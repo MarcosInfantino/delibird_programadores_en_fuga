@@ -9,6 +9,7 @@
 #define TEAM_H_
 
 #include <commons/collections/queue.h>
+#include <commons/string.h>
 #include <stdint.h>
 #include <inttypes.h>
 
@@ -25,14 +26,14 @@ typedef struct{
 } objetivo;
 
 typedef struct{
-	uint32_t posX;
-	uint32_t posY;
+	uint32_t x;
+	uint32_t y;
 } posicion;
 
 typedef struct {
 	posicion posicion;
-	t_list pokemones;
-	t_list objetivoPersonal;
+	t_list* pokemones;
+	t_list* objetivoPersonal;
 	estado estado;
 
 } dataEntrenador;
@@ -40,12 +41,14 @@ typedef struct {
 typedef struct {
 	t_list* objetivoGlobal;
 	t_list* entrenadores;
-	uint32_t** mapa;
+	//uint32_t** mapa;
 
 }dataTeam;
 
-dataTeam inicializarTeam(char* path);
+dataTeam* inicializarTeam(char* path);
 
+t_list* obtenerListaDeListas(char* str);
 
+t_list* arrayStringALista(char** arr);
 
 #endif /* TEAM_H_ */
