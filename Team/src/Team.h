@@ -13,6 +13,8 @@
 #include <stdint.h>
 #include <inttypes.h>
 
+void* especieAComparar;
+
 typedef enum {
 	NEW=1500,
 	READY=1501,
@@ -33,14 +35,15 @@ typedef struct{
 typedef struct {
 	posicion posicion;
 	t_list* pokemones;
-	t_list* objetivoPersonal;
+	t_list* objetivoPersonal;//lista de strings
 	estado estado;
 
 } dataEntrenador;
 
 typedef struct {
-	t_list* objetivoGlobal;
+	t_list* objetivoGlobal;//lista de objetivo
 	t_list* entrenadores;
+	t_list* objetivosCumplidos;
 	//uint32_t** mapa;
 
 }dataTeam;
@@ -50,5 +53,9 @@ dataTeam* inicializarTeam(char* path);
 t_list* obtenerListaDeListas(char* str);
 
 t_list* arrayStringALista(char** arr);
+
+t_list* obtenerObjetivos(t_list* especies);
+
+bool objetivoMismaEspecie(void* obj);
 
 #endif /* TEAM_H_ */

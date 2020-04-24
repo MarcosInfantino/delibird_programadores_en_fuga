@@ -18,6 +18,9 @@
 
 //t_list* idsHilos=list_create();//son ints
 //t_list* hilos=list_create();//son pthread_t
+bool esMayorQue1(void* i){
+	return *((int*)i)>1;
+}
 int main(void) {
 	char* str="[[Pikachu, Squirtle, Pidgey], [Squirtle, Charmander], [Bulbasaur]]";
 
@@ -29,15 +32,25 @@ int main(void) {
 	dataTeam* t=inicializarTeam("Team1.config");
 
 	printf("No se colgo\n");
+
+	t_list* prueba=list_create();
+
+	int pos=4;
+	printf("Objetivo : %s\n",((objetivo*)list_get(t->objetivoGlobal,pos))->pokemon);
+	printf("Cantidad : %i\n",((objetivo*)list_get(t->objetivoGlobal,pos))->cantidad);
+
 	return EXIT_SUCCESS;
 }
+
+
 
 dataTeam* inicializarTeam(char* path){
 	t_config* config=config_create(path);
 	dataTeam* dataTeam=malloc(sizeof(dataTeam));
 	dataTeam->entrenadores=list_create();
-	dataTeam->objetivoGlobal=list_create();
+	t_list* especiesObjetivo=list_create();
 
+	dataTeam->objetivosCumplidos=list_create();
 
 	char* stringPosicionesEntrenadores=config_get_string_value(config,"POSICIONES_ENTRENADORES");
 	char* stringPokemonesEntrenadores=config_get_string_value(config,"POKEMON_ENTRENADORES");
@@ -64,7 +77,8 @@ dataTeam* inicializarTeam(char* path){
 
 		uint32_t i;
 		for(i=0;i<list_size(dataEntrenador->objetivoPersonal);i++){
-			list_add(dataTeam->objetivoGlobal,list_get(dataEntrenador->objetivoPersonal,i));
+
+			list_add(especiesObjetivo,list_get(dataEntrenador->objetivoPersonal,i));
 		}
 
 		dataEntrenador->estado=NEW;
@@ -73,6 +87,7 @@ dataTeam* inicializarTeam(char* path){
 
 
 	}
+	dataTeam->objetivoGlobal=obtenerObjetivos(especiesObjetivo);
 	return dataTeam;
 
 }
@@ -115,6 +130,42 @@ t_list* arrayStringALista(char** arr){
 //		list_add(hilos,(void*)hilo);
 //	}
 //}
+
+//t_list* especiesSinRepeticion(t_list* especies){
+//
+//}
+//
+t_list* obtenerObjetivos(t_list* especies){
+	t_list* objetivos=list_create();
+
+
+	for(uint32_t i=0;i<list_size(especies);i++){
+		void* especie=list_get(especies,i);
+
+		especieAComparar=especie;
+
+		void* encontrado=list_find(objetivos,objetivoMismaEspecie);
+		if(encontrado==NULL){
+			objetivo* objetivo=malloc(sizeof(objetivo));
+			objetivo->cantidad=1;
+			objetivo->pokemon= (char*) especie;
+			//printf("%s\n",(char*)(objetivo->pokemon));
+			list_add(objetivos,(void*)objetivo);
+		}else{
+			(((objetivo*)encontrado)->cantidad)++;
+		}
+	}
+	return objetivos;
+
+}
+
+bool objetivoMismaEspecie(void* obj){
+	objetivo* objAux=(objetivo*) obj;
+	return strcmp(objAux->pokemon,(char*)especieAComparar)==0;
+}
+
+
+
 
 t_list* obtenerListaDeListas(char* str){//me devuelve una lista en la cual cada elemento es un array de strings (char**)
 
