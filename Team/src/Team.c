@@ -12,40 +12,165 @@
 #include <stdlib.h>
 #include <string.h>
 #include "Team.h"
-#include <commons/config.h>
-#include <pthread.h>
 #include <stdbool.h>
+#include <sys/types.h>
+#include <sys/socket.h>
+#include <netdb.h>
+#include <netinet/in.h>
+#include <arpa/inet.h>
+#include <stdlib.h>
 
 //t_list* idsHilos=list_create();//son ints
 //t_list* hilos=list_create();//son pthread_t
-bool esMayorQue1(void* i){
-	return *((int*)i)>1;
+
+
+
+
+
+//int main1(void) {
+//	char* str="[[Pikachu, Squirtle, Pidgey], [Squirtle, Charmander], [Bulbasaur]]";
+//
+//	t_list* lst=obtenerListaDeListas(str);
+//	t_list* primerLista=arrayStringALista(((char**)list_get(lst,0)));
+//
+//	printf("%s\n", (char*) (list_get(primerLista,2)));
+//
+//	dataTeam* t=inicializarTeam("Team1.config");
+//
+//	printf("No se colgo\n");
+//
+//	t_list* prueba=list_create();
+//
+//	int pos=4;
+//	printf("Objetivo : %s\n",((objetivo*)list_get(t->objetivoGlobal,pos))->pokemon);
+//	printf("Cantidad : %i\n",((objetivo*)list_get(t->objetivoGlobal,pos))->cantidad);
+//
+//	return EXIT_SUCCESS;
+//}
+
+
+int main(){
+	char* pathConfig="Team1.config";
+	t_config* config=config_create(pathConfig);
+
+	dataTeam* t=inicializarTeam(config);
+	uint32_t cantEntrenadores=list_size(t->entrenadores);
+	pthread_t arrayIdHilos[cantEntrenadores];
+	inicializarEntrenadores(t->entrenadores,arrayIdHilos);
+	pthread_t hiloConexionInicialBroker;
+	crearHiloConexionColasBroker((void*)config,&hiloConexionInicialBroker);
+	pthread_t hiloServidorGameboy;
+	crearHiloServidorGameboy(&hiloServidorGameboy);
+
+	printf("hola\n");
+
+
+	while(1);
+
+
+
+
+
+	return 0;
 }
-int main(void) {
-	char* str="[[Pikachu, Squirtle, Pidgey], [Squirtle, Charmander], [Bulbasaur]]";
 
-	t_list* lst=obtenerListaDeListas(str);
-	t_list* primerLista=arrayStringALista(((char**)list_get(lst,0)));
+int crearHiloServidorGameboy(pthread_t* hilo){
+	uint32_t err=pthread_create(hilo,NULL,iniciarServidorGameboy,NULL);
+					if(err!=0){
+						printf("Hubo un problema en la creación del hilo para iniciar el servidor para el Gameboy \n");
+						return err;
+					}
 
-	printf("%s\n", (char*) (list_get(primerLista,2)));
+		pthread_detach(*hilo);
+	return 0;
+}
 
-	dataTeam* t=inicializarTeam("Team1.config");
+void* iniciarServidorGameboy(void* arg){
+		struct sockaddr_in direccionServidor;
+		direccionServidor.sin_family=AF_INET;
+		direccionServidor.sin_addr.s_addr=INADDR_ANY;
+		direccionServidor.sin_port=htons(8080);
 
-	printf("No se colgo\n");
+		int servidor=socket(AF_INET,SOCK_STREAM,0);
 
-	t_list* prueba=list_create();
+		int activado=1;
+		setsockopt(servidor,SOL_SOCKET,SO_REUSEADDR,&activado,sizeof(activado));
 
-	int pos=4;
-	printf("Objetivo : %s\n",((objetivo*)list_get(t->objetivoGlobal,pos))->pokemon);
-	printf("Cantidad : %i\n",((objetivo*)list_get(t->objetivoGlobal,pos))->cantidad);
+		if(bind(servidor, (void*) &direccionServidor, sizeof(direccionServidor))!=0){
+			perror("Falló el bind");
 
-	return EXIT_SUCCESS;
+		}else{
+		printf("Estoy escuchando\n");
+		listen(servidor,100);
+		}
+
+		struct sockaddr_in direccionCliente;
+		unsigned int tamanioDireccion=sizeof(direccionCliente);
+		int cliente = accept(servidor, (void*) &direccionCliente, &tamanioDireccion);
+
+		printf("Se ha recibido una conexión en %d.\n", cliente);
+
+	return NULL;
+}
+
+int crearHiloConexionColasBroker(void* config, pthread_t* hilo){
+	uint32_t err=pthread_create(hilo,NULL,suscribirseColasBroker,(void*)config);
+				if(err!=0){
+					printf("Hubo un problema en la creación del hilo para conectarse al broker \n");
+					return err;
+				}
+
+	pthread_detach(*hilo);
+	return 0;
+}
+
+void* suscribirseColasBroker(void* conf){
+
+	t_config* config=(t_config*) conf;
+	uint32_t tiempoReconexion =config_get_int_value(config, "TIEMPO_RECONEXION");
+	struct sockaddr_in direccionServidor;
+	direccionServidor.sin_family=AF_INET;
+	direccionServidor.sin_addr.s_addr=inet_addr("127.0.0.1");
+	direccionServidor.sin_port=htons(8987);
+
+	int cliente=socket(AF_INET,SOCK_STREAM,0);
+
+	while(connect(cliente,(void*) &direccionServidor,sizeof(direccionServidor))!=0){
+		printf("Conexión fallida con el Broker reintentando en %i segundos...\n",tiempoReconexion);
+		sleep(tiempoReconexion);
+	}
+	return NULL;
+}
+
+int inicializarEntrenadores(t_list* entrenadores, pthread_t arrayIdHilos[]){
+	uint32_t i;
+	for(i=0;i<list_size(entrenadores);i++){
+		void* entrenadorActual=list_get(entrenadores,i);
+		uint32_t err=pthread_create(&(arrayIdHilos[i]),NULL,ejecucionHiloEntrenador,entrenadorActual);
+		if(err!=0){
+			printf("Hubo un problema en la creación del hilo del entrenador \n");
+			return err;
+		}
+//		}else{
+//			printf("Todo bien\n");
+//		}
+		pthread_join(arrayIdHilos[i],NULL);
+	}
+	return 0;
+}
+
+
+void* ejecucionHiloEntrenador(void* arg){
+
+
+
+	return NULL;
 }
 
 
 
-dataTeam* inicializarTeam(char* path){
-	t_config* config=config_create(path);
+dataTeam* inicializarTeam(t_config* config){
+
 	dataTeam* dataTeam=malloc(sizeof(dataTeam));
 	dataTeam->entrenadores=list_create();
 	t_list* especiesObjetivo=list_create();
@@ -92,11 +217,7 @@ dataTeam* inicializarTeam(char* path){
 
 }
 
-void* inicializarEntrenador(void* arg){
-	dataEntrenador* data= (dataEntrenador*) arg;
 
-	return NULL;
-}
 
 t_list* arrayStringALista(char** arr){
 	uint32_t i;
@@ -107,34 +228,7 @@ t_list* arrayStringALista(char** arr){
 	return lst;
 }
 
-//int** mostrarPosicionesEntrenadores(char* path){
-//	t_config* config=config_create(path);
-//			char** posicionesEntrenadores=config_get_array_value(config,"POSICIONES_ENTRENADORES");
-//			int**list=malloc();
-//			for (int i = 0 ; i < sizeof(posicionesEntrenadores)/2; i ++ ){
-//
-//				printf("x %c\n", posicionesEntrenadores[i*2][1]);
-//		        printf("y %c\n" ,posicionesEntrenadores[i*2+1][0]);
-//			}
-//}
 
-
-//void inicializarHilosEntrenadores(uint32_t limite){
-//	uint32_t i=0;
-//	while(i<limite){
-//		uint32_t* idHilo=malloc(sizeof(uint32_t));
-//		pthread_t* hilo=malloc(sizeof(pthread_t));
-//		idHilo = pthread_create(hilo, NULL, inicializarSiguienteEntrenador, NULL);
-//		pthread_join(*hilo, NULL);
-//		list_add(idsHilos,(void*)idHilo);
-//		list_add(hilos,(void*)hilo);
-//	}
-//}
-
-//t_list* especiesSinRepeticion(t_list* especies){
-//
-//}
-//
 t_list* obtenerObjetivos(t_list* especies){
 	t_list* objetivos=list_create();
 

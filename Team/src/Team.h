@@ -12,7 +12,9 @@
 #include <commons/string.h>
 #include <stdint.h>
 #include <inttypes.h>
-
+#include <pthread.h>
+#include <commons/config.h>
+#include <unistd.h>
 void* especieAComparar;
 
 typedef enum {
@@ -48,7 +50,7 @@ typedef struct {
 
 }dataTeam;
 
-dataTeam* inicializarTeam(char* path);
+dataTeam* inicializarTeam(t_config* config);
 
 t_list* obtenerListaDeListas(char* str);
 
@@ -57,5 +59,17 @@ t_list* arrayStringALista(char** arr);
 t_list* obtenerObjetivos(t_list* especies);
 
 bool objetivoMismaEspecie(void* obj);
+
+void* ejecucionHiloEntrenador(void* arg);
+
+int inicializarEntrenadores(t_list* entrenadores, pthread_t arrayIdHilos[]);
+
+int crearHiloConexionColasBroker(void* config, pthread_t* hilo);
+
+void* suscribirseColasBroker(void* conf);
+
+int crearHiloServidorGameboy(pthread_t* hilo);
+
+void* iniciarServidorGameboy(void* arg);
 
 #endif /* TEAM_H_ */
