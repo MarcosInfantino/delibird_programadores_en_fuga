@@ -60,7 +60,8 @@ int socketGamecard;
 //}
 
 
-int main(){
+int main(int argc , char* argv[]){
+	//char pathConfig= argv;
 	char* pathConfig="Team2.config";
 	t_config* config=config_create(pathConfig);
 
