@@ -23,34 +23,45 @@
 //t_list* idsHilos=list_create();//son ints
 //t_list* hilos=list_create();//son pthread_t
 
+int socketColasBroker=8987;
+int socketGameboy;
+int socketGamecard;
 
 
 
-
-//int main1(void) {
-//	char* str="[[Pikachu, Squirtle, Pidgey], [Squirtle, Charmander], [Bulbasaur]]";
-//
-//	t_list* lst=obtenerListaDeListas(str);
-//	t_list* primerLista=arrayStringALista(((char**)list_get(lst,0)));
-//
-//	printf("%s\n", (char*) (list_get(primerLista,2)));
-//
-//	dataTeam* t=inicializarTeam("Team1.config");
+//int main(void) {
+////	char* str="[Pikachu|Squirtle|Pidgey, Squirtle|Charmander, Bulbasaur]";
+////
+////	t_list* lst=obtenerListaDeListas(str);
+////	t_list* primerLista=arrayStringALista(((char**)list_get(lst,0)));
+////
+////	printf("%s\n", (char*) (list_get(primerLista,2)));
+//	char* pathConfig="Team2.config";
+//	t_config* config=config_create(pathConfig);
+//	dataTeam* t=inicializarTeam(config);
 //
 //	printf("No se colgo\n");
 //
-//	t_list* prueba=list_create();
+////	t_list* prueba=list_create();
 //
-//	int pos=4;
+//	int pos=0;
 //	printf("Objetivo : %s\n",((objetivo*)list_get(t->objetivoGlobal,pos))->pokemon);
 //	printf("Cantidad : %i\n",((objetivo*)list_get(t->objetivoGlobal,pos))->cantidad);
 //
 //	return EXIT_SUCCESS;
 //}
 
+//int main(void){
+//	int i=0;
+//	char* aux="Pikachu|Squirtle|Pidgey";
+//	char** lst=string_split(aux, "|");
+//	printf("%s",lst[i]);
+//	return 0;
+//}
+
 
 int main(){
-	char* pathConfig="Team1.config";
+	char* pathConfig="Team2.config";
 	t_config* config=config_create(pathConfig);
 
 	dataTeam* t=inicializarTeam(config);
@@ -131,15 +142,58 @@ void* suscribirseColasBroker(void* conf){
 	struct sockaddr_in direccionServidor;
 	direccionServidor.sin_family=AF_INET;
 	direccionServidor.sin_addr.s_addr=inet_addr("127.0.0.1");
-	direccionServidor.sin_port=htons(8987);
+	direccionServidor.sin_port=htons(socketColasBroker);
 
-	int cliente=socket(AF_INET,SOCK_STREAM,0);
+	uint32_t cliente=socket(AF_INET,SOCK_STREAM,0);
 
 	while(connect(cliente,(void*) &direccionServidor,sizeof(direccionServidor))!=0){
 		printf("Conexión fallida con el Broker reintentando en %i segundos...\n",tiempoReconexion);
 		sleep(tiempoReconexion);
 	}
+	uint32_t modulo= TEAM;
+	uint32_t tipoMensaje=MENSAJE_SUSCRIPCION;
+	uint32_t idProceso=getpid();
+
+	cola colaAppeared=APPEARED_POKEMON;
+	cola colaNew=NEW_POKEMON;
+	cola colaCaught=CAUGHT_POKEMON;
+	cola colaCatch=CATCH_POKEMON;
+	cola colaGet=GET_POKEMON;
+	cola colaLocalized=LOCALIZED_POKEMON;
+
+	suscribirseCola(&modulo,&tipoMensaje,&idProceso,&colaAppeared);
+	suscribirseCola(&modulo,&tipoMensaje,&idProceso,&colaNew);
+	suscribirseCola(&modulo,&tipoMensaje,&idProceso,&colaCaught);
+	suscribirseCola(&modulo,&tipoMensaje,&idProceso,&colaCatch);
+	suscribirseCola(&modulo,&tipoMensaje,&idProceso,&colaGet);
+	suscribirseCola(&modulo,&tipoMensaje,&idProceso,&colaLocalized);
+
 	return NULL;
+}
+
+void suscribirseCola(uint32_t* modulo,uint32_t* tipoMensaje,uint32_t* idProceso, uint32_t* cola){
+	uint32_t bytes=sizeof(uint32_t)*4;
+
+	void* stream=malloc(bytes);
+	uint32_t offset=0;
+
+	memcpy(stream+offset,modulo,sizeof(uint32_t));
+	offset+=sizeof(uint32_t);
+
+	memcpy(stream+offset,tipoMensaje,sizeof(uint32_t));
+	offset+=sizeof(uint32_t);
+
+	memcpy(stream+offset,idProceso,sizeof(uint32_t));
+	offset+=sizeof(uint32_t);
+
+	memcpy(stream+offset,cola,sizeof(uint32_t));
+	offset+=sizeof(uint32_t);
+
+	send(socketColasBroker,stream,bytes,0);
+
+	free(stream);
+
+
 }
 
 int inicializarEntrenadores(t_list* entrenadores, pthread_t arrayIdHilos[]){
@@ -177,13 +231,13 @@ dataTeam* inicializarTeam(t_config* config){
 
 	dataTeam->objetivosCumplidos=list_create();
 
-	char* stringPosicionesEntrenadores=config_get_string_value(config,"POSICIONES_ENTRENADORES");
-	char* stringPokemonesEntrenadores=config_get_string_value(config,"POKEMON_ENTRENADORES");
-	char* stringObjetivosEntrenadores=config_get_string_value(config,"OBJETIVOS_ENTRENADORES");
+	char** arrayPosicionesEntrenadores=config_get_array_value(config,"POSICIONES_ENTRENADORES");
+	char** arrayPokemonesEntrenadores=config_get_array_value(config,"POKEMON_ENTRENADORES");
+	char** arrayObjetivosEntrenadores=config_get_array_value(config,"OBJETIVOS_ENTRENADORES");
 
-	t_list* posicionesEntrenadores=obtenerListaDeListas(stringPosicionesEntrenadores);
-	t_list* pokemonesEntrenadores=obtenerListaDeListas(stringPokemonesEntrenadores);
-	t_list* objetivosEntrenadores=obtenerListaDeListas(stringObjetivosEntrenadores);
+	t_list* posicionesEntrenadores=obtenerListaDeListas(arrayPosicionesEntrenadores);
+	t_list* pokemonesEntrenadores=obtenerListaDeListas(arrayPokemonesEntrenadores);
+	t_list* objetivosEntrenadores=obtenerListaDeListas(arrayObjetivosEntrenadores);
 	uint32_t cantEntrenadores=list_size(posicionesEntrenadores);
 
 	uint32_t i;
@@ -200,12 +254,28 @@ dataTeam* inicializarTeam(t_config* config){
 		dataEntrenador->pokemones=arrayStringALista(pokemones);
 		dataEntrenador->objetivoPersonal=arrayStringALista(objetivos);
 
-		uint32_t i;
+//		t_list* pokemonesEntrenadorAux=arrayStringALista(pokemones);
+		uint32_t i=0;
+		//for(i=0;i<list_size(pokemonesEntrenadorAux);i++){
+//		while(i<list_size(pokemonesEntrenadorAux)){
+//			especieAComparar=list_get(pokemonesEntrenadorAux,i);
+//
+//			void* encontrado=list_find(pokemonesEntrenadorAux,mismoPokemon);
+//
+//			if(encontrado==NULL){
+//				list_add(especiesObjetivo,list_get(dataEntrenador->objetivoPersonal,i));
+//				i++;
+//			}else{
+//				list_remove(pokemonesEntrenadorAux,i);
+//
+//			}
+//		}
+
 		for(i=0;i<list_size(dataEntrenador->objetivoPersonal);i++){
 
-			list_add(especiesObjetivo,list_get(dataEntrenador->objetivoPersonal,i));
-		}
+						list_add(especiesObjetivo,list_get(dataEntrenador->objetivoPersonal,i));
 
+				}
 		dataEntrenador->estado=NEW;
 
 		list_add(dataTeam->entrenadores,dataEntrenador);
@@ -217,6 +287,11 @@ dataTeam* inicializarTeam(t_config* config){
 
 }
 
+bool mismoPokemon(void* arg){
+
+
+	return strcmp((char*)especieAComparar, (char*)arg)==0;
+}
 
 
 t_list* arrayStringALista(char** arr){
@@ -259,38 +334,49 @@ bool objetivoMismaEspecie(void* obj){
 }
 
 
-
-
-t_list* obtenerListaDeListas(char* str){//me devuelve una lista en la cual cada elemento es un array de strings (char**)
-
-			int length_value = strlen(str) - 2;
-			char* cadena = string_substring(str, 1, length_value);
-			t_list* lst=list_create();
-			int i;
-			int j=0;
-			bool sublistaTerminada=false;
-
-			char* buffer=malloc(200);
-			for(i=0;i<strlen(cadena);i++){
-
-				if(sublistaTerminada){
-					sublistaTerminada=false;
-				}
-				else if(cadena[i]!=']'){
-					buffer[j]=cadena[i];
-					j++;
-				}else{
-					buffer[j]=cadena[i];
-					buffer[j+1]='\0';
-					j=0;
-					string_trim(&buffer);
-					char** arr= string_get_string_as_array(buffer);
-					list_add(lst,(void**)arr);
-					buffer=malloc(200);
-					sublistaTerminada=true;
-
-				}
-			}
-
-	return lst;
+t_list* obtenerListaDeListas(char** lst){
+	t_list* lstDeLst=list_create();
+	uint32_t i=0;
+	char* aux=lst[i];
+	while(aux!=NULL){
+		char** str=string_split(aux, "|");
+		list_add(lstDeLst,(void**)str);
+		i++;
+		aux=lst[i];
+	}
+	return lstDeLst;
 }
+
+//t_list* obtenerListaDeListas(char* str){//me devuelve una lista en la cual cada elemento es un array de strings (char**)
+//
+//			int length_value = strlen(str) - 2;
+//			char* cadena = string_substring(str, 1, length_value);
+//			t_list* lst=list_create();
+//			int i;
+//			int j=0;
+//			bool sublistaTerminada=false;
+//
+//			char* buffer=malloc(200);
+//			for(i=0;i<strlen(cadena);i++){
+//
+//				if(sublistaTerminada){
+//					sublistaTerminada=false;
+//				}
+//				else if(cadena[i]!=']'){
+//					buffer[j]=cadena[i];
+//					j++;
+//				}else{
+//					buffer[j]=cadena[i];
+//					buffer[j+1]='\0';
+//					j=0;
+//					string_trim(&buffer);
+//					char** arr= string_get_string_as_array(buffer);
+//					list_add(lst,(void**)arr);
+//					buffer=malloc(200);
+//					sublistaTerminada=true;
+//
+//				}
+//			}
+//
+//	return lst;
+//}

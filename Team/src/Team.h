@@ -50,9 +50,30 @@ typedef struct {
 
 }dataTeam;
 
+typedef enum {
+	BROKER,
+	TEAM,
+	GAMECARD,
+	GAMEBOY
+}modulo;
+
+typedef enum{
+	APPEARED_POKEMON,
+	NEW_POKEMON,
+	CAUGHT_POKEMON,
+	CATCH_POKEMON,
+	GET_POKEMON,
+	LOCALIZED_POKEMON
+}cola;
+
+typedef enum{
+	MENSAJE_NORMAL,
+	MENSAJE_SUSCRIPCION
+}tipoMensaje;
+
 dataTeam* inicializarTeam(t_config* config);
 
-t_list* obtenerListaDeListas(char* str);
+t_list* obtenerListaDeListas(char** lst);
 
 t_list* arrayStringALista(char** arr);
 
@@ -72,4 +93,7 @@ int crearHiloServidorGameboy(pthread_t* hilo);
 
 void* iniciarServidorGameboy(void* arg);
 
+bool mismoPokemon(void* arg);
+
+void suscribirseCola(uint32_t* modulo, uint32_t* tipoMensaje,uint32_t* idProceso, uint32_t* cola);
 #endif /* TEAM_H_ */
