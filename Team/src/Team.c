@@ -30,7 +30,7 @@ int socketGameboy;
 int socketGamecard;
 
 
-
+//
 //int main(void) {
 ////	char* str="[Pikachu|Squirtle|Pidgey, Squirtle|Charmander, Bulbasaur]";
 ////
@@ -46,7 +46,7 @@ int socketGamecard;
 //
 ////	t_list* prueba=list_create();
 //
-//	int pos=2;
+//	int pos=1;
 //	printf("Objetivo : %s\n",((objetivo*)list_get(t->objetivoGlobal,pos))->pokemon);
 //	printf("Cantidad : %i\n",((objetivo*)list_get(t->objetivoGlobal,pos))->cantidad);
 //
@@ -310,34 +310,69 @@ t_list* arrayStringALista(char** arr){
 }
 
 
+//t_list* obtenerObjetivos(t_list* especies){
+//	t_list* objetivos=list_create();
+//
+//
+//	for(uint32_t i=0;i<list_size(especies);i++){
+//		void* especie=list_get(especies,i);
+//
+//		especieAComparar=especie;
+//
+//		void* encontrado=list_find(objetivos,objetivoMismaEspecie);
+//		if(encontrado==NULL){
+//			objetivo* objetivo=malloc(sizeof(objetivo));
+//			objetivo->cantidad=1;
+//			objetivo->pokemon= (char*) especie;
+//			//printf("%s\n",(char*)(objetivo->pokemon));
+//			list_add(objetivos,(void*)objetivo);
+//		}else{
+//			(((objetivo*)encontrado)->cantidad)++;
+//		}
+//	}
+//	return objetivos;
+//
+//}
+
 t_list* obtenerObjetivos(t_list* especies){
 	t_list* objetivos=list_create();
 
 
 	for(uint32_t i=0;i<list_size(especies);i++){
-		void* especie=list_get(especies,i);
+		char* especie=(char*)list_get(especies,i);
 
-		especieAComparar=especie;
+		//especieAComparar=especie;
 
-		void* encontrado=list_find(objetivos,objetivoMismaEspecie);
-		if(encontrado==NULL){
+		uint32_t encontrado=buscarObjetivoPorEspecie(objetivos,especie);
+		if(encontrado==-1){
 			objetivo* objetivo=malloc(sizeof(objetivo));
 			objetivo->cantidad=1;
 			objetivo->pokemon= (char*) especie;
 			//printf("%s\n",(char*)(objetivo->pokemon));
 			list_add(objetivos,(void*)objetivo);
 		}else{
-			(((objetivo*)encontrado)->cantidad)++;
+			(((objetivo*)list_get(objetivos,encontrado))->cantidad)++;
 		}
 	}
 	return objetivos;
 
 }
 
-bool objetivoMismaEspecie(void* obj){
-	objetivo* objAux=(objetivo*) obj;
-	return strcmp(objAux->pokemon,(char*)especieAComparar)==0;
+uint32_t buscarObjetivoPorEspecie(t_list* listaObjetivos, char* especie){
+	uint32_t i;
+	for(i=0;i<list_size(listaObjetivos);i++){
+		objetivo* obj=(objetivo*)list_get(listaObjetivos,i);
+		if(strcmp(obj->pokemon,especie)==0){
+			return i;
+		}
+	}
+	return -1;
 }
+
+//bool objetivoMismaEspecie(void* obj){
+//	objetivo* objAux=(objetivo*) obj;
+//	return strcmp(objAux->pokemon,(char*)especieAComparar)==0;
+//}
 
 
 t_list* obtenerListaDeListas(char** lst){

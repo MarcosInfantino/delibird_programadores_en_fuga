@@ -15,7 +15,7 @@
 #include <pthread.h>
 #include <commons/config.h>
 #include <unistd.h>
-void* especieAComparar;
+//void* especieAComparar;
 
 typedef enum {
 	NEW=1500,
@@ -79,7 +79,7 @@ t_list* arrayStringALista(char** arr);
 
 t_list* obtenerObjetivos(t_list* especies);
 
-bool objetivoMismaEspecie(void* obj);
+//bool objetivoMismaEspecie(void* obj);
 
 void* ejecucionHiloEntrenador(void* arg);
 
@@ -96,4 +96,6 @@ void* iniciarServidorGameboy(void* arg);
 uint32_t buscarMismoPokemon(t_list* lst, char* pokemon);
 
 void suscribirseCola(uint32_t* modulo,uint32_t* tipoMensaje,uint32_t* idProceso, uint32_t* cola, uint32_t socket);
+
+uint32_t buscarObjetivoPorEspecie(t_list* listaObjetivos, char* especie);
 #endif /* TEAM_H_ */
