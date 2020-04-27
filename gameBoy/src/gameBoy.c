@@ -35,15 +35,16 @@ int main(int argc, char* argv[]) {
 	uint32_t tipoMensaje = obtenerTipoMensaje(argv[2]);
 	char* ipProcesoDestinatario = obtenerIpProceso (procesoDestinatario, config);
 	uint32_t puertoProcesoDestinatario = obtenerPuertoProceso (procesoDestinatario, config);
-	uint32_t socket_Cliente = socketCliente (ipProcesoDestinatario, puertoProcesoDestinatario);
-	uint32_t bytesStream = sizeStream (tipoMensaje, argv, procesoDestinatario);
+//	uint32_t socket_Cliente = socketCliente (ipProcesoDestinatario, puertoProcesoDestinatario);
+	uint32_t bytesStream = sizeArgumentos (tipoMensaje, argv, procesoDestinatario);
 	//enviarMensaje(socket_Cliente, bytesStream);
 
+	printf("argv[3]: %s\n",argv[3]);
 	printf("El proceso es: %i\n", procesoDestinatario);
 	printf("El tipo de mensaje es: %i\n", tipoMensaje);
 	printf("El IP es: %s \n", ipProcesoDestinatario);
 	printf("El puerto es: %i\n", puertoProcesoDestinatario);
-	printf("El size es: %i", bytesStream);
+	printf("El size es: %i\n", bytesStream);
 
 	return EXIT_SUCCESS;
 }
@@ -131,30 +132,30 @@ uint32_t socketCliente (char* ip, uint32_t puerto){
 	return cliente;
 }
 
-uint32_t sizeStream (uint32_t tipoMensaje, char* argv[], uint32_t proceso){
+uint32_t sizeArgumentos (uint32_t tipoMensaje, char* argv[], uint32_t proceso){
 	uint32_t size;
 	switch(tipoMensaje){
 	case NEW:
 		if(proceso == BROKER){
-			size = sizeof(argv[3]) + sizeof(uint32_t)*3;
+			size = strlen(argv[3]) + 1 + sizeof(uint32_t)*3;
 		} else if (proceso==GAMECARD){
-			size = sizeof(argv[3]) + sizeof(uint32_t)*4;
+			size = strlen(argv[3]) + 1 + sizeof(uint32_t)*4;
 		}
 		break;
 
 	case APPEARED:
 		if(proceso==BROKER){
-			size = sizeof(argv[3]) + sizeof(uint32_t)*3;
+			size = strlen(argv[3]) +1 + sizeof(uint32_t)*3;
 		}else if(proceso==TEAM){
-			size=sizeof(argv[3])+sizeof(uint32_t)*2;
+			size=strlen(argv[3]) + 1 +sizeof(uint32_t)*2;
 		}
 		break;
 
 	case CATCH:
 		if(proceso==BROKER){
-			size = sizeof(argv[3]) + sizeof(uint32_t)*2;
+			size = strlen(argv[3]) + 1 + sizeof(uint32_t)*2;
 		}else if (proceso==GAMECARD){
-			size = sizeof(argv[3]) + sizeof(uint32_t)*3;
+			size = strlen(argv[3]) + 1 + sizeof(uint32_t)*3;
 		}
 		break;
 
@@ -163,7 +164,7 @@ uint32_t sizeStream (uint32_t tipoMensaje, char* argv[], uint32_t proceso){
 		break;
 
 	case GET:
-		size = sizeof(argv[3]);
+		size = strlen(argv[3]) + 1;
 		break;
 
 	default:

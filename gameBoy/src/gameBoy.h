@@ -33,7 +33,7 @@ typedef enum{
 typedef struct{
 	uint32_t tipoMensaje;
 	uint32_t bytes;
-	void* stream;
+	void* argumentos;
 }mensaje;
 
 uint32_t obtenerPuertoProceso (uint32_t proceso, t_config* config);
@@ -46,7 +46,7 @@ uint32_t obtenerTipoMensaje (char* tipo);
 
 uint32_t socketCliente(char* ip, uint32_t puerto);
 
-uint32_t sizeStream (uint32_t tipoMensaje, char* argv[], uint32_t proceso);
+uint32_t sizeArgumentos (uint32_t tipoMensaje, char* argv[], uint32_t proceso);
 
 void enviarMensaje (uint32_t socket, uint32_t sizeStream);
 
