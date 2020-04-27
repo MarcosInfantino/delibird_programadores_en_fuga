@@ -25,10 +25,11 @@
 //t_list* idsHilos=list_create();//son ints
 //t_list* hilos=list_create();//son pthread_t
 
-int socketColasBroker=8987;
+
 int socketGameboy;
 int socketGamecard;
-
+uint32_t puertoBroker;
+char* ipBroker;
 
 //
 //int main(void) {
@@ -66,7 +67,8 @@ int main(int argc , char* argv[]){
 	//char pathConfig= argv;
 	char* pathConfig="Team2.config";
 	t_config* config=config_create(pathConfig);
-
+	puertoBroker=config_get_int_value(config,"PUERTO_BROKER");
+	ipBroker=config_get_string_value(config,"IP_BROKER");
 	dataTeam* t=inicializarTeam(config);
 	uint32_t cantEntrenadores=list_size(t->entrenadores);
 	pthread_t arrayIdHilos[cantEntrenadores];
@@ -144,8 +146,8 @@ void* suscribirseColasBroker(void* conf){
 	uint32_t tiempoReconexion =config_get_int_value(config, "TIEMPO_RECONEXION");
 	struct sockaddr_in direccionServidor;
 	direccionServidor.sin_family=AF_INET;
-	direccionServidor.sin_addr.s_addr=inet_addr("127.0.0.1");
-	direccionServidor.sin_port=htons(socketColasBroker);
+	direccionServidor.sin_addr.s_addr=inet_addr(ipBroker);
+	direccionServidor.sin_port=htons(puertoBroker);
 
 	uint32_t cliente=socket(AF_INET,SOCK_STREAM,0);
 
