@@ -93,7 +93,7 @@ int crearHiloServidorGameboy(pthread_t* hilo);
 
 void* iniciarServidorGameboy(void* arg);
 
-bool mismoPokemon(void* arg);
+uint32_t buscarMismoPokemon(t_list* lst, char* pokemon);
 
-void suscribirseCola(uint32_t* modulo, uint32_t* tipoMensaje,uint32_t* idProceso, uint32_t* cola);
+void suscribirseCola(uint32_t* modulo,uint32_t* tipoMensaje,uint32_t* idProceso, uint32_t* cola, uint32_t socket);
 #endif /* TEAM_H_ */

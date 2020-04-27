@@ -44,7 +44,7 @@ int socketGamecard;
 //
 ////	t_list* prueba=list_create();
 //
-//	int pos=0;
+//	int pos=2;
 //	printf("Objetivo : %s\n",((objetivo*)list_get(t->objetivoGlobal,pos))->pokemon);
 //	printf("Cantidad : %i\n",((objetivo*)list_get(t->objetivoGlobal,pos))->cantidad);
 //
@@ -59,7 +59,7 @@ int socketGamecard;
 //	return 0;
 //}
 
-
+//
 int main(int argc , char* argv[]){
 	//char pathConfig= argv;
 	char* pathConfig="Team2.config";
@@ -255,26 +255,22 @@ dataTeam* inicializarTeam(t_config* config){
 		dataEntrenador->pokemones=arrayStringALista(pokemones);
 		dataEntrenador->objetivoPersonal=arrayStringALista(objetivos);
 
-//		t_list* pokemonesEntrenadorAux=arrayStringALista(pokemones);
-		uint32_t i=0;
+		t_list* pokemonesEntrenadorAux=arrayStringALista(pokemones);
+		t_list* objetivoPersonalEntrenadorAux=arrayStringALista(objetivos);
+		uint32_t i;
 		//for(i=0;i<list_size(pokemonesEntrenadorAux);i++){
-//		while(i<list_size(pokemonesEntrenadorAux)){
-//			especieAComparar=list_get(pokemonesEntrenadorAux,i);
-//
-//			void* encontrado=list_find(pokemonesEntrenadorAux,mismoPokemon);
-//
-//			if(encontrado==NULL){
-//				list_add(especiesObjetivo,list_get(dataEntrenador->objetivoPersonal,i));
-//				i++;
-//			}else{
-//				list_remove(pokemonesEntrenadorAux,i);
-//
-//			}
-//		}
+		for(i=0;i<list_size(pokemonesEntrenadorAux);i++){
+			char *pokemonAComparar=(char*) list_get(pokemonesEntrenadorAux,i);
+			uint32_t encontrado=buscarMismoPokemon(objetivoPersonalEntrenadorAux,pokemonAComparar);
 
-		for(i=0;i<list_size(dataEntrenador->objetivoPersonal);i++){
+			if(encontrado!=-1){
+				list_remove(objetivoPersonalEntrenadorAux,encontrado);
+			}
+		}
 
-						list_add(especiesObjetivo,list_get(dataEntrenador->objetivoPersonal,i));
+		for(i=0;i<list_size(objetivoPersonalEntrenadorAux);i++){
+
+						list_add(especiesObjetivo,list_get(objetivoPersonalEntrenadorAux,i));
 
 				}
 		dataEntrenador->estado=NEW;
@@ -288,10 +284,17 @@ dataTeam* inicializarTeam(t_config* config){
 
 }
 
-bool mismoPokemon(void* arg){
+uint32_t buscarMismoPokemon(t_list* lst, char* pokemon){//devuelve la posicion en la que encontro el pokemon
 
+	uint32_t i;
+	for(i=0;i<list_size(lst);i++){
+		char* pokemonAComparar=(char*)list_get(lst,i);
+		if(strcmp(pokemonAComparar,pokemon)==0){
+			return i;
+		}
+	}
 
-	return strcmp((char*)especieAComparar, (char*)arg)==0;
+	return -1;
 }
 
 
