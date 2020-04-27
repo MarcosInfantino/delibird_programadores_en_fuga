@@ -162,17 +162,17 @@ void* suscribirseColasBroker(void* conf){
 	cola colaGet=GET_POKEMON;
 	cola colaLocalized=LOCALIZED_POKEMON;
 
-	suscribirseCola(&modulo,&tipoMensaje,&idProceso,&colaAppeared);
-	suscribirseCola(&modulo,&tipoMensaje,&idProceso,&colaNew);
-	suscribirseCola(&modulo,&tipoMensaje,&idProceso,&colaCaught);
-	suscribirseCola(&modulo,&tipoMensaje,&idProceso,&colaCatch);
-	suscribirseCola(&modulo,&tipoMensaje,&idProceso,&colaGet);
-	suscribirseCola(&modulo,&tipoMensaje,&idProceso,&colaLocalized);
+	suscribirseCola(&modulo,&tipoMensaje,&idProceso,&colaAppeared,cliente);
+	suscribirseCola(&modulo,&tipoMensaje,&idProceso,&colaNew,cliente);
+	suscribirseCola(&modulo,&tipoMensaje,&idProceso,&colaCaught,cliente);
+	suscribirseCola(&modulo,&tipoMensaje,&idProceso,&colaCatch,cliente);
+	suscribirseCola(&modulo,&tipoMensaje,&idProceso,&colaGet,cliente);
+	suscribirseCola(&modulo,&tipoMensaje,&idProceso,&colaLocalized,cliente);
 
 	return NULL;
 }
 
-void suscribirseCola(uint32_t* modulo,uint32_t* tipoMensaje,uint32_t* idProceso, uint32_t* cola){
+void suscribirseCola(uint32_t* modulo,uint32_t* tipoMensaje,uint32_t* idProceso, uint32_t* cola, uint32_t socket){
 	uint32_t bytes=sizeof(uint32_t)*4;
 
 	void* stream=malloc(bytes);
@@ -190,7 +190,7 @@ void suscribirseCola(uint32_t* modulo,uint32_t* tipoMensaje,uint32_t* idProceso,
 	memcpy(stream+offset,cola,sizeof(uint32_t));
 	offset+=sizeof(uint32_t);
 
-	send(socketColasBroker,stream,bytes,0);
+	send(socket,stream,bytes,0);
 
 	free(stream);
 
