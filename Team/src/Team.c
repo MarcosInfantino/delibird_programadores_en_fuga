@@ -20,6 +20,8 @@
 #include <arpa/inet.h>
 #include <stdlib.h>
 
+//fecha ult modificacion 27 de abril
+
 //t_list* idsHilos=list_create();//son ints
 //t_list* hilos=list_create();//son pthread_t
 
