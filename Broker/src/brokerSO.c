@@ -20,7 +20,8 @@
 #include <stdlib.h>
 #include <string.h>
 #include "broker.h"
-//
+
+
 colaMensajes appearedPokemon,
 			 newPokemon,
 			 caughtPokemon,
@@ -117,7 +118,7 @@ void iniciarHilos(){
 }
 
 
-void esperar_cliente(int socket_servidor){
+void esperar_cliente(uint32_t socket_servidor){
 	struct sockaddr_in dir_cliente;
 
 	uint32_t tam_direccion  = sizeof(struct sockaddr_in);
@@ -129,33 +130,45 @@ void esperar_cliente(int socket_servidor){
 }
 
 
-void atenderCliente(int* socket)
-{
+void atenderCliente(uint32_t* socket){
 	uint32_t  modulo;
-	uint32_t  tipoMensaje;
+	uint32_t  esSuscripcion;
 
 	if(recv(*socket, &modulo, sizeof(int), MSG_WAITALL) == -1) //si hubo un error al recibir
 		modulo = -1;
 
-	recv(*socket, &tipoMensaje, sizeof(int), MSG_WAITALL)
+	recv(*socket, &esSuscripcion, sizeof(int), MSG_WAITALL);
 
-	if (tipoMensaje  == 1){ //se quiere suscribir a alguna cola
-		suscribirCola(modulo, socket);}
+	if (esSuscripcion  == SUSCRIPCION){ //se quiere suscribir a alguna cola
+		suscribirSegunCola(modulo, *socket);}
 	else{
-		manejarTipoDeModulo(modulo, *socket);}
+		manejarTipoDeMensaje(modulo, *socket);}
 }
-//me parece que acá va a convenir que sea por cola y no por modulo, segun la cola es el tipo de mensaje
-void manejarTipoDeModulo(int modulo, int cliente_fd) {
 
-		switch (modulo) {
+//me parece que acá va a convenir que sea por cola y no por modulo, segun la cola es el tipo de mensaje
+void manejarTipoDeMensaje(uint32_t modulo, uint32_t cliente_fd) {
+	/*switch(cola){
+		case APPEARED_POKEMON:
+			deserializarAppeared(cliente_fd);
+			break;
+		case NEW_POKEMON:
+			deserializarNew(cliente_fd);
+			break;
+		case CAUGHT_POKEMON:
+			deserializarCaught(cliente_fd);
+			break;
+		case CATCH_POKEMON:
+			deserializarCatch(cliente_fd);
+			break;
+		case GET_POKEMON:
+			deserializarGet(cliente_fd);
+			break;
+		case LOCALIZED_POKEMON:
+			deserializarLocalized(cliente_fd);
+		}*/
+	switch (modulo) {
 		case TEAM:
-//			tratarTeam
-//			responderMensajeOK(cliente_fd);
 			break;
-		/*case GAMECARD:
-			break;
-		  case GAMEBOY:
-		  	break;*/
 		case 0:
 			pthread_exit(NULL);
 		case -1:
@@ -163,106 +176,82 @@ void manejarTipoDeModulo(int modulo, int cliente_fd) {
 		}
 }
 
-void suscribirCola( uint32_t modulo, uint32_t socket){
+void suscribirSegunCola( uint32_t modulo, uint32_t socket){
 	uint32_t  id_proceso;
 	uint32_t  cola;
 
-	recv(*socket, &id_proceso, sizeof(int), MSG_WAITALL)
-	recv(*socket, &cola, sizeof(int), MSG_WAITALL)
-
-	//agregar validacion de si el que se quiere suscribir a cierta cola pueda hacerlo
-	//agregar validación de si ya esta en la lista
+	recv(socket, &id_proceso, sizeof(int), MSG_WAITALL);
+	recv(socket, &cola, sizeof(int), MSG_WAITALL);
 
 	switch(cola){
 	case APPEARED_POKEMON:
-		list_add(appearedPokemon.suscriptores , (void*)* id_proceso);
+		suscribir(modulo, appearedPokemon, socket, cola);
 		break;
 	case NEW_POKEMON:
-		list_add(newPokemon.suscriptores , (void*)* id_proceso);
+		suscribir(modulo, newPokemon, socket, cola);
 		break;
 	case CAUGHT_POKEMON:
-		list_add(caughtPokemon.suscriptores , (void*)* id_proceso);
+		suscribir(modulo, caughtPokemon, socket, cola);
 		break;
 	case CATCH_POKEMON:
-		list_add(catchPokemon.suscriptores , (void*)* id_proceso);
+		suscribir(modulo, catchPokemon, socket, cola);
 		break;
 	case GET_POKEMON:
-		list_add(getPokemon.suscriptores , (void*)* id_proceso);
+		suscribir(modulo, getPokemon, socket, cola);
 		break;
 	case LOCALIZED_POKEMON:
-		list_add(localizedPokemon.suscriptores , (void*)* id_proceso);
+		suscribir(modulo, localizedPokemon, socket, cola);
+	}
+	//enviar todos los mensajes que hubiesen en la cola antes de suscribirse
+	//cuando se envien mensajes que no sean suscripción asignarles un numero para posibbles respuestas en otra cola
+
+}
+
+void responderMensaje(uint32_t socketCliente, uint32_t respuesta){
+
+	send(socketCliente,(void*)respuesta,sizeof(int),0);
+
+}
+
+void suscribir(uint32_t modulo, colaMensajes structCola, uint32_t socketCliente, uint32_t colaEnum){
+
+	if(validarSuscripcionSegunModulo(modulo, colaEnum) && !validarPertenencia(structCola, socketCliente)){ //si se puede suscribir y aun no esta en la cola
+		list_add(structCola.suscriptores , (void*) socketCliente);
+		responderMensaje(socketCliente, CORRECTO);
+	}else{
+		responderMensaje(socketCliente, INCORRECTO);
 	}
 
-	responderMensajeOK(socket);
-	//enviar todos los mensajes que hubiesen en la cola antes de suscribirse
-	//agregar_a_cola(nombre de cola, id proceso)
-
-
-	//cuando se envien mensajes que no sean suscripción asignarles un numero para posibbles respuestas en otra cola
 }
 
-void responderMensajeOK(uint32_t socketCliente){
+bool validarSuscripcionSegunModulo(uint32_t modulo, uint32_t cola){
 
-	t_paquete* paquete      = malloc(sizeof(t_paquete));
-	paquete->respuesta      = RESPUESTAOK;
-	paquete->buffer->size   = strlen("ok")+1;
-	paquete->buffer->stream = memcpy(buffer->stream,"ok",buffer->size);
+	switch(modulo){
+	case TEAM:
+		if(cola == APPEARED_POKEMON || cola == CAUGHT_POKEMON || cola == LOCALIZED_POKEMON)
+		return true;
+		break;
+	case GAMECARD:
+		if(cola == NEW_POKEMON || cola == GET_POKEMON || cola == CATCH_POKEMON)
+		return true;
+		break;
+	case GAMEBOY: //acepta cualquier cola
+		return true;
+	default:
+		return false;
+	}
 
-	void* a_enviar = serializar_paquete(paquete,sizeof(respuesta_broker)+buffer->size+sizeof(buffer->size))
-	send(socketCliente,a_enviar,sizeof(respuesta_broker)+buffer->size+sizeof(buffer->size),0);
-	contadorMensajes + 1;
-
+	return false; //tiraba error de sin retorno, no sé si está bien
 }
 
-//void agregar_a_cola(uint32_t cola, uint32_t id_proceso){
-//
-//
-//	list_add(cola.suscriptores , (void*)* id_proceso);
-//	chequearYenviarMensajes()
-//}
+bool validarPertenencia(colaMensajes cola, uint32_t socket){
+	uint32_t i;
+	void* socketLista;
+	for(i = 0; i< list_size(cola.suscriptores); i++){
+		socketLista = list_get(cola.suscriptores, i);
+		if(socketLista == (void*) socket)
+			return true;
+	}
+	return false;
 
-
-
-/*---------------protocolo suscripcion---------------*/
-/*modulo   | tipo_mensaje | cola | id_proceso
-        int(enum)
-   *1 si es subscripcion 0 si no lo es*/
-
-
-/*---------------protocolo get pokemon---------------*/
-/*modulo  | tipo_mensaje | cola | nombre_pokemon */
-
-
-/*---------------protocolo Caught Pokemon---------------*/
-/*modulo   | tipo_mensaje | cola | int(0 o 1) */
-/*int         int              string           int   int*/
-
-
-
-/*---------------protocolo Catch Pokemon---------------*/
-/*modulo   | tipo_mensaje | cola | nombre_pokemon  | posx | posy */
-/*int         int              string           int   int*/
-
-
-
-/*---------------protocolo Appeared Pokemon---------------*/
-/*modulo   | tipo_mensaje | cola | nombre_pokemon  | posx | posy */
-/*int         int              string           int   int*/
-
-
-/*---------------protocolo Localized Pokemon---------------*/
-/*modulo   | tipo_mensaje | cola | cant_pokemon | posx | pos y*/
-/*int         int            int            int   int*/
-
-/* van a haber n cantidad de pares de x e y siendo n = cant_pokemon*/
-
-
-
-/*---------------protocolo New Pokemon---------------*/
-/*modulo | tipo_mensaje |  cola| pos x | pos y | cant_pokemon */
-/*int         int     int       int*/
-
-
-
-
-
+}
