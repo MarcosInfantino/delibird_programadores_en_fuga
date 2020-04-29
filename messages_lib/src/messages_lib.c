@@ -47,3 +47,30 @@ void enviarMensaje(char* cadena,int socket){
 	free(paquete);
 	free(a_enviar);
 }
+
+void* serializarMensajeSuscripcion(mensajeSuscripcion* mensaje, uint32_t bytes){
+
+
+		void* stream=malloc(bytes);
+		uint32_t offset=0;
+
+		memcpy(stream+offset,&(mensaje->modulo),sizeof(uint32_t));
+		offset+=sizeof(uint32_t);
+
+		memcpy(stream+offset,&(mensaje->tipoMensaje),sizeof(uint32_t));
+		offset+=sizeof(uint32_t);
+
+		memcpy(stream+offset,&(mensaje->idProceso),sizeof(uint32_t));
+		offset+=sizeof(uint32_t);
+
+		memcpy(stream+offset,&(mensaje->cola),sizeof(uint32_t));
+		offset+=sizeof(uint32_t);
+
+		return stream;
+}
+
+void enviarMensajeSuscripcion(mensajeSuscripcion* mensaje, int socket){
+	uint32_t bytes=sizeof(uint32_t)*4;
+	void* stream=serializarMensajeSuscripcion(mensaje, bytes);
+	send(socket,stream,bytes,0);
+}

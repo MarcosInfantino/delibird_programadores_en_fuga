@@ -23,19 +23,19 @@ endif
 # Add inputs and outputs from these tool invocations to the build variables 
 
 # All Target
-all: string_messages
+all: messages_lib
 
 # Tool invocations
-string_messages: $(OBJS) $(USER_OBJS)
+messages_lib: $(OBJS) $(USER_OBJS)
 	@echo 'Building target: $@'
 	@echo 'Invoking: GCC C Linker'
-	gcc  -o "string_messages" $(OBJS) $(USER_OBJS) $(LIBS)
+	gcc  -o "messages_lib" $(OBJS) $(USER_OBJS) $(LIBS)
 	@echo 'Finished building target: $@'
 	@echo ' '
 
 # Other Targets
 clean:
-	-$(RM) $(EXECUTABLES)$(OBJS)$(C_DEPS) string_messages
+	-$(RM) $(EXECUTABLES)$(OBJS)$(C_DEPS) messages_lib
 	-@echo ' '
 
 .PHONY: all clean dependents

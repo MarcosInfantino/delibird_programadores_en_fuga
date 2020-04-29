@@ -4,16 +4,16 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS += \
-../src/messages_lib.c \
-../src/string_messages.c 
+../src/main.c \
+../src/messages_lib.c 
 
 OBJS += \
-./src/messages_lib.o \
-./src/string_messages.o 
+./src/main.o \
+./src/messages_lib.o 
 
 C_DEPS += \
-./src/messages_lib.d \
-./src/string_messages.d 
+./src/main.d \
+./src/messages_lib.d 
 
 
 # Each subdirectory must supply rules for building sources it contributes

@@ -166,33 +166,29 @@ void* suscribirseColasBroker(void* conf){
 	cola colaGet=GET_POKEMON;
 	cola colaLocalized=LOCALIZED_POKEMON;
 
-	suscribirseCola(&modulo,&tipoMensaje,&idProceso,&colaAppeared,cliente);
-	suscribirseCola(&modulo,&tipoMensaje,&idProceso,&colaNew,cliente);
-	suscribirseCola(&modulo,&tipoMensaje,&idProceso,&colaCaught,cliente);
-	suscribirseCola(&modulo,&tipoMensaje,&idProceso,&colaCatch,cliente);
-	suscribirseCola(&modulo,&tipoMensaje,&idProceso,&colaGet,cliente);
-	suscribirseCola(&modulo,&tipoMensaje,&idProceso,&colaLocalized,cliente);
+	suscribirseCola(modulo,tipoMensaje,idProceso,colaAppeared,cliente);
+	suscribirseCola(modulo,tipoMensaje,idProceso,colaNew,cliente);
+	suscribirseCola(modulo,tipoMensaje,idProceso,colaCaught,cliente);
+	suscribirseCola(modulo,tipoMensaje,idProceso,colaCatch,cliente);
+	suscribirseCola(modulo,tipoMensaje,idProceso,colaGet,cliente);
+	suscribirseCola(modulo,tipoMensaje,idProceso,colaLocalized,cliente);
+
+
+
 
 	return NULL;
 }
 
-void suscribirseCola(uint32_t* modulo,uint32_t* tipoMensaje,uint32_t* idProceso, uint32_t* cola, uint32_t socket){
+void suscribirseCola(uint32_t modulo,uint32_t tipoMensaje,uint32_t idProceso, uint32_t cola, uint32_t socket){
 	uint32_t bytes=sizeof(uint32_t)*4;
+	mensajeSuscripcion* mensaje=malloc(sizeof(mensajeSuscripcion));
+	mensaje->modulo=modulo;
+	mensaje->tipoMensaje=tipoMensaje;
+	mensaje->idProceso=idProceso;
+	mensaje->cola=cola;
+	mensaje->socket=socket;
+	void* stream=serializarMensajeSuscripcion(mensaje,bytes);
 
-	void* stream=malloc(bytes);
-	uint32_t offset=0;
-
-	memcpy(stream+offset,modulo,sizeof(uint32_t));
-	offset+=sizeof(uint32_t);
-
-	memcpy(stream+offset,tipoMensaje,sizeof(uint32_t));
-	offset+=sizeof(uint32_t);
-
-	memcpy(stream+offset,idProceso,sizeof(uint32_t));
-	offset+=sizeof(uint32_t);
-
-	memcpy(stream+offset,cola,sizeof(uint32_t));
-	offset+=sizeof(uint32_t);
 
 	send(socket,stream,bytes,0);
 
@@ -200,6 +196,28 @@ void suscribirseCola(uint32_t* modulo,uint32_t* tipoMensaje,uint32_t* idProceso,
 
 
 }
+
+void* serializarMensajeSuscripcion(mensajeSuscripcion* mensaje, uint32_t bytes){
+
+
+		void* stream=malloc(bytes);
+		uint32_t offset=0;
+
+		memcpy(stream+offset,&(mensaje->modulo),sizeof(uint32_t));
+		offset+=sizeof(uint32_t);
+
+		memcpy(stream+offset,&(mensaje->tipoMensaje),sizeof(uint32_t));
+		offset+=sizeof(uint32_t);
+
+		memcpy(stream+offset,&(mensaje->idProceso),sizeof(uint32_t));
+		offset+=sizeof(uint32_t);
+
+		memcpy(stream+offset,&(mensaje->cola),sizeof(uint32_t));
+		offset+=sizeof(uint32_t);
+
+		return stream;
+}
+
 
 int inicializarEntrenadores(t_list* entrenadores, pthread_t arrayIdHilos[]){
 	uint32_t i;
