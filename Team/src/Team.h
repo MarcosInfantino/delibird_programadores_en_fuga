@@ -16,13 +16,7 @@
 #include <commons/config.h>
 #include <unistd.h>
 //void* especieAComparar;
-
-typedef enum
-{
-	RESPUESTAOK = 0,
-	RESPUESTANOTOK = 1,
-
-}respuesta_broker;
+enum respuestasBroker{INCORRECTO, CORRECTO};
 
 typedef enum {
 	NEW=1500,
@@ -110,7 +104,7 @@ void* iniciarServidorGameboy(void* arg);
 
 uint32_t buscarMismoPokemon(t_list* lst, char* pokemon);
 
-void suscribirseCola(uint32_t modulo,uint32_t tipoMensaje,uint32_t idProceso, uint32_t cola, uint32_t socket);
+int suscribirseCola(uint32_t modulo,uint32_t tipoMensaje,uint32_t idProceso, uint32_t cola, uint32_t socket);
 
 uint32_t buscarObjetivoPorEspecie(t_list* listaObjetivos, char* especie);
 

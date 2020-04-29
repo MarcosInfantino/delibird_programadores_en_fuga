@@ -172,10 +172,12 @@ void* suscribirseColasBroker(void* conf){
 
 	suscribirseCola(modulo,tipoMensaje,idProceso,colaAppeared,cliente);
 
-	suscribirseCola(modulo,tipoMensaje,idProceso,colaCaught,cliente);
-	//recv(cliente,&respuesta2,sizeof(uint32_t),0);
+
+
 	suscribirseCola(modulo,tipoMensaje,idProceso,colaLocalized,cliente);
-	//recv(cliente,&respuesta3,sizeof(uint32_t),0);
+
+	suscribirseCola(modulo,tipoMensaje,idProceso,colaCaught,cliente);
+//	recv(cliente,&respuesta1,sizeof(uint32_t),0);
 
 //	recv(cliente,&respuesta1,sizeof(uint32_t),0);
 //	recv(cliente,&respuesta2,sizeof(uint32_t),0);
@@ -189,9 +191,9 @@ void* suscribirseColasBroker(void* conf){
 //	recv(cliente,&respuesta5,sizeof(uint32_t),0);
 //	recv(cliente,&respuesta6,sizeof(uint32_t),0);
 
-//	printf("respuesta : %i\n", respuesta1);
-//	printf("respuesta : %i\n", respuesta2);
-//	printf("respuesta : %i\n", respuesta3);
+	printf("respuesta : %i\n", respuesta1);
+	printf("respuesta : %i\n", respuesta2);
+	printf("respuesta : %i\n", respuesta3);
 //	printf("respuesta : %i\n", respuesta4);
 //	printf("respuesta : %i\n", respuesta5);
 //	printf("respuesta : %i\n", respuesta6);
@@ -200,12 +202,13 @@ void* suscribirseColasBroker(void* conf){
 //	}else{
 //		printf("Mensaje recibido incorrectamente\n", respuesta);
 //	}
-
+	while(1);
 
 	return NULL;
 }
 
-void suscribirseCola(uint32_t modulo,uint32_t tipoMensaje,uint32_t idProceso, uint32_t cola, uint32_t socket){
+int suscribirseCola(uint32_t modulo,uint32_t tipoMensaje,uint32_t idProceso, uint32_t cola, uint32_t socket){
+	printf("Comienzo suscripcion\n");
 	uint32_t bytes=sizeof(uint32_t)*4;
 	mensajeSuscripcion* mensaje=malloc(sizeof(mensajeSuscripcion));
 	mensaje->modulo=modulo;
@@ -220,7 +223,18 @@ void suscribirseCola(uint32_t modulo,uint32_t tipoMensaje,uint32_t idProceso, ui
 
 	free(stream);
 
+	uint32_t respuesta;
+	printf("Espero respuesta\n");
+	recv(socket,&respuesta,sizeof(uint32_t),0);
 
+		if(respuesta==CORRECTO){
+			printf("Mensaje recibido correctamente\n");
+			return 0;
+		}else{
+			printf("Mensaje recibido incorrectamente\n");
+			printf("mensaje: %i\n", respuesta);
+			return -1;
+		}
 }
 
 void* serializarMensajeSuscripcion(mensajeSuscripcion* mensaje, uint32_t bytes){

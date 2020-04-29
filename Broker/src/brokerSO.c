@@ -21,6 +21,7 @@
 #include <string.h>
 #include "broker.h"
 
+pthread_mutex_t mutex;
 
 
 colaMensajes appearedPokemon,
@@ -127,30 +128,33 @@ void iniciarHilos(){
 
 
 void esperar_cliente(uint32_t socket_servidor){
+
 	struct sockaddr_in dir_cliente;
 
 	uint32_t tam_direccion  = sizeof(struct sockaddr_in);
-
+	printf("Espero un nuevo cliente\n");
 	uint32_t socket_cliente = accept(socket_servidor, (void*) &dir_cliente, &tam_direccion);
-
-	pthread_create(&thread,NULL,(void*)atenderCliente,&socket_cliente);
+	printf("Gestiono un nuevo cliente\n");
+	pthread_create(&thread,NULL,atenderCliente,(void*)(&socket_cliente));
 	pthread_detach(thread);
 }
 
 
-void atenderCliente(uint32_t* socket){
+void* atenderCliente(void* sock){
+	uint32_t* socket=(uint32_t*) sock;
 	uint32_t  modulo;
 	uint32_t  esSuscripcion;
 
 	if(recv(*socket, &modulo, sizeof(int), MSG_WAITALL) == -1) //si hubo un error al recibir
-		modulo = -1;
-
+		{modulo = -1; printf("error recv\n");}
+	printf("recibi un mensaje\n");
 	recv(*socket, &esSuscripcion, sizeof(int), MSG_WAITALL);
 
 	if (esSuscripcion  == SUSCRIPCION){ //se quiere suscribir a alguna cola
 		suscribirSegunCola(modulo, *socket);}
 	else{
 		manejarTipoDeMensaje(modulo, *socket);}
+	return NULL;
 }
 
 //me parece que acá va a convenir que sea por cola y no por modulo, segun la cola es el tipo de mensaje
@@ -216,8 +220,9 @@ void suscribirSegunCola( uint32_t modulo, uint32_t socket){
 }
 
 void responderMensaje(uint32_t socketCliente, uint32_t respuesta){
-
-	send(socketCliente,(void*)(&respuesta),sizeof(uint32_t),0);
+	void* stream=malloc(sizeof(uint32_t));
+	memcpy(stream, &respuesta, sizeof(uint32_t));
+	send(socketCliente,stream,sizeof(uint32_t),0);
 
 }
 
@@ -226,9 +231,10 @@ void suscribir(uint32_t modulo, colaMensajes structCola, uint32_t socketCliente,
 	if(validarSuscripcionSegunModulo(modulo, colaEnum) && !validarPertenencia(structCola, socketCliente)){ //si se puede suscribir y aun no esta en la cola
 		list_add(structCola.suscriptores , (void*) (&socketCliente));
 		responderMensaje(socketCliente, CORRECTO);
-
+		printf("respondi mensaje correcto\n");
 	}else{
 		responderMensaje(socketCliente, INCORRECTO);
+		printf("respondi mensaje incorrecto\n");
 	}
 
 }

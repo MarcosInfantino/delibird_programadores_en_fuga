@@ -17,12 +17,8 @@
 uint32_t puertoBroker;
 char* ipBroker;
 
-typedef enum
-{
-	RESPUESTAOK = 0,
-	RESPUESTANOTOK = 1,
 
-}respuesta_broker;
+typedef enum {INCORRECTO, CORRECTO}respuesta_broker;
 
 typedef struct
 {
@@ -44,7 +40,7 @@ typedef struct{
 
 enum modulosTP {BROKER, TEAM, GAMECARD, GAMEBOY};
 enum colas {APPEARED_POKEMON, NEW_POKEMON, CAUGHT_POKEMON, CATCH_POKEMON, GET_POKEMON, LOCALIZED_POKEMON};
-enum respuestasBroker{INCORRECTO, CORRECTO};
+
 enum tipoMensaje{NORMAL, SUSCRIPCION};
 
 
@@ -56,7 +52,7 @@ void* iniciarCola(void*);
 
 
 void esperar_cliente(uint32_t);
-void atenderCliente(uint32_t *socket);
+void* atenderCliente(void* sock);
 void manejarTipoDeMensaje(uint32_t modulo, uint32_t cliente_fd);
 void suscribirSegunCola(uint32_t modulo, uint32_t socket);
 void suscribir(uint32_t modulo, colaMensajes structCola, uint32_t socketCliente, uint32_t colaEnum);
