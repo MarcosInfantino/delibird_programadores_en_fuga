@@ -22,6 +22,7 @@
 #include "broker.h"
 
 
+
 colaMensajes appearedPokemon,
 			 newPokemon,
 			 caughtPokemon,
@@ -29,7 +30,7 @@ colaMensajes appearedPokemon,
 			 getPokemon,
 			 localizedPokemon;
 
-int idHiloAppearedPokemon, idHiloNewPokemon, idHiloCaughtPokemon,
+uint32_t idHiloAppearedPokemon, idHiloNewPokemon, idHiloCaughtPokemon,
 	idHiloCatchPokemon, idHiloGetPokemon, idHiloLocalizedPokemon;
 
 pthread_t hiloAppearedPokemon, hiloNewPokemon, hiloCaughtPokemon,
@@ -37,13 +38,20 @@ pthread_t hiloAppearedPokemon, hiloNewPokemon, hiloCaughtPokemon,
 
 
 int main(void) {
-
+//	printf("hola");
+//	char* pathConfig="/home/utnso/Escritorio/repoSO/tp-2020-1c-Programadores-en-Fuga/Broker/src/broker.config";
+//	t_config* config=config_create(pathConfig);
+//	printf("hola");
+//	puertoBroker=config_get_int_value(config, "PUERTO_BROKER​");
+//	printf("hola");
+//	ipBroker=config_get_string_value(config, "IP_BROKER");
+//	printf("hola");
 	iniciarHilos();
 
 	struct sockaddr_in direccionServidor;
 		direccionServidor.sin_family      = AF_INET;
 		direccionServidor.sin_addr.s_addr = INADDR_ANY;
-		direccionServidor.sin_port        = htons(8987);
+		direccionServidor.sin_port        = htons(5002);
 
 
 		int servidor=socket(AF_INET,SOCK_STREAM,0);
@@ -209,15 +217,16 @@ void suscribirSegunCola( uint32_t modulo, uint32_t socket){
 
 void responderMensaje(uint32_t socketCliente, uint32_t respuesta){
 
-	send(socketCliente,(void*)respuesta,sizeof(int),0);
+	send(socketCliente,(void*)(&respuesta),sizeof(uint32_t),0);
 
 }
 
 void suscribir(uint32_t modulo, colaMensajes structCola, uint32_t socketCliente, uint32_t colaEnum){
 
 	if(validarSuscripcionSegunModulo(modulo, colaEnum) && !validarPertenencia(structCola, socketCliente)){ //si se puede suscribir y aun no esta en la cola
-		list_add(structCola.suscriptores , (void*) socketCliente);
+		list_add(structCola.suscriptores , (void*) (&socketCliente));
 		responderMensaje(socketCliente, CORRECTO);
+
 	}else{
 		responderMensaje(socketCliente, INCORRECTO);
 	}
@@ -229,11 +238,11 @@ bool validarSuscripcionSegunModulo(uint32_t modulo, uint32_t cola){
 	switch(modulo){
 	case TEAM:
 		if(cola == APPEARED_POKEMON || cola == CAUGHT_POKEMON || cola == LOCALIZED_POKEMON)
-		return true;
+			{printf("Soy team\n"); return true;}
 		break;
 	case GAMECARD:
 		if(cola == NEW_POKEMON || cola == GET_POKEMON || cola == CATCH_POKEMON)
-		return true;
+			return true;
 		break;
 	case GAMEBOY: //acepta cualquier cola
 		return true;
@@ -249,9 +258,10 @@ bool validarPertenencia(colaMensajes cola, uint32_t socket){
 	void* socketLista;
 	for(i = 0; i< list_size(cola.suscriptores); i++){
 		socketLista = list_get(cola.suscriptores, i);
-		if(socketLista == (void*) socket)
-			return true;
+		if(*((uint32_t*)socketLista) == socket)
+			{printf("Me aprobo validar pertenencia\n");return true;}
 	}
+	printf("Me rechazo validar pertenencia\n");
 	return false;
 
 }

@@ -159,21 +159,47 @@ void* suscribirseColasBroker(void* conf){
 	uint32_t tipoMensaje=MENSAJE_SUSCRIPCION;
 	uint32_t idProceso=getpid();
 
-	cola colaAppeared=APPEARED_POKEMON;
-	cola colaNew=NEW_POKEMON;
-	cola colaCaught=CAUGHT_POKEMON;
-	cola colaCatch=CATCH_POKEMON;
-	cola colaGet=GET_POKEMON;
-	cola colaLocalized=LOCALIZED_POKEMON;
+	uint32_t colaAppeared=APPEARED_POKEMON;
+	uint32_t colaNew=NEW_POKEMON;
+	uint32_t colaCaught=CAUGHT_POKEMON;
+	uint32_t colaCatch=CATCH_POKEMON;
+	uint32_t colaGet=GET_POKEMON;
+	uint32_t colaLocalized=LOCALIZED_POKEMON;
+
+	uint32_t respuesta1;
+	uint32_t respuesta2;
+	uint32_t respuesta3;
 
 	suscribirseCola(modulo,tipoMensaje,idProceso,colaAppeared,cliente);
-	suscribirseCola(modulo,tipoMensaje,idProceso,colaNew,cliente);
+
 	suscribirseCola(modulo,tipoMensaje,idProceso,colaCaught,cliente);
-	suscribirseCola(modulo,tipoMensaje,idProceso,colaCatch,cliente);
-	suscribirseCola(modulo,tipoMensaje,idProceso,colaGet,cliente);
+	//recv(cliente,&respuesta2,sizeof(uint32_t),0);
 	suscribirseCola(modulo,tipoMensaje,idProceso,colaLocalized,cliente);
+	//recv(cliente,&respuesta3,sizeof(uint32_t),0);
 
+//	recv(cliente,&respuesta1,sizeof(uint32_t),0);
+//	recv(cliente,&respuesta2,sizeof(uint32_t),0);
+//	recv(cliente,&respuesta3,sizeof(uint32_t),0);
+//	uint32_t respuesta3;
+//	uint32_t respuesta4;
+//	uint32_t respuesta5;
+//	uint32_t respuesta6;
+//	recv(cliente,&respuesta3,sizeof(uint32_t),0);
+//	recv(cliente,&respuesta4,sizeof(uint32_t),0);
+//	recv(cliente,&respuesta5,sizeof(uint32_t),0);
+//	recv(cliente,&respuesta6,sizeof(uint32_t),0);
 
+//	printf("respuesta : %i\n", respuesta1);
+//	printf("respuesta : %i\n", respuesta2);
+//	printf("respuesta : %i\n", respuesta3);
+//	printf("respuesta : %i\n", respuesta4);
+//	printf("respuesta : %i\n", respuesta5);
+//	printf("respuesta : %i\n", respuesta6);
+////	if(respuesta==RESPUESTAOK){
+//		printf("Mensaje recibido correctamente\n");
+//	}else{
+//		printf("Mensaje recibido incorrectamente\n", respuesta);
+//	}
 
 
 	return NULL;

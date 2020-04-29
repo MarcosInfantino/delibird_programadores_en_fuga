@@ -12,6 +12,10 @@
 #include<string.h>
 #include<pthread.h>
 #include <stdbool.h>
+#include <commons/config.h>
+
+uint32_t puertoBroker;
+char* ipBroker;
 
 typedef enum
 {

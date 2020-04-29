@@ -17,6 +17,13 @@
 #include <unistd.h>
 //void* especieAComparar;
 
+typedef enum
+{
+	RESPUESTAOK = 0,
+	RESPUESTANOTOK = 1,
+
+}respuesta_broker;
+
 typedef enum {
 	NEW=1500,
 	READY=1501,
