@@ -189,12 +189,12 @@ void manejarTipoDeMensaje(uint32_t modulo, uint32_t cliente_fd) {
 }
 
 void suscribirSegunCola( uint32_t modulo, uint32_t socket){
-	uint32_t  id_proceso;
+	//uint32_t  id_proceso;
 	uint32_t  cola;
 
-	recv(socket, &id_proceso, sizeof(int), MSG_WAITALL);
+	//recv(socket, &id_proceso, sizeof(int), MSG_WAITALL);
 	recv(socket, &cola, sizeof(int), MSG_WAITALL);
-
+	printf("Hice el recv de la cola\n");
 	switch(cola){
 	case APPEARED_POKEMON:
 		suscribir(modulo, appearedPokemon, socket, cola);
@@ -222,7 +222,7 @@ void suscribirSegunCola( uint32_t modulo, uint32_t socket){
 void responderMensaje(uint32_t socketCliente, uint32_t respuesta){
 	void* stream=malloc(sizeof(uint32_t));
 	memcpy(stream, &respuesta, sizeof(uint32_t));
-	send(socketCliente,stream,sizeof(uint32_t),0);
+	send(socketCliente,(void*)(&respuesta),sizeof(uint32_t),0);
 
 }
 

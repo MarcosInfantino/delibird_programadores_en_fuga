@@ -45,6 +45,7 @@ enum tipoMensaje{NORMAL, SUSCRIPCION};
 
 
 pthread_t thread;
+
 uint32_t contadorMensajes = 0;
 
 void iniciarHilos();

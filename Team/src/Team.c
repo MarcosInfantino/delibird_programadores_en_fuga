@@ -157,26 +157,23 @@ void* suscribirseColasBroker(void* conf){
 	}
 	uint32_t modulo= TEAM;
 	uint32_t tipoMensaje=MENSAJE_SUSCRIPCION;
-	uint32_t idProceso=getpid();
+
 
 	uint32_t colaAppeared=APPEARED_POKEMON;
-	uint32_t colaNew=NEW_POKEMON;
+
 	uint32_t colaCaught=CAUGHT_POKEMON;
-	uint32_t colaCatch=CATCH_POKEMON;
-	uint32_t colaGet=GET_POKEMON;
+
 	uint32_t colaLocalized=LOCALIZED_POKEMON;
 
 	uint32_t respuesta1;
 	uint32_t respuesta2;
 	uint32_t respuesta3;
 
-	suscribirseCola(modulo,tipoMensaje,idProceso,colaAppeared,cliente);
-
-
-
-	suscribirseCola(modulo,tipoMensaje,idProceso,colaLocalized,cliente);
-
-	suscribirseCola(modulo,tipoMensaje,idProceso,colaCaught,cliente);
+	suscribirseCola(modulo,tipoMensaje, colaAppeared,cliente);
+	sleep(5);
+	suscribirseCola(modulo,tipoMensaje,colaLocalized,cliente);
+	sleep(5);
+	suscribirseCola(modulo,tipoMensaje,colaCaught,cliente);
 //	recv(cliente,&respuesta1,sizeof(uint32_t),0);
 
 //	recv(cliente,&respuesta1,sizeof(uint32_t),0);
@@ -191,9 +188,9 @@ void* suscribirseColasBroker(void* conf){
 //	recv(cliente,&respuesta5,sizeof(uint32_t),0);
 //	recv(cliente,&respuesta6,sizeof(uint32_t),0);
 
-	printf("respuesta : %i\n", respuesta1);
-	printf("respuesta : %i\n", respuesta2);
-	printf("respuesta : %i\n", respuesta3);
+//	printf("respuesta : %i\n", respuesta1);
+//	printf("respuesta : %i\n", respuesta2);
+//	printf("respuesta : %i\n", respuesta3);
 //	printf("respuesta : %i\n", respuesta4);
 //	printf("respuesta : %i\n", respuesta5);
 //	printf("respuesta : %i\n", respuesta6);
@@ -207,15 +204,13 @@ void* suscribirseColasBroker(void* conf){
 	return NULL;
 }
 
-int suscribirseCola(uint32_t modulo,uint32_t tipoMensaje,uint32_t idProceso, uint32_t cola, uint32_t socket){
+int suscribirseCola(uint32_t modulo,uint32_t tipoMensaje, uint32_t cola,uint32_t socket){
 	printf("Comienzo suscripcion\n");
-	uint32_t bytes=sizeof(uint32_t)*4;
+	uint32_t bytes=sizeof(uint32_t)*3;
 	mensajeSuscripcion* mensaje=malloc(sizeof(mensajeSuscripcion));
 	mensaje->modulo=modulo;
 	mensaje->tipoMensaje=tipoMensaje;
-	mensaje->idProceso=idProceso;
 	mensaje->cola=cola;
-	mensaje->socket=socket;
 	void* stream=serializarMensajeSuscripcion(mensaje,bytes);
 
 
@@ -223,7 +218,7 @@ int suscribirseCola(uint32_t modulo,uint32_t tipoMensaje,uint32_t idProceso, uin
 
 	free(stream);
 
-	uint32_t respuesta;
+	uint32_t respuesta=-1;
 	printf("Espero respuesta\n");
 	recv(socket,&respuesta,sizeof(uint32_t),0);
 
@@ -247,9 +242,6 @@ void* serializarMensajeSuscripcion(mensajeSuscripcion* mensaje, uint32_t bytes){
 		offset+=sizeof(uint32_t);
 
 		memcpy(stream+offset,&(mensaje->tipoMensaje),sizeof(uint32_t));
-		offset+=sizeof(uint32_t);
-
-		memcpy(stream+offset,&(mensaje->idProceso),sizeof(uint32_t));
 		offset+=sizeof(uint32_t);
 
 		memcpy(stream+offset,&(mensaje->cola),sizeof(uint32_t));
