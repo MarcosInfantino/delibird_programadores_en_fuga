@@ -60,7 +60,7 @@ int main(void) {
 	}
 
 	printf("Estoy escuchando\n");
-	listen(servidor, 100);
+	//listen(servidor, 100);
 
 //		struct sockaddr_in direccionCliente;
 //		unsigned int tamanioDireccion=sizeof(direccionCliente);
@@ -123,13 +123,14 @@ void iniciarHilos() {
 	pthread_join(hiloLocalizedPokemon, NULL);
 }
 
-void esperar_cliente(uint32_t socket_servidor) {
+void esperar_cliente(uint32_t servidor) {
 
+	listen(servidor, 100);
 	struct sockaddr_in dir_cliente;
 
 	uint32_t tam_direccion = sizeof(struct sockaddr_in);
 	printf("Espero un nuevo cliente\n");
-	uint32_t socket_cliente = accept(socket_servidor, (void*) &dir_cliente,
+	uint32_t socket_cliente = accept(servidor, (void*) &dir_cliente,
 			&tam_direccion);
 	printf("Gestiono un nuevo cliente\n");
 	pthread_create(&thread, NULL, atenderCliente, (void*) (&socket_cliente));

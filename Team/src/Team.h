@@ -25,6 +25,14 @@ typedef enum {
 	EXEC=1503,
 	EXIT=1504
 }estado;
+
+typedef struct{
+	uint32_t modulo;
+	uint32_t tipoMensaje;
+	uint32_t cola;
+
+}structSuscripcion;
+
 typedef struct{
 	uint32_t cantidad;
 	char* pokemon;
@@ -78,6 +86,15 @@ typedef struct{
 	uint32_t cola;
 }mensajeSuscripcion;
 
+typedef struct{
+	uint32_t modulo;
+	uint32_t tipoMensaje;
+	uint32_t id;
+	uint32_t idCorrelativo;
+	uint32_t sizeStream;
+	void* stream;
+}paqueteMensaje;
+
 dataTeam* inicializarTeam(t_config* config);
 
 t_list* obtenerListaDeListas(char** lst);
@@ -102,9 +119,10 @@ void* iniciarServidorGameboy(void* arg);
 
 uint32_t buscarMismoPokemon(t_list* lst, char* pokemon);
 
-int suscribirseCola(uint32_t modulo,uint32_t tipoMensaje, uint32_t cola,uint32_t socket);
+void* suscribirseCola(void* estructuraSuscripcion);
 
 uint32_t buscarObjetivoPorEspecie(t_list* listaObjetivos, char* especie);
 
 void* serializarMensajeSuscripcion(mensajeSuscripcion* mensaje, uint32_t bytes);
+mensajeSuscripcion* inicializarMensajeSuscripcion(uint32_t modulo,uint32_t mensaje,uint32_t cola);
 #endif /* TEAM_H_ */

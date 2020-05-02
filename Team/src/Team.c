@@ -31,6 +31,7 @@ int socketGamecard;
 uint32_t puertoBroker;
 char* ipBroker;
 
+uint32_t tiempoReconexion;
 //
 //int main(void) {
 ////	char* str="[Pikachu|Squirtle|Pidgey, Squirtle|Charmander, Bulbasaur]";
@@ -143,18 +144,8 @@ int crearHiloConexionColasBroker(void* config, pthread_t* hilo){
 void* suscribirseColasBroker(void* conf){
 
 	t_config* config=(t_config*) conf;
-	uint32_t tiempoReconexion =config_get_int_value(config, "TIEMPO_RECONEXION");
-	struct sockaddr_in direccionServidor;
-	direccionServidor.sin_family=AF_INET;
-	direccionServidor.sin_addr.s_addr=inet_addr(ipBroker);
-	direccionServidor.sin_port=htons(puertoBroker);
+	tiempoReconexion =config_get_int_value(config, "TIEMPO_RECONEXION");
 
-	uint32_t cliente=socket(AF_INET,SOCK_STREAM,0);
-
-	while(connect(cliente,(void*) &direccionServidor,sizeof(direccionServidor))!=0){
-		printf("Conexión fallida con el Broker reintentando en %i segundos...\n",tiempoReconexion);
-		sleep(tiempoReconexion);
-	}
 	uint32_t modulo= TEAM;
 	uint32_t tipoMensaje=MENSAJE_SUSCRIPCION;
 
@@ -165,15 +156,24 @@ void* suscribirseColasBroker(void* conf){
 
 	uint32_t colaLocalized=LOCALIZED_POKEMON;
 
-	uint32_t respuesta1;
-	uint32_t respuesta2;
-	uint32_t respuesta3;
 
-	suscribirseCola(modulo,tipoMensaje, colaAppeared,cliente);
-	sleep(5);
-	suscribirseCola(modulo,tipoMensaje,colaLocalized,cliente);
-	sleep(5);
-	suscribirseCola(modulo,tipoMensaje,colaCaught,cliente);
+	mensajeSuscripcion* suscripcionAppeared=inicializarMensajeSuscripcion(modulo,tipoMensaje,colaAppeared);
+
+	mensajeSuscripcion* suscripcionLocalized=inicializarMensajeSuscripcion(modulo,tipoMensaje,colaLocalized);;
+
+	mensajeSuscripcion* suscripcionCaught=inicializarMensajeSuscripcion(modulo,tipoMensaje,colaCaught);;
+
+	pthread_t threadSuscripcionAppeared;
+	pthread_create(&threadSuscripcionAppeared, NULL, suscribirseCola, (void*) (suscripcionAppeared));
+	pthread_detach(threadSuscripcionAppeared);
+
+	pthread_t threadSuscripcionLocalized;
+	pthread_create(&threadSuscripcionLocalized, NULL, suscribirseCola, (void*) (suscripcionLocalized));
+	pthread_detach(threadSuscripcionLocalized);
+
+	pthread_t threadSuscripcionCaught;
+	pthread_create(&threadSuscripcionCaught, NULL, suscribirseCola, (void*) (suscripcionCaught));
+	pthread_detach(threadSuscripcionCaught);
 //	recv(cliente,&respuesta1,sizeof(uint32_t),0);
 
 //	recv(cliente,&respuesta1,sizeof(uint32_t),0);
@@ -201,35 +201,60 @@ void* suscribirseColasBroker(void* conf){
 //	}
 	while(1);
 
+	free(suscripcionAppeared);
+	free(suscripcionLocalized);
+	free(suscripcionCaught);
+	free(conf);
 	return NULL;
 }
 
-int suscribirseCola(uint32_t modulo,uint32_t tipoMensaje, uint32_t cola,uint32_t socket){
+mensajeSuscripcion* inicializarMensajeSuscripcion(uint32_t modulo,uint32_t mensaje,uint32_t cola){
+	mensajeSuscripcion* suscripcion=malloc(sizeof(structSuscripcion));
+	suscripcion->modulo=modulo;
+	suscripcion->tipoMensaje=mensaje;
+	suscripcion->cola=cola;
+	return suscripcion;
+}
+void* suscribirseCola(void* msgSuscripcion){
+	mensajeSuscripcion* msg=(mensajeSuscripcion*)msgSuscripcion;
+
+	struct sockaddr_in direccionServidor;
+		direccionServidor.sin_family=AF_INET;
+		direccionServidor.sin_addr.s_addr=inet_addr(ipBroker);
+		direccionServidor.sin_port=htons(puertoBroker);
+
+		uint32_t cliente=socket(AF_INET,SOCK_STREAM,0);
+
+		while(connect(cliente,(void*) &direccionServidor,sizeof(direccionServidor))!=0){
+			printf("Conexión fallida con el Broker reintentando en %i segundos...\n",tiempoReconexion);
+			sleep(tiempoReconexion);
+		}
+
+
+
 	printf("Comienzo suscripcion\n");
 	uint32_t bytes=sizeof(uint32_t)*3;
-	mensajeSuscripcion* mensaje=malloc(sizeof(mensajeSuscripcion));
-	mensaje->modulo=modulo;
-	mensaje->tipoMensaje=tipoMensaje;
-	mensaje->cola=cola;
-	void* stream=serializarMensajeSuscripcion(mensaje,bytes);
+
+	void* stream=serializarMensajeSuscripcion(msg,bytes);
 
 
-	send(socket,stream,bytes,0);
+	send(cliente,stream,bytes,0);
 
 	free(stream);
 
 	uint32_t respuesta=-1;
 	printf("Espero respuesta\n");
-	recv(socket,&respuesta,sizeof(uint32_t),0);
+	recv(cliente,&respuesta,sizeof(uint32_t),0);
 
 		if(respuesta==CORRECTO){
 			printf("Mensaje recibido correctamente\n");
-			return 0;
+
 		}else{
 			printf("Mensaje recibido incorrectamente\n");
 			printf("mensaje: %i\n", respuesta);
-			return -1;
+
 		}
+		return NULL;
 }
 
 void* serializarMensajeSuscripcion(mensajeSuscripcion* mensaje, uint32_t bytes){
@@ -245,7 +270,7 @@ void* serializarMensajeSuscripcion(mensajeSuscripcion* mensaje, uint32_t bytes){
 		offset+=sizeof(uint32_t);
 
 		memcpy(stream+offset,&(mensaje->cola),sizeof(uint32_t));
-		offset+=sizeof(uint32_t);
+
 
 		return stream;
 }
