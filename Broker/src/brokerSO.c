@@ -196,7 +196,7 @@ void suscribirSegunCola(uint32_t modulo, uint32_t socket) {
 	printf("Hice el recv de la cola\n");
 
 	//Relleno parametros
-	parametroValidacion parameter = malloc(sizeOf(parametroValidacion));
+	parametroValidacion parameter;
 	parameter.modulo = modulo;
 	parameter.socketCliente = socket;
 	parameter.colaEnum = cola;
@@ -239,19 +239,19 @@ void responderMensaje(uint32_t socketCliente, uint32_t respuesta) {
 //TODO chequear que esten bien tema punteros con parameter (Creo que si)
 void suscribir(parametroValidacion* parameter) {
 	if (validarParaSuscripcion(parameter)) { //si se puede suscribir y aun no esta en la cola
-		list_add((parameter->structCola).suscriptores, (void*) (&parameter->socketCliente));
-		responderMensaje(socketCliente, CORRECTO);
+		list_add((parameter->structCola).suscriptores, (void*) &(parameter->socketCliente));
+		responderMensaje(parameter->socketCliente, CORRECTO);
 		printf("respondi mensaje correcto\n");
 	} else {
-		responderMensaje(socketCliente, INCORRECTO);
+		responderMensaje(parameter->socketCliente, INCORRECTO);
 		printf("respondi mensaje incorrecto\n");
 	}
 
 }
 
 bool validarParaSuscripcion(parametroValidacion* parameter){
-	return validarSuscripcionSegunModulo(parameter->modulo, parameter->colaEnum) &&
-			!validarPertenencia(parameter->structCola, parameter->socketCliente)
+	return (validarSuscripcionSegunModulo(parameter->modulo, parameter->colaEnum) &&
+			!validarPertenencia(parameter->structCola, parameter->socketCliente));
 }
 
 bool validarSuscripcionSegunModulo(uint32_t modulo, uint32_t cola) {

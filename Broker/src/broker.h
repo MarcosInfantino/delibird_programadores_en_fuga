@@ -31,17 +31,19 @@ typedef struct {
 	t_buffer* buffer;
 } t_paquete;
 
+
+
+typedef struct {
+	t_queue* cola;
+	t_list* suscriptores;
+} colaMensajes;
+
 typedef struct {
 	uint32_t modulo;
 	colaMensajes structCola;
 	uint32_t socketCliente;
 	uint32_t colaEnum;
 } parametroValidacion;
-
-typedef struct {
-	t_queue* cola;
-	t_list* suscriptores;
-} colaMensajes;
 
 enum modulosTP {
 	BROKER, TEAM, GAMECARD, GAMEBOY
