@@ -107,7 +107,7 @@ t_list* obtenerObjetivos(t_list* especies);
 
 void* ejecucionHiloEntrenador(void* arg);
 
-int inicializarEntrenadores(t_list* entrenadores, pthread_t arrayIdHilos[]);
+int inicializarEntrenadores(t_list* entrenadores);
 
 int crearHiloConexionColasBroker(void* config, pthread_t* hilo);
 
@@ -124,5 +124,13 @@ void* suscribirseCola(void* estructuraSuscripcion);
 uint32_t buscarObjetivoPorEspecie(t_list* listaObjetivos, char* especie);
 
 void* serializarMensajeSuscripcion(mensajeSuscripcion* mensaje, uint32_t bytes);
+
+uint32_t distanciaEntrePosiciones(posicion pos1, posicion pos2);
+
 mensajeSuscripcion* inicializarMensajeSuscripcion(uint32_t modulo,uint32_t mensaje,uint32_t cola);
+
+uint32_t distanciaEntrenadorPosicion(dataEntrenador* entrenador, posicion posicion);
+
+uint32_t obtenerIdEntrenadorMasCercano(dataTeam* team, posicion pos);
+
 #endif /* TEAM_H_ */

@@ -30,7 +30,7 @@ int socketGameboy;
 int socketGamecard;
 uint32_t puertoBroker;
 char* ipBroker;
-
+pthread_t* arrayIdHilosEntrenadores;
 uint32_t tiempoReconexion;
 //
 //int main(void) {
@@ -72,8 +72,8 @@ int main(int argc , char* argv[]){
 	ipBroker=config_get_string_value(config,"IP_BROKER");
 	dataTeam* t=inicializarTeam(config);
 	uint32_t cantEntrenadores=list_size(t->entrenadores);
-	pthread_t arrayIdHilos[cantEntrenadores];
-	inicializarEntrenadores(t->entrenadores,arrayIdHilos);
+	arrayIdHilosEntrenadores=malloc(cantEntrenadores*sizeof(pthread_t));
+	inicializarEntrenadores(t->entrenadores);
 	pthread_t hiloConexionInicialBroker;
 	crearHiloConexionColasBroker((void*)config,&hiloConexionInicialBroker);
 	pthread_t hiloServidorGameboy;
@@ -81,6 +81,9 @@ int main(int argc , char* argv[]){
 
 	printf("hola\n");
 
+	posicion pos={6,6};
+
+	printf("id entrenador mas cercano: %i\n", obtenerIdEntrenadorMasCercano(t,pos));
 
 	while(1);
 
@@ -90,6 +93,33 @@ int main(int argc , char* argv[]){
 
 	return 0;
 }
+
+uint32_t distanciaEntrePosiciones(posicion pos1, posicion pos2){
+
+	return abs((pos1.x)-(pos2.x))+abs((pos1.y)-(pos2.y));
+}
+
+uint32_t distanciaEntrenadorPosicion(dataEntrenador* entrenador, posicion posicion){
+
+	return distanciaEntrePosiciones(entrenador->posicion,posicion);
+}
+
+uint32_t obtenerIdEntrenadorMasCercano(dataTeam* team, posicion pos){ //el id es el index del entrenador enla lista de entrenadores
+	t_list* listaEntrenadores=team->entrenadores;
+	uint32_t idEntrenadorMasCercano=0;
+	uint32_t i;
+	for(i=0;i<list_size(listaEntrenadores);i++){
+		dataEntrenador* entrenadorActual=(dataEntrenador*) list_get(team->entrenadores,i);
+		dataEntrenador* entrenadorMasCercano=(dataEntrenador*) list_get(team->entrenadores,idEntrenadorMasCercano);
+			if(distanciaEntrenadorPosicion(entrenadorActual,pos)<distanciaEntrenadorPosicion(entrenadorMasCercano,pos)){
+				idEntrenadorMasCercano=i;
+			}
+
+
+	}
+	return idEntrenadorMasCercano;
+}
+
 
 int crearHiloServidorGameboy(pthread_t* hilo){
 	uint32_t err=pthread_create(hilo,NULL,iniciarServidorGameboy,NULL);
@@ -276,11 +306,11 @@ void* serializarMensajeSuscripcion(mensajeSuscripcion* mensaje, uint32_t bytes){
 }
 
 
-int inicializarEntrenadores(t_list* entrenadores, pthread_t arrayIdHilos[]){
+int inicializarEntrenadores(t_list* entrenadores){
 	uint32_t i;
 	for(i=0;i<list_size(entrenadores);i++){
 		void* entrenadorActual=list_get(entrenadores,i);
-		uint32_t err=pthread_create(&(arrayIdHilos[i]),NULL,ejecucionHiloEntrenador,entrenadorActual);
+		uint32_t err=pthread_create(&(arrayIdHilosEntrenadores[i]),NULL,ejecucionHiloEntrenador,entrenadorActual);
 		if(err!=0){
 			printf("Hubo un problema en la creación del hilo del entrenador \n");
 			return err;
@@ -288,7 +318,7 @@ int inicializarEntrenadores(t_list* entrenadores, pthread_t arrayIdHilos[]){
 //		}else{
 //			printf("Todo bien\n");
 //		}
-		pthread_join(arrayIdHilos[i],NULL);
+		pthread_detach(arrayIdHilosEntrenadores[i]);
 	}
 	return 0;
 }
