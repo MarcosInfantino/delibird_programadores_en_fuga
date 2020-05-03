@@ -131,6 +131,16 @@ mensajeSuscripcion* inicializarMensajeSuscripcion(uint32_t modulo,uint32_t mensa
 
 uint32_t distanciaEntrenadorPosicion(dataEntrenador* entrenador, posicion posicion);
 
-uint32_t obtenerIdEntrenadorMasCercano(dataTeam* team, posicion pos);
+uint32_t obtenerIdEntrenadorMasCercano(posicion pos);
+
+uint32_t idEntrenadorEnLista(dataEntrenador* entrenadorMasCercano);
+
+t_list* inicializarMutexEntrenadores();
+
+void moverEntrenador(dataEntrenador* entrenador, uint32_t movimientoX, uint32_t movimientoY);
+
+void moverEntrenadorY(dataEntrenador* entrenador, uint32_t movimientoY);
+
+void moverEntrenadorX(dataEntrenador* entrenador, uint32_t movimientoX);
 
 #endif /* TEAM_H_ */

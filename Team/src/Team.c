@@ -25,6 +25,9 @@
 //t_list* idsHilos=list_create();//son ints
 //t_list* hilos=list_create();//son pthread_t
 
+t_list* entrenadoresLibres;
+t_list* mutexEntrenadores;
+t_list* entrenadores;
 
 int socketGameboy;
 int socketGamecard;
@@ -32,6 +35,7 @@ uint32_t puertoBroker;
 char* ipBroker;
 pthread_t* arrayIdHilosEntrenadores;
 uint32_t tiempoReconexion;
+uint32_t retardoCicloCpu;
 //
 //int main(void) {
 ////	char* str="[Pikachu|Squirtle|Pidgey, Squirtle|Charmander, Bulbasaur]";
@@ -66,14 +70,20 @@ uint32_t tiempoReconexion;
 //
 int main(int argc , char* argv[]){
 	//char pathConfig= argv;
+	entrenadoresLibres=list_create();
+	mutexEntrenadores=list_create();
 	char* pathConfig="Team2.config";
 	t_config* config=config_create(pathConfig);
+	retardoCicloCpu=config_get_int_value(config,"RETARDO_CICLO_CPU");
 	puertoBroker=config_get_int_value(config,"PUERTO_BROKER");
 	ipBroker=config_get_string_value(config,"IP_BROKER");
-	dataTeam* t=inicializarTeam(config);
-	uint32_t cantEntrenadores=list_size(t->entrenadores);
+	dataTeam* team =inicializarTeam(config);
+	entrenadores= team->entrenadores;
+	entrenadoresLibres=entrenadores;
+	uint32_t cantEntrenadores=list_size(team->entrenadores);
+	mutexEntrenadores=inicializarMutexEntrenadores();
 	arrayIdHilosEntrenadores=malloc(cantEntrenadores*sizeof(pthread_t));
-	inicializarEntrenadores(t->entrenadores);
+	inicializarEntrenadores(team->entrenadores);
 	pthread_t hiloConexionInicialBroker;
 	crearHiloConexionColasBroker((void*)config,&hiloConexionInicialBroker);
 	pthread_t hiloServidorGameboy;
@@ -83,7 +93,7 @@ int main(int argc , char* argv[]){
 
 	posicion pos={6,6};
 
-	printf("id entrenador mas cercano: %i\n", obtenerIdEntrenadorMasCercano(t,pos));
+	printf("id entrenador mas cercano: %i\n", obtenerIdEntrenadorMasCercano(pos));
 
 	while(1);
 
@@ -94,6 +104,15 @@ int main(int argc , char* argv[]){
 	return 0;
 }
 
+t_list* inicializarMutexEntrenadores(){
+	t_list* listaMutex=list_create();
+	for(uint32_t i=0;i<list_size(listaMutex);i++){
+		pthread_mutex_t mutex= PTHREAD_MUTEX_INITIALIZER;
+		list_add(listaMutex,(void*)(&mutex));
+	}
+	return listaMutex;
+
+}
 uint32_t distanciaEntrePosiciones(posicion pos1, posicion pos2){
 
 	return abs((pos1.x)-(pos2.x))+abs((pos1.y)-(pos2.y));
@@ -104,22 +123,50 @@ uint32_t distanciaEntrenadorPosicion(dataEntrenador* entrenador, posicion posici
 	return distanciaEntrePosiciones(entrenador->posicion,posicion);
 }
 
-uint32_t obtenerIdEntrenadorMasCercano(dataTeam* team, posicion pos){ //el id es el index del entrenador enla lista de entrenadores
-	t_list* listaEntrenadores=team->entrenadores;
-	uint32_t idEntrenadorMasCercano=0;
-	uint32_t i;
-	for(i=0;i<list_size(listaEntrenadores);i++){
-		dataEntrenador* entrenadorActual=(dataEntrenador*) list_get(team->entrenadores,i);
-		dataEntrenador* entrenadorMasCercano=(dataEntrenador*) list_get(team->entrenadores,idEntrenadorMasCercano);
-			if(distanciaEntrenadorPosicion(entrenadorActual,pos)<distanciaEntrenadorPosicion(entrenadorMasCercano,pos)){
-				idEntrenadorMasCercano=i;
-			}
+//uint32_t obtenerIdEntrenadorMasCercano(t_list* listaEntrenadores, posicion pos){ //el id es el index del entrenador enla lista de entrenadores
+//
+//	uint32_t idEntrenadorMasCercano=0;
+//	uint32_t i;
+//	for(i=0;i<list_size(listaEntrenadores);i++){
+//		dataEntrenador* entrenadorActual=(dataEntrenador*) list_get(listaEntrenadores,i);
+//		dataEntrenador* entrenadorMasCercano=(dataEntrenador*) list_get(listaEntrenadores,idEntrenadorMasCercano);
+//			if(distanciaEntrenadorPosicion(entrenadorActual,pos)<distanciaEntrenadorPosicion(entrenadorMasCercano,pos)){
+//				idEntrenadorMasCercano=i;
+//			}
+//
+//
+//	}
+//	return idEntrenadorMasCercano;
+//}
 
 
-	}
-	return idEntrenadorMasCercano;
+uint32_t obtenerIdEntrenadorMasCercano(posicion pos){ //el id es el index del entrenador enla lista de entrenadores
+    dataEntrenador* entrenadorMasCercano;
+    uint32_t distanciaASuperar;
+    for(uint32_t i=0;i<list_size(entrenadoresLibres);i++){
+        dataEntrenador* entrenadorActual=(dataEntrenador*) list_get(entrenadoresLibres,i);
+        if (i == 0){
+            entrenadorMasCercano = entrenadorActual;
+            distanciaASuperar = distanciaEntrenadorPosicion(entrenadorActual,pos);
+        } else {
+        if(distanciaEntrenadorPosicion(entrenadorActual,pos) < distanciaASuperar){
+            entrenadorMasCercano=entrenadorActual;
+            distanciaASuperar = distanciaEntrenadorPosicion(entrenadorActual,pos);
+        }
+    }
+
 }
+    return idEntrenadorEnLista(entrenadorMasCercano);}
 
+
+uint32_t idEntrenadorEnLista(dataEntrenador* entrenadorMasCercano){
+    for(uint32_t j=0;j<list_size(entrenadores);j++){
+        if((dataEntrenador*) list_get(entrenadores,j) == entrenadorMasCercano){
+            return j;
+        }
+    }
+    return -1;
+}
 
 int crearHiloServidorGameboy(pthread_t* hilo){
 	uint32_t err=pthread_create(hilo,NULL,iniciarServidorGameboy,NULL);
@@ -325,13 +372,42 @@ int inicializarEntrenadores(t_list* entrenadores){
 
 
 void* ejecucionHiloEntrenador(void* arg){
-
-
+	dataEntrenador* infoEntrenador=(dataEntrenador*) arg;
 
 	return NULL;
 }
 
+void moverEntrenadorAPosicion(dataEntrenador* entrenador, posicion pos){
 
+	moverEntrenadorX(entrenador, pos.x);
+	moverEntrenadorY(entrenador, pos.y);
+}
+
+void moverEntrenadorX(dataEntrenador* entrenador, uint32_t movimientoX){
+	if(movimientoX!=0){
+			uint32_t unidad=movimientoX/abs(movimientoX);
+			for(uint32_t i=0;i< abs(movimientoX);i++){
+			sleep(retardoCicloCpu);
+				(entrenador->posicion).y+=unidad;
+			}
+		}
+}
+
+void moverEntrenadorY(dataEntrenador* entrenador, uint32_t movimientoY){
+	if(movimientoY!=0){
+		uint32_t unidad=movimientoY/abs(movimientoY);
+		for(uint32_t i=0;i< abs(movimientoY);i++){
+		sleep(retardoCicloCpu);
+			(entrenador->posicion).y+=unidad;
+		}
+	}
+}
+
+void moverEntrenador(dataEntrenador* entrenador, uint32_t movimientoX, uint32_t movimientoY){
+	posicion posAnterior=entrenador->posicion;
+	(entrenador->posicion).x=posAnterior.x+movimientoX;
+	(entrenador->posicion).y=posAnterior.y+movimientoY;
+}
 
 dataTeam* inicializarTeam(t_config* config){
 

@@ -29,7 +29,7 @@ all: Team
 Team: $(OBJS) $(USER_OBJS)
 	@echo 'Building target: $@'
 	@echo 'Invoking: GCC C Linker'
-	gcc  -o "Team" $(OBJS) $(USER_OBJS) $(LIBS)
+	gcc -L/home/utnso/Escritorio/repoSO/tp-2020-1c-Programadores-en-Fuga/messages_lib -o "Team" $(OBJS) $(USER_OBJS) $(LIBS)
 	@echo 'Finished building target: $@'
 	@echo ' '
 
