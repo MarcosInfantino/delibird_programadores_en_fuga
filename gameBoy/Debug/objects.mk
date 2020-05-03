@@ -4,5 +4,5 @@
 
 USER_OBJS :=
 
-LIBS := -lcommons
+LIBS := -lcommons -lmessages_lib
 
