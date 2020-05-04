@@ -107,7 +107,12 @@ typedef struct{
 	void* stream;
 }paquete;
 
+typedef struct{
+	uint32_t id;
+}mensajeRespuestaBroker;
+
 t_paquete* armarPaquete(char* cadena);
+mensajeSuscripcion* deserializarMensajeSuscripcion(void* stream, uint32_t bytes);
 
 void* serializarAppearedBroker(mensajeAppearedBroker* mensaje);
 void* serializarAppearedTeam(mensajeAppearedTeam* mensaje);
@@ -117,11 +122,21 @@ void* serializarCatchBroker(mensajeCatchBroker* mensaje);
 void* serializarCatchGamecard(mensajeCatchGamecard* mensaje);
 void* serializarCaught (mensajeCaught* mensaje);
 void* serializarGet (mensajeGet* mensaje);
-void* serializarMensajeSuscripcionTiempo(mensajeSuscripcionTiempo* mensaje);
-void* serializarMensajeSuscripcion(mensajeSuscripcion* mensaje);
+void* serializarSuscripcionTiempo(mensajeSuscripcionTiempo* mensaje);
+void* serializarSuscripcion(mensajeSuscripcion* mensaje);
 paquete* llenarPaquete(uint32_t sizeStream, void* stream, uint32_t tipoMensaje);
 void* serializarPaquete(paquete* paqueteASerializar);
 
-mensajeSuscripcion* deserializarMensajeSuscripcion(void* stream, uint32_t bytes);
+mensajeAppearedBroker* deserializarAppearedBroker(void* streamRecibido);
+mensajeAppearedTeam* deserializarAppearedTeam (void* streamRecibido);
+mensajeNewBroker* deserializarNewBroker (void* streamRecibido);
+mensajeNewGamecard* deserializarNewGamecard (void* streamRecibido);
+mensajeCatchBroker* deserializarCatchBroker (void* streamRecibido);
+mensajeCatchGamecard* deserializarCatchGamecard (void* streamRecibido);
+mensajeCaught* deserializarCaught(void* streamRecibido);
+mensajeGet* deserializarGet (void* streamRecibido);
+mensajeSuscripcionTiempo* deserializarSuscripcionTiempo(void* streamRecibido);
+mensajeSuscripcion* deserializarSuscripcion (void* streamRecibido);
+paquete* deserializarPaquete(void* paqueteRecibido);
 
 #endif /* MESSAGES_LIB_H_ */

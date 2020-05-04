@@ -23,10 +23,6 @@
 #include "messages_lib.h"
 
 //\n
-//argv[0] es ./gameboy, argv[1] es el proceso
-//./gameboy SUSCRIPTOR [COLA_DE_MENSAJES] [TIEMPO]
-
-uint32_t procesoDestinatario, colaMensaje, tipoDeMensaje, bytesArgumentos, tiempoSuscripcion, socket_cliente;
 
 int main(int argc, char* argv[]) {
 
@@ -34,19 +30,20 @@ int main(int argc, char* argv[]) {
 	void* paqueteAEnviar;
 	void* stream;
 	paquete* paquete;
-	uint32_t sizeStream,
-	colaMensaje=obtenerColaMensaje(argv[2]);
+	uint32_t sizeStream, procesoDestinatario;
+	uint32_t colaMensaje=obtenerColaMensaje(argv[2]);
 
 	if(strcmp(argv[1], "SUSCRIPTOR")==0){
+		procesoDestinatario = BROKER;
 		mensajeSuscripcionTiempo* mensajeEnviar = malloc(sizeof(uint32_t)*2);
 		mensajeEnviar->cola = colaMensaje;
 		mensajeEnviar->tiempo=atoi(argv[3]);
-		stream = serializarMensajeSuscripcionTiempo(mensajeEnviar);
+		stream = serializarSuscripcionTiempo(mensajeEnviar);
 		sizeStream=sizeof(uint32_t)*2;
 		paquete = llenarPaquete(sizeStream,stream, SUSCRIPCION_TIEMPO);
 		paqueteAEnviar = serializarPaquete(paquete);
 	}else{
-		uint32_t procesoDestinatario = obtenerNombreProceso(argv[1]);
+		procesoDestinatario = obtenerNombreProceso(argv[1]);
 		switch(colaMensaje){
 				case APPEARED_POKEMON:
 					if(procesoDestinatario == BROKER){
@@ -143,8 +140,8 @@ paquete* llenarPaquete(uint32_t sizeStream, void* stream, uint32_t tipoMensaje){
 	paquete* paqueteASerializar = malloc(sizeof(uint32_t)*5+sizeStream);
 	paqueteASerializar->modulo=GAMEBOY;
 	paqueteASerializar->tipoMensaje=tipoMensaje;
-	paqueteASerializar->id=0;
-	paqueteASerializar->idCorrelativo=0;
+	paqueteASerializar->id=-1;
+	paqueteASerializar->idCorrelativo=-1;
 	paqueteASerializar->sizeStream=sizeStream;
 	paqueteASerializar->stream=stream;
 
@@ -276,63 +273,3 @@ uint32_t sizeArgumentos (uint32_t colaMensaje, char* argv[], uint32_t proceso){
 	return size;
 }
 
-
-//
-//
-//			case TEAM:
-//				uint32_t sizePokemon = sizeof(uint32_t);
-//				memcpy(argumentos+offset, &sizePokemon,sizeof(uint32_t));
-//				offset+=sizeof(uint32_t);
-//				memcpy(argumentos+offset, argv[3], strlen(argv[3])+1);
-//				offset+=(strlen(argv[3])+1);
-//				uint32_t posX = atoi(argv[4]);
-//				memcpy(argumentos+offset, &posX, sizeof(uint32_t));
-//				offset+=sizeof(uint32_t);
-//				uint32_t posY = atoi(argv[5]);
-//				memcpy(argumentos+offset, &posY, sizeof(uint32_t));
-//				offset+=sizeof(uint32_t);
-//			}
-//
-//	return argumentos;
-//}
-//
-//void* armarMensajeNormal (void* argumentos, uint32_t proceso,uint32_t colaMensaje, uint32_t bytesArgumentos, uint32_t tipoMensaje){
-//
-//	/*mensajeNormal mensajeAEnviar = malloc(sizeof(uint32_t)*4 + bytesArgumentos); //opcion 1, pero deberia meterlo en un paquete con un codigo, en este caso tipoMensaje
-//	mensajeAEnviar->proceso = proceso;
-//	mensajeAEnviar->tipoMensaje=MENSAJE_NORMAL;
-//	mensajeAEnviar->cola=colaMensaje;
-//	mensajeAEnviar->bytes=bytesArgumentos;
-//	mensajeAEnviar->argumentos=argumentos;*/
-//
-//	void* mensajeAEnviar = malloc(sizeof(uint32_t)*4 + bytesArgumentos);
-//	uint32_t offset = 0;
-//
-//	memcpy(mensajeAEnviar+offset, &proceso,sizeof(uint32_t));
-//	offset+=sizeof(uint32_t);
-//
-//	memcpy(mensajeAEnviar + offset, &tipoMensaje, sizeof(uint32_t));
-//	offset+=sizeof(uint32_t);
-//
-//	memcpy(mensajeAEnviar+offset, &colaMensaje, sizeof(uint32_t));
-//	offset+=sizeof(uint32_t);
-//
-//	memcpy(mensajeAEnviar+offset, &bytesArgumentos, bytesArgumentos);
-//	offset+=sizeof(uint32_t);
-//
-//	memcpy(mensajeAEnviar+offset, argumentos, bytesArgumentos);
-//
-//	return mensajeAEnviar;
-//}
-//
-//
-//void enviarMensaje(void* mensajeAEnviar, uint32_t socketCliente, uint32_t bytesArgumentos){
-//
-//	switch(tipoDeMensaje){
-//	case MENSAJE_NORMAL:
-//		send(socketCliente, mensajeAEnviar, sizeof(uint32_t)*4+bytesArgumentos, 0);
-//		break;
-//	case MENSAJE_SUSCRIPCION:
-//		send(socketCliente, mensajeAEnviar, sizeof(uint32_t)*5, 0);
-//		break;
-//	}}
