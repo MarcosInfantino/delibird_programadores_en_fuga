@@ -28,7 +28,11 @@
 t_list* entrenadoresLibres;
 t_list* mutexEntrenadores;
 t_list* entrenadores;
+t_queue* colaEjecucionFifo;
 
+pokemonPosicion pokemonAAtrapar;
+
+pthread_mutex_t mutexEntrenadorEnEjecucion=PTHREAD_MUTEX_INITIALIZER;
 int socketGameboy;
 int socketGamecard;
 uint32_t puertoBroker;
@@ -36,6 +40,7 @@ char* ipBroker;
 pthread_t* arrayIdHilosEntrenadores;
 uint32_t tiempoReconexion;
 uint32_t retardoCicloCpu;
+
 //
 //int main(void) {
 ////	char* str="[Pikachu|Squirtle|Pidgey, Squirtle|Charmander, Bulbasaur]";
@@ -72,6 +77,7 @@ int main(int argc , char* argv[]){
 	//char pathConfig= argv;
 	entrenadoresLibres=list_create();
 	mutexEntrenadores=list_create();
+	colaEjecucionFifo=queue_create();
 	char* pathConfig="Team2.config";
 	t_config* config=config_create(pathConfig);
 	retardoCicloCpu=config_get_int_value(config,"RETARDO_CICLO_CPU");
@@ -79,7 +85,7 @@ int main(int argc , char* argv[]){
 	ipBroker=config_get_string_value(config,"IP_BROKER");
 	dataTeam* team =inicializarTeam(config);
 	entrenadores= team->entrenadores;
-	entrenadoresLibres=entrenadores;
+	//entrenadoresLibres=entrenadores;
 	uint32_t cantEntrenadores=list_size(team->entrenadores);
 	mutexEntrenadores=inicializarMutexEntrenadores();
 	arrayIdHilosEntrenadores=malloc(cantEntrenadores*sizeof(pthread_t));
@@ -91,7 +97,7 @@ int main(int argc , char* argv[]){
 
 	printf("hola\n");
 
-	posicion pos={6,6};
+	posicion pos={1,2};
 
 	printf("id entrenador mas cercano: %i\n", obtenerIdEntrenadorMasCercano(pos));
 
@@ -104,15 +110,7 @@ int main(int argc , char* argv[]){
 	return 0;
 }
 
-t_list* inicializarMutexEntrenadores(){
-	t_list* listaMutex=list_create();
-	for(uint32_t i=0;i<list_size(listaMutex);i++){
-		pthread_mutex_t mutex= PTHREAD_MUTEX_INITIALIZER;
-		list_add(listaMutex,(void*)(&mutex));
-	}
-	return listaMutex;
 
-}
 uint32_t distanciaEntrePosiciones(posicion pos1, posicion pos2){
 
 	return abs((pos1.x)-(pos2.x))+abs((pos1.y)-(pos2.y));
@@ -373,9 +371,71 @@ int inicializarEntrenadores(t_list* entrenadores){
 
 void* ejecucionHiloEntrenador(void* arg){
 	dataEntrenador* infoEntrenador=(dataEntrenador*) arg;
+	pthread_mutex_t* mutexEntrenador=(pthread_mutex_t*)list_get(mutexEntrenadores,infoEntrenador->id);
+	while(1){
+		pthread_mutex_lock(mutexEntrenador);
+		infoEntrenador->estado=READY;
+		queue_push(colaEjecucionFifo,(void*)infoEntrenador);
+		list_remove(entrenadoresLibres,encontrarPosicionEntrenadorLibre(infoEntrenador));
+		entrarEnEjecucion(infoEntrenador);
+		//despues de esto enviaria el catch, recibe id y se pone en BLOCKED
 
+
+		infoEntrenador->estado=BLOCKED;//IMPORTANTE: CUANDO LLEGUE LA RESPUESTA DEL CATCH SE TIENE QUE HACER UN UNLOCK AL ENTRENADOR CORRESPONDIENTE
+		pthread_mutex_lock(mutexEntrenador);// ESPERA A QUE EL TEAM LE AVISE QUE LLEGO LA RESPUESTA DEL POKEMON QUE QUISO ATRAPAR
+
+
+
+
+		pthread_mutex_unlock(mutexEntrenador);
+		list_add(entrenadoresLibres,(void*)infoEntrenador);//vuelve a agregar al entrenador a la lista de entrenadores libres
+		infoEntrenador->estado=BLOCKED;
+		pthread_mutex_lock(mutexEntrenador);
+	}
 	return NULL;
 }
+
+uint32_t encontrarPosicionEntrenadorLibre(dataEntrenador* entrenador){
+	 for(uint32_t i=0;i<list_size(entrenadoresLibres);i++){
+	        dataEntrenador* entrenadorActual=(dataEntrenador*) list_get(entrenadoresLibres,i);
+	        if(entrenadorActual->id==entrenador->id){
+	        	return i;
+	        }
+	        }
+	 return -1;
+}
+
+void entrarEnEjecucion(dataEntrenador* infoEntrenador){
+
+	pthread_mutex_lock(&mutexEntrenadorEnEjecucion);
+	infoEntrenador->estado=EXEC;
+	moverEntrenadorAPosicion(infoEntrenador, (pokemonAAtrapar.posicion));
+
+	pthread_mutex_unlock(&mutexEntrenadorEnEjecucion);
+}
+
+void seleccionarEntrenador(pokemonPosicion* pokemon){
+	uint32_t idEntrenadorMasCercano=obtenerIdEntrenadorMasCercano(pokemon->posicion);
+	dataEntrenador* entrenadorMasCercano=list_get(entrenadores,idEntrenadorMasCercano);
+
+	entrenadorMasCercano->pokemonAAtrapar=pokemon;
+	habilitarHiloEntrenador(idEntrenadorMasCercano);
+}
+
+void habilitarHiloEntrenador(uint32_t idEntrenador){
+	pthread_mutex_unlock((pthread_mutex_t *)list_get(mutexEntrenadores,idEntrenador));
+}
+
+t_list* inicializarMutexEntrenadores(){
+	t_list* listaMutex=list_create();
+	for(uint32_t i=0;i<list_size(listaMutex);i++){
+		pthread_mutex_t mutex= PTHREAD_MUTEX_INITIALIZER;
+		list_add(listaMutex,(void*)(&mutex));
+	}
+	return listaMutex;
+
+}
+
 
 void moverEntrenadorAPosicion(dataEntrenador* entrenador, posicion pos){
 
@@ -388,7 +448,7 @@ void moverEntrenadorX(dataEntrenador* entrenador, uint32_t movimientoX){
 			uint32_t unidad=movimientoX/abs(movimientoX);
 			for(uint32_t i=0;i< abs(movimientoX);i++){
 			sleep(retardoCicloCpu);
-				(entrenador->posicion).y+=unidad;
+				(entrenador->posicion).x+=unidad;
 			}
 		}
 }
@@ -426,13 +486,13 @@ dataTeam* inicializarTeam(t_config* config){
 	t_list* objetivosEntrenadores=obtenerListaDeListas(arrayObjetivosEntrenadores);
 	uint32_t cantEntrenadores=list_size(posicionesEntrenadores);
 
-	uint32_t i;
+	uint32_t id;
 
-	for(i=0;i<cantEntrenadores;i++){
+	for(id=0;id<cantEntrenadores;id++){
 		dataEntrenador* dataEntrenador=malloc(sizeof(dataEntrenador));
-		char** pos=list_get(posicionesEntrenadores,i);
-		char** pokemones=list_get(pokemonesEntrenadores,i);
-		char** objetivos=list_get(objetivosEntrenadores,i);
+		char** pos=list_get(posicionesEntrenadores,id);
+		char** pokemones=list_get(pokemonesEntrenadores,id);
+		char** objetivos=list_get(objetivosEntrenadores,id);
 
 		(dataEntrenador->posicion).x=atoi(pos[0]);
 		(dataEntrenador->posicion).y=atoi(pos[1]);
@@ -459,7 +519,9 @@ dataTeam* inicializarTeam(t_config* config){
 
 				}
 		dataEntrenador->estado=NEW;
-
+		dataEntrenador->id=id;
+		dataEntrenador->pokemonAAtrapar=NULL;
+		list_add(entrenadoresLibres,(void*)dataEntrenador);
 		list_add(dataTeam->entrenadores,dataEntrenador);
 
 

@@ -26,6 +26,7 @@ typedef enum {
 	EXIT=1504
 }estado;
 
+
 typedef struct{
 	uint32_t modulo;
 	uint32_t tipoMensaje;
@@ -43,12 +44,18 @@ typedef struct{
 	uint32_t y;
 } posicion;
 
+typedef struct{
+	char* pokemon;
+	posicion posicion;
+} pokemonPosicion;
+
 typedef struct {
 	posicion posicion;
 	t_list* pokemones;
 	t_list* objetivoPersonal;//lista de strings
 	estado estado;
-
+	uint32_t id;
+	pokemonPosicion* pokemonAAtrapar;
 } dataEntrenador;
 
 typedef struct {
@@ -139,8 +146,20 @@ t_list* inicializarMutexEntrenadores();
 
 void moverEntrenador(dataEntrenador* entrenador, uint32_t movimientoX, uint32_t movimientoY);
 
+void moverEntrenadorAPosicion(dataEntrenador* entrenador, posicion pos);
+
 void moverEntrenadorY(dataEntrenador* entrenador, uint32_t movimientoY);
 
 void moverEntrenadorX(dataEntrenador* entrenador, uint32_t movimientoX);
+
+void seleccionarEntrenador(pokemonPosicion* pokemon);
+
+void habilitarHiloEntrenador(uint32_t idEntrenador);
+
+void entrarEnEjecucion(dataEntrenador* infoEntrenador);
+
+uint32_t encontrarPosicionEntrenadorLibre(dataEntrenador* entrenador);
+
+
 
 #endif /* TEAM_H_ */
