@@ -20,7 +20,7 @@
 #include <commons/config.h>
 #include <stdbool.h>
 #include <sys/types.h>
-#include "messages_lib.h"
+#include <messages_lib/messages_lib.h>
 
 //\n
 
