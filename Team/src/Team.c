@@ -19,6 +19,7 @@
 #include <netinet/in.h>
 #include <arpa/inet.h>
 #include <stdlib.h>
+#include <messages_lib/messages_lib.h>
 
 //fecha ult modificacion 27 de abril
 

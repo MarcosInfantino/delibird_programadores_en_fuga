@@ -25,11 +25,14 @@ endif
 # All Target
 all: Team
 
+dependents:
+	-cd /home/utnso/tp-2020-1c-Programadores-en-Fuga/messages_lib/Debug && $(MAKE) clean all
+
 # Tool invocations
-Team: $(OBJS) $(USER_OBJS)
+Team: $(OBJS) $(USER_OBJS) /home/utnso/tp-2020-1c-Programadores-en-Fuga/messages_lib/Debug/libmessages_lib.so
 	@echo 'Building target: $@'
 	@echo 'Invoking: GCC C Linker'
-	gcc -L/home/utnso/Escritorio/repoSO/tp-2020-1c-Programadores-en-Fuga/messages_lib -o "Team" $(OBJS) $(USER_OBJS) $(LIBS)
+	gcc -L"/home/utnso/tp-2020-1c-Programadores-en-Fuga/messages_lib/Debug" -L/home/utnso/Escritorio/repoSO/tp-2020-1c-Programadores-en-Fuga/messages_lib -o "Team" $(OBJS) $(USER_OBJS) $(LIBS)
 	@echo 'Finished building target: $@'
 	@echo ' '
 
@@ -39,5 +42,6 @@ clean:
 	-@echo ' '
 
 .PHONY: all clean dependents
+/home/utnso/tp-2020-1c-Programadores-en-Fuga/messages_lib/Debug/libmessages_lib.so:
 
 -include ../makefile.targets

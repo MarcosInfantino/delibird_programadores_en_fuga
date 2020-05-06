@@ -22,18 +22,6 @@ typedef enum {
 } respuesta_broker;
 
 typedef struct {
-	int size;
-	void* stream;
-} t_buffer;
-
-typedef struct {
-	respuesta_broker respuesta;
-	t_buffer* buffer;
-} t_paquete;
-
-
-
-typedef struct {
 	t_queue* cola;
 	t_list* suscriptores;
 } colaMensajes;

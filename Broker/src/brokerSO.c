@@ -20,6 +20,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include "broker.h"
+#include <messages_lib/messages_lib.h>
 
 pthread_mutex_t mutex;
 
@@ -60,6 +61,11 @@ int main(void) {
 	}
 
 	printf("Estoy escuchando\n");
+
+	printf("Lib\n");
+	t_paquete* dsadsa = armarPaquete("hola");
+	printf("Lib despues\n");
+
 	//listen(servidor, 100);
 
 //		struct sockaddr_in direccionCliente;

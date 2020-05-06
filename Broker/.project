@@ -3,6 +3,7 @@
 	<name>brokerSO</name>
 	<comment></comment>
 	<projects>
+		<project>messages_lib</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>
