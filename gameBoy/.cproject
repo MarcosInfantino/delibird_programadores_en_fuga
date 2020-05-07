@@ -44,7 +44,9 @@
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/messages_lib/Debug}&quot;"/>
 								</option>
 								<option id="gnu.c.link.option.libs.739320082" name="Libraries (-l)" superClass="gnu.c.link.option.libs" useByScannerDiscovery="false" valueType="libs">
-									<listOptionValue builtIn="false" srcPrefixMapping="" srcRootPath="" value="messages_lib"/>
+									<listOptionValue builtIn="false" value="messages_lib"/>
+									<listOptionValue builtIn="false" value="pthread"/>
+									<listOptionValue builtIn="false" value="commons"/>
 								</option>
 								<inputType id="cdt.managedbuild.tool.gnu.c.linker.input.524227858" superClass="cdt.managedbuild.tool.gnu.c.linker.input">
 									<additionalInput kind="additionalinputdependency" paths="$(USER_OBJS)"/>

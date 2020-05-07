@@ -11,23 +11,21 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include <stdint.h>
-#include "gameBoy.h"
+#include <commons/config.h>
 #include <sys/socket.h>
 #include <netdb.h>
 #include <netinet/in.h>
 #include <arpa/inet.h>
-#include <commons/config.h>
 #include <stdbool.h>
 #include <sys/types.h>
+#include <pthread.h>
+#include "gameBoy.h"
 #include <messages_lib/messages_lib.h>
 
 //\n
 
 int main(int argc, char* argv[]) {
-
 	t_config * config = config_create("gameBoy1.config");
-	void* paqueteAEnviar;
 	void* stream;
 	paquete* paquete;
 	uint32_t sizeStream, procesoDestinatario;
@@ -35,118 +33,116 @@ int main(int argc, char* argv[]) {
 
 	if(strcmp(argv[1], "SUSCRIPTOR")==0){
 		procesoDestinatario = BROKER;
-		mensajeSuscripcionTiempo* mensajeEnviar = malloc(sizeof(uint32_t)*2);
+		mensajeSuscripcionTiempo* mensajeEnviar = malloc(sizeof(mensajeSuscripcionTiempo));
 		mensajeEnviar->cola = colaMensaje;
 		mensajeEnviar->tiempo=atoi(argv[3]);
 		stream = serializarSuscripcionTiempo(mensajeEnviar);
 		sizeStream=sizeof(uint32_t)*2;
-		paquete = llenarPaquete(sizeStream,stream, SUSCRIPCION_TIEMPO);
-		paqueteAEnviar = serializarPaquete(paquete);
+		paquete = llenarPaquete(GAMEBOY, SUSCRIPCION_TIEMPO, sizeStream, stream);
 	}else{
-		procesoDestinatario = obtenerNombreProceso(argv[1]);
-		switch(colaMensaje){
-				case APPEARED_POKEMON:
-					if(procesoDestinatario == BROKER){
-						mensajeAppearedBroker* mensajeEnviar = malloc(strlen(argv[3])+1+sizeof(uint32_t)*6);
-						mensajeEnviar->sizePokemon = strlen(argv[3]) + 1;
-						mensajeEnviar->pokemon = argv[3];
-						mensajeEnviar->posX = atoi(argv[4]);
-						mensajeEnviar->posY = atoi(argv[5]);
-						mensajeEnviar->id=atoi(argv[6]);
-						stream = serializarAppearedBroker(mensajeEnviar);
+		procesoDestinatario=obtenerNombreProceso(argv[1]);
+		stream = generarStreamArgumentos(colaMensaje, argv);
+		sizeStream = sizeArgumentos (colaMensaje, argv, procesoDestinatario);
+		paquete=llenarPaquete(GAMEBOY, colaMensaje, sizeStream, stream);
+		}
 
-					}else if (procesoDestinatario==TEAM){
-						mensajeAppearedTeam* mensajeEnviar = malloc(strlen(argv[3]) + 1 + sizeof(uint32_t)*5);
-						mensajeEnviar->sizePokemon=strlen(argv[3])+1;
-						mensajeEnviar->pokemon=argv[3];
-						mensajeEnviar->posX=atoi(argv[4]);
-						mensajeEnviar->posY=atoi(argv[5]);
-						stream = serializarAppearedTeam(mensajeEnviar);
-					}
-					break;
-
-				case NEW_POKEMON:
-					if(procesoDestinatario==BROKER){
-						mensajeNewBroker* mensajeEnviar = malloc(strlen(argv[3])+1+sizeof(uint32_t)*6);
-						mensajeEnviar->sizePokemon=strlen(argv[3])+1;
-						mensajeEnviar->pokemon = argv[3];
-						mensajeEnviar->posX=atoi(argv[4]);
-						mensajeEnviar->posY=atoi(argv[5]);
-						mensajeEnviar->cantidad=atoi(argv[6]);
-						stream = serializarNewBroker(mensajeEnviar);
-
-					}else if (procesoDestinatario==GAMECARD){
-						mensajeNewGamecard* mensajeEnviar = malloc(strlen(argv[3])+1+sizeof(uint32_t)*7);
-						mensajeEnviar->sizePokemon=strlen(argv[3])+1;
-						mensajeEnviar->pokemon=argv[3];
-						mensajeEnviar->posX=atoi(argv[4]);
-						mensajeEnviar->posY = atoi(argv[5]);
-						mensajeEnviar->cantidad = atoi(argv[6]);
-						mensajeEnviar->id=atoi(argv[7]);
-						stream = serializarNewGamecard(mensajeEnviar);
-					}
-					break;
-
-				case CATCH_POKEMON:
-					if(procesoDestinatario==BROKER){
-						mensajeCatchBroker* mensajeEnviar = malloc(strlen(argv[3])+1+sizeof(uint32_t)*5);
-						mensajeEnviar->sizePokemon=strlen(argv[3])+1;
-						mensajeEnviar->pokemon=argv[3];
-						mensajeEnviar->posX=atoi(argv[4]);
-						mensajeEnviar->posY=atoi(argv[5]);
-						stream = serializarCatchBroker(mensajeEnviar);
-
-					}else if(procesoDestinatario==GAMECARD){
-						mensajeCatchGamecard* mensajeEnviarCatch = malloc(strlen(argv[3])+1+sizeof(uint32_t)*6);
-						mensajeEnviarCatch->sizePokemon=strlen(argv[3])+1;
-						mensajeEnviarCatch->pokemon=argv[3];
-						mensajeEnviarCatch->posX=atoi(argv[4]);
-						mensajeEnviarCatch->posY=atoi(argv[5]);
-						mensajeEnviarCatch->id=atoi(argv[6]);
-						stream = serializarCatchGamecard(mensajeEnviarCatch);
-					}
-					break;
-
-				case CAUGHT_POKEMON: ;
-					mensajeCaught* mensajeEnviarCaught = malloc(sizeof(uint32_t)*4);
-					mensajeEnviarCaught->id=atoi(argv[3]);
-					mensajeEnviarCaught->resultadoCaught=atoi(argv[4]);
-					stream = serializarCaught(mensajeEnviarCaught);
-					break;
-
-				case GET_POKEMON: ;
-					mensajeGet* mensajeEnviarGet = malloc(strlen(argv[3])+1+sizeof(uint32_t)*3);
-					mensajeEnviarGet->sizePokemon=strlen(argv[3])+1;
-					mensajeEnviarGet->pokemon = argv[3];
-					stream = serializarGet(mensajeEnviarGet);
-					break;
-
-				default:
-					printf("caso ingresado invalido");
-					break;
-	}
-	sizeStream = sizeArgumentos (colaMensaje, argv, procesoDestinatario);
-	paquete=llenarPaquete(sizeStream, stream, colaMensaje);
-	paqueteAEnviar = serializarPaquete(paquete);
-}
 	char* ipProcesoDestinatario = obtenerIpProceso (procesoDestinatario, config);
 	uint32_t puertoProcesoDestinatario = obtenerPuertoProceso (procesoDestinatario, config);
-	uint32_t socket_cliente = socketCliente (ipProcesoDestinatario, puertoProcesoDestinatario);
-	send(socket_cliente, paqueteAEnviar, sizeof(uint32_t)*5+sizeStream,0);
+	paqueteYSocket* paqueteySocket = malloc(sizeof(paqueteYSocket));
+	paqueteySocket->paqueteAEnviar=serializarPaquete(paquete);
+	paqueteySocket->socketCliente=socketCliente (ipProcesoDestinatario, puertoProcesoDestinatario);
+	paqueteySocket->sizeDelStream=sizeStream;
+	iniciarHiloEnvio(paqueteySocket);
+
 	return EXIT_SUCCESS;
 }
 
-//paquete* llenarPaquete( uint32_t modulo,uint32_t tipoMensaje, uint32_t sizeStream,void* stream){
-//	paquete* paqueteASerializar = malloc(sizeof(uint32_t)*5+sizeStream);
-//	paqueteASerializar->modulo=modulo;
-//	paqueteASerializar->tipoMensaje=tipoMensaje;
-//	paqueteASerializar->id=-1;
-//	paqueteASerializar->idCorrelativo=-1;
-//	paqueteASerializar->sizeStream=sizeStream;
-//	paqueteASerializar->stream=stream;
-//
-//	return paqueteASerializar;
-//}
+void* generarStreamArgumentos (uint32_t colaMensaje, char* argv[]){
+	void* streamArgumentos;
+	uint32_t procesoDestinatario = obtenerNombreProceso(argv[1]);
+	switch(colaMensaje){
+		case APPEARED_POKEMON:
+			if(procesoDestinatario == BROKER){
+				mensajeAppearedBroker* mensajeEnviar = malloc(strlen(argv[3])+1+sizeof(uint32_t)*6);
+				mensajeEnviar->sizePokemon = strlen(argv[3]) + 1;
+				mensajeEnviar->pokemon = argv[3];
+				mensajeEnviar->posX = atoi(argv[4]);
+				mensajeEnviar->posY = atoi(argv[5]);
+				mensajeEnviar->id=atoi(argv[6]);
+				streamArgumentos = serializarAppearedBroker(mensajeEnviar);
+
+			}else if (procesoDestinatario==TEAM){
+				mensajeAppearedTeam* mensajeEnviar = malloc(strlen(argv[3]) + 1 + sizeof(uint32_t)*5);
+				mensajeEnviar->sizePokemon=strlen(argv[3])+1;
+				mensajeEnviar->pokemon=argv[3];
+				mensajeEnviar->posX=atoi(argv[4]);
+				mensajeEnviar->posY=atoi(argv[5]);
+				streamArgumentos = serializarAppearedTeam(mensajeEnviar);
+			}
+			break;
+
+		case NEW_POKEMON:
+			if(procesoDestinatario==BROKER){
+				mensajeNewBroker* mensajeEnviar = malloc(strlen(argv[3])+1+sizeof(uint32_t)*6);
+				mensajeEnviar->sizePokemon=strlen(argv[3])+1;
+				mensajeEnviar->pokemon = argv[3];
+				mensajeEnviar->posX=atoi(argv[4]);
+				mensajeEnviar->posY=atoi(argv[5]);
+				mensajeEnviar->cantidad=atoi(argv[6]);
+				streamArgumentos = serializarNewBroker(mensajeEnviar);
+
+			}else if (procesoDestinatario==GAMECARD){
+				mensajeNewGamecard* mensajeEnviar = malloc(strlen(argv[3])+1+sizeof(uint32_t)*7);
+				mensajeEnviar->sizePokemon=strlen(argv[3])+1;
+				mensajeEnviar->pokemon=argv[3];
+				mensajeEnviar->posX=atoi(argv[4]);
+				mensajeEnviar->posY = atoi(argv[5]);
+				mensajeEnviar->cantidad = atoi(argv[6]);
+				mensajeEnviar->id=atoi(argv[7]);
+				streamArgumentos = serializarNewGamecard(mensajeEnviar);
+			}
+			break;
+
+		case CATCH_POKEMON:
+			if(procesoDestinatario==BROKER){
+				mensajeCatchBroker* mensajeEnviar = malloc(strlen(argv[3])+1+sizeof(uint32_t)*5);
+				mensajeEnviar->sizePokemon=strlen(argv[3])+1;
+				mensajeEnviar->pokemon=argv[3];
+				mensajeEnviar->posX=atoi(argv[4]);
+				mensajeEnviar->posY=atoi(argv[5]);
+				streamArgumentos = serializarCatchBroker(mensajeEnviar);
+
+			}else if(procesoDestinatario==GAMECARD){
+				mensajeCatchGamecard* mensajeEnviarCatch = malloc(strlen(argv[3])+1+sizeof(uint32_t)*6);
+				mensajeEnviarCatch->sizePokemon=strlen(argv[3])+1;
+				mensajeEnviarCatch->pokemon=argv[3];
+				mensajeEnviarCatch->posX=atoi(argv[4]);
+				mensajeEnviarCatch->posY=atoi(argv[5]);
+				mensajeEnviarCatch->id=atoi(argv[6]);
+				streamArgumentos = serializarCatchGamecard(mensajeEnviarCatch);
+			}
+			break;
+
+		case CAUGHT_POKEMON: ;
+			mensajeCaught* mensajeEnviarCaught = malloc(sizeof(uint32_t)*4);
+			mensajeEnviarCaught->id=atoi(argv[3]);
+			mensajeEnviarCaught->resultadoCaught=atoi(argv[4]);
+			streamArgumentos = serializarCaught(mensajeEnviarCaught);
+			break;
+
+		case GET_POKEMON: ;
+			mensajeGet* mensajeEnviarGet = malloc(strlen(argv[3])+1+sizeof(uint32_t)*3);
+			mensajeEnviarGet->sizePokemon=strlen(argv[3])+1;
+			mensajeEnviarGet->pokemon = argv[3];
+			streamArgumentos = serializarGet(mensajeEnviarGet);
+			break;
+
+		default:
+			printf("caso ingresado invalido");
+			break;
+	}
+	return streamArgumentos;
+}
 
 uint32_t obtenerNombreProceso (char* proceso){
 	uint32_t nombreProceso;
@@ -272,4 +268,31 @@ uint32_t sizeArgumentos (uint32_t colaMensaje, char* argv[], uint32_t proceso){
 	}
 	return size;
 }
+
+void* enviarMensaje(void* paqueteySocket){
+	paqueteYSocket* paqueteConSocket = (paqueteYSocket*) paqueteySocket;
+	send(paqueteConSocket->socketCliente, paqueteConSocket->paqueteAEnviar, sizeof(uint32_t)*5+paqueteConSocket->sizeDelStream, 0);
+	printf("Estoy esperando respuesta\n");
+	uint32_t respuesta;
+	recv(paqueteConSocket->socketCliente, &respuesta,sizeof(uint32_t),0);
+	if(respuesta>0){
+		printf("recibido correctamente\n");
+	}else{
+		printf("recibido incorrectamente\n");
+	}
+	close(paqueteConSocket->socketCliente);
+	return NULL;
+}
+
+void iniciarHiloEnvio(paqueteYSocket* paqueteySocket){
+	pthread_t hilo;
+	uint32_t nro = pthread_create(&hilo, NULL, enviarMensaje, (void*)paqueteySocket);
+	if(nro!=0){
+		printf("Hubo un problema en la creación del hilo para conectarse al broker \n");
+	}else{
+		printf("Hilo creado correctamente\n");
+	}
+	pthread_detach(hilo);
+}
+
 

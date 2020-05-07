@@ -16,16 +16,6 @@
 #include<netdb.h>
 #include<string.h>
 
-typedef enum{
-	APPEARED_POKEMON,
-	NEW_POKEMON,
-	CAUGHT_POKEMON,
-	CATCH_POKEMON,
-	GET_POKEMON,
-	LOCALIZED_POKEMON,
-	SUSCRIPCION,
-	SUSCRIPCION_TIEMPO
-}tipoMensaje;
 typedef struct{
 	int size;
 	void* stream;
@@ -41,6 +31,29 @@ typedef struct
 	op_code codigo_operacion;
 	t_buffer* buffer;
 } t_paquete;
+
+typedef enum{
+	APPEARED_POKEMON,
+	NEW_POKEMON,
+	CAUGHT_POKEMON,
+	CATCH_POKEMON,
+	GET_POKEMON,
+	LOCALIZED_POKEMON,
+	SUSCRIPCION,
+	SUSCRIPCION_TIEMPO
+}tipoMensaje;
+
+typedef enum {
+	BROKER,
+	TEAM,
+	GAMECARD,
+	GAMEBOY
+}modulo;
+
+typedef enum{
+	FAIL,
+	OK
+}resultadoCaught;
 
 typedef struct{
 	uint32_t sizePokemon;

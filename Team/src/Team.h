@@ -68,12 +68,12 @@ typedef struct {
 
 }dataTeam;
 
-typedef enum {
-	BROKER,
-	TEAM,
-	GAMECARD,
-	GAMEBOY
-}modulo;
+//typedef enum {
+//	BROKER,
+//	TEAM,
+//	GAMECARD,
+//	GAMEBOY
+//}modulo;
 
 //typedef enum{
 //	APPEARED_POKEMON,
