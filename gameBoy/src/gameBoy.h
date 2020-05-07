@@ -22,16 +22,16 @@ typedef enum {
 	GAMEBOY
 }modulo;
 
-typedef enum{
-	APPEARED_POKEMON,
-	NEW_POKEMON,
-	CAUGHT_POKEMON,
-	CATCH_POKEMON,
-	GET_POKEMON,
-	LOCALIZED_POKEMON,
-	SUSCRIPCION,
-	SUSCRIPCION_TIEMPO
-}tipoMensaje;
+//typedef enum{
+//	APPEARED_POKEMON,
+//	NEW_POKEMON,
+//	CAUGHT_POKEMON,
+//	CATCH_POKEMON,
+//	GET_POKEMON,
+//	LOCALIZED_POKEMON,
+//	SUSCRIPCION,
+//	SUSCRIPCION_TIEMPO
+//}tipoMensaje;
 
 uint32_t obtenerPuertoProceso (uint32_t proceso, t_config* config);
 

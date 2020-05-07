@@ -136,17 +136,17 @@ int main(int argc, char* argv[]) {
 	return EXIT_SUCCESS;
 }
 
-paquete* llenarPaquete(uint32_t sizeStream, void* stream, uint32_t tipoMensaje){
-	paquete* paqueteASerializar = malloc(sizeof(uint32_t)*5+sizeStream);
-	paqueteASerializar->modulo=GAMEBOY;
-	paqueteASerializar->tipoMensaje=tipoMensaje;
-	paqueteASerializar->id=-1;
-	paqueteASerializar->idCorrelativo=-1;
-	paqueteASerializar->sizeStream=sizeStream;
-	paqueteASerializar->stream=stream;
-
-	return paqueteASerializar;
-}
+//paquete* llenarPaquete( uint32_t modulo,uint32_t tipoMensaje, uint32_t sizeStream,void* stream){
+//	paquete* paqueteASerializar = malloc(sizeof(uint32_t)*5+sizeStream);
+//	paqueteASerializar->modulo=modulo;
+//	paqueteASerializar->tipoMensaje=tipoMensaje;
+//	paqueteASerializar->id=-1;
+//	paqueteASerializar->idCorrelativo=-1;
+//	paqueteASerializar->sizeStream=sizeStream;
+//	paqueteASerializar->stream=stream;
+//
+//	return paqueteASerializar;
+//}
 
 uint32_t obtenerNombreProceso (char* proceso){
 	uint32_t nombreProceso;

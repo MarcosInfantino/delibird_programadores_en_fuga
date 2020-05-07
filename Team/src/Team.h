@@ -15,6 +15,7 @@
 #include <pthread.h>
 #include <commons/config.h>
 #include <unistd.h>
+#include <messages_lib/messages_lib.h>
 //void* especieAComparar;
 enum respuestasBroker{INCORRECTO, CORRECTO};
 
@@ -56,6 +57,7 @@ typedef struct {
 	estado estado;
 	uint32_t id;
 	pokemonPosicion* pokemonAAtrapar;
+	pthread_mutex_t mutex;
 } dataEntrenador;
 
 typedef struct {
@@ -73,25 +75,22 @@ typedef enum {
 	GAMEBOY
 }modulo;
 
-typedef enum{
-	APPEARED_POKEMON,
-	NEW_POKEMON,
-	CAUGHT_POKEMON,
-	CATCH_POKEMON,
-	GET_POKEMON,
-	LOCALIZED_POKEMON
-}cola;
+//typedef enum{
+//	APPEARED_POKEMON,
+//	NEW_POKEMON,
+//	CAUGHT_POKEMON,
+//	CATCH_POKEMON,
+//	GET_POKEMON,
+//	LOCALIZED_POKEMON
+//}cola;
 
-typedef enum{
-	MENSAJE_NORMAL,
-	MENSAJE_SUSCRIPCION
-}tipoMensaje;
 
-typedef struct{
-	uint32_t modulo;
-	uint32_t tipoMensaje;
-	uint32_t cola;
-}mensajeSuscripcion;
+
+//typedef struct{
+//	uint32_t modulo;
+//	uint32_t tipoMensaje;
+//	uint32_t cola;
+//}mensajeSuscripcion;
 
 typedef struct{
 	uint32_t modulo;

@@ -16,6 +16,16 @@
 #include<netdb.h>
 #include<string.h>
 
+typedef enum{
+	APPEARED_POKEMON,
+	NEW_POKEMON,
+	CAUGHT_POKEMON,
+	CATCH_POKEMON,
+	GET_POKEMON,
+	LOCALIZED_POKEMON,
+	SUSCRIPCION,
+	SUSCRIPCION_TIEMPO
+}tipoMensaje;
 typedef struct{
 	int size;
 	void* stream;
@@ -124,7 +134,7 @@ void* serializarCaught (mensajeCaught* mensaje);
 void* serializarGet (mensajeGet* mensaje);
 void* serializarSuscripcionTiempo(mensajeSuscripcionTiempo* mensaje);
 void* serializarSuscripcion(mensajeSuscripcion* mensaje);
-paquete* llenarPaquete(uint32_t sizeStream, void* stream, uint32_t tipoMensaje);
+paquete* llenarPaquete( uint32_t modulo,uint32_t tipoMensaje, uint32_t sizeStream,void* stream);
 void* serializarPaquete(paquete* paqueteASerializar);
 
 mensajeAppearedBroker* deserializarAppearedBroker(void* streamRecibido);

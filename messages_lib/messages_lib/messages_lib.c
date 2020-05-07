@@ -192,8 +192,20 @@ void* serializarSuscripcion(mensajeSuscripcion* mensaje){
 	return stream;
 }
 
+paquete* llenarPaquete( uint32_t modulo,uint32_t tipoMensaje, uint32_t sizeStream,void* stream){
+	paquete* paqueteASerializar = malloc(sizeof(paquete));
+	paqueteASerializar->modulo=modulo;
+	paqueteASerializar->tipoMensaje=tipoMensaje;
+	paqueteASerializar->id=-1;
+	paqueteASerializar->idCorrelativo=-1;
+	paqueteASerializar->sizeStream=sizeStream;
+	paqueteASerializar->stream=stream;
+
+	return paqueteASerializar;
+}
+
 void* serializarPaquete(paquete* paqueteASerializar){
-	void* paquete = malloc(sizeof(uint32_t)*3+paqueteASerializar->sizeStream);
+	void* paquete = malloc(sizeof(uint32_t)*5+paqueteASerializar->sizeStream);
 	uint32_t offset=0;
 
 	memcpy(paquete+offset, &(paqueteASerializar->modulo), sizeof(uint32_t));
