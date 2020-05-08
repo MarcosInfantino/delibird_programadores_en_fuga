@@ -183,13 +183,30 @@ void suscribirPorTiempo(void* estructura){
 
 	suscripcionTiempo* structTiempo = (suscripcionTiempo*) estructura;
 	suscribir(structTiempo->cola, structTiempo->paq, structTiempo->socket);
+
 	sleep(structTiempo->tiempo);
-	desuscribir(structTiempo->socket);
+
+	desuscribir(structTiempo->socket, structTiempo->cola);
 
 }
 
-void desuscribir(uint32_t socket, colaMensajes ){
+void desuscribir(uint32_t socket, uint32_t cola ){
+	uint32_t i;
+	void* socketLista;
 
+	//asociar numero con cola real
+
+	for(i = 0; i < list_size(colaReal.suscriptores); i++){
+
+		socketLista = list_get(colaReal.suscriptores, i);
+
+		if (*((uint32_t*) socketLista) == socket) {
+			list_remove(colaReal.suscriptores, i);
+			}
+
+
+
+	}
 
 
 }
@@ -213,7 +230,7 @@ void suscribirSegunCola(paquete paq, uint32_t socket) {
 //	parameter.paquete       = paq;
 
 
-	switch (paq.tipoMensaje) {
+	switch (deserializarSuscripcion(paq.stream)->cola) {
 		case APPEARED_POKEMON:
 			//parameter.structCola = appearedPokemon;
 			suscribir(appearedPokemon, paq, socket);
