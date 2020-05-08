@@ -16,11 +16,13 @@
 #include <commons/config.h>
 #include <unistd.h>
 #include <messages_lib/messages_lib.h>
+#include <semaphore.h>
+#include <arpa/inet.h>
 //void* especieAComparar;
 
 pthread_t threadAtencionGameboy;
 
-enum respuestasBroker{INCORRECTO, CORRECTO};
+
 
 typedef enum {
 	NEW=1500,
@@ -60,7 +62,7 @@ typedef struct {
 	estado estado;
 	uint32_t id;
 	pokemonPosicion* pokemonAAtrapar;
-	pthread_mutex_t mutex;
+	sem_t semaforo;
 } dataEntrenador;
 
 typedef struct {
@@ -70,6 +72,11 @@ typedef struct {
 	//uint32_t** mapa;
 
 }dataTeam;
+
+typedef struct{
+	uint32_t idEntrenador;
+	uint32_t idMensaje;
+}idsEntrenadorMensaje;
 
 //typedef enum {
 //	BROKER,
@@ -166,6 +173,9 @@ void esperar_cliente(uint32_t servidor);
 
 void* atenderCliente(void* sock);
 
+void atenderAppeared(mensajeAppearedTeam* msg);
+
+void enviarCatch(dataEntrenador* infoEntrenador);
 
 
 #endif /* TEAM_H_ */

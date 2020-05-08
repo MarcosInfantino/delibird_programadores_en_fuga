@@ -15,6 +15,15 @@
 #include<sys/socket.h>
 #include<netdb.h>
 #include<string.h>
+#include <commons/collections/queue.h>
+#include <commons/string.h>
+#include <stdint.h>
+#include <inttypes.h>
+#include <pthread.h>
+#include <commons/config.h>
+#include <unistd.h>
+#include <semaphore.h>
+#include <arpa/inet.h>
 
 typedef struct{
 	int size;
@@ -54,7 +63,10 @@ typedef enum{
 	FAIL,
 	OK
 }resultadoCaught;
-
+typedef enum{
+	INCORRECTO,
+	CORRECTO
+}respuestas;
 typedef struct{
 	uint32_t sizePokemon;
 	char* pokemon;
@@ -161,5 +173,8 @@ mensajeGet* deserializarGet (void* streamRecibido);
 mensajeSuscripcionTiempo* deserializarSuscripcionTiempo(void* streamRecibido);
 mensajeSuscripcion* deserializarSuscripcion (void* streamRecibido);
 paquete* deserializarPaquete(void* paqueteRecibido);
-
+paquete* recibirPaquete(uint32_t socket);
+uint32_t crearSocketCliente (char* ip, uint32_t puerto);
+uint32_t sizeArgumentos (uint32_t colaMensaje, char* nombrePokemon, uint32_t procesoDestinatario);
+uint32_t sizePaquete(paquete* paq);
 #endif /* MESSAGES_LIB_H_ */

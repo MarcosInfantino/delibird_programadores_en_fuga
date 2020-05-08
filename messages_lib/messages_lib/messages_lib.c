@@ -248,21 +248,36 @@ mensajeAppearedBroker* deserializarAppearedBroker(void* streamRecibido){
 	return mensaje;
 }
 
+//mensajeAppearedTeam* deserializarAppearedTeam (void* streamRecibido){
+//	mensajeAppearedTeam* mensaje = malloc(sizeof(mensajeAppearedTeam));
+//	uint32_t offset              = 0;
+//
+//	memcpy((void*)mensaje->sizePokemon, streamRecibido+offset, sizeof(uint32_t));
+//	offset+=sizeof(uint32_t);
+//	mensaje->pokemon=malloc(mensaje->sizePokemon);
+//	memcpy((void*)mensaje->pokemon, streamRecibido+offset, mensaje->sizePokemon);
+//	offset+=(mensaje->sizePokemon);
+//	memcpy((void*)mensaje->posX, streamRecibido+offset, sizeof(uint32_t));
+//	offset+=sizeof(uint32_t);
+//	memcpy((void*)mensaje->posY, streamRecibido+offset, sizeof(uint32_t));
+//
+//	return mensaje;
+//}
+
 mensajeAppearedTeam* deserializarAppearedTeam (void* streamRecibido){
 	mensajeAppearedTeam* mensaje = malloc(sizeof(mensajeAppearedTeam));
 	uint32_t offset              = 0;
-
-	memcpy((void*)mensaje->sizePokemon, streamRecibido+offset, sizeof(uint32_t));
+	memcpy(&(mensaje->sizePokemon), streamRecibido+offset, sizeof(uint32_t));
 	offset+=sizeof(uint32_t);
-	memcpy((void*)mensaje->pokemon, streamRecibido+offset, mensaje->sizePokemon);
+	mensaje->pokemon=malloc(mensaje->sizePokemon);
+	memcpy(mensaje->pokemon, streamRecibido+offset, mensaje->sizePokemon);
 	offset+=(mensaje->sizePokemon);
-	memcpy((void*)mensaje->posX, streamRecibido+offset, sizeof(uint32_t));
+	memcpy(&(mensaje->posX), streamRecibido+offset, sizeof(uint32_t));
 	offset+=sizeof(uint32_t);
-	memcpy((void*)mensaje->posY, streamRecibido+offset, sizeof(uint32_t));
+	memcpy(&(mensaje->posY), streamRecibido+offset, sizeof(uint32_t));
 
 	return mensaje;
 }
-
 mensajeNewBroker* deserializarNewBroker (void* streamRecibido){
 	mensajeNewBroker* mensaje = malloc(sizeof(mensajeNewBroker));
 	uint32_t offset 		  = 0;
@@ -394,13 +409,94 @@ paquete* deserializarPaquete(void* paqueteRecibido){
 }
 
 
+paquete* recibirPaquete(uint32_t socket){
+	paquete* paquete = malloc(sizeof(paquete));
+	uint32_t offset  = 0;
+	//recv(cliente,&respuesta1,sizeof(uint32_t),0);
+	if(recv(socket,&(paquete->modulo),sizeof(uint32_t),0)==-1)
+		return NULL;
+	offset+=sizeof(uint32_t);
+	if(recv(socket,&(paquete->tipoMensaje),sizeof(uint32_t),0)==-1)
+		return NULL;
+	offset+=sizeof(uint32_t);
+	if(recv(socket,&(paquete->id),sizeof(uint32_t),0)==-1)
+		return NULL;
+	offset+=sizeof(uint32_t);
+	if(recv(socket,&(paquete->idCorrelativo),sizeof(uint32_t),0)==-1)
+		return NULL;
+	offset+=sizeof(uint32_t);
+	if(recv(socket,&(paquete->sizeStream),sizeof(uint32_t),0)==-1)
+		return NULL;
+	offset+=sizeof(uint32_t);
+	paquete->stream = malloc(paquete->sizeStream);
+	if(recv(socket,(paquete->stream),(paquete->sizeStream),0)==-1)
+		return NULL;
 
 
 
+	return paquete;
+}
 
+uint32_t crearSocketCliente (char* ip, uint32_t puerto){
+	struct sockaddr_in direccionServidor;
+	direccionServidor.sin_family      = AF_INET;
+	direccionServidor.sin_addr.s_addr = inet_addr(ip);
+	direccionServidor.sin_port        = htons(puerto);
 
+	uint32_t cliente=socket(AF_INET,SOCK_STREAM,0);
+	if(connect(cliente,(void*) &direccionServidor,sizeof(direccionServidor)) != 0){
+		perror("No se pudo conectar");
+		return -1;
+	}
 
+	return cliente;
+}
 
+uint32_t sizeArgumentos (uint32_t colaMensaje, char* nombrePokemon, uint32_t proceso){
+	uint32_t size;
+	switch(colaMensaje){
+	case NEW_POKEMON:
+		if(proceso == BROKER){ //size pokemon, pokemon,posx, posy, cantidad
+			size = strlen(nombrePokemon) + 1 + sizeof(uint32_t)*4;
+		} else if (proceso == GAMECARD){ //size pokemon, pokemon, posX, posY, cantidad, ID
+			size = strlen(nombrePokemon) + 1 + sizeof(uint32_t)*5;
+		}
+		break;
+
+	case APPEARED_POKEMON:
+		if(proceso == BROKER){ // sizePokemon, pokemon, posX, posY, ID
+			size = strlen(nombrePokemon) +1 + sizeof(uint32_t)*4;
+		}else if(proceso == TEAM){ //sizePokemon, pokemon, posX, posY
+			size = strlen(nombrePokemon) + 1 +sizeof(uint32_t)*3;
+		}
+		break;
+
+	case CATCH_POKEMON:
+		if(proceso == BROKER){ //sizePokemon, pokemon, posX, posY
+			size = strlen(nombrePokemon) + 1 + sizeof(uint32_t)*3;
+		}else if (proceso == GAMECARD){ //sizePokemon, pokemon, posX, posY, ID
+			size = strlen(nombrePokemon) + 1 + sizeof(uint32_t)*4;
+		}
+		break;
+
+	case CAUGHT_POKEMON://ID, ok/fail
+		size = sizeof(uint32_t)*2;
+		break;
+
+	case GET_POKEMON://sizePokemon, pokemon
+		size = strlen(nombrePokemon) + 1 + sizeof(uint32_t);
+		break;
+
+	default:
+		printf("Error: el caso ingresado no esta contemplado \n");
+		break;
+	}
+	return size;
+}
+
+uint32_t sizePaquete(paquete* paq){
+	return paq->sizeStream+ sizeof(uint32_t)*5;
+}
 
 
 

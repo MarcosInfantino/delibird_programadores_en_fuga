@@ -276,12 +276,12 @@ void* enviarMensaje(void* paqueteySocket){
 	paqueteYSocket* paqueteConSocket = (paqueteYSocket*) paqueteySocket;
 	send(paqueteConSocket->socketCliente, paqueteConSocket->paqueteAEnviar, sizeof(uint32_t)*5+paqueteConSocket->sizeDelStream, 0);
 	printf("Estoy esperando respuesta\n");
-	uint32_t respuesta;
+	uint32_t respuesta=0;
 	recv(paqueteConSocket->socketCliente, &respuesta,sizeof(uint32_t),0);
 	if(respuesta>0){
-		printf("recibido correctamente\n");
+		printf("recibido correctamente: %i\n", respuesta);
 	}else{
-		printf("recibido incorrectamente\n");
+		printf("recibido incorrectamente: %i\n", respuesta);
 	}
 	close(paqueteConSocket->socketCliente);
 	return NULL;
@@ -293,7 +293,7 @@ void iniciarHiloEnvio(paqueteYSocket* paqueteySocket){
 	if(nro!=0){
 		printf("Hubo un problema en la creación del hilo para conectarse al broker \n");
 	}
-	pthread_join(hilo);
+	pthread_join(hilo,NULL);
 }
 
 
