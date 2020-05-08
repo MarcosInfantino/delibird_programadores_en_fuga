@@ -20,11 +20,12 @@
 #include <sys/types.h>
 #include <pthread.h>
 #include "gameBoy.h"
-#include <messages_lib/messages_lib.h>
+
 
 //\n
 
 int main(int argc, char* argv[]) {
+	printf("Estoy andando\n");
 	t_config * config = config_create("gameBoy1.config");
 	void* stream;
 	paquete* paquete;

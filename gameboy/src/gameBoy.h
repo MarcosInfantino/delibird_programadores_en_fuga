@@ -10,6 +10,7 @@
 
 #include <stdint.h>
 #include<commons/config.h>
+#include <messages_lib/messages_lib.h>
 
 typedef struct{
 	void * paqueteAEnviar;
