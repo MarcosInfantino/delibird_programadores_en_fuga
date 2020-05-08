@@ -75,21 +75,21 @@ uint32_t retardoCicloCpu;
 
 //
 int main(int argc , char* argv[]){
-	//char pathConfig= argv;
-	entrenadoresLibres=list_create();
+	//char pathConfig  = argv;
+	entrenadoresLibres = list_create();
 	//mutexEntrenadores=list_create();
-	colaEjecucionFifo=queue_create();
-	char* pathConfig="Team2.config";
-	t_config* config=config_create(pathConfig);
-	retardoCicloCpu=config_get_int_value(config,"RETARDO_CICLO_CPU");
-	puertoBroker=config_get_int_value(config,"PUERTO_BROKER");
-	ipBroker=config_get_string_value(config,"IP_BROKER");
-	dataTeam* team =inicializarTeam(config);
-	entrenadores= team->entrenadores;
+	colaEjecucionFifo  = queue_create();
+	char* pathConfig   = "Team2.config";
+	t_config* config   = config_create(pathConfig);
+	retardoCicloCpu    = config_get_int_value(config,"RETARDO_CICLO_CPU");
+	puertoBroker       = config_get_int_value(config,"PUERTO_BROKER");
+	ipBroker           = config_get_string_value(config,"IP_BROKER");
+	dataTeam* team     = inicializarTeam(config);
+	entrenadores       = team->entrenadores;
 	//entrenadoresLibres=entrenadores;
-	uint32_t cantEntrenadores=list_size(team->entrenadores);
+	uint32_t cantEntrenadores = list_size(team->entrenadores);
 	//mutexEntrenadores=inicializarMutexEntrenadores();
-	arrayIdHilosEntrenadores=malloc(cantEntrenadores*sizeof(pthread_t));
+	arrayIdHilosEntrenadores  = malloc(cantEntrenadores*sizeof(pthread_t));
 	inicializarEntrenadores(team->entrenadores);
 	pthread_t hiloConexionInicialBroker;
 	crearHiloConexionColasBroker((void*)config,&hiloConexionInicialBroker);
@@ -99,7 +99,7 @@ int main(int argc , char* argv[]){
 
 	printf("hola\n");
 
-	posicion pos={1,2};
+	posicion pos = {1,2};
 
 	printf("id entrenador mas cercano: %i\n", obtenerIdEntrenadorMasCercano(pos));
 
@@ -144,14 +144,14 @@ uint32_t obtenerIdEntrenadorMasCercano(posicion pos){ //el id es el index del en
     dataEntrenador* entrenadorMasCercano;
     uint32_t distanciaASuperar;
     for(uint32_t i=0;i<list_size(entrenadoresLibres);i++){
-        dataEntrenador* entrenadorActual=(dataEntrenador*) list_get(entrenadoresLibres,i);
+        dataEntrenador* entrenadorActual = (dataEntrenador*) list_get(entrenadoresLibres,i);
         if (i == 0){
             entrenadorMasCercano = entrenadorActual;
-            distanciaASuperar = distanciaEntrenadorPosicion(entrenadorActual,pos);
+            distanciaASuperar    = distanciaEntrenadorPosicion(entrenadorActual,pos);
         } else {
         if(distanciaEntrenadorPosicion(entrenadorActual,pos) < distanciaASuperar){
-            entrenadorMasCercano=entrenadorActual;
-            distanciaASuperar = distanciaEntrenadorPosicion(entrenadorActual,pos);
+            entrenadorMasCercano = entrenadorActual;
+            distanciaASuperar    = distanciaEntrenadorPosicion(entrenadorActual,pos);
         }
     }
 
@@ -199,8 +199,8 @@ void* iniciarServidorGameboy(void* arg){
 		}
 
 		struct sockaddr_in direccionCliente;
-		unsigned int tamanioDireccion=sizeof(direccionCliente);
-		int cliente = accept(servidor, (void*) &direccionCliente, &tamanioDireccion);
+		unsigned int tamanioDireccion = sizeof(direccionCliente);
+		int cliente 				  = accept(servidor, (void*) &direccionCliente, &tamanioDireccion);
 
 		printf("Se ha recibido una conexión en %d.\n", cliente);
 
@@ -229,11 +229,11 @@ void* suscribirseColasBroker(void* conf){
 	uint32_t sizeStream=sizeof(uint32_t);
 
 
-	mensajeSuscripcion mensajeAppeared={APPEARED_POKEMON};
+	mensajeSuscripcion mensajeAppeared  = {APPEARED_POKEMON};
 
-	mensajeSuscripcion mensajeCaught={CAUGHT_POKEMON};
+	mensajeSuscripcion mensajeCaught    = {CAUGHT_POKEMON};
 
-	mensajeSuscripcion mensajeLocalized={LOCALIZED_POKEMON};
+	mensajeSuscripcion mensajeLocalized = {LOCALIZED_POKEMON};
 
 	void* streamAppeared=serializarSuscripcion(&mensajeAppeared);
 	void* streamCaught=serializarSuscripcion(&mensajeCaught);
@@ -241,9 +241,9 @@ void* suscribirseColasBroker(void* conf){
 
 
 
-	paquete* suscripcionAppeared=llenarPaquete(TEAM,SUSCRIPCION,sizeStream, streamAppeared);
-	paquete* suscripcionCaught=llenarPaquete(TEAM,SUSCRIPCION,sizeStream, streamCaught);
-	paquete* suscripcionLocalized=llenarPaquete(TEAM,SUSCRIPCION,sizeStream, streamLocalized);
+	paquete* suscripcionAppeared  = llenarPaquete(TEAM,SUSCRIPCION,sizeStream, streamAppeared);
+	paquete* suscripcionCaught    = llenarPaquete(TEAM,SUSCRIPCION,sizeStream, streamCaught);
+	paquete* suscripcionLocalized = llenarPaquete(TEAM,SUSCRIPCION,sizeStream, streamLocalized);
 	//suscribirseCola(NULL);
 
 
@@ -300,9 +300,9 @@ void* suscribirseCola(void* msgSuscripcion){
 	paquete* paq=(paquete*) msgSuscripcion;
 
 	struct sockaddr_in direccionServidor;
-		direccionServidor.sin_family=AF_INET;
-		direccionServidor.sin_addr.s_addr=inet_addr(ipBroker);
-		direccionServidor.sin_port=htons(puertoBroker);
+		direccionServidor.sin_family      = AF_INET;
+		direccionServidor.sin_addr.s_addr = inet_addr(ipBroker);
+		direccionServidor.sin_port        = htons(puertoBroker);
 
 		uint32_t cliente=socket(AF_INET,SOCK_STREAM,0);
 
@@ -314,20 +314,20 @@ void* suscribirseCola(void* msgSuscripcion){
 
 
 	printf("Comienzo suscripcion\n");
-	uint32_t bytes=sizeof(uint32_t)*5+paq->sizeStream;
+	uint32_t bytes = sizeof(uint32_t)*5+paq->sizeStream;
 
-	void* stream=serializarPaquete(paq);
+	void* stream   = serializarPaquete(paq);
 
 
 	send(cliente,stream,bytes,0);
 
 	free(stream);
 
-	uint32_t respuesta=-1;
+	uint32_t respuesta = -1;
 	printf("Espero respuesta\n");
 	recv(cliente,&respuesta,sizeof(uint32_t),0);
 
-		if(respuesta==CORRECTO){
+		if(respuesta == CORRECTO){
 			printf("Mensaje recibido correctamente\n");
 
 		}else{
@@ -360,8 +360,8 @@ void* suscribirseCola(void* msgSuscripcion){
 int inicializarEntrenadores(t_list* entrenadores){
 	uint32_t i;
 	for(i=0;i<list_size(entrenadores);i++){
-		void* entrenadorActual=list_get(entrenadores,i);
-		uint32_t err=pthread_create(&(arrayIdHilosEntrenadores[i]),NULL,ejecucionHiloEntrenador,entrenadorActual);
+		void* entrenadorActual = list_get(entrenadores,i);
+		uint32_t err		   = pthread_create(&(arrayIdHilosEntrenadores[i]),NULL,ejecucionHiloEntrenador,entrenadorActual);
 		if(err!=0){
 			printf("Hubo un problema en la creación del hilo del entrenador \n");
 			return err;
@@ -403,8 +403,8 @@ void* ejecucionHiloEntrenador(void* arg){
 
 uint32_t encontrarPosicionEntrenadorLibre(dataEntrenador* entrenador){
 	 for(uint32_t i=0;i<list_size(entrenadoresLibres);i++){
-	        dataEntrenador* entrenadorActual=(dataEntrenador*) list_get(entrenadoresLibres,i);
-	        if(entrenadorActual->id==entrenador->id){
+	        dataEntrenador* entrenadorActual = (dataEntrenador*) list_get(entrenadoresLibres,i);
+	        if(entrenadorActual->id == entrenador->id){
 	        	return i;
 	        }
 	        }
@@ -414,17 +414,17 @@ uint32_t encontrarPosicionEntrenadorLibre(dataEntrenador* entrenador){
 void entrarEnEjecucion(dataEntrenador* infoEntrenador){
 
 	pthread_mutex_lock(&mutexEntrenadorEnEjecucion);
-	infoEntrenador->estado=EXEC;
+	infoEntrenador->estado = EXEC;
 	moverEntrenadorAPosicion(infoEntrenador, (pokemonAAtrapar.posicion));
 
 	pthread_mutex_unlock(&mutexEntrenadorEnEjecucion);
 }
 
 void seleccionarEntrenador(pokemonPosicion* pokemon){
-	uint32_t idEntrenadorMasCercano=obtenerIdEntrenadorMasCercano(pokemon->posicion);
-	dataEntrenador* entrenadorMasCercano=list_get(entrenadores,idEntrenadorMasCercano);
+	uint32_t idEntrenadorMasCercano      = obtenerIdEntrenadorMasCercano(pokemon->posicion);
+	dataEntrenador* entrenadorMasCercano = list_get(entrenadores,idEntrenadorMasCercano);
 
-	entrenadorMasCercano->pokemonAAtrapar=pokemon;
+	entrenadorMasCercano->pokemonAAtrapar = pokemon;
 	habilitarHiloEntrenador(idEntrenadorMasCercano);
 }
 
@@ -470,51 +470,51 @@ void moverEntrenadorY(dataEntrenador* entrenador, uint32_t movimientoY){
 }
 
 void moverEntrenador(dataEntrenador* entrenador, uint32_t movimientoX, uint32_t movimientoY){
-	posicion posAnterior=entrenador->posicion;
-	(entrenador->posicion).x=posAnterior.x+movimientoX;
-	(entrenador->posicion).y=posAnterior.y+movimientoY;
+	posicion posAnterior     = entrenador->posicion;
+	(entrenador->posicion).x = posAnterior.x+movimientoX;
+	(entrenador->posicion).y = posAnterior.y+movimientoY;
 }
 
 dataTeam* inicializarTeam(t_config* config){
 
-	dataTeam* dataTeam=malloc(sizeof(dataTeam));
-	dataTeam->entrenadores=list_create();
-	t_list* especiesObjetivo=list_create();
+	dataTeam* dataTeam       = malloc(sizeof(dataTeam));
+	dataTeam->entrenadores   = list_create();
+	t_list* especiesObjetivo = list_create();
 
-	dataTeam->objetivosCumplidos=list_create();
+	dataTeam->objetivosCumplidos = list_create();
 
 	char** arrayPosicionesEntrenadores=config_get_array_value(config,"POSICIONES_ENTRENADORES");
 	char** arrayPokemonesEntrenadores=config_get_array_value(config,"POKEMON_ENTRENADORES");
 	char** arrayObjetivosEntrenadores=config_get_array_value(config,"OBJETIVOS_ENTRENADORES");
 
-	t_list* posicionesEntrenadores=obtenerListaDeListas(arrayPosicionesEntrenadores);
-	t_list* pokemonesEntrenadores=obtenerListaDeListas(arrayPokemonesEntrenadores);
-	t_list* objetivosEntrenadores=obtenerListaDeListas(arrayObjetivosEntrenadores);
-	uint32_t cantEntrenadores=list_size(posicionesEntrenadores);
+	t_list* posicionesEntrenadores = obtenerListaDeListas(arrayPosicionesEntrenadores);
+	t_list* pokemonesEntrenadores  = obtenerListaDeListas(arrayPokemonesEntrenadores);
+	t_list* objetivosEntrenadores  = obtenerListaDeListas(arrayObjetivosEntrenadores);
+	uint32_t cantEntrenadores      = list_size(posicionesEntrenadores);
 
 	uint32_t id;
 
 	for(id=0;id<cantEntrenadores;id++){
 		dataEntrenador* dataEntrenador=malloc(sizeof(dataEntrenador));
-		char** pos=list_get(posicionesEntrenadores,id);
-		char** pokemones=list_get(pokemonesEntrenadores,id);
-		char** objetivos=list_get(objetivosEntrenadores,id);
+		char** pos		 = list_get(posicionesEntrenadores,id);
+		char** pokemones = list_get(pokemonesEntrenadores,id);
+		char** objetivos = list_get(objetivosEntrenadores,id);
 
-		(dataEntrenador->posicion).x=atoi(pos[0]);
-		(dataEntrenador->posicion).y=atoi(pos[1]);
+		(dataEntrenador->posicion).x = atoi(pos[0]);
+		(dataEntrenador->posicion).y = atoi(pos[1]);
 
-		dataEntrenador->pokemones=arrayStringALista(pokemones);
-		dataEntrenador->objetivoPersonal=arrayStringALista(objetivos);
+		dataEntrenador->pokemones        = arrayStringALista(pokemones);
+		dataEntrenador->objetivoPersonal = arrayStringALista(objetivos);
 
-		t_list* pokemonesEntrenadorAux=arrayStringALista(pokemones);
-		t_list* objetivoPersonalEntrenadorAux=arrayStringALista(objetivos);
+		t_list* pokemonesEntrenadorAux        = arrayStringALista(pokemones);
+		t_list* objetivoPersonalEntrenadorAux = arrayStringALista(objetivos);
 		uint32_t i;
 		//for(i=0;i<list_size(pokemonesEntrenadorAux);i++){
 		for(i=0;i<list_size(pokemonesEntrenadorAux);i++){
-			char *pokemonAComparar=(char*) list_get(pokemonesEntrenadorAux,i);
-			uint32_t encontrado=buscarMismoPokemon(objetivoPersonalEntrenadorAux,pokemonAComparar);
+			char *pokemonAComparar = (char*) list_get(pokemonesEntrenadorAux,i);
+			uint32_t encontrado    = buscarMismoPokemon(objetivoPersonalEntrenadorAux,pokemonAComparar);
 
-			if(encontrado!=-1){
+			if(encontrado != -1){
 				list_remove(objetivoPersonalEntrenadorAux,encontrado);
 			}
 		}
@@ -524,9 +524,9 @@ dataTeam* inicializarTeam(t_config* config){
 						list_add(especiesObjetivo,list_get(objetivoPersonalEntrenadorAux,i));
 
 				}
-		dataEntrenador->estado=NEW;
-		dataEntrenador->id=id;
-		dataEntrenador->pokemonAAtrapar=NULL;
+		dataEntrenador->estado			= NEW;
+		dataEntrenador->id				= id;
+		dataEntrenador->pokemonAAtrapar = NULL;
 		//dataEntrenador->mutex=PTHREAD_MUTEX_INITIALIZER;
 		pthread_mutex_init(&(dataEntrenador->mutex),NULL);
 		list_add(entrenadoresLibres,(void*)dataEntrenador);
@@ -534,7 +534,7 @@ dataTeam* inicializarTeam(t_config* config){
 
 
 	}
-	dataTeam->objetivoGlobal=obtenerObjetivos(especiesObjetivo);
+	dataTeam->objetivoGlobal = obtenerObjetivos(especiesObjetivo);
 	return dataTeam;
 
 }
@@ -555,7 +555,7 @@ uint32_t buscarMismoPokemon(t_list* lst, char* pokemon){//devuelve la posicion e
 
 t_list* arrayStringALista(char** arr){
 	uint32_t i;
-	t_list* lst=list_create();
+	t_list* lst = list_create();
 	for(i=0;arr[i]!=NULL;i++){
 		list_add(lst,(void*) arr[i]);
 	}
@@ -588,19 +588,19 @@ t_list* arrayStringALista(char** arr){
 //}
 
 t_list* obtenerObjetivos(t_list* especies){
-	t_list* objetivos=list_create();
+	t_list* objetivos = list_create();
 
 
-	for(uint32_t i=0;i<list_size(especies);i++){
-		char* especie=(char*)list_get(especies,i);
+	for(uint32_t i = 0;i<list_size(especies);i++){
+		char* especie = (char*)list_get(especies,i);
 
 		//especieAComparar=especie;
 
-		uint32_t encontrado=buscarObjetivoPorEspecie(objetivos,especie);
-		if(encontrado==-1){
-			objetivo* objetivo=malloc(sizeof(objetivo));
-			objetivo->cantidad=1;
-			objetivo->pokemon= (char*) especie;
+		uint32_t encontrado = buscarObjetivoPorEspecie(objetivos,especie);
+		if(encontrado == -1){
+			objetivo* objetivo = malloc(sizeof(objetivo));
+			objetivo->cantidad = 1;
+			objetivo->pokemon  = (char*) especie;
 			//printf("%s\n",(char*)(objetivo->pokemon));
 			list_add(objetivos,(void*)objetivo);
 		}else{
@@ -614,8 +614,8 @@ t_list* obtenerObjetivos(t_list* especies){
 uint32_t buscarObjetivoPorEspecie(t_list* listaObjetivos, char* especie){
 	uint32_t i;
 	for(i=0;i<list_size(listaObjetivos);i++){
-		objetivo* obj=(objetivo*)list_get(listaObjetivos,i);
-		if(strcmp(obj->pokemon,especie)==0){
+		objetivo* obj = (objetivo*)list_get(listaObjetivos,i);
+		if(strcmp(obj->pokemon,especie) == 0){
 			return i;
 		}
 	}
@@ -629,14 +629,14 @@ uint32_t buscarObjetivoPorEspecie(t_list* listaObjetivos, char* especie){
 
 
 t_list* obtenerListaDeListas(char** lst){
-	t_list* lstDeLst=list_create();
-	uint32_t i=0;
+	t_list* lstDeLst = list_create();
+	uint32_t i       = 0;
 	char* aux=lst[i];
 	while(aux!=NULL){
-		char** str=string_split(aux, "|");
+		char** str = string_split(aux, "|");
 		list_add(lstDeLst,(void**)str);
 		i++;
-		aux=lst[i];
+		aux = lst[i];
 	}
 	return lstDeLst;
 }
