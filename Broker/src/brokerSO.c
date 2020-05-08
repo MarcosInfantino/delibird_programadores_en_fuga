@@ -63,7 +63,7 @@ int main(void) {
 	printf("Estoy escuchando\n");
 
 	printf("Lib\n");
-	t_paquete* dsadsa = armarPaquete("hola");
+	t_paquete* prueba = armarPaquete("hola");
 	printf("Lib despues\n");
 
 	//listen(servidor, 100);
@@ -71,29 +71,9 @@ int main(void) {
 //		struct sockaddr_in direccionCliente;
 //		unsigned int tamanioDireccion=sizeof(direccionCliente);
 //		int cliente = accept(servidor, (void*) &direccionCliente, &tamanioDireccion);
-//
-//		printf("Se ha recibido una conexión en %d.\n", cliente);
-//
-//
-//		void *buffer = malloc(100);
-//
-//		while(1){
-//			int bytesRecibidos = recv(cliente,buffer, 99,0);
-//
-//			if(bytesRecibidos<=0){
-//				perror("Error");
-//				return 1;
-//			}
-//
-//
-//
-//			printf("Me llegaron %d bytes con %s\n", bytesRecibidos,(char*)buffer);
-//
-//		}
-//
-//		free(buffer);
 
-	while (1)  //para recibir n cantidad de conexiones
+
+	while (1)  								//para recibir n cantidad de conexiones
 		esperar_cliente(servidor);
 
 	return EXIT_SUCCESS;
@@ -101,25 +81,19 @@ int main(void) {
 
 void* iniciarCola(void* c) {
 	colaMensajes* cc = (colaMensajes*) c;
-	cc->cola = malloc(sizeof(t_queue));
+	cc->cola 		 = malloc(sizeof(t_queue));
 	cc->suscriptores = malloc(sizeof(t_list));
 	return NULL;
 }
 
 void iniciarHilos() {
 
-	idHiloAppearedPokemon = pthread_create(&hiloAppearedPokemon, NULL,
-			iniciarCola, (void*) &appearedPokemon);
-	idHiloNewPokemon = pthread_create(&hiloNewPokemon, NULL, iniciarCola,
-			(void*) &newPokemon);
-	idHiloCaughtPokemon = pthread_create(&hiloCaughtPokemon, NULL, iniciarCola,
-			(void*) &caughtPokemon);
-	idHiloCatchPokemon = pthread_create(&hiloCatchPokemon, NULL, iniciarCola,
-			(void*) &catchPokemon);
-	idHiloGetPokemon = pthread_create(&hiloGetPokemon, NULL, iniciarCola,
-			(void*) &getPokemon);
-	idHiloLocalizedPokemon = pthread_create(&hiloLocalizedPokemon, NULL,
-			iniciarCola, (void*) &localizedPokemon);
+	idHiloAppearedPokemon  = pthread_create(&hiloAppearedPokemon, NULL, iniciarCola, (void*) &appearedPokemon);
+	idHiloNewPokemon 	   = pthread_create(&hiloNewPokemon, NULL, iniciarCola, (void*) &newPokemon);
+	idHiloCaughtPokemon    = pthread_create(&hiloCaughtPokemon, NULL, iniciarCola, (void*) &caughtPokemon);
+	idHiloCatchPokemon     = pthread_create(&hiloCatchPokemon, NULL, iniciarCola, (void*) &catchPokemon);
+	idHiloGetPokemon       = pthread_create(&hiloGetPokemon, NULL, iniciarCola, (void*) &getPokemon);
+	idHiloLocalizedPokemon = pthread_create(&hiloLocalizedPokemon, NULL, iniciarCola, (void*) &localizedPokemon);
 
 	pthread_join(hiloAppearedPokemon, NULL);
 	pthread_join(hiloNewPokemon, NULL);
@@ -136,9 +110,9 @@ void esperar_cliente(uint32_t servidor) {
 
 	uint32_t tam_direccion = sizeof(struct sockaddr_in);
 	printf("Espero un nuevo cliente\n");
-	uint32_t socket_cliente = accept(servidor, (void*) &dir_cliente,
-			&tam_direccion);
+	uint32_t socket_cliente = accept(servidor, (void*) &dir_cliente, &tam_direccion);
 	printf("Gestiono un nuevo cliente\n");
+
 	pthread_create(&thread, NULL, atenderCliente, (void*) (&socket_cliente));
 	pthread_detach(thread);
 }
@@ -146,52 +120,81 @@ void esperar_cliente(uint32_t servidor) {
 void* atenderCliente(void* sock) {
 	uint32_t* socket = (uint32_t*) sock;
 	uint32_t modulo;
-	uint32_t esSuscripcion;
+	uint32_t tipoDeMensaje;
 
 	if (recv(*socket, &modulo, sizeof(int), MSG_WAITALL) == -1) { //si hubo un error al recibir
 		modulo = -1;
 		printf("error recv\n");
 	}
 	printf("recibi un mensaje\n");
-	recv(*socket, &esSuscripcion, sizeof(int), MSG_WAITALL);
+	recv(*socket, &tipoDeMensaje, sizeof(int), MSG_WAITALL);
 
-	if (esSuscripcion == SUSCRIPCION) { //se quiere suscribir a alguna cola
+
+	char * conexionDeProceso = "Se conectó un proceso ";
+	strcat(conexionDeProceso, nombreDeProceso(modulo));
+	log_info(loggerBroker,conexionDeProceso);
+
+
+	if (tipoDeMensaje == SUSCRIPCION) { //se quiere suscribir a alguna cola
 		suscribirSegunCola(modulo, *socket);
 	} else {
-		manejarTipoDeMensaje(modulo, *socket);
+		manejarTipoDeMensaje(modulo, tipoDeMensaje, *socket);
 	}
 	return NULL;
 }
 
-//me parece que acá va a convenir que sea por cola y no por modulo, segun la cola es el tipo de mensaje
-void manejarTipoDeMensaje(uint32_t modulo, uint32_t cliente_fd) {
+
+void manejarTipoDeMensaje(uint32_t modulo, uint32_t  cola, uint32_t cliente_fd) {
+
+	char * mensajeNuevoDeProceso = "Llegó un nuevo mensaje a la cola ";
+	strcat(mensajeNuevoDeProceso, nombreDeCola(cola));
+	log_info(loggerBroker, mensajeNuevoDeProceso);
+
 	/*switch(cola){
 	 case APPEARED_POKEMON:
-	 deserializarAppeared(cliente_fd);
+	 meterEnCola( appearedPokemon, deserializarAppeared(cliente_fd););
 	 break;
 	 case NEW_POKEMON:
-	 deserializarNew(cliente_fd);
+	 meterEnCola( newPokemon, cliente_fd);
 	 break;
 	 case CAUGHT_POKEMON:
-	 deserializarCaught(cliente_fd);
+	 meterEnCola( caughtPokemon, cliente_fd);
 	 break;
 	 case CATCH_POKEMON:
-	 deserializarCatch(cliente_fd);
+	 meterEnCola( catchPokemon, cliente_fd);
 	 break;
 	 case GET_POKEMON:
-	 deserializarGet(cliente_fd);
+	 meterEnCola( getPokemon, cliente_fd);
 	 break;
 	 case LOCALIZED_POKEMON:
-	 deserializarLocalized(cliente_fd);
+	 meterEnCola( localizedPokemon, cliente_fd);
+	 break;
+	 case -1:
+	 pthread_exit(NULL);
 	 }*/
-	switch (modulo) {
-	case TEAM:
-		break;
-	case 0:
-		pthread_exit(NULL);
-	case -1:
-		pthread_exit(NULL);
-	}
+}
+
+void meterEnCola( colaMensajes structCola, uint32_t  socket){
+
+	/*
+	 uint32_t id;
+	 uint32_t idCorrelativo;
+	 uint32_t sizeStream;
+	 void* stream;
+
+	recv(*socket, &id, sizeof(uint32_t), MSG_WAITALL);
+	recv(*socket, &idCorrelativo, sizeof(uint32_t), MSG_WAITALL);
+	recv(*socket, &sizeStream, sizeof(uint32_t), MSG_WAITALL);
+	recv(*socket, &stream, sizeof(sizeStream), MSG_WAITALL);
+
+	//tipoDEMensaje mensaje = acá hay que deserializar segun tipo de mensaje creo que haría un switch
+	 *
+	 *
+	 * esto va fuera del switch
+	list_add(structCola->cola, mensaje);*/
+	//el broker tiene que contestar mandando id de mensaje
+
+
 }
 
 void suscribirSegunCola(uint32_t modulo, uint32_t socket) {
@@ -249,6 +252,10 @@ void suscribir(parametroValidacion* parameter) {
 		list_add((parameter->structCola).suscriptores, (void*) &(parameter->socketCliente));
 		responderMensaje(parameter->socketCliente, CORRECTO);
 		printf("respondi mensaje correcto\n");
+
+		char * frase = armarStringSuscripLog(parameter->modulo,parameter->colaEnum);
+		log_info(loggerBroker, frase);
+
 	} else {
 		responderMensaje(parameter->socketCliente, INCORRECTO);
 		printf("respondi mensaje incorrecto\n");
@@ -297,4 +304,68 @@ bool validarPertenencia(colaMensajes cola, uint32_t socket) {
 	printf("Me rechazo validar pertenencia\n");
 	return false;
 
+}
+
+
+
+char* nombreDeProceso(uint32_t modulo){
+
+	switch(modulo){
+	case BROKER:
+		return "Broker";
+		break;
+	case TEAM:
+		return "Team";
+		break;
+	case GAMECARD:
+		return "GameCard";
+		break;
+	case GAMEBOY:
+		return "GameBoy";
+		break;
+	case -1:
+		return "ERROR";
+		break;
+	}
+	return "0";
+
+}
+
+char* nombreDeCola(uint32_t cola){
+
+	switch(cola){
+	case APPEARED_POKEMON:
+		return "APPEARED_POKEMON";
+		break;
+	case NEW_POKEMON:
+		return "NEW_POKEMON";
+		break;
+	case CAUGHT_POKEMON:
+		return "CAUGHT_POKEMON";
+		break;
+	case CATCH_POKEMON:
+		return "CATCH_POKEMON";
+		break;
+	case GET_POKEMON:
+		return "GET_POKEMON";
+		break;
+	case LOCALIZED_POKEMON:
+		return "LOCALIZED_POKEMON";
+		break;
+	case -1:
+		return "ERROR";
+		break;
+	}
+
+	return "0";
+}
+
+char* armarStringSuscripLog(uint32_t modulo, uint32_t cola){
+	char* suscripcionDeUnProceso = "Se suscribrió el proceso ";
+	char* suscripcionAcola = " a la cola ";
+	strcat(suscripcionDeUnProceso, nombreDeProceso(modulo));
+	strcat(suscripcionDeUnProceso,suscripcionAcola );
+	strcat(suscripcionDeUnProceso ,nombreDeCola(cola));
+
+	return suscripcionDeUnProceso;
 }
