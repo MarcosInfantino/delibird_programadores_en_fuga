@@ -14,63 +14,50 @@
 #include <stdbool.h>
 #include <commons/config.h>
 #include<commons/log.h>
+#include <messages_lib/messages_lib.h>
 
 uint32_t puertoBroker;
 char* ipBroker;
 t_log* loggerBroker;
-
-typedef enum {
-	INCORRECTO, CORRECTO
-} respuesta_broker;
 
 typedef struct {
 	t_queue* cola;
 	t_list* suscriptores;
 } colaMensajes;
 
-typedef struct {
-	uint32_t modulo;
-	colaMensajes structCola;
-	uint32_t socketCliente;
-	uint32_t colaEnum;
-} parametroValidacion;
+typedef struct{
+	colaMensajes cola;
+	paquete paq;
+	uint32_t socket;
+	uint32_t tiempo;
+}suscripcionTiempo;
 
-/*enum modulosTP {
-	BROKER, TEAM, GAMECARD, GAMEBOY
-};*/
 
-/*enum colas {
-	APPEARED_POKEMON,
-	NEW_POKEMON,
-	CAUGHT_POKEMON,
-	CATCH_POKEMON,
-	GET_POKEMON,
-	LOCALIZED_POKEMON
-};*/
-
-/*enum tipoMensaje {
-	NORMAL, SUSCRIPCION
-};*/
+//typedef struct {
+//	paquete paquete;
+//	colaMensajes structCola;
+//	uint32_t socketCliente;
+//} parametroValidacion;
 
 pthread_t thread;
 
-uint32_t contadorMensajes = 0;
+uint32_t contadorMensajes = 1;
 
 void iniciarHilos();
 void* iniciarCola(void*);
 
 void esperar_cliente(uint32_t);
 void* atenderCliente(void* sock);
-void manejarTipoDeMensaje(uint32_t modulo, uint32_t  cola, uint32_t cliente_fd);
-void suscribirSegunCola(uint32_t modulo, uint32_t socket);
-void suscribir(parametroValidacion* parameter);
+void manejarTipoDeMensaje(paquete paq, uint32_t socket);
+void suscribirSegunCola(paquete paq, uint32_t socket);
+void suscribir(colaMensajes cola, paquete paq, uint32_t socket);
 void responderMensaje(uint32_t socketCliente, uint32_t respuesta);
-bool validarParaSuscripcion(parametroValidacion* parameter);
+bool validarParaSuscripcion(colaMensajes cola, paquete paq, uint32_t socket);
 bool validarSuscripcionSegunModulo(uint32_t modulo, uint32_t cola);
 bool validarPertenencia(colaMensajes cola, uint32_t socket);
 char* nombreDeProceso(uint32_t modulo);
 char* nombreDeCola(uint32_t cola);
 char* armarStringSuscripLog(uint32_t modulo, uint32_t cola);
-//void meterEnCola( colaMensajes structCola, uint32_t  socket);
+void meterEnCola( colaMensajes* structCola, void* mensaje, uint32_t  socket);
 
 #endif /* BROKER_H_ */
