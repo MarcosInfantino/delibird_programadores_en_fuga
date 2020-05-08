@@ -195,16 +195,31 @@ void* iniciarServidorGameboy(void* arg){
 
 		}else{
 		printf("Estoy escuchando\n");
-		listen(servidor,100);
+		while (1)  								//para recibir n cantidad de conexiones
+				esperar_cliente(servidor);
 		}
 
-		struct sockaddr_in direccionCliente;
-		unsigned int tamanioDireccion = sizeof(direccionCliente);
-		int cliente 				  = accept(servidor, (void*) &direccionCliente, &tamanioDireccion);
 
-		printf("Se ha recibido una conexión en %d.\n", cliente);
 
 	return NULL;
+}
+
+void esperar_cliente(uint32_t servidor) {
+
+	listen(servidor, 100);
+	struct sockaddr_in dir_cliente;
+
+	uint32_t tam_direccion = sizeof(struct sockaddr_in);
+	printf("Espero un nuevo cliente\n");
+	uint32_t socket_cliente = accept(servidor, (void*) &dir_cliente, &tam_direccion);
+	printf("Gestiono un nuevo cliente\n");
+
+	pthread_create(&threadAtencionGameboy, NULL, atenderCliente, (void*) (&socket_cliente));
+	pthread_detach(threadAtencionGameboy);
+}
+
+void* atenderCliente(void* sock){
+
 }
 
 int crearHiloConexionColasBroker(void* config, pthread_t* hilo){

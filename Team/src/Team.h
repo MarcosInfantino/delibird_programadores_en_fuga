@@ -17,6 +17,9 @@
 #include <unistd.h>
 #include <messages_lib/messages_lib.h>
 //void* especieAComparar;
+
+pthread_t threadAtencionGameboy;
+
 enum respuestasBroker{INCORRECTO, CORRECTO};
 
 typedef enum {
@@ -158,6 +161,10 @@ void habilitarHiloEntrenador(uint32_t idEntrenador);
 void entrarEnEjecucion(dataEntrenador* infoEntrenador);
 
 uint32_t encontrarPosicionEntrenadorLibre(dataEntrenador* entrenador);
+
+void esperar_cliente(uint32_t servidor);
+
+void* atenderCliente(void* sock);
 
 
 

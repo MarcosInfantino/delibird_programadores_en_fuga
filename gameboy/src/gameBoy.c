@@ -226,6 +226,7 @@ uint32_t socketCliente (char* ip, uint32_t puerto){
 		perror("No se pudo conectar");
 		return 1;
 	}
+
 	return cliente;
 }
 
@@ -291,10 +292,8 @@ void iniciarHiloEnvio(paqueteYSocket* paqueteySocket){
 	uint32_t nro = pthread_create(&hilo, NULL, enviarMensaje, (void*)paqueteySocket);
 	if(nro!=0){
 		printf("Hubo un problema en la creación del hilo para conectarse al broker \n");
-	}else{
-		printf("Hilo creado correctamente\n");
 	}
-	pthread_detach(hilo);
+	pthread_join(hilo);
 }
 
 
