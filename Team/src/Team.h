@@ -15,8 +15,14 @@
 #include <pthread.h>
 #include <commons/config.h>
 #include <unistd.h>
+#include <messages_lib/messages_lib.h>
+#include <semaphore.h>
+#include <arpa/inet.h>
 //void* especieAComparar;
-enum respuestasBroker{INCORRECTO, CORRECTO};
+
+pthread_t threadAtencionGameboy;
+
+
 
 typedef enum {
 	NEW=1500,
@@ -56,6 +62,7 @@ typedef struct {
 	estado estado;
 	uint32_t id;
 	pokemonPosicion* pokemonAAtrapar;
+	sem_t semaforo;
 } dataEntrenador;
 
 typedef struct {
@@ -66,32 +73,34 @@ typedef struct {
 
 }dataTeam;
 
-typedef enum {
-	BROKER,
-	TEAM,
-	GAMECARD,
-	GAMEBOY
-}modulo;
-
-typedef enum{
-	APPEARED_POKEMON,
-	NEW_POKEMON,
-	CAUGHT_POKEMON,
-	CATCH_POKEMON,
-	GET_POKEMON,
-	LOCALIZED_POKEMON
-}cola;
-
-typedef enum{
-	MENSAJE_NORMAL,
-	MENSAJE_SUSCRIPCION
-}tipoMensaje;
-
 typedef struct{
-	uint32_t modulo;
-	uint32_t tipoMensaje;
-	uint32_t cola;
-}mensajeSuscripcion;
+	uint32_t idEntrenador;
+	uint32_t idMensaje;
+}idsEntrenadorMensaje;
+
+//typedef enum {
+//	BROKER,
+//	TEAM,
+//	GAMECARD,
+//	GAMEBOY
+//}modulo;
+
+//typedef enum{
+//	APPEARED_POKEMON,
+//	NEW_POKEMON,
+//	CAUGHT_POKEMON,
+//	CATCH_POKEMON,
+//	GET_POKEMON,
+//	LOCALIZED_POKEMON
+//}cola;
+
+
+
+//typedef struct{
+//	uint32_t modulo;
+//	uint32_t tipoMensaje;
+//	uint32_t cola;
+//}mensajeSuscripcion;
 
 typedef struct{
 	uint32_t modulo;
@@ -160,6 +169,13 @@ void entrarEnEjecucion(dataEntrenador* infoEntrenador);
 
 uint32_t encontrarPosicionEntrenadorLibre(dataEntrenador* entrenador);
 
+void esperar_cliente(uint32_t servidor);
+
+void* atenderCliente(void* sock);
+
+void atenderAppeared(mensajeAppearedTeam* msg);
+
+void enviarCatch(dataEntrenador* infoEntrenador);
 
 
 #endif /* TEAM_H_ */

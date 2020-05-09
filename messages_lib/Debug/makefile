@@ -8,7 +8,7 @@ RM := rm -rf
 
 # All of the sources participating in the build are defined here
 -include sources.mk
--include src/subdir.mk
+-include messages_lib/subdir.mk
 -include subdir.mk
 -include objects.mk
 
@@ -23,25 +23,21 @@ endif
 # Add inputs and outputs from these tool invocations to the build variables 
 
 # All Target
-all: libgameboy
-
-dependents:
-	-cd /home/utnso/messages_lib/Debug && $(MAKE) all
+all: libmessages_lib.so
 
 # Tool invocations
-libgameboy: $(OBJS) $(USER_OBJS) /home/utnso/messages_lib/Debug/libmessages_lib.so
+libmessages_lib.so: $(OBJS) $(USER_OBJS)
 	@echo 'Building target: $@'
 	@echo 'Invoking: GCC C Linker'
-	gcc -L"/home/utnso/messages_lib/Debug" -shared -o "libgameboy" $(OBJS) $(USER_OBJS) $(LIBS)
+	gcc -shared -o "libmessages_lib.so" $(OBJS) $(USER_OBJS) $(LIBS)
 	@echo 'Finished building target: $@'
 	@echo ' '
 
 # Other Targets
 clean:
-	-$(RM) $(LIBRARIES)$(OBJS)$(C_DEPS) libgameboy
+	-$(RM) $(LIBRARIES)$(OBJS)$(C_DEPS) libmessages_lib.so
 	-@echo ' '
 
 .PHONY: all clean dependents
-/home/utnso/messages_lib/Debug/libmessages_lib.so:
 
 -include ../makefile.targets

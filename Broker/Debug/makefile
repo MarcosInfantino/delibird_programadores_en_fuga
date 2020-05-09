@@ -23,21 +23,25 @@ endif
 # Add inputs and outputs from these tool invocations to the build variables 
 
 # All Target
-all: brokerSO
+all: Broker
+
+dependents:
+	-cd /home/utnso/tp-2020-1c-Programadores-en-Fuga/messages_lib/Debug && $(MAKE) all
 
 # Tool invocations
-brokerSO: $(OBJS) $(USER_OBJS)
+Broker: $(OBJS) $(USER_OBJS) /home/utnso/tp-2020-1c-Programadores-en-Fuga/messages_lib/Debug/libmessages_lib.so
 	@echo 'Building target: $@'
 	@echo 'Invoking: GCC C Linker'
-	gcc -L/home/utnso/Entrega1TpSo -o "brokerSO" $(OBJS) $(USER_OBJS) $(LIBS)
+	gcc -L"/home/utnso/tp-2020-1c-Programadores-en-Fuga/messages_lib/Debug" -L/home/utnso/Entrega1TpSo -o "Broker" $(OBJS) $(USER_OBJS) $(LIBS)
 	@echo 'Finished building target: $@'
 	@echo ' '
 
 # Other Targets
 clean:
-	-$(RM) $(EXECUTABLES)$(OBJS)$(C_DEPS) brokerSO
+	-$(RM) $(EXECUTABLES)$(OBJS)$(C_DEPS) Broker
 	-@echo ' '
 
 .PHONY: all clean dependents
+/home/utnso/tp-2020-1c-Programadores-en-Fuga/messages_lib/Debug/libmessages_lib.so:
 
 -include ../makefile.targets
