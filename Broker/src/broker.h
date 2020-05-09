@@ -26,7 +26,7 @@ typedef struct {
 } colaMensajes;
 
 typedef struct{
-	colaMensajes cola;
+	uint32_t cola;
 	paquete paq;
 	uint32_t socket;
 	uint32_t tiempo;
@@ -59,5 +59,8 @@ char* nombreDeProceso(uint32_t modulo);
 char* nombreDeCola(uint32_t cola);
 char* armarStringSuscripLog(uint32_t modulo, uint32_t cola);
 void meterEnCola( colaMensajes* structCola, void* mensaje, uint32_t  socket);
+colaMensajes* obtenerCola(uint32_t colaInt);
+void desuscribir(uint32_t socket, uint32_t cola );
+void suscribirPorTiempo(void* estructura);
 
 #endif /* BROKER_H_ */

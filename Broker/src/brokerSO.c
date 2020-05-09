@@ -27,6 +27,8 @@ pthread_mutex_t mutex;
 colaMensajes appearedPokemon, newPokemon, caughtPokemon, catchPokemon,
 		getPokemon, localizedPokemon;
 
+colaMensajes colaNula;
+
 uint32_t idHiloAppearedPokemon, idHiloNewPokemon, idHiloCaughtPokemon,
 		idHiloCatchPokemon, idHiloGetPokemon, idHiloLocalizedPokemon;
 
@@ -145,6 +147,7 @@ void manejarTipoDeMensaje(paquete paq, uint32_t socket) {
 	char * mensajeNuevoDeProceso = "Llegó un nuevo mensaje a la cola ";
 	strcat(mensajeNuevoDeProceso, nombreDeCola(paq.tipoMensaje));
 	log_info(loggerBroker, mensajeNuevoDeProceso);
+	suscripcionTiempo structTiempo;
 
 	switch(paq.tipoMensaje){
 	 case APPEARED_POKEMON:
@@ -169,8 +172,11 @@ void manejarTipoDeMensaje(paquete paq, uint32_t socket) {
 		 suscribirSegunCola(paq, socket);
 		 break;
 	 case SUSCRIPCION_TIEMPO:
-		 suscripcionTiempo* structTiempo;
-
+		 structTiempo.paq = paq;
+		 structTiempo.cola = deserializarSuscripcionTiempo(paq.stream)->cola;
+		 structTiempo.tiempo = deserializarSuscripcionTiempo(paq.stream)->tiempo;
+		 structTiempo.socket = socket;
+		 suscribirPorTiempo((void*) &structTiempo);
 		 break;
 	 case -1:
 	 pthread_exit(NULL);
@@ -181,31 +187,47 @@ void suscribirPorTiempo(void* estructura){
 
 	//suscribir(colaMensajes cola, paquete paq, uint32_t socket);
 
-	suscripcionTiempo* structTiempo = (suscripcionTiempo*) estructura;
-	suscribir(structTiempo->cola, structTiempo->paq, structTiempo->socket);
+	suscripcionTiempo* structPorTiempo = (suscripcionTiempo*) estructura;
+	suscribir(*obtenerCola(structPorTiempo->cola), structPorTiempo->paq, structPorTiempo->socket);
 
-	sleep(structTiempo->tiempo);
+	sleep(structPorTiempo->tiempo);
 
-	desuscribir(structTiempo->socket, structTiempo->cola);
+	desuscribir(structPorTiempo->socket, structPorTiempo->cola);
 
 }
 
 void desuscribir(uint32_t socket, uint32_t cola ){
 	uint32_t i;
 	void* socketLista;
+	colaMensajes* punteroACola = obtenerCola(cola);
 
-	//asociar numero con cola real
-
-	for(i = 0; i < list_size(colaReal.suscriptores); i++){
-
-		socketLista = list_get(colaReal.suscriptores, i);
-
+	for(i = 0; i < list_size(punteroACola->suscriptores); i++){
+		socketLista = list_get(punteroACola->suscriptores, i);
 		if (*((uint32_t*) socketLista) == socket) {
-			list_remove(colaReal.suscriptores, i);
+			list_remove(punteroACola->suscriptores, i);
 			}
 	}
 
 
+}
+
+colaMensajes* obtenerCola(uint32_t colaInt){
+	switch(colaInt){
+		case APPEARED_POKEMON:
+			return &appearedPokemon;
+		case NEW_POKEMON:
+			return &newPokemon;
+		case CAUGHT_POKEMON:
+			return &caughtPokemon;
+		case CATCH_POKEMON:
+			return &catchPokemon;
+		case GET_POKEMON:
+			return &getPokemon;
+		case LOCALIZED_POKEMON:
+			return &localizedPokemon;
+		default :
+			return &colaNula;
+	}
 }
 
 void meterEnCola( colaMensajes* structCola, void* mensaje, uint32_t  socket){
