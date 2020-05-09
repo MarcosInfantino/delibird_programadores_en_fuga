@@ -413,7 +413,9 @@ paquete* deserializarPaquete(void* paqueteRecibido){
 paquete* recibirPaquete(uint32_t socket){
 	paquete* paquete = malloc(sizeof(paquete));
 	uint32_t offset  = 0;
+	//return NULL;
 	//recv(cliente,&respuesta1,sizeof(uint32_t),0);
+	printf("socket recibido por el broker: %i\n",socket);
 	if(recv(socket,&(paquete->modulo),sizeof(uint32_t),0)==-1)
 		return NULL;
 	offset+=sizeof(uint32_t);

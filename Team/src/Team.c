@@ -19,7 +19,7 @@
 #include <netinet/in.h>
 #include <arpa/inet.h>
 #include <stdlib.h>
-#include <messages_lib/messages_lib.h>
+
 
 //fecha ult modificacion 27 de abril
 
@@ -299,38 +299,19 @@ void* suscribirseColasBroker(void* conf){
 
 	pthread_detach(threadSuscripcionAppeared);
 
-	pthread_t threadSuscripcionLocalized;
-	pthread_create(&threadSuscripcionLocalized, NULL, suscribirseCola,(void*) (suscripcionLocalized));
-	pthread_detach(threadSuscripcionLocalized);
+	pthread_t threadSuscripcionAppeared1;
+	//sleep(4);
+	pthread_create(&threadSuscripcionAppeared1, NULL, suscribirseCola, (void*)(suscripcionAppeared));
 
+	pthread_detach(threadSuscripcionAppeared1);
+//	pthread_t threadSuscripcionLocalized;
+//	pthread_create(&threadSuscripcionLocalized, NULL, suscribirseCola,(void*) (suscripcionLocalized));
+//	pthread_detach(threadSuscripcionLocalized);
+	//sleep(4);
 	pthread_t threadSuscripcionCaught;
 	pthread_create(&threadSuscripcionCaught, NULL, suscribirseCola, (void*)(suscripcionCaught));
 	pthread_detach(threadSuscripcionCaught);
-//	recv(cliente,&respuesta1,sizeof(uint32_t),0);
 
-//	recv(cliente,&respuesta1,sizeof(uint32_t),0);
-//	recv(cliente,&respuesta2,sizeof(uint32_t),0);
-//	recv(cliente,&respuesta3,sizeof(uint32_t),0);
-//	uint32_t respuesta3;
-//	uint32_t respuesta4;
-//	uint32_t respuesta5;
-//	uint32_t respuesta6;
-//	recv(cliente,&respuesta3,sizeof(uint32_t),0);
-//	recv(cliente,&respuesta4,sizeof(uint32_t),0);
-//	recv(cliente,&respuesta5,sizeof(uint32_t),0);
-//	recv(cliente,&respuesta6,sizeof(uint32_t),0);
-
-//	printf("respuesta : %i\n", respuesta1);
-//	printf("respuesta : %i\n", respuesta2);
-//	printf("respuesta : %i\n", respuesta3);
-//	printf("respuesta : %i\n", respuesta4);
-//	printf("respuesta : %i\n", respuesta5);
-//	printf("respuesta : %i\n", respuesta6);
-////	if(respuesta==RESPUESTAOK){
-//		printf("Mensaje recibido correctamente\n");
-//	}else{
-//		printf("Mensaje recibido incorrectamente\n", respuesta);
-//	}
 	while(1);
 
 	free(suscripcionAppeared);
@@ -343,6 +324,7 @@ void* suscribirseColasBroker(void* conf){
 
 
 void* suscribirseCola(void* msgSuscripcion){
+
 	paquete* paq=(paquete*) msgSuscripcion;
 
 	struct sockaddr_in direccionServidor;
@@ -351,8 +333,8 @@ void* suscribirseCola(void* msgSuscripcion){
 		direccionServidor.sin_port        = htons(puertoBroker);
 
 		uint32_t cliente=socket(AF_INET,SOCK_STREAM,0);
-
-		while(connect(cliente,(void*) &direccionServidor,sizeof(direccionServidor))!=0){
+		printf("cliente: %d\n",cliente);
+		while(connect(cliente,(void*) &direccionServidor,sizeof(direccionServidor))<0){
 			printf("Conexión fallida con el Broker reintentando en %i segundos...\n",tiempoReconexion);
 			sleep(tiempoReconexion);
 		}
@@ -368,6 +350,7 @@ void* suscribirseCola(void* msgSuscripcion){
 	send(cliente,stream,bytes,0);
 
 	free(stream);
+	//sleep(2);
 
 	uint32_t respuesta = -1;
 	printf("Espero respuesta\n");

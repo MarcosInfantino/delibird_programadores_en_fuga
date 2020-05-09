@@ -23,6 +23,7 @@ t_log* loggerBroker;
 typedef struct {
 	t_queue* cola;
 	t_list* suscriptores;
+	pthread_mutex_t* mutexCola;
 } colaMensajes;
 
 typedef struct{
@@ -32,6 +33,10 @@ typedef struct{
 	uint32_t tiempo;
 }suscripcionTiempo;
 
+typedef struct{
+	uint32_t contador;
+	pthread_mutex_t* mutexContador;
+}contadorMensajes;
 
 //typedef struct {
 //	paquete paquete;
@@ -39,9 +44,10 @@ typedef struct{
 //	uint32_t socketCliente;
 //} parametroValidacion;
 
-pthread_t thread;
+//pthread_t thread;
 
-uint32_t contadorMensajes = 1;
+
+
 
 void iniciarHilos();
 void* iniciarCola(void*);
@@ -50,9 +56,9 @@ void esperar_cliente(uint32_t);
 void* atenderCliente(void* sock);
 void manejarTipoDeMensaje(paquete paq, uint32_t socket);
 void suscribirSegunCola(paquete paq, uint32_t socket);
-void suscribir(colaMensajes cola, paquete paq, uint32_t socket);
+void suscribir(colaMensajes cola, paquete paq, uint32_t socket,uint32_t identificadorCola);
 void responderMensaje(uint32_t socketCliente, uint32_t respuesta);
-bool validarParaSuscripcion(colaMensajes cola, paquete paq, uint32_t socket);
+bool validarParaSuscripcion(colaMensajes cola, paquete paq, uint32_t socket, uint32_t identificadorCola);
 bool validarSuscripcionSegunModulo(uint32_t modulo, uint32_t cola);
 bool validarPertenencia(colaMensajes cola, uint32_t socket);
 char* nombreDeProceso(uint32_t modulo);
@@ -62,5 +68,7 @@ void meterEnCola( colaMensajes* structCola, void* mensaje, uint32_t  socket);
 colaMensajes* obtenerCola(uint32_t colaInt);
 void desuscribir(uint32_t socket, uint32_t cola );
 void suscribirPorTiempo(void* estructura);
+void suscribirACola(uint32_t* socket, colaMensajes cola);
+void inicializarContador();
 
 #endif /* BROKER_H_ */
