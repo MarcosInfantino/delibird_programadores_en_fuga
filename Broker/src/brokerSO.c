@@ -203,9 +203,6 @@ void desuscribir(uint32_t socket, uint32_t cola ){
 		if (*((uint32_t*) socketLista) == socket) {
 			list_remove(colaReal.suscriptores, i);
 			}
-
-
-
 	}
 
 
