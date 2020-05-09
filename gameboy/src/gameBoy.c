@@ -43,7 +43,7 @@ int main(int argc, char* argv[]) {
 	}else{
 		procesoDestinatario = obtenerNombreProceso(argv[1]);
 		stream 				= generarStreamArgumentos(colaMensaje, argv);
-		sizeStream 			= sizeArgumentos (colaMensaje, argv, procesoDestinatario);
+		sizeStream 			= sizeArgumentos (colaMensaje, argv[3], procesoDestinatario);
 		paquete				= llenarPaquete(GAMEBOY, colaMensaje, sizeStream, stream);
 		}
 
@@ -51,7 +51,7 @@ int main(int argc, char* argv[]) {
 	uint32_t puertoProcesoDestinatario = obtenerPuertoProceso (procesoDestinatario, config);
 	paqueteYSocket* paqueteySocket 	   = malloc(sizeof(paqueteYSocket));
 	paqueteySocket->paqueteAEnviar 	   = serializarPaquete(paquete);
-	paqueteySocket->socketCliente      = socketCliente (ipProcesoDestinatario, puertoProcesoDestinatario);
+	paqueteySocket->socketCliente      = crearSocketCliente (ipProcesoDestinatario, puertoProcesoDestinatario);
 	paqueteySocket->sizeDelStream      = sizeStream;
 	iniciarHiloEnvio(paqueteySocket);
 
@@ -226,55 +226,12 @@ uint32_t socketCliente (char* ip, uint32_t puerto){
 		perror("No se pudo conectar");
 		return 1;
 	}
-
 	return cliente;
-}
-
-uint32_t sizeArgumentos (uint32_t colaMensaje, char* argv[], uint32_t proceso){
-	uint32_t size;
-	switch(colaMensaje){
-	case NEW_POKEMON:
-		if(proceso == BROKER){ //size pokemon, pokemon,posx, posy, cantidad
-			size = strlen(argv[3]) + 1 + sizeof(uint32_t)*4;
-		} else if (proceso == GAMECARD){ //size pokemon, pokemon, posX, posY, cantidad, ID
-			size = strlen(argv[3]) + 1 + sizeof(uint32_t)*5;
-		}
-		break;
-
-	case APPEARED_POKEMON:
-		if(proceso == BROKER){ // sizePokemon, pokemon, posX, posY, ID
-			size = strlen(argv[3]) +1 + sizeof(uint32_t)*4;
-		}else if(proceso == TEAM){ //sizePokemon, pokemon, posX, posY
-			size = strlen(argv[3]) + 1 +sizeof(uint32_t)*3;
-		}
-		break;
-
-	case CATCH_POKEMON:
-		if(proceso == BROKER){ //sizePokemon, pokemon, posX, posY
-			size = strlen(argv[3]) + 1 + sizeof(uint32_t)*3;
-		}else if (proceso == GAMECARD){ //sizePokemon, pokemon, posX, posY, ID
-			size = strlen(argv[3]) + 1 + sizeof(uint32_t)*4;
-		}
-		break;
-
-	case CAUGHT_POKEMON://ID, ok/fail
-		size = sizeof(uint32_t)*2;
-		break;
-
-	case GET_POKEMON://sizePokemon, pokemon
-		size = strlen(argv[3]) + 1 + sizeof(uint32_t);
-		break;
-
-	default:
-		printf("Error: el caso ingresado no esta contemplado \n");
-		break;
-	}
-	return size;
 }
 
 void* enviarMensaje(void* paqueteySocket){
 	paqueteYSocket* paqueteConSocket = (paqueteYSocket*) paqueteySocket;
-	send(paqueteConSocket->socketCliente, paqueteConSocket->paqueteAEnviar, sizeof(uint32_t)*5+paqueteConSocket->sizeDelStream, 0);
+	send(paqueteConSocket->socketCliente, paqueteConSocket->paqueteAEnviar, sizePaquete(paqueteConSocket->paqueteAEnviar), 0);
 	printf("Estoy esperando respuesta\n");
 	uint32_t respuesta=0;
 	recv(paqueteConSocket->socketCliente, &respuesta,sizeof(uint32_t),0);

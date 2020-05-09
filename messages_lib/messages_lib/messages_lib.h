@@ -63,10 +63,17 @@ typedef enum{
 	FAIL,
 	OK
 }resultadoCaught;
+
 typedef enum{
 	INCORRECTO,
 	CORRECTO
 }respuestas;
+
+typedef struct{
+	uint32_t x;
+	uint32_t y;
+} posicion;
+
 typedef struct{
 	uint32_t sizePokemon;
 	char* pokemon;
@@ -125,6 +132,13 @@ typedef struct{
 }mensajeGet;
 
 typedef struct{
+	uint32_t sizePokemon;
+	char* pokemon;
+	uint32_t cantidad;
+	posicion* arrayPosiciones;
+}mensajeLocalized;
+
+typedef struct{
 	uint32_t cola;
 	uint32_t tiempo;
 }mensajeSuscripcionTiempo;
@@ -157,6 +171,7 @@ void* serializarCatchBroker(mensajeCatchBroker* mensaje);
 void* serializarCatchGamecard(mensajeCatchGamecard* mensaje);
 void* serializarCaught (mensajeCaught* mensaje);
 void* serializarGet (mensajeGet* mensaje);
+void* serializarLocalized(mensajeLocalized* mensaje);
 void* serializarSuscripcionTiempo(mensajeSuscripcionTiempo* mensaje);
 void* serializarSuscripcion(mensajeSuscripcion* mensaje);
 paquete* llenarPaquete( uint32_t modulo,uint32_t tipoMensaje, uint32_t sizeStream,void* stream);
@@ -170,11 +185,14 @@ mensajeCatchBroker* deserializarCatchBroker (void* streamRecibido);
 mensajeCatchGamecard* deserializarCatchGamecard (void* streamRecibido);
 mensajeCaught* deserializarCaught(void* streamRecibido);
 mensajeGet* deserializarGet (void* streamRecibido);
+mensajeLocalized* deserializarLocalized(void* streamRecibido);
 mensajeSuscripcionTiempo* deserializarSuscripcionTiempo(void* streamRecibido);
 mensajeSuscripcion* deserializarSuscripcion (void* streamRecibido);
 paquete* deserializarPaquete(void* paqueteRecibido);
 paquete* recibirPaquete(uint32_t socket);
+
 uint32_t crearSocketCliente (char* ip, uint32_t puerto);
 uint32_t sizeArgumentos (uint32_t colaMensaje, char* nombrePokemon, uint32_t procesoDestinatario);
 uint32_t sizePaquete(paquete* paq);
+
 #endif /* MESSAGES_LIB_H_ */

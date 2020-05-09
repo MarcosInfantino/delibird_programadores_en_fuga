@@ -26,10 +26,6 @@ uint32_t obtenerNombreProceso (char* proceso);
 
 uint32_t obtenerColaMensaje (char* cola);
 
-uint32_t socketCliente(char* ip, uint32_t puerto);
-
-uint32_t sizeArgumentos (uint32_t colaMensaje, char* argv[], uint32_t proceso);
-
 void* generarStreamArgumentos (uint32_t colaMensaje, char* argv[]);
 
 void* enviarMensaje(void* paqueteConSocket);

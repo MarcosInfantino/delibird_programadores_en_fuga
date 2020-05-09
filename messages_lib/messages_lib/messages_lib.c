@@ -177,6 +177,13 @@ void* serializarGet (mensajeGet* mensaje){
 	return stream;
 }
 
+//void* serializarLocalized (mensajeLocalized* mensaje){
+//	void* stream = malloc(sizeof(mensajeLocalized));
+//	uint32_t offset = 0;
+//
+//	memcpy(stream+offset, )
+//}
+
 void* serializarSuscripcionTiempo(mensajeSuscripcionTiempo* mensaje){
 
 		void* stream    = malloc(sizeof(mensajeSuscripcionTiempo));
@@ -235,34 +242,19 @@ mensajeAppearedBroker* deserializarAppearedBroker(void* streamRecibido){
 	mensajeAppearedBroker* mensaje = malloc(sizeof(mensajeAppearedBroker));
 	uint32_t offset                = 0;
 
-	memcpy((void*)mensaje->sizePokemon, streamRecibido+offset, sizeof(uint32_t));
+	memcpy(&(mensaje->sizePokemon), streamRecibido+offset, sizeof(uint32_t));
 	offset+=sizeof(uint32_t);
-	memcpy((void*)mensaje->pokemon, streamRecibido+offset, mensaje->sizePokemon);
+	mensaje->pokemon=malloc(mensaje->sizePokemon);
+	memcpy(&(mensaje->pokemon), streamRecibido+offset, mensaje->sizePokemon);
 	offset+=(mensaje->sizePokemon);
-	memcpy((void*)mensaje->posX, streamRecibido+offset, sizeof(uint32_t));
+	memcpy(&(mensaje->posX), streamRecibido+offset, sizeof(uint32_t));
 	offset+=sizeof(uint32_t);
-	memcpy((void*)mensaje->posY, streamRecibido+offset, sizeof(uint32_t));
+	memcpy(&(mensaje->posY), streamRecibido+offset, sizeof(uint32_t));
 	offset+=sizeof(uint32_t);
-	memcpy((void*)mensaje->id, streamRecibido+offset, sizeof(uint32_t));
+	memcpy(&(mensaje->id), streamRecibido+offset, sizeof(uint32_t));
 
 	return mensaje;
 }
-
-//mensajeAppearedTeam* deserializarAppearedTeam (void* streamRecibido){
-//	mensajeAppearedTeam* mensaje = malloc(sizeof(mensajeAppearedTeam));
-//	uint32_t offset              = 0;
-//
-//	memcpy((void*)mensaje->sizePokemon, streamRecibido+offset, sizeof(uint32_t));
-//	offset+=sizeof(uint32_t);
-//	mensaje->pokemon=malloc(mensaje->sizePokemon);
-//	memcpy((void*)mensaje->pokemon, streamRecibido+offset, mensaje->sizePokemon);
-//	offset+=(mensaje->sizePokemon);
-//	memcpy((void*)mensaje->posX, streamRecibido+offset, sizeof(uint32_t));
-//	offset+=sizeof(uint32_t);
-//	memcpy((void*)mensaje->posY, streamRecibido+offset, sizeof(uint32_t));
-//
-//	return mensaje;
-//}
 
 mensajeAppearedTeam* deserializarAppearedTeam (void* streamRecibido){
 	mensajeAppearedTeam* mensaje = malloc(sizeof(mensajeAppearedTeam));
@@ -282,15 +274,16 @@ mensajeNewBroker* deserializarNewBroker (void* streamRecibido){
 	mensajeNewBroker* mensaje = malloc(sizeof(mensajeNewBroker));
 	uint32_t offset 		  = 0;
 
-	memcpy((void*)mensaje->sizePokemon, streamRecibido+offset, sizeof(uint32_t));
+	memcpy(&(mensaje->sizePokemon), streamRecibido+offset, sizeof(uint32_t));
 	offset+=sizeof(uint32_t);
-	memcpy((void*)mensaje->pokemon, streamRecibido+offset, mensaje->sizePokemon);
+	mensaje->pokemon=malloc(mensaje->sizePokemon);
+	memcpy(&(mensaje->pokemon), streamRecibido+offset, mensaje->sizePokemon);
 	offset+=(mensaje->sizePokemon);
-	memcpy((void*)mensaje->posX, streamRecibido+offset, sizeof(uint32_t));
+	memcpy(&(mensaje->posX), streamRecibido+offset, sizeof(uint32_t));
 	offset+=sizeof(uint32_t);
-	memcpy((void*)mensaje->posY, streamRecibido+offset, sizeof(uint32_t));
+	memcpy(&(mensaje->posY), streamRecibido+offset, sizeof(uint32_t));
 	offset+=sizeof(uint32_t);
-	memcpy((void*)mensaje->cantidad, streamRecibido+offset, sizeof(int32_t));
+	memcpy(&(mensaje->cantidad), streamRecibido+offset, sizeof(int32_t));
 
 	return mensaje;
 }
@@ -299,17 +292,18 @@ mensajeNewGamecard* deserializarNewGamecard (void* streamRecibido){
 	mensajeNewGamecard* mensaje = malloc(sizeof(mensajeNewGamecard));
 	uint32_t offset				= 0;
 
-	memcpy((void*)mensaje->sizePokemon, streamRecibido+offset, sizeof(uint32_t));
+	memcpy(&(mensaje->sizePokemon), streamRecibido+offset, sizeof(uint32_t));
 	offset+=sizeof(uint32_t);
-	memcpy((void*)mensaje->pokemon, streamRecibido+offset, mensaje->sizePokemon);
+	mensaje->pokemon=malloc(mensaje->sizePokemon);
+	memcpy(&(mensaje->pokemon), streamRecibido+offset, mensaje->sizePokemon);
 	offset+=(mensaje->sizePokemon);
-	memcpy((void*)mensaje->posX, streamRecibido+offset, sizeof(uint32_t));
+	memcpy(&(mensaje->posX), streamRecibido+offset, sizeof(uint32_t));
 	offset+=sizeof(uint32_t);
-	memcpy((void*)mensaje->posY, streamRecibido+offset, sizeof(uint32_t));
+	memcpy(&(mensaje->posY), streamRecibido+offset, sizeof(uint32_t));
 	offset+=sizeof(uint32_t);
-	memcpy((void*)mensaje->cantidad, streamRecibido+offset, sizeof(uint32_t));
+	memcpy(&(mensaje->cantidad), streamRecibido+offset, sizeof(uint32_t));
 	offset+=sizeof(uint32_t);
-	memcpy((void*)mensaje->id, streamRecibido+offset, sizeof(uint32_t));
+	memcpy(&(mensaje->id), streamRecibido+offset, sizeof(uint32_t));
 
 	return mensaje;
 }
@@ -318,13 +312,14 @@ mensajeCatchBroker* deserializarCatchBroker (void* streamRecibido){
 	mensajeCatchBroker* mensaje = malloc(sizeof(mensajeCatchBroker));
 	uint32_t offset 			= 0;
 
-	memcpy((void*)mensaje->sizePokemon, streamRecibido+offset, sizeof(uint32_t));
+	memcpy(&(mensaje->sizePokemon), streamRecibido+offset, sizeof(uint32_t));
 	offset+=sizeof(uint32_t);
-	memcpy((void*)mensaje->pokemon, streamRecibido+offset, mensaje->sizePokemon);
+	mensaje->pokemon=malloc(mensaje->sizePokemon);
+	memcpy(&(mensaje->pokemon), streamRecibido+offset, mensaje->sizePokemon);
 	offset+=(mensaje->sizePokemon);
-	memcpy((void*)mensaje->posX, streamRecibido+offset, sizeof(uint32_t));
+	memcpy(&(mensaje->posX), streamRecibido+offset, sizeof(uint32_t));
 	offset+=sizeof(uint32_t);
-	memcpy((void*)mensaje->posY, streamRecibido+offset, sizeof(uint32_t));
+	memcpy(&(mensaje->posY), streamRecibido+offset, sizeof(uint32_t));
 
 	return mensaje;
 }
@@ -333,15 +328,16 @@ mensajeCatchGamecard* deserializarCatchGamecard (void* streamRecibido){
 	mensajeCatchGamecard* mensaje = malloc(sizeof(mensajeCatchGamecard));
 	uint32_t offset				  = 0;
 
-	memcpy((void*)mensaje->sizePokemon, streamRecibido+offset, sizeof(uint32_t));
+	memcpy(&(mensaje->sizePokemon), streamRecibido+offset, sizeof(uint32_t));
 	offset+=sizeof(uint32_t);
-	memcpy((void*)mensaje->pokemon, streamRecibido+offset, mensaje->sizePokemon);
+	mensaje->pokemon=malloc(mensaje->sizePokemon);
+	memcpy(&(mensaje->pokemon), streamRecibido+offset, mensaje->sizePokemon);
 	offset+=(mensaje->sizePokemon);
-	memcpy((void*)mensaje->posX, streamRecibido+offset, sizeof(uint32_t));
+	memcpy(&(mensaje->posX), streamRecibido+offset, sizeof(uint32_t));
 	offset+=sizeof(uint32_t);
-	memcpy((void*)mensaje->posY, streamRecibido+offset, sizeof(uint32_t));
+	memcpy(&(mensaje->posY), streamRecibido+offset, sizeof(uint32_t));
 	offset+=sizeof(uint32_t);
-	memcpy((void*)mensaje->id, streamRecibido+offset, sizeof(uint32_t));
+	memcpy(&(mensaje->id), streamRecibido+offset, sizeof(uint32_t));
 
 	return mensaje;
 }
@@ -350,9 +346,9 @@ mensajeCaught* deserializarCaught(void* streamRecibido){
 	mensajeCaught* mensaje = malloc(sizeof(mensajeCaught));
 	uint32_t offset        = 0;
 
-	memcpy((void*)mensaje->id, streamRecibido+offset,sizeof(uint32_t));
+	memcpy(&(mensaje->id), streamRecibido+offset,sizeof(uint32_t));
 	offset+=sizeof(uint32_t);
-	memcpy((void*)mensaje->resultadoCaught, streamRecibido+offset, sizeof(uint32_t));
+	memcpy(&(mensaje->resultadoCaught), streamRecibido+offset, sizeof(uint32_t));
 
 	return mensaje;
 }
@@ -361,20 +357,25 @@ mensajeGet* deserializarGet (void* streamRecibido){
 	mensajeGet* mensaje = malloc(sizeof(mensajeGet));
 	uint32_t offset		= 0;
 
-	memcpy((void*)mensaje->sizePokemon, streamRecibido+offset, sizeof(uint32_t));
+	memcpy(&(mensaje->sizePokemon), streamRecibido+offset, sizeof(uint32_t));
 	offset+=sizeof(uint32_t);
-	memcpy((void*)mensaje->pokemon, streamRecibido+offset, mensaje->sizePokemon);
+	mensaje->pokemon=malloc(mensaje->sizePokemon);
+	memcpy(&(mensaje->pokemon), streamRecibido+offset, mensaje->sizePokemon);
 
 	return mensaje;
 }
+
+//mensajeLocalized* deserializarLocalized (void* streamRecibido){
+//
+//}
 
 mensajeSuscripcionTiempo* deserializarSuscripcionTiempo(void* streamRecibido){
 	mensajeSuscripcionTiempo* mensaje = malloc(sizeof(mensajeSuscripcionTiempo));
 	uint32_t offset 				  = 0;
 
-	memcpy((void*)mensaje->cola, streamRecibido+offset, sizeof(uint32_t));
+	memcpy(&(mensaje->cola), streamRecibido+offset, sizeof(uint32_t));
 	offset+=sizeof(uint32_t);
-	memcpy((void*)mensaje->tiempo, streamRecibido+offset, sizeof(uint32_t));
+	memcpy(&(mensaje->tiempo), streamRecibido+offset, sizeof(uint32_t));
 
 	return mensaje;
 }
@@ -382,7 +383,7 @@ mensajeSuscripcionTiempo* deserializarSuscripcionTiempo(void* streamRecibido){
 mensajeSuscripcion* deserializarSuscripcion (void* streamRecibido){
 	mensajeSuscripcion* mensaje = malloc(sizeof(mensajeSuscripcion));
 
-	memcpy((void*)mensaje->cola, streamRecibido, sizeof(uint32_t));
+	memcpy(&(mensaje->cola), streamRecibido, sizeof(uint32_t));
 
 	return mensaje;
 }
@@ -391,18 +392,18 @@ paquete* deserializarPaquete(void* paqueteRecibido){
 	paquete* paquete = malloc(sizeof(paquete));
 	uint32_t offset  = 0;
 
-	memcpy((void*)paquete->modulo, paqueteRecibido+offset, sizeof(uint32_t));
+	memcpy(&(paquete->modulo), paqueteRecibido+offset, sizeof(uint32_t));
 	offset+=sizeof(uint32_t);
-	memcpy((void*)paquete->tipoMensaje, paqueteRecibido+offset, sizeof(uint32_t));
+	memcpy(&(paquete->tipoMensaje), paqueteRecibido+offset, sizeof(uint32_t));
 	offset+=sizeof(uint32_t);
-	memcpy((void*)paquete->id, paqueteRecibido+offset, sizeof(uint32_t));
+	memcpy(&(paquete->id), paqueteRecibido+offset, sizeof(uint32_t));
 	offset+=sizeof(uint32_t);
-	memcpy((void*)paquete->idCorrelativo, paqueteRecibido+offset,sizeof(uint32_t));
+	memcpy(&(paquete->idCorrelativo), paqueteRecibido+offset,sizeof(uint32_t));
 	offset+=sizeof(uint32_t);
-	memcpy((void*)paquete->sizeStream, paqueteRecibido+offset, sizeof(uint32_t));
+	memcpy(&(paquete->sizeStream), paqueteRecibido+offset, sizeof(uint32_t));
 	offset+=sizeof(uint32_t);
 	paquete->stream = malloc(paquete->sizeStream);
-	memcpy((void*)paquete->stream, paqueteRecibido+offset, paquete->sizeStream);
+	memcpy(&(paquete->stream), paqueteRecibido+offset, paquete->sizeStream);
 
 	free(paqueteRecibido);
 	return paquete;
@@ -431,8 +432,6 @@ paquete* recibirPaquete(uint32_t socket){
 	paquete->stream = malloc(paquete->sizeStream);
 	if(recv(socket,(paquete->stream),(paquete->sizeStream),0)==-1)
 		return NULL;
-
-
 
 	return paquete;
 }
@@ -497,7 +496,4 @@ uint32_t sizeArgumentos (uint32_t colaMensaje, char* nombrePokemon, uint32_t pro
 uint32_t sizePaquete(paquete* paq){
 	return paq->sizeStream+ sizeof(uint32_t)*5;
 }
-
-
-
 
