@@ -116,21 +116,21 @@ void esperar_cliente(uint32_t servidor) {
 	struct sockaddr_in dir_cliente;
 
 	uint32_t tam_direccion = sizeof(struct sockaddr_in);
-	printf("Espero un nuevo cliente\n");
+	//printf("Espero un nuevo cliente\n");
 	uint32_t* socketCliente=malloc(sizeof(uint32_t));
 
 	*socketCliente = accept(servidor, (void*) &dir_cliente, &tam_direccion);
 
-	printf("Gestiono un nuevo cliente\n");
+	//printf("Gestiono un nuevo cliente\n");
 	pthread_t thread;
 	pthread_create(&thread, NULL, atenderCliente, (void*) (socketCliente));
 
 	pthread_detach(thread);
-	printf("cree el hilo\n");
+	//printf("cree el hilo\n");
 }
 
 void* atenderCliente(void* sock) {
-	printf("Atiendo cliente\n");
+//	printf("Atiendo cliente\n");
 	uint32_t* socket = (uint32_t*) sock;
 
 	paquete* paquete = recibirPaquete(*socket);
@@ -308,13 +308,13 @@ void suscribir(colaMensajes cola, paquete paq, uint32_t socket,uint32_t identifi
 	if (validarParaSuscripcion(cola, paq, socket,identificadorCola)) { //si se puede suscribir y aun no esta en la cola
 		suscribirACola(&socket, cola);
 		responderMensaje(socket, CORRECTO);
-		printf("suscripcion correcta\n");
+		//printf("suscripcion correcta\n");
 //		char * frase = armarStringSuscripLog(paq.modulo, paq.tipoMensaje);
 //		log_info(loggerBroker, frase);
 
 	} else {
 		responderMensaje(socket, INCORRECTO);
-		printf("suscripcion incorrecta\n");
+		//printf("suscripcion incorrecta\n");
 	}
 
 }
@@ -359,11 +359,11 @@ bool validarPertenencia(colaMensajes cola, uint32_t socket) {
 	for (i = 0; i < list_size(cola.suscriptores); i++) {
 		socketLista = list_get(cola.suscriptores, i);
 		if (*((uint32_t*) socketLista) == socket) {
-			printf("Me aprobo validar pertenencia\n");
+			//printf("Me aprobo validar pertenencia\n");
 			return true;
 		}
 	}
-	printf("Me rechazo validar pertenencia\n");
+	//printf("Me rechazo validar pertenencia\n");
 	return false;
 
 }
