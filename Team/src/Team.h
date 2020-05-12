@@ -20,7 +20,7 @@
 #include <arpa/inet.h>
 //void* especieAComparar;
 
-pthread_t threadAtencionGameboy;
+
 
 
 
@@ -32,7 +32,15 @@ typedef enum {
 	EXIT=1504
 }estado;
 
-
+//typedef struct {
+//	t_list* lista;//lista
+//	pthread_mutex_t* mutex;
+//}listaMutex;
+//
+//typedef struct{
+//	t_queue* cola;
+//	pthread_mutex_t* mutex;
+//}colaMutex;
 typedef struct{
 	uint32_t modulo;
 	uint32_t tipoMensaje;
@@ -174,5 +182,10 @@ void atenderAppeared(mensajeAppearedTeam* msg);
 
 void enviarCatch(dataEntrenador* infoEntrenador);
 
+void atenderCaught(paquete* paqueteRespuesta);
+
+uint32_t buscarEntrenadorParaMensaje(listaMutex listaIds, uint32_t idMensaje);
+
+void replanificarEntrenador(dataEntrenador* entrenador);
 
 #endif /* TEAM_H_ */

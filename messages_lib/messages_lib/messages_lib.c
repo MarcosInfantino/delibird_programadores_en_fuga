@@ -499,3 +499,68 @@ uint32_t sizePaquete(paquete* paq){
 	return paq->sizeStream+ sizeof(uint32_t)*5;
 }
 
+listaMutex inicializarListaMutex(){
+	listaMutex list;
+	list.lista=list_create();
+	list.mutex=malloc(sizeof(pthread_mutex_t));
+	pthread_mutex_init(list.mutex,NULL);
+	return list;
+}
+
+void addListaMutex(listaMutex list,void* elemento){
+	pthread_mutex_lock(list.mutex);
+	list_add(list.lista,elemento);
+	pthread_mutex_unlock(list.mutex);
+}
+
+void* getListaMutex(listaMutex list, uint32_t index){
+	pthread_mutex_lock(list.mutex);
+	void* value=list_get(list.lista,index);
+	pthread_mutex_unlock(list.mutex);
+	return value;
+}
+
+uint32_t sizeListaMutex(listaMutex list){
+	pthread_mutex_lock(list.mutex);
+	uint32_t size=list_size(list.lista);
+	pthread_mutex_unlock(list.mutex);
+	return size;
+}
+
+void removeListaMutex(listaMutex list,uint32_t pos){
+	pthread_mutex_lock(list.mutex);
+	list_remove(list.lista,pos);
+	pthread_mutex_unlock(list.mutex);
+}
+
+void destruirListaMutex(listaMutex* lista){
+
+}
+
+colaMutex inicializarColaMutex(){
+	colaMutex cola;
+	cola.cola=queue_create();
+	cola.mutex=malloc(sizeof(pthread_mutex_t));
+	pthread_mutex_init(cola.mutex,NULL);
+	return cola;
+}
+
+void pushColaMutex(colaMutex cola, void* infoEntrenador){
+	pthread_mutex_lock(cola.mutex);
+	queue_push(cola.cola,infoEntrenador);
+	pthread_mutex_unlock(cola.mutex);
+
+}
+
+void* popColaMutex(colaMutex cola){
+	pthread_mutex_lock(cola.mutex);
+	void* elemento=queue_pop(cola.cola);
+	pthread_mutex_unlock(cola.mutex);
+	return elemento;
+
+}
+
+void destruirColaMutex(colaMutex* cola){
+
+}
+

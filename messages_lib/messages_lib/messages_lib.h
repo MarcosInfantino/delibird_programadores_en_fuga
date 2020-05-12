@@ -160,6 +160,16 @@ typedef struct{
 	uint32_t id;
 }mensajeRespuestaBroker;
 
+typedef struct {
+	t_list* lista;//lista
+	pthread_mutex_t* mutex;
+}listaMutex;
+
+typedef struct{
+	t_queue* cola;
+	pthread_mutex_t* mutex;
+}colaMutex;
+
 t_paquete* armarPaquete(char* cadena);
 mensajeSuscripcion* deserializarMensajeSuscripcion(void* stream, uint32_t bytes);
 
@@ -194,5 +204,27 @@ paquete* recibirPaquete(uint32_t socket);
 uint32_t crearSocketCliente (char* ip, uint32_t puerto);
 uint32_t sizeArgumentos (uint32_t colaMensaje, char* nombrePokemon, uint32_t procesoDestinatario);
 uint32_t sizePaquete(paquete* paq);
+
+
+listaMutex inicializarListaMutex();
+
+void destruirListaEntrenadoresLibres();
+
+void addListaMutex(listaMutex list,void* elemento);
+
+void* getListaMutex(listaMutex list, uint32_t index);
+
+uint32_t sizeListaMutex(listaMutex list);
+
+void destruirListaMutex(listaMutex* lista);
+
+void removeListaMutex(listaMutex list,uint32_t pos);
+
+colaMutex inicializarColaMutex();
+
+void pushColaMutex(colaMutex cola, void* infoEntrenador);
+
+void* popColaMutex(colaMutex cola);
+
 
 #endif /* MESSAGES_LIB_H_ */
