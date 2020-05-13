@@ -26,13 +26,13 @@ endif
 all: Broker
 
 dependents:
-	-cd /home/utnso/tp-2020-1c-Programadores-en-Fuga/messages_lib/Debug && $(MAKE) all
+	-cd /home/utnso/ULTIMO_TP/tp-2020-1c-Programadores-en-Fuga/messages_lib/Debug && $(MAKE) all
 
 # Tool invocations
-Broker: $(OBJS) $(USER_OBJS) /home/utnso/tp-2020-1c-Programadores-en-Fuga/messages_lib/Debug/libmessages_lib.so
+Broker: $(OBJS) $(USER_OBJS) /home/utnso/ULTIMO_TP/tp-2020-1c-Programadores-en-Fuga/messages_lib/Debug/libmessages_lib.so
 	@echo 'Building target: $@'
 	@echo 'Invoking: GCC C Linker'
-	gcc -L"/home/utnso/tp-2020-1c-Programadores-en-Fuga/messages_lib/Debug" -L/home/utnso/Entrega1TpSo -o "Broker" $(OBJS) $(USER_OBJS) $(LIBS)
+	gcc -L"/home/utnso/ULTIMO_TP/tp-2020-1c-Programadores-en-Fuga/messages_lib/Debug" -L/home/utnso/Entrega1TpSo -o "Broker" $(OBJS) $(USER_OBJS) $(LIBS)
 	@echo 'Finished building target: $@'
 	@echo ' '
 
@@ -42,6 +42,6 @@ clean:
 	-@echo ' '
 
 .PHONY: all clean dependents
-/home/utnso/tp-2020-1c-Programadores-en-Fuga/messages_lib/Debug/libmessages_lib.so:
+/home/utnso/ULTIMO_TP/tp-2020-1c-Programadores-en-Fuga/messages_lib/Debug/libmessages_lib.so:
 
 -include ../makefile.targets

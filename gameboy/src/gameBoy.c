@@ -21,7 +21,6 @@
 #include <pthread.h>
 #include "gameBoy.h"
 
-
 //\n
 
 int main(int argc, char* argv[]) {
@@ -52,7 +51,6 @@ int main(int argc, char* argv[]) {
 	paqueteYSocket* paqueteySocket 	   = malloc(sizeof(paqueteYSocket));
 	paqueteySocket->paqueteAEnviar 	   = serializarPaquete(paquete);
 	paqueteySocket->socketCliente      = crearSocketCliente (ipProcesoDestinatario, puertoProcesoDestinatario);
-	paqueteySocket->sizeDelStream      = sizeStream;
 	iniciarHiloEnvio(paqueteySocket);
 
 	return EXIT_SUCCESS;
@@ -215,20 +213,6 @@ uint32_t obtenerPuertoProceso (uint32_t proceso, t_config* config){
 	return puerto;
 }
 
-uint32_t socketCliente (char* ip, uint32_t puerto){
-	struct sockaddr_in direccionServidor;
-	direccionServidor.sin_family      = AF_INET;
-	direccionServidor.sin_addr.s_addr = inet_addr(ip);
-	direccionServidor.sin_port        = htons(puerto);
-
-	uint32_t cliente=socket(AF_INET,SOCK_STREAM,0);
-	if(connect(cliente,(void*) &direccionServidor,sizeof(direccionServidor)) != 0){
-		perror("No se pudo conectar");
-		return 1;
-	}
-	return cliente;
-}
-
 void* enviarMensaje(void* paqueteySocket){
 	paqueteYSocket* paqueteConSocket = (paqueteYSocket*) paqueteySocket;
 	send(paqueteConSocket->socketCliente, paqueteConSocket->paqueteAEnviar, sizePaquete(paqueteConSocket->paqueteAEnviar), 0);
@@ -244,13 +228,54 @@ void* enviarMensaje(void* paqueteySocket){
 	return NULL;
 }
 
+void* enviarMensajeSuscripcion(void* paqueteySocket){
+	paqueteYSocket* paqueteConSocket = (paqueteYSocket*) paqueteySocket;
+	send(paqueteConSocket->socketCliente, paqueteConSocket->paqueteAEnviar, sizePaquete(paqueteConSocket->paqueteAEnviar), 0);
+	printf("Estoy esperando respuesta\n");
+	uint32_t respuesta=0;
+	recv(paqueteConSocket->socketCliente, &respuesta,sizeof(uint32_t),0);
+	if(respuesta>0){
+		printf("recibido correctamente: %i\n", respuesta);
+	}else{
+		printf("recibido incorrectamente: %i\n", respuesta);
+	}
+	while(1){
+		paquete* paqueteRespuesta=recibirPaquete(paqueteConSocket->socketCliente);
+		switch(paqueteRespuesta->tipoMensaje){
+			case APPEARED_POKEMON:;
+				mensajeAppearedBroker* msgAppeared=deserializarAppearedBroker(paqueteRespuesta->stream);
+				break;
+			case NEW_POKEMON: ;
+				mensajeNewBroker* msgNew = deserializarNewBroker(paqueteRespuesta->stream);
+				break;
+			case CATCH_POKEMON: ;
+				mensajeCatchBroker* msgCatch = deserializarCatchBroker (paqueteRespuesta->stream);
+				break;
+			case CAUGHT_POKEMON: ;
+				mensajeCaught* msgCaught = deserializarCaught (paqueteRespuesta->stream);
+				break;
+			case GET_POKEMON: ;
+				mensajeGet* msgGet = deserializarGet (paqueteRespuesta->stream);
+				break;
+//			case LOCALIZED_POKEMON: ;
+//				mensajeLocalized* msgLocalized = deserializarLocalized(paqueteRespuesta->stream);
+//				break;
+	}
+	return NULL;
+	}
+}
+
 void iniciarHiloEnvio(paqueteYSocket* paqueteySocket){
 	pthread_t hilo;
-	uint32_t nro = pthread_create(&hilo, NULL, enviarMensaje, (void*)paqueteySocket);
+	uint32_t nro = 0;
+	paquete* paq = (paquete*)(paqueteySocket->paqueteAEnviar);
+	if(paq->tipoMensaje == SUSCRIPCION_TIEMPO){
+		nro = pthread_create(&hilo, NULL, enviarMensajeSuscripcion, (void*)paqueteySocket);
+	}else{
+		nro = pthread_create(&hilo, NULL, enviarMensaje, (void*)paqueteySocket);
+	}
 	if(nro!=0){
-		printf("Hubo un problema en la creación del hilo para conectarse al broker \n");
+		printf("Hubo un problema en la creación del hilo para conectarse\n");
 	}
 	pthread_join(hilo,NULL);
 }
-
-

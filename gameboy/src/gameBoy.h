@@ -15,7 +15,6 @@
 typedef struct{
 	void * paqueteAEnviar;
 	uint32_t socketCliente;
-	uint32_t sizeDelStream;
 }paqueteYSocket;
 
 uint32_t obtenerPuertoProceso (uint32_t proceso, t_config* config);
@@ -29,6 +28,8 @@ uint32_t obtenerColaMensaje (char* cola);
 void* generarStreamArgumentos (uint32_t colaMensaje, char* argv[]);
 
 void* enviarMensaje(void* paqueteConSocket);
+
+void* enviarMensajeSuscripcion(void* paqueteySocket);
 
 void iniciarHiloEnvio(paqueteYSocket* paqueteySocket);
 
