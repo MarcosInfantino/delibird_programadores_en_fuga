@@ -6,46 +6,6 @@
  */
 #include "messages_lib.h"
 
-t_paquete* armarPaquete(char* cadena){
-	t_buffer* buffer          = malloc(sizeof(t_buffer));
-	buffer->size	          = strlen(cadena)+1;
-	buffer->stream	          = malloc(buffer->size);
-	memcpy(buffer->stream,cadena,buffer->size);
-	t_paquete* paquete        = malloc(sizeof(t_paquete));
-	paquete->codigo_operacion = CADENA;
-	paquete->buffer           = buffer;
-
-	return paquete;
-
-}
-
-void* serializarPaquete1 (t_paquete* paquete, int bytes){
-	void* a_enviar = malloc(bytes);
-		int offset = 0;
-		memcpy(a_enviar+offset,&(paquete->codigo_operacion),sizeof(op_code));
-		offset+= sizeof(op_code);
-
-		memcpy(a_enviar+offset,&(paquete->buffer->size),sizeof(int));
-		offset+= sizeof(int);
-
-		memcpy(a_enviar+offset,(paquete->buffer->stream),paquete->buffer->size);
-		return a_enviar;
-}
-
-void enviarMensaje(char* cadena,int socket){
-	t_paquete* paquete= armarPaquete(cadena);
-
-	int bytes = sizeof(op_code)+sizeof(paquete->buffer->size)+paquete->buffer->size;
-
-	void * a_enviar = serializarPaquete1(paquete, bytes);
-	send(socket,a_enviar,bytes,0);
-
-	free(paquete->buffer->stream);
-	free(paquete->buffer);
-	free(paquete);
-	free(a_enviar);
-}
-
 //void enviarMensajeSuscripcion(mensajeSuscripcion* mensaje, int socket){
 //	uint32_t bytes=sizeof(uint32_t)*4;
 //	void* stream=serializarMensajeSuscripcion(mensaje, bytes);
@@ -217,6 +177,11 @@ paquete* llenarPaquete( uint32_t modulo,uint32_t tipoMensaje, uint32_t sizeStrea
 	paqueteASerializar->stream        = stream;
 
 	return paqueteASerializar;
+}
+
+void destruirPaquete(paquete* paq){
+	free(paq->stream);
+	//free(paq);
 }
 
 void* serializarPaquete(paquete* paqueteASerializar){
@@ -533,8 +498,9 @@ void removeListaMutex(listaMutex list,uint32_t pos){
 	pthread_mutex_unlock(list.mutex);
 }
 
-void destruirListaMutex(listaMutex* lista){
-
+void destruirListaMutex(listaMutex lista,void(*element_destroyer)(void*)){
+	free(lista.mutex);
+	list_clean_and_destroy_elements(lista.lista, element_destroyer);
 }
 
 colaMutex inicializarColaMutex(){
@@ -560,7 +526,15 @@ void* popColaMutex(colaMutex cola){
 
 }
 
-void destruirColaMutex(colaMutex* cola){
+uint32_t sizeColaMutex(colaMutex cola){
+	pthread_mutex_lock(cola.mutex);
+	uint32_t size=queue_size(cola.cola);
+	pthread_mutex_unlock(cola.mutex);
+	return size;
+}
 
+void destruirColaMutex(colaMutex cola, void(*element_destroyer)(void*)){
+	free(cola.mutex);
+	queue_destroy_and_destroy_elements(cola.cola,element_destroyer);
 }
 

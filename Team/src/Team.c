@@ -28,7 +28,8 @@
 uint32_t puertoTeam=5003;
 listaMutex listaIdsEntrenadorMensaje; // del tipo idsEntrenadorMensaje , //ver a futuro si esta lista requiere mutex
 listaMutex entrenadoresLibres;
-listaMutex pokemonesPendientes;//lista de pokePosicion que contiene los pokemones que no pudieron ser asignados a ningun entrenador por no haber entrenadore libres
+colaMutex pokemonesPendientes;//lista de pokePosicion que contiene los pokemones que no pudieron ser asignados a ningun entrenador por no haber entrenadore libres
+listaMutex entrenadoresExit;
 //t_list* mutexEntrenadores;
 listaMutex entrenadores;
 colaMutex colaEjecucionFifo;
@@ -43,7 +44,9 @@ char* ipBroker;
 pthread_t* arrayIdHilosEntrenadores;
 uint32_t tiempoReconexion;
 uint32_t retardoCicloCpu;
+char* algoritmoPlanificacion;
 
+sem_t semaforoEjecucionCpu;
 //
 //int main(void) {
 ////	char* str="[Pikachu|Squirtle|Pidgey, Squirtle|Charmander, Bulbasaur]";
@@ -78,46 +81,88 @@ uint32_t retardoCicloCpu;
 //
 int main(int argc , char* argv[]){
 	//char pathConfig  = argv;
-
-
+	sem_init(&semaforoEjecucionCpu, 0,0);
 	entrenadoresLibres=inicializarListaMutex();
 	colaEjecucionFifo=inicializarColaMutex();
-	pokemonesPendientes=inicializarListaMutex();
+	pokemonesPendientes=inicializarColaMutex();
 	listaIdsEntrenadorMensaje=inicializarListaMutex();
 	entrenadores=inicializarListaMutex();
+	entrenadoresExit=inicializarListaMutex();
 
 	char* pathConfig   = "Team2.config";
 	t_config* config   = config_create(pathConfig);
 	retardoCicloCpu    = config_get_int_value(config,"RETARDO_CICLO_CPU");
 	puertoBroker       = config_get_int_value(config,"PUERTO_BROKER");
 	ipBroker           = config_get_string_value(config,"IP_BROKER");
+	algoritmoPlanificacion=config_get_string_value(config, "ALGORITMO_PLANIFICACION");
 	dataTeam* team     = inicializarTeam(config);
 
 	entrenadores.lista       = team->entrenadores;
 	//entrenadoresLibres=entrenadores;
-	uint32_t cantEntrenadores = list_size(team->entrenadores);
+
 	//mutexEntrenadores=inicializarMutexEntrenadores();
+	uint32_t cantEntrenadores = list_size(team->entrenadores);
+
 	arrayIdHilosEntrenadores  = malloc(cantEntrenadores*sizeof(pthread_t));
 	inicializarEntrenadores(team->entrenadores);
+
 	pthread_t hiloConexionInicialBroker;
+
 	crearHiloConexionColasBroker((void*)config,&hiloConexionInicialBroker);
 
 	pthread_t hiloServidorGameboy;
 	crearHiloServidorGameboy(&hiloServidorGameboy);
 
-	printf("hola\n");
+	pthread_t hiloPlanificador;
+	crearHiloPlanificador(&hiloPlanificador);
 
 	posicion pos = {1,2};
 
 	printf("id entrenador mas cercano: %i\n", obtenerIdEntrenadorMasCercano(pos));
 
-	while(1);
+	while(!objetivoCumplido());
 
+	printf("Programa terminado: objetivo golbal cumplido\n");
 
+	//HACER DESTROY DE TODAS LAS LISTAS Y ESTRUCTURAS AL FINAL
 
 
 
 	return 0;
+}
+
+uint32_t crearHiloPlanificador(pthread_t* hiloPlanificador){
+	uint32_t err=pthread_create(hiloPlanificador,NULL,iniciarPlanificador,NULL);
+
+						if(err!=0){
+							printf("Hubo un problema en la creación del hilo para el planificador \n");
+							return err;
+						}
+
+			pthread_detach(*hiloPlanificador);
+			return 0;
+}
+
+void* iniciarPlanificador(void* arg){
+	if(strcmp(algoritmoPlanificacion,"FIFO")==0)
+		ejecucionPlanificadorFifo();
+	return NULL;
+}
+
+void ejecucionPlanificadorFifo(){
+	sem_post(&semaforoEjecucionCpu);
+	while(1){
+		if(sizeColaMutex(colaEjecucionFifo)>0){
+			sem_wait(&semaforoEjecucionCpu);
+			dataEntrenador* entrenadorAEjecutar=(dataEntrenador*)popColaMutex(colaEjecucionFifo);
+			sem_post(&(entrenadorAEjecutar->semaforo));
+
+		}
+	}
+}
+
+bool objetivoCumplido(){
+	return sizeListaMutex(entrenadores)==sizeListaMutex(entrenadoresExit);
 }
 
 
@@ -130,23 +175,6 @@ uint32_t distanciaEntrenadorPosicion(dataEntrenador* entrenador, posicion posici
 
 	return distanciaEntrePosiciones(entrenador->posicion,posicion);
 }
-
-//uint32_t obtenerIdEntrenadorMasCercano(t_list* listaEntrenadores, posicion pos){ //el id es el index del entrenador enla lista de entrenadores
-//
-//	uint32_t idEntrenadorMasCercano=0;
-//	uint32_t i;
-//	for(i=0;i<list_size(listaEntrenadores);i++){
-//		dataEntrenador* entrenadorActual=(dataEntrenador*) list_get(listaEntrenadores,i);
-//		dataEntrenador* entrenadorMasCercano=(dataEntrenador*) list_get(listaEntrenadores,idEntrenadorMasCercano);
-//			if(distanciaEntrenadorPosicion(entrenadorActual,pos)<distanciaEntrenadorPosicion(entrenadorMasCercano,pos)){
-//				idEntrenadorMasCercano=i;
-//			}
-//
-//
-//	}
-//	return idEntrenadorMasCercano;
-//}
-
 
 uint32_t obtenerIdEntrenadorMasCercano(posicion pos){ //el id es el index del entrenador enla lista de entrenadores
     dataEntrenador* entrenadorMasCercano;
@@ -251,8 +279,10 @@ void* atenderCliente(void* sock){
 	printf("hice el send: %i\n",respuesta);
 
 	switch(paquete->tipoMensaje){
-		case APPEARED_POKEMON:
-			printf("leyo bien\n");atenderAppeared(deserializarAppearedTeam(paquete->stream)); ;break;
+		case APPEARED_POKEMON:;
+			mensajeAppearedTeam* msg=deserializarAppearedTeam(paquete->stream);
+			//destruirPaquete(paquete);
+			printf("leyo bien\n");atenderAppeared(msg); ;break;
 		default: printf("leyo cualquiera\n"); break;
 	}
 
@@ -266,10 +296,11 @@ void atenderAppeared(mensajeAppearedTeam* msg){
 	pokePosicion->pokemon=msg->pokemon;
 	(pokePosicion->posicion).x=msg->posX;
 	(pokePosicion->posicion).y=msg->posY;
-	if(list_size(entrenadoresLibres.lista)>0){
+	free(msg);
+	if(sizeListaMutex(entrenadoresLibres)>0){
 			seleccionarEntrenador(pokePosicion);
 		}else{
-			addListaMutex(pokemonesPendientes,(void*)pokePosicion);
+			pushColaMutex(pokemonesPendientes,(void*)pokePosicion);
 		}
 
 }
@@ -282,11 +313,12 @@ void atenderCaught(paquete* paqueteCaught){
 		dataEntrenador* entrenadorEncontrado=(dataEntrenador*)getListaMutex(entrenadores, idEncontrado);
 		if(msgCaught->resultadoCaught==CORRECTO){
 			list_add(entrenadorEncontrado->pokemones,entrenadorEncontrado->pokemonAAtrapar);
-			habilitarHiloEntrenador(idEncontrado);
+			//falta disminuir el objetivo global del team
 			replanificarEntrenador(entrenadorEncontrado);
 		}else{
-			entrenadorEncontrado->estado=BLOCKED;
-			habilitarHiloEntrenador(idEncontrado);
+//			entrenadorEncontrado->estado=BLOCKED;
+//			habilitarHiloEntrenador(idEncontrado);
+			replanificarEntrenador(entrenadorEncontrado);
 		}
 	}
 
@@ -299,14 +331,46 @@ bool leFaltaCantidadDePokemones(dataEntrenador* entrenador){
 
 void replanificarEntrenador(dataEntrenador* entrenador){
 	if(leFaltaCantidadDePokemones(entrenador)){
-		if(sizeListaMutex(pokemonesPendientes)>0){
-			entrenador->pokemonAAtrapar=(pokemonPosicion*)getListaMutex(pokemonesPendientes,0);
-			removeListaMutex(pokemonesPendientes,0);
-			entrenador->estado=READY;
+		if(sizeColaMutex(pokemonesPendientes)>0){
 			habilitarHiloEntrenador(entrenador->id);
+			pokemonPosicion* pokePosicion=(pokemonPosicion*)popColaMutex(pokemonesPendientes);
+			asignarPokemonAEntrenador(entrenador, pokePosicion);
+			free(pokePosicion);
+		}else{
+			entrenador->estado=BLOCKED;
+			habilitarHiloEntrenador(entrenador->id);
+			//addListaMutex(entrenadoresLibres,entrenador);
 
-		}//HAY QUE TERMINARLA
+		}
+	}else{
+			if(cumplioObjetivo(entrenador)){
+							entrenador->estado=EXIT;
+							habilitarHiloEntrenador(entrenador->id);//preguntar si aca se mata el hilo
+							addListaMutex(entrenadoresExit, (void*)entrenador);
+
+						}else{
+							//DEADLOCK
+						}
 	}
+}
+
+bool cumplioObjetivo(dataEntrenador* entrenador){
+	uint32_t i;
+	for(i=0;i<list_size(entrenador->objetivoPersonal);i++){
+		char* pokemon=list_get(entrenador->objetivoPersonal,i);
+		if(buscarMismoPokemon(entrenador->pokemones,pokemon)==-1)
+			return false;
+	}
+	return true;
+}
+
+void asignarPokemonAEntrenador(dataEntrenador* entrenador, pokemonPosicion* pokePosicion){
+	if(entrenador->pokemonAAtrapar!=NULL){
+		free(entrenador->pokemonAAtrapar);
+	}
+	entrenador->pokemonAAtrapar=pokePosicion;
+	entrenador->estado=READY;
+	habilitarHiloEntrenador(entrenador->id);
 }
 
 uint32_t buscarEntrenadorParaMensaje(listaMutex listaIds, uint32_t idMensaje){//devuelve el id del entrenador
@@ -316,6 +380,8 @@ uint32_t buscarEntrenadorParaMensaje(listaMutex listaIds, uint32_t idMensaje){//
 		idsEntrenadorMensaje* actual=(void*)list_get(listaIds.lista,i);
 		if(actual->idMensaje==idMensaje){
 			uint32_t idEntrenador=actual->idEntrenador;
+			free(actual);
+			list_remove(listaIds.lista,i);
 			return idEntrenador;
 		}
 	}
@@ -344,12 +410,15 @@ void* suscribirseColasBroker(void* conf){
 
 	//uint32_t sizeStream=sizeof(uint32_t);
 
+	mensajeSuscripcion* mensajeAppeared=malloc(sizeof(mensajeSuscripcion));
+	mensajeSuscripcion * mensajeCaught=malloc(sizeof(mensajeSuscripcion));
+	mensajeSuscripcion* mensajeLocalized=malloc(sizeof(mensajeSuscripcion));
 
-	mensajeSuscripcion mensajeAppeared  = {APPEARED_POKEMON};
+	mensajeAppeared->cola  = APPEARED_POKEMON;
 
-	mensajeSuscripcion mensajeCaught    = {CAUGHT_POKEMON};
+	mensajeCaught ->cola   = CAUGHT_POKEMON;
 
-	mensajeSuscripcion mensajeLocalized = {LOCALIZED_POKEMON};
+	mensajeLocalized->cola = LOCALIZED_POKEMON;
 
 //	void* streamAppeared=serializarSuscripcion(&mensajeAppeared);
 //	void* streamCaught=serializarSuscripcion(&mensajeCaught);
@@ -365,13 +434,13 @@ void* suscribirseColasBroker(void* conf){
 
 
 	pthread_t threadSuscripcionAppeared;
-	pthread_create(&threadSuscripcionAppeared, NULL, suscribirseCola, (void*)(&mensajeAppeared));
+	pthread_create(&threadSuscripcionAppeared, NULL, suscribirseCola, (void*)(mensajeAppeared));
 
 	pthread_detach(threadSuscripcionAppeared);
 
 	pthread_t threadSuscripcionAppeared1;
 	//sleep(4);
-	pthread_create(&threadSuscripcionAppeared1, NULL, suscribirseCola, (void*)(&mensajeCaught));
+	pthread_create(&threadSuscripcionAppeared1, NULL, suscribirseCola, (void*)(mensajeCaught));
 
 	pthread_detach(threadSuscripcionAppeared1);
 //	pthread_t threadSuscripcionLocalized;
@@ -379,7 +448,7 @@ void* suscribirseColasBroker(void* conf){
 //	pthread_detach(threadSuscripcionLocalized);
 	//sleep(4);
 	pthread_t threadSuscripcionCaught;
-	pthread_create(&threadSuscripcionCaught, NULL, suscribirseCola, (void*)(&mensajeCaught));
+	pthread_create(&threadSuscripcionCaught, NULL, suscribirseCola, (void*)(mensajeCaught));
 	pthread_detach(threadSuscripcionCaught);
 
 	while(1);
@@ -397,7 +466,7 @@ void* suscribirseCola(void* msgSuscripcion){
 	mensajeSuscripcion* msg=(mensajeSuscripcion*)msgSuscripcion;
 	uint32_t sizeStream=sizeof(uint32_t);
 	void* streamMsgSuscripcion=serializarSuscripcion(msg);
-
+	//free(msg);
 	paquete* paq=llenarPaquete(TEAM,SUSCRIPCION,sizeStream, streamMsgSuscripcion);
 
 	struct sockaddr_in direccionServidor;
@@ -418,13 +487,13 @@ void* suscribirseCola(void* msgSuscripcion){
 	uint32_t bytes = sizeof(uint32_t)*5+paq->sizeStream;
 
 	void* stream   = serializarPaquete(paq);
-	//free(paq);  HACER FUNCION PARA DESTRUIR PAQUETES
-	free(streamMsgSuscripcion);
+
 
 	send(cliente,stream,bytes,0);
 
-	free(stream);
-	//sleep(2);
+	//free(stream);
+
+	//destruirPaquete(paq);
 
 	uint32_t respuesta = -1;
 	printf("Espero respuesta\n");
@@ -443,12 +512,16 @@ void* suscribirseCola(void* msgSuscripcion){
 		switch(paqueteRespuesta->tipoMensaje){
 			case APPEARED_POKEMON:;
 				mensajeAppearedTeam* msgAppeared=deserializarAppearedTeam(paqueteRespuesta->stream);
+				//destruirPaquete(paqueteRespuesta);
 				atenderAppeared(msgAppeared);
+				//free(msgAppeared);
 				break;
 			case LOCALIZED_POKEMON:
+				//destruirPaquete(paqueteRespuesta);//recordar destruir el paquete
 				break;
 			case CAUGHT_POKEMON:
 				atenderCaught(paqueteRespuesta);
+				//destruirPaquete(paqueteRespuesta);
 				break;
 			default: break; //esto no puede pasar
 		}
@@ -458,27 +531,11 @@ void* suscribirseCola(void* msgSuscripcion){
 		return NULL;
 }
 
-//void* serializarMensajeSuscripcion(mensajeSuscripcion* mensaje, uint32_t bytes){
-//
-//
-//		void* stream=malloc(bytes);
-//		uint32_t offset=0;
-//
-//		memcpy(stream+offset,&(mensaje->modulo),sizeof(uint32_t));
-//		offset+=sizeof(uint32_t);
-//
-//		memcpy(stream+offset,&(mensaje->tipoMensaje),sizeof(uint32_t));
-//		offset+=sizeof(uint32_t);
-//
-//		memcpy(stream+offset,&(mensaje->cola),sizeof(uint32_t));
-//
-//
-//		return stream;
-//}
 
 
 int inicializarEntrenadores(t_list* entrenadores){
 	uint32_t i;
+
 	for(i=0;i<list_size(entrenadores);i++){
 		void* entrenadorActual = list_get(entrenadores,i);
 		uint32_t err		   = pthread_create(&(arrayIdHilosEntrenadores[i]),NULL,ejecucionHiloEntrenador,entrenadorActual);
@@ -486,6 +543,7 @@ int inicializarEntrenadores(t_list* entrenadores){
 			printf("Hubo un problema en la creación del hilo del entrenador \n");
 			return err;
 		}
+
 //		}else{
 //			printf("Todo bien\n");
 //		}
@@ -500,7 +558,7 @@ void* ejecucionHiloEntrenador(void* argEntrenador){
 	sem_t* semaforoEntrenador=&(infoEntrenador->semaforo);
 	while(1){
 		sem_wait(semaforoEntrenador);
-		infoEntrenador->estado=READY;
+		//infoEntrenador->estado=READY;
 		pushColaMutex(colaEjecucionFifo,(void*)infoEntrenador);
 		removeListaMutex(entrenadoresLibres,encontrarPosicionEntrenadorLibre(infoEntrenador));
 		entrarEnEjecucion(infoEntrenador);
@@ -515,6 +573,7 @@ void* ejecucionHiloEntrenador(void* argEntrenador){
 	}
 	return NULL;
 }
+//TODO: hacer funciones de llenarMensajeX en la lib
 //llenarPaquete( uint32_t modulo,uint32_t tipoMensaje, uint32_t sizeStream,void* stream)
 void enviarCatch(dataEntrenador* infoEntrenador){
 	uint32_t cliente=crearSocketCliente(ipBroker,puertoBroker);
@@ -526,7 +585,10 @@ void enviarCatch(dataEntrenador* infoEntrenador){
 	void* streamMsg=serializarCatchBroker(msgCatch);
 	paquete* paq=llenarPaquete(TEAM,CATCH_POKEMON,   sizeArgumentos(CATCH_POKEMON,msgCatch->pokemon,BROKER)  , streamMsg);
 	void* paqueteSerializado=serializarPaquete(paq);
+	free(msgCatch);
+	//destruirPaquete(paq);
 	send(cliente,paqueteSerializado, sizePaquete(paq), 0);
+	free(paqueteSerializado);
 
 	uint32_t idMensaje=0;
 
@@ -563,43 +625,34 @@ uint32_t encontrarPosicionEntrenadorLibre(dataEntrenador* entrenador){
 
 void entrarEnEjecucion(dataEntrenador* infoEntrenador){
 
-	pthread_mutex_lock(&mutexEntrenadorEnEjecucion);
+	sem_wait(&(infoEntrenador->semaforo));
 	infoEntrenador->estado = EXEC;
 	moverEntrenadorAPosicion(infoEntrenador, (pokemonAAtrapar.posicion));
 	enviarCatch(infoEntrenador);
-	pthread_mutex_unlock(&mutexEntrenadorEnEjecucion);
+	sem_post(&semaforoEjecucionCpu);
 }
 
 void seleccionarEntrenador(pokemonPosicion* pokemon){
 	uint32_t idEntrenadorMasCercano      = obtenerIdEntrenadorMasCercano(pokemon->posicion);
 	dataEntrenador* entrenadorMasCercano = getListaMutex(entrenadores,idEntrenadorMasCercano);
-
-	entrenadorMasCercano->pokemonAAtrapar = pokemon;
-	habilitarHiloEntrenador(idEntrenadorMasCercano);
+	asignarPokemonAEntrenador(entrenadorMasCercano,pokemon);
+	//habilitarHiloEntrenador(idEntrenadorMasCercano);
 }
 
 void habilitarHiloEntrenador(uint32_t idEntrenador){
 	sem_post(&(((dataEntrenador*)(getListaMutex(entrenadores,idEntrenador)))->semaforo));
 }
 
-//t_list* inicializarMutexEntrenadores(){
-//	t_list* listaMutex=list_create();
-//	for(uint32_t i=0;i<list_size(listaMutex);i++){
-//		pthread_mutex_t mutex= PTHREAD_MUTEX_INITIALIZER;
-//		list_add(listaMutex,(void*)(&mutex));
-//	}
-//	return listaMutex;
-//
-//}
-
 
 void moverEntrenadorAPosicion(dataEntrenador* entrenador, posicion pos){
-
-	moverEntrenadorX(entrenador, pos.x);
-	moverEntrenadorY(entrenador, pos.y);
+	uint32_t restaX=pos.x-(entrenador->posicion).x;
+	uint32_t restaY=pos.y-(entrenador->posicion).y;
+	moverEntrenadorX(entrenador, restaX);
+	moverEntrenadorY(entrenador, restaY);
 }
 
 void moverEntrenadorX(dataEntrenador* entrenador, uint32_t movimientoX){
+
 	if(movimientoX!=0){
 			uint32_t unidad=movimientoX/abs(movimientoX);
 			for(uint32_t i=0;i< abs(movimientoX);i++){
@@ -792,57 +845,4 @@ t_list* obtenerListaDeListas(char** lst){
 	return lstDeLst;
 }
 
-//listaMutex inicializarListaMutex(){
-//	listaMutex list;
-//	list.lista=list_create();
-//	list.mutex=malloc(sizeof(pthread_mutex_t));
-//	pthread_mutex_init(entrenadoresLibres.mutex,NULL);
-//	return list;
-//}
-//
-//void destruirListaEntrenadoresLibres(){
-//
-//}
-//
-//void addListaMutex(listaMutex list,void* elemento){
-//	pthread_mutex_lock(list.mutex);
-//	list_add(list.lista,elemento);
-//	pthread_mutex_unlock(list.mutex);
-//}
-//
-//void removeListaMutex(listaMutex list,uint32_t pos){
-//	pthread_mutex_lock(list.mutex);
-//	list_remove(list.lista,pos);
-//	pthread_mutex_unlock(entrenadoresLibres.mutex);
-//}
-//
-//void destruirListaMutex(listaMutex* lista){
-//
-//}
-//
-//colaMutex inicializarColaMutex(){
-//	colaMutex cola;
-//	cola.cola=queue_create();
-//	cola.mutex=malloc(sizeof(pthread_mutex_t));
-//	pthread_mutex_init(cola.mutex,NULL);
-//	return cola;
-//}
-//
-//void pushColaMutex(colaMutex cola, void* infoEntrenador){
-//	pthread_mutex_lock(cola.mutex);
-//	queue_push(cola.cola,infoEntrenador);
-//	pthread_mutex_unlock(cola.mutex);
-//
-//}
-//
-//void* popColaMutex(colaMutex cola){
-//	pthread_mutex_lock(cola.mutex);
-//	void* elemento=queue_pop(cola.cola);
-//	pthread_mutex_unlock(cola.mutex);
-//	return elemento;
-//
-//}
-//
-//void destruirColaMutex(colaMutex* cola){
-//
-//}
+

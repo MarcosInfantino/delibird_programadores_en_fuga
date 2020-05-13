@@ -170,7 +170,7 @@ typedef struct{
 	pthread_mutex_t* mutex;
 }colaMutex;
 
-t_paquete* armarPaquete(char* cadena);
+//t_paquete* armarPaquete(char* cadena);
 mensajeSuscripcion* deserializarMensajeSuscripcion(void* stream, uint32_t bytes);
 
 void* serializarAppearedBroker(mensajeAppearedBroker* mensaje);
@@ -185,6 +185,7 @@ void* serializarLocalized(mensajeLocalized* mensaje);
 void* serializarSuscripcionTiempo(mensajeSuscripcionTiempo* mensaje);
 void* serializarSuscripcion(mensajeSuscripcion* mensaje);
 paquete* llenarPaquete( uint32_t modulo,uint32_t tipoMensaje, uint32_t sizeStream,void* stream);
+void destruirPaquete(paquete* paq);
 void* serializarPaquete(paquete* paqueteASerializar);
 
 mensajeAppearedBroker* deserializarAppearedBroker(void* streamRecibido);
@@ -216,7 +217,7 @@ void* getListaMutex(listaMutex list, uint32_t index);
 
 uint32_t sizeListaMutex(listaMutex list);
 
-void destruirListaMutex(listaMutex* lista);
+void destruirListaMutex(listaMutex lista,void(*element_destroyer)(void*));
 
 void removeListaMutex(listaMutex list,uint32_t pos);
 
@@ -226,5 +227,8 @@ void pushColaMutex(colaMutex cola, void* infoEntrenador);
 
 void* popColaMutex(colaMutex cola);
 
+uint32_t sizeColaMutex(colaMutex cola);
+
+void destruirColaMutex(colaMutex cola, void(*element_destroyer)(void*));
 
 #endif /* MESSAGES_LIB_H_ */

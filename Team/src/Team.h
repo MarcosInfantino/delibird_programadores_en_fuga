@@ -188,4 +188,16 @@ uint32_t buscarEntrenadorParaMensaje(listaMutex listaIds, uint32_t idMensaje);
 
 void replanificarEntrenador(dataEntrenador* entrenador);
 
+void asignarPokemonAEntrenador(dataEntrenador* entrenador, pokemonPosicion* pokePosicion);
+
+bool cumplioObjetivo(dataEntrenador* entrenador);
+
+bool objetivoCumplido();
+
+uint32_t crearHiloPlanificador(pthread_t* hiloPlanificador);
+
+void* iniciarPlanificador(void* arg);
+
+void ejecucionPlanificadorFifo();
+
 #endif /* TEAM_H_ */
