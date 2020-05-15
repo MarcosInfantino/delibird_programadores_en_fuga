@@ -79,7 +79,7 @@ typedef struct{
 	char* pokemon;
 	uint32_t posX;
 	uint32_t posY;
-	uint32_t id;
+	uint32_t idCorrelativo;
 }mensajeAppearedBroker;
 
 typedef struct{
@@ -122,14 +122,20 @@ typedef struct{
 }mensajeCatchGamecard;
 
 typedef struct{
-	uint32_t id;
+	uint32_t idCorrelativo;
 	uint32_t resultadoCaught;
 }mensajeCaught;
 
 typedef struct{
 	uint32_t sizePokemon;
 	char* pokemon;
-}mensajeGet;
+}mensajeGetBroker;
+
+typedef struct{
+	uint32_t sizePokemon;
+	char* pokemon;
+	uint32_t id;
+}mensajeGetGamecard;
 
 typedef struct{
 	uint32_t sizePokemon;
@@ -180,7 +186,8 @@ void* serializarNewGamecard(mensajeNewGamecard* mensaje);
 void* serializarCatchBroker(mensajeCatchBroker* mensaje);
 void* serializarCatchGamecard(mensajeCatchGamecard* mensaje);
 void* serializarCaught (mensajeCaught* mensaje);
-void* serializarGet (mensajeGet* mensaje);
+void* serializarGetBroker (mensajeGetBroker* mensaje);
+void* serializarGetGamecard (mensajeGetGamecard* mensaje);
 void* serializarLocalized(mensajeLocalized* mensaje);
 void* serializarSuscripcionTiempo(mensajeSuscripcionTiempo* mensaje);
 void* serializarSuscripcion(mensajeSuscripcion* mensaje);
@@ -195,7 +202,8 @@ mensajeNewGamecard* deserializarNewGamecard (void* streamRecibido);
 mensajeCatchBroker* deserializarCatchBroker (void* streamRecibido);
 mensajeCatchGamecard* deserializarCatchGamecard (void* streamRecibido);
 mensajeCaught* deserializarCaught(void* streamRecibido);
-mensajeGet* deserializarGet (void* streamRecibido);
+mensajeGetBroker* deserializarGetBroker (void* streamRecibido);
+mensajeGetGamecard* deserializarGetGamecard (void* streamRecibido);
 mensajeLocalized* deserializarLocalized(void* streamRecibido);
 mensajeSuscripcionTiempo* deserializarSuscripcionTiempo(void* streamRecibido);
 mensajeSuscripcion* deserializarSuscripcion (void* streamRecibido);
@@ -205,7 +213,6 @@ paquete* recibirPaquete(uint32_t socket);
 uint32_t crearSocketCliente (char* ip, uint32_t puerto);
 uint32_t sizeArgumentos (uint32_t colaMensaje, char* nombrePokemon, uint32_t procesoDestinatario);
 uint32_t sizePaquete(paquete* paq);
-
 
 listaMutex inicializarListaMutex();
 
