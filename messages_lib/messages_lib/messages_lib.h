@@ -176,6 +176,11 @@ typedef struct{
 	pthread_mutex_t* mutex;
 }colaMutex;
 
+typedef struct {
+	colaMutex cola;
+	listaMutex suscriptores;
+}colaMensajes;
+
 //t_paquete* armarPaquete(char* cadena);
 mensajeSuscripcion* deserializarMensajeSuscripcion(void* stream, uint32_t bytes);
 
