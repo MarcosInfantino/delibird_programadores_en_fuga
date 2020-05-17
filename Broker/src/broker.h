@@ -47,6 +47,7 @@ void iniciarHilos();
 void* iniciarCola(void*);
 
 void esperar_cliente(uint32_t);
+void asignarID(paquete * paq);
 void* atenderCliente(void* sock);
 void manejarTipoDeMensaje(paquete paq, uint32_t socket);
 void suscribirSegunCola(paquete paq, uint32_t socket);
@@ -58,12 +59,13 @@ bool validarPertenencia(colaMensajes * cola, uint32_t socket);
 char* nombreDeProceso(uint32_t modulo);
 char* nombreDeCola(uint32_t cola);
 char* armarStringSuscripLog(uint32_t modulo, uint32_t cola);
-void meterEnCola( colaMensajes* structCola, void* mensaje, uint32_t  socket);
+void meterEnCola( colaMensajes* structCola, paquete* paq, uint32_t  socket);
 colaMensajes* obtenerCola(uint32_t colaInt);
 void desuscribir(uint32_t socket, uint32_t cola );
 void suscribirPorTiempo(void* estructura);
 void suscribirACola(uint32_t* socket, colaMensajes * cola);
 void inicializarContador();
-void* chequearMensajes(void * par);
+void abrirHiloParaEnviarMensajes();
+void* chequearMensajesEnCola(void * par);
 
 #endif /* BROKER_H_ */

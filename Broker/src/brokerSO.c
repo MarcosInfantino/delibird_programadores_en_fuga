@@ -34,6 +34,9 @@ colaMensajes colaNula;
 uint32_t idHiloAppearedPokemon, idHiloNewPokemon, idHiloCaughtPokemon,
 		idHiloCatchPokemon, idHiloGetPokemon, idHiloLocalizedPokemon;
 
+uint32_t manejoMensajesAppearedPokemon, manejoMensajesNewPokemon, manejoMensajesCaughtPokemon,
+		manejoMensajesCatchPokemon, manejoMensajesGetPokemon, manejoMensajesLocalizedPokemon;
+
 pthread_t hiloAppearedPokemon, hiloNewPokemon, hiloCaughtPokemon,
 		hiloCatchPokemon, hiloGetPokemon, hiloLocalizedPokemon;
 
@@ -80,7 +83,8 @@ int main(void) {
 //		unsigned int tamanioDireccion=sizeof(direccionCliente);
 //		int cliente = accept(servidor, (void*) &direccionCliente, &tamanioDireccion);
 
-	//abrirHiloParaEnviarMensajes();
+	abrirHiloParaEnviarMensajes();
+
 	while (1)  								//para recibir n cantidad de conexiones
 		esperar_cliente(servidor);
 
@@ -95,8 +99,8 @@ void* iniciarCola(void* c) {
 //	pthread_mutex_init((cc->mutexCola),NULL);
 //	return NULL;
 	colaMensajes* cc = (colaMensajes*) c;
-	inicializarListaMutex(cc->suscriptores);
-	inicializarColaMutex(cc->cola);
+	cc->suscriptores=inicializarListaMutex();
+	cc->cola=inicializarColaMutex();
 	return NULL;
 }
 
@@ -165,19 +169,19 @@ void manejarTipoDeMensaje(paquete paq, uint32_t socket) {
 
 	switch(paq.tipoMensaje){
 		 case APPEARED_POKEMON:
-			 meterEnCola(&appearedPokemon, (void*)deserializarAppearedBroker(paq.stream), socket );
+			 meterEnCola(&appearedPokemon, &paq, socket );
 			 break;
 		 case NEW_POKEMON:
-			 meterEnCola( &newPokemon, (void*)deserializarNewBroker(paq.stream), socket);
+			 meterEnCola( &newPokemon, &paq, socket);
 			 break;
 		 case CAUGHT_POKEMON:
-			 meterEnCola( &caughtPokemon,(void*)deserializarCaught(paq.stream), socket);
+			 meterEnCola( &caughtPokemon, &paq, socket);
 			 break;
 		 case CATCH_POKEMON:
-			 meterEnCola( &catchPokemon, (void*)deserializarCatchBroker(paq.stream), socket);
+			 meterEnCola( &catchPokemon, &paq, socket);
 			 break;
 		 case GET_POKEMON:
-			 meterEnCola( &getPokemon, (void*)deserializarGetBroker(paq.stream), socket);
+			 meterEnCola( &getPokemon, &paq, socket);
 		 break;
 		 case LOCALIZED_POKEMON:
 			 //meterEnCola( &localizedPokemon, (void*)deserializarLocalized(paq.stream), socket); //aun no está
@@ -227,19 +231,33 @@ void desuscribir(uint32_t socket, uint32_t cola ){
 }
 
 void abrirHiloParaEnviarMensajes(){
-	pthread_create(&devolverMensajeAppeared, NULL, chequearMensajes, (void*) &appearedPokemon);
-	pthread_create(&devolverMensajeNew, NULL, chequearMensajes, (void*) &newPokemon);
-	pthread_create(&devolverMensajeCaught, NULL, chequearMensajes, (void*) &caughtPokemon);
-	pthread_create(&devolverMensajeCatch, NULL, chequearMensajes, (void*) &catchPokemon);
-	pthread_create(&devolverMensajeGet, NULL, chequearMensajes, (void*) &getPokemon);
-	pthread_create(&devolverMensajeLocalized, NULL, chequearMensajes, (void*) &localizedPokemon);
+	manejoMensajesAppearedPokemon = pthread_create(&devolverMensajeAppeared, NULL, chequearMensajesEnCola, (void*) &appearedPokemon);
+	manejoMensajesNewPokemon = pthread_create(&devolverMensajeNew, NULL, chequearMensajesEnCola, (void*) &newPokemon);
+	manejoMensajesCaughtPokemon = pthread_create(&devolverMensajeCaught, NULL, chequearMensajesEnCola, (void*) &caughtPokemon);
+	manejoMensajesCatchPokemon = pthread_create(&devolverMensajeCatch, NULL, chequearMensajesEnCola, (void*) &catchPokemon);
+	manejoMensajesGetPokemon = pthread_create(&devolverMensajeGet, NULL, chequearMensajesEnCola, (void*) &getPokemon);
+	manejoMensajesLocalizedPokemon = pthread_create(&devolverMensajeLocalized, NULL, chequearMensajesEnCola, (void*) &localizedPokemon);
+	pthread_detach(devolverMensajeAppeared);
+	pthread_detach(devolverMensajeNew);
+	pthread_detach(devolverMensajeCaught);
+	pthread_detach(devolverMensajeCatch);
+	pthread_detach(devolverMensajeGet);
+	pthread_detach(devolverMensajeLocalized);
+
 }
 
-void * chequearMensajes(void * par){
-	//colaMensajes* cola = (colaMensajes*) par;
-	//while (1){
-
-	//}
+void * chequearMensajesEnCola(void * colaVoid){
+	colaMensajes* cola = (colaMensajes*) colaVoid;
+	uint32_t i;
+	while (1){
+		while(sizeColaMutex(cola->cola) == 0);
+		paquete* paq = (paquete*) popColaMutex(cola->cola);
+		void * paqSerializado = serializarPaquete(paq);
+		for(i = 0; i < sizeListaMutex(cola->suscriptores) ;i ++){
+			uint32_t * socketActual = (uint32_t *) getListaMutex(cola->suscriptores, i);
+			send(*socketActual, paqSerializado , sizePaquete(paq), 0);
+		}
+	}
 	return NULL;
 }
 
@@ -262,15 +280,19 @@ colaMensajes* obtenerCola(uint32_t colaInt){
 	}
 }
 
-void meterEnCola( colaMensajes* structCola, void* mensaje, uint32_t  socket){
-
-	pushColaMutex(structCola->cola, mensaje);
+void meterEnCola( colaMensajes* structCola, paquete * paq, uint32_t  socket){
 	pthread_mutex_lock(contador.mutexContador);
+	asignarID(paq);
 	send(socket,(void*)(&contador.contador),sizeof(uint32_t),0);
 	printf("Lo mete en la cola");
 	contador.contador++;
 	pthread_mutex_unlock(contador.mutexContador);
+	pushColaMutex(structCola->cola, (void *) paq);
 	//registrarMensajeEnMemoria(mensaje)
+}
+
+void asignarID(paquete * paq){
+	paq->id = contador.contador;
 }
 
 void suscribirSegunCola(paquete paq, uint32_t socket) {
@@ -332,7 +354,7 @@ void suscribir(colaMensajes * cola, paquete paq, uint32_t socket,uint32_t identi
 }
 
 void suscribirACola(uint32_t* socket, colaMensajes * cola){
-	addListaMutex(cola->suscriptores, (void*) &socket);
+	addListaMutex(cola->suscriptores, (void*) socket);
 }
 
 
