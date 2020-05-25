@@ -20,8 +20,26 @@
 #include <arpa/inet.h>
 //void* especieAComparar;
 
+listaMutex entrenadores;
+colaMutex colaEjecucionFifo;
+
+listaMutex listaIdsEntrenadorMensaje; // del tipo idsEntrenadorMensaje , //ver a futuro si esta lista requiere mutex
+listaMutex entrenadoresLibres;
+colaMutex pokemonesPendientes;//lista de pokePosicion que contiene los pokemones que no pudieron ser asignados a ningun entrenador por no haber entrenadore libres
+listaMutex entrenadoresExit;
+//pokemonPosicion pokemonAAtrapar;
 
 
+int socketGameboy;
+int socketGamecard;
+uint32_t puertoBroker;
+char* ipBroker;
+pthread_t* arrayIdHilosEntrenadores;
+uint32_t tiempoReconexion;
+uint32_t retardoCicloCpu;
+uint32_t algoritmoPlanificacion;
+
+sem_t semaforoEjecucionCpu;
 
 
 typedef enum {
@@ -31,6 +49,10 @@ typedef enum {
 	EXEC=1503,
 	EXIT=1504
 }estado;
+
+typedef enum{
+	FIFO
+}AlgoritmoPlanificacion;
 
 //typedef struct {
 //	t_list* lista;//lista
@@ -200,4 +222,11 @@ void* iniciarPlanificador(void* arg);
 
 void ejecucionPlanificadorFifo();
 
+void poneteEnReady(dataEntrenador* entrenador);
+
+void obtenerAlgoritmoPlanificacion(t_config* config);
+
+void registrarPokemonAtrapado(char* pokemon);
+
+bool pokemonEsObjetivo(char* pokemon);
 #endif /* TEAM_H_ */

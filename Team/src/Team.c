@@ -25,28 +25,29 @@
 
 //t_list* idsHilos=list_create();//son ints
 //t_list* hilos=list_create();//son pthread_t
-uint32_t puertoTeam=5003;
-listaMutex listaIdsEntrenadorMensaje; // del tipo idsEntrenadorMensaje , //ver a futuro si esta lista requiere mutex
-listaMutex entrenadoresLibres;
-colaMutex pokemonesPendientes;//lista de pokePosicion que contiene los pokemones que no pudieron ser asignados a ningun entrenador por no haber entrenadore libres
-listaMutex entrenadoresExit;
-//t_list* mutexEntrenadores;
-listaMutex entrenadores;
-colaMutex colaEjecucionFifo;
+//uint32_t puertoTeam=5003;
+//pthread_mutex_t mutexEntrenadorEnEjecucion=PTHREAD_MUTEX_INITIALIZER;
+//listaMutex listaIdsEntrenadorMensaje; // del tipo idsEntrenadorMensaje , //ver a futuro si esta lista requiere mutex
+//listaMutex entrenadoresLibres;
+//colaMutex pokemonesPendientes;//lista de pokePosicion que contiene los pokemones que no pudieron ser asignados a ningun entrenador por no haber entrenadore libres
+//listaMutex entrenadoresExit;
+////t_list* mutexEntrenadores;
+//listaMutex entrenadores;
+//colaMutex colaEjecucionFifo;
 
-pokemonPosicion pokemonAAtrapar;
-
-pthread_mutex_t mutexEntrenadorEnEjecucion=PTHREAD_MUTEX_INITIALIZER;
-int socketGameboy;
-int socketGamecard;
-uint32_t puertoBroker;
-char* ipBroker;
-pthread_t* arrayIdHilosEntrenadores;
-uint32_t tiempoReconexion;
-uint32_t retardoCicloCpu;
-char* algoritmoPlanificacion;
-
-sem_t semaforoEjecucionCpu;
+//pokemonPosicion pokemonAAtrapar;
+//
+//pthread_mutex_t mutexEntrenadorEnEjecucion=PTHREAD_MUTEX_INITIALIZER;
+//int socketGameboy;
+//int socketGamecard;
+//uint32_t puertoBroker;
+//char* ipBroker;
+//pthread_t* arrayIdHilosEntrenadores;
+//uint32_t tiempoReconexion;
+//uint32_t retardoCicloCpu;
+//char* algoritmoPlanificacion;
+//
+//sem_t semaforoEjecucionCpu;
 //
 //int main(void) {
 ////	char* str="[Pikachu|Squirtle|Pidgey, Squirtle|Charmander, Bulbasaur]";
@@ -79,6 +80,7 @@ sem_t semaforoEjecucionCpu;
 //}
 
 //
+dataTeam* team;
 int main(int argc , char* argv[]){
 	//char pathConfig  = argv;
 	sem_init(&semaforoEjecucionCpu, 0,0);
@@ -94,8 +96,8 @@ int main(int argc , char* argv[]){
 	retardoCicloCpu    = config_get_int_value(config,"RETARDO_CICLO_CPU");
 	puertoBroker       = config_get_int_value(config,"PUERTO_BROKER");
 	ipBroker           = config_get_string_value(config,"IP_BROKER");
-	algoritmoPlanificacion=config_get_string_value(config, "ALGORITMO_PLANIFICACION");
-	dataTeam* team     = inicializarTeam(config);
+	obtenerAlgoritmoPlanificacion(config);
+	team     = inicializarTeam(config);
 
 	entrenadores.lista       = team->entrenadores;
 	//entrenadoresLibres=entrenadores;
@@ -131,165 +133,11 @@ int main(int argc , char* argv[]){
 	return 0;
 }
 
-uint32_t crearHiloPlanificador(pthread_t* hiloPlanificador){
-	uint32_t err=pthread_create(hiloPlanificador,NULL,iniciarPlanificador,NULL);
-
-						if(err!=0){
-							printf("Hubo un problema en la creación del hilo para el planificador \n");
-							return err;
-						}
-
-			pthread_detach(*hiloPlanificador);
-			return 0;
-}
-
-void* iniciarPlanificador(void* arg){
-	if(strcmp(algoritmoPlanificacion,"FIFO")==0)
-		ejecucionPlanificadorFifo();
-	return NULL;
-}
-
-void ejecucionPlanificadorFifo(){
-	sem_post(&semaforoEjecucionCpu);
-	while(1){
-		if(sizeColaMutex(colaEjecucionFifo)>0){
-			sem_wait(&semaforoEjecucionCpu);
-			dataEntrenador* entrenadorAEjecutar=(dataEntrenador*)popColaMutex(colaEjecucionFifo);
-			sem_post(&(entrenadorAEjecutar->semaforo));
-
-		}
-	}
-}
 
 bool objetivoCumplido(){
 	return sizeListaMutex(entrenadores)==sizeListaMutex(entrenadoresExit);
 }
 
-
-uint32_t distanciaEntrePosiciones(posicion pos1, posicion pos2){
-
-	return abs((pos1.x)-(pos2.x))+abs((pos1.y)-(pos2.y));
-}
-
-uint32_t distanciaEntrenadorPosicion(dataEntrenador* entrenador, posicion posicion){
-
-	return distanciaEntrePosiciones(entrenador->posicion,posicion);
-}
-
-uint32_t obtenerIdEntrenadorMasCercano(posicion pos){ //el id es el index del entrenador enla lista de entrenadores
-    dataEntrenador* entrenadorMasCercano;
-    uint32_t distanciaASuperar;
-    pthread_mutex_lock(entrenadoresLibres.mutex);
-    for(uint32_t i=0;i<list_size(entrenadoresLibres.lista);i++){
-        dataEntrenador* entrenadorActual = (dataEntrenador*) list_get(entrenadoresLibres.lista,i);
-        if (i == 0){
-            entrenadorMasCercano = entrenadorActual;
-            distanciaASuperar    = distanciaEntrenadorPosicion(entrenadorActual,pos);
-        } else {
-        if(distanciaEntrenadorPosicion(entrenadorActual,pos) < distanciaASuperar){
-            entrenadorMasCercano = entrenadorActual;
-            distanciaASuperar    = distanciaEntrenadorPosicion(entrenadorActual,pos);
-        }
-    }
-
-}
-    pthread_mutex_unlock(entrenadoresLibres.mutex);
-    return idEntrenadorEnLista(entrenadorMasCercano);}
-
-dataEntrenador* obtenerEntrenadorPorId(uint32_t id){
-	return (dataEntrenador*)getListaMutex(entrenadores,id);
-}
-
-uint32_t idEntrenadorEnLista(dataEntrenador* entrenadorMasCercano){
-    pthread_mutex_lock(entrenadoresLibres.mutex);
-	for(uint32_t j=0;j<sizeListaMutex(entrenadores);j++){
-        if((dataEntrenador*) getListaMutex(entrenadores,j) == entrenadorMasCercano){
-            pthread_mutex_unlock(entrenadoresLibres.mutex);
-        	return j;
-        }
-    }
-	pthread_mutex_unlock(entrenadoresLibres.mutex);
-    return -1;
-}
-
-int crearHiloServidorGameboy(pthread_t* hilo){
-	uint32_t err=pthread_create(hilo,NULL,iniciarServidorGameboy,NULL);
-					if(err!=0){
-						printf("Hubo un problema en la creación del hilo para iniciar el servidor para el Gameboy \n");
-						return err;
-					}
-
-		pthread_detach(*hilo);
-	return 0;
-}
-
-void* iniciarServidorGameboy(void* arg){
-		struct sockaddr_in direccionServidor;
-		direccionServidor.sin_family=AF_INET;
-		direccionServidor.sin_addr.s_addr=INADDR_ANY;
-		direccionServidor.sin_port=htons(puertoTeam);
-
-		uint32_t servidor=socket(AF_INET,SOCK_STREAM,0);
-
-//		int activado=1;
-//		setsockopt(servidor,SOL_SOCKET,SO_REUSEADDR,&activado,sizeof(activado));
-
-		if(bind(servidor, (void*) &direccionServidor, sizeof(direccionServidor))!=0){
-			perror("Falló el bind");
-
-		}else{
-		printf("Estoy escuchando\n");
-		while (1)  								//para recibir n cantidad de conexiones
-				esperar_cliente(servidor);
-		}
-
-
-
-	return NULL;
-}
-
-void esperar_cliente(uint32_t servidor) {
-
-	listen(servidor, 100);
-	struct sockaddr_in dir_cliente;
-
-	uint32_t tam_direccion = sizeof(struct sockaddr_in);
-	printf("Espero un nuevo cliente\n");
-	uint32_t* socket_cliente=malloc(sizeof(uint32_t));
-	*socket_cliente = accept(servidor, (void*) &dir_cliente, &tam_direccion);
-	printf("Gestiono un nuevo cliente\n");
-	pthread_t threadAtencionGameboy;
-	pthread_create(&threadAtencionGameboy, NULL, atenderCliente, (void*) (socket_cliente));
-	pthread_detach(threadAtencionGameboy);
-}
-
-void* atenderCliente(void* sock){
-	printf("atiendo cliente\n");
-	uint32_t* socket = (uint32_t*) sock;
-	paquete* paquete=recibirPaquete(*socket);
-	uint32_t respuesta=0;
-	if(paquete==NULL){
-		respuesta=INCORRECTO;
-	}else{
-		respuesta=CORRECTO;
-	}
-
-	send(*socket,(void*)(&respuesta),sizeof(uint32_t),0);
-
-	printf("hice el send: %i\n",respuesta);
-
-	switch(paquete->tipoMensaje){
-		case APPEARED_POKEMON:;
-			mensajeAppearedTeam* msg=deserializarAppearedTeam(paquete->stream);
-			//destruirPaquete(paquete);
-			printf("leyo bien\n");atenderAppeared(msg); ;break;
-		default: printf("leyo cualquiera\n"); break;
-	}
-
-	free(socket);
-
-	return NULL;
-}
 
 void atenderAppeared(mensajeAppearedTeam* msg){
 	pokemonPosicion* pokePosicion=malloc(sizeof(pokemonPosicion));
@@ -297,12 +145,13 @@ void atenderAppeared(mensajeAppearedTeam* msg){
 	(pokePosicion->posicion).x=msg->posX;
 	(pokePosicion->posicion).y=msg->posY;
 	free(msg);
-	if(sizeListaMutex(entrenadoresLibres)>0){
+	if(pokemonEsObjetivo(pokePosicion->pokemon)){
+		if(sizeListaMutex(entrenadoresLibres)>0){
 			seleccionarEntrenador(pokePosicion);
 		}else{
 			pushColaMutex(pokemonesPendientes,(void*)pokePosicion);
 		}
-
+	}
 }
 
 void atenderCaught(paquete* paqueteCaught){
@@ -312,8 +161,8 @@ void atenderCaught(paquete* paqueteCaught){
 	if(idEncontrado!=-1){
 		dataEntrenador* entrenadorEncontrado=(dataEntrenador*)getListaMutex(entrenadores, idEncontrado);
 		if(msgCaught->resultadoCaught==CORRECTO){
-			list_add(entrenadorEncontrado->pokemones,entrenadorEncontrado->pokemonAAtrapar);
-			//falta disminuir el objetivo global del team
+			list_add(entrenadorEncontrado->pokemones,(void*)(entrenadorEncontrado->pokemonAAtrapar->pokemon));
+			registrarPokemonAtrapado(entrenadorEncontrado->pokemonAAtrapar->pokemon);
 			replanificarEntrenador(entrenadorEncontrado);
 		}else{
 //			entrenadorEncontrado->estado=BLOCKED;
@@ -325,53 +174,7 @@ void atenderCaught(paquete* paqueteCaught){
 
 }
 
-bool leFaltaCantidadDePokemones(dataEntrenador* entrenador){
-	return !(list_size(entrenador->pokemones)==list_size(entrenador->objetivoPersonal));
-}
 
-void replanificarEntrenador(dataEntrenador* entrenador){
-	if(leFaltaCantidadDePokemones(entrenador)){
-		if(sizeColaMutex(pokemonesPendientes)>0){
-			habilitarHiloEntrenador(entrenador->id);
-			pokemonPosicion* pokePosicion=(pokemonPosicion*)popColaMutex(pokemonesPendientes);
-			asignarPokemonAEntrenador(entrenador, pokePosicion);
-			free(pokePosicion);
-		}else{
-			entrenador->estado=BLOCKED;
-			habilitarHiloEntrenador(entrenador->id);
-			//addListaMutex(entrenadoresLibres,entrenador);
-
-		}
-	}else{
-			if(cumplioObjetivo(entrenador)){
-							entrenador->estado=EXIT;
-							habilitarHiloEntrenador(entrenador->id);//preguntar si aca se mata el hilo
-							addListaMutex(entrenadoresExit, (void*)entrenador);
-
-						}else{
-							//DEADLOCK
-						}
-	}
-}
-
-bool cumplioObjetivo(dataEntrenador* entrenador){
-	uint32_t i;
-	for(i=0;i<list_size(entrenador->objetivoPersonal);i++){
-		char* pokemon=list_get(entrenador->objetivoPersonal,i);
-		if(buscarMismoPokemon(entrenador->pokemones,pokemon)==-1)
-			return false;
-	}
-	return true;
-}
-
-void asignarPokemonAEntrenador(dataEntrenador* entrenador, pokemonPosicion* pokePosicion){
-	if(entrenador->pokemonAAtrapar!=NULL){
-		free(entrenador->pokemonAAtrapar);
-	}
-	entrenador->pokemonAAtrapar=pokePosicion;
-	entrenador->estado=READY;
-	habilitarHiloEntrenador(entrenador->id);
-}
 
 uint32_t buscarEntrenadorParaMensaje(listaMutex listaIds, uint32_t idMensaje){//devuelve el id del entrenador
 	uint32_t i;
@@ -533,46 +336,7 @@ void* suscribirseCola(void* msgSuscripcion){
 
 
 
-int inicializarEntrenadores(t_list* entrenadores){
-	uint32_t i;
 
-	for(i=0;i<list_size(entrenadores);i++){
-		void* entrenadorActual = list_get(entrenadores,i);
-		uint32_t err		   = pthread_create(&(arrayIdHilosEntrenadores[i]),NULL,ejecucionHiloEntrenador,entrenadorActual);
-		if(err!=0){
-			printf("Hubo un problema en la creación del hilo del entrenador \n");
-			return err;
-		}
-
-//		}else{
-//			printf("Todo bien\n");
-//		}
-		pthread_detach(arrayIdHilosEntrenadores[i]);
-	}
-	return 0;
-}
-
-
-void* ejecucionHiloEntrenador(void* argEntrenador){
-	dataEntrenador* infoEntrenador=(dataEntrenador*) argEntrenador;
-	sem_t* semaforoEntrenador=&(infoEntrenador->semaforo);
-	while(1){
-		sem_wait(semaforoEntrenador);
-		//infoEntrenador->estado=READY;
-		pushColaMutex(colaEjecucionFifo,(void*)infoEntrenador);
-		removeListaMutex(entrenadoresLibres,encontrarPosicionEntrenadorLibre(infoEntrenador));
-		entrarEnEjecucion(infoEntrenador);
-		//despues de esto enviaria el catch, recibe id y se pone en BLOCKED
-
-		infoEntrenador->estado=BLOCKED;//IMPORTANTE: CUANDO LLEGUE LA RESPUESTA DEL CATCH SE TIENE QUE HACER UN UNLOCK AL ENTRENADOR CORRESPONDIENTE
-		sem_wait(semaforoEntrenador);// ESPERA A QUE EL TEAM LE AVISE QUE LLEGO LA RESPUESTA DEL POKEMON QUE QUISO ATRAPAR
-		//meter un if() para verificar estado y ver que hacer despues
-		if(infoEntrenador->estado==BLOCKED){
-			addListaMutex(entrenadoresLibres, (void*)infoEntrenador);//vuelve a agregar al entrenador a la lista de entrenadores libres
-		}
-	}
-	return NULL;
-}
 //TODO: hacer funciones de llenarMensajeX en la lib
 //llenarPaquete( uint32_t modulo,uint32_t tipoMensaje, uint32_t sizeStream,void* stream)
 void enviarCatch(dataEntrenador* infoEntrenador){
@@ -610,73 +374,6 @@ void enviarCatch(dataEntrenador* infoEntrenador){
 }
 
 
-uint32_t encontrarPosicionEntrenadorLibre(dataEntrenador* entrenador){
-	pthread_mutex_lock(entrenadoresLibres.mutex);
-	for(uint32_t i=0;i<list_size(entrenadoresLibres.lista);i++){
-	        dataEntrenador* entrenadorActual = (dataEntrenador*) list_get(entrenadoresLibres.lista,i);
-	        if(entrenadorActual->id == entrenador->id){
-	        	pthread_mutex_unlock(entrenadoresLibres.mutex);
-	        	return i;
-	        }
-	        }
-	 pthread_mutex_unlock(entrenadoresLibres.mutex);
-	 return -1;
-}
-
-void entrarEnEjecucion(dataEntrenador* infoEntrenador){
-
-	sem_wait(&(infoEntrenador->semaforo));
-	infoEntrenador->estado = EXEC;
-	moverEntrenadorAPosicion(infoEntrenador, (pokemonAAtrapar.posicion));
-	enviarCatch(infoEntrenador);
-	sem_post(&semaforoEjecucionCpu);
-}
-
-void seleccionarEntrenador(pokemonPosicion* pokemon){
-	uint32_t idEntrenadorMasCercano      = obtenerIdEntrenadorMasCercano(pokemon->posicion);
-	dataEntrenador* entrenadorMasCercano = getListaMutex(entrenadores,idEntrenadorMasCercano);
-	asignarPokemonAEntrenador(entrenadorMasCercano,pokemon);
-	//habilitarHiloEntrenador(idEntrenadorMasCercano);
-}
-
-void habilitarHiloEntrenador(uint32_t idEntrenador){
-	sem_post(&(((dataEntrenador*)(getListaMutex(entrenadores,idEntrenador)))->semaforo));
-}
-
-
-void moverEntrenadorAPosicion(dataEntrenador* entrenador, posicion pos){
-	uint32_t restaX=pos.x-(entrenador->posicion).x;
-	uint32_t restaY=pos.y-(entrenador->posicion).y;
-	moverEntrenadorX(entrenador, restaX);
-	moverEntrenadorY(entrenador, restaY);
-}
-
-void moverEntrenadorX(dataEntrenador* entrenador, uint32_t movimientoX){
-
-	if(movimientoX!=0){
-			uint32_t unidad=movimientoX/abs(movimientoX);
-			for(uint32_t i=0;i< abs(movimientoX);i++){
-			sleep(retardoCicloCpu);
-				(entrenador->posicion).x+=unidad;
-			}
-		}
-}
-
-void moverEntrenadorY(dataEntrenador* entrenador, uint32_t movimientoY){
-	if(movimientoY!=0){
-		uint32_t unidad=movimientoY/abs(movimientoY);
-		for(uint32_t i=0;i< abs(movimientoY);i++){
-		sleep(retardoCicloCpu);
-			(entrenador->posicion).y+=unidad;
-		}
-	}
-}
-
-void moverEntrenador(dataEntrenador* entrenador, uint32_t movimientoX, uint32_t movimientoY){
-	posicion posAnterior     = entrenador->posicion;
-	(entrenador->posicion).x = posAnterior.x+movimientoX;
-	(entrenador->posicion).y = posAnterior.y+movimientoY;
-}
 
 dataTeam* inicializarTeam(t_config* config){
 
@@ -826,10 +523,22 @@ uint32_t buscarObjetivoPorEspecie(t_list* listaObjetivos, char* especie){
 	return -1;
 }
 
-//bool objetivoMismaEspecie(void* obj){
-//	objetivo* objAux=(objetivo*) obj;
-//	return strcmp(objAux->pokemon,(char*)especieAComparar)==0;
-//}
+
+void registrarPokemonAtrapado(char* pokemon){
+	uint32_t pos=buscarObjetivoPorEspecie(team->objetivoGlobal,pokemon);
+	if(pos!=-1){
+		(((objetivo*)list_get(team->objetivoGlobal,pos))->cantidad)--;
+	}else
+		printf("No se pudo registrar el pokemon atrapado ya que no está en los objetivos del team\n");
+}
+
+bool pokemonEsObjetivo(char* pokemon){
+	uint32_t pos=buscarObjetivoPorEspecie(team->objetivoGlobal,pokemon);
+	if(pos!=-1){
+			return((((objetivo*)list_get(team->objetivoGlobal,pos))->cantidad)>0);
+		}
+	return false;
+}
 
 
 t_list* obtenerListaDeListas(char** lst){
