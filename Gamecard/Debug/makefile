@@ -8,7 +8,6 @@ RM := rm -rf
 
 # All of the sources participating in the build are defined here
 -include sources.mk
--include src/subdir.mk
 -include subdir.mk
 -include objects.mk
 
@@ -23,22 +22,22 @@ endif
 # Add inputs and outputs from these tool invocations to the build variables 
 
 # All Target
-all: Broker
+all: Gamecard
 
 dependents:
 	-cd /home/utnso/tp-2020-1c-Programadores-en-Fuga/messages_lib/Debug && $(MAKE) all
 
 # Tool invocations
-Broker: $(OBJS) $(USER_OBJS) /home/utnso/tp-2020-1c-Programadores-en-Fuga/messages_lib/Debug/libmessages_lib.so
+Gamecard: $(OBJS) $(USER_OBJS) /home/utnso/tp-2020-1c-Programadores-en-Fuga/messages_lib/Debug/libmessages_lib.so
 	@echo 'Building target: $@'
 	@echo 'Invoking: GCC C Linker'
-	gcc -L"/home/utnso/tp-2020-1c-Programadores-en-Fuga/messages_lib/Debug" -L/home/utnso/Entrega1TpSo -o "Broker" $(OBJS) $(USER_OBJS) $(LIBS)
+	gcc -L"/home/utnso/tp-2020-1c-Programadores-en-Fuga/messages_lib/Debug" -L/messages_lib/Debug -L/home/utnso/Entrega1TpSo -o "Gamecard" $(OBJS) $(USER_OBJS) $(LIBS)
 	@echo 'Finished building target: $@'
 	@echo ' '
 
 # Other Targets
 clean:
-	-$(RM) $(EXECUTABLES)$(OBJS)$(C_DEPS) Broker
+	-$(RM) $(EXECUTABLES)$(OBJS)$(C_DEPS) Gamecard
 	-@echo ' '
 
 .PHONY: all clean dependents
