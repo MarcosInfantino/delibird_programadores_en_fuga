@@ -12,10 +12,10 @@
 //	send(socket,stream,bytes,0);
 //}
 
-mensajeAppearedBroker* llenarMensajeAppearedBroker(uint32_t sizePokemon, char* pokemon, uint32_t posX,uint32_t posY, uint32_t idCorrelativo){
+mensajeAppearedBroker* llenarMensajeAppearedBroker(char* pokemon, uint32_t posX,uint32_t posY, uint32_t idCorrelativo){
 	mensajeAppearedBroker* msg=malloc(sizeof(mensajeAppearedBroker));
-	msg->sizePokemon=sizePokemon;
-	msg->pokemon=malloc(sizePokemon);
+	msg->sizePokemon=strlen(pokemon) + 1;
+	msg->pokemon=malloc(msg->sizePokemon);
 	strcpy(msg->pokemon,pokemon);
 	msg->posX=posX;
 	msg->posY=posY;
@@ -24,7 +24,7 @@ mensajeAppearedBroker* llenarMensajeAppearedBroker(uint32_t sizePokemon, char* p
 
 }
 void* serializarAppearedBroker(mensajeAppearedBroker* mensaje){
-	void* stream    = malloc(sizeof(mensajeAppearedBroker));
+	void* stream    = malloc(sizeof(uint32_t)*4 + mensaje->sizePokemon);
 	uint32_t offset = 0;
 
 	memcpy(stream+offset, &(mensaje->sizePokemon), sizeof(uint32_t));
@@ -40,17 +40,17 @@ void* serializarAppearedBroker(mensajeAppearedBroker* mensaje){
 	return mensaje;
 }
 
-mensajeAppearedTeam* llenarMensajeAppearedTeam(uint32_t sizePokemon, char* pokemon, uint32_t posX, uint32_t posY){
+mensajeAppearedTeam* llenarMensajeAppearedTeam(char* pokemon, uint32_t posX, uint32_t posY){
 	mensajeAppearedTeam* msg=malloc(sizeof(mensajeAppearedTeam));
-	msg->sizePokemon=sizePokemon;
-	msg->pokemon=malloc(sizePokemon);
+	msg->sizePokemon=strlen(pokemon)+1;
+	msg->pokemon=malloc(msg->sizePokemon);
 	strcpy(msg->pokemon,pokemon);
 	msg->posX=posX;
 	msg->posY=posY;
 	return msg;
 }
 void* serializarAppearedTeam(mensajeAppearedTeam* mensaje){
-	void* stream    = malloc(sizeof(mensajeAppearedTeam));
+	void* stream    = malloc(sizeof(uint32_t)*3 + mensaje->sizePokemon);
 	uint32_t offset = 0;
 
 	memcpy(stream+offset, &(mensaje->sizePokemon), sizeof(uint32_t));
@@ -65,10 +65,10 @@ void* serializarAppearedTeam(mensajeAppearedTeam* mensaje){
 	return mensaje;
 }
 
-mensajeNewBroker* llenarMensajeNewBroker(uint32_t sizePokemon, char* pokemon, uint32_t posX, uint32_t posY, uint32_t cantidad){
+mensajeNewBroker* llenarMensajeNewBroker(char* pokemon, uint32_t posX, uint32_t posY, uint32_t cantidad){
 	mensajeNewBroker* msg=malloc(sizeof(mensajeNewBroker));
-		msg->sizePokemon=sizePokemon;
-		msg->pokemon=malloc(sizePokemon);
+		msg->sizePokemon=strlen(pokemon)+1;
+		msg->pokemon=malloc(msg->sizePokemon);
 		strcpy(msg->pokemon,pokemon);
 		msg->posX=posX;
 		msg->posY=posY;
@@ -77,7 +77,7 @@ mensajeNewBroker* llenarMensajeNewBroker(uint32_t sizePokemon, char* pokemon, ui
 
 }
 void* serializarNewBroker(mensajeNewBroker* mensaje){
-	void* stream 	= malloc(sizeof(mensajeNewBroker));
+	void* stream 	= malloc(sizeof(uint32_t)*4 + mensaje->sizePokemon);
 	uint32_t offset = 0;
 
 	memcpy(stream+offset, &(mensaje->sizePokemon), sizeof(uint32_t));
@@ -94,10 +94,10 @@ void* serializarNewBroker(mensajeNewBroker* mensaje){
 	return mensaje;
 }
 
-mensajeNewGamecard* llenarMensajeNewGameCard(uint32_t sizePokemon, char* pokemon, uint32_t posX, uint32_t posY, uint32_t cantidad, uint32_t id){
+mensajeNewGamecard* llenarMensajeNewGameCard(char* pokemon, uint32_t posX, uint32_t posY, uint32_t cantidad, uint32_t id){
 	mensajeNewGamecard* msg=malloc(sizeof(mensajeNewGamecard));
-	msg->sizePokemon=sizePokemon;
-	msg->pokemon=malloc(sizePokemon);
+	msg->sizePokemon=strlen(pokemon)+1;
+	msg->pokemon=malloc(msg->sizePokemon);
 	strcpy(msg->pokemon,pokemon);
 	msg->posX=posX;
 	msg->posY=posY;
@@ -107,7 +107,7 @@ mensajeNewGamecard* llenarMensajeNewGameCard(uint32_t sizePokemon, char* pokemon
 
 }
 void* serializarNewGamecard(mensajeNewGamecard* mensaje){
-	void* stream    = malloc(sizeof(mensajeNewGamecard));
+	void* stream    = malloc(sizeof(uint32_t)*5 + mensaje->sizePokemon);
 	uint32_t offset = 0;
 
 	memcpy(stream+offset, &(mensaje->sizePokemon), sizeof(uint32_t));
@@ -126,11 +126,11 @@ void* serializarNewGamecard(mensajeNewGamecard* mensaje){
 	return mensaje;
 }
 
-mensajeCatchBroker* llenarMensajeCatchBroker(uint32_t sizePokemon, char* pokemon, uint32_t posX, uint32_t posY){
+mensajeCatchBroker* llenarMensajeCatchBroker(char* pokemon, uint32_t posX, uint32_t posY){
 
 	mensajeCatchBroker* msg=malloc(sizeof(mensajeCatchBroker));
-	msg->sizePokemon=sizePokemon;
-	msg->pokemon=malloc(sizePokemon);
+	msg->sizePokemon=strlen(pokemon)+1;
+	msg->pokemon=malloc(msg->sizePokemon);
 	strcpy(msg->pokemon,pokemon);
 	msg->posX=posX;
 	msg->posY=posY;
@@ -138,7 +138,7 @@ mensajeCatchBroker* llenarMensajeCatchBroker(uint32_t sizePokemon, char* pokemon
 }
 
 void* serializarCatchBroker(mensajeCatchBroker* mensaje){
-	void* stream    = malloc(sizeof(mensajeCatchBroker));
+	void* stream    = malloc(sizeof(uint32_t)*3 + mensaje->sizePokemon);
 	uint32_t offset = 0;
 
 	memcpy(stream+offset, &(mensaje->sizePokemon), sizeof(uint32_t));
@@ -153,10 +153,10 @@ void* serializarCatchBroker(mensajeCatchBroker* mensaje){
 	return mensaje;
 }
 
-mensajeCatchGamecard* llenarMensajeCatchGamecard(uint32_t sizePokemon, char* pokemon, uint32_t posX, uint32_t posY, uint32_t id){
+mensajeCatchGamecard* llenarMensajeCatchGamecard(char* pokemon, uint32_t posX, uint32_t posY, uint32_t id){
 	mensajeCatchGamecard* msg=malloc(sizeof(mensajeCatchGamecard));
-	msg->sizePokemon=sizePokemon;
-	msg->pokemon=malloc(sizePokemon);
+	msg->sizePokemon=strlen(pokemon)+1;
+	msg->pokemon=malloc(msg->sizePokemon);
 	strcpy(msg->pokemon,pokemon);
 	msg->posX=posX;
 	msg->posY=posY;
@@ -165,7 +165,7 @@ mensajeCatchGamecard* llenarMensajeCatchGamecard(uint32_t sizePokemon, char* pok
 
 }
 void* serializarCatchGamecard(mensajeCatchGamecard* mensaje){
-	void* stream    = malloc(sizeof(mensajeCatchGamecard));
+	void* stream    = malloc(sizeof(uint32_t)*4 + mensaje->sizePokemon);
 	uint32_t offset = 0;
 
 	memcpy(stream+offset, &(mensaje->sizePokemon), sizeof(uint32_t));
@@ -190,7 +190,7 @@ mensajeCaught* llenarMensajeCaught(uint32_t idCorrelativo, uint32_t resultadoCau
 }
 
 void* serializarCaught (mensajeCaught* mensaje){
-	void* stream    = malloc(sizeof(mensajeCaught));
+	void* stream    = malloc(sizeof(uint32_t)*2);
 	uint32_t offset = 0;
 
 	memcpy(stream+offset, &(mensaje->idCorrelativo), sizeof(uint32_t));
@@ -199,16 +199,16 @@ void* serializarCaught (mensajeCaught* mensaje){
 	offset+= sizeof(uint32_t);
 	return stream;
 }
-mensajeGetBroker* llenarMensajeGetBroker(uint32_t sizePokemon, char* pokemon){
+mensajeGetBroker* llenarMensajeGetBroker(char* pokemon){
 	mensajeGetBroker* msg=malloc(sizeof(mensajeGetBroker));
-	msg->sizePokemon=sizePokemon;
-	msg->pokemon=malloc(sizePokemon);
+	msg->sizePokemon=strlen(pokemon)+1;
+	msg->pokemon=malloc(msg->sizePokemon);
 	strcpy(msg->pokemon,pokemon);
 	return msg;
 }
 
 void* serializarGetBroker (mensajeGetBroker* mensaje){
-	void* stream   = malloc(sizeof(mensajeGetBroker));
+	void* stream   = malloc(sizeof(uint32_t) + mensaje->sizePokemon);
 	uint32_t offset= 0;
 
 	memcpy(stream+offset,&(mensaje->sizePokemon),sizeof(uint32_t));
@@ -217,17 +217,17 @@ void* serializarGetBroker (mensajeGetBroker* mensaje){
 	return stream;
 }
 
-mensajeGetGamecard* llenarMensajeGetGamecard(uint32_t sizePokemon, char* pokemon, uint32_t id){
+mensajeGetGamecard* llenarMensajeGetGamecard(char* pokemon, uint32_t id){
 	mensajeGetGamecard* msg=malloc(sizeof(mensajeGetGamecard));
-	msg->sizePokemon=sizePokemon;
-	msg->pokemon=malloc(sizePokemon);
+	msg->sizePokemon=strlen(pokemon)+1;
+	msg->pokemon=malloc(msg->sizePokemon);
 	strcpy(msg->pokemon,pokemon);
 	msg->id=id;
 	return msg;
 
 }
 void* serializarGetGamecard (mensajeGetGamecard* mensaje){
-	void* stream   = malloc(sizeof(mensajeGetGamecard));
+	void* stream   = malloc(sizeof(uint32_t)*2 + mensaje->sizePokemon);
 	uint32_t offset= 0;
 
 	memcpy(stream+offset,&(mensaje->sizePokemon),sizeof(uint32_t));
@@ -238,10 +238,10 @@ void* serializarGetGamecard (mensajeGetGamecard* mensaje){
 	return stream;
 }
 
-mensajeLocalized* llenarMensajeLocalized(uint32_t sizePokemon, char* pokemon, uint32_t cantidad, posicion* posiciones){
+mensajeLocalized* llenarMensajeLocalized(char* pokemon, uint32_t cantidad, posicion* posiciones){
 	mensajeLocalized* msg=malloc(sizeof(mensajeLocalized));
-	msg->sizePokemon=sizePokemon;
-	msg->pokemon=malloc(sizePokemon);
+	msg->sizePokemon=strlen(pokemon)+1;
+	msg->pokemon=malloc(msg->sizePokemon);
 	strcpy(msg->pokemon,pokemon);
 	msg->cantidad=cantidad;
 	msg->arrayPosiciones=malloc(cantidad*sizeof(posicion));

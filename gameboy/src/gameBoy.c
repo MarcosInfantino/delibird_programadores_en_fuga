@@ -59,89 +59,53 @@ int main(int argc, char* argv[]) {
 void* generarStreamArgumentos (uint32_t colaMensaje, char* argv[]){
 	void* streamArgumentos;
 	uint32_t procesoDestinatario = obtenerNombreProceso(argv[1]);
-	char* nombrePokemon = argv[3];
 	switch(colaMensaje){
 		case APPEARED_POKEMON:
 			if(procesoDestinatario == BROKER){
-				mensajeAppearedBroker* mensajeEnviar = malloc(sizeArgumentos(colaMensaje, nombrePokemon, procesoDestinatario));
-				mensajeEnviar->sizePokemon 			 = strlen(nombrePokemon) + 1;
-				mensajeEnviar->pokemon 				 = nombrePokemon;
-				mensajeEnviar->posX 				 = atoi(argv[4]);
-				mensajeEnviar->posY 				 = atoi(argv[5]);
-				mensajeEnviar->idCorrelativo		 = atoi(argv[6]);
+				mensajeAppearedBroker* mensajeEnviar = llenarMensajeAppearedBroker(argv[3], atoi(argv[4]), atoi(argv[5]), atoi(argv[6]));
 				streamArgumentos = serializarAppearedBroker(mensajeEnviar);
 
 			}else if (procesoDestinatario == TEAM){
-				mensajeAppearedTeam* mensajeEnviar = malloc(sizeArgumentos(colaMensaje, nombrePokemon, procesoDestinatario));
-				mensajeEnviar->sizePokemon		   = strlen(nombrePokemon)+1;
-				mensajeEnviar->pokemon			   = argv[3];
-				mensajeEnviar->posX				   = atoi(argv[4]);
-				mensajeEnviar->posY				   = atoi(argv[5]);
+				mensajeAppearedTeam* mensajeEnviar = llenarMensajeAppearedTeam(argv[3], atoi(argv[4]), atoi(argv[5]));
 				streamArgumentos = serializarAppearedTeam(mensajeEnviar);
 			}
 			break;
 
 		case NEW_POKEMON:
 			if(procesoDestinatario == BROKER){
-				mensajeNewBroker* mensajeEnviar = malloc(sizeArgumentos(colaMensaje, nombrePokemon, procesoDestinatario));
-				mensajeEnviar->sizePokemon		= strlen(nombrePokemon)+1;
-				mensajeEnviar->pokemon 			= argv[3];
-				mensajeEnviar->posX				= atoi(argv[4]);
-				mensajeEnviar->posY				= atoi(argv[5]);
-				mensajeEnviar->cantidad			= atoi(argv[6]);
+				mensajeNewBroker* mensajeEnviar = llenarMensajeNewBroker(argv[3], atoi(argv[4]), atoi(argv[5]), atoi(argv[6]));
 				streamArgumentos = serializarNewBroker(mensajeEnviar);
 
 			}else if (procesoDestinatario == GAMECARD){
-				mensajeNewGamecard* mensajeEnviar = malloc(sizeArgumentos(colaMensaje, nombrePokemon, procesoDestinatario));
-				mensajeEnviar->sizePokemon		  = strlen(nombrePokemon)+1;
-				mensajeEnviar->pokemon			  = argv[3];
-				mensajeEnviar->posX				  = atoi(argv[4]);
-				mensajeEnviar->posY 			  = atoi(argv[5]);
-				mensajeEnviar->cantidad 		  = atoi(argv[6]);
-				mensajeEnviar->id				  = atoi(argv[7]);
+				mensajeNewGamecard* mensajeEnviar= llenarMensajeNewGameCard(argv[3], atoi(argv[4]), atoi(argv[5]), atoi(argv[6]), atoi(argv[6]));
 				streamArgumentos = serializarNewGamecard(mensajeEnviar);
 			}
 			break;
 
 		case CATCH_POKEMON:
 			if(procesoDestinatario == BROKER){
-				mensajeCatchBroker* mensajeEnviar = malloc(sizeArgumentos(colaMensaje, nombrePokemon, procesoDestinatario));
-				mensajeEnviar->sizePokemon		  = strlen(nombrePokemon)+1;
-				mensajeEnviar->pokemon			  = argv[3];
-				mensajeEnviar->posX				  = atoi(argv[4]);
-				mensajeEnviar->posY				  = atoi(argv[5]);
+				mensajeCatchBroker* mensajeEnviar = llenarMensajeCatchBroker(argv[3], atoi(argv[4]), atoi(argv[5]));
 				streamArgumentos = serializarCatchBroker(mensajeEnviar);
 
 			}else if(procesoDestinatario == GAMECARD){
-
-				mensajeCatchGamecard* mensajeEnviarCatch = malloc(sizeArgumentos(colaMensaje, nombrePokemon, procesoDestinatario));
-				mensajeEnviarCatch->sizePokemon			 = strlen(nombrePokemon)+1;
-				mensajeEnviarCatch->pokemon 			 = argv[3];
-				mensajeEnviarCatch->posX				 = atoi(argv[4]);
-				mensajeEnviarCatch->posY				 = atoi(argv[5]);
-				mensajeEnviarCatch->id                   = atoi(argv[6]);
+				mensajeCatchGamecard* mensajeEnviarCatch = llenarMensajeCatchGamecard(argv[3], atoi(argv[4]), atoi(argv[5]), atoi(argv[6]));
 				streamArgumentos = serializarCatchGamecard(mensajeEnviarCatch);
 			}
 			break;
 
 		case CAUGHT_POKEMON: ;
-			mensajeCaught* mensajeEnviarCaught   = malloc(sizeArgumentos(colaMensaje, nombrePokemon, procesoDestinatario));
-			mensajeEnviarCaught->idCorrelativo	 = atoi(argv[3]);
-			mensajeEnviarCaught->resultadoCaught = atoi(argv[4]);
-			streamArgumentos 					 = serializarCaught(mensajeEnviarCaught);
+			mensajeCaught* mensajeEnviarCaught = llenarMensajeCaught(atoi(argv[3]), atoi(argv[4]));
+			streamArgumentos = serializarCaught(mensajeEnviarCaught);
 			break;
 
 		case GET_POKEMON:
 			if(procesoDestinatario == BROKER){
-				mensajeGetBroker* mensajeEnviarGet  = malloc(sizeArgumentos(colaMensaje, nombrePokemon, procesoDestinatario));
-				mensajeEnviarGet->sizePokemon       = strlen(nombrePokemon)+1;
-				mensajeEnviarGet->pokemon 	  		= nombrePokemon;
-				streamArgumentos 					= serializarGetBroker(mensajeEnviarGet);
+				mensajeGetBroker* mensajeEnviarGetBroker = llenarMensajeGetBroker(argv[3]);
+				streamArgumentos 					= serializarGetBroker(mensajeEnviarGetBroker);
+
 			}else if(procesoDestinatario == GAMECARD){
-				mensajeGetGamecard* mensajeEnviarGet = malloc(sizeArgumentos(colaMensaje, nombrePokemon, procesoDestinatario));
-				mensajeEnviarGet->sizePokemon = strlen(nombrePokemon)+1;
-				mensajeEnviarGet->pokemon = nombrePokemon;
-				mensajeEnviarGet->id = atoi(argv[4]);
+				mensajeGetGamecard* mensajeEnviarGetGamecard = llenarMensajeGetGamecard(argv[3], atoi(argv[4]));
+				streamArgumentos = serializarGetGamecard (mensajeEnviarGetGamecard);
 			}
 			break;
 
