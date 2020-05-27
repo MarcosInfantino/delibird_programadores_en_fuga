@@ -65,10 +65,10 @@ void* atenderCliente(void* sock){
 	send(*socket,(void*)(&respuesta),sizeof(uint32_t),0);
 
 	printf("hice el send: %i\n",respuesta);
-
+	printf("recibi: %i\n", paquete->sizeStream);
 	switch(paquete->tipoMensaje){
 		case APPEARED_POKEMON:;
-			mensajeAppearedTeam* msg=deserializarAppearedTeam(paquete->stream);
+			printf("deserializao\n");mensajeAppearedTeam* msg=deserializarAppearedTeam(paquete->stream);
 			//destruirPaquete(paquete);
 			printf("leyo bien\n");atenderAppeared(msg); ;break;
 		default: printf("leyo cualquiera\n"); break;

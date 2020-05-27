@@ -21,7 +21,7 @@
 #include <stdlib.h>
 
 
-
+//TODO: corregir recibirPaquete
 
 //t_list* idsHilos=list_create();//son ints
 //t_list* hilos=list_create();//son pthread_t
@@ -120,6 +120,7 @@ int main(int argc , char* argv[]){
 	pokemonesPendientes=inicializarColaMutex();
 	listaIdsEntrenadorMensaje=inicializarListaMutex();
 	entrenadores=inicializarListaMutex();
+	especiesLocalizadas=inicializarListaMutex();
 	entrenadoresExit=inicializarListaMutex();
 	listaIdsRespuestasGet=inicializarListaMutex();
 	char* pathConfig   = "Team2.config";
@@ -144,6 +145,7 @@ int main(int argc , char* argv[]){
 
 	pthread_t hiloEnviarGets;
 	crearHiloParaEnviarGets(&hiloEnviarGets);
+
 	pthread_t hiloConexionInicialBroker;
 
 	crearHiloConexionColasBroker((void*)config,&hiloConexionInicialBroker);
@@ -178,6 +180,7 @@ bool objetivoCumplido(){
 
 void atenderAppeared(mensajeAppearedTeam* msg){
 	pokemonPosicion* pokePosicion=malloc(sizeof(pokemonPosicion));
+	addListaMutex(especiesLocalizadas,(void*)(msg->pokemon));
 	pokePosicion->pokemon=msg->pokemon;
 	(pokePosicion->posicion).x=msg->posX;
 	(pokePosicion->posicion).y=msg->posY;
@@ -191,6 +194,42 @@ void atenderAppeared(mensajeAppearedTeam* msg){
 	}
 }
 
+void atenderLocalized(paquete* paquete){
+	mensajeLocalized* msg=deserializarLocalized(paquete->stream);
+	if(!especieFueLocalizada(msg->pokemon)&& localizedMeInteresa(paquete)){
+		uint32_t i;
+		for(i=0;i<msg->cantidad;i++){
+			posicion posActual= *((msg->arrayPosiciones)+i);
+			mensajeAppearedTeam* msgAppeared=llenarMensajeAppearedTeam(msg->pokemon,posActual.x,posActual.y);
+			atenderAppeared(msgAppeared);
+		}
+	}
+
+}
+
+bool localizedMeInteresa(paquete* paquete){
+	uint32_t id=paquete->idCorrelativo;
+	uint32_t i;
+	for(i=0;i<sizeListaMutex(listaIdsRespuestasGet);i++){
+		uint32_t* idActual=(uint32_t*)getListaMutex(listaIdsRespuestasGet,i);
+		if(id==(*idActual)){
+			return true;
+		}
+
+	}
+	return false;
+}
+
+bool especieFueLocalizada(char* pokemon){
+	uint32_t i=0;
+	for(i=0;i<sizeListaMutex(especiesLocalizadas);i++){
+		char* pokeActual=(char*)(getListaMutex(especiesLocalizadas,i));
+		if(strcpy(pokeActual,pokemon)){
+			return true;
+		}
+	}
+	return false;
+}
 void atenderCaught(paquete* paqueteCaught){
 	mensajeCaught* msgCaught=deserializarCaught(paqueteCaught->stream);
 	uint32_t id=paqueteCaught->idCorrelativo;
@@ -255,7 +294,7 @@ void* enviarGets(void* arg){
 	uint32_t i=0;
 	for(i=0;i<sizeListaMutex(objetivoGlobal);i++){
 		objetivo* objetivoActual=(objetivo*)getListaMutex(objetivoGlobal,i);
-		pthread_t hilo;;
+		pthread_t hilo;
 		uint32_t err=pthread_create(&hilo,NULL,enviarGet,(void*)(objetivoActual->pokemon));
 							if(err!=0){
 								printf("Hubo un problema en la creación del hilo para conectarse al broker \n");

@@ -375,7 +375,10 @@ paquete* llenarPaquete( uint32_t modulo,uint32_t tipoMensaje, uint32_t sizeStrea
 	paqueteASerializar->id            = -1;
 	paqueteASerializar->idCorrelativo = -1;
 	paqueteASerializar->sizeStream    = sizeStream;
-	paqueteASerializar->stream        = stream;
+	printf("aaaaaaaaaaaaaa %i\n",paqueteASerializar->sizeStream);
+	paqueteASerializar->stream=malloc(sizeStream);
+	memcpy(paqueteASerializar->stream,stream,sizeStream);
+
 
 	return paqueteASerializar;
 }
@@ -425,11 +428,15 @@ mensajeAppearedBroker* deserializarAppearedBroker(void* streamRecibido){
 mensajeAppearedTeam* deserializarAppearedTeam (void* streamRecibido){
 	mensajeAppearedTeam* mensaje = malloc(sizeof(mensajeAppearedTeam));
 	uint32_t offset              = 0;
+	printf("hola1\n");
 	memcpy(&(mensaje->sizePokemon), streamRecibido+offset, sizeof(uint32_t));
 	offset+=sizeof(uint32_t);
+	printf("hola1.5\n");
 	mensaje->pokemon=malloc(mensaje->sizePokemon);
+	printf("hola2\n");
 	memcpy(mensaje->pokemon, streamRecibido+offset, mensaje->sizePokemon);
 	offset+=(mensaje->sizePokemon);
+	printf("hola3\n");
 	memcpy(&(mensaje->posX), streamRecibido+offset, sizeof(uint32_t));
 	offset+=sizeof(uint32_t);
 	memcpy(&(mensaje->posY), streamRecibido+offset, sizeof(uint32_t));
@@ -581,6 +588,7 @@ paquete* deserializarPaquete(void* paqueteRecibido){
 	offset+=sizeof(uint32_t);
 	memcpy(&(paquete->sizeStream), paqueteRecibido+offset, sizeof(uint32_t));
 	offset+=sizeof(uint32_t);
+	printf("asdfasdf %i\n",paquete->sizeStream);
 	paquete->stream = malloc(paquete->sizeStream);
 	memcpy(paquete->stream, paqueteRecibido+offset, paquete->sizeStream);
 
@@ -591,28 +599,34 @@ paquete* deserializarPaquete(void* paqueteRecibido){
 
 paquete* recibirPaquete(uint32_t socket){
 	paquete* paquete = malloc(sizeof(paquete));
-	uint32_t offset  = 0;
+
 
 	//recv(cliente,&respuesta1,sizeof(uint32_t),0);
 
 	if(recv(socket,&(paquete->modulo),sizeof(uint32_t),0)==-1)
 		return NULL;
-	offset+=sizeof(uint32_t);
+
 	if(recv(socket,&(paquete->tipoMensaje),sizeof(uint32_t),0)==-1)
 		return NULL;
-	offset+=sizeof(uint32_t);
+
 	if(recv(socket,&(paquete->id),sizeof(uint32_t),0)==-1)
 		return NULL;
-	offset+=sizeof(uint32_t);
+
 	if(recv(socket,&(paquete->idCorrelativo),sizeof(uint32_t),0)==-1)
 		return NULL;
-	offset+=sizeof(uint32_t);
+
 	if(recv(socket,&(paquete->sizeStream),sizeof(uint32_t),0)==-1)
 		return NULL;
-	offset+=sizeof(uint32_t);
+	printf("antes de recibir el streamMensaje %i",paquete->sizeStream);
 	paquete->stream = malloc(paquete->sizeStream);
-	if(recv(socket,(paquete->stream),(paquete->sizeStream),0)==-1)
+
+
+	if(recv(socket,paquete->stream,(paquete->sizeStream),0)==-1)
 		return NULL;
+
+
+	//free(stream);
+	printf("despues de recibir el streamMensaje %i",paquete->sizeStream);
 
 	return paquete;
 }

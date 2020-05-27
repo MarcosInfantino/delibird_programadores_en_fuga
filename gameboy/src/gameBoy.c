@@ -248,10 +248,10 @@ void loggearMensajeRecibido (paquete* paqueteRespuesta){
 			log_info(gameboyLogger, "El pokemon es: %s\n", msgGet->pokemon);
 			break;
 
-	//	case LOCALIZED_POKEMON: ;
-	//		mensajeLocalized* msgLocalized = deserializarLocalized(paqueteRespuesta->stream);
-	//		log_info(gameboyLogger, "Recibi mensaje localized pokemon\n");
-	//		break;
+		case LOCALIZED_POKEMON: ;
+			mensajeLocalized* msgLocalized = deserializarLocalized(paqueteRespuesta->stream);
+			log_info(gameboyLogger, "Recibi mensaje localized pokemon\n");
+			break;
 		}
 }
 

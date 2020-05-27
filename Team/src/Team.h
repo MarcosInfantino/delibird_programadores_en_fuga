@@ -22,7 +22,7 @@
 
 listaMutex* entrenadores;
 colaMutex* colaEjecucionFifo;
-
+listaMutex* especiesLocalizadas;//lista de pokemones
 listaMutex* listaIdsRespuestasGet;
 listaMutex* listaIdsEntrenadorMensaje; // del tipo idsEntrenadorMensaje , //ver a futuro si esta lista requiere mutex
 listaMutex* entrenadoresLibres;
@@ -236,5 +236,11 @@ void* enviarGet(void* arg);
 uint32_t crearHiloParaEnviarGets(pthread_t* hilo);
 
 void* enviarGets(void* arg);
+
+bool especieFueLocalizada(char* pokemon);
+
+void atenderLocalized(paquete* paquete);
+
+bool localizedMeInteresa(paquete* paquete);
 
 #endif /* TEAM_H_ */
