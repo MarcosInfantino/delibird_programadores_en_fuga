@@ -213,6 +213,9 @@ mensajeLocalized* deserializarLocalized(void* streamRecibido);
 mensajeSuscripcionTiempo* deserializarSuscripcionTiempo(void* streamRecibido);
 mensajeSuscripcion* deserializarSuscripcion (void* streamRecibido);
 paquete* deserializarPaquete(void* paqueteRecibido);
+posicion* deserializarArrayPosiciones(void* stream,uint32_t cantidad);
+posicion* deserializarPosicion(void* stream);
+mensajeLocalized* deserializarLocalized(void* stream);
 paquete* recibirPaquete(uint32_t socket);
 mensajeAppearedBroker* llenarMensajeAppearedBroker(uint32_t sizePokemon, char* pokemon, uint32_t posX,uint32_t posY, uint32_t idCorrelativo);
 mensajeAppearedTeam* llenarMensajeAppearedTeam(uint32_t sizePokemon, char* pokemon, uint32_t posX, uint32_t posY);
@@ -223,6 +226,7 @@ mensajeCatchGamecard* llenarMensajeCatchGamecard(uint32_t sizePokemon, char* pok
 mensajeCaught* llenarMensajeCaught(uint32_t idCorrelativo, uint32_t resultadoCaught);
 mensajeGetBroker* llenarMensajeGetBroker(uint32_t sizePokemon, char* pokemon);
 mensajeGetGamecard* llenarMensajeGetGamecard(uint32_t sizePokemon, char* pokemon, uint32_t id);
+mensajeLocalized* llenarMensajeLocalized(uint32_t sizePokemon, char* pokemon, uint32_t cantidad, posicion* posiciones);
 mensajeSuscripcionTiempo* llenarMensajeSuscripcionTiempo(uint32_t cola, uint32_t tiempo);
 mensajeSuscripcion* llenarMensajeSuscripcion(uint32_t cola);
 uint32_t crearSocketCliente (char* ip, uint32_t puerto);

@@ -238,6 +238,17 @@ void* serializarGetGamecard (mensajeGetGamecard* mensaje){
 	return stream;
 }
 
+mensajeLocalized* llenarMensajeLocalized(uint32_t sizePokemon, char* pokemon, uint32_t cantidad, posicion* posiciones){
+	mensajeLocalized* msg=malloc(sizeof(mensajeLocalized));
+	msg->sizePokemon=sizePokemon;
+	msg->pokemon=malloc(sizePokemon);
+	strcpy(msg->pokemon,pokemon);
+	msg->cantidad=cantidad;
+	msg->arrayPosiciones=malloc(cantidad*sizeof(posicion));
+	memcpy(msg->arrayPosiciones,posiciones,cantidad*sizeof(posicion));
+	return msg;
+}
+
 void* serializarLocalized (mensajeLocalized* mensaje){
 	void* stream = malloc(2*sizeof(uint32_t)+mensaje->sizePokemon+(mensaje->cantidad)*2*sizeof(uint32_t));
 	uint32_t offset = 0;
@@ -245,8 +256,10 @@ void* serializarLocalized (mensajeLocalized* mensaje){
 	offset+= sizeof(uint32_t);
 	memcpy(stream+offset,mensaje->pokemon,mensaje->sizePokemon);
 	offset+= mensaje->sizePokemon;
+	memcpy(stream+offset,&(mensaje->cantidad),sizeof(uint32_t));
+	offset+=sizeof(uint32_t);
 	void* arraySerializado=serializarArrayPosiciones(mensaje->arrayPosiciones,mensaje->cantidad);
-	memcpy(stream,arraySerializado,(mensaje->cantidad)*2*sizeof(uint32_t));
+	memcpy(stream+offset,arraySerializado,(mensaje->cantidad)*2*sizeof(uint32_t));
 	return stream;
 
 }//hay que checkear funcionamiento
@@ -265,21 +278,65 @@ void* serializarArrayPosiciones(posicion* pos, uint32_t cantidad){
 	uint32_t offset=0;
 	void* stream=malloc(cantidad*2*sizeof(uint32_t));
 	uint32_t i=0;
+
 	for(i=0;i<cantidad;i++){
-		posicion* posActual=(pos + i);
-		memcpy(stream+offset,&(posActual->x),sizeof(uint32_t));
-		offset+=sizeof(uint32_t);
-		memcpy(stream+offset,&(posActual->y),sizeof(uint32_t));
-		offset+=sizeof(uint32_t);
+		posicion* posActual=malloc(sizeof(posicion));
+		*posActual=*(pos + i);
+		void* posicionSerializada=serializarPosicion(posActual);
+		memcpy(stream+offset,posicionSerializada,2*sizeof(uint32_t));
+		offset+=2*sizeof(uint32_t);
+		free(posActual);
 	}
 	return stream;
 }
 
+mensajeLocalized* deserializarLocalized(void* stream){
+	uint32_t sizePokemon,cantidad;
+	uint32_t offset=0;
+	memcpy(&sizePokemon, stream+offset,sizeof(uint32_t));
+	offset+=sizeof(uint32_t);
+	char* pokemon=malloc(sizePokemon);
+	memcpy(pokemon,stream+offset,sizePokemon);
+	offset+=sizePokemon;
+	memcpy(&cantidad,stream+offset,sizeof(uint32_t));
+	offset+=sizeof(uint32_t);
+	mensajeLocalized* msg=malloc(sizeof(mensajeLocalized));
+	msg->sizePokemon=sizePokemon;
+	msg->pokemon=pokemon;
+	msg->cantidad=cantidad;
+	msg->arrayPosiciones=deserializarArrayPosiciones(stream+offset,cantidad);
+	return msg;
+
+}
+
+posicion* deserializarArrayPosiciones(void* stream,uint32_t cantidad){
+	uint32_t offsetStream=0;
+	uint32_t i=0;
+	posicion* pos=malloc(cantidad*sizeof(posicion));
+	for(i=0;i<cantidad;i++){
+			posicion* posActual=malloc(sizeof(posicion));
+			posActual=deserializarPosicion(stream+offsetStream);
+			offsetStream+=2*sizeof(uint32_t);
+			memcpy(pos+i,posActual,sizeof(posicion));
+			free(posActual);
+
+		}
+	return pos;
+}
+
+posicion* deserializarPosicion(void* stream){
+	posicion* pos=malloc(sizeof(posicion));
+	uint offset=0;
+	memcpy(&(pos->x),stream+offset,sizeof(uint32_t));
+	offset+=sizeof(uint32_t);
+	memcpy(&(pos->y),stream+offset,sizeof(uint32_t));
+	return pos;
+}
 
 mensajeSuscripcionTiempo* llenarMensajeSuscripcionTiempo(uint32_t cola, uint32_t tiempo){
 	mensajeSuscripcionTiempo* msg= malloc(sizeof(mensajeSuscripcionTiempo));
 	msg->cola=cola;
-	msg->tiempo;
+	msg->tiempo=tiempo;
 	return msg;
 
 }
@@ -298,7 +355,7 @@ void* serializarSuscripcionTiempo(mensajeSuscripcionTiempo* mensaje){
 
 mensajeSuscripcion* llenarMensajeSuscripcion(uint32_t cola){
 	mensajeSuscripcion* msg=malloc(sizeof(mensajeSuscripcion));
-	msg->cola;
+	msg->cola=cola;
 	return msg;
 }
 void* serializarSuscripcion(mensajeSuscripcion* mensaje){
@@ -697,5 +754,30 @@ uint32_t sizeColaMutex(colaMutex cola){
 void destruirColaMutex(colaMutex cola, void(*element_destroyer)(void*)){
 	free(cola.mutex);
 	queue_destroy_and_destroy_elements(cola.cola,element_destroyer);
+}
+
+int main(){
+	//mensajeLocalized* llenarMensajeLocalized(uint32_t sizePokemon, char* pokemon, uint32_t cantidad, posicion* posiciones)
+
+	uint32_t sizePokemon=8;
+	char* pokemon="Pikachu";
+	uint32_t cantidad=2;
+	posicion* posiciones=malloc(sizeof(posiciones)*2);
+	posicion pos1={1,0};
+	posicion pos2={0,0};
+	*(posiciones)=pos1;
+	*(posiciones+1)=pos2;
+	mensajeLocalized* msg= llenarMensajeLocalized(sizePokemon,pokemon,cantidad,posiciones);
+	void* stream= serializarLocalized(msg);
+	mensajeLocalized* msgResultado=deserializarLocalized(stream);
+	printf("sizePokemon: %i\n", msgResultado->sizePokemon);
+	printf("pokemon: %s\n", msgResultado->pokemon);
+	printf("cantidad: %i\n", msgResultado->cantidad);
+	printf("posx1: %i\n", (msgResultado->arrayPosiciones)->x);
+	printf("posy1: %i\n", (msgResultado->arrayPosiciones)->y);
+	printf("posx2: %i\n", ((msgResultado->arrayPosiciones) +1)->x);
+	printf("posy2: %i\n", ((msgResultado->arrayPosiciones) +1)->y);
+
+	return 0;
 }
 

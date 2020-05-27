@@ -80,7 +80,37 @@
 //}
 
 //
+
+
 dataTeam* team;
+
+
+
+//int main(){
+//	//mensajeLocalized* llenarMensajeLocalized(uint32_t sizePokemon, char* pokemon, uint32_t cantidad, posicion* posiciones)
+//
+//	uint32_t sizePokemon=8;
+//	char* pokemon="Pikachu";
+//	uint32_t cantidad=2;
+//	posicion* posiciones=malloc(sizeof(posiciones)*2);
+//	posicion pos1={1,0};
+//	posicion pos2={0,0};
+//	*(posiciones)=pos1;
+//	*(posiciones+1)=pos2;
+//	mensajeLocalized* msg= llenarMensajeLocalized(sizePokemon,pokemon,cantidad,posiciones);
+//	void* stream= serializarLocalized(msg);
+//	mensajeLocalized* msgResultado=deserializarLocalized(stream);
+//	printf("sizePokemon: %i\n", msgResultado->sizePokemon);
+//	printf("pokemon: %s\n", msgResultado->pokemon);
+//	printf("cantidad: %i\n", msgResultado->cantidad);
+//	printf("posx1: %i\n", (msgResultado->arrayPosiciones)->x);
+//	printf("posy1: %i\n", (msgResultado->arrayPosiciones)->y);
+//	printf("posx2: %i\n", ((msgResultado->arrayPosiciones) +1)->x);
+//	printf("posy2: %i\n", ((msgResultado->arrayPosiciones) +1)->y);
+//
+//	return 0;
+//}
+
 int main(int argc , char* argv[]){
 	//char pathConfig  = argv;
 	sem_init(&semaforoEjecucionCpu, 0,0);
