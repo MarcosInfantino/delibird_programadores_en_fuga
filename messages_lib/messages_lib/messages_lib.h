@@ -177,8 +177,8 @@ typedef struct{
 }colaMutex;
 
 typedef struct {
-	colaMutex cola;
-	listaMutex suscriptores;
+	colaMutex* cola;
+	listaMutex* suscriptores;
 }colaMensajes;
 
 //t_paquete* armarPaquete(char* cadena);

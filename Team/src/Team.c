@@ -239,7 +239,7 @@ int crearHiloConexionColasBroker(void* config, pthread_t* hilo){
 	return 0;
 }
 uint32_t crearHiloParaEnviarGets(pthread_t* hilo){
-	uint32_t err=pthread_create(hilo,NULL,suscribirseColasBroker,NULL);
+	uint32_t err=pthread_create(hilo,NULL,enviarGets,NULL);
 					if(err!=0){
 						printf("Hubo un problema en la creación del hilo para conectarse al broker \n");
 						return err;
@@ -254,6 +254,14 @@ void* enviarGets(void* arg){
 	uint32_t i=0;
 	for(i=0;i<sizeListaMutex(objetivoGlobal);i++){
 		objetivo* objetivoActual=(objetivo*)getListaMutex(objetivoGlobal,i);
+		pthread_t hilo;
+		uint32_t err=pthread_create(hilo,NULL,suscribirseColasBroker,NULL);
+							if(err!=0){
+								printf("Hubo un problema en la creación del hilo para conectarse al broker \n");
+								return err;
+							}
+
+		pthread_detach(*hilo);
 	}
 	return NULL;
 }
