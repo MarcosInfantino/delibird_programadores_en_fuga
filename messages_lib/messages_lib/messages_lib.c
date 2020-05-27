@@ -759,7 +759,6 @@ void destruirColaMutex(colaMutex cola, void(*element_destroyer)(void*)){
 int main(){
 	//mensajeLocalized* llenarMensajeLocalized(uint32_t sizePokemon, char* pokemon, uint32_t cantidad, posicion* posiciones)
 
-	uint32_t sizePokemon=8;
 	char* pokemon="Pikachu";
 	uint32_t cantidad=2;
 	posicion* posiciones=malloc(sizeof(posiciones)*2);
@@ -767,7 +766,7 @@ int main(){
 	posicion pos2={0,0};
 	*(posiciones)=pos1;
 	*(posiciones+1)=pos2;
-	mensajeLocalized* msg= llenarMensajeLocalized(sizePokemon,pokemon,cantidad,posiciones);
+	mensajeLocalized* msg= llenarMensajeLocalized(pokemon,cantidad,posiciones);
 	void* stream= serializarLocalized(msg);
 	mensajeLocalized* msgResultado=deserializarLocalized(stream);
 	printf("sizePokemon: %i\n", msgResultado->sizePokemon);
