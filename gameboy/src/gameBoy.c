@@ -20,11 +20,18 @@
 #include <sys/types.h>
 #include <pthread.h>
 #include "gameBoy.h"
+#include "log.h"
 
 //\n
 
+t_log* gameboyLogger;
+
 int main(int argc, char* argv[]) {
+
+	gameboyLogger = iniciar_logger();
+
 	printf("Estoy andando\n");
+	log_info(gameboyLogger, "Arranco\n");
 	t_config * config = config_create("gameBoy1.config");
 	void* stream;
 	paquete* paquete;
@@ -188,51 +195,80 @@ uint32_t obtenerPuertoProceso (uint32_t proceso, t_config* config){
 void* enviarMensaje(void* paqueteySocket){
 	paqueteYSocket* paqueteConSocket = (paqueteYSocket*) paqueteySocket;
 	send(paqueteConSocket->socketCliente, paqueteConSocket->paqueteAEnviar, sizePaquete(paqueteConSocket->paqueteAEnviar), 0);
-	printf("Estoy esperando respuesta\n");
+	log_info(gameboyLogger, "Estoy esperando respuesta al mensaje enviado\n");
 	uint32_t respuesta=0;
 	recv(paqueteConSocket->socketCliente, &respuesta,sizeof(uint32_t),0);
 	if(respuesta>0){
-		printf("recibido correctamente: %i\n", respuesta);
+		log_info(gameboyLogger, "Mensaje fue recibido correctamente, respuesta: %i\n", respuesta);
 	}else{
-		printf("recibido incorrectamente: %i\n", respuesta);
+		log_info(gameboyLogger, "Mensaje recibido incorrectamente, respuesta: %i\n", respuesta);
 	}
 	close(paqueteConSocket->socketCliente);
 	return NULL;
 }
 
+void loggearMensajeRecibido (paquete* paqueteRespuesta){
+	switch(paqueteRespuesta->tipoMensaje){
+		case APPEARED_POKEMON:;
+			mensajeAppearedBroker* msgAppeared=deserializarAppearedBroker(paqueteRespuesta->stream);
+			log_info(gameboyLogger, "Recibi mensaje appeared pokemon: \n");
+			log_info(gameboyLogger, "El pokemon es: %s\n", msgAppeared->pokemon);
+			log_info(gameboyLogger, "La posX es: %i\n", msgAppeared->posX);
+			log_info(gameboyLogger, "La posY es: %i\n", msgAppeared->posY);
+			log_info(gameboyLogger, "El id correlativo es: %i\n", msgAppeared->idCorrelativo);
+			break;
+
+		case NEW_POKEMON: ;
+			mensajeNewBroker* msgNew = deserializarNewBroker(paqueteRespuesta->stream);
+			log_info(gameboyLogger, "Recibi mensaje new pokemon: \n");
+			log_info(gameboyLogger, "El pokemon es: %s\n", msgNew->pokemon);
+			log_info(gameboyLogger, "La posX es: %i\n", msgNew->posX);
+			log_info(gameboyLogger, "La posY es: %i\n", msgNew->posY);
+			log_info(gameboyLogger, "La cantidad es: %i\n", msgNew->cantidad);
+			break;
+
+		case CATCH_POKEMON: ;
+			mensajeCatchBroker* msgCatch = deserializarCatchBroker (paqueteRespuesta->stream);
+			log_info(gameboyLogger, "Recibi mensaje catch pokemon: \n");
+			log_info(gameboyLogger, "El pokemon es: %s\n", msgCatch->pokemon);
+			log_info(gameboyLogger, "La posX es: %i\n", msgCatch->posX);
+			log_info(gameboyLogger, "La posY es: %s\n", msgCatch->posY);
+			break;
+
+		case CAUGHT_POKEMON: ;
+			mensajeCaught* msgCaught = deserializarCaught (paqueteRespuesta->stream);
+			log_info(gameboyLogger, "Recibi mensaje caught pokemon: \n");
+			log_info(gameboyLogger, "El id correlativo es: %i\n", msgCaught->idCorrelativo);
+			log_info(gameboyLogger, "El resultado es: %i\n", msgCaught->resultadoCaught);
+			break;
+
+		case GET_POKEMON: ;
+			mensajeGetBroker* msgGet = deserializarGetBroker (paqueteRespuesta->stream);
+			log_info(gameboyLogger, "Recibi mensaje get pokemon: \n");
+			log_info(gameboyLogger, "El pokemon es: %s\n", msgGet->pokemon);
+			break;
+
+	//	case LOCALIZED_POKEMON: ;
+	//		mensajeLocalized* msgLocalized = deserializarLocalized(paqueteRespuesta->stream);
+	//		log_info(gameboyLogger, "Recibi mensaje localized pokemon\n");
+	//		break;
+		}
+}
+
 void* enviarMensajeSuscripcion(void* paqueteySocket){
 	paqueteYSocket* paqueteConSocket = (paqueteYSocket*) paqueteySocket;
 	send(paqueteConSocket->socketCliente, paqueteConSocket->paqueteAEnviar, sizePaquete(paqueteConSocket->paqueteAEnviar), 0);
-	printf("Estoy esperando respuesta\n");
+	log_info(gameboyLogger, "Espero respuesta a solicitud de suscripción\n");
 	uint32_t respuesta=0;
 	recv(paqueteConSocket->socketCliente, &respuesta,sizeof(uint32_t),0);
 	if(respuesta>0){
-		printf("recibido correctamente: %i\n", respuesta);
+		log_info(gameboyLogger, "Recibido correctamente: %i\n", respuesta);
 	}else{
-		printf("recibido incorrectamente: %i\n", respuesta);
+		log_info(gameboyLogger, "Recibido incorrectamente: %i\n", respuesta);
 	}
 	while(1){
 		paquete* paqueteRespuesta=recibirPaquete(paqueteConSocket->socketCliente);
-		switch(paqueteRespuesta->tipoMensaje){
-			case APPEARED_POKEMON:;
-				mensajeAppearedBroker* msgAppeared=deserializarAppearedBroker(paqueteRespuesta->stream);
-				break;
-			case NEW_POKEMON: ;
-				mensajeNewBroker* msgNew = deserializarNewBroker(paqueteRespuesta->stream);
-				break;
-			case CATCH_POKEMON: ;
-				mensajeCatchBroker* msgCatch = deserializarCatchBroker (paqueteRespuesta->stream);
-				break;
-			case CAUGHT_POKEMON: ;
-				mensajeCaught* msgCaught = deserializarCaught (paqueteRespuesta->stream);
-				break;
-			case GET_POKEMON: ;
-				mensajeGetBroker* msgGet = deserializarGetBroker (paqueteRespuesta->stream);
-				break;
-//			case LOCALIZED_POKEMON: ;
-//				mensajeLocalized* msgLocalized = deserializarLocalized(paqueteRespuesta->stream);
-//				break;
-	}
+		loggearMensajeRecibido (paqueteRespuesta);
 	return NULL;
 	}
 }
