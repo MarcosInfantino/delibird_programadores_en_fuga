@@ -89,15 +89,16 @@ dataTeam* team;
 //int main(){
 //	//mensajeLocalized* llenarMensajeLocalized(uint32_t sizePokemon, char* pokemon, uint32_t cantidad, posicion* posiciones)
 //
-//	uint32_t sizePokemon=8;
+//
 //	char* pokemon="Pikachu";
 //	uint32_t cantidad=2;
-//	posicion* posiciones=malloc(sizeof(posiciones)*2);
+//	posicion* posiciones=malloc(sizeof(posicion)*2);
 //	posicion pos1={1,0};
 //	posicion pos2={0,0};
 //	*(posiciones)=pos1;
 //	*(posiciones+1)=pos2;
-//	mensajeLocalized* msg= llenarMensajeLocalized(sizePokemon,pokemon,cantidad,posiciones);
+//
+//	mensajeLocalized* msg= llenarMensajeLocalized(pokemon,cantidad,posiciones);
 //	void* stream= serializarLocalized(msg);
 //	mensajeLocalized* msgResultado=deserializarLocalized(stream);
 //	printf("sizePokemon: %i\n", msgResultado->sizePokemon);
@@ -142,7 +143,7 @@ int main(int argc , char* argv[]){
 	inicializarEntrenadores(team->entrenadores);
 
 	pthread_t hiloEnviarGets;
-	//crearHiloParaEnviarGets(&hiloEnviarGets);
+	crearHiloParaEnviarGets(&hiloEnviarGets);
 	pthread_t hiloConexionInicialBroker;
 
 	crearHiloConexionColasBroker((void*)config,&hiloConexionInicialBroker);
@@ -254,14 +255,14 @@ void* enviarGets(void* arg){
 	uint32_t i=0;
 	for(i=0;i<sizeListaMutex(objetivoGlobal);i++){
 		objetivo* objetivoActual=(objetivo*)getListaMutex(objetivoGlobal,i);
-		pthread_t hilo;
-		uint32_t err=pthread_create(hilo,NULL,suscribirseColasBroker,NULL);
+		pthread_t hilo;;
+		uint32_t err=pthread_create(&hilo,NULL,enviarGet,(void*)(objetivoActual->pokemon));
 							if(err!=0){
 								printf("Hubo un problema en la creación del hilo para conectarse al broker \n");
-								return err;
+
 							}
 
-		pthread_detach(*hilo);
+		pthread_detach(hilo);
 	}
 	return NULL;
 }

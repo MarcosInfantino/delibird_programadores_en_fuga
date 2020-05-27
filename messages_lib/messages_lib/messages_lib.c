@@ -625,7 +625,7 @@ uint32_t crearSocketCliente (char* ip, uint32_t puerto){
 
 	uint32_t cliente=socket(AF_INET,SOCK_STREAM,0);
 	if(connect(cliente,(void*) &direccionServidor,sizeof(direccionServidor)) != 0){
-		perror("No se pudo conectar");
+
 		return -1;
 	}
 

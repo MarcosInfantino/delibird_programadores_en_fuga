@@ -235,4 +235,6 @@ void* enviarGet(void* arg);
 
 uint32_t crearHiloParaEnviarGets(pthread_t* hilo);
 
+void* enviarGets(void* arg);
+
 #endif /* TEAM_H_ */
