@@ -20,13 +20,14 @@
 #include <arpa/inet.h>
 //void* especieAComparar;
 
-listaMutex entrenadores;
-colaMutex colaEjecucionFifo;
+listaMutex* entrenadores;
+colaMutex* colaEjecucionFifo;
 
-listaMutex listaIdsEntrenadorMensaje; // del tipo idsEntrenadorMensaje , //ver a futuro si esta lista requiere mutex
-listaMutex entrenadoresLibres;
-colaMutex pokemonesPendientes;//lista de pokePosicion que contiene los pokemones que no pudieron ser asignados a ningun entrenador por no haber entrenadore libres
-listaMutex entrenadoresExit;
+listaMutex* listaIdsRespuestasGet;
+listaMutex* listaIdsEntrenadorMensaje; // del tipo idsEntrenadorMensaje , //ver a futuro si esta lista requiere mutex
+listaMutex* entrenadoresLibres;
+colaMutex* pokemonesPendientes;//lista de pokePosicion que contiene los pokemones que no pudieron ser asignados a ningun entrenador por no haber entrenadore libres
+listaMutex* entrenadoresExit;
 //pokemonPosicion pokemonAAtrapar;
 
 
@@ -93,7 +94,7 @@ typedef struct {
 } dataEntrenador;
 
 typedef struct {
-	t_list* objetivoGlobal;//lista de objetivo
+	listaMutex* objetivoGlobal;//lista de objetivo
 	t_list* entrenadores;
 	t_list* objetivosCumplidos;
 	//uint32_t** mapa;
@@ -144,7 +145,7 @@ t_list* obtenerListaDeListas(char** lst);
 
 t_list* arrayStringALista(char** arr);
 
-t_list* obtenerObjetivos(t_list* especies);
+listaMutex* obtenerObjetivos(t_list* especies);
 
 //bool objetivoMismaEspecie(void* obj);
 
@@ -164,7 +165,7 @@ uint32_t buscarMismoPokemon(t_list* lst, char* pokemon);
 
 void* suscribirseCola(void* estructuraSuscripcion);
 
-uint32_t buscarObjetivoPorEspecie(t_list* listaObjetivos, char* especie);
+uint32_t buscarObjetivoPorEspecie(listaMutex* listaObjetivos, char* especie);
 
 void* serializarMensajeSuscripcion(mensajeSuscripcion* mensaje, uint32_t bytes);
 
@@ -206,7 +207,7 @@ void enviarCatch(dataEntrenador* infoEntrenador);
 
 void atenderCaught(paquete* paqueteRespuesta);
 
-uint32_t buscarEntrenadorParaMensaje(listaMutex listaIds, uint32_t idMensaje);
+uint32_t buscarEntrenadorParaMensaje(listaMutex* listaIds, uint32_t idMensaje);
 
 void replanificarEntrenador(dataEntrenador* entrenador);
 
@@ -229,4 +230,9 @@ void obtenerAlgoritmoPlanificacion(t_config* config);
 void registrarPokemonAtrapado(char* pokemon);
 
 bool pokemonEsObjetivo(char* pokemon);
+
+void* enviarGet(void* arg);
+
+uint32_t crearHiloParaEnviarGets(pthread_t* hilo);
+
 #endif /* TEAM_H_ */

@@ -239,28 +239,28 @@ uint32_t sizePaquete(paquete* paq);
 void* serializarArrayPosiciones(posicion* pos, uint32_t cantidad);
 void* serializarPosicion(posicion* pos);
 
-listaMutex inicializarListaMutex();
+listaMutex* inicializarListaMutex();
 
 void destruirListaEntrenadoresLibres();
 
-void addListaMutex(listaMutex list,void* elemento);
+void addListaMutex(listaMutex* list,void* elemento);
 
-void* getListaMutex(listaMutex list, uint32_t index);
+void* getListaMutex(listaMutex* list, uint32_t index);
 
-uint32_t sizeListaMutex(listaMutex list);
+uint32_t sizeListaMutex(listaMutex* list);
 
-void destruirListaMutex(listaMutex lista,void(*element_destroyer)(void*));
+void destruirListaMutex(listaMutex* lista,void(*element_destroyer)(void*));
 
-void removeListaMutex(listaMutex list,uint32_t pos);
+void removeListaMutex(listaMutex* list,uint32_t pos);
 
-colaMutex inicializarColaMutex();
+colaMutex* inicializarColaMutex();
 
-void pushColaMutex(colaMutex cola, void* infoEntrenador);
+void pushColaMutex(colaMutex* cola, void* infoEntrenador);
 
-void* popColaMutex(colaMutex cola);
+void* popColaMutex(colaMutex* cola);
 
-uint32_t sizeColaMutex(colaMutex cola);
+uint32_t sizeColaMutex(colaMutex* cola);
 
-void destruirColaMutex(colaMutex cola, void(*element_destroyer)(void*));
+void destruirColaMutex(colaMutex* cola, void(*element_destroyer)(void*));
 
 #endif /* MESSAGES_LIB_H_ */

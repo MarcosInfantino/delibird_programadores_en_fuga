@@ -20,9 +20,9 @@ uint32_t distanciaEntrenadorPosicion(dataEntrenador* entrenador, posicion posici
 uint32_t obtenerIdEntrenadorMasCercano(posicion pos){ //el id es el index del entrenador enla lista de entrenadores
     dataEntrenador* entrenadorMasCercano;
     uint32_t distanciaASuperar;
-    pthread_mutex_lock(entrenadoresLibres.mutex);
-    for(uint32_t i=0;i<list_size(entrenadoresLibres.lista);i++){
-        dataEntrenador* entrenadorActual = (dataEntrenador*) list_get(entrenadoresLibres.lista,i);
+    pthread_mutex_lock(entrenadoresLibres->mutex);
+    for(uint32_t i=0;i<list_size(entrenadoresLibres->lista);i++){
+        dataEntrenador* entrenadorActual = (dataEntrenador*) list_get(entrenadoresLibres->lista,i);
         if (i == 0){
             entrenadorMasCercano = entrenadorActual;
             distanciaASuperar    = distanciaEntrenadorPosicion(entrenadorActual,pos);
@@ -34,7 +34,7 @@ uint32_t obtenerIdEntrenadorMasCercano(posicion pos){ //el id es el index del en
     }
 
 }
-    pthread_mutex_unlock(entrenadoresLibres.mutex);
+    pthread_mutex_unlock(entrenadoresLibres->mutex);
     return idEntrenadorEnLista(entrenadorMasCercano);}
 
 dataEntrenador* obtenerEntrenadorPorId(uint32_t id){
@@ -42,14 +42,14 @@ dataEntrenador* obtenerEntrenadorPorId(uint32_t id){
 }
 
 uint32_t idEntrenadorEnLista(dataEntrenador* entrenadorMasCercano){
-    pthread_mutex_lock(entrenadoresLibres.mutex);
+    pthread_mutex_lock(entrenadoresLibres->mutex);
 	for(uint32_t j=0;j<sizeListaMutex(entrenadores);j++){
         if((dataEntrenador*) getListaMutex(entrenadores,j) == entrenadorMasCercano){
-            pthread_mutex_unlock(entrenadoresLibres.mutex);
+            pthread_mutex_unlock(entrenadoresLibres->mutex);
         	return j;
         }
     }
-	pthread_mutex_unlock(entrenadoresLibres.mutex);
+	pthread_mutex_unlock(entrenadoresLibres->mutex);
     return -1;
 }
 
@@ -149,15 +149,15 @@ void poneteEnReady(dataEntrenador* entrenador){
 	}
 }
 uint32_t encontrarPosicionEntrenadorLibre(dataEntrenador* entrenador){
-	pthread_mutex_lock(entrenadoresLibres.mutex);
-	for(uint32_t i=0;i<list_size(entrenadoresLibres.lista);i++){
-	        dataEntrenador* entrenadorActual = (dataEntrenador*) list_get(entrenadoresLibres.lista,i);
+	pthread_mutex_lock(entrenadoresLibres->mutex);
+	for(uint32_t i=0;i<list_size(entrenadoresLibres->lista);i++){
+	        dataEntrenador* entrenadorActual = (dataEntrenador*) list_get(entrenadoresLibres->lista,i);
 	        if(entrenadorActual->id == entrenador->id){
-	        	pthread_mutex_unlock(entrenadoresLibres.mutex);
+	        	pthread_mutex_unlock(entrenadoresLibres->mutex);
 	        	return i;
 	        }
 	        }
-	 pthread_mutex_unlock(entrenadoresLibres.mutex);
+	 pthread_mutex_unlock(entrenadoresLibres->mutex);
 	 return -1;
 }
 
