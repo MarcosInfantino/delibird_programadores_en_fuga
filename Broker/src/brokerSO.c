@@ -128,7 +128,7 @@ void esperar_cliente(uint32_t servidor) {
 	//printf("Espero un nuevo cliente\n");
 	uint32_t* socketCliente=malloc(sizeof(uint32_t));
 
-	socketCliente = accept(servidor, (void) &dir_cliente, &tam_direccion);
+	*socketCliente = (uint32_t) accept(servidor, (void*) &dir_cliente, &tam_direccion);
 
 	//printf("Gestiono un nuevo cliente\n");
 	pthread_t thread;
