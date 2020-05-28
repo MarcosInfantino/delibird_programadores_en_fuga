@@ -55,8 +55,7 @@ int main(void) {
 	iniciarHilos();
 	inicializarContador();
 
-
-
+	loggerBroker = log_create( "log-broker.log", "Broker", true , 0);
 
 
 	struct sockaddr_in direccionServidor;
@@ -77,7 +76,6 @@ int main(void) {
 
 	printf("Estoy escuchando\n");
 
-	//listen(servidor, 100);
 
 //		struct sockaddr_in direccionCliente;
 //		unsigned int tamanioDireccion=sizeof(direccionCliente);
@@ -99,8 +97,8 @@ void* iniciarCola(void* c) {
 //	pthread_mutex_init((cc->mutexCola),NULL);
 //	return NULL;
 	colaMensajes* cc = (colaMensajes*) c;
-	cc->suscriptores=inicializarListaMutex();
-	cc->cola=inicializarColaMutex();
+	cc->suscriptores = inicializarListaMutex();
+	cc->cola = inicializarColaMutex();
 	return NULL;
 }
 
@@ -130,7 +128,7 @@ void esperar_cliente(uint32_t servidor) {
 	//printf("Espero un nuevo cliente\n");
 	uint32_t* socketCliente=malloc(sizeof(uint32_t));
 
-	*socketCliente = accept(servidor, (void*) &dir_cliente, &tam_direccion);
+	socketCliente = accept(servidor, (void) &dir_cliente, &tam_direccion);
 
 	//printf("Gestiono un nuevo cliente\n");
 	pthread_t thread;
@@ -145,9 +143,9 @@ void* atenderCliente(void* sock) {
 	uint32_t* socket = (uint32_t*) sock;
 	paquete* paquete = recibirPaquete(*socket);
 
-//	char * conexionDeProceso = "Se conectó un proceso ";
-//	strcat(conexionDeProceso, nombreDeProceso((*paquete).modulo));
-//	log_info(loggerBroker,conexionDeProceso);
+	char * conexionDeProceso = "Se conectó un proceso ";
+	strcat(conexionDeProceso, nombreDeProceso((*paquete).modulo));
+	log_info(loggerBroker,conexionDeProceso);
 
 	if( paquete == NULL){
 		printf("RESPONDO MENSAJE ERRONEO\n");
@@ -160,10 +158,10 @@ void* atenderCliente(void* sock) {
 
 
 void manejarTipoDeMensaje(paquete paq, uint32_t socket) {
-//
-//	char * mensajeNuevoDeProceso = "Llegó un nuevo mensaje a la cola ";
-//	strcat(mensajeNuevoDeProceso, nombreDeCola(paq.tipoMensaje));
-//	log_info(loggerBroker, mensajeNuevoDeProceso);
+
+	char * mensajeNuevoDeProceso = "Llegó un nuevo mensaje a la cola ";
+	strcat(mensajeNuevoDeProceso, nombreDeCola(paq.tipoMensaje));
+	log_info(loggerBroker, mensajeNuevoDeProceso);
 	suscripcionTiempo structTiempo;
 	mensajeSuscripcionTiempo* datosSuscribir;
 
@@ -205,8 +203,6 @@ void manejarTipoDeMensaje(paquete paq, uint32_t socket) {
 
 void suscribirPorTiempo(void* estructura){
 
-	//suscribir(colaMensajes cola, paquete paq, uint32_t socket);
-
 	suscripcionTiempo* structPorTiempo = (suscripcionTiempo*) estructura;
 	suscribir(obtenerCola(structPorTiempo->cola), structPorTiempo->paq, structPorTiempo->socket, structPorTiempo->cola);
 
@@ -224,7 +220,7 @@ void desuscribir(uint32_t socket, uint32_t cola ){
 
 	for(i = 0; i < sizeListaMutex(punteroACola->suscriptores); i++){
 		socketLista = getListaMutex(punteroACola->suscriptores, i);
-		if (*((uint32_t*) socketLista) == socket) {
+		if (((uint32_t) socketLista) == socket) {
 			removeListaMutex(punteroACola->suscriptores, i);
 		}
 	}
@@ -328,7 +324,6 @@ void suscribirSegunCola(paquete paq, uint32_t socket) {
 			suscribir(&localizedPokemon, paq, socket, LOCALIZED_POKEMON);
 	}
 	//enviar todos los mensajes que hubiesen en la cola antes de suscribirse
-	//cuando se envien mensajes que no sean suscripción asignarles un numero para posibbles respuestas en otra cola
 
 }
 
@@ -343,8 +338,9 @@ void suscribir(colaMensajes * cola, paquete paq, uint32_t socket,uint32_t identi
 		suscribirACola(&socket, cola);
 		responderMensaje(socket, CORRECTO);
 		//printf("suscripcion correcta\n");
-//		char * frase = armarStringSuscripLog(paq.modulo, paq.tipoMensaje);
-//		log_info(loggerBroker, frase);
+
+		char * frase = armarStringSuscripLog(paq.modulo, paq.tipoMensaje);
+		log_info(loggerBroker, frase);
 
 	} else {
 		responderMensaje(socket, INCORRECTO);
@@ -390,7 +386,7 @@ bool validarPertenencia(colaMensajes * cola, uint32_t socket) {
 	void* socketLista;
 	for (i = 0; i < sizeListaMutex(cola->suscriptores); i++) {
 		socketLista = getListaMutex(cola->suscriptores, i);
-		if (*((uint32_t*) socketLista) == socket) {
+		if (((uint32_t) socketLista) == socket) {
 			//printf("Me aprobo validar pertenencia\n");
 			return true;
 		}
@@ -475,4 +471,3 @@ void incrementarContador(){
 	contador.contador++;
 	pthread_mutex_unlock(contador.mutexContador);
 }
-
