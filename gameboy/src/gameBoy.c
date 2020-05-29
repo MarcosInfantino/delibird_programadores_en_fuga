@@ -194,6 +194,19 @@ uint32_t obtenerPuertoProceso (uint32_t proceso, t_config* config){
 
 void* enviarMensaje(void* paqueteySocket){
 	paqueteYSocket* paqueteConSocket = (paqueteYSocket*) paqueteySocket;
+	printf("ENTRE A ENVIAR MENSAJE\n");
+	paquete* paq = deserializarPaquete(paqueteConSocket->paqueteAEnviar);
+
+	printf("DESERIALIZE PAQUETE\n");
+	printf("El modulo es: %i\n", paq->modulo);
+	printf("el tipo de mensaje es %i \n", paq->tipoMensaje);
+	printf("El id es: %i\n", paq->id);
+	printf("El id correlativo es:%i \n", paq->idCorrelativo);
+	printf("El sizeStream es: %i\n", paq->sizeStream);
+
+	mensajeNewBroker* msj = deserializarNewBroker (paq->stream);
+	printf("El pokemon es: %s\n", msj->pokemon);
+
 	send(paqueteConSocket->socketCliente, paqueteConSocket->paqueteAEnviar, sizePaquete(paqueteConSocket->paqueteAEnviar), 0);
 	log_info(gameboyLogger, "Estoy esperando respuesta al mensaje enviado\n");
 	uint32_t respuesta=0;
