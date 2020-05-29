@@ -83,6 +83,8 @@ void* iniciarCola(void* c) {
 	colaMensajes* cc = (colaMensajes*) c;
 	cc->suscriptores=inicializarListaMutex();
 	cc->cola=inicializarColaMutex();
+	cc->mensajesEnCola=malloc(sizeof(sem_t));
+	sem_init(cc->mensajesEnCola,0,0);
 	return NULL;
 }
 
@@ -193,6 +195,7 @@ void meterEnCola( colaMensajes* structCola, paquete * paq, uint32_t  socket){
 	contador.contador++;
 	pthread_mutex_unlock(contador.mutexContador);
 	pushColaMutex(structCola->cola, (void *) paq);
+	sem_post(structCola->mensajesEnCola);
 	//registrarMensajeEnMemoria(mensaje)
 }
 
@@ -215,6 +218,7 @@ void * chequearMensajesEnCola(void * colaVoid){
 	colaMensajes* cola = (colaMensajes*) colaVoid;
 	uint32_t i;
 	while (1){
+		sem_wait(cola->mensajesEnCola);
 		while(sizeColaMutex(cola->cola) == 0);
 		paquete* paq = (paquete*) popColaMutex(cola->cola);
 		void * paqSerializado = serializarPaquete(paq);

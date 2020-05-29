@@ -583,21 +583,47 @@ mensajeSuscripcion* deserializarSuscripcion (void* streamRecibido){
 paquete* deserializarPaquete(void* paqueteRecibido){
 	paquete* paquete = malloc(sizeof(paquete));
 	uint32_t offset  = 0;
+	uint32_t* modulo=malloc(sizeof(uint32_t));
+	uint32_t* tipoMensaje=malloc(sizeof(uint32_t));
+	uint32_t* id=malloc(sizeof(uint32_t));
+	uint32_t* idCorrelativo=malloc(sizeof(uint32_t));
+	uint32_t* sizeStream=malloc(sizeof(uint32_t));
 
-	memcpy(&(paquete->modulo), paqueteRecibido+offset, sizeof(uint32_t));
+//	memcpy(&(paquete->modulo), paqueteRecibido+offset, sizeof(uint32_t));
+//	offset+=sizeof(uint32_t);
+//	memcpy(&(paquete->tipoMensaje), paqueteRecibido+offset, sizeof(uint32_t));
+//	offset+=sizeof(uint32_t);
+//	memcpy(&(paquete->id), paqueteRecibido+offset, sizeof(uint32_t));
+//	offset+=sizeof(uint32_t);
+//	memcpy(&(paquete->idCorrelativo), paqueteRecibido+offset,sizeof(uint32_t));
+//	offset+=sizeof(uint32_t);
+//	memcpy(&(paquete->sizeStream), paqueteRecibido+offset, sizeof(uint32_t));
+//	offset+=sizeof(uint32_t);
+	memcpy(modulo, paqueteRecibido+offset, sizeof(uint32_t));
 	offset+=sizeof(uint32_t);
-	memcpy(&(paquete->tipoMensaje), paqueteRecibido+offset, sizeof(uint32_t));
+	memcpy(tipoMensaje, paqueteRecibido+offset, sizeof(uint32_t));
 	offset+=sizeof(uint32_t);
-	memcpy(&(paquete->id), paqueteRecibido+offset, sizeof(uint32_t));
+	memcpy(id, paqueteRecibido+offset, sizeof(uint32_t));
 	offset+=sizeof(uint32_t);
-	memcpy(&(paquete->idCorrelativo), paqueteRecibido+offset,sizeof(uint32_t));
+	memcpy(idCorrelativo, paqueteRecibido+offset,sizeof(uint32_t));
 	offset+=sizeof(uint32_t);
-	memcpy(&(paquete->sizeStream), paqueteRecibido+offset, sizeof(uint32_t));
+	memcpy(sizeStream, paqueteRecibido+offset, sizeof(uint32_t));
 	offset+=sizeof(uint32_t);
 	printf("asdfasdf %i\n",paquete->sizeStream);
 	paquete->stream = malloc(paquete->sizeStream);
 	memcpy(paquete->stream, paqueteRecibido+offset, paquete->sizeStream);
 
+	paquete->modulo=*modulo;
+	paquete->id=*id;
+	paquete->idCorrelativo=*idCorrelativo;
+	paquete->sizeStream=*sizeStream;
+	paquete->tipoMensaje=*tipoMensaje;
+
+//	free(modulo);
+//	free(tipoMensaje);
+//	free(id);
+//	free(idCorrelativo);
+//	free(sizeStream);
 	free(paqueteRecibido);
 	return paquete;
 }
