@@ -506,11 +506,11 @@ void* enviarGet(void* arg){
 
 dataTeam* inicializarTeam(t_config* config){
 
-	dataTeam* dataTeam       = malloc(sizeof(dataTeam));
-	dataTeam->entrenadores   = list_create();
+	dataTeam* infoTeam       = malloc(sizeof(dataTeam));
+	infoTeam->entrenadores   = list_create();
 	t_list* especiesObjetivo = list_create();
-	dataTeam->objetivoGlobal=inicializarListaMutex();
-	dataTeam->objetivosCumplidos = list_create();
+	infoTeam->objetivoGlobal=inicializarListaMutex();
+	infoTeam->objetivosCumplidos = list_create();
 
 	char** arrayPosicionesEntrenadores=config_get_array_value(config,"POSICIONES_ENTRENADORES");
 	char** arrayPokemonesEntrenadores=config_get_array_value(config,"POKEMON_ENTRENADORES");
@@ -524,16 +524,16 @@ dataTeam* inicializarTeam(t_config* config){
 	uint32_t id;
 
 	for(id=0;id<cantEntrenadores;id++){
-		dataEntrenador* dataEntrenador=malloc(sizeof(dataEntrenador));
+		dataEntrenador* infoEntrenador=malloc(sizeof(dataEntrenador));
 		char** pos		 = list_get(posicionesEntrenadores,id);
 		char** pokemones = list_get(pokemonesEntrenadores,id);
 		char** objetivos = list_get(objetivosEntrenadores,id);
 
-		(dataEntrenador->posicion).x = atoi(pos[0]);
-		(dataEntrenador->posicion).y = atoi(pos[1]);
+		(infoEntrenador->posicion).x = atoi(pos[0]);
+		(infoEntrenador->posicion).y = atoi(pos[1]);
 
-		dataEntrenador->pokemones        = arrayStringALista(pokemones);
-		dataEntrenador->objetivoPersonal = arrayStringALista(objetivos);
+		infoEntrenador->pokemones        = arrayStringALista(pokemones);
+		infoEntrenador->objetivoPersonal = arrayStringALista(objetivos);
 
 		t_list* pokemonesEntrenadorAux        = arrayStringALista(pokemones);
 		t_list* objetivoPersonalEntrenadorAux = arrayStringALista(objetivos);
@@ -555,18 +555,18 @@ dataTeam* inicializarTeam(t_config* config){
 
 				}
 
-		dataEntrenador->estado			= NEW;
-		dataEntrenador->id				= id;
-		dataEntrenador->pokemonAAtrapar = NULL;
-		sem_init(&(dataEntrenador->semaforo), 0,0);
-		list_add(entrenadoresLibres->lista,(void*)dataEntrenador);
-		list_add(dataTeam->entrenadores,dataEntrenador);
+		infoEntrenador->estado			= NEW;
+		infoEntrenador->id				= id;
+		infoEntrenador->pokemonAAtrapar = NULL;
+		sem_init(&(infoEntrenador->semaforo), 0,0);
+		list_add(entrenadoresLibres->lista,(void*)infoEntrenador);
+		list_add(infoTeam->entrenadores,infoEntrenador);
 
 
 	}
 
-	dataTeam->objetivoGlobal = obtenerObjetivos(especiesObjetivo);
-	return dataTeam;
+	infoTeam->objetivoGlobal = obtenerObjetivos(especiesObjetivo);
+	return infoTeam;
 
 }
 
@@ -629,11 +629,11 @@ listaMutex* obtenerObjetivos(t_list* especies){
 
 		uint32_t encontrado = buscarObjetivoPorEspecie(objetivos,especie);
 		if(encontrado == -1){
-			objetivo* objetivo = malloc(sizeof(objetivo));
-			objetivo->cantidad = 1;
-			objetivo->pokemon  = (char*) especie;
+			objetivo* obj = malloc(sizeof(objetivo));
+			obj->cantidad = 1;
+			obj->pokemon  = (char*) especie;
 			//printf("%s\n",(char*)(objetivo->pokemon));
-			addListaMutex(objetivos,(void*)objetivo);
+			addListaMutex(objetivos,(void*)obj);
 		}else{
 			(((objetivo*)getListaMutex(objetivos,encontrado))->cantidad)++;
 		}

@@ -44,9 +44,10 @@ mensajeAppearedTeam* llenarMensajeAppearedTeam(char* pokemon, uint32_t posX, uin
 	mensajeAppearedTeam* msg=malloc(sizeof(mensajeAppearedTeam));
 	msg->sizePokemon=strlen(pokemon)+1;
 	msg->pokemon=malloc(msg->sizePokemon);
-	strcpy(msg->pokemon,pokemon);
+	memcpy(msg->pokemon,pokemon,msg->sizePokemon);
 	msg->posX=posX;
 	msg->posY=posY;
+
 	return msg;
 }
 void* serializarAppearedTeam(mensajeAppearedTeam* mensaje){
@@ -375,7 +376,6 @@ paquete* llenarPaquete( uint32_t modulo,uint32_t tipoMensaje, uint32_t sizeStrea
 	paqueteASerializar->id            = -1;
 	paqueteASerializar->idCorrelativo = -1;
 	paqueteASerializar->sizeStream    = sizeStream;
-	printf("aaaaaaaaaaaaaa %i\n",paqueteASerializar->sizeStream);
 	paqueteASerializar->stream=malloc(sizeStream);
 	memcpy(paqueteASerializar->stream,stream,sizeStream);
 
@@ -385,7 +385,7 @@ paquete* llenarPaquete( uint32_t modulo,uint32_t tipoMensaje, uint32_t sizeStrea
 
 void destruirPaquete(paquete* paq){
 	free(paq->stream);
-	//free(paq);
+	free(paq);
 }
 
 void* serializarPaquete(paquete* paqueteASerializar){
@@ -426,9 +426,14 @@ mensajeAppearedBroker* deserializarAppearedBroker(void* streamRecibido){
 }
 
 mensajeAppearedTeam* deserializarAppearedTeam (void* streamRecibido){
-	mensajeAppearedTeam* mensaje = malloc(sizeof(mensajeAppearedTeam));
+	printf("hola0\n");
+
+	printf("hola0.5\n");
 	uint32_t offset              = 0;
+
 	printf("hola1\n");
+	mensajeAppearedTeam* mensaje = malloc(153);
+	printf("hola1.25\n");
 	memcpy(&(mensaje->sizePokemon), streamRecibido+offset, sizeof(uint32_t));
 	offset+=sizeof(uint32_t);
 	printf("hola1.5\n");
@@ -618,14 +623,14 @@ paquete* recibirPaquete(uint32_t socket){
 	if(recv(socket,&(paquete->sizeStream),sizeof(uint32_t),0)==-1)
 		return NULL;
 	printf("antes de recibir el streamMensaje %i",paquete->sizeStream);
-	paquete->stream = malloc(paquete->sizeStream);
 
+	//paquete->stream = malloc(paquete->sizeStream);
 
 	if(recv(socket,paquete->stream,(paquete->sizeStream),0)==-1)
 		return NULL;
 
 
-	//free(stream);
+
 	printf("despues de recibir el streamMensaje %i",paquete->sizeStream);
 
 	return paquete;
@@ -737,7 +742,7 @@ void destruirListaMutex(listaMutex* lista,void(*element_destroyer)(void*)){
 }
 
 colaMutex* inicializarColaMutex(){
-	colaMutex* cola=malloc(sizeof(cola));
+	colaMutex* cola=malloc(sizeof(colaMutex));
 	cola->cola=queue_create();
 	cola->mutex=malloc(sizeof(pthread_mutex_t));
 	pthread_mutex_init(cola->mutex,NULL);
