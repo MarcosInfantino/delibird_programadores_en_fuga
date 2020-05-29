@@ -143,8 +143,8 @@ int main(int argc , char* argv[]){
 	arrayIdHilosEntrenadores  = malloc(cantEntrenadores*sizeof(pthread_t));
 	inicializarEntrenadores(team->entrenadores);
 
-	pthread_t hiloEnviarGets;
-	crearHiloParaEnviarGets(&hiloEnviarGets);
+//	pthread_t hiloEnviarGets;
+//	crearHiloParaEnviarGets(&hiloEnviarGets);
 
 	pthread_t hiloConexionInicialBroker;
 
