@@ -21,29 +21,8 @@
 #include <string.h>
 #include "broker.h"
 
-
-pthread_mutex_t mutex;
-
-contadorMensajes contador;
-
-colaMensajes appearedPokemon, newPokemon, caughtPokemon, catchPokemon,
-		getPokemon, localizedPokemon;
-
-colaMensajes colaNula;
-
-uint32_t idHiloAppearedPokemon, idHiloNewPokemon, idHiloCaughtPokemon,
-		idHiloCatchPokemon, idHiloGetPokemon, idHiloLocalizedPokemon;
-
-uint32_t manejoMensajesAppearedPokemon, manejoMensajesNewPokemon, manejoMensajesCaughtPokemon,
-		manejoMensajesCatchPokemon, manejoMensajesGetPokemon, manejoMensajesLocalizedPokemon;
-
-pthread_t hiloAppearedPokemon, hiloNewPokemon, hiloCaughtPokemon,
-		hiloCatchPokemon, hiloGetPokemon, hiloLocalizedPokemon;
-
-pthread_t devolverMensajeAppeared, devolverMensajeNew, devolverMensajeCaught,
-		devolverMensajeCatch, devolverMensajeGet, devolverMensajeLocalized;
-
 int main(void) {
+
 //	printf("hola");
 //	char* pathConfig="/home/utnso/Escritorio/repoSO/tp-2020-1c-Programadores-en-Fuga/Broker/src/broker.config";
 //	t_config* config=config_create(pathConfig);
@@ -52,13 +31,15 @@ int main(void) {
 //	printf("hola");
 //	ipBroker=config_get_string_value(config, "IP_BROKER");
 //	printf("hola");
+
 	iniciarHilos();
 	inicializarContador();
+	iniciarServidor();
 
+	return EXIT_SUCCESS;
+}
 
-
-
-
+void* iniciarServidor(){
 	struct sockaddr_in direccionServidor;
 	direccionServidor.sin_family = AF_INET;
 	direccionServidor.sin_addr.s_addr = INADDR_ANY;
@@ -72,7 +53,6 @@ int main(void) {
 	if (bind(servidor, (void*) &direccionServidor, sizeof(direccionServidor))
 			!= 0) {
 		perror("Falló el bind");
-		return 1;
 	}
 
 	printf("Estoy escuchando\n");
@@ -88,16 +68,18 @@ int main(void) {
 	while (1)  								//para recibir n cantidad de conexiones
 		esperar_cliente(servidor);
 
-	return EXIT_SUCCESS;
+	return NULL;
 }
 
 void* iniciarCola(void* c) {
+
 //	colaMensajes* cc = (colaMensajes*) c;
 //	cc->cola 		 = malloc(sizeof(t_queue));
 //	cc->suscriptores = malloc(sizeof(t_list));
 //	cc->mutexCola=malloc(sizeof(pthread_mutex_t));
 //	pthread_mutex_init((cc->mutexCola),NULL);
 //	return NULL;
+
 	colaMensajes* cc = (colaMensajes*) c;
 	cc->suscriptores=inicializarListaMutex();
 	cc->cola=inicializarColaMutex();
@@ -142,6 +124,7 @@ void esperar_cliente(uint32_t servidor) {
 
 void* atenderCliente(void* sock) {
 //	printf("Atiendo cliente\n");
+
 	uint32_t* socket = (uint32_t*) sock;
 	paquete* paquete = recibirPaquete(*socket);
 
@@ -158,12 +141,12 @@ void* atenderCliente(void* sock) {
 	return NULL;
 }
 
-
 void manejarTipoDeMensaje(paquete paq, uint32_t socket) {
-//
+
 //	char * mensajeNuevoDeProceso = "Llegó un nuevo mensaje a la cola ";
 //	strcat(mensajeNuevoDeProceso, nombreDeCola(paq.tipoMensaje));
 //	log_info(loggerBroker, mensajeNuevoDeProceso);
+
 	suscripcionTiempo structTiempo;
 	mensajeSuscripcionTiempo* datosSuscribir;
 
@@ -182,9 +165,9 @@ void manejarTipoDeMensaje(paquete paq, uint32_t socket) {
 			 break;
 		 case GET_POKEMON:
 			 meterEnCola( &getPokemon, &paq, socket);
-		 break;
+			 break;
 		 case LOCALIZED_POKEMON:
-			 //meterEnCola( &localizedPokemon, (void*)deserializarLocalized(paq.stream), socket); //aun no está
+			 meterEnCola( &localizedPokemon, &paq, socket);
 			 break;
 		 case SUSCRIPCION:
 			 suscribirSegunCola(paq, socket);
@@ -200,34 +183,17 @@ void manejarTipoDeMensaje(paquete paq, uint32_t socket) {
 		 default:
 			 pthread_exit(NULL);
 	 }
-
 }
 
-void suscribirPorTiempo(void* estructura){
-
-	//suscribir(colaMensajes cola, paquete paq, uint32_t socket);
-
-	suscripcionTiempo* structPorTiempo = (suscripcionTiempo*) estructura;
-	suscribir(obtenerCola(structPorTiempo->cola), structPorTiempo->paq, structPorTiempo->socket, structPorTiempo->cola);
-
-	sleep(structPorTiempo->tiempo);
-
-	desuscribir(structPorTiempo->socket, structPorTiempo->cola);
-
-}
-
-void desuscribir(uint32_t socket, uint32_t cola ){
-	uint32_t i;
-
-	void* socketLista;
-	colaMensajes* punteroACola = obtenerCola(cola);
-
-	for(i = 0; i < sizeListaMutex(punteroACola->suscriptores); i++){
-		socketLista = getListaMutex(punteroACola->suscriptores, i);
-		if (*((uint32_t*) socketLista) == socket) {
-			removeListaMutex(punteroACola->suscriptores, i);
-		}
-	}
+void meterEnCola( colaMensajes* structCola, paquete * paq, uint32_t  socket){
+	pthread_mutex_lock(contador.mutexContador);
+	asignarID(paq);
+	send(socket,(void*)(&contador.contador),sizeof(uint32_t),0);
+	printf("Lo mete en la cola");
+	contador.contador++;
+	pthread_mutex_unlock(contador.mutexContador);
+	pushColaMutex(structCola->cola, (void *) paq);
+	//registrarMensajeEnMemoria(mensaje)
 }
 
 void abrirHiloParaEnviarMensajes(){
@@ -243,7 +209,6 @@ void abrirHiloParaEnviarMensajes(){
 	pthread_detach(devolverMensajeCatch);
 	pthread_detach(devolverMensajeGet);
 	pthread_detach(devolverMensajeLocalized);
-
 }
 
 void * chequearMensajesEnCola(void * colaVoid){
@@ -280,188 +245,12 @@ colaMensajes* obtenerCola(uint32_t colaInt){
 	}
 }
 
-void meterEnCola( colaMensajes* structCola, paquete * paq, uint32_t  socket){
-	pthread_mutex_lock(contador.mutexContador);
-	asignarID(paq);
-	send(socket,(void*)(&contador.contador),sizeof(uint32_t),0);
-	printf("Lo mete en la cola");
-	contador.contador++;
-	pthread_mutex_unlock(contador.mutexContador);
-	pushColaMutex(structCola->cola, (void *) paq);
-	//registrarMensajeEnMemoria(mensaje)
-}
-
 void asignarID(paquete * paq){
 	paq->id = contador.contador;
 }
 
-void suscribirSegunCola(paquete paq, uint32_t socket) {
-
-//	parametroValidacion parameter;
-//	parameter.socketCliente = socket;
-//	parameter.paquete       = paq;
-
-
-	switch (deserializarSuscripcion(paq.stream)->cola) {
-		case APPEARED_POKEMON:
-			//parameter.structCola = appearedPokemon;
-			suscribir(&appearedPokemon, paq, socket,APPEARED_POKEMON);
-			break;
-		case NEW_POKEMON:
-			//parameter.structCola = newPokemon;
-			suscribir(&newPokemon, paq, socket,NEW_POKEMON);
-			break;
-		case CAUGHT_POKEMON:
-			//parameter.structCola = caughtPokemon;
-			suscribir(&caughtPokemon, paq, socket, CAUGHT_POKEMON);
-			break;
-		case CATCH_POKEMON:
-			//parameter.structCola = catchPokemon;
-			suscribir(&catchPokemon, paq, socket, CATCH_POKEMON);
-			break;
-		case GET_POKEMON:
-			//parameter.structCola = getPokemon;
-			suscribir(&getPokemon, paq, socket, GET_POKEMON);
-			break;
-		case LOCALIZED_POKEMON:
-			//parameter.structCola = localizedPokemon;
-			suscribir(&localizedPokemon, paq, socket, LOCALIZED_POKEMON);
-	}
-	//enviar todos los mensajes que hubiesen en la cola antes de suscribirse
-	//cuando se envien mensajes que no sean suscripción asignarles un numero para posibbles respuestas en otra cola
-
-}
-
-
 void responderMensaje(uint32_t socketCliente, uint32_t respuesta) {
 	send(socketCliente, (void*) (&respuesta), sizeof(uint32_t), 0);
-}
-
-
-void suscribir(colaMensajes * cola, paquete paq, uint32_t socket,uint32_t identificadorCola) {
-	if (validarParaSuscripcion(cola, paq, socket,identificadorCola)) { //si se puede suscribir y aun no esta en la cola
-		suscribirACola(&socket, cola);
-		responderMensaje(socket, CORRECTO);
-		//printf("suscripcion correcta\n");
-//		char * frase = armarStringSuscripLog(paq.modulo, paq.tipoMensaje);
-//		log_info(loggerBroker, frase);
-
-	} else {
-		responderMensaje(socket, INCORRECTO);
-		//printf("suscripcion incorrecta\n");
-	}
-
-}
-
-void suscribirACola(uint32_t* socket, colaMensajes * cola){
-	addListaMutex(cola->suscriptores, (void*) socket);
-}
-
-
-bool validarParaSuscripcion(colaMensajes * cola, paquete paq, uint32_t socket, uint32_t identificadorCola){
-	return (validarSuscripcionSegunModulo(paq.modulo, identificadorCola)
-			&& !validarPertenencia(cola, socket));
-}
-
-bool validarSuscripcionSegunModulo(uint32_t modulo, uint32_t cola) {
-
-	switch (modulo) {
-	case TEAM:
-		if (cola == APPEARED_POKEMON || cola == CAUGHT_POKEMON || cola == LOCALIZED_POKEMON) {
-			return true;
-			printf("me acepto validarSuscripcionSegunModulo\n");
-		}
-		break;
-	case GAMECARD:
-		if (cola == NEW_POKEMON || cola == GET_POKEMON || cola == CATCH_POKEMON)
-			return true;
-		break;
-	case GAMEBOY: //acepta cualquier cola
-		return true;
-	default:
-		return false;
-	}
-
-	return false;
-}
-
-bool validarPertenencia(colaMensajes * cola, uint32_t socket) {
-	uint32_t i;
-	void* socketLista;
-	for (i = 0; i < sizeListaMutex(cola->suscriptores); i++) {
-		socketLista = getListaMutex(cola->suscriptores, i);
-		if (*((uint32_t*) socketLista) == socket) {
-			//printf("Me aprobo validar pertenencia\n");
-			return true;
-		}
-	}
-	//printf("Me rechazo validar pertenencia\n");
-	return false;
-
-}
-
-
-
-char* nombreDeProceso(uint32_t modulo){
-
-	switch(modulo){
-	case BROKER:
-		return "Broker";
-		break;
-	case TEAM:
-		return "Team";
-		break;
-	case GAMECARD:
-		return "GameCard";
-		break;
-	case GAMEBOY:
-		return "GameBoy";
-		break;
-	case -1:
-		return "ERROR";
-		break;
-	}
-	return "0";
-
-}
-
-char* nombreDeCola(uint32_t cola){
-
-	switch(cola){
-	case APPEARED_POKEMON:
-		return "APPEARED_POKEMON";
-		break;
-	case NEW_POKEMON:
-		return "NEW_POKEMON";
-		break;
-	case CAUGHT_POKEMON:
-		return "CAUGHT_POKEMON";
-		break;
-	case CATCH_POKEMON:
-		return "CATCH_POKEMON";
-		break;
-	case GET_POKEMON:
-		return "GET_POKEMON";
-		break;
-	case LOCALIZED_POKEMON:
-		return "LOCALIZED_POKEMON";
-		break;
-	case -1:
-		return "ERROR";
-		break;
-	}
-
-	return "0";
-}
-
-char* armarStringSuscripLog(uint32_t modulo, uint32_t cola){
-	char* suscripcionDeUnProceso = "Se suscribrió el proceso ";
-	char* suscripcionAcola       = " a la cola ";
-	strcat(suscripcionDeUnProceso, nombreDeProceso(modulo));
-	strcat(suscripcionDeUnProceso,suscripcionAcola );
-	strcat(suscripcionDeUnProceso ,nombreDeCola(cola));
-
-	return suscripcionDeUnProceso;
 }
 
 void inicializarContador(){
@@ -475,4 +264,3 @@ void incrementarContador(){
 	contador.contador++;
 	pthread_mutex_unlock(contador.mutexContador);
 }
-

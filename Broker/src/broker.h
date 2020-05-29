@@ -16,6 +16,7 @@
 #include<commons/log.h>
 #include <messages_lib/messages_lib.h>
 
+
 uint32_t puertoBroker;
 char* ipBroker;
 t_log* loggerBroker;
@@ -40,11 +41,30 @@ typedef struct{
 
 //pthread_t thread;
 
+pthread_mutex_t mutex;
 
+contadorMensajes contador;
 
+colaMensajes appearedPokemon, newPokemon, caughtPokemon, catchPokemon,
+		getPokemon, localizedPokemon;
+
+colaMensajes colaNula;
+
+uint32_t idHiloAppearedPokemon, idHiloNewPokemon, idHiloCaughtPokemon,
+		idHiloCatchPokemon, idHiloGetPokemon, idHiloLocalizedPokemon;
+
+uint32_t manejoMensajesAppearedPokemon, manejoMensajesNewPokemon, manejoMensajesCaughtPokemon,
+		manejoMensajesCatchPokemon, manejoMensajesGetPokemon, manejoMensajesLocalizedPokemon;
+
+pthread_t hiloAppearedPokemon, hiloNewPokemon, hiloCaughtPokemon,
+		hiloCatchPokemon, hiloGetPokemon, hiloLocalizedPokemon;
+
+pthread_t devolverMensajeAppeared, devolverMensajeNew, devolverMensajeCaught,
+		devolverMensajeCatch, devolverMensajeGet, devolverMensajeLocalized;
 
 void iniciarHilos();
 void* iniciarCola(void*);
+void* iniciarServidor();
 
 void esperar_cliente(uint32_t);
 void asignarID(paquete * paq);
