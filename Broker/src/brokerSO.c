@@ -20,6 +20,8 @@
 #include <stdlib.h>
 #include <string.h>
 #include "broker.h"
+#include "log.h"
+
 
 int main(void) {
 
@@ -31,6 +33,8 @@ int main(void) {
 //	printf("hola");
 //	ipBroker=config_get_string_value(config, "IP_BROKER");
 //	printf("hola");
+
+	loggerBroker = iniciar_logger();
 
 	iniciarHilos();
 	inicializarContador();
@@ -55,6 +59,7 @@ void* iniciarServidor(){
 		perror("Falló el bind");
 	}
 
+	//log_info(loggerBroker, "Estoy escuchando!");
 	printf("Estoy escuchando\n");
 
 
@@ -126,9 +131,8 @@ void* atenderCliente(void* sock) {
 	uint32_t* socket = (uint32_t*) sock;
 	paquete* paquete = recibirPaquete(*socket);
 
-//	char * conexionDeProceso = "Se conectó un proceso ";
-//	strcat(conexionDeProceso, nombreDeProceso((*paquete).modulo));
-//	log_info(loggerBroker,conexionDeProceso);
+
+	log_info(loggerBroker,armarConexionNuevoProcesoLog(paquete->modulo));
 
 	if( paquete == NULL){
 		printf("RESPONDO MENSAJE ERRONEO\n");
@@ -141,9 +145,7 @@ void* atenderCliente(void* sock) {
 
 void manejarTipoDeMensaje(paquete paq, uint32_t socket) {
 
-//	char * mensajeNuevoDeProceso = "Llegó un nuevo mensaje a la cola ";
-//	strcat(mensajeNuevoDeProceso, nombreDeCola(paq.tipoMensaje));
-//	log_info(loggerBroker, mensajeNuevoDeProceso);
+	log_info(loggerBroker, armarStringMsgNuevoLog(paq.tipoMensaje));
 
 	suscripcionTiempo structTiempo;
 	mensajeSuscripcionTiempo* datosSuscribir;
@@ -211,6 +213,7 @@ void abrirHiloParaEnviarMensajes(){
 	manejoMensajesCatchPokemon     = pthread_create(&devolverMensajeCatch, NULL, chequearMensajesEnCola, (void*) &catchPokemon);
 	manejoMensajesGetPokemon       = pthread_create(&devolverMensajeGet, NULL, chequearMensajesEnCola, (void*) &getPokemon);
 	manejoMensajesLocalizedPokemon = pthread_create(&devolverMensajeLocalized, NULL, chequearMensajesEnCola, (void*) &localizedPokemon);
+
 	pthread_detach(devolverMensajeAppeared);
 	pthread_detach(devolverMensajeNew);
 	pthread_detach(devolverMensajeCaught);

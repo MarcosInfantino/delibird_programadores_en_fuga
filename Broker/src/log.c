@@ -5,6 +5,7 @@
  *      Author: utnso
  */
 
+#include "log.h"
 #include "broker.h"
 
 char* nombreDeProceso(uint32_t modulo){
@@ -51,6 +52,12 @@ char* nombreDeCola(uint32_t cola){
 	case LOCALIZED_POKEMON:
 		return "LOCALIZED_POKEMON";
 		break;
+	case SUSCRIPCION:
+		return "ES UNA SUSCRIPCION";
+		break;
+		case SUSCRIPCION_TIEMPO:
+		return "ES UNA SUSCRIPCION POR TIEMPO DEL GAMEBOY";
+		break;
 	case -1:
 		return "ERROR";
 		break;
@@ -58,6 +65,18 @@ char* nombreDeCola(uint32_t cola){
 
 	return "0";
 }
+
+
+t_log* iniciar_logger()
+{
+	t_log* logger;
+	if((logger = log_create("logBroker.log", "BROKER", 1, LOG_LEVEL_INFO))==NULL){
+		printf("No pude crear el logger del Broker\n");
+		exit(1);
+	}
+	return logger;
+}
+
 
 char* armarStringSuscripLog(uint32_t modulo, uint32_t cola){
 	char* suscripcionDeUnProceso = "Se suscribrió el proceso ";
@@ -68,3 +87,24 @@ char* armarStringSuscripLog(uint32_t modulo, uint32_t cola){
 
 	return suscripcionDeUnProceso;
 }
+
+
+char* armarStringMsgNuevoLog(uint32_t cola){
+
+	char * mensajeNuevoDeProceso = "Llegó un nuevo mensaje a la cola ";
+	strcat(mensajeNuevoDeProceso, nombreDeCola(cola));
+	return mensajeNuevoDeProceso;
+
+}
+
+char* armarConexionNuevoProcesoLog(uint32_t modulo){
+	char * conexionDeProceso = "Se conectó un proceso ";
+    strcat(conexionDeProceso, nombreDeProceso(modulo));
+
+    return conexionDeProceso;
+}
+
+
+//void terminar_programa(t_log* logger){
+//	log_destroy(logger);
+//}
