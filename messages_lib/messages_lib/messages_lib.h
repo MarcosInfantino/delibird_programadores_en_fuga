@@ -50,7 +50,8 @@ typedef enum{
 	LOCALIZED_POKEMON,
 	SUSCRIPCION,
 	SUSCRIPCION_TIEMPO,
-	ACK
+	ACK,
+	SUSCRIPCION_FINALIZADA
 }tipoMensaje;
 
 typedef enum {
@@ -266,5 +267,27 @@ void* popColaMutex(colaMutex* cola);
 uint32_t sizeColaMutex(colaMutex* cola);
 
 void destruirColaMutex(colaMutex* cola, void(*element_destroyer)(void*));
+
+void destruirAppearedBroker(mensajeAppearedBroker* msg);
+
+void destruirAppearedTeam(mensajeAppearedTeam* msg);
+
+void destruirNewBroker(mensajeNewBroker* msg);
+
+void destruirNewGamecard(mensajeNewGamecard* msg);
+
+void destruirCatchBroker(mensajeCatchBroker* msg);
+
+void destruirCatchGamecard(mensajeCatchGamecard* msg);
+
+void destruirCaught(mensajeCaught* msg);
+
+void destruirGetBroker(mensajeGetBroker* msg);
+
+void destruirGetGamecard(mensajeGetGamecard* msg);
+
+void destruirSuscripcionTiempo(mensajeSuscripcionTiempo* msg);
+
+void destruirSuscripcion(mensajeSuscripcion* msg);
 
 #endif /* MESSAGES_LIB_H_ */

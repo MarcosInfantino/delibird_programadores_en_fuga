@@ -98,7 +98,9 @@ char* armarStringMsgNuevoLog(uint32_t cola){
 }
 
 char* armarConexionNuevoProcesoLog(uint32_t modulo){
-	char * conexionDeProceso = "Se conectó un proceso ";
+	char* str="Se conectó un proceso ";
+	char * conexionDeProceso = malloc(strlen(str) + strlen(nombreDeProceso(modulo)) +1);
+	strcpy(conexionDeProceso,str);
     strcat(conexionDeProceso, nombreDeProceso(modulo));
 
     return conexionDeProceso;

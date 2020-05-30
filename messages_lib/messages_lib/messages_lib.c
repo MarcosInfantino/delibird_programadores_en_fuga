@@ -41,6 +41,10 @@ void* serializarAppearedBroker(mensajeAppearedBroker* mensaje){
 	return stream;
 }
 
+void destruirAppearedBroker(mensajeAppearedBroker* msg){
+	free(msg->pokemon);
+	free(msg);
+}
 mensajeAppearedTeam* llenarMensajeAppearedTeam(char* pokemon, uint32_t posX, uint32_t posY){
 	mensajeAppearedTeam* msg=malloc(sizeof(mensajeAppearedTeam));
 	msg->sizePokemon=strlen(pokemon)+1;
@@ -65,6 +69,11 @@ void* serializarAppearedTeam(mensajeAppearedTeam* mensaje){
 	offset+= sizeof(uint32_t);
 
 	return stream;
+}
+
+void destruirAppearedTeam(mensajeAppearedTeam* msg){
+	free(msg->pokemon);
+	free(msg);
 }
 
 mensajeNewBroker* llenarMensajeNewBroker(char* pokemon, uint32_t posX, uint32_t posY, uint32_t cantidad){
@@ -94,6 +103,11 @@ void* serializarNewBroker(mensajeNewBroker* mensaje){
 	offset+= sizeof(uint32_t);
 
 	return stream;
+}
+
+void destruirNewBroker(mensajeNewBroker* msg){
+	free(msg->pokemon);
+	free(msg);
 }
 
 mensajeNewGamecard* llenarMensajeNewGameCard(char* pokemon, uint32_t posX, uint32_t posY, uint32_t cantidad, uint32_t id){
@@ -128,6 +142,11 @@ void* serializarNewGamecard(mensajeNewGamecard* mensaje){
 	return stream;
 }
 
+void destruirNewGamecard(mensajeNewGamecard* msg){
+	free(msg->pokemon);
+	free(msg);
+}
+
 mensajeCatchBroker* llenarMensajeCatchBroker(char* pokemon, uint32_t posX, uint32_t posY){
 
 	mensajeCatchBroker* msg=malloc(sizeof(mensajeCatchBroker));
@@ -153,6 +172,11 @@ void* serializarCatchBroker(mensajeCatchBroker* mensaje){
 	offset+= sizeof(uint32_t);
 
 	return stream;
+}
+
+void destruirCatchBroker(mensajeCatchBroker* msg){
+	free(msg->pokemon);
+	free(msg);
 }
 
 mensajeCatchGamecard* llenarMensajeCatchGamecard(char* pokemon, uint32_t posX, uint32_t posY, uint32_t id){
@@ -184,6 +208,11 @@ void* serializarCatchGamecard(mensajeCatchGamecard* mensaje){
 	return stream;
 }
 
+void destruirCatchGamecard(mensajeCatchGamecard* msg){
+	free(msg->pokemon);
+	free(msg);
+}
+
 mensajeCaught* llenarMensajeCaught(uint32_t idCorrelativo, uint32_t resultadoCaught){
 	mensajeCaught* msg=malloc(sizeof(mensajeCaught));
 	msg->idCorrelativo=idCorrelativo;
@@ -202,6 +231,11 @@ void* serializarCaught (mensajeCaught* mensaje){
 	offset+= sizeof(uint32_t);
 	return stream;
 }
+
+void destruirCaught(mensajeCaught* msg){
+	free(msg);
+}
+
 mensajeGetBroker* llenarMensajeGetBroker(char* pokemon){
 	mensajeGetBroker* msg=malloc(sizeof(mensajeGetBroker));
 	msg->sizePokemon=strlen(pokemon)+1;
@@ -218,6 +252,11 @@ void* serializarGetBroker (mensajeGetBroker* mensaje){
 	offset+= sizeof(uint32_t);
 	memcpy(stream+offset,mensaje->pokemon,mensaje->sizePokemon);
 	return stream;
+}
+
+void destruirGetBroker(mensajeGetBroker* msg){
+	free(msg->pokemon);
+	free(msg);
 }
 
 mensajeGetGamecard* llenarMensajeGetGamecard(char* pokemon, uint32_t id){
@@ -239,6 +278,11 @@ void* serializarGetGamecard (mensajeGetGamecard* mensaje){
 	offset+= mensaje->sizePokemon;
 	memcpy(stream+offset, &(mensaje->id), sizeof(uint32_t));
 	return stream;
+}
+
+void destruirGetGamecard(mensajeGetGamecard* msg){
+	free(msg->pokemon);
+	free(msg);
 }
 
 mensajeLocalized* llenarMensajeLocalized(char* pokemon, uint32_t cantidad, posicion* posiciones){
@@ -265,7 +309,13 @@ void* serializarLocalized (mensajeLocalized* mensaje){
 	memcpy(stream+offset,arraySerializado,(mensaje->cantidad)*2*sizeof(uint32_t));
 	return stream;
 
-}//hay que checkear funcionamiento
+}
+
+//void destruirLocalized(mensajeLocalized* msg){
+//	free(msg->arrayPosiciones);
+//	free(msg->pokemon);
+//	free(msg);
+//} TODO
 
 void* serializarPosicion(posicion* pos){
 	void* stream=malloc(2*sizeof(uint32_t));
@@ -345,7 +395,7 @@ mensajeSuscripcionTiempo* llenarMensajeSuscripcionTiempo(uint32_t cola, uint32_t
 }
 void* serializarSuscripcionTiempo(mensajeSuscripcionTiempo* mensaje){
 
-		void* stream    = malloc(sizeof(mensajeSuscripcionTiempo));
+		void* stream    = malloc(sizeof(uint32_t)*2);
 		uint32_t offset = 0;
 
 		memcpy(stream+offset, &(mensaje->cola), sizeof(uint32_t));
@@ -361,6 +411,11 @@ mensajeSuscripcion* llenarMensajeSuscripcion(uint32_t cola){
 	msg->cola=cola;
 	return msg;
 }
+
+void destruirSuscripcionTiempo(mensajeSuscripcionTiempo* msg){
+	free(msg);
+}
+
 void* serializarSuscripcion(mensajeSuscripcion* mensaje){
 
 	void* stream    = malloc(sizeof(mensajeSuscripcion));
@@ -371,16 +426,19 @@ void* serializarSuscripcion(mensajeSuscripcion* mensaje){
 	return stream;
 }
 
+void destruirSuscripcion(mensajeSuscripcion* msg){
+	free(msg);
+}
+
 paquete* llenarPaquete( uint32_t modulo,uint32_t tipoMensaje, uint32_t sizeStream,void* stream){
 	paquete* paqueteASerializar       = malloc(sizeof(paquete));
-	paqueteASerializar->stream=malloc(sizeStream);
-	memcpy(paqueteASerializar->stream,stream,sizeStream);
 	paqueteASerializar->modulo        = modulo;
 	paqueteASerializar->tipoMensaje   = tipoMensaje;
 	paqueteASerializar->id            = -1;
 	paqueteASerializar->idCorrelativo = -1;
 	paqueteASerializar->sizeStream    = sizeStream;
-
+	paqueteASerializar->stream=malloc(paqueteASerializar->sizeStream);
+	memcpy(paqueteASerializar->stream,stream,sizeStream);
 	return paqueteASerializar;
 }
 
@@ -390,22 +448,22 @@ void destruirPaquete(paquete* paq){
 }
 
 void* serializarPaquete(paquete* paqueteASerializar){
-	void* paquete   = malloc(sizeof(uint32_t)*5+paqueteASerializar->sizeStream);
+	void* paq   = malloc(sizeof(uint32_t)*5+paqueteASerializar->sizeStream);
 	uint32_t offset = 0;
 
-	memcpy(paquete+offset, &(paqueteASerializar->modulo), sizeof(uint32_t));
+	memcpy(paq+offset, &(paqueteASerializar->modulo), sizeof(uint32_t));
 	offset+=sizeof(uint32_t);
-	memcpy(paquete+offset, &(paqueteASerializar->tipoMensaje), sizeof(uint32_t));
+	memcpy(paq+offset, &(paqueteASerializar->tipoMensaje), sizeof(uint32_t));
 	offset+=sizeof(uint32_t);
-	memcpy(paquete+offset, &(paqueteASerializar->id), sizeof(uint32_t));
+	memcpy(paq+offset, &(paqueteASerializar->id), sizeof(uint32_t));
 	offset+=sizeof(uint32_t);
-	memcpy(paquete+offset, &(paqueteASerializar->idCorrelativo), sizeof(uint32_t));
+	memcpy(paq+offset, &(paqueteASerializar->idCorrelativo), sizeof(uint32_t));
 	offset+=sizeof(uint32_t);
-	memcpy(paquete+offset, &(paqueteASerializar->sizeStream), sizeof(uint32_t));
+	memcpy(paq+offset, &(paqueteASerializar->sizeStream), sizeof(uint32_t));
 	offset+=sizeof(uint32_t);
-	memcpy(paquete+offset,paqueteASerializar->stream,paqueteASerializar->sizeStream);
+	memcpy(paq+offset,paqueteASerializar->stream,paqueteASerializar->sizeStream);
 
-	return paquete;
+	return paq;
 }
 
 mensajeAppearedBroker* deserializarAppearedBroker(void* streamRecibido){
@@ -427,22 +485,22 @@ mensajeAppearedBroker* deserializarAppearedBroker(void* streamRecibido){
 }
 
 mensajeAppearedTeam* deserializarAppearedTeam (void* streamRecibido){
-	printf("hola0\n");
+	//printf("hola0\n");
 
-	printf("hola0.5\n");
+	//printf("hola0.5\n");
 	uint32_t offset              = 0;
 
-	printf("hola1\n");
+	//printf("hola1\n");
 	mensajeAppearedTeam* mensaje = malloc(sizeof(mensajeAppearedTeam));
-	printf("hola1.25\n");
+	//printf("hola1.25\n");
 	memcpy(&(mensaje->sizePokemon), streamRecibido+offset, sizeof(uint32_t));
 	offset+=sizeof(uint32_t);
-	printf("hola1.5\n");
+	//printf("hola1.5\n");
 	mensaje->pokemon=malloc(mensaje->sizePokemon);
-	printf("hola2\n");
+	//printf("hola2\n");
 	memcpy(mensaje->pokemon, streamRecibido+offset, mensaje->sizePokemon);
 	offset+=(mensaje->sizePokemon);
-	printf("hola3\n");
+	//printf("hola3\n");
 	memcpy(&(mensaje->posX), streamRecibido+offset, sizeof(uint32_t));
 	offset+=sizeof(uint32_t);
 	memcpy(&(mensaje->posY), streamRecibido+offset, sizeof(uint32_t));
@@ -581,86 +639,62 @@ mensajeSuscripcion* deserializarSuscripcion (void* streamRecibido){
 }
 
 paquete* deserializarPaquete(void* paqueteRecibido){
-	paquete* paquete = malloc(sizeof(paquete));
+	paquete* paq = malloc(sizeof(paquete));
 	uint32_t offset  = 0;
-	uint32_t* modulo=malloc(sizeof(uint32_t));
-	uint32_t* tipoMensaje=malloc(sizeof(uint32_t));
-	uint32_t* id=malloc(sizeof(uint32_t));
-	uint32_t* idCorrelativo=malloc(sizeof(uint32_t));
-	uint32_t* sizeStream=malloc(sizeof(uint32_t));
 
-//	memcpy(&(paquete->modulo), paqueteRecibido+offset, sizeof(uint32_t));
-//	offset+=sizeof(uint32_t);
-//	memcpy(&(paquete->tipoMensaje), paqueteRecibido+offset, sizeof(uint32_t));
-//	offset+=sizeof(uint32_t);
-//	memcpy(&(paquete->id), paqueteRecibido+offset, sizeof(uint32_t));
-//	offset+=sizeof(uint32_t);
-//	memcpy(&(paquete->idCorrelativo), paqueteRecibido+offset,sizeof(uint32_t));
-//	offset+=sizeof(uint32_t);
-//	memcpy(&(paquete->sizeStream), paqueteRecibido+offset, sizeof(uint32_t));
-//	offset+=sizeof(uint32_t);
-	memcpy(modulo, paqueteRecibido+offset, sizeof(uint32_t));
-	offset+=sizeof(uint32_t);
-	memcpy(tipoMensaje, paqueteRecibido+offset, sizeof(uint32_t));
-	offset+=sizeof(uint32_t);
-	memcpy(id, paqueteRecibido+offset, sizeof(uint32_t));
-	offset+=sizeof(uint32_t);
-	memcpy(idCorrelativo, paqueteRecibido+offset,sizeof(uint32_t));
-	offset+=sizeof(uint32_t);
-	memcpy(sizeStream, paqueteRecibido+offset, sizeof(uint32_t));
-	offset+=sizeof(uint32_t);
-	printf("asdfasdf %i\n",paquete->sizeStream);
-	paquete->stream = malloc(paquete->sizeStream);
-	memcpy(paquete->stream, paqueteRecibido+offset, paquete->sizeStream);
 
-	paquete->modulo=*modulo;
-	paquete->id=*id;
-	paquete->idCorrelativo=*idCorrelativo;
-	paquete->sizeStream=*sizeStream;
-	paquete->tipoMensaje=*tipoMensaje;
+	memcpy(&(paq->modulo), paqueteRecibido+offset, sizeof(uint32_t));
+	offset+=sizeof(uint32_t);
+	memcpy(&(paq->tipoMensaje), paqueteRecibido+offset, sizeof(uint32_t));
+	offset+=sizeof(uint32_t);
+	memcpy(&(paq->id), paqueteRecibido+offset, sizeof(uint32_t));
+	offset+=sizeof(uint32_t);
+	memcpy(&(paq->idCorrelativo), paqueteRecibido+offset,sizeof(uint32_t));
+	offset+=sizeof(uint32_t);
+	memcpy(&(paq->sizeStream), paqueteRecibido+offset, sizeof(uint32_t));
+	offset+=sizeof(uint32_t);
 
-//	free(modulo);
-//	free(tipoMensaje);
-//	free(id);
-//	free(idCorrelativo);
-//	free(sizeStream);
+	paq->stream = malloc(paq->sizeStream);
+
+
+	memcpy(paq->stream, paqueteRecibido+offset, paq->sizeStream);
+
+
 	free(paqueteRecibido);
-	return paquete;
+	return paq;
 }
 
 
 paquete* recibirPaquete(uint32_t socket){
-	paquete* paquete = malloc(sizeof(paquete));
+	paquete* paq = malloc(sizeof(paquete));
 
 
-	//recv(cliente,&respuesta1,sizeof(uint32_t),0);
+	if(recv(socket,&(paq->modulo),sizeof(uint32_t),0)==-1){
+		printf("hola\n");return NULL;
 
-	if(recv(socket,&(paquete->modulo),sizeof(uint32_t),0)==-1)
-		return NULL;
-
-	if(recv(socket,&(paquete->tipoMensaje),sizeof(uint32_t),0)==-1)
-		return NULL;
-
-	if(recv(socket,&(paquete->id),sizeof(uint32_t),0)==-1)
-		return NULL;
-
-	if(recv(socket,&(paquete->idCorrelativo),sizeof(uint32_t),0)==-1)
-		return NULL;
-
-	if(recv(socket,&(paquete->sizeStream),sizeof(uint32_t),0)==-1)
-		return NULL;
-	printf("antes de recibir el streamMensaje %i",paquete->sizeStream);
-
-	//paquete->stream = malloc(paquete->sizeStream);
-
-	if(recv(socket,paquete->stream,(paquete->sizeStream),0)==-1){
-		printf("ENTRE");
-		return NULL;
+	}
+	if(recv(socket,&(paq->tipoMensaje),sizeof(uint32_t),0)==-1){
+		printf("hola\n");return NULL;
+	}
+	if(recv(socket,&(paq->id),sizeof(uint32_t),0)==-1){
+		printf("hola\n");return NULL;
+	}
+	if(recv(socket,&(paq->idCorrelativo),sizeof(uint32_t),0)==-1){
+		printf("hola\n");return NULL;
+	}
+	if(recv(socket,&(paq->sizeStream),sizeof(uint32_t),0)==-1){
+		printf("hola\n");return NULL;
 	}
 
-	printf("despues de recibir el streamMensaje %i",paquete->sizeStream);
+	paq->stream = malloc(paq->sizeStream);
 
-	return paquete;
+	if(recv(socket,paq->stream,(paq->sizeStream),0)==-1){
+		printf("hola\n");return NULL;
+	}
+
+
+
+	return paq;
 }
 
 uint32_t crearSocketCliente (char* ip, uint32_t puerto){
@@ -716,7 +750,8 @@ uint32_t sizeArgumentos (uint32_t colaMensaje, char* nombrePokemon, uint32_t pro
 			size=strlen(nombrePokemon) + 1 + sizeof(uint32_t)*2;
 		}
 		break;
-
+	case SUSCRIPCION_TIEMPO:
+		size=2*sizeof(uint32_t);  break;
 	default:
 		printf("Error: el caso ingresado no esta contemplado \n");
 		break;
@@ -725,20 +760,20 @@ uint32_t sizeArgumentos (uint32_t colaMensaje, char* nombrePokemon, uint32_t pro
 }
 
 uint32_t sizePaquete(paquete* paq){
-	return paq->sizeStream+ sizeof(uint32_t)*5;
+	return paq->sizeStream + sizeof(uint32_t)*5;
 }
 
 listaMutex* inicializarListaMutex(){
 	listaMutex* list=malloc(sizeof(listaMutex));
-	list->lista=list_create();
-	list->mutex=malloc(sizeof(pthread_mutex_t));
-	pthread_mutex_init(list->mutex,NULL);
+	(*list).lista=list_create();
+	(*list).mutex=malloc(sizeof(pthread_mutex_t));
+	pthread_mutex_init((*list).mutex,NULL);
 	return list;
 }
 
 void addListaMutex(listaMutex* list,void* elemento){
 	pthread_mutex_lock(list->mutex);
-	list_add(list->lista,elemento);
+	list_add((*list).lista,elemento);
 	pthread_mutex_unlock(list->mutex);
 }
 
@@ -803,28 +838,28 @@ void destruirColaMutex(colaMutex* cola, void(*element_destroyer)(void*)){
 	queue_destroy_and_destroy_elements(cola->cola,element_destroyer);
 	free(cola);
 }
-
-int main(){
-	//mensajeLocalized* llenarMensajeLocalized(uint32_t sizePokemon, char* pokemon, uint32_t cantidad, posicion* posiciones)
-
-	char* pokemon="Pikachu";
-	uint32_t cantidad=2;
-	posicion* posiciones=malloc(sizeof(posiciones)*2);
-	posicion pos1={1,0};
-	posicion pos2={0,0};
-	*(posiciones)=pos1;
-	*(posiciones+1)=pos2;
-	mensajeLocalized* msg= llenarMensajeLocalized(pokemon,cantidad,posiciones);
-	void* stream= serializarLocalized(msg);
-	mensajeLocalized* msgResultado=deserializarLocalized(stream);
-	printf("sizePokemon: %i\n", msgResultado->sizePokemon);
-	printf("pokemon: %s\n", msgResultado->pokemon);
-	printf("cantidad: %i\n", msgResultado->cantidad);
-	printf("posx1: %i\n", (msgResultado->arrayPosiciones)->x);
-	printf("posy1: %i\n", (msgResultado->arrayPosiciones)->y);
-	printf("posx2: %i\n", ((msgResultado->arrayPosiciones) +1)->x);
-	printf("posy2: %i\n", ((msgResultado->arrayPosiciones) +1)->y);
-
-	return 0;
-}
+//
+//int main(){
+//	//mensajeLocalized* llenarMensajeLocalized(uint32_t sizePokemon, char* pokemon, uint32_t cantidad, posicion* posiciones)
+//
+//	char* pokemon="Pikachu";
+//	uint32_t cantidad=2;
+//	posicion* posiciones=malloc(sizeof(posiciones)*2);
+//	posicion pos1={1,0};
+//	posicion pos2={0,0};
+//	*(posiciones)=pos1;
+//	*(posiciones+1)=pos2;
+//	mensajeLocalized* msg= llenarMensajeLocalized(pokemon,cantidad,posiciones);
+//	void* stream= serializarLocalized(msg);
+//	mensajeLocalized* msgResultado=deserializarLocalized(stream);
+//	printf("sizePokemon: %i\n", msgResultado->sizePokemon);
+//	printf("pokemon: %s\n", msgResultado->pokemon);
+//	printf("cantidad: %i\n", msgResultado->cantidad);
+//	printf("posx1: %i\n", (msgResultado->arrayPosiciones)->x);
+//	printf("posy1: %i\n", (msgResultado->arrayPosiciones)->y);
+//	printf("posx2: %i\n", ((msgResultado->arrayPosiciones) +1)->x);
+//	printf("posy2: %i\n", ((msgResultado->arrayPosiciones) +1)->y);
+//
+//	return 0;
+//}
 

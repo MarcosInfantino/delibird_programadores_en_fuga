@@ -129,4 +129,12 @@ void desuscribir(uint32_t socket, uint32_t cola ){
 			removeListaMutex(punteroACola->suscriptores, i);
 		}
 	}
+	uint32_t respuestaDesuscripcion=SUSCRIPCION_FINALIZADA;
+	paquete* paqueteDesuscripcion=llenarPaquete(GAMEBOY,SUSCRIPCION_FINALIZADA,4,(void*)(&respuestaDesuscripcion));
+	void* paqueteSerializado=serializarPaquete(paqueteDesuscripcion);
+
+	send(socket,paqueteSerializado,sizePaquete(paqueteDesuscripcion),0);
+	destruirPaquete(paqueteDesuscripcion);
+	free(paqueteSerializado);
+
 }

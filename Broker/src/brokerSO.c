@@ -59,7 +59,7 @@ void* iniciarServidor(){
 		perror("Falló el bind");
 	}
 
-	//log_info(loggerBroker, "Estoy escuchando!");
+	log_info(loggerBroker, "Estoy escuchando!");
 	printf("Estoy escuchando\n");
 
 
@@ -67,7 +67,7 @@ void* iniciarServidor(){
 //		unsigned int tamanioDireccion=sizeof(direccionCliente);
 //		int cliente = accept(servidor, (void*) &direccionCliente, &tamanioDireccion);
 
-	abrirHiloParaEnviarMensajes();
+	//abrirHiloParaEnviarMensajes();
 
 	while (1)  								//para recibir n conexiones
 		esperar_cliente(servidor);
@@ -129,6 +129,7 @@ void* atenderCliente(void* sock) {
 //	printf("Atiendo cliente\n");
 
 	uint32_t* socket = (uint32_t*) sock;
+
 	paquete* paquete = recibirPaquete(*socket);
 
 
@@ -145,7 +146,7 @@ void* atenderCliente(void* sock) {
 
 void manejarTipoDeMensaje(paquete paq, uint32_t socket) {
 
-	log_info(loggerBroker, armarStringMsgNuevoLog(paq.tipoMensaje));
+	//log_info(loggerBroker, armarStringMsgNuevoLog(paq.tipoMensaje));
 
 	suscripcionTiempo structTiempo;
 	mensajeSuscripcionTiempo* datosSuscribir;

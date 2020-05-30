@@ -17,7 +17,10 @@
 
 #include "gameBoy.h"
 
+t_log* gameboyLogger;
+
 t_log* iniciar_logger();
-void terminar_programa(t_log*);
+void terminar_programa(t_log* logger, t_config* config);
+void loggearMensajeRecibido (paquete* paqueteRespuesta);
 
 #endif /* SRC_LOG_H_ */

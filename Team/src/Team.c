@@ -392,8 +392,8 @@ void* suscribirseCola(void* msgSuscripcion){
 	printf("Comienzo suscripcion\n");
 	uint32_t bytes = sizeof(uint32_t)*5+paq->sizeStream;
 
-	void* stream   = serializarPaquete(paq);
 
+	void* stream   = serializarPaquete(paq);
 
 	send(cliente,stream,bytes,0);
 
@@ -407,31 +407,32 @@ void* suscribirseCola(void* msgSuscripcion){
 
 		if(respuesta == CORRECTO){
 			printf("Mensaje recibido correctamente\n");
+			while(1){
+				paquete* paqueteRespuesta=recibirPaquete(cliente);
+				switch(paqueteRespuesta->tipoMensaje){
+					case APPEARED_POKEMON:;
+						mensajeAppearedTeam* msgAppeared=deserializarAppearedTeam(paqueteRespuesta->stream);
+						//destruirPaquete(paqueteRespuesta);
+						atenderAppeared(msgAppeared);
+						//free(msgAppeared);
+						break;
+					case LOCALIZED_POKEMON:
+						//destruirPaquete(paqueteRespuesta);//recordar destruir el paquete
+						break;
+					case CAUGHT_POKEMON:
+						atenderCaught(paqueteRespuesta);
+						//destruirPaquete(paqueteRespuesta);
+						break;
+					default: break; //esto no puede pasar
+				}
+			}
 
 		}else{
 			printf("Mensaje recibido incorrectamente\n");
-			printf("mensaje: %i\n", respuesta);
+			//printf("mensaje: %i\n", respuesta);
 
 		}
-	while(1){
-		paquete* paqueteRespuesta=recibirPaquete(cliente);
-		switch(paqueteRespuesta->tipoMensaje){
-			case APPEARED_POKEMON:;
-				mensajeAppearedTeam* msgAppeared=deserializarAppearedTeam(paqueteRespuesta->stream);
-				//destruirPaquete(paqueteRespuesta);
-				atenderAppeared(msgAppeared);
-				//free(msgAppeared);
-				break;
-			case LOCALIZED_POKEMON:
-				//destruirPaquete(paqueteRespuesta);//recordar destruir el paquete
-				break;
-			case CAUGHT_POKEMON:
-				atenderCaught(paqueteRespuesta);
-				//destruirPaquete(paqueteRespuesta);
-				break;
-			default: break; //esto no puede pasar
-		}
-	}
+
 
 
 		return NULL;
