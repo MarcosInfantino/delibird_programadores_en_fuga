@@ -33,6 +33,19 @@ typedef struct{
 	pthread_mutex_t* mutexContador;
 }contadorMensajes;
 
+typedef struct {
+	uint32_t idMensaje;
+	uint32_t cola;
+	listaMutex* subsYaEnviado;
+	listaMutex* subsACK;
+}msgMemoriaBroker;
+
+typedef enum {
+	CONFIRMADO,
+	SUBSYAENVIADOS
+}ListasMemoria;
+
+
 //typedef struct {
 //	paquete paquete;
 //	colaMensajes structCola;
@@ -68,6 +81,7 @@ void* iniciarServidor();
 
 void esperar_cliente(uint32_t);
 void asignarID(paquete * paq);
+uint32_t obtenerIDultimoMensaje();
 void* atenderCliente(void* sock);
 void manejarTipoDeMensaje(paquete paq, uint32_t socket);
 void suscribirSegunCola(paquete paq, uint32_t socket);
@@ -87,5 +101,10 @@ void suscribirACola(uint32_t* socket, colaMensajes * cola);
 void inicializarContador();
 void abrirHiloParaEnviarMensajes();
 void* chequearMensajesEnCola(void * par);
+
+//void guardarConfirmacionEnMemoriaDe(paquete* paq, uint32_t socket)
+//void registrarMensajeEnMemoria(uint32_t idMensaje, paquete* paq);
+//msgMemoriaBroker* buscarMensajeEnMemoria(uint32_t idMensajeBuscado);
+//void almacenarSubEnMemoriaPara(uint32_t idmensaje,uint32_t socketActual);
 
 #endif /* BROKER_H_ */

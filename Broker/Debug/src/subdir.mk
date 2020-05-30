@@ -6,17 +6,20 @@
 C_SRCS += \
 ../src/Suscripciones.c \
 ../src/brokerSO.c \
-../src/log.c 
+../src/log.c \
+../src/memoria.c 
 
 OBJS += \
 ./src/Suscripciones.o \
 ./src/brokerSO.o \
-./src/log.o 
+./src/log.o \
+./src/memoria.o 
 
 C_DEPS += \
 ./src/Suscripciones.d \
 ./src/brokerSO.d \
-./src/log.d 
+./src/log.d \
+./src/memoria.d 
 
 
 # Each subdirectory must supply rules for building sources it contributes
