@@ -49,7 +49,8 @@ typedef enum{
 	GET_POKEMON,
 	LOCALIZED_POKEMON,
 	SUSCRIPCION,
-	SUSCRIPCION_TIEMPO
+	SUSCRIPCION_TIEMPO,
+	ACK
 }tipoMensaje;
 
 typedef enum {
@@ -200,6 +201,7 @@ void* serializarSuscripcion(mensajeSuscripcion* mensaje);
 paquete* llenarPaquete( uint32_t modulo,uint32_t tipoMensaje, uint32_t sizeStream,void* stream);
 void destruirPaquete(paquete* paq);
 void* serializarPaquete(paquete* paqueteASerializar);
+//void* serializarACK(paquete* ackAserializar);
 
 mensajeAppearedBroker* deserializarAppearedBroker(void* streamRecibido);
 mensajeAppearedTeam* deserializarAppearedTeam (void* streamRecibido);
@@ -217,6 +219,7 @@ paquete* deserializarPaquete(void* paqueteRecibido);
 posicion* deserializarArrayPosiciones(void* stream,uint32_t cantidad);
 posicion* deserializarPosicion(void* stream);
 mensajeLocalized* deserializarLocalized(void* stream);
+//mensajeACK* deserializarACK(void* stream);
 
 paquete* recibirPaquete(uint32_t socket);
 
