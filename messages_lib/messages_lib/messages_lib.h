@@ -184,110 +184,95 @@ typedef struct {
 	sem_t* mensajesEnCola;
 }colaMensajes;
 
-//t_paquete* armarPaquete(char* cadena);
-mensajeSuscripcion* deserializarMensajeSuscripcion(void* stream, uint32_t bytes);
 
 void* serializarAppearedBroker(mensajeAppearedBroker* mensaje);
-void* serializarAppearedTeam(mensajeAppearedTeam* mensaje);
-void* serializarNewBroker(mensajeNewBroker* mensaje);
-void* serializarNewGamecard(mensajeNewGamecard* mensaje);
-void* serializarCatchBroker(mensajeCatchBroker* mensaje);
-void* serializarCatchGamecard(mensajeCatchGamecard* mensaje);
-void* serializarCaught (mensajeCaught* mensaje);
-void* serializarGetBroker (mensajeGetBroker* mensaje);
-void* serializarGetGamecard (mensajeGetGamecard* mensaje);
-void* serializarLocalized(mensajeLocalized* mensaje);
-void* serializarSuscripcionTiempo(mensajeSuscripcionTiempo* mensaje);
-void* serializarSuscripcion(mensajeSuscripcion* mensaje);
-paquete* llenarPaquete( uint32_t modulo,uint32_t tipoMensaje, uint32_t sizeStream,void* stream);
-void destruirPaquete(paquete* paq);
-void* serializarPaquete(paquete* paqueteASerializar);
-//void* serializarACK(paquete* ackAserializar);
-
 mensajeAppearedBroker* deserializarAppearedBroker(void* streamRecibido);
+mensajeAppearedBroker* llenarMensajeAppearedBroker(char* pokemon, uint32_t posX,uint32_t posY, uint32_t idCorrelativo);
+void destruirAppearedBroker(mensajeAppearedBroker* msg);
+
+mensajeAppearedTeam* llenarMensajeAppearedTeam(char* pokemon, uint32_t posX, uint32_t posY);
+void* serializarAppearedTeam(mensajeAppearedTeam* mensaje);
 mensajeAppearedTeam* deserializarAppearedTeam (void* streamRecibido);
+void destruirAppearedTeam(mensajeAppearedTeam* msg);
+
+mensajeNewBroker* llenarMensajeNewBroker(char* pokemon, uint32_t posX, uint32_t posY, uint32_t cantidad);
+void* serializarNewBroker(mensajeNewBroker* mensaje);
 mensajeNewBroker* deserializarNewBroker (void* streamRecibido);
+void destruirNewBroker(mensajeNewBroker* msg);
+
+mensajeNewGamecard* llenarMensajeNewGameCard(char* pokemon, uint32_t posX, uint32_t posY, uint32_t cantidad, uint32_t id);
+void* serializarNewGamecard(mensajeNewGamecard* mensaje);
 mensajeNewGamecard* deserializarNewGamecard (void* streamRecibido);
+void destruirNewGamecard(mensajeNewGamecard* msg);
+
+mensajeCatchBroker* llenarMensajeCatchBroker(char* pokemon, uint32_t posX, uint32_t posY);
+void* serializarCatchBroker(mensajeCatchBroker* mensaje);
 mensajeCatchBroker* deserializarCatchBroker (void* streamRecibido);
+void destruirCatchBroker(mensajeCatchBroker* msg);
+
+mensajeCatchGamecard* llenarMensajeCatchGamecard(char* pokemon, uint32_t posX, uint32_t posY, uint32_t id);
+void* serializarCatchGamecard(mensajeCatchGamecard* mensaje);
 mensajeCatchGamecard* deserializarCatchGamecard (void* streamRecibido);
+void destruirCatchGamecard(mensajeCatchGamecard* msg);
+
+mensajeCaught* llenarMensajeCaught(uint32_t idCorrelativo, uint32_t resultadoCaught);
+void* serializarCaught (mensajeCaught* mensaje);
 mensajeCaught* deserializarCaught(void* streamRecibido);
+void destruirCaught(mensajeCaught* msg);
+
+mensajeGetBroker* llenarMensajeGetBroker(char* pokemon);
+void* serializarGetBroker (mensajeGetBroker* mensaje);
 mensajeGetBroker* deserializarGetBroker (void* streamRecibido);
+void destruirGetBroker(mensajeGetBroker* msg);
+
+mensajeGetGamecard* llenarMensajeGetGamecard(char* pokemon, uint32_t id);
+void* serializarGetGamecard (mensajeGetGamecard* mensaje);
 mensajeGetGamecard* deserializarGetGamecard (void* streamRecibido);
+void destruirGetGamecard(mensajeGetGamecard* msg);
+
+mensajeLocalized* llenarMensajeLocalized(char* pokemon, uint32_t cantidad, posicion* posiciones);
+void* serializarLocalized(mensajeLocalized* mensaje);
+void* serializarArrayPosiciones(posicion* pos, uint32_t cantidad);
+void* serializarPosicion(posicion* pos);
 mensajeLocalized* deserializarLocalized(void* streamRecibido);
-mensajeSuscripcionTiempo* deserializarSuscripcionTiempo(void* streamRecibido);
-mensajeSuscripcion* deserializarSuscripcion (void* streamRecibido);
-paquete* deserializarPaquete(void* paqueteRecibido);
 posicion* deserializarArrayPosiciones(void* stream,uint32_t cantidad);
 posicion* deserializarPosicion(void* stream);
-mensajeLocalized* deserializarLocalized(void* stream);
-//mensajeACK* deserializarACK(void* stream);
 
-paquete* recibirPaquete(uint32_t socket);
-
-mensajeAppearedBroker* llenarMensajeAppearedBroker(char* pokemon, uint32_t posX,uint32_t posY, uint32_t idCorrelativo);
-mensajeAppearedTeam* llenarMensajeAppearedTeam(char* pokemon, uint32_t posX, uint32_t posY);
-mensajeNewBroker* llenarMensajeNewBroker(char* pokemon, uint32_t posX, uint32_t posY, uint32_t cantidad);
-mensajeNewGamecard* llenarMensajeNewGameCard(char* pokemon, uint32_t posX, uint32_t posY, uint32_t cantidad, uint32_t id);
-mensajeCatchBroker* llenarMensajeCatchBroker(char* pokemon, uint32_t posX, uint32_t posY);
-mensajeCatchGamecard* llenarMensajeCatchGamecard(char* pokemon, uint32_t posX, uint32_t posY, uint32_t id);
-mensajeCaught* llenarMensajeCaught(uint32_t idCorrelativo, uint32_t resultadoCaught);
-mensajeGetBroker* llenarMensajeGetBroker(char* pokemon);
-mensajeGetGamecard* llenarMensajeGetGamecard(char* pokemon, uint32_t id);
-mensajeLocalized* llenarMensajeLocalized(char* pokemon, uint32_t cantidad, posicion* posiciones);
 mensajeSuscripcionTiempo* llenarMensajeSuscripcionTiempo(uint32_t cola, uint32_t tiempo);
+void* serializarSuscripcionTiempo(mensajeSuscripcionTiempo* mensaje);
+mensajeSuscripcionTiempo* deserializarSuscripcionTiempo(void* streamRecibido);
+void destruirSuscripcionTiempo(mensajeSuscripcionTiempo* msg);
+
 mensajeSuscripcion* llenarMensajeSuscripcion(uint32_t cola);
+void* serializarSuscripcion(mensajeSuscripcion* mensaje);
+mensajeSuscripcion* deserializarSuscripcion (void* streamRecibido);
+void destruirSuscripcion(mensajeSuscripcion* msg);
+
+paquete* llenarPaquete( uint32_t modulo,uint32_t tipoMensaje, uint32_t sizeStream,void* stream);
+void* serializarPaquete(paquete* paqueteASerializar);
+paquete* deserializarPaquete(void* paqueteRecibido);
+void destruirPaquete(paquete* paq);
+paquete* recibirPaquete(uint32_t socket);
+uint32_t sizePaquete(paquete* paq);
+
+//void* serializarACK(paquete* ackAserializar);
+//mensajeACK* deserializarACK(void* stream);
 
 uint32_t crearSocketCliente (char* ip, uint32_t puerto);
 uint32_t sizeArgumentos (uint32_t colaMensaje, char* nombrePokemon, uint32_t procesoDestinatario);
-uint32_t sizePaquete(paquete* paq);
-
-void* serializarArrayPosiciones(posicion* pos, uint32_t cantidad);
-void* serializarPosicion(posicion* pos);
 
 listaMutex* inicializarListaMutex();
-
 void destruirListaEntrenadoresLibres();
-
 void addListaMutex(listaMutex* list,void* elemento);
-
 void* getListaMutex(listaMutex* list, uint32_t index);
-
 uint32_t sizeListaMutex(listaMutex* list);
-
 void destruirListaMutex(listaMutex* lista,void(*element_destroyer)(void*));
-
 void removeListaMutex(listaMutex* list,uint32_t pos);
 
 colaMutex* inicializarColaMutex();
-
 void pushColaMutex(colaMutex* cola, void* infoEntrenador);
-
 void* popColaMutex(colaMutex* cola);
-
 uint32_t sizeColaMutex(colaMutex* cola);
-
 void destruirColaMutex(colaMutex* cola, void(*element_destroyer)(void*));
-
-void destruirAppearedBroker(mensajeAppearedBroker* msg);
-
-void destruirAppearedTeam(mensajeAppearedTeam* msg);
-
-void destruirNewBroker(mensajeNewBroker* msg);
-
-void destruirNewGamecard(mensajeNewGamecard* msg);
-
-void destruirCatchBroker(mensajeCatchBroker* msg);
-
-void destruirCatchGamecard(mensajeCatchGamecard* msg);
-
-void destruirCaught(mensajeCaught* msg);
-
-void destruirGetBroker(mensajeGetBroker* msg);
-
-void destruirGetGamecard(mensajeGetGamecard* msg);
-
-void destruirSuscripcionTiempo(mensajeSuscripcionTiempo* msg);
-
-void destruirSuscripcion(mensajeSuscripcion* msg);
 
 #endif /* MESSAGES_LIB_H_ */
