@@ -32,10 +32,6 @@ void* serializarLocalized (mensajeLocalized* mensaje){
 	return stream;
 }
 
-//mensajeLocalized* deserializarLocalized (void* streamRecibido){
-//
-//}
-
 //void destruirLocalized(mensajeLocalized* msg){
 //	free(msg->arrayPosiciones);
 //	free(msg->pokemon);

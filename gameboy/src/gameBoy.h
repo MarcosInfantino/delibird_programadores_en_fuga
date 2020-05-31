@@ -12,8 +12,6 @@
 #include<commons/config.h>
 #include <messages_lib/messages_lib.h>
 
-
-
 typedef struct{
 	void * paqueteAEnviar;
 	uint32_t socketCliente;
@@ -26,8 +24,6 @@ char* obtenerIpProceso (uint32_t proceso, t_config* config);
 uint32_t obtenerNombreProceso (char* proceso);
 
 uint32_t obtenerColaMensaje (char* cola);
-
-void loggearMensajeRecibido (paquete* paqueteRespuesta);
 
 void* generarStreamArgumentos (uint32_t colaMensaje, char* argv[]);
 

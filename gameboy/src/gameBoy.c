@@ -24,8 +24,6 @@
 
 //\n
 
-
-
 int main(int argc, char* argv[]) {
 
 	gameboyLogger = iniciar_logger();
@@ -44,9 +42,7 @@ int main(int argc, char* argv[]) {
 		mensajeEnviar->cola 					= colaMensaje;
 		mensajeEnviar->tiempo					= atoi(argv[3]);
 		stream 									= serializarSuscripcionTiempo(mensajeEnviar);
-
-		destruirSuscripcionTiempo(mensajeEnviar);//SI ROMPE PODRIA SER POR ESTO :)
-
+		destruirSuscripcionTiempo(mensajeEnviar);
 		sizeStream								= sizeof(uint32_t)*2;
 		paquete 								= llenarPaquete(GAMEBOY, SUSCRIPCION_TIEMPO, sizeStream, stream);
 	}else{
@@ -222,8 +218,6 @@ void* enviarMensaje(void* paqueteySocket){
 	return NULL;
 }
 
-
-
 void* enviarMensajeSuscripcion(void* paqueteySocket){
 	paqueteYSocket* paqueteConSocket = (paqueteYSocket*) paqueteySocket;
 	send(paqueteConSocket->socketCliente, paqueteConSocket->paqueteAEnviar, sizePaquete(paqueteConSocket->paqueteAEnviar), 0);
@@ -240,8 +234,6 @@ void* enviarMensajeSuscripcion(void* paqueteySocket){
 		loggearMensajeRecibido (paqueteRespuesta);
 		destruirPaquete(paqueteRespuesta);
 		paqueteRespuesta=recibirPaquete(paqueteConSocket->socketCliente);
-
-
 	}
 
 	return NULL;

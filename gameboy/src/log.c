@@ -13,8 +13,6 @@
 #include "log.h"
 #include "gameBoy.h"
 
-//terminar_programa(gameboyLogger);
-
 t_log* iniciar_logger()
 {
 	t_log* logger;
@@ -73,11 +71,17 @@ void loggearMensajeRecibido (paquete* paqueteRespuesta){
 
 		case LOCALIZED_POKEMON: ;
 			mensajeLocalized* msgLocalized = deserializarLocalized(paqueteRespuesta->stream);
-			log_info(gameboyLogger, "Recibi mensaje localized. Pokemon: %s\n", msgLocalized->pokemon);
-			//HACER DESTRUIR LOCALIZED :)
+			log_info(gameboyLogger, "Recibi mensaje localized: \n");
+			log_info(gameboyLogger, "El pokemon es: %s\n", msgLocalized->pokemon);
+			log_info (gameboyLogger, "La cantidad es: %i\n", msgLocalized->cantidad);
+//			for(int j = 0; j<msgLocalized->cantidad; j++){
+//				log_info(gameboyLogger, "las posiciones son: %i\n", (msgLocalized->arrayPosiciones)[j]);
+//			}
+			//destruirLocalized(msgLocalized);
 			break;
 		}
 }
+
 void terminar_programa(t_log* logger, t_config* config)
 {
 	log_destroy(logger);
