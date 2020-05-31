@@ -184,10 +184,9 @@ typedef struct {
 	sem_t* mensajesEnCola;
 }colaMensajes;
 
-
+mensajeAppearedBroker* llenarMensajeAppearedBroker(char* pokemon, uint32_t posX,uint32_t posY, uint32_t idCorrelativo);
 void* serializarAppearedBroker(mensajeAppearedBroker* mensaje);
 mensajeAppearedBroker* deserializarAppearedBroker(void* streamRecibido);
-mensajeAppearedBroker* llenarMensajeAppearedBroker(char* pokemon, uint32_t posX,uint32_t posY, uint32_t idCorrelativo);
 void destruirAppearedBroker(mensajeAppearedBroker* msg);
 
 mensajeAppearedTeam* llenarMensajeAppearedTeam(char* pokemon, uint32_t posX, uint32_t posY);
