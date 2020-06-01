@@ -21,20 +21,24 @@
 #include <string.h>
 #include "broker.h"
 #include "log.h"
+#include "memoria.h"
 
 
 int main(void) {
 
-//	printf("hola");
-//	char* pathConfig="/home/utnso/Escritorio/repoSO/tp-2020-1c-Programadores-en-Fuga/Broker/src/broker.config";
-//	t_config* config=config_create(pathConfig);
-//	printf("hola");
-//	puertoBroker=config_get_int_value(config, "PUERTO_BROKER​");
-//	printf("hola");
-//	ipBroker=config_get_string_value(config, "IP_BROKER");
-//	printf("hola");
+
+	char* pathConfig = "broker.config";
+	t_config* config = config_create(pathConfig);
+
+	puertoBroker     = config_get_int_value(config, "PUERTO_BROKER​");
+	ipBroker         = config_get_string_value(config, "IP_BROKER");
+	tamMemoria       = config_get_int_value(config, "TAMANO_MEMORIA");
+	particionMimina  = config_get_int_value(config, "TAMANO_MINIMO_PARTICION");
 
 	loggerBroker = iniciar_logger();
+	definirAlgoritmoMemoria(config);
+	definirAlgoritmoParticionLibre(config);
+	definirAlgoritmoReemplazo(config);
 
 	iniciarHilos();
 	inicializarContador();
@@ -287,3 +291,77 @@ uint32_t obtenerIDultimoMensaje(){
 	pthread_mutex_unlock(contador.mutexContador);
 
 }
+
+void definirAlgoritmoMemoria(t_config* config){
+
+	//definirAlgoritmo(config, "ALGORITMO_MEMORIA", "PARTICIONES", "BS", PARTICIONES_DINAMICAS, BUDDY_SYSTEM, "Hubo un error al definir el algoritmo de memoria");
+
+
+	char* algoritmo = config_get_string_value(config, "ALGORITMO_MEMORIA");
+
+	if( strcmp(algoritmo,"PARTICIONES") == 0){
+			algoritmoMemoria = PARTICIONES_DINAMICAS;
+		}else if(strcmp(algoritmo,"BS") == 0){
+			algoritmoMemoria = BUDDY_SYSTEM;
+		}else{
+			printf("Hubo un error al definir el algoritmo de memoria");
+		}
+
+	/*switch(config_get_string_value(config, "ALGORITMO_MEMORIA")){ LA CHOTA DE C NO ME DEJÓ IMPLEMENTAR ESTO
+	case "PARTICIONES":
+		algoritmoMemoria = PARTICIONES_DINAMICAS;
+		break;
+	case "BS":
+		algoritmoMemoria = BUDDY_SYSTEM;
+		break;
+	default:
+		printf("Hubo un error al definir el algoritmo de memoria");
+		return;
+	}*/
+}
+
+void definirAlgoritmoParticionLibre(t_config* config){
+	//definirAlgoritmo(config, "ALGORITMO_PARTICION_LIBRE", "FF", "BF", FIRST_FIT, BEST_FIT, "Hubo un error al definir el algoritmo de particiones de memoria libres");
+
+
+	char* algoritmo = config_get_string_value(config, "ALGORITMO_PARTICION_LIBRE");
+
+	if( strcmp(algoritmo,"FF") == 0){
+		algoritmoParticionLibre = FIRST_FIT;
+	}else if(strcmp(algoritmo,"BF") == 0){
+		algoritmoParticionLibre = BEST_FIT;
+	}else{
+		printf("Hubo un error al definir el algoritmo de particiones de memoria libres");
+	}
+}
+
+void definirAlgoritmoReemplazo(t_config* config){
+
+	//definirAlgoritmo(config, "ALGORITMO_REEMPLAZO", "FIFO", "LRU", FIFO, LRU, "Hubo un error al definir el algoritmo de particiones de memoria libres");
+
+
+	char* algoritmo = config_get_string_value(config, "ALGORITMO_REEMPLAZO");
+
+	if( strcmp(algoritmo,"FIFO") == 0){
+		algoritmoReemplazo = FIFO;
+	}else if(strcmp(algoritmo,"LRU") == 0){
+		algoritmoReemplazo = LRU;
+	}else{
+		printf("Hubo un error al definir el algoritmo de particiones de memoria libres");
+	}
+}
+
+/*oid definirAlgoritmo(t_config* config, char* configAtributo, char* OPCION1, char* OPCION2, uint32_t OP1, uint32_t OP2, char* error){
+	char* algoritmo = config_get_string_value(config, configAtributo);
+
+		if( strcmp(algoritmo, OPCION1) == 0){
+			VARIABLE = OP1;
+		}else if(strcmp(algoritmo, OPCION2) == 0){
+			VARIJABLE = OP1;
+		}else{
+			printf("%s", error);
+		}
+
+}*/
+
+

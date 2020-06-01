@@ -16,11 +16,17 @@
 #include<commons/log.h>
 #include <messages_lib/messages_lib.h>
 #include "log.h"
+#include "memoria.h"
 
 
 uint32_t puertoBroker;
 char* ipBroker;
 t_log* loggerBroker;
+uint32_t tamMemoria;
+uint32_t particionMimina;
+algoritmoMem algoritmoMemoria;
+algoritmoParticiones algoritmoParticionLibre;
+algoritmoReemp algoritmoReemplazo;
 
 typedef struct{
 	uint32_t cola;
@@ -33,13 +39,6 @@ typedef struct{
 	uint32_t contador;
 	pthread_mutex_t* mutexContador;
 }contadorMensajes;
-
-typedef struct {
-	uint32_t idMensaje;
-	uint32_t cola;
-	listaMutex* subsYaEnviado;
-	listaMutex* subsACK;
-}msgMemoriaBroker;
 
 typedef enum {
 	CONFIRMADO,
@@ -79,6 +78,10 @@ pthread_t devolverMensajeAppeared, devolverMensajeNew, devolverMensajeCaught,
 void iniciarHilos();
 void* iniciarCola(void*);
 void* iniciarServidor();
+void definirAlgoritmoMemoria(t_config*);
+void definirAlgoritmoParticionLibre(t_config*);
+void definirAlgoritmoReemplazo(t_config*);
+void definirAlgoritmo(t_config* config, char* configAtributo, char* OPCION1, char* OPCION2, uint32_t OP1, uint32_t OP2, char* error);
 
 void esperar_cliente(uint32_t);
 void asignarID(paquete * paq);

@@ -6,6 +6,10 @@
  */
 
 #include "broker.h"
+#include "memoria.h"
+
+
+
 
 /*msgMemoriaBroker* buscarMensajeEnMemoria(uint32_t idMensajeBuscado){ //ver que pasa si el mensaje no esta
 
@@ -30,7 +34,7 @@
 }*/
 
 
-/*void registrarMensajeEnMemoria(uint32_t idMensaje, paquete* paq){
+/*void registrarMensajeEnMemoria(uint32_t idMensaje, paquete* paq, ){
 
 	msgMemoriaBroker* msgNuevo = malloc(sizeof(msgMemoriaBroker));
 	msgNuevo->cola          = paq->tipoMensaje;
