@@ -29,7 +29,7 @@
     pthread_mutex_unlock(memoria.mutexMemoria);
 }*/
 
-/*void guardarSubEnMemoria(uint32_t idMensaje, uint32_t socket, ListasMemoria lista){
+void guardarSubEnMemoria(uint32_t idMensaje, uint32_t socket, ListasMemoria lista){
 	msgMemoriaBroker* mensaje = buscarMensajeEnMemoria(idMensaje);  //validar que pasa si ese mensaje no esta
 
 	if( lista == CONFIRMADO){
@@ -42,7 +42,7 @@
 		pthread_mutex_unlock(mutexMemoria);
 	}
 
-}*/
+}
 
 
 void registrarMensajeEnMemoria(uint32_t idMensaje, paquete* paq, algoritmoMem metodo){
@@ -73,27 +73,6 @@ void registrarMensajeEnMemoria(uint32_t idMensaje, paquete* paq, algoritmoMem me
 	free(msgNuevo);
 }
 
-
-/*void guardarSubEnMemoria(uint32_t idmensaje, uint32_t socket, uint32_t lista){
-	msgMemoriaBroker* mensaje = buscarMensajeEnMemoria(idmensaje); //validar que pasa si ese mensaje no esta
-
-	pthread_mutex_lock(mutexMemoria);
-	pushColaMutex(mensaje->subsYaEnviado, (void*) socket); //verificar que no esté ya en la cola
-	pthread_mutex_unlock(mutexMemoria);
-
-}*/
-
-//ESTA CREO QUE NO VA REPITE LOGICA
-
-/*void guardarConfirmacionEnMemoriaDe(paquete* paq, uint32_t socket){
-
-	msgMemoriaBroker* mensaje = buscarMensajeEnMemoria(paq->idCorrelativo); //validar que pasa si ese mensaje no esta
-
-	pthread_mutex_lock(memoria.mutexMemoria); //la estructura memoria va a tener ese contador
-	pushColaMutex(mensaje->subsACK, (void*) socket); //verificar que no esté ya en la cola
-	pthread_mutex_unlock(memoria.mutexMemoria);
-}*/
-
 void registrarEnMemoriaPARTICIONES(msgMemoriaBroker* mensajeNuevo){
 
 }
@@ -108,6 +87,17 @@ void registrarEnMemoriaBUDDYSYSTEM(msgMemoriaBroker* mensajeNuevo){
 	*/
 
 }
+
+/*void guardarConfirmacionEnMemoriaDe(paquete* paq, uint32_t socket){
+
+	msgMemoriaBroker* mensaje = buscarMensajeEnMemoria(paq->idCorrelativo); //validar que pasa si ese mensaje no esta
+
+	pthread_mutex_lock(memoria.mutexMemoria); //la estructura memoria va a tener ese contador
+	pushColaMutex(mensaje->subsACK, (void*) socket); //verificar que no esté ya en la cola
+	pthread_mutex_unlock(memoria.mutexMemoria);
+}*/
+
+
 
 nodoMemoria* crearRaizArbol(void){
 	nodoMemoria* nodoRaiz = malloc(sizeof(nodoMemoria));    //no estoy liberando malloc
