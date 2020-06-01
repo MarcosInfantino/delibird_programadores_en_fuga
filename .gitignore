@@ -36,6 +36,11 @@
 *.x86_64
 *.hex
 
+#Agrego tato
+*.bin
+*.makefile
+*.run
+
 # Debug files
 *.dSYM/
 *.su
