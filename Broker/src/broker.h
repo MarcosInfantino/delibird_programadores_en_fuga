@@ -28,6 +28,8 @@ algoritmoMem algoritmoMemoria;
 algoritmoParticiones algoritmoParticionLibre;
 algoritmoReemp algoritmoReemplazo;
 
+pthread_mutex_t* mutexMemoria;
+
 typedef struct{
 	uint32_t cola;
 	paquete paq;

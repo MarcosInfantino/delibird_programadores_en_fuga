@@ -201,7 +201,7 @@ void meterEnCola( colaMensajes* structCola, paquete * paq, uint32_t  socket){
 	send(socket,(void*)(&contador.contador),sizeof(uint32_t),0);
 	printf("Lo mete en la cola");
 
-	//registrarMensajeEnMemoria(contador.contador, &paq);
+	//registrarMensajeEnMemoria(contador.contador, &paq, );
 
 	contador.contador++;
 	pthread_mutex_unlock(contador.mutexContador);
@@ -303,6 +303,7 @@ void definirAlgoritmoMemoria(t_config* config){
 			algoritmoMemoria = PARTICIONES_DINAMICAS;
 		}else if(strcmp(algoritmo,"BS") == 0){
 			algoritmoMemoria = BUDDY_SYSTEM;
+			nodoRaizMemoria = crearRaizArbol(); //partición libre inicial
 		}else{
 			printf("Hubo un error al definir el algoritmo de memoria");
 		}
@@ -351,7 +352,7 @@ void definirAlgoritmoReemplazo(t_config* config){
 	}
 }
 
-/*oid definirAlgoritmo(t_config* config, char* configAtributo, char* OPCION1, char* OPCION2, uint32_t OP1, uint32_t OP2, char* error){
+/*void definirAlgoritmo(t_config* config, char* configAtributo, char* OPCION1, char* OPCION2, uint32_t OP1, uint32_t OP2, char* error){
 	char* algoritmo = config_get_string_value(config, configAtributo);
 
 		if( strcmp(algoritmo, OPCION1) == 0){
