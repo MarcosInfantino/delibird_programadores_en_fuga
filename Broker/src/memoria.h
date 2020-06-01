@@ -36,12 +36,12 @@ typedef struct{
 	uint32_t size;
 }nodeData;
 
-typedef struct {
+struct nodoMemoria {
 	nodeData header;
 	msgMemoriaBroker* mensaje;
 	struct nodoMemoria* hijoIzq;
 	struct nodoMemoria* hijoDer;
-}nodoMemoria;
+};
 
 typedef enum{
 	PARTICIONES_DINAMICAS,
@@ -58,7 +58,17 @@ typedef enum{
 	LRU
 }algoritmoReemp;
 
-nodoMemoria* nodoRaizMemoria; //no sé si va como puntero
+typedef struct{
+	t_config* config;
+	char* configAtributo;
+	char* OPCION1;
+	char* OPCION2;
+	uint32_t OP1;
+	uint32_t OP2;
+	char* error;
+} algoritmoParameter;
+
+struct nodoMemoria* nodoRaizMemoria; //no sé si va como puntero
 
 //void enviarMensajesPreviosEnMemoria(uint32_t socket,uint32_t identificadorCola);
 
@@ -66,10 +76,12 @@ void registrarMensajeEnMemoria(uint32_t idMensaje, paquete* paq, algoritmoMem me
 void registrarEnMemoriaPARTICIONES(msgMemoriaBroker*);
 void registrarEnMemoriaBUDDYSYSTEM(msgMemoriaBroker*);
 
+struct nodoMemoria* inicializarNodo();
+
 void guardarSubEnMemoria(uint32_t idmensaje, uint32_t socket, uint32_t lista);
 
-nodoMemoria* crearRaizArbol(void);
-void particionarMemoriaBUDDY(nodoMemoria*);
+struct nodoMemoria* crearRaizArbol(void);
+void particionarMemoriaBUDDY(struct nodoMemoria*);
 
 
 
