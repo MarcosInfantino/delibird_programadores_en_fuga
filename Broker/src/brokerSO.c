@@ -66,13 +66,6 @@ void* iniciarServidor(){
 	log_info(loggerBroker, "Estoy escuchando!");
 	printf("Estoy escuchando\n");
 
-
-//		struct sockaddr_in direccionCliente;
-//		unsigned int tamanioDireccion=sizeof(direccionCliente);
-//		int cliente = accept(servidor, (void*) &direccionCliente, &tamanioDireccion);
-
-	//abrirHiloParaEnviarMensajes();
-
 	while (1)  								//para recibir n conexiones
 		esperar_cliente(servidor);
 

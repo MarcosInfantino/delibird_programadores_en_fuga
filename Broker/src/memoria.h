@@ -60,6 +60,8 @@ typedef enum{
 
 nodoMemoria* nodoRaizMemoria; //no sé si va como puntero
 
+//void enviarMensajesPreviosEnMemoria(uint32_t socket,uint32_t identificadorCola);
+
 void registrarMensajeEnMemoria(uint32_t idMensaje, paquete* paq, algoritmoMem metodo);
 void registrarEnMemoriaPARTICIONES(msgMemoriaBroker*);
 void registrarEnMemoriaBUDDYSYSTEM(msgMemoriaBroker*);
@@ -68,6 +70,7 @@ void guardarSubEnMemoria(uint32_t idmensaje, uint32_t socket, uint32_t lista);
 
 nodoMemoria* crearRaizArbol(void);
 void particionarMemoriaBUDDY(nodoMemoria*);
+
 
 
 #endif /* MEMORIA_H_ */

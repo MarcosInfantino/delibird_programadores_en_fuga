@@ -94,7 +94,9 @@ void suscribir(colaMensajes * cola, paquete paq, uint32_t socket,uint32_t identi
 	if (validarParaSuscripcion(cola, paq, socket,identificadorCola)) { //si se puede suscribir y aun no esta en la cola
 		suscribirACola(&socket, cola);
 		responderMensaje(socket, CORRECTO);
-		//printf("suscripcion correcta\n");
+
+		//enviarMensajesPreviosEnMemoria(socket, identificadorCola);
+
 //		char * frase = armarStringSuscripLog(paq.modulo, paq.tipoMensaje);
 //		log_info(loggerBroker, frase);
 
