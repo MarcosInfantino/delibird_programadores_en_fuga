@@ -68,15 +68,12 @@ typedef struct{
 	uint32_t modulo;
 	uint32_t tipoMensaje;
 	uint32_t cola;
-
 }structSuscripcion;
 
 typedef struct{
 	uint32_t cantidad;
 	char* pokemon;
 } objetivo;
-
-
 
 typedef struct{
 	char* pokemon;

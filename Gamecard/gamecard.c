@@ -20,6 +20,7 @@
 uint32_t puertoBroker;
 char* ipBroker;
 uint32_t tiempoReconexion;
+uint32_t puertoGamecard = 5001;
 
 int main(void){
 	t_config * config = config_create("Gamecard.config");
@@ -138,4 +139,34 @@ void* suscribirseCola(void* msgSuscripcion){
 
 
 		return NULL;
+}
+
+int crearHiloServidorGameboy(pthread_t* hilo){
+	uint32_t err=pthread_create(hilo,NULL,iniciarServidorGameboy,NULL);
+					if(err!=0){
+						printf("Hubo un problema en la creación del hilo para iniciar el servidor para el Gameboy \n");
+						return err;
+					}
+
+		pthread_detach(*hilo);
+	return 0;
+}
+
+void* iniciarServidorGameboy(void* arg){
+		struct sockaddr_in direccionServidor;
+		direccionServidor.sin_family=AF_INET;
+		direccionServidor.sin_addr.s_addr=INADDR_ANY;
+		direccionServidor.sin_port=htons(puertoGamecard);
+
+		uint32_t servidor=socket(AF_INET,SOCK_STREAM,0);
+
+		if(bind(servidor, (void*) &direccionServidor, sizeof(direccionServidor))!=0){
+			perror("Falló el bind");
+
+		}else{
+		printf("Estoy escuchando\n");
+		while (1)  								//para recibir n cantidad de conexiones
+				esperar_cliente(servidor);
+		}
+	return NULL;
 }

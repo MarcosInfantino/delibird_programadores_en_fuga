@@ -5,18 +5,21 @@
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS += \
 ../src/Team.c \
+../src/deadlock.c \
 ../src/entrenadores.c \
 ../src/planificador.c \
 ../src/servidorGameboy.c 
 
 OBJS += \
 ./src/Team.o \
+./src/deadlock.o \
 ./src/entrenadores.o \
 ./src/planificador.o \
 ./src/servidorGameboy.o 
 
 C_DEPS += \
 ./src/Team.d \
+./src/deadlock.d \
 ./src/entrenadores.d \
 ./src/planificador.d \
 ./src/servidorGameboy.d 
