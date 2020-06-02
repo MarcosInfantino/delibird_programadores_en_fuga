@@ -47,7 +47,6 @@ typedef enum {
 	SUBSYAENVIADOS
 }ListasMemoria;
 
-
 //typedef struct {
 //	paquete paquete;
 //	colaMensajes structCola;
@@ -83,7 +82,7 @@ void* iniciarServidor();
 void definirAlgoritmoMemoria(t_config*);
 void definirAlgoritmoParticionLibre(t_config*);
 void definirAlgoritmoReemplazo(t_config*);
-void definirAlgoritmo(t_config* config, char* configAtributo, char* OPCION1, char* OPCION2, uint32_t OP1, uint32_t OP2, char* error);
+void definirAlgoritmo(algoritmoParameter , uint32_t);
 
 void esperar_cliente(uint32_t);
 void asignarID(paquete * paq);

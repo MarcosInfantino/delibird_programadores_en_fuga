@@ -29,7 +29,7 @@
     pthread_mutex_unlock(memoria.mutexMemoria);
 }*/
 
-void guardarSubEnMemoria(uint32_t idMensaje, uint32_t socket, ListasMemoria lista){
+/*void guardarSubEnMemoria(uint32_t idMensaje, uint32_t socket, ListasMemoria lista){
 	msgMemoriaBroker* mensaje = buscarMensajeEnMemoria(idMensaje);  //validar que pasa si ese mensaje no esta
 
 	if( lista == CONFIRMADO){
@@ -42,7 +42,7 @@ void guardarSubEnMemoria(uint32_t idMensaje, uint32_t socket, ListasMemoria list
 		pthread_mutex_unlock(mutexMemoria);
 	}
 
-}
+}*/
 
 
 void registrarMensajeEnMemoria(uint32_t idMensaje, paquete* paq, algoritmoMem metodo){
@@ -79,7 +79,7 @@ void registrarEnMemoriaPARTICIONES(msgMemoriaBroker* mensajeNuevo){
 
 void registrarEnMemoriaBUDDYSYSTEM(msgMemoriaBroker* mensajeNuevo){
 
-	//nodoRaizMemoria(varGlobal) VER CUANTO PESA EL MENSAJE Y VER SI LE CABE LA PARTICION O HAY QUE SEGUIR PARTICIONANDO
+	//nodoRaizMemoria(varGlobal) VER CUANTO PESA EL MENSAJE Y VER SI CABE EN LA PARTICION O HAY QUE SEGUIR PARTICIONANDO
 	/*voy a tener que chequear que no este PARTICIONADA La raiz, si no esta veo si al partirlo en dos y si sigue la particion
 	 * mas grande que el mensaje sigo partiendo hasta que no, cuando no haya que partir mas ahi guardo el mensaje.
 	 * si ya está particionada voy a ir al nodo hijo que este libre, si ninguno esta busco en todos los subhijos cual si y veo
@@ -99,31 +99,34 @@ void registrarEnMemoriaBUDDYSYSTEM(msgMemoriaBroker* mensajeNuevo){
 
 
 
-nodoMemoria* crearRaizArbol(void){
-	nodoMemoria* nodoRaiz = malloc(sizeof(nodoMemoria));    //no estoy liberando malloc
-
+struct nodoMemoria* crearRaizArbol(void){
+	struct nodoMemoria* nodoRaiz = inicializarNodo();    //no estoy liberando malloc
 	nodoRaiz->header.size   = tamMemoria;
 	nodoRaiz->header.status = LIBRE;
 
 	return nodoRaiz;
 }
 
-void particionarMemoriaBUDDY(nodoMemoria* particionActual){
-	nodoMemoria* nodoIz  = malloc(sizeof(nodoMemoria));     //no estoy liberando malloc
-	nodoMemoria* nodoDer = malloc(sizeof(nodoMemoria));
+struct nodoMemoria* inicializarNodo(){
+    struct nodoMemoria* nodo = malloc(sizeof(struct nodoMemoria));
+	nodo->hijoDer = malloc(sizeof(struct nodoMemoria));
+	nodo->hijoIzq = malloc(sizeof(struct nodoMemoria));
+	nodo->mensaje = malloc(sizeof(msgMemoriaBroker));
+	return nodo;
+}
 
+void particionarMemoriaBUDDY(struct nodoMemoria* particionActual){
+	particionActual->hijoIzq = inicializarNodo();
+	particionActual->hijoDer = inicializarNodo();
 	uint32_t tamanoHijos = (particionActual->header.size)/2;
 
-	nodoIz->header.status  = LIBRE;
-	nodoDer->header.status = LIBRE;
-	nodoIz->header.size    = tamanoHijos;
-	nodoDer->header.size   = tamanoHijos;
+	particionActual->hijoIzq->header.status  = LIBRE;
+	particionActual->hijoDer->header.status = LIBRE;
+	particionActual->hijoIzq->header.size    = tamanoHijos;
+	particionActual->hijoDer->header.size   = tamanoHijos;
 
 
 	particionActual->header.status = PARTICIONADO;
-	particionActual->hijoIzq = nodoIz;
-	particionActual->hijoDer = nodoDer;
-
 }
 
 /*bool sonBuddies(nodoMemoria* unNodo, nodoMemoria* otroNodo){
