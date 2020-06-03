@@ -15,15 +15,14 @@
 #include <commons/config.h>
 #include<commons/log.h>
 #include <messages_lib/messages_lib.h>
-#include "log.h"
 #include "memoria.h"
 
 
-uint32_t puertoBroker;
-char* ipBroker;
+uint32_t puerto_broker;
+char* ip_broker;
 t_log* loggerBroker;
 uint32_t tamMemoria;
-uint32_t particionMimina;
+uint32_t particionMinima;
 algoritmoMem algoritmoMemoria;
 algoritmoParticiones algoritmoParticionLibre;
 algoritmoReemp algoritmoReemplazo;

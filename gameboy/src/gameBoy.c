@@ -20,13 +20,13 @@
 #include <sys/types.h>
 #include <pthread.h>
 #include "gameBoy.h"
-#include "log.h"
 
 //\n
 
 int main(int argc, char* argv[]) {
-
-	gameboyLogger = iniciar_logger();
+	char* nombreLog = "gameboy.log";
+	char* nombreProg = "GAMEBOY";
+	gameboyLogger = iniciar_logger(nombreLog, nombreProg);
 
 	printf("Estoy andando\n");
 	log_info(gameboyLogger, "Arranco\n");
@@ -231,7 +231,7 @@ void* enviarMensajeSuscripcion(void* paqueteySocket){
 	}
 	paquete* paqueteRespuesta=recibirPaquete(paqueteConSocket->socketCliente);
 	while(paqueteRespuesta->tipoMensaje!=SUSCRIPCION_FINALIZADA){
-		loggearMensajeRecibido (paqueteRespuesta);
+		loggearMensaje(paqueteRespuesta, gameboyLogger);
 		destruirPaquete(paqueteRespuesta);
 		paqueteRespuesta=recibirPaquete(paqueteConSocket->socketCliente);
 	}

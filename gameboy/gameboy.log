@@ -566,3 +566,21 @@
 
 [INFO] 18:34:39:21 GAMEBOY/(8775:8781): Recibido correctamente: 1
 
+[INFO] 19:39:10:810 GAMEBOY/(17080:17080): Arranco
+
+[INFO] 19:39:11:42 GAMEBOY/(17080:17085): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 19:39:11:52 GAMEBOY/(17080:17085): Mensaje recibido incorrectamente, respuesta: 0
+
+[INFO] 19:40:32:831 GAMEBOY/(17621:17621): Arranco
+
+[INFO] 19:40:32:837 GAMEBOY/(17621:17627): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 19:40:32:841 GAMEBOY/(17621:17627): Mensaje fue recibido correctamente, respuesta: 1
+
+[INFO] 19:48:55:101 GAMEBOY/(18698:18698): Arranco
+
+[INFO] 19:48:55:105 GAMEBOY/(18698:18704): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 19:48:55:105 GAMEBOY/(18698:18704): Mensaje fue recibido correctamente, respuesta: 1
+

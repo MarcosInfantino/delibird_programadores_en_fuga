@@ -24,6 +24,7 @@
 #include <unistd.h>
 #include <semaphore.h>
 #include <arpa/inet.h>
+#include<commons/log.h>
 
 typedef struct{
 	int size;
@@ -273,5 +274,14 @@ void pushColaMutex(colaMutex* cola, void* infoEntrenador);
 void* popColaMutex(colaMutex* cola);
 uint32_t sizeColaMutex(colaMutex* cola);
 void destruirColaMutex(colaMutex* cola, void(*element_destroyer)(void*));
+
+t_log* iniciar_logger(char* file, char* program_name);
+void terminar_programa(t_log* logger, t_config* config);
+void loggearMensaje (paquete* paqueteRespuesta, t_log* logger);
+char* nombreDeProceso(uint32_t modulo);
+char* nombreDeCola(uint32_t cola);
+char* armarStringSuscripLog(uint32_t modulo, uint32_t cola);
+char* armarStringMsgNuevoLog(uint32_t cola);
+char* armarConexionNuevoProcesoLog(uint32_t modulo);
 
 #endif /* MESSAGES_LIB_H_ */

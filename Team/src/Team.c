@@ -82,7 +82,7 @@
 //
 
 
-dataTeam* team;
+//dataTeam* team;
 
 
 
@@ -113,6 +113,7 @@ dataTeam* team;
 //}
 
 int main(int argc , char* argv[]){
+	teamLogger = iniciar_logger("team.log", "TEAM");
 	//char pathConfig  = argv;
 	sem_init(&semaforoEjecucionCpu, 0,0);
 	entrenadoresLibres=inicializarListaMutex();
@@ -143,8 +144,8 @@ int main(int argc , char* argv[]){
 	arrayIdHilosEntrenadores  = malloc(cantEntrenadores*sizeof(pthread_t));
 	inicializarEntrenadores(team->entrenadores);
 
-//	pthread_t hiloEnviarGets;
-//	crearHiloParaEnviarGets(&hiloEnviarGets);
+	pthread_t hiloEnviarGets;
+	crearHiloParaEnviarGets(&hiloEnviarGets);
 
 	pthread_t hiloConexionInicialBroker;
 
@@ -165,8 +166,7 @@ int main(int argc , char* argv[]){
 	printf("Programa terminado: objetivo golbal cumplido\n");
 
 	//HACER DESTROY DE TODAS LAS LISTAS Y ESTRUCTURAS AL FINAL
-
-
+	terminar_programa(teamLogger, config);
 
 	return 0;
 }
@@ -184,7 +184,7 @@ void atenderAppeared(mensajeAppearedTeam* msg){
 	pokePosicion->pokemon=msg->pokemon;
 	(pokePosicion->posicion).x=msg->posX;
 	(pokePosicion->posicion).y=msg->posY;
-	free(msg);
+	destruirAppearedTeam(msg);
 	if(pokemonEsObjetivo(pokePosicion->pokemon)){
 		if(sizeListaMutex(entrenadoresLibres)>0){
 			seleccionarEntrenador(pokePosicion);
@@ -376,22 +376,27 @@ void* suscribirseCola(void* msgSuscripcion){
 	paquete* paq=llenarPaquete(TEAM,SUSCRIPCION,sizeStream, streamMsgSuscripcion);
 
 	struct sockaddr_in direccionServidor;
-		direccionServidor.sin_family      = AF_INET;
-		direccionServidor.sin_addr.s_addr = inet_addr(ipBroker);
-		direccionServidor.sin_port        = htons(puertoBroker);
+	direccionServidor.sin_family      = AF_INET;
+	direccionServidor.sin_addr.s_addr = inet_addr(ipBroker);
+	direccionServidor.sin_port        = htons(puertoBroker);
 
-		uint32_t cliente=socket(AF_INET,SOCK_STREAM,0);
-		printf("cliente: %d\n",cliente);
-		while(connect(cliente,(void*) &direccionServidor,sizeof(direccionServidor))<0){
-			printf("Conexión fallida con el Broker reintentando en %i segundos...\n",tiempoReconexion);
-			sleep(tiempoReconexion);
+	uint32_t cliente=socket(AF_INET,SOCK_STREAM,0);
+	printf("cliente: %d\n",cliente);
+	uint32_t resultadoConnect = connect(cliente,(void*) &direccionServidor,sizeof(direccionServidor));
+	while(resultadoConnect<0){
+		log_info(teamLogger, "Conexión fallida con el Broker\n");
+		log_info(teamLogger, "Reintentando conexión en %i segundos...\n",tiempoReconexion);
+		sleep(tiempoReconexion);
+		resultadoConnect=connect(cliente,(void*) &direccionServidor,sizeof(direccionServidor));
+		if(resultadoConnect<0){
+			log_info(teamLogger,"El reintento de conexión no fue exitoso\n");
+		}else{
+			log_info(teamLogger, "El reintento de conexión fue exitoso\n");
 		}
-
-
+	}
 
 	printf("Comienzo suscripcion\n");
 	uint32_t bytes = sizeof(uint32_t)*5+paq->sizeStream;
-
 
 	void* stream   = serializarPaquete(paq);
 
@@ -409,6 +414,7 @@ void* suscribirseCola(void* msgSuscripcion){
 			printf("Mensaje recibido correctamente\n");
 			while(1){
 				paquete* paqueteRespuesta=recibirPaquete(cliente);
+				loggearMensaje(paqueteRespuesta, teamLogger);
 				switch(paqueteRespuesta->tipoMensaje){
 					case APPEARED_POKEMON:;
 						mensajeAppearedTeam* msgAppeared=deserializarAppearedTeam(paqueteRespuesta->stream);
@@ -506,12 +512,12 @@ void* enviarGet(void* arg){
 }
 
 dataTeam* inicializarTeam(t_config* config){
-
 	dataTeam* infoTeam       = malloc(sizeof(dataTeam));
 	infoTeam->entrenadores   = list_create();
 	t_list* especiesObjetivo = list_create();
 	infoTeam->objetivoGlobal=inicializarListaMutex();
 	infoTeam->objetivosCumplidos = list_create();
+	infoTeam->cantidadCiclosCpuTotales=0;
 
 	char** arrayPosicionesEntrenadores=config_get_array_value(config,"POSICIONES_ENTRENADORES");
 	char** arrayPokemonesEntrenadores=config_get_array_value(config,"POKEMON_ENTRENADORES");
@@ -559,6 +565,7 @@ dataTeam* inicializarTeam(t_config* config){
 		infoEntrenador->estado			= NEW;
 		infoEntrenador->id				= id;
 		infoEntrenador->pokemonAAtrapar = NULL;
+		infoEntrenador->cantidadCiclosCpu = 0;
 		sem_init(&(infoEntrenador->semaforo), 0,0);
 		list_add(entrenadoresLibres->lista,(void*)infoEntrenador);
 		list_add(infoTeam->entrenadores,infoEntrenador);
@@ -684,5 +691,16 @@ t_list* obtenerListaDeListas(char** lst){
 	}
 	return lstDeLst;
 }
+
+void loggearPokemonAAtrapar(pokemonPosicion* pokePosicion, t_log* teamLogger){
+	log_info(teamLogger, "El pokemon a atrapar es: %s, y la posición es: (%i, %i)\n", pokePosicion->pokemon, (pokePosicion->posicion).x, (pokePosicion->posicion).y);
+}
+
+
+
+
+
+
+
 
 

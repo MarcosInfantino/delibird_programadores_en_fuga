@@ -14,6 +14,7 @@ C_SRCS += \
 ../messages_lib/getPokemonGamecard.c \
 ../messages_lib/listaMutex.c \
 ../messages_lib/localizedPokemon.c \
+../messages_lib/log.c \
 ../messages_lib/messages_lib.c \
 ../messages_lib/newPokemonBroker.c \
 ../messages_lib/newPokemonGamecard.c \
@@ -32,6 +33,7 @@ OBJS += \
 ./messages_lib/getPokemonGamecard.o \
 ./messages_lib/listaMutex.o \
 ./messages_lib/localizedPokemon.o \
+./messages_lib/log.o \
 ./messages_lib/messages_lib.o \
 ./messages_lib/newPokemonBroker.o \
 ./messages_lib/newPokemonGamecard.o \
@@ -50,6 +52,7 @@ C_DEPS += \
 ./messages_lib/getPokemonGamecard.d \
 ./messages_lib/listaMutex.d \
 ./messages_lib/localizedPokemon.d \
+./messages_lib/log.d \
 ./messages_lib/messages_lib.d \
 ./messages_lib/newPokemonBroker.d \
 ./messages_lib/newPokemonGamecard.d \

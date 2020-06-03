@@ -73,26 +73,22 @@ void replanificarEntrenador(dataEntrenador* entrenador){
 	}else{
 			if(cumplioObjetivo(entrenador)){
 							entrenador->estado=EXIT;
-							habilitarHiloEntrenador(entrenador->id);//preguntar si aca se mata el hilo
+							habilitarHiloEntrenador(entrenador->id); //preguntar si aca se mata el hilo
 							addListaMutex(entrenadoresExit, (void*)entrenador);
 
 						}else{
-							//DEADLOCK
+							//agregarEntrenadorLista(entrenador);
+							//intentarResolverDeadlock();
 						}
 	}
 }
 
 bool cumplioObjetivo(dataEntrenador* entrenador){
-	uint32_t i;
-	for(i=0;i<list_size(entrenador->objetivoPersonal);i++){
-		char* pokemon=list_get(entrenador->objetivoPersonal,i);
-		if(buscarMismoPokemon(entrenador->pokemones,pokemon)==-1)
-			return false;
-	}
-	return true;
+	return mismaListaPokemones(entrenador->objetivoPersonal, entrenador->pokemones);
 }
 
 void asignarPokemonAEntrenador(dataEntrenador* entrenador, pokemonPosicion* pokePosicion){
+	loggearPokemonAAtrapar(pokePosicion, teamLogger);
 	if(entrenador->pokemonAAtrapar!=NULL){
 		free(entrenador->pokemonAAtrapar);
 	}
@@ -127,16 +123,21 @@ void* ejecucionHiloEntrenador(void* argEntrenador){
 		sem_wait(semaforoEntrenador);
 		infoEntrenador->estado=READY;
 		poneteEnReady(infoEntrenador);
-
 		removeListaMutex(entrenadoresLibres,encontrarPosicionEntrenadorLibre(infoEntrenador));
-		entrarEnEjecucion(infoEntrenador);
-		//despues de esto enviaria el catch, recibe id y se pone en BLOCKED
-
+		entrarEnEjecucion(infoEntrenador); //despues de esto enviaria el catch, recibe id y se pone en BLOCKED
 		infoEntrenador->estado=BLOCKED;//IMPORTANTE: CUANDO LLEGUE LA RESPUESTA DEL CATCH SE TIENE QUE HACER UN UNLOCK AL ENTRENADOR CORRESPONDIENTE
 		sem_wait(semaforoEntrenador);// ESPERA A QUE EL TEAM LE AVISE QUE LLEGO LA RESPUESTA DEL POKEMON QUE QUISO ATRAPAR
 		//meter un if() para verificar estado y ver que hacer despues
-		if(infoEntrenador->estado==BLOCKED){
+		if(infoEntrenador->estado==BLOCKED && leFaltaCantidadDePokemones(infoEntrenador)){
 			addListaMutex(entrenadoresLibres, (void*)infoEntrenador);//vuelve a agregar al entrenador a la lista de entrenadores libres
+		}else if(entrenadorEnDeadlock(infoEntrenador)){
+			while(entrenadorEnDeadlock(infoEntrenador)){
+				sem_wait(semaforoEntrenador);
+				infoEntrenador->estado=READY;
+				poneteEnReady(infoEntrenador);
+				entrarEnEjecucionParaDeadlock(infoEntrenador);
+
+			}
 		}
 	}
 	return NULL;
@@ -148,6 +149,7 @@ void poneteEnReady(dataEntrenador* entrenador){
 			pushColaMutex(colaEjecucionFifo,(void*)entrenador);
 	}
 }
+
 uint32_t encontrarPosicionEntrenadorLibre(dataEntrenador* entrenador){
 	pthread_mutex_lock(entrenadoresLibres->mutex);
 	for(uint32_t i=0;i<list_size(entrenadoresLibres->lista);i++){
@@ -186,6 +188,13 @@ void moverEntrenadorAPosicion(dataEntrenador* entrenador, posicion pos){
 	uint32_t restaY=pos.y-(entrenador->posicion).y;
 	moverEntrenadorX(entrenador, restaX);
 	moverEntrenadorY(entrenador, restaY);
+	log_info(teamLogger, "El entrenador %i se movió a la posición (%i, %i)\n", entrenador->id, (entrenador->posicion).x, (entrenador->posicion).y);
+}
+
+void simularCicloCpu(uint32_t cantidadCiclos, dataEntrenador* entrenador){
+	sleep(retardoCicloCpu*cantidadCiclos);
+	entrenador->cantidadCiclosCpu += cantidadCiclos;
+	team->cantidadCiclosCpuTotales+=cantidadCiclos;
 }
 
 void moverEntrenadorX(dataEntrenador* entrenador, uint32_t movimientoX){
@@ -193,7 +202,7 @@ void moverEntrenadorX(dataEntrenador* entrenador, uint32_t movimientoX){
 	if(movimientoX!=0){
 			uint32_t unidad=movimientoX/abs(movimientoX);
 			for(uint32_t i=0;i< abs(movimientoX);i++){
-			sleep(retardoCicloCpu);
+				simularCicloCpu(1,entrenador);
 				(entrenador->posicion).x+=unidad;
 			}
 		}
@@ -203,7 +212,7 @@ void moverEntrenadorY(dataEntrenador* entrenador, uint32_t movimientoY){
 	if(movimientoY!=0){
 		uint32_t unidad=movimientoY/abs(movimientoY);
 		for(uint32_t i=0;i< abs(movimientoY);i++){
-		sleep(retardoCicloCpu);
+			simularCicloCpu(1,entrenador);
 			(entrenador->posicion).y+=unidad;
 		}
 	}

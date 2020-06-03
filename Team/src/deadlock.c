@@ -5,7 +5,6 @@
  *      Author: utnso
  */
 
-#include "deadlock.h"
 #include "Team.h"
 
 //Dado que el proceso Team conoce cuantos Pokemon de cada especie necesita globalmente,
@@ -18,33 +17,61 @@
 //la posición del primero para generar un “intercambio” (cada intercambio implica que cada entrenador
 //entregue un Pokémon al otro uno de ellos).
 
-//bool existeDeadlock (dataTeam* dataDelTeam){
-//	return (!objetivoCumplido(dataDelTeam) && sizeListaMutex(dataDelTeam->objetivoGlobal) == list_size(dataDelTeam->objetivosCumplidos));
-//}
-//
-//bool estaBloqueado(void* entrenador){
-//	dataEntrenador* entrenadorB = (dataEntrenador*) entrenador;
-//	return (entrenadorB->estado == BLOCKED);
-//}
-//
-//char* pokemonQueSobra (dataEntrenador* entrenador){
-//	saco el pokemon que no le pertenece
-//}
-//
-//char* pokemonQueFalta (dataEntrenador* entrenador){
-//	el pokemon que le falta
-//}
+bool mismaListaPokemones(t_list* listaPokemones1, t_list* listaPokemones2){
+	uint32_t i;
 
-void resolverDeadlock (dataTeam* dataDelTeam){
-//	t_list* entrenadoresEnDeadlock = list_create();
-//	entrenadoresEnDeadlock = list_filter(dataDelTeam->entrenadores, estaBloqueado()); filtro por entrenadores bloqueados.
-//	dataEntrenador* primerEntrenador = list_get(entrenadoresEnDeadlock, 0);
-//	me fijo el pokemon que no le pertenece, recorro la lista para ver a quien le falta ese pokemon, muevo al
-//	entrenador a esa posicion, intercambio pokemones.
-//	pongo a ese pokemon en exit. Me fijo si el primer pokemon puede estar en exit, si no, repito procedimiento.
-//	Todo esto en un while existeDeadlock
+	if(list_size(listaPokemones1) == list_size(listaPokemones2)){
+	t_list* copiaLista1 = list_duplicate(listaPokemones1);
+	for(i=0;i<list_size(listaPokemones2);i++){
+		char *pokemonAComparar = (char*) list_get(listaPokemones2,i);
+		uint32_t encontrado    = buscarMismoPokemon(copiaLista1,pokemonAComparar);
 
+		if(encontrado != -1){
+			list_remove(copiaLista1,encontrado);
+		}else{
+			return false;
+		}
+	}
+	}else{
+		return false;
+	}
+	return true;
 }
+
+bool entrenadorEnDeadlock(dataEntrenador* entrenador){ //para saber si un entrenador esta en deadlock
+	return(entrenador->estado == BLOCKED && !cumplioObjetivo(entrenador));
+}
+
+//t_list* pokemonQueSobra (dataEntrenador* entrenador){
+//
+//	return listaPoke;
+//}
+//
+//t_list* pokemonQueFalta (dataEntrenador* entrenador){
+//
+//	return listaPoke;
+//}
+
+void realizarIntercambio(){
+	//simularCicloCpu(5,entrenador1);
+	//simularCicloCpu(5,entrenador2);
+}
+
+void entrarEnEjecucionParaDeadlock(dataEntrenador* infoEntrenador){
+	sem_wait(&(infoEntrenador->semaforo));
+	infoEntrenador->estado = EXEC;
+	moverEntrenadorAPosicion(infoEntrenador, ((infoEntrenador->pokemonAAtrapar)->posicion));
+	sem_post(&semaforoEjecucionCpu);
+}
+
+
+
+
+
+
+
+
+
 
 
 

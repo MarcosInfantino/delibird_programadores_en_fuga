@@ -18,6 +18,8 @@
 #include <messages_lib/messages_lib.h>
 #include <semaphore.h>
 #include <arpa/inet.h>
+#include <stdbool.h>
+
 //void* especieAComparar;
 
 listaMutex* entrenadores;
@@ -28,6 +30,7 @@ listaMutex* listaIdsEntrenadorMensaje; // del tipo idsEntrenadorMensaje , //ver 
 listaMutex* entrenadoresLibres;
 colaMutex* pokemonesPendientes;//lista de pokePosicion que contiene los pokemones que no pudieron ser asignados a ningun entrenador por no haber entrenadore libres
 listaMutex* entrenadoresExit;
+
 //pokemonPosicion pokemonAAtrapar;
 
 
@@ -42,6 +45,7 @@ uint32_t algoritmoPlanificacion;
 
 sem_t semaforoEjecucionCpu;
 
+t_log* teamLogger;
 
 typedef enum {
 	NEW=1500,
@@ -82,12 +86,13 @@ typedef struct{
 
 typedef struct {
 	posicion posicion;
-	t_list* pokemones;
+	t_list* pokemones; //lista de strings
 	t_list* objetivoPersonal;//lista de strings
 	estado estado;
 	uint32_t id;
 	pokemonPosicion* pokemonAAtrapar;
 	sem_t semaforo;
+	uint32_t cantidadCiclosCpu;
 } dataEntrenador;
 
 typedef struct {
@@ -95,8 +100,10 @@ typedef struct {
 	t_list* entrenadores;
 	t_list* objetivosCumplidos;
 	//uint32_t** mapa;
-
+	uint32_t cantidadCiclosCpuTotales;
 }dataTeam;
+
+dataTeam* team;
 
 typedef struct{
 	uint32_t idEntrenador;
@@ -239,5 +246,11 @@ bool especieFueLocalizada(char* pokemon);
 void atenderLocalized(paquete* paquete);
 
 bool localizedMeInteresa(paquete* paquete);
+
+bool mismaListaPokemones(t_list* listaPokemones1, t_list* listaPokemones2);
+bool entrenadorEnDeadlock(dataEntrenador* entrenador);
+void entrarEnEjecucionParaDeadlock(dataEntrenador* infoEntrenador);
+
+void loggearPokemonAAtrapar(pokemonPosicion* pokePosicion, t_log* teamLogger);
 
 #endif /* TEAM_H_ */

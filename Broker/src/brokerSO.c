@@ -20,25 +20,30 @@
 #include <stdlib.h>
 #include <string.h>
 #include "broker.h"
-#include "log.h"
 #include "memoria.h"
 
 
 int main(void) {
 
+//	char* pathConfig = "broker.config";
+//	t_config* config = config_create(pathConfig);
+//
+//		puerto_broker     = config_get_int_value(config, "PUERTO_BROKER​");
+//		ip_broker         = config_get_string_value(config, "IP_BROKER");
+//		tamMemoria       = config_get_int_value(config, "TAMANO_MEMORIA");
+//		particionMinima  = config_get_int_value(config, "TAMANO_MINIMO_PARTICION");
 
-	char* pathConfig = "broker.config";
-	t_config* config = config_create(pathConfig);
+	puerto_broker = 5002;
+	ip_broker = "127.0.0.1";
+	tamMemoria = 2048;
+	particionMinima = 32;
 
-	puertoBroker     = config_get_int_value(config, "PUERTO_BROKER​");
-	ipBroker         = config_get_string_value(config, "IP_BROKER");
-	tamMemoria       = config_get_int_value(config, "TAMANO_MEMORIA");
-	particionMimina  = config_get_int_value(config, "TAMANO_MINIMO_PARTICION");
-
-	loggerBroker = iniciar_logger();
-	definirAlgoritmoMemoria(config);
-	definirAlgoritmoParticionLibre(config);
-	definirAlgoritmoReemplazo(config);
+	char* nombreLog = "logBroker.log";
+	char* programName = "BROKER";
+	loggerBroker = iniciar_logger(nombreLog, programName);
+//	definirAlgoritmoMemoria(config);
+//	definirAlgoritmoParticionLibre(config);
+//	definirAlgoritmoReemplazo(config);
 
 	iniciarHilos();
 	inicializarContador();

@@ -5,6 +5,7 @@
  *      Author: utnso
  */
 #include "Team.h"
+
 uint32_t crearHiloPlanificador(pthread_t* hiloPlanificador){
 	uint32_t err=pthread_create(hiloPlanificador,NULL,iniciarPlanificador,NULL);
 
@@ -35,7 +36,6 @@ void ejecucionPlanificadorFifo(){
 			sem_wait(&semaforoEjecucionCpu);
 			dataEntrenador* entrenadorAEjecutar=(dataEntrenador*)popColaMutex(colaEjecucionFifo);
 			sem_post(&(entrenadorAEjecutar->semaforo));
-
 		}
 	}
 }

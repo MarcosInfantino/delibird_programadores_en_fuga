@@ -1,5 +1,7 @@
 #include "Team.h"
+
 uint32_t puertoTeam=5003;
+
 int crearHiloServidorGameboy(pthread_t* hilo){
 	uint32_t err=pthread_create(hilo,NULL,iniciarServidorGameboy,NULL);
 					if(err!=0){
@@ -31,8 +33,6 @@ void* iniciarServidorGameboy(void* arg){
 				esperar_cliente(servidor);
 		}
 
-
-
 	return NULL;
 }
 
@@ -52,9 +52,9 @@ void esperar_cliente(uint32_t servidor) {
 }
 
 void* atenderCliente(void* sock){
-	printf("atiendo cliente\n");
+
 	uint32_t* socket = (uint32_t*) sock;
-	printf("hol lleguea\n");
+
 	paquete* paquete=recibirPaquete(*socket);
 	uint32_t respuesta=0;
 	if(paquete==NULL){
@@ -66,15 +66,13 @@ void* atenderCliente(void* sock){
 	send(*socket,(void*)(&respuesta),sizeof(uint32_t),0);
 	free(socket);
 
-	printf("hice el send: %i\n",respuesta);
-	printf("recibi: %i\n", paquete->sizeStream);
+	loggearMensaje(paquete, teamLogger);
 	switch(paquete->tipoMensaje){
 		case APPEARED_POKEMON:;
-			printf("deserializado\n");mensajeAppearedTeam* msg=deserializarAppearedTeam(paquete->stream);
-			//destruirPaquete(paquete);
-
-			printf("leyo bien\n");atenderAppeared(msg); ;break;
-		default: printf("leyo cualquiera\n"); break;
+			mensajeAppearedTeam* msg=deserializarAppearedTeam(paquete->stream);
+			destruirPaquete(paquete);
+			atenderAppeared(msg); ;break;
+		default: break;
 	}
 
 

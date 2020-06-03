@@ -14,7 +14,6 @@
 #include <commons/config.h>
 #include <commons/log.h>
 #include <messages_lib/messages_lib.h>
-#include "log.h"
 
 //si no toma esto, poner SRC_ en el define
 

@@ -12,6 +12,8 @@
 #include<commons/config.h>
 #include <messages_lib/messages_lib.h>
 
+t_log* gameboyLogger;
+
 typedef struct{
 	void * paqueteAEnviar;
 	uint32_t socketCliente;
