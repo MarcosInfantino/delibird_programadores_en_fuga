@@ -86,90 +86,87 @@
 
 
 
-//int main(){
-//	//mensajeLocalized* llenarMensajeLocalized(uint32_t sizePokemon, char* pokemon, uint32_t cantidad, posicion* posiciones)
-//
-//
-//	char* pokemon="Pikachu";
-//	uint32_t cantidad=2;
-//	posicion* posiciones=malloc(sizeof(posicion)*2);
-//	posicion pos1={1,0};
-//	posicion pos2={0,0};
-//	*(posiciones)=pos1;
-//	*(posiciones+1)=pos2;
-//
-//	mensajeLocalized* msg= llenarMensajeLocalized(pokemon,cantidad,posiciones);
-//	void* stream= serializarLocalized(msg);
-//	mensajeLocalized* msgResultado=deserializarLocalized(stream);
-//	printf("sizePokemon: %i\n", msgResultado->sizePokemon);
-//	printf("pokemon: %s\n", msgResultado->pokemon);
-//	printf("cantidad: %i\n", msgResultado->cantidad);
-//	printf("posx1: %i\n", (msgResultado->arrayPosiciones)->x);
-//	printf("posy1: %i\n", (msgResultado->arrayPosiciones)->y);
-//	printf("posx2: %i\n", ((msgResultado->arrayPosiciones) +1)->x);
-//	printf("posy2: %i\n", ((msgResultado->arrayPosiciones) +1)->y);
-//
-//	return 0;
-//}
+int main(){
+	//mensajeLocalized* llenarMensajeLocalized(uint32_t sizePokemon, char* pokemon, uint32_t cantidad, posicion* posiciones)
 
-int main(int argc , char* argv[]){
-	teamLogger = iniciar_logger("team.log", "TEAM");
-	//char pathConfig  = argv;
-	sem_init(&semaforoEjecucionCpu, 0,0);
-	entrenadoresLibres=inicializarListaMutex();
-	colaEjecucionFifo=inicializarColaMutex();
-	pokemonesPendientes=inicializarColaMutex();
-	listaIdsEntrenadorMensaje=inicializarListaMutex();
-	entrenadores=inicializarListaMutex();
-	especiesLocalizadas=inicializarListaMutex();
-	entrenadoresExit=inicializarListaMutex();
-	listaIdsRespuestasGet=inicializarListaMutex();
-	char* pathConfig   = "Team2.config";
-	t_config* config   = config_create(pathConfig);
-	retardoCicloCpu    = config_get_int_value(config,"RETARDO_CICLO_CPU");
-	puertoBroker       = config_get_int_value(config,"PUERTO_BROKER");
-	ipBroker           = config_get_string_value(config,"IP_BROKER");
-	obtenerAlgoritmoPlanificacion(config);
-	//printf("hola\n");
+	t_log* logPrueba=iniciar_logger("pruebaLocalized.log", "TEAM");
+	char* pokemon="Pikachu";
+	uint32_t cantidad=2;
+	posicion* posiciones=malloc(sizeof(posicion)*2);
+	posicion pos1={1,0};
+	posicion pos2={0,0};
+	*(posiciones)=pos1;
+	*(posiciones+1)=pos2;
 
-	team     = inicializarTeam(config);
-	//printf("hola2\n");
-	printf("%s\n", ((objetivo*)getListaMutex(team->objetivoGlobal,2))->pokemon);
-	entrenadores->lista       = team->entrenadores;
-	//entrenadoresLibres=entrenadores;
-
-	//mutexEntrenadores=inicializarMutexEntrenadores();
-	uint32_t cantEntrenadores = list_size(team->entrenadores);
-
-	arrayIdHilosEntrenadores  = malloc(cantEntrenadores*sizeof(pthread_t));
-	inicializarEntrenadores(team->entrenadores);
-
-	pthread_t hiloEnviarGets;
-	crearHiloParaEnviarGets(&hiloEnviarGets);
-
-	pthread_t hiloConexionInicialBroker;
-
-	crearHiloConexionColasBroker((void*)config,&hiloConexionInicialBroker);
-
-	pthread_t hiloServidorGameboy;
-	crearHiloServidorGameboy(&hiloServidorGameboy);
-
-	pthread_t hiloPlanificador;
-	crearHiloPlanificador(&hiloPlanificador);
-
-	posicion pos = {1,2};
-
-	printf("id entrenador mas cercano: %i\n", obtenerIdEntrenadorMasCercano(pos));
-
-	while(!objetivoCumplido());
-
-	printf("Programa terminado: objetivo golbal cumplido\n");
-
-	//HACER DESTROY DE TODAS LAS LISTAS Y ESTRUCTURAS AL FINAL
-	terminar_programa(teamLogger, config);
+	mensajeLocalized* msg= llenarLocalized(pokemon,cantidad,posiciones);
+	void* stream= serializarLocalized(msg);
+	//mensajeLocalized* msgResultado=deserializarLocalized(stream);
+	paquete* paq=llenarPaquete(TEAM,LOCALIZED_POKEMON,sizeArgumentos(LOCALIZED_POKEMON, msg->pokemon,msg->cantidad),stream);
+	loggearMensaje( paq, logPrueba);
+	destruirLocalized(msg);
 
 	return 0;
 }
+
+
+//int main(int argc , char* argv[]){
+//	teamLogger = iniciar_logger("team.log", "TEAM");
+//	//char pathConfig  = argv;
+//	sem_init(&semaforoEjecucionCpu, 0,0);
+//	entrenadoresLibres=inicializarListaMutex();
+//	colaEjecucionFifo=inicializarColaMutex();
+//	pokemonesPendientes=inicializarColaMutex();
+//	listaIdsEntrenadorMensaje=inicializarListaMutex();
+//	entrenadores=inicializarListaMutex();
+//	especiesLocalizadas=inicializarListaMutex();
+//	entrenadoresExit=inicializarListaMutex();
+//	listaIdsRespuestasGet=inicializarListaMutex();
+//	char* pathConfig   = "Team2.config";
+//	t_config* config   = config_create(pathConfig);
+//	retardoCicloCpu    = config_get_int_value(config,"RETARDO_CICLO_CPU");
+//	puertoBroker       = config_get_int_value(config,"PUERTO_BROKER");
+//	ipBroker           = config_get_string_value(config,"IP_BROKER");
+//	obtenerAlgoritmoPlanificacion(config);
+//	//printf("hola\n");
+//
+//	team     = inicializarTeam(config);
+//	//printf("hola2\n");
+//	printf("%s\n", ((objetivo*)getListaMutex(team->objetivoGlobal,2))->pokemon);
+//	entrenadores->lista       = team->entrenadores;
+//	//entrenadoresLibres=entrenadores;
+//
+//	//mutexEntrenadores=inicializarMutexEntrenadores();
+//	uint32_t cantEntrenadores = list_size(team->entrenadores);
+//
+//	arrayIdHilosEntrenadores  = malloc(cantEntrenadores*sizeof(pthread_t));
+//	inicializarEntrenadores(team->entrenadores);
+//
+//	pthread_t hiloEnviarGets;
+//	crearHiloParaEnviarGets(&hiloEnviarGets);
+//
+//	pthread_t hiloConexionInicialBroker;
+//
+//	crearHiloConexionColasBroker((void*)config,&hiloConexionInicialBroker);
+//
+//	pthread_t hiloServidorGameboy;
+//	crearHiloServidorGameboy(&hiloServidorGameboy);
+//
+//	pthread_t hiloPlanificador;
+//	crearHiloPlanificador(&hiloPlanificador);
+//
+//	posicion pos = {1,2};
+//
+//	printf("id entrenador mas cercano: %i\n", obtenerIdEntrenadorMasCercano(pos));
+//
+//	while(!objetivoCumplido());
+//
+//	printf("Programa terminado: objetivo golbal cumplido\n");
+//
+//	//HACER DESTROY DE TODAS LAS LISTAS Y ESTRUCTURAS AL FINAL
+//	terminar_programa(teamLogger, config);
+//
+//	return 0;
+//}
 
 
 
@@ -178,13 +175,13 @@ bool objetivoCumplido(){
 }
 
 
-void atenderAppeared(mensajeAppearedTeam* msg){
+void atenderAppeared(mensajeAppeared* msg){
 	pokemonPosicion* pokePosicion=malloc(sizeof(pokemonPosicion));
 	addListaMutex(especiesLocalizadas,(void*)(msg->pokemon));
 	pokePosicion->pokemon=msg->pokemon;
 	(pokePosicion->posicion).x=msg->posX;
 	(pokePosicion->posicion).y=msg->posY;
-	destruirAppearedTeam(msg);
+	destruirAppeared(msg);
 	if(pokemonEsObjetivo(pokePosicion->pokemon)){
 		if(sizeListaMutex(entrenadoresLibres)>0){
 			seleccionarEntrenador(pokePosicion);
@@ -200,7 +197,7 @@ void atenderLocalized(paquete* paquete){
 		uint32_t i;
 		for(i=0;i<msg->cantidad;i++){
 			posicion posActual= *((msg->arrayPosiciones)+i);
-			mensajeAppearedTeam* msgAppeared=llenarMensajeAppearedTeam(msg->pokemon,posActual.x,posActual.y);
+			mensajeAppeared* msgAppeared=llenarAppeared(msg->pokemon,posActual.x,posActual.y);
 			atenderAppeared(msgAppeared);
 		}
 	}
@@ -305,64 +302,31 @@ void* enviarGets(void* arg){
 	}
 	return NULL;
 }
-//llenarPaquete( uint32_t modulo,uint32_t tipoMensaje, uint32_t sizeStream,void* stream)
+
 void* suscribirseColasBroker(void* conf){
 
 	t_config* config=(t_config*) conf;
 	tiempoReconexion =config_get_int_value(config, "TIEMPO_RECONEXION");
 
-
-
-
-	//uint32_t sizeStream=sizeof(uint32_t);
-
-	mensajeSuscripcion* mensajeAppeared=malloc(sizeof(mensajeSuscripcion));
-	mensajeSuscripcion * mensajeCaught=malloc(sizeof(mensajeSuscripcion));
-	mensajeSuscripcion* mensajeLocalized=malloc(sizeof(mensajeSuscripcion));
-
-	mensajeAppeared->cola  = APPEARED_POKEMON;
-
-	mensajeCaught ->cola   = CAUGHT_POKEMON;
-
-	mensajeLocalized->cola = LOCALIZED_POKEMON;
-
-//	void* streamAppeared=serializarSuscripcion(&mensajeAppeared);
-//	void* streamCaught=serializarSuscripcion(&mensajeCaught);
-//	void* streamLocalized=serializarSuscripcion(&mensajeLocalized);
-//
-//
-//
-//	paquete* suscripcionAppeared  = llenarPaquete(TEAM,SUSCRIPCION,sizeStream, streamAppeared);
-//	paquete* suscripcionCaught    = llenarPaquete(TEAM,SUSCRIPCION,sizeStream, streamCaught);
-//	paquete* suscripcionLocalized = llenarPaquete(TEAM,SUSCRIPCION,sizeStream, streamLocalized);
-	//suscribirseCola(NULL);
-
-
+	mensajeSuscripcion* mensajeSuscripcionAppeared=llenarSuscripcion(APPEARED_POKEMON);
+	mensajeSuscripcion * mensajeSuscripcionCaught=llenarSuscripcion(CAUGHT_POKEMON);
+	mensajeSuscripcion* mensajeSuscripcionLocalized=llenarSuscripcion(LOCALIZED_POKEMON);
 
 	pthread_t threadSuscripcionAppeared;
-	pthread_create(&threadSuscripcionAppeared, NULL, suscribirseCola, (void*)(mensajeAppeared));
-
+	pthread_create(&threadSuscripcionAppeared, NULL, suscribirseCola, (void*)(mensajeSuscripcionAppeared));
 	pthread_detach(threadSuscripcionAppeared);
 
-	pthread_t threadSuscripcionAppeared1;
-	//sleep(4);
-	pthread_create(&threadSuscripcionAppeared1, NULL, suscribirseCola, (void*)(mensajeCaught));
+	pthread_t threadSuscripcionLocalized;
+	pthread_create(&threadSuscripcionLocalized, NULL, suscribirseCola,(void*) (mensajeSuscripcionLocalized));
+	pthread_detach(threadSuscripcionLocalized);
 
-	pthread_detach(threadSuscripcionAppeared1);
-//	pthread_t threadSuscripcionLocalized;
-//	pthread_create(&threadSuscripcionLocalized, NULL, suscribirseCola,(void*) (suscripcionLocalized));
-//	pthread_detach(threadSuscripcionLocalized);
-	//sleep(4);
 	pthread_t threadSuscripcionCaught;
-	pthread_create(&threadSuscripcionCaught, NULL, suscribirseCola, (void*)(mensajeCaught));
+	pthread_create(&threadSuscripcionCaught, NULL, suscribirseCola, (void*)(mensajeSuscripcionCaught));
 	pthread_detach(threadSuscripcionCaught);
 
 	while(1);
 
-//	free(suscripcionAppeared);
-//	free(suscripcionLocalized);
-//	free(suscripcionCaught);
-	free(conf);
+
 	return NULL;
 }
 
@@ -372,7 +336,7 @@ void* suscribirseCola(void* msgSuscripcion){
 	mensajeSuscripcion* msg=(mensajeSuscripcion*)msgSuscripcion;
 	uint32_t sizeStream=sizeof(uint32_t);
 	void* streamMsgSuscripcion=serializarSuscripcion(msg);
-	//free(msg);
+	destruirSuscripcion(msg);
 	paquete* paq=llenarPaquete(TEAM,SUSCRIPCION,sizeStream, streamMsgSuscripcion);
 
 	struct sockaddr_in direccionServidor;
@@ -381,8 +345,8 @@ void* suscribirseCola(void* msgSuscripcion){
 	direccionServidor.sin_port        = htons(puertoBroker);
 
 	uint32_t cliente=socket(AF_INET,SOCK_STREAM,0);
-	printf("cliente: %d\n",cliente);
 	uint32_t resultadoConnect = connect(cliente,(void*) &direccionServidor,sizeof(direccionServidor));
+
 	while(resultadoConnect<0){
 		log_info(teamLogger, "Conexión fallida con el Broker\n");
 		log_info(teamLogger, "Reintentando conexión en %i segundos...\n",tiempoReconexion);
@@ -395,47 +359,52 @@ void* suscribirseCola(void* msgSuscripcion){
 		}
 	}
 
-	printf("Comienzo suscripcion\n");
 	uint32_t bytes = sizeof(uint32_t)*5+paq->sizeStream;
 
 	void* stream   = serializarPaquete(paq);
 
 	send(cliente,stream,bytes,0);
 
-	//free(stream);
 
-	//destruirPaquete(paq);
+
+	destruirPaquete(paq);
+	free(stream);
 
 	uint32_t respuesta = -1;
-	printf("Espero respuesta\n");
+
 	recv(cliente,&respuesta,sizeof(uint32_t),0);
 
 		if(respuesta == CORRECTO){
 			printf("Mensaje recibido correctamente\n");
 			while(1){
+
+
 				paquete* paqueteRespuesta=recibirPaquete(cliente);
 				loggearMensaje(paqueteRespuesta, teamLogger);
 				switch(paqueteRespuesta->tipoMensaje){
 					case APPEARED_POKEMON:;
-						mensajeAppearedTeam* msgAppeared=deserializarAppearedTeam(paqueteRespuesta->stream);
-						//destruirPaquete(paqueteRespuesta);
+						mensajeAppeared* msgAppeared=deserializarAppeared(paqueteRespuesta->stream);
+						destruirPaquete(paqueteRespuesta);
 						atenderAppeared(msgAppeared);
-						//free(msgAppeared);
+
 						break;
 					case LOCALIZED_POKEMON:
-						//destruirPaquete(paqueteRespuesta);//recordar destruir el paquete
+						atenderLocalized(paqueteRespuesta);
+						destruirPaquete(paqueteRespuesta);//recordar destruir el paquete
 						break;
 					case CAUGHT_POKEMON:
 						atenderCaught(paqueteRespuesta);
-						//destruirPaquete(paqueteRespuesta);
+						destruirPaquete(paqueteRespuesta);
 						break;
 					default: break; //esto no puede pasar
+
+
 				}
 			}
 
 		}else{
-			printf("Mensaje recibido incorrectamente\n");
-			//printf("mensaje: %i\n", respuesta);
+			//printf("Mensaje recibido incorrectamente\n");
+
 
 		}
 
@@ -451,15 +420,12 @@ void* suscribirseCola(void* msgSuscripcion){
 //llenarPaquete( uint32_t modulo,uint32_t tipoMensaje, uint32_t sizeStream,void* stream)
 void enviarCatch(dataEntrenador* infoEntrenador){
 	uint32_t cliente=crearSocketCliente(ipBroker,puertoBroker);
-	mensajeCatchBroker* msgCatch=malloc(sizeof(mensajeCatchBroker));
-	msgCatch->pokemon=infoEntrenador->pokemonAAtrapar->pokemon;
-	msgCatch->posX=(infoEntrenador->pokemonAAtrapar->posicion).x;
-	msgCatch->posY=(infoEntrenador->pokemonAAtrapar->posicion).y;
-	msgCatch->sizePokemon=strlen(msgCatch->pokemon)+1;
-	void* streamMsg=serializarCatchBroker(msgCatch);
-	paquete* paq=llenarPaquete(TEAM,CATCH_POKEMON,   sizeArgumentos(CATCH_POKEMON,msgCatch->pokemon,BROKER)  , streamMsg);
+
+	mensajeCatch* msgCatch=llenarCatch(infoEntrenador->pokemonAAtrapar->pokemon, (infoEntrenador->pokemonAAtrapar->posicion).x,(infoEntrenador->pokemonAAtrapar->posicion).y);
+	void* streamMsg=serializarCatch(msgCatch);
+	paquete* paq=llenarPaquete(TEAM,CATCH_POKEMON,   sizeArgumentos(CATCH_POKEMON,msgCatch->pokemon,1)  , streamMsg);
 	void* paqueteSerializado=serializarPaquete(paq);
-	free(msgCatch);
+	destruirCatch(msgCatch);
 	//destruirPaquete(paq);
 	send(cliente,paqueteSerializado, sizePaquete(paq), 0);
 	free(paqueteSerializado);
@@ -487,9 +453,9 @@ void* enviarGet(void* arg){
 	char* pokemon=(char*) arg;
 	uint32_t cliente=crearSocketCliente(ipBroker,puertoBroker);
 	if(cliente!=-1){//se pudo conectar
-	mensajeGetBroker* msg=llenarMensajeGetBroker(pokemon);
-	void* stream=serializarGetBroker(msg);
-	paquete* paq=llenarPaquete(TEAM, GET_POKEMON,sizeArgumentos(GET_POKEMON,msg->pokemon,BROKER),stream);
+	mensajeGet* msg=llenarGet(pokemon);
+	void* stream=serializarGet(msg);
+	paquete* paq=llenarPaquete(TEAM, GET_POKEMON,sizeArgumentos(GET_POKEMON,msg->pokemon,1),stream);
 	void* paqueteSerializado=serializarPaquete(paq);
 	// hacer destroy para el msg
 	send(cliente,paqueteSerializado, sizePaquete(paq), 0);

@@ -28,7 +28,6 @@ int main(int argc, char* argv[]) {
 	char* nombreProg = "GAMEBOY";
 	gameboyLogger = iniciar_logger(nombreLog, nombreProg);
 
-	printf("Estoy andando\n");
 	log_info(gameboyLogger, "Arranco\n");
 	t_config * config = config_create("gameBoy1.config");
 	void* stream;
@@ -38,9 +37,7 @@ int main(int argc, char* argv[]) {
 
 	if(strcmp(argv[1], "SUSCRIPTOR") == 0){
 		procesoDestinatario 					= BROKER;
-		mensajeSuscripcionTiempo* mensajeEnviar = malloc(sizeof(mensajeSuscripcionTiempo));
-		mensajeEnviar->cola 					= colaMensaje;
-		mensajeEnviar->tiempo					= atoi(argv[3]);
+		mensajeSuscripcionTiempo* mensajeEnviar = llenarSuscripcionTiempo(colaMensaje, atoi(argv[3]));
 		stream 									= serializarSuscripcionTiempo(mensajeEnviar);
 		destruirSuscripcionTiempo(mensajeEnviar);
 		sizeStream								= sizeof(uint32_t)*2;
@@ -48,8 +45,10 @@ int main(int argc, char* argv[]) {
 	}else{
 		procesoDestinatario = obtenerNombreProceso(argv[1]);
 		stream 				= generarStreamArgumentos(colaMensaje, argv);
-		sizeStream 			= sizeArgumentos (colaMensaje, argv[3], procesoDestinatario);
+		sizeStream 			= sizeArgumentos (colaMensaje, argv[3],1);
 		paquete				= llenarPaquete(GAMEBOY, colaMensaje, sizeStream, stream);
+		asignarIds(argv,procesoDestinatario,paquete);
+
 		}
 
 	char* ipProcesoDestinatario        = obtenerIpProceso (procesoDestinatario, config);
@@ -62,66 +61,81 @@ int main(int argc, char* argv[]) {
 	return EXIT_SUCCESS;
 }
 
+void asignarIds(char * argv[], uint32_t proceso, paquete* paq){
+
+	switch(paq->tipoMensaje){
+		case APPEARED_POKEMON:
+			if(proceso==BROKER){
+				insertarIdCorrelativoPaquete(paq,atoi(argv[6]));
+			}
+			break;
+		case CAUGHT_POKEMON:
+			if(proceso==BROKER){
+				insertarIdCorrelativoPaquete(paq,atoi(argv[3]));
+			}
+			break;
+		case CATCH_POKEMON:
+			if(proceso==GAMECARD){
+				insertarIdPaquete(paq, atoi(argv[6]));
+			}
+			break;
+		case NEW_POKEMON:
+			if(proceso==GAMECARD){
+				insertarIdPaquete(paq, atoi(argv[7]));
+			}
+			break;
+		case GET_POKEMON:
+			if(proceso==GAMECARD){
+				insertarIdPaquete(paq, atoi(argv[4]));
+			}
+			break;
+		default:break;
+
+	}
+
+}
 void* generarStreamArgumentos (uint32_t colaMensaje, char* argv[]){
 	void* streamArgumentos;
-	uint32_t procesoDestinatario = obtenerNombreProceso(argv[1]);
+
 	switch(colaMensaje){
-		case APPEARED_POKEMON:
-			if(procesoDestinatario == BROKER){
-				mensajeAppearedBroker* mensajeEnviar = llenarMensajeAppearedBroker(argv[3], atoi(argv[4]), atoi(argv[5]), atoi(argv[6]));
-				streamArgumentos = serializarAppearedBroker(mensajeEnviar);
-				destruirAppearedBroker(mensajeEnviar);
+		case APPEARED_POKEMON:;
 
-			}else if (procesoDestinatario == TEAM){
-				mensajeAppearedTeam* mensajeEnviar = llenarMensajeAppearedTeam(argv[3], atoi(argv[4]), atoi(argv[5]));
-				streamArgumentos = serializarAppearedTeam(mensajeEnviar);
-				destruirAppearedTeam(mensajeEnviar);
-			}
+				mensajeAppeared* mensajeEnviarAppeared = llenarAppeared(argv[3], atoi(argv[4]), atoi(argv[5]));
+				streamArgumentos = serializarAppeared(mensajeEnviarAppeared);
+				destruirAppeared(mensajeEnviarAppeared);
+
 			break;
 
-		case NEW_POKEMON:
-			if(procesoDestinatario == BROKER){
-				mensajeNewBroker* mensajeEnviar = llenarMensajeNewBroker(argv[3], atoi(argv[4]), atoi(argv[5]), atoi(argv[6]));
-				streamArgumentos = serializarNewBroker(mensajeEnviar);
-				destruirNewBroker(mensajeEnviar);
+		case NEW_POKEMON: ;
 
-			}else if (procesoDestinatario == GAMECARD){
-				mensajeNewGamecard* mensajeEnviar= llenarMensajeNewGameCard(argv[3], atoi(argv[4]), atoi(argv[5]), atoi(argv[6]), atoi(argv[6]));
-				streamArgumentos = serializarNewGamecard(mensajeEnviar);
-				destruirNewGamecard(mensajeEnviar);
-			}
+				mensajeNew* mensajeEnviarNew = llenarNew(argv[3], atoi(argv[4]), atoi(argv[5]), atoi(argv[6]));
+				streamArgumentos = serializarNew(mensajeEnviarNew);
+				destruirNew(mensajeEnviarNew);
+
+
 			break;
 
-		case CATCH_POKEMON:
-			if(procesoDestinatario == BROKER){
-				mensajeCatchBroker* mensajeEnviar = llenarMensajeCatchBroker(argv[3], atoi(argv[4]), atoi(argv[5]));
-				streamArgumentos = serializarCatchBroker(mensajeEnviar);
-				destruirCatchBroker(mensajeEnviar);
+		case CATCH_POKEMON: ;
+				mensajeCatch* mensajeEnviarCatch = llenarCatch(argv[3], atoi(argv[4]), atoi(argv[5]));
+				streamArgumentos = serializarCatch(mensajeEnviarCatch);
+				destruirCatch(mensajeEnviarCatch);
 
-			}else if(procesoDestinatario == GAMECARD){
-				mensajeCatchGamecard* mensajeEnviarCatch = llenarMensajeCatchGamecard(argv[3], atoi(argv[4]), atoi(argv[5]), atoi(argv[6]));
-				streamArgumentos = serializarCatchGamecard(mensajeEnviarCatch);
-				destruirCatchGamecard(mensajeEnviarCatch);
-			}
+
 			break;
 
 		case CAUGHT_POKEMON: ;
-			mensajeCaught* mensajeEnviarCaught = llenarMensajeCaught(atoi(argv[3]), atoi(argv[4]));
+			mensajeCaught* mensajeEnviarCaught = llenarCaught(atoi(argv[4]));
 			streamArgumentos = serializarCaught(mensajeEnviarCaught);
 			destruirCaught(mensajeEnviarCaught);
 			break;
 
-		case GET_POKEMON:
-			if(procesoDestinatario == BROKER){
-				mensajeGetBroker* mensajeEnviarGetBroker = llenarMensajeGetBroker(argv[3]);
-				streamArgumentos 					= serializarGetBroker(mensajeEnviarGetBroker);
-				destruirGetBroker(mensajeEnviarGetBroker);
+		case GET_POKEMON:;
 
-			}else if(procesoDestinatario == GAMECARD){
-				mensajeGetGamecard* mensajeEnviarGetGamecard = llenarMensajeGetGamecard(argv[3], atoi(argv[4]));
-				streamArgumentos = serializarGetGamecard (mensajeEnviarGetGamecard);
-				destruirGetGamecard(mensajeEnviarGetGamecard);
-			}
+				mensajeGet* mensajeEnviarGet = llenarGet(argv[3]);
+				streamArgumentos 					= serializarGet(mensajeEnviarGet);
+				destruirGet(mensajeEnviarGet);
+
+
 			break;
 
 		default:

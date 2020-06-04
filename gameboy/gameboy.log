@@ -584,3 +584,15 @@
 
 [INFO] 19:48:55:105 GAMEBOY/(18698:18704): Mensaje fue recibido correctamente, respuesta: 1
 
+[INFO] 18:30:00:103 GAMEBOY/(17840:17840): Arranco
+
+[INFO] 18:30:00:109 GAMEBOY/(17840:17846): Espero respuesta a solicitud de suscripción
+
+[INFO] 18:30:00:110 GAMEBOY/(17840:17846): Recibido correctamente: 1
+
+[INFO] 18:31:07:393 GAMEBOY/(17968:17968): Arranco
+
+[INFO] 18:31:07:398 GAMEBOY/(17968:17974): Espero respuesta a solicitud de suscripción
+
+[INFO] 18:31:07:398 GAMEBOY/(17968:17974): Recibido incorrectamente: 0
+

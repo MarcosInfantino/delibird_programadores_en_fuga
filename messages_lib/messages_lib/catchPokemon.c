@@ -7,9 +7,9 @@
 
 #include "messages_lib.h"
 
-mensajeCatchBroker* llenarMensajeCatchBroker(char* pokemon, uint32_t posX, uint32_t posY){
+mensajeCatch* llenarCatch(char* pokemon, uint32_t posX, uint32_t posY){
 
-	mensajeCatchBroker* msg = malloc(sizeof(mensajeCatchBroker));
+	mensajeCatch* msg = malloc(sizeof(mensajeCatch));
 	msg->sizePokemon=strlen(pokemon)+1;
 	msg->pokemon=malloc(msg->sizePokemon);
 	strcpy(msg->pokemon,pokemon);
@@ -18,7 +18,7 @@ mensajeCatchBroker* llenarMensajeCatchBroker(char* pokemon, uint32_t posX, uint3
 	return msg;
 }
 
-void* serializarCatchBroker(mensajeCatchBroker* mensaje){
+void* serializarCatch(mensajeCatch* mensaje){
 	void* stream    = malloc(sizeof(uint32_t)*3 + mensaje->sizePokemon);
 	uint32_t offset = 0;
 
@@ -34,8 +34,8 @@ void* serializarCatchBroker(mensajeCatchBroker* mensaje){
 	return stream;
 }
 
-mensajeCatchBroker* deserializarCatchBroker (void* streamRecibido){
-	mensajeCatchBroker* mensaje = malloc(sizeof(mensajeCatchBroker));
+mensajeCatch* deserializarCatch (void* streamRecibido){
+	mensajeCatch* mensaje = malloc(sizeof(mensajeCatch));
 	uint32_t offset 			= 0;
 
 	memcpy(&(mensaje->sizePokemon), streamRecibido+offset, sizeof(uint32_t));
@@ -50,7 +50,7 @@ mensajeCatchBroker* deserializarCatchBroker (void* streamRecibido){
 	return mensaje;
 }
 
-void destruirCatchBroker(mensajeCatchBroker* msg){
+void destruirCatch(mensajeCatch* msg){
 	free(msg->pokemon);
 	free(msg);
 }

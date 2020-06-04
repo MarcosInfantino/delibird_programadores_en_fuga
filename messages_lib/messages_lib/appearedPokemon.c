@@ -7,8 +7,8 @@
 
 #include "messages_lib.h"
 
-mensajeAppearedTeam* llenarMensajeAppearedTeam(char* pokemon, uint32_t posX, uint32_t posY){
-	mensajeAppearedTeam* msg = malloc(sizeof(mensajeAppearedTeam));
+mensajeAppeared* llenarAppeared(char* pokemon, uint32_t posX, uint32_t posY){
+	mensajeAppeared* msg = malloc(sizeof(mensajeAppeared));
 	msg->sizePokemon=strlen(pokemon)+1;
 	msg->pokemon=malloc(msg->sizePokemon);
 	memcpy(msg->pokemon,pokemon,msg->sizePokemon);
@@ -17,7 +17,7 @@ mensajeAppearedTeam* llenarMensajeAppearedTeam(char* pokemon, uint32_t posX, uin
 
 	return msg;
 }
-void* serializarAppearedTeam(mensajeAppearedTeam* mensaje){
+void* serializarAppeared(mensajeAppeared* mensaje){
 	void* stream    = malloc(sizeof(uint32_t)*3 + mensaje->sizePokemon);
 	uint32_t offset = 0;
 
@@ -33,9 +33,9 @@ void* serializarAppearedTeam(mensajeAppearedTeam* mensaje){
 	return stream;
 }
 
-mensajeAppearedTeam* deserializarAppearedTeam (void* streamRecibido){
+mensajeAppeared* deserializarAppeared (void* streamRecibido){
 	uint32_t offset              = 0;
-	mensajeAppearedTeam* mensaje = malloc(sizeof(mensajeAppearedTeam));
+	mensajeAppeared* mensaje = malloc(sizeof(mensajeAppeared));
 
 	memcpy(&(mensaje->sizePokemon), streamRecibido+offset, sizeof(uint32_t));
 	offset+=sizeof(uint32_t);
@@ -49,7 +49,7 @@ mensajeAppearedTeam* deserializarAppearedTeam (void* streamRecibido){
 	return mensaje;
 }
 
-void destruirAppearedTeam(mensajeAppearedTeam* msg){
+void destruirAppeared(mensajeAppeared* msg){
 	free(msg->pokemon);
 	free(msg);
 }

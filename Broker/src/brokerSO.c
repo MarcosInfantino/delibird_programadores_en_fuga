@@ -69,7 +69,7 @@ void* iniciarServidor(){
 	}
 
 	log_info(loggerBroker, "Estoy escuchando!");
-	printf("Estoy escuchando\n");
+
 
 	while (1)  								//para recibir n conexiones
 		esperar_cliente(servidor);
@@ -114,7 +114,7 @@ void esperar_cliente(uint32_t servidor) {
 	struct sockaddr_in dir_cliente;
 
 	uint32_t tam_direccion = sizeof(struct sockaddr_in);
-	printf("Espero un nuevo cliente\n");
+
 	uint32_t* socketCliente=malloc(sizeof(uint32_t));
 
 	*socketCliente = accept(servidor, (void*) &dir_cliente, &tam_direccion);

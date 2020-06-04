@@ -7,8 +7,8 @@
 
 #include "messages_lib.h"
 
-mensajeNewBroker* llenarMensajeNewBroker(char* pokemon, uint32_t posX, uint32_t posY, uint32_t cantidad){
-	mensajeNewBroker* msg=malloc(sizeof(mensajeNewBroker));
+mensajeNew* llenarNew(char* pokemon, uint32_t posX, uint32_t posY, uint32_t cantidad){
+	mensajeNew* msg=malloc(sizeof(mensajeNew));
 		msg->sizePokemon=strlen(pokemon)+1;
 		msg->pokemon=malloc(msg->sizePokemon);
 		strcpy(msg->pokemon,pokemon);
@@ -18,7 +18,7 @@ mensajeNewBroker* llenarMensajeNewBroker(char* pokemon, uint32_t posX, uint32_t 
 		return msg;
 
 }
-void* serializarNewBroker(mensajeNewBroker* mensaje){
+void* serializarNew(mensajeNew* mensaje){
 	void* stream 	= malloc(sizeof(uint32_t)*4 + mensaje->sizePokemon);
 	uint32_t offset = 0;
 
@@ -36,8 +36,8 @@ void* serializarNewBroker(mensajeNewBroker* mensaje){
 	return stream;
 }
 
-mensajeNewBroker* deserializarNewBroker (void* streamRecibido){
-	mensajeNewBroker* mensaje = malloc(sizeof(mensajeNewBroker));
+mensajeNew* deserializarNew (void* streamRecibido){
+	mensajeNew* mensaje = malloc(sizeof(mensajeNew));
 	uint32_t offset 		  = 0;
 
 	memcpy(&(mensaje->sizePokemon), streamRecibido+offset, sizeof(uint32_t));
@@ -55,7 +55,7 @@ mensajeNewBroker* deserializarNewBroker (void* streamRecibido){
 }
 
 
-void destruirNewBroker(mensajeNewBroker* msg){
+void destruirNew(mensajeNew* msg){
 	free(msg->pokemon);
 	free(msg);
 }

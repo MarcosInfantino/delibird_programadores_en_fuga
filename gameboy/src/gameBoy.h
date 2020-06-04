@@ -35,4 +35,6 @@ void* enviarMensajeSuscripcion(void* paqueteySocket);
 
 void iniciarHiloEnvio(paqueteYSocket* paqueteySocket);
 
+void asignarIds(char * argv[], uint32_t proceso, paquete* paq);
+
 #endif /* GAMEBOY_H_ */

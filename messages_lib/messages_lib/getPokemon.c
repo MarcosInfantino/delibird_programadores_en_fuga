@@ -7,15 +7,15 @@
 
 #include "messages_lib.h"
 
-mensajeGetBroker* llenarMensajeGetBroker(char* pokemon){
-	mensajeGetBroker* msg = malloc(sizeof(mensajeGetBroker));
+mensajeGet* llenarGet(char* pokemon){
+	mensajeGet* msg = malloc(sizeof(mensajeGet));
 	msg->sizePokemon = strlen(pokemon)+1;
 	msg->pokemon=malloc(msg->sizePokemon);
 	strcpy(msg->pokemon,pokemon);
 	return msg;
 }
 
-void* serializarGetBroker (mensajeGetBroker* mensaje){
+void* serializarGet (mensajeGet* mensaje){
 	void* stream   = malloc(sizeof(uint32_t) + mensaje->sizePokemon);
 	uint32_t offset= 0;
 
@@ -25,8 +25,8 @@ void* serializarGetBroker (mensajeGetBroker* mensaje){
 	return stream;
 }
 
-mensajeGetBroker* deserializarGetBroker (void* streamRecibido){
-	mensajeGetBroker* mensaje = malloc(sizeof(mensajeGetBroker));
+mensajeGet* deserializarGet (void* streamRecibido){
+	mensajeGet* mensaje = malloc(sizeof(mensajeGet));
 	uint32_t offset		= 0;
 
 	memcpy(&(mensaje->sizePokemon), streamRecibido+offset, sizeof(uint32_t));
@@ -37,7 +37,7 @@ mensajeGetBroker* deserializarGetBroker (void* streamRecibido){
 	return mensaje;
 }
 
-void destruirGetBroker(mensajeGetBroker* msg){
+void destruirGet(mensajeGet* msg){
 	free(msg->pokemon);
 	free(msg);
 }

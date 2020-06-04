@@ -205,7 +205,7 @@ void esperar_cliente(uint32_t servidor);
 
 void* atenderCliente(void* sock);
 
-void atenderAppeared(mensajeAppearedTeam* msg);
+void atenderAppeared(mensajeAppeared* msg);
 
 void enviarCatch(dataEntrenador* infoEntrenador);
 

@@ -24,58 +24,58 @@ t_log* iniciar_logger(char* file, char* program_name)
 void loggearMensaje (paquete* paqueteRespuesta, t_log* logger){
 	switch(paqueteRespuesta->tipoMensaje){
 		case APPEARED_POKEMON: ;
-			mensajeAppearedTeam* msgAppeared=deserializarAppearedTeam(paqueteRespuesta->stream);
-			log_info(logger, "Recibi mensaje appeared pokemon: \n");
-			log_info(logger, "El pokemon es: %s\n", msgAppeared->pokemon);
-			log_info(logger, "La posX es: %i\n", msgAppeared->posX);
-			log_info(logger, "La posY es: %i\n", msgAppeared->posY);
-			//log_info(logger, "El id correlativo es: %i\n", msgAppeared->idCorrelativo);
-			destruirAppearedTeam(msgAppeared);
+			mensajeAppeared* msgAppeared=deserializarAppeared(paqueteRespuesta->stream);
+			log_info(logger, "Recibi mensaje appeared pokemon. El pokemon es: %s. La posicion es: (%i,%i). \n",
+					msgAppeared->pokemon, msgAppeared->posX,msgAppeared->posY);
+
+			destruirAppeared(msgAppeared);
 			break;
 
 		case NEW_POKEMON: ;
-			mensajeNewBroker* msgNew = deserializarNewBroker(paqueteRespuesta->stream);
-			log_info(logger, "Recibi mensaje new pokemon: \n");
-			log_info(logger, "El pokemon es: %s\n", msgNew->pokemon);
-			log_info(logger, "La posX es: %i\n", msgNew->posX);
-			log_info(logger, "La posY es: %i\n", msgNew->posY);
-			log_info(logger, "La cantidad es: %i\n", msgNew->cantidad);
-			destruirNewBroker(msgNew);
+			mensajeNew* msgNew = deserializarNew(paqueteRespuesta->stream);
+			log_info(logger, "Recibi mensaje new pokemon. El pokemon es: %s. La posicion es: (%i,%i). La cantidad es: %i.\n",
+					msgNew->pokemon,msgNew->posX, msgNew->posY,msgNew->cantidad);
+
+			destruirNew(msgNew);
 			break;
 
 		case CATCH_POKEMON: ;
-			mensajeCatchBroker* msgCatch = deserializarCatchBroker (paqueteRespuesta->stream);
-			log_info(logger, "Recibi mensaje catch pokemon: \n");
-			log_info(logger, "El pokemon es: %s\n", msgCatch->pokemon);
-			log_info(logger, "La posX es: %i\n", msgCatch->posX);
-			log_info(logger, "La posY es: %s\n", msgCatch->posY);
-			destruirCatchBroker(msgCatch);
+			mensajeCatch* msgCatch = deserializarCatch (paqueteRespuesta->stream);
+			log_info(logger, "Recibi mensaje catch pokemon. El pokemon es: %s. La posicion es: (%i,%i).\n",
+					msgCatch->pokemon,msgCatch->posX,msgCatch->posY);
+
+			destruirCatch(msgCatch);
 			break;
 
 		case CAUGHT_POKEMON: ;
 			mensajeCaught* msgCaught = deserializarCaught (paqueteRespuesta->stream);
-			log_info(logger, "Recibi mensaje caught pokemon: \n");
-			log_info(logger, "El id correlativo es: %i\n", msgCaught->idCorrelativo);
-			log_info(logger, "El resultado es: %i\n", msgCaught->resultadoCaught);
+
+			if(msgCaught->resultadoCaught==CORRECTO){
+				log_info(logger, "Recibi mensaje caught pokemon. El pokemon fue atrapado. \n");
+			}else{
+				log_info(logger, "Recibi mensaje caught pokemon. El pokemon no fue atrapado. \n");
+			}
 			destruirCaught(msgCaught);
 			break;
 
 		case GET_POKEMON: ;
-			mensajeGetBroker* msgGet = deserializarGetBroker (paqueteRespuesta->stream);
-			log_info(logger, "Recibi mensaje get pokemon: \n");
-			log_info(logger, "El pokemon es: %s\n", msgGet->pokemon);
-			destruirGetBroker(msgGet);
+			mensajeGet* msgGet = deserializarGet (paqueteRespuesta->stream);
+			log_info(logger, "Recibi mensaje get pokemon. El pokemon es: %s. \n", msgGet->pokemon);
+			destruirGet(msgGet);
 			break;
 
 		case LOCALIZED_POKEMON: ;
 			mensajeLocalized* msgLocalized = deserializarLocalized(paqueteRespuesta->stream);
-			log_info(logger, "Recibi mensaje localized: \n");
-			log_info(logger, "El pokemon es: %s\n", msgLocalized->pokemon);
-			log_info (logger, "La cantidad es: %i\n", msgLocalized->cantidad);
-//			for(int j = 0; j<msgLocalized->cantidad; j++){
-//				log_info(logger, "las posiciones son: %i\n", (msgLocalized->arrayPosiciones)[j]);
-//			}
-			//destruirLocalized(msgLocalized);
+			log_info(logger, "Recibi mensaje localized. El pokemon es: %s. La cantidad es: %i.\n",
+					msgLocalized->pokemon, msgLocalized->cantidad);
+			log_info(logger,"Las posiciones son: ");
+			posicion* posActual=malloc(sizeof(posicion));
+			for(int j = 0; j<msgLocalized->cantidad; j++){
+				*posActual=*((msgLocalized->arrayPosiciones) + j);
+				log_info(logger, "(%i,%i)", posActual->x, posActual->y);
+			}
+			free(posActual);
+			destruirLocalized(msgLocalized);
 			break;
 		}
 }

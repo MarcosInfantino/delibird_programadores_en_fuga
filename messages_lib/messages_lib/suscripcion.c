@@ -7,7 +7,7 @@
 
 #include "messages_lib.h"
 
-mensajeSuscripcion* llenarMensajeSuscripcion(uint32_t cola){
+mensajeSuscripcion* llenarSuscripcion(uint32_t cola){
 	mensajeSuscripcion* msg = malloc(sizeof(mensajeSuscripcion));
 	msg->cola=cola;
 	return msg;

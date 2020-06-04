@@ -7,7 +7,7 @@
 
 #include "messages_lib.h"
 
-mensajeLocalized* llenarMensajeLocalized(char* pokemon, uint32_t cantidad, posicion* posiciones){
+mensajeLocalized* llenarLocalized(char* pokemon, uint32_t cantidad, posicion* posiciones){
 	mensajeLocalized* msg = malloc(sizeof(mensajeLocalized));
 	msg->sizePokemon=strlen(pokemon)+1;
 	msg->pokemon=malloc(msg->sizePokemon);
@@ -32,11 +32,11 @@ void* serializarLocalized (mensajeLocalized* mensaje){
 	return stream;
 }
 
-//void destruirLocalized(mensajeLocalized* msg){
-//	free(msg->arrayPosiciones);
-//	free(msg->pokemon);
-//	free(msg);
-//} TODO
+void destruirLocalized(mensajeLocalized* msg){
+	free(msg->arrayPosiciones);
+	free(msg->pokemon);
+	free(msg);
+}
 
 void* serializarPosicion(posicion* pos){
 	void* stream=malloc(2*sizeof(uint32_t));

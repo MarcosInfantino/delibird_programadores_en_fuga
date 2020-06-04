@@ -7,7 +7,7 @@
 
 #include "messages_lib.h"
 
-mensajeSuscripcionTiempo* llenarMensajeSuscripcionTiempo(uint32_t cola, uint32_t tiempo){
+mensajeSuscripcionTiempo* llenarSuscripcionTiempo(uint32_t cola, uint32_t tiempo){
 	mensajeSuscripcionTiempo* msg= malloc(sizeof(mensajeSuscripcionTiempo));
 	msg->cola=cola;
 	msg->tiempo=tiempo;

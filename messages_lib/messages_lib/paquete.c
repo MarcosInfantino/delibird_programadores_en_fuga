@@ -96,3 +96,11 @@ paquete* recibirPaquete(uint32_t socket){
 	}
 	return paq;
 }
+
+void insertarIdPaquete(paquete* paq, uint32_t id){
+	paq->id=id;
+}
+
+void insertarIdCorrelativoPaquete(paquete* paq, uint32_t idCorrelativo){
+	paq->idCorrelativo=idCorrelativo;
+}
