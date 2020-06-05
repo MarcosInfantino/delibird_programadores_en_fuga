@@ -20,13 +20,14 @@
 uint32_t puertoBroker;
 char* ipBroker;
 uint32_t tiempoReconexion;
+uint32_t tiempoRetardo;
 uint32_t puertoGamecard = 5001;
 
 int main(void){
 	t_config * config = config_create("Gamecard.config");
 	puertoBroker= config_get_int_value(config,"PUERTO_BROKER");
 	ipBroker= config_get_string_value(config,"IP_BROKER");
-
+	tiempoRetardo = config_get_int_value(config,"TIEMPO_RETARDO_OPERACION");
 	FILE *file;
 	file = fopen("metadata.bin","w+b");
 	fputs("F", file);
@@ -157,7 +158,6 @@ void* iniciarServidorGameboy(void* arg){
 		direccionServidor.sin_family=AF_INET;
 		direccionServidor.sin_addr.s_addr=INADDR_ANY;
 		direccionServidor.sin_port=htons(puertoGamecard);
-
 		uint32_t servidor=socket(AF_INET,SOCK_STREAM,0);
 
 		if(bind(servidor, (void*) &direccionServidor, sizeof(direccionServidor))!=0){
@@ -169,4 +169,177 @@ void* iniciarServidorGameboy(void* arg){
 				esperar_cliente(servidor);
 		}
 	return NULL;
+}
+
+void esperar_cliente(uint32_t servidor) {
+
+	listen(servidor, 100);
+	struct sockaddr_in dir_cliente;
+
+	uint32_t tam_direccion = sizeof(struct sockaddr_in);
+	printf("Espero un nuevo cliente\n");
+	uint32_t* socket_cliente=malloc(sizeof(uint32_t));
+	*socket_cliente = accept(servidor, (void*) &dir_cliente, &tam_direccion);
+	printf("Gestiono un nuevo cliente\n");
+	pthread_t threadAtencionGameboy;
+	pthread_create(&threadAtencionGameboy, NULL, atenderCliente, (void*) (socket_cliente));
+	pthread_detach(threadAtencionGameboy);
+}
+
+void* atenderCliente(void* sock){
+	printf("atiendo cliente\n");
+	uint32_t* socket = (uint32_t*) sock;
+	printf("hola llegue\n");
+	paquete* paquete=recibirPaquete(*socket);
+	uint32_t respuesta=0;
+	if(paquete==NULL){
+		respuesta=INCORRECTO;
+	}else{
+		respuesta=CORRECTO;
+	}
+
+	send(*socket,(void*)(&respuesta),sizeof(uint32_t),0);
+	free(socket);
+
+	printf("hice el send: %i\n",respuesta);
+	printf("recibi: %i\n", paquete->sizeStream);
+	switch(paquete->tipoMensaje){
+		case NEW_POKEMON:;
+			uint32_t idNew = paquete->id;
+			mensajeNew* msgNew=deserializarNew (paquete->stream);printf("deserializado\n");
+			//destruirPaquete(paquete);
+
+					printf("leyo bien\n");atenderNew(msgNew,idNew); ;break;
+		case GET_POKEMON:;
+					mensajeGet* msgGet=deserializarGet(paquete->stream);
+					uint32_t idGet = paquete->id;
+					printf("deserializado\n");
+					//destruirPaquete(paquete);
+
+					printf("leyo bien\n");atenderGet(msgGet,idGet); ;break;
+		case CATCH_POKEMON:;
+					uint32_t idCatch = paquete->id;
+					mensajeCatch* msgCatch=deserializarCatch(paquete->stream);printf("deserializado\n");
+					//destruirPaquete(paquete);hay que destruirlo en
+
+					printf("leyo bien\n");atenderCatch(msgCatch,idCatch); ;break;
+		default: printf("leyo cualquiera\n"); break;
+	}
+
+
+
+	return NULL;
+}
+
+void atenderNew(mensajeNew* msg,uint32_t idNew){
+	pokemonEnPosicion* pokeEnPosicion=malloc(sizeof(pokemonEnPosicion));
+	//addListaMutex(especiesLocalizadas,(void*)(msg->pokemon));
+	pokeEnPosicion->pokemon=msg->pokemon;
+	pokeEnPosicion->cantidad= msg->cantidad;
+	pokeEnPosicion->id= idNew;
+	(pokeEnPosicion->posicion).x=msg->posX;
+	(pokeEnPosicion->posicion).y=msg->posY;
+
+	free(msg);
+	//To do :
+	//Verificar que el pokemon este en nuestro FileSystem
+	//Una vez encontrado (o creado) verificar si puedo abrirlo
+	//Verificar si las posiciones existen en el archivo
+	//IF SUCCESS
+	sleep(tiempoRetardo);
+	//CERRAR ARCHIVO
+	enviarAppeared(&pokeEnPosicion);
+
+}
+
+void enviarAppeared (pokemonEnPosicion* pokeEnPosicion){
+		uint32_t cliente=crearSocketCliente(ipBroker,puertoBroker);
+		mensajeAppeared* msgAppeared=malloc(sizeof(mensajeAppeared));
+		msgAppeared->pokemon=pokeEnPosicion->pokemon;
+		msgAppeared->posX=(pokeEnPosicion->posicion).x;
+		msgAppeared->posY=(pokeEnPosicion->posicion).y;
+		//msgAppeared->idCorrelativo =pokeEnPosicion->id;
+		msgAppeared->sizePokemon=strlen(msgAppeared->pokemon)+1;
+		void* streamMsg=serializarAppeared(msgAppeared);
+		paquete* paq=llenarPaquete(GAMECARD,APPEARED_POKEMON, sizeArgumentos(APPEARED_POKEMON,msgAppeared->pokemon,BROKER)  , streamMsg);
+		insertarIdCorrelativoPaquete (paq,(pokeEnPosicion->id));
+		void* paqueteSerializado=serializarPaquete(paq);
+		free(msgAppeared);
+		//destruirPaquete(paq);
+		send(cliente,paqueteSerializado, sizePaquete(paq), 0);
+		free(paqueteSerializado);
+
+}
+
+void atenderGet (mensajeGet* msg, uint32_t idGet){
+		pokemonADevolver* pokeADevolver=malloc(sizeof(pokemonADevolver));
+		pokeADevolver->pokemon=msg->pokemon;
+		pokeADevolver->id= idGet;
+		//Todo :
+		//Verificar que el pokemon este en nuestro FileSystem (si no encuentra mando posiciones vacias)
+		//Una vez encontrado verificar si puedo abrirlo
+		//Verificar si las posiciones existen en el archivo
+		//Conseguir Posiciones
+		//pokeADevolver->cantPosiciones = DEL FILESYSTEM
+		//pokeADevolver->posicion= DEL FILESYSTEM
+		//free(msg);
+		//IF SUCCESS
+		sleep(tiempoRetardo);
+		//CERRAR ARCHIVO
+		enviarLocalized(&pokeADevolver);
+}
+
+void enviarLocalized(pokemonADevolver* pokeADevolver){
+		uint32_t cliente=crearSocketCliente(ipBroker,puertoBroker);
+		mensajeLocalized* msgLocalized=malloc(sizeof(mensajeLocalized));
+		msgLocalized->pokemon=pokeADevolver->pokemon;
+		msgLocalized->cantidad =pokeADevolver->cantPosiciones;
+		msgLocalized->arrayPosiciones=pokeADevolver->posicion;
+		msgLocalized->sizePokemon=strlen(msgLocalized->pokemon)+1;
+		void* streamMsg=serializarLocalized(msgLocalized);
+		paquete* paq=llenarPaquete(GAMECARD,LOCALIZED_POKEMON, sizeArgumentos(LOCALIZED_POKEMON,msgLocalized->pokemon,BROKER), streamMsg);
+		insertarIdCorrelativoPaquete (paq,(pokeADevolver->id));
+		void* paqueteSerializado=serializarPaquete(paq);
+		//free(msgLocalized);
+		//destruirPaquete(paq);
+		send(cliente,paqueteSerializado, sizePaquete(paq), 0);
+		free(paqueteSerializado);
+}
+
+atenderCatch(mensajeCatch* msg, uint32_t idCatch){
+		bool resultado;
+		pokemonAAtrapar* pokeAAtrapar=malloc(sizeof(pokemonAAtrapar));
+		pokeAAtrapar->id = idCatch;
+		pokeAAtrapar->pokemon = msg->pokemon;
+		pokeAAtrapar->posicion->x = msg->posX;
+		pokeAAtrapar->posicion->y = msg->posY;
+
+		//Todo :
+		//Verificar que el pokemon este en nuestro FileSystem (si no encuentra mando ERROR)
+		//Una vez encontrado verificar si puedo abrirlo
+		//Verificar si las posiciones existen en el archivo (SI NO MANDO ERROR)
+		//Si la cantidad del pokemon es 1 elimino la linea, si no la reduzco en 1
+		//free(msg);
+		//IF SUCCESS
+		pokeAAtrapar->resultado = 1;
+		//else pokeAAtrapar->resultado = 0;
+		 sleep(tiempoRetardo);
+		//Cerramos
+
+		enviarCaught(&pokeAAtrapar); //Momentaneo hasta saber bien que hacer con fileSystem
+}
+
+enviarCaught (pokemonAAtrapar* pokeAAtrapar){
+	uint32_t cliente=crearSocketCliente(ipBroker,puertoBroker);
+	mensajeCaught* msgCaught = malloc(sizeof(mensajeCaught));
+	msgCaught->resultadoCaught = pokeAAtrapar->resultado;
+	void* streamMsg=serializarCaught(msgCaught);
+			paquete* paq=llenarPaquete(GAMECARD,CAUGHT_POKEMON, sizeArgumentos(CAUGHT_POKEMON,NULL,BROKER), streamMsg);
+			insertarIdCorrelativoPaquete (paq,(pokeAAtrapar->id));
+			void* paqueteSerializado=serializarPaquete(paq);
+			//free(msgLocalized);
+			//destruirPaquete(paq);
+			send(cliente,paqueteSerializado, sizePaquete(paq), 0);
+			free(paqueteSerializado);
+
 }

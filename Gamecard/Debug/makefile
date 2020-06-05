@@ -25,13 +25,13 @@ endif
 all: Gamecard
 
 dependents:
-	-cd /home/utnso/tp-2020-1c-Programadores-en-Fuga/messages_lib/Debug && $(MAKE) all
+	-cd /home/utnso/tp-2020-1c-Programadores-en-Fuga-master/messages_lib/Debug && $(MAKE) all
 
 # Tool invocations
-Gamecard: $(OBJS) $(USER_OBJS) /home/utnso/tp-2020-1c-Programadores-en-Fuga/messages_lib/Debug/libmessages_lib.so
+Gamecard: $(OBJS) $(USER_OBJS) /home/utnso/tp-2020-1c-Programadores-en-Fuga-master/messages_lib/Debug/libmessages_lib.so
 	@echo 'Building target: $@'
 	@echo 'Invoking: GCC C Linker'
-	gcc -L"/home/utnso/tp-2020-1c-Programadores-en-Fuga/messages_lib/Debug" -L/messages_lib/Debug -L/home/utnso/Entrega1TpSo -o "Gamecard" $(OBJS) $(USER_OBJS) $(LIBS)
+	gcc -L"/home/utnso/tp-2020-1c-Programadores-en-Fuga-master/messages_lib/Debug" -L/messages_lib/Debug -L/home/utnso/Entrega1TpSo -o "Gamecard" $(OBJS) $(USER_OBJS) $(LIBS)
 	@echo 'Finished building target: $@'
 	@echo ' '
 
@@ -41,6 +41,6 @@ clean:
 	-@echo ' '
 
 .PHONY: all clean dependents
-/home/utnso/tp-2020-1c-Programadores-en-Fuga/messages_lib/Debug/libmessages_lib.so:
+/home/utnso/tp-2020-1c-Programadores-en-Fuga-master/messages_lib/Debug/libmessages_lib.so:
 
 -include ../makefile.targets
