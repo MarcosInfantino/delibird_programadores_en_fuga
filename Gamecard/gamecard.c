@@ -248,7 +248,7 @@ void atenderNew(mensajeNew* msg,uint32_t idNew){
 	//IF SUCCESS
 	sleep(tiempoRetardo);
 	//CERRAR ARCHIVO
-	enviarAppeared(&pokeEnPosicion);
+	enviarAppeared(pokeEnPosicion);
 
 }
 
@@ -286,7 +286,7 @@ void atenderGet (mensajeGet* msg, uint32_t idGet){
 		//IF SUCCESS
 		sleep(tiempoRetardo);
 		//CERRAR ARCHIVO
-		enviarLocalized(&pokeADevolver);
+		enviarLocalized(pokeADevolver);
 }
 
 void enviarLocalized(pokemonADevolver* pokeADevolver){
@@ -306,8 +306,7 @@ void enviarLocalized(pokemonADevolver* pokeADevolver){
 		free(paqueteSerializado);
 }
 
-atenderCatch(mensajeCatch* msg, uint32_t idCatch){
-		bool resultado;
+void atenderCatch(mensajeCatch* msg, uint32_t idCatch){
 		pokemonAAtrapar* pokeAAtrapar=malloc(sizeof(pokemonAAtrapar));
 		pokeAAtrapar->id = idCatch;
 		pokeAAtrapar->pokemon = msg->pokemon;
@@ -326,10 +325,10 @@ atenderCatch(mensajeCatch* msg, uint32_t idCatch){
 		 sleep(tiempoRetardo);
 		//Cerramos
 
-		enviarCaught(&pokeAAtrapar); //Momentaneo hasta saber bien que hacer con fileSystem
+		enviarCaught(pokeAAtrapar); //Momentaneo hasta saber bien que hacer con fileSystem
 }
 
-enviarCaught (pokemonAAtrapar* pokeAAtrapar){
+void enviarCaught (pokemonAAtrapar* pokeAAtrapar){
 	uint32_t cliente=crearSocketCliente(ipBroker,puertoBroker);
 	mensajeCaught* msgCaught = malloc(sizeof(mensajeCaught));
 	msgCaught->resultadoCaught = pokeAAtrapar->resultado;

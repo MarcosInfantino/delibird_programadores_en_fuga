@@ -10,6 +10,7 @@
 #include <commons/config.h>
 #include <commons/log.h>
 #include <messages_lib/messages_lib.h>
+#include <stdbool.h>
 
 #ifndef GAMECARD_H_
 #define GAMECARD_H_
