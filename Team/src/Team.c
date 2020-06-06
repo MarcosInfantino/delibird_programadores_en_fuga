@@ -86,87 +86,88 @@
 
 
 
-int main(){
-	//mensajeLocalized* llenarMensajeLocalized(uint32_t sizePokemon, char* pokemon, uint32_t cantidad, posicion* posiciones)
-
-	t_log* logPrueba=iniciar_logger("pruebaLocalized.log", "TEAM");
-	char* pokemon="Pikachu";
-	uint32_t cantidad=2;
-	posicion* posiciones=malloc(sizeof(posicion)*2);
-	posicion pos1={1,0};
-	posicion pos2={0,0};
-	*(posiciones)=pos1;
-	*(posiciones+1)=pos2;
-
-	mensajeLocalized* msg= llenarLocalized(pokemon,cantidad,posiciones);
-	void* stream= serializarLocalized(msg);
-	//mensajeLocalized* msgResultado=deserializarLocalized(stream);
-	paquete* paq=llenarPaquete(TEAM,LOCALIZED_POKEMON,sizeArgumentos(LOCALIZED_POKEMON, msg->pokemon,msg->cantidad),stream);
-	loggearMensaje( paq, logPrueba);
-	destruirLocalized(msg);
-
-	return 0;
-}
-
-
-//int main(int argc , char* argv[]){
-//	teamLogger = iniciar_logger("team.log", "TEAM");
-//	//char pathConfig  = argv;
-//	sem_init(&semaforoEjecucionCpu, 0,0);
-//	entrenadoresLibres=inicializarListaMutex();
-//	colaEjecucionFifo=inicializarColaMutex();
-//	pokemonesPendientes=inicializarColaMutex();
-//	listaIdsEntrenadorMensaje=inicializarListaMutex();
-//	entrenadores=inicializarListaMutex();
-//	especiesLocalizadas=inicializarListaMutex();
-//	entrenadoresExit=inicializarListaMutex();
-//	listaIdsRespuestasGet=inicializarListaMutex();
-//	char* pathConfig   = "Team2.config";
-//	t_config* config   = config_create(pathConfig);
-//	retardoCicloCpu    = config_get_int_value(config,"RETARDO_CICLO_CPU");
-//	puertoBroker       = config_get_int_value(config,"PUERTO_BROKER");
-//	ipBroker           = config_get_string_value(config,"IP_BROKER");
-//	obtenerAlgoritmoPlanificacion(config);
-//	//printf("hola\n");
+//int main(){
+//	//mensajeLocalized* llenarMensajeLocalized(uint32_t sizePokemon, char* pokemon, uint32_t cantidad, posicion* posiciones)
 //
-//	team     = inicializarTeam(config);
-//	//printf("hola2\n");
-//	printf("%s\n", ((objetivo*)getListaMutex(team->objetivoGlobal,2))->pokemon);
-//	entrenadores->lista       = team->entrenadores;
-//	//entrenadoresLibres=entrenadores;
+//	t_log* logPrueba=iniciar_logger("pruebaLocalized.log", "TEAM");
+//	char* pokemon="Pikachu";
+//	uint32_t cantidad=2;
+//	posicion* posiciones=malloc(sizeof(posicion)*2);
+//	posicion pos1={1,0};
+//	posicion pos2={0,0};
+//	*(posiciones)=pos1;
+//	*(posiciones+1)=pos2;
 //
-//	//mutexEntrenadores=inicializarMutexEntrenadores();
-//	uint32_t cantEntrenadores = list_size(team->entrenadores);
-//
-//	arrayIdHilosEntrenadores  = malloc(cantEntrenadores*sizeof(pthread_t));
-//	inicializarEntrenadores(team->entrenadores);
-//
-//	pthread_t hiloEnviarGets;
-//	crearHiloParaEnviarGets(&hiloEnviarGets);
-//
-//	pthread_t hiloConexionInicialBroker;
-//
-//	crearHiloConexionColasBroker((void*)config,&hiloConexionInicialBroker);
-//
-//	pthread_t hiloServidorGameboy;
-//	crearHiloServidorGameboy(&hiloServidorGameboy);
-//
-//	pthread_t hiloPlanificador;
-//	crearHiloPlanificador(&hiloPlanificador);
-//
-//	posicion pos = {1,2};
-//
-//	printf("id entrenador mas cercano: %i\n", obtenerIdEntrenadorMasCercano(pos));
-//
-//	while(!objetivoCumplido());
-//
-//	printf("Programa terminado: objetivo golbal cumplido\n");
-//
-//	//HACER DESTROY DE TODAS LAS LISTAS Y ESTRUCTURAS AL FINAL
-//	terminar_programa(teamLogger, config);
+//	mensajeLocalized* msg= llenarLocalized(pokemon,cantidad,posiciones);
+//	void* stream= serializarLocalized(msg);
+//	//mensajeLocalized* msgResultado=deserializarLocalized(stream);
+//	paquete* paq=llenarPaquete(TEAM,LOCALIZED_POKEMON,sizeArgumentos(LOCALIZED_POKEMON, msg->pokemon,msg->cantidad),stream);
+//	loggearMensaje( paq, logPrueba);
+//	destruirLocalized(msg);
 //
 //	return 0;
 //}
+
+
+int main(int argc , char* argv[]){
+	teamLogger = iniciar_logger("team.log", "TEAM");
+	//char pathConfig  = argv;
+	sem_init(&semaforoEjecucionCpu, 0,0);
+	entrenadoresLibres=inicializarListaMutex();
+	colaEjecucionFifo=inicializarColaMutex();
+	pokemonesPendientes=inicializarColaMutex();
+	listaIdsEntrenadorMensaje=inicializarListaMutex();
+	entrenadores=inicializarListaMutex();
+	especiesLocalizadas=inicializarListaMutex();
+	entrenadoresExit=inicializarListaMutex();
+	listaIdsRespuestasGet=inicializarListaMutex();
+	char* pathConfig   = "Team2.config";
+	t_config* config   = config_create(pathConfig);
+	retardoCicloCpu    = config_get_int_value(config,"RETARDO_CICLO_CPU");
+	tiempoReconexion= config_get_int_value(config,"TIEMPO_RECONEXION");
+	puertoBroker       = config_get_int_value(config,"PUERTO_BROKER");
+	ipBroker           = config_get_string_value(config,"IP_BROKER");
+	obtenerAlgoritmoPlanificacion(config);
+	//printf("hola\n");
+
+	team     = inicializarTeam(config);
+	//printf("hola2\n");
+	printf("%s\n", ((objetivo*)getListaMutex(team->objetivoGlobal,2))->pokemon);
+	entrenadores->lista       = team->entrenadores;
+	//entrenadoresLibres=entrenadores;
+
+	//mutexEntrenadores=inicializarMutexEntrenadores();
+	uint32_t cantEntrenadores = list_size(team->entrenadores);
+
+	arrayIdHilosEntrenadores  = malloc(cantEntrenadores*sizeof(pthread_t));
+	inicializarEntrenadores(team->entrenadores);
+
+	pthread_t hiloEnviarGets;
+	crearHiloParaEnviarGets(&hiloEnviarGets);
+
+	pthread_t hiloConexionInicialBroker;
+
+	crearHiloConexionColasBroker((void*)config,&hiloConexionInicialBroker);
+
+	pthread_t hiloServidorGameboy;
+	crearHiloServidorGameboy(&hiloServidorGameboy);
+
+	pthread_t hiloPlanificador;
+	crearHiloPlanificador(&hiloPlanificador);
+
+	posicion pos = {1,2};
+
+	printf("id entrenador mas cercano: %i\n", obtenerIdEntrenadorMasCercano(pos));
+
+	while(!objetivoCumplido());
+
+	printf("Programa terminado: objetivo golbal cumplido\n");
+
+	//HACER DESTROY DE TODAS LAS LISTAS Y ESTRUCTURAS AL FINAL
+	terminar_programa(teamLogger, config);
+
+	return 0;
+}
 
 
 
@@ -303,10 +304,25 @@ void* enviarGets(void* arg){
 	return NULL;
 }
 
+uint32_t reconectarseAlBroker(uint32_t cliente,void* direccionServidor,socklen_t length){
+
+	log_info(teamLogger, "Reintentando conexión en %i segundos...\n",tiempoReconexion);
+	sleep(tiempoReconexion);
+	while(connect(cliente, direccionServidor,length)<0){
+		log_info(teamLogger,"El reintento de conexión no fue exitoso\n");
+		log_info(teamLogger, "Reintentando conexión en %i segundos...\n",tiempoReconexion);
+		sleep(tiempoReconexion);
+
+
+	}
+	log_info(teamLogger, "El reintento de conexión fue exitoso\n");
+	return 0;
+}
+
 void* suscribirseColasBroker(void* conf){
 
-	t_config* config=(t_config*) conf;
-	tiempoReconexion =config_get_int_value(config, "TIEMPO_RECONEXION");
+
+
 
 	mensajeSuscripcion* mensajeSuscripcionAppeared=llenarSuscripcion(APPEARED_POKEMON);
 	mensajeSuscripcion * mensajeSuscripcionCaught=llenarSuscripcion(CAUGHT_POKEMON);
@@ -345,18 +361,12 @@ void* suscribirseCola(void* msgSuscripcion){
 	direccionServidor.sin_port        = htons(puertoBroker);
 
 	uint32_t cliente=socket(AF_INET,SOCK_STREAM,0);
-	uint32_t resultadoConnect = connect(cliente,(void*) &direccionServidor,sizeof(direccionServidor));
 
-	while(resultadoConnect<0){
+	if(connect(cliente,(void*) &direccionServidor,sizeof(direccionServidor))<0){
 		log_info(teamLogger, "Conexión fallida con el Broker\n");
-		log_info(teamLogger, "Reintentando conexión en %i segundos...\n",tiempoReconexion);
-		sleep(tiempoReconexion);
-		resultadoConnect=connect(cliente,(void*) &direccionServidor,sizeof(direccionServidor));
-		if(resultadoConnect<0){
-			log_info(teamLogger,"El reintento de conexión no fue exitoso\n");
-		}else{
-			log_info(teamLogger, "El reintento de conexión fue exitoso\n");
-		}
+
+		reconectarseAlBroker(cliente,(void*) &direccionServidor,sizeof(direccionServidor));
+
 	}
 
 	uint32_t bytes = sizeof(uint32_t)*5+paq->sizeStream;
@@ -398,6 +408,11 @@ void* suscribirseCola(void* msgSuscripcion){
 						break;
 					default: break; //esto no puede pasar
 
+
+				}
+
+				while(send(cliente,(void*)(&respuesta),sizeof(uint32_t),0)<0){
+					reconectarseAlBroker(cliente,(void*) &direccionServidor,sizeof(direccionServidor));
 
 				}
 			}
@@ -476,6 +491,30 @@ void* enviarGet(void* arg){
 	return NULL;
 
 }
+
+uint32_t crearSocketClienteBroker (char* ip, uint32_t puerto){
+		struct sockaddr_in direccionServidor;
+		direccionServidor.sin_family      = AF_INET;
+		direccionServidor.sin_addr.s_addr = inet_addr(ipBroker);
+		direccionServidor.sin_port        = htons(puertoBroker);
+
+		uint32_t cliente=socket(AF_INET,SOCK_STREAM,0);
+		uint32_t resultadoConnect = connect(cliente,(void*) &direccionServidor,sizeof(direccionServidor));
+
+		while(resultadoConnect<0){
+			log_info(teamLogger, "Conexión fallida con el Broker\n");
+			log_info(teamLogger, "Reintentando conexión en %i segundos...\n",tiempoReconexion);
+			sleep(tiempoReconexion);
+			resultadoConnect=connect(cliente,(void*) &direccionServidor,sizeof(direccionServidor));
+			if(resultadoConnect<0){
+				log_info(teamLogger,"El reintento de conexión no fue exitoso\n");
+			}else{
+				log_info(teamLogger, "El reintento de conexión fue exitoso\n");
+			}
+		}
+	return cliente;
+}
+
 
 dataTeam* inicializarTeam(t_config* config){
 	dataTeam* infoTeam       = malloc(sizeof(dataTeam));

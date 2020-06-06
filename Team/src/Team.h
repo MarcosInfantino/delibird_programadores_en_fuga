@@ -253,4 +253,8 @@ void entrarEnEjecucionParaDeadlock(dataEntrenador* infoEntrenador);
 
 void loggearPokemonAAtrapar(pokemonPosicion* pokePosicion, t_log* teamLogger);
 
+uint32_t crearSocketClienteBroker (char* ip, uint32_t puerto);
+
+uint32_t reconectarseAlBroker(uint32_t cliente,void* direccionServidor,socklen_t length);
+
 #endif /* TEAM_H_ */
