@@ -25,13 +25,13 @@
 
 int main(void) {
 
-//	char* pathConfig = "broker.config";
-//	t_config* config = config_create(pathConfig);
+	char* pathConfig = "broker.config";
+	t_config* config = config_create(pathConfig);
 //
-//		puerto_broker     = config_get_int_value(config, "PUERTO_BROKER​");
-//		ip_broker         = config_get_string_value(config, "IP_BROKER");
-//		tamMemoria       = config_get_int_value(config, "TAMANO_MEMORIA");
-//		particionMinima  = config_get_int_value(config, "TAMANO_MINIMO_PARTICION");
+//	puerto_broker     = config_get_int_value(config, "PUERTO_BROKER​");
+//	ip_broker         = config_get_string_value(config, "IP_BROKER");
+//	tamMemoria        = config_get_int_value(config, "TAMANO_MEMORIA");
+//	particionMinima   = config_get_int_value(config, "TAMANO_MINIMO_PARTICION");
 
 	puerto_broker = 5002;
 	ip_broker = "127.0.0.1";
@@ -44,6 +44,10 @@ int main(void) {
 //	definirAlgoritmoMemoria(config);
 //	definirAlgoritmoParticionLibre(config);
 //	definirAlgoritmoReemplazo(config);
+
+	if(algoritmoMemoria == BUDDY_SYSTEM){
+		nodoRaizMemoria = crearRaizArbol();  //inicializo mem con 1 particion
+	}
 
 	iniciarHilos();
 	inicializarContador();
@@ -193,13 +197,15 @@ void manejarTipoDeMensaje(paquete paq, uint32_t socket) {
 
 void meterEnCola( colaMensajes* structCola, paquete * paq, uint32_t  socket){
 
+	uint32_t tamanioMsg = sizePaquete(paq);
+
 	pthread_mutex_lock(contador.mutexContador);
 	asignarID(paq);
 
 	send(socket,(void*)(&contador.contador),sizeof(uint32_t),0);
 	printf("Lo mete en la cola");
 
-	//registrarMensajeEnMemoria(contador.contador, &paq, );
+	//registrarMensajeEnMemoria(contador.contador, &paq );
 
 	contador.contador++;
 	pthread_mutex_unlock(contador.mutexContador);
@@ -338,5 +344,4 @@ void definirAlgoritmo(algoritmoParameter parAlgoritmo, uint32_t variablecitaDeCa
 			printf("%s", parAlgoritmo.error);
 		}
 }
-
 

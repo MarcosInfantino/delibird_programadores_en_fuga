@@ -95,7 +95,7 @@ void suscribir(colaMensajes * cola, paquete paq, uint32_t socket,uint32_t identi
 		suscribirACola(&socket, cola);
 		responderMensaje(socket, CORRECTO);
 
-		//enviarMensajesPreviosEnMemoria(socket, identificadorCola);
+		//enviarMensajesPreviosEnMemoria(socket, identificadorCola, algoritmoMemoria);
 
 //		char * frase = armarStringSuscripLog(paq.modulo, paq.tipoMensaje);
 //		log_info(loggerBroker, frase);

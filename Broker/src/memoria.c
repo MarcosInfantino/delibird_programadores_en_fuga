@@ -16,6 +16,7 @@
 #include <arpa/inet.h>
 #include <stdlib.h>
 #include <string.h>
+#include <stdbool.h>
 #include "broker.h"
 #include "memoria.h"
 
@@ -52,16 +53,17 @@ void registrarMensajeEnMemoria(uint32_t idMensaje, paquete* paq, algoritmoMem me
 	msgNuevo->idMensaje     = idMensaje;
 	msgNuevo->subsACK       = inicializarListaMutex();
 	msgNuevo->subsYaEnviado = inicializarListaMutex();
+	msgNuevo->paq 			= paq;
 
 	switch(metodo){
 	case PARTICIONES_DINAMICAS:
 		pthread_mutex_lock(mutexMemoria);
-		registrarEnMemoriaPARTICIONES(msgNuevo);
+		registrarEnMemoriaPARTICIONES(&msgNuevo);
 		pthread_mutex_unlock(mutexMemoria);
 		break;
 	case BUDDY_SYSTEM:
 		pthread_mutex_lock(mutexMemoria);
-		registrarEnMemoriaBUDDYSYSTEM(msgNuevo);
+		registrarEnMemoriaBUDDYSYSTEM(&msgNuevo, &nodoRaiz);
 		pthread_mutex_unlock(mutexMemoria);
 		break;
 	default:
@@ -77,16 +79,35 @@ void registrarEnMemoriaPARTICIONES(msgMemoriaBroker* mensajeNuevo){
 
 }
 
-void registrarEnMemoriaBUDDYSYSTEM(msgMemoriaBroker* mensajeNuevo){
+void registrarEnMemoriaBUDDYSYSTEM(msgMemoriaBroker* mensajeNuevo, struct nodoMemoria* partActual){
 
-	//nodoRaizMemoria(varGlobal) VER CUANTO PESA EL MENSAJE Y VER SI CABE EN LA PARTICION O HAY QUE SEGUIR PARTICIONANDO
-	/*voy a tener que chequear que no este PARTICIONADA La raiz, si no esta veo si al partirlo en dos y si sigue la particion
-	 * mas grande que el mensaje sigo partiendo hasta que no, cuando no haya que partir mas ahi guardo el mensaje.
-	 * si ya está particionada voy a ir al nodo hijo que este libre, si ninguno esta busco en todos los subhijos cual si y veo
-	 * si encaja o tengo que seguir particionando
-	*/
+	if(noEsParticionMinima(partActual) && !estaLibre(partActual)){ //o irá solo estado particionado?
+
+		if( partActual->hijoIzq->header.status == OCUPADO){
+			registrarEnMemoriaBUDDYSYSTEM(mensajeNuevo, partActual->hijoDer);
+		}else{
+			registrarEnMemoriaBUDDYSYSTEM(mensajeNuevo, partActual->hijoIzq);}
+
+	}else{
+		evaluarTamanioParticion(partActual, mensajeNuevo);
+	}
 
 }
+
+void evaluarTamanioParticion(struct nodoMemoria* partActual, msgMemoriaBroker* msg){
+
+	uint32_t tamanioMsg = sizePaquete(msg->paq);
+
+	while(tamanioParticion(&partActual)/2 > tamanioMsg){
+	  particionarMemoriaBUDDY(partActual);
+	  partActual = partActual->hijoIzq;
+	}
+
+	partActual->header.status = OCUPADO;
+	partActual->mensaje = msg;
+
+}
+
 
 /*void guardarConfirmacionEnMemoriaDe(paquete* paq, uint32_t socket){
 
@@ -125,17 +146,34 @@ void particionarMemoriaBUDDY(struct nodoMemoria* particionActual){
 	particionActual->hijoIzq->header.size    = tamanoHijos;
 	particionActual->hijoDer->header.size   = tamanoHijos;
 
-
 	particionActual->header.status = PARTICIONADO;
 }
 
-/*bool sonBuddies(nodoMemoria* unNodo, nodoMemoria* otroNodo){
-	if ( unNodo->header.size != otroNodo->header.size){
+
+
+
+bool noEsParticionMinima(struct nodoMemoria* particion){
+
+	return !(particion->header.size == particionMinima);
+}
+
+bool estaLibre(struct nodoMemoria* particion){
+	return particion->header.status == LIBRE;
+}
+
+uint32_t tamanioParticion(struct nodoMemoria* part){
+	return part->header.size;
+}
+
+
+/*bool sonBuddies(struct nodoMemoria* unNodo, struct nodoMemoria* otroNodo){
+	if ( unNodo->header.size != otroNodo->header.size)
 		return false;
-	}
 
-	2 condiciones más en el ppt
+	if (&(unNodo->padre) != &(otroNodo->padre) )
+		return false;
 
-	return false;
+	return true;
 }*/
+
 

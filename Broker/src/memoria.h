@@ -22,6 +22,7 @@ typedef struct {
 	uint32_t cola;
 	listaMutex* subsYaEnviado;
 	listaMutex* subsACK;
+	paquete* paq;
 }msgMemoriaBroker;
 
 typedef enum{
@@ -73,7 +74,9 @@ struct nodoMemoria* nodoRaizMemoria; //no sé si va como puntero
 
 void registrarMensajeEnMemoria(uint32_t idMensaje, paquete* paq, algoritmoMem metodo);
 void registrarEnMemoriaPARTICIONES(msgMemoriaBroker*);
-void registrarEnMemoriaBUDDYSYSTEM(msgMemoriaBroker*);
+void registrarEnMemoriaBUDDYSYSTEM(msgMemoriaBroker* mensajeNuevo, struct nodoMemoria* partActual);
+
+void evaluarTamanioParticion(struct nodoMemoria* partActual, msgMemoriaBroker* msg);
 
 struct nodoMemoria* inicializarNodo();
 
@@ -81,6 +84,10 @@ void guardarSubEnMemoria(uint32_t idmensaje, uint32_t socket, uint32_t lista);
 
 struct nodoMemoria* crearRaizArbol(void);
 void particionarMemoriaBUDDY(struct nodoMemoria*);
+
+bool noEsParticionMinima(struct nodoMemoria* particion);
+uint32_t tamanioParticion(struct nodoMemoria* part);
+bool estaLibre(struct nodoMemoria* particion);
 
 
 
