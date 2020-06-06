@@ -21,63 +21,11 @@
 #include "memoria.h"
 
 
-//SEPARAR TODO EN 2 ARCHIVOS, UNO PARA EL BUDDY Y UNO PARA PARTICIONES DINAMICAS
-
-msgMemoriaBroker* buscarMensajeEnMemoria(uint32_t idMensajeBuscado){ //ver que pasa si el mensaje no esta
-
-	if(algoritmoMemoria == BUDDY_SYSTEM){
-		return buscarMensajeEnMemoriaBuddy(idMensajeBuscado);
-	}/*else{
-		return buscarMensajeEnMemoriaParticiones(idMensajeBuscado);
-	}*/
-
-}
-
-msgMemoriaBroker* buscarMensajeEnMemoriaBuddy(uint32_t id){
-
-	pthread_mutex_lock(mutexMemoria);
-	struct nodoMemoria* nodoActual = nodoRaizMemoria;
-
-	while (!estaLibre(nodoActual) && nodoActual->mensaje->idMensaje != id){ //fijarse que volver a la rama derecha si en la rama izq no hay nada
-		if(nodoActual->hijoIzq->header.status == LIBRE){
-			nodoActual = nodoActual->hijoDer;
-		}else if(nodoActual->hijoDer->header.status == LIBRE){
-			nodoActual = nodoActual->hijoIzq;
-		}else{
-			pthread_mutex_unlock(mutexMemoria);
-			printf("no hay ningun mensaje con ese ID");
-			nodoActual = NULL;
-		}
-
-	}
-		pthread_mutex_unlock(mutexMemoria);
-		return nodoActual->mensaje;
-	}
-
-
-void guardarSubEnMemoria(uint32_t idMensaje, uint32_t socket, ListasMemoria lista){
-
-	msgMemoriaBroker* mensaje = buscarMensajeEnMemoria(idMensaje);
-
-	if(mensaje == NULL){
-		printf("no se encontró el mensaje en memoria, ERROR");
-	}
-
-	if( lista == CONFIRMADO){
-		pthread_mutex_lock(mutexMemoria);
-		pushColaMutex(mensaje->subsYaEnviado, (void*) socket); 		//verificar que no esté ya en la cola
-		pthread_mutex_unlock(mutexMemoria);
-	}else if(lista == SUBSYAENVIADOS){
-		pthread_mutex_lock(mutexMemoria);
-		pushColaMutex(mensaje->subsACK, (void*) socket); 			//verificar que no esté ya en la cola
-		pthread_mutex_unlock(mutexMemoria);
-	}
-}
-
+//SEPARAR TODO EN 2 ARCHIVOS, UNO PARA EL BUDDY Y UNO PARA PARTICIONES DINAMICAS y este con las que unen ambas formas
 
 void registrarMensajeEnMemoria(uint32_t idMensaje, paquete* paq, algoritmoMem metodo){
 
-	msgMemoriaBroker* msgNuevo = malloc(sizeof(msgMemoriaBroker));
+	msgMemoriaBroker* msgNuevo = malloc(sizeof(msgMemoriaBroker)); //todo preguntar cosas repetidas
 	msgNuevo->cola          = paq->tipoMensaje;
 	msgNuevo->idMensaje     = idMensaje;
 	msgNuevo->subsACK       = inicializarListaMutex();
@@ -87,12 +35,12 @@ void registrarMensajeEnMemoria(uint32_t idMensaje, paquete* paq, algoritmoMem me
 	switch(metodo){
 	case PARTICIONES_DINAMICAS:
 		pthread_mutex_lock(mutexMemoria);
-		registrarEnMemoriaPARTICIONES(&msgNuevo);
+		registrarEnMemoriaPARTICIONES(msgNuevo);
 		pthread_mutex_unlock(mutexMemoria);
 		break;
 	case BUDDY_SYSTEM:
 		pthread_mutex_lock(mutexMemoria);
-		registrarEnMemoriaBUDDYSYSTEM(&msgNuevo, nodoRaizMemoria);
+		registrarEnMemoriaBUDDYSYSTEM(msgNuevo, nodoRaizMemoria);
 		pthread_mutex_unlock(mutexMemoria);
 		break;
 	default:
@@ -120,14 +68,13 @@ void registrarEnMemoriaBUDDYSYSTEM(msgMemoriaBroker* mensajeNuevo, struct nodoMe
 	}else{
 		evaluarTamanioParticion(partActual, mensajeNuevo);
 	}
-
 }
 
 void evaluarTamanioParticion(struct nodoMemoria* partActual, msgMemoriaBroker* msg){
 
 	uint32_t tamanioMsg = msg->paq->sizeStream;
 
-	while(tamanioParticion(&partActual)/2 > tamanioMsg){
+	while(tamanioParticion(partActual)/2 > tamanioMsg){
 	  particionarMemoriaBUDDY(partActual);
 	  partActual = partActual->hijoIzq;
 	}
@@ -137,15 +84,87 @@ void evaluarTamanioParticion(struct nodoMemoria* partActual, msgMemoriaBroker* m
 
 }
 
+void particionarMemoriaBUDDY(struct nodoMemoria* particionActual){
+	particionActual->hijoIzq = inicializarNodo();
+	particionActual->hijoDer = inicializarNodo();
+	uint32_t tamanoHijos = tamanioParticion(particionActual)/2;
 
-/*void guardarConfirmacionEnMemoriaDe(paquete* paq, uint32_t socket){
+	particionActual->hijoIzq->header.status = LIBRE;
+	particionActual->hijoDer->header.status = LIBRE;
+	particionActual->hijoIzq->header.size   = tamanoHijos;
+	particionActual->hijoDer->header.size   = tamanoHijos;
 
-	msgMemoriaBroker* mensaje = buscarMensajeEnMemoria(paq->idCorrelativo); //validar que pasa si ese mensaje no esta
+	particionActual->hijoIzq->padre   = particionActual; //nuevo
+	particionActual->hijoDer->padre   = particionActual; //nuevo
 
-	pthread_mutex_lock(memoria.mutexMemoria); //la estructura memoria va a tener ese contador
-	pushColaMutex(mensaje->subsACK, (void*) socket); //verificar que no esté ya en la cola
-	pthread_mutex_unlock(memoria.mutexMemoria);
-}*/
+
+	particionActual->header.status = PARTICIONADO;
+}
+
+void guardarSubEnMemoria(uint32_t idMensaje, uint32_t socket, ListasMemoria lista){
+
+	msgMemoriaBroker* mensaje = buscarMensajeEnMemoria(idMensaje);
+
+	if(mensaje == NULL){
+		printf("no se encontró el mensaje en memoria, ERROR");
+		return;
+	}
+
+	if( lista == CONFIRMADO){
+		pthread_mutex_lock(mutexMemoria);
+		addListaMutex(mensaje->subsYaEnviado, (void*) socket); 		//verificar que no esté ya en la cola
+		pthread_mutex_unlock(mutexMemoria);
+	}else if(lista == SUBSYAENVIADOS){
+		pthread_mutex_lock(mutexMemoria);
+		addListaMutex(mensaje->subsACK, (void*) socket); 			//verificar que no esté ya en la cola
+		pthread_mutex_unlock(mutexMemoria);
+	}
+}
+
+msgMemoriaBroker* buscarMensajeEnMemoria(uint32_t idMensajeBuscado){
+
+	/*if(algoritmoMemoria == BUDDY_SYSTEM){*/
+		return buscarMensajeEnMemoriaBuddy(idMensajeBuscado);
+		/*}else{
+		return buscarMensajeEnMemoriaParticiones(idMensajeBuscado);
+	}*/
+
+}
+
+msgMemoriaBroker* buscarMensajeEnMemoriaBuddy(uint32_t id){
+
+	pthread_mutex_lock(mutexMemoria);
+	struct nodoMemoria* nodoActual = nodoRaizMemoria;
+
+	while (!estaLibre(nodoActual) && nodoActual->mensaje->idMensaje != id){ //fijarse que volver a la rama derecha si en la rama izq no hay nada
+		if(nodoActual->hijoIzq->header.status == LIBRE){
+			nodoActual = nodoActual->hijoDer;
+		}else if(nodoActual->hijoDer->header.status == LIBRE){
+			nodoActual = nodoActual->hijoIzq;
+		}else{
+			pthread_mutex_unlock(mutexMemoria);
+			printf("no hay ningun mensaje con ese ID");
+			nodoActual = NULL;
+		}
+
+	}
+		pthread_mutex_unlock(mutexMemoria);
+		return nodoActual->mensaje;
+}
+
+
+void guardarConfirmacionEnMemoriaDe(paquete* paq, uint32_t socket){
+
+	msgMemoriaBroker* mensaje = buscarMensajeEnMemoria(paq->idCorrelativo);
+
+	if(mensaje == NULL){
+		printf("no se encontró el mensaje en memoria, ERROR");
+		return;}
+
+	pthread_mutex_lock(mutexMemoria);
+	addListaMutex(mensaje->subsACK, (void*) socket); //verificar que no esté ya en la cola
+	pthread_mutex_unlock(mutexMemoria);
+}
 
 
 
@@ -165,24 +184,14 @@ struct nodoMemoria* inicializarNodo(){
 	return nodo;
 }
 
-void particionarMemoriaBUDDY(struct nodoMemoria* particionActual){
-	particionActual->hijoIzq = inicializarNodo();
-	particionActual->hijoDer = inicializarNodo();
-	uint32_t tamanoHijos = (particionActual->header.size)/2;
+void liberarNodo(struct nodoMemoria* nodo){
 
-	particionActual->hijoIzq->header.status  = LIBRE;
-	particionActual->hijoDer->header.status = LIBRE;
-	particionActual->hijoIzq->header.size    = tamanoHijos;
-	particionActual->hijoDer->header.size   = tamanoHijos;
+    free(nodo->mensaje);
+    free(nodo->hijoIzq);
+    free(nodo->hijoDer);
+    free(nodo);
 
-	particionActual->hijoIzq->padre   = particionActual; //nuevo
-	particionActual->hijoDer->padre   = particionActual; //nuevo
-
-
-	particionActual->header.status = PARTICIONADO;
 }
-
-
 
 
 bool noEsParticionMinima(struct nodoMemoria* particion){
@@ -203,7 +212,7 @@ bool sonBuddies(struct nodoMemoria* unNodo, struct nodoMemoria* otroNodo){
 	if ( unNodo->header.size != otroNodo->header.size)
 		return false;
 
-	if (&(unNodo->padre) != &(otroNodo->padre) )
+	if (&(unNodo->padre) != &(otroNodo->padre))
 		return false;
 
 	return true;

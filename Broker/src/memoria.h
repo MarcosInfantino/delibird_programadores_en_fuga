@@ -73,25 +73,25 @@ struct nodoMemoria* nodoRaizMemoria;
 
 //void enviarMensajesPreviosEnMemoria(uint32_t socket,uint32_t identificadorCola);
 
+struct nodoMemoria* inicializarNodo();
+void liberarNodo(struct nodoMemoria* nodo);
+struct nodoMemoria* crearRaizArbol(void);
+
 void registrarMensajeEnMemoria(uint32_t idMensaje, paquete* paq, algoritmoMem metodo);
 void registrarEnMemoriaPARTICIONES(msgMemoriaBroker*);
 void registrarEnMemoriaBUDDYSYSTEM(msgMemoriaBroker* mensajeNuevo, struct nodoMemoria* partActual);
 
-void evaluarTamanioParticion(struct nodoMemoria* partActual, msgMemoriaBroker* msg);
+void particionarMemoriaBUDDY(struct nodoMemoria*);
 
-struct nodoMemoria* inicializarNodo();
+void evaluarTamanioParticion(struct nodoMemoria* partActual, msgMemoriaBroker* msg);
 
 void guardarSubEnMemoria(uint32_t idmensaje, uint32_t socket, uint32_t lista);
 msgMemoriaBroker* buscarMensajeEnMemoria(uint32_t idMensajeBuscado);
 msgMemoriaBroker* buscarMensajeEnMemoriaBuddy(uint32_t id);
 
-struct nodoMemoria* crearRaizArbol(void);
-void particionarMemoriaBUDDY(struct nodoMemoria*);
-
 bool noEsParticionMinima(struct nodoMemoria* particion);
 uint32_t tamanioParticion(struct nodoMemoria* part);
 bool estaLibre(struct nodoMemoria* particion);
-
 
 
 #endif /* MEMORIA_H_ */

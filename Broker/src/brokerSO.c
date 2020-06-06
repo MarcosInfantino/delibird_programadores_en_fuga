@@ -46,7 +46,7 @@ int main(void) {
 //	definirAlgoritmoReemplazo(config);
 
 	if(algoritmoMemoria == BUDDY_SYSTEM){
-		nodoRaizMemoria = crearRaizArbol();  //inicializo mem con 1 particion
+		nodoRaizMemoria = crearRaizArbol();
 	}
 
 	iniciarHilos();
@@ -196,9 +196,6 @@ void manejarTipoDeMensaje(paquete paq, uint32_t socket) {
 }
 
 void meterEnCola( colaMensajes* structCola, paquete * paq, uint32_t  socket){
-
-	uint32_t sizeArgumentos (uint32_t colaMensaje, char* nombrePokemon, uint32_t cantidadPokemon);
-	uint32_t tamanioMsg = sizeArgumentos(paq->tipoMensaje, paq->stream);
 
 	pthread_mutex_lock(contador.mutexContador);
 	asignarID(paq);
