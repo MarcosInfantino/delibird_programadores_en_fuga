@@ -101,6 +101,11 @@ void particionarMemoriaBUDDY(struct nodoMemoria* particionActual){
 	particionActual->header.status = PARTICIONADO;
 }
 
+void particionarMemoriaPARTICIONES(listaMutex* partición, msgMemoriaBroker* msg ){ //todo
+	uint32_t tamanio = msg->paq->sizeStream;
+
+}
+
 void guardarSubEnMemoria(uint32_t idMensaje, uint32_t socket, ListasMemoria lista){
 
 	msgMemoriaBroker* mensaje = buscarMensajeEnMemoria(idMensaje);
@@ -193,6 +198,9 @@ void liberarNodo(struct nodoMemoria* nodo){
 
 }
 
+listaMutex* iniciarMemoriaPARTICIONES(){
+	return inicializarListaMutex();
+}
 
 bool noEsParticionMinima(struct nodoMemoria* particion){
 

@@ -36,7 +36,7 @@ typedef struct{
 	uint32_t size;
 }nodeData;
 
-struct nodoMemoria {
+struct nodoMemoria {  //necesito un mutex por nodo o con el de memoria basta?
 	nodeData header;
 	msgMemoriaBroker* mensaje;
 	struct nodoMemoria* hijoIzq;
@@ -70,6 +70,7 @@ typedef struct{
 } algoritmoParameter;
 
 struct nodoMemoria* nodoRaizMemoria;
+listaMutex* memoriaPARTICIONES;
 
 //void enviarMensajesPreviosEnMemoria(uint32_t socket,uint32_t identificadorCola);
 

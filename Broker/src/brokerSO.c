@@ -45,9 +45,8 @@ int main(void) {
 //	definirAlgoritmoParticionLibre(config);
 //	definirAlgoritmoReemplazo(config);
 
-	if(algoritmoMemoria == BUDDY_SYSTEM){
-		nodoRaizMemoria = crearRaizArbol();
-	}
+
+	definirComienzoDeMemoria();
 
 	iniciarHilos();
 	inicializarContador();
@@ -343,3 +342,10 @@ void definirAlgoritmo(algoritmoParameter parAlgoritmo, uint32_t variablecitaDeCa
 		}
 }
 
+void definirComienzoDeMemoria(){
+	if(algoritmoMemoria == BUDDY_SYSTEM){
+			nodoRaizMemoria = crearRaizArbol();
+	}else if(algoritmoMemoria == BUDDY_SYSTEM){
+			memoriaPARTICIONES = iniciarMemoriaPARTICIONES();
+	}
+}
