@@ -69,7 +69,7 @@ typedef struct{
 	char* error;
 } algoritmoParameter;
 
-struct nodoMemoria* nodoRaizMemoria; //no sé si va como puntero
+struct nodoMemoria* nodoRaizMemoria;
 
 //void enviarMensajesPreviosEnMemoria(uint32_t socket,uint32_t identificadorCola);
 

@@ -26,21 +26,42 @@
 msgMemoriaBroker* buscarMensajeEnMemoria(uint32_t idMensajeBuscado){ //ver que pasa si el mensaje no esta
 
 	if(algoritmoMemoria == BUDDY_SYSTEM){
-		buscarMensajeEnMemoriaBuddy(idMensajeBuscado);
+		return buscarMensajeEnMemoriaBuddy(idMensajeBuscado);
 	}/*else{
-		buscarMensajeEnMemoriaParticiones(idMensajeBuscado);
+		return buscarMensajeEnMemoriaParticiones(idMensajeBuscado);
 	}*/
-    pthread_mutex_lock(memoria.mutexMemoria); //la estructura memoria va a tener ese contador
-    return find(memoria.ListaMensajes, id de mensaje es igual a idMensajeBuscado);
-    pthread_mutex_unlock(memoria.mutexMemoria);
+
 }
 
 msgMemoriaBroker* buscarMensajeEnMemoriaBuddy(uint32_t id){
 
-}
+	pthread_mutex_lock(mutexMemoria);
+	struct nodoMemoria* nodoActual = nodoRaizMemoria;
+
+	while (!estaLibre(nodoActual) && nodoActual->mensaje->idMensaje != id){ //fijarse que volver a la rama derecha si en la rama izq no hay nada
+		if(nodoActual->hijoIzq->header.status == LIBRE){
+			nodoActual = nodoActual->hijoDer;
+		}else if(nodoActual->hijoDer->header.status == LIBRE){
+			nodoActual = nodoActual->hijoIzq;
+		}else{
+			pthread_mutex_unlock(mutexMemoria);
+			printf("no hay ningun mensaje con ese ID");
+			nodoActual = NULL;
+		}
+
+	}
+		pthread_mutex_unlock(mutexMemoria);
+		return nodoActual->mensaje;
+	}
+
 
 void guardarSubEnMemoria(uint32_t idMensaje, uint32_t socket, ListasMemoria lista){
-	msgMemoriaBroker* mensaje = buscarMensajeEnMemoria(idMensaje);  //validar que pasa si ese mensaje no esta
+
+	msgMemoriaBroker* mensaje = buscarMensajeEnMemoria(idMensaje);
+
+	if(mensaje == NULL){
+		printf("no se encontró el mensaje en memoria, ERROR");
+	}
 
 	if( lista == CONFIRMADO){
 		pthread_mutex_lock(mutexMemoria);
@@ -71,7 +92,7 @@ void registrarMensajeEnMemoria(uint32_t idMensaje, paquete* paq, algoritmoMem me
 		break;
 	case BUDDY_SYSTEM:
 		pthread_mutex_lock(mutexMemoria);
-		registrarEnMemoriaBUDDYSYSTEM(&msgNuevo, &nodoRaiz);
+		registrarEnMemoriaBUDDYSYSTEM(&msgNuevo, nodoRaizMemoria);
 		pthread_mutex_unlock(mutexMemoria);
 		break;
 	default:
@@ -104,7 +125,7 @@ void registrarEnMemoriaBUDDYSYSTEM(msgMemoriaBroker* mensajeNuevo, struct nodoMe
 
 void evaluarTamanioParticion(struct nodoMemoria* partActual, msgMemoriaBroker* msg){
 
-	uint32_t tamanioMsg = sizePaquete(msg->paq);
+	uint32_t tamanioMsg = msg->paq->sizeStream;
 
 	while(tamanioParticion(&partActual)/2 > tamanioMsg){
 	  particionarMemoriaBUDDY(partActual);
