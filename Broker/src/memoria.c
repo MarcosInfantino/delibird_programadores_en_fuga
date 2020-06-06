@@ -21,16 +21,25 @@
 #include "memoria.h"
 
 
+//SEPARAR TODO EN 2 ARCHIVOS, UNO PARA EL BUDDY Y UNO PARA PARTICIONES DINAMICAS
 
+msgMemoriaBroker* buscarMensajeEnMemoria(uint32_t idMensajeBuscado){ //ver que pasa si el mensaje no esta
 
-/*msgMemoriaBroker* buscarMensajeEnMemoria(uint32_t idMensajeBuscado){ //ver que pasa si el mensaje no esta
-
+	if(algoritmoMemoria == BUDDY_SYSTEM){
+		buscarMensajeEnMemoriaBuddy(idMensajeBuscado);
+	}/*else{
+		buscarMensajeEnMemoriaParticiones(idMensajeBuscado);
+	}*/
     pthread_mutex_lock(memoria.mutexMemoria); //la estructura memoria va a tener ese contador
     return find(memoria.ListaMensajes, id de mensaje es igual a idMensajeBuscado);
     pthread_mutex_unlock(memoria.mutexMemoria);
-}*/
+}
 
-/*void guardarSubEnMemoria(uint32_t idMensaje, uint32_t socket, ListasMemoria lista){
+msgMemoriaBroker* buscarMensajeEnMemoriaBuddy(uint32_t id){
+
+}
+
+void guardarSubEnMemoria(uint32_t idMensaje, uint32_t socket, ListasMemoria lista){
 	msgMemoriaBroker* mensaje = buscarMensajeEnMemoria(idMensaje);  //validar que pasa si ese mensaje no esta
 
 	if( lista == CONFIRMADO){
@@ -42,8 +51,7 @@
 		pushColaMutex(mensaje->subsACK, (void*) socket); 			//verificar que no esté ya en la cola
 		pthread_mutex_unlock(mutexMemoria);
 	}
-
-}*/
+}
 
 
 void registrarMensajeEnMemoria(uint32_t idMensaje, paquete* paq, algoritmoMem metodo){
@@ -146,6 +154,10 @@ void particionarMemoriaBUDDY(struct nodoMemoria* particionActual){
 	particionActual->hijoIzq->header.size    = tamanoHijos;
 	particionActual->hijoDer->header.size   = tamanoHijos;
 
+	particionActual->hijoIzq->padre   = particionActual; //nuevo
+	particionActual->hijoDer->padre   = particionActual; //nuevo
+
+
 	particionActual->header.status = PARTICIONADO;
 }
 
@@ -166,7 +178,7 @@ uint32_t tamanioParticion(struct nodoMemoria* part){
 }
 
 
-/*bool sonBuddies(struct nodoMemoria* unNodo, struct nodoMemoria* otroNodo){
+bool sonBuddies(struct nodoMemoria* unNodo, struct nodoMemoria* otroNodo){
 	if ( unNodo->header.size != otroNodo->header.size)
 		return false;
 
@@ -174,6 +186,6 @@ uint32_t tamanioParticion(struct nodoMemoria* part){
 		return false;
 
 	return true;
-}*/
+}
 
 

@@ -41,6 +41,7 @@ struct nodoMemoria {
 	msgMemoriaBroker* mensaje;
 	struct nodoMemoria* hijoIzq;
 	struct nodoMemoria* hijoDer;
+	struct nodoMemoria* padre;  //agregué esto no estoy segura
 };
 
 typedef enum{
@@ -81,6 +82,8 @@ void evaluarTamanioParticion(struct nodoMemoria* partActual, msgMemoriaBroker* m
 struct nodoMemoria* inicializarNodo();
 
 void guardarSubEnMemoria(uint32_t idmensaje, uint32_t socket, uint32_t lista);
+msgMemoriaBroker* buscarMensajeEnMemoria(uint32_t idMensajeBuscado);
+msgMemoriaBroker* buscarMensajeEnMemoriaBuddy(uint32_t id);
 
 struct nodoMemoria* crearRaizArbol(void);
 void particionarMemoriaBUDDY(struct nodoMemoria*);
