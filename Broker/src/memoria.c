@@ -57,31 +57,55 @@ void registrarEnMemoriaPARTICIONES(msgMemoriaBroker* mensajeNuevo){
 }
 
 void registrarEnMemoriaBUDDYSYSTEM(msgMemoriaBroker* mensajeNuevo, struct nodoMemoria* partActual){
-
-	if(noEsParticionMinima(partActual) && !estaLibre(partActual)){ //o irá solo estado particionado?
-
-		if( partActual->hijoIzq->header.status == OCUPADO){
-			registrarEnMemoriaBUDDYSYSTEM(mensajeNuevo, partActual->hijoDer);
-		}else{
-			registrarEnMemoriaBUDDYSYSTEM(mensajeNuevo, partActual->hijoIzq);}
-
-	}else{
-		evaluarTamanioParticion(partActual, mensajeNuevo);
+	struct nodoMemoria* backUp = partActual;
+	if(intentarRamaIzquierda(mensajeNuevo, partActual) < 0){
+		partActual = backUp->hijoDer;
+		registrarEnMemoriaBUDDYSYSTEM(mensajeNuevo, partActual);
 	}
 }
 
-void evaluarTamanioParticion(struct nodoMemoria* partActual, msgMemoriaBroker* msg){
-
-	uint32_t tamanioMsg = msg->paq->sizeStream;
-
-	while(tamanioParticion(partActual)/2 > tamanioMsg){
-	  particionarMemoriaBUDDY(partActual);
-	  partActual = partActual->hijoIzq;
+uint32_t intentarRamaIzquierda(msgMemoriaBroker* mensajeNuevo, struct nodoMemoria* partActual){
+	struct nodoMemoria* backUp = partActual;
+	if(noEsParticionMinima(partActual) && !estaLibre(partActual)){ //o irá solo estado particionado?
+		if(!entraEnLaMitad(partActual, mensajeNuevo))
+			return -1;
+		if( partActual->hijoIzq->header.status == OCUPADO){
+			intentarRamaIzquierda(mensajeNuevo, partActual->hijoDer);
+		}else{
+			intentarRamaIzquierda(mensajeNuevo, partActual->hijoIzq);
+		}
+	}else{
+		return evaluarTamanioParticionYasignar(partActual, mensajeNuevo);
 	}
+	return -1;
+}
 
-	partActual->header.status = OCUPADO;
-	partActual->mensaje = msg;
+bool entraEnLaMitad(struct nodoMemoria* partActual, msgMemoriaBroker* mensajeNuevo){
+	return mensajeNuevo->paq->sizeStream <= tamanioParticion(partActual);
+}
 
+//	if(noEsParticionMinima(partActual) && !estaLibre(partActual)){ //o irá solo estado particionado?
+//		if( partActual->hijoIzq->header.status == OCUPADO){
+//			registrarEnMemoriaBUDDYSYSTEM(mensajeNuevo, partActual->hijoDer);
+//		}else{
+//			registrarEnMemoriaBUDDYSYSTEM(mensajeNuevo, partActual->hijoIzq);}
+//	}else{
+//		evaluarTamanioParticion(partActual, mensajeNuevo);
+//	}
+
+void evaluarTamanioParticionYasignar(struct nodoMemoria* partActual, msgMemoriaBroker* msg){
+	uint32_t tamanioMsg = msg->paq->sizeStream;
+	if(tamanioParticion(partActual) > tamanioMsg){
+		while(tamanioParticion(partActual)/2 > tamanioMsg){
+			particionarMemoriaBUDDY(partActual);
+			partActual->header.status = PARTICIONADO;
+			partActual = partActual->hijoIzq;
+		}
+		partActual->header.status = OCUPADO;
+		partActual->mensaje = msg;
+		return 1;
+	}
+	return -1;
 }
 
 void particionarMemoriaBUDDY(struct nodoMemoria* particionActual){
@@ -97,14 +121,13 @@ void particionarMemoriaBUDDY(struct nodoMemoria* particionActual){
 	particionActual->hijoIzq->padre   = particionActual; //nuevo
 	particionActual->hijoDer->padre   = particionActual; //nuevo
 
-
 	particionActual->header.status = PARTICIONADO;
 }
 
-void particionarMemoriaPARTICIONES(listaMutex* partición, msgMemoriaBroker* msg ){ //todo
-	uint32_t tamanio = msg->paq->sizeStream;
+//void particionarMemoriaPARTICIONES(listaMutex* partición, msgMemoriaBroker* msg ){ //todo
+	//uint32_t tamanio = msg->paq->sizeStream;
 
-}
+//}
 
 void guardarSubEnMemoria(uint32_t idMensaje, uint32_t socket, ListasMemoria lista){
 

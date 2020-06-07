@@ -84,6 +84,8 @@ void registrarEnMemoriaBUDDYSYSTEM(msgMemoriaBroker* mensajeNuevo, struct nodoMe
 
 void particionarMemoriaBUDDY(struct nodoMemoria*);
 
+listaMutex* iniciarMemoriaPARTICIONES();
+
 void evaluarTamanioParticion(struct nodoMemoria* partActual, msgMemoriaBroker* msg);
 
 void guardarSubEnMemoria(uint32_t idmensaje, uint32_t socket, uint32_t lista);
