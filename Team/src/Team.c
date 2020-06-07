@@ -113,6 +113,7 @@ int main(int argc , char* argv[]){
 	teamLogger = iniciar_logger("team.log", "TEAM");
 	//char pathConfig  = argv;
 	sem_init(&semaforoEjecucionCpu, 0,0);
+	sem_init(&intercambioFinalizado, 0,0);
 	entrenadoresLibres=inicializarListaMutex();
 	colaEjecucionFifo=inicializarColaMutex();
 	pokemonesPendientes=inicializarColaMutex();
@@ -120,7 +121,9 @@ int main(int argc , char* argv[]){
 	entrenadores=inicializarListaMutex();
 	especiesLocalizadas=inicializarListaMutex();
 	entrenadoresExit=inicializarListaMutex();
+	entrenadoresDeadlock=inicializarListaMutex();
 	listaIdsRespuestasGet=inicializarListaMutex();
+
 	char* pathConfig   = "Team2.config";
 	t_config* config   = config_create(pathConfig);
 	retardoCicloCpu    = config_get_int_value(config,"RETARDO_CICLO_CPU");
@@ -235,9 +238,10 @@ void atenderCaught(paquete* paqueteCaught){
 	if(idEncontrado!=-1){
 		dataEntrenador* entrenadorEncontrado=(dataEntrenador*)getListaMutex(entrenadores, idEncontrado);
 		if(msgCaught->resultadoCaught==CORRECTO){
-			list_add(entrenadorEncontrado->pokemones,(void*)(entrenadorEncontrado->pokemonAAtrapar->pokemon));
-			registrarPokemonAtrapado(entrenadorEncontrado->pokemonAAtrapar->pokemon);
-			replanificarEntrenador(entrenadorEncontrado);
+//			list_add(entrenadorEncontrado->pokemones,(void*)(entrenadorEncontrado->pokemonAAtrapar->pokemon));
+//			registrarPokemonAtrapado(entrenadorEncontrado->pokemonAAtrapar->pokemon);
+//			replanificarEntrenador(entrenadorEncontrado);
+			atraparPokemonYReplanificar (entrenadorEncontrado);
 		}else{
 //			entrenadorEncontrado->estado=BLOCKED;
 //			habilitarHiloEntrenador(idEncontrado);
@@ -435,34 +439,45 @@ void* suscribirseCola(void* msgSuscripcion){
 //llenarPaquete( uint32_t modulo,uint32_t tipoMensaje, uint32_t sizeStream,void* stream)
 void enviarCatch(dataEntrenador* infoEntrenador){
 	uint32_t cliente=crearSocketCliente(ipBroker,puertoBroker);
-
-	mensajeCatch* msgCatch=llenarCatch(infoEntrenador->pokemonAAtrapar->pokemon, (infoEntrenador->pokemonAAtrapar->posicion).x,(infoEntrenador->pokemonAAtrapar->posicion).y);
-	void* streamMsg=serializarCatch(msgCatch);
-	paquete* paq=llenarPaquete(TEAM,CATCH_POKEMON,   sizeArgumentos(CATCH_POKEMON,msgCatch->pokemon,1)  , streamMsg);
-	void* paqueteSerializado=serializarPaquete(paq);
-	destruirCatch(msgCatch);
-	//destruirPaquete(paq);
-	send(cliente,paqueteSerializado, sizePaquete(paq), 0);
-	free(paqueteSerializado);
-
-	uint32_t idMensaje=0;
-
-	if(recv(cliente, &idMensaje, sizeof(uint32_t),0)==-1){
-		printf("Ocurrio un error al recibir la respuesta de un catch\n");
-	}
-	if(idMensaje>0){
+	if(cliente!=-1){
 
 
-	idsEntrenadorMensaje* parDeIds=malloc(sizeof(idsEntrenadorMensaje));
-	parDeIds->idEntrenador=infoEntrenador->id;
-	parDeIds->idMensaje=idMensaje;
-	addListaMutex(listaIdsEntrenadorMensaje,(void*)parDeIds);
+		mensajeCatch* msgCatch=llenarCatch(infoEntrenador->pokemonAAtrapar->pokemon, (infoEntrenador->pokemonAAtrapar->posicion).x,(infoEntrenador->pokemonAAtrapar->posicion).y);
+		void* streamMsg=serializarCatch(msgCatch);
+		paquete* paq=llenarPaquete(TEAM,CATCH_POKEMON,   sizeArgumentos(CATCH_POKEMON,msgCatch->pokemon,1)  , streamMsg);
+		void* paqueteSerializado=serializarPaquete(paq);
+		destruirCatch(msgCatch);
+		//destruirPaquete(paq);
+		if(send(cliente,paqueteSerializado, sizePaquete(paq), 0)!=-1){
 
+
+			uint32_t idMensaje=0;
+
+			if(recv(cliente, &idMensaje, sizeof(uint32_t),0)==-1){
+				printf("Ocurrio un error al recibir la respuesta de un catch\n");
+			}
+
+			if(idMensaje>0){
+
+
+				idsEntrenadorMensaje* parDeIds=malloc(sizeof(idsEntrenadorMensaje));
+				parDeIds->idEntrenador=infoEntrenador->id;
+				parDeIds->idMensaje=idMensaje;
+				addListaMutex(listaIdsEntrenadorMensaje,(void*)parDeIds);
+
+			}else{
+			//se recibio erroneamente
+			}
+		}else{
+			atraparPokemonYReplanificar (infoEntrenador);
+		}
+		free(paqueteSerializado);
 	}else{
-		//se recibio erroneamente
+		atraparPokemonYReplanificar (infoEntrenador);
 	}
 	close(cliente);
 }
+
 
 void* enviarGet(void* arg){
 	char* pokemon=(char*) arg;
@@ -473,20 +488,20 @@ void* enviarGet(void* arg){
 	paquete* paq=llenarPaquete(TEAM, GET_POKEMON,sizeArgumentos(GET_POKEMON,msg->pokemon,1),stream);
 	void* paqueteSerializado=serializarPaquete(paq);
 	// hacer destroy para el msg
-	send(cliente,paqueteSerializado, sizePaquete(paq), 0);
-	free(paqueteSerializado);
-	uint32_t idMensaje=0;
+	if(send(cliente,paqueteSerializado, sizePaquete(paq), 0)!=-1){
+		free(paqueteSerializado);
+		uint32_t idMensaje=0;
 
-	if(recv(cliente, &idMensaje, sizeof(uint32_t),0)==-1){
-			printf("Ocurrio un error al recibir la respuesta de un get\n");
-	}
-	if(idMensaje>0){
-		addListaMutex(listaIdsRespuestasGet,(void*)(&idMensaje));
+		if(recv(cliente, &idMensaje, sizeof(uint32_t),0)==-1){
+				printf("Ocurrio un error al recibir la respuesta de un get\n");
+		}
+		if(idMensaje>0){
+			addListaMutex(listaIdsRespuestasGet,(void*)(&idMensaje));
 
-	}else{
+		}else{
 			//se recibio erroneamente
-	}}
-
+		}}
+	}
 	close(cliente);
 	return NULL;
 
@@ -670,7 +685,12 @@ uint32_t buscarObjetivoPorEspecie(listaMutex* listaObjetivos, char* especie){
 void registrarPokemonAtrapado(char* pokemon){
 	uint32_t pos=buscarObjetivoPorEspecie(team->objetivoGlobal,pokemon);
 	if(pos!=-1){
-		(((objetivo*)getListaMutex(team->objetivoGlobal,pos))->cantidad)--;
+		objetivo* objetivoEncontrado=((objetivo*)getListaMutex(team->objetivoGlobal,pos));
+		(objetivoEncontrado->cantidad)--;
+		if(objetivoEncontrado->cantidad==0){
+			removeListaMutex(team->objetivoGlobal,pos);
+		}
+
 	}else
 		printf("No se pudo registrar el pokemon atrapado ya que no está en los objetivos del team\n");
 }

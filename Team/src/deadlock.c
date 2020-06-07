@@ -39,7 +39,7 @@ bool mismaListaPokemones(t_list* listaPokemones1, t_list* listaPokemones2){
 }
 
 bool entrenadorEnDeadlock(dataEntrenador* entrenador){ //para saber si un entrenador esta en deadlock
-	return(entrenador->estado == BLOCKED && !cumplioObjetivo(entrenador));
+	return(entrenador->estado == BLOCKED && !cumplioObjetivo(entrenador) && !leFaltaCantidadDePokemones(entrenador));
 }
 
 //t_list* pokemonQueSobra (dataEntrenador* entrenador){
@@ -52,23 +52,107 @@ bool entrenadorEnDeadlock(dataEntrenador* entrenador){ //para saber si un entren
 //	return listaPoke;
 //}
 
-void realizarIntercambio(){
-	//simularCicloCpu(5,entrenador1);
-	//simularCicloCpu(5,entrenador2);
+void realizarIntercambio(dataEntrenador* entrenadorQueSeMueve){
+	t_list* pokemonesSobrantesEntrenadorBloqueado=obtenerPokemonesSobrantes(entrenadorBloqueadoParaDeadlock);
+	pokemonSobrante* pokemonSobranteInteresante=
+			obtenerPokemonInteresante(entrenadorQueSeMueve,pokemonesSobrantesEntrenadorBloqueado);
+	char* pokemonAPedir;
+
+	if(pokemonSobranteInteresante==NULL){
+		char* primerPokemon=(char*)list_get(pokemonesSobrantesEntrenadorBloqueado,0);
+		pokemonAPedir=malloc(strlen(primerPokemon)+1);
+		strcpy(pokemonAPedir,primerPokemon);
+	}else{
+		pokemonAPedir=malloc(strlen(pokemonSobranteInteresante->pokemon)+1);
+		strcpy(pokemonAPedir,pokemonSobranteInteresante->pokemon);
+	}
+
+	darPokemon(entrenadorQueSeMueve,entrenadorBloqueadoParaDeadlock,entrenadorQueSeMueve->pokemonAAtrapar->pokemon);
+	darPokemon(entrenadorBloqueadoParaDeadlock,entrenadorQueSeMueve,pokemonAPedir);
+
+	simularCicloCpu(5,entrenadorQueSeMueve);
+
+	sem_post(&intercambioFinalizado);
+
 }
 
 void entrarEnEjecucionParaDeadlock(dataEntrenador* infoEntrenador){
-	sem_wait(&(infoEntrenador->semaforo));
+	sem_wait(&(infoEntrenador->semaforo));//espera al planificador
 	infoEntrenador->estado = EXEC;
 	moverEntrenadorAPosicion(infoEntrenador, ((infoEntrenador->pokemonAAtrapar)->posicion));
+	realizarIntercambio(infoEntrenador);
+	infoEntrenador->estado=BLOCKED;
 	sem_post(&semaforoEjecucionCpu);
 }
 
+void resolverDeadlock(){
+	while(hayEntrenadoresEnDeadlock()){
 
 
+		entrenadorBloqueadoParaDeadlock=(dataEntrenador*)getListaMutex(entrenadoresDeadlock,0);
+
+		while(entrenadorEnDeadlock(entrenadorBloqueadoParaDeadlock)){
+
+			t_list* listaPokemonesSobrantes=obtenerPokemonesSobrantesTeam(entrenadoresDeadlock);
+
+			pokemonSobrante* pokeSobrante=obtenerPokemonInteresante(entrenadorBloqueadoParaDeadlock,listaPokemonesSobrantes );
+
+			dataEntrenador* entrenadorAMover=pokeSobrante->entrenador;
+
+			entrenadorAMover->pokemonAAtrapar->posicion=entrenadorBloqueadoParaDeadlock->posicion;
+			entrenadorAMover->pokemonAAtrapar->pokemon=pokeSobrante->pokemon;//OJO, ACA ESTOY ABUSANDO DE LA VARIABLE PARA GUARDAR EL POKEMON QUE DEBE DARLE AEL ENTRENADOR EN MOVIMIENTO AL QUE ESTA QUIETO
+
+			habilitarHiloEntrenador(entrenadorAMover->id);
+
+			sem_wait(&intercambioFinalizado);
+
+			list_destroy_and_destroy_elements(listaPokemonesSobrantes,free);
+			free(pokeSobrante);
 
 
+		}
 
+		actualizarEntrenadoresEnDeadlock();
+	}
+
+}
+
+bool hayEntrenadoresEnDeadlock(){
+	return sizeListaMutex(entrenadoresDeadlock)>0;
+}
+
+void actualizarEntrenadoresEnDeadlock(){
+
+	for(uint32_t i=0;i<sizeListaMutex(entrenadoresDeadlock);i++){
+		dataEntrenador* entrenadorActual=(dataEntrenador*) getListaMutex(entrenadoresDeadlock,i);
+		if(cumplioObjetivo(entrenadorActual)){
+			entrenadorActual->estado=EXIT;
+			removeListaMutex(entrenadoresDeadlock,i);
+		}
+	}
+}
+
+t_list* obtenerPokemonesSobrantesTeam(listaMutex* listaEntrenadores){
+	t_list* listaGlobal=list_create();
+	for(uint32_t i=0;i<sizeListaMutex(listaEntrenadores);i++){
+		dataEntrenador* entrenadorActual=getListaMutex(listaEntrenadores,i);
+		t_list* listaActual=obtenerPokemonesSobrantes(entrenadorActual);//ESTA DESPUES HAY QUE DESTRUIRLA
+		list_add_all(listaGlobal,listaActual);
+
+	}
+	return listaGlobal;
+}
+
+pokemonSobrante* obtenerPokemonInteresante(dataEntrenador* entrenador,t_list* pokemonesSobrantes){
+	for(uint32_t i=0;i<list_size(pokemonesSobrantes);i++){
+		pokemonSobrante* pokemonSobranteActual=(pokemonSobrante*)list_get(pokemonesSobrantes,i);
+		if(pokemonLeInteresa(entrenador,pokemonSobranteActual->pokemon)){
+			list_remove(pokemonesSobrantes,i);
+			return pokemonSobranteActual;
+		}
+	}
+	return NULL;
+}
 
 
 

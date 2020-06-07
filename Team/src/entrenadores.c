@@ -77,12 +77,17 @@ void replanificarEntrenador(dataEntrenador* entrenador){
 							addListaMutex(entrenadoresExit, (void*)entrenador);
 
 						}else{
-							//agregarEntrenadorLista(entrenador);
-							//intentarResolverDeadlock();
+							//DEADLOCK
+							addListaMutex(entrenadoresDeadlock, (void*) entrenador);
+							if(todosLosEntrenadoresTerminaronDeAtrapar())
+								resolverDeadlock();
 						}
 	}
 }
 
+bool todosLosEntrenadoresTerminaronDeAtrapar(){
+	return (sizeListaMutex(entrenadoresDeadlock)+sizeListaMutex(entrenadoresExit))==sizeListaMutex(entrenadores);
+}
 bool cumplioObjetivo(dataEntrenador* entrenador){
 	return mismaListaPokemones(entrenador->objetivoPersonal, entrenador->pokemones);
 }
@@ -128,16 +133,19 @@ void* ejecucionHiloEntrenador(void* argEntrenador){
 		infoEntrenador->estado=BLOCKED;//IMPORTANTE: CUANDO LLEGUE LA RESPUESTA DEL CATCH SE TIENE QUE HACER UN UNLOCK AL ENTRENADOR CORRESPONDIENTE
 		sem_wait(semaforoEntrenador);// ESPERA A QUE EL TEAM LE AVISE QUE LLEGO LA RESPUESTA DEL POKEMON QUE QUISO ATRAPAR
 		//meter un if() para verificar estado y ver que hacer despues
+
+
 		if(infoEntrenador->estado==BLOCKED && leFaltaCantidadDePokemones(infoEntrenador)){
 			addListaMutex(entrenadoresLibres, (void*)infoEntrenador);//vuelve a agregar al entrenador a la lista de entrenadores libres
-		}else if(entrenadorEnDeadlock(infoEntrenador)){
-			while(entrenadorEnDeadlock(infoEntrenador)){
-				sem_wait(semaforoEntrenador);
-				infoEntrenador->estado=READY;
-				poneteEnReady(infoEntrenador);
-				entrarEnEjecucionParaDeadlock(infoEntrenador);
+		}
 
-			}
+		while(entrenadorEnDeadlock(infoEntrenador) && infoEntrenador!=entrenadorBloqueadoParaDeadlock){
+			sem_wait(semaforoEntrenador);
+			infoEntrenador->estado=READY;
+			poneteEnReady(infoEntrenador);
+			entrarEnEjecucionParaDeadlock(infoEntrenador);
+
+
 		}
 	}
 	return NULL;
@@ -216,4 +224,67 @@ void moverEntrenadorY(dataEntrenador* entrenador, uint32_t movimientoY){
 			(entrenador->posicion).y+=unidad;
 		}
 	}
+}
+
+void atraparPokemonYReplanificar (dataEntrenador* entrenador){
+	list_add(entrenador->pokemones,(void*)(entrenador->pokemonAAtrapar->pokemon));
+	registrarPokemonAtrapado(entrenador->pokemonAAtrapar->pokemon);
+	replanificarEntrenador(entrenador);
+}
+
+t_list* obtenerPokemonesSobrantes(dataEntrenador* entrenador){//lista de pokemonSobrante
+		t_list* pokemonesSobrantes=list_create();
+		uint32_t i;
+		t_list* copiaObjetivo = list_duplicate(entrenador->objetivoPersonal);//DESTRUIR
+		for(i=0;i<list_size(entrenador->pokemones);i++){
+			char *pokemonAComparar = (char*) list_get(entrenador->pokemones,i);
+			uint32_t encontrado    = buscarMismoPokemon(copiaObjetivo,pokemonAComparar);
+
+			if(encontrado != -1){
+				list_remove_and_destroy_element(copiaObjetivo,encontrado,free);
+			}else{
+				pokemonSobrante* pokeSobrante=malloc(sizeof(pokemonSobrante));
+				pokeSobrante->pokemon=pokemonAComparar;
+				pokeSobrante->entrenador=entrenador;
+				list_add(pokemonesSobrantes,(void*)pokeSobrante);
+			}
+		}
+
+		return pokemonesSobrantes;
+
+}
+
+t_list* obtenerPokemonesFaltantes(dataEntrenador* entrenador){
+	t_list* pokemonesFaltantes=list_create();
+			uint32_t i;
+			t_list* copiaPokemones = list_duplicate(entrenador->pokemones);//DESTUIR
+			for(i=0;i<list_size(entrenador->objetivoPersonal);i++){
+				char *pokemonAComparar = (char*) list_get(entrenador->objetivoPersonal,i);
+				uint32_t encontrado    = buscarMismoPokemon(copiaPokemones,pokemonAComparar);
+
+				if(encontrado != -1){
+
+					char* pokemonAAgregar=malloc(strlen(pokemonAComparar)+1);
+					strcpy(pokemonAAgregar,pokemonAComparar);
+					list_add(pokemonesFaltantes, (void*)pokemonAAgregar);
+				}else{
+					list_remove_and_destroy_element(copiaPokemones,encontrado, free);
+
+				}
+			}
+
+			return pokemonesFaltantes;
+}
+
+bool pokemonLeInteresa(dataEntrenador* entrenador, char* pokemon){
+	t_list* listaPokemonesFaltantes=obtenerPokemonesFaltantes(entrenador);
+	uint32_t i=buscarMismoPokemon(listaPokemonesFaltantes,pokemon);
+	list_destroy_and_destroy_elements(listaPokemonesFaltantes,free);
+	return i>=0;
+}
+
+void darPokemon(dataEntrenador* entrenadorDador, dataEntrenador* entrenadorReceptor, char* pokemon){
+	uint32_t posPokemon=buscarMismoPokemon(entrenadorDador->pokemones,pokemon);
+	list_remove_and_destroy_element(entrenadorDador->pokemones, posPokemon, free);//ESTO PUEDE ROMPER EN ALGUN LADO, CUANDO SACO UN ELEMENTO DE UNA LISTA DEBO HACER MEMCPY O STRCPY
+	list_add(entrenadorReceptor->pokemones,(void*)pokemon);
 }

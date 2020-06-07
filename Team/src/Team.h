@@ -29,8 +29,9 @@ listaMutex* listaIdsRespuestasGet;
 listaMutex* listaIdsEntrenadorMensaje; // del tipo idsEntrenadorMensaje , //ver a futuro si esta lista requiere mutex
 listaMutex* entrenadoresLibres;
 colaMutex* pokemonesPendientes;//lista de pokePosicion que contiene los pokemones que no pudieron ser asignados a ningun entrenador por no haber entrenadore libres
-listaMutex* entrenadoresExit;
 
+listaMutex* entrenadoresExit;
+listaMutex* entrenadoresDeadlock;
 //pokemonPosicion pokemonAAtrapar;
 
 
@@ -44,6 +45,8 @@ uint32_t retardoCicloCpu;
 uint32_t algoritmoPlanificacion;
 
 sem_t semaforoEjecucionCpu;
+
+sem_t intercambioFinalizado;
 
 t_log* teamLogger;
 
@@ -84,6 +87,7 @@ typedef struct{
 	posicion posicion;
 } pokemonPosicion;
 
+
 typedef struct {
 	posicion posicion;
 	t_list* pokemones; //lista de strings
@@ -94,6 +98,16 @@ typedef struct {
 	sem_t semaforo;
 	uint32_t cantidadCiclosCpu;
 } dataEntrenador;
+
+dataEntrenador* entrenadorBloqueadoParaDeadlock;
+
+
+typedef struct{
+	char* pokemon;
+	dataEntrenador* entrenador;
+}pokemonSobrante;
+
+
 
 typedef struct {
 	listaMutex* objetivoGlobal;//lista de objetivo
@@ -111,7 +125,7 @@ typedef struct{
 }idsEntrenadorMensaje;
 
 //typedef enum {
-//	BROKER,
+//	BROKER,bool pokemonLeInteresa(dataEntrenador* entrenador, char* pokemon)
 //	TEAM,
 //	GAMECARD,
 //	GAMEBOY
@@ -256,5 +270,34 @@ void loggearPokemonAAtrapar(pokemonPosicion* pokePosicion, t_log* teamLogger);
 uint32_t crearSocketClienteBroker (char* ip, uint32_t puerto);
 
 uint32_t reconectarseAlBroker(uint32_t cliente,void* direccionServidor,socklen_t length);
+
+void atraparPokemonYReplanificar (dataEntrenador* entrenador);
+
+bool leFaltaCantidadDePokemones(dataEntrenador* entrenador);
+
+bool todosLosEntrenadoresTerminaronDeAtrapar();
+
+bool hayEntrenadoresEnDeadlock();
+
+t_list* obtenerPokemonesSobrantes(dataEntrenador* entrenador);
+
+t_list* obtenerPokemonesSobrantesTeam(listaMutex* listaEntrenadores);
+
+t_list* obtenerPokemonesFaltantes(dataEntrenador* entrenador);
+
+t_list* obtenerPokemonesSobrantesTeam(listaMutex* listaEntrenadores);
+
+void resolverDeadlock();
+
+bool pokemonLeInteresa(dataEntrenador* entrenador, char* pokemon);
+
+
+pokemonSobrante* obtenerPokemonInteresante(dataEntrenador* entrenador,t_list* pokemonesSobrantes);
+
+void simularCicloCpu(uint32_t cantidadCiclos, dataEntrenador* entrenador);
+
+void darPokemon(dataEntrenador* entrenadorDador, dataEntrenador* entrenadorReceptor, char* pokemon);
+
+void actualizarEntrenadoresEnDeadlock();
 
 #endif /* TEAM_H_ */
