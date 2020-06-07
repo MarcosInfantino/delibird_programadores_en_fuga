@@ -54,40 +54,27 @@ void suscribirACola(uint32_t* socket, colaMensajes * cola){
 }
 
 void suscribirSegunCola(paquete paq, uint32_t socket) {
-
-//	parametroValidacion parameter;
-//	parameter.socketCliente = socket;
-//	parameter.paquete       = paq;
-
-
 	switch (deserializarSuscripcion(paq.stream)->cola) {
 		case APPEARED_POKEMON:
-			//parameter.structCola = appearedPokemon;
 			suscribir(&appearedPokemon, paq, socket,APPEARED_POKEMON);
 			break;
 		case NEW_POKEMON:
-			//parameter.structCola = newPokemon;
 			suscribir(&newPokemon, paq, socket,NEW_POKEMON);
 			break;
 		case CAUGHT_POKEMON:
-			//parameter.structCola = caughtPokemon;
 			suscribir(&caughtPokemon, paq, socket, CAUGHT_POKEMON);
 			break;
 		case CATCH_POKEMON:
-			//parameter.structCola = catchPokemon;
 			suscribir(&catchPokemon, paq, socket, CATCH_POKEMON);
 			break;
 		case GET_POKEMON:
-			//parameter.structCola = getPokemon;
 			suscribir(&getPokemon, paq, socket, GET_POKEMON);
 			break;
 		case LOCALIZED_POKEMON:
-			//parameter.structCola = localizedPokemon;
 			suscribir(&localizedPokemon, paq, socket, LOCALIZED_POKEMON);
 	}
 	//enviar todos los mensajes que hubiesen en la cola antes de suscribirse
-	//cuando se envien mensajes que no sean suscripción asignarles un numero para posibbles respuestas en otra cola
-
+	//cuando se envien mensajes que no sean suscripción asignarles un numero para posibles respuestas en otra cola
 }
 
 void suscribir(colaMensajes * cola, paquete paq, uint32_t socket,uint32_t identificadorCola) {
@@ -96,10 +83,8 @@ void suscribir(colaMensajes * cola, paquete paq, uint32_t socket,uint32_t identi
 		responderMensaje(socket, CORRECTO);
 
 		//enviarMensajesPreviosEnMemoria(socket, identificadorCola);
-
-//		char * frase = armarStringSuscripLog(paq.modulo, paq.tipoMensaje);
-//		log_info(loggerBroker, frase);
-
+		//char * frase = armarStringSuscripLog(paq.modulo, paq.tipoMensaje);
+		//log_info(loggerBroker, frase);
 	} else {
 		responderMensaje(socket, INCORRECTO);
 		//printf("suscripcion incorrecta\n");

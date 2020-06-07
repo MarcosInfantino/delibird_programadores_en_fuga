@@ -28,10 +28,10 @@ int main(void) {
 	char* pathConfig = "broker.config";
 	t_config* config = config_create(pathConfig);
 //
-//	puerto_broker     = config_get_int_value(config, "PUERTO_BROKER​");
-//	ip_broker         = config_get_string_value(config, "IP_BROKER");
-//	tamMemoria        = config_get_int_value(config, "TAMANO_MEMORIA");
-//	particionMinima   = config_get_int_value(config, "TAMANO_MINIMO_PARTICION");
+	//puerto_broker     = config_get_int_value(config, "PUERTO_BROKER​");
+	//ip_broker         = config_get_string_value(config, "IP_BROKER");
+	//tamMemoria        = config_get_int_value(config, "TAMANO_MEMORIA");
+	//particionMinima   = config_get_int_value(config, "TAMANO_MINIMO_PARTICION");
 
 	puerto_broker = 5002;
 	ip_broker = "127.0.0.1";
@@ -99,7 +99,6 @@ void iniciarHilos() {
 }
 
 void* iniciarCola(void* c) {
-
 	colaMensajes* cc = (colaMensajes*) c;
 
 	cc->suscriptores = inicializarListaMutex();
@@ -108,7 +107,6 @@ void* iniciarCola(void* c) {
 	cc->mensajesEnCola = malloc(sizeof(sem_t));
 	sem_init(cc->mensajesEnCola,0,0);
 	return NULL;
-
 }
 
 void esperar_cliente(uint32_t servidor) {
@@ -132,11 +130,8 @@ void esperar_cliente(uint32_t servidor) {
 
 void* atenderCliente(void* sock) {
 //	printf("Atiendo cliente\n");
-
 	uint32_t* socket = (uint32_t*) sock;
-
 	paquete* paquete = recibirPaquete(*socket);
-
 
 	log_info(loggerBroker,armarConexionNuevoProcesoLog(paquete->modulo));
 
@@ -202,7 +197,7 @@ void meterEnCola( colaMensajes* structCola, paquete * paq, uint32_t  socket){
 	send(socket,(void*)(&contador.contador),sizeof(uint32_t),0);
 	printf("Lo mete en la cola");
 
-	//registrarMensajeEnMemoria(contador.contador, &paq );
+	registrarMensajeEnMemoria(contador.contador, paq, algoritmoMemoria);
 
 	contador.contador++;
 	pthread_mutex_unlock(contador.mutexContador);
@@ -285,14 +280,6 @@ void incrementarContador(){
 	pthread_mutex_unlock(contador.mutexContador);
 }
 
-uint32_t obtenerIDultimoMensaje(){
-
-	pthread_mutex_lock(contador.mutexContador);
-	return contador.contador;
-	pthread_mutex_unlock(contador.mutexContador);
-
-}
-
 void definirAlgoritmoMemoria(t_config* config){
 	algoritmoParameter parAlgoritmo;
 	parAlgoritmo.config = config;
@@ -345,7 +332,7 @@ void definirAlgoritmo(algoritmoParameter parAlgoritmo, uint32_t variablecitaDeCa
 void definirComienzoDeMemoria(){
 	if(algoritmoMemoria == BUDDY_SYSTEM){
 			nodoRaizMemoria = crearRaizArbol();
-	}else if(algoritmoMemoria == BUDDY_SYSTEM){
+	}else if(algoritmoMemoria == PARTICIONES_DINAMICAS){
 			memoriaPARTICIONES = iniciarMemoriaPARTICIONES();
 	}
 }
