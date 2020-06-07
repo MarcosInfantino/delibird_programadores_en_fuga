@@ -93,7 +93,7 @@ bool entraEnLaMitad(struct nodoMemoria* partActual, msgMemoriaBroker* mensajeNue
 //		evaluarTamanioParticion(partActual, mensajeNuevo);
 //	}
 
-void evaluarTamanioParticionYasignar(struct nodoMemoria* partActual, msgMemoriaBroker* msg){
+uint32_t evaluarTamanioParticionYasignar(struct nodoMemoria* partActual, msgMemoriaBroker* msg){
 	uint32_t tamanioMsg = msg->paq->sizeStream;
 	if(tamanioParticion(partActual) > tamanioMsg){
 		while(tamanioParticion(partActual)/2 > tamanioMsg){
@@ -105,6 +105,7 @@ void evaluarTamanioParticionYasignar(struct nodoMemoria* partActual, msgMemoriaB
 		partActual->mensaje = msg;
 		return 1;
 	}
+
 	return -1;
 }
 

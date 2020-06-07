@@ -96,5 +96,6 @@ bool noEsParticionMinima(struct nodoMemoria* particion);
 uint32_t tamanioParticion(struct nodoMemoria* part);
 bool estaLibre(struct nodoMemoria* particion);
 
+uint32_t evaluarTamanioParticionYasignar(struct nodoMemoria* partActual, msgMemoriaBroker* msg);
 
 #endif /* MEMORIA_H_ */

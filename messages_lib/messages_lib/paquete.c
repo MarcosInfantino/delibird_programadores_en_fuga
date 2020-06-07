@@ -24,7 +24,9 @@ uint32_t sizePaquete(paquete* paq){
 }
 
 void destruirPaquete(paquete* paq){
-	free(paq->stream);
+	if(paq->stream!=NULL){
+		free(paq->stream);
+	}
 	free(paq);
 }
 
@@ -42,8 +44,9 @@ void* serializarPaquete(paquete* paqueteASerializar){
 	offset+=sizeof(uint32_t);
 	memcpy(paq+offset, &(paqueteASerializar->sizeStream), sizeof(uint32_t));
 	offset+=sizeof(uint32_t);
-	memcpy(paq+offset,paqueteASerializar->stream,paqueteASerializar->sizeStream);
-
+	if(paqueteASerializar->sizeStream>0){
+		memcpy(paq+offset,paqueteASerializar->stream,paqueteASerializar->sizeStream);
+	}
 	return paq;
 }
 
@@ -62,9 +65,13 @@ paquete* deserializarPaquete(void* paqueteRecibido){
 	memcpy(&(paq->sizeStream), paqueteRecibido+offset, sizeof(uint32_t));
 	offset+=sizeof(uint32_t);
 
+	if(paq->sizeStream>0){
 	paq->stream = malloc(paq->sizeStream);
 
 	memcpy(paq->stream, paqueteRecibido+offset, paq->sizeStream);
+	}else{
+		paq->stream=NULL;
+	}
 
 	free(paqueteRecibido);
 	return paq;
@@ -89,11 +96,16 @@ paquete* recibirPaquete(uint32_t socket){
 	if(recv(socket,&(paq->sizeStream),sizeof(uint32_t),0)==-1){
 		return NULL;
 	}
+
+	if(paq->sizeStream>0){
 	paq->stream = malloc(paq->sizeStream);
 
 	if(recv(socket,paq->stream,(paq->sizeStream),0)==-1){
 		return NULL;
+	}}else{
+		paq->stream=NULL;
 	}
+
 	return paq;
 }
 
