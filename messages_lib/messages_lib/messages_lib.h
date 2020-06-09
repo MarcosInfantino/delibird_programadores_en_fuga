@@ -26,22 +26,6 @@
 #include <arpa/inet.h>
 #include<commons/log.h>
 
-typedef struct{
-	int size;
-	void* stream;
-} t_buffer;
-
-typedef enum
-{
-	CADENA = 1,
-}op_code;
-
-typedef struct
-{
-	op_code codigo_operacion;
-	t_buffer* buffer;
-} t_paquete;
-
 typedef enum{
 	APPEARED_POKEMON,
 	NEW_POKEMON,
@@ -262,6 +246,8 @@ void insertarIdCorrelativoPaquete(paquete* paq, uint32_t idCorrelativo);
 
 uint32_t crearSocketCliente (char* ip, uint32_t puerto);
 uint32_t sizeArgumentos (uint32_t colaMensaje, char* nombrePokemon, uint32_t cantidadPokemon);
+
+void enviarACK(uint32_t socket, uint32_t modulo, uint32_t id);
 
 listaMutex* inicializarListaMutex();
 void destruirListaEntrenadoresLibres();
