@@ -51,9 +51,10 @@ bool validarParaSuscripcion(colaMensajes * cola, paquete paq, uint32_t socket, u
 
 void suscribirACola(uint32_t* socket, colaMensajes * cola){
 	addListaMutex(cola->suscriptores, (void*) socket);
+	log_info(brokerLogger2,"Realizo suscripción a una cola. Socket suscripto: %i" ,*socket);
 }
 
-void suscribirSegunCola(paquete paq, uint32_t socket) {
+void suscribirSegunCola(paquete paq, uint32_t* socket) {
 	switch (deserializarSuscripcion(paq.stream)->cola) {
 		case APPEARED_POKEMON:
 			suscribir(&appearedPokemon, paq, socket,APPEARED_POKEMON);
@@ -77,16 +78,17 @@ void suscribirSegunCola(paquete paq, uint32_t socket) {
 	//cuando se envien mensajes que no sean suscripción asignarles un numero para posibles respuestas en otra cola
 }
 
-void suscribir(colaMensajes * cola, paquete paq, uint32_t socket,uint32_t identificadorCola) {
-	if (validarParaSuscripcion(cola, paq, socket,identificadorCola)) { //si se puede suscribir y aun no esta en la cola
-		suscribirACola(&socket, cola);
-		responderMensaje(socket, CORRECTO);
+void suscribir(colaMensajes * cola, paquete paq, uint32_t* socket,uint32_t identificadorCola) {
+	if (validarParaSuscripcion(cola, paq, *socket,identificadorCola)) { //si se puede suscribir y aun no esta en la cola
+		suscribirACola(socket, cola);
+		responderMensaje(*socket, CORRECTO);
 
 		//enviarMensajesPreviosEnMemoria(socket, identificadorCola);
 		//char * frase = armarStringSuscripLog(paq.modulo, paq.tipoMensaje);
 		//log_info(loggerBroker, frase);
 	} else {
-		responderMensaje(socket, INCORRECTO);
+		responderMensaje(*socket, INCORRECTO);
+		free(socket);
 		//printf("suscripcion incorrecta\n");
 	}
 }
@@ -100,7 +102,7 @@ void suscribirPorTiempo(void* estructura){
 
 	sleep(structPorTiempo->tiempo);
 
-	desuscribir(structPorTiempo->socket, structPorTiempo->cola);
+	desuscribir(*(structPorTiempo->socket), structPorTiempo->cola);
 
 }
 
@@ -111,9 +113,10 @@ void desuscribir(uint32_t socket, uint32_t cola ){
 	colaMensajes* punteroACola = obtenerCola(cola);
 
 	for(i = 0; i < sizeListaMutex(punteroACola->suscriptores); i++){
-		socketLista = getListaMutex(punteroACola->suscriptores, i);
+		socketLista = (uint32_t*)getListaMutex(punteroACola->suscriptores, i);
 		if (*((uint32_t*) socketLista) == socket) {
 			removeListaMutex(punteroACola->suscriptores, i);
+			free(socketLista);
 		}
 	}
 	uint32_t respuestaDesuscripcion=SUSCRIPCION_FINALIZADA;

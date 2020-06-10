@@ -288,7 +288,6 @@ t_list* obtenerPokemonesSobrantesTeam(listaMutex* listaEntrenadores);
 
 t_list* obtenerPokemonesFaltantes(dataEntrenador* entrenador);
 
-t_list* obtenerPokemonesSobrantesTeam(listaMutex* listaEntrenadores);
 
 void resolverDeadlock();
 
@@ -307,4 +306,5 @@ void loggearResultado();
 
 void loggearObjetivoDelTeam();
 
+void destruirPokemonPosicion(pokemonPosicion* poke);
 #endif /* TEAM_H_ */

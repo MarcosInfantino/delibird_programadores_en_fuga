@@ -124,7 +124,15 @@ void* generarStreamArgumentos (uint32_t colaMensaje, char* argv[]){
 			break;
 
 		case CAUGHT_POKEMON: ;
-			mensajeCaught* mensajeEnviarCaught = llenarCaught(atoi(argv[4]));
+			uint32_t respuestaCaught;
+			if(strcmp("OK", argv[4])==0){
+				respuestaCaught=OK;
+				printf("Respuesta caught ok.\n");
+			}else{
+				respuestaCaught=FAIL;
+				printf("Respuesta caught fail.\n");
+			}
+			mensajeCaught* mensajeEnviarCaught = llenarCaught(respuestaCaught);
 			streamArgumentos = serializarCaught(mensajeEnviarCaught);
 			destruirCaught(mensajeEnviarCaught);
 			break;

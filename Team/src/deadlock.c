@@ -29,10 +29,12 @@ bool mismaListaPokemones(t_list* listaPokemones1, t_list* listaPokemones2){
 		if(encontrado != -1){
 			list_remove(copiaLista1,encontrado);
 		}else{
+			list_destroy(copiaLista1);
 			return false;
 		}
 	}
 	}else{
+
 		return false;
 	}
 	return true;
@@ -42,15 +44,7 @@ bool entrenadorEnDeadlock(dataEntrenador* entrenador){ //para saber si un entren
 	return(entrenador->estado == BLOCKED && !cumplioObjetivo(entrenador) && !leFaltaCantidadDePokemones(entrenador));
 }
 
-//t_list* pokemonQueSobra (dataEntrenador* entrenador){
-//
-//	return listaPoke;
-//}
-//
-//t_list* pokemonQueFalta (dataEntrenador* entrenador){
-//
-//	return listaPoke;
-//}
+
 
 void realizarIntercambio(dataEntrenador* entrenadorQueSeMueve){
 	t_list* pokemonesSobrantesEntrenadorBloqueado=obtenerPokemonesSobrantes(entrenadorBloqueadoParaDeadlock);
@@ -110,7 +104,7 @@ void resolverDeadlock(){
 
 			sem_wait(&intercambioFinalizado);
 
-			list_destroy_and_destroy_elements(listaPokemonesSobrantes,free);
+			list_destroy(listaPokemonesSobrantes);
 			free(pokeSobrante);
 
 
@@ -143,6 +137,7 @@ t_list* obtenerPokemonesSobrantesTeam(listaMutex* listaEntrenadores){
 		dataEntrenador* entrenadorActual=getListaMutex(listaEntrenadores,i);
 		t_list* listaActual=obtenerPokemonesSobrantes(entrenadorActual);//ESTA DESPUES HAY QUE DESTRUIRLA
 		list_add_all(listaGlobal,listaActual);
+		list_destroy(listaActual);
 
 	}
 	return listaGlobal;

@@ -53,7 +53,9 @@ int main(void) {
 
 	iniciarHilos();
 	inicializarContador();
+	abrirHiloParaEnviarMensajes();
 	iniciarServidor();
+
 
 	return EXIT_SUCCESS;
 }
@@ -141,13 +143,14 @@ void* atenderCliente(void* sock) {
 	if( paquete == NULL){
 		printf("RESPONDO MENSAJE ERRONEO\n");
 		responderMensaje(*socket, INCORRECTO);
+		free(socket);
 		}else{
-			manejarTipoDeMensaje(*paquete, *socket);
+			manejarTipoDeMensaje(*paquete, socket);
 		}
 	return NULL;
 }
 
-void manejarTipoDeMensaje(paquete paq, uint32_t socket) {
+void manejarTipoDeMensaje(paquete paq, uint32_t* socket) {
 
 	//log_info(loggerBroker, armarStringMsgNuevoLog(paq.tipoMensaje));
 
@@ -156,23 +159,25 @@ void manejarTipoDeMensaje(paquete paq, uint32_t socket) {
 
 	switch(paq.tipoMensaje){
 		 case APPEARED_POKEMON:
-			 meterEnCola(&appearedPokemon, &paq, socket );
+			 meterEnCola(&appearedPokemon, &paq, *socket );
 			 break;
 		 case NEW_POKEMON:
-			 meterEnCola( &newPokemon, &paq, socket);
+			 meterEnCola( &newPokemon, &paq, *socket);
 			 break;
-		 case CAUGHT_POKEMON:
-			 meterEnCola( &caughtPokemon, &paq, socket);
+		 case CAUGHT_POKEMON:;
+			 mensajeCaught* caught=deserializarCaught(paq.stream);
+			 log_info(brokerLogger2, "Id del caught: %i", caught->resultadoCaught);
+			 meterEnCola( &caughtPokemon, &paq, *socket);
 			 break;
 		 case CATCH_POKEMON:
 			 log_info(brokerLogger2,"Me llegó un catch. Código de mensaje: %i. ",paq.tipoMensaje);
-			 meterEnCola( &catchPokemon, &paq, socket);
+			 meterEnCola( &catchPokemon, &paq, *socket);
 			 break;
 		 case GET_POKEMON:
-			 meterEnCola( &getPokemon, &paq, socket);
+			 meterEnCola( &getPokemon, &paq, *socket);
 			 break;
 		 case LOCALIZED_POKEMON:
-			 meterEnCola( &localizedPokemon, &paq, socket);
+			 meterEnCola( &localizedPokemon, &paq, *socket);
 			 break;
 		 case SUSCRIPCION:
 			 suscribirSegunCola(paq, socket);
@@ -204,6 +209,7 @@ void meterEnCola( colaMensajes* structCola, paquete * paq, uint32_t  socket){
 
 	pushColaMutex(structCola->cola, (void *) paq);
 	sem_post(structCola->mensajesEnCola);
+	log_info(brokerLogger2,"Aviso que hay mensajes en cola.");
 
 }
 
@@ -228,13 +234,15 @@ void * chequearMensajesEnCola(void * colaVoid){
 	uint32_t i;
 	while (1){
 		sem_wait(cola->mensajesEnCola); //hasta q no aparezca 1 mensaje no sigue
-		while(sizeColaMutex(cola->cola) == 0);
+		log_info(brokerLogger2,"Comienza el proceso de envío del mensaje a todos los suscriptores.");
 		paquete* paq = (paquete*) popColaMutex(cola->cola);
 		void * paqSerializado = serializarPaquete(paq);
-
+		log_info(brokerLogger2,"Paquete a enviar serializado.");
 		for(i = 0; i < sizeListaMutex(cola->suscriptores) ;i ++){
 			uint32_t * socketActual = (uint32_t *) getListaMutex(cola->suscriptores, i);
+			log_info(brokerLogger2,"Intento enviar mensaje a un suscriptor. Socket: %i", *socketActual);
 			send(*socketActual, paqSerializado , sizePaquete(paq), 0);
+			log_info(brokerLogger2,"Envié mensaje a un suscriptor.");
 			//guardarSubEnMemoria(paq->id, socketActual, SUBSYAENVIADOS);
 		}
 	}

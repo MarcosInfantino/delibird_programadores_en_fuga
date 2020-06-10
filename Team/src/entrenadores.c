@@ -102,12 +102,17 @@ bool cumplioObjetivo(dataEntrenador* entrenador){
 
 void asignarPokemonAEntrenador(dataEntrenador* entrenador, pokemonPosicion* pokePosicion){
 	loggearPokemonAAtrapar(pokePosicion, teamLogger);
-	if(entrenador->pokemonAAtrapar!=NULL){
-		free(entrenador->pokemonAAtrapar);
-	}
+//	if(entrenador->pokemonAAtrapar!=NULL){
+//		free(entrenador->pokemonAAtrapar);//HACER DESTRUIR POKEMONAATRAPAR
+//	}
 	entrenador->pokemonAAtrapar=pokePosicion;
 	entrenador->estado=READY;
 	habilitarHiloEntrenador(entrenador->id);
+}
+
+void destruirPokemonPosicion(pokemonPosicion* poke){
+	free(poke->pokemon);
+	free(poke);
 }
 
 int inicializarEntrenadores(t_list* entrenadores){
@@ -200,11 +205,16 @@ void habilitarHiloEntrenador(uint32_t idEntrenador){
 }
 
 void moverEntrenadorAPosicion(dataEntrenador* entrenador, posicion pos){
+	log_info(teamLogger2, "El entrenador estaba originalmente en la posicion (%i,%i).",(entrenador->posicion).x,(entrenador->posicion).y);
+	log_info(teamLogger2, "El entrenador comenzara a mover a la posicion (%i,%i).",pos.x,pos.y);
+
 	uint32_t restaX=pos.x-(entrenador->posicion).x;
 	uint32_t restaY=pos.y-(entrenador->posicion).y;
+
 	moverEntrenadorX(entrenador, restaX);
 	moverEntrenadorY(entrenador, restaY);
 	log_info(teamLogger, "El entrenador %i se movió a la posición (%i, %i)\n", entrenador->id, (entrenador->posicion).x, (entrenador->posicion).y);
+	log_info(teamLogger2, "El entrenador %i se movió a la posición (%i, %i)\n", entrenador->id, (entrenador->posicion).x, (entrenador->posicion).y);
 }
 
 void simularCicloCpu(uint32_t cantidadCiclos, dataEntrenador* entrenador){
@@ -215,23 +225,59 @@ void simularCicloCpu(uint32_t cantidadCiclos, dataEntrenador* entrenador){
 
 void moverEntrenadorX(dataEntrenador* entrenador, uint32_t movimientoX){
 
-	if(movimientoX!=0){
-			uint32_t unidad=movimientoX/abs(movimientoX);
-			for(uint32_t i=0;i< abs(movimientoX);i++){
-				simularCicloCpu(1,entrenador);
-				(entrenador->posicion).x+=unidad;
-			}
+//	if(movimientoX!=0){
+//			uint32_t unidad=movimientoX/abs(movimientoX);
+//			log_info(teamLogger2,"Unidad de movimiento en x: %i.", unidad);
+//			for(uint32_t i=0;i< abs(movimientoX);i++){
+//				simularCicloCpu(1,entrenador);
+//				(entrenador->posicion).x+=unidad;
+//				log_info(teamLogger2,"El entrenador %i se mueve a : (%i,%i).", entrenador->id,(entrenador->posicion).x,(entrenador->posicion).y);
+//			}
+//		}
+	//log_info(teamLogger2, "Movimiento x: %i", movimientoX);
+	if(movimientoX>0){//ESTA AL REVES PERO ASI ANDA
+
+		for(uint32_t i=0;i< abs(movimientoX);i++){
+			simularCicloCpu(1,entrenador);
+			((entrenador->posicion).x)--;
+			log_info(teamLogger2,"El entrenador %i se mueve a : (%i,%i).", entrenador->id,(entrenador->posicion).x,(entrenador->posicion).y);
 		}
+	}else if(movimientoX<0){
+
+		for(uint32_t i=0;i< abs(movimientoX);i++){
+			simularCicloCpu(1,entrenador);
+			((entrenador->posicion).x)++;
+			log_info(teamLogger2,"El entrenador %i se mueve a : (%i,%i).", entrenador->id,(entrenador->posicion).x,(entrenador->posicion).y);
+			}
+	}
+
 }
 
 void moverEntrenadorY(dataEntrenador* entrenador, uint32_t movimientoY){
-	if(movimientoY!=0){
-		uint32_t unidad=movimientoY/abs(movimientoY);
-		for(uint32_t i=0;i< abs(movimientoY);i++){
-			simularCicloCpu(1,entrenador);
-			(entrenador->posicion).y+=unidad;
+//	if(movimientoY!=0){
+//		uint32_t unidad=movimientoY/abs(movimientoY);
+//		log_info(teamLogger2,"Unidad de movimiento en y: %i.", unidad);
+//		for(uint32_t i=0;i< abs(movimientoY);i++){
+//			simularCicloCpu(1,entrenador);
+//			(entrenador->posicion).y+=unidad;
+//			log_info(teamLogger2,"El entrenador %i se mueve a : (%i,%i).", entrenador->id,(entrenador->posicion).x,(entrenador->posicion).y);
+//		}
+//	}
+	log_info(teamLogger2, "Movimiento y: %i", movimientoY);
+	if(movimientoY>0){
+			for(uint32_t i=0;i< abs(movimientoY);i++){//ESTA AL REVES PERO ASI ANDA
+				simularCicloCpu(1,entrenador);
+				((entrenador->posicion).y)--;
+				log_info(teamLogger2,"El entrenador %i se mueve a : (%i,%i).", entrenador->id,(entrenador->posicion).x,(entrenador->posicion).y);
+			}
+		}else if(movimientoY<0){
+			log_info(teamLogger2, "Movimiento y: %i", movimientoY);
+			for(uint32_t i=0;i< abs(movimientoY);i++){
+				simularCicloCpu(1,entrenador);
+				((entrenador->posicion).y)++;
+				log_info(teamLogger2,"El entrenador %i se mueve a : (%i,%i).", entrenador->id,(entrenador->posicion).x,(entrenador->posicion).y);
+				}
 		}
-	}
 }
 
 void atraparPokemonYReplanificar (dataEntrenador* entrenador){
@@ -252,15 +298,17 @@ t_list* obtenerPokemonesSobrantes(dataEntrenador* entrenador){//lista de pokemon
 			uint32_t encontrado    = buscarMismoPokemon(copiaObjetivo,pokemonAComparar);
 
 			if(encontrado != -1){
-				list_remove_and_destroy_element(copiaObjetivo,encontrado,free);
+				list_remove(copiaObjetivo,encontrado);
 			}else{
 				pokemonSobrante* pokeSobrante=malloc(sizeof(pokemonSobrante));
-				pokeSobrante->pokemon=pokemonAComparar;
+
+				pokeSobrante->pokemon=malloc(strlen(pokemonAComparar)+1);
+				strcpy(pokeSobrante->pokemon,pokemonAComparar);
 				pokeSobrante->entrenador=entrenador;
 				list_add(pokemonesSobrantes,(void*)pokeSobrante);
 			}
 		}
-
+		list_destroy(copiaObjetivo);
 		return pokemonesSobrantes;
 
 }
@@ -279,10 +327,11 @@ t_list* obtenerPokemonesFaltantes(dataEntrenador* entrenador){
 					strcpy(pokemonAAgregar,pokemonAComparar);
 					list_add(pokemonesFaltantes, (void*)pokemonAAgregar);
 				}else{
-					list_remove_and_destroy_element(copiaPokemones,encontrado, free);
+					list_remove(copiaPokemones,encontrado);
 
 				}
 			}
+			list_destroy(copiaPokemones);
 
 			return pokemonesFaltantes;
 }
@@ -290,12 +339,13 @@ t_list* obtenerPokemonesFaltantes(dataEntrenador* entrenador){
 bool pokemonLeInteresa(dataEntrenador* entrenador, char* pokemon){
 	t_list* listaPokemonesFaltantes=obtenerPokemonesFaltantes(entrenador);
 	uint32_t i=buscarMismoPokemon(listaPokemonesFaltantes,pokemon);
-	list_destroy_and_destroy_elements(listaPokemonesFaltantes,free);
+	list_destroy(listaPokemonesFaltantes);
 	return i>=0;
 }
 
 void darPokemon(dataEntrenador* entrenadorDador, dataEntrenador* entrenadorReceptor, char* pokemon){
 	uint32_t posPokemon=buscarMismoPokemon(entrenadorDador->pokemones,pokemon);
-	list_remove_and_destroy_element(entrenadorDador->pokemones, posPokemon, free);//ESTO PUEDE ROMPER EN ALGUN LADO, CUANDO SACO UN ELEMENTO DE UNA LISTA DEBO HACER MEMCPY O STRCPY
+	list_remove(entrenadorDador->pokemones, posPokemon);//ESTO PUEDE ROMPER EN ALGUN LADO, CUANDO SACO UN ELEMENTO DE UNA LISTA DEBO HACER MEMCPY O STRCPY
 	list_add(entrenadorReceptor->pokemones,(void*)pokemon);
+
 }

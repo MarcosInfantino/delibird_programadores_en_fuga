@@ -110,6 +110,8 @@
 
 
 int main(int argc , char* argv[]){
+
+
 	teamLogger = iniciar_logger("team.log", "TEAM");
 	teamLogger2=log_create("teamLoggerSecundario.log","team", true, LOG_LEVEL_INFO);
 
@@ -218,7 +220,7 @@ void atenderAppeared(mensajeAppeared* msg){
 	strcpy(pokePosicion->pokemon,msg->pokemon);
 	(pokePosicion->posicion).x=msg->posX;
 	(pokePosicion->posicion).y=msg->posY;
-	destruirAppeared(msg);
+	//destruirAppeared(msg);
 	if(pokemonEsObjetivo(pokePosicion->pokemon)){
 		log_info(teamLogger2, "El pokemon es objetivo");
 		if(sizeListaMutex(entrenadoresLibres)>0){
@@ -267,28 +269,41 @@ bool especieFueLocalizada(char* pokemon){
 	uint32_t i=0;
 	for(i=0;i<sizeListaMutex(especiesLocalizadas);i++){
 		char* pokeActual=(char*)(getListaMutex(especiesLocalizadas,i));
-		if(strcpy(pokeActual,pokemon)){
+
+		if(strcmp(pokeActual,pokemon)==0){
 			return true;
 		}
 	}
 	return false;
 }
 void atenderCaught(paquete* paqueteCaught){
+	log_info(teamLogger2,"Atiendo caught.");
 	mensajeCaught* msgCaught=deserializarCaught(paqueteCaught->stream);
 	uint32_t id=paqueteCaught->idCorrelativo;
-	uint32_t idEncontrado=buscarEntrenadorParaMensaje(listaIdsEntrenadorMensaje,id)!=1;
+	uint32_t idEncontrado=buscarEntrenadorParaMensaje(listaIdsEntrenadorMensaje,id);
+
 	if(idEncontrado!=-1){
 		dataEntrenador* entrenadorEncontrado=(dataEntrenador*)getListaMutex(entrenadores, idEncontrado);
-		if(msgCaught->resultadoCaught==CORRECTO){
+		log_info(teamLogger2,"Resultado del caught: %i.",msgCaught->resultadoCaught);
+		if(msgCaught->resultadoCaught==CORRECTO && pokemonEsObjetivo(entrenadorEncontrado->pokemonAAtrapar->pokemon)){
 //			list_add(entrenadorEncontrado->pokemones,(void*)(entrenadorEncontrado->pokemonAAtrapar->pokemon));
 //			registrarPokemonAtrapado(entrenadorEncontrado->pokemonAAtrapar->pokemon);
 //			replanificarEntrenador(entrenadorEncontrado);
+			log_info(teamLogger2,"El caught me interesa.");
 			atraparPokemonYReplanificar (entrenadorEncontrado);
 		}else{
 //			entrenadorEncontrado->estado=BLOCKED;
 //			habilitarHiloEntrenador(idEncontrado);
+			if(msgCaught->resultadoCaught!=CORRECTO){
+				log_info(teamLogger2,"El caught no fue exitoso.");
+			}else{
+				log_info(teamLogger2,"El caught me interesaba pero ese pokemon ya no es objetivo del team.");
+			}
+
 			replanificarEntrenador(entrenadorEncontrado);
 		}
+	}else{
+		log_info(teamLogger2,"El caught no me interesa.");
 	}
 
 
@@ -298,17 +313,16 @@ void atenderCaught(paquete* paqueteCaught){
 
 uint32_t buscarEntrenadorParaMensaje(listaMutex* listaIds, uint32_t idMensaje){//devuelve el id del entrenador
 	uint32_t i;
-	pthread_mutex_lock(listaIds->mutex);
-	for(i=0;i<list_size(listaIds->lista);i++){
-		idsEntrenadorMensaje* actual=(void*)list_get(listaIds->lista,i);
+
+	for(i=0;i<sizeListaMutex(listaIds);i++){
+		idsEntrenadorMensaje* actual=(void*)getListaMutex(listaIds,i);
 		if(actual->idMensaje==idMensaje){
 			uint32_t idEntrenador=actual->idEntrenador;
 			free(actual);
-			list_remove(listaIds->lista,i);
+			removeListaMutex(listaIds,i);
 			return idEntrenador;
 		}
 	}
-	pthread_mutex_unlock(listaIds->mutex);
 	return -1;
 }
 
@@ -431,7 +445,7 @@ void* suscribirseCola(void* msgSuscripcion){
 	recv(cliente,&respuesta,sizeof(uint32_t),0);
 
 		if(respuesta == CORRECTO){
-			printf("Mensaje recibido correctamente\n");
+			log_info(teamLogger2,"Suscripción realizada correctamente\n");
 			while(1){
 
 
@@ -539,13 +553,14 @@ void* enviarGet(void* arg){
 		// hacer destroy para el msg
 		if(send(cliente,paqueteSerializado, sizePaquete(paq), 0)!=-1){
 			free(paqueteSerializado);
-			uint32_t idMensaje=0;
+			uint32_t* idMensaje=malloc(sizeof(uint32_t));
+			*idMensaje=0;
 
-			if(recv(cliente, &idMensaje, sizeof(uint32_t),0)==-1){
+			if(recv(cliente, idMensaje, sizeof(uint32_t),0)==-1){
 				printf("Ocurrio un error al recibir la respuesta de un get\n");
 			}
-			if(idMensaje>0){
-				addListaMutex(listaIdsRespuestasGet,(void*)(&idMensaje));
+			if(*idMensaje>0){
+				addListaMutex(listaIdsRespuestasGet,(void*)(idMensaje));
 
 			}else{
 				//se recibio erroneamente
@@ -651,8 +666,16 @@ dataTeam* inicializarTeam(t_config* config){
 	}
 
 	infoTeam->objetivoGlobal = obtenerObjetivos(especiesObjetivo);
+
+
+
 	return infoTeam;
 
+}
+
+void destruirElementoListaDeListas(void** elemento){
+	free(*elemento);
+	free(elemento);
 }
 
 uint32_t buscarMismoPokemon(t_list* lst, char* pokemon){//devuelve la posicion en la que encontro el pokemon
@@ -751,9 +774,10 @@ void registrarPokemonAtrapado(char* pokemon){
 		if(objetivoEncontrado->cantidad==0){
 			removeListaMutex(team->objetivoGlobal,pos);
 		}
+		log_info(teamLogger2,"Se registró el pokemon atrapado.");
 
 	}else
-		printf("No se pudo registrar el pokemon atrapado ya que no está en los objetivos del team\n");
+		log_info(teamLogger2,"No se pudo registrar el pokemon atrapado ya que no está en los objetivos del team.");
 }
 
 bool pokemonEsObjetivo(char* pokemon){

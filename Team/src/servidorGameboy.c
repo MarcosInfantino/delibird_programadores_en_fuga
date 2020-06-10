@@ -75,7 +75,6 @@ void* atenderCliente(void* sock){
 		default: break;
 	}
 
-	free(sock);
 
 	return NULL;
 }

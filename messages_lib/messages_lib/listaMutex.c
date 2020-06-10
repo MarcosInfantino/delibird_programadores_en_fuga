@@ -41,6 +41,12 @@ void removeListaMutex(listaMutex* list,uint32_t pos){
 	pthread_mutex_unlock(list->mutex);
 }
 
+void removeAndDestroyElementListaMutex(listaMutex* list,uint32_t pos,void(*element_destroyer)(void*)){
+	pthread_mutex_lock(list->mutex);
+	list_remove_and_destroy_element(list->lista,pos, element_destroyer);
+	pthread_mutex_unlock(list->mutex);
+}
+
 void destruirListaMutex(listaMutex* lista,void(*element_destroyer)(void*)){
 	free(lista->mutex);
 	list_clean_and_destroy_elements(lista->lista, element_destroyer);

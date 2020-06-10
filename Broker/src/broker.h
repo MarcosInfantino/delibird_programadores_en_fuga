@@ -32,7 +32,7 @@ pthread_mutex_t* mutexMemoria;
 typedef struct{
 	uint32_t cola;
 	paquete paq;
-	uint32_t socket;
+	uint32_t* socket;
 	uint32_t tiempo;
 }suscripcionTiempo;
 
@@ -90,9 +90,9 @@ void esperar_cliente(uint32_t);
 void asignarID(paquete * paq);
 uint32_t obtenerIDultimoMensaje();
 void* atenderCliente(void* sock);
-void manejarTipoDeMensaje(paquete paq, uint32_t socket);
-void suscribirSegunCola(paquete paq, uint32_t socket);
-void suscribir(colaMensajes * cola, paquete paq, uint32_t socket,uint32_t identificadorCola);
+void manejarTipoDeMensaje(paquete paq, uint32_t* socket);
+void suscribirSegunCola(paquete paq, uint32_t* socket);
+void suscribir(colaMensajes * cola, paquete paq, uint32_t* socket,uint32_t identificadorCola);
 void responderMensaje(uint32_t socketCliente, uint32_t respuesta);
 
 bool validarParaSuscripcion(colaMensajes *cola, paquete paq, uint32_t socket, uint32_t identificadorCola);
