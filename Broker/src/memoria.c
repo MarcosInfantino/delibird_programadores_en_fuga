@@ -65,7 +65,6 @@ void registrarEnMemoriaBUDDYSYSTEM(msgMemoriaBroker* mensajeNuevo, struct nodoMe
 }
 
 uint32_t intentarRamaIzquierda(msgMemoriaBroker* mensajeNuevo, struct nodoMemoria* partActual){
-	struct nodoMemoria* backUp = partActual;
 	if(noEsParticionMinima(partActual) && !estaLibre(partActual)){ //o irá solo estado particionado?
 		if(!entraEnLaMitad(partActual, mensajeNuevo))
 			return -1;

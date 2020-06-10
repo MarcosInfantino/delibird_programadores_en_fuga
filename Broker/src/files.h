@@ -7,7 +7,8 @@
 
 #ifndef FILES_H_
 #define FILES_H_
-
+#define modoLecturaEnBinario "rb"
+#define modoEscrituraEnBinario "wb"
 
 typedef struct{
 	FILE* archivo;

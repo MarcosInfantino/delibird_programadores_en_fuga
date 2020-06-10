@@ -9,10 +9,9 @@
 #include "memoria.h"
 #include "files.h"
 
-const char* modoLecturaEnBinario = "rb";
-const char* modoEscrituraEnBinario = "wb";
 
-void almacenarEnArchivo(msgMemoriaBroker* mensajeNuevo){
+
+void almacenarEnArchivoMensaje(msgMemoriaBroker* mensajeNuevo){
 	pthread_mutex_lock(archivoSem->mutex);
 	archivoSem->archivo = fopen("backupFile.db",modoEscrituraEnBinario);
 	if(archivoSem->archivo){
@@ -22,7 +21,7 @@ void almacenarEnArchivo(msgMemoriaBroker* mensajeNuevo){
 	pthread_mutex_unlock(archivoSem->mutex);;
 }
 
-listaMutex * leerNodosEnArchivo(){
+listaMutex * leerNodosEnArchivoMensaje(){
 	listaMutex * lista = inicializarListaMutex();
 	msgMemoriaBroker* mensajeAAlmacenar = malloc(sizeof(msgMemoriaBroker));
 	pthread_mutex_lock(archivoSem->mutex);
