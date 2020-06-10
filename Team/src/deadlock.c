@@ -72,6 +72,8 @@ void realizarIntercambio(dataEntrenador* entrenadorQueSeMueve){
 
 	simularCicloCpu(5,entrenadorQueSeMueve);
 
+	log_info(teamLogger, "Operación de intercambio realizada entre entrenadores %i y %i",entrenadorQueSeMueve->id, entrenadorBloqueadoParaDeadlock->id);
+
 	sem_post(&intercambioFinalizado);
 
 }
@@ -86,6 +88,8 @@ void entrarEnEjecucionParaDeadlock(dataEntrenador* infoEntrenador){
 }
 
 void resolverDeadlock(){
+
+
 	while(hayEntrenadoresEnDeadlock()){
 
 
@@ -111,6 +115,7 @@ void resolverDeadlock(){
 
 
 		}
+
 
 		actualizarEntrenadoresEnDeadlock();
 	}

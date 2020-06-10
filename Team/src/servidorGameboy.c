@@ -28,7 +28,7 @@ void* iniciarServidorGameboy(void* arg){
 			perror("Falló el bind");
 
 		}else{
-		printf("Estoy escuchando\n");
+		//printf("Estoy escuchando\n");
 		while (1)  								//para recibir n cantidad de conexiones
 				esperar_cliente(servidor);
 		}
@@ -42,10 +42,10 @@ void esperar_cliente(uint32_t servidor) {
 	struct sockaddr_in dir_cliente;
 
 	uint32_t tam_direccion = sizeof(struct sockaddr_in);
-	printf("Espero un nuevo cliente\n");
+	//printf("Espero un nuevo cliente\n");
 	uint32_t* socket_cliente=malloc(sizeof(uint32_t));
 	*socket_cliente = accept(servidor, (void*) &dir_cliente, &tam_direccion);
-	printf("Gestiono un nuevo cliente\n");
+	//printf("Gestiono un nuevo cliente\n");
 	pthread_t threadAtencionGameboy;
 	pthread_create(&threadAtencionGameboy, NULL, atenderCliente, (void*) (socket_cliente));
 	pthread_detach(threadAtencionGameboy);
@@ -75,7 +75,7 @@ void* atenderCliente(void* sock){
 		default: break;
 	}
 
-
+	free(sock);
 
 	return NULL;
 }

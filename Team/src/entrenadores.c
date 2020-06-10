@@ -58,6 +58,8 @@ bool leFaltaCantidadDePokemones(dataEntrenador* entrenador){
 }
 
 void replanificarEntrenador(dataEntrenador* entrenador){
+
+
 	if(leFaltaCantidadDePokemones(entrenador)){
 		if(sizeColaMutex(pokemonesPendientes)>0){
 			habilitarHiloEntrenador(entrenador->id);
@@ -70,6 +72,7 @@ void replanificarEntrenador(dataEntrenador* entrenador){
 			//addListaMutex(entrenadoresLibres,entrenador);
 
 		}
+
 	}else{
 			if(cumplioObjetivo(entrenador)){
 							entrenador->estado=EXIT;
@@ -78,9 +81,14 @@ void replanificarEntrenador(dataEntrenador* entrenador){
 
 						}else{
 							//DEADLOCK
+							log_info(teamLogger, "Inicio del algoritmo de detección de deadlock.");
 							addListaMutex(entrenadoresDeadlock, (void*) entrenador);
-							if(todosLosEntrenadoresTerminaronDeAtrapar())
+							if(todosLosEntrenadoresTerminaronDeAtrapar()){
+								log_info(teamLogger, "Se encontró deadlock.");
 								resolverDeadlock();
+							}else{
+								log_info(teamLogger, "No se encontró deadlock.");
+							}
 						}
 	}
 }
@@ -159,21 +167,20 @@ void poneteEnReady(dataEntrenador* entrenador){
 }
 
 uint32_t encontrarPosicionEntrenadorLibre(dataEntrenador* entrenador){
-	pthread_mutex_lock(entrenadoresLibres->mutex);
-	for(uint32_t i=0;i<list_size(entrenadoresLibres->lista);i++){
-	        dataEntrenador* entrenadorActual = (dataEntrenador*) list_get(entrenadoresLibres->lista,i);
+	for(uint32_t i=0;i<sizeListaMutex(entrenadoresLibres);i++){
+	        dataEntrenador* entrenadorActual = (dataEntrenador*) getListaMutex(entrenadoresLibres,i);
 	        if(entrenadorActual->id == entrenador->id){
-	        	pthread_mutex_unlock(entrenadoresLibres->mutex);
 	        	return i;
 	        }
 	        }
-	 pthread_mutex_unlock(entrenadoresLibres->mutex);
+
 	 return -1;
 }
 
 void entrarEnEjecucion(dataEntrenador* infoEntrenador){
 
 	sem_wait(&(infoEntrenador->semaforo));
+	log_info(teamLogger2,"El entrenador %i entro en ejecución.", infoEntrenador->id);
 	infoEntrenador->estado = EXEC;
 	moverEntrenadorAPosicion(infoEntrenador, ((infoEntrenador->pokemonAAtrapar)->posicion));
 	enviarCatch(infoEntrenador);
@@ -184,6 +191,7 @@ void seleccionarEntrenador(pokemonPosicion* pokemon){
 	uint32_t idEntrenadorMasCercano      = obtenerIdEntrenadorMasCercano(pokemon->posicion);
 	dataEntrenador* entrenadorMasCercano = getListaMutex(entrenadores,idEntrenadorMasCercano);
 	asignarPokemonAEntrenador(entrenadorMasCercano,pokemon);
+	log_info(teamLogger2, "Se selecciono el entrenador %i para atrapar al pokemon %s", entrenadorMasCercano->id,pokemon->pokemon);
 	//habilitarHiloEntrenador(idEntrenadorMasCercano);
 }
 
@@ -229,6 +237,9 @@ void moverEntrenadorY(dataEntrenador* entrenador, uint32_t movimientoY){
 void atraparPokemonYReplanificar (dataEntrenador* entrenador){
 	list_add(entrenador->pokemones,(void*)(entrenador->pokemonAAtrapar->pokemon));
 	registrarPokemonAtrapado(entrenador->pokemonAAtrapar->pokemon);
+	log_info(teamLogger,"El entrenador %i atrapó al pokemon %s en la posición (%i,%i).", entrenador->id,entrenador->pokemonAAtrapar->pokemon,
+			(entrenador->pokemonAAtrapar->posicion).x,(entrenador->pokemonAAtrapar->posicion).y);
+
 	replanificarEntrenador(entrenador);
 }
 

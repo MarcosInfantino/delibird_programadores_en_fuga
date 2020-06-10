@@ -111,6 +111,11 @@
 
 int main(int argc , char* argv[]){
 	teamLogger = iniciar_logger("team.log", "TEAM");
+	teamLogger2=log_create("teamLoggerSecundario.log","team", true, LOG_LEVEL_INFO);
+
+	log_info(teamLogger2,"--------------------------------------------------------------------------");
+	log_info(teamLogger2,"NUEVA EJECUCION");
+	log_info(teamLogger2,"--------------------------------------------------------------------------");
 	//char pathConfig  = argv;
 	sem_init(&semaforoEjecucionCpu, 0,0);
 	sem_init(&intercambioFinalizado, 0,0);
@@ -135,13 +140,13 @@ int main(int argc , char* argv[]){
 
 	team     = inicializarTeam(config);
 	//printf("hola2\n");
-	printf("%s\n", ((objetivo*)getListaMutex(team->objetivoGlobal,2))->pokemon);
+	//printf("%s\n", ((objetivo*)getListaMutex(team->objetivoGlobal,2))->pokemon);
 	entrenadores->lista       = team->entrenadores;
 	//entrenadoresLibres=entrenadores;
 
 	//mutexEntrenadores=inicializarMutexEntrenadores();
 	uint32_t cantEntrenadores = list_size(team->entrenadores);
-
+	loggearObjetivoDelTeam();
 	arrayIdHilosEntrenadores  = malloc(cantEntrenadores*sizeof(pthread_t));
 	inicializarEntrenadores(team->entrenadores);
 
@@ -158,13 +163,14 @@ int main(int argc , char* argv[]){
 	pthread_t hiloPlanificador;
 	crearHiloPlanificador(&hiloPlanificador);
 
-	posicion pos = {1,2};
-
-	printf("id entrenador mas cercano: %i\n", obtenerIdEntrenadorMasCercano(pos));
+//	posicion pos = {1,2};
+//
+//	printf("id entrenador mas cercano: %i\n", obtenerIdEntrenadorMasCercano(pos));
 
 	while(!objetivoCumplido());
 
-	printf("Programa terminado: objetivo golbal cumplido\n");
+	loggearResultado();
+
 
 	//HACER DESTROY DE TODAS LAS LISTAS Y ESTRUCTURAS AL FINAL
 	terminar_programa(teamLogger, config);
@@ -172,39 +178,75 @@ int main(int argc , char* argv[]){
 	return 0;
 }
 
+void loggearObjetivoDelTeam(){
+	log_info(teamLogger2, "--------------------------------------------------------------");
+	log_info(teamLogger2, "OBJETIVO DEL TEAM");
+	for(uint32_t i=0; i<sizeListaMutex(team->objetivoGlobal);i++){
+		objetivo* objetivoActual= (objetivo*) (getListaMutex(team->objetivoGlobal,i));
+		log_info(teamLogger2, "Objetivo %i. Pokemon: %s. Cantidad: %i.", i, objetivoActual->pokemon, objetivoActual->cantidad);
+	}
+	log_info(teamLogger2, "--------------------------------------------------");
+}
+void loggearResultado(){
+	log_info(teamLogger,"Programa terminado: objetivo global cumplido.");
+	log_info(teamLogger,"Cantidad de ciclos de CPU totales: %i.", team->cantidadCiclosCpuTotales );
+	log_info(teamLogger,"Cantidad de cambios de contexto realizados: %i.", team->cantidadCambiosContexto );
+	log_info(teamLogger,"------------------------------------------------" );
+	log_info(teamLogger,"Información de los entrenadores: " );
 
+	for(uint32_t i=0;i<sizeListaMutex(entrenadores);i++){
+		dataEntrenador* entrenadorActual=(dataEntrenador*) getListaMutex(entrenadores,i);
+		log_info(teamLogger, "Cantidad de ciclos de CPU realizados por el entrenador %i: %i.",entrenadorActual->id,entrenadorActual->cantidadCiclosCpu);
 
+	}
+
+	log_info(teamLogger,"Deadlocks producidos y resueltos: %i.", team->cantidadDeadlocks);
+
+}
 bool objetivoCumplido(){
 	return sizeListaMutex(entrenadores)==sizeListaMutex(entrenadoresExit);
 }
 
 
 void atenderAppeared(mensajeAppeared* msg){
+	log_info(teamLogger2, "Atiendo appeared. Pokemon: %s.", msg->pokemon);
 	pokemonPosicion* pokePosicion=malloc(sizeof(pokemonPosicion));
-	addListaMutex(especiesLocalizadas,(void*)(msg->pokemon));
-	pokePosicion->pokemon=msg->pokemon;
+	if(!especieFueLocalizada(msg->pokemon))
+		addListaMutex(especiesLocalizadas,(void*)(msg->pokemon));
+
+	pokePosicion->pokemon=malloc(strlen(msg->pokemon)+1);
+	strcpy(pokePosicion->pokemon,msg->pokemon);
 	(pokePosicion->posicion).x=msg->posX;
 	(pokePosicion->posicion).y=msg->posY;
 	destruirAppeared(msg);
 	if(pokemonEsObjetivo(pokePosicion->pokemon)){
+		log_info(teamLogger2, "El pokemon es objetivo");
 		if(sizeListaMutex(entrenadoresLibres)>0){
+			log_info(teamLogger2, "Hay entrenadores disponibles para atrapar a %s.",pokePosicion->pokemon );
 			seleccionarEntrenador(pokePosicion);
 		}else{
+			log_info(teamLogger2, "No hay entrenadores disponibles para atrapar a %s. ",pokePosicion->pokemon);
 			pushColaMutex(pokemonesPendientes,(void*)pokePosicion);
 		}
+	}else{
+		log_info(teamLogger2, "El pokemon no es objetivo");
 	}
 }
 
 void atenderLocalized(paquete* paquete){
 	mensajeLocalized* msg=deserializarLocalized(paquete->stream);
+	char* pokemonAAgregar=malloc(strlen(msg->pokemon)+1);
+	strcpy(pokemonAAgregar,msg->pokemon);
 	if(!especieFueLocalizada(msg->pokemon)&& localizedMeInteresa(paquete)){
 		uint32_t i;
 		for(i=0;i<msg->cantidad;i++){
 			posicion posActual= *((msg->arrayPosiciones)+i);
-			mensajeAppeared* msgAppeared=llenarAppeared(msg->pokemon,posActual.x,posActual.y);
+			mensajeAppeared* msgAppeared=llenarAppeared(pokemonAAgregar,posActual.x,posActual.y);
 			atenderAppeared(msgAppeared);
 		}
 	}
+
+
 
 }
 
@@ -309,7 +351,7 @@ void* enviarGets(void* arg){
 }
 
 uint32_t reconectarseAlBroker(uint32_t cliente,void* direccionServidor,socklen_t length){
-
+	log_info(teamLogger, "Conexión fallida con el Broker\n");
 	log_info(teamLogger, "Reintentando conexión en %i segundos...\n",tiempoReconexion);
 	sleep(tiempoReconexion);
 	while(connect(cliente, direccionServidor,length)<0){
@@ -367,7 +409,7 @@ void* suscribirseCola(void* msgSuscripcion){
 	uint32_t cliente=socket(AF_INET,SOCK_STREAM,0);
 
 	if(connect(cliente,(void*) &direccionServidor,sizeof(direccionServidor))<0){
-		log_info(teamLogger, "Conexión fallida con el Broker\n");
+
 
 		reconectarseAlBroker(cliente,(void*) &direccionServidor,sizeof(direccionServidor));
 
@@ -395,6 +437,7 @@ void* suscribirseCola(void* msgSuscripcion){
 
 				paquete* paqueteRespuesta=recibirPaquete(cliente);
 				loggearMensaje(paqueteRespuesta, teamLogger);
+				enviarACK(cliente, TEAM, paqueteRespuesta->id);
 				switch(paqueteRespuesta->tipoMensaje){
 					case APPEARED_POKEMON:;
 						mensajeAppeared* msgAppeared=deserializarAppeared(paqueteRespuesta->stream);
@@ -438,6 +481,7 @@ void* suscribirseCola(void* msgSuscripcion){
 //TODO: hacer funciones de llenarMensajeX en la lib
 //llenarPaquete( uint32_t modulo,uint32_t tipoMensaje, uint32_t sizeStream,void* stream)
 void enviarCatch(dataEntrenador* infoEntrenador){
+	log_info(teamLogger2,"El entrenador %i inició el proceso de envío del catch.", infoEntrenador->id);
 	uint32_t cliente=crearSocketCliente(ipBroker,puertoBroker);
 	if(cliente!=-1){
 
@@ -447,19 +491,22 @@ void enviarCatch(dataEntrenador* infoEntrenador){
 		paquete* paq=llenarPaquete(TEAM,CATCH_POKEMON,   sizeArgumentos(CATCH_POKEMON,msgCatch->pokemon,1)  , streamMsg);
 		void* paqueteSerializado=serializarPaquete(paq);
 		destruirCatch(msgCatch);
+		log_info(teamLogger2,"El entrenador %i intenta hacer el send del catch.", infoEntrenador->id);
 		//destruirPaquete(paq);
 		if(send(cliente,paqueteSerializado, sizePaquete(paq), 0)!=-1){
+			simularCicloCpu(1,infoEntrenador);
 
+			log_info(teamLogger2,"El entrenador %i hace el send del catch.", infoEntrenador->id);
 
 			uint32_t idMensaje=0;
 
 			if(recv(cliente, &idMensaje, sizeof(uint32_t),0)==-1){
-				printf("Ocurrio un error al recibir la respuesta de un catch\n");
+				log_info(teamLogger2,"Ocurrio un error al recibir la respuesta de un catch\n");
 			}
 
 			if(idMensaje>0){
 
-
+				log_info(teamLogger2,"El entrenador % i recibió el id del catch: %i.", infoEntrenador->id, idMensaje);
 				idsEntrenadorMensaje* parDeIds=malloc(sizeof(idsEntrenadorMensaje));
 				parDeIds->idEntrenador=infoEntrenador->id;
 				parDeIds->idMensaje=idMensaje;
@@ -469,10 +516,12 @@ void enviarCatch(dataEntrenador* infoEntrenador){
 			//se recibio erroneamente
 			}
 		}else{
+			log_info(teamLogger, "Fallo de comunicación con el Broker al enviar un catch. Se realizará la operación por default.");
 			atraparPokemonYReplanificar (infoEntrenador);
 		}
 		free(paqueteSerializado);
 	}else{
+		log_info(teamLogger, "Fallo de comunicación con el Broker al enviar un catch. Se realizará la operación por default.");
 		atraparPokemonYReplanificar (infoEntrenador);
 	}
 	close(cliente);
@@ -483,24 +532,30 @@ void* enviarGet(void* arg){
 	char* pokemon=(char*) arg;
 	uint32_t cliente=crearSocketCliente(ipBroker,puertoBroker);
 	if(cliente!=-1){//se pudo conectar
-	mensajeGet* msg=llenarGet(pokemon);
-	void* stream=serializarGet(msg);
-	paquete* paq=llenarPaquete(TEAM, GET_POKEMON,sizeArgumentos(GET_POKEMON,msg->pokemon,1),stream);
-	void* paqueteSerializado=serializarPaquete(paq);
-	// hacer destroy para el msg
-	if(send(cliente,paqueteSerializado, sizePaquete(paq), 0)!=-1){
-		free(paqueteSerializado);
-		uint32_t idMensaje=0;
+		mensajeGet* msg=llenarGet(pokemon);
+		void* stream=serializarGet(msg);
+		paquete* paq=llenarPaquete(TEAM, GET_POKEMON,sizeArgumentos(GET_POKEMON,msg->pokemon,1),stream);
+		void* paqueteSerializado=serializarPaquete(paq);
+		// hacer destroy para el msg
+		if(send(cliente,paqueteSerializado, sizePaquete(paq), 0)!=-1){
+			free(paqueteSerializado);
+			uint32_t idMensaje=0;
 
-		if(recv(cliente, &idMensaje, sizeof(uint32_t),0)==-1){
+			if(recv(cliente, &idMensaje, sizeof(uint32_t),0)==-1){
 				printf("Ocurrio un error al recibir la respuesta de un get\n");
-		}
-		if(idMensaje>0){
-			addListaMutex(listaIdsRespuestasGet,(void*)(&idMensaje));
+			}
+			if(idMensaje>0){
+				addListaMutex(listaIdsRespuestasGet,(void*)(&idMensaje));
+
+			}else{
+				//se recibio erroneamente
+			}
 
 		}else{
-			//se recibio erroneamente
-		}}
+			log_info(teamLogger, "Fallo de comunicación con el Broker al enviar un get. Se realizará la operación por default.");
+		}
+	}else{
+		log_info(teamLogger, "Fallo de comunicación con el Broker al enviar un get. Se realizará la operación por default.");
 	}
 	close(cliente);
 	return NULL;
@@ -538,6 +593,8 @@ dataTeam* inicializarTeam(t_config* config){
 	infoTeam->objetivoGlobal=inicializarListaMutex();
 	infoTeam->objetivosCumplidos = list_create();
 	infoTeam->cantidadCiclosCpuTotales=0;
+	infoTeam->cantidadCambiosContexto=0;
+	infoTeam->cantidadDeadlocks=0;
 
 	char** arrayPosicionesEntrenadores=config_get_array_value(config,"POSICIONES_ENTRENADORES");
 	char** arrayPokemonesEntrenadores=config_get_array_value(config,"POKEMON_ENTRENADORES");
@@ -659,7 +716,8 @@ listaMutex* obtenerObjetivos(t_list* especies){
 		if(encontrado == -1){
 			objetivo* obj = malloc(sizeof(objetivo));
 			obj->cantidad = 1;
-			obj->pokemon  = (char*) especie;
+			obj->pokemon=malloc(strlen(especie)+1);
+			strcpy(obj->pokemon,especie);
 			//printf("%s\n",(char*)(objetivo->pokemon));
 			addListaMutex(objetivos,(void*)obj);
 		}else{
@@ -676,6 +734,9 @@ uint32_t buscarObjetivoPorEspecie(listaMutex* listaObjetivos, char* especie){
 		objetivo* obj = (objetivo*)getListaMutex(listaObjetivos,i);
 		if(strcmp(obj->pokemon,especie) == 0){
 			return i;
+		}else{
+			log_info(teamLogger2, "--------------------------------------------------------");
+			log_info(teamLogger2, "Objetivo en lista: %s. Objetivo recibido: %s.", obj->pokemon,especie);
 		}
 	}
 	return -1;
@@ -698,8 +759,10 @@ void registrarPokemonAtrapado(char* pokemon){
 bool pokemonEsObjetivo(char* pokemon){
 	uint32_t pos=buscarObjetivoPorEspecie(team->objetivoGlobal,pokemon);
 	if(pos!=-1){
+			log_info(teamLogger2, "Encontre al pokemon %s en mis objetivos", pokemon);
 			return((((objetivo*)getListaMutex(team->objetivoGlobal,pos))->cantidad)>0);
 		}
+	log_info(teamLogger2, "No encontre al pokemon %s en mis objetivos", pokemon);
 	return false;
 }
 

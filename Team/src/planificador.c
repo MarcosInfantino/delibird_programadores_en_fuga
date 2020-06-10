@@ -19,6 +19,7 @@ uint32_t crearHiloPlanificador(pthread_t* hiloPlanificador){
 }
 
 void* iniciarPlanificador(void* arg){
+	log_info(teamLogger2, "Se inicia el planificador");
 	switch(algoritmoPlanificacion)
 	{
 	case FIFO:
@@ -36,6 +37,7 @@ void ejecucionPlanificadorFifo(){
 			sem_wait(&semaforoEjecucionCpu);
 			dataEntrenador* entrenadorAEjecutar=(dataEntrenador*)popColaMutex(colaEjecucionFifo);
 			sem_post(&(entrenadorAEjecutar->semaforo));
+			log_info(teamLogger2, "elijo entrenador para ejecutar");
 		}
 	}
 }

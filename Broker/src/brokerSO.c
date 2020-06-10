@@ -25,14 +25,14 @@
 
 int main(void) {
 
-	char* pathConfig = "broker.config";
-	t_config* config = config_create(pathConfig);
+//	char* pathConfig = "broker.config";
+//	t_config* config = config_create(pathConfig);
 //
 	//puerto_broker     = config_get_int_value(config, "PUERTO_BROKER​");
 	//ip_broker         = config_get_string_value(config, "IP_BROKER");
 	//tamMemoria        = config_get_int_value(config, "TAMANO_MEMORIA");
 	//particionMinima   = config_get_int_value(config, "TAMANO_MINIMO_PARTICION");
-
+	brokerLogger2=log_create("brokerLoggerSecundario.log","broker", true, LOG_LEVEL_INFO);
 	puerto_broker = 5002;
 	ip_broker = "127.0.0.1";
 	tamMemoria = 2048;
@@ -162,6 +162,7 @@ void manejarTipoDeMensaje(paquete paq, uint32_t socket) {
 			 meterEnCola( &caughtPokemon, &paq, socket);
 			 break;
 		 case CATCH_POKEMON:
+			 log_info(brokerLogger2,"Me llegó un catch. Código de mensaje: %i. ",paq.tipoMensaje);
 			 meterEnCola( &catchPokemon, &paq, socket);
 			 break;
 		 case GET_POKEMON:
@@ -191,16 +192,12 @@ void manejarTipoDeMensaje(paquete paq, uint32_t socket) {
 
 void meterEnCola( colaMensajes* structCola, paquete * paq, uint32_t  socket){
 
-	pthread_mutex_lock(contador.mutexContador);
-	asignarID(paq);
+	uint32_t valorContador=incrementarContador();
+	insertarIdPaquete(paq,valorContador);
+	send(socket,(void*)(&valorContador),sizeof(uint32_t),0);
+	log_info(brokerLogger2,"Meto un mensaje en la cola.");
 
-	send(socket,(void*)(&contador.contador),sizeof(uint32_t),0);
-	printf("Lo mete en la cola");
-
-	registrarMensajeEnMemoria(contador.contador, paq, algoritmoMemoria);
-
-	contador.contador++;
-	pthread_mutex_unlock(contador.mutexContador);
+	//registrarMensajeEnMemoria(contador.contador, paq, algoritmoMemoria);
 
 	pushColaMutex(structCola->cola, (void *) paq);
 	sem_post(structCola->mensajesEnCola);
@@ -269,15 +266,24 @@ void responderMensaje(uint32_t socketCliente, uint32_t respuesta) {
 }
 
 void inicializarContador(){
-	contador.contador=1;
+	contador.contador=0;
 	contador.mutexContador=malloc(sizeof(pthread_mutex_t));
 	pthread_mutex_init(contador.mutexContador,NULL);
 }
 
-void incrementarContador(){
+uint32_t incrementarContador(){
 	pthread_mutex_lock(contador.mutexContador);
 	contador.contador++;
+	uint32_t i=contador.contador;
 	pthread_mutex_unlock(contador.mutexContador);
+	return i;
+}
+
+uint32_t obtenerContador(){
+	pthread_mutex_lock(contador.mutexContador);
+	uint32_t i=contador.contador;
+	pthread_mutex_unlock(contador.mutexContador);
+	return i;
 }
 
 void definirAlgoritmoMemoria(t_config* config){

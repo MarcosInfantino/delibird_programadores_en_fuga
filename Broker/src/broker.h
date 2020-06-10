@@ -113,7 +113,8 @@ void suscribirACola(uint32_t* socket, colaMensajes * cola);
 void inicializarContador();
 void abrirHiloParaEnviarMensajes();
 void* chequearMensajesEnCola(void * par);
-
+uint32_t incrementarContador();
+uint32_t obtenerContador();
 //void guardarConfirmacionEnMemoriaDe(paquete* paq, uint32_t socket)
 //void registrarMensajeEnMemoria(uint32_t idMensaje, paquete* paq);
 //msgMemoriaBroker* buscarMensajeEnMemoria(uint32_t idMensajeBuscado);

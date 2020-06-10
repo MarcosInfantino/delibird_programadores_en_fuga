@@ -17,6 +17,7 @@
 
 //si no toma esto, poner SRC_ en el define
 
+t_log* brokerLogger2;
 typedef struct {
 	uint32_t idMensaje;
 	uint32_t cola;
@@ -97,5 +98,9 @@ uint32_t tamanioParticion(struct nodoMemoria* part);
 bool estaLibre(struct nodoMemoria* particion);
 
 uint32_t evaluarTamanioParticionYasignar(struct nodoMemoria* partActual, msgMemoriaBroker* msg);
+
+uint32_t intentarRamaIzquierda(msgMemoriaBroker* mensajeNuevo, struct nodoMemoria* partActual);
+
+bool entraEnLaMitad(struct nodoMemoria* partActual, msgMemoriaBroker* mensajeNuevo);
 
 #endif /* MEMORIA_H_ */

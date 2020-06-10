@@ -14,7 +14,7 @@
 t_log* iniciar_logger(char* file, char* program_name)
 {
 	t_log* logger;
-	if((logger=log_create(file, program_name, 1, LOG_LEVEL_INFO))==NULL){
+	if((logger=log_create(file, program_name, false, LOG_LEVEL_INFO))==NULL){
 		printf("No pude crear el logger\n");
 		exit(1);
 	}

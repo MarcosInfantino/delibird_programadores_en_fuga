@@ -49,6 +49,7 @@ sem_t semaforoEjecucionCpu;
 sem_t intercambioFinalizado;
 
 t_log* teamLogger;
+t_log* teamLogger2;
 
 typedef enum {
 	NEW=1500,
@@ -115,6 +116,8 @@ typedef struct {
 	t_list* objetivosCumplidos;
 	//uint32_t** mapa;
 	uint32_t cantidadCiclosCpuTotales;
+	uint32_t cantidadCambiosContexto;
+	uint32_t cantidadDeadlocks;
 }dataTeam;
 
 dataTeam* team;
@@ -299,5 +302,9 @@ void simularCicloCpu(uint32_t cantidadCiclos, dataEntrenador* entrenador);
 void darPokemon(dataEntrenador* entrenadorDador, dataEntrenador* entrenadorReceptor, char* pokemon);
 
 void actualizarEntrenadoresEnDeadlock();
+
+void loggearResultado();
+
+void loggearObjetivoDelTeam();
 
 #endif /* TEAM_H_ */
