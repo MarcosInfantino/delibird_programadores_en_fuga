@@ -6,16 +6,19 @@
 C_SRCS += \
 ../src/Suscripciones.c \
 ../src/brokerSO.c \
+../src/files.c \
 ../src/memoria.c 
 
 OBJS += \
 ./src/Suscripciones.o \
 ./src/brokerSO.o \
+./src/files.o \
 ./src/memoria.o 
 
 C_DEPS += \
 ./src/Suscripciones.d \
 ./src/brokerSO.d \
+./src/files.d \
 ./src/memoria.d 
 
 

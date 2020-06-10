@@ -21,7 +21,7 @@
 #include <string.h>
 #include "broker.h"
 #include "memoria.h"
-
+#include "files.h"
 
 int main(void) {
 
@@ -47,6 +47,9 @@ int main(void) {
 
 
 	definirComienzoDeMemoria();
+
+	//archivoSem = iniciarArchivoMutex();
+	//
 
 	iniciarHilos();
 	inicializarContador();

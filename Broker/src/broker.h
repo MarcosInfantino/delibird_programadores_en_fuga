@@ -16,6 +16,7 @@
 #include<commons/log.h>
 #include <messages_lib/messages_lib.h>
 #include "memoria.h"
+#include "files.h"
 
 
 uint32_t puerto_broker;
@@ -26,7 +27,6 @@ uint32_t particionMinima;
 algoritmoMem algoritmoMemoria;
 algoritmoParticiones algoritmoParticionLibre;
 algoritmoReemp algoritmoReemplazo;
-
 pthread_mutex_t* mutexMemoria;
 
 typedef struct{
@@ -55,6 +55,8 @@ typedef enum {
 //pthread_t thread;
 
 pthread_mutex_t mutex;
+
+archivoMutex* archivoSem;
 
 contadorMensajes contador;
 
