@@ -432,3 +432,913 @@
 [INFO] 18:36:52:854 broker/(6466:6479): Intento enviar mensaje a un suscriptor. Socket: 8
 [INFO] 18:36:52:854 broker/(6466:6479): Envié mensaje a un suscriptor.
 [INFO] 18:36:52:854 broker/(6466:6718): Aviso que hay mensajes en cola.
+[INFO] 18:43:09:419 broker/(7697:7747): Realizo suscripción a una cola. Socket suscripto: 6
+[INFO] 18:43:09:420 broker/(7697:7748): Realizo suscripción a una cola. Socket suscripto: 7
+[INFO] 18:43:09:420 broker/(7697:7749): Realizo suscripción a una cola. Socket suscripto: 8
+[INFO] 18:43:09:420 broker/(7697:7750): Meto un mensaje en la cola.
+[INFO] 18:43:09:420 broker/(7697:7751): Meto un mensaje en la cola.
+[INFO] 18:43:09:420 broker/(7697:7752): Meto un mensaje en la cola.
+[INFO] 18:43:09:424 broker/(7697:7714): Comienza el proceso de envío del mensaje a todos los suscriptores.
+[INFO] 18:43:09:424 broker/(7697:7714): Paquete a enviar serializado.
+[INFO] 18:43:09:424 broker/(7697:7750): Aviso que hay mensajes en cola.
+[INFO] 18:43:09:424 broker/(7697:7714): Comienza el proceso de envío del mensaje a todos los suscriptores.
+[INFO] 18:43:09:424 broker/(7697:7714): Paquete a enviar serializado.
+[INFO] 18:43:09:424 broker/(7697:7751): Aviso que hay mensajes en cola.
+[INFO] 18:43:09:424 broker/(7697:7714): Comienza el proceso de envío del mensaje a todos los suscriptores.
+[INFO] 18:43:09:424 broker/(7697:7714): Paquete a enviar serializado.
+[INFO] 18:43:09:424 broker/(7697:7752): Aviso que hay mensajes en cola.
+[INFO] 18:44:01:200 broker/(7697:7870): Me llegó un catch. Código de mensaje: 3. 
+[INFO] 18:44:01:201 broker/(7697:7870): Meto un mensaje en la cola.
+[INFO] 18:44:01:202 broker/(7697:7713): Comienza el proceso de envío del mensaje a todos los suscriptores.
+[INFO] 18:44:01:202 broker/(7697:7713): Paquete a enviar serializado.
+[INFO] 18:44:01:203 broker/(7697:7870): Aviso que hay mensajes en cola.
+[INFO] 18:44:34:986 broker/(7697:7943): Me llegó un catch. Código de mensaje: 3. 
+[INFO] 18:44:34:986 broker/(7697:7943): Meto un mensaje en la cola.
+[INFO] 18:44:34:986 broker/(7697:7713): Comienza el proceso de envío del mensaje a todos los suscriptores.
+[INFO] 18:44:34:986 broker/(7697:7713): Paquete a enviar serializado.
+[INFO] 18:44:34:986 broker/(7697:7943): Aviso que hay mensajes en cola.
+[INFO] 18:45:06:547 broker/(7697:8007): Id del caught: 1
+[INFO] 18:45:06:547 broker/(7697:8007): Meto un mensaje en la cola.
+[INFO] 18:45:06:547 broker/(7697:8007): Aviso que hay mensajes en cola.
+[INFO] 18:45:06:547 broker/(7697:7712): Comienza el proceso de envío del mensaje a todos los suscriptores.
+[INFO] 18:45:06:547 broker/(7697:7712): Paquete a enviar serializado.
+[INFO] 18:45:06:547 broker/(7697:7712): Intento enviar mensaje a un suscriptor. Socket: 8
+[INFO] 18:45:06:547 broker/(7697:7712): Envié mensaje a un suscriptor.
+[INFO] 18:45:18:690 broker/(7697:8050): Id del caught: 1
+[INFO] 18:45:18:691 broker/(7697:8050): Meto un mensaje en la cola.
+[INFO] 18:45:18:691 broker/(7697:7712): Comienza el proceso de envío del mensaje a todos los suscriptores.
+[INFO] 18:45:18:691 broker/(7697:7712): Paquete a enviar serializado.
+[INFO] 18:45:18:691 broker/(7697:7712): Intento enviar mensaje a un suscriptor. Socket: 8
+[INFO] 18:45:18:691 broker/(7697:7712): Envié mensaje a un suscriptor.
+[INFO] 18:45:18:691 broker/(7697:8050): Aviso que hay mensajes en cola.
+[INFO] 18:58:35:291 broker/(9521:9569): Realizo suscripción a una cola. Socket suscripto: 6
+[INFO] 18:58:35:291 broker/(9521:9570): Realizo suscripción a una cola. Socket suscripto: 7
+[INFO] 18:58:35:291 broker/(9521:9571): Realizo suscripción a una cola. Socket suscripto: 8
+[INFO] 18:58:35:291 broker/(9521:9572): Meto un mensaje en la cola.
+[INFO] 18:58:35:291 broker/(9521:9573): Meto un mensaje en la cola.
+[INFO] 18:58:35:291 broker/(9521:9574): Meto un mensaje en la cola.
+[INFO] 18:58:35:292 broker/(9521:9536): Comienza el proceso de envío del mensaje a todos los suscriptores.
+[INFO] 18:58:35:292 broker/(9521:9536): Paquete a enviar serializado.
+[INFO] 18:58:35:292 broker/(9521:9572): Aviso que hay mensajes en cola.
+[INFO] 18:58:35:292 broker/(9521:9536): Comienza el proceso de envío del mensaje a todos los suscriptores.
+[INFO] 18:58:35:292 broker/(9521:9536): Paquete a enviar serializado.
+[INFO] 18:58:35:292 broker/(9521:9573): Aviso que hay mensajes en cola.
+[INFO] 18:58:35:292 broker/(9521:9536): Comienza el proceso de envío del mensaje a todos los suscriptores.
+[INFO] 18:58:35:292 broker/(9521:9536): Paquete a enviar serializado.
+[INFO] 18:58:35:292 broker/(9521:9574): Aviso que hay mensajes en cola.
+[INFO] 18:59:24:659 broker/(9521:9674): Me llegó un catch. Código de mensaje: 3. 
+[INFO] 18:59:24:659 broker/(9521:9674): Meto un mensaje en la cola.
+[INFO] 18:59:24:659 broker/(9521:9535): Comienza el proceso de envío del mensaje a todos los suscriptores.
+[INFO] 18:59:24:659 broker/(9521:9535): Paquete a enviar serializado.
+[INFO] 18:59:24:659 broker/(9521:9674): Aviso que hay mensajes en cola.
+[INFO] 19:00:24:623 broker/(9521:9809): Me llegó un catch. Código de mensaje: 3. 
+[INFO] 19:00:24:625 broker/(9521:9809): Meto un mensaje en la cola.
+[INFO] 19:00:24:627 broker/(9521:9535): Comienza el proceso de envío del mensaje a todos los suscriptores.
+[INFO] 19:00:24:627 broker/(9521:9535): Paquete a enviar serializado.
+[INFO] 19:00:24:627 broker/(9521:9809): Aviso que hay mensajes en cola.
+[INFO] 19:00:47:35 broker/(9521:9860): Id del caught: 1
+[INFO] 19:00:47:35 broker/(9521:9860): Meto un mensaje en la cola.
+[INFO] 19:00:47:36 broker/(9521:9534): Comienza el proceso de envío del mensaje a todos los suscriptores.
+[INFO] 19:00:47:36 broker/(9521:9534): Paquete a enviar serializado.
+[INFO] 19:00:47:36 broker/(9521:9534): Intento enviar mensaje a un suscriptor. Socket: 8
+[INFO] 19:00:47:36 broker/(9521:9534): Envié mensaje a un suscriptor.
+[INFO] 19:00:47:36 broker/(9521:9860): Aviso que hay mensajes en cola.
+[INFO] 19:01:20:903 broker/(9521:9935): Id del caught: 1
+[INFO] 19:01:20:903 broker/(9521:9935): Meto un mensaje en la cola.
+[INFO] 19:01:20:903 broker/(9521:9935): Aviso que hay mensajes en cola.
+[INFO] 19:01:20:903 broker/(9521:9534): Comienza el proceso de envío del mensaje a todos los suscriptores.
+[INFO] 19:01:20:903 broker/(9521:9534): Paquete a enviar serializado.
+[INFO] 19:01:20:903 broker/(9521:9534): Intento enviar mensaje a un suscriptor. Socket: 8
+[INFO] 19:01:20:903 broker/(9521:9534): Envié mensaje a un suscriptor.
+[INFO] 19:01:45:727 broker/(9521:9996): Id del caught: 1
+[INFO] 19:01:45:727 broker/(9521:9996): Meto un mensaje en la cola.
+[INFO] 19:01:45:727 broker/(9521:9534): Comienza el proceso de envío del mensaje a todos los suscriptores.
+[INFO] 19:01:45:727 broker/(9521:9534): Paquete a enviar serializado.
+[INFO] 19:01:45:727 broker/(9521:9534): Intento enviar mensaje a un suscriptor. Socket: 8
+[INFO] 19:01:45:727 broker/(9521:9534): Envié mensaje a un suscriptor.
+[INFO] 19:01:45:727 broker/(9521:9996): Aviso que hay mensajes en cola.
+[INFO] 19:04:47:713 broker/(10304:10379): Realizo suscripción a una cola. Socket suscripto: 7
+[INFO] 19:04:47:713 broker/(10304:10380): Meto un mensaje en la cola.
+[INFO] 19:04:47:715 broker/(10304:10381): Realizo suscripción a una cola. Socket suscripto: 9
+[INFO] 19:04:47:715 broker/(10304:10378): Realizo suscripción a una cola. Socket suscripto: 6
+[INFO] 19:04:47:715 broker/(10304:10323): Comienza el proceso de envío del mensaje a todos los suscriptores.
+[INFO] 19:04:47:715 broker/(10304:10323): Paquete a enviar serializado.
+[INFO] 19:04:47:715 broker/(10304:10380): Aviso que hay mensajes en cola.
+[INFO] 19:04:47:716 broker/(10304:10383): Meto un mensaje en la cola.
+[INFO] 19:04:47:716 broker/(10304:10323): Comienza el proceso de envío del mensaje a todos los suscriptores.
+[INFO] 19:04:47:716 broker/(10304:10323): Paquete a enviar serializado.
+[INFO] 19:04:47:716 broker/(10304:10383): Aviso que hay mensajes en cola.
+[INFO] 19:04:47:716 broker/(10304:10382): Meto un mensaje en la cola.
+[INFO] 19:04:47:716 broker/(10304:10323): Comienza el proceso de envío del mensaje a todos los suscriptores.
+[INFO] 19:04:47:716 broker/(10304:10323): Paquete a enviar serializado.
+[INFO] 19:04:47:716 broker/(10304:10382): Aviso que hay mensajes en cola.
+[INFO] 19:04:54:355 broker/(10304:10410): Id del caught: 1
+[INFO] 19:04:54:356 broker/(10304:10410): Meto un mensaje en la cola.
+[INFO] 19:04:54:357 broker/(10304:10321): Comienza el proceso de envío del mensaje a todos los suscriptores.
+[INFO] 19:04:54:357 broker/(10304:10321): Paquete a enviar serializado.
+[INFO] 19:04:54:357 broker/(10304:10321): Intento enviar mensaje a un suscriptor. Socket: 9
+[INFO] 19:04:54:357 broker/(10304:10321): Envié mensaje a un suscriptor.
+[INFO] 19:04:54:357 broker/(10304:10410): Aviso que hay mensajes en cola.
+[INFO] 19:05:01:195 broker/(10304:10439): Id del caught: 1
+[INFO] 19:05:01:196 broker/(10304:10439): Meto un mensaje en la cola.
+[INFO] 19:05:01:196 broker/(10304:10321): Comienza el proceso de envío del mensaje a todos los suscriptores.
+[INFO] 19:05:01:196 broker/(10304:10321): Paquete a enviar serializado.
+[INFO] 19:05:01:196 broker/(10304:10321): Intento enviar mensaje a un suscriptor. Socket: 9
+[INFO] 19:05:01:196 broker/(10304:10321): Envié mensaje a un suscriptor.
+[INFO] 19:05:01:196 broker/(10304:10439): Aviso que hay mensajes en cola.
+[INFO] 19:05:04:199 broker/(10304:10464): Id del caught: 1
+[INFO] 19:05:04:200 broker/(10304:10464): Meto un mensaje en la cola.
+[INFO] 19:05:04:200 broker/(10304:10464): Aviso que hay mensajes en cola.
+[INFO] 19:05:04:200 broker/(10304:10321): Comienza el proceso de envío del mensaje a todos los suscriptores.
+[INFO] 19:05:04:200 broker/(10304:10321): Paquete a enviar serializado.
+[INFO] 19:05:04:200 broker/(10304:10321): Intento enviar mensaje a un suscriptor. Socket: 9
+[INFO] 19:05:04:200 broker/(10304:10321): Envié mensaje a un suscriptor.
+[INFO] 19:05:06:856 broker/(10304:10476): Id del caught: 1
+[INFO] 19:05:06:856 broker/(10304:10476): Meto un mensaje en la cola.
+[INFO] 19:05:06:858 broker/(10304:10321): Comienza el proceso de envío del mensaje a todos los suscriptores.
+[INFO] 19:05:06:858 broker/(10304:10321): Paquete a enviar serializado.
+[INFO] 19:05:06:858 broker/(10304:10321): Intento enviar mensaje a un suscriptor. Socket: 9
+[INFO] 19:05:06:858 broker/(10304:10321): Envié mensaje a un suscriptor.
+[INFO] 19:05:06:858 broker/(10304:10476): Aviso que hay mensajes en cola.
+[INFO] 19:05:59:546 broker/(10594:10647): Realizo suscripción a una cola. Socket suscripto: 7
+[INFO] 19:05:59:546 broker/(10594:10648): Realizo suscripción a una cola. Socket suscripto: 8
+[INFO] 19:05:59:546 broker/(10594:10649): Meto un mensaje en la cola.
+[INFO] 19:05:59:547 broker/(10594:10609): Comienza el proceso de envío del mensaje a todos los suscriptores.
+[INFO] 19:05:59:547 broker/(10594:10609): Paquete a enviar serializado.
+[INFO] 19:05:59:547 broker/(10594:10649): Aviso que hay mensajes en cola.
+[INFO] 19:05:59:547 broker/(10594:10646): Realizo suscripción a una cola. Socket suscripto: 6
+[INFO] 19:05:59:548 broker/(10594:10651): Meto un mensaje en la cola.
+[INFO] 19:05:59:548 broker/(10594:10609): Comienza el proceso de envío del mensaje a todos los suscriptores.
+[INFO] 19:05:59:548 broker/(10594:10609): Paquete a enviar serializado.
+[INFO] 19:05:59:548 broker/(10594:10651): Aviso que hay mensajes en cola.
+[INFO] 19:05:59:548 broker/(10594:10650): Meto un mensaje en la cola.
+[INFO] 19:05:59:548 broker/(10594:10609): Comienza el proceso de envío del mensaje a todos los suscriptores.
+[INFO] 19:05:59:548 broker/(10594:10609): Paquete a enviar serializado.
+[INFO] 19:05:59:548 broker/(10594:10650): Aviso que hay mensajes en cola.
+[INFO] 19:06:04:546 broker/(10594:10678): Id del caught: 1
+[INFO] 19:06:04:547 broker/(10594:10678): Meto un mensaje en la cola.
+[INFO] 19:06:04:547 broker/(10594:10678): Aviso que hay mensajes en cola.
+[INFO] 19:06:04:547 broker/(10594:10607): Comienza el proceso de envío del mensaje a todos los suscriptores.
+[INFO] 19:06:04:547 broker/(10594:10607): Paquete a enviar serializado.
+[INFO] 19:06:04:547 broker/(10594:10607): Intento enviar mensaje a un suscriptor. Socket: 8
+[INFO] 19:06:04:547 broker/(10594:10607): Envié mensaje a un suscriptor.
+[INFO] 19:06:07:583 broker/(10594:10706): Id del caught: 1
+[INFO] 19:06:07:584 broker/(10594:10706): Meto un mensaje en la cola.
+[INFO] 19:06:07:584 broker/(10594:10706): Aviso que hay mensajes en cola.
+[INFO] 19:06:07:584 broker/(10594:10607): Comienza el proceso de envío del mensaje a todos los suscriptores.
+[INFO] 19:06:07:584 broker/(10594:10607): Paquete a enviar serializado.
+[INFO] 19:06:07:584 broker/(10594:10607): Intento enviar mensaje a un suscriptor. Socket: 8
+[INFO] 19:06:07:584 broker/(10594:10607): Envié mensaje a un suscriptor.
+[INFO] 19:06:09:827 broker/(10594:10716): Id del caught: 1
+[INFO] 19:06:09:828 broker/(10594:10716): Meto un mensaje en la cola.
+[INFO] 19:06:09:828 broker/(10594:10607): Comienza el proceso de envío del mensaje a todos los suscriptores.
+[INFO] 19:06:09:828 broker/(10594:10607): Paquete a enviar serializado.
+[INFO] 19:06:09:828 broker/(10594:10607): Intento enviar mensaje a un suscriptor. Socket: 8
+[INFO] 19:06:09:828 broker/(10594:10607): Envié mensaje a un suscriptor.
+[INFO] 19:06:09:828 broker/(10594:10716): Aviso que hay mensajes en cola.
+[INFO] 19:06:14:433 broker/(10594:10741): Id del caught: 1
+[INFO] 19:06:14:434 broker/(10594:10741): Meto un mensaje en la cola.
+[INFO] 19:06:14:434 broker/(10594:10607): Comienza el proceso de envío del mensaje a todos los suscriptores.
+[INFO] 19:06:14:434 broker/(10594:10607): Paquete a enviar serializado.
+[INFO] 19:06:14:434 broker/(10594:10607): Intento enviar mensaje a un suscriptor. Socket: 8
+[INFO] 19:06:14:434 broker/(10594:10607): Envié mensaje a un suscriptor.
+[INFO] 19:06:14:435 broker/(10594:10741): Aviso que hay mensajes en cola.
+[INFO] 19:06:41:334 broker/(10594:10801): Id del caught: 1
+[INFO] 19:06:41:335 broker/(10594:10801): Meto un mensaje en la cola.
+[INFO] 19:06:41:335 broker/(10594:10607): Comienza el proceso de envío del mensaje a todos los suscriptores.
+[INFO] 19:06:41:335 broker/(10594:10607): Paquete a enviar serializado.
+[INFO] 19:06:41:335 broker/(10594:10607): Intento enviar mensaje a un suscriptor. Socket: 8
+[INFO] 19:06:41:335 broker/(10594:10607): Envié mensaje a un suscriptor.
+[INFO] 19:06:41:335 broker/(10594:10801): Aviso que hay mensajes en cola.
+[INFO] 19:06:44:149 broker/(10594:10826): Id del caught: 1
+[INFO] 19:06:44:149 broker/(10594:10826): Meto un mensaje en la cola.
+[INFO] 19:06:44:149 broker/(10594:10607): Comienza el proceso de envío del mensaje a todos los suscriptores.
+[INFO] 19:06:44:149 broker/(10594:10607): Paquete a enviar serializado.
+[INFO] 19:06:44:149 broker/(10594:10607): Intento enviar mensaje a un suscriptor. Socket: 8
+[INFO] 19:06:44:149 broker/(10594:10607): Envié mensaje a un suscriptor.
+[INFO] 19:06:44:149 broker/(10594:10826): Aviso que hay mensajes en cola.
+[INFO] 19:06:46:147 broker/(10594:10838): Id del caught: 1
+[INFO] 19:06:46:147 broker/(10594:10838): Meto un mensaje en la cola.
+[INFO] 19:06:46:147 broker/(10594:10838): Aviso que hay mensajes en cola.
+[INFO] 19:06:46:147 broker/(10594:10607): Comienza el proceso de envío del mensaje a todos los suscriptores.
+[INFO] 19:06:46:147 broker/(10594:10607): Paquete a enviar serializado.
+[INFO] 19:06:46:147 broker/(10594:10607): Intento enviar mensaje a un suscriptor. Socket: 8
+[INFO] 19:06:46:147 broker/(10594:10607): Envié mensaje a un suscriptor.
+[INFO] 19:07:54:40 broker/(10594:10983): Id del caught: 1
+[INFO] 19:07:54:41 broker/(10594:10983): Meto un mensaje en la cola.
+[INFO] 19:07:54:41 broker/(10594:10607): Comienza el proceso de envío del mensaje a todos los suscriptores.
+[INFO] 19:07:54:41 broker/(10594:10607): Paquete a enviar serializado.
+[INFO] 19:07:54:41 broker/(10594:10607): Intento enviar mensaje a un suscriptor. Socket: 8
+[INFO] 19:07:54:41 broker/(10594:10607): Envié mensaje a un suscriptor.
+[INFO] 19:07:54:41 broker/(10594:10983): Aviso que hay mensajes en cola.
+[INFO] 19:07:55:847 broker/(10594:10996): Id del caught: 1
+[INFO] 19:07:55:847 broker/(10594:10996): Meto un mensaje en la cola.
+[INFO] 19:07:55:847 broker/(10594:10996): Aviso que hay mensajes en cola.
+[INFO] 19:07:55:847 broker/(10594:10607): Comienza el proceso de envío del mensaje a todos los suscriptores.
+[INFO] 19:07:55:847 broker/(10594:10607): Paquete a enviar serializado.
+[INFO] 19:07:55:847 broker/(10594:10607): Intento enviar mensaje a un suscriptor. Socket: 8
+[INFO] 19:07:55:847 broker/(10594:10607): Envié mensaje a un suscriptor.
+[INFO] 19:07:59:919 broker/(10594:11016): Id del caught: 1
+[INFO] 19:07:59:921 broker/(10594:11016): Meto un mensaje en la cola.
+[INFO] 19:07:59:921 broker/(10594:10607): Comienza el proceso de envío del mensaje a todos los suscriptores.
+[INFO] 19:07:59:921 broker/(10594:10607): Paquete a enviar serializado.
+[INFO] 19:07:59:921 broker/(10594:10607): Intento enviar mensaje a un suscriptor. Socket: 8
+[INFO] 19:07:59:921 broker/(10594:10607): Envié mensaje a un suscriptor.
+[INFO] 19:07:59:921 broker/(10594:11016): Aviso que hay mensajes en cola.
+[INFO] 19:08:09:795 broker/(10594:11054): Id del caught: 0
+[INFO] 19:08:09:796 broker/(10594:11054): Meto un mensaje en la cola.
+[INFO] 19:08:09:796 broker/(10594:10607): Comienza el proceso de envío del mensaje a todos los suscriptores.
+[INFO] 19:08:09:796 broker/(10594:10607): Paquete a enviar serializado.
+[INFO] 19:08:09:796 broker/(10594:10607): Intento enviar mensaje a un suscriptor. Socket: 8
+[INFO] 19:08:09:796 broker/(10594:10607): Envié mensaje a un suscriptor.
+[INFO] 19:08:09:796 broker/(10594:11054): Aviso que hay mensajes en cola.
+[INFO] 19:08:13:403 broker/(10594:11082): Id del caught: 0
+[INFO] 19:08:13:404 broker/(10594:11082): Meto un mensaje en la cola.
+[INFO] 19:08:13:404 broker/(10594:11082): Aviso que hay mensajes en cola.
+[INFO] 19:08:13:404 broker/(10594:10607): Comienza el proceso de envío del mensaje a todos los suscriptores.
+[INFO] 19:08:13:404 broker/(10594:10607): Paquete a enviar serializado.
+[INFO] 19:08:13:404 broker/(10594:10607): Intento enviar mensaje a un suscriptor. Socket: 8
+[INFO] 19:08:13:404 broker/(10594:10607): Envié mensaje a un suscriptor.
+[INFO] 19:08:14:919 broker/(10594:11090): Id del caught: 0
+[INFO] 19:08:14:920 broker/(10594:11090): Meto un mensaje en la cola.
+[INFO] 19:08:14:920 broker/(10594:10607): Comienza el proceso de envío del mensaje a todos los suscriptores.
+[INFO] 19:08:14:920 broker/(10594:10607): Paquete a enviar serializado.
+[INFO] 19:08:14:920 broker/(10594:10607): Intento enviar mensaje a un suscriptor. Socket: 8
+[INFO] 19:08:14:920 broker/(10594:10607): Envié mensaje a un suscriptor.
+[INFO] 19:08:14:921 broker/(10594:11090): Aviso que hay mensajes en cola.
+[INFO] 19:14:33:594 broker/(11911:11976): Realizo suscripción a una cola. Socket suscripto: 6
+[INFO] 19:14:33:595 broker/(11911:11977): Realizo suscripción a una cola. Socket suscripto: 7
+[INFO] 19:14:33:595 broker/(11911:11978): Realizo suscripción a una cola. Socket suscripto: 8
+[INFO] 19:14:33:597 broker/(11911:11979): Meto un mensaje en la cola.
+[INFO] 19:14:33:597 broker/(11911:11980): Meto un mensaje en la cola.
+[INFO] 19:14:33:597 broker/(11911:11981): Meto un mensaje en la cola.
+[INFO] 19:14:33:597 broker/(11911:11926): Comienza el proceso de envío del mensaje a todos los suscriptores.
+[INFO] 19:14:33:597 broker/(11911:11926): Paquete a enviar serializado.
+[INFO] 19:14:33:597 broker/(11911:11979): Aviso que hay mensajes en cola.
+[INFO] 19:14:33:597 broker/(11911:11926): Comienza el proceso de envío del mensaje a todos los suscriptores.
+[INFO] 19:14:33:597 broker/(11911:11926): Paquete a enviar serializado.
+[INFO] 19:14:33:597 broker/(11911:11981): Aviso que hay mensajes en cola.
+[INFO] 19:14:33:597 broker/(11911:11926): Comienza el proceso de envío del mensaje a todos los suscriptores.
+[INFO] 19:14:33:597 broker/(11911:11926): Paquete a enviar serializado.
+[INFO] 19:14:33:597 broker/(11911:11980): Aviso que hay mensajes en cola.
+[INFO] 19:14:40:509 broker/(11911:12014): Id del caught: 0
+[INFO] 19:14:40:510 broker/(11911:12014): Meto un mensaje en la cola.
+[INFO] 19:14:40:510 broker/(11911:12014): Aviso que hay mensajes en cola.
+[INFO] 19:14:40:510 broker/(11911:11924): Comienza el proceso de envío del mensaje a todos los suscriptores.
+[INFO] 19:14:40:510 broker/(11911:11924): Paquete a enviar serializado.
+[INFO] 19:14:40:510 broker/(11911:11924): Intento enviar mensaje a un suscriptor. Socket: 8
+[INFO] 19:14:40:510 broker/(11911:11924): Envié mensaje a un suscriptor.
+[INFO] 19:14:59:375 broker/(11911:12060): Id del caught: 0
+[INFO] 19:14:59:375 broker/(11911:12060): Meto un mensaje en la cola.
+[INFO] 19:14:59:375 broker/(11911:11924): Comienza el proceso de envío del mensaje a todos los suscriptores.
+[INFO] 19:14:59:375 broker/(11911:11924): Paquete a enviar serializado.
+[INFO] 19:14:59:375 broker/(11911:11924): Intento enviar mensaje a un suscriptor. Socket: 8
+[INFO] 19:14:59:375 broker/(11911:11924): Envié mensaje a un suscriptor.
+[INFO] 19:14:59:375 broker/(11911:12060): Aviso que hay mensajes en cola.
+[INFO] 19:15:07:487 broker/(11911:12093): Id del caught: 0
+[INFO] 19:15:07:487 broker/(11911:12093): Meto un mensaje en la cola.
+[INFO] 19:15:07:487 broker/(11911:12093): Aviso que hay mensajes en cola.
+[INFO] 19:15:07:487 broker/(11911:11924): Comienza el proceso de envío del mensaje a todos los suscriptores.
+[INFO] 19:15:07:487 broker/(11911:11924): Paquete a enviar serializado.
+[INFO] 19:15:07:487 broker/(11911:11924): Intento enviar mensaje a un suscriptor. Socket: 8
+[INFO] 19:15:07:488 broker/(11911:11924): Envié mensaje a un suscriptor.
+[INFO] 19:15:10:101 broker/(11911:12116): Id del caught: 0
+[INFO] 19:15:10:101 broker/(11911:12116): Meto un mensaje en la cola.
+[INFO] 19:15:10:104 broker/(11911:11924): Comienza el proceso de envío del mensaje a todos los suscriptores.
+[INFO] 19:15:10:104 broker/(11911:11924): Paquete a enviar serializado.
+[INFO] 19:15:10:104 broker/(11911:11924): Intento enviar mensaje a un suscriptor. Socket: 8
+[INFO] 19:15:10:104 broker/(11911:11924): Envié mensaje a un suscriptor.
+[INFO] 19:15:10:104 broker/(11911:12116): Aviso que hay mensajes en cola.
+[INFO] 19:15:12:447 broker/(11911:12139): Id del caught: 0
+[INFO] 19:15:12:447 broker/(11911:12139): Meto un mensaje en la cola.
+[INFO] 19:15:12:448 broker/(11911:11924): Comienza el proceso de envío del mensaje a todos los suscriptores.
+[INFO] 19:15:12:448 broker/(11911:11924): Paquete a enviar serializado.
+[INFO] 19:15:12:448 broker/(11911:11924): Intento enviar mensaje a un suscriptor. Socket: 8
+[INFO] 19:15:12:448 broker/(11911:11924): Envié mensaje a un suscriptor.
+[INFO] 19:15:12:448 broker/(11911:12139): Aviso que hay mensajes en cola.
+[INFO] 19:15:14:881 broker/(11911:12158): Id del caught: 0
+[INFO] 19:15:14:881 broker/(11911:12158): Meto un mensaje en la cola.
+[INFO] 19:15:14:881 broker/(11911:11924): Comienza el proceso de envío del mensaje a todos los suscriptores.
+[INFO] 19:15:14:881 broker/(11911:11924): Paquete a enviar serializado.
+[INFO] 19:15:14:881 broker/(11911:11924): Intento enviar mensaje a un suscriptor. Socket: 8
+[INFO] 19:15:14:881 broker/(11911:11924): Envié mensaje a un suscriptor.
+[INFO] 19:15:14:881 broker/(11911:12158): Aviso que hay mensajes en cola.
+[INFO] 19:25:15:707 broker/(13497:13550): Realizo suscripción a una cola. Socket suscripto: 6
+[INFO] 19:25:15:707 broker/(13497:13551): Realizo suscripción a una cola. Socket suscripto: 7
+[INFO] 19:25:15:707 broker/(13497:13552): Realizo suscripción a una cola. Socket suscripto: 8
+[INFO] 19:25:15:707 broker/(13497:13553): Meto un mensaje en la cola.
+[INFO] 19:25:15:708 broker/(13497:13554): Meto un mensaje en la cola.
+[INFO] 19:25:15:708 broker/(13497:13555): Meto un mensaje en la cola.
+[INFO] 19:25:15:708 broker/(13497:13512): Comienza el proceso de envío del mensaje a todos los suscriptores.
+[INFO] 19:25:15:708 broker/(13497:13512): Paquete a enviar serializado.
+[INFO] 19:25:15:708 broker/(13497:13512): Comienza el proceso de envío del mensaje a todos los suscriptores.
+[INFO] 19:25:15:708 broker/(13497:13512): Paquete a enviar serializado.
+[INFO] 19:25:15:708 broker/(13497:13555): Aviso que hay mensajes en cola.
+[INFO] 19:25:15:708 broker/(13497:13553): Aviso que hay mensajes en cola.
+[INFO] 19:25:15:708 broker/(13497:13512): Comienza el proceso de envío del mensaje a todos los suscriptores.
+[INFO] 19:25:15:708 broker/(13497:13512): Paquete a enviar serializado.
+[INFO] 19:25:15:708 broker/(13497:13554): Aviso que hay mensajes en cola.
+[INFO] 19:25:24:881 broker/(13497:13586): Id del caught: 0
+[INFO] 19:25:24:883 broker/(13497:13586): Meto un mensaje en la cola.
+[INFO] 19:25:24:887 broker/(13497:13510): Comienza el proceso de envío del mensaje a todos los suscriptores.
+[INFO] 19:25:24:887 broker/(13497:13510): Paquete a enviar serializado.
+[INFO] 19:25:24:887 broker/(13497:13510): Intento enviar mensaje a un suscriptor. Socket: 8
+[INFO] 19:25:24:888 broker/(13497:13510): Envié mensaje a un suscriptor.
+[INFO] 19:25:24:888 broker/(13497:13586): Aviso que hay mensajes en cola.
+[INFO] 19:26:01:354 broker/(13497:13659): Me llegó un catch. Código de mensaje: 3. 
+[INFO] 19:26:01:355 broker/(13497:13659): Meto un mensaje en la cola.
+[INFO] 19:26:01:355 broker/(13497:13511): Comienza el proceso de envío del mensaje a todos los suscriptores.
+[INFO] 19:26:01:355 broker/(13497:13511): Paquete a enviar serializado.
+[INFO] 19:26:01:355 broker/(13497:13659): Aviso que hay mensajes en cola.
+[INFO] 19:34:12:519 broker/(14971:15186): Realizo suscripción a una cola. Socket suscripto: 6
+[INFO] 19:34:12:520 broker/(14971:15187): Realizo suscripción a una cola. Socket suscripto: 7
+[INFO] 19:34:12:520 broker/(14971:15188): Realizo suscripción a una cola. Socket suscripto: 8
+[INFO] 19:34:12:521 broker/(14971:15189): Meto un mensaje en la cola.
+[INFO] 19:34:12:521 broker/(14971:15190): Meto un mensaje en la cola.
+[INFO] 19:34:12:521 broker/(14971:15191): Meto un mensaje en la cola.
+[INFO] 19:34:12:521 broker/(14971:14986): Comienza el proceso de envío del mensaje a todos los suscriptores.
+[INFO] 19:34:12:521 broker/(14971:14986): Paquete a enviar serializado.
+[INFO] 19:34:12:522 broker/(14971:15189): Aviso que hay mensajes en cola.
+[INFO] 19:34:12:522 broker/(14971:14986): Comienza el proceso de envío del mensaje a todos los suscriptores.
+[INFO] 19:34:12:522 broker/(14971:14986): Paquete a enviar serializado.
+[INFO] 19:34:12:522 broker/(14971:15191): Aviso que hay mensajes en cola.
+[INFO] 19:34:12:522 broker/(14971:14986): Comienza el proceso de envío del mensaje a todos los suscriptores.
+[INFO] 19:34:12:522 broker/(14971:14986): Paquete a enviar serializado.
+[INFO] 19:34:12:522 broker/(14971:15190): Aviso que hay mensajes en cola.
+[INFO] 19:34:31:999 broker/(14971:15392): Me llegó un catch. Código de mensaje: 3. 
+[INFO] 19:34:31:0 broker/(14971:15392): Meto un mensaje en la cola.
+[INFO] 19:34:31:0 broker/(14971:14985): Comienza el proceso de envío del mensaje a todos los suscriptores.
+[INFO] 19:34:31:0 broker/(14971:14985): Paquete a enviar serializado.
+[INFO] 19:34:31:0 broker/(14971:15392): Aviso que hay mensajes en cola.
+[INFO] 19:35:09:150 broker/(14971:15464): Id del caught: 1
+[INFO] 19:35:09:150 broker/(14971:15464): Meto un mensaje en la cola.
+[INFO] 19:35:09:151 broker/(14971:14984): Comienza el proceso de envío del mensaje a todos los suscriptores.
+[INFO] 19:35:09:151 broker/(14971:14984): Paquete a enviar serializado.
+[INFO] 19:35:09:151 broker/(14971:14984): Intento enviar mensaje a un suscriptor. Socket: 6
+[INFO] 19:35:09:151 broker/(14971:14984): Envié mensaje a un suscriptor.
+[INFO] 19:35:09:151 broker/(14971:15464): Aviso que hay mensajes en cola.
+[INFO] 19:35:26:167 broker/(14971:15517): Id del caught: 1
+[INFO] 19:35:26:167 broker/(14971:15517): Meto un mensaje en la cola.
+[INFO] 19:35:26:168 broker/(14971:14984): Comienza el proceso de envío del mensaje a todos los suscriptores.
+[INFO] 19:35:26:168 broker/(14971:14984): Paquete a enviar serializado.
+[INFO] 19:35:26:168 broker/(14971:14984): Intento enviar mensaje a un suscriptor. Socket: 6
+[INFO] 19:35:26:168 broker/(14971:14984): Envié mensaje a un suscriptor.
+[INFO] 19:35:26:168 broker/(14971:15517): Aviso que hay mensajes en cola.
+[INFO] 19:35:31:139 broker/(14971:15546): Id del caught: 1
+[INFO] 19:35:31:140 broker/(14971:15546): Meto un mensaje en la cola.
+[INFO] 19:35:31:140 broker/(14971:14984): Comienza el proceso de envío del mensaje a todos los suscriptores.
+[INFO] 19:35:31:140 broker/(14971:14984): Paquete a enviar serializado.
+[INFO] 19:35:31:140 broker/(14971:14984): Intento enviar mensaje a un suscriptor. Socket: 6
+[INFO] 19:35:31:140 broker/(14971:14984): Envié mensaje a un suscriptor.
+[INFO] 19:35:31:140 broker/(14971:15546): Aviso que hay mensajes en cola.
+[INFO] 19:35:33:859 broker/(14971:15564): Id del caught: 1
+[INFO] 19:35:33:860 broker/(14971:15564): Meto un mensaje en la cola.
+[INFO] 19:35:33:860 broker/(14971:14984): Comienza el proceso de envío del mensaje a todos los suscriptores.
+[INFO] 19:35:33:860 broker/(14971:14984): Paquete a enviar serializado.
+[INFO] 19:35:33:860 broker/(14971:14984): Intento enviar mensaje a un suscriptor. Socket: 6
+[INFO] 19:35:33:860 broker/(14971:14984): Envié mensaje a un suscriptor.
+[INFO] 19:35:33:860 broker/(14971:15564): Aviso que hay mensajes en cola.
+[INFO] 19:35:36:408 broker/(14971:15587): Id del caught: 1
+[INFO] 19:35:36:408 broker/(14971:15587): Meto un mensaje en la cola.
+[INFO] 19:35:36:408 broker/(14971:14984): Comienza el proceso de envío del mensaje a todos los suscriptores.
+[INFO] 19:35:36:408 broker/(14971:14984): Paquete a enviar serializado.
+[INFO] 19:35:36:408 broker/(14971:14984): Intento enviar mensaje a un suscriptor. Socket: 6
+[INFO] 19:35:36:408 broker/(14971:14984): Envié mensaje a un suscriptor.
+[INFO] 19:35:36:408 broker/(14971:15587): Aviso que hay mensajes en cola.
+[INFO] 19:35:58:548 broker/(14971:15645): Id del caught: 1
+[INFO] 19:35:58:551 broker/(14971:15645): Meto un mensaje en la cola.
+[INFO] 19:35:58:551 broker/(14971:14984): Comienza el proceso de envío del mensaje a todos los suscriptores.
+[INFO] 19:35:58:551 broker/(14971:14984): Paquete a enviar serializado.
+[INFO] 19:35:58:551 broker/(14971:14984): Intento enviar mensaje a un suscriptor. Socket: 6
+[INFO] 19:35:58:551 broker/(14971:14984): Envié mensaje a un suscriptor.
+[INFO] 19:35:58:551 broker/(14971:15645): Aviso que hay mensajes en cola.
+[INFO] 19:36:00:619 broker/(14971:15658): Id del caught: 1
+[INFO] 19:36:00:620 broker/(14971:15658): Meto un mensaje en la cola.
+[INFO] 19:36:00:620 broker/(14971:15658): Aviso que hay mensajes en cola.
+[INFO] 19:36:00:620 broker/(14971:14984): Comienza el proceso de envío del mensaje a todos los suscriptores.
+[INFO] 19:36:00:620 broker/(14971:14984): Paquete a enviar serializado.
+[INFO] 19:36:00:620 broker/(14971:14984): Intento enviar mensaje a un suscriptor. Socket: 6
+[INFO] 19:36:00:620 broker/(14971:14984): Envié mensaje a un suscriptor.
+[INFO] 19:36:04:51 broker/(14971:15688): Id del caught: 1
+[INFO] 19:36:04:51 broker/(14971:15688): Meto un mensaje en la cola.
+[INFO] 19:36:04:51 broker/(14971:15688): Aviso que hay mensajes en cola.
+[INFO] 19:36:04:51 broker/(14971:14984): Comienza el proceso de envío del mensaje a todos los suscriptores.
+[INFO] 19:36:04:51 broker/(14971:14984): Paquete a enviar serializado.
+[INFO] 19:36:04:51 broker/(14971:14984): Intento enviar mensaje a un suscriptor. Socket: 6
+[INFO] 19:36:04:51 broker/(14971:14984): Envié mensaje a un suscriptor.
+[INFO] 19:36:06:515 broker/(14971:15705): Id del caught: 1
+[INFO] 19:36:06:516 broker/(14971:15705): Meto un mensaje en la cola.
+[INFO] 19:36:06:516 broker/(14971:14984): Comienza el proceso de envío del mensaje a todos los suscriptores.
+[INFO] 19:36:06:516 broker/(14971:14984): Paquete a enviar serializado.
+[INFO] 19:36:06:516 broker/(14971:14984): Intento enviar mensaje a un suscriptor. Socket: 6
+[INFO] 19:36:06:516 broker/(14971:14984): Envié mensaje a un suscriptor.
+[INFO] 19:36:06:516 broker/(14971:15705): Aviso que hay mensajes en cola.
+[INFO] 19:36:08:231 broker/(14971:15723): Id del caught: 1
+[INFO] 19:36:08:231 broker/(14971:15723): Meto un mensaje en la cola.
+[INFO] 19:36:08:231 broker/(14971:14984): Comienza el proceso de envío del mensaje a todos los suscriptores.
+[INFO] 19:36:08:231 broker/(14971:14984): Paquete a enviar serializado.
+[INFO] 19:36:08:231 broker/(14971:14984): Intento enviar mensaje a un suscriptor. Socket: 6
+[INFO] 19:36:08:231 broker/(14971:14984): Envié mensaje a un suscriptor.
+[INFO] 19:36:08:231 broker/(14971:15723): Aviso que hay mensajes en cola.
+[INFO] 19:36:57:679 broker/(14971:15819): Id del caught: 1
+[INFO] 19:36:57:680 broker/(14971:15819): Meto un mensaje en la cola.
+[INFO] 19:36:57:680 broker/(14971:14984): Comienza el proceso de envío del mensaje a todos los suscriptores.
+[INFO] 19:36:57:680 broker/(14971:14984): Paquete a enviar serializado.
+[INFO] 19:36:57:680 broker/(14971:14984): Intento enviar mensaje a un suscriptor. Socket: 6
+[INFO] 19:36:57:680 broker/(14971:14984): Envié mensaje a un suscriptor.
+[INFO] 19:36:57:680 broker/(14971:15819): Aviso que hay mensajes en cola.
+[INFO] 19:37:07:305 broker/(14971:16030): Meto un mensaje en la cola.
+[INFO] 19:37:07:305 broker/(14971:16029): Meto un mensaje en la cola.
+[INFO] 19:37:07:305 broker/(14971:16032): Realizo suscripción a una cola. Socket suscripto: 28
+[INFO] 19:37:07:305 broker/(14971:16033): Realizo suscripción a una cola. Socket suscripto: 29
+[INFO] 19:37:07:305 broker/(14971:16031): Realizo suscripción a una cola. Socket suscripto: 27
+[INFO] 19:37:07:305 broker/(14971:14986): Comienza el proceso de envío del mensaje a todos los suscriptores.
+[INFO] 19:37:07:305 broker/(14971:14986): Paquete a enviar serializado.
+[INFO] 19:37:07:305 broker/(14971:14986): Comienza el proceso de envío del mensaje a todos los suscriptores.
+[INFO] 19:37:07:305 broker/(14971:14986): Paquete a enviar serializado.
+[INFO] 19:37:07:305 broker/(14971:16029): Aviso que hay mensajes en cola.
+[INFO] 19:37:07:305 broker/(14971:16028): Meto un mensaje en la cola.
+[INFO] 19:37:07:305 broker/(14971:14986): Comienza el proceso de envío del mensaje a todos los suscriptores.
+[INFO] 19:37:07:306 broker/(14971:14986): Paquete a enviar serializado.
+[INFO] 19:37:07:306 broker/(14971:16028): Aviso que hay mensajes en cola.
+[INFO] 19:37:07:306 broker/(14971:16030): Aviso que hay mensajes en cola.
+[INFO] 19:37:13:347 broker/(14971:16071): Meto un mensaje en la cola.
+[INFO] 19:37:13:347 broker/(14971:16072): Meto un mensaje en la cola.
+[INFO] 19:37:13:347 broker/(14971:16073): Meto un mensaje en la cola.
+[INFO] 19:37:13:347 broker/(14971:16074): Realizo suscripción a una cola. Socket suscripto: 33
+[INFO] 19:37:13:347 broker/(14971:16075): Realizo suscripción a una cola. Socket suscripto: 34
+[INFO] 19:37:13:347 broker/(14971:16076): Realizo suscripción a una cola. Socket suscripto: 35
+[INFO] 19:37:13:349 broker/(14971:14986): Comienza el proceso de envío del mensaje a todos los suscriptores.
+[INFO] 19:37:13:349 broker/(14971:14986): Paquete a enviar serializado.
+[INFO] 19:37:13:349 broker/(14971:16071): Aviso que hay mensajes en cola.
+[INFO] 19:37:13:349 broker/(14971:14986): Comienza el proceso de envío del mensaje a todos los suscriptores.
+[INFO] 19:37:13:349 broker/(14971:14986): Paquete a enviar serializado.
+[INFO] 19:37:13:349 broker/(14971:16073): Aviso que hay mensajes en cola.
+[INFO] 19:37:13:349 broker/(14971:14986): Comienza el proceso de envío del mensaje a todos los suscriptores.
+[INFO] 19:37:13:349 broker/(14971:14986): Paquete a enviar serializado.
+[INFO] 19:37:13:349 broker/(14971:16072): Aviso que hay mensajes en cola.
+[INFO] 19:37:35:621 broker/(14971:16281): Id del caught: 1
+[INFO] 19:37:35:621 broker/(14971:16281): Meto un mensaje en la cola.
+[INFO] 19:37:35:621 broker/(14971:14984): Comienza el proceso de envío del mensaje a todos los suscriptores.
+[INFO] 19:37:35:621 broker/(14971:14984): Paquete a enviar serializado.
+[INFO] 19:37:35:621 broker/(14971:14984): Intento enviar mensaje a un suscriptor. Socket: 6
+[INFO] 19:37:35:621 broker/(14971:14984): Envié mensaje a un suscriptor.
+[INFO] 19:37:35:621 broker/(14971:14984): Intento enviar mensaje a un suscriptor. Socket: 27
+[INFO] 19:37:35:621 broker/(14971:14984): Envié mensaje a un suscriptor.
+[INFO] 19:37:35:621 broker/(14971:14984): Intento enviar mensaje a un suscriptor. Socket: 35
+[INFO] 19:37:35:621 broker/(14971:14984): Envié mensaje a un suscriptor.
+[INFO] 19:37:35:621 broker/(14971:16281): Aviso que hay mensajes en cola.
+[INFO] 19:37:38:620 broker/(14971:16311): Id del caught: 1
+[INFO] 19:37:38:621 broker/(14971:16311): Meto un mensaje en la cola.
+[INFO] 19:37:38:621 broker/(14971:16311): Aviso que hay mensajes en cola.
+[INFO] 19:37:38:621 broker/(14971:14984): Comienza el proceso de envío del mensaje a todos los suscriptores.
+[INFO] 19:37:38:622 broker/(14971:14984): Paquete a enviar serializado.
+[INFO] 19:37:38:622 broker/(14971:14984): Intento enviar mensaje a un suscriptor. Socket: 6
+[INFO] 19:37:38:622 broker/(14971:14984): Envié mensaje a un suscriptor.
+[INFO] 19:37:38:622 broker/(14971:14984): Intento enviar mensaje a un suscriptor. Socket: 27
+[INFO] 19:38:30:724 broker/(16647:16851): Realizo suscripción a una cola. Socket suscripto: 6
+[INFO] 19:38:30:724 broker/(16647:16852): Realizo suscripción a una cola. Socket suscripto: 7
+[INFO] 19:38:30:724 broker/(16647:16853): Realizo suscripción a una cola. Socket suscripto: 8
+[INFO] 19:38:30:724 broker/(16647:16854): Meto un mensaje en la cola.
+[INFO] 19:38:30:724 broker/(16647:16855): Meto un mensaje en la cola.
+[INFO] 19:38:30:724 broker/(16647:16856): Meto un mensaje en la cola.
+[INFO] 19:38:30:725 broker/(16647:16662): Comienza el proceso de envío del mensaje a todos los suscriptores.
+[INFO] 19:38:30:725 broker/(16647:16662): Paquete a enviar serializado.
+[INFO] 19:38:30:725 broker/(16647:16854): Aviso que hay mensajes en cola.
+[INFO] 19:38:30:725 broker/(16647:16662): Comienza el proceso de envío del mensaje a todos los suscriptores.
+[INFO] 19:38:30:725 broker/(16647:16662): Paquete a enviar serializado.
+[INFO] 19:38:30:725 broker/(16647:16855): Aviso que hay mensajes en cola.
+[INFO] 19:38:30:725 broker/(16647:16662): Comienza el proceso de envío del mensaje a todos los suscriptores.
+[INFO] 19:38:30:725 broker/(16647:16662): Paquete a enviar serializado.
+[INFO] 19:38:30:725 broker/(16647:16856): Aviso que hay mensajes en cola.
+[INFO] 19:38:41:171 broker/(16647:17052): Id del caught: 1
+[INFO] 19:38:41:172 broker/(16647:17052): Meto un mensaje en la cola.
+[INFO] 19:38:41:179 broker/(16647:16660): Comienza el proceso de envío del mensaje a todos los suscriptores.
+[INFO] 19:38:41:179 broker/(16647:16660): Paquete a enviar serializado.
+[INFO] 19:38:41:179 broker/(16647:16660): Intento enviar mensaje a un suscriptor. Socket: 8
+[INFO] 19:38:41:179 broker/(16647:16660): Envié mensaje a un suscriptor.
+[INFO] 19:38:41:179 broker/(16647:17052): Aviso que hay mensajes en cola.
+[INFO] 19:38:43:523 broker/(16647:17070): Id del caught: 1
+[INFO] 19:38:43:523 broker/(16647:17070): Meto un mensaje en la cola.
+[INFO] 19:38:43:528 broker/(16647:16660): Comienza el proceso de envío del mensaje a todos los suscriptores.
+[INFO] 19:38:43:528 broker/(16647:16660): Paquete a enviar serializado.
+[INFO] 19:38:43:528 broker/(16647:16660): Intento enviar mensaje a un suscriptor. Socket: 8
+[INFO] 19:38:43:528 broker/(16647:16660): Envié mensaje a un suscriptor.
+[INFO] 19:38:43:528 broker/(16647:17070): Aviso que hay mensajes en cola.
+[INFO] 19:38:46:263 broker/(16647:17094): Id del caught: 1
+[INFO] 19:38:46:266 broker/(16647:17094): Meto un mensaje en la cola.
+[INFO] 19:38:46:266 broker/(16647:16660): Comienza el proceso de envío del mensaje a todos los suscriptores.
+[INFO] 19:38:46:266 broker/(16647:16660): Paquete a enviar serializado.
+[INFO] 19:38:46:266 broker/(16647:16660): Intento enviar mensaje a un suscriptor. Socket: 8
+[INFO] 19:38:46:266 broker/(16647:16660): Envié mensaje a un suscriptor.
+[INFO] 19:38:46:266 broker/(16647:17094): Aviso que hay mensajes en cola.
+[INFO] 19:38:48:645 broker/(16647:17111): Id del caught: 1
+[INFO] 19:38:48:646 broker/(16647:17111): Meto un mensaje en la cola.
+[INFO] 19:38:48:648 broker/(16647:16660): Comienza el proceso de envío del mensaje a todos los suscriptores.
+[INFO] 19:38:48:648 broker/(16647:16660): Paquete a enviar serializado.
+[INFO] 19:38:48:648 broker/(16647:16660): Intento enviar mensaje a un suscriptor. Socket: 8
+[INFO] 19:38:48:648 broker/(16647:16660): Envié mensaje a un suscriptor.
+[INFO] 19:38:48:648 broker/(16647:17111): Aviso que hay mensajes en cola.
+[INFO] 19:38:50:389 broker/(16647:17128): Id del caught: 1
+[INFO] 19:38:50:389 broker/(16647:17128): Meto un mensaje en la cola.
+[INFO] 19:38:50:389 broker/(16647:16660): Comienza el proceso de envío del mensaje a todos los suscriptores.
+[INFO] 19:38:50:389 broker/(16647:16660): Paquete a enviar serializado.
+[INFO] 19:38:50:389 broker/(16647:16660): Intento enviar mensaje a un suscriptor. Socket: 8
+[INFO] 19:38:50:389 broker/(16647:16660): Envié mensaje a un suscriptor.
+[INFO] 19:38:50:389 broker/(16647:17128): Aviso que hay mensajes en cola.
+[INFO] 19:39:11:847 broker/(16647:17183): Id del caught: 1
+[INFO] 19:39:11:847 broker/(16647:17183): Meto un mensaje en la cola.
+[INFO] 19:39:11:847 broker/(16647:16660): Comienza el proceso de envío del mensaje a todos los suscriptores.
+[INFO] 19:39:11:847 broker/(16647:16660): Paquete a enviar serializado.
+[INFO] 19:39:11:847 broker/(16647:16660): Intento enviar mensaje a un suscriptor. Socket: 8
+[INFO] 19:39:11:847 broker/(16647:16660): Envié mensaje a un suscriptor.
+[INFO] 19:39:11:847 broker/(16647:17183): Aviso que hay mensajes en cola.
+[INFO] 19:39:14:74 broker/(16647:17200): Id del caught: 1
+[INFO] 19:39:14:75 broker/(16647:17200): Meto un mensaje en la cola.
+[INFO] 19:39:14:75 broker/(16647:16660): Comienza el proceso de envío del mensaje a todos los suscriptores.
+[INFO] 19:39:14:75 broker/(16647:16660): Paquete a enviar serializado.
+[INFO] 19:39:14:75 broker/(16647:16660): Intento enviar mensaje a un suscriptor. Socket: 8
+[INFO] 19:39:14:75 broker/(16647:16660): Envié mensaje a un suscriptor.
+[INFO] 19:39:14:75 broker/(16647:17200): Aviso que hay mensajes en cola.
+[INFO] 19:39:16:827 broker/(16647:17225): Id del caught: 1
+[INFO] 19:39:16:828 broker/(16647:17225): Meto un mensaje en la cola.
+[INFO] 19:39:16:828 broker/(16647:17225): Aviso que hay mensajes en cola.
+[INFO] 19:39:16:828 broker/(16647:16660): Comienza el proceso de envío del mensaje a todos los suscriptores.
+[INFO] 19:39:16:828 broker/(16647:16660): Paquete a enviar serializado.
+[INFO] 19:39:16:828 broker/(16647:16660): Intento enviar mensaje a un suscriptor. Socket: 8
+[INFO] 19:39:16:828 broker/(16647:16660): Envié mensaje a un suscriptor.
+[INFO] 19:39:19:367 broker/(16647:17246): Id del caught: 1
+[INFO] 19:39:19:369 broker/(16647:17246): Meto un mensaje en la cola.
+[INFO] 19:39:19:369 broker/(16647:16660): Comienza el proceso de envío del mensaje a todos los suscriptores.
+[INFO] 19:39:19:369 broker/(16647:16660): Paquete a enviar serializado.
+[INFO] 19:39:19:369 broker/(16647:16660): Intento enviar mensaje a un suscriptor. Socket: 8
+[INFO] 19:39:19:369 broker/(16647:16660): Envié mensaje a un suscriptor.
+[INFO] 19:39:19:369 broker/(16647:17246): Aviso que hay mensajes en cola.
+[INFO] 19:39:20:963 broker/(16647:17259): Id del caught: 1
+[INFO] 19:39:20:963 broker/(16647:17259): Meto un mensaje en la cola.
+[INFO] 19:39:20:963 broker/(16647:17259): Aviso que hay mensajes en cola.
+[INFO] 19:39:20:963 broker/(16647:16660): Comienza el proceso de envío del mensaje a todos los suscriptores.
+[INFO] 19:39:20:963 broker/(16647:16660): Paquete a enviar serializado.
+[INFO] 19:39:20:963 broker/(16647:16660): Intento enviar mensaje a un suscriptor. Socket: 8
+[INFO] 19:39:20:963 broker/(16647:16660): Envié mensaje a un suscriptor.
+[INFO] 19:40:12:163 broker/(16647:17362): Id del caught: 1
+[INFO] 19:40:12:164 broker/(16647:17362): Meto un mensaje en la cola.
+[INFO] 19:40:12:164 broker/(16647:16660): Comienza el proceso de envío del mensaje a todos los suscriptores.
+[INFO] 19:40:12:164 broker/(16647:16660): Paquete a enviar serializado.
+[INFO] 19:40:12:164 broker/(16647:16660): Intento enviar mensaje a un suscriptor. Socket: 8
+[INFO] 19:40:12:164 broker/(16647:16660): Envié mensaje a un suscriptor.
+[INFO] 19:40:12:165 broker/(16647:17362): Aviso que hay mensajes en cola.
+[INFO] 19:40:14:559 broker/(16647:17384): Id del caught: 1
+[INFO] 19:40:14:559 broker/(16647:17384): Meto un mensaje en la cola.
+[INFO] 19:40:14:559 broker/(16647:17384): Aviso que hay mensajes en cola.
+[INFO] 19:40:14:559 broker/(16647:16660): Comienza el proceso de envío del mensaje a todos los suscriptores.
+[INFO] 19:40:14:559 broker/(16647:16660): Paquete a enviar serializado.
+[INFO] 19:40:14:559 broker/(16647:16660): Intento enviar mensaje a un suscriptor. Socket: 8
+[INFO] 19:40:14:559 broker/(16647:16660): Envié mensaje a un suscriptor.
+[INFO] 19:40:16:660 broker/(16647:17397): Id del caught: 1
+[INFO] 19:40:16:661 broker/(16647:17397): Meto un mensaje en la cola.
+[INFO] 19:40:16:661 broker/(16647:16660): Comienza el proceso de envío del mensaje a todos los suscriptores.
+[INFO] 19:40:16:661 broker/(16647:16660): Paquete a enviar serializado.
+[INFO] 19:40:16:661 broker/(16647:16660): Intento enviar mensaje a un suscriptor. Socket: 8
+[INFO] 19:40:16:661 broker/(16647:16660): Envié mensaje a un suscriptor.
+[INFO] 19:40:16:661 broker/(16647:17397): Aviso que hay mensajes en cola.
+[INFO] 19:40:58:775 broker/(16647:17482): Id del caught: 1
+[INFO] 19:40:58:775 broker/(16647:17482): Meto un mensaje en la cola.
+[INFO] 19:40:58:775 broker/(16647:16660): Comienza el proceso de envío del mensaje a todos los suscriptores.
+[INFO] 19:40:58:775 broker/(16647:16660): Paquete a enviar serializado.
+[INFO] 19:40:58:775 broker/(16647:16660): Intento enviar mensaje a un suscriptor. Socket: 8
+[INFO] 19:40:58:775 broker/(16647:16660): Envié mensaje a un suscriptor.
+[INFO] 19:40:58:775 broker/(16647:17482): Aviso que hay mensajes en cola.
+[INFO] 19:41:01:474 broker/(16647:17507): Id del caught: 1
+[INFO] 19:41:01:474 broker/(16647:17507): Meto un mensaje en la cola.
+[INFO] 19:41:01:474 broker/(16647:17507): Aviso que hay mensajes en cola.
+[INFO] 19:41:01:474 broker/(16647:16660): Comienza el proceso de envío del mensaje a todos los suscriptores.
+[INFO] 19:41:01:474 broker/(16647:16660): Paquete a enviar serializado.
+[INFO] 19:41:01:474 broker/(16647:16660): Intento enviar mensaje a un suscriptor. Socket: 8
+[INFO] 19:41:01:474 broker/(16647:16660): Envié mensaje a un suscriptor.
+[INFO] 19:41:03:923 broker/(16647:17520): Id del caught: 1
+[INFO] 19:41:03:924 broker/(16647:17520): Meto un mensaje en la cola.
+[INFO] 19:41:03:924 broker/(16647:17520): Aviso que hay mensajes en cola.
+[INFO] 19:41:03:924 broker/(16647:16660): Comienza el proceso de envío del mensaje a todos los suscriptores.
+[INFO] 19:41:03:924 broker/(16647:16660): Paquete a enviar serializado.
+[INFO] 19:41:03:924 broker/(16647:16660): Intento enviar mensaje a un suscriptor. Socket: 8
+[INFO] 19:41:03:924 broker/(16647:16660): Envié mensaje a un suscriptor.
+[INFO] 19:41:20:923 broker/(16647:17567): Id del caught: 1
+[INFO] 19:41:20:924 broker/(16647:17567): Meto un mensaje en la cola.
+[INFO] 19:41:20:929 broker/(16647:16660): Comienza el proceso de envío del mensaje a todos los suscriptores.
+[INFO] 19:41:20:929 broker/(16647:16660): Paquete a enviar serializado.
+[INFO] 19:41:20:929 broker/(16647:16660): Intento enviar mensaje a un suscriptor. Socket: 8
+[INFO] 19:41:20:929 broker/(16647:16660): Envié mensaje a un suscriptor.
+[INFO] 19:41:20:929 broker/(16647:17567): Aviso que hay mensajes en cola.
+[INFO] 19:41:23:528 broker/(16647:17592): Id del caught: 1
+[INFO] 19:41:23:529 broker/(16647:17592): Meto un mensaje en la cola.
+[INFO] 19:41:23:529 broker/(16647:17592): Aviso que hay mensajes en cola.
+[INFO] 19:41:23:529 broker/(16647:16660): Comienza el proceso de envío del mensaje a todos los suscriptores.
+[INFO] 19:41:23:529 broker/(16647:16660): Paquete a enviar serializado.
+[INFO] 19:41:23:529 broker/(16647:16660): Intento enviar mensaje a un suscriptor. Socket: 8
+[INFO] 19:41:23:529 broker/(16647:16660): Envié mensaje a un suscriptor.
+[INFO] 19:41:25:829 broker/(16647:17609): Id del caught: 1
+[INFO] 19:41:25:830 broker/(16647:17609): Meto un mensaje en la cola.
+[INFO] 19:41:25:830 broker/(16647:17609): Aviso que hay mensajes en cola.
+[INFO] 19:41:25:830 broker/(16647:16660): Comienza el proceso de envío del mensaje a todos los suscriptores.
+[INFO] 19:41:25:830 broker/(16647:16660): Paquete a enviar serializado.
+[INFO] 19:41:25:830 broker/(16647:16660): Intento enviar mensaje a un suscriptor. Socket: 8
+[INFO] 19:41:25:830 broker/(16647:16660): Envié mensaje a un suscriptor.
+[INFO] 19:41:28:287 broker/(16647:17631): Id del caught: 1
+[INFO] 19:41:28:287 broker/(16647:17631): Meto un mensaje en la cola.
+[INFO] 19:41:28:287 broker/(16647:17631): Aviso que hay mensajes en cola.
+[INFO] 19:41:28:287 broker/(16647:16660): Comienza el proceso de envío del mensaje a todos los suscriptores.
+[INFO] 19:41:28:287 broker/(16647:16660): Paquete a enviar serializado.
+[INFO] 19:41:28:287 broker/(16647:16660): Intento enviar mensaje a un suscriptor. Socket: 8
+[INFO] 19:41:28:287 broker/(16647:16660): Envié mensaje a un suscriptor.
+[INFO] 19:49:43:155 broker/(16647:19072): Meto un mensaje en la cola.
+[INFO] 19:49:43:155 broker/(16647:19073): Meto un mensaje en la cola.
+[INFO] 19:49:43:155 broker/(16647:19074): Meto un mensaje en la cola.
+[INFO] 19:49:43:155 broker/(16647:19075): Realizo suscripción a una cola. Socket suscripto: 35
+[INFO] 19:49:43:155 broker/(16647:19076): Realizo suscripción a una cola. Socket suscripto: 36
+[INFO] 19:49:43:155 broker/(16647:19077): Realizo suscripción a una cola. Socket suscripto: 37
+[INFO] 19:49:43:155 broker/(16647:16662): Comienza el proceso de envío del mensaje a todos los suscriptores.
+[INFO] 19:49:43:155 broker/(16647:16662): Paquete a enviar serializado.
+[INFO] 19:49:43:155 broker/(16647:19072): Aviso que hay mensajes en cola.
+[INFO] 19:49:43:155 broker/(16647:16662): Comienza el proceso de envío del mensaje a todos los suscriptores.
+[INFO] 19:49:43:155 broker/(16647:16662): Paquete a enviar serializado.
+[INFO] 19:49:43:155 broker/(16647:19074): Aviso que hay mensajes en cola.
+[INFO] 19:49:43:155 broker/(16647:16662): Comienza el proceso de envío del mensaje a todos los suscriptores.
+[INFO] 19:49:43:155 broker/(16647:16662): Paquete a enviar serializado.
+[INFO] 19:49:43:155 broker/(16647:19073): Aviso que hay mensajes en cola.
+[INFO] 19:50:36:468 broker/(19486:19686): Realizo suscripción a una cola. Socket suscripto: 6
+[INFO] 19:50:36:468 broker/(19486:19687): Realizo suscripción a una cola. Socket suscripto: 7
+[INFO] 19:50:36:468 broker/(19486:19688): Realizo suscripción a una cola. Socket suscripto: 8
+[INFO] 19:50:36:468 broker/(19486:19689): Meto un mensaje en la cola.
+[INFO] 19:50:36:468 broker/(19486:19690): Meto un mensaje en la cola.
+[INFO] 19:50:36:468 broker/(19486:19691): Meto un mensaje en la cola.
+[INFO] 19:50:36:469 broker/(19486:19505): Comienza el proceso de envío del mensaje a todos los suscriptores.
+[INFO] 19:50:36:469 broker/(19486:19505): Paquete a enviar serializado.
+[INFO] 19:50:36:469 broker/(19486:19690): Aviso que hay mensajes en cola.
+[INFO] 19:50:36:469 broker/(19486:19505): Comienza el proceso de envío del mensaje a todos los suscriptores.
+[INFO] 19:50:36:469 broker/(19486:19505): Paquete a enviar serializado.
+[INFO] 19:50:36:469 broker/(19486:19689): Aviso que hay mensajes en cola.
+[INFO] 19:50:36:469 broker/(19486:19505): Comienza el proceso de envío del mensaje a todos los suscriptores.
+[INFO] 19:50:36:469 broker/(19486:19505): Paquete a enviar serializado.
+[INFO] 19:50:36:469 broker/(19486:19691): Aviso que hay mensajes en cola.
+[INFO] 19:55:37:926 broker/(20759:21004): Id del caught: 1
+[INFO] 19:55:37:927 broker/(20759:21004): Meto un mensaje en la cola.
+[INFO] 19:55:37:927 broker/(20759:21004): id caught segunda vez: 1.
+[INFO] 19:55:37:927 broker/(20759:20773): Comienza el proceso de envío del mensaje a todos los suscriptores.
+[INFO] 19:55:37:927 broker/(20759:20773): Paquete a enviar serializado.
+[INFO] 19:55:37:927 broker/(20759:21004): Aviso que hay mensajes en cola.
+[INFO] 19:55:49:70 broker/(20759:21040): Id del caught: 1
+[INFO] 19:55:49:71 broker/(20759:21040): Meto un mensaje en la cola.
+[INFO] 19:55:49:71 broker/(20759:21040): id caught segunda vez: 1.
+[INFO] 19:55:49:71 broker/(20759:20773): Comienza el proceso de envío del mensaje a todos los suscriptores.
+[INFO] 19:55:49:71 broker/(20759:20773): Paquete a enviar serializado.
+[INFO] 19:55:49:71 broker/(20759:21040): Aviso que hay mensajes en cola.
+[INFO] 19:55:50:49 broker/(20759:21052): Id del caught: 1
+[INFO] 19:55:50:49 broker/(20759:21052): Meto un mensaje en la cola.
+[INFO] 19:55:50:50 broker/(20759:21052): id caught segunda vez: 1.
+[INFO] 19:55:50:50 broker/(20759:21052): Aviso que hay mensajes en cola.
+[INFO] 19:55:50:50 broker/(20759:20773): Comienza el proceso de envío del mensaje a todos los suscriptores.
+[INFO] 19:55:50:50 broker/(20759:20773): Paquete a enviar serializado.
+[INFO] 19:55:52:407 broker/(20759:21080): Id del caught: 1
+[INFO] 19:55:52:410 broker/(20759:21080): Meto un mensaje en la cola.
+[INFO] 19:55:52:410 broker/(20759:21080): id caught segunda vez: 1.
+[INFO] 19:55:52:410 broker/(20759:21080): Aviso que hay mensajes en cola.
+[INFO] 19:55:52:410 broker/(20759:20773): Comienza el proceso de envío del mensaje a todos los suscriptores.
+[INFO] 19:55:52:411 broker/(20759:20773): Paquete a enviar serializado.
+[INFO] 19:55:53:439 broker/(20759:21096): Id del caught: 1
+[INFO] 19:55:53:439 broker/(20759:21096): Meto un mensaje en la cola.
+[INFO] 19:55:53:439 broker/(20759:21096): id caught segunda vez: 1.
+[INFO] 19:55:53:439 broker/(20759:20773): Comienza el proceso de envío del mensaje a todos los suscriptores.
+[INFO] 19:55:53:439 broker/(20759:20773): Paquete a enviar serializado.
+[INFO] 19:55:53:439 broker/(20759:21096): Aviso que hay mensajes en cola.
+[INFO] 19:55:54:467 broker/(20759:21109): Id del caught: 1
+[INFO] 19:55:54:468 broker/(20759:21109): Meto un mensaje en la cola.
+[INFO] 19:55:54:470 broker/(20759:21109): id caught segunda vez: 1.
+[INFO] 19:55:54:471 broker/(20759:20773): Comienza el proceso de envío del mensaje a todos los suscriptores.
+[INFO] 19:55:54:471 broker/(20759:20773): Paquete a enviar serializado.
+[INFO] 19:55:54:471 broker/(20759:21109): Aviso que hay mensajes en cola.
+[INFO] 19:55:56:779 broker/(20759:21133): Id del caught: 1
+[INFO] 19:55:56:779 broker/(20759:21133): Meto un mensaje en la cola.
+[INFO] 19:55:56:779 broker/(20759:21133): id caught segunda vez: 1.
+[INFO] 19:55:56:779 broker/(20759:20773): Comienza el proceso de envío del mensaje a todos los suscriptores.
+[INFO] 19:55:56:779 broker/(20759:20773): Paquete a enviar serializado.
+[INFO] 19:55:56:779 broker/(20759:21133): Aviso que hay mensajes en cola.
+[INFO] 19:58:34:99 broker/(21585:21785): Realizo suscripción a una cola. Socket suscripto: 6
+[INFO] 19:58:34:99 broker/(21585:21786): Realizo suscripción a una cola. Socket suscripto: 7
+[INFO] 19:58:34:99 broker/(21585:21787): Realizo suscripción a una cola. Socket suscripto: 8
+[INFO] 19:58:34:99 broker/(21585:21788): Meto un mensaje en la cola.
+[INFO] 19:58:34:99 broker/(21585:21789): Meto un mensaje en la cola.
+[INFO] 19:58:34:99 broker/(21585:21790): Meto un mensaje en la cola.
+[INFO] 19:58:34:100 broker/(21585:21604): Comienza el proceso de envío del mensaje a todos los suscriptores.
+[INFO] 19:58:34:100 broker/(21585:21604): Paquete a enviar serializado.
+[INFO] 19:59:36:983 broker/(22076:22277): Realizo suscripción a una cola. Socket suscripto: 6
+[INFO] 19:59:36:983 broker/(22076:22278): Realizo suscripción a una cola. Socket suscripto: 7
+[INFO] 19:59:36:984 broker/(22076:22279): Realizo suscripción a una cola. Socket suscripto: 8
+[INFO] 19:59:36:984 broker/(22076:22280): Meto un mensaje en la cola.
+[INFO] 19:59:36:984 broker/(22076:22281): Meto un mensaje en la cola.
+[INFO] 19:59:36:984 broker/(22076:22282): Meto un mensaje en la cola.
+[INFO] 19:59:36:984 broker/(22076:22096): Comienza el proceso de envío del mensaje a todos los suscriptores.
+[INFO] 19:59:36:984 broker/(22076:22096): Paquete a enviar serializado.
+[INFO] 19:59:36:984 broker/(22076:22280): Aviso que hay mensajes en cola.
+[INFO] 19:59:36:984 broker/(22076:22096): Comienza el proceso de envío del mensaje a todos los suscriptores.
+[INFO] 19:59:36:984 broker/(22076:22096): Paquete a enviar serializado.
+[INFO] 19:59:36:984 broker/(22076:22281): Aviso que hay mensajes en cola.
+[INFO] 19:59:36:985 broker/(22076:22096): Comienza el proceso de envío del mensaje a todos los suscriptores.
+[INFO] 19:59:36:985 broker/(22076:22096): Paquete a enviar serializado.
+[INFO] 19:59:36:986 broker/(22076:22282): Aviso que hay mensajes en cola.
+[INFO] 19:59:55:855 broker/(22076:22487): Id del caught: 1
+[INFO] 19:59:55:856 broker/(22076:22487): Meto un mensaje en la cola.
+[INFO] 19:59:55:856 broker/(22076:22487): Aviso que hay mensajes en cola.
+[INFO] 19:59:55:856 broker/(22076:22094): Comienza el proceso de envío del mensaje a todos los suscriptores.
+[INFO] 19:59:55:856 broker/(22076:22094): id caught segunda vez: 193643393.
+[INFO] 19:59:55:856 broker/(22076:22094): Paquete a enviar serializado.
+[INFO] 19:59:55:856 broker/(22076:22094): Intento enviar mensaje a un suscriptor. Socket: 8
+[INFO] 19:59:55:856 broker/(22076:22094): Envié mensaje a un suscriptor.
+[INFO] 20:00:00:135 broker/(22076:22522): Id del caught: 1
+[INFO] 20:00:00:135 broker/(22076:22522): Meto un mensaje en la cola.
+[INFO] 20:00:00:135 broker/(22076:22522): Aviso que hay mensajes en cola.
+[INFO] 20:00:00:135 broker/(22076:22094): Comienza el proceso de envío del mensaje a todos los suscriptores.
+[INFO] 20:00:00:135 broker/(22076:22094): id caught segunda vez: 193643393.
+[INFO] 20:00:00:135 broker/(22076:22094): Paquete a enviar serializado.
+[INFO] 20:00:00:135 broker/(22076:22094): Intento enviar mensaje a un suscriptor. Socket: 8
+[INFO] 20:00:00:135 broker/(22076:22094): Envié mensaje a un suscriptor.
+[INFO] 20:00:01:355 broker/(22076:22535): Id del caught: 1
+[INFO] 20:00:01:355 broker/(22076:22535): Meto un mensaje en la cola.
+[INFO] 20:00:01:355 broker/(22076:22535): Aviso que hay mensajes en cola.
+[INFO] 20:00:01:355 broker/(22076:22094): Comienza el proceso de envío del mensaje a todos los suscriptores.
+[INFO] 20:00:01:355 broker/(22076:22094): id caught segunda vez: 193643393.
+[INFO] 20:00:01:355 broker/(22076:22094): Paquete a enviar serializado.
+[INFO] 20:00:01:355 broker/(22076:22094): Intento enviar mensaje a un suscriptor. Socket: 8
+[INFO] 20:00:01:355 broker/(22076:22094): Envié mensaje a un suscriptor.
+[INFO] 20:00:03:755 broker/(22076:22556): Id del caught: 1
+[INFO] 20:00:03:755 broker/(22076:22556): Meto un mensaje en la cola.
+[INFO] 20:00:03:755 broker/(22076:22094): Comienza el proceso de envío del mensaje a todos los suscriptores.
+[INFO] 20:00:03:755 broker/(22076:22094): id caught segunda vez: 1.
+[INFO] 20:00:03:755 broker/(22076:22094): Paquete a enviar serializado.
+[INFO] 20:00:03:755 broker/(22076:22094): Intento enviar mensaje a un suscriptor. Socket: 8
+[INFO] 20:00:03:755 broker/(22076:22556): Aviso que hay mensajes en cola.
+[INFO] 20:00:03:755 broker/(22076:22094): Envié mensaje a un suscriptor.
+[INFO] 20:00:05:420 broker/(22076:22569): Id del caught: 1
+[INFO] 20:00:05:420 broker/(22076:22569): Meto un mensaje en la cola.
+[INFO] 20:00:05:420 broker/(22076:22569): Aviso que hay mensajes en cola.
+[INFO] 20:00:05:420 broker/(22076:22094): Comienza el proceso de envío del mensaje a todos los suscriptores.
+[INFO] 20:00:05:420 broker/(22076:22094): id caught segunda vez: 193643393.
+[INFO] 20:00:05:420 broker/(22076:22094): Paquete a enviar serializado.
+[INFO] 20:00:05:420 broker/(22076:22094): Intento enviar mensaje a un suscriptor. Socket: 8
+[INFO] 20:00:05:420 broker/(22076:22094): Envié mensaje a un suscriptor.
+[INFO] 20:06:05:743 broker/(23532:23736): Realizo suscripción a una cola. Socket suscripto: 6
+[INFO] 20:06:05:743 broker/(23532:23737): Realizo suscripción a una cola. Socket suscripto: 7
+[INFO] 20:06:05:743 broker/(23532:23738): Realizo suscripción a una cola. Socket suscripto: 8
+[INFO] 20:06:05:744 broker/(23532:23739): Meto un mensaje en la cola.
+[INFO] 20:06:05:744 broker/(23532:23740): Meto un mensaje en la cola.
+[INFO] 20:06:05:744 broker/(23532:23741): Meto un mensaje en la cola.
+[INFO] 20:06:05:744 broker/(23532:23547): Comienza el proceso de envío del mensaje a todos los suscriptores.
+[INFO] 20:06:05:744 broker/(23532:23739): Aviso que hay mensajes en cola.
+[INFO] 20:06:05:744 broker/(23532:23547): Comienza el proceso de envío del mensaje a todos los suscriptores.
+[INFO] 20:06:05:744 broker/(23532:23741): Aviso que hay mensajes en cola.
+[INFO] 20:06:05:744 broker/(23532:23547): Comienza el proceso de envío del mensaje a todos los suscriptores.
+[INFO] 20:06:05:744 broker/(23532:23740): Aviso que hay mensajes en cola.
+[INFO] 20:06:15:627 broker/(23532:23927): Id del caught: 1
+[INFO] 20:06:15:627 broker/(23532:23927): Meto un mensaje en la cola.
+[INFO] 20:06:15:627 broker/(23532:23545): Comienza el proceso de envío del mensaje a todos los suscriptores.
+[INFO] 20:06:15:627 broker/(23532:23545): id caught segunda vez: 1.
+[INFO] 20:06:15:627 broker/(23532:23545): Envié mensaje a un suscriptor.
+[INFO] 20:06:15:627 broker/(23532:23927): Aviso que hay mensajes en cola.
+[INFO] 20:06:21:151 broker/(23532:23960): Id del caught: 1
+[INFO] 20:06:21:151 broker/(23532:23960): Meto un mensaje en la cola.
+[INFO] 20:06:21:151 broker/(23532:23545): Comienza el proceso de envío del mensaje a todos los suscriptores.
+[INFO] 20:06:21:151 broker/(23532:23545): id caught segunda vez: 1.
+[INFO] 20:06:21:151 broker/(23532:23545): Envié mensaje a un suscriptor.
+[INFO] 20:06:21:152 broker/(23532:23960): Aviso que hay mensajes en cola.
+[INFO] 20:06:23:491 broker/(23532:23978): Id del caught: 1
+[INFO] 20:06:23:491 broker/(23532:23978): Meto un mensaje en la cola.
+[INFO] 20:06:23:491 broker/(23532:23978): Aviso que hay mensajes en cola.
+[INFO] 20:06:23:491 broker/(23532:23545): Comienza el proceso de envío del mensaje a todos los suscriptores.
+[INFO] 20:06:23:491 broker/(23532:23545): id caught segunda vez: 1.
+[INFO] 20:06:23:491 broker/(23532:23545): Envié mensaje a un suscriptor.
+[INFO] 20:06:26:187 broker/(23532:23999): Id del caught: 1
+[INFO] 20:06:26:187 broker/(23532:23999): Meto un mensaje en la cola.
+[INFO] 20:06:26:187 broker/(23532:23999): Aviso que hay mensajes en cola.
+[INFO] 20:06:26:187 broker/(23532:23545): Comienza el proceso de envío del mensaje a todos los suscriptores.
+[INFO] 20:06:26:187 broker/(23532:23545): id caught segunda vez: 1.
+[INFO] 20:06:26:187 broker/(23532:23545): Envié mensaje a un suscriptor.
+[INFO] 20:07:15:172 broker/(24224:24597): Realizo suscripción a una cola. Socket suscripto: 6
+[INFO] 20:07:15:173 broker/(24224:24598): Realizo suscripción a una cola. Socket suscripto: 7
+[INFO] 20:07:15:174 broker/(24224:24599): Meto un mensaje en la cola.
+[INFO] 20:07:15:174 broker/(24224:24600): Realizo suscripción a una cola. Socket suscripto: 9
+[INFO] 20:07:15:174 broker/(24224:24601): Meto un mensaje en la cola.
+[INFO] 20:07:15:174 broker/(24224:24602): Meto un mensaje en la cola.
+[INFO] 20:07:15:174 broker/(24224:24239): Comienza el proceso de envío del mensaje a todos los suscriptores.
+[INFO] 20:07:15:174 broker/(24224:24599): Aviso que hay mensajes en cola.
+[INFO] 20:07:15:174 broker/(24224:24239): Comienza el proceso de envío del mensaje a todos los suscriptores.
+[INFO] 20:07:15:174 broker/(24224:24601): Aviso que hay mensajes en cola.
+[INFO] 20:07:15:174 broker/(24224:24239): Comienza el proceso de envío del mensaje a todos los suscriptores.
+[INFO] 20:07:15:174 broker/(24224:24602): Aviso que hay mensajes en cola.
+[INFO] 20:07:26:499 broker/(24224:24791): Id del caught: 1
+[INFO] 20:07:26:499 broker/(24224:24791): Meto un mensaje en la cola.
+[INFO] 20:07:26:499 broker/(24224:24237): Comienza el proceso de envío del mensaje a todos los suscriptores.
+[INFO] 20:07:26:499 broker/(24224:24237): id caught segunda vez: 1.
+[INFO] 20:07:26:499 broker/(24224:24237): Envié mensaje a un suscriptor.
+[INFO] 20:07:26:500 broker/(24224:24791): Aviso que hay mensajes en cola.
+[INFO] 20:07:29:820 broker/(24224:24821): Id del caught: 1
+[INFO] 20:07:29:821 broker/(24224:24821): Meto un mensaje en la cola.
+[INFO] 20:07:29:821 broker/(24224:24237): Comienza el proceso de envío del mensaje a todos los suscriptores.
+[INFO] 20:07:29:821 broker/(24224:24237): id caught segunda vez: 1.
+[INFO] 20:07:29:821 broker/(24224:24237): Envié mensaje a un suscriptor.
+[INFO] 20:07:29:821 broker/(24224:24821): Aviso que hay mensajes en cola.
+[INFO] 20:07:31:987 broker/(24224:24839): Id del caught: 1
+[INFO] 20:07:31:988 broker/(24224:24839): Meto un mensaje en la cola.
+[INFO] 20:07:31:988 broker/(24224:24237): Comienza el proceso de envío del mensaje a todos los suscriptores.
+[INFO] 20:07:31:988 broker/(24224:24237): id caught segunda vez: 1.
+[INFO] 20:07:31:988 broker/(24224:24237): Envié mensaje a un suscriptor.
+[INFO] 20:07:31:988 broker/(24224:24839): Aviso que hay mensajes en cola.
+[INFO] 20:07:34:11 broker/(24224:24860): Id del caught: 1
+[INFO] 20:07:34:11 broker/(24224:24860): Meto un mensaje en la cola.
+[INFO] 20:07:34:11 broker/(24224:24237): Comienza el proceso de envío del mensaje a todos los suscriptores.
+[INFO] 20:07:34:11 broker/(24224:24237): id caught segunda vez: 1.
+[INFO] 20:07:34:11 broker/(24224:24237): Envié mensaje a un suscriptor.
+[INFO] 20:07:34:11 broker/(24224:24860): Aviso que hay mensajes en cola.
+[INFO] 20:07:37:7 broker/(24224:24877): Id del caught: 1
+[INFO] 20:07:37:7 broker/(24224:24877): Meto un mensaje en la cola.
+[INFO] 20:07:37:7 broker/(24224:24237): Comienza el proceso de envío del mensaje a todos los suscriptores.
+[INFO] 20:07:37:7 broker/(24224:24237): id caught segunda vez: 1.
+[INFO] 20:07:37:7 broker/(24224:24237): Envié mensaje a un suscriptor.
+[INFO] 20:07:37:8 broker/(24224:24877): Aviso que hay mensajes en cola.
+[INFO] 20:07:52:527 broker/(24224:25253): Id del caught: 1
+[INFO] 20:07:52:528 broker/(24224:25253): Meto un mensaje en la cola.
+[INFO] 20:07:52:528 broker/(24224:24237): Comienza el proceso de envío del mensaje a todos los suscriptores.
+[INFO] 20:07:52:528 broker/(24224:24237): id caught segunda vez: 1.
+[INFO] 20:07:52:528 broker/(24224:24237): Envié mensaje a un suscriptor.
+[INFO] 20:07:52:528 broker/(24224:25253): Aviso que hay mensajes en cola.
+[INFO] 20:07:55:227 broker/(24224:25271): Id del caught: 1
+[INFO] 20:07:55:228 broker/(24224:25271): Meto un mensaje en la cola.
+[INFO] 20:07:55:228 broker/(24224:25271): Aviso que hay mensajes en cola.
+[INFO] 20:07:55:228 broker/(24224:24237): Comienza el proceso de envío del mensaje a todos los suscriptores.
+[INFO] 20:07:55:228 broker/(24224:24237): id caught segunda vez: 1.
+[INFO] 20:07:55:228 broker/(24224:24237): Envié mensaje a un suscriptor.
+[INFO] 20:09:03:498 broker/(25496:25696): Realizo suscripción a una cola. Socket suscripto: 6
+[INFO] 20:09:03:500 broker/(25496:25697): Realizo suscripción a una cola. Socket suscripto: 7
+[INFO] 20:09:03:500 broker/(25496:25698): Realizo suscripción a una cola. Socket suscripto: 8
+[INFO] 20:09:03:501 broker/(25496:25699): Meto un mensaje en la cola.
+[INFO] 20:09:03:501 broker/(25496:25700): Meto un mensaje en la cola.
+[INFO] 20:09:03:501 broker/(25496:25701): Meto un mensaje en la cola.
+[INFO] 20:09:03:501 broker/(25496:25511): Comienza el proceso de envío del mensaje a todos los suscriptores.
+[INFO] 20:09:03:501 broker/(25496:25699): Aviso que hay mensajes en cola.
+[INFO] 20:09:03:501 broker/(25496:25511): Comienza el proceso de envío del mensaje a todos los suscriptores.
+[INFO] 20:09:03:501 broker/(25496:25511): Comienza el proceso de envío del mensaje a todos los suscriptores.
+[INFO] 20:09:03:501 broker/(25496:25700): Aviso que hay mensajes en cola.
+[INFO] 20:09:03:501 broker/(25496:25701): Aviso que hay mensajes en cola.
+[INFO] 20:09:55:629 broker/(25496:25930): Me llegó un catch. Código de mensaje: 3. 
+[INFO] 20:09:55:630 broker/(25496:25930): Meto un mensaje en la cola.
+[INFO] 20:09:55:630 broker/(25496:25510): Comienza el proceso de envío del mensaje a todos los suscriptores.
+[INFO] 20:09:55:630 broker/(25496:25930): Aviso que hay mensajes en cola.
+[INFO] 20:10:17:635 broker/(25496:25949): Me llegó un catch. Código de mensaje: 3. 
+[INFO] 20:10:17:635 broker/(25496:25949): Meto un mensaje en la cola.
+[INFO] 20:10:17:635 broker/(25496:25510): Comienza el proceso de envío del mensaje a todos los suscriptores.
+[INFO] 20:10:17:635 broker/(25496:25949): Aviso que hay mensajes en cola.
+[INFO] 20:11:12:147 broker/(25496:26012): Id del caught: 1
+[INFO] 20:11:12:147 broker/(25496:26012): Meto un mensaje en la cola.
+[INFO] 20:11:12:147 broker/(25496:25509): Comienza el proceso de envío del mensaje a todos los suscriptores.
+[INFO] 20:11:12:147 broker/(25496:25509): id caught segunda vez: 1.
+[INFO] 20:11:12:147 broker/(25496:25509): Envié mensaje a un suscriptor.
+[INFO] 20:11:12:147 broker/(25496:26012): Aviso que hay mensajes en cola.
+[INFO] 20:11:17:125 broker/(25496:26033): Id del caught: 1
+[INFO] 20:11:17:125 broker/(25496:26033): Meto un mensaje en la cola.
+[INFO] 20:11:17:125 broker/(25496:25509): Comienza el proceso de envío del mensaje a todos los suscriptores.
+[INFO] 20:11:17:125 broker/(25496:25509): id caught segunda vez: 1.
+[INFO] 20:11:17:125 broker/(25496:25509): Envié mensaje a un suscriptor.
+[INFO] 20:11:17:125 broker/(25496:26033): Aviso que hay mensajes en cola.
+[INFO] 20:12:09:935 broker/(25496:26091): Id del caught: 1
+[INFO] 20:12:09:935 broker/(25496:26091): Meto un mensaje en la cola.
+[INFO] 20:12:09:935 broker/(25496:25509): Comienza el proceso de envío del mensaje a todos los suscriptores.
+[INFO] 20:12:09:935 broker/(25496:25509): id caught segunda vez: 1.
+[INFO] 20:12:09:935 broker/(25496:25509): Envié mensaje a un suscriptor.
+[INFO] 20:12:09:935 broker/(25496:26091): Aviso que hay mensajes en cola.
+[INFO] 20:15:06:880 broker/(25496:26269): Realizo suscripción a una cola. Socket suscripto: 17
+[INFO] 20:16:09:943 broker/(25496:26346): Me llegó un catch. Código de mensaje: 3. 
+[INFO] 20:16:09:944 broker/(25496:26346): Meto un mensaje en la cola.
+[INFO] 20:16:09:944 broker/(25496:25510): Comienza el proceso de envío del mensaje a todos los suscriptores.
+[INFO] 20:16:09:944 broker/(25496:25510): Envié mensaje a un suscriptor.
+[INFO] 20:16:09:944 broker/(25496:26346): Aviso que hay mensajes en cola.
+[INFO] 20:23:13:423 broker/(27153:27355): Realizo suscripción a una cola. Socket suscripto: 6
+[INFO] 20:23:13:423 broker/(27153:27356): Realizo suscripción a una cola. Socket suscripto: 7
+[INFO] 20:23:13:423 broker/(27153:27357): Realizo suscripción a una cola. Socket suscripto: 8
+[INFO] 20:23:13:423 broker/(27153:27358): Meto un mensaje en la cola.
+[INFO] 20:23:13:423 broker/(27153:27359): Meto un mensaje en la cola.
+[INFO] 20:23:13:424 broker/(27153:27360): Meto un mensaje en la cola.
+[INFO] 20:23:13:424 broker/(27153:27168): Comienza el proceso de envío del mensaje a todos los suscriptores.
+[INFO] 20:23:13:424 broker/(27153:27168): Comienza el proceso de envío del mensaje a todos los suscriptores.
+[INFO] 20:23:13:424 broker/(27153:27358): Aviso que hay mensajes en cola.
+[INFO] 20:23:13:424 broker/(27153:27168): Comienza el proceso de envío del mensaje a todos los suscriptores.
+[INFO] 20:23:13:424 broker/(27153:27359): Aviso que hay mensajes en cola.
+[INFO] 20:23:13:424 broker/(27153:27360): Aviso que hay mensajes en cola.
+[INFO] 20:23:55:91 broker/(27153:27568): Me llegó un catch. Código de mensaje: 3. 
+[INFO] 20:23:55:91 broker/(27153:27568): Meto un mensaje en la cola.
+[INFO] 20:23:55:91 broker/(27153:27167): Comienza el proceso de envío del mensaje a todos los suscriptores.
+[INFO] 20:23:55:91 broker/(27153:27568): Aviso que hay mensajes en cola.
+[INFO] 20:24:30:419 broker/(27153:27615): Id del caught: 1
+[INFO] 20:24:30:419 broker/(27153:27615): Meto un mensaje en la cola.
+[INFO] 20:24:30:419 broker/(27153:27615): Aviso que hay mensajes en cola.
+[INFO] 20:24:30:419 broker/(27153:27166): Comienza el proceso de envío del mensaje a todos los suscriptores.
+[INFO] 20:24:30:419 broker/(27153:27166): id caught segunda vez: 1.
+[INFO] 20:24:30:419 broker/(27153:27166): Envié mensaje a un suscriptor.

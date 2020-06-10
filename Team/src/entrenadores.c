@@ -54,6 +54,7 @@ uint32_t idEntrenadorEnLista(dataEntrenador* entrenadorMasCercano){
 }
 
 bool leFaltaCantidadDePokemones(dataEntrenador* entrenador){
+	log_info(teamLogger2, "Pregunto si al entrenador %i le faltan pokemones.",entrenador->id);
 	return !(list_size(entrenador->pokemones)==list_size(entrenador->objetivoPersonal));
 }
 
@@ -146,10 +147,13 @@ void* ejecucionHiloEntrenador(void* argEntrenador){
 		infoEntrenador->estado=BLOCKED;//IMPORTANTE: CUANDO LLEGUE LA RESPUESTA DEL CATCH SE TIENE QUE HACER UN UNLOCK AL ENTRENADOR CORRESPONDIENTE
 		sem_wait(semaforoEntrenador);// ESPERA A QUE EL TEAM LE AVISE QUE LLEGO LA RESPUESTA DEL POKEMON QUE QUISO ATRAPAR
 		//meter un if() para verificar estado y ver que hacer despues
-
+		log_info(teamLogger2, "El entrenador %i salio de la espera a la respuesta caught.",infoEntrenador->id);
 
 		if(infoEntrenador->estado==BLOCKED && leFaltaCantidadDePokemones(infoEntrenador)){
+			log_info(teamLogger2, "El entrenador %i queda libre.",infoEntrenador->id);
 			addListaMutex(entrenadoresLibres, (void*)infoEntrenador);//vuelve a agregar al entrenador a la lista de entrenadores libres
+		}else{
+			log_info(teamLogger2, "El entrenador %i no queda libre.",infoEntrenador->id);
 		}
 
 		while(entrenadorEnDeadlock(infoEntrenador) && infoEntrenador!=entrenadorBloqueadoParaDeadlock){

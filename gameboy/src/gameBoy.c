@@ -127,10 +127,10 @@ void* generarStreamArgumentos (uint32_t colaMensaje, char* argv[]){
 			uint32_t respuestaCaught;
 			if(strcmp("OK", argv[4])==0){
 				respuestaCaught=OK;
-				printf("Respuesta caught ok.\n");
+
 			}else{
 				respuestaCaught=FAIL;
-				printf("Respuesta caught fail.\n");
+
 			}
 			mensajeCaught* mensajeEnviarCaught = llenarCaught(respuestaCaught);
 			streamArgumentos = serializarCaught(mensajeEnviarCaught);

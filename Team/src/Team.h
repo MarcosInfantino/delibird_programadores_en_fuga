@@ -222,11 +222,11 @@ void esperar_cliente(uint32_t servidor);
 
 void* atenderCliente(void* sock);
 
-void atenderAppeared(mensajeAppeared* msg);
+void* atenderAppeared(void* paq);
 
 void enviarCatch(dataEntrenador* infoEntrenador);
 
-void atenderCaught(paquete* paqueteRespuesta);
+void* atenderCaught(void* paq);
 
 uint32_t buscarEntrenadorParaMensaje(listaMutex* listaIds, uint32_t idMensaje);
 
@@ -260,7 +260,7 @@ void* enviarGets(void* arg);
 
 bool especieFueLocalizada(char* pokemon);
 
-void atenderLocalized(paquete* paquete);
+void* atenderLocalized(void* paq);
 
 bool localizedMeInteresa(paquete* paquete);
 

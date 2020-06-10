@@ -107,7 +107,8 @@
 //
 //	return 0;
 //}
-
+//TEAM APPEARED_POKEMON Pikachu 0 0
+//BROKER CAUGHT_POKEMON 4 OK
 
 int main(int argc , char* argv[]){
 
@@ -210,7 +211,9 @@ bool objetivoCumplido(){
 }
 
 
-void atenderAppeared(mensajeAppeared* msg){
+void* atenderAppeared(void* paq){
+	paquete* paqueteAppeared=(paquete*) paq;
+	mensajeAppeared* msg=deserializarAppeared(paqueteAppeared->stream);
 	log_info(teamLogger2, "Atiendo appeared. Pokemon: %s.", msg->pokemon);
 	pokemonPosicion* pokePosicion=malloc(sizeof(pokemonPosicion));
 	if(!especieFueLocalizada(msg->pokemon))
@@ -233,20 +236,28 @@ void atenderAppeared(mensajeAppeared* msg){
 	}else{
 		log_info(teamLogger2, "El pokemon no es objetivo");
 	}
+	destruirPaquete(paqueteAppeared);
+	return NULL;
 }
 
-void atenderLocalized(paquete* paquete){
-	mensajeLocalized* msg=deserializarLocalized(paquete->stream);
+void* atenderLocalized(void* paq){
+	paquete* paqueteLocalized= (paquete*) paq;
+	mensajeLocalized* msg=deserializarLocalized(paqueteLocalized->stream);
 	char* pokemonAAgregar=malloc(strlen(msg->pokemon)+1);
 	strcpy(pokemonAAgregar,msg->pokemon);
-	if(!especieFueLocalizada(msg->pokemon)&& localizedMeInteresa(paquete)){
+	if(!especieFueLocalizada(msg->pokemon)&& localizedMeInteresa(paqueteLocalized)){
 		uint32_t i;
 		for(i=0;i<msg->cantidad;i++){
 			posicion posActual= *((msg->arrayPosiciones)+i);
 			mensajeAppeared* msgAppeared=llenarAppeared(pokemonAAgregar,posActual.x,posActual.y);
-			atenderAppeared(msgAppeared);
+			void* streamAppeared=serializarAppeared(msgAppeared);
+			paquete* paqueteAppeared=llenarPaquete(TEAM,APPEARED_POKEMON, sizeArgumentos(APPEARED_POKEMON, msgAppeared->pokemon,0), streamAppeared);
+			atenderAppeared(paqueteAppeared);
 		}
 	}
+
+	destruirPaquete(paqueteLocalized);
+	return NULL;
 
 
 
@@ -276,15 +287,18 @@ bool especieFueLocalizada(char* pokemon){
 	}
 	return false;
 }
-void atenderCaught(paquete* paqueteCaught){
+void* atenderCaught(void* paq){
+	paquete* paqueteCaught=(paquete*) paq;
 	log_info(teamLogger2,"Atiendo caught.");
 	mensajeCaught* msgCaught=deserializarCaught(paqueteCaught->stream);
 	uint32_t id=paqueteCaught->idCorrelativo;
 	uint32_t idEncontrado=buscarEntrenadorParaMensaje(listaIdsEntrenadorMensaje,id);
-
+	log_info(teamLogger2,"Resultado del caught: %i.",msgCaught->resultadoCaught);
 	if(idEncontrado!=-1){
 		dataEntrenador* entrenadorEncontrado=(dataEntrenador*)getListaMutex(entrenadores, idEncontrado);
-		log_info(teamLogger2,"Resultado del caught: %i.",msgCaught->resultadoCaught);
+
+
+
 		if(msgCaught->resultadoCaught==CORRECTO && pokemonEsObjetivo(entrenadorEncontrado->pokemonAAtrapar->pokemon)){
 //			list_add(entrenadorEncontrado->pokemones,(void*)(entrenadorEncontrado->pokemonAAtrapar->pokemon));
 //			registrarPokemonAtrapado(entrenadorEncontrado->pokemonAAtrapar->pokemon);
@@ -306,7 +320,9 @@ void atenderCaught(paquete* paqueteCaught){
 		log_info(teamLogger2,"El caught no me interesa.");
 	}
 
-
+	destruirCaught(msgCaught);
+	destruirPaquete(paqueteCaught);
+	return NULL;
 }
 
 
@@ -451,21 +467,27 @@ void* suscribirseCola(void* msgSuscripcion){
 
 				paquete* paqueteRespuesta=recibirPaquete(cliente);
 				loggearMensaje(paqueteRespuesta, teamLogger);
-				enviarACK(cliente, TEAM, paqueteRespuesta->id);
+
+				while(enviarACK(cliente, TEAM, paqueteRespuesta->id)<0){
+									reconectarseAlBroker(cliente,(void*) &direccionServidor,sizeof(direccionServidor));
+				}
+
 				switch(paqueteRespuesta->tipoMensaje){
 					case APPEARED_POKEMON:;
-						mensajeAppeared* msgAppeared=deserializarAppeared(paqueteRespuesta->stream);
-						destruirPaquete(paqueteRespuesta);
-						atenderAppeared(msgAppeared);
+					pthread_t threadAppeared;
+					pthread_create(&threadAppeared, NULL, atenderAppeared,(void*) (paqueteRespuesta));
+					pthread_detach(threadAppeared);
 
 						break;
-					case LOCALIZED_POKEMON:
-						atenderLocalized(paqueteRespuesta);
-						destruirPaquete(paqueteRespuesta);//recordar destruir el paquete
+					case LOCALIZED_POKEMON:;
+						pthread_t threadLocalized;
+						pthread_create(&threadLocalized, NULL, atenderLocalized,(void*) (paqueteRespuesta));
+						pthread_detach(threadLocalized);//recordar destruir el paquete
 						break;
-					case CAUGHT_POKEMON:
-						atenderCaught(paqueteRespuesta);
-						destruirPaquete(paqueteRespuesta);
+					case CAUGHT_POKEMON:;
+						pthread_t threadCaught;
+						pthread_create(&threadCaught, NULL, atenderCaught,(void*) (paqueteRespuesta));
+						pthread_detach(threadCaught);
 						break;
 					default: break; //esto no puede pasar
 
@@ -479,7 +501,7 @@ void* suscribirseCola(void* msgSuscripcion){
 			}
 
 		}else{
-			//printf("Mensaje recibido incorrectamente\n");
+			log_info(teamLogger2, "Hubo un problema con la suscripción a una cola.");
 
 
 		}

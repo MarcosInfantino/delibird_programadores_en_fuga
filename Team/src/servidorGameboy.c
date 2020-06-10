@@ -69,9 +69,10 @@ void* atenderCliente(void* sock){
 	loggearMensaje(paquete, teamLogger);
 	switch(paquete->tipoMensaje){
 		case APPEARED_POKEMON:;
-			mensajeAppeared* msg=deserializarAppeared(paquete->stream);
-			destruirPaquete(paquete);
-			atenderAppeared(msg); ;break;
+
+			atenderAppeared((void*)paquete); ;break;
+		case CAUGHT_POKEMON:;
+			atenderCaught((void*)paquete); break;
 		default: break;
 	}
 

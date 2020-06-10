@@ -57,13 +57,14 @@ uint32_t sizeArgumentos (uint32_t colaMensaje, char* nombrePokemon, uint32_t can
 	return size;
 }
 
-void enviarACK(uint32_t socket, uint32_t modulo, uint32_t id){
+uint32_t enviarACK(uint32_t socket, uint32_t modulo, uint32_t id){
 	paquete* paqueteACK = llenarPaquete(modulo, ACK, 0, NULL);
 	insertarIdCorrelativoPaquete(paqueteACK, id);
 	void* paqueteACKSerializado = serializarPaquete(paqueteACK);
-	send(socket, paqueteACKSerializado, sizePaquete(paqueteACKSerializado), 0);
+	uint32_t i= send(socket, paqueteACKSerializado, sizePaquete(paqueteACKSerializado), 0);
 
 	destruirPaquete(paqueteACK);
 	free(paqueteACKSerializado);
+	return i;
 }
 

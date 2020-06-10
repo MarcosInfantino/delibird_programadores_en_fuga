@@ -1626,3 +1626,915 @@
 [INFO] 18:36:52:864 team/(6500:6514): Resultado del caught: 1.
 [INFO] 18:36:52:864 team/(6500:6514): Encontre al pokemon Pikachu en mis objetivos
 [INFO] 18:36:52:864 team/(6500:6514): El caught me interesa.
+[INFO] 18:43:09:401 team/(7729:7729): --------------------------------------------------------------------------
+[INFO] 18:43:09:403 team/(7729:7729): NUEVA EJECUCION
+[INFO] 18:43:09:404 team/(7729:7729): --------------------------------------------------------------------------
+[INFO] 18:43:09:405 team/(7729:7729): --------------------------------------------------------
+[INFO] 18:43:09:405 team/(7729:7729): Objetivo en lista: Pikachu. Objetivo recibido: Charmander.
+[INFO] 18:43:09:405 team/(7729:7729): --------------------------------------------------------
+[INFO] 18:43:09:405 team/(7729:7729): Objetivo en lista: Pikachu. Objetivo recibido: Squirtle.
+[INFO] 18:43:09:405 team/(7729:7729): --------------------------------------------------------
+[INFO] 18:43:09:405 team/(7729:7729): Objetivo en lista: Charmander. Objetivo recibido: Squirtle.
+[INFO] 18:43:09:405 team/(7729:7729): --------------------------------------------------------------
+[INFO] 18:43:09:405 team/(7729:7729): OBJETIVO DEL TEAM
+[INFO] 18:43:09:406 team/(7729:7729): Objetivo 0. Pokemon: Pikachu. Cantidad: 2.
+[INFO] 18:43:09:406 team/(7729:7729): Objetivo 1. Pokemon: Charmander. Cantidad: 1.
+[INFO] 18:43:09:406 team/(7729:7729): Objetivo 2. Pokemon: Squirtle. Cantidad: 1.
+[INFO] 18:43:09:406 team/(7729:7729): --------------------------------------------------
+[INFO] 18:43:09:409 team/(7729:7740): Se inicia el planificador
+[INFO] 18:43:09:421 team/(7729:7741): Suscripción realizada correctamente
+
+[INFO] 18:43:09:423 team/(7729:7743): Suscripción realizada correctamente
+
+[INFO] 18:43:09:424 team/(7729:7742): Suscripción realizada correctamente
+
+[INFO] 18:43:55:183 team/(7729:7860): Atiendo appeared. Pokemon: Pikachu.
+[INFO] 18:43:55:183 team/(7729:7860): Encontre al pokemon Pikachu en mis objetivos
+[INFO] 18:43:55:183 team/(7729:7860): El pokemon es objetivo
+[INFO] 18:43:55:183 team/(7729:7860): Hay entrenadores disponibles para atrapar a Pikachu.
+[INFO] 18:43:55:183 team/(7729:7860): Se selecciono el entrenador 0 para atrapar al pokemon Pikachu
+[INFO] 18:43:55:191 team/(7729:7734): El entrenador 0 entro en ejecución.
+[INFO] 18:43:55:191 team/(7729:7734): El entrenador estaba originalmente en la posicion (1,2).
+[INFO] 18:43:55:191 team/(7729:7734): El entrenador comenzara a mover a la posicion (0,0).
+[INFO] 18:43:55:191 team/(7729:7740): elijo entrenador para ejecutar
+[INFO] 18:43:57:193 team/(7729:7734): El entrenador 0 se mueve a : (0,2).
+[INFO] 18:43:57:193 team/(7729:7734): Movimiento y: -2
+[INFO] 18:43:59:194 team/(7729:7734): El entrenador 0 se mueve a : (0,1).
+[INFO] 18:44:01:195 team/(7729:7734): El entrenador 0 se mueve a : (0,0).
+[INFO] 18:44:01:196 team/(7729:7734): El entrenador 0 se movió a la posición (0, 0)
+
+[INFO] 18:44:01:196 team/(7729:7734): El entrenador 0 inició el proceso de envío del catch.
+[INFO] 18:44:01:196 team/(7729:7734): El entrenador 0 intenta hacer el send del catch.
+[INFO] 18:44:03:196 team/(7729:7734): El entrenador 0 hace el send del catch.
+[INFO] 18:44:03:197 team/(7729:7734): El entrenador  0 recibió el id del catch: 4.
+[INFO] 18:44:14:971 team/(7729:7913): Atiendo appeared. Pokemon: Pikachu.
+[INFO] 18:44:14:972 team/(7729:7913): Encontre al pokemon Pikachu en mis objetivos
+[INFO] 18:44:14:972 team/(7729:7913): El pokemon es objetivo
+[INFO] 18:44:14:972 team/(7729:7913): Hay entrenadores disponibles para atrapar a Pikachu.
+[INFO] 18:44:14:972 team/(7729:7913): Se selecciono el entrenador 1 para atrapar al pokemon Pikachu
+[INFO] 18:44:14:972 team/(7729:7735): El entrenador 1 entro en ejecución.
+[INFO] 18:44:14:972 team/(7729:7735): El entrenador estaba originalmente en la posicion (3,7).
+[INFO] 18:44:14:972 team/(7729:7735): El entrenador comenzara a mover a la posicion (0,0).
+[INFO] 18:44:14:972 team/(7729:7740): elijo entrenador para ejecutar
+[INFO] 18:44:16:972 team/(7729:7735): El entrenador 1 se mueve a : (2,7).
+[INFO] 18:44:18:974 team/(7729:7735): El entrenador 1 se mueve a : (1,7).
+[INFO] 18:44:20:975 team/(7729:7735): El entrenador 1 se mueve a : (0,7).
+[INFO] 18:44:20:975 team/(7729:7735): Movimiento y: -7
+[INFO] 18:44:22:976 team/(7729:7735): El entrenador 1 se mueve a : (0,6).
+[INFO] 18:44:24:976 team/(7729:7735): El entrenador 1 se mueve a : (0,5).
+[INFO] 18:44:26:977 team/(7729:7735): El entrenador 1 se mueve a : (0,4).
+[INFO] 18:44:28:978 team/(7729:7735): El entrenador 1 se mueve a : (0,3).
+[INFO] 18:44:30:979 team/(7729:7735): El entrenador 1 se mueve a : (0,2).
+[INFO] 18:44:32:980 team/(7729:7735): El entrenador 1 se mueve a : (0,1).
+[INFO] 18:44:34:983 team/(7729:7735): El entrenador 1 se mueve a : (0,0).
+[INFO] 18:44:34:984 team/(7729:7735): El entrenador 1 se movió a la posición (0, 0)
+
+[INFO] 18:44:34:984 team/(7729:7735): El entrenador 1 inició el proceso de envío del catch.
+[INFO] 18:44:34:984 team/(7729:7735): El entrenador 1 intenta hacer el send del catch.
+[INFO] 18:44:36:984 team/(7729:7735): El entrenador 1 hace el send del catch.
+[INFO] 18:44:36:984 team/(7729:7735): El entrenador  1 recibió el id del catch: 5.
+[INFO] 18:45:06:547 team/(7729:7743): Atiendo caught.
+[INFO] 18:45:06:547 team/(7729:7743): Resultado del caught: 193643393.
+[INFO] 18:45:06:547 team/(7729:7743): El caught no fue exitoso.
+[INFO] 18:45:18:691 team/(7729:7743): Atiendo caught.
+[INFO] 18:45:18:691 team/(7729:7743): Resultado del caught: 1.
+[INFO] 18:45:18:691 team/(7729:7743): Encontre al pokemon Pikachu en mis objetivos
+[INFO] 18:45:18:691 team/(7729:7743): El caught me interesa.
+[INFO] 18:45:18:691 team/(7729:7743): Se registró el pokemon atrapado.
+[INFO] 18:58:35:268 team/(9551:9551): --------------------------------------------------------------------------
+[INFO] 18:58:35:274 team/(9551:9551): NUEVA EJECUCION
+[INFO] 18:58:35:275 team/(9551:9551): --------------------------------------------------------------------------
+[INFO] 18:58:35:275 team/(9551:9551): --------------------------------------------------------
+[INFO] 18:58:35:275 team/(9551:9551): Objetivo en lista: Pikachu. Objetivo recibido: Charmander.
+[INFO] 18:58:35:275 team/(9551:9551): --------------------------------------------------------
+[INFO] 18:58:35:275 team/(9551:9551): Objetivo en lista: Pikachu. Objetivo recibido: Squirtle.
+[INFO] 18:58:35:275 team/(9551:9551): --------------------------------------------------------
+[INFO] 18:58:35:275 team/(9551:9551): Objetivo en lista: Charmander. Objetivo recibido: Squirtle.
+[INFO] 18:58:35:275 team/(9551:9551): --------------------------------------------------------------
+[INFO] 18:58:35:276 team/(9551:9551): OBJETIVO DEL TEAM
+[INFO] 18:58:35:276 team/(9551:9551): Objetivo 0. Pokemon: Pikachu. Cantidad: 2.
+[INFO] 18:58:35:276 team/(9551:9551): Objetivo 1. Pokemon: Charmander. Cantidad: 1.
+[INFO] 18:58:35:276 team/(9551:9551): Objetivo 2. Pokemon: Squirtle. Cantidad: 1.
+[INFO] 18:58:35:276 team/(9551:9551): --------------------------------------------------
+[INFO] 18:58:35:279 team/(9551:9562): Se inicia el planificador
+[INFO] 18:58:35:291 team/(9551:9563): Suscripción realizada correctamente
+
+[INFO] 18:58:35:292 team/(9551:9565): Suscripción realizada correctamente
+
+[INFO] 18:58:35:292 team/(9551:9564): Suscripción realizada correctamente
+
+[INFO] 18:59:18:627 team/(9551:9664): Atiendo appeared. Pokemon: Pikachu.
+[INFO] 18:59:18:627 team/(9551:9664): Encontre al pokemon Pikachu en mis objetivos
+[INFO] 18:59:18:627 team/(9551:9664): El pokemon es objetivo
+[INFO] 18:59:18:627 team/(9551:9664): Hay entrenadores disponibles para atrapar a Pikachu.
+[INFO] 18:59:18:628 team/(9551:9664): Se selecciono el entrenador 0 para atrapar al pokemon Pikachu
+[INFO] 18:59:18:642 team/(9551:9556): El entrenador 0 entro en ejecución.
+[INFO] 18:59:18:643 team/(9551:9556): El entrenador estaba originalmente en la posicion (1,2).
+[INFO] 18:59:18:643 team/(9551:9556): El entrenador comenzara a mover a la posicion (0,0).
+[INFO] 18:59:18:643 team/(9551:9562): elijo entrenador para ejecutar
+[INFO] 18:59:20:643 team/(9551:9556): El entrenador 0 se mueve a : (0,2).
+[INFO] 18:59:20:644 team/(9551:9556): Movimiento y: -2
+[INFO] 18:59:22:645 team/(9551:9556): El entrenador 0 se mueve a : (0,1).
+[INFO] 18:59:24:645 team/(9551:9556): El entrenador 0 se mueve a : (0,0).
+[INFO] 18:59:24:645 team/(9551:9556): El entrenador 0 se movió a la posición (0, 0)
+
+[INFO] 18:59:24:645 team/(9551:9556): El entrenador 0 inició el proceso de envío del catch.
+[INFO] 18:59:24:645 team/(9551:9556): El entrenador 0 intenta hacer el send del catch.
+[INFO] 18:59:26:646 team/(9551:9556): El entrenador 0 hace el send del catch.
+[INFO] 18:59:26:646 team/(9551:9556): El entrenador  0 recibió el id del catch: 4.
+[INFO] 19:00:04:591 team/(9551:9772): Atiendo appeared. Pokemon: Pikachu.
+[INFO] 19:00:04:591 team/(9551:9772): Encontre al pokemon Pikachu en mis objetivos
+[INFO] 19:00:04:591 team/(9551:9772): El pokemon es objetivo
+[INFO] 19:00:04:591 team/(9551:9772): Hay entrenadores disponibles para atrapar a Pikachu.
+[INFO] 19:00:04:591 team/(9551:9772): Se selecciono el entrenador 1 para atrapar al pokemon Pikachu
+[INFO] 19:00:04:595 team/(9551:9557): El entrenador 1 entro en ejecución.
+[INFO] 19:00:04:595 team/(9551:9557): El entrenador estaba originalmente en la posicion (3,7).
+[INFO] 19:00:04:595 team/(9551:9557): El entrenador comenzara a mover a la posicion (0,0).
+[INFO] 19:00:04:595 team/(9551:9562): elijo entrenador para ejecutar
+[INFO] 19:00:06:596 team/(9551:9557): El entrenador 1 se mueve a : (2,7).
+[INFO] 19:00:08:603 team/(9551:9557): El entrenador 1 se mueve a : (1,7).
+[INFO] 19:00:10:604 team/(9551:9557): El entrenador 1 se mueve a : (0,7).
+[INFO] 19:00:10:604 team/(9551:9557): Movimiento y: -7
+[INFO] 19:00:12:605 team/(9551:9557): El entrenador 1 se mueve a : (0,6).
+[INFO] 19:00:14:606 team/(9551:9557): El entrenador 1 se mueve a : (0,5).
+[INFO] 19:00:16:607 team/(9551:9557): El entrenador 1 se mueve a : (0,4).
+[INFO] 19:00:18:608 team/(9551:9557): El entrenador 1 se mueve a : (0,3).
+[INFO] 19:00:20:616 team/(9551:9557): El entrenador 1 se mueve a : (0,2).
+[INFO] 19:00:22:616 team/(9551:9557): El entrenador 1 se mueve a : (0,1).
+[INFO] 19:00:24:618 team/(9551:9557): El entrenador 1 se mueve a : (0,0).
+[INFO] 19:00:24:618 team/(9551:9557): El entrenador 1 se movió a la posición (0, 0)
+
+[INFO] 19:00:24:618 team/(9551:9557): El entrenador 1 inició el proceso de envío del catch.
+[INFO] 19:00:24:618 team/(9551:9557): El entrenador 1 intenta hacer el send del catch.
+[INFO] 19:00:26:619 team/(9551:9557): El entrenador 1 hace el send del catch.
+[INFO] 19:00:26:619 team/(9551:9557): El entrenador  1 recibió el id del catch: 5.
+[INFO] 19:00:47:36 team/(9551:9565): Atiendo caught.
+[INFO] 19:00:47:36 team/(9551:9565): Resultado del caught: 1.
+[INFO] 19:00:47:36 team/(9551:9565): Encontre al pokemon Pikachu en mis objetivos
+[INFO] 19:00:47:36 team/(9551:9565): El caught me interesa.
+[INFO] 19:00:47:36 team/(9551:9565): Se registró el pokemon atrapado.
+[INFO] 19:01:20:903 team/(9551:9565): Atiendo caught.
+[INFO] 19:01:20:903 team/(9551:9565): Resultado del caught: 193643393.
+[INFO] 19:01:20:903 team/(9551:9565): El caught no fue exitoso.
+[INFO] 19:01:45:727 team/(9551:9565): Atiendo caught.
+[INFO] 19:01:45:727 team/(9551:9565): El caught no me interesa.
+[INFO] 19:04:47:700 team/(10360:10360): --------------------------------------------------------------------------
+[INFO] 19:04:47:708 team/(10360:10360): NUEVA EJECUCION
+[INFO] 19:04:47:708 team/(10360:10360): --------------------------------------------------------------------------
+[INFO] 19:04:47:708 team/(10360:10360): --------------------------------------------------------
+[INFO] 19:04:47:708 team/(10360:10360): Objetivo en lista: Pikachu. Objetivo recibido: Charmander.
+[INFO] 19:04:47:708 team/(10360:10360): --------------------------------------------------------
+[INFO] 19:04:47:708 team/(10360:10360): Objetivo en lista: Pikachu. Objetivo recibido: Squirtle.
+[INFO] 19:04:47:708 team/(10360:10360): --------------------------------------------------------
+[INFO] 19:04:47:708 team/(10360:10360): Objetivo en lista: Charmander. Objetivo recibido: Squirtle.
+[INFO] 19:04:47:708 team/(10360:10360): --------------------------------------------------------------
+[INFO] 19:04:47:708 team/(10360:10360): OBJETIVO DEL TEAM
+[INFO] 19:04:47:708 team/(10360:10360): Objetivo 0. Pokemon: Pikachu. Cantidad: 2.
+[INFO] 19:04:47:708 team/(10360:10360): Objetivo 1. Pokemon: Charmander. Cantidad: 1.
+[INFO] 19:04:47:708 team/(10360:10360): Objetivo 2. Pokemon: Squirtle. Cantidad: 1.
+[INFO] 19:04:47:708 team/(10360:10360): --------------------------------------------------
+[INFO] 19:04:47:712 team/(10360:10371): Se inicia el planificador
+[INFO] 19:04:47:715 team/(10360:10376): Suscripción realizada correctamente
+
+[INFO] 19:04:47:716 team/(10360:10375): Suscripción realizada correctamente
+
+[INFO] 19:04:47:716 team/(10360:10377): Suscripción realizada correctamente
+
+[INFO] 19:04:54:357 team/(10360:10377): Atiendo caught.
+[INFO] 19:04:54:357 team/(10360:10377): El caught no me interesa.
+[INFO] 19:05:01:196 team/(10360:10377): Atiendo caught.
+[INFO] 19:05:01:196 team/(10360:10377): El caught no me interesa.
+[INFO] 19:05:04:200 team/(10360:10377): Atiendo caught.
+[INFO] 19:05:04:200 team/(10360:10377): El caught no me interesa.
+[INFO] 19:05:06:858 team/(10360:10377): Atiendo caught.
+[INFO] 19:05:06:858 team/(10360:10377): El caught no me interesa.
+[INFO] 19:05:59:535 team/(10628:10628): --------------------------------------------------------------------------
+[INFO] 19:05:59:537 team/(10628:10628): NUEVA EJECUCION
+[INFO] 19:05:59:537 team/(10628:10628): --------------------------------------------------------------------------
+[INFO] 19:05:59:537 team/(10628:10628): --------------------------------------------------------
+[INFO] 19:05:59:537 team/(10628:10628): Objetivo en lista: Pikachu. Objetivo recibido: Charmander.
+[INFO] 19:05:59:537 team/(10628:10628): --------------------------------------------------------
+[INFO] 19:05:59:537 team/(10628:10628): Objetivo en lista: Pikachu. Objetivo recibido: Squirtle.
+[INFO] 19:05:59:537 team/(10628:10628): --------------------------------------------------------
+[INFO] 19:05:59:537 team/(10628:10628): Objetivo en lista: Charmander. Objetivo recibido: Squirtle.
+[INFO] 19:05:59:537 team/(10628:10628): --------------------------------------------------------------
+[INFO] 19:05:59:537 team/(10628:10628): OBJETIVO DEL TEAM
+[INFO] 19:05:59:537 team/(10628:10628): Objetivo 0. Pokemon: Pikachu. Cantidad: 2.
+[INFO] 19:05:59:537 team/(10628:10628): Objetivo 1. Pokemon: Charmander. Cantidad: 1.
+[INFO] 19:05:59:537 team/(10628:10628): Objetivo 2. Pokemon: Squirtle. Cantidad: 1.
+[INFO] 19:05:59:537 team/(10628:10628): --------------------------------------------------
+[INFO] 19:05:59:545 team/(10628:10639): Se inicia el planificador
+[INFO] 19:05:59:547 team/(10628:10644): Suscripción realizada correctamente
+
+[INFO] 19:05:59:547 team/(10628:10645): Suscripción realizada correctamente
+
+[INFO] 19:05:59:548 team/(10628:10643): Suscripción realizada correctamente
+
+[INFO] 19:06:04:547 team/(10628:10645): Atiendo caught.
+[INFO] 19:06:04:547 team/(10628:10645): Resultado del caught: 193643393.
+[INFO] 19:06:04:547 team/(10628:10645): El caught no me interesa.
+[INFO] 19:06:07:584 team/(10628:10645): Atiendo caught.
+[INFO] 19:06:07:585 team/(10628:10645): Resultado del caught: 193643393.
+[INFO] 19:06:07:585 team/(10628:10645): El caught no me interesa.
+[INFO] 19:06:09:828 team/(10628:10645): Atiendo caught.
+[INFO] 19:06:09:828 team/(10628:10645): Resultado del caught: 1.
+[INFO] 19:06:09:828 team/(10628:10645): El caught no me interesa.
+[INFO] 19:06:14:434 team/(10628:10645): Atiendo caught.
+[INFO] 19:06:14:434 team/(10628:10645): Resultado del caught: 1.
+[INFO] 19:06:14:434 team/(10628:10645): El caught no me interesa.
+[INFO] 19:06:41:335 team/(10628:10645): Atiendo caught.
+[INFO] 19:06:41:335 team/(10628:10645): Resultado del caught: 1.
+[INFO] 19:06:41:335 team/(10628:10645): El caught no me interesa.
+[INFO] 19:06:44:149 team/(10628:10645): Atiendo caught.
+[INFO] 19:06:44:149 team/(10628:10645): Resultado del caught: 1.
+[INFO] 19:06:44:149 team/(10628:10645): El caught no me interesa.
+[INFO] 19:06:46:147 team/(10628:10645): Atiendo caught.
+[INFO] 19:06:46:147 team/(10628:10645): Resultado del caught: 193643393.
+[INFO] 19:06:46:147 team/(10628:10645): El caught no me interesa.
+[INFO] 19:07:54:41 team/(10628:10645): Atiendo caught.
+[INFO] 19:07:54:41 team/(10628:10645): Resultado del caught: 1.
+[INFO] 19:07:54:41 team/(10628:10645): El caught no me interesa.
+[INFO] 19:07:55:847 team/(10628:10645): Atiendo caught.
+[INFO] 19:07:55:847 team/(10628:10645): Resultado del caught: 193643393.
+[INFO] 19:07:55:847 team/(10628:10645): El caught no me interesa.
+[INFO] 19:07:59:921 team/(10628:10645): Atiendo caught.
+[INFO] 19:07:59:921 team/(10628:10645): Resultado del caught: 1.
+[INFO] 19:07:59:921 team/(10628:10645): El caught no me interesa.
+[INFO] 19:08:09:796 team/(10628:10645): Atiendo caught.
+[INFO] 19:08:09:796 team/(10628:10645): Resultado del caught: 0.
+[INFO] 19:08:09:796 team/(10628:10645): El caught no me interesa.
+[INFO] 19:08:13:404 team/(10628:10645): Atiendo caught.
+[INFO] 19:08:13:404 team/(10628:10645): Resultado del caught: 193643393.
+[INFO] 19:08:13:404 team/(10628:10645): El caught no me interesa.
+[INFO] 19:08:14:920 team/(10628:10645): Atiendo caught.
+[INFO] 19:08:14:920 team/(10628:10645): Resultado del caught: 0.
+[INFO] 19:08:14:920 team/(10628:10645): El caught no me interesa.
+[INFO] 19:14:33:569 team/(11957:11957): --------------------------------------------------------------------------
+[INFO] 19:14:33:571 team/(11957:11957): NUEVA EJECUCION
+[INFO] 19:14:33:572 team/(11957:11957): --------------------------------------------------------------------------
+[INFO] 19:14:33:580 team/(11957:11957): --------------------------------------------------------
+[INFO] 19:14:33:580 team/(11957:11957): Objetivo en lista: Pikachu. Objetivo recibido: Charmander.
+[INFO] 19:14:33:580 team/(11957:11957): --------------------------------------------------------
+[INFO] 19:14:33:580 team/(11957:11957): Objetivo en lista: Pikachu. Objetivo recibido: Squirtle.
+[INFO] 19:14:33:580 team/(11957:11957): --------------------------------------------------------
+[INFO] 19:14:33:580 team/(11957:11957): Objetivo en lista: Charmander. Objetivo recibido: Squirtle.
+[INFO] 19:14:33:580 team/(11957:11957): --------------------------------------------------------------
+[INFO] 19:14:33:580 team/(11957:11957): OBJETIVO DEL TEAM
+[INFO] 19:14:33:580 team/(11957:11957): Objetivo 0. Pokemon: Pikachu. Cantidad: 2.
+[INFO] 19:14:33:580 team/(11957:11957): Objetivo 1. Pokemon: Charmander. Cantidad: 1.
+[INFO] 19:14:33:580 team/(11957:11957): Objetivo 2. Pokemon: Squirtle. Cantidad: 1.
+[INFO] 19:14:33:580 team/(11957:11957): --------------------------------------------------
+[INFO] 19:14:33:586 team/(11957:11969): Se inicia el planificador
+[INFO] 19:14:33:595 team/(11957:11970): Suscripción realizada correctamente
+
+[INFO] 19:14:33:596 team/(11957:11972): Suscripción realizada correctamente
+
+[INFO] 19:14:33:597 team/(11957:11971): Suscripción realizada correctamente
+
+[INFO] 19:14:40:515 team/(11957:12016): Atiendo caught.
+[INFO] 19:14:40:515 team/(11957:12016): Resultado del caught: 193643393.
+[INFO] 19:14:40:515 team/(11957:12016): El caught no me interesa.
+[INFO] 19:14:59:378 team/(11957:12062): Atiendo caught.
+[INFO] 19:14:59:379 team/(11957:12062): Resultado del caught: 0.
+[INFO] 19:14:59:379 team/(11957:12062): El caught no me interesa.
+[INFO] 19:15:07:491 team/(11957:12095): Atiendo caught.
+[INFO] 19:15:07:492 team/(11957:12095): Resultado del caught: 193643393.
+[INFO] 19:15:07:492 team/(11957:12095): El caught no me interesa.
+[INFO] 19:15:10:111 team/(11957:12118): Atiendo caught.
+[INFO] 19:15:10:111 team/(11957:12118): Resultado del caught: 0.
+[INFO] 19:15:10:111 team/(11957:12118): El caught no me interesa.
+[INFO] 19:15:12:459 team/(11957:12141): Atiendo caught.
+[INFO] 19:15:12:461 team/(11957:12141): Resultado del caught: 0.
+[INFO] 19:15:12:461 team/(11957:12141): El caught no me interesa.
+[INFO] 19:15:14:882 team/(11957:12160): Atiendo caught.
+[INFO] 19:15:14:882 team/(11957:12160): Resultado del caught: 0.
+[INFO] 19:15:14:882 team/(11957:12160): El caught no me interesa.
+[INFO] 19:25:15:688 team/(13532:13532): --------------------------------------------------------------------------
+[INFO] 19:25:15:690 team/(13532:13532): NUEVA EJECUCION
+[INFO] 19:25:15:691 team/(13532:13532): --------------------------------------------------------------------------
+[INFO] 19:25:15:692 team/(13532:13532): --------------------------------------------------------
+[INFO] 19:25:15:692 team/(13532:13532): Objetivo en lista: Pikachu. Objetivo recibido: Charmander.
+[INFO] 19:25:15:692 team/(13532:13532): --------------------------------------------------------
+[INFO] 19:25:15:692 team/(13532:13532): Objetivo en lista: Pikachu. Objetivo recibido: Squirtle.
+[INFO] 19:25:15:692 team/(13532:13532): --------------------------------------------------------
+[INFO] 19:25:15:693 team/(13532:13532): Objetivo en lista: Charmander. Objetivo recibido: Squirtle.
+[INFO] 19:25:15:693 team/(13532:13532): --------------------------------------------------------------
+[INFO] 19:25:15:693 team/(13532:13532): OBJETIVO DEL TEAM
+[INFO] 19:25:15:693 team/(13532:13532): Objetivo 0. Pokemon: Pikachu. Cantidad: 2.
+[INFO] 19:25:15:693 team/(13532:13532): Objetivo 1. Pokemon: Charmander. Cantidad: 1.
+[INFO] 19:25:15:693 team/(13532:13532): Objetivo 2. Pokemon: Squirtle. Cantidad: 1.
+[INFO] 19:25:15:693 team/(13532:13532): --------------------------------------------------
+[INFO] 19:25:15:697 team/(13532:13543): Se inicia el planificador
+[INFO] 19:25:15:708 team/(13532:13544): Suscripción realizada correctamente
+
+[INFO] 19:25:15:708 team/(13532:13546): Suscripción realizada correctamente
+
+[INFO] 19:25:15:708 team/(13532:13545): Suscripción realizada correctamente
+
+[INFO] 19:25:24:899 team/(13532:13588): Atiendo caught.
+[INFO] 19:25:24:899 team/(13532:13588): Resultado del caught: 0.
+[INFO] 19:25:24:899 team/(13532:13588): El caught no me interesa.
+[INFO] 19:25:55:343 team/(13532:13648): Atiendo appeared. Pokemon: Pikachu.
+[INFO] 19:25:55:344 team/(13532:13648): Encontre al pokemon Pikachu en mis objetivos
+[INFO] 19:25:55:344 team/(13532:13648): El pokemon es objetivo
+[INFO] 19:25:55:344 team/(13532:13648): Hay entrenadores disponibles para atrapar a Pikachu.
+[INFO] 19:25:55:344 team/(13532:13648): Se selecciono el entrenador 0 para atrapar al pokemon Pikachu
+[INFO] 19:25:55:350 team/(13532:13537): El entrenador 0 entro en ejecución.
+[INFO] 19:25:55:350 team/(13532:13537): El entrenador estaba originalmente en la posicion (1,2).
+[INFO] 19:25:55:350 team/(13532:13537): El entrenador comenzara a mover a la posicion (0,0).
+[INFO] 19:25:55:350 team/(13532:13543): elijo entrenador para ejecutar
+[INFO] 19:25:57:350 team/(13532:13537): El entrenador 0 se mueve a : (0,2).
+[INFO] 19:25:57:350 team/(13532:13537): Movimiento y: -2
+[INFO] 19:25:59:351 team/(13532:13537): El entrenador 0 se mueve a : (0,1).
+[INFO] 19:26:01:352 team/(13532:13537): El entrenador 0 se mueve a : (0,0).
+[INFO] 19:26:01:352 team/(13532:13537): El entrenador 0 se movió a la posición (0, 0)
+
+[INFO] 19:26:01:352 team/(13532:13537): El entrenador 0 inició el proceso de envío del catch.
+[INFO] 19:26:01:352 team/(13532:13537): El entrenador 0 intenta hacer el send del catch.
+[INFO] 19:26:03:353 team/(13532:13537): El entrenador 0 hace el send del catch.
+[INFO] 19:26:03:353 team/(13532:13537): El entrenador  0 recibió el id del catch: 5.
+[INFO] 19:34:12:489 team/(15168:15168): --------------------------------------------------------------------------
+[INFO] 19:34:12:499 team/(15168:15168): NUEVA EJECUCION
+[INFO] 19:34:12:499 team/(15168:15168): --------------------------------------------------------------------------
+[INFO] 19:34:12:499 team/(15168:15168): --------------------------------------------------------
+[INFO] 19:34:12:499 team/(15168:15168): Objetivo en lista: Pikachu. Objetivo recibido: Charmander.
+[INFO] 19:34:12:499 team/(15168:15168): --------------------------------------------------------
+[INFO] 19:34:12:499 team/(15168:15168): Objetivo en lista: Pikachu. Objetivo recibido: Squirtle.
+[INFO] 19:34:12:499 team/(15168:15168): --------------------------------------------------------
+[INFO] 19:34:12:499 team/(15168:15168): Objetivo en lista: Charmander. Objetivo recibido: Squirtle.
+[INFO] 19:34:12:499 team/(15168:15168): --------------------------------------------------------------
+[INFO] 19:34:12:500 team/(15168:15168): OBJETIVO DEL TEAM
+[INFO] 19:34:12:500 team/(15168:15168): Objetivo 0. Pokemon: Pikachu. Cantidad: 2.
+[INFO] 19:34:12:500 team/(15168:15168): Objetivo 1. Pokemon: Charmander. Cantidad: 1.
+[INFO] 19:34:12:500 team/(15168:15168): Objetivo 2. Pokemon: Squirtle. Cantidad: 1.
+[INFO] 19:34:12:500 team/(15168:15168): --------------------------------------------------
+[INFO] 19:34:12:507 team/(15168:15179): Se inicia el planificador
+[INFO] 19:34:12:520 team/(15168:15182): Suscripción realizada correctamente
+
+[INFO] 19:34:12:520 team/(15168:15181): Suscripción realizada correctamente
+
+[INFO] 19:34:12:520 team/(15168:15180): Suscripción realizada correctamente
+
+[INFO] 19:34:25:984 team/(15168:15382): Atiendo appeared. Pokemon: Pikachu.
+[INFO] 19:34:25:985 team/(15168:15382): Encontre al pokemon Pikachu en mis objetivos
+[INFO] 19:34:25:985 team/(15168:15382): El pokemon es objetivo
+[INFO] 19:34:25:985 team/(15168:15382): Hay entrenadores disponibles para atrapar a Pikachu.
+[INFO] 19:34:25:985 team/(15168:15382): Se selecciono el entrenador 0 para atrapar al pokemon Pikachu
+[INFO] 19:34:25:995 team/(15168:15173): El entrenador 0 entro en ejecución.
+[INFO] 19:34:25:995 team/(15168:15173): El entrenador estaba originalmente en la posicion (1,2).
+[INFO] 19:34:25:995 team/(15168:15173): El entrenador comenzara a mover a la posicion (0,0).
+[INFO] 19:34:25:995 team/(15168:15179): elijo entrenador para ejecutar
+[INFO] 19:34:27:996 team/(15168:15173): El entrenador 0 se mueve a : (0,2).
+[INFO] 19:34:27:996 team/(15168:15173): Movimiento y: -2
+[INFO] 19:34:29:996 team/(15168:15173): El entrenador 0 se mueve a : (0,1).
+[INFO] 19:34:31:998 team/(15168:15173): El entrenador 0 se mueve a : (0,0).
+[INFO] 19:34:31:998 team/(15168:15173): El entrenador 0 se movió a la posición (0, 0)
+
+[INFO] 19:34:31:998 team/(15168:15173): El entrenador 0 inició el proceso de envío del catch.
+[INFO] 19:34:31:998 team/(15168:15173): El entrenador 0 intenta hacer el send del catch.
+[INFO] 19:34:33:998 team/(15168:15173): El entrenador 0 hace el send del catch.
+[INFO] 19:34:33:999 team/(15168:15173): El entrenador  0 recibió el id del catch: 4.
+[INFO] 19:35:09:155 team/(15168:15466): Atiendo caught.
+[INFO] 19:35:09:155 team/(15168:15466): Resultado del caught: 1.
+[INFO] 19:35:09:155 team/(15168:15466): Encontre al pokemon Pikachu en mis objetivos
+[INFO] 19:35:09:155 team/(15168:15466): El caught me interesa.
+[INFO] 19:35:09:155 team/(15168:15466): Se registró el pokemon atrapado.
+[INFO] 19:35:26:168 team/(15168:15519): Atiendo caught.
+[INFO] 19:35:26:168 team/(15168:15519): Resultado del caught: 1.
+[INFO] 19:35:26:168 team/(15168:15519): El caught no me interesa.
+[INFO] 19:35:31:143 team/(15168:15548): Atiendo caught.
+[INFO] 19:35:31:143 team/(15168:15548): Resultado del caught: 1.
+[INFO] 19:35:31:143 team/(15168:15548): El caught no me interesa.
+[INFO] 19:35:33:868 team/(15168:15566): Atiendo caught.
+[INFO] 19:35:33:868 team/(15168:15566): Resultado del caught: 1.
+[INFO] 19:35:33:868 team/(15168:15566): El caught no me interesa.
+[INFO] 19:35:36:411 team/(15168:15589): Atiendo caught.
+[INFO] 19:35:36:412 team/(15168:15589): Resultado del caught: 1.
+[INFO] 19:35:36:412 team/(15168:15589): El caught no me interesa.
+[INFO] 19:35:58:554 team/(15168:15647): Atiendo caught.
+[INFO] 19:35:58:554 team/(15168:15647): Resultado del caught: 1.
+[INFO] 19:35:58:554 team/(15168:15647): El caught no me interesa.
+[INFO] 19:36:00:631 team/(15168:15660): Atiendo caught.
+[INFO] 19:36:00:631 team/(15168:15660): Resultado del caught: 193643393.
+[INFO] 19:36:00:631 team/(15168:15660): El caught no me interesa.
+[INFO] 19:36:04:63 team/(15168:15690): Atiendo caught.
+[INFO] 19:36:04:63 team/(15168:15690): Resultado del caught: 193643393.
+[INFO] 19:36:04:63 team/(15168:15690): El caught no me interesa.
+[INFO] 19:36:06:524 team/(15168:15707): Atiendo caught.
+[INFO] 19:36:06:525 team/(15168:15707): Resultado del caught: 1.
+[INFO] 19:36:06:525 team/(15168:15707): El caught no me interesa.
+[INFO] 19:36:08:237 team/(15168:15725): Atiendo caught.
+[INFO] 19:36:08:237 team/(15168:15725): Resultado del caught: 1.
+[INFO] 19:36:08:237 team/(15168:15725): El caught no me interesa.
+[INFO] 19:36:57:681 team/(15168:15821): Atiendo caught.
+[INFO] 19:36:57:681 team/(15168:15821): Resultado del caught: 1.
+[INFO] 19:36:57:681 team/(15168:15821): El caught no me interesa.
+[INFO] 19:37:07:254 team/(16009:16009): --------------------------------------------------------------------------
+[INFO] 19:37:07:283 team/(16009:16009): NUEVA EJECUCION
+[INFO] 19:37:07:283 team/(16009:16009): --------------------------------------------------------------------------
+[INFO] 19:37:07:283 team/(16009:16009): --------------------------------------------------------
+[INFO] 19:37:07:283 team/(16009:16009): Objetivo en lista: Pikachu. Objetivo recibido: Charmander.
+[INFO] 19:37:07:283 team/(16009:16009): --------------------------------------------------------
+[INFO] 19:37:07:283 team/(16009:16009): Objetivo en lista: Pikachu. Objetivo recibido: Squirtle.
+[INFO] 19:37:07:283 team/(16009:16009): --------------------------------------------------------
+[INFO] 19:37:07:283 team/(16009:16009): Objetivo en lista: Charmander. Objetivo recibido: Squirtle.
+[INFO] 19:37:07:283 team/(16009:16009): --------------------------------------------------------------
+[INFO] 19:37:07:283 team/(16009:16009): OBJETIVO DEL TEAM
+[INFO] 19:37:07:283 team/(16009:16009): Objetivo 0. Pokemon: Pikachu. Cantidad: 2.
+[INFO] 19:37:07:283 team/(16009:16009): Objetivo 1. Pokemon: Charmander. Cantidad: 1.
+[INFO] 19:37:07:283 team/(16009:16009): Objetivo 2. Pokemon: Squirtle. Cantidad: 1.
+[INFO] 19:37:07:284 team/(16009:16009): --------------------------------------------------
+[INFO] 19:37:07:302 team/(16009:16021): Se inicia el planificador
+[INFO] 19:37:07:305 team/(16009:16025): Suscripción realizada correctamente
+
+[INFO] 19:37:07:305 team/(16009:16027): Suscripción realizada correctamente
+
+[INFO] 19:37:07:305 team/(16009:16026): Suscripción realizada correctamente
+
+[INFO] 19:37:13:298 team/(16053:16053): --------------------------------------------------------------------------
+[INFO] 19:37:13:315 team/(16053:16053): NUEVA EJECUCION
+[INFO] 19:37:13:315 team/(16053:16053): --------------------------------------------------------------------------
+[INFO] 19:37:13:315 team/(16053:16053): --------------------------------------------------------
+[INFO] 19:37:13:315 team/(16053:16053): Objetivo en lista: Pikachu. Objetivo recibido: Charmander.
+[INFO] 19:37:13:315 team/(16053:16053): --------------------------------------------------------
+[INFO] 19:37:13:315 team/(16053:16053): Objetivo en lista: Pikachu. Objetivo recibido: Squirtle.
+[INFO] 19:37:13:315 team/(16053:16053): --------------------------------------------------------
+[INFO] 19:37:13:315 team/(16053:16053): Objetivo en lista: Charmander. Objetivo recibido: Squirtle.
+[INFO] 19:37:13:315 team/(16053:16053): --------------------------------------------------------------
+[INFO] 19:37:13:315 team/(16053:16053): OBJETIVO DEL TEAM
+[INFO] 19:37:13:315 team/(16053:16053): Objetivo 0. Pokemon: Pikachu. Cantidad: 2.
+[INFO] 19:37:13:315 team/(16053:16053): Objetivo 1. Pokemon: Charmander. Cantidad: 1.
+[INFO] 19:37:13:315 team/(16053:16053): Objetivo 2. Pokemon: Squirtle. Cantidad: 1.
+[INFO] 19:37:13:315 team/(16053:16053): --------------------------------------------------
+[INFO] 19:37:13:327 team/(16053:16064): Se inicia el planificador
+[INFO] 19:37:13:349 team/(16053:16069): Suscripción realizada correctamente
+
+[INFO] 19:37:13:349 team/(16053:16070): Suscripción realizada correctamente
+
+[INFO] 19:37:13:350 team/(16053:16068): Suscripción realizada correctamente
+
+[INFO] 19:37:35:629 team/(15168:16283): Atiendo caught.
+[INFO] 19:37:35:629 team/(15168:16283): Resultado del caught: 1.
+[INFO] 19:37:35:629 team/(15168:16283): El caught no me interesa.
+[INFO] 19:38:30:708 team/(16833:16833): --------------------------------------------------------------------------
+[INFO] 19:38:30:709 team/(16833:16833): NUEVA EJECUCION
+[INFO] 19:38:30:711 team/(16833:16833): --------------------------------------------------------------------------
+[INFO] 19:38:30:711 team/(16833:16833): --------------------------------------------------------
+[INFO] 19:38:30:712 team/(16833:16833): Objetivo en lista: Pikachu. Objetivo recibido: Charmander.
+[INFO] 19:38:30:712 team/(16833:16833): --------------------------------------------------------
+[INFO] 19:38:30:712 team/(16833:16833): Objetivo en lista: Pikachu. Objetivo recibido: Squirtle.
+[INFO] 19:38:30:712 team/(16833:16833): --------------------------------------------------------
+[INFO] 19:38:30:712 team/(16833:16833): Objetivo en lista: Charmander. Objetivo recibido: Squirtle.
+[INFO] 19:38:30:712 team/(16833:16833): --------------------------------------------------------------
+[INFO] 19:38:30:712 team/(16833:16833): OBJETIVO DEL TEAM
+[INFO] 19:38:30:712 team/(16833:16833): Objetivo 0. Pokemon: Pikachu. Cantidad: 2.
+[INFO] 19:38:30:712 team/(16833:16833): Objetivo 1. Pokemon: Charmander. Cantidad: 1.
+[INFO] 19:38:30:712 team/(16833:16833): Objetivo 2. Pokemon: Squirtle. Cantidad: 1.
+[INFO] 19:38:30:712 team/(16833:16833): --------------------------------------------------
+[INFO] 19:38:30:715 team/(16833:16844): Se inicia el planificador
+[INFO] 19:38:30:724 team/(16833:16845): Suscripción realizada correctamente
+
+[INFO] 19:38:30:724 team/(16833:16847): Suscripción realizada correctamente
+
+[INFO] 19:38:30:724 team/(16833:16846): Suscripción realizada correctamente
+
+[INFO] 19:38:41:183 team/(16833:17054): Atiendo caught.
+[INFO] 19:38:41:183 team/(16833:17054): Resultado del caught: 1.
+[INFO] 19:38:41:183 team/(16833:17054): El caught no me interesa.
+[INFO] 19:38:43:537 team/(16833:17073): Atiendo caught.
+[INFO] 19:38:43:537 team/(16833:17073): Resultado del caught: 1.
+[INFO] 19:38:43:537 team/(16833:17073): El caught no me interesa.
+[INFO] 19:38:46:275 team/(16833:17096): Atiendo caught.
+[INFO] 19:38:46:275 team/(16833:17096): Resultado del caught: 1.
+[INFO] 19:38:46:275 team/(16833:17096): El caught no me interesa.
+[INFO] 19:38:48:659 team/(16833:17113): Atiendo caught.
+[INFO] 19:38:48:659 team/(16833:17113): Resultado del caught: 1.
+[INFO] 19:38:48:659 team/(16833:17113): El caught no me interesa.
+[INFO] 19:38:50:395 team/(16833:17130): Atiendo caught.
+[INFO] 19:38:50:395 team/(16833:17130): Resultado del caught: 1.
+[INFO] 19:38:50:395 team/(16833:17130): El caught no me interesa.
+[INFO] 19:39:11:855 team/(16833:17185): Atiendo caught.
+[INFO] 19:39:11:856 team/(16833:17185): Resultado del caught: 1.
+[INFO] 19:39:11:856 team/(16833:17185): El caught no me interesa.
+[INFO] 19:39:14:85 team/(16833:17202): Atiendo caught.
+[INFO] 19:39:14:85 team/(16833:17202): Resultado del caught: 1.
+[INFO] 19:39:14:85 team/(16833:17202): El caught no me interesa.
+[INFO] 19:39:16:835 team/(16833:17227): Atiendo caught.
+[INFO] 19:39:16:836 team/(16833:17227): Resultado del caught: 193643393.
+[INFO] 19:39:16:836 team/(16833:17227): El caught no me interesa.
+[INFO] 19:39:19:379 team/(16833:17248): Atiendo caught.
+[INFO] 19:39:19:379 team/(16833:17248): Resultado del caught: 1.
+[INFO] 19:39:19:379 team/(16833:17248): El caught no me interesa.
+[INFO] 19:39:20:975 team/(16833:17261): Atiendo caught.
+[INFO] 19:39:20:975 team/(16833:17261): Resultado del caught: 193643393.
+[INFO] 19:39:20:975 team/(16833:17261): El caught no me interesa.
+[INFO] 19:40:12:175 team/(16833:17364): Atiendo caught.
+[INFO] 19:40:12:175 team/(16833:17364): Resultado del caught: 1.
+[INFO] 19:40:12:175 team/(16833:17364): El caught no me interesa.
+[INFO] 19:40:14:571 team/(16833:17386): Atiendo caught.
+[INFO] 19:40:14:571 team/(16833:17386): Resultado del caught: 193643393.
+[INFO] 19:40:14:571 team/(16833:17386): El caught no me interesa.
+[INFO] 19:40:16:662 team/(16833:17399): Atiendo caught.
+[INFO] 19:40:16:662 team/(16833:17399): Resultado del caught: 1.
+[INFO] 19:40:16:662 team/(16833:17399): El caught no me interesa.
+[INFO] 19:40:58:779 team/(16833:17484): Atiendo caught.
+[INFO] 19:40:58:779 team/(16833:17484): Resultado del caught: 1.
+[INFO] 19:40:58:779 team/(16833:17484): El caught no me interesa.
+[INFO] 19:41:01:475 team/(16833:17509): Atiendo caught.
+[INFO] 19:41:01:475 team/(16833:17509): Resultado del caught: 193643393.
+[INFO] 19:41:01:475 team/(16833:17509): El caught no me interesa.
+[INFO] 19:41:03:928 team/(16833:17522): Atiendo caught.
+[INFO] 19:41:03:929 team/(16833:17522): Resultado del caught: 193643393.
+[INFO] 19:41:03:929 team/(16833:17522): El caught no me interesa.
+[INFO] 19:41:20:933 team/(16833:17569): Atiendo caught.
+[INFO] 19:41:20:935 team/(16833:17569): Resultado del caught: 1.
+[INFO] 19:41:20:936 team/(16833:17569): El caught no me interesa.
+[INFO] 19:41:23:532 team/(16833:17594): Atiendo caught.
+[INFO] 19:41:23:533 team/(16833:17594): Resultado del caught: 193643393.
+[INFO] 19:41:23:533 team/(16833:17594): El caught no me interesa.
+[INFO] 19:41:25:834 team/(16833:17611): Atiendo caught.
+[INFO] 19:41:25:834 team/(16833:17611): Resultado del caught: 193643393.
+[INFO] 19:41:25:835 team/(16833:17611): El caught no me interesa.
+[INFO] 19:41:28:291 team/(16833:17633): Atiendo caught.
+[INFO] 19:41:28:292 team/(16833:17633): Resultado del caught: 193643393.
+[INFO] 19:41:28:292 team/(16833:17633): El caught no me interesa.
+[INFO] 19:49:43:113 team/(19054:19054): --------------------------------------------------------------------------
+[INFO] 19:49:43:130 team/(19054:19054): NUEVA EJECUCION
+[INFO] 19:49:43:130 team/(19054:19054): --------------------------------------------------------------------------
+[INFO] 19:49:43:131 team/(19054:19054): --------------------------------------------------------
+[INFO] 19:49:43:131 team/(19054:19054): Objetivo en lista: Pikachu. Objetivo recibido: Charmander.
+[INFO] 19:49:43:131 team/(19054:19054): --------------------------------------------------------
+[INFO] 19:49:43:131 team/(19054:19054): Objetivo en lista: Pikachu. Objetivo recibido: Squirtle.
+[INFO] 19:49:43:131 team/(19054:19054): --------------------------------------------------------
+[INFO] 19:49:43:131 team/(19054:19054): Objetivo en lista: Charmander. Objetivo recibido: Squirtle.
+[INFO] 19:49:43:131 team/(19054:19054): --------------------------------------------------------------
+[INFO] 19:49:43:131 team/(19054:19054): OBJETIVO DEL TEAM
+[INFO] 19:49:43:131 team/(19054:19054): Objetivo 0. Pokemon: Pikachu. Cantidad: 2.
+[INFO] 19:49:43:131 team/(19054:19054): Objetivo 1. Pokemon: Charmander. Cantidad: 1.
+[INFO] 19:49:43:131 team/(19054:19054): Objetivo 2. Pokemon: Squirtle. Cantidad: 1.
+[INFO] 19:49:43:131 team/(19054:19054): --------------------------------------------------
+[INFO] 19:49:43:143 team/(19054:19065): Se inicia el planificador
+[INFO] 19:49:43:155 team/(19054:19069): Suscripción realizada correctamente
+
+[INFO] 19:49:43:155 team/(19054:19070): Suscripción realizada correctamente
+
+[INFO] 19:49:43:156 team/(19054:19071): Suscripción realizada correctamente
+
+[INFO] 19:50:36:449 team/(19668:19668): --------------------------------------------------------------------------
+[INFO] 19:50:36:449 team/(19668:19668): NUEVA EJECUCION
+[INFO] 19:50:36:449 team/(19668:19668): --------------------------------------------------------------------------
+[INFO] 19:50:36:449 team/(19668:19668): --------------------------------------------------------
+[INFO] 19:50:36:449 team/(19668:19668): Objetivo en lista: Pikachu. Objetivo recibido: Charmander.
+[INFO] 19:50:36:449 team/(19668:19668): --------------------------------------------------------
+[INFO] 19:50:36:449 team/(19668:19668): Objetivo en lista: Pikachu. Objetivo recibido: Squirtle.
+[INFO] 19:50:36:451 team/(19668:19668): --------------------------------------------------------
+[INFO] 19:50:36:451 team/(19668:19668): Objetivo en lista: Charmander. Objetivo recibido: Squirtle.
+[INFO] 19:50:36:451 team/(19668:19668): --------------------------------------------------------------
+[INFO] 19:50:36:451 team/(19668:19668): OBJETIVO DEL TEAM
+[INFO] 19:50:36:452 team/(19668:19668): Objetivo 0. Pokemon: Pikachu. Cantidad: 2.
+[INFO] 19:50:36:452 team/(19668:19668): Objetivo 1. Pokemon: Charmander. Cantidad: 1.
+[INFO] 19:50:36:452 team/(19668:19668): Objetivo 2. Pokemon: Squirtle. Cantidad: 1.
+[INFO] 19:50:36:452 team/(19668:19668): --------------------------------------------------
+[INFO] 19:50:36:458 team/(19668:19679): Se inicia el planificador
+[INFO] 19:50:36:469 team/(19668:19680): Suscripción realizada correctamente
+
+[INFO] 19:50:36:469 team/(19668:19682): Suscripción realizada correctamente
+
+[INFO] 19:50:36:469 team/(19668:19681): Suscripción realizada correctamente
+
+[INFO] 19:50:45:727 team/(19668:19875): Atiendo caught.
+[INFO] 19:50:45:727 team/(19668:19875): Resultado del caught: 1.
+[INFO] 19:50:45:727 team/(19668:19875): El caught no me interesa.
+[INFO] 19:50:59:607 team/(19668:19919): Atiendo caught.
+[INFO] 19:50:59:607 team/(19668:19919): Resultado del caught: 1.
+[INFO] 19:50:59:607 team/(19668:19919): El caught no me interesa.
+[INFO] 19:51:02:115 team/(19668:19935): Atiendo caught.
+[INFO] 19:51:02:116 team/(19668:19935): Resultado del caught: 1.
+[INFO] 19:51:02:116 team/(19668:19935): El caught no me interesa.
+[INFO] 19:51:04:771 team/(19668:19957): Atiendo caught.
+[INFO] 19:51:04:773 team/(19668:19957): Resultado del caught: 1.
+[INFO] 19:51:04:773 team/(19668:19957): El caught no me interesa.
+[INFO] 19:51:07:587 team/(19668:19979): Atiendo caught.
+[INFO] 19:51:07:592 team/(19668:19979): Resultado del caught: 1.
+[INFO] 19:51:07:592 team/(19668:19979): El caught no me interesa.
+[INFO] 19:51:10:429 team/(19668:20012): Atiendo caught.
+[INFO] 19:51:10:429 team/(19668:20012): Resultado del caught: 1.
+[INFO] 19:51:10:429 team/(19668:20012): El caught no me interesa.
+[INFO] 19:51:12:333 team/(19668:20026): Atiendo caught.
+[INFO] 19:51:12:333 team/(19668:20026): Resultado del caught: 1.
+[INFO] 19:51:12:333 team/(19668:20026): El caught no me interesa.
+[INFO] 19:51:16:140 team/(19668:20054): Atiendo caught.
+[INFO] 19:51:16:141 team/(19668:20054): Resultado del caught: 1.
+[INFO] 19:51:16:141 team/(19668:20054): El caught no me interesa.
+[INFO] 19:51:17:194 team/(19668:20062): Atiendo caught.
+[INFO] 19:51:17:194 team/(19668:20062): Resultado del caught: 1.
+[INFO] 19:51:17:194 team/(19668:20062): El caught no me interesa.
+[INFO] 19:51:43:916 team/(19668:20122): Atiendo caught.
+[INFO] 19:51:43:917 team/(19668:20122): Resultado del caught: 1.
+[INFO] 19:51:43:917 team/(19668:20122): El caught no me interesa.
+[INFO] 19:51:46:239 team/(19668:20138): Atiendo caught.
+[INFO] 19:51:46:239 team/(19668:20138): Resultado del caught: 1.
+[INFO] 19:51:46:240 team/(19668:20138): El caught no me interesa.
+[INFO] 19:51:49:537 team/(19668:20164): Atiendo caught.
+[INFO] 19:51:49:538 team/(19668:20164): Resultado del caught: 1.
+[INFO] 19:51:49:538 team/(19668:20164): El caught no me interesa.
+[INFO] 19:51:52:144 team/(19668:20183): Atiendo caught.
+[INFO] 19:51:52:144 team/(19668:20183): Resultado del caught: 1.
+[INFO] 19:51:52:144 team/(19668:20183): El caught no me interesa.
+[INFO] 19:58:34:70 team/(21767:21767): --------------------------------------------------------------------------
+[INFO] 19:58:34:78 team/(21767:21767): NUEVA EJECUCION
+[INFO] 19:58:34:78 team/(21767:21767): --------------------------------------------------------------------------
+[INFO] 19:58:34:78 team/(21767:21767): --------------------------------------------------------
+[INFO] 19:58:34:78 team/(21767:21767): Objetivo en lista: Pikachu. Objetivo recibido: Charmander.
+[INFO] 19:58:34:78 team/(21767:21767): --------------------------------------------------------
+[INFO] 19:58:34:78 team/(21767:21767): Objetivo en lista: Pikachu. Objetivo recibido: Squirtle.
+[INFO] 19:58:34:78 team/(21767:21767): --------------------------------------------------------
+[INFO] 19:58:34:78 team/(21767:21767): Objetivo en lista: Charmander. Objetivo recibido: Squirtle.
+[INFO] 19:58:34:78 team/(21767:21767): --------------------------------------------------------------
+[INFO] 19:58:34:78 team/(21767:21767): OBJETIVO DEL TEAM
+[INFO] 19:58:34:78 team/(21767:21767): Objetivo 0. Pokemon: Pikachu. Cantidad: 2.
+[INFO] 19:58:34:78 team/(21767:21767): Objetivo 1. Pokemon: Charmander. Cantidad: 1.
+[INFO] 19:58:34:78 team/(21767:21767): Objetivo 2. Pokemon: Squirtle. Cantidad: 1.
+[INFO] 19:58:34:82 team/(21767:21767): --------------------------------------------------
+[INFO] 19:58:34:86 team/(21767:21778): Se inicia el planificador
+[INFO] 19:58:34:100 team/(21767:21779): Suscripción realizada correctamente
+
+[INFO] 19:58:34:100 team/(21767:21781): Suscripción realizada correctamente
+
+[INFO] 19:59:36:962 team/(22259:22259): --------------------------------------------------------------------------
+[INFO] 19:59:36:970 team/(22259:22259): NUEVA EJECUCION
+[INFO] 19:59:36:970 team/(22259:22259): --------------------------------------------------------------------------
+[INFO] 19:59:36:970 team/(22259:22259): --------------------------------------------------------
+[INFO] 19:59:36:970 team/(22259:22259): Objetivo en lista: Pikachu. Objetivo recibido: Charmander.
+[INFO] 19:59:36:970 team/(22259:22259): --------------------------------------------------------
+[INFO] 19:59:36:970 team/(22259:22259): Objetivo en lista: Pikachu. Objetivo recibido: Squirtle.
+[INFO] 19:59:36:970 team/(22259:22259): --------------------------------------------------------
+[INFO] 19:59:36:970 team/(22259:22259): Objetivo en lista: Charmander. Objetivo recibido: Squirtle.
+[INFO] 19:59:36:970 team/(22259:22259): --------------------------------------------------------------
+[INFO] 19:59:36:970 team/(22259:22259): OBJETIVO DEL TEAM
+[INFO] 19:59:36:970 team/(22259:22259): Objetivo 0. Pokemon: Pikachu. Cantidad: 2.
+[INFO] 19:59:36:970 team/(22259:22259): Objetivo 1. Pokemon: Charmander. Cantidad: 1.
+[INFO] 19:59:36:970 team/(22259:22259): Objetivo 2. Pokemon: Squirtle. Cantidad: 1.
+[INFO] 19:59:36:970 team/(22259:22259): --------------------------------------------------
+[INFO] 19:59:36:977 team/(22259:22270): Se inicia el planificador
+[INFO] 19:59:36:984 team/(22259:22271): Suscripción realizada correctamente
+
+[INFO] 19:59:36:984 team/(22259:22273): Suscripción realizada correctamente
+
+[INFO] 19:59:36:985 team/(22259:22272): Suscripción realizada correctamente
+
+[INFO] 19:59:55:856 team/(22259:22489): Atiendo caught.
+[INFO] 19:59:55:856 team/(22259:22489): Resultado del caught: 193643393.
+[INFO] 19:59:55:856 team/(22259:22489): El caught no me interesa.
+[INFO] 20:00:00:139 team/(22259:22524): Atiendo caught.
+[INFO] 20:00:00:139 team/(22259:22524): Resultado del caught: 193643393.
+[INFO] 20:00:00:139 team/(22259:22524): El caught no me interesa.
+[INFO] 20:00:01:363 team/(22259:22537): Atiendo caught.
+[INFO] 20:00:01:363 team/(22259:22537): Resultado del caught: 193643393.
+[INFO] 20:00:01:367 team/(22259:22537): El caught no me interesa.
+[INFO] 20:00:03:769 team/(22259:22558): Atiendo caught.
+[INFO] 20:00:03:770 team/(22259:22558): Resultado del caught: 1.
+[INFO] 20:00:03:770 team/(22259:22558): El caught no me interesa.
+[INFO] 20:00:05:427 team/(22259:22571): Atiendo caught.
+[INFO] 20:00:05:427 team/(22259:22571): Resultado del caught: 193643393.
+[INFO] 20:00:05:427 team/(22259:22571): El caught no me interesa.
+[INFO] 20:06:05:710 team/(23718:23718): --------------------------------------------------------------------------
+[INFO] 20:06:05:724 team/(23718:23718): NUEVA EJECUCION
+[INFO] 20:06:05:724 team/(23718:23718): --------------------------------------------------------------------------
+[INFO] 20:06:05:724 team/(23718:23718): --------------------------------------------------------
+[INFO] 20:06:05:724 team/(23718:23718): Objetivo en lista: Pikachu. Objetivo recibido: Charmander.
+[INFO] 20:06:05:725 team/(23718:23718): --------------------------------------------------------
+[INFO] 20:06:05:725 team/(23718:23718): Objetivo en lista: Pikachu. Objetivo recibido: Squirtle.
+[INFO] 20:06:05:725 team/(23718:23718): --------------------------------------------------------
+[INFO] 20:06:05:725 team/(23718:23718): Objetivo en lista: Charmander. Objetivo recibido: Squirtle.
+[INFO] 20:06:05:725 team/(23718:23718): --------------------------------------------------------------
+[INFO] 20:06:05:725 team/(23718:23718): OBJETIVO DEL TEAM
+[INFO] 20:06:05:725 team/(23718:23718): Objetivo 0. Pokemon: Pikachu. Cantidad: 2.
+[INFO] 20:06:05:725 team/(23718:23718): Objetivo 1. Pokemon: Charmander. Cantidad: 1.
+[INFO] 20:06:05:725 team/(23718:23718): Objetivo 2. Pokemon: Squirtle. Cantidad: 1.
+[INFO] 20:06:05:725 team/(23718:23718): --------------------------------------------------
+[INFO] 20:06:05:731 team/(23718:23729): Se inicia el planificador
+[INFO] 20:06:05:743 team/(23718:23732): Suscripción realizada correctamente
+
+[INFO] 20:06:05:744 team/(23718:23731): Suscripción realizada correctamente
+
+[INFO] 20:06:05:744 team/(23718:23730): Suscripción realizada correctamente
+
+[INFO] 20:06:15:630 team/(23718:23929): Atiendo caught.
+[INFO] 20:06:15:631 team/(23718:23929): Resultado del caught: 1.
+[INFO] 20:06:15:631 team/(23718:23929): El caught no me interesa.
+[INFO] 20:06:21:163 team/(23718:23962): Atiendo caught.
+[INFO] 20:06:21:163 team/(23718:23962): Resultado del caught: 1.
+[INFO] 20:06:21:163 team/(23718:23962): El caught no me interesa.
+[INFO] 20:06:23:496 team/(23718:23980): Atiendo caught.
+[INFO] 20:06:23:496 team/(23718:23980): Resultado del caught: 1.
+[INFO] 20:06:23:496 team/(23718:23980): El caught no me interesa.
+[INFO] 20:06:26:190 team/(23718:24001): Atiendo caught.
+[INFO] 20:06:26:191 team/(23718:24001): Resultado del caught: 1.
+[INFO] 20:06:26:191 team/(23718:24001): El caught no me interesa.
+[INFO] 20:07:15:153 team/(24579:24579): --------------------------------------------------------------------------
+[INFO] 20:07:15:155 team/(24579:24579): NUEVA EJECUCION
+[INFO] 20:07:15:156 team/(24579:24579): --------------------------------------------------------------------------
+[INFO] 20:07:15:157 team/(24579:24579): --------------------------------------------------------
+[INFO] 20:07:15:158 team/(24579:24579): Objetivo en lista: Pikachu. Objetivo recibido: Charmander.
+[INFO] 20:07:15:158 team/(24579:24579): --------------------------------------------------------
+[INFO] 20:07:15:158 team/(24579:24579): Objetivo en lista: Pikachu. Objetivo recibido: Squirtle.
+[INFO] 20:07:15:158 team/(24579:24579): --------------------------------------------------------
+[INFO] 20:07:15:158 team/(24579:24579): Objetivo en lista: Charmander. Objetivo recibido: Squirtle.
+[INFO] 20:07:15:158 team/(24579:24579): --------------------------------------------------------------
+[INFO] 20:07:15:158 team/(24579:24579): OBJETIVO DEL TEAM
+[INFO] 20:07:15:158 team/(24579:24579): Objetivo 0. Pokemon: Pikachu. Cantidad: 2.
+[INFO] 20:07:15:158 team/(24579:24579): Objetivo 1. Pokemon: Charmander. Cantidad: 1.
+[INFO] 20:07:15:158 team/(24579:24579): Objetivo 2. Pokemon: Squirtle. Cantidad: 1.
+[INFO] 20:07:15:158 team/(24579:24579): --------------------------------------------------
+[INFO] 20:07:15:160 team/(24579:24590): Se inicia el planificador
+[INFO] 20:07:15:173 team/(24579:24591): Suscripción realizada correctamente
+
+[INFO] 20:07:15:174 team/(24579:24592): Suscripción realizada correctamente
+
+[INFO] 20:07:15:174 team/(24579:24593): Suscripción realizada correctamente
+
+[INFO] 20:07:26:503 team/(24579:24793): Atiendo caught.
+[INFO] 20:07:26:504 team/(24579:24793): Resultado del caught: 1.
+[INFO] 20:07:26:504 team/(24579:24793): El caught no me interesa.
+[INFO] 20:07:29:827 team/(24579:24824): Atiendo caught.
+[INFO] 20:07:29:827 team/(24579:24824): Resultado del caught: 1.
+[INFO] 20:07:29:827 team/(24579:24824): El caught no me interesa.
+[INFO] 20:07:32:3 team/(24579:24841): Atiendo caught.
+[INFO] 20:07:32:3 team/(24579:24841): Resultado del caught: 1.
+[INFO] 20:07:32:3 team/(24579:24841): El caught no me interesa.
+[INFO] 20:07:34:16 team/(24579:24862): Atiendo caught.
+[INFO] 20:07:34:16 team/(24579:24862): Resultado del caught: 1.
+[INFO] 20:07:34:16 team/(24579:24862): El caught no me interesa.
+[INFO] 20:07:37:11 team/(24579:24879): Atiendo caught.
+[INFO] 20:07:37:11 team/(24579:24879): Resultado del caught: 1.
+[INFO] 20:07:37:11 team/(24579:24879): El caught no me interesa.
+[INFO] 20:07:52:539 team/(24579:25255): Atiendo caught.
+[INFO] 20:07:52:539 team/(24579:25255): Resultado del caught: 1.
+[INFO] 20:07:52:539 team/(24579:25255): El caught no me interesa.
+[INFO] 20:07:55:231 team/(24579:25273): Atiendo caught.
+[INFO] 20:07:55:231 team/(24579:25273): Resultado del caught: 1.
+[INFO] 20:07:55:231 team/(24579:25273): El caught no me interesa.
+[INFO] 20:09:03:464 team/(25678:25678): --------------------------------------------------------------------------
+[INFO] 20:09:03:477 team/(25678:25678): NUEVA EJECUCION
+[INFO] 20:09:03:477 team/(25678:25678): --------------------------------------------------------------------------
+[INFO] 20:09:03:477 team/(25678:25678): --------------------------------------------------------
+[INFO] 20:09:03:477 team/(25678:25678): Objetivo en lista: Pikachu. Objetivo recibido: Charmander.
+[INFO] 20:09:03:477 team/(25678:25678): --------------------------------------------------------
+[INFO] 20:09:03:477 team/(25678:25678): Objetivo en lista: Pikachu. Objetivo recibido: Squirtle.
+[INFO] 20:09:03:477 team/(25678:25678): --------------------------------------------------------
+[INFO] 20:09:03:477 team/(25678:25678): Objetivo en lista: Charmander. Objetivo recibido: Squirtle.
+[INFO] 20:09:03:477 team/(25678:25678): --------------------------------------------------------------
+[INFO] 20:09:03:477 team/(25678:25678): OBJETIVO DEL TEAM
+[INFO] 20:09:03:477 team/(25678:25678): Objetivo 0. Pokemon: Pikachu. Cantidad: 2.
+[INFO] 20:09:03:477 team/(25678:25678): Objetivo 1. Pokemon: Charmander. Cantidad: 1.
+[INFO] 20:09:03:477 team/(25678:25678): Objetivo 2. Pokemon: Squirtle. Cantidad: 1.
+[INFO] 20:09:03:477 team/(25678:25678): --------------------------------------------------
+[INFO] 20:09:03:483 team/(25678:25689): Se inicia el planificador
+[INFO] 20:09:03:500 team/(25678:25692): Suscripción realizada correctamente
+
+[INFO] 20:09:03:500 team/(25678:25691): Suscripción realizada correctamente
+
+[INFO] 20:09:03:501 team/(25678:25690): Suscripción realizada correctamente
+
+[INFO] 20:09:49:611 team/(25678:25921): Atiendo appeared. Pokemon: Pikachu.
+[INFO] 20:09:49:612 team/(25678:25921): Encontre al pokemon Pikachu en mis objetivos
+[INFO] 20:09:49:612 team/(25678:25921): El pokemon es objetivo
+[INFO] 20:09:49:612 team/(25678:25921): Hay entrenadores disponibles para atrapar a Pikachu.
+[INFO] 20:09:49:612 team/(25678:25921): Se selecciono el entrenador 0 para atrapar al pokemon Pikachu
+[INFO] 20:09:49:613 team/(25678:25683): El entrenador 0 entro en ejecución.
+[INFO] 20:09:49:614 team/(25678:25683): El entrenador estaba originalmente en la posicion (1,2).
+[INFO] 20:09:49:614 team/(25678:25683): El entrenador comenzara a mover a la posicion (0,0).
+[INFO] 20:09:49:614 team/(25678:25689): elijo entrenador para ejecutar
+[INFO] 20:09:50:425 team/(25678:25923): Atiendo appeared. Pokemon: Pikachu.
+[INFO] 20:09:50:425 team/(25678:25923): Encontre al pokemon Pikachu en mis objetivos
+[INFO] 20:09:50:425 team/(25678:25923): El pokemon es objetivo
+[INFO] 20:09:50:426 team/(25678:25923): Hay entrenadores disponibles para atrapar a Pikachu.
+[INFO] 20:09:50:426 team/(25678:25923): Se selecciono el entrenador 1 para atrapar al pokemon Pikachu
+[INFO] 20:09:51:614 team/(25678:25683): El entrenador 0 se mueve a : (0,2).
+[INFO] 20:09:51:614 team/(25678:25683): Movimiento y: -2
+[INFO] 20:09:53:618 team/(25678:25683): El entrenador 0 se mueve a : (0,1).
+[INFO] 20:09:55:618 team/(25678:25683): El entrenador 0 se mueve a : (0,0).
+[INFO] 20:09:55:619 team/(25678:25683): El entrenador 0 se movió a la posición (0, 0)
+
+[INFO] 20:09:55:619 team/(25678:25683): El entrenador 0 inició el proceso de envío del catch.
+[INFO] 20:09:55:619 team/(25678:25683): El entrenador 0 intenta hacer el send del catch.
+[INFO] 20:09:57:620 team/(25678:25683): El entrenador 0 hace el send del catch.
+[INFO] 20:09:57:620 team/(25678:25683): El entrenador  0 recibió el id del catch: 4.
+[INFO] 20:09:57:620 team/(25678:25689): elijo entrenador para ejecutar
+[INFO] 20:09:57:620 team/(25678:25684): El entrenador 1 entro en ejecución.
+[INFO] 20:09:57:621 team/(25678:25684): El entrenador estaba originalmente en la posicion (3,7).
+[INFO] 20:09:57:621 team/(25678:25684): El entrenador comenzara a mover a la posicion (0,0).
+[INFO] 20:09:59:622 team/(25678:25684): El entrenador 1 se mueve a : (2,7).
+[INFO] 20:10:01:622 team/(25678:25684): El entrenador 1 se mueve a : (1,7).
+[INFO] 20:10:03:623 team/(25678:25684): El entrenador 1 se mueve a : (0,7).
+[INFO] 20:10:03:624 team/(25678:25684): Movimiento y: -7
+[INFO] 20:10:05:624 team/(25678:25684): El entrenador 1 se mueve a : (0,6).
+[INFO] 20:10:07:625 team/(25678:25684): El entrenador 1 se mueve a : (0,5).
+[INFO] 20:10:09:626 team/(25678:25684): El entrenador 1 se mueve a : (0,4).
+[INFO] 20:10:11:627 team/(25678:25684): El entrenador 1 se mueve a : (0,3).
+[INFO] 20:10:13:629 team/(25678:25684): El entrenador 1 se mueve a : (0,2).
+[INFO] 20:10:15:629 team/(25678:25684): El entrenador 1 se mueve a : (0,1).
+[INFO] 20:10:17:632 team/(25678:25684): El entrenador 1 se mueve a : (0,0).
+[INFO] 20:10:17:632 team/(25678:25684): El entrenador 1 se movió a la posición (0, 0)
+
+[INFO] 20:10:17:632 team/(25678:25684): El entrenador 1 inició el proceso de envío del catch.
+[INFO] 20:10:17:633 team/(25678:25684): El entrenador 1 intenta hacer el send del catch.
+[INFO] 20:10:19:633 team/(25678:25684): El entrenador 1 hace el send del catch.
+[INFO] 20:10:19:633 team/(25678:25684): El entrenador  1 recibió el id del catch: 5.
+[INFO] 20:11:12:149 team/(25678:26014): Atiendo caught.
+[INFO] 20:11:12:149 team/(25678:26014): Resultado del caught: 1.
+[INFO] 20:11:12:149 team/(25678:26014): Encontre al pokemon Pikachu en mis objetivos
+[INFO] 20:11:12:149 team/(25678:26014): El caught me interesa.
+[INFO] 20:11:12:151 team/(25678:26014): Se registró el pokemon atrapado.
+[INFO] 20:11:17:139 team/(25678:26035): Atiendo caught.
+[INFO] 20:11:17:139 team/(25678:26035): Resultado del caught: 1.
+[INFO] 20:11:17:139 team/(25678:26035): El caught no me interesa.
+[INFO] 20:12:09:937 team/(25678:26093): Atiendo caught.
+[INFO] 20:12:09:937 team/(25678:26093): Resultado del caught: 1.
+[INFO] 20:12:09:937 team/(25678:26093): Encontre al pokemon Pikachu en mis objetivos
+[INFO] 20:12:09:937 team/(25678:26093): El caught me interesa.
+[INFO] 20:12:09:937 team/(25678:26093): Se registró el pokemon atrapado.
+[INFO] 20:15:49:913 team/(25678:26327): Atiendo appeared. Pokemon: Charmander.
+[INFO] 20:15:49:913 team/(25678:26327): Encontre al pokemon Charmander en mis objetivos
+[INFO] 20:15:49:913 team/(25678:26327): El pokemon es objetivo
+[INFO] 20:15:49:913 team/(25678:26327): Hay entrenadores disponibles para atrapar a Charmander.
+[INFO] 20:15:49:913 team/(25678:26327): Se selecciono el entrenador 2 para atrapar al pokemon Charmander
+[INFO] 20:15:49:927 team/(25678:25685): El entrenador 2 entro en ejecución.
+[INFO] 20:15:49:927 team/(25678:25685): El entrenador estaba originalmente en la posicion (5,5).
+[INFO] 20:15:49:927 team/(25678:25685): El entrenador comenzara a mover a la posicion (0,0).
+[INFO] 20:15:49:927 team/(25678:25689): elijo entrenador para ejecutar
+[INFO] 20:15:51:928 team/(25678:25685): El entrenador 2 se mueve a : (4,5).
+[INFO] 20:15:53:928 team/(25678:25685): El entrenador 2 se mueve a : (3,5).
+[INFO] 20:15:55:928 team/(25678:25685): El entrenador 2 se mueve a : (2,5).
+[INFO] 20:15:57:929 team/(25678:25685): El entrenador 2 se mueve a : (1,5).
+[INFO] 20:15:59:930 team/(25678:25685): El entrenador 2 se mueve a : (0,5).
+[INFO] 20:15:59:930 team/(25678:25685): Movimiento y: -5
+[INFO] 20:16:01:935 team/(25678:25685): El entrenador 2 se mueve a : (0,4).
+[INFO] 20:16:03:936 team/(25678:25685): El entrenador 2 se mueve a : (0,3).
+[INFO] 20:16:05:937 team/(25678:25685): El entrenador 2 se mueve a : (0,2).
+[INFO] 20:16:07:938 team/(25678:25685): El entrenador 2 se mueve a : (0,1).
+[INFO] 20:16:09:940 team/(25678:25685): El entrenador 2 se mueve a : (0,0).
+[INFO] 20:16:09:940 team/(25678:25685): El entrenador 2 se movió a la posición (0, 0)
+
+[INFO] 20:16:09:940 team/(25678:25685): El entrenador 2 inició el proceso de envío del catch.
+[INFO] 20:16:09:940 team/(25678:25685): El entrenador 2 intenta hacer el send del catch.
+[INFO] 20:16:11:941 team/(25678:25685): El entrenador 2 hace el send del catch.
+[INFO] 20:16:11:941 team/(25678:25685): El entrenador  2 recibió el id del catch: 9.
+[INFO] 20:17:11:503 team/(25678:26418): Atiendo appeared. Pokemon: Charmander.
+[INFO] 20:17:11:503 team/(25678:26418): Encontre al pokemon Charmander en mis objetivos
+[INFO] 20:17:11:503 team/(25678:26418): El pokemon es objetivo
+[INFO] 20:17:11:503 team/(25678:26418): No hay entrenadores disponibles para atrapar a Charmander. 
+[INFO] 20:23:13:408 team/(27337:27337): --------------------------------------------------------------------------
+[INFO] 20:23:13:408 team/(27337:27337): NUEVA EJECUCION
+[INFO] 20:23:13:409 team/(27337:27337): --------------------------------------------------------------------------
+[INFO] 20:23:13:409 team/(27337:27337): --------------------------------------------------------
+[INFO] 20:23:13:409 team/(27337:27337): Objetivo en lista: Pikachu. Objetivo recibido: Charmander.
+[INFO] 20:23:13:409 team/(27337:27337): --------------------------------------------------------
+[INFO] 20:23:13:409 team/(27337:27337): Objetivo en lista: Pikachu. Objetivo recibido: Squirtle.
+[INFO] 20:23:13:409 team/(27337:27337): --------------------------------------------------------
+[INFO] 20:23:13:409 team/(27337:27337): Objetivo en lista: Charmander. Objetivo recibido: Squirtle.
+[INFO] 20:23:13:409 team/(27337:27337): --------------------------------------------------------------
+[INFO] 20:23:13:409 team/(27337:27337): OBJETIVO DEL TEAM
+[INFO] 20:23:13:409 team/(27337:27337): Objetivo 0. Pokemon: Pikachu. Cantidad: 2.
+[INFO] 20:23:13:409 team/(27337:27337): Objetivo 1. Pokemon: Charmander. Cantidad: 1.
+[INFO] 20:23:13:409 team/(27337:27337): Objetivo 2. Pokemon: Squirtle. Cantidad: 1.
+[INFO] 20:23:13:409 team/(27337:27337): --------------------------------------------------
+[INFO] 20:23:13:415 team/(27337:27348): Se inicia el planificador
+[INFO] 20:23:13:423 team/(27337:27349): Suscripción realizada correctamente
+
+[INFO] 20:23:13:424 team/(27337:27351): Suscripción realizada correctamente
+
+[INFO] 20:23:13:424 team/(27337:27350): Suscripción realizada correctamente
+
+[INFO] 20:23:49:83 team/(27337:27562): Atiendo appeared. Pokemon: Charmander.
+[INFO] 20:23:49:83 team/(27337:27562): --------------------------------------------------------
+[INFO] 20:23:49:83 team/(27337:27562): Objetivo en lista: Pikachu. Objetivo recibido: Charmander.
+[INFO] 20:23:49:83 team/(27337:27562): Encontre al pokemon Charmander en mis objetivos
+[INFO] 20:23:49:83 team/(27337:27562): El pokemon es objetivo
+[INFO] 20:23:49:83 team/(27337:27562): Hay entrenadores disponibles para atrapar a Charmander.
+[INFO] 20:23:49:83 team/(27337:27562): Se selecciono el entrenador 0 para atrapar al pokemon Charmander
+[INFO] 20:23:49:84 team/(27337:27342): El entrenador 0 entro en ejecución.
+[INFO] 20:23:49:84 team/(27337:27342): El entrenador estaba originalmente en la posicion (1,2).
+[INFO] 20:23:49:84 team/(27337:27342): El entrenador comenzara a mover a la posicion (0,0).
+[INFO] 20:23:49:84 team/(27337:27348): elijo entrenador para ejecutar
+[INFO] 20:23:51:84 team/(27337:27342): El entrenador 0 se mueve a : (0,2).
+[INFO] 20:23:51:84 team/(27337:27342): Movimiento y: -2
+[INFO] 20:23:53:85 team/(27337:27342): El entrenador 0 se mueve a : (0,1).
+[INFO] 20:23:55:86 team/(27337:27342): El entrenador 0 se mueve a : (0,0).
+[INFO] 20:23:55:87 team/(27337:27342): El entrenador 0 se movió a la posición (0, 0)
+
+[INFO] 20:23:55:87 team/(27337:27342): El entrenador 0 inició el proceso de envío del catch.
+[INFO] 20:23:55:87 team/(27337:27342): El entrenador 0 intenta hacer el send del catch.
+[INFO] 20:23:57:87 team/(27337:27342): El entrenador 0 hace el send del catch.
+[INFO] 20:23:57:88 team/(27337:27342): El entrenador  0 recibió el id del catch: 4.
+[INFO] 20:24:30:427 team/(27337:27617): Atiendo caught.
+[INFO] 20:24:30:429 team/(27337:27617): Resultado del caught: 1.
+[INFO] 20:24:30:429 team/(27337:27617): --------------------------------------------------------
+[INFO] 20:24:30:429 team/(27337:27617): Objetivo en lista: Pikachu. Objetivo recibido: Charmander.
+[INFO] 20:24:30:429 team/(27337:27617): Encontre al pokemon Charmander en mis objetivos
+[INFO] 20:24:30:429 team/(27337:27617): El caught me interesa.
+[INFO] 20:24:30:429 team/(27337:27617): --------------------------------------------------------
+[INFO] 20:24:30:429 team/(27337:27617): Objetivo en lista: Pikachu. Objetivo recibido: Charmander.
+[INFO] 20:24:30:429 team/(27337:27617): Se registró el pokemon atrapado.
+[INFO] 20:24:30:429 team/(27337:27617): Pregunto si al entrenador 0 le faltan pokemones.

@@ -145,48 +145,48 @@ void* atenderCliente(void* sock) {
 		responderMensaje(*socket, INCORRECTO);
 		free(socket);
 		}else{
-			manejarTipoDeMensaje(*paquete, socket);
+			manejarTipoDeMensaje(paquete, socket);
 		}
 	return NULL;
 }
 
-void manejarTipoDeMensaje(paquete paq, uint32_t* socket) {
+void manejarTipoDeMensaje(paquete* paq, uint32_t* socket) {
 
 	//log_info(loggerBroker, armarStringMsgNuevoLog(paq.tipoMensaje));
 
 	suscripcionTiempo structTiempo;
 	mensajeSuscripcionTiempo* datosSuscribir;
 
-	switch(paq.tipoMensaje){
+	switch(paq->tipoMensaje){
 		 case APPEARED_POKEMON:
-			 meterEnCola(&appearedPokemon, &paq, *socket );
+			 meterEnCola(&appearedPokemon, paq, *socket );
 			 break;
 		 case NEW_POKEMON:
-			 meterEnCola( &newPokemon, &paq, *socket);
+			 meterEnCola( &newPokemon, paq, *socket);
 			 break;
 		 case CAUGHT_POKEMON:;
-			 mensajeCaught* caught=deserializarCaught(paq.stream);
+			 mensajeCaught* caught=deserializarCaught(paq->stream);
 			 log_info(brokerLogger2, "Id del caught: %i", caught->resultadoCaught);
-			 meterEnCola( &caughtPokemon, &paq, *socket);
+			 meterEnCola( &caughtPokemon, paq, *socket);
 			 break;
 		 case CATCH_POKEMON:
-			 log_info(brokerLogger2,"Me llegó un catch. Código de mensaje: %i. ",paq.tipoMensaje);
-			 meterEnCola( &catchPokemon, &paq, *socket);
+			 log_info(brokerLogger2,"Me llegó un catch. Código de mensaje: %i. ",paq->tipoMensaje);
+			 meterEnCola( &catchPokemon, paq, *socket);
 			 break;
 		 case GET_POKEMON:
-			 meterEnCola( &getPokemon, &paq, *socket);
+			 meterEnCola( &getPokemon, paq, *socket);
 			 break;
 		 case LOCALIZED_POKEMON:
-			 meterEnCola( &localizedPokemon, &paq, *socket);
+			 meterEnCola( &localizedPokemon, paq, *socket);
 			 break;
 		 case SUSCRIPCION:
-			 suscribirSegunCola(paq, socket);
+			 suscribirSegunCola(*paq, socket);
 			 break;
 		 case SUSCRIPCION_TIEMPO:
-			 datosSuscribir = deserializarSuscripcionTiempo(paq.stream);
+			 datosSuscribir = deserializarSuscripcionTiempo(paq->stream);
 			 structTiempo.cola   = datosSuscribir->cola;
 			 structTiempo.tiempo = datosSuscribir->tiempo;
-			 structTiempo.paq    = paq;
+			 structTiempo.paq    = *paq;
 			 structTiempo.socket = socket;
 			 suscribirPorTiempo((void*) &structTiempo);
 			 break;
@@ -208,6 +208,11 @@ void meterEnCola( colaMensajes* structCola, paquete * paq, uint32_t  socket){
 	//registrarMensajeEnMemoria(contador.contador, paq, algoritmoMemoria);
 
 	pushColaMutex(structCola->cola, (void *) paq);
+//	if(paq->tipoMensaje==CAUGHT_POKEMON)
+//	{	mensajeCaught* msg=deserializarCaught(paq->stream);
+//		log_info(brokerLogger2,"id caught segunda vez: %i.",msg->resultadoCaught);
+//
+//	}
 	sem_post(structCola->mensajesEnCola);
 	log_info(brokerLogger2,"Aviso que hay mensajes en cola.");
 
@@ -236,15 +241,22 @@ void * chequearMensajesEnCola(void * colaVoid){
 		sem_wait(cola->mensajesEnCola); //hasta q no aparezca 1 mensaje no sigue
 		log_info(brokerLogger2,"Comienza el proceso de envío del mensaje a todos los suscriptores.");
 		paquete* paq = (paquete*) popColaMutex(cola->cola);
+		if(paq->tipoMensaje==CAUGHT_POKEMON)
+			{	mensajeCaught* msg=deserializarCaught(paq->stream);
+				log_info(brokerLogger2,"id caught segunda vez: %i.",msg->resultadoCaught);
+
+			}
 		void * paqSerializado = serializarPaquete(paq);
-		log_info(brokerLogger2,"Paquete a enviar serializado.");
+
 		for(i = 0; i < sizeListaMutex(cola->suscriptores) ;i ++){
 			uint32_t * socketActual = (uint32_t *) getListaMutex(cola->suscriptores, i);
-			log_info(brokerLogger2,"Intento enviar mensaje a un suscriptor. Socket: %i", *socketActual);
+
 			send(*socketActual, paqSerializado , sizePaquete(paq), 0);
 			log_info(brokerLogger2,"Envié mensaje a un suscriptor.");
 			//guardarSubEnMemoria(paq->id, socketActual, SUBSYAENVIADOS);
 		}
+
+		destruirPaquete(paq);
 	}
 	return NULL;
 }
