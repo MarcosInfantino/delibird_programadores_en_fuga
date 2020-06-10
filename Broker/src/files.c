@@ -9,8 +9,6 @@
 #include "memoria.h"
 #include "files.h"
 
-
-
 void almacenarEnArchivoMensaje(msgMemoriaBroker* mensajeNuevo){
 	pthread_mutex_lock(archivoSem->mutex);
 	archivoSem->archivo = fopen("backupFile.db",modoEscrituraEnBinario);
@@ -27,12 +25,18 @@ listaMutex * leerNodosEnArchivoMensaje(){
 	pthread_mutex_lock(archivoSem->mutex);
 	archivoSem->archivo = fopen("backupFile.db",modoLecturaEnBinario);
 	if(archivoSem->archivo){
-		while(fread(mensajeAAlmacenar, sizeof(mensajeAAlmacenar), 1, archivoSem->archivo) != 0){
+		fread(mensajeAAlmacenar, sizeof(mensajeAAlmacenar), 1, archivoSem->archivo);
+		addListaMutex(lista,(void*) mensajeAAlmacenar);
+		if(!feof(archivoSem->archivo)){
+			fread(mensajeAAlmacenar, sizeof(mensajeAAlmacenar), 1, archivoSem->archivo);
+			addListaMutex(lista,(void*) mensajeAAlmacenar);
+		}
+		/*while(fread(mensajeAAlmacenar, sizeof(mensajeAAlmacenar), 1, archivoSem->archivo) != 0){
 		addListaMutex(lista,(void*) mensajeAAlmacenar);
 		}
 		if(fread(mensajeAAlmacenar, sizeof(mensajeAAlmacenar), 1, archivoSem->archivo) != 0){
 			addListaMutex(lista,(void*) mensajeAAlmacenar);
-		}
+		}*/
 		fclose(archivoSem->archivo);
 	}
 	pthread_mutex_unlock(archivoSem->mutex);

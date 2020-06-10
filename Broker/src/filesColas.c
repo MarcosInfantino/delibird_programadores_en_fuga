@@ -9,7 +9,29 @@
 #include "memoria.h"
 #include "files.h"
 
-void almacenarSuscriptorEnArchivoCola(uint32_t socketSuscrito, char* nombreArchivo){
+void almacenarColaEnArchivo(colaMensajes * cola, char* nombreArchivo){
+	archivoMutex * archivoAUsar = iniciarArchivoMutex();
+	pthread_mutex_lock(archivoAUsar->mutex);
+	archivoAUsar->archivo = fopen(nombreArchivo,modoEscrituraEnBinario);
+	if(archivoSem->archivo){
+		fwrite(cola, sizeof(cola), 1, archivoAUsar->archivo);
+		fclose(archivoAUsar->archivo);
+	}
+	pthread_mutex_unlock(archivoAUsar->mutex);
+}
+
+void llenarColaDeMensajes(char* nombreArchivo, colaMensajes * cola){
+	archivoMutex * archivoAUsar = iniciarArchivoMutex();
+	pthread_mutex_lock(archivoAUsar->mutex);
+	archivoAUsar->archivo = fopen(nombreArchivo,modoLecturaEnBinario);
+	if(archivoAUsar->archivo){
+		fread(cola, sizeof(colaMensajes), 1, archivoAUsar->archivo);
+		fclose(archivoAUsar->archivo);
+	}
+	pthread_mutex_unlock(archivoAUsar->mutex);
+}
+
+/*void almacenarSuscriptorEnArchivoCola(uint32_t socketSuscrito, char* nombreArchivo){
 	archivoMutex * archivoAUsar = iniciarArchivoMutex();
 	pthread_mutex_lock(archivoAUsar->mutex);
 	archivoAUsar->archivo = fopen(nombreArchivo,modoEscrituraEnBinario);
@@ -76,4 +98,6 @@ colaMutex * leerEnArchivoPaquetesDeCola(char* nombreArchivo){
 void recuperarPaquetesDeCola(colaMensajes * cola, char* nombreArchivo){
 	cola->cola = leerEnArchivoPaquetesDeCola(nombreArchivo);
 	//NO SE QUE JORACA PONER PARA MENSAJES EN COLA, DEBERIA SER 0
-}
+}*/
+
+
