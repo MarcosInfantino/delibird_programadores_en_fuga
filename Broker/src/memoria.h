@@ -14,10 +14,8 @@
 #include <commons/config.h>
 #include <commons/log.h>
 #include <messages_lib/messages_lib.h>
+#include "broker.h"
 
-//si no toma esto, poner SRC_ en el define
-
-t_log* brokerLogger2;
 typedef struct {
 	uint32_t idMensaje;
 	uint32_t cola;
@@ -37,7 +35,7 @@ typedef struct{
 	uint32_t size;
 }nodeData;
 
-struct nodoMemoria {  //necesito un mutex por nodo o con el de memoria basta?
+struct nodoMemoria {
 	nodeData header;
 	msgMemoriaBroker* mensaje;
 	struct nodoMemoria* hijoIzq;
@@ -59,6 +57,11 @@ typedef enum{
 	FIFO,
 	LRU
 }algoritmoReemp;
+
+typedef enum {
+	CONFIRMADO,
+	SUBSYAENVIADOS
+}ListasMemoria;
 
 typedef struct{
 	t_config* config;
@@ -85,6 +88,7 @@ void registrarEnMemoriaBUDDYSYSTEM(msgMemoriaBroker* mensajeNuevo, struct nodoMe
 
 void particionarMemoriaBUDDY(struct nodoMemoria*);
 
+
 listaMutex* iniciarMemoriaPARTICIONES();
 
 void evaluarTamanioParticion(struct nodoMemoria* partActual, msgMemoriaBroker* msg);
@@ -92,10 +96,12 @@ void evaluarTamanioParticion(struct nodoMemoria* partActual, msgMemoriaBroker* m
 void guardarSubEnMemoria(uint32_t idmensaje, uint32_t socket, uint32_t lista);
 msgMemoriaBroker* buscarMensajeEnMemoria(uint32_t idMensajeBuscado);
 msgMemoriaBroker* buscarMensajeEnMemoriaBuddy(uint32_t id);
+msgMemoriaBroker* buscarPorRama(uint32_t id, struct nodoMemoria* nodoActual );
 
 bool noEsParticionMinima(struct nodoMemoria* particion);
 uint32_t tamanioParticion(struct nodoMemoria* part);
 bool estaLibre(struct nodoMemoria* particion);
+bool estaEnLista(uint32_t socket, ListasMemoria lista, msgMemoriaBroker* mensaje);
 
 uint32_t evaluarTamanioParticionYasignar(struct nodoMemoria* partActual, msgMemoriaBroker* msg);
 

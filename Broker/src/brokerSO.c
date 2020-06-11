@@ -32,13 +32,14 @@ int main(void) {
 	//ip_broker         = config_get_string_value(config, "IP_BROKER");
 	//tamMemoria        = config_get_int_value(config, "TAMANO_MEMORIA");
 	//particionMinima   = config_get_int_value(config, "TAMANO_MINIMO_PARTICION");
-	brokerLogger2=log_create("brokerLoggerSecundario.log","broker", true, LOG_LEVEL_INFO);
+
+	brokerLogger2 = log_create("brokerLoggerSecundario.log","broker", true, LOG_LEVEL_INFO);
 	puerto_broker = 5002;
-	ip_broker = "127.0.0.1";
-	tamMemoria = 2048;
+	ip_broker     = "127.0.0.1";
+	tamMemoria    = 2048;
 	particionMinima = 32;
 
-	char* nombreLog = "logBroker.log";
+	char* nombreLog   = "logBroker.log";
 	char* programName = "BROKER";
 	loggerBroker = iniciar_logger(nombreLog, programName);
 //	definirAlgoritmoMemoria(config);
@@ -121,7 +122,7 @@ void esperar_cliente(uint32_t servidor) {
 
 	uint32_t tam_direccion = sizeof(struct sockaddr_in);
 
-	uint32_t* socketCliente=malloc(sizeof(uint32_t));
+	uint32_t* socketCliente = malloc(sizeof(uint32_t));
 
 	*socketCliente = accept(servidor, (void*) &dir_cliente, &tam_direccion);
 
@@ -200,7 +201,7 @@ void manejarTipoDeMensaje(paquete* paq, uint32_t* socket) {
 
 void meterEnCola( colaMensajes* structCola, paquete * paq, uint32_t  socket){
 
-	uint32_t valorContador=incrementarContador();
+	uint32_t valorContador = incrementarContador();
 	insertarIdPaquete(paq,valorContador);
 	send(socket,(void*)(&valorContador),sizeof(uint32_t),0);
 	log_info(brokerLogger2,"Meto un mensaje en la cola.");
@@ -241,8 +242,8 @@ void * chequearMensajesEnCola(void * colaVoid){
 		sem_wait(cola->mensajesEnCola); //hasta q no aparezca 1 mensaje no sigue
 		log_info(brokerLogger2,"Comienza el proceso de envío del mensaje a todos los suscriptores.");
 		paquete* paq = (paquete*) popColaMutex(cola->cola);
-		if(paq->tipoMensaje==CAUGHT_POKEMON)
-			{	mensajeCaught* msg=deserializarCaught(paq->stream);
+		if(paq->tipoMensaje == CAUGHT_POKEMON)
+			{	mensajeCaught* msg = deserializarCaught(paq->stream);
 				log_info(brokerLogger2,"id caught segunda vez: %i.",msg->resultadoCaught);
 
 			}
@@ -289,35 +290,35 @@ void responderMensaje(uint32_t socketCliente, uint32_t respuesta) {
 }
 
 void inicializarContador(){
-	contador.contador=0;
-	contador.mutexContador=malloc(sizeof(pthread_mutex_t));
+	contador.contador = 0;
+	contador.mutexContador = malloc(sizeof(pthread_mutex_t));
 	pthread_mutex_init(contador.mutexContador,NULL);
 }
 
 uint32_t incrementarContador(){
 	pthread_mutex_lock(contador.mutexContador);
 	contador.contador++;
-	uint32_t i=contador.contador;
+	uint32_t i = contador.contador;
 	pthread_mutex_unlock(contador.mutexContador);
 	return i;
 }
 
 uint32_t obtenerContador(){
 	pthread_mutex_lock(contador.mutexContador);
-	uint32_t i=contador.contador;
+	uint32_t i = contador.contador;
 	pthread_mutex_unlock(contador.mutexContador);
 	return i;
 }
 
 void definirAlgoritmoMemoria(t_config* config){
 	algoritmoParameter parAlgoritmo;
-	parAlgoritmo.config = config;
+	parAlgoritmo.config  = config;
 	parAlgoritmo.configAtributo = "ALGORITMO_MEMORIA";
 	parAlgoritmo.OPCION1 = "PARTICIONES";
 	parAlgoritmo.OPCION2 = "BS";
-	parAlgoritmo.OP1 = PARTICIONES_DINAMICAS;
-	parAlgoritmo.OP2 = BUDDY_SYSTEM;
-	parAlgoritmo.error = "Hubo un error al definir el algoritmo de memoria";
+	parAlgoritmo.OP1     = PARTICIONES_DINAMICAS;
+	parAlgoritmo.OP2     = BUDDY_SYSTEM;
+	parAlgoritmo.error   = "Hubo un error al definir el algoritmo de memoria";
 
 	definirAlgoritmo(parAlgoritmo, algoritmoMemoria);
 }

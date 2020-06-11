@@ -65,7 +65,7 @@ void registrarEnMemoriaBUDDYSYSTEM(msgMemoriaBroker* mensajeNuevo, struct nodoMe
 }
 
 uint32_t intentarRamaIzquierda(msgMemoriaBroker* mensajeNuevo, struct nodoMemoria* partActual){
-	if(noEsParticionMinima(partActual) && !estaLibre(partActual)){ //o irá solo estado particionado?
+	if(noEsParticionMinima(partActual) && !estaLibre(partActual)){
 		if(!entraEnLaMitad(partActual, mensajeNuevo))
 			return -1;
 		if( partActual->hijoIzq->header.status == OCUPADO){
@@ -94,7 +94,7 @@ bool entraEnLaMitad(struct nodoMemoria* partActual, msgMemoriaBroker* mensajeNue
 
 uint32_t evaluarTamanioParticionYasignar(struct nodoMemoria* partActual, msgMemoriaBroker* msg){
 	uint32_t tamanioMsg = msg->paq->sizeStream;
-	if(tamanioParticion(partActual) > tamanioMsg){
+	if(tamanioParticion(partActual) >= tamanioMsg){
 		while(tamanioParticion(partActual)/2 > tamanioMsg){
 			particionarMemoriaBUDDY(partActual);
 			partActual->header.status = PARTICIONADO;
@@ -118,8 +118,8 @@ void particionarMemoriaBUDDY(struct nodoMemoria* particionActual){
 	particionActual->hijoIzq->header.size   = tamanoHijos;
 	particionActual->hijoDer->header.size   = tamanoHijos;
 
-	particionActual->hijoIzq->padre   = particionActual; //nuevo
-	particionActual->hijoDer->padre   = particionActual; //nuevo
+	particionActual->hijoIzq->padre   = particionActual;
+	particionActual->hijoDer->padre   = particionActual;
 
 	particionActual->header.status = PARTICIONADO;
 }
@@ -139,17 +139,19 @@ void guardarSubEnMemoria(uint32_t idMensaje, uint32_t socket, ListasMemoria list
 	}
 
 	if( lista == CONFIRMADO){
+		if(estaEnLista(socket,lista, mensaje )){return;}
 		pthread_mutex_lock(mutexMemoria);
-		addListaMutex(mensaje->subsYaEnviado, (void*) socket); 		//verificar que no esté ya en la cola
+		addListaMutex(mensaje->subsYaEnviado, (void*) socket);
 		pthread_mutex_unlock(mutexMemoria);
 	}else if(lista == SUBSYAENVIADOS){
+		if(estaEnLista(socket,lista, mensaje )){return;}
 		pthread_mutex_lock(mutexMemoria);
-		addListaMutex(mensaje->subsACK, (void*) socket); 			//verificar que no esté ya en la cola
+		addListaMutex(mensaje->subsACK, (void*) socket);
 		pthread_mutex_unlock(mutexMemoria);
 	}
 }
 
-msgMemoriaBroker* buscarMensajeEnMemoria(uint32_t idMensajeBuscado){
+msgMemoriaBroker* buscarMensajeEnMemoria(uint32_t idMensajeBuscado){ //todo poner validaciones
 
 	/*if(algoritmoMemoria == BUDDY_SYSTEM){*/
 		return buscarMensajeEnMemoriaBuddy(idMensajeBuscado);
@@ -163,38 +165,63 @@ msgMemoriaBroker* buscarMensajeEnMemoriaBuddy(uint32_t id){
 
 	pthread_mutex_lock(mutexMemoria);
 	struct nodoMemoria* nodoActual = nodoRaizMemoria;
+	//struct nodoMemoria* backUp = nodoActual;
 
-	while (!estaLibre(nodoActual) && nodoActual->mensaje->idMensaje != id){ //fijarse que volver a la rama derecha si en la rama izq no hay nada
+	if(estaLibre(nodoActual)) {
+		pthread_mutex_unlock(mutexMemoria);
+		return NULL;}
+
+	if(nodoActual->mensaje->idMensaje != id){
+
+		if(buscarPorRama(id, nodoActual->hijoIzq) == NULL){
+			if(buscarPorRama(id, nodoActual->hijoDer) == NULL){
+				pthread_mutex_unlock(mutexMemoria);
+				return NULL;}
+			pthread_mutex_unlock(mutexMemoria);
+			return buscarPorRama(id, nodoActual->hijoDer);
+		}
+		pthread_mutex_unlock(mutexMemoria);
+		return buscarPorRama(id, nodoActual->hijoIzq);
+	}
+	pthread_mutex_unlock(mutexMemoria);
+	return nodoActual->mensaje;
+
+}
+
+//pthread_mutex_lock(mutexMemoria);
+//	struct nodoMemoria* nodoActual = nodoRaizMemoria;
+//	struct nodoMemoria* backUp = nodoActual;
+//
+//	while (!estaLibre(nodoActual) && nodoActual->mensaje->idMensaje != id){
+//		if(nodoActual->hijoIzq->header.status == LIBRE){
+//			nodoActual = nodoActual->hijoDer;
+//		}else if(nodoActual->hijoDer->header.status == LIBRE){
+//			nodoActual = nodoActual->hijoIzq;
+//		}else{
+//			pthread_mutex_unlock(mutexMemoria);
+//
+//
+//			printf("no hay ningun mensaje con ese ID");
+//
+//			return NULL;
+//		}
+//
+//	}
+//		pthread_mutex_unlock(mutexMemoria);
+//		return nodoActual->mensaje;
+
+msgMemoriaBroker* buscarPorRama(uint32_t id, struct nodoMemoria* nodoActual ){
+	while (!estaLibre(nodoActual) && nodoActual->mensaje->idMensaje != id){
+
 		if(nodoActual->hijoIzq->header.status == LIBRE){
 			nodoActual = nodoActual->hijoDer;
 		}else if(nodoActual->hijoDer->header.status == LIBRE){
 			nodoActual = nodoActual->hijoIzq;
-		}else{
-			pthread_mutex_unlock(mutexMemoria);
-			printf("no hay ningun mensaje con ese ID");
-			nodoActual = NULL;
+		}else if (nodoActual->header.status == OCUPADO || nodoActual->header.status == LIBRE){
+				return NULL;}
 		}
-
-	}
-		pthread_mutex_unlock(mutexMemoria);
-		return nodoActual->mensaje;
+	return nodoActual->mensaje;
 }
-
-
-void guardarConfirmacionEnMemoriaDe(paquete* paq, uint32_t socket){
-
-	msgMemoriaBroker* mensaje = buscarMensajeEnMemoria(paq->idCorrelativo);
-
-	if(mensaje == NULL){
-		printf("no se encontró el mensaje en memoria, ERROR");
-		return;}
-
-	pthread_mutex_lock(mutexMemoria);
-	addListaMutex(mensaje->subsACK, (void*) socket); //verificar que no esté ya en la cola
-	pthread_mutex_unlock(mutexMemoria);
-}
-
-
 
 struct nodoMemoria* crearRaizArbol(void){
 	struct nodoMemoria* nodoRaiz = inicializarNodo();    //no estoy liberando malloc
@@ -249,4 +276,22 @@ bool sonBuddies(struct nodoMemoria* unNodo, struct nodoMemoria* otroNodo){
 	return true;
 }
 
+bool estaEnLista(uint32_t socket, ListasMemoria lista, msgMemoriaBroker* mensaje){
+	listaMutex* list = malloc(sizeof(listaMutex));
+	if(lista == CONFIRMADO){
+		list =  mensaje->subsACK;
+	}else{
+		list =  mensaje->subsYaEnviado;
+	}
+
+	for(uint32_t i=0; i< sizeListaMutex(list); i++ ){
+		if(socket == (uint32_t)getListaMutex(list, i)){
+			free(list);
+			return true;
+		}
+	}
+
+	free(list);
+    return false;
+}
 

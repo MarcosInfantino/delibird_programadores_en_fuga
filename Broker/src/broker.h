@@ -22,6 +22,7 @@
 uint32_t puerto_broker;
 char* ip_broker;
 t_log* loggerBroker;
+t_log* brokerLogger2;
 uint32_t tamMemoria;
 uint32_t particionMinima;
 algoritmoMem algoritmoMemoria;
@@ -41,10 +42,6 @@ typedef struct{
 	pthread_mutex_t* mutexContador;
 }contadorMensajes;
 
-typedef enum {
-	CONFIRMADO,
-	SUBSYAENVIADOS
-}ListasMemoria;
 
 //typedef struct {
 //	paquete paquete;
@@ -117,9 +114,6 @@ void abrirHiloParaEnviarMensajes();
 void* chequearMensajesEnCola(void * par);
 uint32_t incrementarContador();
 uint32_t obtenerContador();
-//void guardarConfirmacionEnMemoriaDe(paquete* paq, uint32_t socket)
-//void registrarMensajeEnMemoria(uint32_t idMensaje, paquete* paq);
-//msgMemoriaBroker* buscarMensajeEnMemoria(uint32_t idMensajeBuscado);
-//void almacenarSubEnMemoriaPara(uint32_t idmensaje,uint32_t socketActual);
+
 
 #endif /* BROKER_H_ */
