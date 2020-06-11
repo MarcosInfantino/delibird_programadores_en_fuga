@@ -1935,3 +1935,24 @@
 [INFO] 20:24:30:429 TEAM/(27337:27617): El entrenador 0 atrapó al pokemon Charmander en la posición (0,0).
 [INFO] 20:24:30:429 TEAM/(27337:27617): Inicio del algoritmo de detección de deadlock.
 [INFO] 20:24:30:429 TEAM/(27337:27617): No se encontró deadlock.
+[INFO] 19:11:48:260 TEAM/(12469:12483): Conexión fallida con el Broker
+
+[INFO] 19:11:48:260 TEAM/(12469:12483): Reintentando conexión en 10 segundos...
+
+[INFO] 19:11:48:260 TEAM/(12469:12482): Conexión fallida con el Broker
+
+[INFO] 19:11:48:260 TEAM/(12469:12482): Reintentando conexión en 10 segundos...
+
+[INFO] 19:11:48:260 TEAM/(12469:12484): Fallo de comunicación con el Broker al enviar un get. Se realizará la operación por default.
+[INFO] 19:11:48:260 TEAM/(12469:12485): Fallo de comunicación con el Broker al enviar un get. Se realizará la operación por default.
+[INFO] 19:11:48:260 TEAM/(12469:12486): Fallo de comunicación con el Broker al enviar un get. Se realizará la operación por default.
+[INFO] 19:11:48:260 TEAM/(12469:12481): Conexión fallida con el Broker
+
+[INFO] 19:11:48:260 TEAM/(12469:12481): Reintentando conexión en 10 segundos...
+
+[INFO] 19:34:01:238 TEAM/(16393:16407): Recibi mensaje caught pokemon. El pokemon fue atrapado. 
+
+[INFO] 20:30:01:303 TEAM/(25294:25308): Recibi mensaje caught pokemon. El pokemon fue atrapado. 
+
+[INFO] 20:31:12:652 TEAM/(25988:26006): Recibi mensaje caught pokemon. El pokemon fue atrapado. 
+

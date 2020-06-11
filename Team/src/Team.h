@@ -306,5 +306,17 @@ void loggearResultado();
 
 void loggearObjetivoDelTeam();
 
+bool tieneUnPokemonQueMeInteresa(dataEntrenador* entrenador1, dataEntrenador* entrenador2 );
+
 void destruirPokemonPosicion(pokemonPosicion* poke);
+
+bool tieneUnPokemonQueMeInteresa(dataEntrenador* entrenador1, dataEntrenador* entrenador2 );
+
+bool hayIntercambioMutuo(dataEntrenador* entrenador1, dataEntrenador* entrenador2);
+
+dataEntrenador* encontrarEntrenadorParaIntercambioMutuo(listaMutex* listaEntrenadores );
+
+uint32_t cuantosEntrenadoresInteresantesHay(dataEntrenador* entrenador,listaMutex* listaEntrenadores);
+
+t_list* encontrarEsperaCircular(listaMutex* listaEntrenadores,t_list* entrenadoresEnEsperaCircular, dataEntrenador* actual);
 #endif /* TEAM_H_ */

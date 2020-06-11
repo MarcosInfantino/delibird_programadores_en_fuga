@@ -46,7 +46,10 @@ int main(void) {
 //	definirAlgoritmoMemoria(config);
 //	definirAlgoritmoParticionLibre(config);
 //	definirAlgoritmoReemplazo(config);
-
+	mutexMemoria=malloc(sizeof(pthread_mutex_t));
+	pthread_mutex_init(mutexMemoria,NULL);
+	algoritmoMemoria=BUDDY_SYSTEM;
+	algoritmoReemplazo=FIFO;
 
 	definirComienzoDeMemoria();
 
@@ -208,7 +211,7 @@ void meterEnCola( colaMensajes* structCola, paquete * paq, uint32_t  socket){
 	send(socket,(void*)(&valorContador),sizeof(uint32_t),0);
 	log_info(brokerLogger2,"Meto un mensaje en la cola.");
 
-	//registrarMensajeEnMemoria(contador.contador, paq, algoritmoMemoria);
+	registrarMensajeEnMemoria(contador.contador, paq, algoritmoMemoria);
 
 	pushColaMutex(structCola->cola, (void *) paq);
 //	if(paq->tipoMensaje==CAUGHT_POKEMON)

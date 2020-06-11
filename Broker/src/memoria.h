@@ -111,4 +111,15 @@ bool entraEnLaMitad(struct nodoMemoria* partActual, msgMemoriaBroker* mensajeNue
 
 void crearDumpDeCache();
 
+bool esParticionMinima(struct nodoMemoria* particion);
+
+uint32_t tamanioMinimo(struct nodoMemoria* partActual);
+
+bool estaParticionado(struct nodoMemoria* partActual);
+
+bool estaOcupado(struct nodoMemoria* partActual);
+
+bool ambosHijosOcupados(struct nodoMemoria* padre);
+
+
 #endif /* MEMORIA_H_ */

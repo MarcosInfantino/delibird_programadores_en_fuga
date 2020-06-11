@@ -116,9 +116,47 @@ void resolverDeadlock(){
 
 }
 
+//void resolverDeadlock(){
+//
+//
+//	while(hayEntrenadoresEnDeadlock()){
+//
+//		entrenadorBloqueadoParaDeadlock=encontrarEntrenadorParaIntercambioMutuo(entrenadoresDeadlock );
+//
+//		if(entrenadorBloqueadoParaDeadlock==NULL)
+//			entrenadorBloqueadoParaDeadlock=(dataEntrenador*)getListaMutex(entrenadoresDeadlock,0);
+//
+//		while(entrenadorEnDeadlock(entrenadorBloqueadoParaDeadlock)){
+//
+//			t_list* listaPokemonesSobrantes=obtenerPokemonesSobrantesTeam(entrenadoresDeadlock);
+//
+//			pokemonSobrante* pokeSobrante=obtenerPokemonInteresante(entrenadorBloqueadoParaDeadlock,listaPokemonesSobrantes );
+//
+//			dataEntrenador* entrenadorAMover=pokeSobrante->entrenador;
+//
+//			entrenadorAMover->pokemonAAtrapar->posicion=entrenadorBloqueadoParaDeadlock->posicion;
+//			entrenadorAMover->pokemonAAtrapar->pokemon=pokeSobrante->pokemon;//OJO, ACA ESTOY ABUSANDO DE LA VARIABLE PARA GUARDAR EL POKEMON QUE DEBE DARLE AEL ENTRENADOR EN MOVIMIENTO AL QUE ESTA QUIETO
+//
+//			habilitarHiloEntrenador(entrenadorAMover->id);
+//
+//			sem_wait(&intercambioFinalizado);
+//
+//			list_destroy(listaPokemonesSobrantes);
+//			free(pokeSobrante);
+//
+//
+//		}
+//
+//
+//		actualizarEntrenadoresEnDeadlock();
+//	}
+//
+//}
+
 bool hayEntrenadoresEnDeadlock(){
 	return sizeListaMutex(entrenadoresDeadlock)>0;
 }
+
 
 void actualizarEntrenadoresEnDeadlock(){
 

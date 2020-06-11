@@ -353,3 +353,75 @@ void darPokemon(dataEntrenador* entrenadorDador, dataEntrenador* entrenadorRecep
 	list_add(entrenadorReceptor->pokemones,(void*)pokemon);
 
 }
+
+bool tieneUnPokemonQueMeInteresa(dataEntrenador* entrenador1, dataEntrenador* entrenador2 ){
+	t_list* pokemonesSobrantesEntrenador2=obtenerPokemonesSobrantes(entrenador2);
+	for(uint32_t i=0; i<list_size(pokemonesSobrantesEntrenador2);i++){
+		pokemonSobrante* pokeActual= (pokemonSobrante*) list_get(pokemonesSobrantesEntrenador2,i);
+		if(pokemonLeInteresa(entrenador1,pokeActual->pokemon)){
+			list_destroy(pokemonesSobrantesEntrenador2);
+			return true;
+		}
+	}
+	list_destroy(pokemonesSobrantesEntrenador2);
+	return false;
+}
+
+
+bool hayIntercambioMutuo(dataEntrenador* entrenador1, dataEntrenador* entrenador2){
+	return tieneUnPokemonQueMeInteresa(entrenador1,entrenador2) &&tieneUnPokemonQueMeInteresa(entrenador2,entrenador1);
+
+}
+
+dataEntrenador* encontrarEntrenadorParaIntercambioMutuo(listaMutex* listaEntrenadores ){
+	for(uint32_t i=0; i<sizeListaMutex(listaEntrenadores);i++){
+		dataEntrenador* entrenadorActual= (dataEntrenador*) (getListaMutex(listaEntrenadores,i));
+
+		for(uint32_t j=0;j<sizeListaMutex(listaEntrenadores);j++){
+			dataEntrenador* entrenadorActual2= (dataEntrenador*) (getListaMutex(listaEntrenadores,i));
+			if(hayIntercambioMutuo(entrenadorActual, entrenadorActual2))
+				return entrenadorActual;
+		}
+
+	}
+	return NULL;
+}
+dataEntrenador* seleccionarEntrenadorInteresante(dataEntrenador* entrenadorInteresado, listaMutex* listaEntrenadores){
+	for(uint32_t i=0; i<sizeListaMutex(listaEntrenadores);i++){
+			dataEntrenador* entrenadorActual= (dataEntrenador*) (getListaMutex(listaEntrenadores,i));
+
+				if(tieneUnPokemonQueMeInteresa(entrenadorInteresado,entrenadorActual))
+					return entrenadorActual;
+			}
+	return NULL;
+
+}
+
+uint32_t cuantosEntrenadoresInteresantesHay(dataEntrenador* entrenador,listaMutex* listaEntrenadores){
+	uint32_t contador=0;
+	for(uint32_t i=0; i<sizeListaMutex(listaEntrenadores);i++){
+				dataEntrenador* entrenadorActual= (dataEntrenador*) (getListaMutex(listaEntrenadores,i));
+		if(tieneUnPokemonQueMeInteresa(entrenador,entrenadorActual))
+			contador++;
+	}
+	return contador;
+}
+
+t_list* encontrarEsperaCircular(listaMutex* listaEntrenadores,t_list* entrenadoresEnEsperaCircular, dataEntrenador* actual){
+	dataEntrenador* primerEntrenador=(dataEntrenador*) getListaMutex(listaEntrenadores,0);
+	if(actual==primerEntrenador){
+		return entrenadoresEnEsperaCircular;
+	}
+	if(actual==NULL){
+		actual=getListaMutex(listaEntrenadores,0);
+	}
+
+//	uint32_t cantEntrenadoresInteresantes =cuantosEntrenadoresInteresantesHay(actual,listaEntrenadores);
+//
+//	for(uint32_t i=0;i<sizeListaMutex(listaEntrenadores);i++){
+//		t_list* listaEntrenadoresParcial=list_create();
+//		dataEntrenador* entrenadorActual= (dataEntrenador*)getListaMutex(listaEntrenadores,i);
+//
+//	}
+	return entrenadoresEnEsperaCircular;
+}
