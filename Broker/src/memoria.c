@@ -218,7 +218,7 @@ msgMemoriaBroker* buscarPorRama(uint32_t id, struct nodoMemoria* nodoActual ){
 		}else if(nodoActual->hijoDer->header.status == LIBRE){
 			nodoActual = nodoActual->hijoIzq;
 		}else if (nodoActual->header.status == OCUPADO || nodoActual->header.status == LIBRE){
-				return NULL;}
+				return NULL;} //podría regresar al padre->hijoder? pero entraría en bucle
 		}
 	return nodoActual->mensaje;
 }
