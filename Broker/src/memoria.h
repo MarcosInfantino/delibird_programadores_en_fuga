@@ -109,4 +109,6 @@ uint32_t intentarRamaIzquierda(msgMemoriaBroker* mensajeNuevo, struct nodoMemori
 
 bool entraEnLaMitad(struct nodoMemoria* partActual, msgMemoriaBroker* mensajeNuevo);
 
+void crearDumpDeCache();
+
 #endif /* MEMORIA_H_ */

@@ -295,3 +295,7 @@ bool estaEnLista(uint32_t socket, ListasMemoria lista, msgMemoriaBroker* mensaje
     return false;
 }
 
+
+void crearDumpDeCache(){
+  printf("toma la señal y la trata");
+}

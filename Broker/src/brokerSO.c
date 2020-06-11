@@ -19,6 +19,7 @@
 #include <arpa/inet.h>
 #include <stdlib.h>
 #include <string.h>
+#include <signal.h>
 #include "broker.h"
 #include "memoria.h"
 #include "files.h"
@@ -57,6 +58,7 @@ int main(void) {
 	abrirHiloParaEnviarMensajes();
 	iniciarServidor();
 
+	signal(SIGUSR1, crearDumpDeCache);
 
 	return EXIT_SUCCESS;
 }
