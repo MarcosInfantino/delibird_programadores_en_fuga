@@ -40,6 +40,7 @@
 *.bin
 *.makefile
 *.run
+*.log
 
 # Debug files
 *.dSYM/
