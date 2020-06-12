@@ -47,6 +47,8 @@ bool entrenadorEnDeadlock(dataEntrenador* entrenador){ //para saber si un entren
 
 
 void realizarIntercambio(dataEntrenador* entrenadorQueSeMueve){
+	simularCicloCpu(5,entrenadorQueSeMueve);
+
 	t_list* pokemonesSobrantesEntrenadorBloqueado=obtenerPokemonesSobrantes(entrenadorBloqueadoParaDeadlock);
 	pokemonSobrante* pokemonSobranteInteresante=
 			obtenerPokemonInteresante(entrenadorQueSeMueve,pokemonesSobrantesEntrenadorBloqueado);
@@ -60,11 +62,10 @@ void realizarIntercambio(dataEntrenador* entrenadorQueSeMueve){
 		pokemonAPedir=malloc(strlen(pokemonSobranteInteresante->pokemon)+1);
 		strcpy(pokemonAPedir,pokemonSobranteInteresante->pokemon);
 	}
-
 	darPokemon(entrenadorQueSeMueve,entrenadorBloqueadoParaDeadlock,entrenadorQueSeMueve->pokemonAAtrapar->pokemon);
 	darPokemon(entrenadorBloqueadoParaDeadlock,entrenadorQueSeMueve,pokemonAPedir);
 
-	simularCicloCpu(5,entrenadorQueSeMueve);
+
 
 	log_info(teamLogger, "Operación de intercambio realizada entre entrenadores %i y %i",entrenadorQueSeMueve->id, entrenadorBloqueadoParaDeadlock->id);
 
@@ -73,7 +74,8 @@ void realizarIntercambio(dataEntrenador* entrenadorQueSeMueve){
 }
 
 void entrarEnEjecucionParaDeadlock(dataEntrenador* infoEntrenador){
-	sem_wait(&(infoEntrenador->semaforo));//espera al planificador
+	log_info(teamLogger, "El entrenador %i entra en ejecución para deadlock.");
+	sem_wait((infoEntrenador->semaforo));//espera al planificador
 	infoEntrenador->estado = EXEC;
 	moverEntrenadorAPosicion(infoEntrenador, ((infoEntrenador->pokemonAAtrapar)->posicion));
 	realizarIntercambio(infoEntrenador);
@@ -85,7 +87,7 @@ void resolverDeadlock(){
 
 
 	while(hayEntrenadoresEnDeadlock()){
-
+		log_info(teamLogger2, "Siguen habiendo entrenadores en deadlock.");
 
 		entrenadorBloqueadoParaDeadlock=(dataEntrenador*)getListaMutex(entrenadoresDeadlock,0);
 
@@ -100,7 +102,9 @@ void resolverDeadlock(){
 			entrenadorAMover->pokemonAAtrapar->posicion=entrenadorBloqueadoParaDeadlock->posicion;
 			entrenadorAMover->pokemonAAtrapar->pokemon=pokeSobrante->pokemon;//OJO, ACA ESTOY ABUSANDO DE LA VARIABLE PARA GUARDAR EL POKEMON QUE DEBE DARLE AEL ENTRENADOR EN MOVIMIENTO AL QUE ESTA QUIETO
 
-			habilitarHiloEntrenador(entrenadorAMover->id);
+			sem_post(entrenadorAMover->semaforo);
+			sem_post(entrenadorAMover->semaforo);
+			log_info(teamLogger2, "Entrenador bloqueado: %i. Entrenador a mover: %i.", entrenadorBloqueadoParaDeadlock->id, entrenadorAMover->id);
 
 			sem_wait(&intercambioFinalizado);
 
@@ -165,6 +169,7 @@ void actualizarEntrenadoresEnDeadlock(){
 		if(cumplioObjetivo(entrenadorActual)){
 			entrenadorActual->estado=EXIT;
 			removeListaMutex(entrenadoresDeadlock,i);
+			log_info(teamLogger2, "El entrenador %i salio del deadlock.");
 		}
 	}
 }

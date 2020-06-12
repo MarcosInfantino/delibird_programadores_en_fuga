@@ -11,8 +11,8 @@ paquete* llenarPaquete( uint32_t modulo,uint32_t tipoMensaje, uint32_t sizeStrea
 	paquete* paqueteASerializar       = malloc(sizeof(paquete));
 	paqueteASerializar->modulo        = modulo;
 	paqueteASerializar->tipoMensaje   = tipoMensaje;
-	paqueteASerializar->id            = -1;
-	paqueteASerializar->idCorrelativo = -1;
+	paqueteASerializar->id            = 0;
+	paqueteASerializar->idCorrelativo = 0;
 	paqueteASerializar->sizeStream    = sizeStream;
 	if(paqueteASerializar->sizeStream>0){
 		paqueteASerializar->stream = malloc(paqueteASerializar->sizeStream);

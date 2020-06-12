@@ -37,6 +37,7 @@ listaMutex* entrenadoresDeadlock;
 
 int socketGameboy;
 int socketGamecard;
+uint32_t quantumRR;
 uint32_t puertoBroker;
 char* ipBroker;
 pthread_t* arrayIdHilosEntrenadores;
@@ -45,7 +46,7 @@ uint32_t retardoCicloCpu;
 uint32_t algoritmoPlanificacion;
 
 sem_t semaforoEjecucionCpu;
-
+sem_t* entrenadorEnCola;
 sem_t intercambioFinalizado;
 
 t_log* teamLogger;
@@ -60,7 +61,8 @@ typedef enum {
 }estado;
 
 typedef enum{
-	FIFO
+	FIFO,
+	RR
 }AlgoritmoPlanificacion;
 
 //typedef struct {
@@ -96,8 +98,12 @@ typedef struct {
 	estado estado;
 	uint32_t id;
 	pokemonPosicion* pokemonAAtrapar;
-	sem_t semaforo;
+	sem_t* semaforo;
 	uint32_t cantidadCiclosCpu;
+	sem_t* semaforoContinuarEjecucion;
+	bool ejecucionEnPausa;
+//	uint32_t estimacionAnterior;
+//	uint32_t rafaCpuAnterior;
 } dataEntrenador;
 
 dataEntrenador* entrenadorBloqueadoParaDeadlock;
@@ -206,9 +212,9 @@ void moverEntrenador(dataEntrenador* entrenador, uint32_t movimientoX, uint32_t 
 
 void moverEntrenadorAPosicion(dataEntrenador* entrenador, posicion pos);
 
-void moverEntrenadorY(dataEntrenador* entrenador, uint32_t movimientoY);
+void moverEntrenadorY(dataEntrenador* entrenador, int32_t movimientoY);
 
-void moverEntrenadorX(dataEntrenador* entrenador, uint32_t movimientoX);
+void moverEntrenadorX(dataEntrenador* entrenador, int32_t movimientoX);
 
 void seleccionarEntrenador(pokemonPosicion* pokemon);
 
@@ -243,6 +249,8 @@ uint32_t crearHiloPlanificador(pthread_t* hiloPlanificador);
 void* iniciarPlanificador(void* arg);
 
 void ejecucionPlanificadorFifo();
+
+void ejecucionPlanificadorRR();
 
 void poneteEnReady(dataEntrenador* entrenador);
 
@@ -296,6 +304,8 @@ bool pokemonLeInteresa(dataEntrenador* entrenador, char* pokemon);
 
 pokemonSobrante* obtenerPokemonInteresante(dataEntrenador* entrenador,t_list* pokemonesSobrantes);
 
+void simularUnidadCicloCpu(dataEntrenador* entrenador);
+
 void simularCicloCpu(uint32_t cantidadCiclos, dataEntrenador* entrenador);
 
 void darPokemon(dataEntrenador* entrenadorDador, dataEntrenador* entrenadorReceptor, char* pokemon);
@@ -319,4 +329,19 @@ dataEntrenador* encontrarEntrenadorParaIntercambioMutuo(listaMutex* listaEntrena
 uint32_t cuantosEntrenadoresInteresantesHay(dataEntrenador* entrenador,listaMutex* listaEntrenadores);
 
 t_list* encontrarEsperaCircular(listaMutex* listaEntrenadores,t_list* entrenadoresEnEsperaCircular, dataEntrenador* actual);
+
+bool fueInterrumpido(dataEntrenador* entrenador);
+
+void retomarEjecucion(dataEntrenador* entrenador);
+
+void ponerEnEjecucion(dataEntrenador* entrenador);
+
+void interrumpir(dataEntrenador* entrenador);
+
+bool estaBloqueado(dataEntrenador* entrenador);
+
+bool estaEjecutando(dataEntrenador* entrenador);
+
+uint32_t setearTimer(uint32_t quantum, dataEntrenador* entrenador);
+
 #endif /* TEAM_H_ */

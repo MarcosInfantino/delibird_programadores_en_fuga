@@ -1,0 +1,157 @@
+[INFO] 20:06:51:706 TEAM/(8391:8402): Conexión fallida con el Broker
+
+[INFO] 20:06:51:706 TEAM/(8391:8402): Reintentando conexión en 10 segundos...
+
+[INFO] 20:06:51:706 TEAM/(8391:8401): Conexión fallida con el Broker
+
+[INFO] 20:06:51:706 TEAM/(8391:8401): Reintentando conexión en 10 segundos...
+
+[INFO] 20:06:51:706 TEAM/(8391:8404): Fallo de comunicación con el Broker al enviar un get. Se realizará la operación por default.
+[INFO] 20:06:51:706 TEAM/(8391:8403): Fallo de comunicación con el Broker al enviar un get. Se realizará la operación por default.
+[INFO] 20:06:51:706 TEAM/(8391:8400): Conexión fallida con el Broker
+
+[INFO] 20:06:51:706 TEAM/(8391:8400): Reintentando conexión en 10 segundos...
+
+[INFO] 20:07:01:707 TEAM/(8391:8400): El reintento de conexión no fue exitoso
+
+[INFO] 20:07:01:707 TEAM/(8391:8400): Reintentando conexión en 10 segundos...
+
+[INFO] 20:07:01:707 TEAM/(8391:8401): El reintento de conexión no fue exitoso
+
+[INFO] 20:07:01:707 TEAM/(8391:8401): Reintentando conexión en 10 segundos...
+
+[INFO] 20:07:01:707 TEAM/(8391:8402): El reintento de conexión no fue exitoso
+
+[INFO] 20:07:01:707 TEAM/(8391:8402): Reintentando conexión en 10 segundos...
+
+[INFO] 20:07:11:707 TEAM/(8391:8402): El reintento de conexión no fue exitoso
+
+[INFO] 20:07:11:707 TEAM/(8391:8402): Reintentando conexión en 10 segundos...
+
+[INFO] 20:07:11:707 TEAM/(8391:8401): El reintento de conexión no fue exitoso
+
+[INFO] 20:07:11:707 TEAM/(8391:8401): Reintentando conexión en 10 segundos...
+
+[INFO] 20:07:11:707 TEAM/(8391:8400): El reintento de conexión no fue exitoso
+
+[INFO] 20:07:11:707 TEAM/(8391:8400): Reintentando conexión en 10 segundos...
+
+[INFO] 20:07:21:707 TEAM/(8391:8401): El reintento de conexión no fue exitoso
+
+[INFO] 20:07:21:707 TEAM/(8391:8401): Reintentando conexión en 10 segundos...
+
+[INFO] 20:07:21:708 TEAM/(8391:8400): El reintento de conexión no fue exitoso
+
+[INFO] 20:07:21:708 TEAM/(8391:8400): Reintentando conexión en 10 segundos...
+
+[INFO] 20:07:21:708 TEAM/(8391:8402): El reintento de conexión no fue exitoso
+
+[INFO] 20:07:21:708 TEAM/(8391:8402): Reintentando conexión en 10 segundos...
+
+[INFO] 20:07:27:302 TEAM/(8391:8467): Recibi mensaje appeared pokemon. El pokemon es: Pikachu. La posicion es: (0,0). 
+
+[INFO] 20:07:27:304 TEAM/(8391:8467): El pokemon a atrapar es: Pikachu, y la posición es: (0, 0)
+
+[INFO] 20:07:27:304 TEAM/(8391:8467): Habilito el hilo del entrenador 0.
+[INFO] 20:07:30:316 TEAM/(8391:8393): El entrenador 0 se movió a la posición (0, 0).
+[INFO] 20:07:30:317 TEAM/(8391:8393): Fallo de comunicación con el Broker al enviar un catch. Se realizará la operación por default.
+[INFO] 20:07:30:317 TEAM/(8391:8393): El entrenador 0 atrapó al pokemon Pikachu en la posición (0,0).
+[INFO] 20:07:30:317 TEAM/(8391:8393): Habilito el hilo del entrenador 0.
+[INFO] 20:07:31:708 TEAM/(8391:8402): El reintento de conexión no fue exitoso
+
+[INFO] 20:07:31:708 TEAM/(8391:8402): Reintentando conexión en 10 segundos...
+
+[INFO] 20:07:31:708 TEAM/(8391:8400): El reintento de conexión no fue exitoso
+
+[INFO] 20:07:31:708 TEAM/(8391:8400): Reintentando conexión en 10 segundos...
+
+[INFO] 20:07:31:708 TEAM/(8391:8401): El reintento de conexión no fue exitoso
+
+[INFO] 20:07:31:708 TEAM/(8391:8401): Reintentando conexión en 10 segundos...
+
+[INFO] 20:07:39:898 TEAM/(8391:8498): Recibi mensaje appeared pokemon. El pokemon es: Pikachu. La posicion es: (0,0). 
+
+[INFO] 20:07:39:904 TEAM/(8391:8498): El pokemon a atrapar es: Pikachu, y la posición es: (0, 0)
+
+[INFO] 20:07:39:906 TEAM/(8391:8498): Habilito el hilo del entrenador 1.
+[INFO] 20:07:41:709 TEAM/(8391:8401): El reintento de conexión no fue exitoso
+
+[INFO] 20:07:41:709 TEAM/(8391:8401): Reintentando conexión en 10 segundos...
+
+[INFO] 20:07:41:709 TEAM/(8391:8400): El reintento de conexión no fue exitoso
+
+[INFO] 20:07:41:709 TEAM/(8391:8400): Reintentando conexión en 10 segundos...
+
+[INFO] 20:07:41:709 TEAM/(8391:8402): El reintento de conexión no fue exitoso
+
+[INFO] 20:07:41:709 TEAM/(8391:8402): Reintentando conexión en 10 segundos...
+
+[INFO] 20:07:49:925 TEAM/(8391:8394): El entrenador 1 se movió a la posición (0, 0).
+[INFO] 20:07:49:925 TEAM/(8391:8394): Fallo de comunicación con el Broker al enviar un catch. Se realizará la operación por default.
+[INFO] 20:07:49:925 TEAM/(8391:8394): El entrenador 1 atrapó al pokemon Pikachu en la posición (0,0).
+[INFO] 20:07:49:926 TEAM/(8391:8394): Inicio del algoritmo de detección de deadlock.
+[INFO] 20:07:49:937 TEAM/(8391:8394): No se encontró deadlock.
+[INFO] 20:07:51:709 TEAM/(8391:8402): El reintento de conexión no fue exitoso
+
+[INFO] 20:07:51:709 TEAM/(8391:8402): Reintentando conexión en 10 segundos...
+
+[INFO] 20:07:51:709 TEAM/(8391:8400): El reintento de conexión no fue exitoso
+
+[INFO] 20:07:51:709 TEAM/(8391:8400): Reintentando conexión en 10 segundos...
+
+[INFO] 20:07:51:709 TEAM/(8391:8401): El reintento de conexión no fue exitoso
+
+[INFO] 20:07:51:709 TEAM/(8391:8401): Reintentando conexión en 10 segundos...
+
+[INFO] 20:08:01:710 TEAM/(8391:8401): El reintento de conexión no fue exitoso
+
+[INFO] 20:08:01:710 TEAM/(8391:8401): Reintentando conexión en 10 segundos...
+
+[INFO] 20:08:01:710 TEAM/(8391:8400): El reintento de conexión no fue exitoso
+
+[INFO] 20:08:01:710 TEAM/(8391:8400): Reintentando conexión en 10 segundos...
+
+[INFO] 20:08:01:711 TEAM/(8391:8402): El reintento de conexión no fue exitoso
+
+[INFO] 20:08:01:711 TEAM/(8391:8402): Reintentando conexión en 10 segundos...
+
+[INFO] 20:08:11:711 TEAM/(8391:8402): El reintento de conexión no fue exitoso
+
+[INFO] 20:08:11:711 TEAM/(8391:8402): Reintentando conexión en 10 segundos...
+
+[INFO] 20:08:11:711 TEAM/(8391:8400): El reintento de conexión no fue exitoso
+
+[INFO] 20:08:11:711 TEAM/(8391:8400): Reintentando conexión en 10 segundos...
+
+[INFO] 20:08:11:712 TEAM/(8391:8401): El reintento de conexión no fue exitoso
+
+[INFO] 20:08:11:712 TEAM/(8391:8401): Reintentando conexión en 10 segundos...
+
+[INFO] 20:08:21:712 TEAM/(8391:8400): El reintento de conexión no fue exitoso
+
+[INFO] 20:08:21:712 TEAM/(8391:8400): Reintentando conexión en 10 segundos...
+
+[INFO] 20:08:21:712 TEAM/(8391:8402): El reintento de conexión no fue exitoso
+
+[INFO] 20:08:21:712 TEAM/(8391:8402): Reintentando conexión en 10 segundos...
+
+[INFO] 20:08:21:712 TEAM/(8391:8401): El reintento de conexión no fue exitoso
+
+[INFO] 20:08:21:712 TEAM/(8391:8401): Reintentando conexión en 10 segundos...
+
+[INFO] 20:08:31:713 TEAM/(8391:8401): El reintento de conexión no fue exitoso
+
+[INFO] 20:08:31:713 TEAM/(8391:8401): Reintentando conexión en 10 segundos...
+
+[INFO] 20:08:31:713 TEAM/(8391:8402): El reintento de conexión no fue exitoso
+
+[INFO] 20:08:31:713 TEAM/(8391:8402): Reintentando conexión en 10 segundos...
+
+[INFO] 20:08:31:713 TEAM/(8391:8400): El reintento de conexión no fue exitoso
+
+[INFO] 20:08:31:713 TEAM/(8391:8400): Reintentando conexión en 10 segundos...
+
+[INFO] 20:09:02:399 TEAM/(8671:8724): Recibi mensaje appeared pokemon. El pokemon es: Pokemon. La posicion es: (0,0). 
+
+[INFO] 20:09:19:708 TEAM/(8671:8845): Recibi mensaje appeared pokemon. El pokemon es: Pokemon. La posicion es: (0,0). 
+

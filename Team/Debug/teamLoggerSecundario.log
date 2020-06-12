@@ -1,0 +1,82 @@
+[INFO] 20:06:51:694 team/(8391:8391): --------------------------------------------------------------------------
+[INFO] 20:06:51:694 team/(8391:8391): NUEVA EJECUCION
+[INFO] 20:06:51:694 team/(8391:8391): --------------------------------------------------------------------------
+[INFO] 20:06:51:695 team/(8391:8391): Algortimo de planificación: FIFO.
+[INFO] 20:06:51:695 team/(8391:8391): --------------------------------------------------------
+[INFO] 20:06:51:695 team/(8391:8391): Objetivo en lista: Pikachu. Objetivo recibido: Charmander.
+[INFO] 20:06:51:695 team/(8391:8391): --------------------------------------------------------------
+[INFO] 20:06:51:695 team/(8391:8391): OBJETIVO DEL TEAM
+[INFO] 20:06:51:695 team/(8391:8391): Objetivo 0. Pokemon: Pikachu. Cantidad: 2.
+[INFO] 20:06:51:695 team/(8391:8391): Objetivo 1. Pokemon: Charmander. Cantidad: 1.
+[INFO] 20:06:51:695 team/(8391:8391): --------------------------------------------------
+[INFO] 20:06:51:698 team/(8391:8399): Se inicia el planificador
+[INFO] 20:07:27:302 team/(8391:8467): Atiendo appeared. Pokemon: Pikachu.
+[INFO] 20:07:27:304 team/(8391:8467): El pokemon es objetivo
+[INFO] 20:07:27:304 team/(8391:8467): Hay entrenadores disponibles para atrapar a Pikachu.
+[INFO] 20:07:27:304 team/(8391:8393): El entrenador 0 se pone en READY.
+[INFO] 20:07:27:304 team/(8391:8467): Se selecciono el entrenador 0 para atrapar al pokemon Pikachu
+[INFO] 20:07:27:314 team/(8391:8393): El entrenador 0 entro en ejecución.
+[INFO] 20:07:27:314 team/(8391:8393): El entrenador 0, que estaba en (1,2), comenzará a moverse a (0,0).
+[INFO] 20:07:27:314 team/(8391:8399): elijo entrenador para ejecutar
+[INFO] 20:07:28:315 team/(8391:8393): El entrenador 0 se mueve a : (0,2).
+[INFO] 20:07:29:316 team/(8391:8393): El entrenador 0 se mueve a : (0,1).
+[INFO] 20:07:30:316 team/(8391:8393): El entrenador 0 se mueve a : (0,0).
+[INFO] 20:07:30:316 team/(8391:8393): El entrenador 0 se movió a la posición (0, 0).
+[INFO] 20:07:30:317 team/(8391:8393): Se registró el pokemon atrapado.
+[INFO] 20:07:30:317 team/(8391:8393): El entrenador 0 cumplio su objetivo.
+[INFO] 20:07:30:317 team/(8391:8393): El entrenador 0 libera la CPU por su cuenta.
+[INFO] 20:07:30:317 team/(8391:8393): El entrenador 0 salio de la espera a la respuesta caught.
+[INFO] 20:07:30:317 team/(8391:8393): El entrenador 0 no queda libre.
+[INFO] 20:07:39:901 team/(8391:8498): Atiendo appeared. Pokemon: Pikachu.
+[INFO] 20:07:39:903 team/(8391:8498): El pokemon es objetivo
+[INFO] 20:07:39:904 team/(8391:8498): Hay entrenadores disponibles para atrapar a Pikachu.
+[INFO] 20:07:39:906 team/(8391:8394): El entrenador 1 se pone en READY.
+[INFO] 20:07:39:906 team/(8391:8498): Se selecciono el entrenador 1 para atrapar al pokemon Pikachu
+[INFO] 20:07:39:916 team/(8391:8394): El entrenador 1 entro en ejecución.
+[INFO] 20:07:39:917 team/(8391:8394): El entrenador 1, que estaba en (3,7), comenzará a moverse a (0,0).
+[INFO] 20:07:39:917 team/(8391:8399): elijo entrenador para ejecutar
+[INFO] 20:07:40:917 team/(8391:8394): El entrenador 1 se mueve a : (2,7).
+[INFO] 20:07:41:918 team/(8391:8394): El entrenador 1 se mueve a : (1,7).
+[INFO] 20:07:42:919 team/(8391:8394): El entrenador 1 se mueve a : (0,7).
+[INFO] 20:07:43:919 team/(8391:8394): El entrenador 1 se mueve a : (0,6).
+[INFO] 20:07:44:920 team/(8391:8394): El entrenador 1 se mueve a : (0,5).
+[INFO] 20:07:45:921 team/(8391:8394): El entrenador 1 se mueve a : (0,4).
+[INFO] 20:07:46:923 team/(8391:8394): El entrenador 1 se mueve a : (0,3).
+[INFO] 20:07:47:924 team/(8391:8394): El entrenador 1 se mueve a : (0,2).
+[INFO] 20:07:48:924 team/(8391:8394): El entrenador 1 se mueve a : (0,1).
+[INFO] 20:07:49:925 team/(8391:8394): El entrenador 1 se mueve a : (0,0).
+[INFO] 20:07:49:925 team/(8391:8394): El entrenador 1 se movió a la posición (0, 0).
+[INFO] 20:07:49:925 team/(8391:8394): Se registró el pokemon atrapado.
+[INFO] 20:07:49:925 team/(8391:8394): El entrenador 1 forma parte de un interbloqueo.
+[INFO] 20:07:49:925 team/(8391:8394): Inicio del algoritmo de detección de deadlock.
+[INFO] 20:07:49:937 team/(8391:8394): El entrenador 1 libera la CPU por su cuenta.
+[INFO] 20:08:42:590 team/(8671:8671): --------------------------------------------------------------------------
+[INFO] 20:08:42:593 team/(8671:8671): NUEVA EJECUCION
+[INFO] 20:08:42:593 team/(8671:8671): --------------------------------------------------------------------------
+[INFO] 20:08:42:593 team/(8671:8671): Algortimo de planificación: FIFO.
+[INFO] 20:08:42:593 team/(8671:8671): --------------------------------------------------------
+[INFO] 20:08:42:593 team/(8671:8671): Objetivo en lista: Pikachu. Objetivo recibido: Charmander.
+[INFO] 20:08:42:594 team/(8671:8671): --------------------------------------------------------------
+[INFO] 20:08:42:594 team/(8671:8671): OBJETIVO DEL TEAM
+[INFO] 20:08:42:594 team/(8671:8671): Objetivo 0. Pokemon: Pikachu. Cantidad: 2.
+[INFO] 20:08:42:594 team/(8671:8671): Objetivo 1. Pokemon: Charmander. Cantidad: 1.
+[INFO] 20:08:42:594 team/(8671:8671): --------------------------------------------------
+[INFO] 20:08:42:598 team/(8671:8679): Se inicia el planificador
+[INFO] 20:08:42:606 team/(8671:8680): Suscripción realizada correctamente
+
+[INFO] 20:08:42:606 team/(8671:8682): Suscripción realizada correctamente
+
+[INFO] 20:08:42:606 team/(8671:8681): Suscripción realizada correctamente
+
+[INFO] 20:09:02:399 team/(8671:8724): Atiendo appeared. Pokemon: Pokemon.
+[INFO] 20:09:02:400 team/(8671:8724): --------------------------------------------------------
+[INFO] 20:09:02:400 team/(8671:8724): Objetivo en lista: Pikachu. Objetivo recibido: Pokemon.
+[INFO] 20:09:02:400 team/(8671:8724): --------------------------------------------------------
+[INFO] 20:09:02:400 team/(8671:8724): Objetivo en lista: Charmander. Objetivo recibido: Pokemon.
+[INFO] 20:09:02:400 team/(8671:8724): El pokemon no es objetivo
+[INFO] 20:09:19:712 team/(8671:8845): Atiendo appeared. Pokemon: Pokemon.
+[INFO] 20:09:19:716 team/(8671:8845): --------------------------------------------------------
+[INFO] 20:09:19:716 team/(8671:8845): Objetivo en lista: Pikachu. Objetivo recibido: Pokemon.
+[INFO] 20:09:19:716 team/(8671:8845): --------------------------------------------------------
+[INFO] 20:09:19:716 team/(8671:8845): Objetivo en lista: Charmander. Objetivo recibido: Pokemon.
+[INFO] 20:09:19:721 team/(8671:8845): El pokemon no es objetivo

@@ -142,6 +142,7 @@ int main(int argc , char* argv[]){
 	//printf("hola\n");
 
 	team     = inicializarTeam(config);
+
 	//printf("hola2\n");
 	//printf("%s\n", ((objetivo*)getListaMutex(team->objetivoGlobal,2))->pokemon);
 	entrenadores->lista       = team->entrenadores;
@@ -517,7 +518,7 @@ void* suscribirseCola(void* msgSuscripcion){
 //TODO: hacer funciones de llenarMensajeX en la lib
 //llenarPaquete( uint32_t modulo,uint32_t tipoMensaje, uint32_t sizeStream,void* stream)
 void enviarCatch(dataEntrenador* infoEntrenador){
-	log_info(teamLogger2,"El entrenador %i inició el proceso de envío del catch.", infoEntrenador->id);
+	//log_info(teamLogger2,"El entrenador %i inició el proceso de envío del catch.", infoEntrenador->id);
 	uint32_t cliente=crearSocketCliente(ipBroker,puertoBroker);
 	if(cliente!=-1){
 
@@ -527,7 +528,7 @@ void enviarCatch(dataEntrenador* infoEntrenador){
 		paquete* paq=llenarPaquete(TEAM,CATCH_POKEMON,   sizeArgumentos(CATCH_POKEMON,msgCatch->pokemon,1)  , streamMsg);
 		void* paqueteSerializado=serializarPaquete(paq);
 		destruirCatch(msgCatch);
-		log_info(teamLogger2,"El entrenador %i intenta hacer el send del catch.", infoEntrenador->id);
+		//log_info(teamLogger2,"El entrenador %i intenta hacer el send del catch.", infoEntrenador->id);
 		//destruirPaquete(paq);
 		if(send(cliente,paqueteSerializado, sizePaquete(paq), 0)!=-1){
 			simularCicloCpu(1,infoEntrenador);
@@ -633,6 +634,7 @@ dataTeam* inicializarTeam(t_config* config){
 	infoTeam->cantidadCambiosContexto=0;
 	infoTeam->cantidadDeadlocks=0;
 
+	t_list* pokemonesDelTeam=list_create();
 	char** arrayPosicionesEntrenadores=config_get_array_value(config,"POSICIONES_ENTRENADORES");
 	char** arrayPokemonesEntrenadores=config_get_array_value(config,"POKEMON_ENTRENADORES");
 	char** arrayObjetivosEntrenadores=config_get_array_value(config,"OBJETIVOS_ENTRENADORES");
@@ -670,22 +672,39 @@ dataTeam* inicializarTeam(t_config* config){
 			}
 		}
 
-		for(i=0;i<list_size(objetivoPersonalEntrenadorAux);i++){
+		for(i=0;i<list_size(infoEntrenador->objetivoPersonal);i++){
 
-						list_add(especiesObjetivo,list_get(objetivoPersonalEntrenadorAux,i));
+						list_add(especiesObjetivo,list_get(infoEntrenador->objetivoPersonal,i));
 
 				}
-
+		infoEntrenador->ejecucionEnPausa=false;
 		infoEntrenador->estado			= NEW;
 		infoEntrenador->id				= id;
 		infoEntrenador->pokemonAAtrapar = NULL;
 		infoEntrenador->cantidadCiclosCpu = 0;
-		sem_init(&(infoEntrenador->semaforo), 0,0);
+		infoEntrenador->semaforo=malloc(sizeof(sem_t));
+		infoEntrenador->semaforoContinuarEjecucion=malloc(sizeof(sem_t));
+		sem_init((infoEntrenador->semaforo), 0,0);
+		sem_init((infoEntrenador->semaforoContinuarEjecucion), 0,0);
+
 		list_add(entrenadoresLibres->lista,(void*)infoEntrenador);
 		list_add(infoTeam->entrenadores,infoEntrenador);
 
+		list_add_all(pokemonesDelTeam, infoEntrenador->pokemones);
 
 	}
+
+	uint32_t z;
+	for(z=0;z<list_size(pokemonesDelTeam);z++){
+				char *pokemonAComparar = (char*) list_get(pokemonesDelTeam,z);
+				uint32_t encontrado    = buscarMismoPokemon(especiesObjetivo,pokemonAComparar);
+
+				if(encontrado != -1){
+
+					list_remove(especiesObjetivo,encontrado);
+
+				}
+			}
 
 	infoTeam->objetivoGlobal = obtenerObjetivos(especiesObjetivo);
 
@@ -805,10 +824,10 @@ void registrarPokemonAtrapado(char* pokemon){
 bool pokemonEsObjetivo(char* pokemon){
 	uint32_t pos=buscarObjetivoPorEspecie(team->objetivoGlobal,pokemon);
 	if(pos!=-1){
-			log_info(teamLogger2, "Encontre al pokemon %s en mis objetivos", pokemon);
+			//log_info(teamLogger2, "Encontre al pokemon %s en mis objetivos", pokemon);
 			return((((objetivo*)getListaMutex(team->objetivoGlobal,pos))->cantidad)>0);
 		}
-	log_info(teamLogger2, "No encontre al pokemon %s en mis objetivos", pokemon);
+	//log_info(teamLogger2, "No encontre al pokemon %s en mis objetivos", pokemon);
 	return false;
 }
 
