@@ -85,7 +85,22 @@ bool ambosHijosOcupados(struct nodoMemoria* padre){
 bool esHijoDerecho(struct nodoMemoria* particion){
 	return particion==(particion->padre->hijoDer);
 }
-uint32_t intentarRamaIzquierda(msgMemoriaBroker* mensajeNuevo, struct nodoMemoria* partActual){
+
+uint32_t intentarRamaIzquierda(msgMemoriaBroker* mensajeNuevo,struct nodoMemoria* partActual){
+	if (estaOcupado(partActual)){
+	return -1;
+	} else if (estaParticionado(partActual)){
+		uint32_t retorno = intentarRamaIzquierda(mensajeNuevo,partActual->hijoIzq);
+		if (retorno != 1)
+			return intentarRamaIzquierda(mensajeNuevo,partActual->hijoDer);
+		return retorno;
+	}else{
+		return evaluarTamanioParticionYasignar (partActual, mensajeNuevo);
+	}
+}
+
+
+/*uint32_t intentarRamaIzquierda(msgMemoriaBroker* mensajeNuevo, struct nodoMemoria* partActual){
 //	if(estaParticionado(partActual) && ambosHijosOcupados(partActual->padre)){
 //		return intentarRamaIzquierda(mensajeNuevo, partActual->padre->padre->hijoDer);
 //	}else
@@ -115,7 +130,7 @@ uint32_t intentarRamaIzquierda(msgMemoriaBroker* mensajeNuevo, struct nodoMemori
 		return intentarRamaIzquierda(mensajeNuevo, partActual->padre->hijoDer);
 	}
 
-}
+}*/
 
 bool estaOcupado(struct nodoMemoria* partActual){
 	return (partActual->header).status==OCUPADO;
@@ -281,7 +296,20 @@ msgMemoriaBroker* buscarMensajeEnMemoriaBuddy(uint32_t id){
 //	return nodoActual->mensaje;
 //}
 
-msgMemoriaBroker* buscarPorRama(uint32_t id, struct nodoMemoria* nodoActual ){
+msgMemoriaBroker* buscarPorRama(uint32_t id, struct nodoMemoria* partActual ){
+	if (estaOcupado(partActual) && (partActual->mensaje->idMensaje)==id){
+		return partActual->mensaje;
+	}else if (estaParticionado(partActual)){
+		msgMemoriaBroker* retorno = buscarPorRama(id,partActual->hijoIzq);
+		if (retorno == NULL)
+			return buscarPorRama(id,partActual->hijoDer);
+		return retorno;
+	}else{
+		return NULL;
+	}
+}
+
+/* msgMemoriaBroker* buscarPorRama(uint32_t id, struct nodoMemoria* partActual ){
 	if(estaParticionado(nodoActual)){
 		msgMemoriaBroker* mensajeEnRamaIzq=buscarPorRama(id, nodoActual->hijoIzq);
 
@@ -299,8 +327,7 @@ msgMemoriaBroker* buscarPorRama(uint32_t id, struct nodoMemoria* nodoActual ){
 	}else {
 		return NULL;
 	}
-
-}
+} */
 
 
 struct nodoMemoria* crearRaizArbol(void){
