@@ -120,8 +120,13 @@ int main(int argc , char* argv[]){
 
 	teamLogger = iniciar_logger("team.log", "TEAM");
 	teamLogger2=log_create("teamLoggerSecundario.log","team", true, LOG_LEVEL_INFO);
+
 	iniciarResolucionDeadlock=malloc(sizeof(sem_t));
 	sem_init((iniciarResolucionDeadlock), 0,0);
+
+	semaforoObjetivoCumplido=malloc(sizeof(sem_t));
+	sem_init((semaforoObjetivoCumplido), 0,0);
+
 	log_info(teamLogger2,"--------------------------------------------------------------------------");
 	log_info(teamLogger2,"NUEVA EJECUCION");
 	log_info(teamLogger2,"--------------------------------------------------------------------------");
@@ -181,8 +186,8 @@ int main(int argc , char* argv[]){
 //
 //	printf("id entrenador mas cercano: %i\n", obtenerIdEntrenadorMasCercano(pos));
 
-	while(!objetivoCumplido());
-
+	//while(!objetivoCumplido());
+	sem_wait(semaforoObjetivoCumplido);
 	loggearResultado();
 
 
@@ -202,20 +207,20 @@ void loggearObjetivoDelTeam(){
 	log_info(teamLogger2, "--------------------------------------------------");
 }
 void loggearResultado(){
+	log_info(teamLogger,"------------------------------------------------" );
 	log_info(teamLogger,"Programa terminado: objetivo global cumplido.");
 	log_info(teamLogger,"Cantidad de ciclos de CPU totales: %i.", team->cantidadCiclosCpuTotales );
 	log_info(teamLogger,"Cantidad de cambios de contexto realizados: %i.", team->cantidadCambiosContexto );
 	log_info(teamLogger,"------------------------------------------------" );
 	log_info(teamLogger,"Información de los entrenadores: " );
-
-	for(uint32_t i=0;i<sizeListaMutex(entrenadores);i++){
-		dataEntrenador* entrenadorActual=(dataEntrenador*) getListaMutex(entrenadores,i);
-		log_info(teamLogger, "Cantidad de ciclos de CPU realizados por el entrenador %i: %i.",entrenadorActual->id,entrenadorActual->cantidadCiclosCpu);
-
-	}
-
 	log_info(teamLogger,"Deadlocks producidos: %i.", team->cantidadDeadlocksEncontrados);
 	log_info(teamLogger,"Deadlocks resueltos: %i.", team->cantidadDeadlocksResueltos);
+
+	for(uint32_t i=0;i<sizeListaMutex(entrenadores);i++){
+			dataEntrenador* entrenadorActual=(dataEntrenador*) getListaMutex(entrenadores,i);
+			log_info(teamLogger, "Cantidad de ciclos de CPU realizados por el entrenador %i: %i.",entrenadorActual->id,entrenadorActual->cantidadCiclosCpu);
+
+		}
 
 }
 bool objetivoCumplido(){
@@ -661,12 +666,12 @@ dataTeam* inicializarTeam(t_config* config){
 	t_list* pokemonesDelTeam=list_create();
 	char** arrayPosicionesEntrenadores=config_get_array_value(config,"POSICIONES_ENTRENADORES");
 	char** arrayPokemonesEntrenadores=config_get_array_value(config,"POKEMON_ENTRENADORES");
-	printf("hola1\n");
+
 	char** arrayObjetivosEntrenadores=config_get_array_value(config,"OBJETIVOS_ENTRENADORES");
 
 	t_list* posicionesEntrenadores = obtenerListaDeListas(arrayPosicionesEntrenadores);
 	t_list* pokemonesEntrenadores  = obtenerListaDeListas(arrayPokemonesEntrenadores);
-	printf("hola2\n");
+
 	t_list* objetivosEntrenadores  = obtenerListaDeListas(arrayObjetivosEntrenadores);
 	uint32_t cantEntrenadores      = list_size(posicionesEntrenadores);
 
@@ -828,8 +833,8 @@ uint32_t buscarObjetivoPorEspecie(listaMutex* listaObjetivos, char* especie){
 		if(strcmp(obj->pokemon,especie) == 0){
 			return i;
 		}else{
-			log_info(teamLogger2, "--------------------------------------------------------");
-			log_info(teamLogger2, "Objetivo en lista: %s. Objetivo recibido: %s.", obj->pokemon,especie);
+//			log_info(teamLogger2, "--------------------------------------------------------");
+//			log_info(teamLogger2, "Objetivo en lista: %s. Objetivo recibido: %s.", obj->pokemon,especie);
 		}
 	}
 	return -1;

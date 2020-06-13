@@ -49,6 +49,7 @@ sem_t semaforoEjecucionCpu;
 sem_t* entrenadorEnCola;
 sem_t intercambioFinalizado;
 sem_t* iniciarResolucionDeadlock;
+sem_t* semaforoObjetivoCumplido;
 
 t_log* teamLogger;
 t_log* teamLogger2;
@@ -299,7 +300,7 @@ t_list* obtenerPokemonesSobrantesTeam(listaMutex* listaEntrenadores);
 t_list* obtenerPokemonesFaltantes(dataEntrenador* entrenador);
 
 
-void resolverDeadlock();
+void* resolverDeadlock(void* arg);
 
 bool pokemonLeInteresa(dataEntrenador* entrenador, char* pokemon);
 

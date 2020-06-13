@@ -8608,3 +8608,642 @@
 [INFO] 17:09:42:216 team/(29192:29202): El entrenador 1 salio del deadlock.
 [INFO] 17:09:42:216 team/(29192:29202): Siguen habiendo entrenadores en deadlock.
 [INFO] 17:09:42:217 team/(29192:29202): El entrenador 2 salio del deadlock.
+[INFO] 17:33:15:958 team/(4853:4853): --------------------------------------------------------------------------
+[INFO] 17:33:15:981 team/(4853:4853): NUEVA EJECUCION
+[INFO] 17:33:15:981 team/(4853:4853): --------------------------------------------------------------------------
+[INFO] 17:33:15:0 team/(4853:4853): Algortimo de planificación: FIFO.
+[INFO] 17:33:15:0 team/(4853:4853): --------------------------------------------------------
+[INFO] 17:33:15:0 team/(4853:4853): Objetivo en lista: Squirtle. Objetivo recibido: Pikachu.
+[INFO] 17:33:15:0 team/(4853:4853): --------------------------------------------------------
+[INFO] 17:33:15:0 team/(4853:4853): Objetivo en lista: Squirtle. Objetivo recibido: Gengar.
+[INFO] 17:33:15:0 team/(4853:4853): --------------------------------------------------------
+[INFO] 17:33:15:0 team/(4853:4853): Objetivo en lista: Pikachu. Objetivo recibido: Gengar.
+[INFO] 17:33:15:0 team/(4853:4853): --------------------------------------------------------
+[INFO] 17:33:15:0 team/(4853:4853): Objetivo en lista: Squirtle. Objetivo recibido: Onix.
+[INFO] 17:33:15:0 team/(4853:4853): --------------------------------------------------------
+[INFO] 17:33:15:0 team/(4853:4853): Objetivo en lista: Pikachu. Objetivo recibido: Onix.
+[INFO] 17:33:15:0 team/(4853:4853): --------------------------------------------------------
+[INFO] 17:33:15:0 team/(4853:4853): Objetivo en lista: Gengar. Objetivo recibido: Onix.
+[INFO] 17:33:15:0 team/(4853:4853): --------------------------------------------------------------
+[INFO] 17:33:15:0 team/(4853:4853): OBJETIVO DEL TEAM
+[INFO] 17:33:15:0 team/(4853:4853): Objetivo 0. Pokemon: Squirtle. Cantidad: 2.
+[INFO] 17:33:15:0 team/(4853:4853): Objetivo 1. Pokemon: Pikachu. Cantidad: 1.
+[INFO] 17:33:15:0 team/(4853:4853): Objetivo 2. Pokemon: Gengar. Cantidad: 1.
+[INFO] 17:33:15:0 team/(4853:4853): Objetivo 3. Pokemon: Onix. Cantidad: 1.
+[INFO] 17:33:15:0 team/(4853:4853): --------------------------------------------------
+[INFO] 17:33:16:14 team/(4853:4865): Se inicia el planificador
+[INFO] 17:33:37:75 team/(4853:4921): Atiendo appeared. Pokemon: Pikachu.
+[INFO] 17:33:37:76 team/(4853:4921): --------------------------------------------------------
+[INFO] 17:33:37:82 team/(4853:4921): Objetivo en lista: Squirtle. Objetivo recibido: Pikachu.
+[INFO] 17:33:37:84 team/(4853:4921): El pokemon es objetivo
+[INFO] 17:33:37:84 team/(4853:4921): Hay entrenadores disponibles para atrapar a Pikachu.
+[INFO] 17:33:37:98 team/(4853:4926): Atiendo appeared. Pokemon: Squirtle.
+[INFO] 17:33:37:100 team/(4853:4926): El pokemon es objetivo
+[INFO] 17:33:37:100 team/(4853:4921): Se selecciono el entrenador 0 para atrapar al pokemon Pikachu
+[INFO] 17:33:37:100 team/(4853:4858): El entrenador 0 se pone en READY.
+[INFO] 17:33:37:101 team/(4853:4926): Hay entrenadores disponibles para atrapar a Squirtle.
+[INFO] 17:33:37:101 team/(4853:4860): El entrenador 2 se pone en READY.
+[INFO] 17:33:37:101 team/(4853:4926): Se selecciono el entrenador 2 para atrapar al pokemon Squirtle
+[INFO] 17:33:37:106 team/(4853:4858): El entrenador 0 entro en ejecución.
+[INFO] 17:33:37:106 team/(4853:4858): El entrenador 0, que estaba en (2,3), comenzará a moverse a (1,1).
+[INFO] 17:33:37:108 team/(4853:4865): elijo entrenador para ejecutar
+[INFO] 17:33:37:111 team/(4853:4929): Atiendo appeared. Pokemon: Onix.
+[INFO] 17:33:37:111 team/(4853:4929): --------------------------------------------------------
+[INFO] 17:33:37:112 team/(4853:4929): Objetivo en lista: Squirtle. Objetivo recibido: Onix.
+[INFO] 17:33:37:112 team/(4853:4929): --------------------------------------------------------
+[INFO] 17:33:37:112 team/(4853:4929): Objetivo en lista: Pikachu. Objetivo recibido: Onix.
+[INFO] 17:33:37:113 team/(4853:4929): --------------------------------------------------------
+[INFO] 17:33:37:113 team/(4853:4929): Objetivo en lista: Gengar. Objetivo recibido: Onix.
+[INFO] 17:33:37:113 team/(4853:4929): El pokemon es objetivo
+[INFO] 17:33:37:113 team/(4853:4929): Hay entrenadores disponibles para atrapar a Onix.
+[INFO] 17:33:37:118 team/(4853:4859): El entrenador 1 se pone en READY.
+[INFO] 17:33:37:118 team/(4853:4929): Se selecciono el entrenador 1 para atrapar al pokemon Onix
+[INFO] 17:33:38:107 team/(4853:4858): El entrenador 0 se mueve a : (1,3).
+[INFO] 17:33:39:109 team/(4853:4858): El entrenador 0 se mueve a : (1,2).
+[INFO] 17:33:40:110 team/(4853:4858): El entrenador 0 se mueve a : (1,1).
+[INFO] 17:33:40:110 team/(4853:4858): El entrenador 0 se movió a la posición (1, 1).
+[INFO] 17:33:41:110 team/(4853:4858): --------------------------------------------------------
+[INFO] 17:33:41:111 team/(4853:4858): Objetivo en lista: Squirtle. Objetivo recibido: Pikachu.
+[INFO] 17:33:41:111 team/(4853:4858): Se registró el pokemon atrapado.
+[INFO] 17:33:41:112 team/(4853:4858): El entrenador 0 forma parte de un interbloqueo.
+[INFO] 17:33:41:112 team/(4853:4858): Inicio del algoritmo de detección de deadlock.
+[INFO] 17:33:41:112 team/(4853:4858): El entrenador 0 libera la CPU por su cuenta.
+[INFO] 17:33:41:112 team/(4853:4865): elijo entrenador para ejecutar
+[INFO] 17:33:41:112 team/(4853:4860): El entrenador 2 entro en ejecución.
+[INFO] 17:33:41:112 team/(4853:4858): El entrenador 0 salio de la espera a la respuesta caught.
+[INFO] 17:33:41:112 team/(4853:4858): El entrenador 0 no queda libre.
+[INFO] 17:33:41:112 team/(4853:4858): El entrenador 0 entra a la ejecucion entra al while del deadlock.
+[INFO] 17:33:41:112 team/(4853:4860): El entrenador 2, que estaba en (9,9), comenzará a moverse a (9,7).
+[INFO] 17:33:42:112 team/(4853:4860): El entrenador 2 se mueve a : (9,8).
+[INFO] 17:33:43:118 team/(4853:4860): El entrenador 2 se mueve a : (9,7).
+[INFO] 17:33:43:119 team/(4853:4860): El entrenador 2 se movió a la posición (9, 7).
+[INFO] 17:33:44:121 team/(4853:4860): Se registró el pokemon atrapado.
+[INFO] 17:33:44:123 team/(4853:4860): El entrenador 2 se bloquea porque no hay pokemones para atrapar.
+[INFO] 17:33:44:123 team/(4853:4860): El entrenador 2 libera la CPU por su cuenta.
+[INFO] 17:33:44:123 team/(4853:4865): elijo entrenador para ejecutar
+[INFO] 17:33:44:123 team/(4853:4859): El entrenador 1 entro en ejecución.
+[INFO] 17:33:44:124 team/(4853:4860): El entrenador 2 salio de la espera a la respuesta caught.
+[INFO] 17:33:44:124 team/(4853:4860): El entrenador 2 queda libre.
+[INFO] 17:33:44:124 team/(4853:4859): El entrenador 1, que estaba en (6,5), comenzará a moverse a (2,2).
+[INFO] 17:33:45:126 team/(4853:4859): El entrenador 1 se mueve a : (5,5).
+[INFO] 17:33:46:127 team/(4853:4859): El entrenador 1 se mueve a : (4,5).
+[INFO] 17:33:47:129 team/(4853:4859): El entrenador 1 se mueve a : (3,5).
+[INFO] 17:33:48:130 team/(4853:4859): El entrenador 1 se mueve a : (2,5).
+[INFO] 17:33:49:132 team/(4853:4859): El entrenador 1 se mueve a : (2,4).
+[INFO] 17:33:50:135 team/(4853:4859): El entrenador 1 se mueve a : (2,3).
+[INFO] 17:33:51:136 team/(4853:4859): El entrenador 1 se mueve a : (2,2).
+[INFO] 17:33:51:136 team/(4853:4859): El entrenador 1 se movió a la posición (2, 2).
+[INFO] 17:33:52:138 team/(4853:4859): --------------------------------------------------------
+[INFO] 17:33:52:138 team/(4853:4859): Objetivo en lista: Squirtle. Objetivo recibido: Onix.
+[INFO] 17:33:52:138 team/(4853:4859): --------------------------------------------------------
+[INFO] 17:33:52:138 team/(4853:4859): Objetivo en lista: Gengar. Objetivo recibido: Onix.
+[INFO] 17:33:52:138 team/(4853:4859): Se registró el pokemon atrapado.
+[INFO] 17:33:52:138 team/(4853:4859): El entrenador 1 se bloquea porque no hay pokemones para atrapar.
+[INFO] 17:33:52:138 team/(4853:4859): El entrenador 1 libera la CPU por su cuenta.
+[INFO] 17:33:52:138 team/(4853:4859): El entrenador 1 salio de la espera a la respuesta caught.
+[INFO] 17:33:52:138 team/(4853:4859): El entrenador 1 queda libre.
+[INFO] 17:34:12:721 team/(4853:4991): Atiendo appeared. Pokemon: Squirtle.
+[INFO] 17:34:12:727 team/(4853:4991): El pokemon es objetivo
+[INFO] 17:34:12:729 team/(4853:4991): Hay entrenadores disponibles para atrapar a Squirtle.
+[INFO] 17:34:12:732 team/(4853:4859): El entrenador 1 se pone en READY.
+[INFO] 17:34:12:733 team/(4853:4991): Se selecciono el entrenador 1 para atrapar al pokemon Squirtle
+[INFO] 17:34:12:735 team/(4853:4859): El entrenador 1 entro en ejecución.
+[INFO] 17:34:12:735 team/(4853:4859): El entrenador 1, que estaba en (2,2), comenzará a moverse a (3,5).
+[INFO] 17:34:12:735 team/(4853:4865): elijo entrenador para ejecutar
+[INFO] 17:34:12:746 team/(4853:4995): Atiendo appeared. Pokemon: Gengar.
+[INFO] 17:34:12:748 team/(4853:4995): --------------------------------------------------------
+[INFO] 17:34:12:748 team/(4853:4995): Objetivo en lista: Squirtle. Objetivo recibido: Gengar.
+[INFO] 17:34:12:748 team/(4853:4995): El pokemon es objetivo
+[INFO] 17:34:12:748 team/(4853:4995): Hay entrenadores disponibles para atrapar a Gengar.
+[INFO] 17:34:12:748 team/(4853:4860): El entrenador 2 se pone en READY.
+[INFO] 17:34:12:748 team/(4853:4995): Se selecciono el entrenador 2 para atrapar al pokemon Gengar
+[INFO] 17:34:13:735 team/(4853:4859): El entrenador 1 se mueve a : (3,2).
+[INFO] 17:34:14:736 team/(4853:4859): El entrenador 1 se mueve a : (3,3).
+[INFO] 17:34:15:741 team/(4853:4859): El entrenador 1 se mueve a : (3,4).
+[INFO] 17:34:16:742 team/(4853:4859): El entrenador 1 se mueve a : (3,5).
+[INFO] 17:34:16:742 team/(4853:4859): El entrenador 1 se movió a la posición (3, 5).
+[INFO] 17:34:17:742 team/(4853:4859): Se registró el pokemon atrapado.
+[INFO] 17:34:17:743 team/(4853:4859): El entrenador 1 forma parte de un interbloqueo.
+[INFO] 17:34:17:743 team/(4853:4859): Inicio del algoritmo de detección de deadlock.
+[INFO] 17:34:17:743 team/(4853:4859): El entrenador 1 libera la CPU por su cuenta.
+[INFO] 17:34:17:743 team/(4853:4865): elijo entrenador para ejecutar
+[INFO] 17:34:17:743 team/(4853:4860): El entrenador 2 entro en ejecución.
+[INFO] 17:34:17:743 team/(4853:4859): El entrenador 1 salio de la espera a la respuesta caught.
+[INFO] 17:34:17:743 team/(4853:4859): El entrenador 1 no queda libre.
+[INFO] 17:34:17:743 team/(4853:4859): El entrenador 1 entra a la ejecucion entra al while del deadlock.
+[INFO] 17:34:17:743 team/(4853:4860): El entrenador 2, que estaba en (9,7), comenzará a moverse a (7,5).
+[INFO] 17:34:18:744 team/(4853:4860): El entrenador 2 se mueve a : (8,7).
+[INFO] 17:34:19:744 team/(4853:4860): El entrenador 2 se mueve a : (7,7).
+[INFO] 17:34:20:746 team/(4853:4860): El entrenador 2 se mueve a : (7,6).
+[INFO] 17:34:21:747 team/(4853:4860): El entrenador 2 se mueve a : (7,5).
+[INFO] 17:34:21:748 team/(4853:4860): El entrenador 2 se movió a la posición (7, 5).
+[INFO] 17:34:22:750 team/(4853:4860): Se registró el pokemon atrapado.
+[INFO] 17:34:22:750 team/(4853:4860): El entrenador 2 forma parte de un interbloqueo.
+[INFO] 17:34:22:750 team/(4853:4860): Inicio del algoritmo de detección de deadlock.
+[INFO] 17:34:22:750 team/(4853:4860): El entrenador 2 libera la CPU por su cuenta.
+[INFO] 17:34:22:750 team/(4853:4862): Siguen habiendo entrenadores en deadlock.
+[INFO] 17:34:22:750 team/(4853:4860): El entrenador 2 salio de la espera a la respuesta caught.
+[INFO] 17:34:22:750 team/(4853:4860): El entrenador 2 no queda libre.
+[INFO] 17:34:22:750 team/(4853:4860): El entrenador 2 entra a la ejecucion entra al while del deadlock.
+[INFO] 17:34:22:750 team/(4853:4862): El entrenador 0, esta en interbloqueo con el entrenador 1.
+[INFO] 17:34:22:750 team/(4853:4859): El entrenador 1 se pone en READY.
+[INFO] 17:34:22:750 team/(4853:4862): Entrenador bloqueado: 0. Entrenador a mover: 1.
+[INFO] 17:34:22:766 team/(4853:4859): El entrenador 1, que estaba en (3,5), comenzará a moverse a (1,1).
+[INFO] 17:34:22:766 team/(4853:4865): elijo entrenador para ejecutar
+[INFO] 17:34:23:767 team/(4853:4859): El entrenador 1 se mueve a : (2,5).
+[INFO] 17:34:24:768 team/(4853:4859): El entrenador 1 se mueve a : (1,5).
+[INFO] 17:34:25:769 team/(4853:4859): El entrenador 1 se mueve a : (1,4).
+[INFO] 17:34:26:770 team/(4853:4859): El entrenador 1 se mueve a : (1,3).
+[INFO] 17:34:27:774 team/(4853:4859): El entrenador 1 se mueve a : (1,2).
+[INFO] 17:34:28:776 team/(4853:4859): El entrenador 1 se mueve a : (1,1).
+[INFO] 17:34:28:776 team/(4853:4859): El entrenador 1 se movió a la posición (1, 1).
+[INFO] 17:34:33:779 team/(4853:4859): El entrenador 1 entra a la ejecucion entra al while del deadlock.
+[INFO] 17:34:33:786 team/(4853:4862): El entrenador 0 salio del deadlock.
+[INFO] 17:34:33:786 team/(4853:4862): Siguen habiendo entrenadores en deadlock.
+[INFO] 17:34:33:786 team/(4853:4862): El entrenador 1, esta en interbloqueo con el entrenador 2.
+[INFO] 17:34:33:786 team/(4853:4860): El entrenador 2 se pone en READY.
+[INFO] 17:34:33:786 team/(4853:4862): Entrenador bloqueado: 1. Entrenador a mover: 2.
+[INFO] 17:34:33:798 team/(4853:4860): El entrenador 2, que estaba en (7,5), comenzará a moverse a (1,1).
+[INFO] 17:34:33:800 team/(4853:4865): elijo entrenador para ejecutar
+[INFO] 17:34:34:799 team/(4853:4860): El entrenador 2 se mueve a : (6,5).
+[INFO] 17:34:35:801 team/(4853:4860): El entrenador 2 se mueve a : (5,5).
+[INFO] 17:34:36:802 team/(4853:4860): El entrenador 2 se mueve a : (4,5).
+[INFO] 17:34:37:802 team/(4853:4860): El entrenador 2 se mueve a : (3,5).
+[INFO] 17:34:38:803 team/(4853:4860): El entrenador 2 se mueve a : (2,5).
+[INFO] 17:34:39:805 team/(4853:4860): El entrenador 2 se mueve a : (1,5).
+[INFO] 17:34:40:806 team/(4853:4860): El entrenador 2 se mueve a : (1,4).
+[INFO] 17:34:41:807 team/(4853:4860): El entrenador 2 se mueve a : (1,3).
+[INFO] 17:34:42:809 team/(4853:4860): El entrenador 2 se mueve a : (1,2).
+[INFO] 17:34:43:810 team/(4853:4860): El entrenador 2 se mueve a : (1,1).
+[INFO] 17:34:43:811 team/(4853:4860): El entrenador 2 se movió a la posición (1, 1).
+[INFO] 17:34:48:817 team/(4853:4862): El entrenador 1 salio del deadlock.
+[INFO] 17:34:48:817 team/(4853:4862): Siguen habiendo entrenadores en deadlock.
+[INFO] 17:34:48:817 team/(4853:4862): El entrenador 2 salio del deadlock.
+[INFO] 17:42:47:313 team/(6086:6086): --------------------------------------------------------------------------
+[INFO] 17:42:47:317 team/(6086:6086): NUEVA EJECUCION
+[INFO] 17:42:47:318 team/(6086:6086): --------------------------------------------------------------------------
+[INFO] 17:42:47:318 team/(6086:6086): Algortimo de planificación: FIFO.
+[INFO] 17:42:47:319 team/(6086:6086): --------------------------------------------------------------
+[INFO] 17:42:47:319 team/(6086:6086): OBJETIVO DEL TEAM
+[INFO] 17:42:47:319 team/(6086:6086): Objetivo 0. Pokemon: Squirtle. Cantidad: 2.
+[INFO] 17:42:47:319 team/(6086:6086): Objetivo 1. Pokemon: Pikachu. Cantidad: 1.
+[INFO] 17:42:47:319 team/(6086:6086): Objetivo 2. Pokemon: Gengar. Cantidad: 1.
+[INFO] 17:42:47:319 team/(6086:6086): Objetivo 3. Pokemon: Onix. Cantidad: 1.
+[INFO] 17:42:47:319 team/(6086:6086): --------------------------------------------------
+[INFO] 17:42:47:322 team/(6086:6098): Se inicia el planificador
+[INFO] 17:42:56:205 team/(6086:6125): Atiendo appeared. Pokemon: Pikachu.
+[INFO] 17:42:56:206 team/(6086:6125): El pokemon es objetivo
+[INFO] 17:42:56:206 team/(6086:6125): Hay entrenadores disponibles para atrapar a Pikachu.
+[INFO] 17:42:56:231 team/(6086:6091): El entrenador 0 se pone en READY.
+[INFO] 17:42:56:232 team/(6086:6125): Se selecciono el entrenador 0 para atrapar al pokemon Pikachu
+[INFO] 17:42:56:235 team/(6086:6129): Atiendo appeared. Pokemon: Squirtle.
+[INFO] 17:42:56:239 team/(6086:6129): El pokemon es objetivo
+[INFO] 17:42:56:239 team/(6086:6129): Hay entrenadores disponibles para atrapar a Squirtle.
+[INFO] 17:42:56:239 team/(6086:6093): El entrenador 2 se pone en READY.
+[INFO] 17:42:56:239 team/(6086:6129): Se selecciono el entrenador 2 para atrapar al pokemon Squirtle
+[INFO] 17:42:56:244 team/(6086:6132): Atiendo appeared. Pokemon: Onix.
+[INFO] 17:42:56:247 team/(6086:6132): El pokemon es objetivo
+[INFO] 17:42:56:248 team/(6086:6132): Hay entrenadores disponibles para atrapar a Onix.
+[INFO] 17:42:56:248 team/(6086:6092): El entrenador 1 se pone en READY.
+[INFO] 17:42:56:250 team/(6086:6132): Se selecciono el entrenador 1 para atrapar al pokemon Onix
+[INFO] 17:42:56:251 team/(6086:6091): El entrenador 0 entro en ejecución.
+[INFO] 17:42:56:251 team/(6086:6091): El entrenador 0, que estaba en (2,3), comenzará a moverse a (1,1).
+[INFO] 17:42:56:251 team/(6086:6098): elijo entrenador para ejecutar
+[INFO] 17:42:57:252 team/(6086:6091): El entrenador 0 se mueve a : (1,3).
+[INFO] 17:42:58:253 team/(6086:6091): El entrenador 0 se mueve a : (1,2).
+[INFO] 17:42:59:255 team/(6086:6091): El entrenador 0 se mueve a : (1,1).
+[INFO] 17:42:59:257 team/(6086:6091): El entrenador 0 se movió a la posición (1, 1).
+[INFO] 17:43:00:258 team/(6086:6091): Se registró el pokemon atrapado.
+[INFO] 17:43:00:259 team/(6086:6091): El entrenador 0 forma parte de un interbloqueo.
+[INFO] 17:43:00:259 team/(6086:6091): Inicio del algoritmo de detección de deadlock.
+[INFO] 17:43:00:266 team/(6086:6091): No se encontró deadlock.
+[INFO] 17:43:00:266 team/(6086:6091): El entrenador 0 libera la CPU por su cuenta.
+[INFO] 17:43:00:266 team/(6086:6098): elijo entrenador para ejecutar
+[INFO] 17:43:00:266 team/(6086:6093): El entrenador 2 entro en ejecución.
+[INFO] 17:43:00:270 team/(6086:6091): El entrenador 0 salio de la espera a la respuesta caught.
+[INFO] 17:43:00:270 team/(6086:6091): El entrenador 0 no queda libre.
+[INFO] 17:43:00:270 team/(6086:6091): El entrenador 0 entra a la ejecucion entra al while del deadlock.
+[INFO] 17:43:00:270 team/(6086:6093): El entrenador 2, que estaba en (9,9), comenzará a moverse a (9,7).
+[INFO] 17:43:01:270 team/(6086:6093): El entrenador 2 se mueve a : (9,8).
+[INFO] 17:43:02:275 team/(6086:6093): El entrenador 2 se mueve a : (9,7).
+[INFO] 17:43:02:275 team/(6086:6093): El entrenador 2 se movió a la posición (9, 7).
+[INFO] 17:43:03:281 team/(6086:6093): Se registró el pokemon atrapado.
+[INFO] 17:43:03:281 team/(6086:6093): El entrenador 2 se bloquea porque no hay pokemones para atrapar.
+[INFO] 17:43:03:289 team/(6086:6093): El entrenador 2 libera la CPU por su cuenta.
+[INFO] 17:43:03:289 team/(6086:6098): elijo entrenador para ejecutar
+[INFO] 17:43:03:289 team/(6086:6092): El entrenador 1 entro en ejecución.
+[INFO] 17:43:03:289 team/(6086:6093): El entrenador 2 salio de la espera a la respuesta caught.
+[INFO] 17:43:03:289 team/(6086:6093): El entrenador 2 queda libre.
+[INFO] 17:43:03:289 team/(6086:6092): El entrenador 1, que estaba en (6,5), comenzará a moverse a (2,2).
+[INFO] 17:43:04:290 team/(6086:6092): El entrenador 1 se mueve a : (5,5).
+[INFO] 17:43:05:292 team/(6086:6092): El entrenador 1 se mueve a : (4,5).
+[INFO] 17:43:06:294 team/(6086:6092): El entrenador 1 se mueve a : (3,5).
+[INFO] 17:43:07:295 team/(6086:6092): El entrenador 1 se mueve a : (2,5).
+[INFO] 17:43:08:297 team/(6086:6092): El entrenador 1 se mueve a : (2,4).
+[INFO] 17:43:09:298 team/(6086:6092): El entrenador 1 se mueve a : (2,3).
+[INFO] 17:43:10:299 team/(6086:6092): El entrenador 1 se mueve a : (2,2).
+[INFO] 17:43:10:300 team/(6086:6092): El entrenador 1 se movió a la posición (2, 2).
+[INFO] 17:43:11:301 team/(6086:6092): Se registró el pokemon atrapado.
+[INFO] 17:43:11:301 team/(6086:6092): El entrenador 1 se bloquea porque no hay pokemones para atrapar.
+[INFO] 17:43:11:302 team/(6086:6092): El entrenador 1 libera la CPU por su cuenta.
+[INFO] 17:43:11:302 team/(6086:6092): El entrenador 1 salio de la espera a la respuesta caught.
+[INFO] 17:43:11:302 team/(6086:6092): El entrenador 1 queda libre.
+[INFO] 17:43:16:907 team/(6086:6165): Atiendo appeared. Pokemon: Pikachu.
+[INFO] 17:43:16:908 team/(6086:6165): El pokemon no es objetivo
+[INFO] 17:43:16:918 team/(6086:6169): Atiendo appeared. Pokemon: Squirtle.
+[INFO] 17:43:16:920 team/(6086:6169): El pokemon es objetivo
+[INFO] 17:43:16:921 team/(6086:6169): Hay entrenadores disponibles para atrapar a Squirtle.
+[INFO] 17:43:16:930 team/(6086:6172): Atiendo appeared. Pokemon: Onix.
+[INFO] 17:43:16:932 team/(6086:6172): El pokemon no es objetivo
+[INFO] 17:43:16:934 team/(6086:6169): Se selecciono el entrenador 2 para atrapar al pokemon Squirtle
+[INFO] 17:43:16:934 team/(6086:6093): El entrenador 2 se pone en READY.
+[INFO] 17:43:16:944 team/(6086:6093): El entrenador 2 entro en ejecución.
+[INFO] 17:43:16:944 team/(6086:6093): El entrenador 2, que estaba en (9,7), comenzará a moverse a (9,7).
+[INFO] 17:43:16:944 team/(6086:6093): El entrenador 2 se movió a la posición (9, 7).
+[INFO] 17:43:16:944 team/(6086:6098): elijo entrenador para ejecutar
+[INFO] 17:43:17:944 team/(6086:6093): Se registró el pokemon atrapado.
+[INFO] 17:43:17:945 team/(6086:6093): El entrenador 2 forma parte de un interbloqueo.
+[INFO] 17:43:17:945 team/(6086:6093): Inicio del algoritmo de detección de deadlock.
+[INFO] 17:43:17:945 team/(6086:6093): No se encontró deadlock.
+[INFO] 17:43:17:945 team/(6086:6093): El entrenador 2 libera la CPU por su cuenta.
+[INFO] 17:43:17:945 team/(6086:6093): El entrenador 2 salio de la espera a la respuesta caught.
+[INFO] 17:43:17:945 team/(6086:6093): El entrenador 2 no queda libre.
+[INFO] 17:43:17:945 team/(6086:6093): El entrenador 2 entra a la ejecucion entra al while del deadlock.
+[INFO] 17:44:16:919 team/(6325:6325): --------------------------------------------------------------------------
+[INFO] 17:44:16:924 team/(6325:6325): NUEVA EJECUCION
+[INFO] 17:44:16:926 team/(6325:6325): --------------------------------------------------------------------------
+[INFO] 17:44:16:927 team/(6325:6325): Algortimo de planificación: FIFO.
+[INFO] 17:44:16:927 team/(6325:6325): --------------------------------------------------------------
+[INFO] 17:44:16:927 team/(6325:6325): OBJETIVO DEL TEAM
+[INFO] 17:44:16:927 team/(6325:6325): Objetivo 0. Pokemon: Squirtle. Cantidad: 2.
+[INFO] 17:44:16:927 team/(6325:6325): Objetivo 1. Pokemon: Pikachu. Cantidad: 1.
+[INFO] 17:44:16:927 team/(6325:6325): Objetivo 2. Pokemon: Gengar. Cantidad: 1.
+[INFO] 17:44:16:928 team/(6325:6325): Objetivo 3. Pokemon: Onix. Cantidad: 1.
+[INFO] 17:44:16:928 team/(6325:6325): --------------------------------------------------
+[INFO] 17:44:16:934 team/(6325:6337): Se inicia el planificador
+[INFO] 17:44:20:517 team/(6325:6352): Atiendo appeared. Pokemon: Pikachu.
+[INFO] 17:44:20:522 team/(6325:6352): El pokemon es objetivo
+[INFO] 17:44:20:524 team/(6325:6352): Hay entrenadores disponibles para atrapar a Pikachu.
+[INFO] 17:44:20:528 team/(6325:6330): El entrenador 0 se pone en READY.
+[INFO] 17:44:20:528 team/(6325:6352): Se selecciono el entrenador 0 para atrapar al pokemon Pikachu
+[INFO] 17:44:20:529 team/(6325:6330): El entrenador 0 entro en ejecución.
+[INFO] 17:44:20:529 team/(6325:6330): El entrenador 0, que estaba en (2,3), comenzará a moverse a (1,1).
+[INFO] 17:44:20:530 team/(6325:6337): elijo entrenador para ejecutar
+[INFO] 17:44:20:542 team/(6325:6356): Atiendo appeared. Pokemon: Squirtle.
+[INFO] 17:44:20:543 team/(6325:6356): El pokemon es objetivo
+[INFO] 17:44:20:543 team/(6325:6356): Hay entrenadores disponibles para atrapar a Squirtle.
+[INFO] 17:44:20:543 team/(6325:6332): El entrenador 2 se pone en READY.
+[INFO] 17:44:20:543 team/(6325:6356): Se selecciono el entrenador 2 para atrapar al pokemon Squirtle
+[INFO] 17:44:20:550 team/(6325:6359): Atiendo appeared. Pokemon: Onix.
+[INFO] 17:44:20:552 team/(6325:6359): El pokemon es objetivo
+[INFO] 17:44:20:553 team/(6325:6359): Hay entrenadores disponibles para atrapar a Onix.
+[INFO] 17:44:20:553 team/(6325:6331): El entrenador 1 se pone en READY.
+[INFO] 17:44:20:553 team/(6325:6359): Se selecciono el entrenador 1 para atrapar al pokemon Onix
+[INFO] 17:44:21:530 team/(6325:6330): El entrenador 0 se mueve a : (1,3).
+[INFO] 17:44:22:532 team/(6325:6330): El entrenador 0 se mueve a : (1,2).
+[INFO] 17:44:23:532 team/(6325:6330): El entrenador 0 se mueve a : (1,1).
+[INFO] 17:44:23:533 team/(6325:6330): El entrenador 0 se movió a la posición (1, 1).
+[INFO] 17:44:24:533 team/(6325:6330): Se registró el pokemon atrapado.
+[INFO] 17:44:24:534 team/(6325:6330): El entrenador 0 forma parte de un interbloqueo.
+[INFO] 17:44:24:534 team/(6325:6330): Inicio del algoritmo de detección de deadlock.
+[INFO] 17:44:24:535 team/(6325:6330): No se encontró deadlock.
+[INFO] 17:44:24:535 team/(6325:6330): El entrenador 0 libera la CPU por su cuenta.
+[INFO] 17:44:24:536 team/(6325:6337): elijo entrenador para ejecutar
+[INFO] 17:44:24:536 team/(6325:6332): El entrenador 2 entro en ejecución.
+[INFO] 17:44:24:536 team/(6325:6332): El entrenador 2, que estaba en (9,9), comenzará a moverse a (9,7).
+[INFO] 17:44:25:536 team/(6325:6332): El entrenador 2 se mueve a : (9,8).
+[INFO] 17:44:26:536 team/(6325:6332): El entrenador 2 se mueve a : (9,7).
+[INFO] 17:44:26:536 team/(6325:6332): El entrenador 2 se movió a la posición (9, 7).
+[INFO] 17:44:27:537 team/(6325:6332): Se registró el pokemon atrapado.
+[INFO] 17:44:27:537 team/(6325:6332): El entrenador 2 se bloquea porque no hay pokemones para atrapar.
+[INFO] 17:44:27:538 team/(6325:6332): El entrenador 2 libera la CPU por su cuenta.
+[INFO] 17:44:27:538 team/(6325:6337): elijo entrenador para ejecutar
+[INFO] 17:44:27:538 team/(6325:6331): El entrenador 1 entro en ejecución.
+[INFO] 17:44:27:538 team/(6325:6331): El entrenador 1, que estaba en (6,5), comenzará a moverse a (2,2).
+[INFO] 17:44:28:538 team/(6325:6331): El entrenador 1 se mueve a : (5,5).
+[INFO] 17:44:29:542 team/(6325:6331): El entrenador 1 se mueve a : (4,5).
+[INFO] 17:44:30:542 team/(6325:6331): El entrenador 1 se mueve a : (3,5).
+[INFO] 17:44:31:544 team/(6325:6331): El entrenador 1 se mueve a : (2,5).
+[INFO] 17:44:32:545 team/(6325:6331): El entrenador 1 se mueve a : (2,4).
+[INFO] 17:44:33:546 team/(6325:6331): El entrenador 1 se mueve a : (2,3).
+[INFO] 17:44:34:548 team/(6325:6331): El entrenador 1 se mueve a : (2,2).
+[INFO] 17:44:34:548 team/(6325:6331): El entrenador 1 se movió a la posición (2, 2).
+[INFO] 17:44:35:549 team/(6325:6331): Se registró el pokemon atrapado.
+[INFO] 17:44:35:550 team/(6325:6331): El entrenador 1 se bloquea porque no hay pokemones para atrapar.
+[INFO] 17:44:35:550 team/(6325:6331): El entrenador 1 libera la CPU por su cuenta.
+[INFO] 17:44:43:29 team/(6325:6403): Atiendo appeared. Pokemon: Squirtle.
+[INFO] 17:44:43:30 team/(6325:6403): El pokemon es objetivo
+[INFO] 17:44:43:30 team/(6325:6403): Hay entrenadores disponibles para atrapar a Squirtle.
+[INFO] 17:44:43:30 team/(6325:6331): El entrenador 1 se pone en READY.
+[INFO] 17:44:43:30 team/(6325:6403): Se selecciono el entrenador 1 para atrapar al pokemon Squirtle
+[INFO] 17:44:43:38 team/(6325:6331): El entrenador 1 entro en ejecución.
+[INFO] 17:44:43:38 team/(6325:6331): El entrenador 1, que estaba en (2,2), comenzará a moverse a (3,5).
+[INFO] 17:44:43:38 team/(6325:6337): elijo entrenador para ejecutar
+[INFO] 17:44:43:46 team/(6325:6407): Atiendo appeared. Pokemon: Gengar.
+[INFO] 17:44:43:46 team/(6325:6407): El pokemon es objetivo
+[INFO] 17:44:43:50 team/(6325:6407): Hay entrenadores disponibles para atrapar a Gengar.
+[INFO] 17:44:43:62 team/(6325:6407): Se selecciono el entrenador 2 para atrapar al pokemon Gengar
+[INFO] 17:44:43:62 team/(6325:6332): El entrenador 2 se pone en READY.
+[INFO] 17:44:44:39 team/(6325:6331): El entrenador 1 se mueve a : (3,2).
+[INFO] 17:44:45:40 team/(6325:6331): El entrenador 1 se mueve a : (3,3).
+[INFO] 17:44:46:40 team/(6325:6331): El entrenador 1 se mueve a : (3,4).
+[INFO] 17:44:47:42 team/(6325:6331): El entrenador 1 se mueve a : (3,5).
+[INFO] 17:44:47:43 team/(6325:6331): El entrenador 1 se movió a la posición (3, 5).
+[INFO] 17:44:48:44 team/(6325:6331): Se registró el pokemon atrapado.
+[INFO] 17:44:48:44 team/(6325:6331): El entrenador 1 forma parte de un interbloqueo.
+[INFO] 17:44:48:44 team/(6325:6331): Inicio del algoritmo de detección de deadlock.
+[INFO] 17:44:48:46 team/(6325:6331): No se encontró deadlock.
+[INFO] 17:44:48:46 team/(6325:6331): El entrenador 1 libera la CPU por su cuenta.
+[INFO] 17:44:48:46 team/(6325:6337): elijo entrenador para ejecutar
+[INFO] 17:44:48:46 team/(6325:6332): El entrenador 2 entro en ejecución.
+[INFO] 17:44:48:46 team/(6325:6332): El entrenador 2, que estaba en (9,7), comenzará a moverse a (7,5).
+[INFO] 17:44:49:47 team/(6325:6332): El entrenador 2 se mueve a : (8,7).
+[INFO] 17:44:50:49 team/(6325:6332): El entrenador 2 se mueve a : (7,7).
+[INFO] 17:44:51:50 team/(6325:6332): El entrenador 2 se mueve a : (7,6).
+[INFO] 17:44:52:51 team/(6325:6332): El entrenador 2 se mueve a : (7,5).
+[INFO] 17:44:52:52 team/(6325:6332): El entrenador 2 se movió a la posición (7, 5).
+[INFO] 17:44:53:52 team/(6325:6332): Se registró el pokemon atrapado.
+[INFO] 17:44:53:53 team/(6325:6332): El entrenador 2 forma parte de un interbloqueo.
+[INFO] 17:44:53:53 team/(6325:6332): Inicio del algoritmo de detección de deadlock.
+[INFO] 17:44:53:53 team/(6325:6332): El entrenador 2 libera la CPU por su cuenta.
+[INFO] 17:44:53:53 team/(6325:6334): El entrenador 0, esta en interbloqueo con el entrenador 1.
+[INFO] 17:44:53:53 team/(6325:6331): El entrenador 1 se pone en READY.
+[INFO] 17:44:53:58 team/(6325:6331): El entrenador 1, que estaba en (3,5), comenzará a moverse a (1,1).
+[INFO] 17:44:53:59 team/(6325:6337): elijo entrenador para ejecutar
+[INFO] 17:44:54:58 team/(6325:6331): El entrenador 1 se mueve a : (2,5).
+[INFO] 17:44:55:60 team/(6325:6331): El entrenador 1 se mueve a : (1,5).
+[INFO] 17:44:56:61 team/(6325:6331): El entrenador 1 se mueve a : (1,4).
+[INFO] 17:44:57:62 team/(6325:6331): El entrenador 1 se mueve a : (1,3).
+[INFO] 17:44:58:64 team/(6325:6331): El entrenador 1 se mueve a : (1,2).
+[INFO] 17:44:59:64 team/(6325:6331): El entrenador 1 se mueve a : (1,1).
+[INFO] 17:44:59:65 team/(6325:6331): El entrenador 1 se movió a la posición (1, 1).
+[INFO] 17:45:04:68 team/(6325:6334): El entrenador 0 salio del deadlock.
+[INFO] 17:45:04:68 team/(6325:6334): El entrenador 1, esta en interbloqueo con el entrenador 2.
+[INFO] 17:45:04:68 team/(6325:6332): El entrenador 2 se pone en READY.
+[INFO] 17:45:04:68 team/(6325:6332): El entrenador 2, que estaba en (7,5), comenzará a moverse a (1,1).
+[INFO] 17:45:04:68 team/(6325:6337): elijo entrenador para ejecutar
+[INFO] 17:45:05:69 team/(6325:6332): El entrenador 2 se mueve a : (6,5).
+[INFO] 17:45:06:71 team/(6325:6332): El entrenador 2 se mueve a : (5,5).
+[INFO] 17:45:07:72 team/(6325:6332): El entrenador 2 se mueve a : (4,5).
+[INFO] 17:45:08:75 team/(6325:6332): El entrenador 2 se mueve a : (3,5).
+[INFO] 17:45:09:76 team/(6325:6332): El entrenador 2 se mueve a : (2,5).
+[INFO] 17:45:10:77 team/(6325:6332): El entrenador 2 se mueve a : (1,5).
+[INFO] 17:45:11:78 team/(6325:6332): El entrenador 2 se mueve a : (1,4).
+[INFO] 17:45:12:79 team/(6325:6332): El entrenador 2 se mueve a : (1,3).
+[INFO] 17:45:13:80 team/(6325:6332): El entrenador 2 se mueve a : (1,2).
+[INFO] 17:45:14:81 team/(6325:6332): El entrenador 2 se mueve a : (1,1).
+[INFO] 17:45:14:82 team/(6325:6332): El entrenador 2 se movió a la posición (1, 1).
+[INFO] 17:45:19:84 team/(6325:6334): El entrenador 1 salio del deadlock.
+[INFO] 17:45:19:85 team/(6325:6334): El entrenador 2 salio del deadlock.
+[INFO] 17:54:02:740 team/(7673:7673): --------------------------------------------------------------------------
+[INFO] 17:54:02:740 team/(7673:7673): NUEVA EJECUCION
+[INFO] 17:54:02:740 team/(7673:7673): --------------------------------------------------------------------------
+[INFO] 17:54:02:740 team/(7673:7673): Algortimo de planificación: FIFO.
+[INFO] 17:54:02:740 team/(7673:7673): --------------------------------------------------------------
+[INFO] 17:54:02:742 team/(7673:7673): OBJETIVO DEL TEAM
+[INFO] 17:54:02:742 team/(7673:7673): Objetivo 0. Pokemon: Squirtle. Cantidad: 2.
+[INFO] 17:54:02:742 team/(7673:7673): Objetivo 1. Pokemon: Pikachu. Cantidad: 1.
+[INFO] 17:54:02:742 team/(7673:7673): Objetivo 2. Pokemon: Gengar. Cantidad: 1.
+[INFO] 17:54:02:742 team/(7673:7673): Objetivo 3. Pokemon: Onix. Cantidad: 1.
+[INFO] 17:54:02:742 team/(7673:7673): --------------------------------------------------
+[INFO] 17:54:02:748 team/(7673:7689): Se inicia el planificador
+[INFO] 17:54:08:310 team/(7673:7708): Atiendo appeared. Pokemon: Pikachu.
+[INFO] 17:54:08:311 team/(7673:7708): El pokemon es objetivo
+[INFO] 17:54:08:315 team/(7673:7708): Hay entrenadores disponibles para atrapar a Pikachu.
+[INFO] 17:54:08:319 team/(7673:7682): El entrenador 0 se pone en READY.
+[INFO] 17:54:08:319 team/(7673:7708): Se selecciono el entrenador 0 para atrapar al pokemon Pikachu
+[INFO] 17:54:08:322 team/(7673:7682): El entrenador 0 entro en ejecución.
+[INFO] 17:54:08:322 team/(7673:7682): El entrenador 0, que estaba en (2,3), comenzará a moverse a (1,1).
+[INFO] 17:54:08:322 team/(7673:7689): elijo entrenador para ejecutar
+[INFO] 17:54:08:327 team/(7673:7712): Atiendo appeared. Pokemon: Squirtle.
+[INFO] 17:54:08:327 team/(7673:7712): El pokemon es objetivo
+[INFO] 17:54:08:329 team/(7673:7712): Hay entrenadores disponibles para atrapar a Squirtle.
+[INFO] 17:54:08:329 team/(7673:7684): El entrenador 2 se pone en READY.
+[INFO] 17:54:08:329 team/(7673:7712): Se selecciono el entrenador 2 para atrapar al pokemon Squirtle
+[INFO] 17:54:08:334 team/(7673:7715): Atiendo appeared. Pokemon: Onix.
+[INFO] 17:54:08:336 team/(7673:7715): El pokemon es objetivo
+[INFO] 17:54:08:343 team/(7673:7715): Hay entrenadores disponibles para atrapar a Onix.
+[INFO] 17:54:08:346 team/(7673:7683): El entrenador 1 se pone en READY.
+[INFO] 17:54:08:347 team/(7673:7715): Se selecciono el entrenador 1 para atrapar al pokemon Onix
+[INFO] 17:54:09:323 team/(7673:7682): El entrenador 0 se mueve a : (1,3).
+[INFO] 17:54:10:324 team/(7673:7682): El entrenador 0 se mueve a : (1,2).
+[INFO] 17:54:11:325 team/(7673:7682): El entrenador 0 se mueve a : (1,1).
+[INFO] 17:54:11:326 team/(7673:7682): El entrenador 0 se movió a la posición (1, 1).
+[INFO] 17:54:12:326 team/(7673:7682): Se registró el pokemon atrapado.
+[INFO] 17:54:12:328 team/(7673:7682): El entrenador 0 forma parte de un interbloqueo.
+[INFO] 17:54:12:328 team/(7673:7682): Inicio del algoritmo de detección de deadlock.
+[INFO] 17:54:12:328 team/(7673:7682): No se encontró deadlock.
+[INFO] 17:54:12:328 team/(7673:7682): El entrenador 0 libera la CPU por su cuenta.
+[INFO] 17:54:12:328 team/(7673:7689): elijo entrenador para ejecutar
+[INFO] 17:54:12:328 team/(7673:7684): El entrenador 2 entro en ejecución.
+[INFO] 17:54:12:328 team/(7673:7684): El entrenador 2, que estaba en (9,9), comenzará a moverse a (9,7).
+[INFO] 17:54:13:330 team/(7673:7684): El entrenador 2 se mueve a : (9,8).
+[INFO] 17:54:14:330 team/(7673:7684): El entrenador 2 se mueve a : (9,7).
+[INFO] 17:54:14:331 team/(7673:7684): El entrenador 2 se movió a la posición (9, 7).
+[INFO] 17:54:15:332 team/(7673:7684): Se registró el pokemon atrapado.
+[INFO] 17:54:15:333 team/(7673:7684): El entrenador 2 se bloquea porque no hay pokemones para atrapar.
+[INFO] 17:54:15:333 team/(7673:7684): El entrenador 2 libera la CPU por su cuenta.
+[INFO] 17:54:15:333 team/(7673:7689): elijo entrenador para ejecutar
+[INFO] 17:54:15:333 team/(7673:7683): El entrenador 1 entro en ejecución.
+[INFO] 17:54:15:333 team/(7673:7683): El entrenador 1, que estaba en (6,5), comenzará a moverse a (2,2).
+[INFO] 17:54:16:333 team/(7673:7683): El entrenador 1 se mueve a : (5,5).
+[INFO] 17:54:17:335 team/(7673:7683): El entrenador 1 se mueve a : (4,5).
+[INFO] 17:54:18:336 team/(7673:7683): El entrenador 1 se mueve a : (3,5).
+[INFO] 17:54:19:337 team/(7673:7683): El entrenador 1 se mueve a : (2,5).
+[INFO] 17:54:20:338 team/(7673:7683): El entrenador 1 se mueve a : (2,4).
+[INFO] 17:54:21:340 team/(7673:7683): El entrenador 1 se mueve a : (2,3).
+[INFO] 17:54:22:341 team/(7673:7683): El entrenador 1 se mueve a : (2,2).
+[INFO] 17:54:22:341 team/(7673:7683): El entrenador 1 se movió a la posición (2, 2).
+[INFO] 17:54:23:343 team/(7673:7683): Se registró el pokemon atrapado.
+[INFO] 17:54:23:343 team/(7673:7683): El entrenador 1 se bloquea porque no hay pokemones para atrapar.
+[INFO] 17:54:23:343 team/(7673:7683): El entrenador 1 libera la CPU por su cuenta.
+[INFO] 17:54:26:409 team/(7673:7749): Atiendo appeared. Pokemon: Squirtle.
+[INFO] 17:54:26:410 team/(7673:7749): El pokemon es objetivo
+[INFO] 17:54:26:413 team/(7673:7749): Hay entrenadores disponibles para atrapar a Squirtle.
+[INFO] 17:54:26:414 team/(7673:7683): El entrenador 1 se pone en READY.
+[INFO] 17:54:26:414 team/(7673:7749): Se selecciono el entrenador 1 para atrapar al pokemon Squirtle
+[INFO] 17:54:26:419 team/(7673:7683): El entrenador 1 entro en ejecución.
+[INFO] 17:54:26:419 team/(7673:7683): El entrenador 1, que estaba en (2,2), comenzará a moverse a (3,5).
+[INFO] 17:54:26:419 team/(7673:7689): elijo entrenador para ejecutar
+[INFO] 17:54:26:424 team/(7673:7753): Atiendo appeared. Pokemon: Gengar.
+[INFO] 17:54:26:426 team/(7673:7753): El pokemon es objetivo
+[INFO] 17:54:26:426 team/(7673:7753): Hay entrenadores disponibles para atrapar a Gengar.
+[INFO] 17:54:26:426 team/(7673:7684): El entrenador 2 se pone en READY.
+[INFO] 17:54:26:426 team/(7673:7753): Se selecciono el entrenador 2 para atrapar al pokemon Gengar
+[INFO] 17:54:27:419 team/(7673:7683): El entrenador 1 se mueve a : (3,2).
+[INFO] 17:54:28:420 team/(7673:7683): El entrenador 1 se mueve a : (3,3).
+[INFO] 17:54:29:421 team/(7673:7683): El entrenador 1 se mueve a : (3,4).
+[INFO] 17:54:30:423 team/(7673:7683): El entrenador 1 se mueve a : (3,5).
+[INFO] 17:54:30:424 team/(7673:7683): El entrenador 1 se movió a la posición (3, 5).
+[INFO] 17:54:31:426 team/(7673:7683): Se registró el pokemon atrapado.
+[INFO] 17:54:31:430 team/(7673:7683): El entrenador 1 forma parte de un interbloqueo.
+[INFO] 17:54:31:430 team/(7673:7683): Inicio del algoritmo de detección de deadlock.
+[INFO] 17:54:31:430 team/(7673:7683): No se encontró deadlock.
+[INFO] 17:54:31:430 team/(7673:7683): El entrenador 1 libera la CPU por su cuenta.
+[INFO] 17:54:31:430 team/(7673:7689): elijo entrenador para ejecutar
+[INFO] 17:54:31:430 team/(7673:7684): El entrenador 2 entro en ejecución.
+[INFO] 17:54:31:430 team/(7673:7684): El entrenador 2, que estaba en (9,7), comenzará a moverse a (7,5).
+[INFO] 17:54:32:431 team/(7673:7684): El entrenador 2 se mueve a : (8,7).
+[INFO] 17:54:33:432 team/(7673:7684): El entrenador 2 se mueve a : (7,7).
+[INFO] 17:54:34:433 team/(7673:7684): El entrenador 2 se mueve a : (7,6).
+[INFO] 17:54:35:435 team/(7673:7684): El entrenador 2 se mueve a : (7,5).
+[INFO] 17:54:35:435 team/(7673:7684): El entrenador 2 se movió a la posición (7, 5).
+[INFO] 17:54:36:436 team/(7673:7684): Se registró el pokemon atrapado.
+[INFO] 17:54:36:437 team/(7673:7684): El entrenador 2 forma parte de un interbloqueo.
+[INFO] 17:54:36:437 team/(7673:7684): Inicio del algoritmo de detección de deadlock.
+[INFO] 17:54:36:437 team/(7673:7684): El entrenador 2 libera la CPU por su cuenta.
+[INFO] 17:54:36:437 team/(7673:7686): El entrenador 0, esta en interbloqueo con el entrenador 1.
+[INFO] 17:54:36:437 team/(7673:7683): El entrenador 1 se pone en READY.
+[INFO] 17:54:36:441 team/(7673:7683): El entrenador 1, que estaba en (3,5), comenzará a moverse a (1,1).
+[INFO] 17:54:36:442 team/(7673:7689): elijo entrenador para ejecutar
+[INFO] 17:54:37:442 team/(7673:7683): El entrenador 1 se mueve a : (2,5).
+[INFO] 17:54:38:443 team/(7673:7683): El entrenador 1 se mueve a : (1,5).
+[INFO] 17:54:39:444 team/(7673:7683): El entrenador 1 se mueve a : (1,4).
+[INFO] 17:54:40:444 team/(7673:7683): El entrenador 1 se mueve a : (1,3).
+[INFO] 17:54:41:446 team/(7673:7683): El entrenador 1 se mueve a : (1,2).
+[INFO] 17:54:42:447 team/(7673:7683): El entrenador 1 se mueve a : (1,1).
+[INFO] 17:54:42:447 team/(7673:7683): El entrenador 1 se movió a la posición (1, 1).
+[INFO] 17:54:47:450 team/(7673:7686): El entrenador 0 salio del deadlock.
+[INFO] 17:54:47:451 team/(7673:7686): El entrenador 1, esta en interbloqueo con el entrenador 2.
+[INFO] 17:54:47:451 team/(7673:7684): El entrenador 2 se pone en READY.
+[INFO] 17:54:47:451 team/(7673:7684): El entrenador 2, que estaba en (7,5), comenzará a moverse a (1,1).
+[INFO] 17:54:47:451 team/(7673:7689): elijo entrenador para ejecutar
+[INFO] 17:54:48:452 team/(7673:7684): El entrenador 2 se mueve a : (6,5).
+[INFO] 17:54:49:453 team/(7673:7684): El entrenador 2 se mueve a : (5,5).
+[INFO] 17:54:50:455 team/(7673:7684): El entrenador 2 se mueve a : (4,5).
+[INFO] 17:54:51:456 team/(7673:7684): El entrenador 2 se mueve a : (3,5).
+[INFO] 17:54:52:457 team/(7673:7684): El entrenador 2 se mueve a : (2,5).
+[INFO] 17:54:53:458 team/(7673:7684): El entrenador 2 se mueve a : (1,5).
+[INFO] 17:54:54:459 team/(7673:7684): El entrenador 2 se mueve a : (1,4).
+[INFO] 17:54:55:460 team/(7673:7684): El entrenador 2 se mueve a : (1,3).
+[INFO] 17:54:56:461 team/(7673:7684): El entrenador 2 se mueve a : (1,2).
+[INFO] 17:54:57:463 team/(7673:7684): El entrenador 2 se mueve a : (1,1).
+[INFO] 17:54:57:463 team/(7673:7684): El entrenador 2 se movió a la posición (1, 1).
+[INFO] 17:55:02:467 team/(7673:7686): El entrenador 1 salio del deadlock.
+[INFO] 17:55:02:467 team/(7673:7686): El entrenador 2 salio del deadlock.
+[INFO] 17:56:30:450 team/(8017:8017): --------------------------------------------------------------------------
+[INFO] 17:56:30:452 team/(8017:8017): NUEVA EJECUCION
+[INFO] 17:56:30:454 team/(8017:8017): --------------------------------------------------------------------------
+[INFO] 17:56:30:454 team/(8017:8017): Algortimo de planificación: FIFO.
+[INFO] 17:56:30:454 team/(8017:8017): --------------------------------------------------------------
+[INFO] 17:56:30:454 team/(8017:8017): OBJETIVO DEL TEAM
+[INFO] 17:56:30:454 team/(8017:8017): Objetivo 0. Pokemon: Squirtle. Cantidad: 2.
+[INFO] 17:56:30:454 team/(8017:8017): Objetivo 1. Pokemon: Pikachu. Cantidad: 1.
+[INFO] 17:56:30:454 team/(8017:8017): Objetivo 2. Pokemon: Gengar. Cantidad: 1.
+[INFO] 17:56:30:454 team/(8017:8017): Objetivo 3. Pokemon: Onix. Cantidad: 1.
+[INFO] 17:56:30:455 team/(8017:8017): --------------------------------------------------
+[INFO] 17:56:30:458 team/(8017:8030): Se inicia el planificador
+[INFO] 17:56:34:772 team/(8017:8049): Atiendo appeared. Pokemon: Pikachu.
+[INFO] 17:56:34:773 team/(8017:8049): El pokemon es objetivo
+[INFO] 17:56:34:773 team/(8017:8049): Hay entrenadores disponibles para atrapar a Pikachu.
+[INFO] 17:56:34:773 team/(8017:8023): El entrenador 0 se pone en READY.
+[INFO] 17:56:34:773 team/(8017:8049): Se selecciono el entrenador 0 para atrapar al pokemon Pikachu
+[INFO] 17:56:34:779 team/(8017:8023): El entrenador 0 entro en ejecución.
+[INFO] 17:56:34:779 team/(8017:8023): El entrenador 0, que estaba en (2,3), comenzará a moverse a (1,1).
+[INFO] 17:56:34:779 team/(8017:8030): elijo entrenador para ejecutar
+[INFO] 17:56:34:785 team/(8017:8053): Atiendo appeared. Pokemon: Squirtle.
+[INFO] 17:56:34:788 team/(8017:8053): El pokemon es objetivo
+[INFO] 17:56:34:788 team/(8017:8053): Hay entrenadores disponibles para atrapar a Squirtle.
+[INFO] 17:56:34:788 team/(8017:8025): El entrenador 2 se pone en READY.
+[INFO] 17:56:34:789 team/(8017:8053): Se selecciono el entrenador 2 para atrapar al pokemon Squirtle
+[INFO] 17:56:34:795 team/(8017:8056): Atiendo appeared. Pokemon: Onix.
+[INFO] 17:56:34:796 team/(8017:8056): El pokemon es objetivo
+[INFO] 17:56:34:797 team/(8017:8056): Hay entrenadores disponibles para atrapar a Onix.
+[INFO] 17:56:34:797 team/(8017:8024): El entrenador 1 se pone en READY.
+[INFO] 17:56:34:798 team/(8017:8056): Se selecciono el entrenador 1 para atrapar al pokemon Onix
+[INFO] 17:56:35:779 team/(8017:8023): El entrenador 0 se mueve a : (1,3).
+[INFO] 17:56:36:781 team/(8017:8023): El entrenador 0 se mueve a : (1,2).
+[INFO] 17:56:37:782 team/(8017:8023): El entrenador 0 se mueve a : (1,1).
+[INFO] 17:56:37:783 team/(8017:8023): El entrenador 0 se movió a la posición (1, 1).
+[INFO] 17:56:38:783 team/(8017:8023): Se registró el pokemon atrapado.
+[INFO] 17:56:38:784 team/(8017:8023): El entrenador 0 forma parte de un interbloqueo.
+[INFO] 17:56:38:784 team/(8017:8023): Inicio del algoritmo de detección de deadlock.
+[INFO] 17:56:38:784 team/(8017:8023): No se encontró deadlock.
+[INFO] 17:56:38:784 team/(8017:8023): El entrenador 0 libera la CPU por su cuenta.
+[INFO] 17:56:38:784 team/(8017:8030): elijo entrenador para ejecutar
+[INFO] 17:56:38:784 team/(8017:8025): El entrenador 2 entro en ejecución.
+[INFO] 17:56:38:784 team/(8017:8025): El entrenador 2, que estaba en (9,9), comenzará a moverse a (9,7).
+[INFO] 17:56:39:784 team/(8017:8025): El entrenador 2 se mueve a : (9,8).
+[INFO] 17:56:40:786 team/(8017:8025): El entrenador 2 se mueve a : (9,7).
+[INFO] 17:56:40:786 team/(8017:8025): El entrenador 2 se movió a la posición (9, 7).
+[INFO] 17:56:41:787 team/(8017:8025): Se registró el pokemon atrapado.
+[INFO] 17:56:41:788 team/(8017:8025): El entrenador 2 se bloquea porque no hay pokemones para atrapar.
+[INFO] 17:56:41:788 team/(8017:8025): El entrenador 2 libera la CPU por su cuenta.
+[INFO] 17:56:41:788 team/(8017:8030): elijo entrenador para ejecutar
+[INFO] 17:56:41:788 team/(8017:8024): El entrenador 1 entro en ejecución.
+[INFO] 17:56:41:788 team/(8017:8024): El entrenador 1, que estaba en (6,5), comenzará a moverse a (2,2).
+[INFO] 17:56:42:788 team/(8017:8024): El entrenador 1 se mueve a : (5,5).
+[INFO] 17:56:43:790 team/(8017:8024): El entrenador 1 se mueve a : (4,5).
+[INFO] 17:56:44:791 team/(8017:8024): El entrenador 1 se mueve a : (3,5).
+[INFO] 17:56:45:792 team/(8017:8024): El entrenador 1 se mueve a : (2,5).
+[INFO] 17:56:46:793 team/(8017:8024): El entrenador 1 se mueve a : (2,4).
+[INFO] 17:56:47:794 team/(8017:8024): El entrenador 1 se mueve a : (2,3).
+[INFO] 17:56:48:796 team/(8017:8024): El entrenador 1 se mueve a : (2,2).
+[INFO] 17:56:48:796 team/(8017:8024): El entrenador 1 se movió a la posición (2, 2).
+[INFO] 17:56:49:798 team/(8017:8024): Se registró el pokemon atrapado.
+[INFO] 17:56:49:799 team/(8017:8024): El entrenador 1 se bloquea porque no hay pokemones para atrapar.
+[INFO] 17:56:49:799 team/(8017:8024): El entrenador 1 libera la CPU por su cuenta.
+[INFO] 17:56:51:990 team/(8017:8096): Atiendo appeared. Pokemon: Squirtle.
+[INFO] 17:56:51:991 team/(8017:8096): El pokemon es objetivo
+[INFO] 17:56:51:991 team/(8017:8096): Hay entrenadores disponibles para atrapar a Squirtle.
+[INFO] 17:56:51:991 team/(8017:8024): El entrenador 1 se pone en READY.
+[INFO] 17:56:51:992 team/(8017:8096): Se selecciono el entrenador 1 para atrapar al pokemon Squirtle
+[INFO] 17:56:51:999 team/(8017:8024): El entrenador 1 entro en ejecución.
+[INFO] 17:56:51:0 team/(8017:8024): El entrenador 1, que estaba en (2,2), comenzará a moverse a (3,5).
+[INFO] 17:56:51:1 team/(8017:8030): elijo entrenador para ejecutar
+[INFO] 17:56:52:8 team/(8017:8100): Atiendo appeared. Pokemon: Gengar.
+[INFO] 17:56:52:10 team/(8017:8100): El pokemon es objetivo
+[INFO] 17:56:52:10 team/(8017:8100): Hay entrenadores disponibles para atrapar a Gengar.
+[INFO] 17:56:52:10 team/(8017:8025): El entrenador 2 se pone en READY.
+[INFO] 17:56:52:10 team/(8017:8100): Se selecciono el entrenador 2 para atrapar al pokemon Gengar
+[INFO] 17:56:52:1 team/(8017:8024): El entrenador 1 se mueve a : (3,2).
+[INFO] 17:56:53:3 team/(8017:8024): El entrenador 1 se mueve a : (3,3).
+[INFO] 17:56:54:3 team/(8017:8024): El entrenador 1 se mueve a : (3,4).
+[INFO] 17:56:55:5 team/(8017:8024): El entrenador 1 se mueve a : (3,5).
+[INFO] 17:56:55:5 team/(8017:8024): El entrenador 1 se movió a la posición (3, 5).
+[INFO] 17:56:57:10 team/(8017:8024): Se registró el pokemon atrapado.
+[INFO] 17:56:57:11 team/(8017:8024): El entrenador 1 forma parte de un interbloqueo.
+[INFO] 17:56:57:11 team/(8017:8024): Inicio del algoritmo de detección de deadlock.
+[INFO] 17:56:57:11 team/(8017:8024): No se encontró deadlock.
+[INFO] 17:56:57:11 team/(8017:8024): El entrenador 1 libera la CPU por su cuenta.
+[INFO] 17:56:57:11 team/(8017:8030): elijo entrenador para ejecutar
+[INFO] 17:56:57:11 team/(8017:8025): El entrenador 2 entro en ejecución.
+[INFO] 17:56:57:11 team/(8017:8025): El entrenador 2, que estaba en (9,7), comenzará a moverse a (7,5).
+[INFO] 17:56:58:12 team/(8017:8025): El entrenador 2 se mueve a : (8,7).
+[INFO] 17:56:59:12 team/(8017:8025): El entrenador 2 se mueve a : (7,7).
+[INFO] 17:57:00:13 team/(8017:8025): El entrenador 2 se mueve a : (7,6).
+[INFO] 17:57:01:14 team/(8017:8025): El entrenador 2 se mueve a : (7,5).
+[INFO] 17:57:01:15 team/(8017:8025): El entrenador 2 se movió a la posición (7, 5).
+[INFO] 17:57:02:16 team/(8017:8025): Se registró el pokemon atrapado.
+[INFO] 17:57:02:16 team/(8017:8025): El entrenador 2 forma parte de un interbloqueo.
+[INFO] 17:57:02:16 team/(8017:8025): Inicio del algoritmo de detección de deadlock.
+[INFO] 17:57:02:16 team/(8017:8025): El entrenador 2 libera la CPU por su cuenta.
+[INFO] 17:57:02:16 team/(8017:8027): El entrenador 0, esta en interbloqueo con el entrenador 1.
+[INFO] 17:57:02:16 team/(8017:8024): El entrenador 1 se pone en READY.
+[INFO] 17:57:02:18 team/(8017:8024): El entrenador 1, que estaba en (3,5), comenzará a moverse a (1,1).
+[INFO] 17:57:02:19 team/(8017:8030): elijo entrenador para ejecutar
+[INFO] 17:57:03:18 team/(8017:8024): El entrenador 1 se mueve a : (2,5).
+[INFO] 17:57:04:19 team/(8017:8024): El entrenador 1 se mueve a : (1,5).
+[INFO] 17:57:05:20 team/(8017:8024): El entrenador 1 se mueve a : (1,4).
+[INFO] 17:57:06:22 team/(8017:8024): El entrenador 1 se mueve a : (1,3).
+[INFO] 17:57:07:24 team/(8017:8024): El entrenador 1 se mueve a : (1,2).
+[INFO] 17:57:08:25 team/(8017:8024): El entrenador 1 se mueve a : (1,1).
+[INFO] 17:57:08:26 team/(8017:8024): El entrenador 1 se movió a la posición (1, 1).
+[INFO] 17:57:13:28 team/(8017:8027): El entrenador 0 salio del deadlock.
+[INFO] 17:57:13:29 team/(8017:8027): El entrenador 1, esta en interbloqueo con el entrenador 2.
+[INFO] 17:57:13:29 team/(8017:8025): El entrenador 2 se pone en READY.
+[INFO] 17:57:13:29 team/(8017:8025): El entrenador 2, que estaba en (7,5), comenzará a moverse a (1,1).
+[INFO] 17:57:13:29 team/(8017:8030): elijo entrenador para ejecutar
+[INFO] 17:57:14:30 team/(8017:8025): El entrenador 2 se mueve a : (6,5).
+[INFO] 17:57:15:32 team/(8017:8025): El entrenador 2 se mueve a : (5,5).
+[INFO] 17:57:16:33 team/(8017:8025): El entrenador 2 se mueve a : (4,5).
+[INFO] 17:57:17:34 team/(8017:8025): El entrenador 2 se mueve a : (3,5).
+[INFO] 17:57:18:35 team/(8017:8025): El entrenador 2 se mueve a : (2,5).
+[INFO] 17:57:19:36 team/(8017:8025): El entrenador 2 se mueve a : (1,5).
+[INFO] 17:57:20:37 team/(8017:8025): El entrenador 2 se mueve a : (1,4).
+[INFO] 17:57:21:38 team/(8017:8025): El entrenador 2 se mueve a : (1,3).
+[INFO] 17:57:22:39 team/(8017:8025): El entrenador 2 se mueve a : (1,2).
+[INFO] 17:57:23:40 team/(8017:8025): El entrenador 2 se mueve a : (1,1).
+[INFO] 17:57:23:40 team/(8017:8025): El entrenador 2 se movió a la posición (1, 1).
+[INFO] 17:57:28:44 team/(8017:8027): El entrenador 1 salio del deadlock.
+[INFO] 17:57:28:44 team/(8017:8027): El entrenador 2 salio del deadlock.

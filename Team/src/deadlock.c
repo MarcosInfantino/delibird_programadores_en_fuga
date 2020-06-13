@@ -69,9 +69,9 @@ void realizarIntercambio(dataEntrenador* entrenadorQueSeMueve){
 
 
 	log_info(teamLogger, "Operación de intercambio realizada entre entrenadores %i y %i",entrenadorQueSeMueve->id, entrenadorBloqueadoParaDeadlock->id);
-
+	(team->cantidadDeadlocksResueltos)++;
 	sem_post(&intercambioFinalizado); //OK5
-*
+
 }
 
 void entrarEnEjecucionParaDeadlock(dataEntrenador* infoEntrenador){
@@ -87,11 +87,11 @@ void entrarEnEjecucionParaDeadlock(dataEntrenador* infoEntrenador){
 	sem_post(&semaforoEjecucionCpu);
 }
 
-void* resolverDeadlock(){
+void* resolverDeadlock(void* arg){
 
 	sem_wait(iniciarResolucionDeadlock);
 	while(hayEntrenadoresEnDeadlock()){
-		log_info(teamLogger2, "Siguen habiendo entrenadores en deadlock.");
+		//log_info(teamLogger2, "Siguen habiendo entrenadores en deadlock.");
 
 		entrenadorBloqueadoParaDeadlock=(dataEntrenador*)getListaMutex(entrenadoresDeadlock,0);
 
@@ -110,8 +110,8 @@ void* resolverDeadlock(){
 			//sem_post(entrenadorAMover->semaforo);
 			log_info (teamLogger, "El entrenador %i, esta en interbloqueo con el entrenador %i.", entrenadorBloqueadoParaDeadlock->id, entrenadorAMover->id);
 			log_info (teamLogger2, "El entrenador %i, esta en interbloqueo con el entrenador %i.", entrenadorBloqueadoParaDeadlock->id, entrenadorAMover->id);
-			log_info(teamLogger2, "Entrenador bloqueado: %i. Entrenador a mover: %i.", entrenadorBloqueadoParaDeadlock->id, entrenadorAMover->id);
-
+			//log_info(teamLogger2, "Entrenador bloqueado: %i. Entrenador a mover: %i.", entrenadorBloqueadoParaDeadlock->id, entrenadorAMover->id);
+			(team->cantidadDeadlocksEncontrados)++;
 			sem_wait(&intercambioFinalizado); //OK5
 
 			list_destroy(listaPokemonesSobrantes);
@@ -124,6 +124,10 @@ void* resolverDeadlock(){
 		actualizarEntrenadoresEnDeadlock();
 	}
 
+	if(objetivoCumplido()){
+		sem_post(semaforoObjetivoCumplido);
+	}
+	return NULL;
 }
 
 //void resolverDeadlock(){
@@ -176,7 +180,7 @@ void actualizarEntrenadoresEnDeadlock(){
 			removeListaMutex(entrenadoresDeadlock,i);
 			//entrenadorActual->estado=EXIT;;
 			poneteEnExit(entrenadorActual);
-			addListaMutex(entrenadoresExit, (void*)entrenadorActual);
+			//addListaMutex(entrenadoresExit, (void*)entrenadorActual);
 			log_info(teamLogger2, "El entrenador %i salio del deadlock.", entrenadorActual->id);
 		}
 	}

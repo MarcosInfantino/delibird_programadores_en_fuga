@@ -146,7 +146,9 @@ void replanificarEntrenador(dataEntrenador* entrenador){
 							poneteEnExit(entrenador);
 							habilitarHiloEntrenador(entrenador->id); //preguntar si aca se mata el hilo
 							addListaMutex(entrenadoresExit, (void*)entrenador);
-
+							if(objetivoCumplido()){
+								sem_post(semaforoObjetivoCumplido);
+							}
 						}else{
 							//DEADLOCK
 							log_info(teamLogger2, "El entrenador %i forma parte de un interbloqueo.", entrenador->id);
@@ -162,6 +164,7 @@ void replanificarEntrenador(dataEntrenador* entrenador){
 							}else{
 								habilitarHiloEntrenador(entrenador->id);
 								log_info(teamLogger, "No se encontró deadlock.");
+								log_info(teamLogger2, "No se encontró deadlock.");
 							}
 						}
 	}
@@ -221,17 +224,17 @@ void* ejecucionHiloEntrenador(void* argEntrenador){
 		//IMPORTANTE: CUANDO LLEGUE LA RESPUESTA DEL CATCH SE TIENE QUE HACER UN UNLOCK AL ENTRENADOR CORRESPONDIENTE
 		sem_wait(semaforoEntrenador);//OK2 // ESPERA A QUE EL TEAM LE AVISE QUE LLEGO LA RESPUESTA DEL POKEMON QUE QUISO ATRAPAR
 		//meter un if() para verificar estado y ver que hacer despues
-		log_info(teamLogger2, "El entrenador %i salio de la espera a la respuesta caught.",infoEntrenador->id);
+		//log_info(teamLogger2, "El entrenador %i salio de la espera a la respuesta caught.",infoEntrenador->id);
 
 		if(infoEntrenador->estado==BLOCKED && leFaltaCantidadDePokemones(infoEntrenador)){
-			log_info(teamLogger2, "El entrenador %i queda libre.",infoEntrenador->id);
+			//log_info(teamLogger2, "El entrenador %i queda libre.",infoEntrenador->id);
 			addListaMutex(entrenadoresLibres, (void*)infoEntrenador);//vuelve a agregar al entrenador a la lista de entrenadores libres
 		}else{
-			log_info(teamLogger2, "El entrenador %i no queda libre.",infoEntrenador->id);
+			//log_info(teamLogger2, "El entrenador %i no queda libre.",infoEntrenador->id);
 		}
 
 		while(entrenadorEnDeadlock(infoEntrenador)){// && infoEntrenador!=entrenadorBloqueadoParaDeadlock){
-			log_info(teamLogger2, "El entrenador %i entra a la ejecucion entra al while del deadlock.", infoEntrenador->id);
+			//log_info(teamLogger2, "El entrenador %i entra a la ejecucion entra al while del deadlock.", infoEntrenador->id);
 			sem_wait(semaforoEntrenador); //OK3
 			poneteEnReady(infoEntrenador);
 			entrarEnEjecucionParaDeadlock(infoEntrenador);
