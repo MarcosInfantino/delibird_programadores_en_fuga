@@ -6779,3 +6779,249 @@
 [INFO] 23:55:28:888 team/(28671:28810): El entrenador -1218786535 salio del deadlock.
 [INFO] 23:55:28:888 team/(28671:28810): Siguen habiendo entrenadores en deadlock.
 [INFO] 23:55:28:888 team/(28671:28810): El entrenador -1314934072 salio del deadlock.
+[INFO] 11:35:06:269 team/(29485:29485): --------------------------------------------------------------------------
+[INFO] 11:35:06:277 team/(29485:29485): NUEVA EJECUCION
+[INFO] 11:35:06:277 team/(29485:29485): --------------------------------------------------------------------------
+[INFO] 11:35:06:278 team/(29485:29485): Algortimo de planificación: FIFO.
+[INFO] 11:35:06:278 team/(29485:29485): --------------------------------------------------------
+[INFO] 11:35:06:278 team/(29485:29485): Objetivo en lista: Pikachu. Objetivo recibido: Charmander.
+[INFO] 11:35:06:278 team/(29485:29485): --------------------------------------------------------------
+[INFO] 11:35:06:278 team/(29485:29485): OBJETIVO DEL TEAM
+[INFO] 11:35:06:278 team/(29485:29485): Objetivo 0. Pokemon: Pikachu. Cantidad: 2.
+[INFO] 11:35:06:278 team/(29485:29485): Objetivo 1. Pokemon: Charmander. Cantidad: 1.
+[INFO] 11:35:06:278 team/(29485:29485): --------------------------------------------------
+[INFO] 11:35:06:285 team/(29485:29496): Se inicia el planificador
+[INFO] 11:35:06:296 team/(29485:29497): Suscripción realizada correctamente
+
+[INFO] 11:35:06:297 team/(29485:29498): Suscripción realizada correctamente
+
+[INFO] 11:35:06:297 team/(29485:29499): Suscripción realizada correctamente
+
+[INFO] 13:33:47:142 team/(30559:30559): --------------------------------------------------------------------------
+[INFO] 13:33:47:190 team/(30559:30559): NUEVA EJECUCION
+[INFO] 13:33:47:190 team/(30559:30559): --------------------------------------------------------------------------
+[INFO] 13:33:47:205 team/(30559:30559): Algortimo de planificación: FIFO.
+[INFO] 13:33:47:205 team/(30559:30559): --------------------------------------------------------
+[INFO] 13:33:47:205 team/(30559:30559): Objetivo en lista: Pikachu. Objetivo recibido: Charmander.
+[INFO] 13:33:47:205 team/(30559:30559): --------------------------------------------------------------
+[INFO] 13:33:47:205 team/(30559:30559): OBJETIVO DEL TEAM
+[INFO] 13:33:47:206 team/(30559:30559): Objetivo 0. Pokemon: Pikachu. Cantidad: 2.
+[INFO] 13:33:47:206 team/(30559:30559): Objetivo 1. Pokemon: Charmander. Cantidad: 1.
+[INFO] 13:33:47:206 team/(30559:30559): --------------------------------------------------
+[INFO] 13:33:47:209 team/(30559:30570): Se inicia el planificador
+[INFO] 13:33:47:236 team/(30559:30571): Suscripción realizada correctamente
+
+[INFO] 13:33:47:236 team/(30559:30573): Suscripción realizada correctamente
+
+[INFO] 13:33:47:237 team/(30559:30572): Suscripción realizada correctamente
+
+[INFO] 13:34:13:893 team/(30559:30597): Atiendo appeared. Pokemon: Pikachu.
+[INFO] 13:34:13:893 team/(30559:30597): El pokemon es objetivo
+[INFO] 13:34:13:893 team/(30559:30597): Hay entrenadores disponibles para atrapar a Pikachu.
+[INFO] 13:34:13:901 team/(30559:30597): Se selecciono el entrenador 0 para atrapar al pokemon Pikachu
+[INFO] 13:34:13:901 team/(30559:30564): El entrenador 0 se pone en READY.
+[INFO] 13:34:13:905 team/(30559:30564): El entrenador 0 entro en ejecución.
+[INFO] 13:34:13:905 team/(30559:30564): El entrenador 0, que estaba en (1,2), comenzará a moverse a (0,0).
+[INFO] 13:34:13:906 team/(30559:30570): elijo entrenador para ejecutar
+[INFO] 13:34:14:906 team/(30559:30564): El entrenador 0 se mueve a : (0,2).
+[INFO] 13:34:15:907 team/(30559:30564): El entrenador 0 se mueve a : (0,1).
+[INFO] 13:34:16:907 team/(30559:30564): El entrenador 0 se mueve a : (0,0).
+[INFO] 13:34:16:908 team/(30559:30564): El entrenador 0 se movió a la posición (0, 0).
+[INFO] 13:34:17:909 team/(30559:30564): El entrenador 0 hace el send del catch.
+[INFO] 13:34:17:909 team/(30559:30564): El entrenador  0 recibió el id del catch: 3.
+[INFO] 13:34:17:909 team/(30559:30564): El entrenador 0 libera la CPU por su cuenta.
+[INFO] 13:34:26:125 team/(30559:30618): Atiendo appeared. Pokemon: Pikachu.
+[INFO] 13:34:26:127 team/(30559:30618): El pokemon es objetivo
+[INFO] 13:34:26:128 team/(30559:30618): Hay entrenadores disponibles para atrapar a Pikachu.
+[INFO] 13:34:26:129 team/(30559:30565): El entrenador 1 se pone en READY.
+[INFO] 13:34:26:130 team/(30559:30618): Se selecciono el entrenador 1 para atrapar al pokemon Pikachu
+[INFO] 13:34:26:145 team/(30559:30565): El entrenador 1 entro en ejecución.
+[INFO] 13:34:26:146 team/(30559:30565): El entrenador 1, que estaba en (3,7), comenzará a moverse a (0,0).
+[INFO] 13:34:26:146 team/(30559:30570): elijo entrenador para ejecutar
+[INFO] 13:34:27:146 team/(30559:30565): El entrenador 1 se mueve a : (2,7).
+[INFO] 13:34:28:147 team/(30559:30565): El entrenador 1 se mueve a : (1,7).
+[INFO] 13:34:29:147 team/(30559:30565): El entrenador 1 se mueve a : (0,7).
+[INFO] 13:34:30:148 team/(30559:30565): El entrenador 1 se mueve a : (0,6).
+[INFO] 13:34:31:148 team/(30559:30565): El entrenador 1 se mueve a : (0,5).
+[INFO] 13:34:32:148 team/(30559:30565): El entrenador 1 se mueve a : (0,4).
+[INFO] 13:34:33:149 team/(30559:30565): El entrenador 1 se mueve a : (0,3).
+[INFO] 13:34:34:150 team/(30559:30565): El entrenador 1 se mueve a : (0,2).
+[INFO] 13:34:35:151 team/(30559:30565): El entrenador 1 se mueve a : (0,1).
+[INFO] 13:34:36:151 team/(30559:30565): El entrenador 1 se mueve a : (0,0).
+[INFO] 13:34:36:151 team/(30559:30565): El entrenador 1 se movió a la posición (0, 0).
+[INFO] 13:34:37:152 team/(30559:30565): El entrenador 1 hace el send del catch.
+[INFO] 13:34:37:152 team/(30559:30565): El entrenador  1 recibió el id del catch: 4.
+[INFO] 13:34:37:152 team/(30559:30565): El entrenador 1 libera la CPU por su cuenta.
+[INFO] 13:34:45:682 team/(30559:30636): Atiendo appeared. Pokemon: Charmander.
+[INFO] 13:34:45:682 team/(30559:30636): --------------------------------------------------------
+[INFO] 13:34:45:682 team/(30559:30636): Objetivo en lista: Pikachu. Objetivo recibido: Charmander.
+[INFO] 13:34:45:682 team/(30559:30636): El pokemon es objetivo
+[INFO] 13:34:45:682 team/(30559:30636): Hay entrenadores disponibles para atrapar a Charmander.
+[INFO] 13:34:45:682 team/(30559:30566): El entrenador 2 se pone en READY.
+[INFO] 13:34:45:682 team/(30559:30636): Se selecciono el entrenador 2 para atrapar al pokemon Charmander
+[INFO] 13:34:45:689 team/(30559:30566): El entrenador 2 entro en ejecución.
+[INFO] 13:34:45:689 team/(30559:30566): El entrenador 2, que estaba en (5,5), comenzará a moverse a (0,0).
+[INFO] 13:34:45:689 team/(30559:30570): elijo entrenador para ejecutar
+[INFO] 13:34:46:690 team/(30559:30566): El entrenador 2 se mueve a : (4,5).
+[INFO] 13:34:47:690 team/(30559:30566): El entrenador 2 se mueve a : (3,5).
+[INFO] 13:34:48:691 team/(30559:30566): El entrenador 2 se mueve a : (2,5).
+[INFO] 13:34:49:691 team/(30559:30566): El entrenador 2 se mueve a : (1,5).
+[INFO] 13:34:50:692 team/(30559:30566): El entrenador 2 se mueve a : (0,5).
+[INFO] 13:34:51:692 team/(30559:30566): El entrenador 2 se mueve a : (0,4).
+[INFO] 13:34:52:692 team/(30559:30566): El entrenador 2 se mueve a : (0,3).
+[INFO] 13:34:53:693 team/(30559:30566): El entrenador 2 se mueve a : (0,2).
+[INFO] 13:34:54:693 team/(30559:30566): El entrenador 2 se mueve a : (0,1).
+[INFO] 13:34:55:694 team/(30559:30566): El entrenador 2 se mueve a : (0,0).
+[INFO] 13:34:55:694 team/(30559:30566): El entrenador 2 se movió a la posición (0, 0).
+[INFO] 13:34:56:694 team/(30559:30566): El entrenador 2 hace el send del catch.
+[INFO] 13:34:56:694 team/(30559:30566): El entrenador  2 recibió el id del catch: 5.
+[INFO] 13:34:56:694 team/(30559:30566): El entrenador 2 libera la CPU por su cuenta.
+[INFO] 13:35:12:337 team/(30559:30658): Atiendo caught.
+[INFO] 13:35:12:337 team/(30559:30658): Resultado del caught: 1.
+[INFO] 13:35:12:337 team/(30559:30658): El caught me interesa.
+[INFO] 13:35:12:337 team/(30559:30658): Se registró el pokemon atrapado.
+[INFO] 13:35:12:337 team/(30559:30658): El entrenador 0 cumplio su objetivo.
+[INFO] 13:35:12:337 team/(30559:30564): El entrenador 0 salio de la espera a la respuesta caught.
+[INFO] 13:35:12:337 team/(30559:30564): El entrenador 0 no queda libre.
+[INFO] 13:35:27:901 team/(30559:30678): Atiendo caught.
+[INFO] 13:35:27:901 team/(30559:30678): Resultado del caught: 1.
+[INFO] 13:35:27:901 team/(30559:30678): El caught me interesa.
+[INFO] 13:35:27:901 team/(30559:30678): Se registró el pokemon atrapado.
+[INFO] 13:35:27:901 team/(30559:30678): El entrenador 1 forma parte de un interbloqueo.
+[INFO] 13:35:27:901 team/(30559:30678): Inicio del algoritmo de detección de deadlock.
+[INFO] 13:35:27:901 team/(30559:30565): El entrenador 1 salio de la espera a la respuesta caught.
+[INFO] 13:35:27:901 team/(30559:30565): El entrenador 1 no queda libre.
+[INFO] 13:35:27:901 team/(30559:30565): El entrenador 1 entra a la ejecucion entra al while del deadlock.
+[INFO] 13:35:44:598 team/(30559:30696): Atiendo caught.
+[INFO] 13:35:44:598 team/(30559:30696): Resultado del caught: 1.
+[INFO] 13:35:44:598 team/(30559:30696): El caught me interesa.
+[INFO] 13:35:44:598 team/(30559:30696): Se registró el pokemon atrapado.
+[INFO] 13:35:44:598 team/(30559:30696): El entrenador 2 forma parte de un interbloqueo.
+[INFO] 13:35:44:598 team/(30559:30696): Inicio del algoritmo de detección de deadlock.
+[INFO] 13:35:44:609 team/(30559:30566): El entrenador 2 salio de la espera a la respuesta caught.
+[INFO] 13:35:44:609 team/(30559:30566): El entrenador 2 no queda libre.
+[INFO] 13:35:44:609 team/(30559:30566): El entrenador 2 entra a la ejecucion entra al while del deadlock.
+[INFO] 13:35:44:609 team/(30559:30696): Siguen habiendo entrenadores en deadlock.
+[INFO] 13:35:44:610 team/(30559:30566): El entrenador 2 se pone en READY.
+[INFO] 13:35:44:610 team/(30559:30696): El entrenador: 1, esta en interbloqueo con: 2.
+[INFO] 13:35:44:610 team/(30559:30696): Entrenador bloqueado: 1. Entrenador a mover: 2.
+[INFO] 13:35:44:625 team/(30559:30566): El entrenador 2, que estaba en (0,0), comenzará a moverse a (0,0).
+[INFO] 13:35:44:626 team/(30559:30566): El entrenador 2 se movió a la posición (0, 0).
+[INFO] 13:35:44:629 team/(30559:30570): elijo entrenador para ejecutar
+[INFO] 13:35:49:628 team/(30559:30696): El entrenador 1 salio del deadlock.
+[INFO] 13:35:49:629 team/(30559:30696): Siguen habiendo entrenadores en deadlock.
+[INFO] 13:35:49:629 team/(30559:30696): El entrenador 2 salio del deadlock.
+[INFO] 14:18:46:84 team/(31367:31367): --------------------------------------------------------------------------
+[INFO] 14:18:46:85 team/(31367:31367): NUEVA EJECUCION
+[INFO] 14:18:46:85 team/(31367:31367): --------------------------------------------------------------------------
+[INFO] 14:18:46:85 team/(31367:31367): Algortimo de planificación: FIFO.
+[INFO] 14:18:46:85 team/(31367:31367): --------------------------------------------------------
+[INFO] 14:18:46:85 team/(31367:31367): Objetivo en lista: Pikachu. Objetivo recibido: Charmander.
+[INFO] 14:18:46:85 team/(31367:31367): --------------------------------------------------------------
+[INFO] 14:18:46:85 team/(31367:31367): OBJETIVO DEL TEAM
+[INFO] 14:18:46:85 team/(31367:31367): Objetivo 0. Pokemon: Pikachu. Cantidad: 2.
+[INFO] 14:18:46:86 team/(31367:31367): Objetivo 1. Pokemon: Charmander. Cantidad: 1.
+[INFO] 14:18:46:86 team/(31367:31367): --------------------------------------------------
+[INFO] 14:18:46:89 team/(31367:31378): Se inicia el planificador
+[INFO] 14:18:46:98 team/(31367:31379): Suscripción realizada correctamente
+
+[INFO] 14:18:46:121 team/(31367:31380): Suscripción realizada correctamente
+
+[INFO] 14:18:46:121 team/(31367:31381): Suscripción realizada correctamente
+
+[INFO] 14:19:19:249 team/(31367:31404): Atiendo appeared. Pokemon: Pikachu.
+[INFO] 14:19:19:250 team/(31367:31404): El pokemon es objetivo
+[INFO] 14:19:19:250 team/(31367:31404): Hay entrenadores disponibles para atrapar a Pikachu.
+[INFO] 14:19:19:250 team/(31367:31372): El entrenador 0 se pone en READY.
+[INFO] 14:19:19:250 team/(31367:31404): Se selecciono el entrenador 0 para atrapar al pokemon Pikachu
+[INFO] 14:19:19:265 team/(31367:31372): El entrenador 0 entro en ejecución.
+[INFO] 14:19:19:266 team/(31367:31372): El entrenador 0, que estaba en (1,2), comenzará a moverse a (0,0).
+[INFO] 14:19:19:266 team/(31367:31378): elijo entrenador para ejecutar
+[INFO] 14:19:20:266 team/(31367:31372): El entrenador 0 se mueve a : (0,2).
+[INFO] 14:19:21:266 team/(31367:31372): El entrenador 0 se mueve a : (0,1).
+[INFO] 14:19:22:267 team/(31367:31372): El entrenador 0 se mueve a : (0,0).
+[INFO] 14:19:22:267 team/(31367:31372): El entrenador 0 se movió a la posición (0, 0).
+[INFO] 14:19:23:267 team/(31367:31372): El entrenador 0 hace el send del catch.
+[INFO] 14:19:23:267 team/(31367:31372): El entrenador  0 recibió el id del catch: 3.
+[INFO] 14:19:23:267 team/(31367:31372): El entrenador 0 libera la CPU por su cuenta.
+[INFO] 14:19:32:516 team/(31367:31426): Atiendo appeared. Pokemon: Pikachu.
+[INFO] 14:19:32:516 team/(31367:31426): El pokemon es objetivo
+[INFO] 14:19:32:516 team/(31367:31426): Hay entrenadores disponibles para atrapar a Pikachu.
+[INFO] 14:19:32:516 team/(31367:31373): El entrenador 1 se pone en READY.
+[INFO] 14:19:32:516 team/(31367:31426): Se selecciono el entrenador 1 para atrapar al pokemon Pikachu
+[INFO] 14:19:32:522 team/(31367:31373): El entrenador 1 entro en ejecución.
+[INFO] 14:19:32:522 team/(31367:31373): El entrenador 1, que estaba en (3,7), comenzará a moverse a (0,0).
+[INFO] 14:19:32:522 team/(31367:31378): elijo entrenador para ejecutar
+[INFO] 14:19:33:523 team/(31367:31373): El entrenador 1 se mueve a : (2,7).
+[INFO] 14:19:34:523 team/(31367:31373): El entrenador 1 se mueve a : (1,7).
+[INFO] 14:19:35:525 team/(31367:31373): El entrenador 1 se mueve a : (0,7).
+[INFO] 14:19:36:526 team/(31367:31373): El entrenador 1 se mueve a : (0,6).
+[INFO] 14:19:37:526 team/(31367:31373): El entrenador 1 se mueve a : (0,5).
+[INFO] 14:19:38:527 team/(31367:31373): El entrenador 1 se mueve a : (0,4).
+[INFO] 14:19:39:527 team/(31367:31373): El entrenador 1 se mueve a : (0,3).
+[INFO] 14:19:40:528 team/(31367:31373): El entrenador 1 se mueve a : (0,2).
+[INFO] 14:19:41:528 team/(31367:31373): El entrenador 1 se mueve a : (0,1).
+[INFO] 14:19:42:529 team/(31367:31373): El entrenador 1 se mueve a : (0,0).
+[INFO] 14:19:42:529 team/(31367:31373): El entrenador 1 se movió a la posición (0, 0).
+[INFO] 14:19:43:529 team/(31367:31373): El entrenador 1 hace el send del catch.
+[INFO] 14:19:43:529 team/(31367:31373): El entrenador  1 recibió el id del catch: 4.
+[INFO] 14:19:43:529 team/(31367:31373): El entrenador 1 libera la CPU por su cuenta.
+[INFO] 14:19:54:163 team/(31367:31445): Atiendo appeared. Pokemon: Charmander.
+[INFO] 14:19:54:163 team/(31367:31445): --------------------------------------------------------
+[INFO] 14:19:54:163 team/(31367:31445): Objetivo en lista: Pikachu. Objetivo recibido: Charmander.
+[INFO] 14:19:54:163 team/(31367:31445): El pokemon es objetivo
+[INFO] 14:19:54:163 team/(31367:31445): Hay entrenadores disponibles para atrapar a Charmander.
+[INFO] 14:19:54:163 team/(31367:31445): Se selecciono el entrenador 2 para atrapar al pokemon Charmander
+[INFO] 14:19:54:163 team/(31367:31374): El entrenador 2 se pone en READY.
+[INFO] 14:19:54:177 team/(31367:31374): El entrenador 2 entro en ejecución.
+[INFO] 14:19:54:177 team/(31367:31374): El entrenador 2, que estaba en (5,5), comenzará a moverse a (0,0).
+[INFO] 14:19:54:177 team/(31367:31378): elijo entrenador para ejecutar
+[INFO] 14:19:55:178 team/(31367:31374): El entrenador 2 se mueve a : (4,5).
+[INFO] 14:19:56:178 team/(31367:31374): El entrenador 2 se mueve a : (3,5).
+[INFO] 14:19:57:179 team/(31367:31374): El entrenador 2 se mueve a : (2,5).
+[INFO] 14:19:58:179 team/(31367:31374): El entrenador 2 se mueve a : (1,5).
+[INFO] 14:19:59:179 team/(31367:31374): El entrenador 2 se mueve a : (0,5).
+[INFO] 14:20:00:180 team/(31367:31374): El entrenador 2 se mueve a : (0,4).
+[INFO] 14:20:01:181 team/(31367:31374): El entrenador 2 se mueve a : (0,3).
+[INFO] 14:20:02:181 team/(31367:31374): El entrenador 2 se mueve a : (0,2).
+[INFO] 14:20:03:182 team/(31367:31374): El entrenador 2 se mueve a : (0,1).
+[INFO] 14:20:04:183 team/(31367:31374): El entrenador 2 se mueve a : (0,0).
+[INFO] 14:20:04:184 team/(31367:31374): El entrenador 2 se movió a la posición (0, 0).
+[INFO] 14:20:05:189 team/(31367:31374): El entrenador 2 hace el send del catch.
+[INFO] 14:20:05:189 team/(31367:31374): El entrenador  2 recibió el id del catch: 5.
+[INFO] 14:20:05:189 team/(31367:31374): El entrenador 2 libera la CPU por su cuenta.
+[INFO] 14:20:20:557 team/(31367:31465): Atiendo caught.
+[INFO] 14:20:20:557 team/(31367:31465): Resultado del caught: 1.
+[INFO] 14:20:20:558 team/(31367:31465): El caught me interesa.
+[INFO] 14:20:20:558 team/(31367:31465): Se registró el pokemon atrapado.
+[INFO] 14:20:20:558 team/(31367:31465): El entrenador 0 cumplio su objetivo.
+[INFO] 14:20:20:558 team/(31367:31372): El entrenador 0 salio de la espera a la respuesta caught.
+[INFO] 14:20:20:558 team/(31367:31372): El entrenador 0 no queda libre.
+[INFO] 14:20:35:607 team/(31367:31485): Atiendo caught.
+[INFO] 14:20:35:607 team/(31367:31485): Resultado del caught: 1.
+[INFO] 14:20:35:609 team/(31367:31485): El caught me interesa.
+[INFO] 14:20:35:609 team/(31367:31485): Se registró el pokemon atrapado.
+[INFO] 14:20:35:609 team/(31367:31485): El entrenador 1 forma parte de un interbloqueo.
+[INFO] 14:20:35:609 team/(31367:31485): Inicio del algoritmo de detección de deadlock.
+[INFO] 14:20:35:613 team/(31367:31373): El entrenador 1 salio de la espera a la respuesta caught.
+[INFO] 14:20:35:613 team/(31367:31373): El entrenador 1 no queda libre.
+[INFO] 14:20:35:613 team/(31367:31373): El entrenador 1 entra a la ejecucion entra al while del deadlock.
+[INFO] 14:20:53:116 team/(31367:31506): Atiendo caught.
+[INFO] 14:20:53:116 team/(31367:31506): Resultado del caught: 1.
+[INFO] 14:20:53:133 team/(31367:31506): El caught me interesa.
+[INFO] 14:20:53:133 team/(31367:31506): Se registró el pokemon atrapado.
+[INFO] 14:20:53:133 team/(31367:31506): El entrenador 2 forma parte de un interbloqueo.
+[INFO] 14:20:53:133 team/(31367:31506): Inicio del algoritmo de detección de deadlock.
+[INFO] 14:20:53:133 team/(31367:31506): Siguen habiendo entrenadores en deadlock.
+[INFO] 14:20:53:133 team/(31367:31374): El entrenador 2 salio de la espera a la respuesta caught.
+[INFO] 14:20:53:133 team/(31367:31506): El entrenador: 1, esta en interbloqueo con: 2.
+[INFO] 14:20:53:133 team/(31367:31506): Entrenador bloqueado: 1. Entrenador a mover: 2.
+[INFO] 14:20:53:133 team/(31367:31374): El entrenador 2 no queda libre.
+[INFO] 14:20:53:134 team/(31367:31374): El entrenador 2 entra a la ejecucion entra al while del deadlock.
+[INFO] 14:20:53:134 team/(31367:31374): El entrenador 2 se pone en READY.
+[INFO] 14:20:53:147 team/(31367:31374): El entrenador 2, que estaba en (0,0), comenzará a moverse a (0,0).
+[INFO] 14:20:53:147 team/(31367:31374): El entrenador 2 se movió a la posición (0, 0).
+[INFO] 14:20:53:147 team/(31367:31378): elijo entrenador para ejecutar
+[INFO] 14:20:58:151 team/(31367:31506): El entrenador 1 salio del deadlock.
+[INFO] 14:20:58:151 team/(31367:31506): Siguen habiendo entrenadores en deadlock.
+[INFO] 14:20:58:151 team/(31367:31506): El entrenador 2 salio del deadlock.

@@ -104,6 +104,7 @@ void resolverDeadlock(){
 
 			sem_post(entrenadorAMover->semaforo);//OK3
 			//sem_post(entrenadorAMover->semaforo);
+			log_info (teamLogger2, "El entrenador: %i, esta en interbloqueo con: %i.", entrenadorBloqueadoParaDeadlock->id, entrenadorAMover->id);
 			log_info(teamLogger2, "Entrenador bloqueado: %i. Entrenador a mover: %i.", entrenadorBloqueadoParaDeadlock->id, entrenadorAMover->id);
 
 			sem_wait(&intercambioFinalizado); //OK5
@@ -167,9 +168,10 @@ void actualizarEntrenadoresEnDeadlock(){
 	for(uint32_t i=0;i<sizeListaMutex(entrenadoresDeadlock);i++){
 		dataEntrenador* entrenadorActual=(dataEntrenador*) getListaMutex(entrenadoresDeadlock,i);
 		if(cumplioObjetivo(entrenadorActual)){
-			entrenadorActual->estado=EXIT;
 			removeListaMutex(entrenadoresDeadlock,i);
-			log_info(teamLogger2, "El entrenador %i salio del deadlock.");
+			entrenadorActual->estado=EXIT;;
+			addListaMutex(entrenadoresExit, (void*)entrenadorActual);
+			log_info(teamLogger2, "El entrenador %i salio del deadlock.", entrenadorActual->id);
 		}
 	}
 }

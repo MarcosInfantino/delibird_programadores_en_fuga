@@ -5278,3 +5278,92 @@
 [INFO] 23:55:23:886 TEAM/(28671:28678): El entrenador 2 se movió a la posición (0, 0).
 [INFO] 23:55:28:888 TEAM/(28671:28678): entre al if de obtenerPokemonesFaltantes.
 [INFO] 23:55:28:888 TEAM/(28671:28678): Operación de intercambio realizada entre entrenadores 2 y 1
+[INFO] 13:34:13:877 TEAM/(30559:30597): Recibi mensaje appeared pokemon. El pokemon es: Pikachu. La posicion es: (0,0). 
+
+[INFO] 13:34:13:901 TEAM/(30559:30597): El pokemon a atrapar es: Pikachu, y la posición es: (0, 0)
+
+[INFO] 13:34:13:901 TEAM/(30559:30597): Habilito el hilo del entrenador 0.
+[INFO] 13:34:16:908 TEAM/(30559:30564): El entrenador 0 se movió a la posición (0, 0).
+[INFO] 13:34:26:125 TEAM/(30559:30618): Recibi mensaje appeared pokemon. El pokemon es: Pikachu. La posicion es: (0,0). 
+
+[INFO] 13:34:26:129 TEAM/(30559:30618): El pokemon a atrapar es: Pikachu, y la posición es: (0, 0)
+
+[INFO] 13:34:26:129 TEAM/(30559:30618): Habilito el hilo del entrenador 1.
+[INFO] 13:34:36:151 TEAM/(30559:30565): El entrenador 1 se movió a la posición (0, 0).
+[INFO] 13:34:45:682 TEAM/(30559:30636): Recibi mensaje appeared pokemon. El pokemon es: Charmander. La posicion es: (0,0). 
+
+[INFO] 13:34:45:682 TEAM/(30559:30636): El pokemon a atrapar es: Charmander, y la posición es: (0, 0)
+
+[INFO] 13:34:45:682 TEAM/(30559:30636): Habilito el hilo del entrenador 2.
+[INFO] 13:34:55:694 TEAM/(30559:30566): El entrenador 2 se movió a la posición (0, 0).
+[INFO] 13:35:12:334 TEAM/(30559:30573): Recibi mensaje caught pokemon. El pokemon fue atrapado. 
+
+[INFO] 13:35:12:337 TEAM/(30559:30658): El entrenador 0 atrapó al pokemon Pikachu en la posición (0,0).
+[INFO] 13:35:12:337 TEAM/(30559:30658): Habilito el hilo del entrenador 0.
+[INFO] 13:35:27:899 TEAM/(30559:30573): Recibi mensaje caught pokemon. El pokemon fue atrapado. 
+
+[INFO] 13:35:27:901 TEAM/(30559:30678): El entrenador 1 atrapó al pokemon Pikachu en la posición (0,0).
+[INFO] 13:35:27:901 TEAM/(30559:30678): Inicio del algoritmo de detección de deadlock.
+[INFO] 13:35:27:901 TEAM/(30559:30678): Habilito el hilo del entrenador 1.
+[INFO] 13:35:27:901 TEAM/(30559:30678): No se encontró deadlock.
+[INFO] 13:35:44:594 TEAM/(30559:30573): Recibi mensaje caught pokemon. El pokemon fue atrapado. 
+
+[INFO] 13:35:44:598 TEAM/(30559:30696): El entrenador 2 atrapó al pokemon Charmander en la posición (0,0).
+[INFO] 13:35:44:598 TEAM/(30559:30696): Inicio del algoritmo de detección de deadlock.
+[INFO] 13:35:44:609 TEAM/(30559:30696): Se encontró deadlock.
+[INFO] 13:35:44:609 TEAM/(30559:30696): Habilito el hilo del entrenador 2.
+[INFO] 13:35:44:610 TEAM/(30559:30696): entre al if de obtenerPokemonesFaltantes.
+[INFO] 13:35:44:610 TEAM/(30559:30696): entre al if de obtenerPokemonesFaltantes.
+[INFO] 13:35:44:610 TEAM/(30559:30566): El entrenador 2 entra en ejecución para deadlock.
+[INFO] 13:35:44:626 TEAM/(30559:30566): El entrenador 2 se movió a la posición (0, 0).
+[INFO] 13:35:49:628 TEAM/(30559:30566): entre al if de obtenerPokemonesFaltantes.
+[INFO] 13:35:49:628 TEAM/(30559:30566): Operación de intercambio realizada entre entrenadores 2 y 1
+[INFO] 14:19:19:249 TEAM/(31367:31404): Recibi mensaje appeared pokemon. El pokemon es: Pikachu. La posicion es: (0,0). 
+
+[INFO] 14:19:19:250 TEAM/(31367:31404): El pokemon a atrapar es: Pikachu, y la posición es: (0, 0)
+
+[INFO] 14:19:19:250 TEAM/(31367:31404): Habilito el hilo del entrenador 0.
+[INFO] 14:19:22:267 TEAM/(31367:31372): El entrenador 0 se movió a la posición (0, 0).
+[INFO] 14:19:32:516 TEAM/(31367:31426): Recibi mensaje appeared pokemon. El pokemon es: Pikachu. La posicion es: (0,0). 
+
+[INFO] 14:19:32:516 TEAM/(31367:31426): El pokemon a atrapar es: Pikachu, y la posición es: (0, 0)
+
+[INFO] 14:19:32:516 TEAM/(31367:31426): Habilito el hilo del entrenador 1.
+[INFO] 14:19:42:529 TEAM/(31367:31373): El entrenador 1 se movió a la posición (0, 0).
+[INFO] 14:19:54:163 TEAM/(31367:31445): Recibi mensaje appeared pokemon. El pokemon es: Charmander. La posicion es: (0,0). 
+
+[INFO] 14:19:54:163 TEAM/(31367:31445): El pokemon a atrapar es: Charmander, y la posición es: (0, 0)
+
+[INFO] 14:19:54:163 TEAM/(31367:31445): Habilito el hilo del entrenador 2.
+[INFO] 14:20:04:184 TEAM/(31367:31374): El entrenador 2 se movió a la posición (0, 0).
+[INFO] 14:20:20:547 TEAM/(31367:31381): Recibi mensaje caught pokemon. El pokemon fue atrapado. 
+
+[INFO] 14:20:20:558 TEAM/(31367:31465): El entrenador 0 atrapó al pokemon Pikachu en la posición (0,0).
+[INFO] 14:20:20:558 TEAM/(31367:31465): Habilito el hilo del entrenador 0.
+[INFO] 14:20:35:602 TEAM/(31367:31381): Recibi mensaje caught pokemon. El pokemon fue atrapado. 
+
+[INFO] 14:20:35:609 TEAM/(31367:31485): El entrenador 1 atrapó al pokemon Pikachu en la posición (0,0).
+[INFO] 14:20:35:609 TEAM/(31367:31485): Inicio del algoritmo de detección de deadlock.
+[INFO] 14:20:35:613 TEAM/(31367:31485): Habilito el hilo del entrenador 1.
+[INFO] 14:20:35:613 TEAM/(31367:31485): No se encontró deadlock.
+[INFO] 14:20:53:101 TEAM/(31367:31381): Recibi mensaje caught pokemon. El pokemon fue atrapado. 
+
+[INFO] 14:20:53:133 TEAM/(31367:31506): El entrenador 2 atrapó al pokemon Charmander en la posición (0,0).
+[INFO] 14:20:53:133 TEAM/(31367:31506): Inicio del algoritmo de detección de deadlock.
+[INFO] 14:20:53:133 TEAM/(31367:31506): Se encontró deadlock.
+[INFO] 14:20:53:133 TEAM/(31367:31506): Habilito el hilo del entrenador 2.
+[INFO] 14:20:53:133 TEAM/(31367:31506): entre al if de obtenerPokemonesFaltantes.
+[INFO] 14:20:53:133 TEAM/(31367:31506): entre al if de obtenerPokemonesFaltantes.
+[INFO] 14:20:53:134 TEAM/(31367:31374): El entrenador 2 entra en ejecución para deadlock.
+[INFO] 14:20:53:147 TEAM/(31367:31374): El entrenador 2 se movió a la posición (0, 0).
+[INFO] 14:20:58:151 TEAM/(31367:31374): entre al if de obtenerPokemonesFaltantes.
+[INFO] 14:20:58:151 TEAM/(31367:31374): Operación de intercambio realizada entre entrenadores 2 y 1
+[INFO] 14:20:58:152 TEAM/(31367:31367): Programa terminado: objetivo global cumplido.
+[INFO] 14:20:58:152 TEAM/(31367:31367): Cantidad de ciclos de CPU totales: 31.
+[INFO] 14:20:58:152 TEAM/(31367:31367): Cantidad de cambios de contexto realizados: 0.
+[INFO] 14:20:58:152 TEAM/(31367:31367): ------------------------------------------------
+[INFO] 14:20:58:152 TEAM/(31367:31367): Información de los entrenadores: 
+[INFO] 14:20:58:152 TEAM/(31367:31367): Cantidad de ciclos de CPU realizados por el entrenador 0: 4.
+[INFO] 14:20:58:152 TEAM/(31367:31367): Cantidad de ciclos de CPU realizados por el entrenador 1: 11.
+[INFO] 14:20:58:152 TEAM/(31367:31367): Cantidad de ciclos de CPU realizados por el entrenador 2: 16.
+[INFO] 14:20:58:152 TEAM/(31367:31367): Deadlocks producidos y resueltos: 0.

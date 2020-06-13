@@ -195,7 +195,7 @@ void* ejecucionHiloEntrenador(void* argEntrenador){
 			log_info(teamLogger2, "El entrenador %i no queda libre.",infoEntrenador->id);
 		}
 
-		while(entrenadorEnDeadlock(infoEntrenador) && infoEntrenador!=entrenadorBloqueadoParaDeadlock){
+		while(entrenadorEnDeadlock(infoEntrenador)){// && infoEntrenador!=entrenadorBloqueadoParaDeadlock){
 			log_info(teamLogger2, "El entrenador %i entra a la ejecucion entra al while del deadlock.", infoEntrenador->id);
 			sem_wait(semaforoEntrenador); //OK3
 			poneteEnReady(infoEntrenador);
