@@ -36,11 +36,11 @@ void ejecucionPlanificadorFifo(){
 	sem_post(&semaforoEjecucionCpu);
 	while(1){
 		if(sizeColaMutex(colaEjecucionFifo)>0){
-			sem_wait(entrenadorEnCola);
+			sem_wait(entrenadorEnCola); //OK6
 			sem_wait(&semaforoEjecucionCpu);
 			dataEntrenador* entrenadorAEjecutar=(dataEntrenador*)popColaMutex(colaEjecucionFifo);
 			ponerEnEjecucion(entrenadorAEjecutar);
-			sem_post((entrenadorAEjecutar->semaforo));
+			sem_post((entrenadorAEjecutar->semaforo)); //OK4
 			log_info(teamLogger2, "elijo entrenador para ejecutar");
 		}
 	}
@@ -50,7 +50,7 @@ void ejecucionPlanificadorRR(){
 	sem_post(&semaforoEjecucionCpu);
 		while(1){
 			if(sizeColaMutex(colaEjecucionFifo)>0){
-				sem_wait(entrenadorEnCola);
+				sem_wait(entrenadorEnCola); //OK6
 				sem_wait(&semaforoEjecucionCpu);
 
 				dataEntrenador* entrenadorAEjecutar=(dataEntrenador*)popColaMutex(colaEjecucionFifo);
@@ -59,7 +59,7 @@ void ejecucionPlanificadorRR(){
 					sem_post((entrenadorAEjecutar->semaforoContinuarEjecucion));
 				}else{
 					ponerEnEjecucion(entrenadorAEjecutar);
-					sem_post((entrenadorAEjecutar->semaforo));
+					sem_post((entrenadorAEjecutar->semaforo)); //OK1 //OK4
 				}
 				setearTimer(quantumRR, entrenadorAEjecutar);
 				log_info(teamLogger2, "elijo entrenador para ejecutar");

@@ -112,7 +112,6 @@
 
 int main(int argc , char* argv[]){
 
-
 	teamLogger = iniciar_logger("team.log", "TEAM");
 	teamLogger2=log_create("teamLoggerSecundario.log","team", true, LOG_LEVEL_INFO);
 

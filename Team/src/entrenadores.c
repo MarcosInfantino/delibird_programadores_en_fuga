@@ -95,7 +95,7 @@ void replanificarEntrenador(dataEntrenador* entrenador){
 	if(leFaltaCantidadDePokemones(entrenador)){
 		if(sizeColaMutex(pokemonesPendientes)>0){
 			log_info(teamLogger2, "El entrenador %i va a buscar pokemones pendientes.", entrenador->id);
-			habilitarHiloEntrenador(entrenador->id);
+			//habilitarHiloEntrenador(entrenador->id);
 			pokemonPosicion* pokePosicion=(pokemonPosicion*)popColaMutex(pokemonesPendientes);
 			asignarPokemonAEntrenador(entrenador, pokePosicion);
 			free(pokePosicion);
@@ -122,8 +122,10 @@ void replanificarEntrenador(dataEntrenador* entrenador){
 							addListaMutex(entrenadoresDeadlock, (void*) entrenador);
 							if(todosLosEntrenadoresTerminaronDeAtrapar()){
 								log_info(teamLogger, "Se encontró deadlock.");
+								habilitarHiloEntrenador(entrenador->id);
 								resolverDeadlock();
 							}else{
+								habilitarHiloEntrenador(entrenador->id);
 								log_info(teamLogger, "No se encontró deadlock.");
 							}
 						}
@@ -175,14 +177,14 @@ void* ejecucionHiloEntrenador(void* argEntrenador){
 	dataEntrenador* infoEntrenador=(dataEntrenador*) argEntrenador;
 	sem_t* semaforoEntrenador=(infoEntrenador->semaforo);
 	while(1){
-		sem_wait(semaforoEntrenador);
+		sem_wait(semaforoEntrenador); //OK1
 
 		removeListaMutex(entrenadoresLibres,encontrarPosicionEntrenadorLibre(infoEntrenador));
 		poneteEnReady(infoEntrenador);
 
 		entrarEnEjecucion(infoEntrenador); //despues de esto enviaria el catch, recibe id y se pone en BLOCKED
 		//IMPORTANTE: CUANDO LLEGUE LA RESPUESTA DEL CATCH SE TIENE QUE HACER UN UNLOCK AL ENTRENADOR CORRESPONDIENTE
-		sem_wait(semaforoEntrenador);// ESPERA A QUE EL TEAM LE AVISE QUE LLEGO LA RESPUESTA DEL POKEMON QUE QUISO ATRAPAR
+		sem_wait(semaforoEntrenador);//OK2 // ESPERA A QUE EL TEAM LE AVISE QUE LLEGO LA RESPUESTA DEL POKEMON QUE QUISO ATRAPAR
 		//meter un if() para verificar estado y ver que hacer despues
 		log_info(teamLogger2, "El entrenador %i salio de la espera a la respuesta caught.",infoEntrenador->id);
 
@@ -195,7 +197,7 @@ void* ejecucionHiloEntrenador(void* argEntrenador){
 
 		while(entrenadorEnDeadlock(infoEntrenador) && infoEntrenador!=entrenadorBloqueadoParaDeadlock){
 			log_info(teamLogger2, "El entrenador %i entra a la ejecucion entra al while del deadlock.", infoEntrenador->id);
-			sem_wait(semaforoEntrenador);
+			sem_wait(semaforoEntrenador); //OK3
 			poneteEnReady(infoEntrenador);
 			entrarEnEjecucionParaDeadlock(infoEntrenador);
 
@@ -211,7 +213,7 @@ void poneteEnReady(dataEntrenador* entrenador){
 		case FIFO:
 			entrenador->estado=READY;
 			pushColaMutex(colaEjecucionFifo,(void*)entrenador);
-			sem_post(entrenadorEnCola);
+			sem_post(entrenadorEnCola); //OK6
 			break;
 
 	}
@@ -230,7 +232,7 @@ uint32_t encontrarPosicionEntrenadorLibre(dataEntrenador* entrenador){
 
 void entrarEnEjecucion(dataEntrenador* infoEntrenador){
 
-	sem_wait((infoEntrenador->semaforo));
+	sem_wait((infoEntrenador->semaforo)); //OK4
 	log_info(teamLogger2,"El entrenador %i entro en ejecución.", infoEntrenador->id);
 	infoEntrenador->estado = EXEC;
 	moverEntrenadorAPosicion(infoEntrenador, ((infoEntrenador->pokemonAAtrapar)->posicion));
@@ -250,7 +252,7 @@ void seleccionarEntrenador(pokemonPosicion* pokemon){
 
 void habilitarHiloEntrenador(uint32_t idEntrenador){
 	log_info(teamLogger, "Habilito el hilo del entrenador %i.", idEntrenador);
-	sem_post((((dataEntrenador*)(getListaMutex(entrenadores,idEntrenador)))->semaforo));
+	sem_post((((dataEntrenador*)(getListaMutex(entrenadores,idEntrenador)))->semaforo)); //OK2 //OK1
 }
 
 void moverEntrenadorAPosicion(dataEntrenador* entrenador, posicion pos){

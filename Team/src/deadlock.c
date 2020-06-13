@@ -69,13 +69,13 @@ void realizarIntercambio(dataEntrenador* entrenadorQueSeMueve){
 
 	log_info(teamLogger, "Operación de intercambio realizada entre entrenadores %i y %i",entrenadorQueSeMueve->id, entrenadorBloqueadoParaDeadlock->id);
 
-	sem_post(&intercambioFinalizado);
+	sem_post(&intercambioFinalizado); //OK5
 
 }
 
 void entrarEnEjecucionParaDeadlock(dataEntrenador* infoEntrenador){
 	log_info(teamLogger, "El entrenador %i entra en ejecución para deadlock.");
-	sem_wait((infoEntrenador->semaforo));//espera al planificador
+	sem_wait((infoEntrenador->semaforo));//espera al planificador //OK4
 	infoEntrenador->estado = EXEC;
 	moverEntrenadorAPosicion(infoEntrenador, ((infoEntrenador->pokemonAAtrapar)->posicion));
 	realizarIntercambio(infoEntrenador);
@@ -102,11 +102,11 @@ void resolverDeadlock(){
 			entrenadorAMover->pokemonAAtrapar->posicion=entrenadorBloqueadoParaDeadlock->posicion;
 			entrenadorAMover->pokemonAAtrapar->pokemon=pokeSobrante->pokemon;//OJO, ACA ESTOY ABUSANDO DE LA VARIABLE PARA GUARDAR EL POKEMON QUE DEBE DARLE AEL ENTRENADOR EN MOVIMIENTO AL QUE ESTA QUIETO
 
-			sem_post(entrenadorAMover->semaforo);
-			sem_post(entrenadorAMover->semaforo);
+			sem_post(entrenadorAMover->semaforo);//OK3
+			//sem_post(entrenadorAMover->semaforo);
 			log_info(teamLogger2, "Entrenador bloqueado: %i. Entrenador a mover: %i.", entrenadorBloqueadoParaDeadlock->id, entrenadorAMover->id);
 
-			sem_wait(&intercambioFinalizado);
+			sem_wait(&intercambioFinalizado); //OK5
 
 			list_destroy(listaPokemonesSobrantes);
 			free(pokeSobrante);

@@ -5143,3 +5143,138 @@
 [INFO] 20:29:35:814 TEAM/(11086:11093): El entrenador 2 se movió a la posición (0, 0).
 [INFO] 20:30:04:817 TEAM/(11086:11100): Recibi mensaje caught pokemon. El pokemon fue atrapado. 
 
+[INFO] 22:54:18:62 TEAM/(26511:26715): Recibi mensaje appeared pokemon. El pokemon es: Pikachu. La posicion es: (0,0). 
+
+[INFO] 22:54:18:82 TEAM/(26511:26715): El pokemon a atrapar es: Pikachu, y la posición es: (0, 0)
+
+[INFO] 22:54:18:82 TEAM/(26511:26715): Habilito el hilo del entrenador 0.
+[INFO] 22:54:21:92 TEAM/(26511:26516): El entrenador 0 se movió a la posición (0, 0).
+[INFO] 22:54:44:138 TEAM/(26511:26736): Recibi mensaje appeared pokemon. El pokemon es: Pikachu. La posicion es: (0,0). 
+
+[INFO] 22:54:44:138 TEAM/(26511:26736): El pokemon a atrapar es: Pikachu, y la posición es: (0, 0)
+
+[INFO] 22:54:44:138 TEAM/(26511:26736): Habilito el hilo del entrenador 1.
+[INFO] 22:54:54:144 TEAM/(26511:26517): El entrenador 1 se movió a la posición (0, 0).
+[INFO] 22:55:31:177 TEAM/(26511:26757): Recibi mensaje appeared pokemon. El pokemon es: Charmander. La posicion es: (0,0). 
+
+[INFO] 22:55:31:180 TEAM/(26511:26757): El pokemon a atrapar es: Charmander, y la posición es: (0, 0)
+
+[INFO] 22:55:31:180 TEAM/(26511:26757): Habilito el hilo del entrenador 2.
+[INFO] 22:55:41:199 TEAM/(26511:26518): El entrenador 2 se movió a la posición (0, 0).
+[INFO] 22:56:59:354 TEAM/(26511:26525): Recibi mensaje caught pokemon. El pokemon fue atrapado. 
+
+[INFO] 22:56:59:358 TEAM/(26511:26785): El entrenador 0 atrapó al pokemon Pikachu en la posición (0,0).
+[INFO] 22:56:59:359 TEAM/(26511:26785): Habilito el hilo del entrenador 0.
+[INFO] 22:57:30:914 TEAM/(26511:26525): Recibi mensaje caught pokemon. El pokemon fue atrapado. 
+
+[INFO] 22:57:30:930 TEAM/(26511:26807): El entrenador 1 atrapó al pokemon Pikachu en la posición (0,0).
+[INFO] 22:57:30:930 TEAM/(26511:26807): Inicio del algoritmo de detección de deadlock.
+[INFO] 22:57:30:930 TEAM/(26511:26807): No se encontró deadlock.
+[INFO] 22:58:02:511 TEAM/(26511:26525): Recibi mensaje caught pokemon. El pokemon fue atrapado. 
+
+[INFO] 22:58:02:521 TEAM/(26511:26828): El entrenador 2 atrapó al pokemon Charmander en la posición (0,0).
+[INFO] 22:58:02:522 TEAM/(26511:26828): Inicio del algoritmo de detección de deadlock.
+[INFO] 22:58:02:522 TEAM/(26511:26828): Se encontró deadlock.
+[INFO] 22:58:02:522 TEAM/(26511:26828): entre al if de obtenerPokemonesFaltantes.
+[INFO] 22:58:02:522 TEAM/(26511:26828): entre al if de obtenerPokemonesFaltantes.
+[INFO] 23:10:59:702 TEAM/(27543:27555): Recibi mensaje appeared pokemon. El pokemon es: Pikachu. La posicion es: (0,0). 
+
+[INFO] 23:10:59:717 TEAM/(27543:27605): El pokemon a atrapar es: Pikachu, y la posición es: (0, 0)
+
+[INFO] 23:10:59:717 TEAM/(27543:27605): Habilito el hilo del entrenador 0.
+[INFO] 23:11:02:727 TEAM/(27543:27548): El entrenador 0 se movió a la posición (0, 0).
+[INFO] 23:11:31:895 TEAM/(27543:27555): Recibi mensaje appeared pokemon. El pokemon es: Pikachu. La posicion es: (0,0). 
+
+[INFO] 23:11:31:904 TEAM/(27543:27630): El pokemon a atrapar es: Pikachu, y la posición es: (0, 0)
+
+[INFO] 23:11:31:904 TEAM/(27543:27630): Habilito el hilo del entrenador 1.
+[INFO] 23:11:41:920 TEAM/(27543:27549): El entrenador 1 se movió a la posición (0, 0).
+[INFO] 23:12:14:358 TEAM/(27543:27555): Recibi mensaje appeared pokemon. El pokemon es: Charmander. La posicion es: (0,0). 
+
+[INFO] 23:12:14:362 TEAM/(27543:27650): El pokemon a atrapar es: Charmander, y la posición es: (0, 0)
+
+[INFO] 23:12:14:362 TEAM/(27543:27650): Habilito el hilo del entrenador 2.
+[INFO] 23:12:24:376 TEAM/(27543:27550): El entrenador 2 se movió a la posición (0, 0).
+[INFO] 23:13:18:262 TEAM/(27543:27557): Recibi mensaje caught pokemon. El pokemon no fue atrapado. 
+
+[INFO] 23:14:29:287 TEAM/(27543:27557): Recibi mensaje caught pokemon. El pokemon no fue atrapado. 
+
+[INFO] 23:14:56:792 TEAM/(27543:27557): Recibi mensaje caught pokemon. El pokemon no fue atrapado. 
+
+[INFO] 23:16:47:665 TEAM/(27543:27557): Recibi mensaje caught pokemon. El pokemon no fue atrapado. 
+
+[INFO] 23:46:26:544 TEAM/(28411:28449): Recibi mensaje appeared pokemon. El pokemon es: Pikachu. La posicion es: (0,0). 
+
+[INFO] 23:46:26:557 TEAM/(28411:28449): El pokemon a atrapar es: Pikachu, y la posición es: (0, 0)
+
+[INFO] 23:46:26:557 TEAM/(28411:28449): Habilito el hilo del entrenador 0.
+[INFO] 23:46:29:569 TEAM/(28411:28416): El entrenador 0 se movió a la posición (0, 0).
+[INFO] 23:46:45:145 TEAM/(28411:28472): Recibi mensaje appeared pokemon. El pokemon es: Pikachu. La posicion es: (0,0). 
+
+[INFO] 23:46:45:146 TEAM/(28411:28472): El pokemon a atrapar es: Pikachu, y la posición es: (0, 0)
+
+[INFO] 23:46:45:146 TEAM/(28411:28472): Habilito el hilo del entrenador 1.
+[INFO] 23:46:55:160 TEAM/(28411:28417): El entrenador 1 se movió a la posición (0, 0).
+[INFO] 23:47:14:163 TEAM/(28411:28490): Recibi mensaje appeared pokemon. El pokemon es: Charmander. La posicion es: (0,0). 
+
+[INFO] 23:47:14:164 TEAM/(28411:28490): El pokemon a atrapar es: Charmander, y la posición es: (0, 0)
+
+[INFO] 23:47:14:164 TEAM/(28411:28490): Habilito el hilo del entrenador 2.
+[INFO] 23:47:24:173 TEAM/(28411:28418): El entrenador 2 se movió a la posición (0, 0).
+[INFO] 23:48:40:222 TEAM/(28411:28425): Recibi mensaje caught pokemon. El pokemon fue atrapado. 
+
+[INFO] 23:48:40:232 TEAM/(28411:28519): El entrenador 0 atrapó al pokemon Pikachu en la posición (0,0).
+[INFO] 23:48:40:232 TEAM/(28411:28519): Habilito el hilo del entrenador 0.
+[INFO] 23:49:08:80 TEAM/(28411:28425): Recibi mensaje caught pokemon. El pokemon fue atrapado. 
+
+[INFO] 23:49:08:85 TEAM/(28411:28537): El entrenador 1 atrapó al pokemon Pikachu en la posición (0,0).
+[INFO] 23:49:08:89 TEAM/(28411:28537): Inicio del algoritmo de detección de deadlock.
+[INFO] 23:49:08:89 TEAM/(28411:28537): Habilito el hilo del entrenador 1.
+[INFO] 23:49:08:89 TEAM/(28411:28537): No se encontró deadlock.
+[INFO] 23:49:53:78 TEAM/(28411:28425): Recibi mensaje caught pokemon. El pokemon fue atrapado. 
+
+[INFO] 23:49:53:82 TEAM/(28411:28560): El entrenador 2 atrapó al pokemon Charmander en la posición (0,0).
+[INFO] 23:49:53:82 TEAM/(28411:28560): Inicio del algoritmo de detección de deadlock.
+[INFO] 23:49:53:82 TEAM/(28411:28560): Se encontró deadlock.
+[INFO] 23:49:53:82 TEAM/(28411:28560): entre al if de obtenerPokemonesFaltantes.
+[INFO] 23:49:53:82 TEAM/(28411:28560): entre al if de obtenerPokemonesFaltantes.
+[INFO] 23:53:41:568 TEAM/(28671:28713): Recibi mensaje appeared pokemon. El pokemon es: Pikachu. La posicion es: (0,0). 
+
+[INFO] 23:53:41:569 TEAM/(28671:28713): El pokemon a atrapar es: Pikachu, y la posición es: (0, 0)
+
+[INFO] 23:53:41:569 TEAM/(28671:28713): Habilito el hilo del entrenador 0.
+[INFO] 23:53:44:582 TEAM/(28671:28676): El entrenador 0 se movió a la posición (0, 0).
+[INFO] 23:53:55:414 TEAM/(28671:28731): Recibi mensaje appeared pokemon. El pokemon es: Pikachu. La posicion es: (0,0). 
+
+[INFO] 23:53:55:414 TEAM/(28671:28731): El pokemon a atrapar es: Pikachu, y la posición es: (0, 0)
+
+[INFO] 23:53:55:414 TEAM/(28671:28731): Habilito el hilo del entrenador 1.
+[INFO] 23:54:05:424 TEAM/(28671:28677): El entrenador 1 se movió a la posición (0, 0).
+[INFO] 23:54:10:7 TEAM/(28671:28752): Recibi mensaje appeared pokemon. El pokemon es: Charmander. La posicion es: (0,0). 
+
+[INFO] 23:54:10:10 TEAM/(28671:28752): El pokemon a atrapar es: Charmander, y la posición es: (0, 0)
+
+[INFO] 23:54:10:10 TEAM/(28671:28752): Habilito el hilo del entrenador 2.
+[INFO] 23:54:20:25 TEAM/(28671:28678): El entrenador 2 se movió a la posición (0, 0).
+[INFO] 23:54:44:968 TEAM/(28671:28685): Recibi mensaje caught pokemon. El pokemon fue atrapado. 
+
+[INFO] 23:54:44:982 TEAM/(28671:28774): El entrenador 0 atrapó al pokemon Pikachu en la posición (0,0).
+[INFO] 23:54:44:982 TEAM/(28671:28774): Habilito el hilo del entrenador 0.
+[INFO] 23:55:07:109 TEAM/(28671:28685): Recibi mensaje caught pokemon. El pokemon fue atrapado. 
+
+[INFO] 23:55:07:116 TEAM/(28671:28793): El entrenador 1 atrapó al pokemon Pikachu en la posición (0,0).
+[INFO] 23:55:07:116 TEAM/(28671:28793): Inicio del algoritmo de detección de deadlock.
+[INFO] 23:55:07:116 TEAM/(28671:28793): Habilito el hilo del entrenador 1.
+[INFO] 23:55:07:116 TEAM/(28671:28793): No se encontró deadlock.
+[INFO] 23:55:23:850 TEAM/(28671:28685): Recibi mensaje caught pokemon. El pokemon fue atrapado. 
+
+[INFO] 23:55:23:857 TEAM/(28671:28810): El entrenador 2 atrapó al pokemon Charmander en la posición (0,0).
+[INFO] 23:55:23:857 TEAM/(28671:28810): Inicio del algoritmo de detección de deadlock.
+[INFO] 23:55:23:873 TEAM/(28671:28810): Se encontró deadlock.
+[INFO] 23:55:23:873 TEAM/(28671:28810): Habilito el hilo del entrenador 2.
+[INFO] 23:55:23:873 TEAM/(28671:28810): entre al if de obtenerPokemonesFaltantes.
+[INFO] 23:55:23:873 TEAM/(28671:28810): entre al if de obtenerPokemonesFaltantes.
+[INFO] 23:55:23:886 TEAM/(28671:28678): El entrenador 2 entra en ejecución para deadlock.
+[INFO] 23:55:23:886 TEAM/(28671:28678): El entrenador 2 se movió a la posición (0, 0).
+[INFO] 23:55:28:888 TEAM/(28671:28678): entre al if de obtenerPokemonesFaltantes.
+[INFO] 23:55:28:888 TEAM/(28671:28678): Operación de intercambio realizada entre entrenadores 2 y 1
