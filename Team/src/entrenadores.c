@@ -32,7 +32,38 @@ void retomarEjecucion(dataEntrenador* entrenador){
 
 void ponerEnEjecucion(dataEntrenador* entrenador){
 	entrenador->estado=EXEC;
+	log_info(teamLogger,"El entrenador %i ahora está en EXEC.",entrenador->id);
 }
+
+void poneteEnNew(dataEntrenador* entrenador){
+	entrenador->estado=NEW;
+	log_info(teamLogger,"El entrenador %i ahora está en NEW.",entrenador->id);
+}
+void poneteEnReady(dataEntrenador* entrenador){
+	log_info(teamLogger2,"El entrenador %i se pone en READY.", entrenador->id);
+	switch(algoritmoPlanificacion){
+		case RR:
+		case FIFO:
+			entrenador->estado=READY;
+			pushColaMutex(colaEjecucionFifo,(void*)entrenador);
+			sem_post(entrenadorEnCola); //OK6
+			break;
+
+	}
+	log_info(teamLogger,"El entrenador %i ahora está en READY.",entrenador->id);
+}
+
+void poneteEnExit(dataEntrenador* entrenador){
+	entrenador->estado=EXIT;
+	addListaMutex(entrenadoresExit, entrenador);
+	log_info(teamLogger,"El entrenador %i ahora está en EXIT.",entrenador->id);
+}
+
+void poneteEnBlocked(dataEntrenador* entrenador){
+	entrenador->estado=BLOCKED;
+	log_info(teamLogger,"El entrenador %i ahora está en BLOCKED.",entrenador->id);
+}
+
 
 void guardarContexto(dataEntrenador* entrenador){
 	entrenador->ejecucionEnPausa=true;
@@ -101,7 +132,8 @@ void replanificarEntrenador(dataEntrenador* entrenador){
 			free(pokePosicion);
 		}else{
 			log_info(teamLogger2, "El entrenador %i se bloquea porque no hay pokemones para atrapar.", entrenador->id);
-			entrenador->estado=BLOCKED;
+			//entrenador->estado=BLOCKED;
+			poneteEnBlocked(entrenador);
 			habilitarHiloEntrenador(entrenador->id);
 			//addListaMutex(entrenadoresLibres,entrenador);
 
@@ -110,7 +142,8 @@ void replanificarEntrenador(dataEntrenador* entrenador){
 	}else{
 			if(cumplioObjetivo(entrenador)){
 						log_info(teamLogger2, "El entrenador %i cumplio su objetivo.", entrenador->id);
-							entrenador->estado=EXIT;
+							//entrenador->estado=EXIT;
+							poneteEnExit(entrenador);
 							habilitarHiloEntrenador(entrenador->id); //preguntar si aca se mata el hilo
 							addListaMutex(entrenadoresExit, (void*)entrenador);
 
@@ -122,8 +155,10 @@ void replanificarEntrenador(dataEntrenador* entrenador){
 							addListaMutex(entrenadoresDeadlock, (void*) entrenador);
 							if(todosLosEntrenadoresTerminaronDeAtrapar()){
 								log_info(teamLogger, "Se encontró deadlock.");
+
 								habilitarHiloEntrenador(entrenador->id);
-								resolverDeadlock();
+								sem_post(iniciarResolucionDeadlock);
+								//resolverDeadlock();
 							}else{
 								habilitarHiloEntrenador(entrenador->id);
 								log_info(teamLogger, "No se encontró deadlock.");
@@ -206,18 +241,7 @@ void* ejecucionHiloEntrenador(void* argEntrenador){
 	return NULL;
 }
 
-void poneteEnReady(dataEntrenador* entrenador){
-	log_info(teamLogger2,"El entrenador %i se pone en READY.", entrenador->id);
-	switch(algoritmoPlanificacion){
-		case RR:
-		case FIFO:
-			entrenador->estado=READY;
-			pushColaMutex(colaEjecucionFifo,(void*)entrenador);
-			sem_post(entrenadorEnCola); //OK6
-			break;
 
-	}
-}
 
 uint32_t encontrarPosicionEntrenadorLibre(dataEntrenador* entrenador){
 	for(uint32_t i=0;i<sizeListaMutex(entrenadoresLibres);i++){
@@ -234,10 +258,12 @@ void entrarEnEjecucion(dataEntrenador* infoEntrenador){
 
 	sem_wait((infoEntrenador->semaforo)); //OK4
 	log_info(teamLogger2,"El entrenador %i entro en ejecución.", infoEntrenador->id);
-	infoEntrenador->estado = EXEC;
+	//infoEntrenador->estado = EXEC;
+	ponerEnEjecucion(infoEntrenador);
 	moverEntrenadorAPosicion(infoEntrenador, ((infoEntrenador->pokemonAAtrapar)->posicion));
 	enviarCatch(infoEntrenador);
-	infoEntrenador->estado=BLOCKED;
+	//infoEntrenador->estado=BLOCKED;
+	poneteEnBlocked(infoEntrenador);
 	sem_post(&semaforoEjecucionCpu);
 	log_info(teamLogger2, "El entrenador %i libera la CPU por su cuenta.", infoEntrenador->id);
 }
@@ -388,7 +414,7 @@ t_list* obtenerPokemonesFaltantes(dataEntrenador* entrenador){
 				int32_t encontrado    = buscarMismoPokemon(copiaPokemones,pokemonAComparar);
 
 				if(encontrado == -1){
-					log_info(teamLogger, "entre al if de obtenerPokemonesFaltantes.");
+
 					char* pokemonAAgregar=malloc(strlen(pokemonAComparar)+1);
 					strcpy(pokemonAAgregar,pokemonAComparar);
 					list_add(pokemonesFaltantes, (void*)pokemonAAgregar);
@@ -413,6 +439,7 @@ void darPokemon(dataEntrenador* entrenadorDador, dataEntrenador* entrenadorRecep
 	uint32_t posPokemon=buscarMismoPokemon(entrenadorDador->pokemones,pokemon);
 	list_remove(entrenadorDador->pokemones, posPokemon);//ESTO PUEDE ROMPER EN ALGUN LADO, CUANDO SACO UN ELEMENTO DE UNA LISTA DEBO HACER MEMCPY O STRCPY
 	list_add(entrenadorReceptor->pokemones,(void*)pokemon);
+	log_info(teamLogger, "El entrenador% i le da el pokemon %s al entrenador %i", entrenadorDador->id,pokemon, entrenadorReceptor->id);
 
 }
 

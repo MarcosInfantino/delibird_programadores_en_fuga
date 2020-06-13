@@ -110,11 +110,18 @@
 //TEAM APPEARED_POKEMON Pikachu 0 0
 //BROKER CAUGHT_POKEMON 4 OK
 
+//./gameboy TEAM APPEARED_POKEMON Pikachu 1 1
+//./gameboy TEAM APPEARED_POKEMON Squirtle 9 7
+//./gameboy TEAM APPEARED_POKEMON Onix 2 2
+//./gameboy TEAM APPEARED_POKEMON Squirtle 3 5
+//./gameboy TEAM APPEARED_POKEMON Gengar 7 5
+
 int main(int argc , char* argv[]){
 
 	teamLogger = iniciar_logger("team.log", "TEAM");
 	teamLogger2=log_create("teamLoggerSecundario.log","team", true, LOG_LEVEL_INFO);
-
+	iniciarResolucionDeadlock=malloc(sizeof(sem_t));
+	sem_init((iniciarResolucionDeadlock), 0,0);
 	log_info(teamLogger2,"--------------------------------------------------------------------------");
 	log_info(teamLogger2,"NUEVA EJECUCION");
 	log_info(teamLogger2,"--------------------------------------------------------------------------");
@@ -156,9 +163,13 @@ int main(int argc , char* argv[]){
 	pthread_t hiloEnviarGets;
 	crearHiloParaEnviarGets(&hiloEnviarGets);
 
+	pthread_t resolucionDeadlock;
+	crearHiloResolucionDeadlock(&resolucionDeadlock);
+
 	pthread_t hiloConexionInicialBroker;
 
 	crearHiloConexionColasBroker((void*)config,&hiloConexionInicialBroker);
+
 
 	pthread_t hiloServidorGameboy;
 	crearHiloServidorGameboy(&hiloServidorGameboy);
@@ -203,7 +214,8 @@ void loggearResultado(){
 
 	}
 
-	log_info(teamLogger,"Deadlocks producidos y resueltos: %i.", team->cantidadDeadlocks);
+	log_info(teamLogger,"Deadlocks producidos: %i.", team->cantidadDeadlocksEncontrados);
+	log_info(teamLogger,"Deadlocks resueltos: %i.", team->cantidadDeadlocksResueltos);
 
 }
 bool objetivoCumplido(){
@@ -340,6 +352,17 @@ uint32_t buscarEntrenadorParaMensaje(listaMutex* listaIds, uint32_t idMensaje){/
 		}
 	}
 	return -1;
+}
+
+int32_t crearHiloResolucionDeadlock(pthread_t* hilo){
+	int32_t err=pthread_create(hilo,NULL,resolverDeadlock,NULL);
+					if(err!=0){
+						printf("Hubo un problema en la creación del hilo para conectarse al broker \n");
+						return err;
+					}
+
+		pthread_detach(*hilo);
+		return 0;
 }
 
 int crearHiloConexionColasBroker(void* config, pthread_t* hilo){
@@ -518,7 +541,7 @@ void* suscribirseCola(void* msgSuscripcion){
 //llenarPaquete( uint32_t modulo,uint32_t tipoMensaje, uint32_t sizeStream,void* stream)
 void enviarCatch(dataEntrenador* infoEntrenador){
 	//log_info(teamLogger2,"El entrenador %i inició el proceso de envío del catch.", infoEntrenador->id);
-	uint32_t cliente=crearSocketCliente(ipBroker,puertoBroker);
+	int32_t cliente=crearSocketCliente(ipBroker,puertoBroker);
 	if(cliente!=-1){
 
 
@@ -557,6 +580,7 @@ void enviarCatch(dataEntrenador* infoEntrenador){
 		}
 		free(paqueteSerializado);
 	}else{
+		simularCicloCpu(1,infoEntrenador);
 		log_info(teamLogger, "Fallo de comunicación con el Broker al enviar un catch. Se realizará la operación por default.");
 		atraparPokemonYReplanificar (infoEntrenador);
 	}
@@ -631,15 +655,18 @@ dataTeam* inicializarTeam(t_config* config){
 	infoTeam->objetivosCumplidos = list_create();
 	infoTeam->cantidadCiclosCpuTotales=0;
 	infoTeam->cantidadCambiosContexto=0;
-	infoTeam->cantidadDeadlocks=0;
+	infoTeam->cantidadDeadlocksEncontrados=0;
+	infoTeam->cantidadDeadlocksResueltos=0;
 
 	t_list* pokemonesDelTeam=list_create();
 	char** arrayPosicionesEntrenadores=config_get_array_value(config,"POSICIONES_ENTRENADORES");
 	char** arrayPokemonesEntrenadores=config_get_array_value(config,"POKEMON_ENTRENADORES");
+	printf("hola1\n");
 	char** arrayObjetivosEntrenadores=config_get_array_value(config,"OBJETIVOS_ENTRENADORES");
 
 	t_list* posicionesEntrenadores = obtenerListaDeListas(arrayPosicionesEntrenadores);
 	t_list* pokemonesEntrenadores  = obtenerListaDeListas(arrayPokemonesEntrenadores);
+	printf("hola2\n");
 	t_list* objetivosEntrenadores  = obtenerListaDeListas(arrayObjetivosEntrenadores);
 	uint32_t cantEntrenadores      = list_size(posicionesEntrenadores);
 
@@ -735,6 +762,9 @@ uint32_t buscarMismoPokemon(t_list* lst, char* pokemon){//devuelve la posicion e
 t_list* arrayStringALista(char** arr){
 	uint32_t i;
 	t_list* lst = list_create();
+	if(arr==NULL){
+		return lst;
+	}
 	for(i=0;arr[i]!=NULL;i++){
 		list_add(lst,(void*) arr[i]);
 	}

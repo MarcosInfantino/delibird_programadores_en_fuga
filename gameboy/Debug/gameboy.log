@@ -1,16 +1,2580 @@
-[INFO] 19:33:57:336 GAMEBOY/(14874:14874): Arranco
+[INFO] 17:20:38:616 GAMEBOY/(18382:18382): arranco
 
-[INFO] 19:34:10:764 GAMEBOY/(14896:14896): Arranco
+[INFO] 18:59:10:792 GAMEBOY/(31951:31951): Arranco
 
-[INFO] 19:34:14:580 GAMEBOY/(14903:14903): Arranco
+[INFO] 18:59:10:800 GAMEBOY/(31951:31958): Estoy esperando respuesta al mensaje enviado
 
-[INFO] 19:34:53:322 GAMEBOY/(14973:14973): Arranco
+[INFO] 18:59:10:800 GAMEBOY/(31951:31958): Mensaje fue recibido correctamente, respuesta: 1
 
-[INFO] 20:45:19:0 GAMEBOY/(24796:24796): Arranco
+[INFO] 19:01:36:370 GAMEBOY/(32183:32183): Arranco
 
-[INFO] 20:46:44:65 GAMEBOY/(24836:24836): Arranco
+[INFO] 19:01:36:372 GAMEBOY/(32183:32189): Estoy esperando respuesta al mensaje enviado
 
-[INFO] 20:47:50:987 GAMEBOY/(24850:24850): Arranco
+[INFO] 19:01:36:374 GAMEBOY/(32183:32189): Mensaje recibido incorrectamente, respuesta: 0
 
-[INFO] 20:48:04:349 GAMEBOY/(24852:24852): Arranco
+[INFO] 19:01:54:988 GAMEBOY/(32247:32247): Arranco
+
+[INFO] 19:01:54:993 GAMEBOY/(32247:32255): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 19:01:54:993 GAMEBOY/(32247:32255): Mensaje fue recibido correctamente, respuesta: 1
+
+[INFO] 19:05:26:328 GAMEBOY/(32607:32607): Arranco
+
+[INFO] 19:05:26:332 GAMEBOY/(32607:32618): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 19:05:26:332 GAMEBOY/(32607:32618): Mensaje fue recibido correctamente, respuesta: 1
+
+[INFO] 19:08:27:537 GAMEBOY/(472:472): Arranco
+
+[INFO] 19:08:27:541 GAMEBOY/(472:479): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 19:08:27:543 GAMEBOY/(472:479): Mensaje fue recibido correctamente, respuesta: 1
+
+[INFO] 19:18:35:49 GAMEBOY/(1265:1265): Arranco
+
+[INFO] 19:18:35:52 GAMEBOY/(1265:1272): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 19:18:35:53 GAMEBOY/(1265:1272): Mensaje fue recibido correctamente, respuesta: 1
+
+[INFO] 19:26:30:848 GAMEBOY/(1933:1933): Arranco
+
+[INFO] 19:26:30:852 GAMEBOY/(1933:1944): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 19:26:30:853 GAMEBOY/(1933:1944): Mensaje fue recibido correctamente, respuesta: 1
+
+[INFO] 19:29:13:404 GAMEBOY/(2440:2440): Arranco
+
+[INFO] 19:29:13:408 GAMEBOY/(2440:2447): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 19:29:13:408 GAMEBOY/(2440:2447): Mensaje fue recibido correctamente, respuesta: 1
+
+[INFO] 19:31:46:362 GAMEBOY/(2795:2795): Arranco
+
+[INFO] 19:31:46:362 GAMEBOY/(2795:2808): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 19:31:46:362 GAMEBOY/(2795:2808): Mensaje fue recibido correctamente, respuesta: 1
+
+[INFO] 19:32:57:259 GAMEBOY/(2971:2971): Arranco
+
+[INFO] 19:32:57:263 GAMEBOY/(2971:2977): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 19:32:57:263 GAMEBOY/(2971:2977): Mensaje recibido incorrectamente, respuesta: 0
+
+[INFO] 19:33:10:181 GAMEBOY/(3081:3081): Arranco
+
+[INFO] 19:33:10:189 GAMEBOY/(3081:3088): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 19:33:10:190 GAMEBOY/(3081:3088): Mensaje fue recibido correctamente, respuesta: 1
+
+[INFO] 19:38:15:84 GAMEBOY/(3546:3546): Arranco
+
+[INFO] 19:38:15:85 GAMEBOY/(3546:3553): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 19:38:15:86 GAMEBOY/(3546:3553): Mensaje fue recibido correctamente, respuesta: 1
+
+[INFO] 19:40:24:868 GAMEBOY/(3808:3808): Arranco
+
+[INFO] 19:40:24:873 GAMEBOY/(3808:3815): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 19:40:24:873 GAMEBOY/(3808:3815): Mensaje fue recibido correctamente, respuesta: 1
+
+[INFO] 19:43:18:52 GAMEBOY/(4107:4107): Arranco
+
+[INFO] 19:43:18:54 GAMEBOY/(4107:4114): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 19:43:18:54 GAMEBOY/(4107:4114): Mensaje fue recibido correctamente, respuesta: 1
+
+[INFO] 19:46:51:752 GAMEBOY/(4586:4586): Arranco
+
+[INFO] 19:46:51:753 GAMEBOY/(4586:4593): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 19:46:52:9 GAMEBOY/(4586:4593): Mensaje recibido incorrectamente, respuesta: 0
+
+[INFO] 19:47:51:953 GAMEBOY/(4779:4779): Arranco
+
+[INFO] 19:47:51:958 GAMEBOY/(4779:4786): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 19:47:51:959 GAMEBOY/(4779:4786): Mensaje recibido incorrectamente, respuesta: 0
+
+[INFO] 19:48:24:85 GAMEBOY/(4903:4903): Arranco
+
+[INFO] 19:48:24:92 GAMEBOY/(4903:4911): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 19:48:24:92 GAMEBOY/(4903:4911): Mensaje fue recibido correctamente, respuesta: 1
+
+[INFO] 19:51:06:600 GAMEBOY/(5201:5201): Arranco
+
+[INFO] 19:51:06:602 GAMEBOY/(5201:5209): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 19:51:06:602 GAMEBOY/(5201:5209): Mensaje fue recibido correctamente, respuesta: 1
+
+[INFO] 15:41:51:160 GAMEBOY/(20795:20795): Arranco
+
+[INFO] 15:41:51:168 GAMEBOY/(20795:20801): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 15:41:51:310 GAMEBOY/(20795:20801): Mensaje recibido incorrectamente, respuesta: 0
+
+[INFO] 15:42:33:213 GAMEBOY/(20876:20876): Arranco
+
+[INFO] 15:42:33:214 GAMEBOY/(20876:20883): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 15:42:33:466 GAMEBOY/(20876:20883): Mensaje recibido incorrectamente, respuesta: 0
+
+[INFO] 15:45:06:602 GAMEBOY/(21095:21095): Arranco
+
+[INFO] 15:45:06:605 GAMEBOY/(21095:21101): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 15:45:06:881 GAMEBOY/(21095:21101): Mensaje recibido incorrectamente, respuesta: 0
+
+[INFO] 15:46:02:437 GAMEBOY/(21236:21236): Arranco
+
+[INFO] 15:46:02:437 GAMEBOY/(21236:21242): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 15:46:02:566 GAMEBOY/(21236:21242): Mensaje recibido incorrectamente, respuesta: 0
+
+[INFO] 15:48:36:572 GAMEBOY/(21530:21530): Arranco
+
+[INFO] 15:48:36:581 GAMEBOY/(21530:21541): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 15:48:36:814 GAMEBOY/(21530:21541): Mensaje recibido incorrectamente, respuesta: 0
+
+[INFO] 15:50:49:301 GAMEBOY/(22166:22166): Arranco
+
+[INFO] 15:50:49:306 GAMEBOY/(22166:22172): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 15:50:49:482 GAMEBOY/(22166:22172): Mensaje recibido incorrectamente, respuesta: 0
+
+[INFO] 15:52:33:429 GAMEBOY/(22410:22410): Arranco
+
+[INFO] 15:52:33:433 GAMEBOY/(22410:22424): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 15:52:33:654 GAMEBOY/(22410:22424): Mensaje recibido incorrectamente, respuesta: 0
+
+[INFO] 16:09:34:437 GAMEBOY/(23766:23766): Arranco
+
+[INFO] 16:09:34:443 GAMEBOY/(23766:23772): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 16:09:34:656 GAMEBOY/(23766:23772): Mensaje recibido incorrectamente, respuesta: 0
+
+[INFO] 16:15:03:375 GAMEBOY/(24304:24304): Arranco
+
+[INFO] 16:15:03:380 GAMEBOY/(24304:24311): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 16:15:03:555 GAMEBOY/(24304:24311): Mensaje recibido incorrectamente, respuesta: 0
+
+[INFO] 16:19:10:654 GAMEBOY/(24688:24688): Arranco
+
+[INFO] 16:19:10:663 GAMEBOY/(24688:24694): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 16:19:10:860 GAMEBOY/(24688:24694): Mensaje recibido incorrectamente, respuesta: 0
+
+[INFO] 16:20:00:131 GAMEBOY/(24844:24844): Arranco
+
+[INFO] 16:20:00:136 GAMEBOY/(24844:24855): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 16:20:18:855 GAMEBOY/(24844:24855): Mensaje recibido incorrectamente, respuesta: 0
+
+[INFO] 16:20:24:775 GAMEBOY/(24959:24959): Arranco
+
+[INFO] 16:20:24:778 GAMEBOY/(24959:24964): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 16:20:24:778 GAMEBOY/(24959:24964): Mensaje recibido incorrectamente, respuesta: 0
+
+[INFO] 16:20:46:596 GAMEBOY/(25068:25068): Arranco
+
+[INFO] 16:20:46:602 GAMEBOY/(25068:25079): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 16:20:46:813 GAMEBOY/(25068:25079): Mensaje recibido incorrectamente, respuesta: 0
+
+[INFO] 16:24:12:925 GAMEBOY/(25417:25417): Arranco
+
+[INFO] 16:24:12:927 GAMEBOY/(25417:25424): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 16:24:13:134 GAMEBOY/(25417:25424): Mensaje recibido incorrectamente, respuesta: 0
+
+[INFO] 16:28:14:755 GAMEBOY/(25857:25857): Arranco
+
+[INFO] 16:28:14:755 GAMEBOY/(25857:25863): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 16:28:14:991 GAMEBOY/(25857:25863): Mensaje recibido incorrectamente, respuesta: 0
+
+[INFO] 16:33:21:220 GAMEBOY/(26386:26386): Arranco
+
+[INFO] 16:33:21:224 GAMEBOY/(26386:26392): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 16:33:21:505 GAMEBOY/(26386:26392): Mensaje recibido incorrectamente, respuesta: 0
+
+[INFO] 16:35:50:235 GAMEBOY/(26696:26696): Arranco
+
+[INFO] 16:35:50:243 GAMEBOY/(26696:26702): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 16:36:17:951 GAMEBOY/(26696:26702): Mensaje recibido incorrectamente, respuesta: 0
+
+[INFO] 16:37:13:367 GAMEBOY/(26896:26896): Arranco
+
+[INFO] 16:37:13:368 GAMEBOY/(26896:26901): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 16:37:13:368 GAMEBOY/(26896:26901): Mensaje recibido incorrectamente, respuesta: 0
+
+[INFO] 16:37:28:120 GAMEBOY/(26998:26998): Arranco
+
+[INFO] 16:37:28:123 GAMEBOY/(26998:27004): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 16:37:28:123 GAMEBOY/(26998:27004): Mensaje fue recibido correctamente, respuesta: 1
+
+[INFO] 16:39:32:104 GAMEBOY/(27277:27277): Arranco
+
+[INFO] 16:39:32:105 GAMEBOY/(27277:27283): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 16:39:32:105 GAMEBOY/(27277:27283): Mensaje fue recibido correctamente, respuesta: 1
+
+[INFO] 16:40:47:494 GAMEBOY/(27459:27459): Arranco
+
+[INFO] 16:40:47:504 GAMEBOY/(27459:27466): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 16:40:47:510 GAMEBOY/(27459:27466): Mensaje fue recibido correctamente, respuesta: 1
+
+[INFO] 16:41:41:176 GAMEBOY/(27706:27706): Arranco
+
+[INFO] 16:41:41:182 GAMEBOY/(27706:27716): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 16:41:41:183 GAMEBOY/(27706:27716): Mensaje recibido incorrectamente, respuesta: 0
+
+[INFO] 16:42:16:601 GAMEBOY/(27830:27830): Arranco
+
+[INFO] 16:42:16:620 GAMEBOY/(27830:27836): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 16:42:16:621 GAMEBOY/(27830:27836): Mensaje fue recibido correctamente, respuesta: 1
+
+[INFO] 16:43:30:108 GAMEBOY/(28063:28063): Arranco
+
+[INFO] 16:43:30:119 GAMEBOY/(28063:28069): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 16:43:30:119 GAMEBOY/(28063:28069): Mensaje fue recibido correctamente, respuesta: 1
+
+[INFO] 16:44:27:264 GAMEBOY/(28230:28230): Arranco
+
+[INFO] 16:44:27:271 GAMEBOY/(28230:28237): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 16:44:27:272 GAMEBOY/(28230:28237): Mensaje fue recibido correctamente, respuesta: 1
+
+[INFO] 16:45:13:843 GAMEBOY/(28402:28402): Arranco
+
+[INFO] 16:45:13:849 GAMEBOY/(28402:28408): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 16:45:13:850 GAMEBOY/(28402:28408): Mensaje fue recibido correctamente, respuesta: 1
+
+[INFO] 16:46:13:111 GAMEBOY/(28658:28658): Arranco
+
+[INFO] 16:46:13:120 GAMEBOY/(28658:28664): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 16:46:13:120 GAMEBOY/(28658:28664): Mensaje fue recibido correctamente, respuesta: 1
+
+[INFO] 17:10:13:153 GAMEBOY/(30675:30675): Arranco
+
+[INFO] 17:10:13:156 GAMEBOY/(30675:30685): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 17:10:13:189 GAMEBOY/(30675:30685): Mensaje fue recibido correctamente, respuesta: 1
+
+[INFO] 17:34:27:154 GAMEBOY/(30156:30156): Arranco
+
+[INFO] 17:34:27:170 GAMEBOY/(30156:30162): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 17:34:27:172 GAMEBOY/(30156:30162): Mensaje recibido incorrectamente, respuesta: 0
+
+[INFO] 17:37:54:350 GAMEBOY/(30317:30317): Arranco
+
+[INFO] 17:37:54:360 GAMEBOY/(30317:30323): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 17:37:54:367 GAMEBOY/(30317:30323): Mensaje recibido incorrectamente, respuesta: 0
+
+[INFO] 17:41:12:2 GAMEBOY/(30465:30465): Arranco
+
+[INFO] 17:41:13:18 GAMEBOY/(30465:30472): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 17:41:13:19 GAMEBOY/(30465:30472): Mensaje recibido incorrectamente, respuesta: 0
+
+[INFO] 17:44:49:909 GAMEBOY/(30614:30614): Arranco
+
+[INFO] 17:44:49:921 GAMEBOY/(30614:30621): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 17:44:49:922 GAMEBOY/(30614:30621): Mensaje recibido incorrectamente, respuesta: 0
+
+[INFO] 17:46:39:249 GAMEBOY/(30796:30796): Arranco
+
+[INFO] 17:46:39:260 GAMEBOY/(30796:30802): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 17:46:39:262 GAMEBOY/(30796:30802): Mensaje recibido incorrectamente, respuesta: 0
+
+[INFO] 17:47:49:497 GAMEBOY/(30897:30897): Arranco
+
+[INFO] 17:47:49:510 GAMEBOY/(30897:30903): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 17:47:49:513 GAMEBOY/(30897:30903): Mensaje fue recibido correctamente, respuesta: 1
+
+[INFO] 17:51:17:726 GAMEBOY/(31040:31040): Arranco
+
+[INFO] 17:51:17:739 GAMEBOY/(31040:31047): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 17:51:17:740 GAMEBOY/(31040:31047): Mensaje fue recibido correctamente, respuesta: 1
+
+[INFO] 17:53:05:464 GAMEBOY/(31164:31164): Arranco
+
+[INFO] 17:53:05:484 GAMEBOY/(31164:31169): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 17:53:05:486 GAMEBOY/(31164:31169): Mensaje recibido incorrectamente, respuesta: 0
+
+[INFO] 17:53:49:16 GAMEBOY/(31271:31271): Arranco
+
+[INFO] 17:53:49:30 GAMEBOY/(31271:31277): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 17:53:49:31 GAMEBOY/(31271:31277): Mensaje fue recibido correctamente, respuesta: 1
+
+[INFO] 18:02:13:972 GAMEBOY/(31584:31584): Arranco
+
+[INFO] 18:02:13:977 GAMEBOY/(31584:31590): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 18:02:13:977 GAMEBOY/(31584:31590): Mensaje fue recibido correctamente, respuesta: 1
+
+[INFO] 18:05:00:53 GAMEBOY/(31711:31711): Arranco
+
+[INFO] 18:05:00:56 GAMEBOY/(31711:31718): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 18:05:00:63 GAMEBOY/(31711:31718): Mensaje recibido incorrectamente, respuesta: 0
+
+[INFO] 18:08:49:826 GAMEBOY/(31880:31880): Arranco
+
+[INFO] 18:08:49:843 GAMEBOY/(31880:31886): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 18:08:49:846 GAMEBOY/(31880:31886): Mensaje recibido incorrectamente, respuesta: 0
+
+[INFO] 18:16:27:466 GAMEBOY/(32204:32204): Arranco
+
+[INFO] 18:17:29:194 GAMEBOY/(32310:32310): Arranco
+
+[INFO] 18:21:43:537 GAMEBOY/(32511:32511): Arranco
+
+[INFO] 18:27:06:406 GAMEBOY/(326:326): Arranco
+
+[INFO] 18:32:57:745 GAMEBOY/(531:531): Arranco
+
+[INFO] 18:34:45:438 GAMEBOY/(670:670): Arranco
+
+[INFO] 18:42:20:911 GAMEBOY/(772:772): Arranco
+
+[INFO] 19:07:48:695 GAMEBOY/(7593:7593): Arranco
+
+[INFO] 19:09:09:145 GAMEBOY/(7740:7740): Arranco
+
+[INFO] 19:10:56:668 GAMEBOY/(7940:7940): Arranco
+
+[INFO] 19:11:48:53 GAMEBOY/(8043:8043): Arranco
+
+[INFO] 19:12:48:435 GAMEBOY/(8152:8152): Arranco
+
+[INFO] 19:15:47:509 GAMEBOY/(8451:8451): Arranco
+
+[INFO] 19:28:23:84 GAMEBOY/(9879:9879): Arranco
+
+[INFO] 19:31:19:198 GAMEBOY/(10381:10381): Arranco
+
+[INFO] 19:31:19:207 GAMEBOY/(10381:10388): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 19:31:19:207 GAMEBOY/(10381:10388): Mensaje fue recibido correctamente, respuesta: 3
+
+[INFO] 19:34:53:98 GAMEBOY/(9879:9987): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 19:34:53:98 GAMEBOY/(9879:9987): Mensaje recibido incorrectamente, respuesta: 0
+
+[INFO] 19:35:20:307 GAMEBOY/(10794:10794): Arranco
+
+[INFO] 19:39:44:748 GAMEBOY/(11280:11280): Arranco
+
+[INFO] 19:41:08:278 GAMEBOY/(11464:11464): Arranco
+
+[INFO] 19:41:08:283 GAMEBOY/(11464:11470): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 19:41:08:283 GAMEBOY/(11464:11470): Mensaje recibido incorrectamente, respuesta: 0
+
+[INFO] 19:41:43:419 GAMEBOY/(11513:11513): Arranco
+
+[INFO] 19:47:00:758 GAMEBOY/(12145:12145): Arranco
+
+[INFO] 19:47:22:500 GAMEBOY/(11513:11625): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 19:47:22:500 GAMEBOY/(11513:11625): Mensaje recibido incorrectamente, respuesta: 0
+
+[INFO] 19:47:32:647 GAMEBOY/(12247:12247): Arranco
+
+[INFO] 19:49:18:623 GAMEBOY/(12558:12558): Arranco
+
+[INFO] 14:41:15:596 GAMEBOY/(13942:13942): Arranco
+
+[INFO] 14:41:15:605 GAMEBOY/(13942:13949): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 14:41:15:820 GAMEBOY/(13942:13949): Mensaje recibido incorrectamente, respuesta: 0
+
+[INFO] 15:04:57:733 GAMEBOY/(15713:15713): Arranco
+
+[INFO] 15:04:57:736 GAMEBOY/(15713:15718): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 15:04:57:736 GAMEBOY/(15713:15718): Mensaje recibido incorrectamente, respuesta: 0
+
+[INFO] 15:05:47:464 GAMEBOY/(15831:15831): Arranco
+
+[INFO] 15:05:47:471 GAMEBOY/(15831:15842): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 15:05:47:471 GAMEBOY/(15831:15842): Mensaje recibido incorrectamente, respuesta: 0
+
+[INFO] 15:10:40:985 GAMEBOY/(16372:16372): Arranco
+
+[INFO] 15:12:52:427 GAMEBOY/(16667:16667): Arranco
+
+[INFO] 15:13:43:510 GAMEBOY/(16816:16816): Arranco
+
+[INFO] 15:15:04:767 GAMEBOY/(17058:17058): Arranco
+
+[INFO] 15:16:25:95 GAMEBOY/(17228:17228): Arranco
+
+[INFO] 15:21:26:391 GAMEBOY/(17819:17819): Arranco
+
+[INFO] 15:24:38:300 GAMEBOY/(18167:18167): Arranco
+
+[INFO] 15:27:22:513 GAMEBOY/(18400:18400): Arranco
+
+[INFO] 15:39:36:339 GAMEBOY/(19491:19491): Arranco
+
+[INFO] 15:40:25:569 GAMEBOY/(19631:19631): Arranco
+
+[INFO] 15:42:02:530 GAMEBOY/(19894:19894): Arranco
+
+[INFO] 15:43:25:443 GAMEBOY/(20064:20064): Arranco
+
+[INFO] 15:46:21:642 GAMEBOY/(20396:20396): Arranco
+
+[INFO] 15:53:28:740 GAMEBOY/(21169:21169): Arranco
+
+[INFO] 15:54:33:152 GAMEBOY/(21478:21478): Arranco
+
+[INFO] 15:54:33:280 GAMEBOY/(21478:21490): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 15:54:33:282 GAMEBOY/(21478:21490): Mensaje recibido incorrectamente, respuesta: 0
+
+[INFO] 16:01:02:176 GAMEBOY/(22137:22137): Arranco
+
+[INFO] 16:01:02:279 GAMEBOY/(22137:22149): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 16:01:02:286 GAMEBOY/(22137:22149): Mensaje recibido incorrectamente, respuesta: 0
+
+[INFO] 16:02:23:9 GAMEBOY/(22267:22267): Arranco
+
+[INFO] 16:02:23:11 GAMEBOY/(22267:22272): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 16:02:23:11 GAMEBOY/(22267:22272): Mensaje recibido incorrectamente, respuesta: 0
+
+[INFO] 16:31:14:84 GAMEBOY/(26004:26004): Arranco
+
+[INFO] 16:31:14:89 GAMEBOY/(26004:26012): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 16:31:14:254 GAMEBOY/(26004:26012): Mensaje recibido incorrectamente, respuesta: 0
+
+[INFO] 16:32:22:276 GAMEBOY/(26278:26278): Arranco
+
+[INFO] 16:32:22:292 GAMEBOY/(26278:26284): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 16:32:22:292 GAMEBOY/(26278:26284): Mensaje recibido incorrectamente, respuesta: 0
+
+[INFO] 16:43:24:613 GAMEBOY/(27998:27998): Arranco
+
+[INFO] 16:43:24:620 GAMEBOY/(27998:28004): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 16:43:24:621 GAMEBOY/(27998:28004): Mensaje recibido incorrectamente, respuesta: 0
+
+[INFO] 16:43:52:712 GAMEBOY/(28047:28047): Arranco
+
+[INFO] 16:43:52:716 GAMEBOY/(28047:28052): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 16:43:52:716 GAMEBOY/(28047:28052): Mensaje recibido incorrectamente, respuesta: 0
+
+[INFO] 16:56:38:908 GAMEBOY/(29983:29983): Arranco
+
+[INFO] 16:56:38:934 GAMEBOY/(29983:29989): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 16:56:38:935 GAMEBOY/(29983:29989): Mensaje recibido incorrectamente, respuesta: 0
+
+[INFO] 16:58:39:935 GAMEBOY/(30312:30312): Arranco
+
+[INFO] 16:58:39:937 GAMEBOY/(30312:30317): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 16:58:39:937 GAMEBOY/(30312:30317): Mensaje recibido incorrectamente, respuesta: 0
+
+[INFO] 16:58:51:247 GAMEBOY/(30412:30412): Arranco
+
+[INFO] 16:58:51:257 GAMEBOY/(30412:30419): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 16:58:51:257 GAMEBOY/(30412:30419): Mensaje fue recibido correctamente, respuesta: 1
+
+[INFO] 17:19:27:44 GAMEBOY/(1099:1099): Arranco
+
+[INFO] 17:19:44:295 GAMEBOY/(1148:1148): Arranco
+
+[INFO] 17:21:42:718 GAMEBOY/(1385:1385): Arranco
+
+[INFO] 17:22:04:19 GAMEBOY/(1432:1432): Arranco
+
+[INFO] 17:27:40:95 GAMEBOY/(1995:1995): Arranco
+
+[INFO] 17:29:57:434 GAMEBOY/(2202:2202): Arranco
+
+[INFO] 17:29:57:440 GAMEBOY/(2202:2208): Espero respuesta a solicitud de suscripción
+
+[INFO] 17:29:57:440 GAMEBOY/(2202:2208): Recibido correctamente: 1
+
+[INFO] 17:32:14:322 GAMEBOY/(2512:2512): Arranco
+
+[INFO] 17:32:14:324 GAMEBOY/(2512:2525): Espero respuesta a solicitud de suscripción
+
+[INFO] 17:32:14:324 GAMEBOY/(2512:2525): Recibido correctamente: 1
+
+[INFO] 17:52:01:724 GAMEBOY/(4512:4512): Arranco
+
+[INFO] 17:52:01:747 GAMEBOY/(4512:4520): Espero respuesta a solicitud de suscripción
+
+[INFO] 17:52:01:747 GAMEBOY/(4512:4520): Recibido correctamente: 1
+
+[INFO] 17:52:56:704 GAMEBOY/(4653:4653): Arranco
+
+[INFO] 17:52:56:705 GAMEBOY/(4653:4659): Espero respuesta a solicitud de suscripción
+
+[INFO] 17:52:56:705 GAMEBOY/(4653:4659): Recibido correctamente: 1
+
+[INFO] 17:54:22:71 GAMEBOY/(4829:4829): Arranco
+
+[INFO] 17:54:22:72 GAMEBOY/(4829:4835): Espero respuesta a solicitud de suscripción
+
+[INFO] 17:54:22:72 GAMEBOY/(4829:4835): Recibido correctamente: 1
+
+[INFO] 18:00:51:408 GAMEBOY/(5476:5476): Arranco
+
+[INFO] 18:00:51:408 GAMEBOY/(5476:5488): Espero respuesta a solicitud de suscripción
+
+[INFO] 18:00:51:408 GAMEBOY/(5476:5488): Recibido correctamente: 1
+
+[INFO] 18:34:39:18 GAMEBOY/(8775:8775): Arranco
+
+[INFO] 18:34:39:20 GAMEBOY/(8775:8781): Espero respuesta a solicitud de suscripción
+
+[INFO] 18:34:39:21 GAMEBOY/(8775:8781): Recibido correctamente: 1
+
+[INFO] 19:39:10:810 GAMEBOY/(17080:17080): Arranco
+
+[INFO] 19:39:11:42 GAMEBOY/(17080:17085): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 19:39:11:52 GAMEBOY/(17080:17085): Mensaje recibido incorrectamente, respuesta: 0
+
+[INFO] 19:40:32:831 GAMEBOY/(17621:17621): Arranco
+
+[INFO] 19:40:32:837 GAMEBOY/(17621:17627): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 19:40:32:841 GAMEBOY/(17621:17627): Mensaje fue recibido correctamente, respuesta: 1
+
+[INFO] 19:48:55:101 GAMEBOY/(18698:18698): Arranco
+
+[INFO] 19:48:55:105 GAMEBOY/(18698:18704): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 19:48:55:105 GAMEBOY/(18698:18704): Mensaje fue recibido correctamente, respuesta: 1
+
+[INFO] 18:30:00:103 GAMEBOY/(17840:17840): Arranco
+
+[INFO] 18:30:00:109 GAMEBOY/(17840:17846): Espero respuesta a solicitud de suscripción
+
+[INFO] 18:30:00:110 GAMEBOY/(17840:17846): Recibido correctamente: 1
+
+[INFO] 18:31:07:393 GAMEBOY/(17968:17968): Arranco
+
+[INFO] 18:31:07:398 GAMEBOY/(17968:17974): Espero respuesta a solicitud de suscripción
+
+[INFO] 18:31:07:398 GAMEBOY/(17968:17974): Recibido incorrectamente: 0
+
+[INFO] 19:36:13:521 GAMEBOY/(15221:15221): Arranco
+
+[INFO] 19:36:13:533 GAMEBOY/(15221:15231): Espero respuesta a solicitud de suscripción
+
+[INFO] 19:36:13:534 GAMEBOY/(15221:15231): Recibido correctamente: 1
+
+[INFO] 19:38:10:452 GAMEBOY/(15432:15432): Arranco
+
+[INFO] 19:38:10:463 GAMEBOY/(15432:15439): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 19:38:10:463 GAMEBOY/(15432:15439): Mensaje fue recibido correctamente, respuesta: 1
+
+[INFO] 19:38:44:798 GAMEBOY/(15508:15508): Arranco
+
+[INFO] 19:38:44:815 GAMEBOY/(15508:15514): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 19:38:44:815 GAMEBOY/(15508:15514): Mensaje fue recibido correctamente, respuesta: 1
+
+[INFO] 19:45:53:585 GAMEBOY/(16571:16571): Arranco
+
+[INFO] 19:45:53:598 GAMEBOY/(16571:16582): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 19:45:53:599 GAMEBOY/(16571:16582): Mensaje fue recibido correctamente, respuesta: 1
+
+[INFO] 19:47:45:309 GAMEBOY/(16944:16944): Arranco
+
+[INFO] 19:47:45:311 GAMEBOY/(16944:16950): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 19:47:45:311 GAMEBOY/(16944:16950): Mensaje fue recibido correctamente, respuesta: 1
+
+[INFO] 19:50:05:867 GAMEBOY/(17384:17384): Arranco
+
+[INFO] 19:50:05:875 GAMEBOY/(17384:17394): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 19:50:05:876 GAMEBOY/(17384:17394): Mensaje fue recibido correctamente, respuesta: 1
+
+[INFO] 19:51:33:702 GAMEBOY/(17765:17765): Arranco
+
+[INFO] 19:51:33:714 GAMEBOY/(17765:17771): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 19:51:33:714 GAMEBOY/(17765:17771): Mensaje fue recibido correctamente, respuesta: 1
+
+[INFO] 20:02:59:603 GAMEBOY/(19501:19501): Arranco
+
+[INFO] 20:02:59:612 GAMEBOY/(19501:19507): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 20:02:59:612 GAMEBOY/(19501:19507): Mensaje fue recibido correctamente, respuesta: 1
+
+[INFO] 20:08:15:230 GAMEBOY/(20280:20280): Arranco
+
+[INFO] 20:08:15:248 GAMEBOY/(20280:20286): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 20:08:15:248 GAMEBOY/(20280:20286): Mensaje fue recibido correctamente, respuesta: 1
+
+[INFO] 20:12:17:596 GAMEBOY/(20897:20897): Arranco
+
+[INFO] 20:12:17:603 GAMEBOY/(20897:20904): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 20:12:17:603 GAMEBOY/(20897:20904): Mensaje fue recibido correctamente, respuesta: 1
+
+[INFO] 20:15:29:135 GAMEBOY/(21356:21356): Arranco
+
+[INFO] 20:15:29:136 GAMEBOY/(21356:21362): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 20:15:29:144 GAMEBOY/(21356:21362): Mensaje fue recibido correctamente, respuesta: 1
+
+[INFO] 20:18:46:930 GAMEBOY/(21781:21781): Arranco
+
+[INFO] 20:18:46:953 GAMEBOY/(21781:21787): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 20:18:46:953 GAMEBOY/(21781:21787): Mensaje fue recibido correctamente, respuesta: 1
+
+[INFO] 20:24:36:809 GAMEBOY/(22400:22400): Arranco
+
+[INFO] 20:24:36:824 GAMEBOY/(22400:22406): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 20:24:36:824 GAMEBOY/(22400:22406): Mensaje fue recibido correctamente, respuesta: 1
+
+[INFO] 20:30:43:665 GAMEBOY/(23017:23017): Arranco
+
+[INFO] 20:30:43:670 GAMEBOY/(23017:23026): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 20:30:43:672 GAMEBOY/(23017:23026): Mensaje fue recibido correctamente, respuesta: 1
+
+[INFO] 20:33:08:394 GAMEBOY/(23338:23338): Arranco
+
+[INFO] 20:33:08:403 GAMEBOY/(23338:23344): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 20:33:08:404 GAMEBOY/(23338:23344): Mensaje fue recibido correctamente, respuesta: 1
+
+[INFO] 20:49:47:362 GAMEBOY/(24888:24888): Arranco
+
+[INFO] 20:49:47:379 GAMEBOY/(24888:24894): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 20:49:47:379 GAMEBOY/(24888:24894): Mensaje fue recibido correctamente, respuesta: 1
+
+[INFO] 20:50:50:215 GAMEBOY/(24962:24962): Arranco
+
+[INFO] 20:50:50:217 GAMEBOY/(24962:24968): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 20:50:50:218 GAMEBOY/(24962:24968): Mensaje fue recibido correctamente, respuesta: 1
+
+[INFO] 20:59:25:22 GAMEBOY/(25718:25718): Arranco
+
+[INFO] 20:59:25:49 GAMEBOY/(25718:25725): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 20:59:25:49 GAMEBOY/(25718:25725): Mensaje fue recibido correctamente, respuesta: 1
+
+[INFO] 20:59:43:825 GAMEBOY/(25755:25755): Arranco
+
+[INFO] 20:59:43:835 GAMEBOY/(25755:25762): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 20:59:43:835 GAMEBOY/(25755:25762): Mensaje fue recibido correctamente, respuesta: 1
+
+[INFO] 21:01:42:693 GAMEBOY/(25878:25878): Arranco
+
+[INFO] 21:01:42:702 GAMEBOY/(25878:25889): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 21:01:42:703 GAMEBOY/(25878:25889): Mensaje fue recibido correctamente, respuesta: 1
+
+[INFO] 21:04:53:258 GAMEBOY/(26079:26079): Arranco
+
+[INFO] 21:04:53:279 GAMEBOY/(26079:26086): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 21:04:53:279 GAMEBOY/(26079:26086): Mensaje fue recibido correctamente, respuesta: 1
+
+[INFO] 15:59:18:498 GAMEBOY/(32396:32396): Arranco
+
+[INFO] 15:59:18:508 GAMEBOY/(32396:32402): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 15:59:18:508 GAMEBOY/(32396:32402): Mensaje fue recibido correctamente, respuesta: 1
+
+[INFO] 15:59:44:658 GAMEBOY/(32439:32439): Arranco
+
+[INFO] 15:59:44:660 GAMEBOY/(32439:32445): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 15:59:44:845 GAMEBOY/(32439:32445): Mensaje recibido incorrectamente, respuesta: 0
+
+[INFO] 16:00:35:787 GAMEBOY/(577:577): Arranco
+
+[INFO] 16:00:35:797 GAMEBOY/(577:583): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 16:00:35:797 GAMEBOY/(577:583): Mensaje fue recibido correctamente, respuesta: 1
+
+[INFO] 16:00:54:322 GAMEBOY/(613:613): Arranco
+
+[INFO] 16:00:54:324 GAMEBOY/(613:624): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 16:00:54:324 GAMEBOY/(613:624): Mensaje fue recibido correctamente, respuesta: 1
+
+[INFO] 16:03:40:729 GAMEBOY/(1220:1220): Arranco
+
+[INFO] 16:03:40:736 GAMEBOY/(1220:1227): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 16:03:40:736 GAMEBOY/(1220:1227): Mensaje fue recibido correctamente, respuesta: 1
+
+[INFO] 16:04:46:260 GAMEBOY/(2017:2017): Arranco
+
+[INFO] 16:04:46:268 GAMEBOY/(2017:2022): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 16:04:46:274 GAMEBOY/(2017:2022): Mensaje fue recibido correctamente, respuesta: 1
+
+[INFO] 16:05:04:441 GAMEBOY/(2057:2057): Arranco
+
+[INFO] 16:05:04:442 GAMEBOY/(2057:2062): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 16:05:04:465 GAMEBOY/(2057:2062): Mensaje fue recibido correctamente, respuesta: 1
+
+[INFO] 16:17:25:822 GAMEBOY/(4047:4047): Arranco
+
+[INFO] 16:17:25:837 GAMEBOY/(4047:4053): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 16:17:25:837 GAMEBOY/(4047:4053): Mensaje fue recibido correctamente, respuesta: 1
+
+[INFO] 16:19:15:635 GAMEBOY/(4595:4595): Arranco
+
+[INFO] 16:19:15:642 GAMEBOY/(4595:4606): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 16:19:15:643 GAMEBOY/(4595:4606): Mensaje fue recibido correctamente, respuesta: 1
+
+[INFO] 16:19:33:454 GAMEBOY/(4634:4634): Arranco
+
+[INFO] 16:19:33:468 GAMEBOY/(4634:4640): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 16:19:33:468 GAMEBOY/(4634:4640): Mensaje fue recibido correctamente, respuesta: 1
+
+[INFO] 16:22:01:240 GAMEBOY/(5514:5514): Arranco
+
+[INFO] 16:22:01:241 GAMEBOY/(5514:5519): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 16:22:01:263 GAMEBOY/(5514:5519): Mensaje fue recibido correctamente, respuesta: 1
+
+[INFO] 16:22:17:881 GAMEBOY/(5547:5547): Arranco
+
+[INFO] 16:22:17:896 GAMEBOY/(5547:5558): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 16:22:17:902 GAMEBOY/(5547:5558): Mensaje fue recibido correctamente, respuesta: 1
+
+[INFO] 16:23:12:183 GAMEBOY/(5623:5623): Arranco
+
+[INFO] 16:23:12:192 GAMEBOY/(5623:5629): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 16:23:12:200 GAMEBOY/(5623:5629): Mensaje fue recibido correctamente, respuesta: 1
+
+[INFO] 16:23:42:856 GAMEBOY/(5673:5673): Arranco
+
+[INFO] 16:23:42:874 GAMEBOY/(5673:5678): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 16:23:42:879 GAMEBOY/(5673:5678): Mensaje fue recibido correctamente, respuesta: 1
+
+[INFO] 16:27:13:651 GAMEBOY/(6495:6495): Arranco
+
+[INFO] 16:27:13:669 GAMEBOY/(6495:6502): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 16:27:13:669 GAMEBOY/(6495:6502): Mensaje fue recibido correctamente, respuesta: 1
+
+[INFO] 16:27:29:756 GAMEBOY/(6529:6529): Arranco
+
+[INFO] 16:27:29:764 GAMEBOY/(6529:6535): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 16:27:29:764 GAMEBOY/(6529:6535): Mensaje fue recibido correctamente, respuesta: 1
+
+[INFO] 16:31:44:99 GAMEBOY/(7556:7556): Arranco
+
+[INFO] 16:31:44:112 GAMEBOY/(7556:7567): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 16:31:44:112 GAMEBOY/(7556:7567): Mensaje fue recibido correctamente, respuesta: 1
+
+[INFO] 16:32:22:218 GAMEBOY/(7621:7621): Arranco
+
+[INFO] 16:32:22:227 GAMEBOY/(7621:7627): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 16:32:22:227 GAMEBOY/(7621:7627): Mensaje fue recibido correctamente, respuesta: 1
+
+[INFO] 16:35:26:712 GAMEBOY/(8643:8643): Arranco
+
+[INFO] 16:35:26:724 GAMEBOY/(8643:8651): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 16:35:26:724 GAMEBOY/(8643:8651): Mensaje fue recibido correctamente, respuesta: 1
+
+[INFO] 16:36:23:421 GAMEBOY/(8727:8727): Arranco
+
+[INFO] 16:36:23:439 GAMEBOY/(8727:8733): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 16:36:23:439 GAMEBOY/(8727:8733): Mensaje fue recibido correctamente, respuesta: 1
+
+[INFO] 16:37:34:40 GAMEBOY/(8815:8815): Arranco
+
+[INFO] 16:37:34:42 GAMEBOY/(8815:8821): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 16:37:34:42 GAMEBOY/(8815:8821): Mensaje fue recibido correctamente, respuesta: 1
+
+[INFO] 16:45:15:521 GAMEBOY/(10103:10103): Arranco
+
+[INFO] 16:45:15:539 GAMEBOY/(10103:10110): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 16:45:15:539 GAMEBOY/(10103:10110): Mensaje fue recibido correctamente, respuesta: 1
+
+[INFO] 16:45:48:652 GAMEBOY/(10154:10154): Arranco
+
+[INFO] 16:45:48:670 GAMEBOY/(10154:10160): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 16:45:48:670 GAMEBOY/(10154:10160): Mensaje fue recibido correctamente, respuesta: 1
+
+[INFO] 16:49:00:543 GAMEBOY/(11076:11076): Arranco
+
+[INFO] 16:49:00:554 GAMEBOY/(11076:11087): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 16:49:00:554 GAMEBOY/(11076:11087): Mensaje fue recibido correctamente, respuesta: 1
+
+[INFO] 16:50:48:978 GAMEBOY/(11724:11724): Arranco
+
+[INFO] 16:50:48:990 GAMEBOY/(11724:11729): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 16:50:48:990 GAMEBOY/(11724:11729): Mensaje recibido incorrectamente, respuesta: 0
+
+[INFO] 16:51:30:722 GAMEBOY/(12450:12450): Arranco
+
+[INFO] 16:51:30:803 GAMEBOY/(12450:12456): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 16:51:30:805 GAMEBOY/(12450:12456): Mensaje fue recibido correctamente, respuesta: 1
+
+[INFO] 16:53:08:380 GAMEBOY/(13257:13257): Arranco
+
+[INFO] 16:53:08:382 GAMEBOY/(13257:13268): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 16:53:08:383 GAMEBOY/(13257:13268): Mensaje fue recibido correctamente, respuesta: 1
+
+[INFO] 16:54:29:70 GAMEBOY/(14039:14039): Arranco
+
+[INFO] 16:54:29:73 GAMEBOY/(14039:14045): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 16:54:29:74 GAMEBOY/(14039:14045): Mensaje fue recibido correctamente, respuesta: 1
+
+[INFO] 16:56:49:340 GAMEBOY/(14927:14927): Arranco
+
+[INFO] 16:56:49:362 GAMEBOY/(14927:14933): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 16:56:49:362 GAMEBOY/(14927:14933): Mensaje fue recibido correctamente, respuesta: 1
+
+[INFO] 16:59:28:814 GAMEBOY/(15802:15802): Arranco
+
+[INFO] 16:59:28:823 GAMEBOY/(15802:15808): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 16:59:28:823 GAMEBOY/(15802:15808): Mensaje fue recibido correctamente, respuesta: 1
+
+[INFO] 17:01:19:857 GAMEBOY/(16624:16624): Arranco
+
+[INFO] 17:01:19:862 GAMEBOY/(16624:16629): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 17:01:19:862 GAMEBOY/(16624:16629): Mensaje recibido incorrectamente, respuesta: 0
+
+[INFO] 17:01:41:136 GAMEBOY/(16997:16997): Arranco
+
+[INFO] 17:01:41:152 GAMEBOY/(16997:17003): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 17:01:41:152 GAMEBOY/(16997:17003): Mensaje fue recibido correctamente, respuesta: 1
+
+[INFO] 17:02:16:88 GAMEBOY/(17052:17052): Arranco
+
+[INFO] 17:02:16:102 GAMEBOY/(17052:17058): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 17:02:16:103 GAMEBOY/(17052:17058): Mensaje fue recibido correctamente, respuesta: 1
+
+[INFO] 17:11:56:85 GAMEBOY/(19058:19058): Arranco
+
+[INFO] 17:11:56:99 GAMEBOY/(19058:19070): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 17:11:56:99 GAMEBOY/(19058:19070): Mensaje fue recibido correctamente, respuesta: 1
+
+[INFO] 17:12:54:98 GAMEBOY/(19135:19135): Arranco
+
+[INFO] 17:12:54:102 GAMEBOY/(19135:19146): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 17:12:54:102 GAMEBOY/(19135:19146): Mensaje fue recibido correctamente, respuesta: 5
+
+[INFO] 17:14:24:34 GAMEBOY/(19252:19252): Arranco
+
+[INFO] 17:14:24:56 GAMEBOY/(19252:19259): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 17:14:24:56 GAMEBOY/(19252:19259): Mensaje fue recibido correctamente, respuesta: 6
+
+[INFO] 17:19:10:780 GAMEBOY/(20166:20166): Arranco
+
+[INFO] 17:19:10:797 GAMEBOY/(20166:20173): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 17:19:10:797 GAMEBOY/(20166:20173): Mensaje fue recibido correctamente, respuesta: 4
+
+[INFO] 17:21:07:552 GAMEBOY/(20833:20833): Arranco
+
+[INFO] 17:21:07:570 GAMEBOY/(20833:20840): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 17:21:07:570 GAMEBOY/(20833:20840): Mensaje fue recibido correctamente, respuesta: 4
+
+[INFO] 17:26:45:40 GAMEBOY/(22183:22183): Arranco
+
+[INFO] 17:26:45:57 GAMEBOY/(22183:22194): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 17:26:45:57 GAMEBOY/(22183:22194): Mensaje fue recibido correctamente, respuesta: 4
+
+[INFO] 17:31:14:715 GAMEBOY/(23089:23089): Arranco
+
+[INFO] 17:31:14:722 GAMEBOY/(23089:23096): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 17:31:14:723 GAMEBOY/(23089:23096): Mensaje fue recibido correctamente, respuesta: 4
+
+[INFO] 17:33:03:807 GAMEBOY/(23786:23786): Arranco
+
+[INFO] 17:33:03:810 GAMEBOY/(23786:23792): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 17:33:03:810 GAMEBOY/(23786:23792): Mensaje fue recibido correctamente, respuesta: 4
+
+[INFO] 17:34:44:936 GAMEBOY/(24464:24464): Arranco
+
+[INFO] 17:34:44:936 GAMEBOY/(24464:24475): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 17:34:44:938 GAMEBOY/(24464:24475): Mensaje fue recibido correctamente, respuesta: 4
+
+[INFO] 17:36:30:360 GAMEBOY/(25140:25140): Arranco
+
+[INFO] 17:36:30:376 GAMEBOY/(25140:25151): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 17:36:30:376 GAMEBOY/(25140:25151): Mensaje fue recibido correctamente, respuesta: 4
+
+[INFO] 17:45:19:978 GAMEBOY/(26472:26472): Arranco
+
+[INFO] 17:45:19:984 GAMEBOY/(26472:26478): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 17:45:19:985 GAMEBOY/(26472:26478): Mensaje fue recibido correctamente, respuesta: 4
+
+[INFO] 17:49:23:974 GAMEBOY/(27513:27513): Arranco
+
+[INFO] 17:49:23:974 GAMEBOY/(27513:27519): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 17:49:23:974 GAMEBOY/(27513:27519): Mensaje recibido incorrectamente, respuesta: 0
+
+[INFO] 18:01:54:477 GAMEBOY/(29307:29307): Arranco
+
+[INFO] 18:01:54:507 GAMEBOY/(29307:29313): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 18:01:54:507 GAMEBOY/(29307:29313): Mensaje fue recibido correctamente, respuesta: 4
+
+[INFO] 18:06:13:28 GAMEBOY/(30180:30180): Arranco
+
+[INFO] 18:06:13:29 GAMEBOY/(30180:30191): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 18:06:13:29 GAMEBOY/(30180:30191): Mensaje fue recibido correctamente, respuesta: 4
+
+[INFO] 18:07:41:576 GAMEBOY/(30832:30832): Arranco
+
+[INFO] 18:07:41:588 GAMEBOY/(30832:30838): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 18:07:41:588 GAMEBOY/(30832:30838): Mensaje fue recibido correctamente, respuesta: 4
+
+[INFO] 18:16:04:76 GAMEBOY/(3445:3445): Arranco
+
+[INFO] 18:16:04:128 GAMEBOY/(3445:3451): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 18:16:04:128 GAMEBOY/(3445:3451): Mensaje fue recibido correctamente, respuesta: 4
+
+[INFO] 18:16:58:843 GAMEBOY/(3559:3559): Arranco
+
+[INFO] 18:16:58:852 GAMEBOY/(3559:3574): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 18:16:58:852 GAMEBOY/(3559:3574): Mensaje fue recibido correctamente, respuesta: 1
+
+[INFO] 18:18:00:546 GAMEBOY/(3713:3713): Arranco
+
+[INFO] 18:18:00:567 GAMEBOY/(3713:3719): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 18:18:00:567 GAMEBOY/(3713:3719): Mensaje fue recibido correctamente, respuesta: 6
+
+[INFO] 18:24:14:503 GAMEBOY/(4794:4794): Arranco
+
+[INFO] 18:24:14:511 GAMEBOY/(4794:4804): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 18:24:14:511 GAMEBOY/(4794:4804): Mensaje fue recibido correctamente, respuesta: 1
+
+[INFO] 18:25:02:817 GAMEBOY/(4892:4892): Arranco
+
+[INFO] 18:25:02:839 GAMEBOY/(4892:4898): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 18:25:02:839 GAMEBOY/(4892:4898): Mensaje fue recibido correctamente, respuesta: 5
+
+[INFO] 18:27:30:739 GAMEBOY/(5281:5281): Arranco
+
+[INFO] 18:27:30:743 GAMEBOY/(5281:5287): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 18:27:30:743 GAMEBOY/(5281:5287): Mensaje fue recibido correctamente, respuesta: 1
+
+[INFO] 18:28:22:226 GAMEBOY/(5391:5391): Arranco
+
+[INFO] 18:28:22:247 GAMEBOY/(5391:5397): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 18:28:22:247 GAMEBOY/(5391:5397): Mensaje fue recibido correctamente, respuesta: 5
+
+[INFO] 18:30:23:792 GAMEBOY/(5710:5710): Arranco
+
+[INFO] 18:30:23:799 GAMEBOY/(5710:5716): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 18:30:23:799 GAMEBOY/(5710:5716): Mensaje fue recibido correctamente, respuesta: 1
+
+[INFO] 18:33:44:492 GAMEBOY/(6232:6232): Arranco
+
+[INFO] 18:33:44:495 GAMEBOY/(6232:6238): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 18:33:44:496 GAMEBOY/(6232:6238): Mensaje fue recibido correctamente, respuesta: 1
+
+[INFO] 18:35:43:310 GAMEBOY/(6557:6557): Arranco
+
+[INFO] 18:35:43:323 GAMEBOY/(6557:6563): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 18:35:43:323 GAMEBOY/(6557:6563): Mensaje fue recibido correctamente, respuesta: 4
+
+[INFO] 18:36:17:845 GAMEBOY/(6627:6627): Arranco
+
+[INFO] 18:36:17:854 GAMEBOY/(6627:6637): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 18:36:17:854 GAMEBOY/(6627:6637): Mensaje fue recibido correctamente, respuesta: 1
+
+[INFO] 18:36:52:833 GAMEBOY/(6705:6705): Arranco
+
+[INFO] 18:36:52:851 GAMEBOY/(6705:6719): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 18:36:52:851 GAMEBOY/(6705:6719): Mensaje fue recibido correctamente, respuesta: 6
+
+[INFO] 18:43:55:179 GAMEBOY/(7855:7855): Arranco
+
+[INFO] 18:43:55:183 GAMEBOY/(7855:7861): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 18:43:55:183 GAMEBOY/(7855:7861): Mensaje fue recibido correctamente, respuesta: 1
+
+[INFO] 18:44:14:966 GAMEBOY/(7904:7904): Arranco
+
+[INFO] 18:44:14:971 GAMEBOY/(7904:7914): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 18:44:14:972 GAMEBOY/(7904:7914): Mensaje fue recibido correctamente, respuesta: 1
+
+[INFO] 18:45:06:530 GAMEBOY/(8001:8001): Arranco
+
+[INFO] 18:45:06:548 GAMEBOY/(8001:8008): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 18:45:06:548 GAMEBOY/(8001:8008): Mensaje fue recibido correctamente, respuesta: 6
+
+[INFO] 18:45:18:678 GAMEBOY/(8045:8045): Arranco
+
+[INFO] 18:45:18:691 GAMEBOY/(8045:8051): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 18:45:18:691 GAMEBOY/(8045:8051): Mensaje fue recibido correctamente, respuesta: 7
+
+[INFO] 18:59:18:620 GAMEBOY/(9659:9659): Arranco
+
+[INFO] 18:59:18:627 GAMEBOY/(9659:9665): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 18:59:18:627 GAMEBOY/(9659:9665): Mensaje fue recibido correctamente, respuesta: 1
+
+[INFO] 19:00:04:582 GAMEBOY/(9767:9767): Arranco
+
+[INFO] 19:00:04:591 GAMEBOY/(9767:9773): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 19:00:04:591 GAMEBOY/(9767:9773): Mensaje fue recibido correctamente, respuesta: 1
+
+[INFO] 19:00:47:31 GAMEBOY/(9851:9851): Arranco
+
+[INFO] 19:00:47:35 GAMEBOY/(9851:9861): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 19:00:47:36 GAMEBOY/(9851:9861): Mensaje fue recibido correctamente, respuesta: 6
+
+[INFO] 19:01:20:881 GAMEBOY/(9930:9930): Arranco
+
+[INFO] 19:01:20:903 GAMEBOY/(9930:9936): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 19:01:20:903 GAMEBOY/(9930:9936): Mensaje fue recibido correctamente, respuesta: 7
+
+[INFO] 19:01:45:716 GAMEBOY/(9991:9991): Arranco
+
+[INFO] 19:01:45:727 GAMEBOY/(9991:9997): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 19:01:45:727 GAMEBOY/(9991:9997): Mensaje fue recibido correctamente, respuesta: 8
+
+[INFO] 19:04:54:345 GAMEBOY/(10405:10405): Arranco
+
+[INFO] 19:04:54:355 GAMEBOY/(10405:10411): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 19:04:54:356 GAMEBOY/(10405:10411): Mensaje fue recibido correctamente, respuesta: 4
+
+[INFO] 19:05:01:184 GAMEBOY/(10430:10430): Arranco
+
+[INFO] 19:05:01:195 GAMEBOY/(10430:10440): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 19:05:01:196 GAMEBOY/(10430:10440): Mensaje fue recibido correctamente, respuesta: 5
+
+[INFO] 19:05:04:178 GAMEBOY/(10451:10451): Arranco
+
+[INFO] 19:05:04:200 GAMEBOY/(10451:10465): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 19:05:04:200 GAMEBOY/(10451:10465): Mensaje fue recibido correctamente, respuesta: 6
+
+[INFO] 19:05:06:852 GAMEBOY/(10471:10471): Arranco
+
+[INFO] 19:05:06:856 GAMEBOY/(10471:10477): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 19:05:06:856 GAMEBOY/(10471:10477): Mensaje fue recibido correctamente, respuesta: 7
+
+[INFO] 19:06:04:515 GAMEBOY/(10669:10669): Arranco
+
+[INFO] 19:06:04:548 GAMEBOY/(10669:10679): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 19:06:04:548 GAMEBOY/(10669:10679): Mensaje fue recibido correctamente, respuesta: 4
+
+[INFO] 19:06:07:553 GAMEBOY/(10693:10693): Arranco
+
+[INFO] 19:06:07:585 GAMEBOY/(10693:10707): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 19:06:07:585 GAMEBOY/(10693:10707): Mensaje fue recibido correctamente, respuesta: 5
+
+[INFO] 19:06:09:824 GAMEBOY/(10711:10711): Arranco
+
+[INFO] 19:06:09:827 GAMEBOY/(10711:10717): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 19:06:09:828 GAMEBOY/(10711:10717): Mensaje fue recibido correctamente, respuesta: 6
+
+[INFO] 19:06:14:424 GAMEBOY/(10736:10736): Arranco
+
+[INFO] 19:06:14:435 GAMEBOY/(10736:10742): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 19:06:14:435 GAMEBOY/(10736:10742): Mensaje fue recibido correctamente, respuesta: 7
+
+[INFO] 19:06:41:324 GAMEBOY/(10792:10792): Arranco
+
+[INFO] 19:06:41:334 GAMEBOY/(10792:10802): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 19:06:41:335 GAMEBOY/(10792:10802): Mensaje fue recibido correctamente, respuesta: 8
+
+[INFO] 19:06:44:142 GAMEBOY/(10812:10812): Arranco
+
+[INFO] 19:06:44:149 GAMEBOY/(10812:10827): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 19:06:44:150 GAMEBOY/(10812:10827): Mensaje fue recibido correctamente, respuesta: 9
+
+[INFO] 19:06:46:122 GAMEBOY/(10833:10833): Arranco
+
+[INFO] 19:06:46:147 GAMEBOY/(10833:10839): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 19:06:46:147 GAMEBOY/(10833:10839): Mensaje fue recibido correctamente, respuesta: 10
+
+[INFO] 19:07:54:22 GAMEBOY/(10971:10971): Arranco
+
+[INFO] 19:07:54:41 GAMEBOY/(10971:10984): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 19:07:54:41 GAMEBOY/(10971:10984): Mensaje fue recibido correctamente, respuesta: 11
+
+[INFO] 19:07:55:823 GAMEBOY/(10987:10987): Arranco
+
+[INFO] 19:07:55:847 GAMEBOY/(10987:10997): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 19:07:55:847 GAMEBOY/(10987:10997): Mensaje fue recibido correctamente, respuesta: 12
+
+[INFO] 19:07:59:912 GAMEBOY/(11011:11011): Arranco
+
+[INFO] 19:07:59:919 GAMEBOY/(11011:11017): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 19:07:59:921 GAMEBOY/(11011:11017): Mensaje fue recibido correctamente, respuesta: 13
+
+[INFO] 19:08:09:781 GAMEBOY/(11045:11045): Arranco
+
+[INFO] 19:08:09:796 GAMEBOY/(11045:11055): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 19:08:09:797 GAMEBOY/(11045:11055): Mensaje fue recibido correctamente, respuesta: 14
+
+[INFO] 19:08:13:367 GAMEBOY/(11069:11069): Arranco
+
+[INFO] 19:08:13:404 GAMEBOY/(11069:11083): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 19:08:13:404 GAMEBOY/(11069:11083): Mensaje fue recibido correctamente, respuesta: 15
+
+[INFO] 19:08:14:915 GAMEBOY/(11085:11085): Arranco
+
+[INFO] 19:08:14:919 GAMEBOY/(11085:11091): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 19:08:14:920 GAMEBOY/(11085:11091): Mensaje fue recibido correctamente, respuesta: 16
+
+[INFO] 19:14:40:487 GAMEBOY/(12009:12009): Arranco
+
+[INFO] 19:14:40:510 GAMEBOY/(12009:12015): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 19:14:40:510 GAMEBOY/(12009:12015): Mensaje fue recibido correctamente, respuesta: 4
+
+[INFO] 19:14:59:365 GAMEBOY/(12051:12051): Arranco
+
+[INFO] 19:14:59:375 GAMEBOY/(12051:12061): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 19:14:59:375 GAMEBOY/(12051:12061): Mensaje fue recibido correctamente, respuesta: 5
+
+[INFO] 19:15:07:458 GAMEBOY/(12084:12084): Arranco
+
+[INFO] 19:15:07:488 GAMEBOY/(12084:12094): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 19:15:07:488 GAMEBOY/(12084:12094): Mensaje fue recibido correctamente, respuesta: 6
+
+[INFO] 19:15:10:81 GAMEBOY/(12105:12105): Arranco
+
+[INFO] 19:15:10:101 GAMEBOY/(12105:12117): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 19:15:10:101 GAMEBOY/(12105:12117): Mensaje fue recibido correctamente, respuesta: 7
+
+[INFO] 19:15:12:446 GAMEBOY/(12129:12129): Arranco
+
+[INFO] 19:15:12:447 GAMEBOY/(12129:12140): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 19:15:12:447 GAMEBOY/(12129:12140): Mensaje fue recibido correctamente, respuesta: 8
+
+[INFO] 19:15:14:865 GAMEBOY/(12147:12147): Arranco
+
+[INFO] 19:15:14:881 GAMEBOY/(12147:12159): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 19:15:14:881 GAMEBOY/(12147:12159): Mensaje fue recibido correctamente, respuesta: 9
+
+[INFO] 19:25:24:881 GAMEBOY/(13577:13577): Arranco
+
+[INFO] 19:25:24:881 GAMEBOY/(13577:13587): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 19:25:24:883 GAMEBOY/(13577:13587): Mensaje fue recibido correctamente, respuesta: 4
+
+[INFO] 19:25:55:319 GAMEBOY/(13639:13639): Arranco
+
+[INFO] 19:25:55:344 GAMEBOY/(13639:13649): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 19:25:55:344 GAMEBOY/(13639:13649): Mensaje fue recibido correctamente, respuesta: 1
+
+[INFO] 19:34:25:973 GAMEBOY/(15377:15377): Arranco
+
+[INFO] 19:34:25:986 GAMEBOY/(15377:15383): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 19:34:25:986 GAMEBOY/(15377:15383): Mensaje fue recibido correctamente, respuesta: 1
+
+[INFO] 19:35:09:137 GAMEBOY/(15459:15459): Arranco
+
+[INFO] 19:35:09:150 GAMEBOY/(15459:15465): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 19:35:09:150 GAMEBOY/(15459:15465): Mensaje fue recibido correctamente, respuesta: 5
+
+[INFO] 19:35:26:163 GAMEBOY/(15508:15508): Arranco
+
+[INFO] 19:35:26:167 GAMEBOY/(15508:15518): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 19:35:26:167 GAMEBOY/(15508:15518): Mensaje fue recibido correctamente, respuesta: 6
+
+[INFO] 19:35:31:121 GAMEBOY/(15531:15531): Arranco
+
+[INFO] 19:35:31:140 GAMEBOY/(15531:15547): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 19:35:31:140 GAMEBOY/(15531:15547): Mensaje fue recibido correctamente, respuesta: 7
+
+[INFO] 19:35:33:845 GAMEBOY/(15555:15555): Arranco
+
+[INFO] 19:35:33:860 GAMEBOY/(15555:15565): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 19:35:33:860 GAMEBOY/(15555:15565): Mensaje fue recibido correctamente, respuesta: 8
+
+[INFO] 19:35:36:400 GAMEBOY/(15573:15573): Arranco
+
+[INFO] 19:35:36:408 GAMEBOY/(15573:15588): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 19:35:36:408 GAMEBOY/(15573:15588): Mensaje fue recibido correctamente, respuesta: 9
+
+[INFO] 19:35:58:540 GAMEBOY/(15636:15636): Arranco
+
+[INFO] 19:35:58:548 GAMEBOY/(15636:15646): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 19:35:58:551 GAMEBOY/(15636:15646): Mensaje fue recibido correctamente, respuesta: 10
+
+[INFO] 19:36:00:593 GAMEBOY/(15649:15649): Arranco
+
+[INFO] 19:36:00:620 GAMEBOY/(15649:15659): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 19:36:00:620 GAMEBOY/(15649:15659): Mensaje fue recibido correctamente, respuesta: 11
+
+[INFO] 19:36:04:33 GAMEBOY/(15679:15679): Arranco
+
+[INFO] 19:36:04:52 GAMEBOY/(15679:15689): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 19:36:04:52 GAMEBOY/(15679:15689): Mensaje fue recibido correctamente, respuesta: 12
+
+[INFO] 19:36:06:508 GAMEBOY/(15696:15696): Arranco
+
+[INFO] 19:36:06:515 GAMEBOY/(15696:15706): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 19:36:06:516 GAMEBOY/(15696:15706): Mensaje fue recibido correctamente, respuesta: 13
+
+[INFO] 19:36:08:224 GAMEBOY/(15713:15713): Arranco
+
+[INFO] 19:36:08:231 GAMEBOY/(15713:15724): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 19:36:08:231 GAMEBOY/(15713:15724): Mensaje fue recibido correctamente, respuesta: 14
+
+[INFO] 19:36:57:665 GAMEBOY/(15810:15810): Arranco
+
+[INFO] 19:36:57:680 GAMEBOY/(15810:15820): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 19:36:57:680 GAMEBOY/(15810:15820): Mensaje fue recibido correctamente, respuesta: 15
+
+[INFO] 19:37:35:611 GAMEBOY/(16270:16270): Arranco
+
+[INFO] 19:37:35:621 GAMEBOY/(16270:16282): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 19:37:35:621 GAMEBOY/(16270:16282): Mensaje fue recibido correctamente, respuesta: 22
+
+[INFO] 19:37:38:605 GAMEBOY/(16302:16302): Arranco
+
+[INFO] 19:37:38:622 GAMEBOY/(16302:16312): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 19:37:38:622 GAMEBOY/(16302:16312): Mensaje fue recibido correctamente, respuesta: 23
+
+[INFO] 19:37:39:722 GAMEBOY/(16315:16315): Arranco
+
+[INFO] 19:37:39:723 GAMEBOY/(16315:16324): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 19:37:39:723 GAMEBOY/(16315:16324): Mensaje recibido incorrectamente, respuesta: 0
+
+[INFO] 19:37:41:244 GAMEBOY/(16334:16334): Arranco
+
+[INFO] 19:37:41:251 GAMEBOY/(16334:16343): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 19:37:41:251 GAMEBOY/(16334:16343): Mensaje recibido incorrectamente, respuesta: 0
+
+[INFO] 19:37:42:65 GAMEBOY/(16345:16345): Arranco
+
+[INFO] 19:37:42:77 GAMEBOY/(16345:16359): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 19:37:42:77 GAMEBOY/(16345:16359): Mensaje recibido incorrectamente, respuesta: 0
+
+[INFO] 19:37:43:700 GAMEBOY/(16372:16372): Arranco
+
+[INFO] 19:37:43:708 GAMEBOY/(16372:16380): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 19:37:43:709 GAMEBOY/(16372:16380): Mensaje recibido incorrectamente, respuesta: 0
+
+[INFO] 19:37:44:587 GAMEBOY/(16383:16383): Arranco
+
+[INFO] 19:37:44:587 GAMEBOY/(16383:16392): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 19:37:44:587 GAMEBOY/(16383:16392): Mensaje recibido incorrectamente, respuesta: 0
+
+[INFO] 19:37:45:746 GAMEBOY/(16402:16402): Arranco
+
+[INFO] 19:37:45:751 GAMEBOY/(16402:16411): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 19:37:45:751 GAMEBOY/(16402:16411): Mensaje recibido incorrectamente, respuesta: 0
+
+[INFO] 19:37:46:431 GAMEBOY/(16413:16413): Arranco
+
+[INFO] 19:37:46:435 GAMEBOY/(16413:16418): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 19:37:46:435 GAMEBOY/(16413:16418): Mensaje recibido incorrectamente, respuesta: 0
+
+[INFO] 19:38:41:161 GAMEBOY/(17043:17043): Arranco
+
+[INFO] 19:38:41:171 GAMEBOY/(17043:17053): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 19:38:41:172 GAMEBOY/(17043:17053): Mensaje fue recibido correctamente, respuesta: 4
+
+[INFO] 19:38:43:501 GAMEBOY/(17060:17060): Arranco
+
+[INFO] 19:38:43:523 GAMEBOY/(17060:17071): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 19:38:43:524 GAMEBOY/(17060:17071): Mensaje fue recibido correctamente, respuesta: 5
+
+[INFO] 19:38:46:255 GAMEBOY/(17085:17085): Arranco
+
+[INFO] 19:38:46:263 GAMEBOY/(17085:17095): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 19:38:46:266 GAMEBOY/(17085:17095): Mensaje fue recibido correctamente, respuesta: 6
+
+[INFO] 19:38:48:630 GAMEBOY/(17102:17102): Arranco
+
+[INFO] 19:38:48:646 GAMEBOY/(17102:17112): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 19:38:48:646 GAMEBOY/(17102:17112): Mensaje fue recibido correctamente, respuesta: 7
+
+[INFO] 19:38:50:380 GAMEBOY/(17119:17119): Arranco
+
+[INFO] 19:38:50:389 GAMEBOY/(17119:17129): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 19:38:50:389 GAMEBOY/(17119:17129): Mensaje fue recibido correctamente, respuesta: 8
+
+[INFO] 19:39:11:842 GAMEBOY/(17174:17174): Arranco
+
+[INFO] 19:39:11:846 GAMEBOY/(17174:17184): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 19:39:11:848 GAMEBOY/(17174:17184): Mensaje fue recibido correctamente, respuesta: 9
+
+[INFO] 19:39:14:72 GAMEBOY/(17191:17191): Arranco
+
+[INFO] 19:39:14:74 GAMEBOY/(17191:17201): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 19:39:14:75 GAMEBOY/(17191:17201): Mensaje fue recibido correctamente, respuesta: 10
+
+[INFO] 19:39:16:809 GAMEBOY/(17212:17212): Arranco
+
+[INFO] 19:39:16:828 GAMEBOY/(17212:17226): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 19:39:16:828 GAMEBOY/(17212:17226): Mensaje fue recibido correctamente, respuesta: 11
+
+[INFO] 19:39:19:356 GAMEBOY/(17237:17237): Arranco
+
+[INFO] 19:39:19:367 GAMEBOY/(17237:17247): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 19:39:19:369 GAMEBOY/(17237:17247): Mensaje fue recibido correctamente, respuesta: 12
+
+[INFO] 19:39:20:947 GAMEBOY/(17250:17250): Arranco
+
+[INFO] 19:39:20:963 GAMEBOY/(17250:17260): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 19:39:20:963 GAMEBOY/(17250:17260): Mensaje fue recibido correctamente, respuesta: 13
+
+[INFO] 19:40:12:156 GAMEBOY/(17353:17353): Arranco
+
+[INFO] 19:40:12:163 GAMEBOY/(17353:17363): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 19:40:12:165 GAMEBOY/(17353:17363): Mensaje fue recibido correctamente, respuesta: 14
+
+[INFO] 19:40:14:545 GAMEBOY/(17371:17371): Arranco
+
+[INFO] 19:40:14:559 GAMEBOY/(17371:17385): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 19:40:14:559 GAMEBOY/(17371:17385): Mensaje fue recibido correctamente, respuesta: 15
+
+[INFO] 19:40:16:649 GAMEBOY/(17392:17392): Arranco
+
+[INFO] 19:40:16:661 GAMEBOY/(17392:17398): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 19:40:16:661 GAMEBOY/(17392:17398): Mensaje fue recibido correctamente, respuesta: 16
+
+[INFO] 19:40:58:757 GAMEBOY/(17473:17473): Arranco
+
+[INFO] 19:40:58:775 GAMEBOY/(17473:17483): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 19:40:58:776 GAMEBOY/(17473:17483): Mensaje fue recibido correctamente, respuesta: 17
+
+[INFO] 19:41:01:447 GAMEBOY/(17490:17490): Arranco
+
+[INFO] 19:41:01:474 GAMEBOY/(17490:17508): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 19:41:01:474 GAMEBOY/(17490:17508): Mensaje fue recibido correctamente, respuesta: 18
+
+[INFO] 19:41:03:906 GAMEBOY/(17515:17515): Arranco
+
+[INFO] 19:41:03:924 GAMEBOY/(17515:17521): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 19:41:03:924 GAMEBOY/(17515:17521): Mensaje fue recibido correctamente, respuesta: 19
+
+[INFO] 19:41:20:909 GAMEBOY/(17558:17558): Arranco
+
+[INFO] 19:41:20:923 GAMEBOY/(17558:17568): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 19:41:20:924 GAMEBOY/(17558:17568): Mensaje fue recibido correctamente, respuesta: 20
+
+[INFO] 19:41:23:505 GAMEBOY/(17583:17583): Arranco
+
+[INFO] 19:41:23:529 GAMEBOY/(17583:17593): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 19:41:23:529 GAMEBOY/(17583:17593): Mensaje fue recibido correctamente, respuesta: 21
+
+[INFO] 19:41:25:802 GAMEBOY/(17600:17600): Arranco
+
+[INFO] 19:41:25:831 GAMEBOY/(17600:17610): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 19:41:25:831 GAMEBOY/(17600:17610): Mensaje fue recibido correctamente, respuesta: 22
+
+[INFO] 19:41:28:269 GAMEBOY/(17625:17625): Arranco
+
+[INFO] 19:41:28:288 GAMEBOY/(17625:17632): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 19:41:28:288 GAMEBOY/(17625:17632): Mensaje fue recibido correctamente, respuesta: 23
+
+[INFO] 19:50:00:304 GAMEBOY/(19264:19264): Arranco
+
+[INFO] 19:50:00:319 GAMEBOY/(19264:19270): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 19:50:00:320 GAMEBOY/(19264:19270): Mensaje fue recibido correctamente, respuesta: 1
+
+[INFO] 19:50:45:713 GAMEBOY/(19870:19870): Arranco
+
+[INFO] 19:50:45:727 GAMEBOY/(19870:19876): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 19:50:45:727 GAMEBOY/(19870:19876): Mensaje fue recibido correctamente, respuesta: 1
+
+[INFO] 19:50:59:554 GAMEBOY/(19902:19902): Arranco
+
+[INFO] 19:50:59:608 GAMEBOY/(19902:19920): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 19:50:59:608 GAMEBOY/(19902:19920): Mensaje fue recibido correctamente, respuesta: 1
+
+[INFO] 19:51:02:96 GAMEBOY/(19926:19926): Arranco
+
+[INFO] 19:51:02:116 GAMEBOY/(19926:19936): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 19:51:02:116 GAMEBOY/(19926:19936): Mensaje fue recibido correctamente, respuesta: 1
+
+[INFO] 19:51:04:767 GAMEBOY/(19944:19944): Arranco
+
+[INFO] 19:51:04:771 GAMEBOY/(19944:19958): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 19:51:04:773 GAMEBOY/(19944:19958): Mensaje fue recibido correctamente, respuesta: 1
+
+[INFO] 19:51:07:587 GAMEBOY/(19970:19970): Arranco
+
+[INFO] 19:51:07:587 GAMEBOY/(19970:19980): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 19:51:07:588 GAMEBOY/(19970:19980): Mensaje fue recibido correctamente, respuesta: 1
+
+[INFO] 19:51:10:424 GAMEBOY/(19990:19990): Arranco
+
+[INFO] 19:51:10:429 GAMEBOY/(19990:20013): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 19:51:10:429 GAMEBOY/(19990:20013): Mensaje fue recibido correctamente, respuesta: 1
+
+[INFO] 19:51:12:314 GAMEBOY/(20017:20017): Arranco
+
+[INFO] 19:51:12:334 GAMEBOY/(20017:20027): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 19:51:12:334 GAMEBOY/(20017:20027): Mensaje fue recibido correctamente, respuesta: 1
+
+[INFO] 19:51:16:115 GAMEBOY/(20045:20045): Arranco
+
+[INFO] 19:51:16:141 GAMEBOY/(20045:20055): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 19:51:16:141 GAMEBOY/(20045:20055): Mensaje fue recibido correctamente, respuesta: 1
+
+[INFO] 19:51:17:178 GAMEBOY/(20057:20057): Arranco
+
+[INFO] 19:51:17:194 GAMEBOY/(20057:20063): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 19:51:17:194 GAMEBOY/(20057:20063): Mensaje fue recibido correctamente, respuesta: 1
+
+[INFO] 19:51:43:898 GAMEBOY/(20113:20113): Arranco
+
+[INFO] 19:51:43:919 GAMEBOY/(20113:20123): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 19:51:43:919 GAMEBOY/(20113:20123): Mensaje fue recibido correctamente, respuesta: 1
+
+[INFO] 19:51:46:195 GAMEBOY/(20129:20129): Arranco
+
+[INFO] 19:51:46:240 GAMEBOY/(20129:20139): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 19:51:46:240 GAMEBOY/(20129:20139): Mensaje fue recibido correctamente, respuesta: 1
+
+[INFO] 19:51:49:532 GAMEBOY/(20155:20155): Arranco
+
+[INFO] 19:51:49:538 GAMEBOY/(20155:20165): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 19:51:49:538 GAMEBOY/(20155:20165): Mensaje fue recibido correctamente, respuesta: 1
+
+[INFO] 19:51:52:126 GAMEBOY/(20171:20171): Arranco
+
+[INFO] 19:51:52:146 GAMEBOY/(20171:20185): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 19:51:52:146 GAMEBOY/(20171:20185): Mensaje fue recibido correctamente, respuesta: 1
+
+[INFO] 19:55:18:507 GAMEBOY/(20946:20946): Arranco
+
+[INFO] 19:55:18:507 GAMEBOY/(20946:20951): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 19:55:18:507 GAMEBOY/(20946:20951): Mensaje recibido incorrectamente, respuesta: 0
+
+[INFO] 19:55:37:925 GAMEBOY/(20998:20998): Arranco
+
+[INFO] 19:55:37:926 GAMEBOY/(20998:21005): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 19:55:37:927 GAMEBOY/(20998:21005): Mensaje fue recibido correctamente, respuesta: 1
+
+[INFO] 19:55:49:66 GAMEBOY/(21031:21031): Arranco
+
+[INFO] 19:55:49:71 GAMEBOY/(21031:21041): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 19:55:49:72 GAMEBOY/(21031:21041): Mensaje fue recibido correctamente, respuesta: 2
+
+[INFO] 19:55:50:44 GAMEBOY/(21047:21047): Arranco
+
+[INFO] 19:55:50:50 GAMEBOY/(21047:21053): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 19:55:50:50 GAMEBOY/(21047:21053): Mensaje fue recibido correctamente, respuesta: 3
+
+[INFO] 19:55:52:397 GAMEBOY/(21071:21071): Arranco
+
+[INFO] 19:55:52:411 GAMEBOY/(21071:21081): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 19:55:52:411 GAMEBOY/(21071:21081): Mensaje fue recibido correctamente, respuesta: 4
+
+[INFO] 19:55:53:434 GAMEBOY/(21088:21088): Arranco
+
+[INFO] 19:55:53:439 GAMEBOY/(21088:21098): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 19:55:53:439 GAMEBOY/(21088:21098): Mensaje fue recibido correctamente, respuesta: 5
+
+[INFO] 19:55:54:467 GAMEBOY/(21104:21104): Arranco
+
+[INFO] 19:55:54:467 GAMEBOY/(21104:21110): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 19:55:54:469 GAMEBOY/(21104:21110): Mensaje fue recibido correctamente, respuesta: 6
+
+[INFO] 19:55:56:774 GAMEBOY/(21124:21124): Arranco
+
+[INFO] 19:55:56:779 GAMEBOY/(21124:21134): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 19:55:56:779 GAMEBOY/(21124:21134): Mensaje fue recibido correctamente, respuesta: 7
+
+[INFO] 19:59:55:834 GAMEBOY/(22477:22477): Arranco
+
+[INFO] 19:59:55:856 GAMEBOY/(22477:22488): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 19:59:55:856 GAMEBOY/(22477:22488): Mensaje fue recibido correctamente, respuesta: 4
+
+[INFO] 20:00:00:114 GAMEBOY/(22513:22513): Arranco
+
+[INFO] 20:00:00:135 GAMEBOY/(22513:22523): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 20:00:00:135 GAMEBOY/(22513:22523): Mensaje fue recibido correctamente, respuesta: 5
+
+[INFO] 20:00:01:338 GAMEBOY/(22526:22526): Arranco
+
+[INFO] 20:00:01:355 GAMEBOY/(22526:22536): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 20:00:01:355 GAMEBOY/(22526:22536): Mensaje fue recibido correctamente, respuesta: 6
+
+[INFO] 20:00:03:745 GAMEBOY/(22543:22543): Arranco
+
+[INFO] 20:00:03:756 GAMEBOY/(22543:22557): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 20:00:03:756 GAMEBOY/(22543:22557): Mensaje fue recibido correctamente, respuesta: 7
+
+[INFO] 20:00:05:406 GAMEBOY/(22564:22564): Arranco
+
+[INFO] 20:00:05:420 GAMEBOY/(22564:22570): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 20:00:05:420 GAMEBOY/(22564:22570): Mensaje fue recibido correctamente, respuesta: 8
+
+[INFO] 20:06:15:609 GAMEBOY/(23914:23914): Arranco
+
+[INFO] 20:06:15:627 GAMEBOY/(23914:23928): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 20:06:15:627 GAMEBOY/(23914:23928): Mensaje fue recibido correctamente, respuesta: 4
+
+[INFO] 20:06:21:129 GAMEBOY/(23947:23947): Arranco
+
+[INFO] 20:06:21:152 GAMEBOY/(23947:23961): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 20:06:21:152 GAMEBOY/(23947:23961): Mensaje fue recibido correctamente, respuesta: 5
+
+[INFO] 20:06:23:467 GAMEBOY/(23969:23969): Arranco
+
+[INFO] 20:06:23:491 GAMEBOY/(23969:23979): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 20:06:23:491 GAMEBOY/(23969:23979): Mensaje fue recibido correctamente, respuesta: 6
+
+[INFO] 20:06:26:165 GAMEBOY/(23990:23990): Arranco
+
+[INFO] 20:06:26:187 GAMEBOY/(23990:24000): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 20:06:26:187 GAMEBOY/(23990:24000): Mensaje fue recibido correctamente, respuesta: 7
+
+[INFO] 20:07:26:489 GAMEBOY/(24781:24781): Arranco
+
+[INFO] 20:07:26:499 GAMEBOY/(24781:24792): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 20:07:26:500 GAMEBOY/(24781:24792): Mensaje fue recibido correctamente, respuesta: 4
+
+[INFO] 20:07:29:809 GAMEBOY/(24811:24811): Arranco
+
+[INFO] 20:07:29:821 GAMEBOY/(24811:24822): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 20:07:29:821 GAMEBOY/(24811:24822): Mensaje fue recibido correctamente, respuesta: 5
+
+[INFO] 20:07:31:980 GAMEBOY/(24830:24830): Arranco
+
+[INFO] 20:07:31:987 GAMEBOY/(24830:24840): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 20:07:31:988 GAMEBOY/(24830:24840): Mensaje fue recibido correctamente, respuesta: 6
+
+[INFO] 20:07:33:1 GAMEBOY/(24843:24843): Arranco
+
+[INFO] 20:07:34:11 GAMEBOY/(24843:24861): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 20:07:34:12 GAMEBOY/(24843:24861): Mensaje fue recibido correctamente, respuesta: 7
+
+[INFO] 20:07:36:3 GAMEBOY/(24868:24868): Arranco
+
+[INFO] 20:07:37:7 GAMEBOY/(24868:24878): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 20:07:37:8 GAMEBOY/(24868:24878): Mensaje fue recibido correctamente, respuesta: 8
+
+[INFO] 20:07:52:510 GAMEBOY/(25243:25243): Arranco
+
+[INFO] 20:07:52:527 GAMEBOY/(25243:25254): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 20:07:52:531 GAMEBOY/(25243:25254): Mensaje fue recibido correctamente, respuesta: 9
+
+[INFO] 20:07:55:205 GAMEBOY/(25266:25266): Arranco
+
+[INFO] 20:07:55:228 GAMEBOY/(25266:25272): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 20:07:55:228 GAMEBOY/(25266:25272): Mensaje fue recibido correctamente, respuesta: 10
+
+[INFO] 20:09:49:598 GAMEBOY/(25906:25906): Arranco
+
+[INFO] 20:09:49:612 GAMEBOY/(25906:25922): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 20:09:49:612 GAMEBOY/(25906:25922): Mensaje fue recibido correctamente, respuesta: 1
+
+[INFO] 20:09:50:419 GAMEBOY/(25916:25916): Arranco
+
+[INFO] 20:09:50:425 GAMEBOY/(25916:25924): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 20:09:50:427 GAMEBOY/(25916:25924): Mensaje fue recibido correctamente, respuesta: 1
+
+[INFO] 20:11:12:136 GAMEBOY/(26007:26007): Arranco
+
+[INFO] 20:11:12:147 GAMEBOY/(26007:26013): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 20:11:12:147 GAMEBOY/(26007:26013): Mensaje fue recibido correctamente, respuesta: 6
+
+[INFO] 20:11:17:120 GAMEBOY/(26028:26028): Arranco
+
+[INFO] 20:11:17:125 GAMEBOY/(26028:26034): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 20:11:17:126 GAMEBOY/(26028:26034): Mensaje fue recibido correctamente, respuesta: 7
+
+[INFO] 20:12:09:926 GAMEBOY/(26086:26086): Arranco
+
+[INFO] 20:12:09:935 GAMEBOY/(26086:26092): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 20:12:09:935 GAMEBOY/(26086:26092): Mensaje fue recibido correctamente, respuesta: 8
+
+[INFO] 20:15:06:869 GAMEBOY/(26264:26264): Arranco
+
+[INFO] 20:15:06:880 GAMEBOY/(26264:26270): Espero respuesta a solicitud de suscripción
+
+[INFO] 20:15:06:880 GAMEBOY/(26264:26270): Recibido correctamente: 1
+
+[INFO] 20:15:49:900 GAMEBOY/(26320:26320): Arranco
+
+[INFO] 20:15:49:913 GAMEBOY/(26320:26328): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 20:15:49:914 GAMEBOY/(26320:26328): Mensaje fue recibido correctamente, respuesta: 1
+
+[INFO] 20:16:09:944 GAMEBOY/(26264:26270): Recibi mensaje catch pokemon. El pokemon es: Charmander. La posicion es: (0,0).
+
+[INFO] 20:17:11:493 GAMEBOY/(26411:26411): Arranco
+
+[INFO] 20:17:11:503 GAMEBOY/(26411:26419): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 20:17:11:503 GAMEBOY/(26411:26419): Mensaje fue recibido correctamente, respuesta: 1
+
+[INFO] 20:23:49:76 GAMEBOY/(27553:27553): Arranco
+
+[INFO] 20:23:49:83 GAMEBOY/(27553:27563): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 20:23:49:83 GAMEBOY/(27553:27563): Mensaje fue recibido correctamente, respuesta: 1
+
+[INFO] 20:24:30:410 GAMEBOY/(27606:27606): Arranco
+
+[INFO] 20:24:30:419 GAMEBOY/(27606:27616): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 20:24:30:419 GAMEBOY/(27606:27616): Mensaje fue recibido correctamente, respuesta: 5
+
+[INFO] 19:34:01:166 GAMEBOY/(16600:16600): Arranco
+
+[INFO] 19:34:01:238 GAMEBOY/(16600:16609): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 19:34:01:238 GAMEBOY/(16600:16609): Mensaje fue recibido correctamente, respuesta: 4
+
+[INFO] 19:51:41:378 GAMEBOY/(18780:18780): Arranco
+
+[INFO] 19:51:41:380 GAMEBOY/(18780:18786): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 19:51:41:381 GAMEBOY/(18780:18786): Mensaje fue recibido correctamente, respuesta: 1
+
+[INFO] 19:52:23:219 GAMEBOY/(18831:18831): Arranco
+
+[INFO] 19:52:23:224 GAMEBOY/(18831:18837): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 19:52:23:224 GAMEBOY/(18831:18837): Mensaje fue recibido correctamente, respuesta: 2
+
+[INFO] 19:58:43:760 GAMEBOY/(19592:19592): Arranco
+
+[INFO] 19:58:43:770 GAMEBOY/(19592:19598): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 19:58:43:772 GAMEBOY/(19592:19598): Mensaje fue recibido correctamente, respuesta: 1
+
+[INFO] 19:58:55:476 GAMEBOY/(19621:19621): Arranco
+
+[INFO] 19:58:55:482 GAMEBOY/(19621:19627): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 19:58:55:482 GAMEBOY/(19621:19627): Mensaje fue recibido correctamente, respuesta: 2
+
+[INFO] 20:00:40:229 GAMEBOY/(20215:20215): Arranco
+
+[INFO] 20:00:40:236 GAMEBOY/(20215:20221): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 20:00:40:236 GAMEBOY/(20215:20221): Mensaje fue recibido correctamente, respuesta: 1
+
+[INFO] 20:00:43:398 GAMEBOY/(20232:20232): Arranco
+
+[INFO] 20:00:43:401 GAMEBOY/(20232:20242): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 20:00:43:402 GAMEBOY/(20232:20242): Mensaje fue recibido correctamente, respuesta: 2
+
+[INFO] 20:02:33:278 GAMEBOY/(20722:20722): Arranco
+
+[INFO] 20:02:33:288 GAMEBOY/(20722:20728): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 20:02:33:288 GAMEBOY/(20722:20728): Mensaje fue recibido correctamente, respuesta: 1
+
+[INFO] 20:02:42:69 GAMEBOY/(20743:20743): Arranco
+
+[INFO] 20:02:42:83 GAMEBOY/(20743:20753): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 20:02:42:83 GAMEBOY/(20743:20753): Mensaje fue recibido correctamente, respuesta: 2
+
+[INFO] 20:15:09:800 GAMEBOY/(22396:22396): Arranco
+
+[INFO] 20:15:09:800 GAMEBOY/(22396:22402): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 20:15:09:802 GAMEBOY/(22396:22402): Mensaje fue recibido correctamente, respuesta: 1
+
+[INFO] 20:17:28:669 GAMEBOY/(23312:23312): Arranco
+
+[INFO] 20:17:28:675 GAMEBOY/(23312:23318): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 20:17:28:676 GAMEBOY/(23312:23318): Mensaje fue recibido correctamente, respuesta: 1
+
+[INFO] 20:17:37:632 GAMEBOY/(23337:23337): Arranco
+
+[INFO] 20:17:37:636 GAMEBOY/(23337:23343): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 20:17:37:636 GAMEBOY/(23337:23343): Mensaje fue recibido correctamente, respuesta: 2
+
+[INFO] 20:23:55:676 GAMEBOY/(24127:24127): Arranco
+
+[INFO] 20:23:55:683 GAMEBOY/(24127:24133): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 20:23:55:684 GAMEBOY/(24127:24133): Mensaje fue recibido correctamente, respuesta: 1
+
+[INFO] 20:24:00:483 GAMEBOY/(24148:24148): Arranco
+
+[INFO] 20:24:00:492 GAMEBOY/(24148:24154): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 20:24:00:492 GAMEBOY/(24148:24154): Mensaje fue recibido correctamente, respuesta: 2
+
+[INFO] 20:26:31:763 GAMEBOY/(24690:24690): Arranco
+
+[INFO] 20:26:31:767 GAMEBOY/(24690:24696): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 20:26:31:768 GAMEBOY/(24690:24696): Mensaje fue recibido correctamente, respuesta: 1
+
+[INFO] 20:26:35:4 GAMEBOY/(24708:24708): Arranco
+
+[INFO] 20:26:35:6 GAMEBOY/(24708:24714): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 20:26:35:6 GAMEBOY/(24708:24714): Mensaje fue recibido correctamente, respuesta: 2
+
+[INFO] 20:26:38:709 GAMEBOY/(24729:24729): Arranco
+
+[INFO] 20:26:38:710 GAMEBOY/(24729:24735): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 20:26:38:710 GAMEBOY/(24729:24735): Mensaje fue recibido correctamente, respuesta: 3
+
+[INFO] 20:30:01:231 GAMEBOY/(25516:25516): Arranco
+
+[INFO] 20:30:01:298 GAMEBOY/(25516:25526): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 20:30:01:299 GAMEBOY/(25516:25526): Mensaje fue recibido correctamente, respuesta: 4
+
+[INFO] 20:30:04:745 GAMEBOY/(25539:25539): Arranco
+
+[INFO] 20:30:04:754 GAMEBOY/(25539:25554): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 20:30:04:756 GAMEBOY/(25539:25554): Mensaje fue recibido correctamente, respuesta: 5
+
+[INFO] 20:30:07:95 GAMEBOY/(25561:25561): Arranco
+
+[INFO] 20:30:07:103 GAMEBOY/(25561:25571): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 20:30:08:385 GAMEBOY/(25561:25571): Mensaje fue recibido correctamente, respuesta: 6
+
+[INFO] 20:30:10:50 GAMEBOY/(25574:25574): Arranco
+
+[INFO] 20:30:10:71 GAMEBOY/(25574:25588): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 20:30:12:333 GAMEBOY/(25595:25595): Arranco
+
+[INFO] 20:30:12:352 GAMEBOY/(25595:25602): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 20:30:13:16 GAMEBOY/(25574:25588): Mensaje fue recibido correctamente, respuesta: 7
+
+[INFO] 20:30:13:16 GAMEBOY/(25595:25602): Mensaje fue recibido correctamente, respuesta: 8
+
+[INFO] 20:31:12:640 GAMEBOY/(26186:26186): Arranco
+
+[INFO] 20:31:12:646 GAMEBOY/(26186:26196): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 20:31:12:646 GAMEBOY/(26186:26196): Mensaje fue recibido correctamente, respuesta: 4
+
+[INFO] 20:31:26:529 GAMEBOY/(26218:26218): Arranco
+
+[INFO] 20:31:26:551 GAMEBOY/(26218:26224): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 20:31:26:551 GAMEBOY/(26218:26224): Mensaje fue recibido correctamente, respuesta: 5
+
+[INFO] 22:06:36:673 GAMEBOY/(4730:4730): Arranco
+
+[INFO] 22:06:36:676 GAMEBOY/(4730:4735): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 22:06:36:676 GAMEBOY/(4730:4735): Mensaje recibido incorrectamente, respuesta: 0
+
+[INFO] 22:07:32:247 GAMEBOY/(4790:4790): Arranco
+
+[INFO] 22:07:32:250 GAMEBOY/(4790:4796): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 22:07:32:252 GAMEBOY/(4790:4796): Mensaje fue recibido correctamente, respuesta: 1
+
+[INFO] 22:07:53:949 GAMEBOY/(4815:4815): Arranco
+
+[INFO] 22:07:53:960 GAMEBOY/(4815:4821): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 22:07:53:960 GAMEBOY/(4815:4821): Mensaje fue recibido correctamente, respuesta: 2
+
+[INFO] 22:08:05:482 GAMEBOY/(4838:4838): Arranco
+
+[INFO] 22:08:05:482 GAMEBOY/(4838:4844): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 22:08:05:483 GAMEBOY/(4838:4844): Mensaje fue recibido correctamente, respuesta: 3
+
+[INFO] 22:08:15:83 GAMEBOY/(4855:4855): Arranco
+
+[INFO] 22:08:15:87 GAMEBOY/(4855:4861): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 22:08:15:87 GAMEBOY/(4855:4861): Mensaje fue recibido correctamente, respuesta: 4
+
+[INFO] 22:08:20:693 GAMEBOY/(4873:4873): Arranco
+
+[INFO] 22:08:20:698 GAMEBOY/(4873:4879): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 22:08:20:698 GAMEBOY/(4873:4879): Mensaje fue recibido correctamente, respuesta: 5
+
+[INFO] 22:08:25:546 GAMEBOY/(4890:4890): Arranco
+
+[INFO] 22:08:25:558 GAMEBOY/(4890:4896): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 22:08:25:558 GAMEBOY/(4890:4896): Mensaje fue recibido correctamente, respuesta: 6
+
+[INFO] 22:08:35:157 GAMEBOY/(4910:4910): Arranco
+
+[INFO] 22:08:35:170 GAMEBOY/(4910:4917): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 22:08:35:172 GAMEBOY/(4910:4917): Mensaje fue recibido correctamente, respuesta: 7
+
+[INFO] 22:54:17:761 GAMEBOY/(26709:26709): Arranco
+
+[INFO] 22:54:18:62 GAMEBOY/(26709:26716): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 22:54:18:63 GAMEBOY/(26709:26716): Mensaje fue recibido correctamente, respuesta: 1
+
+[INFO] 22:54:44:120 GAMEBOY/(26731:26731): Arranco
+
+[INFO] 22:54:44:138 GAMEBOY/(26731:26737): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 22:54:44:138 GAMEBOY/(26731:26737): Mensaje fue recibido correctamente, respuesta: 1
+
+[INFO] 22:55:31:170 GAMEBOY/(26750:26750): Arranco
+
+[INFO] 22:55:31:177 GAMEBOY/(26750:26758): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 22:55:31:179 GAMEBOY/(26750:26758): Mensaje fue recibido correctamente, respuesta: 1
+
+[INFO] 22:56:59:336 GAMEBOY/(26777:26777): Arranco
+
+[INFO] 22:56:59:354 GAMEBOY/(26777:26784): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 22:56:59:354 GAMEBOY/(26777:26784): Mensaje fue recibido correctamente, respuesta: 6
+
+[INFO] 22:57:30:905 GAMEBOY/(26798:26798): Arranco
+
+[INFO] 22:57:30:913 GAMEBOY/(26798:26806): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 22:57:30:917 GAMEBOY/(26798:26806): Mensaje fue recibido correctamente, respuesta: 7
+
+[INFO] 22:58:02:502 GAMEBOY/(26820:26820): Arranco
+
+[INFO] 22:58:02:509 GAMEBOY/(26820:26827): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 22:58:02:510 GAMEBOY/(26820:26827): Mensaje fue recibido correctamente, respuesta: 8
+
+[INFO] 23:10:59:681 GAMEBOY/(27598:27598): Arranco
+
+[INFO] 23:10:59:702 GAMEBOY/(27598:27604): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 23:10:59:702 GAMEBOY/(27598:27604): Mensaje fue recibido correctamente, respuesta: 3
+
+[INFO] 23:11:31:886 GAMEBOY/(27621:27621): Arranco
+
+[INFO] 23:11:31:893 GAMEBOY/(27621:27629): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 23:11:31:894 GAMEBOY/(27621:27629): Mensaje fue recibido correctamente, respuesta: 5
+
+[INFO] 23:12:14:332 GAMEBOY/(27643:27643): Arranco
+
+[INFO] 23:12:14:358 GAMEBOY/(27643:27649): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 23:12:14:358 GAMEBOY/(27643:27649): Mensaje fue recibido correctamente, respuesta: 7
+
+[INFO] 23:13:18:250 GAMEBOY/(27667:27667): Arranco
+
+[INFO] 23:13:18:263 GAMEBOY/(27667:27673): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 23:13:18:263 GAMEBOY/(27667:27673): Mensaje fue recibido correctamente, respuesta: 9
+
+[INFO] 23:14:29:268 GAMEBOY/(27690:27690): Arranco
+
+[INFO] 23:14:29:288 GAMEBOY/(27690:27697): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 23:14:29:288 GAMEBOY/(27690:27697): Mensaje fue recibido correctamente, respuesta: 10
+
+[INFO] 23:14:56:786 GAMEBOY/(27713:27713): Arranco
+
+[INFO] 23:14:56:791 GAMEBOY/(27713:27719): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 23:14:56:792 GAMEBOY/(27713:27719): Mensaje fue recibido correctamente, respuesta: 11
+
+[INFO] 23:16:47:633 GAMEBOY/(27745:27745): Arranco
+
+[INFO] 23:16:47:666 GAMEBOY/(27745:27751): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 23:16:47:666 GAMEBOY/(27745:27751): Mensaje fue recibido correctamente, respuesta: 12
+
+[INFO] 23:46:26:523 GAMEBOY/(28444:28444): Arranco
+
+[INFO] 23:46:26:544 GAMEBOY/(28444:28450): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 23:46:26:545 GAMEBOY/(28444:28450): Mensaje fue recibido correctamente, respuesta: 1
+
+[INFO] 23:46:45:132 GAMEBOY/(28466:28466): Arranco
+
+[INFO] 23:46:45:146 GAMEBOY/(28466:28473): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 23:46:45:146 GAMEBOY/(28466:28473): Mensaje fue recibido correctamente, respuesta: 1
+
+[INFO] 23:47:14:154 GAMEBOY/(28485:28485): Arranco
+
+[INFO] 23:47:14:163 GAMEBOY/(28485:28491): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 23:47:14:164 GAMEBOY/(28485:28491): Mensaje fue recibido correctamente, respuesta: 1
+
+[INFO] 23:48:40:210 GAMEBOY/(28512:28512): Arranco
+
+[INFO] 23:48:40:221 GAMEBOY/(28512:28518): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 23:48:40:225 GAMEBOY/(28512:28518): Mensaje fue recibido correctamente, respuesta: 6
+
+[INFO] 23:49:08:55 GAMEBOY/(28530:28530): Arranco
+
+[INFO] 23:49:08:79 GAMEBOY/(28530:28536): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 23:49:08:80 GAMEBOY/(28530:28536): Mensaje fue recibido correctamente, respuesta: 7
+
+[INFO] 23:49:53:58 GAMEBOY/(28553:28553): Arranco
+
+[INFO] 23:49:53:77 GAMEBOY/(28553:28559): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 23:49:53:78 GAMEBOY/(28553:28559): Mensaje fue recibido correctamente, respuesta: 8
+
+[INFO] 23:53:41:562 GAMEBOY/(28708:28708): Arranco
+
+[INFO] 23:53:41:569 GAMEBOY/(28708:28714): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 23:53:41:569 GAMEBOY/(28708:28714): Mensaje fue recibido correctamente, respuesta: 1
+
+[INFO] 23:53:55:392 GAMEBOY/(28726:28726): Arranco
+
+[INFO] 23:53:55:414 GAMEBOY/(28726:28732): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 23:53:55:414 GAMEBOY/(28726:28732): Mensaje fue recibido correctamente, respuesta: 1
+
+[INFO] 23:54:09:2 GAMEBOY/(28747:28747): Arranco
+
+[INFO] 23:54:10:7 GAMEBOY/(28747:28753): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 23:54:10:9 GAMEBOY/(28747:28753): Mensaje fue recibido correctamente, respuesta: 1
+
+[INFO] 23:54:44:958 GAMEBOY/(28767:28767): Arranco
+
+[INFO] 23:54:44:961 GAMEBOY/(28767:28773): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 23:54:44:963 GAMEBOY/(28767:28773): Mensaje fue recibido correctamente, respuesta: 6
+
+[INFO] 23:55:07:98 GAMEBOY/(28786:28786): Arranco
+
+[INFO] 23:55:07:108 GAMEBOY/(28786:28792): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 23:55:07:109 GAMEBOY/(28786:28792): Mensaje fue recibido correctamente, respuesta: 7
+
+[INFO] 23:55:23:835 GAMEBOY/(28803:28803): Arranco
+
+[INFO] 23:55:23:850 GAMEBOY/(28803:28809): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 23:55:23:850 GAMEBOY/(28803:28809): Mensaje fue recibido correctamente, respuesta: 8
+
+[INFO] 13:34:13:851 GAMEBOY/(30592:30592): Arranco
+
+[INFO] 13:34:13:877 GAMEBOY/(30592:30598): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 13:34:13:878 GAMEBOY/(30592:30598): Mensaje fue recibido correctamente, respuesta: 1
+
+[INFO] 13:34:26:123 GAMEBOY/(30613:30613): Arranco
+
+[INFO] 13:34:26:125 GAMEBOY/(30613:30619): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 13:34:26:128 GAMEBOY/(30613:30619): Mensaje fue recibido correctamente, respuesta: 1
+
+[INFO] 13:34:45:681 GAMEBOY/(30631:30631): Arranco
+
+[INFO] 13:34:45:682 GAMEBOY/(30631:30637): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 13:34:45:683 GAMEBOY/(30631:30637): Mensaje fue recibido correctamente, respuesta: 1
+
+[INFO] 13:35:12:297 GAMEBOY/(30651:30651): Arranco
+
+[INFO] 13:35:12:326 GAMEBOY/(30651:30657): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 13:35:12:327 GAMEBOY/(30651:30657): Mensaje fue recibido correctamente, respuesta: 6
+
+[INFO] 13:35:27:869 GAMEBOY/(30671:30671): Arranco
+
+[INFO] 13:35:27:897 GAMEBOY/(30671:30677): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 13:35:27:897 GAMEBOY/(30671:30677): Mensaje fue recibido correctamente, respuesta: 7
+
+[INFO] 13:35:44:586 GAMEBOY/(30689:30689): Arranco
+
+[INFO] 13:35:44:593 GAMEBOY/(30689:30695): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 13:35:44:594 GAMEBOY/(30689:30695): Mensaje fue recibido correctamente, respuesta: 8
+
+[INFO] 14:19:19:241 GAMEBOY/(31399:31399): Arranco
+
+[INFO] 14:19:19:250 GAMEBOY/(31399:31405): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 14:19:19:250 GAMEBOY/(31399:31405): Mensaje fue recibido correctamente, respuesta: 1
+
+[INFO] 14:19:32:508 GAMEBOY/(31421:31421): Arranco
+
+[INFO] 14:19:32:515 GAMEBOY/(31421:31427): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 14:19:32:517 GAMEBOY/(31421:31427): Mensaje fue recibido correctamente, respuesta: 1
+
+[INFO] 14:19:54:140 GAMEBOY/(31440:31440): Arranco
+
+[INFO] 14:19:54:163 GAMEBOY/(31440:31446): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 14:19:54:163 GAMEBOY/(31440:31446): Mensaje fue recibido correctamente, respuesta: 1
+
+[INFO] 14:20:20:522 GAMEBOY/(31458:31458): Arranco
+
+[INFO] 14:20:20:548 GAMEBOY/(31458:31464): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 14:20:20:548 GAMEBOY/(31458:31464): Mensaje fue recibido correctamente, respuesta: 6
+
+[INFO] 14:20:35:590 GAMEBOY/(31478:31478): Arranco
+
+[INFO] 14:20:35:604 GAMEBOY/(31478:31484): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 14:20:35:604 GAMEBOY/(31478:31484): Mensaje fue recibido correctamente, respuesta: 7
+
+[INFO] 14:20:53:77 GAMEBOY/(31498:31498): Arranco
+
+[INFO] 14:20:53:102 GAMEBOY/(31498:31505): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 14:20:53:102 GAMEBOY/(31498:31505): Mensaje fue recibido correctamente, respuesta: 8
+
+[INFO] 15:03:17:745 GAMEBOY/(16702:16702): Arranco
+
+[INFO] 15:03:17:787 GAMEBOY/(16702:16714): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 15:03:17:788 GAMEBOY/(16702:16714): Mensaje fue recibido correctamente, respuesta: 1
+
+[INFO] 15:03:51:453 GAMEBOY/(16762:16762): Arranco
+
+[INFO] 15:03:51:462 GAMEBOY/(16762:16768): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 15:03:51:462 GAMEBOY/(16762:16768): Mensaje fue recibido correctamente, respuesta: 1
+
+[INFO] 15:04:16:811 GAMEBOY/(16810:16810): Arranco
+
+[INFO] 15:04:16:832 GAMEBOY/(16810:16816): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 15:04:16:832 GAMEBOY/(16810:16816): Mensaje fue recibido correctamente, respuesta: 1
+
+[INFO] 15:06:18:500 GAMEBOY/(16995:16995): Arranco
+
+[INFO] 15:06:18:504 GAMEBOY/(16995:17004): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 15:06:18:504 GAMEBOY/(16995:17004): Mensaje fue recibido correctamente, respuesta: 1
+
+[INFO] 15:06:41:499 GAMEBOY/(17038:17038): Arranco
+
+[INFO] 15:06:41:516 GAMEBOY/(17038:17044): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 15:06:41:516 GAMEBOY/(17038:17044): Mensaje fue recibido correctamente, respuesta: 1
+
+[INFO] 15:09:51:14 GAMEBOY/(17503:17503): Arranco
+
+[INFO] 15:09:51:51 GAMEBOY/(17503:17514): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 15:09:51:51 GAMEBOY/(17503:17514): Mensaje fue recibido correctamente, respuesta: 1
+
+[INFO] 15:11:24:94 GAMEBOY/(17779:17779): Arranco
+
+[INFO] 15:11:24:104 GAMEBOY/(17779:17785): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 15:11:24:104 GAMEBOY/(17779:17785): Mensaje fue recibido correctamente, respuesta: 1
+
+[INFO] 15:11:50:499 GAMEBOY/(17826:17826): Arranco
+
+[INFO] 15:11:50:503 GAMEBOY/(17826:17837): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 15:11:50:504 GAMEBOY/(17826:17837): Mensaje fue recibido correctamente, respuesta: 1
+
+[INFO] 15:12:11:936 GAMEBOY/(17873:17873): Arranco
+
+[INFO] 15:12:11:944 GAMEBOY/(17873:17879): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 15:12:11:944 GAMEBOY/(17873:17879): Mensaje fue recibido correctamente, respuesta: 1
+
+[INFO] 15:12:39:673 GAMEBOY/(17921:17921): Arranco
+
+[INFO] 15:12:39:676 GAMEBOY/(17921:17927): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 15:12:39:676 GAMEBOY/(17921:17927): Mensaje fue recibido correctamente, respuesta: 1
+
+[INFO] 15:12:54:275 GAMEBOY/(17967:17967): Arranco
+
+[INFO] 15:12:54:277 GAMEBOY/(17967:17973): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 15:12:54:278 GAMEBOY/(17967:17973): Mensaje fue recibido correctamente, respuesta: 1
+
+[INFO] 15:17:12:542 GAMEBOY/(18559:18559): Arranco
+
+[INFO] 15:17:12:552 GAMEBOY/(18559:18565): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 15:17:12:553 GAMEBOY/(18559:18565): Mensaje fue recibido correctamente, respuesta: 1
+
+[INFO] 15:17:31:594 GAMEBOY/(18592:18592): Arranco
+
+[INFO] 15:17:31:603 GAMEBOY/(18592:18598): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 15:17:31:603 GAMEBOY/(18592:18598): Mensaje fue recibido correctamente, respuesta: 1
+
+[INFO] 15:17:51:634 GAMEBOY/(18638:18638): Arranco
+
+[INFO] 15:17:51:645 GAMEBOY/(18638:18644): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 15:17:51:645 GAMEBOY/(18638:18644): Mensaje fue recibido correctamente, respuesta: 1
+
+[INFO] 15:18:29:303 GAMEBOY/(18703:18703): Arranco
+
+[INFO] 15:18:29:320 GAMEBOY/(18703:18709): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 15:18:29:320 GAMEBOY/(18703:18709): Mensaje fue recibido correctamente, respuesta: 1
+
+[INFO] 15:18:49:716 GAMEBOY/(18744:18744): Arranco
+
+[INFO] 15:18:49:733 GAMEBOY/(18744:18750): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 15:18:49:733 GAMEBOY/(18744:18750): Mensaje fue recibido correctamente, respuesta: 1
+
+[INFO] 15:25:44:494 GAMEBOY/(19494:19494): Arranco
+
+[INFO] 15:25:44:501 GAMEBOY/(19494:19497): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 15:25:44:501 GAMEBOY/(19494:19497): Mensaje fue recibido correctamente, respuesta: 1
+
+[INFO] 15:26:02:953 GAMEBOY/(19518:19518): Arranco
+
+[INFO] 15:26:02:965 GAMEBOY/(19518:19521): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 15:26:02:966 GAMEBOY/(19518:19521): Mensaje fue recibido correctamente, respuesta: 1
+
+[INFO] 15:26:21:349 GAMEBOY/(19558:19558): Arranco
+
+[INFO] 15:26:21:353 GAMEBOY/(19558:19561): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 15:26:21:354 GAMEBOY/(19558:19561): Mensaje fue recibido correctamente, respuesta: 1
+
+[INFO] 15:26:53:173 GAMEBOY/(19612:19612): Arranco
+
+[INFO] 15:26:53:189 GAMEBOY/(19612:19614): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 15:26:53:189 GAMEBOY/(19612:19614): Mensaje fue recibido correctamente, respuesta: 1
+
+[INFO] 15:26:53:193 GAMEBOY/(19615:19615): Arranco
+
+[INFO] 15:26:53:201 GAMEBOY/(19615:19617): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 15:26:53:206 GAMEBOY/(19615:19617): Mensaje fue recibido correctamente, respuesta: 1
+
+[INFO] 15:27:03:338 GAMEBOY/(19634:19634): Arranco
+
+[INFO] 15:27:03:353 GAMEBOY/(19634:19637): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 15:27:03:354 GAMEBOY/(19634:19637): Mensaje fue recibido correctamente, respuesta: 1
+
+[INFO] 15:30:52:945 GAMEBOY/(20110:20110): Arranco
+
+[INFO] 15:30:52:948 GAMEBOY/(20110:20113): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 15:30:52:951 GAMEBOY/(20110:20113): Mensaje fue recibido correctamente, respuesta: 1
+
+[INFO] 15:30:58:4 GAMEBOY/(20120:20120): Arranco
+
+[INFO] 15:30:59:8 GAMEBOY/(20120:20123): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 15:30:59:9 GAMEBOY/(20120:20123): Mensaje fue recibido correctamente, respuesta: 1
+
+[INFO] 15:31:05:858 GAMEBOY/(20135:20135): Arranco
+
+[INFO] 15:31:05:862 GAMEBOY/(20135:20137): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 15:31:05:865 GAMEBOY/(20135:20137): Mensaje fue recibido correctamente, respuesta: 1
+
+[INFO] 15:31:36:382 GAMEBOY/(20166:20166): Arranco
+
+[INFO] 15:31:36:389 GAMEBOY/(20166:20169): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 15:31:36:390 GAMEBOY/(20166:20169): Mensaje fue recibido correctamente, respuesta: 6
+
+[INFO] 15:31:40:826 GAMEBOY/(20176:20176): Arranco
+
+[INFO] 15:31:40:841 GAMEBOY/(20176:20179): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 15:31:40:842 GAMEBOY/(20176:20179): Mensaje fue recibido correctamente, respuesta: 7
+
+[INFO] 15:31:44:329 GAMEBOY/(20186:20186): Arranco
+
+[INFO] 15:31:44:344 GAMEBOY/(20186:20189): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 15:31:44:345 GAMEBOY/(20186:20189): Mensaje fue recibido correctamente, respuesta: 8
+
+[INFO] 15:36:30:21 GAMEBOY/(20709:20709): Arranco
+
+[INFO] 15:36:30:29 GAMEBOY/(20709:20712): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 15:36:30:30 GAMEBOY/(20709:20712): Mensaje fue recibido correctamente, respuesta: 1
+
+[INFO] 15:36:32:926 GAMEBOY/(20713:20713): Arranco
+
+[INFO] 15:36:32:936 GAMEBOY/(20713:20716): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 15:36:32:942 GAMEBOY/(20713:20716): Mensaje fue recibido correctamente, respuesta: 1
+
+[INFO] 15:36:36:261 GAMEBOY/(20722:20722): Arranco
+
+[INFO] 15:36:36:264 GAMEBOY/(20722:20725): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 15:36:36:265 GAMEBOY/(20722:20725): Mensaje fue recibido correctamente, respuesta: 1
+
+[INFO] 15:50:42:911 GAMEBOY/(22183:22183): Arranco
+
+[INFO] 15:50:42:916 GAMEBOY/(22183:22186): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 15:50:42:917 GAMEBOY/(22183:22186): Mensaje fue recibido correctamente, respuesta: 1
+
+[INFO] 15:50:44:155 GAMEBOY/(22187:22187): Arranco
+
+[INFO] 15:50:44:157 GAMEBOY/(22187:22190): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 15:50:44:159 GAMEBOY/(22187:22190): Mensaje fue recibido correctamente, respuesta: 1
+
+[INFO] 15:50:45:653 GAMEBOY/(22197:22197): Arranco
+
+[INFO] 15:50:45:665 GAMEBOY/(22197:22200): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 15:50:45:667 GAMEBOY/(22197:22200): Mensaje fue recibido correctamente, respuesta: 1
+
+[INFO] 16:03:53:653 GAMEBOY/(23416:23416): Arranco
+
+[INFO] 16:03:53:678 GAMEBOY/(23416:23419): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 16:03:53:679 GAMEBOY/(23416:23419): Mensaje fue recibido correctamente, respuesta: 1
+
+[INFO] 16:03:57:448 GAMEBOY/(23425:23425): Arranco
+
+[INFO] 16:03:57:464 GAMEBOY/(23425:23427): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 16:03:57:473 GAMEBOY/(23425:23427): Mensaje fue recibido correctamente, respuesta: 1
+
+[INFO] 16:04:00:792 GAMEBOY/(23429:23429): Arranco
+
+[INFO] 16:04:00:801 GAMEBOY/(23429:23432): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 16:04:00:805 GAMEBOY/(23429:23432): Mensaje fue recibido correctamente, respuesta: 1
+
+[INFO] 16:06:34:657 GAMEBOY/(23678:23678): Arranco
+
+[INFO] 16:06:34:663 GAMEBOY/(23678:23681): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 16:06:34:664 GAMEBOY/(23678:23681): Mensaje fue recibido correctamente, respuesta: 1
+
+[INFO] 16:06:42:901 GAMEBOY/(23687:23687): Arranco
+
+[INFO] 16:06:42:909 GAMEBOY/(23687:23690): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 16:06:42:914 GAMEBOY/(23687:23690): Mensaje fue recibido correctamente, respuesta: 1
+
+[INFO] 16:06:48:285 GAMEBOY/(23697:23697): Arranco
+
+[INFO] 16:06:48:293 GAMEBOY/(23697:23700): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 16:06:48:294 GAMEBOY/(23697:23700): Mensaje fue recibido correctamente, respuesta: 1
+
+[INFO] 16:07:10:213 GAMEBOY/(23732:23732): Arranco
+
+[INFO] 16:07:10:228 GAMEBOY/(23732:23735): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 16:07:10:230 GAMEBOY/(23732:23735): Mensaje fue recibido correctamente, respuesta: 1
+
+[INFO] 16:07:15:765 GAMEBOY/(23741:23741): Arranco
+
+[INFO] 16:07:15:776 GAMEBOY/(23741:23744): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 16:07:15:779 GAMEBOY/(23741:23744): Mensaje fue recibido correctamente, respuesta: 1
+
+[INFO] 16:14:10:329 GAMEBOY/(24354:24354): Arranco
+
+[INFO] 16:14:10:343 GAMEBOY/(24354:24357): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 16:14:10:345 GAMEBOY/(24354:24357): Mensaje fue recibido correctamente, respuesta: 1
+
+[INFO] 16:14:14:337 GAMEBOY/(24364:24364): Arranco
+
+[INFO] 16:14:14:341 GAMEBOY/(24364:24367): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 16:14:14:344 GAMEBOY/(24364:24367): Mensaje fue recibido correctamente, respuesta: 1
+
+[INFO] 16:14:18:642 GAMEBOY/(24374:24374): Arranco
+
+[INFO] 16:14:18:653 GAMEBOY/(24374:24377): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 16:14:18:654 GAMEBOY/(24374:24377): Mensaje fue recibido correctamente, respuesta: 1
+
+[INFO] 16:14:32:616 GAMEBOY/(24395:24395): Arranco
+
+[INFO] 16:14:32:619 GAMEBOY/(24395:24398): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 16:14:32:620 GAMEBOY/(24395:24398): Mensaje fue recibido correctamente, respuesta: 1
+
+[INFO] 16:14:37:437 GAMEBOY/(24405:24405): Arranco
+
+[INFO] 16:14:37:451 GAMEBOY/(24405:24408): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 16:14:37:453 GAMEBOY/(24405:24408): Mensaje fue recibido correctamente, respuesta: 1
+
+[INFO] 16:19:33:72 GAMEBOY/(24849:24849): Arranco
+
+[INFO] 16:19:33:83 GAMEBOY/(24849:24852): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 16:19:33:84 GAMEBOY/(24849:24852): Mensaje fue recibido correctamente, respuesta: 1
+
+[INFO] 16:19:33:92 GAMEBOY/(24853:24853): Arranco
+
+[INFO] 16:19:33:100 GAMEBOY/(24853:24855): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 16:19:33:105 GAMEBOY/(24853:24855): Mensaje fue recibido correctamente, respuesta: 1
+
+[INFO] 16:19:33:109 GAMEBOY/(24856:24856): Arranco
+
+[INFO] 16:19:33:109 GAMEBOY/(24856:24858): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 16:19:33:110 GAMEBOY/(24856:24858): Mensaje fue recibido correctamente, respuesta: 1
+
+[INFO] 16:20:24:529 GAMEBOY/(24929:24929): Arranco
+
+[INFO] 16:20:24:537 GAMEBOY/(24929:24932): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 16:20:24:538 GAMEBOY/(24929:24932): Mensaje fue recibido correctamente, respuesta: 1
+
+[INFO] 16:20:24:540 GAMEBOY/(24933:24933): Arranco
+
+[INFO] 16:20:24:552 GAMEBOY/(24933:24935): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 16:20:24:554 GAMEBOY/(24933:24935): Mensaje fue recibido correctamente, respuesta: 1
+
+[INFO] 17:08:47:139 GAMEBOY/(29225:29225): Arranco
+
+[INFO] 17:08:47:152 GAMEBOY/(29225:29228): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 17:08:47:153 GAMEBOY/(29225:29228): Mensaje fue recibido correctamente, respuesta: 1
+
+[INFO] 17:08:47:155 GAMEBOY/(29229:29229): Arranco
+
+[INFO] 17:08:47:164 GAMEBOY/(29229:29231): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 17:08:47:166 GAMEBOY/(29229:29231): Mensaje fue recibido correctamente, respuesta: 1
+
+[INFO] 17:08:47:168 GAMEBOY/(29232:29232): Arranco
+
+[INFO] 17:08:47:176 GAMEBOY/(29232:29234): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 17:08:47:178 GAMEBOY/(29232:29234): Mensaje fue recibido correctamente, respuesta: 1
+
+[INFO] 17:09:06:133 GAMEBOY/(29260:29260): Arranco
+
+[INFO] 17:09:06:142 GAMEBOY/(29260:29263): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 17:09:06:143 GAMEBOY/(29260:29263): Mensaje fue recibido correctamente, respuesta: 1
+
+[INFO] 17:09:06:148 GAMEBOY/(29264:29264): Arranco
+
+[INFO] 17:09:06:160 GAMEBOY/(29264:29266): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 17:09:06:162 GAMEBOY/(29264:29266): Mensaje fue recibido correctamente, respuesta: 1
 

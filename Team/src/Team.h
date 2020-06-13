@@ -48,6 +48,7 @@ uint32_t algoritmoPlanificacion;
 sem_t semaforoEjecucionCpu;
 sem_t* entrenadorEnCola;
 sem_t intercambioFinalizado;
+sem_t* iniciarResolucionDeadlock;
 
 t_log* teamLogger;
 t_log* teamLogger2;
@@ -123,7 +124,8 @@ typedef struct {
 	//uint32_t** mapa;
 	uint32_t cantidadCiclosCpuTotales;
 	uint32_t cantidadCambiosContexto;
-	uint32_t cantidadDeadlocks;
+	uint32_t cantidadDeadlocksEncontrados;
+	uint32_t cantidadDeadlocksResueltos;
 }dataTeam;
 
 dataTeam* team;
@@ -343,5 +345,13 @@ bool estaBloqueado(dataEntrenador* entrenador);
 bool estaEjecutando(dataEntrenador* entrenador);
 
 uint32_t setearTimer(uint32_t quantum, dataEntrenador* entrenador);
+
+void poneteEnExit(dataEntrenador* entrenador);
+
+void poneteEnBlocked(dataEntrenador* entrenador);
+
+void poneteEnNew(dataEntrenador* entrenador);
+
+int32_t crearHiloResolucionDeadlock(pthread_t* hilo);
 
 #endif /* TEAM_H_ */
