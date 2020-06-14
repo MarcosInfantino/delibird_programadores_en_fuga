@@ -34,7 +34,6 @@ int main(void) {
 	//tamMemoria        = config_get_int_value(config, "TAMANO_MEMORIA");
 	//particionMinima   = config_get_int_value(config, "TAMANO_MINIMO_PARTICION");
 
-	brokerLogger2 = log_create("brokerLoggerSecundario.log","broker", true, LOG_LEVEL_INFO);
 	puerto_broker = 5002;
 	ip_broker     = "127.0.0.1";
 	tamMemoria    = 2048;
@@ -64,6 +63,16 @@ int main(void) {
 	signal(SIGUSR1, crearDumpDeCache);
 
 	return EXIT_SUCCESS;
+}
+
+t_config* leer_config(void)
+{
+	t_config* config;
+	if((config=config_create("/home/utnso/tp-2020-1c-Programadores-en-Fuga/Broker/configPrueba.config"))==NULL){
+		printf("No pude leer la config\n");
+		exit(2);
+	}
+	return config;
 }
 
 void* iniciarServidor(){

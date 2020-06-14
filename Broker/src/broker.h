@@ -115,5 +115,6 @@ void* chequearMensajesEnCola(void * par);
 uint32_t incrementarContador();
 uint32_t obtenerContador();
 
+t_config* leer_config(void);
 
 #endif /* BROKER_H_ */
