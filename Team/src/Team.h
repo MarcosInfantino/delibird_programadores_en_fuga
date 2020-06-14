@@ -41,6 +41,7 @@ int socketGamecard;
 uint32_t quantumRR;
 uint32_t puertoBroker;
 char* ipBroker;
+char* logFilePrincipal;
 pthread_t* arrayIdHilosEntrenadores;
 uint32_t tiempoReconexion;
 uint32_t retardoCicloCpu;
@@ -178,6 +179,14 @@ typedef struct{
 	uint32_t sizeStream;
 	void* stream;
 }paqueteMensaje;
+
+t_config* crearYLeerConfig(char* pathConfig);
+
+void inicializarColasYListas();
+
+void crearHilos(t_config* config);
+
+void inicializarSemaforos();
 
 dataTeam* inicializarTeam(t_config* config);
 

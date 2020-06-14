@@ -21,8 +21,6 @@
 #include <stdlib.h>
 
 
-//TODO: corregir recibirPaquete
-
 //t_list* idsHilos=list_create();//son ints
 //t_list* hilos=list_create();//son pthread_t
 //uint32_t puertoTeam=5003;
@@ -118,38 +116,17 @@
 
 int main(int argc , char* argv[]){
 	char* pathConfig   = "Team2.config";
-	t_config* config   = config_create(pathConfig);
-	estimacionInicial=config_get_int_value(config, "ESTIMACION_INICIAL");
-	retardoCicloCpu    = config_get_int_value(config,"RETARDO_CICLO_CPU");
-	tiempoReconexion= config_get_int_value(config,"TIEMPO_RECONEXION");
-	puertoBroker       = config_get_int_value(config,"PUERTO_BROKER");
-	ipBroker           = config_get_string_value(config,"IP_BROKER");
-	char* logFilePrincipal=config_get_string_value(config, "LOG_FILE");
-
+	t_config* config = crearYLeerConfig(pathConfig);
 	teamLogger = iniciar_logger(logFilePrincipal, "TEAM");
+
 	teamLogger2=log_create("teamLoggerSecundario.log","team", true, LOG_LEVEL_INFO);
 
-	iniciarResolucionDeadlock=malloc(sizeof(sem_t));
-	sem_init((iniciarResolucionDeadlock), 0,0);
-
-	semaforoObjetivoCumplido=malloc(sizeof(sem_t));
-	sem_init((semaforoObjetivoCumplido), 0,0);
+	inicializarSemaforos();
+	inicializarColasYListas();
 
 	log_info(teamLogger2,"--------------------------------------------------------------------------");
 	log_info(teamLogger2,"NUEVA EJECUCION");
 	log_info(teamLogger2,"--------------------------------------------------------------------------");
-	//char pathConfig  = argv;
-	sem_init(&semaforoEjecucionCpu, 0,0);
-	sem_init(&intercambioFinalizado, 0,0);
-	entrenadoresLibres=inicializarListaMutex();
-	//colaEjecucionFifo=inicializarColaMutex();
-	pokemonesPendientes=inicializarColaMutex();
-	listaIdsEntrenadorMensaje=inicializarListaMutex();
-	entrenadores=inicializarListaMutex();
-	especiesLocalizadas=inicializarListaMutex();
-	entrenadoresExit=inicializarListaMutex();
-	entrenadoresDeadlock=inicializarListaMutex();
-	listaIdsRespuestasGet=inicializarListaMutex();
 
 //	char* pathConfig   = "Team2.config";
 //	t_config* config   = config_create(pathConfig);
@@ -160,41 +137,20 @@ int main(int argc , char* argv[]){
 //	ipBroker           = config_get_string_value(config,"IP_BROKER");
 
 	obtenerAlgoritmoPlanificacion(config);
-	//printf("hola\n");
 
 	team     = inicializarTeam(config);
 
-	//printf("hola2\n");
-	//printf("%s\n", ((objetivo*)getListaMutex(team->objetivoGlobal,2))->pokemon);
 	entrenadores->lista       = team->entrenadores;
 	//entrenadoresLibres=entrenadores;
 
 	//mutexEntrenadores=inicializarMutexEntrenadores();
+
 	uint32_t cantEntrenadores = list_size(team->entrenadores);
 	loggearObjetivoDelTeam();
 	arrayIdHilosEntrenadores  = malloc(cantEntrenadores*sizeof(pthread_t));
 	inicializarEntrenadores(team->entrenadores);
 
-	pthread_t hiloEnviarGets;
-	crearHiloParaEnviarGets(&hiloEnviarGets);
-
-	pthread_t resolucionDeadlock;
-	crearHiloResolucionDeadlock(&resolucionDeadlock);
-
-	pthread_t hiloConexionInicialBroker;
-
-	crearHiloConexionColasBroker((void*)config,&hiloConexionInicialBroker);
-
-
-	pthread_t hiloServidorGameboy;
-	crearHiloServidorGameboy(&hiloServidorGameboy);
-
-	pthread_t hiloPlanificador;
-	crearHiloPlanificador(&hiloPlanificador);
-
-//	posicion pos = {1,2};
-//
-//	printf("id entrenador mas cercano: %i\n", obtenerIdEntrenadorMasCercano(pos));
+	crearHilos(config);
 
 	//while(!objetivoCumplido());
 	sem_wait(semaforoObjetivoCumplido);
@@ -205,6 +161,58 @@ int main(int argc , char* argv[]){
 	terminar_programa(teamLogger, config);
 
 	return 0;
+}
+
+void inicializarSemaforos(){
+	sem_init(&semaforoEjecucionCpu, 0,0);
+	sem_init(&intercambioFinalizado, 0,0);
+
+	iniciarResolucionDeadlock=malloc(sizeof(sem_t));
+	sem_init((iniciarResolucionDeadlock), 0,0);
+
+	semaforoObjetivoCumplido=malloc(sizeof(sem_t));
+	sem_init((semaforoObjetivoCumplido), 0,0);
+}
+
+void crearHilos(t_config* config){
+	pthread_t hiloEnviarGets;
+	crearHiloParaEnviarGets(&hiloEnviarGets);
+
+	pthread_t resolucionDeadlock;
+	crearHiloResolucionDeadlock(&resolucionDeadlock);
+
+	pthread_t hiloConexionInicialBroker;
+	crearHiloConexionColasBroker((void*)config,&hiloConexionInicialBroker);
+
+	pthread_t hiloServidorGameboy;
+	crearHiloServidorGameboy(&hiloServidorGameboy);
+
+	pthread_t hiloPlanificador;
+	crearHiloPlanificador(&hiloPlanificador);
+}
+
+t_config* crearYLeerConfig(char* pathConfig){
+	t_config* config   = config_create(pathConfig);
+	estimacionInicial=config_get_int_value(config, "ESTIMACION_INICIAL");
+	retardoCicloCpu    = config_get_int_value(config,"RETARDO_CICLO_CPU");
+	tiempoReconexion= config_get_int_value(config,"TIEMPO_RECONEXION");
+	puertoBroker       = config_get_int_value(config,"PUERTO_BROKER");
+	ipBroker           = config_get_string_value(config,"IP_BROKER");
+	logFilePrincipal=config_get_string_value(config, "LOG_FILE");
+
+	return config;
+}
+
+void inicializarColasYListas(){
+	entrenadoresLibres=inicializarListaMutex();
+	//colaEjecucionFifo=inicializarColaMutex();
+	pokemonesPendientes=inicializarColaMutex();
+	listaIdsEntrenadorMensaje=inicializarListaMutex();
+	entrenadores=inicializarListaMutex();
+	especiesLocalizadas=inicializarListaMutex();
+	entrenadoresExit=inicializarListaMutex();
+	entrenadoresDeadlock=inicializarListaMutex();
+	listaIdsRespuestasGet=inicializarListaMutex();
 }
 
 void loggearObjetivoDelTeam(){
@@ -285,9 +293,6 @@ void* atenderLocalized(void* paq){
 
 	destruirPaquete(paqueteLocalized);
 	return NULL;
-
-
-
 }
 
 bool localizedMeInteresa(paquete* paquete){
@@ -298,7 +303,6 @@ bool localizedMeInteresa(paquete* paquete){
 		if(id==(*idActual)){
 			return true;
 		}
-
 	}
 	return false;
 }
@@ -314,6 +318,7 @@ bool especieFueLocalizada(char* pokemon){
 	}
 	return false;
 }
+
 void* atenderCaught(void* paq){
 	paquete* paqueteCaught=(paquete*) paq;
 	log_info(teamLogger2,"Atiendo caught.");
@@ -323,8 +328,6 @@ void* atenderCaught(void* paq){
 	log_info(teamLogger2,"Resultado del caught: %i.",msgCaught->resultadoCaught);
 	if(idEncontrado!=-1){
 		dataEntrenador* entrenadorEncontrado=(dataEntrenador*)getListaMutex(entrenadores, idEncontrado);
-
-
 
 		if(msgCaught->resultadoCaught==CORRECTO && pokemonEsObjetivo(entrenadorEncontrado->pokemonAAtrapar->pokemon)){
 //			list_add(entrenadorEncontrado->pokemones,(void*)(entrenadorEncontrado->pokemonAAtrapar->pokemon));
@@ -351,8 +354,6 @@ void* atenderCaught(void* paq){
 	destruirPaquete(paqueteCaught);
 	return NULL;
 }
-
-
 
 uint32_t buscarEntrenadorParaMensaje(listaMutex* listaIds, uint32_t idMensaje){//devuelve el id del entrenador
 	uint32_t i;
@@ -390,6 +391,7 @@ int crearHiloConexionColasBroker(void* config, pthread_t* hilo){
 	pthread_detach(*hilo);
 	return 0;
 }
+
 uint32_t crearHiloParaEnviarGets(pthread_t* hilo){
 	uint32_t err=pthread_create(hilo,NULL,enviarGets,NULL);
 					if(err!=0){
@@ -434,9 +436,6 @@ uint32_t reconectarseAlBroker(uint32_t cliente,void* direccionServidor,socklen_t
 }
 
 void* suscribirseColasBroker(void* conf){
-
-
-
 
 	mensajeSuscripcion* mensajeSuscripcionAppeared=llenarSuscripcion(APPEARED_POKEMON);
 	mensajeSuscripcion * mensajeSuscripcionCaught=llenarSuscripcion(CAUGHT_POKEMON);
