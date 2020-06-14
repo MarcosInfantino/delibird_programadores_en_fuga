@@ -23,10 +23,23 @@ void* iniciarPlanificador(void* arg ){
 	switch(algoritmoPlanificacion)
 	{
 	case FIFO:
-		ejecucionPlanificadorFifo();break;
+		colaEjecucionFifo=inicializarColaMutex();
+		ejecucionPlanificadorFifo();
+		break;
 	case RR:
-		ejecucionPlanificadorRR(); break;
-
+		colaEjecucionFifo=inicializarColaMutex();
+		ejecucionPlanificadorRR();
+		break;
+	case SJF:
+		listaEjecucionSjf=inicializarListaMutex();
+		ejecucionPlanificadorSjf();
+		break;
+	case SJFCD:
+		listaEjecucionSjf=inicializarListaMutex();
+		ejecucionPlanificadorSjfConDesalojo();
+		break;
+	default:
+		break;
 	}
 
 	return NULL;
@@ -35,21 +48,23 @@ void* iniciarPlanificador(void* arg ){
 void ejecucionPlanificadorFifo(){
 	sem_post(&semaforoEjecucionCpu);
 	while(1){
-		if(sizeColaMutex(colaEjecucionFifo)>0){
+	//	if(sizeColaMutex(colaEjecucionFifo)>0){
 			sem_wait(entrenadorEnCola); //OK6
 			sem_wait(&semaforoEjecucionCpu);
+			//ACA VA CAMBIO DE CONTEXTO
+
 			dataEntrenador* entrenadorAEjecutar=(dataEntrenador*)popColaMutex(colaEjecucionFifo);
 			ponerEnEjecucion(entrenadorAEjecutar);
 			sem_post((entrenadorAEjecutar->semaforo)); //OK4
 			log_info(teamLogger2, "elijo entrenador para ejecutar");
-		}
+	//	}
 	}
 }
 
 void ejecucionPlanificadorRR(){
 	sem_post(&semaforoEjecucionCpu);
 		while(1){
-			if(sizeColaMutex(colaEjecucionFifo)>0){
+		//	if(sizeColaMutex(colaEjecucionFifo)>0){//despues borrarlo
 				sem_wait(entrenadorEnCola); //OK6
 				sem_wait(&semaforoEjecucionCpu);
 
@@ -62,9 +77,110 @@ void ejecucionPlanificadorRR(){
 					sem_post((entrenadorAEjecutar->semaforo)); //OK1 //OK4
 				}
 				setearTimer(quantumRR, entrenadorAEjecutar);
+				//ACA VA CAMBIO DE CONTEXTO
+
 				log_info(teamLogger2, "elijo entrenador para ejecutar");
-			}
+			//}
 		}
+}
+
+void ejecucionPlanificadorSjf(){
+	sem_post(&semaforoEjecucionCpu);
+			while(1){
+
+					sem_wait(entrenadorEnCola); //OK6
+					sem_wait(&semaforoEjecucionCpu);
+					//ACA VA CAMBIO DE CONTEXTO
+
+					dataEntrenador* entrenadorAEjecutar=sacarEntrenadorMenorEstimacion();//encontrar el mas copado
+
+					ponerEnEjecucion(entrenadorAEjecutar);
+					sem_post((entrenadorAEjecutar->semaforo)); //OK1 //OK4
+					log_info(teamLogger2, "elijo entrenador para ejecutar");
+
+			}
+}
+
+void ejecucionPlanificadorSjfConDesalojo(){
+	sem_post(&semaforoEjecucionCpu);
+				while(1){
+
+						sem_wait(entrenadorEnCola); //OK6
+						sem_wait(&semaforoEjecucionCpu);
+
+						dataEntrenador* entrenadorAEjecutar=sacarEntrenadorMenorEstimacion();//encontrar el mas copado
+
+
+						if(fueInterrumpido(entrenadorAEjecutar)){
+							retomarEjecucion(entrenadorAEjecutar);
+							sem_post((entrenadorAEjecutar->semaforoContinuarEjecucion));
+						}else{
+							ponerEnEjecucion(entrenadorAEjecutar);
+							sem_post((entrenadorAEjecutar->semaforo)); //OK1 //OK4
+						} //OK1 //OK4
+
+						verificarDesalojo(entrenadorAEjecutar);
+
+						//ACA VA CAMBIO DE CONTEXTO
+
+						log_info(teamLogger2, "elijo entrenador para ejecutar");
+
+				}
+}
+
+uint32_t obtenerPosicionEntrenadorMenorEstimacion(){
+	uint32_t posMejorEntrenador=-1;
+	double mejorEstimacion;
+	//dataEntrenador* mejorEntrenador;
+	for(uint32_t i=0; i<sizeListaMutex(listaEjecucionSjf);i++){
+		dataEntrenador* entrenadorActual=(dataEntrenador*)getListaMutex(listaEjecucionSjf,i);
+		double estimacionActual=obtenerEstimacion(entrenadorActual);
+		if(estimacionActual<mejorEstimacion || i==0){
+			mejorEstimacion=estimacionActual;
+			//mejorEntrenador=entrenadorActual;
+			posMejorEntrenador=i;
+		}
+	}
+	//removeListaMutex(listaEjecucionSjf,posMejorEntrenador);
+	return posMejorEntrenador;
+}
+
+dataEntrenador* sacarEntrenadorMenorEstimacion(){
+	uint32_t pos= obtenerPosicionEntrenadorMenorEstimacion();
+	if(pos!=-1){
+		dataEntrenador* entrenador=(dataEntrenador*)getListaMutex(listaEjecucionSjf,( pos ));
+		removeListaMutex(listaEjecucionSjf, pos);
+		return entrenador;
+	}else{
+		return NULL;
+	}
+
+}
+
+dataEntrenador* obtenerEntrenadorMenorEstimacion(){
+	uint32_t pos= obtenerPosicionEntrenadorMenorEstimacion();
+	if(pos!=-1){
+		return (dataEntrenador*)getListaMutex(listaEjecucionSjf,( pos ));
+	}else{
+		return NULL;
+	}
+
+}
+
+uint32_t verificarDesalojo(dataEntrenador* entrenador){
+	while(1){
+			sleep(1);
+			dataEntrenador* entrenadorMenorEstimacion=obtenerEntrenadorMenorEstimacion();
+			if(!estaEjecutando(entrenador)){
+				return 0;
+			}else if(entrenadorMenorEstimacion!=NULL && obtenerEstimacion(entrenador)> obtenerEstimacion( obtenerEntrenadorMenorEstimacion() )){
+				interrumpir(entrenador);
+				log_info(teamLogger2, "interrumpo al entrendador %i ", entrenador->id);
+				return 0;
+			}
+
+		}
+
 }
 
 uint32_t setearTimer(uint32_t quantum, dataEntrenador* entrenador){
@@ -94,6 +210,14 @@ void obtenerAlgoritmoPlanificacion(t_config* config){
 		algoritmoPlanificacion=RR;
 		quantumRR=config_get_int_value(config, "QUANTUM");
 		log_info(teamLogger2, "Algortimo de planificación: RR con Q=%i.", quantumRR);
+	}else if(strcmp(algoritmo, "SJF")==0){
+		algoritmoPlanificacion=SJF;
+		log_info(teamLogger2, "SJF sin desalojo.");
+	}else if(strcmp(algoritmo, "SJFCD")==0){
+		algoritmoPlanificacion=SJFCD;
+		log_info(teamLogger2, "Algortimo planificacion SJF con desalojo.");
+	}else{
+		log_info(teamLogger2, "El algoritmo ingresado no está contemplado.");
 	}
 }
 

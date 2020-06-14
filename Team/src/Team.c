@@ -117,8 +117,16 @@
 //./gameboy TEAM APPEARED_POKEMON Gengar 7 5
 
 int main(int argc , char* argv[]){
+	char* pathConfig   = "Team2.config";
+	t_config* config   = config_create(pathConfig);
+	estimacionInicial=config_get_int_value(config, "ESTIMACION_INICIAL");
+	retardoCicloCpu    = config_get_int_value(config,"RETARDO_CICLO_CPU");
+	tiempoReconexion= config_get_int_value(config,"TIEMPO_RECONEXION");
+	puertoBroker       = config_get_int_value(config,"PUERTO_BROKER");
+	ipBroker           = config_get_string_value(config,"IP_BROKER");
+	char* logFilePrincipal=config_get_string_value(config, "LOG_FILE");
 
-	teamLogger = iniciar_logger("team.log", "TEAM");
+	teamLogger = iniciar_logger(logFilePrincipal, "TEAM");
 	teamLogger2=log_create("teamLoggerSecundario.log","team", true, LOG_LEVEL_INFO);
 
 	iniciarResolucionDeadlock=malloc(sizeof(sem_t));
@@ -134,7 +142,7 @@ int main(int argc , char* argv[]){
 	sem_init(&semaforoEjecucionCpu, 0,0);
 	sem_init(&intercambioFinalizado, 0,0);
 	entrenadoresLibres=inicializarListaMutex();
-	colaEjecucionFifo=inicializarColaMutex();
+	//colaEjecucionFifo=inicializarColaMutex();
 	pokemonesPendientes=inicializarColaMutex();
 	listaIdsEntrenadorMensaje=inicializarListaMutex();
 	entrenadores=inicializarListaMutex();
@@ -143,12 +151,14 @@ int main(int argc , char* argv[]){
 	entrenadoresDeadlock=inicializarListaMutex();
 	listaIdsRespuestasGet=inicializarListaMutex();
 
-	char* pathConfig   = "Team2.config";
-	t_config* config   = config_create(pathConfig);
-	retardoCicloCpu    = config_get_int_value(config,"RETARDO_CICLO_CPU");
-	tiempoReconexion= config_get_int_value(config,"TIEMPO_RECONEXION");
-	puertoBroker       = config_get_int_value(config,"PUERTO_BROKER");
-	ipBroker           = config_get_string_value(config,"IP_BROKER");
+//	char* pathConfig   = "Team2.config";
+//	t_config* config   = config_create(pathConfig);
+//	estimacionInicial=config_get_int_value(config, "ESTIMACION_INICIAL");
+//	retardoCicloCpu    = config_get_int_value(config,"RETARDO_CICLO_CPU");
+//	tiempoReconexion= config_get_int_value(config,"TIEMPO_RECONEXION");
+//	puertoBroker       = config_get_int_value(config,"PUERTO_BROKER");
+//	ipBroker           = config_get_string_value(config,"IP_BROKER");
+
 	obtenerAlgoritmoPlanificacion(config);
 	//printf("hola\n");
 
@@ -715,6 +725,9 @@ dataTeam* inicializarTeam(t_config* config){
 		infoEntrenador->cantidadCiclosCpu = 0;
 		infoEntrenador->semaforo=malloc(sizeof(sem_t));
 		infoEntrenador->semaforoContinuarEjecucion=malloc(sizeof(sem_t));
+		infoEntrenador->rafagaCpuAnterior=0;
+		infoEntrenador->estimacionAnterior=estimacionInicial;
+		infoEntrenador->contadorCpu=inicializarContadorRafagas();
 		sem_init((infoEntrenador->semaforo), 0,0);
 		sem_init((infoEntrenador->semaforoContinuarEjecucion), 0,0);
 
@@ -879,8 +892,8 @@ t_list* obtenerListaDeListas(char** lst){
 	return lstDeLst;
 }
 
-void loggearPokemonAAtrapar(pokemonPosicion* pokePosicion, t_log* teamLogger){
-	log_info(teamLogger, "El pokemon a atrapar es: %s, y la posición es: (%i, %i)\n", pokePosicion->pokemon, (pokePosicion->posicion).x, (pokePosicion->posicion).y);
+void loggearPokemonAAtrapar(dataEntrenador* entrenador, t_log* teamLogger){
+	log_info(teamLogger, "El entrenador % i se mueve a atrapar a %s en posición (%i, %i)\n",entrenador->id, entrenador->pokemonAAtrapar->pokemon, (entrenador->pokemonAAtrapar->posicion).x, (entrenador->pokemonAAtrapar->posicion).y);
 }
 
 

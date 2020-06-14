@@ -24,6 +24,7 @@
 
 listaMutex* entrenadores;
 colaMutex* colaEjecucionFifo;
+listaMutex* listaEjecucionSjf;
 listaMutex* especiesLocalizadas;//lista de pokemones
 listaMutex* listaIdsRespuestasGet;
 listaMutex* listaIdsEntrenadorMensaje; // del tipo idsEntrenadorMensaje , //ver a futuro si esta lista requiere mutex
@@ -44,6 +45,7 @@ pthread_t* arrayIdHilosEntrenadores;
 uint32_t tiempoReconexion;
 uint32_t retardoCicloCpu;
 uint32_t algoritmoPlanificacion;
+uint32_t estimacionInicial;
 
 sem_t semaforoEjecucionCpu;
 sem_t* entrenadorEnCola;
@@ -64,7 +66,9 @@ typedef enum {
 
 typedef enum{
 	FIFO,
-	RR
+	RR,
+	SJF,
+	SJFCD
 }AlgoritmoPlanificacion;
 
 //typedef struct {
@@ -92,6 +96,10 @@ typedef struct{
 	posicion posicion;
 } pokemonPosicion;
 
+typedef struct{
+	uint32_t cantRafagas;
+	pthread_mutex_t* mutex;
+}contadorRafagas;
 
 typedef struct {
 	posicion posicion;
@@ -104,8 +112,9 @@ typedef struct {
 	uint32_t cantidadCiclosCpu;
 	sem_t* semaforoContinuarEjecucion;
 	bool ejecucionEnPausa;
-//	uint32_t estimacionAnterior;
-//	uint32_t rafaCpuAnterior;
+	uint32_t estimacionAnterior;
+	uint32_t rafagaCpuAnterior;
+	contadorRafagas* contadorCpu;
 } dataEntrenador;
 
 dataEntrenador* entrenadorBloqueadoParaDeadlock;
@@ -115,6 +124,7 @@ typedef struct{
 	char* pokemon;
 	dataEntrenador* entrenador;
 }pokemonSobrante;
+
 
 
 
@@ -279,7 +289,7 @@ bool mismaListaPokemones(t_list* listaPokemones1, t_list* listaPokemones2);
 bool entrenadorEnDeadlock(dataEntrenador* entrenador);
 void entrarEnEjecucionParaDeadlock(dataEntrenador* infoEntrenador);
 
-void loggearPokemonAAtrapar(pokemonPosicion* pokePosicion, t_log* teamLogger);
+void loggearPokemonAAtrapar(dataEntrenador* entrenador, t_log* teamLogger);
 
 uint32_t crearSocketClienteBroker (char* ip, uint32_t puerto);
 
@@ -354,5 +364,29 @@ void poneteEnBlocked(dataEntrenador* entrenador);
 void poneteEnNew(dataEntrenador* entrenador);
 
 int32_t crearHiloResolucionDeadlock(pthread_t* hilo);
+
+void ejecucionPlanificadorSjf();
+
+contadorRafagas* inicializarContadorRafagas();
+
+void incrementarContadorRafagas(dataEntrenador* entrenador);
+
+uint32_t obtenerContadorRafagas(dataEntrenador* entrenador);
+
+void resetearContadorRafagas(dataEntrenador* entrenador);
+
+void realizarIntercambio(dataEntrenador* entrenadorQueSeMueve);
+
+double obtenerEstimacion(dataEntrenador* entrenador);
+
+dataEntrenador* obtenerEntrenadorMenorEstimacion();
+
+uint32_t verificarDesalojo(dataEntrenador* entrenador);
+
+dataEntrenador* sacarEntrenadorMenorEstimacion();
+
+dataEntrenador* obtenerEntrenadorMenorEstimacion();
+
+void ejecucionPlanificadorSjfConDesalojo();
 
 #endif /* TEAM_H_ */

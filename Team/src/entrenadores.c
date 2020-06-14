@@ -30,6 +30,37 @@ void retomarEjecucion(dataEntrenador* entrenador){
 	ponerEnEjecucion(entrenador);
 }
 
+
+
+contadorRafagas* inicializarContadorRafagas(){
+	contadorRafagas* contador=malloc(sizeof(contadorRafagas));
+	contador->cantRafagas=0;
+	contador->mutex=malloc(sizeof(pthread_mutex_t));
+	pthread_mutex_init(contador->mutex,NULL);
+
+	return contador;
+}
+
+void incrementarContadorRafagas(dataEntrenador* entrenador){
+	pthread_mutex_lock(entrenador->contadorCpu->mutex);
+	(entrenador->contadorCpu->cantRafagas)++;
+	pthread_mutex_unlock(entrenador->contadorCpu->mutex);
+}
+
+uint32_t obtenerContadorRafagas(dataEntrenador* entrenador){
+	uint32_t i;
+	pthread_mutex_lock(entrenador->contadorCpu->mutex);
+	i=(entrenador->contadorCpu->cantRafagas);
+	pthread_mutex_unlock(entrenador->contadorCpu->mutex);
+	return i;
+}
+
+void resetearContadorRafagas(dataEntrenador* entrenador){
+	pthread_mutex_lock(entrenador->contadorCpu->mutex);
+	(entrenador->contadorCpu->cantRafagas)=0;
+	pthread_mutex_unlock(entrenador->contadorCpu->mutex);
+}
+
 void ponerEnEjecucion(dataEntrenador* entrenador){
 	entrenador->estado=EXEC;
 	log_info(teamLogger,"El entrenador %i ahora está en EXEC.",entrenador->id);
@@ -39,6 +70,7 @@ void poneteEnNew(dataEntrenador* entrenador){
 	entrenador->estado=NEW;
 	log_info(teamLogger,"El entrenador %i ahora está en NEW.",entrenador->id);
 }
+
 void poneteEnReady(dataEntrenador* entrenador){
 	log_info(teamLogger2,"El entrenador %i se pone en READY.", entrenador->id);
 	switch(algoritmoPlanificacion){
@@ -48,11 +80,20 @@ void poneteEnReady(dataEntrenador* entrenador){
 			pushColaMutex(colaEjecucionFifo,(void*)entrenador);
 			sem_post(entrenadorEnCola); //OK6
 			break;
+		case SJF:
+		case SJFCD:
+
+			entrenador->estado=READY;
+			addListaMutex(listaEjecucionSjf,(void*)entrenador);
+			printf("buenasss\n");
+			sem_post(entrenadorEnCola);
+			//ACA CAMBIO DE CONTEXTO
+			break;
+
 
 	}
 	log_info(teamLogger,"El entrenador %i ahora está en READY.",entrenador->id);
 }
-
 void poneteEnExit(dataEntrenador* entrenador){
 	entrenador->estado=EXIT;
 	addListaMutex(entrenadoresExit, entrenador);
@@ -178,12 +219,13 @@ bool cumplioObjetivo(dataEntrenador* entrenador){
 }
 
 void asignarPokemonAEntrenador(dataEntrenador* entrenador, pokemonPosicion* pokePosicion){
-	loggearPokemonAAtrapar(pokePosicion, teamLogger);
+
 //	if(entrenador->pokemonAAtrapar!=NULL){
 //		free(entrenador->pokemonAAtrapar);//HACER DESTRUIR POKEMONAATRAPAR
 //	}
 	entrenador->pokemonAAtrapar=pokePosicion;
 	entrenador->estado=READY;
+
 	habilitarHiloEntrenador(entrenador->id);
 }
 
@@ -244,7 +286,13 @@ void* ejecucionHiloEntrenador(void* argEntrenador){
 	return NULL;
 }
 
-
+double obtenerEstimacion(dataEntrenador* entrenador){
+	if((entrenador->rafagaCpuAnterior)==0){
+		return (double)entrenador->estimacionAnterior;
+	}else{
+		return ((double)(entrenador->rafagaCpuAnterior)+(double)(entrenador->estimacionAnterior))/2 - (double)obtenerContadorRafagas(entrenador);
+	}
+}
 
 uint32_t encontrarPosicionEntrenadorLibre(dataEntrenador* entrenador){
 	for(uint32_t i=0;i<sizeListaMutex(entrenadoresLibres);i++){
@@ -257,19 +305,47 @@ uint32_t encontrarPosicionEntrenadorLibre(dataEntrenador* entrenador){
 	 return -1;
 }
 
+
+
+void actualizarRafagaAnterior(dataEntrenador* entrenador){
+	entrenador->rafagaCpuAnterior=obtenerContadorRafagas(entrenador);
+	resetearContadorRafagas(entrenador);
+}
+
 void entrarEnEjecucion(dataEntrenador* infoEntrenador){
 
 	sem_wait((infoEntrenador->semaforo)); //OK4
-	log_info(teamLogger2,"El entrenador %i entro en ejecución.", infoEntrenador->id);
-	//infoEntrenador->estado = EXEC;
+	loggearPokemonAAtrapar(infoEntrenador, teamLogger);
+
+	//log_info(teamLogger2,"El entrenador %i entro en ejecución.", infoEntrenador->id);
+
 	ponerEnEjecucion(infoEntrenador);
 	moverEntrenadorAPosicion(infoEntrenador, ((infoEntrenador->pokemonAAtrapar)->posicion));
 	enviarCatch(infoEntrenador);
-	//infoEntrenador->estado=BLOCKED;
+
 	poneteEnBlocked(infoEntrenador);
+
+	actualizarRafagaAnterior(infoEntrenador);
 	sem_post(&semaforoEjecucionCpu);
 	log_info(teamLogger2, "El entrenador %i libera la CPU por su cuenta.", infoEntrenador->id);
 }
+
+void entrarEnEjecucionParaDeadlock(dataEntrenador* infoEntrenador){
+	//log_info(teamLogger, "El entrenador %i se mueve a la posición del entrenador %i.", infoEntrenador->id, entrenadorBloqueadoParaDeadlock->id);
+
+	sem_wait((infoEntrenador->semaforo));//espera al planificador //OK4
+
+
+	ponerEnEjecucion(infoEntrenador);
+	moverEntrenadorAPosicion(infoEntrenador, ((infoEntrenador->pokemonAAtrapar)->posicion));
+	realizarIntercambio(infoEntrenador);
+	poneteEnBlocked(infoEntrenador);
+
+	actualizarRafagaAnterior(infoEntrenador);
+	sem_post(&semaforoEjecucionCpu);
+}
+
+
 
 void seleccionarEntrenador(pokemonPosicion* pokemon){
 	uint32_t idEntrenadorMasCercano      = obtenerIdEntrenadorMasCercano(pokemon->posicion);
@@ -315,6 +391,7 @@ void simularUnidadCicloCpu(dataEntrenador* entrenador){
 	}
 	sleep(1);
 	entrenador->cantidadCiclosCpu ++;
+	incrementarContadorRafagas(entrenador);
 	team->cantidadCiclosCpuTotales++;
 }
 
