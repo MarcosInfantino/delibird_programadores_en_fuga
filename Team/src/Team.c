@@ -172,6 +172,12 @@ void inicializarSemaforos(){
 
 	semaforoObjetivoCumplido=malloc(sizeof(sem_t));
 	sem_init((semaforoObjetivoCumplido), 0,0);
+
+	pedidoCicloCpu=malloc(sizeof(sem_t));
+	sem_init((pedidoCicloCpu), 0,0);
+
+	finalizacionCicloCpu=malloc(sizeof(sem_t));
+	sem_init((finalizacionCicloCpu), 0,0);
 }
 
 void crearHilos(t_config* config){
@@ -556,6 +562,7 @@ void* suscribirseCola(void* msgSuscripcion){
 void enviarCatch(dataEntrenador* infoEntrenador){
 	//log_info(teamLogger2,"El entrenador %i inició el proceso de envío del catch.", infoEntrenador->id);
 	int32_t cliente=crearSocketCliente(ipBroker,puertoBroker);
+	log_info(teamLogger2, "El entrenador %i envia el catch para el pokemon %s.", infoEntrenador->id, infoEntrenador->pokemonAAtrapar->pokemon);
 	if(cliente!=-1){
 
 
@@ -566,6 +573,7 @@ void enviarCatch(dataEntrenador* infoEntrenador){
 		destruirCatch(msgCatch);
 		//log_info(teamLogger2,"El entrenador %i intenta hacer el send del catch.", infoEntrenador->id);
 		//destruirPaquete(paq);
+
 		if(send(cliente,paqueteSerializado, sizePaquete(paq), 0)!=-1){
 			simularCicloCpu(1,infoEntrenador);
 
@@ -598,6 +606,7 @@ void enviarCatch(dataEntrenador* infoEntrenador){
 		log_info(teamLogger, "Fallo de comunicación con el Broker al enviar un catch. Se realizará la operación por default.");
 		atraparPokemonYReplanificar (infoEntrenador);
 	}
+
 	close(cliente);
 }
 
@@ -724,12 +733,13 @@ dataTeam* inicializarTeam(t_config* config){
 		infoEntrenador->cantidadCiclosCpu = 0;
 		infoEntrenador->semaforo=malloc(sizeof(sem_t));
 		infoEntrenador->semaforoContinuarEjecucion=malloc(sizeof(sem_t));
+		infoEntrenador->semaforoPedidoCiclo=malloc(sizeof(sem_t));
+		sem_init((infoEntrenador->semaforo), 0,0);
+		sem_init((infoEntrenador->semaforoContinuarEjecucion), 0,0);
+		sem_init((infoEntrenador->semaforoPedidoCiclo), 0,0);
 		infoEntrenador->rafagaCpuAnterior=0;
 		infoEntrenador->estimacionAnterior=estimacionInicial;
 		infoEntrenador->contadorCpu=inicializarContadorRafagas();
-		sem_init((infoEntrenador->semaforo), 0,0);
-		sem_init((infoEntrenador->semaforoContinuarEjecucion), 0,0);
-
 		list_add(entrenadoresLibres->lista,(void*)infoEntrenador);
 		list_add(infoTeam->entrenadores,infoEntrenador);
 

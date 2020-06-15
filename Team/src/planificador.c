@@ -62,24 +62,43 @@ void ejecucionPlanificadorFifo(){
 }
 
 void ejecucionPlanificadorRR(){
-	sem_post(&semaforoEjecucionCpu);
+	//sem_post(&semaforoEjecucionCpu);
 		while(1){
+
 		//	if(sizeColaMutex(colaEjecucionFifo)>0){//despues borrarlo
 				sem_wait(entrenadorEnCola); //OK6
-				sem_wait(&semaforoEjecucionCpu);
+				//sem_wait(&semaforoEjecucionCpu);
+
 
 				dataEntrenador* entrenadorAEjecutar=(dataEntrenador*)popColaMutex(colaEjecucionFifo);
+
+				log_info(teamLogger2, "Elijo al entrenador %i para ejecutar.", entrenadorAEjecutar->id);
+
 				if(fueInterrumpido(entrenadorAEjecutar)){
 					retomarEjecucion(entrenadorAEjecutar);
-					sem_post((entrenadorAEjecutar->semaforoContinuarEjecucion));
+					//sem_post((entrenadorAEjecutar->semaforoContinuarEjecucion));
+
 				}else{
 					ponerEnEjecucion(entrenadorAEjecutar);
 					sem_post((entrenadorAEjecutar->semaforo)); //OK1 //OK4
+					esperarPedidoCicloCpu(entrenadorAEjecutar);
 				}
-				setearTimer(quantumRR, entrenadorAEjecutar);
+
+				pthread_t hiloTimer;
+				pthread_create(&hiloTimer, NULL, setearTimer, (void*) entrenadorAEjecutar);
+				pthread_detach(hiloTimer);
+				//setearTimer(quantumRR, entrenadorAEjecutar);
 				//ACA VA CAMBIO DE CONTEXTO
 
-				log_info(teamLogger2, "elijo entrenador para ejecutar");
+				sem_wait(&semaforoEjecucionCpu);
+				pthread_cancel(hiloTimer);//lo cierra porque aca hay dos posibilidades: o lo libera a la fuerza o el entrenador sale por su cuenta
+											//en el ultimo caso debe cerrar el hilo para que no se quede en espera
+
+//				if(){
+//					poneteEnReady(entrenadorAEjecutar);
+//				}
+
+
 			//}
 		}
 }
@@ -102,28 +121,42 @@ void ejecucionPlanificadorSjf(){
 }
 
 void ejecucionPlanificadorSjfConDesalojo(){
-	sem_post(&semaforoEjecucionCpu);
+	//sem_post(&semaforoEjecucionCpu);
 				while(1){
 
 						sem_wait(entrenadorEnCola); //OK6
-						sem_wait(&semaforoEjecucionCpu);
+						//sem_wait(&semaforoEjecucionCpu);
 
 						dataEntrenador* entrenadorAEjecutar=sacarEntrenadorMenorEstimacion();//encontrar el mas copado
+						log_info(teamLogger2, "Elijo al entrenador %i para ejecutar.", entrenadorAEjecutar->id);
 
+//						if(fueInterrumpido(entrenadorAEjecutar)){
+//							retomarEjecucion(entrenadorAEjecutar);
+//							sem_post((entrenadorAEjecutar->semaforoContinuarEjecucion));
+//						}else{
+//							ponerEnEjecucion(entrenadorAEjecutar);
+//							sem_post((entrenadorAEjecutar->semaforo)); //OK1 //OK4
+//						} //OK1 //OK4
 
 						if(fueInterrumpido(entrenadorAEjecutar)){
-							retomarEjecucion(entrenadorAEjecutar);
-							sem_post((entrenadorAEjecutar->semaforoContinuarEjecucion));
-						}else{
-							ponerEnEjecucion(entrenadorAEjecutar);
-							sem_post((entrenadorAEjecutar->semaforo)); //OK1 //OK4
-						} //OK1 //OK4
+								retomarEjecucion(entrenadorAEjecutar);
+										//sem_post((entrenadorAEjecutar->semaforoContinuarEjecucion));
 
-						verificarDesalojo(entrenadorAEjecutar);
+						}else{
+								ponerEnEjecucion(entrenadorAEjecutar);
+								sem_post((entrenadorAEjecutar->semaforo)); //OK1 //OK4
+								esperarPedidoCicloCpu(entrenadorAEjecutar);
+						}
+
+						pthread_t hiloVerificacionDesalojo;
+						pthread_create(&hiloVerificacionDesalojo,NULL,verificarDesalojo,(void*) entrenadorAEjecutar);
+						pthread_detach(hiloVerificacionDesalojo);
 
 						//ACA VA CAMBIO DE CONTEXTO
+						sem_wait(&semaforoEjecucionCpu);
+						pthread_cancel(hiloVerificacionDesalojo);
 
-						log_info(teamLogger2, "elijo entrenador para ejecutar");
+
 
 				}
 }
@@ -167,36 +200,47 @@ dataEntrenador* obtenerEntrenadorMenorEstimacion(){
 
 }
 
-uint32_t verificarDesalojo(dataEntrenador* entrenador){
+void* verificarDesalojo(void* arg){
+	dataEntrenador* entrenador=(dataEntrenador*) arg;
 	while(1){
-			sleep(1);
+			habilitarCiclo(entrenador);
+			esperarTerminoCiclo();
+			esperarPedidoCicloCpu(entrenador);
 			dataEntrenador* entrenadorMenorEstimacion=obtenerEntrenadorMenorEstimacion();
-			if(!estaEjecutando(entrenador)){
-				return 0;
-			}else if(entrenadorMenorEstimacion!=NULL && obtenerEstimacion(entrenador)> obtenerEstimacion( obtenerEntrenadorMenorEstimacion() )){
+//			if(!estaEjecutando(entrenador)){
+//				return 0;
+//			}else
+			if(entrenadorMenorEstimacion!=NULL && obtenerEstimacion(entrenador)> obtenerEstimacion( entrenadorMenorEstimacion )){
 				interrumpir(entrenador);
 				log_info(teamLogger2, "interrumpo al entrendador %i ", entrenador->id);
 				return 0;
 			}
 
 		}
+	return NULL;
 
 }
 
-uint32_t setearTimer(uint32_t quantum, dataEntrenador* entrenador){
+void* setearTimer(void* arg){
+
+	uint32_t quantum=quantumRR;
+	dataEntrenador* entrenador=(dataEntrenador*) arg;
 
 	while(quantum>0){
-		if(!estaEjecutando(entrenador)){
-			return 0;
-		}
-		sleep(1);
+		habilitarCiclo(entrenador);
+//		if(!estaEjecutando(entrenador)){
+//			return 0;
+//		}
+		esperarTerminoCiclo();
 		quantum--;
+		esperarPedidoCicloCpu(entrenador);
+
 	}
 
-	if(estaEjecutando(entrenador)){
-		interrumpir(entrenador);
-	}
-	return 0;
+	//solo sale del while si hizo un pedido de más, en caso contrario se queda esperando en el while y el hilo es terminado
+	interrumpir(entrenador);
+
+	return NULL;
 }
 
 void obtenerAlgoritmoPlanificacion(t_config* config){
@@ -221,3 +265,10 @@ void obtenerAlgoritmoPlanificacion(t_config* config){
 	}
 }
 
+void pedirCicloCpu(dataEntrenador* entrenador){
+	sem_post(entrenador->semaforoPedidoCiclo);
+}
+
+void esperarPedidoCicloCpu(dataEntrenador* entrenador){
+	sem_wait(entrenador->semaforoPedidoCiclo);
+}

@@ -165,7 +165,6 @@ void poneteEnReady(dataEntrenador* entrenador){
 
 			entrenador->estado=READY;
 			addListaMutex(listaEjecucionSjf,(void*)entrenador);
-			printf("buenasss\n");
 			sem_post(entrenadorEnCola);
 			//ACA CAMBIO DE CONTEXTO
 			break;
@@ -189,7 +188,11 @@ bool estaBloqueado(dataEntrenador* entrenador){
 }
 
 void interrumpir(dataEntrenador* entrenador){
-	entrenador->ejecucionEnPausa=true;
+	guardarContexto(entrenador);
+	poneteEnReady(entrenador);
+	sem_post(&semaforoEjecucionCpu);
+	log_info(teamLogger2, "El entrenador %i fue sacado de ejecución.", entrenador->id);
+
 }
 
 bool fueInterrumpido(dataEntrenador* entrenador){
@@ -404,6 +407,35 @@ void entrarEnEjecucionParaDeadlock(dataEntrenador* infoEntrenador){
 	sem_post(&semaforoEjecucionCpu);
 }
 
+void esperarHabilitacionPlanificador(dataEntrenador* entrenador){
+	switch(algoritmoPlanificacion){
+		case SJFCD:
+		case RR:
+			sem_wait(entrenador->semaforoContinuarEjecucion);
+			break;
+		default:
+			break;
+	}
+}
+
+void avisarFinalizacionCicloAlPlanificador(){
+	switch(algoritmoPlanificacion){
+			case SJFCD:
+			case RR:
+				sem_post(finalizacionCicloCpu);
+				break;
+			default:
+				break;
+		}
+}
+
+void habilitarCiclo(dataEntrenador* entrenador){
+	sem_post(entrenador->semaforoContinuarEjecucion);
+}
+
+void esperarTerminoCiclo(){
+	sem_wait(finalizacionCicloCpu);
+}
 void simularCicloCpu(uint32_t cantidadCiclos, dataEntrenador* entrenador){
 	for(uint32_t i=0;i<cantidadCiclos;i++){
 		simularUnidadCicloCpu(entrenador);
@@ -412,17 +444,22 @@ void simularCicloCpu(uint32_t cantidadCiclos, dataEntrenador* entrenador){
 }
 
 void simularUnidadCicloCpu(dataEntrenador* entrenador){
-	if(fueInterrumpido(entrenador)){
-		guardarContexto(entrenador);
-		sem_post(&semaforoEjecucionCpu);
-		poneteEnReady(entrenador);
-		log_info(teamLogger2, "El entrenador %i fue sacado de ejecución.", entrenador->id);
-		sem_wait((entrenador->semaforoContinuarEjecucion));
-	}
-	sleep(1);
+	pedirCicloCpu(entrenador);
+	//esperarRespuestaPlanificador
+
+	esperarHabilitacionPlanificador(entrenador);
+//	if(fueInterrumpido(entrenador)){
+//		guardarContexto(entrenador);
+//		sem_post(&semaforoEjecucionCpu);
+//		poneteEnReady(entrenador);
+//		log_info(teamLogger2, "El entrenador %i fue sacado de ejecución.", entrenador->id);
+//		sem_wait((entrenador->semaforoContinuarEjecucion));
+//	}
+	sleep(retardoCicloCpu);
 	entrenador->cantidadCiclosCpu ++;
 	incrementarContadorRafagas(entrenador);
 	team->cantidadCiclosCpuTotales++;
+	avisarFinalizacionCicloAlPlanificador();
 }
 
 t_list* obtenerPokemonesSobrantes(dataEntrenador* entrenador){//lista de pokemonSobrante

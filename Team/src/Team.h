@@ -54,6 +54,9 @@ sem_t intercambioFinalizado;
 sem_t* iniciarResolucionDeadlock;
 sem_t* semaforoObjetivoCumplido;
 
+sem_t* pedidoCicloCpu;
+sem_t* finalizacionCicloCpu;
+
 t_log* teamLogger;
 t_log* teamLogger2;
 
@@ -112,6 +115,7 @@ typedef struct {
 	sem_t* semaforo;
 	uint32_t cantidadCiclosCpu;
 	sem_t* semaforoContinuarEjecucion;
+	sem_t* semaforoPedidoCiclo;
 	bool ejecucionEnPausa;
 	uint32_t estimacionAnterior;
 	uint32_t rafagaCpuAnterior;
@@ -364,7 +368,7 @@ bool estaBloqueado(dataEntrenador* entrenador);
 
 bool estaEjecutando(dataEntrenador* entrenador);
 
-uint32_t setearTimer(uint32_t quantum, dataEntrenador* entrenador);
+void* setearTimer(void* arg);
 
 void poneteEnExit(dataEntrenador* entrenador);
 
@@ -390,12 +394,28 @@ double obtenerEstimacion(dataEntrenador* entrenador);
 
 dataEntrenador* obtenerEntrenadorMenorEstimacion();
 
-uint32_t verificarDesalojo(dataEntrenador* entrenador);
+void* verificarDesalojo(void* arg);
 
 dataEntrenador* sacarEntrenadorMenorEstimacion();
 
 dataEntrenador* obtenerEntrenadorMenorEstimacion();
 
 void ejecucionPlanificadorSjfConDesalojo();
+
+void esperarHabilitacionPlanificador(dataEntrenador* entrenador);
+
+void avisarFinalizacionCicloAlPlanificador();
+
+void habilitarCiclo(dataEntrenador* entrenador);
+
+void esperarTerminoCiclo();
+
+void actualizarRafagaAnterior(dataEntrenador* entrenador);
+
+void guardarContexto(dataEntrenador* entrenador);
+
+void pedirCicloCpu(dataEntrenador* entrenador);
+
+void esperarPedidoCicloCpu(dataEntrenador* entrenador);
 
 #endif /* TEAM_H_ */
