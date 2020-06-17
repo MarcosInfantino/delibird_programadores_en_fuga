@@ -20,12 +20,14 @@
 #include <stdlib.h>
 #include <string.h>
 #include <signal.h>
+#include <unistd.h>
 #include "broker.h"
 #include "memoria.h"
 #include "files.h"
 
 int main(void) {
 
+	signal(SIGUSR1, crearDumpDeCache);
 	//char* pathConfig = "broker.config";
 //	t_config* config = config_create("broker.config");
 //
@@ -60,7 +62,7 @@ int main(void) {
 	abrirHiloParaEnviarMensajes();
 	iniciarServidor();
 
-	signal(SIGUSR1, crearDumpDeCache);
+
 
 	return EXIT_SUCCESS;
 }
