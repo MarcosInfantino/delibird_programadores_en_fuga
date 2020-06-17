@@ -8,21 +8,27 @@ C_SRCS += \
 ../src/brokerSO.c \
 ../src/files.c \
 ../src/filesColas.c \
-../src/memoria.c 
+../src/memoria.c \
+../src/memoriaBuddy.c \
+../src/memoriaParticiones.c 
 
 OBJS += \
 ./src/Suscripciones.o \
 ./src/brokerSO.o \
 ./src/files.o \
 ./src/filesColas.o \
-./src/memoria.o 
+./src/memoria.o \
+./src/memoriaBuddy.o \
+./src/memoriaParticiones.o 
 
 C_DEPS += \
 ./src/Suscripciones.d \
 ./src/brokerSO.d \
 ./src/files.d \
 ./src/filesColas.d \
-./src/memoria.d 
+./src/memoria.d \
+./src/memoriaBuddy.d \
+./src/memoriaParticiones.d 
 
 
 # Each subdirectory must supply rules for building sources it contributes
