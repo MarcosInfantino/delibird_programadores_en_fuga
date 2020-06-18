@@ -257,6 +257,7 @@ uint32_t sizeListaMutex(listaMutex* list);
 void destruirListaMutex(listaMutex* lista,void(*element_destroyer)(void*));
 void removeListaMutex(listaMutex* list,uint32_t pos);
 void removeAndDestroyElementListaMutex(listaMutex* list,uint32_t pos,void(*element_destroyer)(void*));
+listaMutex* convertirAListaMutex(t_list* lista);
 
 colaMutex* inicializarColaMutex();
 void pushColaMutex(colaMutex* cola, void* infoEntrenador);

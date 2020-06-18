@@ -117,7 +117,7 @@ typedef struct {
 	sem_t* semaforoContinuarEjecucion;
 	sem_t* semaforoPedidoCiclo;
 	bool ejecucionEnPausa;
-	uint32_t estimacionAnterior;
+	double estimacionAnterior;
 	uint32_t rafagaCpuAnterior;
 	contadorRafagas* contadorCpu;
 } dataEntrenador;
@@ -417,5 +417,15 @@ void guardarContexto(dataEntrenador* entrenador);
 void pedirCicloCpu(dataEntrenador* entrenador);
 
 void esperarPedidoCicloCpu(dataEntrenador* entrenador);
+
+dataEntrenador* encontrarCompanieroIntercambioMutuo(dataEntrenador* entrenador, listaMutex* entrenadores);
+
+void resolverIntercambioMutuo();
+
+void resolverEsperaCircular(t_list* entrenadoresEsperacircular);
+
+void loggearEsperaCircular(t_list* listaEspera);
+
+void recalcularEstimacion(dataEntrenador* entrenador);
 
 #endif /* TEAM_H_ */

@@ -52,3 +52,10 @@ void destruirListaMutex(listaMutex* lista,void(*element_destroyer)(void*)){
 	list_clean_and_destroy_elements(lista->lista, element_destroyer);
 	free(lista);
 }
+
+listaMutex* convertirAListaMutex(t_list* lista){
+	listaMutex* list=inicializarListaMutex();
+	list_destroy(list->lista);
+	list->lista=lista;
+	return list;
+}

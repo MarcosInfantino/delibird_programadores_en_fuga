@@ -115,8 +115,9 @@
 //./gameboy TEAM APPEARED_POKEMON Gengar 7 5
 
 int main(int argc , char* argv[]){
-	char* pathConfig   = "Team2.config";
+	char* pathConfig   = argv[1];
 	t_config* config = crearYLeerConfig(pathConfig);
+
 	teamLogger = iniciar_logger(logFilePrincipal, "TEAM");
 
 	teamLogger2=log_create("teamLoggerSecundario.log","team", true, LOG_LEVEL_INFO);
