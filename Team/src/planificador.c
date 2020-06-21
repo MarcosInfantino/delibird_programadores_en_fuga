@@ -160,6 +160,7 @@ void ejecucionPlanificadorSjfConDesalojo(){
 								ponerEnEjecucion(entrenadorAEjecutar);
 								sem_post((entrenadorAEjecutar->semaforo)); //OK1 //OK4
 								esperarPedidoCicloCpu(entrenadorAEjecutar);
+								log_info(teamLogger2, "Le llego el pedido de ciclo del entrenador %i al planificador. ", entrenadorAEjecutar->id);
 						}
 
 						pthread_t hiloVerificacionDesalojo;
@@ -173,7 +174,7 @@ void ejecucionPlanificadorSjfConDesalojo(){
 
 
 				}
-}
+}//TODO: revisar el fallo que se da con el sjfcd con el team3, retardocpu=0
 
 uint32_t obtenerPosicionEntrenadorMenorEstimacion(){
 	uint32_t posMejorEntrenador=-1;
@@ -182,7 +183,7 @@ uint32_t obtenerPosicionEntrenadorMenorEstimacion(){
 	for(uint32_t i=0; i<sizeListaMutex(listaEjecucionSjf);i++){
 		dataEntrenador* entrenadorActual=(dataEntrenador*)getListaMutex(listaEjecucionSjf,i);
 		double estimacionActual=obtenerEstimacion(entrenadorActual);
-		if(estimacionActual<mejorEstimacion || i==0){
+		if( i==0 || estimacionActual<mejorEstimacion ){
 			mejorEstimacion=estimacionActual;
 			//mejorEntrenador=entrenadorActual;
 			posMejorEntrenador=i;
@@ -281,8 +282,10 @@ void obtenerAlgoritmoPlanificacion(t_config* config){
 
 void pedirCicloCpu(dataEntrenador* entrenador){
 	sem_post(entrenador->semaforoPedidoCiclo);
+	log_info(teamLogger2,"El entrenador %i pide un ciclo", entrenador->id);
 }
 
 void esperarPedidoCicloCpu(dataEntrenador* entrenador){
+	log_info(teamLogger2, "El planificador espera el pedido de cilo del entrenador %i. ", entrenador->id);
 	sem_wait(entrenador->semaforoPedidoCiclo);
 }

@@ -64,6 +64,7 @@ void realizarIntercambio(dataEntrenador* entrenadorQueSeMueve){
 	darPokemon(entrenadorQueSeMueve,entrenadorBloqueadoParaDeadlock,entrenadorQueSeMueve->pokemonAAtrapar->pokemon);
 	darPokemon(entrenadorBloqueadoParaDeadlock,entrenadorQueSeMueve,pokemonAPedir);
 
+	free(entrenadorQueSeMueve->pokemonAAtrapar->pokemon);
 	free(pokemonAPedir);
 	log_info(teamLogger, "Operación de intercambio realizada entre entrenadores %i y %i",entrenadorQueSeMueve->id, entrenadorBloqueadoParaDeadlock->id);
 

@@ -263,9 +263,9 @@ uint32_t obtenerIdEntrenadorMasCercano(posicion pos){ //el id es el index del en
 
 void asignarPokemonAEntrenador(dataEntrenador* entrenador, pokemonPosicion* pokePosicion){
 
-//	if(entrenador->pokemonAAtrapar!=NULL){
-//		free(entrenador->pokemonAAtrapar);//HACER DESTRUIR POKEMONAATRAPAR
-//	}
+	if(entrenador->pokemonAAtrapar!=NULL){
+		destruirPokemonPosicion((entrenador->pokemonAAtrapar));//HACER DESTRUIR POKEMONAATRAPAR
+	}
 	entrenador->pokemonAAtrapar=pokePosicion;
 	entrenador->estado=READY;
 

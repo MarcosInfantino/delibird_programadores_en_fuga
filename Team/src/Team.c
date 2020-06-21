@@ -269,7 +269,7 @@ void* atenderAppeared(void* paq){
 	strcpy(pokePosicion->pokemon,msg->pokemon);
 	(pokePosicion->posicion).x=msg->posX;
 	(pokePosicion->posicion).y=msg->posY;
-	//destruirAppeared(msg);
+	destruirAppeared(msg);
 	if(pokemonEsObjetivo(pokePosicion->pokemon)){
 		log_info(teamLogger2, "El pokemon es objetivo");
 		if(sizeListaMutex(entrenadoresLibres)>0){
@@ -750,6 +750,9 @@ dataTeam* inicializarTeam(t_config* config){
 
 		list_add_all(pokemonesDelTeam, infoEntrenador->pokemones);
 
+		list_destroy(pokemonesEntrenadorAux);
+		list_destroy(objetivoPersonalEntrenadorAux);
+
 	}
 
 	uint32_t z;
@@ -765,8 +768,8 @@ dataTeam* inicializarTeam(t_config* config){
 			}
 
 	infoTeam->objetivoGlobal = obtenerObjetivos(especiesObjetivo);
-
-
+	list_destroy(especiesObjetivo);
+	list_destroy(pokemonesDelTeam);
 
 	return infoTeam;
 
