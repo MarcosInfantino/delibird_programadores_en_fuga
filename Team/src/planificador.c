@@ -45,6 +45,20 @@ void* iniciarPlanificador(void* arg ){
 	return NULL;
 }
 
+void terminarPlanificador(){
+	pthread_cancel(hiloPlanificador);
+	switch(algoritmoPlanificacion){
+		case FIFO:
+		case RR:
+			destruirColaMutex(colaEjecucionFifo);
+			break;
+		case SJF:
+		case SJFCD:
+			destruirListaMutex(listaEjecucionSjf);
+			break;
+	}
+}
+
 void ejecucionPlanificadorFifo(){
 	sem_post(&semaforoEjecucionCpu);
 	while(1){

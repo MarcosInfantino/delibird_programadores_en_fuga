@@ -160,7 +160,7 @@ int main(int argc , char* argv[]){
 
 	//HACER DESTROY DE TODAS LAS LISTAS Y ESTRUCTURAS AL FINAL
 	terminar_programa(teamLogger, config);
-
+	liberarMemoria();
 	return 0;
 }
 
@@ -174,27 +174,27 @@ void inicializarSemaforos(){
 	semaforoObjetivoCumplido=malloc(sizeof(sem_t));
 	sem_init((semaforoObjetivoCumplido), 0,0);
 
-	pedidoCicloCpu=malloc(sizeof(sem_t));
-	sem_init((pedidoCicloCpu), 0,0);
+//	pedidoCicloCpu=malloc(sizeof(sem_t));
+//	sem_init((pedidoCicloCpu), 0,0);
 
 	finalizacionCicloCpu=malloc(sizeof(sem_t));
 	sem_init((finalizacionCicloCpu), 0,0);
 }
 
 void crearHilos(t_config* config){
-	pthread_t hiloEnviarGets;
+
 	crearHiloParaEnviarGets(&hiloEnviarGets);
 
-	pthread_t resolucionDeadlock;
+
 	crearHiloResolucionDeadlock(&resolucionDeadlock);
 
-	pthread_t hiloConexionInicialBroker;
+
 	crearHiloConexionColasBroker((void*)config,&hiloConexionInicialBroker);
 
-	pthread_t hiloServidorGameboy;
+
 	crearHiloServidorGameboy(&hiloServidorGameboy);
 
-	pthread_t hiloPlanificador;
+
 	crearHiloPlanificador(&hiloPlanificador);
 }
 
@@ -258,8 +258,12 @@ void* atenderAppeared(void* paq){
 	mensajeAppeared* msg=deserializarAppeared(paqueteAppeared->stream);
 	log_info(teamLogger2, "Atiendo appeared. Pokemon: %s.", msg->pokemon);
 	pokemonPosicion* pokePosicion=malloc(sizeof(pokemonPosicion));
-	if(!especieFueLocalizada(msg->pokemon))
-		addListaMutex(especiesLocalizadas,(void*)(msg->pokemon));
+	if(!especieFueLocalizada(msg->pokemon)){
+		char* poke=malloc(strlen(msg->pokemon)+1);
+		strcpy(poke, msg->pokemon);
+		addListaMutex(especiesLocalizadas,(void*)poke);
+	}
+
 
 	pokePosicion->pokemon=malloc(strlen(msg->pokemon)+1);
 	strcpy(pokePosicion->pokemon,msg->pokemon);
@@ -676,7 +680,7 @@ dataTeam* inicializarTeam(t_config* config){
 	infoTeam->entrenadores   = list_create();
 	t_list* especiesObjetivo = list_create();
 	infoTeam->objetivoGlobal=inicializarListaMutex();
-	infoTeam->objetivosCumplidos = list_create();
+	//infoTeam->objetivosCumplidos = list_create();
 	infoTeam->cantidadCiclosCpuTotales=0;
 	infoTeam->cantidadCambiosContexto=0;
 	infoTeam->cantidadDeadlocksEncontrados=0;

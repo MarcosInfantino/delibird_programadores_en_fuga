@@ -64,6 +64,7 @@ void realizarIntercambio(dataEntrenador* entrenadorQueSeMueve){
 	darPokemon(entrenadorQueSeMueve,entrenadorBloqueadoParaDeadlock,entrenadorQueSeMueve->pokemonAAtrapar->pokemon);
 	darPokemon(entrenadorBloqueadoParaDeadlock,entrenadorQueSeMueve,pokemonAPedir);
 
+	free(pokemonAPedir);
 	log_info(teamLogger, "Operación de intercambio realizada entre entrenadores %i y %i",entrenadorQueSeMueve->id, entrenadorBloqueadoParaDeadlock->id);
 
 	sem_post(&intercambioFinalizado); //OK5
@@ -137,12 +138,12 @@ void* resolverDeadlock(void* arg){
 		t_list* entrenadoresEsperaCircular;
 
 		if(entrenadorBloqueadoParaDeadlock==NULL){
-			log_info(teamLogger2,"Entre al if.");
+			//log_info(teamLogger2,"Entre al if.");
 			entrenadoresEsperaCircular=list_create();
 			entrenadoresEsperaCircular=encontrarEsperaCircular(entrenadoresDeadlock,entrenadoresEsperaCircular,NULL);
 			loggearEsperaCircular(entrenadoresEsperaCircular);
 			resolverEsperaCircular(entrenadoresEsperaCircular);
-
+			list_destroy(entrenadoresEsperaCircular);
 		}else{
 			resolverIntercambioMutuo();
 		}

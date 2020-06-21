@@ -131,10 +131,10 @@ bool cumplioObjetivo(dataEntrenador* entrenador){
 	return mismaListaPokemones(entrenador->objetivoPersonal, entrenador->pokemones);
 }
 
-void destruirPokemonPosicion(pokemonPosicion* poke){
-	free(poke->pokemon);
-	free(poke);
-}
+//void destruirPokemonPosicion(pokemonPosicion* poke){
+//	free(poke->pokemon);
+//	free(poke);
+//}
 
 //---------------------------------------ESTADO ENTRENADORES---------------------------------------------------
 bool estaEjecutando(dataEntrenador* entrenador){
@@ -536,7 +536,9 @@ void darPokemon(dataEntrenador* entrenadorDador, dataEntrenador* entrenadorRecep
 	//log_info(teamLogger2,"hola1    %i.",posPokemon);
 	list_remove(entrenadorDador->pokemones, posPokemon);//ESTO PUEDE ROMPER EN ALGUN LADO, CUANDO SACO UN ELEMENTO DE UNA LISTA DEBO HACER MEMCPY O STRCPY
 	//log_info(teamLogger2,"hola2.");
-	list_add(entrenadorReceptor->pokemones,(void*)pokemon);
+	char* pokemonAAgregar=malloc(strlen(pokemon)+1);
+	strcpy(pokemonAAgregar,pokemon);
+	list_add(entrenadorReceptor->pokemones,(void*)pokemonAAgregar);
 
 	log_info(teamLogger, "El entrenador% i le da el pokemon %s al entrenador %i", entrenadorDador->id,pokemon, entrenadorReceptor->id);
 

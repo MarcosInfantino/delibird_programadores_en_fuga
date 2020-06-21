@@ -54,11 +54,17 @@ sem_t intercambioFinalizado;
 sem_t* iniciarResolucionDeadlock;
 sem_t* semaforoObjetivoCumplido;
 
-sem_t* pedidoCicloCpu;
+//sem_t* pedidoCicloCpu;
 sem_t* finalizacionCicloCpu;
 
 t_log* teamLogger;
 t_log* teamLogger2;
+
+pthread_t hiloEnviarGets;
+pthread_t resolucionDeadlock;
+pthread_t hiloConexionInicialBroker;
+pthread_t hiloServidorGameboy;
+pthread_t hiloPlanificador;
 
 typedef enum {
 	NEW=1500,
@@ -136,7 +142,7 @@ typedef struct{
 typedef struct {
 	listaMutex* objetivoGlobal;//lista de objetivo
 	t_list* entrenadores;
-	t_list* objetivosCumplidos;
+	//t_list* objetivosCumplidos;
 	//uint32_t** mapa;
 	uint32_t cantidadCiclosCpuTotales;
 	uint32_t cantidadCambiosContexto;
@@ -175,14 +181,14 @@ typedef struct{
 //	uint32_t cola;
 //}mensajeSuscripcion;
 
-typedef struct{
-	uint32_t modulo;
-	uint32_t tipoMensaje;
-	uint32_t id;
-	uint32_t idCorrelativo;
-	uint32_t sizeStream;
-	void* stream;
-}paqueteMensaje;
+//typedef struct{
+//	uint32_t modulo;
+//	uint32_t tipoMensaje;
+//	uint32_t id;
+//	uint32_t idCorrelativo;
+//	uint32_t sizeStream;
+//	void* stream;
+//}paqueteMensaje;
 
 t_config* crearYLeerConfig(char* pathConfig);
 
@@ -344,8 +350,6 @@ void loggearObjetivoDelTeam();
 
 bool tieneUnPokemonQueMeInteresa(dataEntrenador* entrenador1, dataEntrenador* entrenador2 );
 
-void destruirPokemonPosicion(pokemonPosicion* poke);
-
 bool tieneUnPokemonQueMeInteresa(dataEntrenador* entrenador1, dataEntrenador* entrenador2 );
 
 bool hayIntercambioMutuo(dataEntrenador* entrenador1, dataEntrenador* entrenador2);
@@ -428,4 +432,19 @@ void loggearEsperaCircular(t_list* listaEspera);
 
 void recalcularEstimacion(dataEntrenador* entrenador);
 
+void destruirObjetivo(void* arg);
+
+void destruirPokemonPosicion(void* arg);
+
+void destruirContadorRafagas(void* arg);
+
+void destruirDataEntrenador(void* arg);
+
+void destruirPokemonSobrante(void* arg);
+
+void destruirDataTeam(void* arg);
+
+void liberarMemoria();
+
+void terminarPlanificador();
 #endif /* TEAM_H_ */

@@ -37,8 +37,12 @@ uint32_t sizeColaMutex(colaMutex* cola){
 	return size;
 }
 
-void destruirColaMutex(colaMutex* cola, void(*element_destroyer)(void*)){
+void destruirColaMutexYElementos(colaMutex* cola, void(*element_destroyer)(void*)){
 	free(cola->mutex);
 	queue_destroy_and_destroy_elements(cola->cola,element_destroyer);
-	free(cola);
+}
+
+void destruirColaMutex(colaMutex* cola){
+	free(cola->mutex);
+	queue_destroy(cola->cola);
 }

@@ -6,6 +6,7 @@
 C_SRCS += \
 ../src/Team.c \
 ../src/deadlock.c \
+../src/destroyers.c \
 ../src/entrenadores.c \
 ../src/planificador.c \
 ../src/servidorGameboy.c 
@@ -13,6 +14,7 @@ C_SRCS += \
 OBJS += \
 ./src/Team.o \
 ./src/deadlock.o \
+./src/destroyers.o \
 ./src/entrenadores.o \
 ./src/planificador.o \
 ./src/servidorGameboy.o 
@@ -20,6 +22,7 @@ OBJS += \
 C_DEPS += \
 ./src/Team.d \
 ./src/deadlock.d \
+./src/destroyers.d \
 ./src/entrenadores.d \
 ./src/planificador.d \
 ./src/servidorGameboy.d 
