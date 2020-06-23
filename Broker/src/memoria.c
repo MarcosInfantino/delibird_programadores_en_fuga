@@ -140,5 +140,7 @@ bool estaEnLista(uint32_t socket, ListasMemoria lista, msgMemoriaBroker* mensaje
 
 
 void crearDumpDeCache(){
-  printf("toma la señal y la trata");
+ // printf("toma la señal y la trata");
+	log_info(brokerLogger2,"toma la señal y la trata" );
+
 }

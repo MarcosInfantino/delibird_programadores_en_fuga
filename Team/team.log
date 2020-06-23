@@ -32318,3 +32318,20 @@
 [INFO] 19:01:34:930 TEAM/(5484:5484): Cantidad de ciclos de CPU realizados por el entrenador 2: 22.
 [INFO] 19:01:34:930 TEAM/(5484:5484): Cantidad de ciclos de CPU realizados por el entrenador 3: 15.
 [INFO] 19:01:34:930 TEAM/(5484:5484): Cantidad de ciclos de CPU realizados por el entrenador 4: 19.
+[INFO] 10:05:38:839 TEAM/(7091:7109): Conexión fallida con el Broker
+
+[INFO] 10:05:38:839 TEAM/(7091:7109): Reintentando conexión en 30 segundos...
+
+[INFO] 10:05:38:839 TEAM/(7091:7108): Conexión fallida con el Broker
+
+[INFO] 10:05:38:839 TEAM/(7091:7108): Reintentando conexión en 30 segundos...
+
+[INFO] 10:05:38:839 TEAM/(7091:7107): Conexión fallida con el Broker
+
+[INFO] 10:05:38:839 TEAM/(7091:7107): Reintentando conexión en 30 segundos...
+
+[INFO] 10:05:38:839 TEAM/(7091:7111): Fallo de comunicación con el Broker al enviar un get. Se realizará la operación por default.
+[INFO] 10:05:38:839 TEAM/(7091:7110): Fallo de comunicación con el Broker al enviar un get. Se realizará la operación por default.
+[INFO] 10:05:38:839 TEAM/(7091:7112): Fallo de comunicación con el Broker al enviar un get. Se realizará la operación por default.
+[INFO] 10:05:38:841 TEAM/(7091:7114): Fallo de comunicación con el Broker al enviar un get. Se realizará la operación por default.
+[INFO] 10:05:38:841 TEAM/(7091:7113): Fallo de comunicación con el Broker al enviar un get. Se realizará la operación por default.
