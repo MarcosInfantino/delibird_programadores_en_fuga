@@ -42,13 +42,16 @@ typedef struct{
 }archivoHeader;
 
 
+typedef enum{
+	LIBRE,
+	OCUPADO
+}estadoBloque;
 
 typedef struct{
 	FILE* file;
 	uint32_t bytesLeft;
-
+	uint32_t id;
 }blockHeader;
-
 
 
 typedef struct{
@@ -78,7 +81,7 @@ t_bitarray* bitmap;
 char* puntoMontaje;
 tallGrassHeader tallGrass;
 char* mmapBitmap;
-listaMutex* listaBloques;
+t_list* listaBloques;
 
 void* suscribirseCola(void* msgSuscripcion);
 void* suscribirseColasBroker(void* config);
@@ -99,5 +102,11 @@ void iniciarBitmap();
 uint32_t directorioExiste (char *path);
 uint32_t archivoExiste(char* path);
 void actualizarArchivoBitmap();
-uint32_t crearBloque();
+int32_t crearArchivoBloque(blockHeader* bloque);
+bool poseeArchivo(blockHeader* bloque);
+void inicializarListaBloques();
+bool estaLibre(uint32_t idBloque);
+void ocuparBloque(uint32_t idBloque);
+void liberarBloque(uint32_t idBloque);
+blockHeader* obtenerBloquePorId(uint32_t id);
 #endif /* GAMECARD_H_ */

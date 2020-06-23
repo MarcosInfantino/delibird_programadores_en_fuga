@@ -25,14 +25,16 @@ int main(void) {
 	printf("%i\n",puertoBrokerGC);
 	printf("%s\n",ipBrokerGC);
 	printf("%i\n",tiempoRetardoGC);
-	listaBloques = inicializarListaMutex();
+
 	//iniciarFileSystem(); //"/home/utnso/tp-2020-1c-Programadores-en-Fuga/Gamecard/TALL_GRASS"; //
 	iniciarMetadata();
 	iniciarBitmap();
+	inicializarListaBloques();
 	   /* uint32_t buenas = crearBloque();
 		if(buenas<0){
 		printf("LA concha de tu madreeee");
 		}*/
+	crearArchivoBloque(obtenerBloquePorId(1));//obtenerBloquePorId(1)
 	suscribirseColasBroker(configGamecard);
 	pthread_t hiloServidorDeEscucha;
 	crearHiloServidorGameboy(&hiloServidorDeEscucha);

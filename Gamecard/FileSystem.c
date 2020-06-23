@@ -106,55 +106,42 @@ void iniciarBitmap() {
 	FILE* archivoBitmap = fopen(pathBitmap,"w+b");
 	fseek(archivoBitmap,0, SEEK_SET);
 	for(uint32_t i=0;i<tallGrass.blocks;i++){
-		//char a= '0';
 		fputs("0",archivoBitmap);
 	}
 	fclose(archivoBitmap);
 
-	uint32_t descriptor = open(pathBitmap, O_CREAT | O_RDWR | O_TRUNC, S_IRUSR | S_IWUSR);
-	//struct stat sb;
-
-	//ftruncate(descriptor, tallGrass.blocks);
-	//fstat(descriptor,&sb);
+	uint32_t descriptor = open(pathBitmap, O_RDWR , S_IRUSR | S_IWUSR);
 	fsync(descriptor);
 	mmapBitmap = mmap(NULL, tallGrass.blocks, PROT_READ | PROT_WRITE, MAP_SHARED, descriptor, 0);
 
-	if(mmapBitmap == NULL){
-		printf("El bitmap esta vacio.\n");
-		//Chequear si es un error
-	}
+
 	close(descriptor);
-	//mmapBitmap[0]='1';
-//	 bitmap = bitarray_create_with_mode((char*) mmapBitmap, tallGrass.blocks, LSB_FIRST);
-//	//bitmap = bitarray_create_(mmapBitmap, sb.st_size);
-////	for(uint32_t i = 0; i < tallGrass.blocks; i++){
-////			 bitarray_clean_bit(bitmap, i);
-////		}
-//	bitarray_set_bit(bitmap, 0);
-//	msync(mmapBitmap,tallGrass.blocks,MS_ASYNC);
+
+	 bitmap = bitarray_create_with_mode((char*) mmapBitmap, tallGrass.blocks, LSB_FIRST);
+	//bitmap = bitarray_create_(mmapBitmap, sb.st_size);
+//	for(uint32_t i = 0; i < tallGrass.blocks; i++){
+//			 bitarray_clean_bit(bitmap, i);
+//		}
+	//bitarray_set_bit(bitmap, 0);
+	//msync(mmapBitmap,tallGrass.blocks,MS_ASYNC);
 
 }
 
 
-uint32_t crearBloque() {
-	printf("Creando Bloque\n");
-	int i;
-	for (i = 0; i < (bitmap->size * 8); i++) {
-		if (bitarray_test_bit(bitmap, i) == 0) {
-			bitarray_set_bit(bitmap, 1);
-			FILE* bloque = fopen(string_from_format("%s/Blocks/%d.bin", puntoMontaje, i), "w");
+int32_t crearArchivoBloque(blockHeader* bloque) {
 
-			if (bloque == NULL){
+
+
+		FILE* archivoBloque = fopen(string_from_format("%s/Blocks/%d.bin", puntoMontaje, bloque->id), "w");
+
+		if (archivoBloque == NULL){
 				return -1;
-			}
-			fclose(bloque);
-			actualizarArchivoBitmap();
-			printf("Bloque %i creado", i);
-			return i;
 		}
-	}
+		fclose(archivoBloque);
+		ocuparBloque(bloque->id);
 
-	return -1;
+
+	return 0;
 }
 
 void actualizarArchivoBitmap() {
@@ -164,3 +151,44 @@ void actualizarArchivoBitmap() {
 }
 
 
+void inicializarListaBloques(){
+	listaBloques=list_create();
+	for(uint32_t i=1;i<=tallGrass.blocks;i++){
+		blockHeader* bloqueActual=malloc(sizeof(blockHeader));
+		bloqueActual->file=NULL;
+		bloqueActual->bytesLeft=tallGrass.block_size;
+		bloqueActual->id=i;
+		list_add(listaBloques,(void*) bloqueActual);
+	}
+}
+
+bool poseeArchivo(blockHeader* bloque){
+	return bloque->file!=NULL;
+}
+
+bool estaLibre(uint32_t idBloque){
+	return !bitarray_test_bit(bitmap, idBloque-1);
+}
+
+void ocuparBloque(uint32_t idBloque){
+	bitarray_set_bit(bitmap,idBloque-1);
+}
+
+void liberarBloque(uint32_t idBloque){
+	bitarray_clean_bit(bitmap,idBloque-1);
+}
+
+blockHeader* obtenerBloquePorId(uint32_t id){
+	return (blockHeader*) list_get(listaBloques, id-1);
+}
+
+blockHeader* encontrarBloqueLibre(){// devuelve el bloque ya ocupado
+	for(uint32_t i=0; i<list_size(listaBloques);i++){
+		blockHeader* bloqueActual= list_get(listaBloques,i);
+		if(estaLibre(bloqueActual->id)){
+			ocuparBloque(bloqueActual->id);
+			return bloqueActual;
+		}
+	}
+	return NULL;
+}
