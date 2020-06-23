@@ -11,9 +11,45 @@
 #include <commons/log.h>
 #include <messages_lib/messages_lib.h>
 #include <stdbool.h>
+#include <commons/bitarray.h>
+#include <errno.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <sys/socket.h>
+#include <netdb.h>
+#include <netinet/in.h>
+#include <arpa/inet.h>
+#include <sys/types.h>
+#include <sys/stat.h>
+#include <fcntl.h>
+#include <sys/mman.h>
 
 #ifndef GAMECARD_H_
 #define GAMECARD_H_
+
+typedef struct{
+	uint32_t block_size;
+	uint32_t blocks;
+	char* magic_number;
+}tallGrassHeader;
+
+typedef struct{
+	char esDirectorio;
+	uint32_t tamanioArchivo;
+	t_list* bloquesUsados;
+	char estaAbierto;
+}archivoHeader;
+
+
+
+typedef struct{
+	FILE* file;
+	uint32_t bytesLeft;
+
+}blockHeader;
+
+
 
 typedef struct{
 	char* pokemon;
@@ -36,6 +72,14 @@ typedef struct{
 	bool resultado;
 } pokemonAAtrapar;
 
+uint32_t tamanioBloque;
+uint32_t cantidadBloques;
+t_bitarray* bitmap;
+char* puntoMontaje;
+tallGrassHeader tallGrass;
+char* mmapBitmap;
+listaMutex* listaBloques;
+
 void* suscribirseCola(void* msgSuscripcion);
 void* suscribirseColasBroker(void* config);
 void* iniciarServidorGameboy(void* arg);
@@ -48,7 +92,12 @@ void* atenderCatch(void* paquete);
 void enviarLocalized(pokemonADevolver* pokeADevolver);
 void enviarAppeared (pokemonEnPosicion* pokeEnPosicion);
 void enviarCaught (pokemonAAtrapar* pokeAAtrapar);
-
-
-
+char* buscarPath (char *path);
+void iniciarFileSystem();
+void iniciarMetadata();
+void iniciarBitmap();
+uint32_t directorioExiste (char *path);
+uint32_t archivoExiste(char* path);
+void actualizarArchivoBitmap();
+uint32_t crearBloque();
 #endif /* GAMECARD_H_ */

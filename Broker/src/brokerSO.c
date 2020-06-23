@@ -33,19 +33,19 @@ int main(void) {
 	//ip_broker=malloc(30);
 
 
-	t_config* configBroker=config_create("Broker.config");
-	tamMemoria        = config_get_int_value(configBroker, "TAMANO_MEMORIA");
-	particionMinima   = config_get_int_value(configBroker, "TAMANO_MINIMO_PARTICION");
-	ip_broker         = config_get_string_value(configBroker, "IP_BROKER");
-	puerto_broker     = config_get_int_value(configBroker, "PUERTO_BROKER​");
+//	t_config* configBroker=config_create("Broker.config");
+//	tamMemoria        = config_get_int_value(configBroker, "TAMANO_MEMORIA");
+//	particionMinima   = config_get_int_value(configBroker, "TAMANO_MINIMO_PARTICION");
+//	ip_broker         = config_get_string_value(configBroker, "IP_BROKER");
+//	puerto_broker     = config_get_int_value(configBroker, "PUERTO_BROKER​");
 
 
 
 //	printf("hola");
-//	puerto_broker = 5002;
-//	ip_broker     = "127.0.0.1";
-//	tamMemoria    = 2048;
-//	particionMinima = 32;
+	puerto_broker = 5002;
+	ip_broker     = "127.0.0.1";
+	tamMemoria    = 2048;
+	particionMinima = 32;
 	//printf("hola");
 	char* nombreLog   = "logBroker.log";
 	char* programName = "BROKER";

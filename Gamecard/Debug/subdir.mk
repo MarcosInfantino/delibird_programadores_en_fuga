@@ -4,12 +4,15 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS += \
+../FileSystem.c \
 ../gamecard.c 
 
 OBJS += \
+./FileSystem.o \
 ./gamecard.o 
 
 C_DEPS += \
+./FileSystem.d \
 ./gamecard.d 
 
 

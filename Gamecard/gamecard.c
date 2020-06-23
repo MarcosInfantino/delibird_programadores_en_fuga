@@ -5,46 +5,45 @@
  *      Author: juancito
  */
 
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include <commons/config.h>
-#include <sys/socket.h>
-#include <netdb.h>
-#include <netinet/in.h>
-#include <arpa/inet.h>
-#include <sys/types.h>
-#include <pthread.h>
+
+
 #include "gamecard.h"
 
-
-uint32_t puertoBroker;
-char* ipBroker;
-uint32_t tiempoReconexion;
-uint32_t tiempoRetardo;
-uint32_t puertoGamecard = 5001;
+uint32_t puertoBrokerGC;
+char* ipBrokerGC;
+uint32_t tiempoReconexionGC;
+uint32_t tiempoRetardoGC;
+uint32_t puertoGamecardGC = 5001;
 
 int main(void) {
-//	printf("Hola");
-	t_config * config = config_create("Gamecard.config");
-	puertoBroker = 5002; //config_get_int_value(config, "PUERTO_BROKER");
-	ipBroker = "127.0.0.1"; //config_get_string_value(config, "IP_BROKER");
-	tiempoRetardo = 5; //config_get_int_value(config, "TIEMPO_RETARDO_OPERACION");
-	//FILE *file;
-	//file = fopen("metadata.bin","w+b");
-	//fputs("F", file);
-	suscribirseColasBroker(config);
-	printf ("hola");
+
+	t_config * configGamecard = config_create("Gamecard.config");
+	puertoBrokerGC = config_get_int_value(configGamecard, "PUERTO_BROKER");//5002;
+	ipBrokerGC = config_get_string_value(configGamecard, "IP_BROKER");//"127.0.0.1"; //
+	tiempoRetardoGC = config_get_int_value(configGamecard, "TIEMPO_DE_RETARDO_OPERACION"); //
+	puntoMontaje = config_get_string_value(configGamecard, "PUNTO_MONTAJE_TALLGRASS");
+	printf("%i\n",puertoBrokerGC);
+	printf("%s\n",ipBrokerGC);
+	printf("%i\n",tiempoRetardoGC);
+	listaBloques = inicializarListaMutex();
+	//iniciarFileSystem(); //"/home/utnso/tp-2020-1c-Programadores-en-Fuga/Gamecard/TALL_GRASS"; //
+	iniciarMetadata();
+	iniciarBitmap();
+	   /* uint32_t buenas = crearBloque();
+		if(buenas<0){
+		printf("LA concha de tu madreeee");
+		}*/
+	suscribirseColasBroker(configGamecard);
 	pthread_t hiloServidorDeEscucha;
 	crearHiloServidorGameboy(&hiloServidorDeEscucha);
 	return EXIT_SUCCESS;
 }
 
+
 void* suscribirseColasBroker(void* config) {
 
 	t_config* confi = (t_config*) config;
-	tiempoReconexion = config_get_int_value(confi,
-			"TIEMPO_DE_REINTENTO_CONEXION");
+	tiempoReconexionGC = config_get_int_value(confi,"TIEMPO_DE_REINTENTO_CONEXION");
 
 	mensajeSuscripcion* mensajeNew = malloc(sizeof(mensajeSuscripcion));
 	mensajeSuscripcion * mensajeCatch = malloc(sizeof(mensajeSuscripcion));
@@ -57,22 +56,18 @@ void* suscribirseColasBroker(void* config) {
 	mensajeGet->cola = GET_POKEMON;
 
 	pthread_t threadSuscripcionNew;
-	pthread_create(&threadSuscripcionNew, NULL, suscribirseCola,
-			(void*) mensajeNew);
+	pthread_create(&threadSuscripcionNew, NULL, suscribirseCola,(void*) mensajeNew);
 	pthread_detach(threadSuscripcionNew);
 
 	pthread_t threadSuscripcionCatch;
-	pthread_create(&threadSuscripcionCatch, NULL, suscribirseCola,
-			(void*) mensajeCatch);
+	pthread_create(&threadSuscripcionCatch, NULL, suscribirseCola,(void*) mensajeCatch);
 	pthread_detach(threadSuscripcionCatch);
 
 	pthread_t threadSuscripcionGet;
-	pthread_create(&threadSuscripcionGet, NULL, suscribirseCola,
-			(void*) mensajeGet);
+	pthread_create(&threadSuscripcionGet, NULL, suscribirseCola,(void*) mensajeGet);
 	pthread_detach(threadSuscripcionGet);
 
-	while (1)
-		;
+	while (1);
 	free(confi);
 	return NULL;
 }
@@ -86,14 +81,14 @@ void* suscribirseCola(void* msgSuscripcion) {
 
 	struct sockaddr_in direccionServidor;
 	direccionServidor.sin_family = AF_INET;
-	direccionServidor.sin_addr.s_addr = inet_addr(ipBroker);
-	direccionServidor.sin_port = htons(puertoBroker);
+	direccionServidor.sin_addr.s_addr = inet_addr(ipBrokerGC);
+	direccionServidor.sin_port = htons(puertoBrokerGC);
 
 	uint32_t cliente = socket(AF_INET, SOCK_STREAM, 0);
 	printf("cliente: %d\n", cliente);
 	while (connect(cliente, (void*) &direccionServidor,sizeof(direccionServidor)) < 0) {
-		printf("Conexión fallida con el Broker reintentando en %i segundos...\n",tiempoReconexion);
-		sleep(tiempoReconexion);
+		printf("Conexión fallida con el Broker reintentando en %i segundos...\n",tiempoReconexionGC);
+		sleep(tiempoReconexionGC);
 	}
 
 	printf("Comienzo suscripcion a %i \n", paq->tipoMensaje);
@@ -119,8 +114,8 @@ void* suscribirseCola(void* msgSuscripcion) {
 
 			while (enviarACK(cliente, GAMECARD, paqueteRespuesta->id) < 0) {
 
-				printf("Conexión fallida con el Broker reintentando en %i segundos...\n",tiempoReconexion);
-				sleep(tiempoReconexion);
+				printf("Conexión fallida con el Broker reintentando en %i segundos...\n",tiempoReconexionGC);
+				sleep(tiempoReconexionGC);
 
 			}
 
@@ -147,7 +142,7 @@ void* suscribirseCola(void* msgSuscripcion) {
 			}
 
 			while (send(cliente, (void*) (&respuesta), sizeof(uint32_t), 0) < 0) {
-				sleep(tiempoReconexion);
+				sleep(tiempoReconexionGC);
 				//reconectarseAlBroker(cliente, (void*) &direccionServidor,sizeof(direccionServidor));
 			}
 		}
@@ -175,7 +170,7 @@ void* iniciarServidorGameboy(void* arg) {
 	struct sockaddr_in direccionServidor;
 	direccionServidor.sin_family = AF_INET;
 	direccionServidor.sin_addr.s_addr = INADDR_ANY;
-	direccionServidor.sin_port = htons(puertoGamecard);
+	direccionServidor.sin_port = htons(puertoGamecardGC);
 	uint32_t servidor = socket(AF_INET, SOCK_STREAM, 0);
 
 	if (bind(servidor, (void*) &direccionServidor, sizeof(direccionServidor))
@@ -262,7 +257,7 @@ void* atenderNew(void* paq) {
 	//Una vez encontrado (o creado) verificar si puedo abrirlo
 	//Verificar si las posiciones existen en el archivo
 	//IF SUCCESS
-	sleep(tiempoRetardo);
+	sleep(tiempoRetardoGC);
 	//CERRAR ARCHIVO
 	enviarAppeared(pokeEnPosicion);
 	return NULL;
@@ -270,7 +265,7 @@ void* atenderNew(void* paq) {
 }
 
 void enviarAppeared(pokemonEnPosicion* pokeEnPosicion) {
-	uint32_t cliente = crearSocketCliente(ipBroker, puertoBroker);
+	uint32_t cliente = crearSocketCliente(ipBrokerGC, puertoBrokerGC);
 	mensajeAppeared* msgAppeared = malloc(sizeof(mensajeAppeared));
 	msgAppeared->pokemon = pokeEnPosicion->pokemon;
 	msgAppeared->posX = (pokeEnPosicion->posicion).x;
@@ -307,14 +302,14 @@ void* atenderGet(void* paq) {
 	//pokeADevolver->posicion= DEL FILESYSTEM
 	//free(msg);
 	//IF SUCCESS
-	sleep(tiempoRetardo);
+	sleep(tiempoRetardoGC);
 	//CERRAR ARCHIVO
 	enviarLocalized(pokeADevolver);
 	return NULL;
 }
 
 void enviarLocalized(pokemonADevolver* pokeADevolver) {
-	uint32_t cliente = crearSocketCliente(ipBroker, puertoBroker);
+	uint32_t cliente = crearSocketCliente(ipBrokerGC, puertoBrokerGC);
 	mensajeLocalized* msgLocalized = malloc(sizeof(mensajeLocalized));
 	msgLocalized->pokemon = pokeADevolver->pokemon;
 	msgLocalized->cantidad = pokeADevolver->cantPosiciones;
@@ -352,7 +347,7 @@ void* atenderCatch(void* paq) {
 	//IF SUCCESS
 	pokeAAtrapar->resultado = 1;
 	//else pokeAAtrapar->resultado = 0;
-	sleep(tiempoRetardo);
+	sleep(tiempoRetardoGC);
 	//Cerramos
 
 	enviarCaught(pokeAAtrapar); //Momentaneo hasta saber bien que hacer con fileSystem
@@ -360,7 +355,7 @@ void* atenderCatch(void* paq) {
 }
 
 void enviarCaught(pokemonAAtrapar* pokeAAtrapar) {
-	uint32_t cliente = crearSocketCliente(ipBroker, puertoBroker);
+	uint32_t cliente = crearSocketCliente(ipBrokerGC, puertoBrokerGC);
 	mensajeCaught* msgCaught = malloc(sizeof(mensajeCaught));
 	msgCaught->resultadoCaught = pokeAAtrapar->resultado;
 	void* streamMsg = serializarCaught(msgCaught);
