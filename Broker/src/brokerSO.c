@@ -20,32 +20,35 @@
 #include <stdlib.h>
 #include <string.h>
 #include <signal.h>
-//#include <unistd.h>
+#include <unistd.h>
+#include <errno.h>
 #include "broker.h"
 #include "memoria.h"
 #include "files.h"
 
 int main(void) {
-	brokerLogger2=log_create("brokerLoggerSecundario.log", "Broker", true, LOG_LEVEL_INFO);
+    brokerLogger2=log_create("brokerLoggerSecundario.log", "Broker", true, LOG_LEVEL_INFO);
 	//log_info(brokerLogger2, "pid : %i", getpid());
 	signal(SIGUSR1, crearDumpDeCache);
-	//char* pathConfig = "broker.config";
 	//ip_broker=malloc(30);
 
+	char* pathConfig = "Broker.config";
+	FILE * f = fopen(pathConfig, "r");
+	perror("Error \n");
 
-//	t_config* configBroker=config_create("Broker.config");
-//	tamMemoria        = config_get_int_value(configBroker, "TAMANO_MEMORIA");
-//	particionMinima   = config_get_int_value(configBroker, "TAMANO_MINIMO_PARTICION");
-//	ip_broker         = config_get_string_value(configBroker, "IP_BROKER");
-//	puerto_broker     = config_get_int_value(configBroker, "PUERTO_BROKER​");
+	t_config* configBroker = config_create(pathConfig);
+	tamMemoria        = config_get_int_value(configBroker, "TAMANO_MEMORIA");
+	particionMinima   = config_get_int_value(configBroker, "TAMANO_MINIMO_PARTICION");
+	ip_broker         = config_get_string_value(configBroker, "IP_BROKER");
+	puerto_broker     = config_get_int_value(configBroker, "PUERTO_BROKER");
 
 
 
 //	printf("hola");
-	puerto_broker = 5002;
-	ip_broker     = "127.0.0.1";
-	tamMemoria    = 2048;
-	particionMinima = 32;
+//	puerto_broker = 5002;
+//	ip_broker     = "127.0.0.1";
+//	tamMemoria    = 2048;
+//	particionMinima = 32;
 	//printf("hola");
 	char* nombreLog   = "logBroker.log";
 	char* programName = "BROKER";
