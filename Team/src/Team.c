@@ -117,7 +117,7 @@
 int main(int argc , char* argv[]){
 	char* pathConfig   = argv[1];
 	t_config* config = crearYLeerConfig(pathConfig);
-
+	esperaPedido=0;
 	teamLogger = iniciar_logger(logFilePrincipal, "TEAM");
 
 	teamLogger2=log_create("teamLoggerSecundario.log","team", true, LOG_LEVEL_INFO);
@@ -146,7 +146,7 @@ int main(int argc , char* argv[]){
 
 	//mutexEntrenadores=inicializarMutexEntrenadores();
 
-	uint32_t cantEntrenadores = list_size(team->entrenadores);
+	cantEntrenadores = list_size(team->entrenadores);
 	loggearObjetivoDelTeam();
 	arrayIdHilosEntrenadores  = malloc(cantEntrenadores*sizeof(pthread_t));
 	inicializarEntrenadores(team->entrenadores);
@@ -159,8 +159,9 @@ int main(int argc , char* argv[]){
 
 
 	//HACER DESTROY DE TODAS LAS LISTAS Y ESTRUCTURAS AL FINAL
-	terminar_programa(teamLogger, config);
+
 	liberarMemoria();
+	terminar_programa(teamLogger, config);
 	return 0;
 }
 
@@ -452,15 +453,15 @@ void* suscribirseColasBroker(void* conf){
 	mensajeSuscripcion * mensajeSuscripcionCaught=llenarSuscripcion(CAUGHT_POKEMON);
 	mensajeSuscripcion* mensajeSuscripcionLocalized=llenarSuscripcion(LOCALIZED_POKEMON);
 
-	pthread_t threadSuscripcionAppeared;
+	//pthread_t threadSuscripcionAppeared;
 	pthread_create(&threadSuscripcionAppeared, NULL, suscribirseCola, (void*)(mensajeSuscripcionAppeared));
 	pthread_detach(threadSuscripcionAppeared);
 
-	pthread_t threadSuscripcionLocalized;
+	//pthread_t threadSuscripcionLocalized;
 	pthread_create(&threadSuscripcionLocalized, NULL, suscribirseCola,(void*) (mensajeSuscripcionLocalized));
 	pthread_detach(threadSuscripcionLocalized);
 
-	pthread_t threadSuscripcionCaught;
+	//pthread_t threadSuscripcionCaught;
 	pthread_create(&threadSuscripcionCaught, NULL, suscribirseCola, (void*)(mensajeSuscripcionCaught));
 	pthread_detach(threadSuscripcionCaught);
 
@@ -753,6 +754,10 @@ dataTeam* inicializarTeam(t_config* config){
 		list_destroy(pokemonesEntrenadorAux);
 		list_destroy(objetivoPersonalEntrenadorAux);
 
+		//-----------------------------------
+		free(pos);
+		free(pokemones);
+		free(objetivos);
 	}
 
 	uint32_t z;
@@ -771,6 +776,14 @@ dataTeam* inicializarTeam(t_config* config){
 	list_destroy(especiesObjetivo);
 	list_destroy(pokemonesDelTeam);
 
+	list_destroy(posicionesEntrenadores);
+	list_destroy(pokemonesEntrenadores);
+	list_destroy(objetivosEntrenadores);
+
+	//---------------------------------------------------
+	free(arrayPosicionesEntrenadores);
+	free(arrayPokemonesEntrenadores);
+	free(arrayObjetivosEntrenadores);
 	return infoTeam;
 
 }
@@ -878,6 +891,7 @@ void registrarPokemonAtrapado(char* pokemon){
 		(objetivoEncontrado->cantidad)--;
 		if(objetivoEncontrado->cantidad==0){
 			removeListaMutex(team->objetivoGlobal,pos);
+			destruirObjetivo((void*)objetivoEncontrado);
 		}
 		log_info(teamLogger2,"Se registró el pokemon atrapado.");
 
@@ -915,7 +929,14 @@ void loggearPokemonAAtrapar(dataEntrenador* entrenador, t_log* teamLogger){
 
 
 
-
+void resetearSemaforo(sem_t* semaforo){
+	int32_t valor;
+	sem_getvalue(semaforo,&valor);
+	while(valor<0){
+		sem_post(semaforo);
+		valor++;
+	}
+}
 
 
 

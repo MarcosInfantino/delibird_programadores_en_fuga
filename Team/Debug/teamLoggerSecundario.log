@@ -80,3 +80,378 @@
 [INFO] 20:09:19:716 team/(8671:8845): --------------------------------------------------------
 [INFO] 20:09:19:716 team/(8671:8845): Objetivo en lista: Charmander. Objetivo recibido: Pokemon.
 [INFO] 20:09:19:721 team/(8671:8845): El pokemon no es objetivo
+[INFO] 17:39:11:231 team/(16582:16582): --------------------------------------------------------------------------
+[INFO] 17:39:11:246 team/(16582:16582): NUEVA EJECUCION
+[INFO] 17:39:11:246 team/(16582:16582): --------------------------------------------------------------------------
+[INFO] 17:39:11:246 team/(16582:16582): Algortimo de planificación: FIFO.
+[INFO] 17:39:11:247 team/(16582:16582): --------------------------------------------------------------
+[INFO] 17:39:11:247 team/(16582:16582): OBJETIVO DEL TEAM
+[INFO] 17:39:11:247 team/(16582:16582): Objetivo 0. Pokemon: Vaporeon. Cantidad: 1.
+[INFO] 17:39:11:247 team/(16582:16582): Objetivo 1. Pokemon: Jolteon. Cantidad: 1.
+[INFO] 17:39:11:247 team/(16582:16582): Objetivo 2. Pokemon: Flareon. Cantidad: 1.
+[INFO] 17:39:11:247 team/(16582:16582): Objetivo 3. Pokemon: Umbreon. Cantidad: 1.
+[INFO] 17:39:11:247 team/(16582:16582): Objetivo 4. Pokemon: Espeon. Cantidad: 1.
+[INFO] 17:39:11:247 team/(16582:16582): --------------------------------------------------
+[INFO] 17:39:11:251 team/(16582:16593): Se inicia el planificador
+[INFO] 17:39:30:383 team/(16622:16622): --------------------------------------------------------------------------
+[INFO] 17:39:30:383 team/(16622:16622): NUEVA EJECUCION
+[INFO] 17:39:30:383 team/(16622:16622): --------------------------------------------------------------------------
+[INFO] 17:39:30:383 team/(16622:16622): Algortimo de planificación: FIFO.
+[INFO] 17:39:30:383 team/(16622:16622): --------------------------------------------------------------
+[INFO] 17:39:30:383 team/(16622:16622): OBJETIVO DEL TEAM
+[INFO] 17:39:30:383 team/(16622:16622): Objetivo 0. Pokemon: Vaporeon. Cantidad: 1.
+[INFO] 17:39:30:383 team/(16622:16622): Objetivo 1. Pokemon: Jolteon. Cantidad: 1.
+[INFO] 17:39:30:383 team/(16622:16622): Objetivo 2. Pokemon: Flareon. Cantidad: 1.
+[INFO] 17:39:30:383 team/(16622:16622): Objetivo 3. Pokemon: Umbreon. Cantidad: 1.
+[INFO] 17:39:30:383 team/(16622:16622): Objetivo 4. Pokemon: Espeon. Cantidad: 1.
+[INFO] 17:39:30:383 team/(16622:16622): --------------------------------------------------
+[INFO] 17:39:30:387 team/(16622:16633): Se inicia el planificador
+[INFO] 17:40:30:91 team/(16737:16737): --------------------------------------------------------------------------
+[INFO] 17:40:30:91 team/(16737:16737): NUEVA EJECUCION
+[INFO] 17:40:30:91 team/(16737:16737): --------------------------------------------------------------------------
+[INFO] 17:40:30:91 team/(16737:16737): Algortimo de planificación: FIFO.
+[INFO] 17:40:30:91 team/(16737:16737): --------------------------------------------------------------
+[INFO] 17:40:30:91 team/(16737:16737): OBJETIVO DEL TEAM
+[INFO] 17:40:30:91 team/(16737:16737): Objetivo 0. Pokemon: Vaporeon. Cantidad: 1.
+[INFO] 17:40:30:91 team/(16737:16737): Objetivo 1. Pokemon: Jolteon. Cantidad: 1.
+[INFO] 17:40:30:91 team/(16737:16737): Objetivo 2. Pokemon: Flareon. Cantidad: 1.
+[INFO] 17:40:30:91 team/(16737:16737): Objetivo 3. Pokemon: Umbreon. Cantidad: 1.
+[INFO] 17:40:30:91 team/(16737:16737): Objetivo 4. Pokemon: Espeon. Cantidad: 1.
+[INFO] 17:40:30:91 team/(16737:16737): --------------------------------------------------
+[INFO] 17:40:30:91 team/(16737:16748): Se inicia el planificador
+[INFO] 17:40:37:828 team/(16737:16774): Atiendo appeared. Pokemon: Jolteon.
+[INFO] 17:40:37:828 team/(16737:16774): El pokemon es objetivo
+[INFO] 17:40:37:828 team/(16737:16774): Hay entrenadores disponibles para atrapar a Jolteon.
+[INFO] 17:40:37:828 team/(16737:16739): El entrenador 0 se pone en READY.
+[INFO] 17:40:37:828 team/(16737:16748): elijo entrenador para ejecutar
+[INFO] 17:40:37:828 team/(16737:16739): El entrenador 0, que estaba en (2,3), comenzará a moverse a (2,2).
+[INFO] 17:40:37:828 team/(16737:16774): Se selecciono el entrenador 0 para atrapar al pokemon Jolteon
+[INFO] 17:40:37:835 team/(16737:16778): Atiendo appeared. Pokemon: Flareon.
+[INFO] 17:40:37:835 team/(16737:16778): El pokemon es objetivo
+[INFO] 17:40:37:835 team/(16737:16778): Hay entrenadores disponibles para atrapar a Flareon.
+[INFO] 17:40:37:835 team/(16737:16778): Se selecciono el entrenador 1 para atrapar al pokemon Flareon
+[INFO] 17:40:37:835 team/(16737:16740): El entrenador 1 se pone en READY.
+[INFO] 17:40:37:837 team/(16737:16781): Atiendo appeared. Pokemon: Umbreon.
+[INFO] 17:40:37:837 team/(16737:16781): El pokemon es objetivo
+[INFO] 17:40:37:837 team/(16737:16781): Hay entrenadores disponibles para atrapar a Umbreon.
+[INFO] 17:40:37:837 team/(16737:16781): Se selecciono el entrenador 2 para atrapar al pokemon Umbreon
+[INFO] 17:40:37:837 team/(16737:16741): El entrenador 2 se pone en READY.
+[INFO] 17:40:37:838 team/(16737:16784): Atiendo appeared. Pokemon: Espeon.
+[INFO] 17:40:37:838 team/(16737:16784): El pokemon es objetivo
+[INFO] 17:40:37:838 team/(16737:16784): Hay entrenadores disponibles para atrapar a Espeon.
+[INFO] 17:40:37:838 team/(16737:16742): El entrenador 3 se pone en READY.
+[INFO] 17:40:37:838 team/(16737:16784): Se selecciono el entrenador 3 para atrapar al pokemon Espeon
+[INFO] 17:40:37:839 team/(16737:16787): Atiendo appeared. Pokemon: Vaporeon.
+[INFO] 17:40:37:839 team/(16737:16787): El pokemon es objetivo
+[INFO] 17:40:37:839 team/(16737:16787): Hay entrenadores disponibles para atrapar a Vaporeon.
+[INFO] 17:40:37:839 team/(16737:16787): Se selecciono el entrenador 4 para atrapar al pokemon Vaporeon
+[INFO] 17:40:37:839 team/(16737:16743): El entrenador 4 se pone en READY.
+[INFO] 17:40:38:829 team/(16737:16739): El entrenador 0 se mueve a : (2,2).
+[INFO] 17:40:38:829 team/(16737:16739): El entrenador 0 se movió a la posición (2, 2).
+[INFO] 17:40:38:829 team/(16737:16739): El entrenador 0 envia el catch para el pokemon Jolteon.
+[INFO] 17:40:39:829 team/(16737:16739): Se registró el pokemon atrapado.
+[INFO] 17:40:39:830 team/(16737:16739): El entrenador 0 forma parte de un interbloqueo.
+[INFO] 17:40:39:830 team/(16737:16739): Inicio del algoritmo de detección de deadlock.
+[INFO] 17:40:39:830 team/(16737:16739): Entrenadores en deadlock 1.
+[INFO] 17:40:39:830 team/(16737:16739): Entrenadores exit 0.
+[INFO] 17:40:39:830 team/(16737:16739): Entrenadores enntrenadores totales 5.
+[INFO] 17:40:39:830 team/(16737:16739): No se encontró deadlock.
+[INFO] 17:40:39:830 team/(16737:16739): El entrenador 0 libera la CPU por su cuenta.
+[INFO] 17:40:39:830 team/(16737:16748): elijo entrenador para ejecutar
+[INFO] 17:40:39:830 team/(16737:16740): El entrenador 1, que estaba en (6,5), comenzará a moverse a (4,6).
+[INFO] 17:40:40:830 team/(16737:16740): El entrenador 1 se mueve a : (5,5).
+[INFO] 17:40:41:842 team/(16737:16740): El entrenador 1 se mueve a : (4,5).
+[INFO] 17:40:42:856 team/(16737:16740): El entrenador 1 se mueve a : (4,6).
+[INFO] 17:40:42:856 team/(16737:16740): El entrenador 1 se movió a la posición (4, 6).
+[INFO] 17:40:42:856 team/(16737:16740): El entrenador 1 envia el catch para el pokemon Flareon.
+[INFO] 17:40:43:881 team/(16737:16740): Se registró el pokemon atrapado.
+[INFO] 17:40:43:881 team/(16737:16740): El entrenador 1 forma parte de un interbloqueo.
+[INFO] 17:40:43:881 team/(16737:16740): Inicio del algoritmo de detección de deadlock.
+[INFO] 17:40:43:881 team/(16737:16740): Entrenadores en deadlock 2.
+[INFO] 17:40:43:881 team/(16737:16740): Entrenadores exit 0.
+[INFO] 17:40:43:881 team/(16737:16740): Entrenadores enntrenadores totales 5.
+[INFO] 17:40:43:881 team/(16737:16740): No se encontró deadlock.
+[INFO] 17:40:43:881 team/(16737:16740): El entrenador 1 libera la CPU por su cuenta.
+[INFO] 17:40:43:881 team/(16737:16748): elijo entrenador para ejecutar
+[INFO] 17:40:43:881 team/(16737:16741): El entrenador 2, que estaba en (9,9), comenzará a moverse a (10,6).
+[INFO] 17:40:44:883 team/(16737:16741): El entrenador 2 se mueve a : (10,9).
+[INFO] 17:40:45:883 team/(16737:16741): El entrenador 2 se mueve a : (10,8).
+[INFO] 17:40:46:884 team/(16737:16741): El entrenador 2 se mueve a : (10,7).
+[INFO] 17:40:47:888 team/(16737:16741): El entrenador 2 se mueve a : (10,6).
+[INFO] 17:40:47:888 team/(16737:16741): El entrenador 2 se movió a la posición (10, 6).
+[INFO] 17:40:47:889 team/(16737:16741): El entrenador 2 envia el catch para el pokemon Umbreon.
+[INFO] 17:40:48:892 team/(16737:16741): Se registró el pokemon atrapado.
+[INFO] 17:40:48:892 team/(16737:16741): El entrenador 2 forma parte de un interbloqueo.
+[INFO] 17:40:48:892 team/(16737:16741): Inicio del algoritmo de detección de deadlock.
+[INFO] 17:40:48:892 team/(16737:16741): Entrenadores en deadlock 3.
+[INFO] 17:40:48:893 team/(16737:16741): Entrenadores exit 0.
+[INFO] 17:40:48:893 team/(16737:16741): Entrenadores enntrenadores totales 5.
+[INFO] 17:40:48:893 team/(16737:16741): No se encontró deadlock.
+[INFO] 17:40:48:893 team/(16737:16741): El entrenador 2 libera la CPU por su cuenta.
+[INFO] 17:40:48:893 team/(16737:16742): El entrenador 3, que estaba en (9,2), comenzará a moverse a (7,1).
+[INFO] 17:40:48:893 team/(16737:16748): elijo entrenador para ejecutar
+[INFO] 17:40:49:902 team/(16737:16742): El entrenador 3 se mueve a : (8,2).
+[INFO] 17:40:50:921 team/(16737:16742): El entrenador 3 se mueve a : (7,2).
+[INFO] 17:40:51:985 team/(16737:16742): El entrenador 3 se mueve a : (7,1).
+[INFO] 17:40:51:985 team/(16737:16742): El entrenador 3 se movió a la posición (7, 1).
+[INFO] 17:40:51:986 team/(16737:16742): El entrenador 3 envia el catch para el pokemon Espeon.
+[INFO] 17:40:52:987 team/(16737:16742): Se registró el pokemon atrapado.
+[INFO] 17:40:52:987 team/(16737:16742): El entrenador 3 forma parte de un interbloqueo.
+[INFO] 17:40:52:987 team/(16737:16742): Inicio del algoritmo de detección de deadlock.
+[INFO] 17:40:52:987 team/(16737:16742): Entrenadores en deadlock 4.
+[INFO] 17:40:52:987 team/(16737:16742): Entrenadores exit 0.
+[INFO] 17:40:52:987 team/(16737:16742): Entrenadores enntrenadores totales 5.
+[INFO] 17:40:52:987 team/(16737:16742): No se encontró deadlock.
+[INFO] 17:40:52:987 team/(16737:16742): El entrenador 3 libera la CPU por su cuenta.
+[INFO] 17:40:52:987 team/(16737:16748): elijo entrenador para ejecutar
+[INFO] 17:40:52:988 team/(16737:16743): El entrenador 4, que estaba en (2,9), comenzará a moverse a (4,10).
+[INFO] 17:40:54:5 team/(16737:16743): El entrenador 4 se mueve a : (3,9).
+[INFO] 17:40:55:7 team/(16737:16743): El entrenador 4 se mueve a : (4,9).
+[INFO] 17:40:56:30 team/(16737:16743): El entrenador 4 se mueve a : (4,10).
+[INFO] 17:40:56:30 team/(16737:16743): El entrenador 4 se movió a la posición (4, 10).
+[INFO] 17:40:56:31 team/(16737:16743): El entrenador 4 envia el catch para el pokemon Vaporeon.
+[INFO] 17:40:57:60 team/(16737:16743): Se registró el pokemon atrapado.
+[INFO] 17:40:57:60 team/(16737:16743): El entrenador 4 forma parte de un interbloqueo.
+[INFO] 17:40:57:60 team/(16737:16743): Inicio del algoritmo de detección de deadlock.
+[INFO] 17:40:57:60 team/(16737:16743): Entrenadores en deadlock 5.
+[INFO] 17:40:57:60 team/(16737:16743): Entrenadores exit 0.
+[INFO] 17:40:57:60 team/(16737:16743): Entrenadores enntrenadores totales 5.
+[INFO] 17:40:57:60 team/(16737:16743): El entrenador 4 libera la CPU por su cuenta.
+[INFO] 17:40:57:60 team/(16737:16745): Encontre una espera circular. Entrenadores involucrados: 
+[INFO] 17:40:57:61 team/(16737:16745): Entrenador 0.
+[INFO] 17:40:57:61 team/(16737:16745): Entrenador 4.
+[INFO] 17:40:57:61 team/(16737:16745): Entrenador 3.
+[INFO] 17:40:57:61 team/(16737:16745): Entrenador 2.
+[INFO] 17:40:57:61 team/(16737:16745): Entrenador 1.
+[INFO] 17:40:57:61 team/(16737:16745): entrenador bloqueado para deadlock : 0
+[INFO] 17:40:57:61 team/(16737:16745): hola.
+[INFO] 17:40:57:61 team/(16737:16745): Entrenador bloqueado: 0. Entrenador a mover: 4.
+[INFO] 17:40:57:61 team/(16737:16745): El entrenador 0, esta en DEADLOCK con el entrenador 4.
+[INFO] 17:40:57:61 team/(16737:16743): El entrenador 4 se pone en READY.
+[INFO] 17:40:57:61 team/(16737:16743): El entrenador 4 entra en ejecucion para deadlock.
+[INFO] 17:40:57:61 team/(16737:16748): elijo entrenador para ejecutar
+[INFO] 17:40:57:61 team/(16737:16743): El entrenador 4, que estaba en (4,10), comenzará a moverse a (2,2).
+[INFO] 17:40:58:62 team/(16737:16743): El entrenador 4 se mueve a : (3,10).
+[INFO] 17:40:59:63 team/(16737:16743): El entrenador 4 se mueve a : (2,10).
+[INFO] 17:41:00:63 team/(16737:16743): El entrenador 4 se mueve a : (2,9).
+[INFO] 17:41:01:63 team/(16737:16743): El entrenador 4 se mueve a : (2,8).
+[INFO] 17:41:02:82 team/(16737:16743): El entrenador 4 se mueve a : (2,7).
+[INFO] 17:41:03:82 team/(16737:16743): El entrenador 4 se mueve a : (2,6).
+[INFO] 17:41:04:106 team/(16737:16743): El entrenador 4 se mueve a : (2,5).
+[INFO] 17:41:05:107 team/(16737:16743): El entrenador 4 se mueve a : (2,4).
+[INFO] 17:41:06:110 team/(16737:16743): El entrenador 4 se mueve a : (2,3).
+[INFO] 17:41:07:111 team/(16737:16743): El entrenador 4 se mueve a : (2,2).
+[INFO] 17:41:07:111 team/(16737:16743): El entrenador 4 se movió a la posición (2, 2).
+[INFO] 17:41:12:205 team/(16737:16743): El entrenador 4 comienza con el intercambio.
+[INFO] 17:41:12:206 team/(16737:16745): entrenador bloqueado para deadlock : 4
+[INFO] 17:41:12:206 team/(16737:16745): hola.
+[INFO] 17:41:12:206 team/(16737:16745): Entrenador bloqueado: 4. Entrenador a mover: 3.
+[INFO] 17:41:12:206 team/(16737:16745): El entrenador 4, esta en DEADLOCK con el entrenador 3.
+[INFO] 17:41:12:206 team/(16737:16742): El entrenador 3 se pone en READY.
+[INFO] 17:41:12:206 team/(16737:16742): El entrenador 3 entra en ejecucion para deadlock.
+[INFO] 17:41:12:206 team/(16737:16748): elijo entrenador para ejecutar
+[INFO] 17:41:12:206 team/(16737:16742): El entrenador 3, que estaba en (7,1), comenzará a moverse a (2,2).
+[INFO] 17:41:13:207 team/(16737:16742): El entrenador 3 se mueve a : (6,1).
+[INFO] 17:41:14:219 team/(16737:16742): El entrenador 3 se mueve a : (5,1).
+[INFO] 17:41:15:220 team/(16737:16742): El entrenador 3 se mueve a : (4,1).
+[INFO] 17:41:16:240 team/(16737:16742): El entrenador 3 se mueve a : (3,1).
+[INFO] 17:41:17:245 team/(16737:16742): El entrenador 3 se mueve a : (2,1).
+[INFO] 17:41:18:246 team/(16737:16742): El entrenador 3 se mueve a : (2,2).
+[INFO] 17:41:18:246 team/(16737:16742): El entrenador 3 se movió a la posición (2, 2).
+[INFO] 17:41:23:343 team/(16737:16742): El entrenador 3 comienza con el intercambio.
+[INFO] 17:41:23:343 team/(16737:16745): entrenador bloqueado para deadlock : 3
+[INFO] 17:41:23:343 team/(16737:16745): hola.
+[INFO] 17:41:23:343 team/(16737:16745): Entrenador bloqueado: 3. Entrenador a mover: 2.
+[INFO] 17:41:23:343 team/(16737:16745): El entrenador 3, esta en DEADLOCK con el entrenador 2.
+[INFO] 17:41:23:343 team/(16737:16741): El entrenador 2 se pone en READY.
+[INFO] 17:41:23:343 team/(16737:16741): El entrenador 2 entra en ejecucion para deadlock.
+[INFO] 17:41:23:343 team/(16737:16748): elijo entrenador para ejecutar
+[INFO] 17:41:23:343 team/(16737:16741): El entrenador 2, que estaba en (10,6), comenzará a moverse a (2,2).
+[INFO] 17:41:24:358 team/(16737:16741): El entrenador 2 se mueve a : (9,6).
+[INFO] 17:41:25:359 team/(16737:16741): El entrenador 2 se mueve a : (8,6).
+[INFO] 17:41:26:404 team/(16737:16741): El entrenador 2 se mueve a : (7,6).
+[INFO] 17:41:27:404 team/(16737:16741): El entrenador 2 se mueve a : (6,6).
+[INFO] 17:41:28:416 team/(16737:16741): El entrenador 2 se mueve a : (5,6).
+[INFO] 17:41:29:417 team/(16737:16741): El entrenador 2 se mueve a : (4,6).
+[INFO] 17:41:30:458 team/(16737:16741): El entrenador 2 se mueve a : (3,6).
+[INFO] 17:41:31:461 team/(16737:16741): El entrenador 2 se mueve a : (2,6).
+[INFO] 17:41:32:462 team/(16737:16741): El entrenador 2 se mueve a : (2,5).
+[INFO] 17:41:33:548 team/(16737:16741): El entrenador 2 se mueve a : (2,4).
+[INFO] 17:41:34:576 team/(16737:16741): El entrenador 2 se mueve a : (2,3).
+[INFO] 17:41:35:625 team/(16737:16741): El entrenador 2 se mueve a : (2,2).
+[INFO] 17:41:35:625 team/(16737:16741): El entrenador 2 se movió a la posición (2, 2).
+[INFO] 17:41:40:699 team/(16737:16741): El entrenador 2 comienza con el intercambio.
+[INFO] 17:41:40:700 team/(16737:16745): entrenador bloqueado para deadlock : 2
+[INFO] 17:41:40:700 team/(16737:16745): hola.
+[INFO] 17:41:40:700 team/(16737:16745): Entrenador bloqueado: 2. Entrenador a mover: 1.
+[INFO] 17:41:40:700 team/(16737:16745): El entrenador 2, esta en DEADLOCK con el entrenador 1.
+[INFO] 17:41:40:700 team/(16737:16740): El entrenador 1 se pone en READY.
+[INFO] 17:41:40:700 team/(16737:16740): El entrenador 1 entra en ejecucion para deadlock.
+[INFO] 17:41:40:700 team/(16737:16748): elijo entrenador para ejecutar
+[INFO] 17:41:40:700 team/(16737:16740): El entrenador 1, que estaba en (4,6), comenzará a moverse a (2,2).
+[INFO] 17:41:41:742 team/(16737:16740): El entrenador 1 se mueve a : (3,6).
+[INFO] 17:41:42:785 team/(16737:16740): El entrenador 1 se mueve a : (2,6).
+[INFO] 17:41:43:896 team/(16737:16740): El entrenador 1 se mueve a : (2,5).
+[INFO] 17:41:44:898 team/(16737:16740): El entrenador 1 se mueve a : (2,4).
+[INFO] 17:41:45:924 team/(16737:16740): El entrenador 1 se mueve a : (2,3).
+[INFO] 17:41:46:924 team/(16737:16740): El entrenador 1 se mueve a : (2,2).
+[INFO] 17:41:46:925 team/(16737:16740): El entrenador 1 se movió a la posición (2, 2).
+[INFO] 17:41:51:959 team/(16737:16740): El entrenador 1 comienza con el intercambio.
+[INFO] 17:41:51:960 team/(16737:16745): hice todos los intercambios.
+[INFO] 17:41:51:960 team/(16737:16745): El entrenador 0 salio del deadlock.
+[INFO] 17:41:51:960 team/(16737:16745): El entrenador 1 salio del deadlock.
+[INFO] 17:41:51:960 team/(16737:16745): El entrenador 2 salio del deadlock.
+[INFO] 17:41:51:960 team/(16737:16745): El entrenador 3 salio del deadlock.
+[INFO] 17:41:51:960 team/(16737:16745): El entrenador 4 salio del deadlock.
+[INFO] 17:42:59:294 team/(16949:16949): --------------------------------------------------------------------------
+[INFO] 17:42:59:294 team/(16949:16949): NUEVA EJECUCION
+[INFO] 17:42:59:294 team/(16949:16949): --------------------------------------------------------------------------
+[INFO] 17:42:59:294 team/(16949:16949): Algortimo de planificación: FIFO.
+[INFO] 17:42:59:294 team/(16949:16949): --------------------------------------------------------------
+[INFO] 17:42:59:294 team/(16949:16949): OBJETIVO DEL TEAM
+[INFO] 17:42:59:294 team/(16949:16949): Objetivo 0. Pokemon: Vaporeon. Cantidad: 1.
+[INFO] 17:42:59:294 team/(16949:16949): Objetivo 1. Pokemon: Jolteon. Cantidad: 1.
+[INFO] 17:42:59:294 team/(16949:16949): Objetivo 2. Pokemon: Flareon. Cantidad: 1.
+[INFO] 17:42:59:294 team/(16949:16949): Objetivo 3. Pokemon: Umbreon. Cantidad: 1.
+[INFO] 17:42:59:294 team/(16949:16949): Objetivo 4. Pokemon: Espeon. Cantidad: 1.
+[INFO] 17:42:59:295 team/(16949:16949): --------------------------------------------------
+[INFO] 17:42:59:299 team/(16949:16961): Se inicia el planificador
+[INFO] 17:43:16:486 team/(16949:16991): Atiendo appeared. Pokemon: Jolteon.
+[INFO] 17:43:16:486 team/(16949:16991): El pokemon es objetivo
+[INFO] 17:43:16:486 team/(16949:16991): Hay entrenadores disponibles para atrapar a Jolteon.
+[INFO] 17:43:16:487 team/(16949:16991): Se selecciono el entrenador 0 para atrapar al pokemon Jolteon
+[INFO] 17:43:16:487 team/(16949:16952): El entrenador 0 se pone en READY.
+[INFO] 17:43:16:487 team/(16949:16961): elijo entrenador para ejecutar
+[INFO] 17:43:16:487 team/(16949:16952): El entrenador 0, que estaba en (2,3), comenzará a moverse a (2,2).
+[INFO] 17:43:16:492 team/(16949:16995): Atiendo appeared. Pokemon: Flareon.
+[INFO] 17:43:16:492 team/(16949:16995): El pokemon es objetivo
+[INFO] 17:43:16:492 team/(16949:16995): Hay entrenadores disponibles para atrapar a Flareon.
+[INFO] 17:43:16:492 team/(16949:16995): Se selecciono el entrenador 1 para atrapar al pokemon Flareon
+[INFO] 17:43:16:492 team/(16949:16953): El entrenador 1 se pone en READY.
+[INFO] 17:43:16:493 team/(16949:16999): Atiendo appeared. Pokemon: Umbreon.
+[INFO] 17:43:16:493 team/(16949:16999): El pokemon es objetivo
+[INFO] 17:43:16:493 team/(16949:16999): Hay entrenadores disponibles para atrapar a Umbreon.
+[INFO] 17:43:16:493 team/(16949:16999): Se selecciono el entrenador 2 para atrapar al pokemon Umbreon
+[INFO] 17:43:16:493 team/(16949:16954): El entrenador 2 se pone en READY.
+[INFO] 17:43:16:494 team/(16949:17002): Atiendo appeared. Pokemon: Espeon.
+[INFO] 17:43:16:495 team/(16949:17002): El pokemon es objetivo
+[INFO] 17:43:16:495 team/(16949:17002): Hay entrenadores disponibles para atrapar a Espeon.
+[INFO] 17:43:16:495 team/(16949:17002): Se selecciono el entrenador 3 para atrapar al pokemon Espeon
+[INFO] 17:43:16:495 team/(16949:16955): El entrenador 3 se pone en READY.
+[INFO] 17:43:16:497 team/(16949:17005): Atiendo appeared. Pokemon: Vaporeon.
+[INFO] 17:43:16:497 team/(16949:17005): El pokemon es objetivo
+[INFO] 17:43:16:497 team/(16949:17005): Hay entrenadores disponibles para atrapar a Vaporeon.
+[INFO] 17:43:16:497 team/(16949:17005): Se selecciono el entrenador 4 para atrapar al pokemon Vaporeon
+[INFO] 17:43:16:497 team/(16949:16956): El entrenador 4 se pone en READY.
+[INFO] 17:43:17:490 team/(16949:16952): El entrenador 0 se mueve a : (2,2).
+[INFO] 17:43:17:490 team/(16949:16952): El entrenador 0 se movió a la posición (2, 2).
+[INFO] 17:43:17:490 team/(16949:16952): El entrenador 0 envia el catch para el pokemon Jolteon.
+[INFO] 17:43:18:493 team/(16949:16952): Se registró el pokemon atrapado.
+[INFO] 17:43:18:493 team/(16949:16952): El entrenador 0 forma parte de un interbloqueo.
+[INFO] 17:43:18:493 team/(16949:16952): Inicio del algoritmo de detección de deadlock.
+[INFO] 17:43:18:493 team/(16949:16952): Entrenadores en deadlock 1.
+[INFO] 17:43:18:493 team/(16949:16952): Entrenadores exit 0.
+[INFO] 17:43:18:493 team/(16949:16952): Entrenadores enntrenadores totales 5.
+[INFO] 17:43:18:493 team/(16949:16952): No se encontró deadlock.
+[INFO] 17:43:18:494 team/(16949:16952): El entrenador 0 libera la CPU por su cuenta.
+[INFO] 17:43:18:494 team/(16949:16961): elijo entrenador para ejecutar
+[INFO] 17:43:18:494 team/(16949:16953): El entrenador 1, que estaba en (6,5), comenzará a moverse a (4,6).
+[INFO] 17:43:19:495 team/(16949:16953): El entrenador 1 se mueve a : (5,5).
+[INFO] 17:43:20:520 team/(16949:16953): El entrenador 1 se mueve a : (4,5).
+[INFO] 17:43:21:521 team/(16949:16953): El entrenador 1 se mueve a : (4,6).
+[INFO] 17:43:21:521 team/(16949:16953): El entrenador 1 se movió a la posición (4, 6).
+[INFO] 17:43:21:521 team/(16949:16953): El entrenador 1 envia el catch para el pokemon Flareon.
+[INFO] 17:43:22:550 team/(16949:16953): Se registró el pokemon atrapado.
+[INFO] 17:43:22:550 team/(16949:16953): El entrenador 1 forma parte de un interbloqueo.
+[INFO] 17:43:22:550 team/(16949:16953): Inicio del algoritmo de detección de deadlock.
+[INFO] 17:43:22:550 team/(16949:16953): Entrenadores en deadlock 2.
+[INFO] 17:43:22:550 team/(16949:16953): Entrenadores exit 0.
+[INFO] 17:43:22:550 team/(16949:16953): Entrenadores enntrenadores totales 5.
+[INFO] 17:43:22:551 team/(16949:16953): No se encontró deadlock.
+[INFO] 17:43:22:551 team/(16949:16953): El entrenador 1 libera la CPU por su cuenta.
+[INFO] 17:43:22:551 team/(16949:16961): elijo entrenador para ejecutar
+[INFO] 17:43:22:551 team/(16949:16954): El entrenador 2, que estaba en (9,9), comenzará a moverse a (10,6).
+[INFO] 17:43:23:601 team/(16949:16954): El entrenador 2 se mueve a : (10,9).
+[INFO] 17:43:24:602 team/(16949:16954): El entrenador 2 se mueve a : (10,8).
+[INFO] 17:43:25:608 team/(16949:16954): El entrenador 2 se mueve a : (10,7).
+[INFO] 17:43:26:713 team/(16949:16954): El entrenador 2 se mueve a : (10,6).
+[INFO] 17:43:26:713 team/(16949:16954): El entrenador 2 se movió a la posición (10, 6).
+[INFO] 17:43:26:713 team/(16949:16954): El entrenador 2 envia el catch para el pokemon Umbreon.
+[INFO] 17:43:27:714 team/(16949:16954): Se registró el pokemon atrapado.
+[INFO] 17:43:27:714 team/(16949:16954): El entrenador 2 forma parte de un interbloqueo.
+[INFO] 17:43:27:714 team/(16949:16954): Inicio del algoritmo de detección de deadlock.
+[INFO] 17:43:27:714 team/(16949:16954): Entrenadores en deadlock 3.
+[INFO] 17:43:27:714 team/(16949:16954): Entrenadores exit 0.
+[INFO] 17:43:27:714 team/(16949:16954): Entrenadores enntrenadores totales 5.
+[INFO] 17:43:27:714 team/(16949:16954): No se encontró deadlock.
+[INFO] 17:43:27:714 team/(16949:16954): El entrenador 2 libera la CPU por su cuenta.
+[INFO] 17:43:27:714 team/(16949:16961): elijo entrenador para ejecutar
+[INFO] 17:43:27:714 team/(16949:16955): El entrenador 3, que estaba en (9,2), comenzará a moverse a (7,1).
+[INFO] 17:43:28:754 team/(16949:16955): El entrenador 3 se mueve a : (8,2).
+[INFO] 17:43:29:755 team/(16949:16955): El entrenador 3 se mueve a : (7,2).
+[INFO] 17:43:30:764 team/(16949:16955): El entrenador 3 se mueve a : (7,1).
+[INFO] 17:43:30:764 team/(16949:16955): El entrenador 3 se movió a la posición (7, 1).
+[INFO] 17:43:30:764 team/(16949:16955): El entrenador 3 envia el catch para el pokemon Espeon.
+[INFO] 17:43:31:806 team/(16949:16955): Se registró el pokemon atrapado.
+[INFO] 17:43:31:806 team/(16949:16955): El entrenador 3 forma parte de un interbloqueo.
+[INFO] 17:43:31:806 team/(16949:16955): Inicio del algoritmo de detección de deadlock.
+[INFO] 17:43:31:806 team/(16949:16955): Entrenadores en deadlock 4.
+[INFO] 17:43:31:806 team/(16949:16955): Entrenadores exit 0.
+[INFO] 17:43:31:806 team/(16949:16955): Entrenadores enntrenadores totales 5.
+[INFO] 17:43:31:806 team/(16949:16955): No se encontró deadlock.
+[INFO] 17:43:31:806 team/(16949:16955): El entrenador 3 libera la CPU por su cuenta.
+[INFO] 17:43:31:806 team/(16949:16961): elijo entrenador para ejecutar
+[INFO] 17:43:31:807 team/(16949:16956): El entrenador 4, que estaba en (2,9), comenzará a moverse a (4,10).
+[INFO] 17:43:32:830 team/(16949:16956): El entrenador 4 se mueve a : (3,9).
+[INFO] 17:43:33:831 team/(16949:16956): El entrenador 4 se mueve a : (4,9).
+[INFO] 17:43:34:831 team/(16949:16956): El entrenador 4 se mueve a : (4,10).
+[INFO] 17:43:34:831 team/(16949:16956): El entrenador 4 se movió a la posición (4, 10).
+[INFO] 17:43:34:831 team/(16949:16956): El entrenador 4 envia el catch para el pokemon Vaporeon.
+[INFO] 17:43:35:891 team/(16949:16956): Se registró el pokemon atrapado.
+[INFO] 17:43:35:892 team/(16949:16956): El entrenador 4 forma parte de un interbloqueo.
+[INFO] 17:43:35:892 team/(16949:16956): Inicio del algoritmo de detección de deadlock.
+[INFO] 17:43:35:892 team/(16949:16956): Entrenadores en deadlock 5.
+[INFO] 17:43:35:892 team/(16949:16956): Entrenadores exit 0.
+[INFO] 17:43:35:892 team/(16949:16956): Entrenadores enntrenadores totales 5.
+[INFO] 17:43:35:892 team/(16949:16956): El entrenador 4 libera la CPU por su cuenta.
+[INFO] 17:43:35:892 team/(16949:16958): Encontre una espera circular. Entrenadores involucrados: 
+[INFO] 17:43:35:892 team/(16949:16958): Entrenador 0.
+[INFO] 17:43:35:892 team/(16949:16958): Entrenador 4.
+[INFO] 17:43:35:892 team/(16949:16958): Entrenador 3.
+[INFO] 17:43:35:892 team/(16949:16958): Entrenador 2.
+[INFO] 17:43:35:892 team/(16949:16958): Entrenador 1.
+[INFO] 17:43:35:892 team/(16949:16958): entrenador bloqueado para deadlock : 0
+[INFO] 17:43:35:892 team/(16949:16958): hola.
+[INFO] 17:43:35:892 team/(16949:16958): Entrenador bloqueado: 0. Entrenador a mover: 4.
+[INFO] 17:43:35:892 team/(16949:16956): El entrenador 4 se pone en READY.
+[INFO] 17:43:35:892 team/(16949:16958): El entrenador 0, esta en DEADLOCK con el entrenador 4.
+[INFO] 17:43:35:892 team/(16949:16956): El entrenador 4 entra en ejecucion para deadlock.
+[INFO] 17:43:35:892 team/(16949:16961): elijo entrenador para ejecutar
+[INFO] 17:43:35:892 team/(16949:16956): El entrenador 4, que estaba en (4,10), comenzará a moverse a (2,2).
+[INFO] 17:43:36:900 team/(16949:16956): El entrenador 4 se mueve a : (3,10).
+[INFO] 17:43:37:933 team/(16949:16956): El entrenador 4 se mueve a : (2,10).
+[INFO] 17:43:38:972 team/(16949:16956): El entrenador 4 se mueve a : (2,9).
+[INFO] 17:43:39:975 team/(16949:16956): El entrenador 4 se mueve a : (2,8).
+[INFO] 17:43:40:976 team/(16949:16956): El entrenador 4 se mueve a : (2,7).
+[INFO] 17:43:41:985 team/(16949:16956): El entrenador 4 se mueve a : (2,6).
+[INFO] 17:43:42:986 team/(16949:16956): El entrenador 4 se mueve a : (2,5).
+[INFO] 17:43:44:4 team/(16949:16956): El entrenador 4 se mueve a : (2,4).
+[INFO] 17:43:45:7 team/(16949:16956): El entrenador 4 se mueve a : (2,3).
+[INFO] 17:43:46:7 team/(16949:16956): El entrenador 4 se mueve a : (2,2).
+[INFO] 17:43:46:7 team/(16949:16956): El entrenador 4 se movió a la posición (2, 2).
+[INFO] 17:43:51:10 team/(16949:16956): El entrenador 4 comienza con el intercambio.
+[INFO] 17:43:51:10 team/(16949:16958): entrenador bloqueado para deadlock : 4
+[INFO] 17:43:51:10 team/(16949:16958): hola.
+[INFO] 17:43:51:10 team/(16949:16958): Entrenador bloqueado: 4. Entrenador a mover: 3.
+[INFO] 17:43:51:10 team/(16949:16958): El entrenador 4, esta en DEADLOCK con el entrenador 3.
+[INFO] 17:43:51:10 team/(16949:16955): El entrenador 3 se pone en READY.
+[INFO] 17:43:51:10 team/(16949:16955): El entrenador 3 entra en ejecucion para deadlock.
+[INFO] 17:43:51:10 team/(16949:16961): elijo entrenador para ejecutar
+[INFO] 17:43:51:10 team/(16949:16955): El entrenador 3, que estaba en (7,1), comenzará a moverse a (2,2).
+[INFO] 17:43:52:11 team/(16949:16955): El entrenador 3 se mueve a : (6,1).
+[INFO] 17:43:53:12 team/(16949:16955): El entrenador 3 se mueve a : (5,1).
+[INFO] 17:43:54:13 team/(16949:16955): El entrenador 3 se mueve a : (4,1).
+[INFO] 17:43:55:14 team/(16949:16955): El entrenador 3 se mueve a : (3,1).
+[INFO] 17:43:56:17 team/(16949:16955): El entrenador 3 se mueve a : (2,1).
+[INFO] 17:43:57:18 team/(16949:16955): El entrenador 3 se mueve a : (2,2).
+[INFO] 17:43:57:18 team/(16949:16955): El entrenador 3 se movió a la posición (2, 2).

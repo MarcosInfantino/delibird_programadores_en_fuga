@@ -20,7 +20,7 @@ void destruirPokemonPosicion(void* arg){
 
 void destruirContadorRafagas(void* arg){
 	contadorRafagas* contador=(contadorRafagas*) arg;
-	free(contador->mutex);
+	pthread_mutex_destroy(contador->mutex);
 	free(contador);
 }
 
@@ -28,9 +28,9 @@ void destruirDataEntrenador(void* arg){
 	dataEntrenador* entrenador= (dataEntrenador*) arg;
 	list_destroy_and_destroy_elements(entrenador->pokemones, free);
 	list_destroy_and_destroy_elements(entrenador->objetivoPersonal, free);
-	free(entrenador->semaforo);
-	free(entrenador->semaforoContinuarEjecucion);
-	free(entrenador->semaforoPedidoCiclo);
+	sem_destroy(entrenador->semaforo);
+	sem_destroy(entrenador->semaforoContinuarEjecucion);
+	sem_destroy(entrenador->semaforoPedidoCiclo);
 	destruirContadorRafagas((void*) entrenador->contadorCpu);
 }
 
@@ -57,9 +57,24 @@ void liberarMemoria(){
 	destruirColaMutexYElementos(pokemonesPendientes, destruirPokemonPosicion);
 	destruirListaMutex(entrenadoresExit);
 	destruirListaMutex(entrenadoresDeadlock);
-	free(entrenadorEnCola);
-	free(iniciarResolucionDeadlock);
-	free(semaforoObjetivoCumplido);
-	free(finalizacionCicloCpu);
+	sem_destroy(entrenadorEnCola);
+	sem_destroy(iniciarResolucionDeadlock);
+	sem_destroy(semaforoObjetivoCumplido);
+	sem_destroy(finalizacionCicloCpu);
+	pthread_cancel(threadSuscripcionAppeared);
+	pthread_cancel(threadSuscripcionCaught);
+	pthread_cancel(threadSuscripcionLocalized);
+	pthread_cancel(hiloConexionInicialBroker);
+	pthread_cancel(hiloServidorGameboy);
+	pthread_cancel(hiloPlanificador);
 
+	destruirHilosEntrenadores();
+
+}
+
+void destruirHilosEntrenadores(){
+	for(uint32_t i=0; i<cantEntrenadores;i++){
+		pthread_cancel(arrayIdHilosEntrenadores[i]);
+	}
+	free(arrayIdHilosEntrenadores);
 }

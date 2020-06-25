@@ -195,7 +195,7 @@ void resolverIntercambioMutuo(){
 	pokemonSobrante* pokeSobrante=obtenerPokemonInteresante(entrenadorBloqueadoParaDeadlock,listaPokemonesSobrantes );
 
 	dataEntrenador* entrenadorAMover=pokeSobrante->entrenador;
-
+	entrenadorAMover->pokemonAAtrapar=malloc(sizeof(pokemonPosicion));
 	entrenadorAMover->pokemonAAtrapar->posicion=entrenadorBloqueadoParaDeadlock->posicion;
 	entrenadorAMover->pokemonAAtrapar->pokemon=pokeSobrante->pokemon;//OJO, ACA ESTOY ABUSANDO DE LA VARIABLE PARA GUARDAR EL POKEMON QUE DEBE DARLE AEL ENTRENADOR EN MOVIMIENTO AL QUE ESTA QUIETO
 
@@ -210,8 +210,10 @@ void resolverIntercambioMutuo(){
 
 	(team->cantidadDeadlocksResueltos)++;
 
-	list_destroy(listaPokemonesSobrantes);
-	free(pokeSobrante);
+
+
+	list_destroy_and_destroy_elements(listaPokemonesSobrantes,destruirPokemonSobrante);
+	//free(pokeSobrante);
 
 
 
@@ -231,7 +233,7 @@ void resolverEsperaCircular(t_list* entrenadoresEsperaCircular){
 		pokemonSobrante* pokeSobrante=obtenerPokemonInteresante(entrenadorBloqueadoParaDeadlock,listaPokemonesSobrantes );
 		log_info(teamLogger2, "entrenador bloqueado para deadlock : %i", entrenadorBloqueadoParaDeadlock->id);
 		dataEntrenador* entrenadorAMover=pokeSobrante->entrenador;
-
+		entrenadorAMover->pokemonAAtrapar=malloc(sizeof(pokemonPosicion));
 		entrenadorAMover->pokemonAAtrapar->posicion=entrenadorBloqueadoParaDeadlock->posicion;
 		log_info(teamLogger2, "hola.");
 		entrenadorAMover->pokemonAAtrapar->pokemon=pokeSobrante->pokemon;//OJO, ACA ESTOY ABUSANDO DE LA VARIABLE PARA GUARDAR EL POKEMON QUE DEBE DARLE AEL ENTRENADOR EN MOVIMIENTO AL QUE ESTA QUIETO
@@ -247,8 +249,8 @@ void resolverEsperaCircular(t_list* entrenadoresEsperaCircular){
 
 		(team->cantidadDeadlocksResueltos)++;
 
-		list_destroy(listaPokemonesSobrantes);
-		free(pokeSobrante);
+		list_destroy_and_destroy_elements(listaPokemonesSobrantes,destruirPokemonSobrante);
+		//free(pokeSobrante);
 
 
 //

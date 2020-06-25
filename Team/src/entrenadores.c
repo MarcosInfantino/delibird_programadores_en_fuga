@@ -16,6 +16,7 @@ int inicializarEntrenadores(t_list* entrenadores){
 	for(i=0;i<list_size(entrenadores);i++){
 		void* entrenadorActual = list_get(entrenadores,i);
 		uint32_t err		   = pthread_create(&(arrayIdHilosEntrenadores[i]),NULL,ejecucionHiloEntrenador,entrenadorActual);
+		//uint32_t err		   = pthread_create(&(((dataEntrenador*)entrenadorActual)->hilo),NULL,ejecucionHiloEntrenador,entrenadorActual);
 		if(err!=0){
 			printf("Hubo un problema en la creación del hilo del entrenador \n");
 			return err;
@@ -263,9 +264,9 @@ uint32_t obtenerIdEntrenadorMasCercano(posicion pos){ //el id es el index del en
 
 void asignarPokemonAEntrenador(dataEntrenador* entrenador, pokemonPosicion* pokePosicion){
 
-	if(entrenador->pokemonAAtrapar!=NULL){
-		destruirPokemonPosicion((entrenador->pokemonAAtrapar));//HACER DESTRUIR POKEMONAATRAPAR
-	}
+//	if(entrenador->pokemonAAtrapar!=NULL){
+//		destruirPokemonPosicion((entrenador->pokemonAAtrapar));//HACER DESTRUIR POKEMONAATRAPAR
+//	}
 	entrenador->pokemonAAtrapar=pokePosicion;
 	entrenador->estado=READY;
 
@@ -273,10 +274,14 @@ void asignarPokemonAEntrenador(dataEntrenador* entrenador, pokemonPosicion* poke
 }
 
 void atraparPokemonYReplanificar (dataEntrenador* entrenador){
-	list_add(entrenador->pokemones,(void*)(entrenador->pokemonAAtrapar->pokemon));
+	char* pokemonAtrapado=malloc(strlen(entrenador->pokemonAAtrapar->pokemon)+1);
+	strcpy(pokemonAtrapado,entrenador->pokemonAAtrapar->pokemon);
+	list_add(entrenador->pokemones,(void*)(pokemonAtrapado));
 	registrarPokemonAtrapado(entrenador->pokemonAAtrapar->pokemon);
 	log_info(teamLogger,"El entrenador %i atrapó al pokemon %s en la posición (%i,%i).", entrenador->id,entrenador->pokemonAAtrapar->pokemon,
 			(entrenador->pokemonAAtrapar->posicion).x,(entrenador->pokemonAAtrapar->posicion).y);
+
+	destruirPokemonPosicion(entrenador->pokemonAAtrapar);
 
 	replanificarEntrenador(entrenador);
 }
@@ -526,7 +531,8 @@ t_list* obtenerPokemonesFaltantes(dataEntrenador* entrenador){
 bool pokemonLeInteresa(dataEntrenador* entrenador, char* pokemon){
 	t_list* listaPokemonesFaltantes=obtenerPokemonesFaltantes(entrenador);
 	int32_t i=buscarMismoPokemon(listaPokemonesFaltantes,pokemon);
-	list_destroy(listaPokemonesFaltantes);
+	//list_destroy(listaPokemonesFaltantes);
+	list_destroy_and_destroy_elements(listaPokemonesFaltantes,free);
 	return i>=0;
 }
 
@@ -534,7 +540,8 @@ void darPokemon(dataEntrenador* entrenadorDador, dataEntrenador* entrenadorRecep
 	//log_info(teamLogger2,"poke: %s.", pokemon);
 	uint32_t posPokemon=buscarMismoPokemon(entrenadorDador->pokemones,pokemon);
 	//log_info(teamLogger2,"hola1    %i.",posPokemon);
-	list_remove(entrenadorDador->pokemones, posPokemon);//ESTO PUEDE ROMPER EN ALGUN LADO, CUANDO SACO UN ELEMENTO DE UNA LISTA DEBO HACER MEMCPY O STRCPY
+	//list_remove(entrenadorDador->pokemones, posPokemon);
+	list_remove_and_destroy_element(entrenadorDador->pokemones, posPokemon,free);		//ESTO PUEDE ROMPER EN ALGUN LADO, CUANDO SACO UN ELEMENTO DE UNA LISTA DEBO HACER MEMCPY O STRCPY
 	//log_info(teamLogger2,"hola2.");
 	char* pokemonAAgregar=malloc(strlen(pokemon)+1);
 	strcpy(pokemonAAgregar,pokemon);
@@ -671,9 +678,10 @@ t_list* encontrarEsperaCircular(listaMutex* listaEntrenadores,t_list* entrenador
 			dataEntrenador* entrenadorActual= (dataEntrenador*) (list_get(listaEntrenadoresInteresantes,i));
 			t_list* listaResultado=encontrarEsperaCircular(listaEntrenadores, listaPropia, entrenadorActual);
 
-			if(listaResultado!=NULL)
+			if(listaResultado!=NULL){
+				//list_destroy(listaPropia);
 				return listaResultado;
-
+			}
 		}
 
 		list_destroy(listaPropia);

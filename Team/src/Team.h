@@ -35,9 +35,10 @@ listaMutex* entrenadoresExit;
 listaMutex* entrenadoresDeadlock;
 //pokemonPosicion pokemonAAtrapar;
 
-
+int esperaPedido;
 int socketGameboy;
 int socketGamecard;
+uint32_t cantEntrenadores;
 uint32_t quantumRR;
 uint32_t puertoBroker;
 char* ipBroker;
@@ -65,6 +66,10 @@ pthread_t resolucionDeadlock;
 pthread_t hiloConexionInicialBroker;
 pthread_t hiloServidorGameboy;
 pthread_t hiloPlanificador;
+
+pthread_t threadSuscripcionAppeared;
+pthread_t threadSuscripcionLocalized;
+pthread_t threadSuscripcionCaught;
 
 typedef enum {
 	NEW=1500,
@@ -126,6 +131,7 @@ typedef struct {
 	double estimacionAnterior;
 	uint32_t rafagaCpuAnterior;
 	contadorRafagas* contadorCpu;
+	pthread_t hilo;
 } dataEntrenador;
 
 dataEntrenador* entrenadorBloqueadoParaDeadlock;
@@ -420,7 +426,7 @@ void guardarContexto(dataEntrenador* entrenador);
 
 void pedirCicloCpu(dataEntrenador* entrenador);
 
-void esperarPedidoCicloCpu(dataEntrenador* entrenador);
+int esperarPedidoCicloCpu(dataEntrenador* entrenador);
 
 dataEntrenador* encontrarCompanieroIntercambioMutuo(dataEntrenador* entrenador, listaMutex* entrenadores);
 
@@ -447,4 +453,8 @@ void destruirDataTeam(void* arg);
 void liberarMemoria();
 
 void terminarPlanificador();
+
+void resetearSemaforo(sem_t* semaforo);
+
+void destruirHilosEntrenadores();
 #endif /* TEAM_H_ */

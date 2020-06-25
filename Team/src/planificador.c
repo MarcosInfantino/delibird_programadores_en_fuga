@@ -107,7 +107,10 @@ void ejecucionPlanificadorRR(){
 				sem_wait(&semaforoEjecucionCpu);
 				pthread_cancel(hiloTimer);//lo cierra porque aca hay dos posibilidades: o lo libera a la fuerza o el entrenador sale por su cuenta
 											//en el ultimo caso debe cerrar el hilo para que no se quede en espera
-
+				if(esperaPedido>0){
+											sem_post(entrenadorAEjecutar->semaforoPedidoCiclo);
+											esperaPedido--;
+										}
 //				if(){
 //					poneteEnReady(entrenadorAEjecutar);
 //				}
@@ -170,6 +173,12 @@ void ejecucionPlanificadorSjfConDesalojo(){
 						//ACA VA CAMBIO DE CONTEXTO
 						sem_wait(&semaforoEjecucionCpu);
 						pthread_cancel(hiloVerificacionDesalojo);
+						//sem_close(entrenadorAEjecutar->semaforoPedidoCiclo);
+						if(esperaPedido>0){
+							sem_post(entrenadorAEjecutar->semaforoPedidoCiclo);
+							esperaPedido--;
+						}
+						//resetearSemaforo(entrenadorAEjecutar->semaforoPedidoCiclo);
 
 
 
@@ -228,7 +237,7 @@ void* verificarDesalojo(void* arg){
 			if(entrenadorMenorEstimacion!=NULL && obtenerEstimacion(entrenador)> obtenerEstimacion( entrenadorMenorEstimacion )){
 				interrumpir(entrenador);
 				log_info(teamLogger2, "interrumpo al entrendador %i ", entrenador->id);
-				return 0;
+				return NULL;
 			}
 
 		}
@@ -282,10 +291,22 @@ void obtenerAlgoritmoPlanificacion(t_config* config){
 
 void pedirCicloCpu(dataEntrenador* entrenador){
 	sem_post(entrenador->semaforoPedidoCiclo);
-	log_info(teamLogger2,"El entrenador %i pide un ciclo", entrenador->id);
+	int valorSemaforo=-500;
+	sem_getvalue(entrenador->semaforoPedidoCiclo,&valorSemaforo);
+	//log_info(teamLogger2,"El entrenador %i pide un ciclo. Valor del semaforo: %i. ", entrenador->id, valorSemaforo);
 }
 
-void esperarPedidoCicloCpu(dataEntrenador* entrenador){
-	log_info(teamLogger2, "El planificador espera el pedido de cilo del entrenador %i. ", entrenador->id);
+int esperarPedidoCicloCpu(dataEntrenador* entrenador){
+	int valorSemaforo=-500;
+	sem_getvalue(entrenador->semaforoPedidoCiclo,&valorSemaforo);
+	//log_info(teamLogger2, "El planificador espera el pedido de cilo del entrenador %i. Valor del semaforo: %i.", entrenador->id, valorSemaforo);
+
+//	if(!estaEjecutando(entrenador)){
+//		return 0;
+//	}
+	esperaPedido++;
 	sem_wait(entrenador->semaforoPedidoCiclo);
+	esperaPedido--;
+	//log_info(teamLogger2, "El planificador recibe el pedido de cilo del entrenador %i. ", entrenador->id);
+	return 0;
 }
