@@ -46,8 +46,12 @@ typedef struct{
 	char esDirectorio;
 	uint32_t tamanioArchivo;
 	t_list* bloquesUsados;
-	char estaAbierto;
+	bool estaAbierto;
 	tipoMetadata tipo;
+	//FILE* archivoMetadata;
+	t_list* archivosHijos;
+	char* pathArchivo;
+	//struct archivoHeader* archivoPadre;
 }archivoHeader;
 
 
@@ -119,8 +123,11 @@ bool estaLibre(uint32_t idBloque);
 void ocuparBloque(uint32_t idBloque);
 void liberarBloque(uint32_t idBloque);
 blockHeader* obtenerBloquePorId(uint32_t id);
-int32_t crearDirectorio(char* nombre, char* pathDestino);
+int32_t crearDirectorio(char* nombre, char* pathDestino, uint32_t tipo);
 void eliminarDirectorio(char* path);
 void crearMetadata(uint32_t tipo, char* direccion);
-void escribirMetadata(FILE* archivoMetadata, archivoHeader* metadata);
+void escribirMetadata(archivoHeader* metadata, FILE* archivoMetadata);
+FILE* abrirArchivo(archivoHeader* metadata);
+void cerrarArchivo(archivoHeader* metadata, FILE* archivo);
+bool estaAbierto(archivoHeader* metadata);
 #endif /* GAMECARD_H_ */

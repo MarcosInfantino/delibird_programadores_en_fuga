@@ -30,7 +30,8 @@ int main(void) {
 	iniciarMetadata();
 	iniciarBitmap();
 	inicializarListaBloques();
-	crearDirectorio("Pikachu",pathFiles);
+	crearDirectorio("Files","/home/utnso/tp-2020-1c-Programadores-en-Fuga/Gamecard/TALL_GRASS/", DIRECTORIO);
+	crearDirectorio("Pikachu",pathFiles,ARCHIVO);
 	//printf("El resultado fue: %i\n",resul);
 	crearArchivoBloque(obtenerBloquePorId(1));//obtenerBloquePorId(1)
 	suscribirseColasBroker(configGamecard);
@@ -360,7 +361,7 @@ void enviarCaught(pokemonAAtrapar* pokeAAtrapar) {
 	msgCaught->resultadoCaught = pokeAAtrapar->resultado;
 	void* streamMsg = serializarCaught(msgCaught);
 	paquete* paq = llenarPaquete(GAMECARD, CAUGHT_POKEMON,
-			sizeArgumentos(CAUGHT_POKEMON, NULL, BROKER), streamMsg);
+	sizeArgumentos(CAUGHT_POKEMON, NULL, BROKER), streamMsg);
 	insertarIdCorrelativoPaquete(paq, (pokeAAtrapar->id));
 	void* paqueteSerializado = serializarPaquete(paq);
 	//free(msgLocalized);
@@ -369,3 +370,5 @@ void enviarCaught(pokemonAAtrapar* pokeAAtrapar) {
 	free(paqueteSerializado);
 
 }
+
+
