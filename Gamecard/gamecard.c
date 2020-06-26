@@ -30,10 +30,8 @@ int main(void) {
 	iniciarMetadata();
 	iniciarBitmap();
 	inicializarListaBloques();
-	   /* uint32_t buenas = crearBloque();
-		if(buenas<0){
-		printf("LA concha de tu madreeee");
-		}*/
+	crearDirectorio("Pikachu",pathFiles);
+	//printf("El resultado fue: %i\n",resul);
 	crearArchivoBloque(obtenerBloquePorId(1));//obtenerBloquePorId(1)
 	suscribirseColasBroker(configGamecard);
 	pthread_t hiloServidorDeEscucha;

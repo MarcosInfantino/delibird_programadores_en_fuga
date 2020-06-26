@@ -28,18 +28,28 @@
 #ifndef GAMECARD_H_
 #define GAMECARD_H_
 
+#define pathFiles "/home/utnso/tp-2020-1c-Programadores-en-Fuga/Gamecard/TALL_GRASS/Files/"
+#define pathBlocks "/home/utnso/tp-2020-1c-Programadores-en-Fuga/Gamecard/TALL_GRASS/Blocks/"
+
 typedef struct{
 	uint32_t block_size;
 	uint32_t blocks;
 	char* magic_number;
 }tallGrassHeader;
 
+typedef enum{
+	ARCHIVO,
+	DIRECTORIO
+}tipoMetadata;
+
 typedef struct{
 	char esDirectorio;
 	uint32_t tamanioArchivo;
 	t_list* bloquesUsados;
 	char estaAbierto;
+	tipoMetadata tipo;
 }archivoHeader;
+
 
 
 typedef enum{
@@ -109,4 +119,8 @@ bool estaLibre(uint32_t idBloque);
 void ocuparBloque(uint32_t idBloque);
 void liberarBloque(uint32_t idBloque);
 blockHeader* obtenerBloquePorId(uint32_t id);
+int32_t crearDirectorio(char* nombre, char* pathDestino);
+void eliminarDirectorio(char* path);
+void crearMetadata(uint32_t tipo, char* direccion);
+void escribirMetadata(FILE* archivoMetadata, archivoHeader* metadata);
 #endif /* GAMECARD_H_ */

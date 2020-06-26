@@ -130,8 +130,6 @@ void iniciarBitmap() {
 
 int32_t crearArchivoBloque(blockHeader* bloque) {
 
-
-
 		FILE* archivoBloque = fopen(string_from_format("%s/Blocks/%d.bin", puntoMontaje, bloque->id), "w");
 
 		if (archivoBloque == NULL){
@@ -142,6 +140,64 @@ int32_t crearArchivoBloque(blockHeader* bloque) {
 
 
 	return 0;
+}
+
+int32_t crearDirectorio(char* nombre, char* pathDestino){
+	int32_t status;
+	errno = 0;
+	char* direc = string_new();
+	string_append(&direc,pathDestino);
+	string_append(&direc,nombre);
+
+	status = mkdir(direc, 0755);
+	if(status != 0){
+		if(errno == EEXIST){
+			printf("El directorio ya existe\n");
+			//Ver que hacer aca
+			return 0;
+		}
+		if(status < 0){
+			printf("Error al crear el directorio\n");
+			return -1;
+		}
+	}
+	crearMetadata(ARCHIVO, pathDestino);
+	return status;
+}
+
+void eliminarDirectorio(char* path){
+	rmdir(path);
+}
+
+void crearMetadata(uint32_t tipo, char* direccion){
+	archivoHeader* metadataFile = malloc(sizeof(archivoHeader));
+	char* nuevaDirec = malloc(strlen(direccion)+strlen("metadata.bin"));
+	strcpy(nuevaDirec,direccion);
+	string_append(&nuevaDirec,"metadata.bin");
+	FILE* metadataArchivo = fopen(direccion,"w+b");
+	switch(tipo){
+	case DIRECTORIO:;
+		printf("Soy directorio\n");
+		metadataFile->esDirectorio = 'Y';
+		metadataFile->estaAbierto = 'N';
+		metadataFile->bloquesUsados = NULL;
+		metadataFile->tamanioArchivo = 0;
+		metadataFile->tipo = DIRECTORIO;
+		escribirMetadata(metadataArchivo,metadataFile);
+		//fwrite(&metadataFile,sizeof(archivoHeader),1, metadataArchivo);
+		fclose(metadataArchivo);
+		break;
+	case ARCHIVO:;
+		printf("Soy archivo\n");
+		metadataFile->esDirectorio = 'N';
+		metadataFile->estaAbierto = 'N';
+		metadataFile->bloquesUsados = list_create();
+		metadataFile->tamanioArchivo = 0;
+		metadataFile->tipo = ARCHIVO;
+		escribirMetadata(metadataArchivo,metadataFile);
+		break;
+	default:; printf("Manqueada\n");break;
+	}
 }
 
 void actualizarArchivoBitmap() {
@@ -191,4 +247,23 @@ blockHeader* encontrarBloqueLibre(){// devuelve el bloque ya ocupado
 		}
 	}
 	return NULL;
+}
+
+void escribirMetadata(FILE* archivoMetadata, archivoHeader* metadata){
+	switch(metadata->tipo){
+	case DIRECTORIO:;
+		char* tipoArchivo = "DIRECTORY=Y\n";
+		fwrite(tipoArchivo,strlen(tipoArchivo)+1,1,archivoMetadata);
+		break;
+	case ARCHIVO:;
+		char* lineaDirectorio ="DIRECTORY=N\n";
+		char* lineaSize = "SIZE=0\n";
+		char* lineaBloques = "BLOCKS=[]\n";
+		char* lineaOpen = "OPEN=N\n";
+		fwrite(lineaDirectorio,strlen(lineaDirectorio)+1,1,archivoMetadata);
+		fwrite(lineaSize,strlen(lineaSize)+1,1,archivoMetadata);
+		fwrite(lineaBloques,strlen(lineaBloques)+1,1,archivoMetadata);
+		fwrite(lineaOpen,strlen(lineaOpen)+1,1,archivoMetadata);
+	}
+
 }
