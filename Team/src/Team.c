@@ -251,7 +251,7 @@ void* atenderCaught(void* paq){
 		}else{
 //			entrenadorEncontrado->estado=BLOCKED;
 //			habilitarHiloEntrenador(idEncontrado);
-			agregarObjetivo(entrenadorEncontrado->pokemonAAtrapar->pokemon);
+			agregarObjetivo(entrenadorEncontrado->pokemonAAtrapar->pokemon);//lo vuelve a gregar a los objetivos porque vuelver a ser un objetivo necesario
 				log_info(teamLogger2,"El caught no fue exitoso.");
 
 

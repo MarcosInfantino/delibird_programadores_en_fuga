@@ -65,6 +65,7 @@ void ejecucionPlanificadorFifo(){
 
 			sem_wait(entrenadorEnCola);
 			sem_wait(&semaforoEjecucionCpu);
+			team->cantidadCambiosContexto++;
 			//ACA VA CAMBIO DE CONTEXTO
 
 			dataEntrenador* entrenadorAEjecutar=(dataEntrenador*)popColaMutex(colaEjecucionFifo);
@@ -81,7 +82,7 @@ void ejecucionPlanificadorRR(){
 
 
 				sem_wait(entrenadorEnCola);
-
+				team->cantidadCambiosContexto++;
 
 
 				dataEntrenador* entrenadorAEjecutar=(dataEntrenador*)popColaMutex(colaEjecucionFifo);
@@ -120,6 +121,7 @@ void ejecucionPlanificadorSjf(){
 
 					sem_wait(entrenadorEnCola);
 					sem_wait(&semaforoEjecucionCpu);
+					team->cantidadCambiosContexto++;
 					//ACA VA CAMBIO DE CONTEXTO
 
 					dataEntrenador* entrenadorAEjecutar=sacarEntrenadorMenorEstimacion();//encontrar el mas copado
@@ -136,7 +138,7 @@ void ejecucionPlanificadorSjfConDesalojo(){
 				while(1){
 
 						sem_wait(entrenadorEnCola);
-
+						team->cantidadCambiosContexto++;
 
 						dataEntrenador* entrenadorAEjecutar=sacarEntrenadorMenorEstimacion();//encontrar el mas copado
 						log_info(teamLogger2, "Elijo al entrenador %i para ejecutar.", entrenadorAEjecutar->id);
