@@ -54,7 +54,7 @@ typedef struct{
 	//struct archivoHeader* archivoPadre;
 }archivoHeader;
 
-
+archivoHeader* var;
 
 typedef enum{
 	LIBRE,
@@ -130,4 +130,10 @@ void escribirMetadata(archivoHeader* metadata, FILE* archivoMetadata);
 FILE* abrirArchivo(archivoHeader* metadata);
 void cerrarArchivo(archivoHeader* metadata, FILE* archivo);
 bool estaAbierto(archivoHeader* metadata);
+void modificarSize(archivoHeader* metadata,uint32_t size);
+char* agregarIdBloque(char* string, uint32_t id);
+char* obtenerStringListaBloques(archivoHeader* metadata);
+void agregarBloque(archivoHeader* metadata, blockHeader* bloque);
+int32_t obtenerPosicionBloqueEnLista(t_list* listaBloques , uint32_t idBloque);
+void removerBloque(archivoHeader* metadata, uint32_t idBloque);
 #endif /* GAMECARD_H_ */

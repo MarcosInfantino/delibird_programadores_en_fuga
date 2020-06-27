@@ -15,6 +15,7 @@ uint32_t tiempoReconexionGC;
 uint32_t tiempoRetardoGC;
 uint32_t puertoGamecardGC = 5001;
 
+
 int main(void) {
 
 	t_config * configGamecard = config_create("Gamecard.config");
@@ -33,6 +34,21 @@ int main(void) {
 	crearDirectorio("Files","/home/utnso/tp-2020-1c-Programadores-en-Fuga/Gamecard/TALL_GRASS/", DIRECTORIO);
 	crearDirectorio("Pikachu",pathFiles,ARCHIVO);
 	//printf("El resultado fue: %i\n",resul);
+//	blockHeader* bloque= malloc(sizeof(blockHeader));
+//	bloque->id=10;
+//	agregarBloque(var,bloque);
+//	blockHeader* bloque2= malloc(sizeof(blockHeader));
+//		bloque2->id=1023214234;
+//	agregarBloque(var,bloque2);
+//	blockHeader* bloque3= malloc(sizeof(blockHeader));
+//		bloque3->id=102384724;
+//	agregarBloque(var,bloque3);
+//	blockHeader* bloque4= malloc(sizeof(blockHeader));
+//		bloque4->id=103345232;
+//	agregarBloque(var,bloque4);
+//
+//	removerBloque(var,1038423);
+
 	crearArchivoBloque(obtenerBloquePorId(1));//obtenerBloquePorId(1)
 	suscribirseColasBroker(configGamecard);
 	pthread_t hiloServidorDeEscucha;

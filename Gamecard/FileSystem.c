@@ -197,12 +197,14 @@ void crearMetadata(uint32_t tipo, char* direccion){
 		metadataFile->bloquesUsados = list_create();
 		metadataFile->tamanioArchivo = 0;
 		metadataFile->tipo = ARCHIVO;
+		var=metadataFile;
 		escribirMetadata(metadataFile, archivoMetadata);
 		break;
 	default:; printf("Manqueada\n");break;
 	}
+
 	fclose(archivoMetadata);
-	abrirArchivo(metadataFile);
+
 }
 
 void actualizarArchivoBitmap() {
@@ -255,20 +257,33 @@ blockHeader* encontrarBloqueLibre(){// devuelve el bloque ya ocupado
 }
 
 void escribirMetadata(archivoHeader* metadata, FILE* archivoMetadata){
+	t_config* config=config_create(metadata->pathArchivo);
 	switch(metadata->tipo){
 	case DIRECTORIO:;
-		fputs("DIRECTORY=Y\n",archivoMetadata);
+
+		//fputs("DIRECTORY=Y\n",archivoMetadata);
+
+
+		config_set_value(config, "DIRECTORY", "Y");
+		config_save(config);
+
 		break;
 	case ARCHIVO:;
 
-		fputs("DIRECTORY=N\n", archivoMetadata);
-		fputs("SIZE=0\n", archivoMetadata);
-		fputs("BLOCKS=[]\n",archivoMetadata);
-		fputs("OPEN=N\n", archivoMetadata);
+//		fputs("DIRECTORY=N\n", archivoMetadata);
+//		fputs("SIZE=0\n", archivoMetadata);
+//		fputs("BLOCKS=[]\n",archivoMetadata);
+//		fputs("OPEN=N\n", archivoMetadata);
 
+		config_set_value(config, "DIRECTORY", "N");
+		config_set_value(config, "SIZE", "0");
+		config_set_value(config, "BLOCKS", "[]");
+		config_set_value(config, "OPEN", "N");
+		config_save(config);
 		break;
 
 	}
+	config_destroy(config);
 
 
 }
