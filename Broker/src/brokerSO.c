@@ -27,38 +27,34 @@
 #include "files.h"
 
 int main(void) {
+
     brokerLogger2=log_create("brokerLoggerSecundario.log", "Broker", true, LOG_LEVEL_INFO);
-	//log_info(brokerLogger2, "pid : %i", getpid());
+
+    log_info(brokerLogger2, "pid : %i", getpid());
+
 	signal(SIGUSR1, crearDumpDeCache);
-	//ip_broker=malloc(30);
 
 	char* pathConfig = "Broker.config";
-	FILE * f = fopen(pathConfig, "r");
-	perror("Error \n");
-
 	t_config* configBroker = config_create(pathConfig);
 	tamMemoria        = config_get_int_value(configBroker, "TAMANO_MEMORIA");
 	particionMinima   = config_get_int_value(configBroker, "TAMANO_MINIMO_PARTICION");
 	ip_broker         = config_get_string_value(configBroker, "IP_BROKER");
 	puerto_broker     = config_get_int_value(configBroker, "PUERTO_BROKER");
 
-
-
-//	printf("hola");
 //	puerto_broker = 5002;
 //	ip_broker     = "127.0.0.1";
 //	tamMemoria    = 2048;
 //	particionMinima = 32;
-	//printf("hola");
+
 	char* nombreLog   = "logBroker.log";
 	char* programName = "BROKER";
 
 	loggerBroker = iniciar_logger(nombreLog, programName);
 
 
-//	definirAlgoritmoMemoria(config);
-//	definirAlgoritmoParticionLibre(config);
-//	definirAlgoritmoReemplazo(config);
+	definirAlgoritmoMemoria(configBroker);
+	definirAlgoritmoParticionLibre(configBroker);
+	definirAlgoritmoReemplazo(configBroker);
 	mutexMemoria=malloc(sizeof(pthread_mutex_t));
 	pthread_mutex_init(mutexMemoria,NULL);
 	algoritmoMemoria=BUDDY_SYSTEM;
@@ -67,13 +63,12 @@ int main(void) {
 	definirComienzoDeMemoria();
 
 	//archivoSem = iniciarArchivoMutex();
-	//
+
 
 	iniciarHilos();
 	inicializarContador();
 	abrirHiloParaEnviarMensajes();
 	iniciarServidor();
-
 
 
 	return EXIT_SUCCESS;
@@ -209,9 +204,9 @@ void manejarTipoDeMensaje(paquete* paq, uint32_t* socket) {
 			 structTiempo.socket = socket;
 			 suscribirPorTiempo((void*) &structTiempo);
 			 break;
-		/* case ACK:
-			 guardarSubEnMemoria(paq->idCorrelativo, socket, CONFIRMADO);
-			 break;*/
+		 case ACK:
+			 guardarEnListaMemoria(paq->idCorrelativo, *socket, CONFIRMADO);
+			 break;
 		 default:
 			 pthread_exit(NULL);
 	 }
@@ -227,14 +222,9 @@ void meterEnCola( colaMensajes* structCola, paquete * paq, uint32_t  socket){
 	registrarMensajeEnMemoria(contador.contador, paq, algoritmoMemoria);
 
 	pushColaMutex(structCola->cola, (void *) paq);
-//	if(paq->tipoMensaje==CAUGHT_POKEMON)
-//	{	mensajeCaught* msg=deserializarCaught(paq->stream);
-//		log_info(brokerLogger2,"id caught segunda vez: %i.",msg->resultadoCaught);
-//
-//	}
+
 	sem_post(structCola->mensajesEnCola);
 	log_info(brokerLogger2,"Aviso que hay mensajes en cola.");
-
 }
 
 void abrirHiloParaEnviarMensajes(){
@@ -257,7 +247,7 @@ void * chequearMensajesEnCola(void * colaVoid){
 	colaMensajes* cola = (colaMensajes*) colaVoid;
 	uint32_t i;
 	while (1){
-		sem_wait(cola->mensajesEnCola); //hasta q no aparezca 1 mensaje no sigue
+		sem_wait(cola->mensajesEnCola);
 		log_info(brokerLogger2,"Comienza el proceso de envío del mensaje a todos los suscriptores.");
 		paquete* paq = (paquete*) popColaMutex(cola->cola);
 		if(paq->tipoMensaje == CAUGHT_POKEMON)
@@ -272,7 +262,7 @@ void * chequearMensajesEnCola(void * colaVoid){
 
 			send(*socketActual, paqSerializado , sizePaquete(paq), 0);
 			log_info(brokerLogger2,"Envié mensaje a un suscriptor.");
-			//guardarSubEnMemoria(paq->id, socketActual, SUBSYAENVIADOS);
+			guardarEnListaMemoria(paq->id, *socketActual, SUBSYAENVIADOS);
 		}
 
 		destruirPaquete(paq);
@@ -378,9 +368,10 @@ void definirAlgoritmo(algoritmoParameter parAlgoritmo, uint32_t variablecitaDeCa
 }
 
 void definirComienzoDeMemoria(){
-	if(algoritmoMemoria == BUDDY_SYSTEM){
+	void* memoria = malloc(tamMemoria);
+	/*if(algoritmoMemoria == BUDDY_SYSTEM){*/
 			nodoRaizMemoria = crearRaizArbol();
-	}else if(algoritmoMemoria == PARTICIONES_DINAMICAS){
+	/*}else if(algoritmoMemoria == PARTICIONES_DINAMICAS){
 			memoriaPARTICIONES = iniciarMemoriaPARTICIONES();
-	}
+	}*/
 }

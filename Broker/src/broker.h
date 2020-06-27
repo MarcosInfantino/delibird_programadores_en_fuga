@@ -29,6 +29,7 @@ algoritmoMem algoritmoMemoria;
 algoritmoParticiones algoritmoParticionLibre;
 algoritmoReemp algoritmoReemplazo;
 pthread_mutex_t* mutexMemoria;
+void* memoria; //malloc de la memoria
 
 typedef struct{
 	uint32_t cola;
@@ -97,10 +98,10 @@ bool validarSuscripcionSegunModulo(uint32_t modulo, uint32_t cola);
 bool validarPertenencia(colaMensajes * cola, uint32_t socket);
 
 
-//char* nombreDeProceso(uint32_t modulo);
-//char* nombreDeCola(uint32_t cola);
-//char* armarStringSuscripLog(uint32_t modulo, uint32_t cola);
-//char* armarStringMsgNuevoLog(uint32_t modulo);
+char* nombreDeProceso(uint32_t modulo);
+char* nombreDeCola(uint32_t cola);
+char* armarStringSuscripLog(uint32_t modulo, uint32_t cola);
+char* armarStringMsgNuevoLog(uint32_t modulo);
 
 void meterEnCola( colaMensajes* structCola, paquete* paq, uint32_t  socket);
 colaMensajes* obtenerCola(uint32_t colaInt);
