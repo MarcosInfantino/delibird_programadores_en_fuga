@@ -81,7 +81,7 @@ uint32_t evaluarTamanioParticionYasignar(struct nodoMemoria* partActual, msgMemo
 		partActual->header.status = OCUPADO;
 		partActual->mensaje = msg;
 
-		asignarPuntero(partActual->offset, partActual->mensaje->stream);
+		asignarPuntero(partActual->offset, partActual->mensaje->stream, partActual->mensaje->sizeStream);
 
 		log_info(brokerLogger2,"Size: %i. Id mensaje: %i. Size del mensaje: %i.", (partActual->header).size, partActual->mensaje->idMensaje, partActual->mensaje->sizeStream);
 		return 1;
