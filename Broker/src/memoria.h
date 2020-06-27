@@ -16,12 +16,16 @@
 #include <messages_lib/messages_lib.h>
 #include "broker.h"
 
+listaMutex* memoriaParticiones;
+listaMutex* particionesLibres;
+
 typedef struct {
 	uint32_t idMensaje;
 	uint32_t cola;
 	listaMutex* subsYaEnviado;
 	listaMutex* subsACK;
-	paquete* paq;
+	uint32_t sizeStream;
+	void* stream;
 }msgMemoriaBroker;
 
 typedef enum{
@@ -38,10 +42,16 @@ typedef struct{
 struct nodoMemoria {
 	nodeData header;
 	msgMemoriaBroker* mensaje;
+	uint32_t offset;
 	struct nodoMemoria* hijoIzq;
 	struct nodoMemoria* hijoDer;
-	struct nodoMemoria* padre;  //agregué esto no estoy segura
+	struct nodoMemoria* padre;
 };
+
+typedef struct{
+	uint32_t offset;
+	uint32_t sizeParticion;
+}particionLibre;
 
 typedef enum{
 	PARTICIONES_DINAMICAS,
@@ -93,7 +103,7 @@ listaMutex* iniciarMemoriaPARTICIONES();
 
 void evaluarTamanioParticion(struct nodoMemoria* partActual, msgMemoriaBroker* msg);
 
-void guardarSubEnMemoria(uint32_t idmensaje, uint32_t socket, uint32_t lista);
+void guardarEnListaMemoria(uint32_t idmensaje, uint32_t socket, uint32_t lista);
 msgMemoriaBroker* buscarMensajeEnMemoria(uint32_t idMensajeBuscado);
 msgMemoriaBroker* buscarMensajeEnMemoriaBuddy(uint32_t id);
 msgMemoriaBroker* buscarPorRama(uint32_t id, struct nodoMemoria* nodoActual );
@@ -111,6 +121,8 @@ bool entraEnLaMitad(struct nodoMemoria* partActual, msgMemoriaBroker* mensajeNue
 
 void crearDumpDeCache();
 
+msgMemoriaBroker* buscarMensajeEnMemoriaParticiones(uint32_t idMensajeBuscado);
+
 bool esParticionMinima(struct nodoMemoria* particion);
 
 uint32_t tamanioMinimo(struct nodoMemoria* partActual);
@@ -120,6 +132,8 @@ bool estaParticionado(struct nodoMemoria* partActual);
 bool estaOcupado(struct nodoMemoria* partActual);
 
 bool ambosHijosOcupados(struct nodoMemoria* padre);
+
+void asignarPuntero(uint32_t offset, void* stream);
 
 
 #endif /* MEMORIA_H_ */
