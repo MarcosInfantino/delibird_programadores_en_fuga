@@ -21,90 +21,7 @@
 #include <stdlib.h>
 
 
-//t_list* idsHilos=list_create();//son ints
-//t_list* hilos=list_create();//son pthread_t
-//uint32_t puertoTeam=5003;
-//pthread_mutex_t mutexEntrenadorEnEjecucion=PTHREAD_MUTEX_INITIALIZER;
-//listaMutex listaIdsEntrenadorMensaje; // del tipo idsEntrenadorMensaje , //ver a futuro si esta lista requiere mutex
-//listaMutex entrenadoresLibres;
-//colaMutex pokemonesPendientes;//lista de pokePosicion que contiene los pokemones que no pudieron ser asignados a ningun entrenador por no haber entrenadore libres
-//listaMutex entrenadoresExit;
-////t_list* mutexEntrenadores;
-//listaMutex entrenadores;
-//colaMutex colaEjecucionFifo;
 
-//pokemonPosicion pokemonAAtrapar;
-//
-//pthread_mutex_t mutexEntrenadorEnEjecucion=PTHREAD_MUTEX_INITIALIZER;
-//int socketGameboy;
-//int socketGamecard;
-//uint32_t puertoBroker;
-//char* ipBroker;
-//pthread_t* arrayIdHilosEntrenadores;
-//uint32_t tiempoReconexion;
-//uint32_t retardoCicloCpu;
-//char* algoritmoPlanificacion;
-//
-//sem_t semaforoEjecucionCpu;
-//
-//int main(void) {
-////	char* str="[Pikachu|Squirtle|Pidgey, Squirtle|Charmander, Bulbasaur]";
-////
-////	t_list* lst=obtenerListaDeListas(str);
-////	t_list* primerLista=arrayStringALista(((char**)list_get(lst,0)));
-////
-////	printf("%s\n", (char*) (list_get(primerLista,2)));
-//	char* pathConfig="Team2.config";
-//	t_config* config=config_create(pathConfig);
-//	dataTeam* t=inicializarTeam(config);
-//
-//	printf("No se colgo\n");
-//
-////	t_list* prueba=list_create();
-//
-//	int pos=1;
-//	printf("Objetivo : %s\n",((objetivo*)list_get(t->objetivoGlobal,pos))->pokemon);
-//	printf("Cantidad : %i\n",((objetivo*)list_get(t->objetivoGlobal,pos))->cantidad);
-//
-//	return EXIT_SUCCESS;
-//}
-
-//int main(void){
-//	int i=0;
-//	char* aux="Pikachu|Squirtle|Pidgey";
-//	char** lst=string_split(aux, "|");
-//	printf("%s",lst[i]);
-//	return 0;
-//}
-
-//
-
-
-//dataTeam* team;
-
-
-
-//int main(){
-//	//mensajeLocalized* llenarMensajeLocalized(uint32_t sizePokemon, char* pokemon, uint32_t cantidad, posicion* posiciones)
-//
-//	t_log* logPrueba=iniciar_logger("pruebaLocalized.log", "TEAM");
-//	char* pokemon="Pikachu";
-//	uint32_t cantidad=2;
-//	posicion* posiciones=malloc(sizeof(posicion)*2);
-//	posicion pos1={1,0};
-//	posicion pos2={0,0};
-//	*(posiciones)=pos1;
-//	*(posiciones+1)=pos2;
-//
-//	mensajeLocalized* msg= llenarLocalized(pokemon,cantidad,posiciones);
-//	void* stream= serializarLocalized(msg);
-//	//mensajeLocalized* msgResultado=deserializarLocalized(stream);
-//	paquete* paq=llenarPaquete(TEAM,LOCALIZED_POKEMON,sizeArgumentos(LOCALIZED_POKEMON, msg->pokemon,msg->cantidad),stream);
-//	loggearMensaje( paq, logPrueba);
-//	destruirLocalized(msg);
-//
-//	return 0;
-//}
 //TEAM APPEARED_POKEMON Pikachu 0 0
 //BROKER CAUGHT_POKEMON 4 OK
 
@@ -129,22 +46,12 @@ int main(int argc , char* argv[]){
 	log_info(teamLogger2,"NUEVA EJECUCION");
 	log_info(teamLogger2,"--------------------------------------------------------------------------");
 
-//	char* pathConfig   = "Team2.config";
-//	t_config* config   = config_create(pathConfig);
-//	estimacionInicial=config_get_int_value(config, "ESTIMACION_INICIAL");
-//	retardoCicloCpu    = config_get_int_value(config,"RETARDO_CICLO_CPU");
-//	tiempoReconexion= config_get_int_value(config,"TIEMPO_RECONEXION");
-//	puertoBroker       = config_get_int_value(config,"PUERTO_BROKER");
-//	ipBroker           = config_get_string_value(config,"IP_BROKER");
-
 	obtenerAlgoritmoPlanificacion(config);
 
 	team     = inicializarTeam(config);
 
 	entrenadores->lista       = team->entrenadores;
-	//entrenadoresLibres=entrenadores;
 
-	//mutexEntrenadores=inicializarMutexEntrenadores();
 
 	cantEntrenadores = list_size(team->entrenadores);
 	loggearObjetivoDelTeam();
@@ -153,12 +60,9 @@ int main(int argc , char* argv[]){
 
 	crearHilos(config);
 
-	//while(!objetivoCumplido());
 	sem_wait(semaforoObjetivoCumplido);
 	loggearResultado();
 
-
-	//HACER DESTROY DE TODAS LAS LISTAS Y ESTRUCTURAS AL FINAL
 
 	liberarMemoria();
 	terminar_programa(teamLogger, config);
@@ -174,9 +78,6 @@ void inicializarSemaforos(){
 
 	semaforoObjetivoCumplido=malloc(sizeof(sem_t));
 	sem_init((semaforoObjetivoCumplido), 0,0);
-
-//	pedidoCicloCpu=malloc(sizeof(sem_t));
-//	sem_init((pedidoCicloCpu), 0,0);
 
 	finalizacionCicloCpu=malloc(sizeof(sem_t));
 	sem_init((finalizacionCicloCpu), 0,0);
@@ -207,13 +108,13 @@ t_config* crearYLeerConfig(char* pathConfig){
 	puertoBroker       = config_get_int_value(config,"PUERTO_BROKER");
 	ipBroker           = config_get_string_value(config,"IP_BROKER");
 	logFilePrincipal=config_get_string_value(config, "LOG_FILE");
+	puertoTeam=config_get_int_value(config,"PUERTO_TEAM");
 
 	return config;
 }
 
 void inicializarColasYListas(){
 	entrenadoresLibres=inicializarListaMutex();
-	//colaEjecucionFifo=inicializarColaMutex();
 	pokemonesPendientes=inicializarColaMutex();
 	listaIdsEntrenadorMensaje=inicializarListaMutex();
 	entrenadores=inicializarListaMutex();
@@ -341,7 +242,7 @@ void* atenderCaught(void* paq){
 	if(idEncontrado!=-1){
 		dataEntrenador* entrenadorEncontrado=(dataEntrenador*)getListaMutex(entrenadores, idEncontrado);
 
-		if(msgCaught->resultadoCaught==CORRECTO && pokemonEsObjetivo(entrenadorEncontrado->pokemonAAtrapar->pokemon)){
+		if(msgCaught->resultadoCaught==CORRECTO ){
 //			list_add(entrenadorEncontrado->pokemones,(void*)(entrenadorEncontrado->pokemonAAtrapar->pokemon));
 //			registrarPokemonAtrapado(entrenadorEncontrado->pokemonAAtrapar->pokemon);
 //			replanificarEntrenador(entrenadorEncontrado);
@@ -350,11 +251,9 @@ void* atenderCaught(void* paq){
 		}else{
 //			entrenadorEncontrado->estado=BLOCKED;
 //			habilitarHiloEntrenador(idEncontrado);
-			if(msgCaught->resultadoCaught!=CORRECTO){
+			agregarObjetivo(entrenadorEncontrado->pokemonAAtrapar->pokemon);
 				log_info(teamLogger2,"El caught no fue exitoso.");
-			}else{
-				log_info(teamLogger2,"El caught me interesaba pero ese pokemon ya no es objetivo del team.");
-			}
+
 
 			replanificarEntrenador(entrenadorEncontrado);
 		}
@@ -453,15 +352,15 @@ void* suscribirseColasBroker(void* conf){
 	mensajeSuscripcion * mensajeSuscripcionCaught=llenarSuscripcion(CAUGHT_POKEMON);
 	mensajeSuscripcion* mensajeSuscripcionLocalized=llenarSuscripcion(LOCALIZED_POKEMON);
 
-	//pthread_t threadSuscripcionAppeared;
+
 	pthread_create(&threadSuscripcionAppeared, NULL, suscribirseCola, (void*)(mensajeSuscripcionAppeared));
 	pthread_detach(threadSuscripcionAppeared);
 
-	//pthread_t threadSuscripcionLocalized;
+
 	pthread_create(&threadSuscripcionLocalized, NULL, suscribirseCola,(void*) (mensajeSuscripcionLocalized));
 	pthread_detach(threadSuscripcionLocalized);
 
-	//pthread_t threadSuscripcionCaught;
+
 	pthread_create(&threadSuscripcionCaught, NULL, suscribirseCola, (void*)(mensajeSuscripcionCaught));
 	pthread_detach(threadSuscripcionCaught);
 
@@ -563,10 +462,9 @@ void* suscribirseCola(void* msgSuscripcion){
 
 
 
-//TODO: hacer funciones de llenarMensajeX en la lib
-//llenarPaquete( uint32_t modulo,uint32_t tipoMensaje, uint32_t sizeStream,void* stream)
+
 void enviarCatch(dataEntrenador* infoEntrenador){
-	//log_info(teamLogger2,"El entrenador %i inició el proceso de envío del catch.", infoEntrenador->id);
+
 	int32_t cliente=crearSocketCliente(ipBroker,puertoBroker);
 	log_info(teamLogger2, "El entrenador %i envia el catch para el pokemon %s.", infoEntrenador->id, infoEntrenador->pokemonAAtrapar->pokemon);
 	if(cliente!=-1){
@@ -577,8 +475,6 @@ void enviarCatch(dataEntrenador* infoEntrenador){
 		paquete* paq=llenarPaquete(TEAM,CATCH_POKEMON,   sizeArgumentos(CATCH_POKEMON,msgCatch->pokemon,1)  , streamMsg);
 		void* paqueteSerializado=serializarPaquete(paq);
 		destruirCatch(msgCatch);
-		//log_info(teamLogger2,"El entrenador %i intenta hacer el send del catch.", infoEntrenador->id);
-		//destruirPaquete(paq);
 
 		if(send(cliente,paqueteSerializado, sizePaquete(paq), 0)!=-1){
 			simularCicloCpu(1,infoEntrenador);
@@ -644,6 +540,7 @@ void* enviarGet(void* arg){
 		}else{
 			log_info(teamLogger, "Fallo de comunicación con el Broker al enviar un get. Se realizará la operación por default.");
 		}
+		destruirGet(msg);
 	}else{
 		log_info(teamLogger, "Fallo de comunicación con el Broker al enviar un get. Se realizará la operación por default.");
 	}
@@ -681,7 +578,7 @@ dataTeam* inicializarTeam(t_config* config){
 	infoTeam->entrenadores   = list_create();
 	t_list* especiesObjetivo = list_create();
 	infoTeam->objetivoGlobal=inicializarListaMutex();
-	//infoTeam->objetivosCumplidos = list_create();
+
 	infoTeam->cantidadCiclosCpuTotales=0;
 	infoTeam->cantidadCambiosContexto=0;
 	infoTeam->cantidadDeadlocksEncontrados=0;
@@ -716,7 +613,7 @@ dataTeam* inicializarTeam(t_config* config){
 		t_list* pokemonesEntrenadorAux        = arrayStringALista(pokemones);
 		t_list* objetivoPersonalEntrenadorAux = arrayStringALista(objetivos);
 		uint32_t i;
-		//for(i=0;i<list_size(pokemonesEntrenadorAux);i++){
+
 
 		for(i=0;i<list_size(pokemonesEntrenadorAux);i++){
 			char *pokemonAComparar = (char*) list_get(pokemonesEntrenadorAux,i);
@@ -820,29 +717,7 @@ t_list* arrayStringALista(char** arr){
 }
 
 
-//t_list* obtenerObjetivos(t_list* especies){
-//	t_list* objetivos=list_create();
-//
-//
-//	for(uint32_t i=0;i<list_size(especies);i++){
-//		void* especie=list_get(especies,i);
-//
-//		especieAComparar=especie;
-//
-//		void* encontrado=list_find(objetivos,objetivoMismaEspecie);
-//		if(encontrado==NULL){
-//			objetivo* objetivo=malloc(sizeof(objetivo));
-//			objetivo->cantidad=1;
-//			objetivo->pokemon= (char*) especie;
-//			//printf("%s\n",(char*)(objetivo->pokemon));
-//			list_add(objetivos,(void*)objetivo);
-//		}else{
-//			(((objetivo*)encontrado)->cantidad)++;
-//		}
-//	}
-//	return objetivos;
-//
-//}
+
 
 listaMutex* obtenerObjetivos(t_list* especies){
 	listaMutex* objetivos = inicializarListaMutex();
@@ -885,18 +760,34 @@ uint32_t buscarObjetivoPorEspecie(listaMutex* listaObjetivos, char* especie){
 
 
 void registrarPokemonAtrapado(char* pokemon){
-	uint32_t pos=buscarObjetivoPorEspecie(team->objetivoGlobal,pokemon);
-	if(pos!=-1){
-		objetivo* objetivoEncontrado=((objetivo*)getListaMutex(team->objetivoGlobal,pos));
-		(objetivoEncontrado->cantidad)--;
-		if(objetivoEncontrado->cantidad==0){
-			removeListaMutex(team->objetivoGlobal,pos);
-			destruirObjetivo((void*)objetivoEncontrado);
-		}
+
 		log_info(teamLogger2,"Se registró el pokemon atrapado.");
 
-	}else
-		log_info(teamLogger2,"No se pudo registrar el pokemon atrapado ya que no está en los objetivos del team.");
+}
+
+void agregarObjetivo(char* pokemon){
+	uint32_t encontrado = buscarObjetivoPorEspecie(team->objetivoGlobal,pokemon);
+	if(encontrado == -1){
+		objetivo* obj = malloc(sizeof(objetivo));
+		obj->cantidad = 1;
+		obj->pokemon=malloc(strlen(pokemon)+1);
+		strcpy(obj->pokemon,pokemon);
+		addListaMutex(team->objetivoGlobal,(void*)obj);
+	}else{
+		(((objetivo*)getListaMutex(team->objetivoGlobal,encontrado))->cantidad)++;
+	}
+}
+
+void removerObjetivo(char* pokemon){
+	uint32_t pos=buscarObjetivoPorEspecie(team->objetivoGlobal,pokemon);
+		if(pos!=-1){
+			objetivo* objetivoEncontrado=((objetivo*)getListaMutex(team->objetivoGlobal,pos));
+			(objetivoEncontrado->cantidad)--;
+			if(objetivoEncontrado->cantidad==0){
+				removeListaMutex(team->objetivoGlobal,pos);
+				destruirObjetivo((void*)objetivoEncontrado);
+			}
+		}
 }
 
 bool pokemonEsObjetivo(char* pokemon){

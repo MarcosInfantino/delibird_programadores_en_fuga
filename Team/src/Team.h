@@ -38,6 +38,7 @@ listaMutex* entrenadoresDeadlock;
 int esperaPedido;
 int socketGameboy;
 int socketGamecard;
+uint32_t puertoTeam;
 uint32_t cantEntrenadores;
 uint32_t quantumRR;
 uint32_t puertoBroker;
@@ -457,4 +458,8 @@ void terminarPlanificador();
 void resetearSemaforo(sem_t* semaforo);
 
 void destruirHilosEntrenadores();
+
+void removerObjetivo(char* pokemon);
+
+void agregarObjetivo(char* pokemon);
 #endif /* TEAM_H_ */

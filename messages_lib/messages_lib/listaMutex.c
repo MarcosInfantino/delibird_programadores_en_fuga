@@ -35,10 +35,11 @@ uint32_t sizeListaMutex(listaMutex* list){
 	return size;
 }
 
-void removeListaMutex(listaMutex* list,uint32_t pos){
+void* removeListaMutex(listaMutex* list,uint32_t pos){
 	pthread_mutex_lock(list->mutex);
-	list_remove(list->lista,pos);
+	void* retorno =list_remove(list->lista,pos);
 	pthread_mutex_unlock(list->mutex);
+	return retorno;
 }
 
 void removeAndDestroyElementListaMutex(listaMutex* list,uint32_t pos,void(*element_destroyer)(void*)){

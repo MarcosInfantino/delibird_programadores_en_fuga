@@ -267,6 +267,7 @@ void asignarPokemonAEntrenador(dataEntrenador* entrenador, pokemonPosicion* poke
 //	if(entrenador->pokemonAAtrapar!=NULL){
 //		destruirPokemonPosicion((entrenador->pokemonAAtrapar));//HACER DESTRUIR POKEMONAATRAPAR
 //	}
+	removerObjetivo(pokePosicion->pokemon);
 	entrenador->pokemonAAtrapar=pokePosicion;
 	entrenador->estado=READY;
 
