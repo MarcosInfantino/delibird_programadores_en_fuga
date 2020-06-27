@@ -16,9 +16,6 @@
 #include <messages_lib/messages_lib.h>
 #include "broker.h"
 
-listaMutex* memoriaParticiones;
-listaMutex* particionesLibres;
-
 typedef struct {
 	uint32_t idMensaje;
 	uint32_t cola;
@@ -85,55 +82,49 @@ typedef struct{
 
 struct nodoMemoria* nodoRaizMemoria;
 listaMutex* memoriaPARTICIONES;
+listaMutex* particionesLibres;
 
 //void enviarMensajesPreviosEnMemoria(uint32_t socket,uint32_t identificadorCola);
 
+struct nodoMemoria* crearRaizArbol(void);
+listaMutex* iniciarMemoriaPARTICIONES();
 struct nodoMemoria* inicializarNodo();
 void liberarNodo(struct nodoMemoria* nodo);
-struct nodoMemoria* crearRaizArbol(void);
+
 
 void registrarMensajeEnMemoria(uint32_t idMensaje, paquete* paq, algoritmoMem metodo);
 void registrarEnMemoriaPARTICIONES(msgMemoriaBroker*);
 void registrarEnMemoriaBUDDYSYSTEM(msgMemoriaBroker* mensajeNuevo, struct nodoMemoria* partActual);
 
 void particionarMemoriaBUDDY(struct nodoMemoria*);
-
-
-listaMutex* iniciarMemoriaPARTICIONES();
-
 void evaluarTamanioParticion(struct nodoMemoria* partActual, msgMemoriaBroker* msg);
+uint32_t evaluarTamanioParticionYasignar(struct nodoMemoria* partActual, msgMemoriaBroker* msg);
 
 void guardarEnListaMemoria(uint32_t idmensaje, uint32_t socket, uint32_t lista);
 msgMemoriaBroker* buscarMensajeEnMemoria(uint32_t idMensajeBuscado);
 msgMemoriaBroker* buscarMensajeEnMemoriaBuddy(uint32_t id);
+msgMemoriaBroker* buscarMensajeEnMemoriaParticiones(uint32_t idMensajeBuscado);
 msgMemoriaBroker* buscarPorRama(uint32_t id, struct nodoMemoria* nodoActual );
-
-bool noEsParticionMinima(struct nodoMemoria* particion);
-uint32_t tamanioParticion(struct nodoMemoria* part);
-bool estaLibre(struct nodoMemoria* particion);
-bool estaEnLista(uint32_t socket, ListasMemoria lista, msgMemoriaBroker* mensaje);
-
-uint32_t evaluarTamanioParticionYasignar(struct nodoMemoria* partActual, msgMemoriaBroker* msg);
-
 uint32_t intentarRamaIzquierda(msgMemoriaBroker* mensajeNuevo, struct nodoMemoria* partActual);
 
+uint32_t tamanioParticion(struct nodoMemoria* part);
+uint32_t tamanioMinimo(struct nodoMemoria* partActual);
+bool noEsParticionMinima(struct nodoMemoria* particion);
+bool estaLibre(struct nodoMemoria* particion);
+bool estaEnLista(uint32_t socket, ListasMemoria lista, msgMemoriaBroker* mensaje);
 bool entraEnLaMitad(struct nodoMemoria* partActual, msgMemoriaBroker* mensajeNuevo);
-
-void crearDumpDeCache();
-
-msgMemoriaBroker* buscarMensajeEnMemoriaParticiones(uint32_t idMensajeBuscado);
-
 bool esParticionMinima(struct nodoMemoria* particion);
 
-uint32_t tamanioMinimo(struct nodoMemoria* partActual);
-
 bool estaParticionado(struct nodoMemoria* partActual);
-
 bool estaOcupado(struct nodoMemoria* partActual);
-
 bool ambosHijosOcupados(struct nodoMemoria* padre);
 
-void asignarPuntero(uint32_t offset, void* stream);
+particionLibre* obtenerParticionLibrePARTICIONES(uint32_t tamStream);
+bool menorAmayorSegunSize(void* primero, void* segundo);
+bool menorAmayorSegunOffset(void* primero, void* segundo);
+bool esSuficientementeGrandeParaElMSG(void* elemento);
 
+void crearDumpDeCache();
+void asignarPuntero(uint32_t offset, void* stream, uint32_t sizeStream);
 
 #endif /* MEMORIA_H_ */

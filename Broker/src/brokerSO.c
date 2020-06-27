@@ -28,7 +28,7 @@
 
 int main(void) {
 
-    brokerLogger2=log_create("brokerLoggerSecundario.log", "Broker", true, LOG_LEVEL_INFO);
+    brokerLogger2 = log_create("brokerLoggerSecundario.log", "Broker", true, LOG_LEVEL_INFO);
 
     log_info(brokerLogger2, "pid : %i", getpid());
 
@@ -40,36 +40,32 @@ int main(void) {
 	particionMinima   = config_get_int_value(configBroker, "TAMANO_MINIMO_PARTICION");
 	ip_broker         = config_get_string_value(configBroker, "IP_BROKER");
 	puerto_broker     = config_get_int_value(configBroker, "PUERTO_BROKER");
-
-//	puerto_broker = 5002;
-//	ip_broker     = "127.0.0.1";
-//	tamMemoria    = 2048;
-//	particionMinima = 32;
-
-	char* nombreLog   = "logBroker.log";
-	char* programName = "BROKER";
-
-	loggerBroker = iniciar_logger(nombreLog, programName);
-
-
 	definirAlgoritmoMemoria(configBroker);
 	definirAlgoritmoParticionLibre(configBroker);
 	definirAlgoritmoReemplazo(configBroker);
-	mutexMemoria=malloc(sizeof(pthread_mutex_t));
+
+//	puerto_broker   = 5002;
+//	ip_broker       = "127.0.0.1";
+//	tamMemoria      = 2048;
+//	particionMinima = 32;
+//  algoritmoMemoria   = BUDDY_SYSTEM;
+//  algoritmoReemplazo = FIFO;
+
+	char* nombreLog   = "logBroker.log";
+	char* programName = "BROKER";
+	loggerBroker = iniciar_logger(nombreLog, programName);
+
+	mutexMemoria = malloc(sizeof(pthread_mutex_t));
 	pthread_mutex_init(mutexMemoria,NULL);
-	algoritmoMemoria=BUDDY_SYSTEM;
-	algoritmoReemplazo=FIFO;
 
 	definirComienzoDeMemoria();
 
 	//archivoSem = iniciarArchivoMutex();
 
-
 	iniciarHilos();
 	inicializarContador();
 	abrirHiloParaEnviarMensajes();
 	iniciarServidor();
-
 
 	return EXIT_SUCCESS;
 }
