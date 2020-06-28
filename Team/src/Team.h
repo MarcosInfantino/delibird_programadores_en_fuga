@@ -31,6 +31,8 @@ listaMutex* listaIdsEntrenadorMensaje; // del tipo idsEntrenadorMensaje , //ver 
 listaMutex* entrenadoresLibres;
 colaMutex* pokemonesPendientes;//lista de pokePosicion que contiene los pokemones que no pudieron ser asignados a ningun entrenador por no haber entrenadore libres
 
+listaMutex* pokemonesConCatchPendiente;
+
 listaMutex* entrenadoresExit;
 listaMutex* entrenadoresDeadlock;
 //pokemonPosicion pokemonAAtrapar;

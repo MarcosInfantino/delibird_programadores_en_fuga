@@ -172,6 +172,7 @@ void* atenderAppeared(void* paq){
 	(pokePosicion->posicion).x=msg->posX;
 	(pokePosicion->posicion).y=msg->posY;
 	destruirAppeared(msg);
+
 	if(pokemonEsObjetivo(pokePosicion->pokemon)){
 		log_info(teamLogger2, "El pokemon es objetivo");
 		if(sizeListaMutex(entrenadoresLibres)>0){
@@ -181,7 +182,11 @@ void* atenderAppeared(void* paq){
 			log_info(teamLogger2, "No hay entrenadores disponibles para atrapar a %s. ",pokePosicion->pokemon);
 			pushColaMutex(pokemonesPendientes,(void*)pokePosicion);
 		}
-	}else{
+	}else
+//		if(seEstaGestionandoCatch(pokePosicion->pokemon)){
+//
+//	}
+	{
 		log_info(teamLogger2, "El pokemon no es objetivo");
 	}
 	destruirPaquete(paqueteAppeared);
@@ -254,7 +259,13 @@ void* atenderCaught(void* paq){
 			agregarObjetivo(entrenadorEncontrado->pokemonAAtrapar->pokemon);//lo vuelve a gregar a los objetivos porque vuelver a ser un objetivo necesario
 				log_info(teamLogger2,"El caught no fue exitoso.");
 
-
+//			if(hayAppearedParaEsteCaughtFallido(entrenadorEncontrado->pokemonAAtrapar->pokemon)){
+//				pokemonPosicion* poke=malloc(sizeof(pokemonPosicion));
+//				poke->pokemon=malloc(strlen(entrenadorEncontrado->pokemonAAtrapar->pokemon)+1);
+//				strcpy(poke->pokemon,entrenadorEncontrado->pokemonAAtrapar->pokemon);
+//				poke->posicion=entrenadorEncontrado->pokemonAAtrapar->posicion;
+//				pushColaMutex(pokemonesPendientes,(void*)pokePosicion);
+//			}
 			replanificarEntrenador(entrenadorEncontrado);
 		}
 	}else{

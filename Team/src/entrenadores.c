@@ -154,6 +154,7 @@ void poneteEnNew(dataEntrenador* entrenador){
 
 void poneteEnReady(dataEntrenador* entrenador){
 	log_info(teamLogger2,"El entrenador %i se pone en READY.", entrenador->id);
+
 	switch(algoritmoPlanificacion){
 		case RR:
 		case FIFO:
@@ -161,8 +162,8 @@ void poneteEnReady(dataEntrenador* entrenador){
 			pushColaMutex(colaEjecucionFifo,(void*)entrenador);
 			sem_post(entrenadorEnCola); //OK6
 			break;
-		case SJF:
 		case SJFCD:
+		case SJF:
 
 			entrenador->estado=READY;
 			addListaMutex(listaEjecucionSjf,(void*)entrenador);
