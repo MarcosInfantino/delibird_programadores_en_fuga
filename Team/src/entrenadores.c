@@ -92,6 +92,7 @@ void replanificarEntrenador(dataEntrenador* entrenador){
 			log_info(teamLogger2, "El entrenador %i va a buscar pokemones pendientes.", entrenador->id);
 			pokemonPosicion* pokePosicion=(pokemonPosicion*)popColaMutex(pokemonesPendientes);
 			log_info(teamLogger2, "El entrenador %i hace pop del pokemon pendiente %s.", entrenador->id, pokePosicion->pokemon);
+			habilitarHiloEntrenador(entrenador->id);
 			asignarPokemonAEntrenador(entrenador, pokePosicion);
 			//free(pokePosicion);
 		}else{
