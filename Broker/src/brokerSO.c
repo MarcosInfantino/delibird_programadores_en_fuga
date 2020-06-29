@@ -215,7 +215,7 @@ void meterEnCola( colaMensajes* structCola, paquete * paq, uint32_t  socket){
 	send(socket,(void*)(&valorContador),sizeof(uint32_t),0);
 	log_info(brokerLogger2,"Meto un mensaje en la cola.");
 
-	registrarMensajeEnMemoria(contador.contador, paq, algoritmoMemoria);
+	//registrarMensajeEnMemoria(contador.contador, paq, algoritmoMemoria);
 
 	pushColaMutex(structCola->cola, (void *) paq);
 

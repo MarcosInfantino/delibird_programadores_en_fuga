@@ -31,7 +31,8 @@ listaMutex* listaIdsEntrenadorMensaje; // del tipo idsEntrenadorMensaje , //ver 
 listaMutex* entrenadoresLibres;
 colaMutex* pokemonesPendientes;//lista de pokePosicion que contiene los pokemones que no pudieron ser asignados a ningun entrenador por no haber entrenadore libres
 
-listaMutex* pokemonesConCatchPendiente;
+listaMutex* pokemonesConCatchPendiente;//lista de strings de pokemonm
+listaMutex* pokemonesPosicionDeReserva;//lista de pokemonPosicion que se mandaron ahi porque en el momento que llegaron se les estaba gestionando un catch
 
 listaMutex* entrenadoresExit;
 listaMutex* entrenadoresDeadlock;
@@ -230,6 +231,8 @@ int crearHiloServidorGameboy(pthread_t* hilo);
 void* iniciarServidorGameboy(void* arg);
 
 uint32_t buscarMismoPokemon(t_list* lst, char* pokemon);
+
+int32_t buscarMismoPokemonListaMutex(listaMutex* lst, char* pokemon);
 
 void* suscribirseCola(void* estructuraSuscripcion);
 
@@ -464,4 +467,19 @@ void destruirHilosEntrenadores();
 void removerObjetivo(char* pokemon);
 
 void agregarObjetivo(char* pokemon);
+
+void gestionarBusquedaPokemon(pokemonPosicion* pokePosicion);
+
+bool seEstaGestionandoCatch(char* pokemon);
+
+void removerPokemonConCatchPendiente(char* pokemon);
+
+pokemonPosicion* obtenerPokemonPosicionEnReserva(char* pokemon);
+
+bool mismoPokemonPosicion(pokemonPosicion* poke1, pokemonPosicion* poke2);
+
+void agregarPokemonPosicionAReserva(pokemonPosicion* poke);
+
+bool yaEstaEnReserva(pokemonPosicion* poke);
+
 #endif /* TEAM_H_ */

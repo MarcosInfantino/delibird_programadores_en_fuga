@@ -36,7 +36,7 @@ void* ejecucionHiloEntrenador(void* argEntrenador){
 	while(1){
 		sem_wait(semaforoEntrenador); //OK1
 
-		removeListaMutex(entrenadoresLibres,encontrarPosicionEntrenadorLibre(infoEntrenador));
+		//removeListaMutex(entrenadoresLibres,encontrarPosicionEntrenadorLibre(infoEntrenador));
 		poneteEnReady(infoEntrenador);
 
 		entrarEnEjecucion(infoEntrenador); //despues de esto enviaria el catch, recibe id y se pone en BLOCKED
@@ -91,8 +91,9 @@ void replanificarEntrenador(dataEntrenador* entrenador){
 		if(sizeColaMutex(pokemonesPendientes)>0){
 			log_info(teamLogger2, "El entrenador %i va a buscar pokemones pendientes.", entrenador->id);
 			pokemonPosicion* pokePosicion=(pokemonPosicion*)popColaMutex(pokemonesPendientes);
+			log_info(teamLogger2, "El entrenador %i hace pop del pokemon pendiente %s.", entrenador->id, pokePosicion->pokemon);
 			asignarPokemonAEntrenador(entrenador, pokePosicion);
-			free(pokePosicion);
+			//free(pokePosicion);
 		}else{
 			log_info(teamLogger2, "El entrenador %i se bloquea porque no hay pokemones para atrapar.", entrenador->id);
 			poneteEnBlocked(entrenador);
@@ -237,6 +238,7 @@ void resetearContadorRafagas(dataEntrenador* entrenador){
 void seleccionarEntrenador(pokemonPosicion* pokemon){
 	uint32_t idEntrenadorMasCercano      = obtenerIdEntrenadorMasCercano(pokemon->posicion);
 	dataEntrenador* entrenadorMasCercano = getListaMutex(entrenadores,idEntrenadorMasCercano);
+	removeListaMutex(entrenadoresLibres,encontrarPosicionEntrenadorLibre(entrenadorMasCercano));
 	asignarPokemonAEntrenador(entrenadorMasCercano,pokemon);
 	log_info(teamLogger2, "Se selecciono el entrenador %i para atrapar al pokemon %s", entrenadorMasCercano->id,pokemon->pokemon);
 	//habilitarHiloEntrenador(idEntrenadorMasCercano);
@@ -268,6 +270,11 @@ void asignarPokemonAEntrenador(dataEntrenador* entrenador, pokemonPosicion* poke
 //	if(entrenador->pokemonAAtrapar!=NULL){
 //		destruirPokemonPosicion((entrenador->pokemonAAtrapar));//HACER DESTRUIR POKEMONAATRAPAR
 //	}
+	log_info(teamLogger2, "Se le asigno el posemon %s al entrenador %i.", pokePosicion->pokemon, entrenador->id);
+	char* pokemonString=malloc(strlen(pokePosicion->pokemon)+1);
+	strcpy(pokemonString,pokePosicion->pokemon);
+	addListaMutex(pokemonesConCatchPendiente, (void*) pokemonString);
+
 	removerObjetivo(pokePosicion->pokemon);
 	entrenador->pokemonAAtrapar=pokePosicion;
 	entrenador->estado=READY;
@@ -276,9 +283,15 @@ void asignarPokemonAEntrenador(dataEntrenador* entrenador, pokemonPosicion* poke
 }
 
 void atraparPokemonYReplanificar (dataEntrenador* entrenador){
+
+	removerPokemonConCatchPendiente(entrenador->pokemonAAtrapar->pokemon);
+
+
 	char* pokemonAtrapado=malloc(strlen(entrenador->pokemonAAtrapar->pokemon)+1);
 	strcpy(pokemonAtrapado,entrenador->pokemonAAtrapar->pokemon);
+
 	list_add(entrenador->pokemones,(void*)(pokemonAtrapado));
+	log_info(teamLogger2,"%i atrapo a %s", entrenador->id,entrenador->pokemonAAtrapar->pokemon);
 	registrarPokemonAtrapado(entrenador->pokemonAAtrapar->pokemon);
 	log_info(teamLogger,"El entrenador %i atrapó al pokemon %s en la posición (%i,%i).", entrenador->id,entrenador->pokemonAAtrapar->pokemon,
 			(entrenador->pokemonAAtrapar->posicion).x,(entrenador->pokemonAAtrapar->posicion).y);
@@ -287,6 +300,8 @@ void atraparPokemonYReplanificar (dataEntrenador* entrenador){
 
 	replanificarEntrenador(entrenador);
 }
+
+
 
 void moverEntrenadorAPosicion(dataEntrenador* entrenador, posicion pos){
 

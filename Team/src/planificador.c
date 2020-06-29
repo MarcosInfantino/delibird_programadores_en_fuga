@@ -107,6 +107,7 @@ void ejecucionPlanificadorRR(){
 
 				sem_wait(&semaforoEjecucionCpu);
 				pthread_cancel(hiloTimer);
+
 				if(esperaPedido>0){
 					sem_post(entrenadorAEjecutar->semaforoPedidoCiclo);
 					esperaPedido--;

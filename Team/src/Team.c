@@ -122,6 +122,8 @@ void inicializarColasYListas(){
 	entrenadoresExit=inicializarListaMutex();
 	entrenadoresDeadlock=inicializarListaMutex();
 	listaIdsRespuestasGet=inicializarListaMutex();
+	pokemonesConCatchPendiente=inicializarListaMutex();
+	pokemonesPosicionDeReserva=inicializarListaMutex();
 }
 
 void loggearObjetivoDelTeam(){
@@ -172,25 +174,48 @@ void* atenderAppeared(void* paq){
 	(pokePosicion->posicion).x=msg->posX;
 	(pokePosicion->posicion).y=msg->posY;
 	destruirAppeared(msg);
-
-	if(pokemonEsObjetivo(pokePosicion->pokemon)){
-		log_info(teamLogger2, "El pokemon es objetivo");
-		if(sizeListaMutex(entrenadoresLibres)>0){
-			log_info(teamLogger2, "Hay entrenadores disponibles para atrapar a %s.",pokePosicion->pokemon );
-			seleccionarEntrenador(pokePosicion);
-		}else{
-			log_info(teamLogger2, "No hay entrenadores disponibles para atrapar a %s. ",pokePosicion->pokemon);
-			pushColaMutex(pokemonesPendientes,(void*)pokePosicion);
-		}
-	}else
-//		if(seEstaGestionandoCatch(pokePosicion->pokemon)){
-//
+	gestionarBusquedaPokemon(pokePosicion);
+//	if(pokemonEsObjetivo(pokePosicion->pokemon)){
+//		log_info(teamLogger2, "El pokemon es objetivo");
+//		if(sizeListaMutex(entrenadoresLibres)>0){
+//			log_info(teamLogger2, "Hay entrenadores disponibles para atrapar a %s.",pokePosicion->pokemon );
+//			seleccionarEntrenador(pokePosicion);
+//		}else{
+//			log_info(teamLogger2, "No hay entrenadores disponibles para atrapar a %s. ",pokePosicion->pokemon);
+//			pushColaMutex(pokemonesPendientes,(void*)pokePosicion);
+//		}
+//	}else
+////		if(seEstaGestionandoCatch(pokePosicion->pokemon)){
+////
+////	}
+//	{
+//		log_info(teamLogger2, "El pokemon no es objetivo");
 //	}
-	{
-		log_info(teamLogger2, "El pokemon no es objetivo");
-	}
 	destruirPaquete(paqueteAppeared);
 	return NULL;
+}
+
+void gestionarBusquedaPokemon(pokemonPosicion* pokePosicion){
+	if(pokemonEsObjetivo(pokePosicion->pokemon)){
+			log_info(teamLogger2, "El pokemon es objetivo");
+			if(sizeListaMutex(entrenadoresLibres)>0){
+				log_info(teamLogger2, "Hay entrenadores disponibles para atrapar a %s.",pokePosicion->pokemon );
+				seleccionarEntrenador(pokePosicion);
+			}else{
+				log_info(teamLogger2, "No hay entrenadores disponibles para atrapar a %s. ",pokePosicion->pokemon);
+				pushColaMutex(pokemonesPendientes,(void*)pokePosicion);
+			}
+		}else if(seEstaGestionandoCatch(pokePosicion->pokemon)){
+			log_info(teamLogger2, "se esta gestionando el catch.");
+				agregarPokemonPosicionAReserva(pokePosicion);
+
+		}else {
+			log_info(teamLogger2, "El pokemon no es objetivo");
+		}
+}
+
+bool seEstaGestionandoCatch(char* pokemon){
+	return buscarMismoPokemonListaMutex(pokemonesConCatchPendiente, pokemon)!=-1;
 }
 
 void* atenderLocalized(void* paq){
@@ -256,7 +281,15 @@ void* atenderCaught(void* paq){
 		}else{
 //			entrenadorEncontrado->estado=BLOCKED;
 //			habilitarHiloEntrenador(idEncontrado);
-			agregarObjetivo(entrenadorEncontrado->pokemonAAtrapar->pokemon);//lo vuelve a gregar a los objetivos porque vuelver a ser un objetivo necesario
+			agregarObjetivo(entrenadorEncontrado->pokemonAAtrapar->pokemon);//lo vuelve a agregar a los objetivos porque vuelver a ser un objetivo necesario
+			removerPokemonConCatchPendiente(entrenadorEncontrado->pokemonAAtrapar->pokemon);
+			pokemonPosicion* pokeReserva=obtenerPokemonPosicionEnReserva(entrenadorEncontrado->pokemonAAtrapar->pokemon);
+
+			if(pokeReserva!=NULL){
+				gestionarBusquedaPokemon(pokeReserva);
+			}
+
+			destruirPokemonPosicion(entrenadorEncontrado->pokemonAAtrapar);
 				log_info(teamLogger2,"El caught no fue exitoso.");
 
 //			if(hayAppearedParaEsteCaughtFallido(entrenadorEncontrado->pokemonAAtrapar->pokemon)){
@@ -275,6 +308,27 @@ void* atenderCaught(void* paq){
 	destruirCaught(msgCaught);
 	destruirPaquete(paqueteCaught);
 	return NULL;
+}
+
+bool mismoPokemonPosicion(pokemonPosicion* poke1, pokemonPosicion* poke2){
+	return (strcmp(poke1->pokemon, poke2->pokemon)==0) && (poke1->posicion).x==(poke2->posicion).x && (poke1->posicion).y==(poke2->posicion).x;
+}
+
+bool yaEstaEnReserva(pokemonPosicion* poke){
+	for(uint32_t i=0; i< sizeListaMutex(pokemonesPosicionDeReserva);i++){
+		pokemonPosicion* pokeActual= (pokemonPosicion*) getListaMutex(pokemonesPosicionDeReserva,i);
+		if(mismoPokemonPosicion(pokeActual, poke)){
+			return true;
+		}
+	}
+
+	return false;
+}
+
+void agregarPokemonPosicionAReserva(pokemonPosicion* poke){
+	if(!yaEstaEnReserva(poke)){
+		addListaMutex(pokemonesPosicionDeReserva, (void*) poke);
+	}
 }
 
 uint32_t buscarEntrenadorParaMensaje(listaMutex* listaIds, uint32_t idMensaje){//devuelve el id del entrenador
@@ -511,6 +565,7 @@ void enviarCatch(dataEntrenador* infoEntrenador){
 			}
 		}else{
 			log_info(teamLogger, "Fallo de comunicación con el Broker al enviar un catch. Se realizará la operación por default.");
+			simularCicloCpu(1,infoEntrenador);
 			atraparPokemonYReplanificar (infoEntrenador);
 		}
 		free(paqueteSerializado);
@@ -523,6 +578,31 @@ void enviarCatch(dataEntrenador* infoEntrenador){
 	close(cliente);
 }
 
+int32_t buscarMismoPokemonListaMutex(listaMutex* lst, char* pokemon){
+	for(uint32_t i=0; i<sizeListaMutex(lst);i++){
+		char* pokemonActual=(char*)getListaMutex(lst,i);
+		if(strcmp(pokemon,pokemonActual)==0){
+			return i;
+		}
+	}
+	return -1;
+}
+
+void removerPokemonConCatchPendiente(char* pokemon){
+	int32_t posPokemonPendiente=buscarMismoPokemonListaMutex(pokemonesConCatchPendiente, pokemon);
+	if(posPokemonPendiente!=-1)
+		removeListaMutex(pokemonesConCatchPendiente,posPokemonPendiente);
+}
+
+pokemonPosicion* obtenerPokemonPosicionEnReserva(char* pokemon){
+	for(uint32_t i=0; i<sizeListaMutex(pokemonesPosicionDeReserva); i++){
+		pokemonPosicion* pokeActual= (pokemonPosicion*) getListaMutex(pokemonesPosicionDeReserva,i);
+		if(strcpy(pokeActual->pokemon,pokemon)){
+			return (pokemonPosicion*)removeListaMutex(pokemonesPosicionDeReserva,i);
+		}
+	}
+	return NULL;
+}
 
 void* enviarGet(void* arg){
 	char* pokemon=(char*) arg;
@@ -772,7 +852,7 @@ uint32_t buscarObjetivoPorEspecie(listaMutex* listaObjetivos, char* especie){
 
 void registrarPokemonAtrapado(char* pokemon){
 
-		log_info(teamLogger2,"Se registró el pokemon atrapado.");
+		log_info(teamLogger2,"Se registró el pokemon atrapado. %s", pokemon);
 
 }
 
