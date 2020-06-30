@@ -37,9 +37,9 @@
 *.hex
 
 #Agrego tato
-*.makefile
-*.run
-*.log
+.makefile
+.run
+.log
 
 # Debug files
 *.dSYM/

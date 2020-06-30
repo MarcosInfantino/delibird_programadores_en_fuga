@@ -34,22 +34,7 @@ int main(void) {
 
 	signal(SIGUSR1, crearDumpDeCache);
 
-	char* pathConfig = "Broker.config";
-	t_config* configBroker = config_create(pathConfig);
-	tamMemoria        = config_get_int_value(configBroker, "TAMANO_MEMORIA");
-	particionMinima   = config_get_int_value(configBroker, "TAMANO_MINIMO_PARTICION");
-	ip_broker         = config_get_string_value(configBroker, "IP_BROKER");
-	puerto_broker     = config_get_int_value(configBroker, "PUERTO_BROKER");
-	definirAlgoritmoMemoria(configBroker);
-	definirAlgoritmoParticionLibre(configBroker);
-	definirAlgoritmoReemplazo(configBroker);
-
-//	puerto_broker   = 5002;
-//	ip_broker       = "127.0.0.1";
-//	tamMemoria      = 2048;
-//	particionMinima = 32;
-//  algoritmoMemoria   = BUDDY_SYSTEM;
-//  algoritmoReemplazo = FIFO;
+	levantarDatosDeConfig("Broker.config", 1); //1 para datos de config, otro para hardcode
 
 	char* nombreLog   = "logBroker.log";
 	char* programName = "BROKER";
@@ -69,6 +54,30 @@ int main(void) {
 
 	return EXIT_SUCCESS;
 }
+
+void levantarDatosDeConfig(char * pathConfig, uint32_t intMock){
+	if (intMock == 1){
+		t_config* configBroker = config_create(pathConfig);
+
+		tamMemoria        = config_get_int_value(configBroker, "TAMANO_MEMORIA");
+		particionMinima   = config_get_int_value(configBroker, "TAMANO_MINIMO_PARTICION");
+		ip_broker         = config_get_string_value(configBroker, "IP_BROKER");
+		puerto_broker     = config_get_int_value(configBroker, "PUERTO_BROKER");
+
+		definirAlgoritmoMemoria(configBroker);
+		definirAlgoritmoParticionLibre(configBroker);
+		definirAlgoritmoReemplazo(configBroker);
+	}else{
+		puerto_broker   = 5002;
+		ip_broker       = "127.0.0.1";
+		tamMemoria      = 2048;
+		particionMinima = 32;
+		algoritmoMemoria   = BUDDY_SYSTEM;
+		algoritmoReemplazo = FIFO;
+	}
+}
+
+
 
 void* iniciarServidor(){
 	struct sockaddr_in direccionServidor;
@@ -324,7 +333,7 @@ void definirAlgoritmoMemoria(t_config* config){
 	parAlgoritmo.OP2     = BUDDY_SYSTEM;
 	parAlgoritmo.error   = "Hubo un error al definir el algoritmo de memoria";
 
-	definirAlgoritmo(parAlgoritmo, algoritmoMemoria);
+	definirAlgoritmo(parAlgoritmo, &algoritmoMemoria);
 }
 
 void definirAlgoritmoParticionLibre(t_config* config){
@@ -337,7 +346,7 @@ void definirAlgoritmoParticionLibre(t_config* config){
 	parAlgoritmo.OP2 = BEST_FIT;
 	parAlgoritmo.error = "Hubo un error al definir el algoritmo de particiones de memoria libres";
 
-	definirAlgoritmo(parAlgoritmo, algoritmoParticionLibre);
+	definirAlgoritmo(parAlgoritmo, &algoritmoParticionLibre);
 }
 
 void definirAlgoritmoReemplazo(t_config* config){
@@ -350,14 +359,14 @@ void definirAlgoritmoReemplazo(t_config* config){
 	parAlgoritmo.OP2 = LRU;
 	parAlgoritmo.error = "Hubo un error al definir el algoritmo de particiones de memoria libres";
 
-	definirAlgoritmo(parAlgoritmo, algoritmoReemplazo);
+	definirAlgoritmo(parAlgoritmo, &algoritmoReemplazo);
 }
-void definirAlgoritmo(algoritmoParameter parAlgoritmo, uint32_t variablecitaDeCamiEnojona){
+void definirAlgoritmo(algoritmoParameter parAlgoritmo, uint32_t * varInt){
 	char* algoritmo = config_get_string_value(parAlgoritmo.config, parAlgoritmo.configAtributo);
 		if( strcmp(algoritmo, parAlgoritmo.OPCION1) == 0){
-			variablecitaDeCamiEnojona = parAlgoritmo.OP1;
+			*varInt = parAlgoritmo.OP1;
 		}else if(strcmp(algoritmo, parAlgoritmo.OPCION2) == 0){
-			variablecitaDeCamiEnojona = parAlgoritmo.OP2;
+			*varInt = parAlgoritmo.OP2;
 		}else{
 			printf("%s", parAlgoritmo.error);
 		}
@@ -366,7 +375,8 @@ void definirAlgoritmo(algoritmoParameter parAlgoritmo, uint32_t variablecitaDeCa
 void definirComienzoDeMemoria(){
 	void* memoria = malloc(tamMemoria);
 	/*if(algoritmoMemoria == BUDDY_SYSTEM){*/
-			nodoRaizMemoria = crearRaizArbol();
+	nodoRaizMemoria = crearRaizArbol();
+	nodoRaizMemoria->offset = 0;
 	/*}else if(algoritmoMemoria == PARTICIONES_DINAMICAS){
 			memoriaPARTICIONES = iniciarMemoriaPARTICIONES();
 	}*/

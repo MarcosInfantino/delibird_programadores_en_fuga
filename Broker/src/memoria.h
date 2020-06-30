@@ -15,6 +15,8 @@
 #include <commons/log.h>
 #include <messages_lib/messages_lib.h>
 #include "broker.h"
+#include <time.h>
+
 
 typedef struct {
 	uint32_t idMensaje;
@@ -34,6 +36,7 @@ typedef enum{
 typedef struct{
 	nodeStatus status;
 	uint32_t size;
+	struct tm tiempo;
 }nodeData;
 
 struct nodoMemoria {

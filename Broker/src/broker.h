@@ -43,7 +43,6 @@ typedef struct{
 	pthread_mutex_t* mutexContador;
 }contadorMensajes;
 
-
 //typedef struct {
 //	paquete paquete;
 //	colaMensajes structCola;
@@ -81,8 +80,9 @@ void* iniciarServidor();
 void definirAlgoritmoMemoria(t_config*);
 void definirAlgoritmoParticionLibre(t_config*);
 void definirAlgoritmoReemplazo(t_config*);
-void definirAlgoritmo(algoritmoParameter , uint32_t);
+void definirAlgoritmo(algoritmoParameter , uint32_t*);
 void definirComienzoDeMemoria();
+void levantarDatosDeConfig(char *, uint32_t);
 
 void esperar_cliente(uint32_t);
 void asignarID(paquete * paq);
