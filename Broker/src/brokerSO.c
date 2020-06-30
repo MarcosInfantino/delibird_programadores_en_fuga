@@ -218,13 +218,14 @@ void manejarTipoDeMensaje(paquete* paq, uint32_t* socket) {
 }
 
 void meterEnCola( colaMensajes* structCola, paquete * paq, uint32_t  socket){
-
-	uint32_t valorContador = incrementarContador();
-	insertarIdPaquete(paq,valorContador);
-	send(socket,(void*)(&valorContador),sizeof(uint32_t),0);
 	log_info(brokerLogger2,"Meto un mensaje en la cola.");
+	incrementarContador();
+	pthread_mutex_lock(contador.mutexContador);
+	insertarIdPaquete(paq,contador.contador);
+	send(socket,(void*)(&contador.contador),sizeof(uint32_t),0);
+	pthread_mutex_unlock(contador.mutexContador);
 
-	//registrarMensajeEnMemoria(contador.contador, paq, algoritmoMemoria);
+	registrarMensajeEnMemoria(contador.contador, paq, algoritmoMemoria);
 
 	pushColaMutex(structCola->cola, (void *) paq);
 
@@ -308,12 +309,10 @@ void inicializarContador(){
 	pthread_mutex_init(contador.mutexContador,NULL);
 }
 
-uint32_t incrementarContador(){
+void incrementarContador(){
 	pthread_mutex_lock(contador.mutexContador);
-	contador.contador++;
-	uint32_t i = contador.contador;
+	contador.contador = contador.contador + 1;
 	pthread_mutex_unlock(contador.mutexContador);
-	return i;
 }
 
 uint32_t obtenerContador(){
@@ -373,7 +372,7 @@ void definirAlgoritmo(algoritmoParameter parAlgoritmo, uint32_t * varInt){
 }
 
 void definirComienzoDeMemoria(){
-	void* memoria = malloc(tamMemoria);
+	memoria = malloc(tamMemoria);
 	/*if(algoritmoMemoria == BUDDY_SYSTEM){*/
 	nodoRaizMemoria = crearRaizArbol();
 	nodoRaizMemoria->offset = 0;

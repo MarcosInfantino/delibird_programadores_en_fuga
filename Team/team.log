@@ -51474,3 +51474,62 @@
 [INFO] 11:30:49:47 TEAM/(4732:4732): Cantidad de ciclos de CPU realizados por el entrenador 0: 4.
 [INFO] 11:30:49:47 TEAM/(4732:4732): Cantidad de ciclos de CPU realizados por el entrenador 1: 32.
 [INFO] 11:30:49:47 TEAM/(4732:4732): Cantidad de ciclos de CPU realizados por el entrenador 2: 23.
+[INFO] 21:31:23:450 TEAM/(8653:8670): Conexión fallida con el Broker
+
+[INFO] 21:31:23:450 TEAM/(8653:8670): Reintentando conexión en 30 segundos...
+
+[INFO] 21:31:23:450 TEAM/(8653:8669): Conexión fallida con el Broker
+
+[INFO] 21:31:23:450 TEAM/(8653:8669): Reintentando conexión en 30 segundos...
+
+[INFO] 21:31:23:450 TEAM/(8653:8668): Conexión fallida con el Broker
+
+[INFO] 21:31:23:450 TEAM/(8653:8668): Reintentando conexión en 30 segundos...
+
+[INFO] 21:31:23:450 TEAM/(8653:8672): Fallo de comunicación con el Broker al enviar un get. Se realizará la operación por default.
+[INFO] 21:31:23:450 TEAM/(8653:8673): Fallo de comunicación con el Broker al enviar un get. Se realizará la operación por default.
+[INFO] 21:31:23:450 TEAM/(8653:8674): Fallo de comunicación con el Broker al enviar un get. Se realizará la operación por default.
+[INFO] 21:31:23:450 TEAM/(8653:8671): Fallo de comunicación con el Broker al enviar un get. Se realizará la operación por default.
+[INFO] 21:31:23:450 TEAM/(8653:8675): Fallo de comunicación con el Broker al enviar un get. Se realizará la operación por default.
+[INFO] 21:31:53:450 TEAM/(8653:8668): El reintento de conexión fue exitoso
+
+[INFO] 21:31:53:450 TEAM/(8653:8669): El reintento de conexión fue exitoso
+
+[INFO] 21:31:53:450 TEAM/(8653:8670): El reintento de conexión fue exitoso
+
+[INFO] 21:38:04:794 TEAM/(8961:8978): Conexión fallida con el Broker
+
+[INFO] 21:38:04:794 TEAM/(8961:8978): Reintentando conexión en 30 segundos...
+
+[INFO] 21:38:04:794 TEAM/(8961:8977): Conexión fallida con el Broker
+
+[INFO] 21:38:04:794 TEAM/(8961:8977): Reintentando conexión en 30 segundos...
+
+[INFO] 21:38:04:794 TEAM/(8961:8976): Conexión fallida con el Broker
+
+[INFO] 21:38:04:794 TEAM/(8961:8976): Reintentando conexión en 30 segundos...
+
+[INFO] 21:38:04:794 TEAM/(8961:8982): Fallo de comunicación con el Broker al enviar un get. Se realizará la operación por default.
+[INFO] 21:38:04:794 TEAM/(8961:8983): Fallo de comunicación con el Broker al enviar un get. Se realizará la operación por default.
+[INFO] 21:38:04:794 TEAM/(8961:8980): Fallo de comunicación con el Broker al enviar un get. Se realizará la operación por default.
+[INFO] 21:38:04:794 TEAM/(8961:8981): Fallo de comunicación con el Broker al enviar un get. Se realizará la operación por default.
+[INFO] 21:38:04:794 TEAM/(8961:8979): Fallo de comunicación con el Broker al enviar un get. Se realizará la operación por default.
+[INFO] 22:01:31:220 TEAM/(10081:10097): Fallo de comunicación con el Broker al enviar un get. Se realizará la operación por default.
+[INFO] 22:01:31:220 TEAM/(10081:10096): Fallo de comunicación con el Broker al enviar un get. Se realizará la operación por default.
+[INFO] 22:01:31:220 TEAM/(10081:10099): Fallo de comunicación con el Broker al enviar un get. Se realizará la operación por default.
+[INFO] 22:01:31:220 TEAM/(10081:10098): Fallo de comunicación con el Broker al enviar un get. Se realizará la operación por default.
+[INFO] 22:01:31:220 TEAM/(10081:10100): Fallo de comunicación con el Broker al enviar un get. Se realizará la operación por default.
+[INFO] 22:01:31:222 TEAM/(10081:10101): Conexión fallida con el Broker
+
+[INFO] 22:01:31:222 TEAM/(10081:10101): Reintentando conexión en 30 segundos...
+
+[INFO] 22:01:31:222 TEAM/(10081:10102): Conexión fallida con el Broker
+
+[INFO] 22:01:31:222 TEAM/(10081:10102): Reintentando conexión en 30 segundos...
+
+[INFO] 22:01:31:222 TEAM/(10081:10103): Conexión fallida con el Broker
+
+[INFO] 22:01:31:222 TEAM/(10081:10103): Reintentando conexión en 30 segundos...
+
+[INFO] 22:25:46:37 TEAM/(11481:11503): Recibi mensaje caught pokemon. El pokemon fue atrapado. 
+

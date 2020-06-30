@@ -109,6 +109,7 @@ bool estaEnLista(uint32_t socket, ListasMemoria lista, msgMemoriaBroker* mensaje
 
 
 void asignarPuntero(uint32_t offset, void* stream, uint32_t sizeStream){
+	log_info(brokerLogger2,"Lo voy a guardar en posicion %d (de memoria) -.-", memoria + offset);
 	memcpy(memoria + offset, stream, sizeStream);
 }
 

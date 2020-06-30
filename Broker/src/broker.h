@@ -113,7 +113,7 @@ void suscribirACola(uint32_t* socket, colaMensajes * cola);
 void inicializarContador();
 void abrirHiloParaEnviarMensajes();
 void* chequearMensajesEnCola(void * par);
-uint32_t incrementarContador();
+void incrementarContador();
 uint32_t obtenerContador();
 
 t_config* leer_config(void);
