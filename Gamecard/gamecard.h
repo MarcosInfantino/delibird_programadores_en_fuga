@@ -126,7 +126,7 @@ blockHeader* obtenerBloquePorId(uint32_t id);
 int32_t crearDirectorio(char* nombre, char* pathDestino, uint32_t tipo);
 void eliminarDirectorio(char* path);
 void crearMetadata(uint32_t tipo, char* direccion);
-void escribirMetadata(archivoHeader* metadata, FILE* archivoMetadata);
+void escribirMetadata(archivoHeader* metadata);
 FILE* abrirArchivo(archivoHeader* metadata);
 void cerrarArchivo(archivoHeader* metadata, FILE* archivo);
 bool estaAbierto(archivoHeader* metadata);
@@ -136,4 +136,6 @@ char* obtenerStringListaBloques(archivoHeader* metadata);
 void agregarBloque(archivoHeader* metadata, blockHeader* bloque);
 int32_t obtenerPosicionBloqueEnLista(t_list* listaBloques , uint32_t idBloque);
 void removerBloque(archivoHeader* metadata, uint32_t idBloque);
+void escribirBloque(int32_t bloque, int32_t offset, int32_t longitud,char* buffer);
+void escribirBloque2(int32_t bloque, char* buffer);
 #endif /* GAMECARD_H_ */

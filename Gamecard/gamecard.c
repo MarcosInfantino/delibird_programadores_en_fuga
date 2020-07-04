@@ -32,7 +32,10 @@ int main(void) {
 	iniciarBitmap();
 	inicializarListaBloques();
 	crearDirectorio("Files","/home/utnso/tp-2020-1c-Programadores-en-Fuga/Gamecard/TALL_GRASS/", DIRECTORIO);
+	crearDirectorio("Blocks","/home/utnso/tp-2020-1c-Programadores-en-Fuga/Gamecard/TALL_GRASS/", DIRECTORIO);
 	crearDirectorio("Pikachu",pathFiles,ARCHIVO);
+	escribirBloque(1,0,5,"Hola");
+	//escribirBloque2(1,"Hola");
 	//printf("El resultado fue: %i\n",resul);
 //	blockHeader* bloque= malloc(sizeof(blockHeader));
 //	bloque->id=10;

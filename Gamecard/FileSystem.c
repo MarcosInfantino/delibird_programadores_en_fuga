@@ -171,10 +171,10 @@ void eliminarDirectorio(char* path){
 
 void crearMetadata(uint32_t tipo, char* direccion){
 	archivoHeader* metadataFile = malloc(sizeof(archivoHeader));
-	char* nuevaDirec = malloc(strlen(direccion)+strlen("metadata.bin"));
+	char* nuevaDirec = malloc(strlen(direccion)+strlen("metadata.bin")+1);
 	strcpy(nuevaDirec,direccion);
 	string_append(&nuevaDirec,"/metadata.bin");
-	metadataFile->pathArchivo = malloc(strlen(nuevaDirec));
+	metadataFile->pathArchivo = malloc(strlen(nuevaDirec)+1);
 	strcpy(metadataFile->pathArchivo,nuevaDirec);
 	FILE *archivoMetadata=fopen(nuevaDirec,"w+b");
 
@@ -186,7 +186,7 @@ void crearMetadata(uint32_t tipo, char* direccion){
 		metadataFile->bloquesUsados = NULL;
 		metadataFile->tamanioArchivo = 0;
 		metadataFile->tipo = DIRECTORIO;
-		escribirMetadata(metadataFile, archivoMetadata);
+		escribirMetadata(metadataFile);
 		//fwrite(&metadataFile,sizeof(archivoHeader),1, metadataArchivo);
 
 		break;
@@ -198,7 +198,7 @@ void crearMetadata(uint32_t tipo, char* direccion){
 		metadataFile->tamanioArchivo = 0;
 		metadataFile->tipo = ARCHIVO;
 		var=metadataFile;
-		escribirMetadata(metadataFile, archivoMetadata);
+		escribirMetadata(metadataFile);
 		break;
 	default:; printf("Manqueada\n");break;
 	}
@@ -256,16 +256,16 @@ blockHeader* encontrarBloqueLibre(){// devuelve el bloque ya ocupado
 	return NULL;
 }
 
-void escribirMetadata(archivoHeader* metadata, FILE* archivoMetadata){
-	t_config* config=config_create(metadata->pathArchivo);
+void escribirMetadata(archivoHeader* metadata){
+	t_config* configLoco=config_create(metadata->pathArchivo);
 	switch(metadata->tipo){
 	case DIRECTORIO:;
 
 		//fputs("DIRECTORY=Y\n",archivoMetadata);
 
 
-		config_set_value(config, "DIRECTORY", "Y");
-		config_save(config);
+		config_set_value(configLoco, "DIRECTORY", "Y");
+		config_save(configLoco);
 
 		break;
 	case ARCHIVO:;
@@ -275,17 +275,37 @@ void escribirMetadata(archivoHeader* metadata, FILE* archivoMetadata){
 //		fputs("BLOCKS=[]\n",archivoMetadata);
 //		fputs("OPEN=N\n", archivoMetadata);
 
-		config_set_value(config, "DIRECTORY", "N");
-		config_set_value(config, "SIZE", "0");
-		config_set_value(config, "BLOCKS", "[]");
-		config_set_value(config, "OPEN", "N");
-		config_save(config);
+		config_set_value(configLoco, "DIRECTORY", "N");
+		config_set_value(configLoco, "SIZE", "0");
+		config_set_value(configLoco, "BLOCKS", "[]");
+		config_set_value(configLoco, "OPEN", "N");
+		config_save(configLoco);
 		break;
 
 	}
-	config_destroy(config);
-
+	config_destroy(configLoco);
+	free(metadata);
 
 }
+/*
+void escribirBloque2(int32_t bloque, char* buffer){
+	FILE* block = fopen("/home/utnso/tp-2020-1c-Programadores-en-Fuga/Gamecard/TALL_GRASS/Blocks/1.bin","wb+");
+	fseek(block, 0, SEEK_SET);
+	uint32_t resultado=fputs(buffer,block);
+	printf("%i\n",resultado);
+	fclose(block);
+}
+*/
 
+void escribirBloque(int32_t bloque, int32_t offset, int32_t longitud, char* buffer) {
+	printf( "Escribiendo bloque:%d, offset=%d, longitud=%d, buffer=%s\n", bloque, offset, longitud, buffer);
+	//const char* bufferin = buffer;
+	//FILE* block = fopen(string_from_format("%s%d.bin", pathBlocks, bloque), "w+b");
+	//FILE* block = fopen(string_from_format("%s1.bin", pathBlocks), "r+");
+	FILE* block = fopen("/home/utnso/tp-2020-1c-Programadores-en-Fuga/Gamecard/TALL_GRASS/Blocks/1.bin","w+b");
+	fseek(block, 0, SEEK_SET);
+	//fwrite(buffer, 1, strlen(buffer)+1, block);
+	fputs(buffer,block);
+	fclose(block);
 
+}
