@@ -130,15 +130,11 @@ void iniciarBitmap() {
 
 int32_t crearArchivoBloque(blockHeader* bloque) {
 
-		FILE* archivoBloque = fopen(string_from_format("%s/Blocks/%d.bin", puntoMontaje, bloque->id), "w");
-
-		if (archivoBloque == NULL){
-				return -1;
-		}
-		fclose(archivoBloque);
-		ocuparBloque(bloque->id);
-
-
+	//FILE* archivoBloque = fopen(string_from_format("%s/Blocks/%d.bin", puntoMontaje, bloque->id), "w");
+	uint32_t fd = open(string_from_format("%s/Blocks/%d.bin", puntoMontaje, bloque->id),O_RDWR|O_CREAT,0777);
+	ftruncate(fd,tallGrass.block_size);
+	close(fd);
+		//ocuparBloque(bloque->id);
 	return 0;
 }
 
@@ -152,12 +148,12 @@ int32_t crearDirectorio(char* nombre, char* pathDestino, uint32_t tipo){
 	status = mkdir(direc, 0755);
 	if(status != 0){
 		if(errno == EEXIST){
-			printf("El directorio ya existe\n");
+			log_info(gamecardLogger2,"El directorio ya existe");
 			//Ver que hacer aca
 			return 0;
 		}
 		if(status < 0){
-			printf("Error al crear el directorio\n");
+			log_info(gamecardLogger2,"Error al crear el directorio");
 			return -1;
 		}
 	}
@@ -222,6 +218,7 @@ void inicializarListaBloques(){
 		bloqueActual->bytesLeft=tallGrass.block_size;
 		bloqueActual->id=i;
 		list_add(listaBloques,(void*) bloqueActual);
+		crearArchivoBloque(obtenerBloquePorId(i));//obtenerBloquePorId(1)
 	}
 }
 
@@ -298,14 +295,14 @@ void escribirBloque2(int32_t bloque, char* buffer){
 */
 
 void escribirBloque(int32_t bloque, int32_t offset, int32_t longitud, char* buffer) {
-	printf( "Escribiendo bloque:%d, offset=%d, longitud=%d, buffer=%s\n", bloque, offset, longitud, buffer);
+	log_info(gamecardLogger2, "Escribiendo bloque:%d, offset=%d, longitud=%d, buffer=%s", bloque, offset, longitud, buffer);
 	//const char* bufferin = buffer;
 	//FILE* block = fopen(string_from_format("%s%d.bin", pathBlocks, bloque), "w+b");
 	//FILE* block = fopen(string_from_format("%s1.bin", pathBlocks), "r+");
-	FILE* block = fopen("/home/utnso/tp-2020-1c-Programadores-en-Fuga/Gamecard/TALL_GRASS/Blocks/1.bin","w+b");
-	fseek(block, 0, SEEK_SET);
-	//fwrite(buffer, 1, strlen(buffer)+1, block);
-	fputs(buffer,block);
+	FILE* block = fopen("/home/utnso/tp-2020-1c-Programadores-en-Fuga/Gamecard/TALL_GRASS/Blocks/1.bin","r+");
+	fseek(block, offset, SEEK_SET);
+	fwrite(buffer, strlen(buffer)+1, 1, block);
+	//fputs(buffer,block);
 	fclose(block);
 
 }

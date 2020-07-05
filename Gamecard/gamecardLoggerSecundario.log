@@ -1,0 +1,118 @@
+
+[INFO] 17:58:04:708 gamecard/(14767:14767): Puerto Broker:5002
+[INFO] 17:58:04:722 gamecard/(14767:14767): El directorio ya existe
+[INFO] 17:58:04:722 gamecard/(14767:14767): El directorio ya existe
+[INFO] 17:58:04:722 gamecard/(14767:14767): El directorio ya existe
+[INFO] 17:58:04:723 gamecard/(14767:14767): Escribiendo bloque:1, offset=0, longitud=5, buffer=Hola
+[INFO] 17:58:04:723 gamecard/(14767:14767): Resultado:1
+[INFO] 17:58:04:723 gamecard/(14767:14767): Escribiendo bloque:1, offset=5, longitud=5, buffer=Hola
+[INFO] 17:58:04:723 gamecard/(14767:14767): Resultado:1
+[INFO] 17:59:29:4 gamecard/(14847:14847): Puerto Broker:5002
+[INFO] 17:59:30:54 gamecard/(14847:14847): El directorio ya existe
+[INFO] 17:59:30:54 gamecard/(14847:14847): El directorio ya existe
+[INFO] 17:59:30:54 gamecard/(14847:14847): El directorio ya existe
+[INFO] 17:59:30:54 gamecard/(14847:14847): Escribiendo bloque:1, offset=0, longitud=5, buffer=Hola
+[INFO] 17:59:30:54 gamecard/(14847:14847): Escribiendo bloque:1, offset=5, longitud=5, buffer=Hola
+[INFO] 18:04:31:225 gamecard/(15014:15014): Puerto Broker:5002
+[INFO] 18:04:31:233 gamecard/(15014:15014): El directorio ya existe
+[INFO] 18:04:31:233 gamecard/(15014:15014): El directorio ya existe
+[INFO] 18:04:31:233 gamecard/(15014:15014): El directorio ya existe
+[INFO] 18:04:31:233 gamecard/(15014:15014): Escribiendo bloque:1, offset=0, longitud=5, buffer=Hola
+[INFO] 18:04:31:233 gamecard/(15014:15014): Resultado Seek:0
+[INFO] 18:04:31:233 gamecard/(15014:15014): Resultado Write:1
+[INFO] 18:04:31:233 gamecard/(15014:15014): Escribiendo bloque:1, offset=5, longitud=5, buffer=Hola
+[INFO] 18:04:31:233 gamecard/(15014:15014): Resultado Seek:0
+[INFO] 18:04:31:233 gamecard/(15014:15014): Resultado Write:1
+[INFO] 18:05:27:296 gamecard/(15089:15089): Puerto Broker:5002
+[INFO] 18:05:27:303 gamecard/(15089:15089): El directorio ya existe
+[INFO] 18:05:27:303 gamecard/(15089:15089): El directorio ya existe
+[INFO] 18:05:27:304 gamecard/(15089:15089): El directorio ya existe
+[INFO] 18:05:27:304 gamecard/(15089:15089): Escribiendo bloque:1, offset=0, longitud=5, buffer=Hola
+[INFO] 18:05:27:304 gamecard/(15089:15089): Resultado Seek:0
+[INFO] 18:05:27:304 gamecard/(15089:15089): Resultado Write:1
+[INFO] 18:05:27:304 gamecard/(15089:15089): Escribiendo bloque:1, offset=5, longitud=5, buffer=Hola
+[INFO] 18:05:27:304 gamecard/(15089:15089): Resultado Seek:5
+[INFO] 18:05:27:304 gamecard/(15089:15089): Resultado Write:1
+[INFO] 18:07:21:72 gamecard/(15205:15205): Puerto Broker:5002
+[INFO] 18:07:21:83 gamecard/(15205:15205): El directorio ya existe
+[INFO] 18:07:21:83 gamecard/(15205:15205): El directorio ya existe
+[INFO] 18:07:21:83 gamecard/(15205:15205): El directorio ya existe
+[INFO] 18:07:21:83 gamecard/(15205:15205): Escribiendo bloque:1, offset=0, longitud=29, buffer=Hola
+[INFO] 18:07:21:83 gamecard/(15205:15205): Resultado Seek:0
+[INFO] 18:07:21:83 gamecard/(15205:15205): Resultado Write:1
+[INFO] 18:07:21:84 gamecard/(15205:15205): Escribiendo bloque:1, offset=5, longitud=5, buffer=Hola
+[INFO] 18:07:21:84 gamecard/(15205:15205): Resultado Seek:5
+[INFO] 18:07:21:84 gamecard/(15205:15205): Resultado Write:1
+[INFO] 18:07:47:467 gamecard/(15266:15266): Puerto Broker:5002
+[INFO] 18:07:47:469 gamecard/(15266:15266): El directorio ya existe
+[INFO] 18:07:47:469 gamecard/(15266:15266): El directorio ya existe
+[INFO] 18:07:47:469 gamecard/(15266:15266): El directorio ya existe
+[INFO] 18:07:47:470 gamecard/(15266:15266): Escribiendo bloque:1, offset=0, longitud=29, buffer=Hola LA concha de tu m,adre3
+[INFO] 18:07:47:470 gamecard/(15266:15266): Resultado Seek:0
+[INFO] 18:07:47:470 gamecard/(15266:15266): Resultado Write:1
+[INFO] 18:07:47:471 gamecard/(15266:15266): Escribiendo bloque:1, offset=5, longitud=5, buffer=Hola
+[INFO] 18:07:47:471 gamecard/(15266:15266): Resultado Seek:5
+[INFO] 18:07:47:471 gamecard/(15266:15266): Resultado Write:1
+[INFO] 18:08:42:838 gamecard/(15356:15356): Puerto Broker:5002
+[INFO] 18:08:42:866 gamecard/(15356:15356): El directorio ya existe
+[INFO] 18:08:42:866 gamecard/(15356:15356): El directorio ya existe
+[INFO] 18:08:42:866 gamecard/(15356:15356): El directorio ya existe
+[INFO] 18:08:42:867 gamecard/(15356:15356): Escribiendo bloque:1, offset=0, longitud=5, buffer=Hola
+[INFO] 18:08:42:867 gamecard/(15356:15356): Resultado Seek:0
+[INFO] 18:08:42:867 gamecard/(15356:15356): Resultado Write:1
+[INFO] 18:08:42:868 gamecard/(15356:15356): Escribiendo bloque:1, offset=5, longitud=5, buffer=Hola
+[INFO] 18:08:42:868 gamecard/(15356:15356): Resultado Seek:5
+[INFO] 18:08:42:868 gamecard/(15356:15356): Resultado Write:1
+[INFO] 18:09:26:16 gamecard/(15438:15438): Puerto Broker:5002
+[INFO] 18:09:26:18 gamecard/(15438:15438): El directorio ya existe
+[INFO] 18:09:26:19 gamecard/(15438:15438): El directorio ya existe
+[INFO] 18:09:26:19 gamecard/(15438:15438): El directorio ya existe
+[INFO] 18:09:26:21 gamecard/(15438:15438): Escribiendo bloque:1, offset=0, longitud=5, buffer=Hola
+[INFO] 18:09:26:21 gamecard/(15438:15438): Resultado Seek:0
+[INFO] 18:09:26:21 gamecard/(15438:15438): Resultado Write:1
+[INFO] 18:09:26:22 gamecard/(15438:15438): Escribiendo bloque:1, offset=4, longitud=5, buffer=Hola
+[INFO] 18:09:26:22 gamecard/(15438:15438): Resultado Seek:4
+[INFO] 18:09:26:22 gamecard/(15438:15438): Resultado Write:1
+[INFO] 18:10:07:47 gamecard/(15517:15517): Puerto Broker:5002
+[INFO] 18:10:07:53 gamecard/(15517:15517): El directorio ya existe
+[INFO] 18:10:07:53 gamecard/(15517:15517): El directorio ya existe
+[INFO] 18:10:07:53 gamecard/(15517:15517): El directorio ya existe
+[INFO] 18:10:07:54 gamecard/(15517:15517): Escribiendo bloque:1, offset=0, longitud=5, buffer=Hola
+[INFO] 18:10:07:54 gamecard/(15517:15517): Resultado Seek:0
+[INFO] 18:10:07:54 gamecard/(15517:15517): Resultado Write:1
+[INFO] 18:10:07:54 gamecard/(15517:15517): Escribiendo bloque:1, offset=4, longitud=5, buffer=Hola
+[INFO] 18:10:07:55 gamecard/(15517:15517): Resultado Seek:4
+[INFO] 18:10:07:55 gamecard/(15517:15517): Resultado Write:1
+[INFO] 18:17:04:5 gamecard/(15862:15862): Puerto Broker:5002
+[INFO] 18:17:05:8 gamecard/(15862:15862): El directorio ya existe
+[INFO] 18:17:05:8 gamecard/(15862:15862): El directorio ya existe
+[INFO] 18:17:05:8 gamecard/(15862:15862): El directorio ya existe
+[INFO] 18:17:05:9 gamecard/(15862:15862): Escribiendo bloque:1, offset=0, longitud=5, buffer=Hola
+[INFO] 18:17:05:9 gamecard/(15862:15862): Escribiendo bloque:1, offset=4, longitud=5, buffer=Hola
+[INFO] 18:17:36:430 gamecard/(15905:15905): Puerto Broker:5002
+[INFO] 18:17:36:435 gamecard/(15905:15905): Escribiendo bloque:1, offset=0, longitud=5, buffer=Hola
+[INFO] 18:19:34:273 gamecard/(15999:15999): Puerto Broker:5002
+[INFO] 18:19:34:279 gamecard/(15999:15999): El directorio ya existe
+[INFO] 18:19:34:280 gamecard/(15999:15999): El directorio ya existe
+[INFO] 18:19:34:280 gamecard/(15999:15999): El directorio ya existe
+[INFO] 18:19:34:280 gamecard/(15999:15999): Escribiendo bloque:1, offset=0, longitud=5, buffer=Hola
+[INFO] 18:20:03:509 gamecard/(16054:16054): Puerto Broker:5002
+[INFO] 18:20:03:516 gamecard/(16054:16054): El directorio ya existe
+[INFO] 18:20:03:516 gamecard/(16054:16054): El directorio ya existe
+[INFO] 18:20:03:516 gamecard/(16054:16054): El directorio ya existe
+[INFO] 18:20:03:516 gamecard/(16054:16054): Escribiendo bloque:1, offset=0, longitud=5, buffer=Hola
+[INFO] 18:20:28:352 gamecard/(16110:16110): Puerto Broker:5002
+[INFO] 18:20:28:363 gamecard/(16110:16110): El directorio ya existe
+[INFO] 18:20:28:363 gamecard/(16110:16110): El directorio ya existe
+[INFO] 18:20:28:364 gamecard/(16110:16110): El directorio ya existe
+[INFO] 18:20:28:364 gamecard/(16110:16110): Escribiendo bloque:1, offset=0, longitud=5, buffer=Hola
+[INFO] 18:20:54:113 gamecard/(16151:16151): Puerto Broker:5002
+[INFO] 18:20:54:119 gamecard/(16151:16151): Escribiendo bloque:1, offset=0, longitud=5, buffer=Hola
+[INFO] 18:22:48:26 gamecard/(16253:16253): Puerto Broker:5002
+[INFO] 18:22:48:29 gamecard/(16253:16253): El directorio ya existe
+[INFO] 18:22:48:29 gamecard/(16253:16253): El directorio ya existe
+[INFO] 18:22:48:29 gamecard/(16253:16253): El directorio ya existe
+[INFO] 18:22:48:29 gamecard/(16253:16253): Escribiendo bloque:1, offset=0, longitud=5, buffer=Hola
+[INFO] 18:23:41:932 gamecard/(16322:16322): Puerto Broker:5002
+[INFO] 18:23:41:954 gamecard/(16322:16322): Escribiendo bloque:1, offset=0, longitud=5, buffer=Hola
+[INFO] 18:23:41:954 gamecard/(16322:16322): Escribiendo bloque:1, offset=4, longitud=5, buffer=Hola

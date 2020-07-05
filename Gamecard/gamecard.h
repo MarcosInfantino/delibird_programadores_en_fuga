@@ -54,6 +54,12 @@ typedef struct{
 	//struct archivoHeader* archivoPadre;
 }archivoHeader;
 
+struct nodoArbolDirectorio{
+	archivoHeader* dataNodo;
+	struct nodoArbolDirectorio* nodoPadre;
+	t_list* nodosHijos;  //Lista de nodoArbolDirectorio
+};
+
 archivoHeader* var;
 
 typedef enum{
@@ -96,6 +102,8 @@ char* puntoMontaje;
 tallGrassHeader tallGrass;
 char* mmapBitmap;
 t_list* listaBloques;
+t_log* gamecardLogger2;
+struct nodoArbolDirectorio* raizDirectorio;
 
 void* suscribirseCola(void* msgSuscripcion);
 void* suscribirseColasBroker(void* config);

@@ -17,24 +17,23 @@ uint32_t puertoGamecardGC = 5001;
 
 
 int main(void) {
-
+	gamecardLogger2=log_create("gamecardLoggerSecundario.log","gamecard", true, LOG_LEVEL_INFO);
 	t_config * configGamecard = config_create("Gamecard.config");
 	puertoBrokerGC = config_get_int_value(configGamecard, "PUERTO_BROKER");//5002;
 	ipBrokerGC = config_get_string_value(configGamecard, "IP_BROKER");//"127.0.0.1"; //
 	tiempoRetardoGC = config_get_int_value(configGamecard, "TIEMPO_DE_RETARDO_OPERACION"); //
 	puntoMontaje = config_get_string_value(configGamecard, "PUNTO_MONTAJE_TALLGRASS");
-	printf("%i\n",puertoBrokerGC);
-	printf("%s\n",ipBrokerGC);
-	printf("%i\n",tiempoRetardoGC);
+	log_info(gamecardLogger2,"Puerto Broker:%i",puertoBrokerGC);
 
 	//iniciarFileSystem(); //"/home/utnso/tp-2020-1c-Programadores-en-Fuga/Gamecard/TALL_GRASS"; //
 	iniciarMetadata();
 	iniciarBitmap();
-	inicializarListaBloques();
 	crearDirectorio("Files","/home/utnso/tp-2020-1c-Programadores-en-Fuga/Gamecard/TALL_GRASS/", DIRECTORIO);
 	crearDirectorio("Blocks","/home/utnso/tp-2020-1c-Programadores-en-Fuga/Gamecard/TALL_GRASS/", DIRECTORIO);
 	crearDirectorio("Pikachu",pathFiles,ARCHIVO);
-	escribirBloque(1,0,5,"Hola");
+	inicializarListaBloques();
+	escribirBloque(1,0,strlen("Hola")+1,"Hola");
+	escribirBloque(1,4,strlen("Hola")+1,"Hola");
 	//escribirBloque2(1,"Hola");
 	//printf("El resultado fue: %i\n",resul);
 //	blockHeader* bloque= malloc(sizeof(blockHeader));
@@ -52,7 +51,6 @@ int main(void) {
 //
 //	removerBloque(var,1038423);
 
-	crearArchivoBloque(obtenerBloquePorId(1));//obtenerBloquePorId(1)
 	suscribirseColasBroker(configGamecard);
 	pthread_t hiloServidorDeEscucha;
 	crearHiloServidorGameboy(&hiloServidorDeEscucha);
