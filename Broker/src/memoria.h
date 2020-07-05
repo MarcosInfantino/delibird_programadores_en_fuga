@@ -93,6 +93,8 @@ struct nodoMemoria* nodoRaizMemoria;
 listaMutex* memoriaPARTICIONES;
 listaMutex* particionesLibres;
 
+uint32_t auxTamanioStreamGlobal;
+
 //void enviarMensajesPreviosEnMemoria(uint32_t socket,uint32_t identificadorCola);
 
 struct nodoMemoria* crearRaizArbol(void);
@@ -132,6 +134,7 @@ particionLibre* obtenerParticionLibrePARTICIONES(uint32_t tamStream);
 bool menorAmayorSegunSize(void* primero, void* segundo);
 bool menorAmayorSegunOffset(void* primero, void* segundo);
 bool esSuficientementeGrandeParaElMSG(void* elemento);
+void generarParticionLibre(uint32_t base);
 
 void crearDumpDeCache();
 void asignarPuntero(uint32_t offset, void* stream, uint32_t sizeStream);

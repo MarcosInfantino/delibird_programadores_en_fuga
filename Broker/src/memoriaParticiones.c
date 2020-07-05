@@ -37,6 +37,7 @@ void registrarEnMemoriaPARTICIONES(msgMemoriaBroker* mensajeNuevo){
 }
 
 particionLibre* obtenerParticionLibrePARTICIONES(uint32_t tamStream){
+	auxTamanioStreamGlobal = tamStream;
 
 	if(sizeListaMutex(particionesLibres) <= 0)
 		return NULL;
@@ -44,17 +45,45 @@ particionLibre* obtenerParticionLibrePARTICIONES(uint32_t tamStream){
 	if (algoritmoParticionLibre == FIRST_FIT){ //acá hay qué agregar mutex?
 
 		list_sort(particionesLibres->lista, menorAmayorSegunOffset);
+		return list_remove_by_condition(particionesLibres->lista, esSuficientementeGrandeParaElMSG );
 		//return removeListaMutex(particionesLibres, 1); //lo saca de los libres y lo retorna
-		return list_remove(particionesLibres->lista, 1);
+		//return list_remove(particionesLibres->lista, 1);
 
 	}else if(algoritmoParticionLibre == BEST_FIT){
 		list_sort(particionesLibres->lista, menorAmayorSegunSize);
+
 		return list_remove_by_condition(particionesLibres->lista, esSuficientementeGrandeParaElMSG );
-		//no se como pasar por parametro el tamStream, deberia ser global, la condicion solo acepta 1 parametro
-		//y es el elemento de la lista que varía.
 	}
 
 	return NULL;
+}
+
+void compactar(){
+	particionOcupada* elemento;
+	uint32_t base = 0;
+	list_sort_Mutex(memoriaPARTICIONES, menorAmayorSegunOffset);
+	//list_sort(memoriaPARTICIONES->lista, menorAmayorSegunOffset);
+	for(int i=0; i<sizeListaMutex(memoriaPARTICIONES); i++){
+		elemento = getListaMutex(memoriaPARTICIONES, i);
+
+		memcpy(memoria + base, memoria + elemento->offset, elemento->mensaje->sizeStream);
+		elemento->offset = base;
+		base  += elemento->mensaje->sizeStream;
+	}
+
+	generarParticionLibre(base);
+}
+
+void generarParticionLibre(uint32_t base){
+	particionLibre* nuevaParticion = malloc(sizeof(particionLibre));
+	nuevaParticion->offset = base;
+	nuevaParticion->sizeParticion = tamMemoria - base;
+
+	for(int j=0; j<sizeListaMutex(particionesLibres); j++){
+		removeAndDestroyElementListaMutex(particionesLibres,j,free); //todo hacer un destroy para particionLibre
+	}
+
+	addListaMutex(particionesLibres,(void*) nuevaParticion);
 }
 
 bool menorAmayorSegunOffset(void* primero, void* segundo){
@@ -64,8 +93,8 @@ bool menorAmayorSegunSize(void* primero, void* segundo){
 	return ((particionLibre*)primero)->sizeParticion < ((particionLibre*)segundo)->sizeParticion;}
 
 bool esSuficientementeGrandeParaElMSG(void* elemento){
-	uint32_t tamStream = 0; //lo puse para q no rompa pero debería ser global para poder comparar.
-	return ((particionLibre*)elemento)->sizeParticion >= tamStream;
+	particionLibre* partLibre = (particionLibre*)elemento;
+	return partLibre->sizeParticion >= auxTamanioStreamGlobal;
 }
 
 /*msgMemoriaBroker*  buscarMensajeEnMemoriaParticiones(idMensajeBuscado){

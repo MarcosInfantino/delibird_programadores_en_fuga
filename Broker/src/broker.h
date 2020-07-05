@@ -43,6 +43,7 @@ typedef struct{
 	pthread_mutex_t* mutexContador;
 }contadorMensajes;
 
+
 //typedef struct {
 //	paquete paquete;
 //	colaMensajes structCola;
