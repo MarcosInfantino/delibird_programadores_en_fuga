@@ -12,12 +12,14 @@
 #define OCUPADA "[X]"
 #define LIBREP "[L]"
 
+
 typedef struct{
 	FILE* archivo;
 	pthread_mutex_t* mutex;
 }archivoMutex;
 
 typedef struct{
+	char* nombre;
 	void* base;
 	void* limite;
 	uint32_t tamanio;
@@ -27,6 +29,15 @@ typedef struct{
 	char estado[3];    //LIBRE - OCUPADO
 }lineaFile;
 
+typedef struct{
+	char* nombre;
+	void* base;
+	void* limite;
+	uint32_t tamanio;
+	char estado[3];    //LIBRE - OCUPADO
+}lineaFileLibre;
+
+uint32_t contadorFile;
 
 archivoMutex* iniciarArchivoMutex();
 void almacenarEnArchivo(msgMemoriaBroker* mensajeNuevo);
@@ -35,6 +46,6 @@ void agregarListaABuddySystem(listaMutex * lista, struct nodoMemoria* partActual
 void almacenarParticionEnArchivo(lineaFile* particion);
 void registrarParticionesLibresYocupadas();
 void recorrerArbol();
-char estadoEnString(uint32_t estado);
+char* estadoEnString(uint32_t estado);
 
 #endif /* FILES_H_ */

@@ -14,9 +14,14 @@ archivoMutex* iniciarArchivoMutex(char* version){
 	archivo->mutex = malloc(sizeof(pthread_mutex_t));
 	archivo->archivo = malloc(sizeof(FILE));
 
-	time_t t;
-	t = time(NULL);
-	struct tm tiempoActual = *localtime(&t);
+   time_t rawtime;
+   struct tm *info;
+   time( &rawtime );
+   info = localtime( &rawtime );
+
+//	time_t t;
+//	t = time(NULL);
+//	struct tm *tiempoActual = *localtime(&t);
 
 	char * nombre = "dumpDeCache";
 	char * extension = ".db";
@@ -26,36 +31,54 @@ archivoMutex* iniciarArchivoMutex(char* version){
 	strcat(nombreCompleto, extension);
 
 	archivoSem->archivo = fopen(nombreCompleto,modoEscrituraEnBinario);
-	//fwrite(tiempoActual, sizeof(struct tm), 1, archivoSem->archivo);
+	fwrite(info, sizeof(struct tm), 1, archivoSem->archivo);
 
 	return archivo;
 }
 
-void almacenarParticionEnArchivo(lineaFile* particion){
+void almacenarParticionEnArchivo(lineaFile* particion){ //TODO hacer que varíe el archivito
+	lineaFileLibre* particionVacia = malloc(sizeof(lineaFileLibre));
+
+	if(strcmp (particion->estado, LIBREP) == 0){
+		particionVacia->base    = particion->base;
+		particionVacia->limite  = particion->limite;
+		particionVacia->tamanio = particion->tamanio;
+		strcpy(particionVacia->estado,particion->estado);
+
+		pthread_mutex_lock(archivoSem->mutex);
+		archivoSem->archivo = fopen("dumpDeCache.db",modoEscrituraEnBinario);
+			if(archivoSem->archivo){
+				fwrite(particionVacia, sizeof(lineaFileLibre), 1, archivoSem->archivo);
+				fclose(archivoSem->archivo);
+			}
+		pthread_mutex_unlock(archivoSem->mutex);
+		return;
+	}
 
 	pthread_mutex_lock(archivoSem->mutex);
 	archivoSem->archivo = fopen("dumpDeCache.db",modoEscrituraEnBinario);
 	if(archivoSem->archivo){
 
+
 		fwrite(particion, sizeof(lineaFile), 1, archivoSem->archivo);
 		fclose(archivoSem->archivo);
 	}
-	pthread_mutex_unlock(archivoSem->mutex);;
+	pthread_mutex_unlock(archivoSem->mutex);
 }
 
-//VALIDAR RQUE PONER EN PARTICIONES QUE ESTÉN LIBRES
+//VALIDAr QUE PONER EN PARTICIONES QUE ESTÉN LIBRES
 
 void recorrerArbol(){ //TODO recorrer arbol y por cada particion que este ocupada o libre pero NO particionada recolecto datos y mando
 	lineaFile* datosParticion = malloc(sizeof(lineaFile));
-	struct nodoMemoria* particionActual;
+	struct nodoMemoria* particionActual = malloc(sizeof(struct nodoMemoria));
 
 	pthread_mutex_lock(mutexMemoria);
-	//datosParticion->idMensaje = particionActual->mensaje->idMensaje;
+	datosParticion->idMensaje = particionActual->mensaje->idMensaje;
 	datosParticion->base      = particionActual->offset + &memoria;
 	datosParticion->lru       = particionActual->header.tiempo;
 	datosParticion->tamanio   = particionActual->header.size;
 	datosParticion->limite    = particionActual->offset + &memoria + particionActual->header.size;
-	//strcpy(datosParticion->estado,estadoEnString(particionActual->header.status));
+	strcpy(datosParticion->estado,estadoEnString(particionActual->header.status));
 	pthread_mutex_unlock(mutexMemoria);
 
 	almacenarParticionEnArchivo(datosParticion);
@@ -64,28 +87,28 @@ void recorrerArbol(){ //TODO recorrer arbol y por cada particion que este ocupad
 
 void registrarParticionesLibresYocupadas(){
 	lineaFile* datosParticion = malloc(sizeof(lineaFile));
+	lineaFileLibre* datosParticionVacia = malloc(sizeof(lineaFileLibre));
 	particionLibre* partLibre = malloc(sizeof(particionLibre));
 	particionOcupada* partOcupada = malloc(sizeof(particionOcupada));
 
-	pthread_mutex_lock(mutexMemoria);
-	for(int i=0; i< sizeof(particionesLibres);i++){
-	 partLibre = getListaMutex(particionesLibres, i);
-	 datosParticion->idMensaje = -1;
-	 datosParticion->base      = &memoria + partLibre->offset;
-	// datosParticion->lru       = 0; //creo que va tipo tiempo aca
-	 datosParticion->tamanio   = partLibre->sizeParticion;
-	 datosParticion->limite    = (partLibre->offset + &memoria) + partLibre->sizeParticion;
-	 strcpy(datosParticion->estado,LIBREP);
 
-	 almacenarParticionEnArchivo(datosParticion);}
+	pthread_mutex_lock(mutexMemoria);
+	for(int i=0; i< sizeListaMutex(particionesLibres);i++){
+	 partLibre = getListaMutex(particionesLibres, i);
+	 datosParticionVacia->base    = &memoria + partLibre->offset;
+	 datosParticionVacia->tamanio = partLibre->sizeParticion;
+	 datosParticionVacia->limite  = (partLibre->offset + &memoria) + partLibre->sizeParticion;
+	 strcpy(datosParticionVacia->estado,LIBREP);
+
+	 almacenarParticionEnArchivo(datosParticionVacia);}
 	pthread_mutex_unlock(mutexMemoria);
 
 	pthread_mutex_lock(mutexMemoria);
-	for(int i=0; i< sizeof(memoriaPARTICIONES);i++){
+	for(int i=0; i< sizeListaMutex(memoriaPARTICIONES);i++){
 	 partOcupada = getListaMutex(memoriaPARTICIONES, i);
 	 datosParticion->idMensaje = partOcupada->mensaje->idMensaje;
 	datosParticion->base      = partOcupada->offset + &memoria;
-	 datosParticion->lru       = partOcupada->lru; //creo que va tipo tiempo aca
+	 datosParticion->lru       = partOcupada->lru;
 	 datosParticion->tamanio   = partOcupada->mensaje->sizeStream;
 	 datosParticion->limite    = (partOcupada->offset + &memoria) + partOcupada->mensaje->sizeStream;
 	 strcpy(datosParticion->estado,OCUPADA);
@@ -97,9 +120,10 @@ void registrarParticionesLibresYocupadas(){
 	free(partLibre);
 	free(partOcupada);
 	free(datosParticion);
+	free(datosParticionVacia);
 }
 
-char estadoEnString(uint32_t estado){
+char* estadoEnString(uint32_t estado){
 	if(estado == 1){
 		return LIBREP;
 	}else{

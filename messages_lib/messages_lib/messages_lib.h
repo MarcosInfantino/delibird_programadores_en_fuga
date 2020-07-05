@@ -259,6 +259,7 @@ void destruirListaMutexYElementos(listaMutex* lista,void(*element_destroyer)(voi
 void* removeListaMutex(listaMutex* list,uint32_t pos);
 void removeAndDestroyElementListaMutex(listaMutex* list,uint32_t pos,void(*element_destroyer)(void*));
 listaMutex* convertirAListaMutex(t_list* lista);
+void list_sort_Mutex(listaMutex* list, bool (*comparator)(void *, void *));
 
 colaMutex* inicializarColaMutex();
 void pushColaMutex(colaMutex* cola, void* infoEntrenador);
