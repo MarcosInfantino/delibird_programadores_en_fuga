@@ -96,7 +96,7 @@ void* suscribirseCola(void* msgSuscripcion) {
 	mensajeSuscripcion* msg = (mensajeSuscripcion*) msgSuscripcion;
 	uint32_t sizeStream = sizeof(uint32_t);
 	void* streamMsgSuscripcion = serializarSuscripcion(msg);
-	printf("Voy a llenar el paquete\n");
+	log_info(gamecardLogger2,"Voy a llenar el paquete");
 	paquete* paq = llenarPaquete(GAMECARD, SUSCRIPCION, sizeStream,streamMsgSuscripcion);
 
 	struct sockaddr_in direccionServidor;
@@ -105,13 +105,12 @@ void* suscribirseCola(void* msgSuscripcion) {
 	direccionServidor.sin_port = htons(puertoBrokerGC);
 
 	uint32_t cliente = socket(AF_INET, SOCK_STREAM, 0);
-	printf("cliente: %d\n", cliente);
+	log_info(gamecardLogger2,"cliente: %d", cliente);
 	while (connect(cliente, (void*) &direccionServidor,sizeof(direccionServidor)) < 0) {
-		printf("Conexión fallida con el Broker reintentando en %i segundos...\n",tiempoReconexionGC);
+		log_info(gamecardLogger2,"Conexión fallida con el Broker reintentando en %i segundos...",tiempoReconexionGC);
 		sleep(tiempoReconexionGC);
 	}
-
-	printf("Comienzo suscripcion a %i \n", paq->tipoMensaje);
+	log_info(gamecardLogger2,"Comienzo suscripcion a %i", paq->tipoMensaje);
 	uint32_t bytes = sizeof(uint32_t) * 5 + paq->sizeStream;
 
 	void* stream = serializarPaquete(paq);
@@ -123,18 +122,18 @@ void* suscribirseCola(void* msgSuscripcion) {
 	//free(stream);
 
 	uint32_t respuesta;
-	printf("Espero respuesta\n");
+	log_info(gamecardLogger2,"Espero respuesta");
 	recv(cliente, &respuesta, sizeof(uint32_t), 0);
 
 	if (respuesta == CORRECTO) {
-		printf("Se suscribio correctamente\n");
+		log_info(gamecardLogger2,"Se suscribio correctamente");
 		while (1) {
 
 			paquete* paqueteRespuesta = recibirPaquete(cliente);
 
 			while (enviarACK(cliente, GAMECARD, paqueteRespuesta->id) < 0) {
 
-				printf("Conexión fallida con el Broker reintentando en %i segundos...\n",tiempoReconexionGC);
+				log_info(gamecardLogger2,"Conexión fallida con el Broker reintentando en %i segundos",tiempoReconexionGC);
 				sleep(tiempoReconexionGC);
 
 			}
@@ -167,8 +166,8 @@ void* suscribirseCola(void* msgSuscripcion) {
 			}
 		}
 	} else {
-		printf("Mensaje recibido incorrectamente\n");
-		printf("mensaje: %i\n", respuesta);
+		log_info(gamecardLogger2,"Mensaje recibido incorrectamente\n");
+		log_info(gamecardLogger2,"mensaje: %i", respuesta);
 
 	}
 	return NULL;
@@ -177,8 +176,7 @@ void* suscribirseCola(void* msgSuscripcion) {
 int crearHiloServidorGameboy(pthread_t* hilo) {
 	uint32_t err = pthread_create(hilo, NULL, iniciarServidorGameboy, NULL);
 	if (err != 0) {
-		printf(
-				"Hubo un problema en la creación del hilo para iniciar el servidor para el Gameboy \n");
+		log_info(gamecardLogger2,"Hubo un problema en la creación del hilo para iniciar el servidor para el Gameboy \n");
 		return err;
 	}
 
@@ -198,7 +196,7 @@ void* iniciarServidorGameboy(void* arg) {
 		perror("Falló el bind");
 
 	} else {
-		printf("Estoy escuchando\n");
+		log_info(gamecardLogger2,"Estoy escuchando");
 		while (1)  						//para recibir n cantidad de conexiones
 			esperar_cliente(servidor);
 	}
@@ -211,19 +209,19 @@ void esperar_cliente(uint32_t servidor) {
 	struct sockaddr_in dir_cliente;
 
 	uint32_t tam_direccion = sizeof(struct sockaddr_in);
-	printf("Espero un nuevo cliente\n");
+	log_info(gamecardLogger2,"Espero un nuevo cliente");
 	uint32_t* socket_cliente = malloc(sizeof(uint32_t));
 	*socket_cliente = accept(servidor, (void*) &dir_cliente, &tam_direccion);
-	printf("Gestiono un nuevo cliente\n");
+	log_info(gamecardLogger2,"Gestiono un nuevo cliente");
 	pthread_t threadAtencionGameboy;
 	pthread_create(&threadAtencionGameboy, NULL, atenderCliente,(void*) (socket_cliente));
 	pthread_detach(threadAtencionGameboy);
 }
 
 void* atenderCliente(void* sock) {
-	printf("atiendo cliente\n");
+	log_info(gamecardLogger2,"atiendo cliente");
 	uint32_t* socket = (uint32_t*) sock;
-	printf("hola llegue\n");
+	log_info(gamecardLogger2,"hola llegue");
 	paquete* paquete = recibirPaquete(*socket);
 	uint32_t respuesta = 0;
 	if (paquete == NULL) {
@@ -235,8 +233,8 @@ void* atenderCliente(void* sock) {
 	send(*socket, (void*) (&respuesta), sizeof(uint32_t), 0);
 	free(socket);
 
-	printf("hice el send: %i\n", respuesta);
-	printf("recibi: %i\n", paquete->sizeStream);
+	log_info(gamecardLogger2,"hice el send: %i", respuesta);
+	log_info(gamecardLogger2,"recibi: %i", paquete->sizeStream);
 	switch (paquete->tipoMensaje) {
 	case NEW_POKEMON:;
 		atenderNew((void*)paquete);
@@ -250,7 +248,7 @@ void* atenderCliente(void* sock) {
 		atenderCatch((void*)paquete);
 		break;
 	default:
-		printf("leyo cualquiera\n");
+		log_info(gamecardLogger2,"leyo cualquiera");
 		break;
 	}
 
@@ -261,7 +259,7 @@ void* atenderNew(void* paq) {
 	paquete* paqueteNew = (paquete*) paq;
 	uint32_t idNew = paqueteNew->id;
 	mensajeNew* msgNew = deserializarNew(paqueteNew->stream);
-	printf("deserializado\n");
+	log_info(gamecardLogger2,"deserializado");
 
 	pokemonEnPosicion* pokeEnPosicion = malloc(sizeof(pokemonEnPosicion));
 	//addListaMutex(especiesLocalizadas,(void*)(msg->pokemon));
@@ -307,7 +305,7 @@ void* atenderGet(void* paq) {
 	paquete* paqueteGet = (paquete*) paq;
 	mensajeGet* msgGet = deserializarGet(paqueteGet->stream);
 	uint32_t idGet = paqueteGet->id;
-	printf("deserializado\n");
+	log_info(gamecardLogger2,"deserializado");
 	//destruirPaquete(paquete);
 
 	pokemonADevolver* pokeADevolver = malloc(sizeof(pokemonADevolver));
@@ -351,7 +349,7 @@ void* atenderCatch(void* paq) {
 	paquete* paqueteCatch = (paquete*) paq;
 	uint32_t idCatch = paqueteCatch->id;
 	mensajeCatch* msgCatch = deserializarCatch(paqueteCatch->stream);
-	printf("deserializado\n");
+	log_info(gamecardLogger2,"deserializado");
 	pokemonAAtrapar* pokeAAtrapar = malloc(sizeof(pokemonAAtrapar));
 	pokeAAtrapar->id = idCatch;
 	pokeAAtrapar->pokemon = msgCatch->pokemon;

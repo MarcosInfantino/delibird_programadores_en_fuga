@@ -49,14 +49,14 @@ uint32_t directorioExiste (char *path){
 
 void iniciarMetadata() {
 	if(directorioExiste(buscarPath("/Metadata"))<0){
-		printf("No se encontro el directorio metadata\n");
+		log_info(gamecardLogger2,"No se encontro el directorio metadata");
 	}else{
-		printf("Se encontro el directorio metadata\n");
+		log_info(gamecardLogger2,"Se encontro el directorio metadata");
 		if(archivoExiste(buscarPath("/Metadata/Metadata.bin"))<0){
-			printf("No se encontro el archivo metadata.bin\n");
+			log_info(gamecardLogger2,"No se encontro el archivo metadata.bin");
 		}
 		else{
-			printf("Se encontro el archivo metadata.bin\n");
+			log_info(gamecardLogger2,"Se encontro el archivo metadata.bin");
 			//char* pathMetadata = buscarPath("/Metadata/Metadata.bin");
 		//	int descriptorFichero = open(pathMetadata,O_RDONLY);
 		//	fstat(descriptorFichero,&bufferEstado);
@@ -66,7 +66,7 @@ void iniciarMetadata() {
 			tallGrass.block_size  = config_get_int_value(config_metadata, "BLOCK_SIZE");
 			tallGrass.blocks = config_get_int_value(config_metadata, "BLOCKS");
 			tallGrass.magic_number = config_get_string_value(config_metadata, "MAGIC_NUMBER");
-			printf("Inicio de Metadata\n Tamanio bloques: %i\n Cantidad de bloques: %i\n Magic number: %s\n", tallGrass.block_size, tallGrass.blocks, tallGrass.magic_number);
+			log_info(gamecardLogger2,"Inicio de Metadata, Tamanio bloques: %i,  Cantidad de bloques: %i,  Magic number: %s", tallGrass.block_size, tallGrass.blocks, tallGrass.magic_number);
 			config_destroy(config_metadata);
 		}
 	}
@@ -180,7 +180,7 @@ archivoHeader* crearMetadata(uint32_t tipo, char* direccion){
 
 	switch(tipo){
 	case DIRECTORIO:;
-		printf("Soy directorio\n");
+		log_info(gamecardLogger2,"Soy directorio");
 		metadataFile->esDirectorio = 'Y';
 		metadataFile->estaAbierto = false;
 		metadataFile->bloquesUsados = NULL;
@@ -191,7 +191,7 @@ archivoHeader* crearMetadata(uint32_t tipo, char* direccion){
 
 		break;
 	case ARCHIVO:;
-		printf("Soy archivo\n");
+		log_info(gamecardLogger2,"Soy archivo");
 		metadataFile->esDirectorio = 'N';
 		metadataFile->estaAbierto = false;
 		metadataFile->bloquesUsados = list_create();
@@ -200,7 +200,7 @@ archivoHeader* crearMetadata(uint32_t tipo, char* direccion){
 		var=metadataFile;
 		escribirMetadata(metadataFile);
 		break;
-	default:; printf("Manqueada\n");break;
+	default:; log_info(gamecardLogger2,"Manqueada");break;
 	}
 
 	fclose(archivoMetadata);

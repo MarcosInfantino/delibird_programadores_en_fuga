@@ -130,3 +130,24 @@
 [INFO] 19:49:55:650 gamecard/(11501:11501): Puerto Broker:5002
 [INFO] 19:49:55:654 gamecard/(11501:11501): Escribiendo bloque:1, offset=0, longitud=5, buffer=Hola
 [INFO] 19:49:55:654 gamecard/(11501:11501): Escribiendo bloque:1, offset=4, longitud=5, buffer=Hola
+[INFO] 20:40:16:993 gamecard/(19050:19050): Puerto Broker:5002
+[INFO] 20:40:16:994 gamecard/(19050:19050): Se encontro el directorio metadata
+[INFO] 20:40:16:994 gamecard/(19050:19050): Se encontro el archivo metadata.bin
+[INFO] 20:40:16:994 gamecard/(19050:19050): Inicio de Metadata, Tamanio bloques: 64,  Cantidad de bloques: 10,  Magic number: TALL_GRASS
+[INFO] 20:40:16:998 gamecard/(19050:19050): Soy directorio
+[INFO] 20:40:16:998 gamecard/(19050:19050): Soy directorio
+[INFO] 20:40:16:998 gamecard/(19050:19050): Soy archivo
+[INFO] 20:40:16:998 gamecard/(19050:19050): Escribiendo bloque:1, offset=0, longitud=5, buffer=Hola
+[INFO] 20:40:16:998 gamecard/(19050:19050): Escribiendo bloque:1, offset=4, longitud=5, buffer=Hola
+[INFO] 20:40:16:0 gamecard/(19050:19058): Voy a llenar el paquete
+[INFO] 20:40:16:1 gamecard/(19050:19058): cliente: 4
+[INFO] 20:40:16:1 gamecard/(19050:19058): Conexión fallida con el Broker reintentando en 10 segundos...
+[INFO] 20:40:16:1 gamecard/(19050:19057): Voy a llenar el paquete
+[INFO] 20:40:16:1 gamecard/(19050:19057): cliente: 5
+[INFO] 20:40:16:1 gamecard/(19050:19057): Conexión fallida con el Broker reintentando en 10 segundos...
+[INFO] 20:40:17:5 gamecard/(19050:19056): Voy a llenar el paquete
+[INFO] 20:40:17:6 gamecard/(19050:19056): cliente: 6
+[INFO] 20:40:17:6 gamecard/(19050:19056): Conexión fallida con el Broker reintentando en 10 segundos...
+[INFO] 20:40:26:1 gamecard/(19050:19057): Conexión fallida con el Broker reintentando en 10 segundos...
+[INFO] 20:40:26:1 gamecard/(19050:19058): Conexión fallida con el Broker reintentando en 10 segundos...
+[INFO] 20:40:27:6 gamecard/(19050:19056): Conexión fallida con el Broker reintentando en 10 segundos...
