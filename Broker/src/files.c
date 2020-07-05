@@ -14,6 +14,10 @@ archivoMutex* iniciarArchivoMutex(char* version){
 	archivo->mutex = malloc(sizeof(pthread_mutex_t));
 	archivo->archivo = malloc(sizeof(FILE));
 
+	time_t t;
+	t = time(NULL);
+	struct tm tiempoActual = *localtime(&t);
+
 	char * nombre = "dumpDeCache";
 	char * extension = ".db";
 	char* nombreCompleto = malloc(sizeof(nombre) + sizeof(version) + sizeof(extension) + 1);
@@ -22,7 +26,7 @@ archivoMutex* iniciarArchivoMutex(char* version){
 	strcat(nombreCompleto, extension);
 
 	archivoSem->archivo = fopen(nombreCompleto,modoEscrituraEnBinario);
-	//fwrite(fechaActual, sizeof(lineaFile), 1, archivoSem->archivo);
+	//fwrite(tiempoActual, sizeof(struct tm), 1, archivoSem->archivo);
 
 	return archivo;
 }
