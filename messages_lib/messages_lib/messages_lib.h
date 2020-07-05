@@ -275,5 +275,6 @@ char* nombreDeCola(uint32_t cola);
 char* armarStringSuscripLog(uint32_t modulo, uint32_t cola);
 char* armarStringMsgNuevoLog(uint32_t cola);
 char* armarConexionNuevoProcesoLog(uint32_t modulo);
+char* armarStringACK(uint32_t cola, uint32_t idMensaje, uint32_t socket);
 
 #endif /* MESSAGES_LIB_H_ */

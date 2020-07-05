@@ -141,29 +141,45 @@ char* nombreDeCola(uint32_t cola){
 char* armarStringSuscripLog(uint32_t modulo, uint32_t cola){
 	char* suscripcionDeUnProceso = "Se suscribrió el proceso ";
 	char* suscripcionAcola       = " a la cola ";
-	strcat(suscripcionDeUnProceso, nombreDeProceso(modulo));
-	strcat(suscripcionDeUnProceso,suscripcionAcola );
-	strcat(suscripcionDeUnProceso ,nombreDeCola(cola));
+	char* cadena = malloc(sizeof(suscripcionDeUnProceso) + sizeof(suscripcionAcola) + sizeof(nombreDeProceso(modulo)) + sizeof(nombreDeCola(cola)) + 1);
+	strcpy(cadena,suscripcionDeUnProceso);
+	strcat(cadena, nombreDeProceso(modulo));
+	strcat(cadena, suscripcionAcola );
+	strcat(cadena, nombreDeCola(cola));
 
-	return suscripcionDeUnProceso;
+	return cadena;
 }
 
 
 char* armarStringMsgNuevoLog(uint32_t cola){
-
 	char * mensajeNuevoDeProceso = "Llegó un nuevo mensaje a la cola ";
-	strcat(mensajeNuevoDeProceso, nombreDeCola(cola));
-	return mensajeNuevoDeProceso;
+	char * cadena = malloc(sizeof(mensajeNuevoDeProceso) + sizeof(nombreDeCola(cola)) + 1);
+	strcpy(cadena,mensajeNuevoDeProceso);
+	strcat(cadena, nombreDeCola(cola));
+	return cadena;
 
 }
 
 char* armarConexionNuevoProcesoLog(uint32_t modulo){
-	char* str="Se conectó un proceso ";
-	char * conexionDeProceso = malloc(strlen(str) + strlen(nombreDeProceso(modulo)) +1);
+	char* str = "Se conectó un proceso ";
+	char * conexionDeProceso = malloc(strlen(str) + strlen(nombreDeProceso(modulo)) + 1);
 	strcpy(conexionDeProceso,str);
     strcat(conexionDeProceso, nombreDeProceso(modulo));
 
     return conexionDeProceso;
+}
+
+
+char* armarStringACK(uint32_t cola, uint32_t idMensaje, uint32_t socket ){ //falta concatenar el número de mensaje y socket
+	char * mensaje = "Se recibió un ACK de la cola: ";
+	char * mensajeNro = ", el id de mensaje es: ";
+	char * suscriptor = "y el suscriptor es: ";
+	char * cadena = malloc(sizeof(mensaje) + sizeof(nombreDeCola(cola)) + sizeof(mensajeNro) + sizeof(suscriptor) + 1);
+	strcpy(cadena,mensaje);
+	strcat(cadena, nombreDeCola(cola));
+	strcat(cadena, mensajeNro);
+	strcat(cadena, suscriptor);
+	return cadena;
 }
 
 void terminar_programa(t_log* logger, t_config* config)

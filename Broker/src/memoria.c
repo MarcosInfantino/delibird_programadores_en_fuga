@@ -60,6 +60,11 @@ void guardarEnListaMemoria(uint32_t idMensaje, uint32_t socket, ListasMemoria li
 		return;
 	}
 
+	log_info(loggerBroker,"Se recibió ACK de cola: %s, suscriptor: %d, id de mensaje: %d -.-",nombreDeCola(mensaje->cola),socket,mensaje->idMensaje);
+	log_info(brokerLogger2,"Se recibió ACK de cola: %s, suscriptor: %d, id de mensaje: %d -.-",nombreDeCola(mensaje->cola),socket,mensaje->idMensaje);
+	//log_info(loggerBroker, armarStringACK(mensaje->cola, mensaje->idMensaje, socket));
+	//log_info(brokerLogger2, armarStringACK(mensaje->cola, mensaje->idMensaje, socket));
+
 	if( lista == CONFIRMADO){
 		if(estaEnLista(socket,lista, mensaje ))
 		{	printf("Ya está en la lista");
@@ -109,12 +114,13 @@ bool estaEnLista(uint32_t socket, ListasMemoria lista, msgMemoriaBroker* mensaje
 
 
 void asignarPuntero(uint32_t offset, void* stream, uint32_t sizeStream){
-	log_info(brokerLogger2,"Lo voy a guardar en posicion %d (de memoria) -.-", memoria + offset);
+	log_info(brokerLogger2,"Se almacena mensaje en posición: %d (de memoria) -.-", memoria + offset);
+	log_info(loggerBroker, "Se almacena mensaje en memoria en posición: %d -.-", memoria + offset);
 	memcpy(memoria + offset, stream, sizeStream);
 }
 
 void crearDumpDeCache(){
-
-	log_info(brokerLogger2,"toma la señal y la trata" );
+	log_info(loggerBroker,"Se solicitó dump de cache.");
+	log_info(brokerLogger2,"Se solicitó dump de cache.");
 
 }

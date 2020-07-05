@@ -31,14 +31,18 @@ int main(void) {
     brokerLogger2 = log_create("brokerLoggerSecundario.log", "Broker", true, LOG_LEVEL_INFO);
 
     log_info(brokerLogger2, "pid : %i", getpid());
+    //log_info(brokerLogger2, armarStringEnvioXsub(2));
 
 	signal(SIGUSR1, crearDumpDeCache);
 
-	levantarDatosDeConfig("Broker.config", 1); //1 para datos de config, otro para hardcode
+	//levantarDatosDeConfig("Broker.config", 1); 			//1 para datos de config, otro para hardcode
+	//levantarDatosDeConfig("pruebaBaseBroker.config", 1);
+	levantarDatosDeConfig("pruebaBS.config", 1);
 
 	char* nombreLog   = "logBroker.log";
 	char* programName = "BROKER";
 	loggerBroker = iniciar_logger(nombreLog, programName);
+
 
 	mutexMemoria = malloc(sizeof(pthread_mutex_t));
 	pthread_mutex_init(mutexMemoria,NULL);
@@ -98,7 +102,7 @@ void* iniciarServidor(){
 	log_info(loggerBroker, "Estoy escuchando!");
 
 
-	while (1)  								//para recibir n conexiones
+	while (1)
 		esperar_cliente(servidor);
 
 	return NULL;
@@ -171,8 +175,6 @@ void* atenderCliente(void* sock) {
 
 void manejarTipoDeMensaje(paquete* paq, uint32_t* socket) {
 
-	//log_info(loggerBroker, armarStringMsgNuevoLog(paq.tipoMensaje));
-
 	suscripcionTiempo structTiempo;
 	mensajeSuscripcionTiempo* datosSuscribir;
 
@@ -184,12 +186,12 @@ void manejarTipoDeMensaje(paquete* paq, uint32_t* socket) {
 			 meterEnCola( &newPokemon, paq, *socket);
 			 break;
 		 case CAUGHT_POKEMON:;
-			 mensajeCaught* caught=deserializarCaught(paq->stream);
-			 log_info(brokerLogger2, "Id del caught: %i", caught->resultadoCaught);
+			 //mensajeCaught* caught = deserializarCaught(paq->stream);
+			// log_info(brokerLogger2, "Id del caught: %i", caught->resultadoCaught);
 			 meterEnCola( &caughtPokemon, paq, *socket);
 			 break;
 		 case CATCH_POKEMON:
-			 log_info(brokerLogger2,"Me llegó un catch. Código de mensaje: %i. ",paq->tipoMensaje);
+			 //log_info(brokerLogger2,"Me llegó un catch. Código de mensaje: %i. ",paq->tipoMensaje);
 			 meterEnCola( &catchPokemon, paq, *socket);
 			 break;
 		 case GET_POKEMON:
@@ -218,7 +220,9 @@ void manejarTipoDeMensaje(paquete* paq, uint32_t* socket) {
 }
 
 void meterEnCola( colaMensajes* structCola, paquete * paq, uint32_t  socket){
-	log_info(brokerLogger2,"Meto un mensaje en la cola.");
+	log_info(loggerBroker, armarStringMsgNuevoLog(paq->tipoMensaje));
+	log_info(brokerLogger2, armarStringMsgNuevoLog(paq->tipoMensaje));
+
 	incrementarContador();
 	pthread_mutex_lock(contador.mutexContador);
 	insertarIdPaquete(paq,contador.contador);
@@ -256,18 +260,20 @@ void * chequearMensajesEnCola(void * colaVoid){
 		sem_wait(cola->mensajesEnCola);
 		log_info(brokerLogger2,"Comienza el proceso de envío del mensaje a todos los suscriptores.");
 		paquete* paq = (paquete*) popColaMutex(cola->cola);
-		if(paq->tipoMensaje == CAUGHT_POKEMON)
-			{	mensajeCaught* msg = deserializarCaught(paq->stream);
-				log_info(brokerLogger2,"id caught segunda vez: %i.",msg->resultadoCaught);
 
-			}
+		//if(paq->tipoMensaje == CAUGHT_POKEMON){
+		//mensajeCaught* msg = deserializarCaught(paq->stream);}
+
 		void * paqSerializado = serializarPaquete(paq);
 
 		for(i = 0; i < sizeListaMutex(cola->suscriptores) ;i ++){
 			uint32_t * socketActual = (uint32_t *) getListaMutex(cola->suscriptores, i);
 
 			send(*socketActual, paqSerializado , sizePaquete(paq), 0);
-			log_info(brokerLogger2,"Envié mensaje a un suscriptor.");
+
+			log_info(brokerLogger2, "Envié mensaje a suscriptor: %d -.-", *socketActual);
+			log_info(loggerBroker, "Envié mensaje a suscriptor: %d -.-", *socketActual);
+
 			guardarEnListaMemoria(paq->id, *socketActual, SUBSYAENVIADOS);
 		}
 
