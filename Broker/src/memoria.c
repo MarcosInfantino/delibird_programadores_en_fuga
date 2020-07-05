@@ -119,8 +119,13 @@ void asignarPuntero(uint32_t offset, void* stream, uint32_t sizeStream){
 	memcpy(memoria + offset, stream, sizeStream);
 }
 
-void crearDumpDeCache(){
+void crearDumpDeCache(){ //ver como hacer para que vaya creando uno y no siempre el mismo
 	log_info(loggerBroker,"Se solicitó dump de cache.");
 	log_info(brokerLogger2,"Se solicitó dump de cache.");
+
+	char* version = "1";
+	archivoMutex* archivo = iniciarArchivoMutex(contador);
+
+	*version = *version + 1;
 
 }

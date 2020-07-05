@@ -53,6 +53,12 @@ typedef struct{
 	uint32_t sizeParticion;
 }particionLibre;
 
+typedef struct{
+	uint32_t offset;
+	struct tm lru;
+	msgMemoriaBroker* mensaje;
+}particionOcupada;
+
 typedef enum{
 	PARTICIONES_DINAMICAS,
 	BUDDY_SYSTEM

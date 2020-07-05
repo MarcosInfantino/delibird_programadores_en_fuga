@@ -37,7 +37,6 @@ void registrarEnMemoriaPARTICIONES(msgMemoriaBroker* mensajeNuevo){
 }
 
 particionLibre* obtenerParticionLibrePARTICIONES(uint32_t tamStream){
-	//listaMutex* aux = malloc(sizeof(listaMutex));
 
 	if(sizeListaMutex(particionesLibres) <= 0)
 		return NULL;
