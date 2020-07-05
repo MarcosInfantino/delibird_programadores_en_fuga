@@ -118,4 +118,10 @@ int32_t obtenerPosicionBloqueEnLista(t_list* listaBloques , uint32_t idBloque){
 	return -1;
 }
 
+void disminuirCapacidad(blockHeader* bloque, int32_t bytes){
+	bloque->bytesLeft-=bytes;
+}
 
+bool tieneCapacidad(blockHeader* bloque, int32_t capacidad){
+	return bloque->bytesLeft>=capacidad;
+}

@@ -138,7 +138,7 @@ int32_t crearArchivoBloque(blockHeader* bloque) {
 	return 0;
 }
 
-int32_t crearDirectorio(char* nombre, char* pathDestino, uint32_t tipo){
+archivoHeader* crearDirectorio(char* nombre, char* pathDestino, uint32_t tipo){
 	int32_t status;
 	errno = 0;
 	char* direc = string_new();
@@ -150,22 +150,26 @@ int32_t crearDirectorio(char* nombre, char* pathDestino, uint32_t tipo){
 		if(errno == EEXIST){
 			log_info(gamecardLogger2,"El directorio ya existe");
 			//Ver que hacer aca
-			return 0;
+			//return 0;
 		}
 		if(status < 0){
 			log_info(gamecardLogger2,"Error al crear el directorio");
-			return -1;
+			//return -1;
 		}
 	}
-	crearMetadata(tipo, direc);
-	return status;
+
+	return crearMetadata(tipo, direc);
+	//return crearNodoDirectorio(header, directorioPadre);
+
+
+
 }
 
 void eliminarDirectorio(char* path){
 	rmdir(path);
 }
 
-void crearMetadata(uint32_t tipo, char* direccion){
+archivoHeader* crearMetadata(uint32_t tipo, char* direccion){
 	archivoHeader* metadataFile = malloc(sizeof(archivoHeader));
 	char* nuevaDirec = malloc(strlen(direccion)+strlen("metadata.bin")+1);
 	strcpy(nuevaDirec,direccion);
@@ -200,6 +204,7 @@ void crearMetadata(uint32_t tipo, char* direccion){
 	}
 
 	fclose(archivoMetadata);
+	return metadataFile;
 
 }
 
@@ -217,6 +222,7 @@ void inicializarListaBloques(){
 		bloqueActual->file=NULL;
 		bloqueActual->bytesLeft=tallGrass.block_size;
 		bloqueActual->id=i;
+		bloqueActual->pos=0;
 		list_add(listaBloques,(void*) bloqueActual);
 		crearArchivoBloque(obtenerBloquePorId(i));//obtenerBloquePorId(1)
 	}
@@ -294,7 +300,10 @@ void escribirBloque2(int32_t bloque, char* buffer){
 }
 */
 
-void escribirBloque(int32_t bloque, int32_t offset, int32_t longitud, char* buffer) {
+int32_t escribirBloque(int32_t bloque, int32_t offset, int32_t longitud, char* buffer) {
+	blockHeader* headerBloque=obtenerBloquePorId(bloque);
+	if(tieneCapacidad(headerBloque,longitud)){
+	disminuirCapacidad(headerBloque, longitud);
 	log_info(gamecardLogger2, "Escribiendo bloque:%d, offset=%d, longitud=%d, buffer=%s", bloque, offset, longitud, buffer);
 	//const char* bufferin = buffer;
 	//FILE* block = fopen(string_from_format("%s%d.bin", pathBlocks, bloque), "w+b");
@@ -303,6 +312,11 @@ void escribirBloque(int32_t bloque, int32_t offset, int32_t longitud, char* buff
 	fseek(block, offset, SEEK_SET);
 	fwrite(buffer, strlen(buffer)+1, 1, block);
 	//fputs(buffer,block);
+	headerBloque->pos=ftell(block);
 	fclose(block);
 
+	return 0;
+	}else{
+		return -1;
+	}
 }

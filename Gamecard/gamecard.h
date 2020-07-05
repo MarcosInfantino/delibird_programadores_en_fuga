@@ -51,6 +51,7 @@ typedef struct{
 	//FILE* archivoMetadata;
 	t_list* archivosHijos;
 	char* pathArchivo;
+
 	//struct archivoHeader* archivoPadre;
 }archivoHeader;
 
@@ -71,6 +72,7 @@ typedef struct{
 	FILE* file;
 	uint32_t bytesLeft;
 	uint32_t id;
+	uint32_t pos;
 }blockHeader;
 
 
@@ -103,6 +105,7 @@ tallGrassHeader tallGrass;
 char* mmapBitmap;
 t_list* listaBloques;
 t_log* gamecardLogger2;
+
 struct nodoArbolDirectorio* raizDirectorio;
 
 void* suscribirseCola(void* msgSuscripcion);
@@ -131,9 +134,9 @@ bool estaLibre(uint32_t idBloque);
 void ocuparBloque(uint32_t idBloque);
 void liberarBloque(uint32_t idBloque);
 blockHeader* obtenerBloquePorId(uint32_t id);
-int32_t crearDirectorio(char* nombre, char* pathDestino, uint32_t tipo);
+archivoHeader* crearDirectorio(char* nombre, char* pathDestino, uint32_t tipo);
 void eliminarDirectorio(char* path);
-void crearMetadata(uint32_t tipo, char* direccion);
+archivoHeader* crearMetadata(uint32_t tipo, char* direccion);
 void escribirMetadata(archivoHeader* metadata);
 FILE* abrirArchivo(archivoHeader* metadata);
 void cerrarArchivo(archivoHeader* metadata, FILE* archivo);
@@ -144,6 +147,9 @@ char* obtenerStringListaBloques(archivoHeader* metadata);
 void agregarBloque(archivoHeader* metadata, blockHeader* bloque);
 int32_t obtenerPosicionBloqueEnLista(t_list* listaBloques , uint32_t idBloque);
 void removerBloque(archivoHeader* metadata, uint32_t idBloque);
-void escribirBloque(int32_t bloque, int32_t offset, int32_t longitud,char* buffer);
+int32_t escribirBloque(int32_t bloque, int32_t offset, int32_t longitud,char* buffer);
 void escribirBloque2(int32_t bloque, char* buffer);
+struct nodoArbolDirectorio* crearNodoDirectorio(archivoHeader* archivo, struct nodoArbolDirectorio* nodoDirectorioPadre);
+void disminuirCapacidad(blockHeader* bloque, int32_t bytes);
+bool tieneCapacidad(blockHeader* bloque, int32_t capacidad);
 #endif /* GAMECARD_H_ */

@@ -5,16 +5,19 @@
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS += \
 ../FileSystem.c \
+../arbolDirectorio.c \
 ../archivoHeader.c \
 ../gamecard.c 
 
 OBJS += \
 ./FileSystem.o \
+./arbolDirectorio.o \
 ./archivoHeader.o \
 ./gamecard.o 
 
 C_DEPS += \
 ./FileSystem.d \
+./arbolDirectorio.d \
 ./archivoHeader.d \
 ./gamecard.d 
 

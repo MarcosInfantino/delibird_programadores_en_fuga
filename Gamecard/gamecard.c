@@ -28,6 +28,8 @@ int main(void) {
 	//iniciarFileSystem(); //"/home/utnso/tp-2020-1c-Programadores-en-Fuga/Gamecard/TALL_GRASS"; //
 	iniciarMetadata();
 	iniciarBitmap();
+	//crearDirectorio("TALL_GRASS", "/home/utnso/tp-2020-1c-Programadores-en-Fuga/Gamecard/", DIRECTORIO);
+	//crearDirectorio("Metadata", "/home/utnso/tp-2020-1c-Programadores-en-Fuga/Gamecard/TALL_GRASS/", DIRECTORIO);
 	crearDirectorio("Files","/home/utnso/tp-2020-1c-Programadores-en-Fuga/Gamecard/TALL_GRASS/", DIRECTORIO);
 	crearDirectorio("Blocks","/home/utnso/tp-2020-1c-Programadores-en-Fuga/Gamecard/TALL_GRASS/", DIRECTORIO);
 	crearDirectorio("Pikachu",pathFiles,ARCHIVO);

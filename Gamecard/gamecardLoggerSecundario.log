@@ -116,3 +116,17 @@
 [INFO] 18:23:41:932 gamecard/(16322:16322): Puerto Broker:5002
 [INFO] 18:23:41:954 gamecard/(16322:16322): Escribiendo bloque:1, offset=0, longitud=5, buffer=Hola
 [INFO] 18:23:41:954 gamecard/(16322:16322): Escribiendo bloque:1, offset=4, longitud=5, buffer=Hola
+[INFO] 19:43:46:258 gamecard/(10627:10627): Puerto Broker:5002
+[INFO] 19:43:46:271 gamecard/(10627:10627): El directorio ya existe
+[INFO] 19:43:46:288 gamecard/(10627:10627): Error al crear el directorio
+[INFO] 19:43:46:288 gamecard/(10627:10627): El directorio ya existe
+[INFO] 19:43:46:288 gamecard/(10627:10627): Error al crear el directorio
+[INFO] 19:43:46:289 gamecard/(10627:10627): Escribiendo bloque:1, offset=0, longitud=5, buffer=Hola
+[INFO] 19:43:46:289 gamecard/(10627:10627): Escribiendo bloque:1, offset=4, longitud=5, buffer=Hola
+[INFO] 19:45:20:821 gamecard/(10812:10812): Puerto Broker:5002
+[INFO] 19:46:38:235 gamecard/(11068:11068): Puerto Broker:5002
+[INFO] 19:47:25:317 gamecard/(11197:11197): Puerto Broker:5002
+[INFO] 19:47:58:301 gamecard/(11299:11299): Puerto Broker:5002
+[INFO] 19:49:55:650 gamecard/(11501:11501): Puerto Broker:5002
+[INFO] 19:49:55:654 gamecard/(11501:11501): Escribiendo bloque:1, offset=0, longitud=5, buffer=Hola
+[INFO] 19:49:55:654 gamecard/(11501:11501): Escribiendo bloque:1, offset=4, longitud=5, buffer=Hola
