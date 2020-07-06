@@ -12,6 +12,7 @@
 #define OCUPADA "[X]"
 #define LIBREP "[L]"
 
+//#include <mathcalls.h>
 
 typedef struct{
 	FILE* archivo;

@@ -9,7 +9,7 @@
 #include "memoria.h"
 #include "files.h"
 
-archivoMutex* iniciarArchivoMutex(char* version){
+archivoMutex* iniciarArchivoMutex(){
 	archivoMutex* archivo = malloc(sizeof(archivoMutex));
 	archivo->mutex = malloc(sizeof(pthread_mutex_t));
 	archivo->archivo = malloc(sizeof(FILE));
@@ -23,14 +23,14 @@ archivoMutex* iniciarArchivoMutex(char* version){
 //	t = time(NULL);
 //	struct tm *tiempoActual = *localtime(&t);
 
-	char * nombre = "dumpDeCache";
-	char * extension = ".db";
-	char* nombreCompleto = malloc(sizeof(nombre) + sizeof(version) + sizeof(extension) + 1);
-	strcpy(nombreCompleto,nombre);
-	strcat(nombreCompleto, version);
-	strcat(nombreCompleto, extension);
+	//char * nombre = "dumpDeCache";
+	//char * extension = ".db";
+	//char* nombreCompleto = malloc(sizeof(nombre) + sizeof(version) + sizeof(extension) + 1);
+	//strcpy(nombreCompleto,nombre);
+	//strcat(nombreCompleto, version);
+	//strcat(nombreCompleto, extension);
 
-	archivoSem->archivo = fopen(nombreCompleto,modoEscrituraEnBinario);
+	archivoSem->archivo = fopen("dumpDeCache.db",modoEscrituraEnBinario);
 	fwrite(info, sizeof(struct tm), 1, archivoSem->archivo);
 
 	return archivo;
@@ -66,7 +66,7 @@ void almacenarParticionEnArchivo(lineaFile* particion){ //TODO hacer que varíe 
 	pthread_mutex_unlock(archivoSem->mutex);
 }
 
-//VALIDAr QUE PONER EN PARTICIONES QUE ESTÉN LIBRES
+
 
 void recorrerArbol(){ //TODO recorrer arbol y por cada particion que este ocupada o libre pero NO particionada recolecto datos y mando
 	lineaFile* datosParticion = malloc(sizeof(lineaFile));
@@ -100,7 +100,8 @@ void registrarParticionesLibresYocupadas(){
 	 datosParticionVacia->limite  = (partLibre->offset + &memoria) + partLibre->sizeParticion;
 	 strcpy(datosParticionVacia->estado,LIBREP);
 
-	 almacenarParticionEnArchivo(datosParticionVacia);}
+	 almacenarParticionEnArchivo((lineaFile*)datosParticionVacia); //todo veer como arreglar esto.
+	}
 	pthread_mutex_unlock(mutexMemoria);
 
 	pthread_mutex_lock(mutexMemoria);
@@ -130,6 +131,22 @@ char* estadoEnString(uint32_t estado){
 		return OCUPADA;}
 }
 
+/*char* intToVecChar(uint32_t intAConvertir){
+    uint32_t lengthDeInt = (uint32_t)floor(log10(abs(intAConvertir))) + 1;
+    uint32_t array[lengthDeInt];
+    char * cadena = "";
+    char digitoActual;
+    for (uint32_t i = lengthDeInt-1; i >= 0; i--) {
+        array[i] = intAConvertir % 10;
+        intAConvertir /= 10;
+    }
+    for (uint32_t i = 0; i < lengthDeInt; i--) {
+        digitoActual = array[i] + '0';
+        strcpy(cadena+i,digitoActual);
+    }
+    return cadena;
+}
+*/
 //DEPRECATED
 /*void almacenarEnArchivoMensaje(msgMemoriaBroker* mensajeNuevo){
 	pthread_mutex_lock(archivoSem->mutex);

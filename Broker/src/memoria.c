@@ -22,6 +22,11 @@
 
 void registrarMensajeEnMemoria(uint32_t idMensaje, paquete* paq, algoritmoMem metodo){
 
+	if(paq->tipoMensaje == CATCH_POKEMON || paq->tipoMensaje == GET_POKEMON){
+		if(yaEstaEnMemoria(paq))
+			return;
+	}
+
 	msgMemoriaBroker* msgNuevo = malloc(sizeof(msgMemoriaBroker));
 	msgNuevo->cola          = paq->tipoMensaje;
 	msgNuevo->idMensaje     = idMensaje;
@@ -123,9 +128,61 @@ void crearDumpDeCache(){ //ver como hacer para que vaya creando uno y no siempre
 	log_info(loggerBroker,"Se solicitó dump de cache.");
 	log_info(brokerLogger2,"Se solicitó dump de cache.");
 
-	char* version = "1";
-	archivoMutex* archivo = iniciarArchivoMutex(contador);
+	//archivoMutex* archivo = iniciarArchivoMutex();
+}
 
-	*version = *version + 1;
+bool yaEstaEnMemoria(paquete* paq){
 
+	switch(paq->tipoMensaje){
+	case CATCH_POKEMON:
+		return yaSeGuardoEnMemoria(deserializarCatch(paq->stream), NULL);
+	break;
+	case GET_POKEMON:
+		return yaSeGuardoEnMemoria(NULL, deserializarGet(paq->stream));
+	break;
+	default:
+		printf("ERROR");
+		return false;
+	}
+
+}
+
+bool yaSeGuardoEnMemoria(mensajeCatch* msgCatch, mensajeGet* msgGet){
+	 particionOcupada* partOcupada = malloc(sizeof(particionOcupada));
+
+	if(algoritmoMemoria == BUDDY_SYSTEM){
+		return false;
+	}else{
+
+		for(int i=0; i<sizeListaMutex(memoriaPARTICIONES); i++){
+
+		  partOcupada = getListaMutex(memoriaPARTICIONES, i);
+
+		  if(partOcupada->mensaje->cola == CATCH_POKEMON && msgCatch != NULL){
+
+			  if(compararCatch(deserializarCatch(partOcupada->mensaje->stream), msgCatch))
+				  return true;
+
+		  }else if(partOcupada->mensaje->cola == GET_POKEMON && msgGet != NULL){
+
+			  if( compararGet(deserializarGet(partOcupada->mensaje->stream), msgGet))
+				  return true;
+		  }
+		}
+		return false;
+	  }
+}
+
+uint32_t compararCatch(mensajeCatch*  elemLista, mensajeCatch*  msgCatch){
+	if(strcmp(elemLista->pokemon, msgCatch->pokemon) == 0){
+		if(elemLista->posX == msgCatch->posX && elemLista->posY == msgCatch->posY)
+			return true;
+	}
+		return false;
+}
+
+uint32_t compararGet(mensajeGet* elemLista, mensajeGet* msgGet){
+	if(strcmp(elemLista->pokemon, msgGet->pokemon) == 0){
+		return true;}
+	return false;
 }

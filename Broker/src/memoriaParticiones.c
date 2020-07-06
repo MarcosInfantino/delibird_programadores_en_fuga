@@ -42,19 +42,15 @@ particionLibre* obtenerParticionLibrePARTICIONES(uint32_t tamStream){
 	if(sizeListaMutex(particionesLibres) <= 0)
 		return NULL;
 
-	if (algoritmoParticionLibre == FIRST_FIT){ //acá hay qué agregar mutex?
+	if (algoritmoParticionLibre == FIRST_FIT){
 
-		list_sort(particionesLibres->lista, menorAmayorSegunOffset);
+		list_sort_Mutex(particionesLibres, menorAmayorSegunOffset);
 		return list_remove_by_condition(particionesLibres->lista, esSuficientementeGrandeParaElMSG );
-		//return removeListaMutex(particionesLibres, 1); //lo saca de los libres y lo retorna
-		//return list_remove(particionesLibres->lista, 1);
 
 	}else if(algoritmoParticionLibre == BEST_FIT){
-		list_sort(particionesLibres->lista, menorAmayorSegunSize);
-
+		list_sort_Mutex(particionesLibres, menorAmayorSegunSize);
 		return list_remove_by_condition(particionesLibres->lista, esSuficientementeGrandeParaElMSG );
 	}
-
 	return NULL;
 }
 
@@ -62,7 +58,6 @@ void compactar(){
 	particionOcupada* elemento;
 	uint32_t base = 0;
 	list_sort_Mutex(memoriaPARTICIONES, menorAmayorSegunOffset);
-	//list_sort(memoriaPARTICIONES->lista, menorAmayorSegunOffset);
 	for(int i=0; i<sizeListaMutex(memoriaPARTICIONES); i++){
 		elemento = getListaMutex(memoriaPARTICIONES, i);
 
@@ -80,10 +75,15 @@ void generarParticionLibre(uint32_t base){
 	nuevaParticion->sizeParticion = tamMemoria - base;
 
 	for(int j=0; j<sizeListaMutex(particionesLibres); j++){
-		removeAndDestroyElementListaMutex(particionesLibres,j,free); //todo hacer un destroy para particionLibre
+		removeAndDestroyElementListaMutex(particionesLibres,j,destroyParticion); //o free normal
 	}
 
 	addListaMutex(particionesLibres,(void*) nuevaParticion);
+}
+
+void destroyParticion(void* particion){
+	particionLibre* part = (particionLibre*)particion;
+	free(part);
 }
 
 bool menorAmayorSegunOffset(void* primero, void* segundo){

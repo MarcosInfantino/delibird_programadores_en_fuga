@@ -138,5 +138,11 @@ void generarParticionLibre(uint32_t base);
 
 void crearDumpDeCache();
 void asignarPuntero(uint32_t offset, void* stream, uint32_t sizeStream);
+void destroyParticion(void* particion);
+
+bool yaEstaEnMemoria(paquete* paq);
+bool yaSeGuardoEnMemoria(mensajeCatch* msgCatch, mensajeGet* msgGet);
+uint32_t compararCatch(mensajeCatch*  elemLista, mensajeCatch*  msgCatch);
+uint32_t compararGet(mensajeGet* elemLista, mensajeGet* msgGet);
 
 #endif /* MEMORIA_H_ */

@@ -113,10 +113,9 @@ void particionarMemoriaBUDDY(struct nodoMemoria* particionActual){
 }
 
 msgMemoriaBroker* buscarMensajeEnMemoriaBuddy(uint32_t id){
-
 	pthread_mutex_lock(mutexMemoria);
-	struct nodoMemoria* nodoActual = nodoRaizMemoria;
 	//struct nodoMemoria* backUp = nodoActual;
+	struct nodoMemoria* nodoActual = nodoRaizMemoria;
 
 	if(estaLibre(nodoActual)) {
 		pthread_mutex_unlock(mutexMemoria);
@@ -127,21 +126,59 @@ msgMemoriaBroker* buscarMensajeEnMemoriaBuddy(uint32_t id){
 		msgMemoriaBroker* mensajeEnRamaDer;
 
 		if(mensajeEnRamaIzq == NULL){
-
 			mensajeEnRamaDer = buscarPorRama(id, nodoActual->hijoDer);
 			pthread_mutex_unlock(mutexMemoria);
 			return mensajeEnRamaDer;
-
 		}
-
 		pthread_mutex_unlock(mutexMemoria);
 		return mensajeEnRamaIzq;
-
 	}
-
 	pthread_mutex_unlock(mutexMemoria);
 	return nodoActual->mensaje;
+}
 
+bool yaEstaEnMemoriaBuddy(mensajeGet* msgGet, mensajeCatch*  msgCatch){
+	pthread_mutex_lock(mutexMemoria);
+	struct nodoMemoria* nodoActual = nodoRaizMemoria;
+
+	if(estaLibre(nodoActual)) {
+		pthread_mutex_unlock(mutexMemoria);
+		return false;}
+
+	if(msgGet == NULL){
+		if(compararCatch(deserializarCatch(nodoActual->mensaje->stream),msgCatch) == 0){
+		msgMemoriaBroker* mensajeEnRamaIzq = buscarPorRama(id, nodoActual->hijoIzq); //todo modificar el buscar por rama
+		msgMemoriaBroker* mensajeEnRamaDer;
+
+		if(mensajeEnRamaIzq == NULL){
+
+			mensajeEnRamaDer = buscarPorRama(id, nodoActual->hijoDer);
+			pthread_mutex_unlock(mutexMemoria);
+			return compararCatch(deserializarCatch(mensajeEnRamaDer->stream), msgCatch);
+		}
+		pthread_mutex_unlock(mutexMemoria);
+		return compararCatch(deserializarCatch(mensajeEnRamaIzq->stream), msgCatch);
+	}
+	pthread_mutex_unlock(mutexMemoria);
+	return true;
+
+	}else{
+		if(compararGet(deserializarGet(nodoActual->mensaje->stream),msgGet) == 0){
+			msgMemoriaBroker* mensajeEnRamaIzq = buscarPorRama(id, nodoActual->hijoIzq); //todo modificar el buscar por rama
+			msgMemoriaBroker* mensajeEnRamaDer;
+
+					if(mensajeEnRamaIzq == NULL){
+
+						mensajeEnRamaDer = buscarPorRama(id, nodoActual->hijoDer);
+						pthread_mutex_unlock(mutexMemoria);
+						return compararGet(deserializarGet(mensajeEnRamaDer->stream), msgGet);
+					}
+					pthread_mutex_unlock(mutexMemoria);
+					return compararGet(deserializarGet(mensajeEnRamaIzq->stream), msgGet);
+				}
+				pthread_mutex_unlock(mutexMemoria);
+				return true;
+	}
 }
 
 msgMemoriaBroker* buscarPorRama(uint32_t id, struct nodoMemoria* partActual ){
