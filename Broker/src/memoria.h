@@ -115,7 +115,11 @@ void guardarEnListaMemoria(uint32_t idmensaje, uint32_t socket, uint32_t lista);
 msgMemoriaBroker* buscarMensajeEnMemoria(uint32_t idMensajeBuscado);
 msgMemoriaBroker* buscarMensajeEnMemoriaBuddy(uint32_t id);
 msgMemoriaBroker* buscarMensajeEnMemoriaParticiones(uint32_t idMensajeBuscado);
-msgMemoriaBroker* buscarPorRama(uint32_t id, struct nodoMemoria* nodoActual );
+msgMemoriaBroker* buscarPorRama(uint32_t id, struct nodoMemoria* partActual );
+bool buscarPorRamaGet(mensajeGet* msgGet, struct nodoMemoria* nodoActual );
+bool buscarPorRamaCatch(mensajeCatch*  msgCatch, struct nodoMemoria* nodoActual );
+
+
 uint32_t intentarRamaIzquierda(msgMemoriaBroker* mensajeNuevo, struct nodoMemoria* partActual);
 
 uint32_t tamanioParticion(struct nodoMemoria* part);
