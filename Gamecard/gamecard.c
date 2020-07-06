@@ -12,11 +12,13 @@
 uint32_t puertoBrokerGC;
 char* ipBrokerGC;
 uint32_t tiempoReconexionGC;
-uint32_t tiempoRetardoGC;
+
 uint32_t puertoGamecardGC = 5001;
 
 
 int main(void) {
+	listaArchivos=inicializarListaMutex();
+
 	gamecardLogger2=log_create("gamecardLoggerSecundario.log","gamecard", true, LOG_LEVEL_INFO);
 	t_config * configGamecard = config_create("Gamecard.config");
 	puertoBrokerGC = config_get_int_value(configGamecard, "PUERTO_BROKER");//5002;
@@ -26,21 +28,26 @@ int main(void) {
 	log_info(gamecardLogger2,"Puerto Broker:%i",puertoBrokerGC);
 
 	//iniciarFileSystem(); //"/home/utnso/tp-2020-1c-Programadores-en-Fuga/Gamecard/TALL_GRASS"; //
-	iniciarMetadata();
-	iniciarBitmap();
+
 	//crearDirectorio("TALL_GRASS", "/home/utnso/tp-2020-1c-Programadores-en-Fuga/Gamecard/", DIRECTORIO);
 	//crearDirectorio("Metadata", "/home/utnso/tp-2020-1c-Programadores-en-Fuga/Gamecard/TALL_GRASS/", DIRECTORIO);
 	crearDirectorio("Files","/home/utnso/tp-2020-1c-Programadores-en-Fuga/Gamecard/TALL_GRASS/", DIRECTORIO);
 	crearDirectorio("Blocks","/home/utnso/tp-2020-1c-Programadores-en-Fuga/Gamecard/TALL_GRASS/", DIRECTORIO);
-	crearDirectorio("Pikachu",pathFiles,ARCHIVO);
+
+	iniciarMetadata();
+	iniciarBitmap();
 	inicializarListaBloques();
-	escribirBloque(1,0,strlen("Hola")+1,"Hola");
-	escribirBloque(1,4,strlen("Hola")+1,"Hola");
+	archivoHeader* pikachu=crearDirectorio("Pikachu",pathFiles,ARCHIVO);
+
+	//agregarBloque(pikachu, obtenerBloquePorId(1));
+	escribirBloque(1,0,strlen("Hola")+1,"Hola\n");
+	escribirBloque(1,5,strlen("Hola"),"Hola");
+	//log_info(gamecardLogger2,"Lectura bloque: %s", obtenerStringArchivo("Pikachu"));
 	//escribirBloque2(1,"Hola");
 	//printf("El resultado fue: %i\n",resul);
-//	blockHeader* bloque= malloc(sizeof(blockHeader));
-//	bloque->id=10;
-//	agregarBloque(var,bloque);
+	blockHeader* bloque= malloc(sizeof(blockHeader));
+	bloque->id=10;
+	//agregarBloque(var,bloque);
 //	blockHeader* bloque2= malloc(sizeof(blockHeader));
 //		bloque2->id=1023214234;
 //	agregarBloque(var,bloque2);
@@ -271,8 +278,13 @@ void* atenderNew(void* paq) {
 
 	//free(msg);
 	//To do :
+	archivoHeader* archivoPoke= obtenerArchivoPokemon(pokeEnPosicion->pokemon);
+
+
+
 	//Verificar que el pokemon este en nuestro FileSystem
 	//Una vez encontrado (o creado) verificar si puedo abrirlo
+
 	//Verificar si las posiciones existen en el archivo
 	//IF SUCCESS
 	sleep(tiempoRetardoGC);

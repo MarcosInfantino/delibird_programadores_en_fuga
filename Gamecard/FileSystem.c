@@ -150,33 +150,46 @@ archivoHeader* crearDirectorio(char* nombre, char* pathDestino, uint32_t tipo){
 		if(errno == EEXIST){
 			log_info(gamecardLogger2,"El directorio ya existe");
 			//Ver que hacer aca
-			//return 0;
+			//si el directorio ya existe devuelve null
 		}
 		if(status < 0){
 			log_info(gamecardLogger2,"Error al crear el directorio");
 			//return -1;
 		}
 	}
+	if(strcmp("Blocks", nombre)==0){
+		return NULL;
+	}else{
+		return crearMetadata(nombre,tipo, direc);
+	}
 
-	return crearMetadata(tipo, direc);
 	//return crearNodoDirectorio(header, directorioPadre);
 
 
 
 }
 
+archivoHeader* obtenerArchivoPokemon(char* nombre){
+	return crearDirectorio(nombre, pathFiles, ARCHIVO);
+}
+
 void eliminarDirectorio(char* path){
 	rmdir(path);
 }
 
-archivoHeader* crearMetadata(uint32_t tipo, char* direccion){
-	archivoHeader* metadataFile = malloc(sizeof(archivoHeader));
+archivoHeader* crearMetadata(char* nombre, uint32_t tipo, char* direccion){
+	archivoHeader* metadataFile;
+	if(!archivoHeaderYaRegistrado(nombre)){
+	 metadataFile= malloc(sizeof(archivoHeader));
 	char* nuevaDirec = malloc(strlen(direccion)+strlen("metadata.bin")+1);
 	strcpy(nuevaDirec,direccion);
 	string_append(&nuevaDirec,"/metadata.bin");
 	metadataFile->pathArchivo = malloc(strlen(nuevaDirec)+1);
 	strcpy(metadataFile->pathArchivo,nuevaDirec);
 	FILE *archivoMetadata=fopen(nuevaDirec,"w+b");
+
+	metadataFile->nombreArchivo=malloc(strlen(nombre)+1);
+	strcpy(metadataFile->nombreArchivo, nombre);
 
 	switch(tipo){
 	case DIRECTORIO:;
@@ -197,13 +210,20 @@ archivoHeader* crearMetadata(uint32_t tipo, char* direccion){
 		metadataFile->bloquesUsados = list_create();
 		metadataFile->tamanioArchivo = 0;
 		metadataFile->tipo = ARCHIVO;
-		var=metadataFile;
+
 		escribirMetadata(metadataFile);
 		break;
 	default:; log_info(gamecardLogger2,"Manqueada");break;
 	}
 
+
 	fclose(archivoMetadata);
+	if(tipo==ARCHIVO){
+		addListaMutex(listaArchivos, (void*)metadataFile);
+	}
+	}else{
+		metadataFile=buscarArchivoHeaderPokemon(nombre);
+	}
 	return metadataFile;
 
 }
@@ -319,4 +339,20 @@ int32_t escribirBloque(int32_t bloque, int32_t offset, int32_t longitud, char* b
 	}else{
 		return -1;
 	}
+}
+
+archivoHeader* buscarArchivoHeaderPokemon(char* pokemon){
+	for(uint32_t i=0; i< sizeListaMutex(listaArchivos);i++){
+		archivoHeader* actual= (archivoHeader*) getListaMutex(listaArchivos,i);
+		if(strcmp(actual->nombreArchivo,pokemon)==0){
+			return actual;
+		}
+	}
+
+	return NULL;
+
+}
+
+bool archivoHeaderYaRegistrado(char* pokemon){
+	return buscarArchivoHeaderPokemon(pokemon)!=NULL;
 }

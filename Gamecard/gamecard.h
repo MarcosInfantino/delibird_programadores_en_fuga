@@ -31,6 +31,8 @@
 #define pathFiles "/home/utnso/tp-2020-1c-Programadores-en-Fuga/Gamecard/TALL_GRASS/Files/"
 #define pathBlocks "/home/utnso/tp-2020-1c-Programadores-en-Fuga/Gamecard/TALL_GRASS/Blocks/"
 
+
+
 typedef struct{
 	uint32_t block_size;
 	uint32_t blocks;
@@ -51,9 +53,10 @@ typedef struct{
 	//FILE* archivoMetadata;
 	t_list* archivosHijos;
 	char* pathArchivo;
-
+	char* nombreArchivo;
 	//struct archivoHeader* archivoPadre;
 }archivoHeader;
+
 
 struct nodoArbolDirectorio{
 	archivoHeader* dataNodo;
@@ -108,6 +111,9 @@ t_log* gamecardLogger2;
 
 struct nodoArbolDirectorio* raizDirectorio;
 
+listaMutex* listaArchivos;//lista de archivoHeader
+uint32_t tiempoRetardoGC;
+
 void* suscribirseCola(void* msgSuscripcion);
 void* suscribirseColasBroker(void* config);
 void* iniciarServidorGameboy(void* arg);
@@ -136,7 +142,7 @@ void liberarBloque(uint32_t idBloque);
 blockHeader* obtenerBloquePorId(uint32_t id);
 archivoHeader* crearDirectorio(char* nombre, char* pathDestino, uint32_t tipo);
 void eliminarDirectorio(char* path);
-archivoHeader* crearMetadata(uint32_t tipo, char* direccion);
+archivoHeader* crearMetadata(char* nombre, uint32_t tipo, char* direccion);
 void escribirMetadata(archivoHeader* metadata);
 FILE* abrirArchivo(archivoHeader* metadata);
 void cerrarArchivo(archivoHeader* metadata, FILE* archivo);
@@ -152,4 +158,10 @@ void escribirBloque2(int32_t bloque, char* buffer);
 struct nodoArbolDirectorio* crearNodoDirectorio(archivoHeader* archivo, struct nodoArbolDirectorio* nodoDirectorioPadre);
 void disminuirCapacidad(blockHeader* bloque, int32_t bytes);
 bool tieneCapacidad(blockHeader* bloque, int32_t capacidad);
+archivoHeader* buscarArchivoHeaderPokemon(char* pokemon);
+bool archivoHeaderYaRegistrado(char* pokemon);
+archivoHeader* obtenerArchivoPokemon(char* nombre);
+char* leerBloque(blockHeader* bloque);
+uint32_t posBloque(blockHeader* bloque);
+char* obtenerStringArchivo(char* pokemon);
 #endif /* GAMECARD_H_ */

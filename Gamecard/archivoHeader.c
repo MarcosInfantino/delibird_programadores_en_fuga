@@ -8,7 +8,17 @@
 #include "gamecard.h"
 
 bool estaAbierto(archivoHeader* metadata){
-	return metadata->estaAbierto;
+	if(metadata->tipo==ARCHIVO){
+			t_config* config=config_create(metadata->pathArchivo);
+			char* valorOpen=config_get_string_value(config,"OPEN");
+			config_destroy(config);
+			if(strcmp(valorOpen, "Y")==0){
+				return true;
+			}
+
+
+		}
+	return false;
 }
 
 void cerrarArchivo(archivoHeader* metadata, FILE* archivo){
@@ -124,4 +134,47 @@ void disminuirCapacidad(blockHeader* bloque, int32_t bytes){
 
 bool tieneCapacidad(blockHeader* bloque, int32_t capacidad){
 	return bloque->bytesLeft>=capacidad;
+}
+
+char* obtenerStringArchivo(char* pokemon){
+	char* buffer=string_new();
+	archivoHeader* headerPoke= buscarArchivoHeaderPokemon(pokemon);
+	for(uint32_t i=0; i<list_size(headerPoke->bloquesUsados);i++){
+		blockHeader* actual= list_get(headerPoke->bloquesUsados,i);
+		char* bufferBloque=leerBloque(actual);
+		string_append(&buffer, bufferBloque);
+		free(bufferBloque);
+	}
+
+	return buffer;
+}
+
+char* pathBloque(uint32_t idBloque){
+	return string_from_format("%s/Blocks/%d.bin", puntoMontaje, idBloque);
+}
+char* leerBloque(blockHeader* bloque){
+	char* path=pathBloque(bloque->id);
+	FILE* archivoBloque= fopen(path,"r");
+
+
+	fseek(archivoBloque, 0, SEEK_END);
+	uint32_t pos= ftell(archivoBloque);
+	fseek(archivoBloque, 0, SEEK_SET);
+	char* buffer= malloc(pos+1);
+	fread(buffer, pos+1, 1, archivoBloque);
+	if(string_contains(buffer, "\n")){
+		log_info(gamecardLogger2, "Encontre el  barra n.");
+	}
+	fclose(archivoBloque);
+	return buffer;
+
+}
+
+uint32_t posBloque(blockHeader* bloque){
+	char* path=pathBloque(bloque->id);
+	FILE* archivoBloque= fopen(path,"r");
+	fseek(archivoBloque, 0, SEEK_END);
+	uint32_t pos= ftell(archivoBloque);
+	fclose(archivoBloque);
+	return pos;
 }

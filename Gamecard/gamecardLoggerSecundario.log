@@ -151,3 +151,356 @@
 [INFO] 20:40:26:1 gamecard/(19050:19057): Conexión fallida con el Broker reintentando en 10 segundos...
 [INFO] 20:40:26:1 gamecard/(19050:19058): Conexión fallida con el Broker reintentando en 10 segundos...
 [INFO] 20:40:27:6 gamecard/(19050:19056): Conexión fallida con el Broker reintentando en 10 segundos...
+[INFO] 17:01:07:777 gamecard/(16073:16073): Puerto Broker:5002
+[INFO] 17:01:07:777 gamecard/(16073:16073): Se encontro el directorio metadata
+[INFO] 17:01:07:777 gamecard/(16073:16073): Se encontro el archivo metadata.bin
+[INFO] 17:01:07:777 gamecard/(16073:16073): Inicio de Metadata, Tamanio bloques: 64,  Cantidad de bloques: 10,  Magic number: TALL_GRASS
+[INFO] 17:01:07:886 gamecard/(16073:16073): El directorio ya existe
+[INFO] 17:01:07:886 gamecard/(16073:16073): Error al crear el directorio
+[INFO] 17:01:07:886 gamecard/(16073:16073): Soy directorio
+[INFO] 17:01:07:886 gamecard/(16073:16073): El directorio ya existe
+[INFO] 17:01:07:886 gamecard/(16073:16073): Error al crear el directorio
+[INFO] 17:01:07:886 gamecard/(16073:16073): Soy directorio
+[INFO] 17:01:07:886 gamecard/(16073:16073): El directorio ya existe
+[INFO] 17:01:07:886 gamecard/(16073:16073): Error al crear el directorio
+[INFO] 17:01:07:886 gamecard/(16073:16073): Soy archivo
+[INFO] 17:01:07:886 gamecard/(16073:16073): Escribiendo bloque:1, offset=0, longitud=5, buffer=Hola
+[INFO] 17:01:07:887 gamecard/(16073:16073): Escribiendo bloque:1, offset=4, longitud=5, buffer=Hola
+[INFO] 17:01:07:887 gamecard/(16073:16080): Voy a llenar el paquete
+[INFO] 17:01:07:887 gamecard/(16073:16081): Voy a llenar el paquete
+[INFO] 17:01:07:887 gamecard/(16073:16080): cliente: 4
+[INFO] 17:01:07:887 gamecard/(16073:16081): cliente: 5
+[INFO] 17:01:07:887 gamecard/(16073:16081): Conexión fallida con el Broker reintentando en 10 segundos...
+[INFO] 17:01:07:887 gamecard/(16073:16080): Conexión fallida con el Broker reintentando en 10 segundos...
+[INFO] 17:01:07:901 gamecard/(16073:16079): Voy a llenar el paquete
+[INFO] 17:01:07:901 gamecard/(16073:16079): cliente: 6
+[INFO] 17:01:07:901 gamecard/(16073:16079): Conexión fallida con el Broker reintentando en 10 segundos...
+[INFO] 17:01:31:373 gamecard/(16116:16116): Puerto Broker:5002
+[INFO] 17:01:31:373 gamecard/(16116:16116): Se encontro el directorio metadata
+[INFO] 17:01:31:373 gamecard/(16116:16116): Se encontro el archivo metadata.bin
+[INFO] 17:01:31:373 gamecard/(16116:16116): Inicio de Metadata, Tamanio bloques: 64,  Cantidad de bloques: 10,  Magic number: TALL_GRASS
+[INFO] 17:01:31:377 gamecard/(16116:16116): Soy directorio
+[INFO] 17:01:31:377 gamecard/(16116:16116): Soy directorio
+[INFO] 17:01:31:377 gamecard/(16116:16116): Soy archivo
+[INFO] 17:01:31:377 gamecard/(16116:16116): Escribiendo bloque:1, offset=0, longitud=5, buffer=Hola
+[INFO] 17:01:31:377 gamecard/(16116:16116): Escribiendo bloque:1, offset=4, longitud=5, buffer=Hola
+[INFO] 17:01:31:377 gamecard/(16116:16122): Voy a llenar el paquete
+[INFO] 17:01:31:378 gamecard/(16116:16122): cliente: 4
+[INFO] 17:01:31:378 gamecard/(16116:16122): Conexión fallida con el Broker reintentando en 10 segundos...
+[INFO] 17:01:31:382 gamecard/(16116:16123): Voy a llenar el paquete
+[INFO] 17:01:31:382 gamecard/(16116:16123): cliente: 5
+[INFO] 17:01:31:382 gamecard/(16116:16123): Conexión fallida con el Broker reintentando en 10 segundos...
+[INFO] 17:01:31:382 gamecard/(16116:16124): Voy a llenar el paquete
+[INFO] 17:01:31:382 gamecard/(16116:16124): cliente: 6
+[INFO] 17:01:31:382 gamecard/(16116:16124): Conexión fallida con el Broker reintentando en 10 segundos...
+[INFO] 17:01:41:378 gamecard/(16116:16122): Conexión fallida con el Broker reintentando en 10 segundos...
+[INFO] 17:01:41:383 gamecard/(16116:16124): Conexión fallida con el Broker reintentando en 10 segundos...
+[INFO] 17:01:41:383 gamecard/(16116:16123): Conexión fallida con el Broker reintentando en 10 segundos...
+[INFO] 17:01:51:379 gamecard/(16116:16122): Conexión fallida con el Broker reintentando en 10 segundos...
+[INFO] 17:01:51:384 gamecard/(16116:16124): Conexión fallida con el Broker reintentando en 10 segundos...
+[INFO] 17:01:51:384 gamecard/(16116:16123): Conexión fallida con el Broker reintentando en 10 segundos...
+[INFO] 17:27:33:301 gamecard/(18711:18711): Puerto Broker:5002
+[INFO] 17:27:33:301 gamecard/(18711:18711): Se encontro el directorio metadata
+[INFO] 17:27:33:301 gamecard/(18711:18711): Se encontro el archivo metadata.bin
+[INFO] 17:27:33:378 gamecard/(18711:18711): Inicio de Metadata, Tamanio bloques: 64,  Cantidad de bloques: 10,  Magic number: TALL_GRASS
+[INFO] 17:27:33:389 gamecard/(18711:18711): Soy directorio
+[INFO] 17:27:33:389 gamecard/(18711:18711): Soy archivo
+[INFO] 17:27:33:389 gamecard/(18711:18711): Escribiendo bloque:1, offset=0, longitud=5, buffer=Hola
+[INFO] 17:27:33:389 gamecard/(18711:18711): Escribiendo bloque:1, offset=4, longitud=5, buffer=Hola
+[INFO] 17:27:33:390 gamecard/(18711:18716): Voy a llenar el paquete
+[INFO] 17:27:33:390 gamecard/(18711:18717): Voy a llenar el paquete
+[INFO] 17:27:33:390 gamecard/(18711:18718): Voy a llenar el paquete
+[INFO] 17:27:33:390 gamecard/(18711:18716): cliente: 4
+[INFO] 17:27:33:390 gamecard/(18711:18718): cliente: 5
+[INFO] 17:27:33:390 gamecard/(18711:18717): cliente: 6
+[INFO] 17:27:33:390 gamecard/(18711:18717): Conexión fallida con el Broker reintentando en 10 segundos...
+[INFO] 17:27:33:390 gamecard/(18711:18718): Conexión fallida con el Broker reintentando en 10 segundos...
+[INFO] 17:27:33:390 gamecard/(18711:18716): Conexión fallida con el Broker reintentando en 10 segundos...
+[INFO] 18:01:04:11 gamecard/(21904:21904): Puerto Broker:5002
+[INFO] 18:01:04:160 gamecard/(21904:21904): Se encontro el directorio metadata
+[INFO] 18:01:04:160 gamecard/(21904:21904): Se encontro el archivo metadata.bin
+[INFO] 18:01:04:311 gamecard/(21904:21904): Inicio de Metadata, Tamanio bloques: 64,  Cantidad de bloques: 10,  Magic number: TALL_GRASS
+[INFO] 18:01:04:329 gamecard/(21904:21904): Soy directorio
+[INFO] 18:01:04:329 gamecard/(21904:21904): Soy archivo
+[INFO] 18:01:04:330 gamecard/(21904:21904): Escribiendo bloque:1, offset=0, longitud=5, buffer=Hola
+
+[INFO] 18:01:04:330 gamecard/(21904:21904): Escribiendo bloque:1, offset=4, longitud=4, buffer=Hola
+[INFO] 18:01:39:794 gamecard/(21975:21975): Puerto Broker:5002
+[INFO] 18:01:39:794 gamecard/(21975:21975): Se encontro el directorio metadata
+[INFO] 18:01:39:794 gamecard/(21975:21975): Se encontro el archivo metadata.bin
+[INFO] 18:01:39:794 gamecard/(21975:21975): Inicio de Metadata, Tamanio bloques: 64,  Cantidad de bloques: 10,  Magic number: TALL_GRASS
+[INFO] 18:01:39:797 gamecard/(21975:21975): Soy directorio
+[INFO] 18:01:39:797 gamecard/(21975:21975): Soy archivo
+[INFO] 18:01:39:798 gamecard/(21975:21975): Escribiendo bloque:1, offset=0, longitud=5, buffer=Hola
+
+[INFO] 18:01:39:798 gamecard/(21975:21975): Escribiendo bloque:1, offset=4, longitud=4, buffer=Hola
+[INFO] 18:03:12:324 gamecard/(22233:22233): Puerto Broker:5002
+[INFO] 18:03:12:324 gamecard/(22233:22233): Se encontro el directorio metadata
+[INFO] 18:03:12:324 gamecard/(22233:22233): Se encontro el archivo metadata.bin
+[INFO] 18:03:12:324 gamecard/(22233:22233): Inicio de Metadata, Tamanio bloques: 64,  Cantidad de bloques: 10,  Magic number: TALL_GRASS
+[INFO] 18:03:12:663 gamecard/(22233:22233): Soy directorio
+[INFO] 18:03:12:663 gamecard/(22233:22233): Soy archivo
+[INFO] 18:03:12:663 gamecard/(22233:22233): Escribiendo bloque:1, offset=0, longitud=5, buffer=Hola
+
+[INFO] 18:03:12:663 gamecard/(22233:22233): Escribiendo bloque:1, offset=4, longitud=4, buffer=Hola
+[INFO] 18:03:12:663 gamecard/(22233:22233): Lectura bloque: HolaHola
+[INFO] 18:03:12:663 gamecard/(22233:22239): Voy a llenar el paquete
+[INFO] 18:03:12:663 gamecard/(22233:22239): cliente: 5
+[INFO] 18:03:12:663 gamecard/(22233:22239): Conexión fallida con el Broker reintentando en 10 segundos...
+[INFO] 18:03:12:676 gamecard/(22233:22241): Voy a llenar el paquete
+[INFO] 18:03:12:676 gamecard/(22233:22240): Voy a llenar el paquete
+[INFO] 18:03:12:676 gamecard/(22233:22241): cliente: 6
+[INFO] 18:03:12:676 gamecard/(22233:22240): cliente: 7
+[INFO] 18:03:12:677 gamecard/(22233:22240): Conexión fallida con el Broker reintentando en 10 segundos...
+[INFO] 18:03:12:677 gamecard/(22233:22241): Conexión fallida con el Broker reintentando en 10 segundos...
+[INFO] 18:03:22:664 gamecard/(22233:22239): Conexión fallida con el Broker reintentando en 10 segundos...
+[INFO] 18:03:22:678 gamecard/(22233:22241): Conexión fallida con el Broker reintentando en 10 segundos...
+[INFO] 18:03:22:678 gamecard/(22233:22240): Conexión fallida con el Broker reintentando en 10 segundos...
+[INFO] 18:03:32:664 gamecard/(22233:22239): Conexión fallida con el Broker reintentando en 10 segundos...
+[INFO] 18:03:32:679 gamecard/(22233:22241): Conexión fallida con el Broker reintentando en 10 segundos...
+[INFO] 18:03:32:679 gamecard/(22233:22240): Conexión fallida con el Broker reintentando en 10 segundos...
+[INFO] 18:03:42:665 gamecard/(22233:22239): Conexión fallida con el Broker reintentando en 10 segundos...
+[INFO] 18:03:42:679 gamecard/(22233:22241): Conexión fallida con el Broker reintentando en 10 segundos...
+[INFO] 18:03:42:680 gamecard/(22233:22240): Conexión fallida con el Broker reintentando en 10 segundos...
+[INFO] 18:05:23:13 gamecard/(22460:22460): Puerto Broker:5002
+[INFO] 18:05:23:13 gamecard/(22460:22460): Se encontro el directorio metadata
+[INFO] 18:05:23:13 gamecard/(22460:22460): Se encontro el archivo metadata.bin
+[INFO] 18:05:23:13 gamecard/(22460:22460): Inicio de Metadata, Tamanio bloques: 64,  Cantidad de bloques: 10,  Magic number: TALL_GRASS
+[INFO] 18:05:23:122 gamecard/(22460:22460): Soy directorio
+[INFO] 18:05:23:123 gamecard/(22460:22460): Soy archivo
+[INFO] 18:05:23:123 gamecard/(22460:22460): Escribiendo bloque:1, offset=0, longitud=5, buffer=Hola
+
+[INFO] 18:05:23:123 gamecard/(22460:22460): Escribiendo bloque:1, offset=4, longitud=4, buffer=Hola
+[INFO] 18:05:23:123 gamecard/(22460:22460): Lectura bloque: HolaHola
+[INFO] 18:05:23:123 gamecard/(22460:22466): Voy a llenar el paquete
+[INFO] 18:05:23:123 gamecard/(22460:22466): cliente: 5
+[INFO] 18:05:23:123 gamecard/(22460:22467): Voy a llenar el paquete
+[INFO] 18:05:23:123 gamecard/(22460:22467): cliente: 6
+[INFO] 18:05:23:123 gamecard/(22460:22467): Conexión fallida con el Broker reintentando en 10 segundos...
+[INFO] 18:05:23:123 gamecard/(22460:22466): Conexión fallida con el Broker reintentando en 10 segundos...
+[INFO] 18:05:23:123 gamecard/(22460:22468): Voy a llenar el paquete
+[INFO] 18:05:23:123 gamecard/(22460:22468): cliente: 7
+[INFO] 18:05:23:123 gamecard/(22460:22468): Conexión fallida con el Broker reintentando en 10 segundos...
+[INFO] 18:05:33:124 gamecard/(22460:22468): Conexión fallida con el Broker reintentando en 10 segundos...
+[INFO] 18:05:33:124 gamecard/(22460:22466): Conexión fallida con el Broker reintentando en 10 segundos...
+[INFO] 18:05:33:124 gamecard/(22460:22467): Conexión fallida con el Broker reintentando en 10 segundos...
+[INFO] 18:06:35:528 gamecard/(22603:22603): Puerto Broker:5002
+[INFO] 18:06:35:528 gamecard/(22603:22603): Se encontro el directorio metadata
+[INFO] 18:06:35:528 gamecard/(22603:22603): Se encontro el archivo metadata.bin
+[INFO] 18:06:35:528 gamecard/(22603:22603): Inicio de Metadata, Tamanio bloques: 64,  Cantidad de bloques: 10,  Magic number: TALL_GRASS
+[INFO] 18:06:35:540 gamecard/(22603:22603): Soy directorio
+[INFO] 18:06:35:540 gamecard/(22603:22603): Soy archivo
+[INFO] 18:06:35:540 gamecard/(22603:22603): Escribiendo bloque:1, offset=0, longitud=5, buffer=Hola
+
+[INFO] 18:06:35:540 gamecard/(22603:22603): Escribiendo bloque:1, offset=5, longitud=4, buffer=Hola
+[INFO] 18:06:35:540 gamecard/(22603:22603): Encontre el  barra n.
+[INFO] 18:06:35:540 gamecard/(22603:22603): Lectura bloque: Hola
+Hola
+[INFO] 18:06:35:541 gamecard/(22603:22609): Voy a llenar el paquete
+[INFO] 18:06:35:541 gamecard/(22603:22610): Voy a llenar el paquete
+[INFO] 18:06:35:541 gamecard/(22603:22611): Voy a llenar el paquete
+[INFO] 18:06:35:541 gamecard/(22603:22609): cliente: 5
+[INFO] 18:06:35:541 gamecard/(22603:22611): cliente: 6
+[INFO] 18:06:35:541 gamecard/(22603:22610): cliente: 7
+[INFO] 18:06:35:541 gamecard/(22603:22610): Conexión fallida con el Broker reintentando en 10 segundos...
+[INFO] 18:06:35:541 gamecard/(22603:22611): Conexión fallida con el Broker reintentando en 10 segundos...
+[INFO] 18:06:35:541 gamecard/(22603:22609): Conexión fallida con el Broker reintentando en 10 segundos...
+[INFO] 18:06:45:542 gamecard/(22603:22609): Conexión fallida con el Broker reintentando en 10 segundos...
+[INFO] 18:06:45:542 gamecard/(22603:22610): Conexión fallida con el Broker reintentando en 10 segundos...
+[INFO] 18:06:45:542 gamecard/(22603:22611): Conexión fallida con el Broker reintentando en 10 segundos...
+[INFO] 18:17:37:700 gamecard/(23960:23960): Puerto Broker:5002
+[INFO] 18:17:37:700 gamecard/(23960:23960): Se encontro el directorio metadata
+[INFO] 18:17:37:700 gamecard/(23960:23960): Se encontro el archivo metadata.bin
+[INFO] 18:17:37:700 gamecard/(23960:23960): Inicio de Metadata, Tamanio bloques: 64,  Cantidad de bloques: 10,  Magic number: TALL_GRASS
+[INFO] 18:17:37:758 gamecard/(23960:23960): El directorio ya existe
+[INFO] 18:17:37:758 gamecard/(23960:23960): Error al crear el directorio
+[INFO] 18:17:37:758 gamecard/(23960:23960): Soy directorio
+[INFO] 18:17:37:759 gamecard/(23960:23960): El directorio ya existe
+[INFO] 18:17:37:759 gamecard/(23960:23960): Error al crear el directorio
+[INFO] 18:17:37:759 gamecard/(23960:23960): El directorio ya existe
+[INFO] 18:17:37:759 gamecard/(23960:23960): Error al crear el directorio
+[INFO] 18:17:37:759 gamecard/(23960:23960): Soy archivo
+[INFO] 18:17:37:759 gamecard/(23960:23960): Escribiendo bloque:1, offset=0, longitud=5, buffer=Hola
+
+[INFO] 18:17:37:759 gamecard/(23960:23960): Escribiendo bloque:1, offset=5, longitud=4, buffer=Hola
+[INFO] 18:18:25:358 gamecard/(24050:24050): Puerto Broker:5002
+[INFO] 18:18:25:358 gamecard/(24050:24050): Se encontro el directorio metadata
+[INFO] 18:18:25:358 gamecard/(24050:24050): Se encontro el archivo metadata.bin
+[INFO] 18:18:25:358 gamecard/(24050:24050): Inicio de Metadata, Tamanio bloques: 64,  Cantidad de bloques: 10,  Magic number: TALL_GRASS
+[INFO] 18:18:25:367 gamecard/(24050:24050): Soy directorio
+[INFO] 18:18:25:368 gamecard/(24050:24050): Soy archivo
+[INFO] 18:18:25:368 gamecard/(24050:24050): Escribiendo bloque:1, offset=0, longitud=5, buffer=Hola
+
+[INFO] 18:18:25:368 gamecard/(24050:24050): Escribiendo bloque:1, offset=5, longitud=4, buffer=Hola
+[INFO] 18:19:47:356 gamecard/(24226:24226): Puerto Broker:5002
+[INFO] 18:19:47:356 gamecard/(24226:24226): Se encontro el directorio metadata
+[INFO] 18:19:47:356 gamecard/(24226:24226): Se encontro el archivo metadata.bin
+[INFO] 18:19:47:357 gamecard/(24226:24226): Inicio de Metadata, Tamanio bloques: 64,  Cantidad de bloques: 10,  Magic number: TALL_GRASS
+[INFO] 18:19:47:359 gamecard/(24226:24226): Soy directorio
+[INFO] 18:19:47:360 gamecard/(24226:24226): Soy archivo
+[INFO] 18:19:47:360 gamecard/(24226:24226): Escribiendo bloque:1, offset=0, longitud=5, buffer=Hola
+
+[INFO] 18:19:47:360 gamecard/(24226:24226): Escribiendo bloque:1, offset=5, longitud=4, buffer=Hola
+[INFO] 18:20:04:679 gamecard/(24287:24287): Puerto Broker:5002
+[INFO] 18:20:04:679 gamecard/(24287:24287): Se encontro el directorio metadata
+[INFO] 18:20:04:679 gamecard/(24287:24287): Se encontro el archivo metadata.bin
+[INFO] 18:20:04:695 gamecard/(24287:24287): Inicio de Metadata, Tamanio bloques: 64,  Cantidad de bloques: 10,  Magic number: TALL_GRASS
+[INFO] 18:20:04:698 gamecard/(24287:24287): Soy directorio
+[INFO] 18:20:23:47 gamecard/(24287:24287): Soy archivo
+[INFO] 18:20:49:406 gamecard/(24287:24287): Escribiendo bloque:1, offset=0, longitud=5, buffer=Hola
+
+[INFO] 18:20:49:406 gamecard/(24287:24287): Escribiendo bloque:1, offset=5, longitud=4, buffer=Hola
+[INFO] 18:24:12:66 gamecard/(24696:24696): Puerto Broker:5002
+[INFO] 18:24:12:66 gamecard/(24696:24696): Se encontro el directorio metadata
+[INFO] 18:24:12:66 gamecard/(24696:24696): Se encontro el archivo metadata.bin
+[INFO] 18:24:12:66 gamecard/(24696:24696): Inicio de Metadata, Tamanio bloques: 64,  Cantidad de bloques: 10,  Magic number: TALL_GRASS
+[INFO] 18:24:12:69 gamecard/(24696:24696): Soy directorio
+[INFO] 18:24:15:838 gamecard/(24696:24696): Soy archivo
+[INFO] 18:27:55:131 gamecard/(25183:25183): Puerto Broker:5002
+[INFO] 18:27:55:131 gamecard/(25183:25183): Se encontro el directorio metadata
+[INFO] 18:27:55:131 gamecard/(25183:25183): Se encontro el archivo metadata.bin
+[INFO] 18:27:55:131 gamecard/(25183:25183): Inicio de Metadata, Tamanio bloques: 64,  Cantidad de bloques: 10,  Magic number: TALL_GRASS
+[INFO] 18:27:55:134 gamecard/(25183:25183): Soy directorio
+[INFO] 18:27:55:134 gamecard/(25183:25183): Soy archivo
+[INFO] 18:27:55:134 gamecard/(25183:25183): Escribiendo bloque:1, offset=0, longitud=5, buffer=Hola
+
+[INFO] 18:28:26:585 gamecard/(25261:25261): Puerto Broker:5002
+[INFO] 18:28:26:585 gamecard/(25261:25261): Se encontro el directorio metadata
+[INFO] 18:28:26:585 gamecard/(25261:25261): Se encontro el archivo metadata.bin
+[INFO] 18:28:26:585 gamecard/(25261:25261): Inicio de Metadata, Tamanio bloques: 64,  Cantidad de bloques: 10,  Magic number: TALL_GRASS
+[INFO] 18:28:26:591 gamecard/(25261:25261): Soy directorio
+[INFO] 18:28:59:408 gamecard/(25261:25261): Soy archivo
+[INFO] 18:29:04:42 gamecard/(25261:25261): Escribiendo bloque:1, offset=0, longitud=5, buffer=Hola
+
+[INFO] 18:29:26:375 gamecard/(25386:25386): Puerto Broker:5002
+[INFO] 18:29:26:375 gamecard/(25386:25386): Se encontro el directorio metadata
+[INFO] 18:29:26:375 gamecard/(25386:25386): Se encontro el archivo metadata.bin
+[INFO] 18:29:26:376 gamecard/(25386:25386): Inicio de Metadata, Tamanio bloques: 64,  Cantidad de bloques: 10,  Magic number: TALL_GRASS
+[INFO] 18:29:26:627 gamecard/(25386:25386): Soy directorio
+[INFO] 18:29:29:780 gamecard/(25386:25386): Soy archivo
+[INFO] 18:29:39:836 gamecard/(25386:25386): Escribiendo bloque:1, offset=0, longitud=5, buffer=Hola
+
+[INFO] 18:30:22:68 gamecard/(25522:25522): Puerto Broker:5002
+[INFO] 18:30:22:68 gamecard/(25522:25522): Se encontro el directorio metadata
+[INFO] 18:30:22:68 gamecard/(25522:25522): Se encontro el archivo metadata.bin
+[INFO] 18:30:22:68 gamecard/(25522:25522): Inicio de Metadata, Tamanio bloques: 64,  Cantidad de bloques: 10,  Magic number: TALL_GRASS
+[INFO] 18:30:22:236 gamecard/(25522:25522): Soy directorio
+[INFO] 18:30:24:484 gamecard/(25522:25522): Soy archivo
+[INFO] 18:30:26:720 gamecard/(25522:25522): Escribiendo bloque:1, offset=0, longitud=5, buffer=Hola
+
+[INFO] 18:31:16:152 gamecard/(25664:25664): Puerto Broker:5002
+[INFO] 18:31:16:152 gamecard/(25664:25664): Se encontro el directorio metadata
+[INFO] 18:31:16:152 gamecard/(25664:25664): Se encontro el archivo metadata.bin
+[INFO] 18:31:16:152 gamecard/(25664:25664): Inicio de Metadata, Tamanio bloques: 64,  Cantidad de bloques: 10,  Magic number: TALL_GRASS
+[INFO] 18:31:16:155 gamecard/(25664:25664): Soy directorio
+[INFO] 18:31:17:472 gamecard/(25664:25664): Soy archivo
+[INFO] 18:31:32:508 gamecard/(25664:25664): Escribiendo bloque:1, offset=0, longitud=5, buffer=Hola
+
+[INFO] 18:31:56:656 gamecard/(25773:25773): Puerto Broker:5002
+[INFO] 18:31:56:656 gamecard/(25773:25773): Se encontro el directorio metadata
+[INFO] 18:31:56:656 gamecard/(25773:25773): Se encontro el archivo metadata.bin
+[INFO] 18:31:56:656 gamecard/(25773:25773): Inicio de Metadata, Tamanio bloques: 64,  Cantidad de bloques: 10,  Magic number: TALL_GRASS
+[INFO] 18:31:56:658 gamecard/(25773:25773): Soy directorio
+[INFO] 18:31:58:569 gamecard/(25773:25773): Soy archivo
+[INFO] 18:32:06:132 gamecard/(25773:25773): Escribiendo bloque:1, offset=0, longitud=5, buffer=Hola
+
+[INFO] 18:33:23:849 gamecard/(25977:25977): Puerto Broker:5002
+[INFO] 18:33:23:849 gamecard/(25977:25977): Soy directorio
+[INFO] 18:33:23:849 gamecard/(25977:25977): Soy archivo
+[INFO] 18:33:23:850 gamecard/(25977:25977): Se encontro el directorio metadata
+[INFO] 18:33:23:850 gamecard/(25977:25977): Se encontro el archivo metadata.bin
+[INFO] 18:33:23:850 gamecard/(25977:25977): Inicio de Metadata, Tamanio bloques: 64,  Cantidad de bloques: 10,  Magic number: TALL_GRASS
+[INFO] 18:33:23:854 gamecard/(25977:25977): Escribiendo bloque:1, offset=0, longitud=5, buffer=Hola
+
+[INFO] 18:33:23:854 gamecard/(25977:25977): Escribiendo bloque:1, offset=5, longitud=4, buffer=Hola
+[INFO] 18:33:59:899 gamecard/(26078:26078): Puerto Broker:5002
+[INFO] 18:33:59:899 gamecard/(26078:26078): Soy directorio
+[INFO] 18:33:59:899 gamecard/(26078:26078): Soy archivo
+[INFO] 18:33:59:899 gamecard/(26078:26078): Se encontro el directorio metadata
+[INFO] 18:33:59:899 gamecard/(26078:26078): Se encontro el archivo metadata.bin
+[INFO] 18:33:59:899 gamecard/(26078:26078): Inicio de Metadata, Tamanio bloques: 64,  Cantidad de bloques: 10,  Magic number: TALL_GRASS
+[INFO] 18:33:59:904 gamecard/(26078:26078): Escribiendo bloque:1, offset=0, longitud=5, buffer=Hola
+
+[INFO] 18:33:59:904 gamecard/(26078:26078): Escribiendo bloque:1, offset=5, longitud=4, buffer=Hola
+[INFO] 18:33:59:904 gamecard/(26078:26084): Voy a llenar el paquete
+[INFO] 18:33:59:904 gamecard/(26078:26084): cliente: 4
+[INFO] 18:33:59:904 gamecard/(26078:26084): Conexión fallida con el Broker reintentando en 10 segundos...
+[INFO] 18:33:59:907 gamecard/(26078:26085): Voy a llenar el paquete
+[INFO] 18:33:59:907 gamecard/(26078:26086): Voy a llenar el paquete
+[INFO] 18:33:59:908 gamecard/(26078:26085): cliente: 5
+[INFO] 18:33:59:908 gamecard/(26078:26086): cliente: 6
+[INFO] 18:33:59:908 gamecard/(26078:26086): Conexión fallida con el Broker reintentando en 10 segundos...
+[INFO] 18:33:59:908 gamecard/(26078:26085): Conexión fallida con el Broker reintentando en 10 segundos...
+[INFO] 18:34:09:905 gamecard/(26078:26084): Conexión fallida con el Broker reintentando en 10 segundos...
+[INFO] 18:34:09:909 gamecard/(26078:26085): Conexión fallida con el Broker reintentando en 10 segundos...
+[INFO] 18:34:09:909 gamecard/(26078:26086): Conexión fallida con el Broker reintentando en 10 segundos...
+[INFO] 18:34:19:906 gamecard/(26078:26084): Conexión fallida con el Broker reintentando en 10 segundos...
+[INFO] 18:34:19:911 gamecard/(26078:26086): Conexión fallida con el Broker reintentando en 10 segundos...
+[INFO] 18:34:19:911 gamecard/(26078:26085): Conexión fallida con el Broker reintentando en 10 segundos...
+[INFO] 18:34:29:910 gamecard/(26078:26084): Conexión fallida con el Broker reintentando en 10 segundos...
+[INFO] 18:34:29:911 gamecard/(26078:26085): Conexión fallida con el Broker reintentando en 10 segundos...
+[INFO] 18:34:29:911 gamecard/(26078:26086): Conexión fallida con el Broker reintentando en 10 segundos...
+[INFO] 18:34:39:910 gamecard/(26078:26084): Conexión fallida con el Broker reintentando en 10 segundos...
+[INFO] 18:34:39:912 gamecard/(26078:26086): Conexión fallida con el Broker reintentando en 10 segundos...
+[INFO] 18:34:39:912 gamecard/(26078:26085): Conexión fallida con el Broker reintentando en 10 segundos...
+[INFO] 18:34:49:915 gamecard/(26078:26085): Conexión fallida con el Broker reintentando en 10 segundos...
+[INFO] 18:34:49:915 gamecard/(26078:26086): Conexión fallida con el Broker reintentando en 10 segundos...
+[INFO] 18:34:49:915 gamecard/(26078:26084): Conexión fallida con el Broker reintentando en 10 segundos...
+[INFO] 18:35:10:275 gamecard/(26201:26201): Puerto Broker:5002
+[INFO] 18:35:10:275 gamecard/(26201:26201): Soy directorio
+[INFO] 18:35:11:478 gamecard/(26201:26201): Soy archivo
+[INFO] 18:35:12:68 gamecard/(26201:26201): Se encontro el directorio metadata
+[INFO] 18:35:12:68 gamecard/(26201:26201): Se encontro el archivo metadata.bin
+[INFO] 18:35:12:68 gamecard/(26201:26201): Inicio de Metadata, Tamanio bloques: 64,  Cantidad de bloques: 10,  Magic number: TALL_GRASS
+[INFO] 18:35:12:846 gamecard/(26201:26201): Escribiendo bloque:1, offset=0, longitud=5, buffer=Hola
+
+[INFO] 18:35:13:768 gamecard/(26201:26201): Escribiendo bloque:1, offset=5, longitud=4, buffer=Hola
+[INFO] 18:36:21:388 gamecard/(26379:26379): Puerto Broker:5002
+[INFO] 18:36:21:388 gamecard/(26379:26379): Soy directorio
+[INFO] 18:36:23:530 gamecard/(26379:26379): Soy archivo
+[INFO] 18:36:24:627 gamecard/(26379:26379): Se encontro el directorio metadata
+[INFO] 18:36:24:627 gamecard/(26379:26379): Se encontro el archivo metadata.bin
+[INFO] 18:36:24:627 gamecard/(26379:26379): Inicio de Metadata, Tamanio bloques: 64,  Cantidad de bloques: 10,  Magic number: TALL_GRASS
+[INFO] 18:36:25:737 gamecard/(26379:26379): Escribiendo bloque:1, offset=0, longitud=5, buffer=Hola
+
+[INFO] 18:36:26:902 gamecard/(26379:26379): Escribiendo bloque:1, offset=5, longitud=4, buffer=Hola
+[INFO] 18:38:04:175 gamecard/(26605:26605): Puerto Broker:5002
+[INFO] 18:38:04:175 gamecard/(26605:26605): Soy directorio
+[INFO] 18:38:09:461 gamecard/(26605:26605): Soy archivo
+[INFO] 18:39:06:421 gamecard/(26605:26605): Se encontro el directorio metadata
+[INFO] 18:39:06:421 gamecard/(26605:26605): Se encontro el archivo metadata.bin
+[INFO] 18:39:06:421 gamecard/(26605:26605): Inicio de Metadata, Tamanio bloques: 64,  Cantidad de bloques: 10,  Magic number: TALL_GRASS
+[INFO] 18:39:14:88 gamecard/(26605:26605): Escribiendo bloque:1, offset=0, longitud=5, buffer=Hola
+
+[INFO] 18:39:17:216 gamecard/(26605:26605): Escribiendo bloque:1, offset=5, longitud=4, buffer=Hola
+[INFO] 18:41:05:309 gamecard/(27094:27094): Puerto Broker:5002
+[INFO] 18:41:05:309 gamecard/(27094:27094): El directorio ya existe
+[INFO] 18:41:05:309 gamecard/(27094:27094): Error al crear el directorio
+[INFO] 18:41:05:309 gamecard/(27094:27094): Soy directorio
+[INFO] 18:41:23:908 gamecard/(27168:27168): Puerto Broker:5002
+[INFO] 18:41:23:908 gamecard/(27168:27168): Soy directorio
+[INFO] 18:41:31:788 gamecard/(27168:27168): Se encontro el directorio metadata
+[INFO] 18:41:31:788 gamecard/(27168:27168): Se encontro el archivo metadata.bin
+[INFO] 18:41:31:788 gamecard/(27168:27168): Inicio de Metadata, Tamanio bloques: 64,  Cantidad de bloques: 10,  Magic number: TALL_GRASS
+[INFO] 18:41:31:805 gamecard/(27168:27168): Soy archivo
+[INFO] 18:42:40:839 gamecard/(27329:27329): Puerto Broker:5002
+[INFO] 18:42:40:839 gamecard/(27329:27329): Soy directorio
+[INFO] 18:42:44:222 gamecard/(27329:27329): Se encontro el directorio metadata
+[INFO] 18:42:44:222 gamecard/(27329:27329): Se encontro el archivo metadata.bin
+[INFO] 18:42:44:222 gamecard/(27329:27329): Inicio de Metadata, Tamanio bloques: 64,  Cantidad de bloques: 10,  Magic number: TALL_GRASS
+[INFO] 18:42:44:367 gamecard/(27329:27329): Soy archivo
+[INFO] 18:45:41:586 gamecard/(27633:27633): Puerto Broker:5002
+[INFO] 18:45:41:586 gamecard/(27633:27633): Soy directorio
+[INFO] 18:45:43:40 gamecard/(27633:27633): Se encontro el directorio metadata
+[INFO] 18:45:43:40 gamecard/(27633:27633): Se encontro el archivo metadata.bin
+[INFO] 18:45:43:40 gamecard/(27633:27633): Inicio de Metadata, Tamanio bloques: 64,  Cantidad de bloques: 10,  Magic number: TALL_GRASS
+[INFO] 18:45:43:107 gamecard/(27633:27633): Soy archivo
+[INFO] 18:48:15:529 gamecard/(27946:27946): Puerto Broker:5002
+[INFO] 18:48:15:529 gamecard/(27946:27946): Soy directorio
+[INFO] 18:48:15:530 gamecard/(27946:27946): Se encontro el directorio metadata
+[INFO] 18:48:15:530 gamecard/(27946:27946): Se encontro el archivo metadata.bin
+[INFO] 18:48:15:530 gamecard/(27946:27946): Inicio de Metadata, Tamanio bloques: 64,  Cantidad de bloques: 10,  Magic number: TALL_GRASS
+[INFO] 18:48:15:542 gamecard/(27946:27946): Soy archivo
+[INFO] 18:48:15:543 gamecard/(27946:27946): Escribiendo bloque:1, offset=0, longitud=5, buffer=Hola
+
+[INFO] 18:48:15:543 gamecard/(27946:27946): Escribiendo bloque:1, offset=5, longitud=4, buffer=Hola
