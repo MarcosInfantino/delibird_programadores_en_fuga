@@ -41,6 +41,15 @@ void* removeListaMutex(listaMutex* list,uint32_t pos){
 	pthread_mutex_unlock(list->mutex);
 	return retorno;
 }
+
+void* list_remove_by_condition_Mutex(listaMutex* list, bool(*condition)(void*)){
+	pthread_mutex_lock(list->mutex);
+	void* retorno = list_remove_by_condition(list->lista, condition);
+	pthread_mutex_unlock(list->mutex);
+
+	return retorno;
+}
+
 void list_sort_Mutex(listaMutex* list, bool (*comparator)(void *, void *)){
 	pthread_mutex_lock(list->mutex);
 	list_sort(list->lista, comparator);
