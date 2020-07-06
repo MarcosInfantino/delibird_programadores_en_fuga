@@ -9,7 +9,7 @@
 #include "memoria.h"
 #include "files.h"
 
-archivoMutex* iniciarArchivoMutex(){
+void iniciarArchivoMutex(){
 	archivoMutex* archivo = malloc(sizeof(archivoMutex));
 	archivo->mutex = malloc(sizeof(pthread_mutex_t));
 	archivo->archivo = malloc(sizeof(FILE));
@@ -33,7 +33,7 @@ archivoMutex* iniciarArchivoMutex(){
 	archivoSem->archivo = fopen("dumpDeCache.db",modoEscrituraEnBinario);
 	fwrite(info, sizeof(struct tm), 1, archivoSem->archivo);
 
-	return archivo;
+	//return archivo;
 }
 
 void almacenarParticionEnArchivo(lineaFile* particion){
@@ -75,10 +75,10 @@ void recorrerArbolYgrabarArchivo(){ //TODO recorrer arbol y por cada particion q
 	almacenarParticionEnArchivo(datosParticion);
 
 	//y si está libre sólo esto
-//	particionVacia->base    = particion->base;
-//	particionVacia->limite  = particion->limite;
-//	particionVacia->tamanio = particion->tamanio;
-//	strcpy(particionVacia->estado,particion->estado);
+	datosParticionVacia->base    = particionActual->offset + &memoria;
+	datosParticionVacia->limite  = particionActual->offset + &memoria + particionActual->header.size;
+	datosParticionVacia->tamanio = particionActual->header.size;
+	strcpy(datosParticionVacia->estado,LIBREP);
 
 	almacenarParticionLibreEnArchivo(datosParticionVacia);
 

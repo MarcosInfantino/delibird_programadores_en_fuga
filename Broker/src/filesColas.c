@@ -9,7 +9,8 @@
 #include "memoria.h"
 #include "files.h"
 
-void almacenarColaEnArchivo(colaMensajes * cola, char* nombreArchivo){
+//DEPRECATED
+/*void almacenarColaEnArchivo(colaMensajes * cola, char* nombreArchivo){
 	archivoMutex * archivoAUsar = iniciarArchivoMutex();
 	pthread_mutex_lock(archivoAUsar->mutex);
 	archivoAUsar->archivo = fopen(nombreArchivo,modoEscrituraEnBinario);
@@ -31,7 +32,7 @@ void llenarColaDeMensajes(char* nombreArchivo, colaMensajes * cola){
 	pthread_mutex_unlock(archivoAUsar->mutex);
 }
 
-/*void almacenarSuscriptorEnArchivoCola(uint32_t socketSuscrito, char* nombreArchivo){
+void almacenarSuscriptorEnArchivoCola(uint32_t socketSuscrito, char* nombreArchivo){
 	archivoMutex * archivoAUsar = iniciarArchivoMutex();
 	pthread_mutex_lock(archivoAUsar->mutex);
 	archivoAUsar->archivo = fopen(nombreArchivo,modoEscrituraEnBinario);

@@ -128,12 +128,12 @@ void crearDumpDeCache(){
 	log_info(loggerBroker,"Se solicitó dump de cache.");
 	log_info(brokerLogger2,"Se solicitó dump de cache.");
 
-	archivoMutex* archivo = iniciarArchivoMutex();
-
+	//archivoMutex* archivo = iniciarArchivoMutex();
+	iniciarArchivoMutex();
 	if(algoritmoMemoria == BUDDY_SYSTEM){
 		recorrerArbolYgrabarArchivo();
 	}else{
-		void registrarParticionesLibresYocupadas();
+		registrarParticionesLibresYocupadas();
 	}
 }
 

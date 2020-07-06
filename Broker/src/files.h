@@ -40,7 +40,7 @@ typedef struct{
 
 uint32_t contadorFile;
 
-archivoMutex* iniciarArchivoMutex();
+void iniciarArchivoMutex();
 void almacenarEnArchivo(msgMemoriaBroker* mensajeNuevo);
 listaMutex * leerNodosEnArchivo();
 void agregarListaABuddySystem(listaMutex * lista, struct nodoMemoria* partActual);
