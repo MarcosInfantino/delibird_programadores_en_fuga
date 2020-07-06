@@ -151,7 +151,11 @@ bool yaSeGuardoEnMemoria(mensajeCatch* msgCatch, mensajeGet* msgGet){
 	 particionOcupada* partOcupada = malloc(sizeof(particionOcupada));
 
 	if(algoritmoMemoria == BUDDY_SYSTEM){
-		return false;
+		if(msgCatch != NULL){
+			return existeMensajeEnMemoriaBuddy(NULL, msgCatch);
+		}else{
+			return existeMensajeEnMemoriaBuddy(msgGet,NULL);
+		}
 	}else{
 
 		for(int i=0; i<sizeListaMutex(memoriaPARTICIONES); i++){
