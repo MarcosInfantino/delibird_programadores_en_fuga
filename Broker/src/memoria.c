@@ -124,11 +124,17 @@ void asignarPuntero(uint32_t offset, void* stream, uint32_t sizeStream){
 	memcpy(memoria + offset, stream, sizeStream);
 }
 
-void crearDumpDeCache(){ //ver como hacer para que vaya creando uno y no siempre el mismo
+void crearDumpDeCache(){
 	log_info(loggerBroker,"Se solicitó dump de cache.");
 	log_info(brokerLogger2,"Se solicitó dump de cache.");
 
-	//archivoMutex* archivo = iniciarArchivoMutex();
+	archivoMutex* archivo = iniciarArchivoMutex();
+
+	if(algoritmoMemoria == BUDDY_SYSTEM){
+		recorrerArbolYgrabarArchivo();
+	}else{
+		void registrarParticionesLibresYocupadas();
+	}
 }
 
 bool yaEstaEnMemoria(paquete* paq){

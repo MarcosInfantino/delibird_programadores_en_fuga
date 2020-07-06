@@ -36,41 +36,31 @@ archivoMutex* iniciarArchivoMutex(){
 	return archivo;
 }
 
-void almacenarParticionEnArchivo(lineaFile* particion){ //TODO hacer que varíe el archivito
-	lineaFileLibre* particionVacia = malloc(sizeof(lineaFileLibre));
-
-	if(strcmp (particion->estado, LIBREP) == 0){
-		particionVacia->base    = particion->base;
-		particionVacia->limite  = particion->limite;
-		particionVacia->tamanio = particion->tamanio;
-		strcpy(particionVacia->estado,particion->estado);
-
-		pthread_mutex_lock(archivoSem->mutex);
-		archivoSem->archivo = fopen("dumpDeCache.db",modoEscrituraEnBinario);
-			if(archivoSem->archivo){
-				fwrite(particionVacia, sizeof(lineaFileLibre), 1, archivoSem->archivo);
-				fclose(archivoSem->archivo);
-			}
-		pthread_mutex_unlock(archivoSem->mutex);
-		return;
-	}
-
+void almacenarParticionEnArchivo(lineaFile* particion){
 	pthread_mutex_lock(archivoSem->mutex);
 	archivoSem->archivo = fopen("dumpDeCache.db",modoEscrituraEnBinario);
 	if(archivoSem->archivo){
-
-
 		fwrite(particion, sizeof(lineaFile), 1, archivoSem->archivo);
 		fclose(archivoSem->archivo);
 	}
 	pthread_mutex_unlock(archivoSem->mutex);
 }
 
+void almacenarParticionLibreEnArchivo(lineaFileLibre* particionVacia){
+
+	archivoSem->archivo = fopen("dumpDeCache.db",modoEscrituraEnBinario);
+		if(archivoSem->archivo){
+		 fwrite(particionVacia, sizeof(lineaFileLibre), 1, archivoSem->archivo);
+		 fclose(archivoSem->archivo);
+		}
+	return;
+}
 
 
-void recorrerArbol(){ //TODO recorrer arbol y por cada particion que este ocupada o libre pero NO particionada recolecto datos y mando
+void recorrerArbolYgrabarArchivo(){ //TODO recorrer arbol y por cada particion que este ocupada o libre pero NO particionada recolecto datos y mando
 	lineaFile* datosParticion = malloc(sizeof(lineaFile));
 	struct nodoMemoria* particionActual = malloc(sizeof(struct nodoMemoria));
+	lineaFileLibre* datosParticionVacia = malloc(sizeof(lineaFileLibre));
 
 	pthread_mutex_lock(mutexMemoria);
 	datosParticion->idMensaje = particionActual->mensaje->idMensaje;
@@ -78,14 +68,25 @@ void recorrerArbol(){ //TODO recorrer arbol y por cada particion que este ocupad
 	datosParticion->lru       = particionActual->header.tiempo;
 	datosParticion->tamanio   = particionActual->header.size;
 	datosParticion->limite    = particionActual->offset + &memoria + particionActual->header.size;
-	strcpy(datosParticion->estado,estadoEnString(particionActual->header.status));
+	strcpy(datosParticion->estado,OCUPADA);
+	//strcpy(datosParticion->estado,estadoEnString(particionActual->header.status));
 	pthread_mutex_unlock(mutexMemoria);
 
 	almacenarParticionEnArchivo(datosParticion);
+
+	//y si está libre sólo esto
+//	particionVacia->base    = particion->base;
+//	particionVacia->limite  = particion->limite;
+//	particionVacia->tamanio = particion->tamanio;
+//	strcpy(particionVacia->estado,particion->estado);
+
+	almacenarParticionLibreEnArchivo(datosParticionVacia);
+
+
 	free(datosParticion);
 }
 
-void registrarParticionesLibresYocupadas(){
+void registrarParticionesLibresYocupadas(){ //TODO esto debería ir por orden de offset
 	lineaFile* datosParticion = malloc(sizeof(lineaFile));
 	lineaFileLibre* datosParticionVacia = malloc(sizeof(lineaFileLibre));
 	particionLibre* partLibre = malloc(sizeof(particionLibre));
@@ -100,7 +101,7 @@ void registrarParticionesLibresYocupadas(){
 	 datosParticionVacia->limite  = (partLibre->offset + &memoria) + partLibre->sizeParticion;
 	 strcpy(datosParticionVacia->estado,LIBREP);
 
-	 almacenarParticionEnArchivo((lineaFile*)datosParticionVacia); //todo veer como arreglar esto.
+	 almacenarParticionLibreEnArchivo(datosParticionVacia);
 	}
 	pthread_mutex_unlock(mutexMemoria);
 
@@ -108,7 +109,7 @@ void registrarParticionesLibresYocupadas(){
 	for(int i=0; i< sizeListaMutex(memoriaPARTICIONES);i++){
 	 partOcupada = getListaMutex(memoriaPARTICIONES, i);
 	 datosParticion->idMensaje = partOcupada->mensaje->idMensaje;
-	datosParticion->base      = partOcupada->offset + &memoria;
+	 datosParticion->base      = partOcupada->offset + &memoria;
 	 datosParticion->lru       = partOcupada->lru;
 	 datosParticion->tamanio   = partOcupada->mensaje->sizeStream;
 	 datosParticion->limite    = (partOcupada->offset + &memoria) + partOcupada->mensaje->sizeStream;

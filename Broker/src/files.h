@@ -45,8 +45,9 @@ void almacenarEnArchivo(msgMemoriaBroker* mensajeNuevo);
 listaMutex * leerNodosEnArchivo();
 void agregarListaABuddySystem(listaMutex * lista, struct nodoMemoria* partActual);
 void almacenarParticionEnArchivo(lineaFile* particion);
+void almacenarParticionLibreEnArchivo(lineaFileLibre* particionVacia);
 void registrarParticionesLibresYocupadas();
-void recorrerArbol();
+void recorrerArbolYgrabarArchivo();
 char* estadoEnString(uint32_t estado);
 
 #endif /* FILES_H_ */
