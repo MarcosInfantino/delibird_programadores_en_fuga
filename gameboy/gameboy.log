@@ -2384,3 +2384,21 @@
 
 [INFO] 20:48:53:585 GAMEBOY/(14108:14108): Arranco
 
+[INFO] 23:32:50:642 GAMEBOY/(8708:8708): Arranco
+
+[INFO] 23:32:50:643 GAMEBOY/(8708:8714): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 23:33:15:198 GAMEBOY/(8708:8714): Mensaje recibido incorrectamente, respuesta: 0
+
+[INFO] 23:34:15:391 GAMEBOY/(8946:8946): Arranco
+
+[INFO] 23:34:15:391 GAMEBOY/(8946:8952): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 23:34:15:392 GAMEBOY/(8946:8952): Mensaje fue recibido correctamente, respuesta: 1
+
+[INFO] 23:36:59:558 GAMEBOY/(9121:9121): Arranco
+
+[INFO] 23:36:59:558 GAMEBOY/(9121:9127): Estoy esperando respuesta al mensaje enviado
+
+[INFO] 23:36:59:559 GAMEBOY/(9121:9127): Mensaje fue recibido correctamente, respuesta: 1
+

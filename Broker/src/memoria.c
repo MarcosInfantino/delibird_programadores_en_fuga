@@ -34,6 +34,9 @@ void registrarMensajeEnMemoria(uint32_t idMensaje, paquete* paq, algoritmoMem me
 	msgNuevo->subsYaEnviado = inicializarListaMutex();
 	msgNuevo->sizeStream 	= paq->sizeStream;
 	msgNuevo->stream 		= paq->stream;
+
+	uint32_t sizePrevio;
+
 	log_info(brokerLogger2, "Comienzo a registrar el mensaje en memoria.");
 	switch(metodo){
 	case PARTICIONES_DINAMICAS:
@@ -44,7 +47,13 @@ void registrarMensajeEnMemoria(uint32_t idMensaje, paquete* paq, algoritmoMem me
 	case BUDDY_SYSTEM:
 		pthread_mutex_lock(mutexMemoria);
 		log_info(brokerLogger2, "Selecciono administración de memoria con buddy system.");
+		sizePrevio = sizeListaMutex(nodosOcupados);
 		registrarEnMemoriaBUDDYSYSTEM(msgNuevo, nodoRaizMemoria);
+		while (sizeListaMutex(nodosOcupados) == sizePrevio){
+			elegirVictimaDeReemplazoYeliminarBD();
+			sizePrevio = sizeListaMutex(nodosOcupados);
+			registrarEnMemoriaBUDDYSYSTEM(msgNuevo, nodoRaizMemoria);
+		}
 		pthread_mutex_unlock(mutexMemoria);
 		break;
 	default:
@@ -99,7 +108,7 @@ msgMemoriaBroker* buscarMensajeEnMemoria(uint32_t idMensajeBuscado){
 }
 
 bool estaEnLista(uint32_t socket, ListasMemoria lista, msgMemoriaBroker* mensaje){
-	listaMutex* list = malloc(sizeof(listaMutex));
+	listaMutex* list = inicializarListaMutex();
 	if(lista == CONFIRMADO){
 		list =  mensaje->subsACK;
 	}else{
@@ -119,8 +128,8 @@ bool estaEnLista(uint32_t socket, ListasMemoria lista, msgMemoriaBroker* mensaje
 
 
 void asignarPuntero(uint32_t offset, void* stream, uint32_t sizeStream){
-	log_info(brokerLogger2,"Se almacena mensaje en posición: %d (de memoria) -.-", memoria + offset);
-	log_info(loggerBroker, "Se almacena mensaje en memoria en posición: %d -.-", memoria + offset);
+	log_info(brokerLogger2,"Se almacena mensaje en posición: %p (de memoria) -.-", memoria - memoria+ offset);
+	log_info(loggerBroker, "Se almacena mensaje en memoria en posición: %p -.-", memoria - memoria + offset);
 	memcpy(memoria + offset, stream, sizeStream);
 }
 

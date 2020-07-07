@@ -43,7 +43,6 @@ int main(void) {
 	char* programName = "BROKER";
 	loggerBroker = iniciar_logger(nombreLog, programName);
 
-
 	mutexMemoria = malloc(sizeof(pthread_mutex_t));
 	pthread_mutex_init(mutexMemoria,NULL);
 
@@ -220,8 +219,8 @@ void manejarTipoDeMensaje(paquete* paq, uint32_t* socket) {
 }
 
 void meterEnCola( colaMensajes* structCola, paquete * paq, uint32_t  socket){
-	log_info(loggerBroker, armarStringMsgNuevoLog(paq->tipoMensaje));
-	log_info(brokerLogger2, armarStringMsgNuevoLog(paq->tipoMensaje));
+	//log_info(loggerBroker, armarStringMsgNuevoLog(paq->tipoMensaje));
+	//log_info(brokerLogger2, armarStringMsgNuevoLog(paq->tipoMensaje));
 
 	incrementarContador();
 	pthread_mutex_lock(contador.mutexContador);
@@ -382,6 +381,7 @@ void definirComienzoDeMemoria(){
 	/*if(algoritmoMemoria == BUDDY_SYSTEM){*/
 	nodoRaizMemoria = crearRaizArbol();
 	nodoRaizMemoria->offset = 0;
+	nodosOcupados = inicializarListaMutex();
 	/*}else if(algoritmoMemoria == PARTICIONES_DINAMICAS){
 			memoriaPARTICIONES = iniciarMemoriaPARTICIONES();
 	}*/
