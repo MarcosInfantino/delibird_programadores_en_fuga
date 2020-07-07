@@ -12,19 +12,27 @@
 #include <stdbool.h>
 #include "broker.h"
 #include "memoria.h"
+//
+//void registrarEnMemoriaBUDDYSYSTEM(msgMemoriaBroker* mensajeNuevo, struct nodoMemoria* partActual){
+//	struct nodoMemoria* backUp = partActual;
+//	uint32_t response = intentarRamaIzquierda(mensajeNuevo, partActual);
+//
+//	if(response == 0){
+//		partActual = backUp->hijoDer;
+//		registrarEnMemoriaBUDDYSYSTEM(mensajeNuevo, partActual);
+//	}
+//
+//	if(response == 0){ //TODO VER que condición poner para que entre acá
+//		elegirVictimaDeReemplazoYeliminarBD();
+//		registrarEnMemoriaBUDDYSYSTEM(mensajeNuevo, nodoRaizMemoria);
+//	}
+//}
 
 void registrarEnMemoriaBUDDYSYSTEM(msgMemoriaBroker* mensajeNuevo, struct nodoMemoria* partActual){
 	struct nodoMemoria* backUp = partActual;
-	uint32_t response = intentarRamaIzquierda(mensajeNuevo, partActual);
-
-	if(response == 0){
+	if(intentarRamaIzquierda(mensajeNuevo, partActual) < 0){
 		partActual = backUp->hijoDer;
 		registrarEnMemoriaBUDDYSYSTEM(mensajeNuevo, partActual);
-	}
-
-	if(response == 0){ //TODO VER que condición poner para que entre acá
-		elegirVictimaDeReemplazoYeliminarBD();
-		registrarEnMemoriaBUDDYSYSTEM(mensajeNuevo, nodoRaizMemoria);
 	}
 }
 
@@ -32,9 +40,9 @@ void elegirVictimaDeReemplazoYeliminarBD(){
 	struct nodoMemoria* victima;
 
 	if(algoritmoReemplazo == FIFO){
-	 victima = buscarVictimaPor(tiempoDeCargaMenor);
+		victima = buscarVictimaPor(tiempoDeCargaMenor);
 	}else{ //LRU
-	 victima = buscarVictimaPor(tiempoDeUsoMenor);
+		victima = buscarVictimaPor(tiempoDeUsoMenor);
 	}
 	modificarNodoAlibre(victima);
 }
