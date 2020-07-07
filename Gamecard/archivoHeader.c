@@ -178,3 +178,84 @@ uint32_t posBloque(blockHeader* bloque){
 	fclose(archivoBloque);
 	return pos;
 }
+
+t_list* obtenerListaPosicionesString(char* posiciones){
+	t_list* lista=list_create();
+	char* buffer=string_new();
+	for(uint32_t i=0;i<(strlen(posiciones)+1);i++){
+		char caracterActual= posiciones[i];
+		if(caracterActual=='\n'){
+			list_add(lista, (void*) buffer);
+			buffer=string_new();
+		}else{
+			char* cadena=malloc(1);
+			sprintf(cadena, "%c", caracterActual);
+			string_append(&buffer, cadena);
+			free(cadena);
+		}
+	}
+	return lista;
+}
+
+posicionCantidad* obtenerPosicionCantidadDeString(char* stringPos){
+	char* bufferPosX=string_new();
+	char* bufferPosY=string_new();
+	char* bufferCantidad=string_new();
+	bool posX=true;
+	bool posY=false;
+	bool cantidad=false;
+
+		for(uint32_t i=0;i<(strlen(stringPos));i++){
+			char caracterActual= stringPos[i];
+			if(posX){
+				if(caracterActual=='-'){
+					posX=false;
+					posY=true;
+				}else{
+					char* cadena=malloc(1);
+					sprintf(cadena, "%c", caracterActual);
+					string_append(&bufferPosX, cadena);
+					free(cadena);
+				}
+			}else if(posY){
+				if(caracterActual=='='){
+					posY=false;
+					cantidad=true;
+				}else{
+					char* cadena=malloc(1);
+					sprintf(cadena, "%c", caracterActual);
+					string_append(&bufferPosY, cadena);
+					free(cadena);
+				}
+			}else if(cantidad){
+				char* cadena=malloc(1);
+				sprintf(cadena, "%c", caracterActual);
+				string_append(&bufferCantidad, cadena);
+				free(cadena);
+			}
+
+		}
+
+	posicionCantidad* pos=malloc(sizeof(posicionCantidad));
+	(pos->posicion).x=atoi(bufferPosX);
+	(pos->posicion).y=atoi(bufferPosY);
+	pos->cantidad=atoi(bufferCantidad);
+
+	return pos;
+
+}
+
+t_list * obtenerListaPosicionCantidad(t_list* listaString){
+	t_list* lista= list_create();
+	for(uint32_t i=0; i<list_size(listaString);i++){
+		char* stringActual= (char*) list_get(listaString,i);
+		posicionCantidad* posActual=obtenerPosicionCantidadDeString(stringActual);
+		list_add(lista, (void*) posActual);
+	}
+	list_destroy_and_destroy_elements(listaString, free);
+	return lista;
+}
+
+t_list* obtenerListaPosicionCantidadDeString(char* string){
+	return obtenerListaPosicionCantidad(obtenerListaPosicionesString(string));
+}

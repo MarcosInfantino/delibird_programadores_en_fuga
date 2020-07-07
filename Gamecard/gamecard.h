@@ -87,6 +87,11 @@ typedef struct{
 } pokemonEnPosicion;
 
 typedef struct{
+	posicion posicion;
+	uint32_t cantidad;
+}posicionCantidad;
+
+typedef struct{
 	char* pokemon;
 	uint32_t id;
 	uint32_t cantPosiciones;
@@ -164,4 +169,9 @@ archivoHeader* obtenerArchivoPokemon(char* nombre);
 char* leerBloque(blockHeader* bloque);
 uint32_t posBloque(blockHeader* bloque);
 char* obtenerStringArchivo(char* pokemon);
+char* pathBloque(uint32_t idBloque);
+t_list* obtenerListaPosicionesString(char* posiciones);
+posicionCantidad* obtenerPosicionCantidadDeString(char* stringPos);
+t_list * obtenerListaPosicionCantidad(t_list* listaString);
+t_list* obtenerListaPosicionCantidadDeString(char* string);
 #endif /* GAMECARD_H_ */

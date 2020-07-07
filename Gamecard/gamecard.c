@@ -39,14 +39,34 @@ int main(void) {
 	inicializarListaBloques();
 	archivoHeader* pikachu=crearDirectorio("Pikachu",pathFiles,ARCHIVO);
 
-	//agregarBloque(pikachu, obtenerBloquePorId(1));
+	agregarBloque(pikachu, obtenerBloquePorId(1));
+	agregarBloque(pikachu, obtenerBloquePorId(2));
 	escribirBloque(1,0,strlen("Hola")+1,"Hola\n");
 	escribirBloque(1,5,strlen("Hola"),"Hola");
-	//log_info(gamecardLogger2,"Lectura bloque: %s", obtenerStringArchivo("Pikachu"));
+	escribirBloque(2,0,strlen("comoAndas"),"comoAndas");
+//	log_info(gamecardLogger2,"Lectura bloque: %s", obtenerStringArchivo("Pikachu"));
+//
+//	t_list* listaPosicionesString=obtenerListaPosicionesString("1-1=10\n10-11=1\n158-1=112\n");
+//	log_info(gamecardLogger2, "%s             %s                  %s", (char*) list_get(listaPosicionesString,0),(char*) list_get(listaPosicionesString,1), (char*) list_get(listaPosicionesString,2));
+//
+
+	t_list* listaPosicionCantidad= obtenerListaPosicionCantidadDeString("1-1=10\n10-11=1\n158-1=112\n");
+
+	posicionCantidad* posCantidad1=list_get(listaPosicionCantidad,0);
+	posicionCantidad* posCantidad2=list_get(listaPosicionCantidad,1);
+	posicionCantidad* posCantidad3=list_get(listaPosicionCantidad,2);
+
+	log_info(gamecardLogger2, "Traduccion: %i-%i=%i", (posCantidad1->posicion).x, (posCantidad1->posicion).y, posCantidad1->cantidad);
+	log_info(gamecardLogger2, "Traduccion: %i-%i=%i", (posCantidad2->posicion).x, (posCantidad2->posicion).y, posCantidad2->cantidad);
+	log_info(gamecardLogger2, "Traduccion: %i-%i=%i", (posCantidad3->posicion).x, (posCantidad3->posicion).y, posCantidad3->cantidad);
+
+
+
+
 	//escribirBloque2(1,"Hola");
 	//printf("El resultado fue: %i\n",resul);
-	blockHeader* bloque= malloc(sizeof(blockHeader));
-	bloque->id=10;
+//	blockHeader* bloque= malloc(sizeof(blockHeader));
+//	bloque->id=10;
 	//agregarBloque(var,bloque);
 //	blockHeader* bloque2= malloc(sizeof(blockHeader));
 //		bloque2->id=1023214234;
@@ -399,5 +419,6 @@ void enviarCaught(pokemonAAtrapar* pokeAAtrapar) {
 	free(paqueteSerializado);
 
 }
+
 
 

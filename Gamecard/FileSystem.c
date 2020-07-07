@@ -307,7 +307,7 @@ void escribirMetadata(archivoHeader* metadata){
 
 	}
 	config_destroy(configLoco);
-	free(metadata);
+	//free(metadata);
 
 }
 /*
@@ -328,7 +328,8 @@ int32_t escribirBloque(int32_t bloque, int32_t offset, int32_t longitud, char* b
 	//const char* bufferin = buffer;
 	//FILE* block = fopen(string_from_format("%s%d.bin", pathBlocks, bloque), "w+b");
 	//FILE* block = fopen(string_from_format("%s1.bin", pathBlocks), "r+");
-	FILE* block = fopen("/home/utnso/tp-2020-1c-Programadores-en-Fuga/Gamecard/TALL_GRASS/Blocks/1.bin","r+");
+
+	FILE* block = fopen(pathBloque(bloque),"r+");
 	fseek(block, offset, SEEK_SET);
 	fwrite(buffer, strlen(buffer)+1, 1, block);
 	//fputs(buffer,block);
