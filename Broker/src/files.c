@@ -65,7 +65,7 @@ void recorrerArbolYgrabarArchivo(){ //TODO recorrer arbol y por cada particion q
 	pthread_mutex_lock(mutexMemoria);
 	datosParticion->idMensaje = particionActual->mensaje->idMensaje;
 	datosParticion->base      = particionActual->offset + &memoria;
-	datosParticion->lru       = particionActual->header.tiempo;
+	datosParticion->lru       = particionActual->header.ultimoAcceso;
 	datosParticion->tamanio   = particionActual->header.size;
 	datosParticion->limite    = particionActual->offset + &memoria + particionActual->header.size;
 	strcpy(datosParticion->estado,OCUPADA);

@@ -15,15 +15,72 @@
 
 void registrarEnMemoriaBUDDYSYSTEM(msgMemoriaBroker* mensajeNuevo, struct nodoMemoria* partActual){
 	struct nodoMemoria* backUp = partActual;
-	if(intentarRamaIzquierda(mensajeNuevo, partActual) < 0){
+	uint32_t response = intentarRamaIzquierda(mensajeNuevo, partActual);
+
+	if(response == 0){
 		partActual = backUp->hijoDer;
 		registrarEnMemoriaBUDDYSYSTEM(mensajeNuevo, partActual);
 	}
+
+	if(response == 0){ //TODO VER que condición poner para que entre acá
+		elegirVictimaDeReemplazoYeliminarBD();
+		registrarEnMemoriaBUDDYSYSTEM(mensajeNuevo, nodoRaizMemoria);
+	}
+}
+
+void elegirVictimaDeReemplazoYeliminarBD(){
+	struct nodoMemoria* victima;
+
+	if(algoritmoReemplazo == FIFO){
+	 victima = buscarVictimaPor(tiempoDeCargaMenor);
+	}else{ //LRU
+	 victima = buscarVictimaPor(tiempoDeUsoMenor);
+	}
+	modificarNodoAlibre(victima);
+}
+
+struct nodoMemoria* buscarVictimaPor(bool(*condition)(struct nodoMemoria*,struct nodoMemoria*)){
+	struct nodoMemoria* minimo = getListaMutex(nodosOcupados, 0);
+	struct nodoMemoria* aux;
+
+	for(int i=1; i<sizeListaMutex(nodosOcupados);i++){
+		aux = getListaMutex(nodosOcupados, i);
+
+		if(condition(aux,minimo)){
+			minimo = aux;
+		}
+	}
+	return minimo;
+}
+
+void modificarNodoAlibre(struct nodoMemoria* victima){
+	victima->header.status = LIBRE;
+
+	removerDeListaOcupados(victima);
+	evaluarConsolidacion(victima);
+}
+
+void evaluarConsolidacion(struct nodoMemoria* nodo){
+	struct nodoMemoria* buddie;
+
+	if(nodo->padre->hijoDer == nodo){
+		buddie = nodo->padre->hijoIzq;
+	}else{
+		buddie = nodo->padre->hijoDer;
+	}
+
+	if(estaLibre(buddie)){
+		nodo->padre->header.status = LIBRE;
+		liberarNodo(nodo);
+		liberarNodo(buddie);
+		evaluarConsolidacion(nodo->padre);
+	}else{return;}
+
 }
 
 uint32_t intentarRamaIzquierda(msgMemoriaBroker* mensajeNuevo,struct nodoMemoria* partActual){
 	if (estaOcupado(partActual)){
-	return -1;
+	return 0;
 	} else if (estaParticionado(partActual)){
 		uint32_t retorno = intentarRamaIzquierda(mensajeNuevo,partActual->hijoIzq);
 		if (retorno != 1)
@@ -32,38 +89,6 @@ uint32_t intentarRamaIzquierda(msgMemoriaBroker* mensajeNuevo,struct nodoMemoria
 	}else{
 		return evaluarTamanioParticionYasignar (partActual, mensajeNuevo);
 	}
-}
-
-bool ambosHijosOcupados(struct nodoMemoria* padre){
-	return estaOcupado(padre->hijoDer) && estaOcupado(padre->hijoIzq);
-}
-
-bool esHijoDerecho(struct nodoMemoria* particion){
-	return particion==(particion->padre->hijoDer);
-}
-
-bool estaOcupado(struct nodoMemoria* partActual){
-	return (partActual->header).status==OCUPADO;
-}
-
-bool estaParticionado(struct nodoMemoria* partActual){
-	return (partActual->header).status==PARTICIONADO;
-}
-bool entraEnLaMitad(struct nodoMemoria* partActual, msgMemoriaBroker* mensajeNuevo){
-	return mensajeNuevo->sizeStream <= tamanioParticion(partActual);
-}
-
-//	if(noEsParticionMinima(partActual) && !estaLibre(partActual)){ //o irá solo estado particionado?
-//		if( partActual->hijoIzq->header.status == OCUPADO){
-//			registrarEnMemoriaBUDDYSYSTEM(mensajeNuevo, partActual->hijoDer);
-//		}else{
-//			registrarEnMemoriaBUDDYSYSTEM(mensajeNuevo, partActual->hijoIzq);}
-//	}else{
-//		evaluarTamanioParticion(partActual, mensajeNuevo);
-//	}
-
-uint32_t tamanioMinimo(struct nodoMemoria* partActual){
-	return (partActual->header).size;
 }
 
 uint32_t evaluarTamanioParticionYasignar(struct nodoMemoria* partActual, msgMemoriaBroker* msg){
@@ -80,16 +105,23 @@ uint32_t evaluarTamanioParticionYasignar(struct nodoMemoria* partActual, msgMemo
 		}
 		partActual->header.status = OCUPADO;
 		partActual->mensaje = msg;
+
+		addListaMutex(nodosOcupados,partActual);
+
 		time_t t;
 		t=time(NULL);
-		partActual->header.tiempo = *localtime(&t);
+		partActual->header.tiempoDeCarga = *localtime(&t);
 		asignarPuntero(partActual->offset, partActual->mensaje->stream, partActual->mensaje->sizeStream);
 		log_info(brokerLogger2,"ASIGNE: Size: %i. Id mensaje: %i. Size del mensaje: %i.", (partActual->header).size, partActual->mensaje->idMensaje, partActual->mensaje->sizeStream);
 		return 1;
 	}
 
-	return -1;
+	return 0;
 }
+
+uint32_t tamanioMinimo(struct nodoMemoria* partActual){
+	return (partActual->header).size;}
+
 
 void particionarMemoriaBUDDY(struct nodoMemoria* particionActual){
 	particionActual->hijoIzq = inicializarNodo();
@@ -108,8 +140,6 @@ void particionarMemoriaBUDDY(struct nodoMemoria* particionActual){
 	particionActual->hijoDer->offset = particionActual->offset + tamanioParticion(particionActual)/2;
 
 	particionActual->header.status = PARTICIONADO;
-
-
 }
 
 msgMemoriaBroker* buscarMensajeEnMemoriaBuddy(uint32_t id){
@@ -134,6 +164,11 @@ msgMemoriaBroker* buscarMensajeEnMemoriaBuddy(uint32_t id){
 		return mensajeEnRamaIzq;
 	}
 	pthread_mutex_unlock(mutexMemoria);
+
+	time_t t;
+	t=time(NULL);
+	nodoActual->header.ultimoAcceso = *localtime(&t); //actualizo la fecha de acceso
+
 	return nodoActual->mensaje;
 }
 
@@ -216,6 +251,8 @@ msgMemoriaBroker* buscarPorRama(uint32_t id, struct nodoMemoria* partActual ){
 	}
 }
 
+
+
 struct nodoMemoria* crearRaizArbol(void){
 	struct nodoMemoria* nodoRaiz = inicializarNodo();    //no estoy liberando malloc
 	nodoRaiz->header.size   = tamMemoria;
@@ -235,12 +272,40 @@ struct nodoMemoria* inicializarNodo(){
 }
 
 void liberarNodo(struct nodoMemoria* nodo){
-
     free(nodo->mensaje);
     free(nodo->hijoIzq);
     free(nodo->hijoDer);
     free(nodo);
+}
 
+void removerDeListaOcupados(struct nodoMemoria* nodo){
+	struct nodoMemoria* aux;
+
+	for(int i=0; i<sizeListaMutex(nodosOcupados);i++){
+		aux = getListaMutex(nodosOcupados, i);
+		if(aux == nodo){
+			removeListaMutex(nodosOcupados,i);
+		}
+	}
+}
+
+bool ambosHijosOcupados(struct nodoMemoria* padre){
+	return estaOcupado(padre->hijoDer) && estaOcupado(padre->hijoIzq);
+}
+
+bool esHijoDerecho(struct nodoMemoria* particion){
+	return particion==(particion->padre->hijoDer);
+}
+
+bool estaOcupado(struct nodoMemoria* partActual){
+	return (partActual->header).status==OCUPADO;
+}
+
+bool estaParticionado(struct nodoMemoria* partActual){
+	return (partActual->header).status==PARTICIONADO;
+}
+bool entraEnLaMitad(struct nodoMemoria* partActual, msgMemoriaBroker* mensajeNuevo){
+	return mensajeNuevo->sizeStream <= tamanioParticion(partActual);
 }
 
 bool esParticionMinima(struct nodoMemoria* particion){
@@ -254,4 +319,24 @@ bool estaLibre(struct nodoMemoria* particion){
 
 uint32_t tamanioParticion(struct nodoMemoria* part){
 	return part->header.size;
+}
+
+struct tm tiempoCarga(struct nodoMemoria* nodo){
+	return nodo->header.tiempoDeCarga;
+}
+
+struct tm tiempoUso(struct nodoMemoria* nodo){
+	return nodo->header.ultimoAcceso;
+}
+
+bool tiempoDeCargaMenor(struct nodoMemoria* nodo, struct nodoMemoria* otroNodo){
+	return tiempoCarga(nodo).tm_hour < tiempoCarga(otroNodo).tm_hour
+			&& tiempoCarga(nodo).tm_min < tiempoCarga(otroNodo).tm_min
+			&& tiempoCarga(nodo).tm_sec < tiempoCarga(otroNodo).tm_sec;
+}
+
+bool tiempoDeUsoMenor(struct nodoMemoria* nodo, struct nodoMemoria* otroNodo){
+	return tiempoUso(nodo).tm_hour < tiempoUso(otroNodo).tm_hour
+			&& tiempoUso(nodo).tm_min < tiempoUso(otroNodo).tm_min
+			&& tiempoUso(nodo).tm_sec < tiempoUso(otroNodo).tm_sec;
 }

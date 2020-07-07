@@ -36,7 +36,8 @@ typedef enum{
 typedef struct{
 	nodeStatus status;
 	uint32_t size;
-	struct tm tiempo;
+	struct tm tiempoDeCarga;
+	struct tm ultimoAcceso;
 }nodeData;
 
 struct nodoMemoria {
@@ -92,6 +93,7 @@ typedef struct{
 struct nodoMemoria* nodoRaizMemoria;
 listaMutex* memoriaPARTICIONES;
 listaMutex* particionesLibres;
+listaMutex* nodosOcupados;
 
 uint32_t auxTamanioStreamGlobal;
 
@@ -149,5 +151,14 @@ bool yaSeGuardoEnMemoria(mensajeCatch* msgCatch, mensajeGet* msgGet);
 bool existeMensajeEnMemoriaBuddy(mensajeGet* msgGet, mensajeCatch*  msgCatch);
 uint32_t compararCatch(mensajeCatch*  elemLista, mensajeCatch*  msgCatch);
 uint32_t compararGet(mensajeGet* elemLista, mensajeGet* msgGet);
+
+void elegirVictimaDeReemplazoYeliminarBD();
+struct nodoMemoria* buscarVictimaPor(bool(*condition)(struct nodoMemoria*,struct nodoMemoria*));
+void modificarNodoAlibre(struct nodoMemoria* victima);
+struct tm tiempoCarga(struct nodoMemoria* nodo);
+void removerDeListaOcupados(struct nodoMemoria* nodo);
+bool tiempoDeCargaMenor(struct nodoMemoria* nodo, struct nodoMemoria* otroNodo);
+bool tiempoDeUsoMenor(struct nodoMemoria* nodo, struct nodoMemoria* otroNodo);
+void evaluarConsolidacion(struct nodoMemoria* nodo);
 
 #endif /* MEMORIA_H_ */
