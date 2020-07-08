@@ -7,16 +7,22 @@
 
 #ifndef MEMORIA_H_
 #define MEMORIA_H_
-#include <commons/collections/queue.h>
-#include <string.h>
+#include <stdio.h>
+#include <stdlib.h>
 #include <pthread.h>
+#include <sys/types.h>
+#include <sys/socket.h>
+#include <netdb.h>
+#include <netinet/in.h>
+#include <arpa/inet.h>
+#include <string.h>
 #include <stdbool.h>
+#include <commons/collections/queue.h>
 #include <commons/config.h>
 #include <commons/log.h>
 #include <messages_lib/messages_lib.h>
 #include "broker.h"
 #include <time.h>
-
 
 typedef struct {
 	uint32_t idMensaje;
@@ -25,6 +31,7 @@ typedef struct {
 	listaMutex* subsACK;
 	uint32_t sizeStream;
 	void* stream;
+	uint32_t modulo;
 }msgMemoriaBroker;
 
 typedef enum{
@@ -32,6 +39,11 @@ typedef enum{
 	OCUPADO,
 	PARTICIONADO
 }nodeStatus;
+
+typedef enum{
+	PARTICION_LIBRE,
+	PARTICION_OCUPADA
+}estadoParticion;
 
 typedef struct{
 	nodeStatus status;
@@ -57,8 +69,18 @@ typedef struct{
 typedef struct{
 	uint32_t offset;
 	struct tm lru;
+	struct tm tiempoDeCargaPart;
 	msgMemoriaBroker* mensaje;
 }particionOcupada;
+
+typedef struct{
+	uint32_t offset;
+	uint32_t sizeParticion;
+	struct tm lru;
+	struct tm tiempoDeCargaPart;
+	msgMemoriaBroker* mensaje;
+	uint32_t estadoParticion;
+}particion;
 
 typedef enum{
 	PARTICIONES_DINAMICAS,
@@ -91,22 +113,18 @@ typedef struct{
 } algoritmoParameter;
 
 struct nodoMemoria* nodoRaizMemoria;
-listaMutex* memoriaPARTICIONES;
+listaMutex* particionesOcupadas;
 listaMutex* particionesLibres;
 listaMutex* nodosOcupados;
 
 uint32_t auxTamanioStreamGlobal;
 
-//void enviarMensajesPreviosEnMemoria(uint32_t socket,uint32_t identificadorCola);
-
 struct nodoMemoria* crearRaizArbol(void);
-listaMutex* iniciarMemoriaPARTICIONES();
 struct nodoMemoria* inicializarNodo();
 void liberarNodo(struct nodoMemoria* nodo);
 
 
 void registrarMensajeEnMemoria(uint32_t idMensaje, paquete* paq, algoritmoMem metodo);
-void registrarEnMemoriaPARTICIONES(msgMemoriaBroker*);
 void registrarEnMemoriaBUDDYSYSTEM(msgMemoriaBroker* mensajeNuevo, struct nodoMemoria* partActual);
 
 void particionarMemoriaBUDDY(struct nodoMemoria*);
@@ -116,11 +134,10 @@ uint32_t evaluarTamanioParticionYasignar(struct nodoMemoria* partActual, msgMemo
 void guardarEnListaMemoria(uint32_t idmensaje, uint32_t socket, uint32_t lista);
 msgMemoriaBroker* buscarMensajeEnMemoria(uint32_t idMensajeBuscado);
 msgMemoriaBroker* buscarMensajeEnMemoriaBuddy(uint32_t id);
-msgMemoriaBroker* buscarMensajeEnMemoriaParticiones(uint32_t idMensajeBuscado);
+msgMemoriaBroker* buscarMensajeEnParticionesOcupadas(uint32_t idMensajeBuscado);
 msgMemoriaBroker* buscarPorRama(uint32_t id, struct nodoMemoria* partActual );
 bool buscarPorRamaGet(mensajeGet* msgGet, struct nodoMemoria* nodoActual );
 bool buscarPorRamaCatch(mensajeCatch*  msgCatch, struct nodoMemoria* nodoActual );
-
 
 uint32_t intentarRamaIzquierda(msgMemoriaBroker* mensajeNuevo, struct nodoMemoria* partActual);
 
@@ -136,15 +153,30 @@ bool estaParticionado(struct nodoMemoria* partActual);
 bool estaOcupado(struct nodoMemoria* partActual);
 bool ambosHijosOcupados(struct nodoMemoria* padre);
 
+//---------------------------------PARTICIONES DINAMICAS---------------------------------------
+void registrarEnParticiones(msgMemoriaBroker*);
 particionLibre* obtenerParticionLibrePARTICIONES(uint32_t tamStream);
 bool menorAmayorSegunSize(void* primero, void* segundo);
 bool menorAmayorSegunOffset(void* primero, void* segundo);
 bool esSuficientementeGrandeParaElMSG(void* elemento);
 void generarParticionLibre(uint32_t base);
+void compactar();
+void asignarMensajeAParticion(particion* partiLibre, msgMemoriaBroker* mensaje);
+void eliminarParticion (particion* particion);
+void elegirParticionVictimaYEliminarla();
+void destroyParticionOcupada (void* particion);
+void destroyParticionLibre (void* particion);
+bool menorAMayorSegunTiempoCarga (void* part1, void* part2);
+bool menorAMayorSegunLru (void* part1, void* part2);
+bool sePuedeCompactar();
+t_list* buscarMensajesDeColaEnParticiones (uint32_t cola);
+void enviarMsjsASuscriptorNuevoParticiones (uint32_t cola, uint32_t* socket);
+msgMemoriaBroker*  buscarMensajeEnMemoriaParticiones(uint32_t idMensajeBuscado);
+//------------------------------------------------------------------------------------------------
+void enviarMensajesPreviosEnMemoria(uint32_t* socket, uint32_t cola);
 
 void crearDumpDeCache();
 void asignarPuntero(uint32_t offset, void* stream, uint32_t sizeStream);
-void destroyParticion(void* particion);
 
 bool yaEstaEnMemoria(paquete* paq);
 bool yaSeGuardoEnMemoria(mensajeCatch* msgCatch, mensajeGet* msgGet);

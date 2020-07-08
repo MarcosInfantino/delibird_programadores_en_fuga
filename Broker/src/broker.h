@@ -8,12 +8,22 @@
 #ifndef BROKER_H_
 #define BROKER_H_
 
+#include <stdio.h>
+#include <stdlib.h>
+#include <pthread.h>
+#include <sys/types.h>
+#include <sys/socket.h>
+#include <netdb.h>
+#include <netinet/in.h>
+#include <arpa/inet.h>
+#include <string.h>
+#include <signal.h>
+#include <unistd.h>
+#include <errno.h>
 #include <commons/collections/queue.h>
-#include<string.h>
-#include<pthread.h>
 #include <stdbool.h>
 #include <commons/config.h>
-#include<commons/log.h>
+#include <commons/log.h>
 #include <messages_lib/messages_lib.h>
 #include "memoria.h"
 #include "files.h"
@@ -25,6 +35,10 @@ t_log* loggerBroker;
 t_log* brokerLogger2;
 uint32_t tamMemoria;
 uint32_t particionMinima;
+
+uint32_t frecuenciaCompactacion;
+uint32_t cantidadBusquedasFallidas;
+
 algoritmoMem algoritmoMemoria;
 algoritmoParticiones algoritmoParticionLibre;
 algoritmoReemp algoritmoReemplazo;
