@@ -21,12 +21,12 @@
 #include "memoria.h"
 
 void registrarMensajeEnMemoria(uint32_t idMensaje, paquete* paq, algoritmoMem metodo){
-
+	log_info(brokerLogger2, "Numero 2");
 	if(paq->tipoMensaje == CATCH_POKEMON || paq->tipoMensaje == GET_POKEMON){
 		if(yaEstaEnMemoria(paq))
 			return;
 	}
-
+	log_info(brokerLogger2, "Numero 2.1");
 	msgMemoriaBroker* msgNuevo = malloc(sizeof(msgMemoriaBroker));
 	msgNuevo->cola          = paq->tipoMensaje;
 	msgNuevo->idMensaje     = idMensaje;
@@ -47,6 +47,7 @@ void registrarMensajeEnMemoria(uint32_t idMensaje, paquete* paq, algoritmoMem me
 	case BUDDY_SYSTEM:
 		pthread_mutex_lock(mutexMemoria);
 		log_info(brokerLogger2, "Selecciono administración de memoria con buddy system.");
+		log_info(brokerLogger2, "Numero 3");
 		sizePrevio = sizeListaMutex(nodosOcupados);
 		registrarEnMemoriaBUDDYSYSTEM(msgNuevo, nodoRaizMemoria);
 		while (sizeListaMutex(nodosOcupados) == sizePrevio){
@@ -66,16 +67,16 @@ void registrarMensajeEnMemoria(uint32_t idMensaje, paquete* paq, algoritmoMem me
 }
 
 void guardarEnListaMemoria(uint32_t idMensaje, uint32_t socket, ListasMemoria lista){
-
+	log_info(brokerLogger2, "Numero 4");
 	msgMemoriaBroker* mensaje = buscarMensajeEnMemoria(idMensaje);
 
 	if(mensaje == NULL){
-		printf("no se encontró el mensaje en memoria, ERROR");
+		printf("No se encontró el mensaje en memoria, ERROR");
 		return;
 	}
 
-	log_info(loggerBroker,"Se recibió ACK de cola: %s, suscriptor: %d, id de mensaje: %d -.-",nombreDeCola(mensaje->cola),socket,mensaje->idMensaje);
-	log_info(brokerLogger2,"Se recibió ACK de cola: %s, suscriptor: %d, id de mensaje: %d -.-",nombreDeCola(mensaje->cola),socket,mensaje->idMensaje);
+	//log_info(loggerBroker,"Se recibió ACK de cola: %s, suscriptor: %d, id de mensaje: %d -.-",nombreDeCola(mensaje->cola),socket,mensaje->idMensaje);
+	//log_info(brokerLogger2,"Se recibió ACK de cola: %s, suscriptor: %d, id de mensaje: %d -.-",nombreDeCola(mensaje->cola),socket,mensaje->idMensaje);
 	//log_info(loggerBroker, armarStringACK(mensaje->cola, mensaje->idMensaje, socket));
 	//log_info(brokerLogger2, armarStringACK(mensaje->cola, mensaje->idMensaje, socket));
 
@@ -108,6 +109,7 @@ msgMemoriaBroker* buscarMensajeEnMemoria(uint32_t idMensajeBuscado){
 }
 
 bool estaEnLista(uint32_t socket, ListasMemoria lista, msgMemoriaBroker* mensaje){
+	log_info(brokerLogger2, "Numero 5");
 	listaMutex* list = inicializarListaMutex();
 	if(lista == CONFIRMADO){
 		list =  mensaje->subsACK;
@@ -147,9 +149,10 @@ void crearDumpDeCache(){
 }
 
 bool yaEstaEnMemoria(paquete* paq){
-
+	log_info(brokerLogger2, "Numero 2.2");
 	switch(paq->tipoMensaje){
 	case CATCH_POKEMON:
+		log_info(brokerLogger2, "Numero CATCH");
 		return yaSeGuardoEnMemoria(deserializarCatch(paq->stream), NULL);
 	break;
 	case GET_POKEMON:
@@ -163,8 +166,7 @@ bool yaEstaEnMemoria(paquete* paq){
 }
 
 bool yaSeGuardoEnMemoria(mensajeCatch* msgCatch, mensajeGet* msgGet){
-	 particionOcupada* partOcupada = malloc(sizeof(particionOcupada));
-
+	particionOcupada* partOcupada;
 	if(algoritmoMemoria == BUDDY_SYSTEM){
 		if(msgCatch != NULL){
 			return existeMensajeEnMemoriaBuddy(NULL, msgCatch);
@@ -172,18 +174,12 @@ bool yaSeGuardoEnMemoria(mensajeCatch* msgCatch, mensajeGet* msgGet){
 			return existeMensajeEnMemoriaBuddy(msgGet,NULL);
 		}
 	}else{
-
 		for(int i=0; i<sizeListaMutex(memoriaPARTICIONES); i++){
-
 		  partOcupada = getListaMutex(memoriaPARTICIONES, i);
-
 		  if(partOcupada->mensaje->cola == CATCH_POKEMON && msgCatch != NULL){
-
 			  if(compararCatch(deserializarCatch(partOcupada->mensaje->stream), msgCatch))
 				  return true;
-
 		  }else if(partOcupada->mensaje->cola == GET_POKEMON && msgGet != NULL){
-
 			  if( compararGet(deserializarGet(partOcupada->mensaje->stream), msgGet))
 				  return true;
 		  }
@@ -192,15 +188,18 @@ bool yaSeGuardoEnMemoria(mensajeCatch* msgCatch, mensajeGet* msgGet){
 	  }
 }
 
-uint32_t compararCatch(mensajeCatch*  elemLista, mensajeCatch*  msgCatch){
+bool compararCatch(mensajeCatch*  elemLista, mensajeCatch*  msgCatch){
+	log_info(brokerLogger2, "Numero 2.2.3");
 	if(strcmp(elemLista->pokemon, msgCatch->pokemon) == 0){
 		if(elemLista->posX == msgCatch->posX && elemLista->posY == msgCatch->posY)
+			log_info(brokerLogger2, "Numero 2.2.4");
 			return true;
 	}
+	log_info(brokerLogger2, "Numero 2.2.5");
 		return false;
 }
 
-uint32_t compararGet(mensajeGet* elemLista, mensajeGet* msgGet){
+bool compararGet(mensajeGet* elemLista, mensajeGet* msgGet){
 	if(strcmp(elemLista->pokemon, msgGet->pokemon) == 0){
 		return true;}
 	return false;

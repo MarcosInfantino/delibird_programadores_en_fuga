@@ -37,6 +37,7 @@ void registrarEnMemoriaBUDDYSYSTEM(msgMemoriaBroker* mensajeNuevo, struct nodoMe
 }
 
 void elegirVictimaDeReemplazoYeliminarBD(){
+	log_info(brokerLogger2, "Numero 6");
 	struct nodoMemoria* victima;
 
 	if(algoritmoReemplazo == FIFO){
@@ -48,6 +49,7 @@ void elegirVictimaDeReemplazoYeliminarBD(){
 }
 
 struct nodoMemoria* buscarVictimaPor(bool(*condition)(struct nodoMemoria*,struct nodoMemoria*)){
+	log_info(brokerLogger2, "Numero 7");
 	struct nodoMemoria* minimo = getListaMutex(nodosOcupados, 0);
 	struct nodoMemoria* aux;
 
@@ -69,6 +71,7 @@ void modificarNodoAlibre(struct nodoMemoria* victima){
 }
 
 void evaluarConsolidacion(struct nodoMemoria* nodo){
+	log_info(brokerLogger2, "Numero 8");
 	struct nodoMemoria* buddie;
 
 	if(nodo->padre->hijoDer == nodo){
@@ -76,13 +79,20 @@ void evaluarConsolidacion(struct nodoMemoria* nodo){
 	}else{
 		buddie = nodo->padre->hijoDer;
 	}
-
+	log_info(brokerLogger2, "Numero 9");
 	if(estaLibre(buddie)){
 		nodo->padre->header.status = LIBRE;
+		struct nodoMemoria* partActual = nodo->padre;
 		liberarNodo(nodo);
 		liberarNodo(buddie);
-		evaluarConsolidacion(nodo->padre);
-	}else{return;}
+		partActual->hijoDer = malloc(sizeof(struct nodoMemoria));
+		partActual->hijoIzq = malloc(sizeof(struct nodoMemoria));
+		evaluarConsolidacion(partActual);
+		log_info(brokerLogger2, "Numero 9.1");
+	}else{
+		log_info(brokerLogger2, "Numero 9.2");
+		return;
+	}
 
 }
 
@@ -100,7 +110,7 @@ uint32_t intentarRamaIzquierda(msgMemoriaBroker* mensajeNuevo,struct nodoMemoria
 }
 
 uint32_t evaluarTamanioParticionYasignar(struct nodoMemoria* partActual, msgMemoriaBroker* msg){
-	log_info(brokerLogger2,"Entre a particionar.");
+	log_info(brokerLogger2,"Entre a particionar para el mensaje: %d y la cola %d", msg->idMensaje, msg->cola);
 
 	uint32_t tamanioMsg = msg->sizeStream;
 
@@ -184,37 +194,37 @@ bool existeMensajeEnMemoriaBuddy(mensajeGet* msgGet, mensajeCatch*  msgCatch){
 	//struct nodoMemoria* backUp = nodoActual;
 	pthread_mutex_lock(mutexMemoria);
 	struct nodoMemoria* nodoActual = nodoRaizMemoria;
-
+	struct nodoMemoria* aux;
 	if(estaLibre(nodoActual)) {
 		pthread_mutex_unlock(mutexMemoria);
-		return NULL;}
-
+		return false;
+	}
 	if(msgGet != NULL){
-		if(!compararGet(deserializarGet(nodoActual->mensaje->stream),msgGet)){
-				bool mensajeEnRamaIzq = buscarPorRamaGet(msgGet, nodoActual->hijoIzq);
-				bool mensajeEnRamaDer;
-
-				if(!mensajeEnRamaIzq){
-					mensajeEnRamaDer = buscarPorRamaGet(msgGet, nodoActual->hijoDer);
+		log_info(brokerLogger2, "Existe Get");
+		for (uint32_t o = 0; o < sizeListaMutex(nodosOcupados); o ++){
+			aux = (struct nodoMemoria*) getListaMutex(nodosOcupados, o);
+			if (aux->mensaje->cola == GET_POKEMON){
+				if (compararGet(deserializarGet(aux->mensaje->stream),msgGet)){
 					pthread_mutex_unlock(mutexMemoria);
-					return mensajeEnRamaDer;
+					return true;
 				}
-				pthread_mutex_unlock(mutexMemoria);
-				return mensajeEnRamaIzq;
+			}
 		}
+		pthread_mutex_unlock(mutexMemoria);
+		return false;
 	}else if(msgCatch != NULL){
-		if(!compararCatch(deserializarCatch(nodoActual->mensaje->stream),msgCatch)){
-				bool mensajeEnRamaIzq = buscarPorRamaCatch(msgCatch, nodoActual->hijoIzq);
-				bool mensajeEnRamaDer;
-
-				if(!mensajeEnRamaIzq){
-					mensajeEnRamaDer = buscarPorRamaCatch(msgCatch, nodoActual->hijoDer);
-					pthread_mutex_unlock(mutexMemoria);
-					return mensajeEnRamaDer;
+		log_info(brokerLogger2, "Existe Catch");
+		for (uint32_t p = 0; p < sizeListaMutex(nodosOcupados); p ++){
+			aux = (struct nodoMemoria*) getListaMutex(nodosOcupados, p);
+					if (aux->mensaje->cola == CATCH_POKEMON){
+						if (compararCatch(deserializarCatch(aux->mensaje->stream),msgCatch)){
+							pthread_mutex_unlock(mutexMemoria);
+							return true;
+						}
+					}
 				}
-				pthread_mutex_unlock(mutexMemoria);
-				return mensajeEnRamaIzq;
-		}
+		pthread_mutex_unlock(mutexMemoria);
+		return false;
 	}
 	pthread_mutex_unlock(mutexMemoria);
 	return true;
@@ -280,7 +290,10 @@ struct nodoMemoria* inicializarNodo(){
 }
 
 void liberarNodo(struct nodoMemoria* nodo){
-    free(nodo->mensaje);
+//	free(nodo->mensaje->subsYaEnviado);
+//	free(nodo->mensaje->subsACK);
+//	free(nodo->mensaje->stream);
+//    free(nodo->mensaje);
     free(nodo->hijoIzq);
     free(nodo->hijoDer);
     free(nodo);

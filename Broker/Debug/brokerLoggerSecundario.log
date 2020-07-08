@@ -197,3 +197,35 @@
 [INFO] 23:46:40:507 Broker/(9585:9608): Registre el mensaje en memoria.
 [INFO] 23:46:40:507 Broker/(9585:9608): Aviso que hay mensajes en cola.
 [INFO] 23:46:40:507 Broker/(9585:9593): Comienza el proceso de envío del mensaje a todos los suscriptores.
+[INFO] 22:26:48:478 Broker/(4753:4753): pid : 4753
+[INFO] 22:27:28:427 Broker/(4753:4772): Comienzo a registrar el mensaje en memoria.
+[INFO] 22:27:28:427 Broker/(4753:4772): Selecciono administración de memoria con buddy system.
+[INFO] 22:27:28:427 Broker/(4753:4772): Entre a particionar.
+[INFO] 22:27:28:427 Broker/(4753:4772): Comienzo a evaluar el tamaño de la particion y asignar.
+[INFO] 22:27:28:427 Broker/(4753:4772): Se almacena mensaje en posición: (nil) (de memoria) -.-
+[INFO] 22:27:28:427 Broker/(4753:4772): ASIGNE: Size: 4. Id mensaje: 1. Size del mensaje: 4.
+[INFO] 22:27:28:428 Broker/(4753:4772): Registre el mensaje en memoria.
+[INFO] 22:27:28:428 Broker/(4753:4762): Comienza el proceso de envío del mensaje a todos los suscriptores.
+[INFO] 22:27:28:428 Broker/(4753:4772): Aviso que hay mensajes en cola.
+[INFO] 22:27:28:428 Broker/(4753:4775): Comienzo a registrar el mensaje en memoria.
+[INFO] 22:27:28:428 Broker/(4753:4775): Selecciono administración de memoria con buddy system.
+[INFO] 22:27:28:428 Broker/(4753:4775): Entre a particionar.
+[INFO] 22:27:28:428 Broker/(4753:4775): Comienzo a evaluar el tamaño de la particion y asignar.
+[INFO] 22:27:28:428 Broker/(4753:4775): Se almacena mensaje en posición: 0x4 (de memoria) -.-
+[INFO] 22:27:28:429 Broker/(4753:4775): ASIGNE: Size: 4. Id mensaje: 2. Size del mensaje: 4.
+[INFO] 22:27:28:429 Broker/(4753:4775): Registre el mensaje en memoria.
+[INFO] 22:27:28:429 Broker/(4753:4762): Comienza el proceso de envío del mensaje a todos los suscriptores.
+[INFO] 22:27:28:429 Broker/(4753:4775): Aviso que hay mensajes en cola.
+[INFO] 22:27:28:429 Broker/(4753:4778): Comienzo a registrar el mensaje en memoria.
+[INFO] 22:27:28:429 Broker/(4753:4778): Selecciono administración de memoria con buddy system.
+[INFO] 22:27:28:429 Broker/(4753:4778): Entre a particionar.
+[INFO] 22:27:28:429 Broker/(4753:4778): Comienzo a evaluar el tamaño de la particion y asignar.
+[INFO] 22:27:28:430 Broker/(4753:4778): Entre a particionar.
+[INFO] 22:27:28:430 Broker/(4753:4778): Comienzo a evaluar el tamaño de la particion y asignar.
+[INFO] 22:27:28:430 Broker/(4753:4778): Entre a particionar.
+[INFO] 22:27:28:430 Broker/(4753:4778): Comienzo a evaluar el tamaño de la particion y asignar.
+[INFO] 22:27:28:430 Broker/(4753:4778): Se almacena mensaje en posición: 0x20 (de memoria) -.-
+[INFO] 22:27:28:430 Broker/(4753:4778): ASIGNE: Size: 32. Id mensaje: 3. Size del mensaje: 24.
+[INFO] 22:27:28:430 Broker/(4753:4778): Registre el mensaje en memoria.
+[INFO] 22:27:28:430 Broker/(4753:4761): Comienza el proceso de envío del mensaje a todos los suscriptores.
+[INFO] 22:27:28:430 Broker/(4753:4778): Aviso que hay mensajes en cola.

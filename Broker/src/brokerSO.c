@@ -80,8 +80,6 @@ void levantarDatosDeConfig(char * pathConfig, uint32_t intMock){
 	}
 }
 
-
-
 void* iniciarServidor(){
 	struct sockaddr_in direccionServidor;
 	direccionServidor.sin_family = AF_INET;

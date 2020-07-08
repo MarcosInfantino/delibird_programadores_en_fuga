@@ -149,8 +149,8 @@ void destroyParticion(void* particion);
 bool yaEstaEnMemoria(paquete* paq);
 bool yaSeGuardoEnMemoria(mensajeCatch* msgCatch, mensajeGet* msgGet);
 bool existeMensajeEnMemoriaBuddy(mensajeGet* msgGet, mensajeCatch*  msgCatch);
-uint32_t compararCatch(mensajeCatch*  elemLista, mensajeCatch*  msgCatch);
-uint32_t compararGet(mensajeGet* elemLista, mensajeGet* msgGet);
+bool compararCatch(mensajeCatch*  elemLista, mensajeCatch*  msgCatch);
+bool compararGet(mensajeGet* elemLista, mensajeGet* msgGet);
 
 void elegirVictimaDeReemplazoYeliminarBD();
 struct nodoMemoria* buscarVictimaPor(bool(*condition)(struct nodoMemoria*,struct nodoMemoria*));
