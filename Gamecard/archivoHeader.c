@@ -57,6 +57,7 @@ void modificarSize(archivoHeader* metadata,uint32_t size){
 
 void agregarBloque(archivoHeader* metadata, blockHeader* bloque){
 	if(metadata->tipo==ARCHIVO){
+		ocuparBloque(bloque->id);
 		t_config* config=config_create(metadata->pathArchivo);
 		list_add(metadata->bloquesUsados,(void*) bloque);
 		char* listaB=obtenerStringListaBloques(metadata);
@@ -68,7 +69,10 @@ void agregarBloque(archivoHeader* metadata, blockHeader* bloque){
 
 }
 
-
+void agregarUnBloque(archivoHeader* metadata){
+	blockHeader* bloqueLibre= encontrarBloqueLibre();
+	agregarBloque(metadata, bloqueLibre);
+}
 
 char* obtenerStringListaBloques(archivoHeader* metadata){
 	t_list* listaBloques=metadata->bloquesUsados;
@@ -116,6 +120,12 @@ void removerBloque(archivoHeader* metadata, uint32_t idBloque){
 	config_save(config);
 	config_destroy(config);
 	free(listaB);
+	liberarBloque(idBloque);
+}
+
+void removerUnBloque(archivoHeader* metadata){
+	blockHeader* bloque=list_get(metadata->bloquesUsados,0);
+	removerBloque(metadata, bloque->id);
 }
 
 int32_t obtenerPosicionBloqueEnLista(t_list* listaBloques , uint32_t idBloque){
@@ -149,6 +159,10 @@ char* obtenerStringArchivo(char* pokemon){
 	return buffer;
 }
 
+t_list* obtenerPosicionesDeArchivo(char* pokemon){
+	return obtenerListaPosicionCantidadDeString(obtenerStringArchivo(pokemon));
+}
+
 char* pathBloque(uint32_t idBloque){
 	return string_from_format("%s/Blocks/%d.bin", puntoMontaje, idBloque);
 }
@@ -160,15 +174,23 @@ char* leerBloque(blockHeader* bloque){
 	fseek(archivoBloque, 0, SEEK_END);
 	uint32_t pos= ftell(archivoBloque);
 	fseek(archivoBloque, 0, SEEK_SET);
-	char* buffer= malloc(pos+1);
-	fread(buffer, pos+1, 1, archivoBloque);
-	if(string_contains(buffer, "\n")){
-		log_info(gamecardLogger2, "Encontre el  barra n.");
-	}
+	char* resultado= malloc(pos+1);
+	//fread(buffer, pos, 1, archivoBloque);
+	fread(resultado, 1, pos, archivoBloque);
+//	if(string_contains(resultado, "\n")){
+//		log_info(gamecardLogger2, "Encontre el  barra n.");
+	*(resultado+pos)='\0';
 	fclose(archivoBloque);
-	return buffer;
+//	char* resultado=string_new();
+//	string_append(&resultado,buffer);
+//	string_append(&resultado,"\0");
+	//free(buffer);
+	return resultado;
+	//return resultado;
 
 }
+
+
 
 uint32_t posBloque(blockHeader* bloque){
 	char* path=pathBloque(bloque->id);
@@ -188,10 +210,10 @@ t_list* obtenerListaPosicionesString(char* posiciones){
 			list_add(lista, (void*) buffer);
 			buffer=string_new();
 		}else{
-			char* cadena=malloc(1);
-			sprintf(cadena, "%c", caracterActual);
+			char cadena [2]=" \0";
+			cadena[0]=caracterActual;
 			string_append(&buffer, cadena);
-			free(cadena);
+			//free(cadena);
 		}
 	}
 	return lista;
@@ -212,26 +234,26 @@ posicionCantidad* obtenerPosicionCantidadDeString(char* stringPos){
 					posX=false;
 					posY=true;
 				}else{
-					char* cadena=malloc(1);
-					sprintf(cadena, "%c", caracterActual);
+					char cadena [2]=" \0";
+					cadena[0]=caracterActual;
 					string_append(&bufferPosX, cadena);
-					free(cadena);
+					//free(cadena);
 				}
 			}else if(posY){
 				if(caracterActual=='='){
 					posY=false;
 					cantidad=true;
 				}else{
-					char* cadena=malloc(1);
-					sprintf(cadena, "%c", caracterActual);
+					char cadena [2]=" \0";
+					cadena[0]=caracterActual;
 					string_append(&bufferPosY, cadena);
-					free(cadena);
+					//free(cadena);
 				}
 			}else if(cantidad){
-				char* cadena=malloc(1);
-				sprintf(cadena, "%c", caracterActual);
+				char cadena [2]=" \0";
+				cadena[0]=caracterActual;
 				string_append(&bufferCantidad, cadena);
-				free(cadena);
+				//free(cadena);
 			}
 
 		}
@@ -258,4 +280,125 @@ t_list * obtenerListaPosicionCantidad(t_list* listaString){
 
 t_list* obtenerListaPosicionCantidadDeString(char* string){
 	return obtenerListaPosicionCantidad(obtenerListaPosicionesString(string));
+}
+
+
+
+void reescribirArchivo(char* pokemon, char* stringAEscribir){
+	archivoHeader* headerPoke= buscarArchivoHeaderPokemon(pokemon);
+
+	uint32_t bytesAEscribir=strlen(stringAEscribir);
+	uint32_t bloquesNecesarios=(bytesAEscribir/tallGrass.block_size)+1;
+
+	while(bloquesNecesarios<cantidadBloquesArchivo(headerPoke)){
+		removerUnBloque(headerPoke);
+	}
+	while(bytesAEscribir>capacidadTotalArchivo(headerPoke)){
+		agregarUnBloque(headerPoke);
+	}
+
+	t_list* listaBloques= headerPoke->bloquesUsados;
+	for(uint32_t i=0;i<list_size(listaBloques);i++){
+		blockHeader* bloqueActual=(blockHeader*) list_get(listaBloques,i);
+		char* subString;
+		if(bytesAEscribir<tallGrass.block_size){
+			subString= string_substring(stringAEscribir, i* tallGrass.block_size, bytesAEscribir);
+
+			escribirBloque(bloqueActual->id, 0, bytesAEscribir, subString);
+
+			bytesAEscribir=0;
+		}else{
+			subString= string_substring(stringAEscribir, i* tallGrass.block_size, tallGrass.block_size);
+
+			escribirBloque(bloqueActual->id, 0, tallGrass.block_size, subString);
+
+			bytesAEscribir-=tallGrass.block_size;
+		}
+
+		free(subString);
+
+	}
+
+
+}
+
+uint32_t cantidadBloquesArchivo(archivoHeader* archivo){
+	return list_size(archivo->bloquesUsados);
+}
+
+uint32_t capacidadTotalArchivo(archivoHeader* archivo){
+	return cantidadBloquesArchivo(archivo)*(tallGrass.block_size);
+}
+
+char* leerArchivo(char* pokemon){
+	archivoHeader* headerPoke= buscarArchivoHeaderPokemon(pokemon);
+	char* buffer=string_new();
+	for(uint32_t i=0; i<list_size(headerPoke->bloquesUsados);i++){
+		blockHeader* bloqueActual= (blockHeader*) list_get(headerPoke->bloquesUsados,i);
+		char* stringActual= leerBloque(bloqueActual);
+		string_append(&buffer, stringActual);
+		free(stringActual);
+	}
+	return buffer;
+}
+
+posicionCantidad* buscarPosicionCantidad(t_list* lista, posicion pos){
+	for(uint32_t i=0; i< list_size(lista);i++ ){
+		posicionCantidad* actual= (posicionCantidad*) list_get(lista,i);
+
+		if((actual->posicion).x==pos.x && (actual->posicion).y==pos.y){
+			return actual;
+		}
+	}
+	return NULL;
+}
+
+t_list* obtenerListaPosicionCantidadDeArchivo(archivoHeader* archivo){
+	char* stringPosCant=leerArchivo(archivo->nombreArchivo);
+	return obtenerListaPosicionCantidadDeString(stringPosCant);
+}
+
+char* posicionCantidadToString(posicionCantidad* pos){
+	char* posX=string_itoa((pos->posicion).x);
+	char* posY=string_itoa((pos->posicion).y);
+	char* cantidad=string_itoa(pos->cantidad);
+	char * buffer=string_new();
+	string_append(&buffer,posX );
+	string_append(&buffer,"-");
+	string_append(&buffer,posY );
+	string_append(&buffer, "=" );
+	string_append(&buffer,cantidad);
+	string_append(&buffer,"\n" );
+
+	free(posX);
+	free(posY);
+	free(cantidad);
+
+	return buffer;
+}
+
+char* listaPosicionCantidadToString(t_list* lista){
+	char* buffer=string_new();
+
+	for(uint32_t i=0; i<list_size(lista);i++){
+		posicionCantidad* actual= (posicionCantidad*) list_get(lista, i);
+
+		char* stringActual=posicionCantidadToString(actual);
+
+		string_append(&buffer, stringActual);
+		free(stringActual);
+	}
+	return buffer;
+
+}
+
+void actualizarPosicionesArchivo(archivoHeader* archivo, t_list* listaPosicionCantidad){//listaPosicionCantidad
+	if(archivo->tipo==ARCHIVO){
+
+		char* listaString=listaPosicionCantidadToString(listaPosicionCantidad);
+		reescribirArchivo(archivo->nombreArchivo, listaString);
+	}
+
+
+
 }

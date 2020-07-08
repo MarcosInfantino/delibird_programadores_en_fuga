@@ -118,6 +118,7 @@ struct nodoArbolDirectorio* raizDirectorio;
 
 listaMutex* listaArchivos;//lista de archivoHeader
 uint32_t tiempoRetardoGC;
+uint32_t tiempoReintentoOperacion;
 
 void* suscribirseCola(void* msgSuscripcion);
 void* suscribirseColasBroker(void* config);
@@ -174,4 +175,18 @@ t_list* obtenerListaPosicionesString(char* posiciones);
 posicionCantidad* obtenerPosicionCantidadDeString(char* stringPos);
 t_list * obtenerListaPosicionCantidad(t_list* listaString);
 t_list* obtenerListaPosicionCantidadDeString(char* string);
+t_list* obtenerPosicionesDeArchivo(char* pokemon);
+uint32_t cantidadBloquesArchivo(archivoHeader* archivo);
+uint32_t capacidadTotalArchivo(archivoHeader* archivo);
+void removerUnBloque(archivoHeader* metadata);
+blockHeader* encontrarBloqueLibre();
+void agregarUnBloque(archivoHeader* metadata);
+void reescribirArchivo(char* pokemon, char* stringAEscribir);
+FILE* verificarApertura(archivoHeader* archivo);
+char* leerArchivo(char* pokemon);
+posicionCantidad* buscarPosicionCantidad(t_list* lista, posicion pos);
+t_list* obtenerListaPosicionCantidadDeArchivo(archivoHeader* archivo);
+char* posicionCantidadToString(posicionCantidad* pos);
+char* listaPosicionCantidadToString(t_list* lista);
+void actualizarPosicionesArchivo(archivoHeader* archivo, t_list* listaPosicionCantidad);
 #endif /* GAMECARD_H_ */

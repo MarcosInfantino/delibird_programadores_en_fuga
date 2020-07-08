@@ -24,6 +24,7 @@ int main(void) {
 	puertoBrokerGC = config_get_int_value(configGamecard, "PUERTO_BROKER");//5002;
 	ipBrokerGC = config_get_string_value(configGamecard, "IP_BROKER");//"127.0.0.1"; //
 	tiempoRetardoGC = config_get_int_value(configGamecard, "TIEMPO_DE_RETARDO_OPERACION"); //
+	tiempoReintentoOperacion=config_get_int_value(configGamecard, "TIEMPO_DE_REINTENTO_OPERACION"); //
 	puntoMontaje = config_get_string_value(configGamecard, "PUNTO_MONTAJE_TALLGRASS");
 	log_info(gamecardLogger2,"Puerto Broker:%i",puertoBrokerGC);
 
@@ -39,11 +40,32 @@ int main(void) {
 	inicializarListaBloques();
 	archivoHeader* pikachu=crearDirectorio("Pikachu",pathFiles,ARCHIVO);
 
-	agregarBloque(pikachu, obtenerBloquePorId(1));
-	agregarBloque(pikachu, obtenerBloquePorId(2));
-	escribirBloque(1,0,strlen("Hola")+1,"Hola\n");
-	escribirBloque(1,5,strlen("Hola"),"Hola");
-	escribirBloque(2,0,strlen("comoAndas"),"comoAndas");
+//	char* string=string_new();
+//	sprintf(string, "%s\n",string_repeat('a', 135));
+	if(!estaLibre(5)){
+		printf("esta ocupado el 5\n");
+	}
+	//reescribirArchivo("Pikachu", string_repeat('a', 600));
+
+	//char* s=leerBloque(obtenerBloquePorId(1));
+
+//	log_info(gamecardLogger2, "%i",strlen(s));
+//	log_info(gamecardLogger2, "lectura bloque1: %s",s);
+//	log_info(gamecardLogger2, "lecuta archivo: %s",leerArchivo("Pikachu"));
+//	ocuparBloque(1);
+//	ocuparBloque(2);
+//	ocuparBloque(3);
+//	if(!estaLibre(1) && !estaLibre(2) && !estaLibre(3) ){
+//		log_info(gamecardLogger2,"SE OCUPARON TODOS");
+//	}
+//	agregarBloque(pikachu, obtenerBloquePorId(1));
+//	agregarBloque(pikachu, obtenerBloquePorId(2));
+//	agregarBloque(pikachu, obtenerBloquePorId(5));
+//	escribirBloque(1,0,strlen("Hola")+1,"Hola\n");
+//	escribirBloque(1,5,strlen("Hola"),"Hola");
+//	escribirBloque(2,0,strlen("comoAndas"),"comoAndas");
+
+
 //	log_info(gamecardLogger2,"Lectura bloque: %s", obtenerStringArchivo("Pikachu"));
 //
 //	t_list* listaPosicionesString=obtenerListaPosicionesString("1-1=10\n10-11=1\n158-1=112\n");
@@ -60,8 +82,9 @@ int main(void) {
 	log_info(gamecardLogger2, "Traduccion: %i-%i=%i", (posCantidad2->posicion).x, (posCantidad2->posicion).y, posCantidad2->cantidad);
 	log_info(gamecardLogger2, "Traduccion: %i-%i=%i", (posCantidad3->posicion).x, (posCantidad3->posicion).y, posCantidad3->cantidad);
 
-
-
+	actualizarPosicionesArchivo(pikachu,listaPosicionCantidad);
+	//log_info(gamecardLogger2, "pos en string: %s",posicionCantidadToString(posCantidad1));
+	//log_info(gamecardLogger2, "lista en string: %s",listaPosicionCantidadToString(listaPosicionCantidad));
 
 	//escribirBloque2(1,"Hola");
 	//printf("El resultado fue: %i\n",resul);
@@ -301,10 +324,23 @@ void* atenderNew(void* paq) {
 	archivoHeader* archivoPoke= obtenerArchivoPokemon(pokeEnPosicion->pokemon);
 
 
+	FILE* archivoMetadata=verificarApertura(archivoPoke);
+
+	t_list* listaPosCantidad=obtenerListaPosicionCantidadDeArchivo(archivoPoke);
+	posicionCantidad* encontrado= buscarPosicionCantidad(listaPosCantidad, pokeEnPosicion->posicion);
+
+	if(encontrado!=NULL){
+		(encontrado->cantidad)+=pokeEnPosicion->cantidad;
+	}else{
+		posicionCantidad* posAgregar=malloc(sizeof(posicionCantidad));
+		posAgregar->cantidad=pokeEnPosicion->cantidad;
+		(posAgregar->posicion).x=(pokeEnPosicion->posicion).x;
+		(posAgregar->posicion).y=(pokeEnPosicion->posicion).y;
+		list_add(listaPosCantidad, (void*) posAgregar);
+	}
 
 	//Verificar que el pokemon este en nuestro FileSystem
 	//Una vez encontrado (o creado) verificar si puedo abrirlo
-
 	//Verificar si las posiciones existen en el archivo
 	//IF SUCCESS
 	sleep(tiempoRetardoGC);
@@ -418,6 +454,13 @@ void enviarCaught(pokemonAAtrapar* pokeAAtrapar) {
 	send(cliente, paqueteSerializado, sizePaquete(paq), 0);
 	free(paqueteSerializado);
 
+}
+
+FILE* verificarApertura(archivoHeader* archivo){
+	while(estaAbierto(archivo)){
+		sleep(tiempoReintentoOperacion);
+	}
+	return abrirArchivo(archivo);
 }
 
 

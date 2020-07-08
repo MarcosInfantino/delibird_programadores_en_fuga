@@ -103,14 +103,19 @@ void iniciarBitmap() {
 void iniciarBitmap() {
 	char* pathBitmap = "/home/utnso/tp-2020-1c-Programadores-en-Fuga/Gamecard/TALL_GRASS/Metadata/bitmap.bin";
 
-	FILE* archivoBitmap = fopen(pathBitmap,"w+b");
-	fseek(archivoBitmap,0, SEEK_SET);
-	for(uint32_t i=0;i<tallGrass.blocks;i++){
-		fputs("0",archivoBitmap);
-	}
-	fclose(archivoBitmap);
+//	FILE* archivoBitmap = fopen(pathBitmap,"w+b");
+//	fseek(archivoBitmap,0, SEEK_SET);
+//	for(uint32_t i=0;i<tallGrass.blocks;i++){
+//		fputs("0",archivoBitmap);
+//	}
+//	fclose(archivoBitmap);
 
-	uint32_t descriptor = open(pathBitmap, O_RDWR , S_IRUSR | S_IWUSR);
+	//uint32_t fd = open(string_from_format("%s/Blocks/%d.bin", puntoMontaje, bloque->id),O_RDWR|O_CREAT,0777);
+
+
+	//uint32_t descriptor = open(pathBitmap, O_RDWR , S_IRUSR | S_IWUSR);
+	uint32_t descriptor = open(pathBitmap, O_RDWR , S_IRUSR | S_IWUSR | O_RDWR|O_CREAT, 0777);
+	ftruncate(descriptor,tallGrass.blocks);
 	fsync(descriptor);
 	mmapBitmap = mmap(NULL, tallGrass.blocks, PROT_READ | PROT_WRITE, MAP_SHARED, descriptor, 0);
 
@@ -118,6 +123,11 @@ void iniciarBitmap() {
 	close(descriptor);
 
 	 bitmap = bitarray_create_with_mode((char*) mmapBitmap, tallGrass.blocks, LSB_FIRST);
+
+	 for(uint32_t i=0;i<tallGrass.blocks;i++){
+	 	bitarray_clean_bit(bitmap,i);
+	 }
+
 	//bitmap = bitarray_create_(mmapBitmap, sb.st_size);
 //	for(uint32_t i = 0; i < tallGrass.blocks; i++){
 //			 bitarray_clean_bit(bitmap, i);
@@ -331,7 +341,8 @@ int32_t escribirBloque(int32_t bloque, int32_t offset, int32_t longitud, char* b
 
 	FILE* block = fopen(pathBloque(bloque),"r+");
 	fseek(block, offset, SEEK_SET);
-	fwrite(buffer, strlen(buffer)+1, 1, block);
+	//fwrite(buffer, strlen(buffer)+1, 1, block);
+	fwrite(buffer, strlen(buffer), 1, block);
 	//fputs(buffer,block);
 	headerBloque->pos=ftell(block);
 	fclose(block);
@@ -341,6 +352,8 @@ int32_t escribirBloque(int32_t bloque, int32_t offset, int32_t longitud, char* b
 		return -1;
 	}
 }
+
+
 
 archivoHeader* buscarArchivoHeaderPokemon(char* pokemon){
 	for(uint32_t i=0; i< sizeListaMutex(listaArchivos);i++){
@@ -357,3 +370,4 @@ archivoHeader* buscarArchivoHeaderPokemon(char* pokemon){
 bool archivoHeaderYaRegistrado(char* pokemon){
 	return buscarArchivoHeaderPokemon(pokemon)!=NULL;
 }
+
