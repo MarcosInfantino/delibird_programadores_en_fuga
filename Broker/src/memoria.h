@@ -141,6 +141,9 @@ bool buscarPorRamaCatch(mensajeCatch*  msgCatch, struct nodoMemoria* nodoActual 
 
 uint32_t intentarRamaIzquierda(msgMemoriaBroker* mensajeNuevo, struct nodoMemoria* partActual);
 
+particion* crearPrimeraParticionLibre();
+particion* inicializarParticion();
+
 uint32_t tamanioParticion(struct nodoMemoria* part);
 uint32_t tamanioMinimo(struct nodoMemoria* partActual);
 bool noEsParticionMinima(struct nodoMemoria* particion);
@@ -155,7 +158,7 @@ bool ambosHijosOcupados(struct nodoMemoria* padre);
 
 //---------------------------------PARTICIONES DINAMICAS---------------------------------------
 void registrarEnParticiones(msgMemoriaBroker*);
-particionLibre* obtenerParticionLibrePARTICIONES(uint32_t tamStream);
+particion* obtenerParticionLibrePARTICIONES(uint32_t tamStream);
 bool menorAmayorSegunSize(void* primero, void* segundo);
 bool menorAmayorSegunOffset(void* primero, void* segundo);
 bool esSuficientementeGrandeParaElMSG(void* elemento);

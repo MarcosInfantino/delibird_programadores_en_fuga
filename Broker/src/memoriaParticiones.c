@@ -50,58 +50,92 @@ bool sePuedeCompactar(){
 void registrarEnParticiones(msgMemoriaBroker* mensajeNuevo){
 	particion* particionLibre;
 	particionLibre = obtenerParticionLibrePARTICIONES(mensajeNuevo->sizeStream);
-
+	log_info(brokerLogger2, "OBTUVE PARTICION");
 	if(particionLibre == NULL){
+		log_info(brokerLogger2, "Particion nula");
 		cantidadBusquedasFallidas++;
 		if(sePuedeCompactar()){
 			compactar();
 			particionLibre = obtenerParticionLibrePARTICIONES(mensajeNuevo->sizeStream);
 			if(particionLibre == NULL){
+				log_info(brokerLogger2, "Particion nula 2");
 				cantidadBusquedasFallidas++;
 				elegirParticionVictimaYEliminarla();
 				registrarEnParticiones (mensajeNuevo);
+			}
 		}else{
+			log_info(brokerLogger2, "Particion nula 3");
 			elegirParticionVictimaYEliminarla();
 			registrarEnParticiones(mensajeNuevo);
 		}
 	}
+	log_info(brokerLogger2, "Voy a asignar mensaje");
 	asignarMensajeAParticion(particionLibre, mensajeNuevo);
 //	asignarPuntero(particionLibre->offset, mensajeNuevo->stream, mensajeNuevo->sizeStream);
-	}
 }
 
 void asignarMensajeAParticion(particion* partiLibre, msgMemoriaBroker* mensaje){
-	particion* partiOcupada = malloc(sizeof(particion));
+	log_info(brokerLogger2, "ENTRO part");
+	log_info(brokerLogger2, "MI MENSAJE TIENE TAMAÑO %i", mensaje->sizeStream);
+	particion* partiOcupada = inicializarParticion();
+	printf("\nEl offset es %i \n", partiLibre->offset);
+	log_info(brokerLogger2, "Creando part");
 	partiOcupada->offset = partiLibre->offset;
 	partiOcupada->mensaje = mensaje;
 	partiOcupada->sizeParticion = mensaje->sizeStream;
 	partiOcupada->estadoParticion = PARTICION_OCUPADA;
-	//asignar LRU y tiempo de carga
+	time_t t;
+	t=time(NULL);
+	partiOcupada->lru = *localtime(&t);
+	partiOcupada->tiempoDeCargaPart = *localtime(&t);
+
 	memcpy(memoria + partiOcupada->offset, mensaje->stream, mensaje->sizeStream);
 	mensaje->stream = memoria + partiOcupada->offset;
 	addListaMutex(particionesOcupadas, (void*)partiOcupada);
-
 	if(partiLibre->sizeParticion > mensaje->sizeStream){
-		partiLibre->offset += mensaje->sizeStream;
-		partiLibre->sizeParticion-= mensaje->sizeStream;
+		log_info(brokerLogger2, "GENERO POR MAYOR");
+		partiLibre->offset = partiLibre->offset + mensaje->sizeStream;
+		partiLibre->sizeParticion = partiLibre->sizeParticion - mensaje->sizeStream;
+		partiLibre->estadoParticion = PARTICION_LIBRE;
+		addListaMutex(particionesLibres, (void*)partiLibre);
 	}else{ //osea que el tamaño es igual
+		log_info(brokerLogger2, "DESTRUYO PART");
 		destroyParticionLibre (partiLibre);
 	}
 }
+particion* inicializarParticion(){
+	particion* particionADevolver = malloc(sizeof(particion));
+	particionADevolver->mensaje = malloc (sizeof(msgMemoriaBroker));
+	return particionADevolver;
+}
 
-particionLibre* obtenerParticionLibrePARTICIONES(uint32_t tamStream){
+particion* crearPrimeraParticionLibre(void){
+	particion* particionADevolver = malloc(sizeof(particion));
+	particionADevolver->offset = 0;
+	particionADevolver->sizeParticion = tamMemoria;
+	particionADevolver->estadoParticion = PARTICION_LIBRE;
+
+	particionADevolver->mensaje = malloc (sizeof(msgMemoriaBroker));
+	return particionADevolver;
+}
+
+
+particion* obtenerParticionLibrePARTICIONES(uint32_t tamStream){
 	auxTamanioStreamGlobal = tamStream;
 
-	if(sizeListaMutex(particionesLibres) <= 0)
+	if(sizeListaMutex(particionesLibres) == 0)
 		return NULL;
 
 	if (algoritmoParticionLibre == FIRST_FIT){
 		list_sort_Mutex(particionesLibres, menorAmayorSegunOffset);
-		return list_remove_by_condition_Mutex(particionesLibres, esSuficientementeGrandeParaElMSG );
-
+		particion* pSeleccionadaFIRST = (particion*)list_remove_by_condition_Mutex(particionesLibres, esSuficientementeGrandeParaElMSG);
+		printf("FIRST FIT Selecciono %i , cuyo estado es: %i \n", pSeleccionadaFIRST->offset, pSeleccionadaFIRST->estadoParticion);
+		return pSeleccionadaFIRST;
 	}else if(algoritmoParticionLibre == BEST_FIT){
 		list_sort_Mutex(particionesLibres, menorAmayorSegunSize);
-		return list_remove_by_condition_Mutex(particionesLibres, esSuficientementeGrandeParaElMSG );
+		particion* pSeleccionadaBEST = (particion*)list_remove_by_condition_Mutex(particionesLibres, esSuficientementeGrandeParaElMSG);
+		printf("BEST FIT Selecciono %i , cuyo estado es: %i \n", pSeleccionadaBEST->offset, pSeleccionadaBEST->estadoParticion);
+		return pSeleccionadaBEST;
 	}
 	return NULL;
 }

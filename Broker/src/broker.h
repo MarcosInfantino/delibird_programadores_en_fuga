@@ -35,6 +35,7 @@ t_log* loggerBroker;
 t_log* brokerLogger2;
 uint32_t tamMemoria;
 uint32_t particionMinima;
+uint32_t iteraciones;
 
 uint32_t frecuenciaCompactacion;
 uint32_t cantidadBusquedasFallidas;

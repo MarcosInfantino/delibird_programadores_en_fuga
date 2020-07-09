@@ -9,12 +9,10 @@
 #include "memoria.h"
 
 void registrarMensajeEnMemoria(uint32_t idMensaje, paquete* paq, algoritmoMem metodo){
-	log_info(brokerLogger2, "Numero 2");
 	if(paq->tipoMensaje == CATCH_POKEMON || paq->tipoMensaje == GET_POKEMON){
 		if(yaEstaEnMemoria(paq))
 			return;
 	}
-	log_info(brokerLogger2, "Numero 2.1");
 	msgMemoriaBroker* msgNuevo = malloc(sizeof(msgMemoriaBroker));
 	msgNuevo->cola          = paq->tipoMensaje;
 	msgNuevo->idMensaje     = idMensaje;
@@ -29,8 +27,13 @@ void registrarMensajeEnMemoria(uint32_t idMensaje, paquete* paq, algoritmoMem me
 	log_info(brokerLogger2, "Comienzo a registrar el mensaje en memoria.");
 	switch(metodo){
 	case PARTICIONES_DINAMICAS:
+		log_info(brokerLogger2, "ITERACION: %i", iteraciones);
+		iteraciones = iteraciones + 1;
 		pthread_mutex_lock(mutexMemoria);
+		particion* part = (particion*) getListaMutex(particionesLibres,0);
+		log_info(brokerLogger2, "Mi primera particion tiene offset: %i", part -> offset);
 		registrarEnParticiones(msgNuevo);
+		log_info(brokerLogger2, "Registre en particiones");
 		pthread_mutex_unlock(mutexMemoria);
 		break;
 	case BUDDY_SYSTEM:
@@ -133,10 +136,11 @@ bool yaEstaEnMemoria(paquete* paq){
 	log_info(brokerLogger2, "Numero 2.2");
 	switch(paq->tipoMensaje){
 	case CATCH_POKEMON:
-		log_info(brokerLogger2, "Numero CATCH");
+		log_info(brokerLogger2, "Ya esta Catch");
 		return yaSeGuardoEnMemoria(deserializarCatch(paq->stream), NULL);
 	break;
 	case GET_POKEMON:
+		log_info(brokerLogger2, "Ya esta Get");
 		return yaSeGuardoEnMemoria(NULL, deserializarGet(paq->stream));
 	break;
 	default:
@@ -147,7 +151,7 @@ bool yaEstaEnMemoria(paquete* paq){
 }
 
 bool yaSeGuardoEnMemoria(mensajeCatch* msgCatch, mensajeGet* msgGet){
-	particionOcupada* partOcupada;
+	particion* partOcupada;
 	if(algoritmoMemoria == BUDDY_SYSTEM){
 		if(msgCatch != NULL){
 			return existeMensajeEnMemoriaBuddy(NULL, msgCatch);
@@ -155,6 +159,7 @@ bool yaSeGuardoEnMemoria(mensajeCatch* msgCatch, mensajeGet* msgGet){
 			return existeMensajeEnMemoriaBuddy(msgGet,NULL);
 		}
 	}else{
+		log_info(brokerLogger2, "Entro como particion en YASEGUARDO");
 		for(int i=0; i<sizeListaMutex(particionesOcupadas); i++){
 		  partOcupada = getListaMutex(particionesOcupadas, i);
 		  if(partOcupada->mensaje->cola == CATCH_POKEMON && msgCatch != NULL){

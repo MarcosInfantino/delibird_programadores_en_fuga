@@ -13,7 +13,7 @@
 #include "files.h"
 
 int main(void) {
-
+	iteraciones = 0;
     brokerLogger2 = log_create("brokerLoggerSecundario.log", "Broker", true, LOG_LEVEL_INFO);
 
     log_info(brokerLogger2, "pid : %i", getpid());
@@ -22,8 +22,8 @@ int main(void) {
 	signal(SIGUSR1, crearDumpDeCache);
 
 	//levantarDatosDeConfig("Broker.config", 1); 			//1 para datos de config, otro para hardcode
-	//levantarDatosDeConfig("pruebaBaseBroker.config", 1);
-	levantarDatosDeConfig("pruebaBS.config", 1);
+	levantarDatosDeConfig("pruebaBaseBroker.config", 1);
+	//levantarDatosDeConfig("pruebaBS.config", 1);
 
 	char* nombreLog   = "logBroker.log";
 	char* programName = "BROKER";
@@ -373,6 +373,7 @@ void definirComienzoDeMemoria(){
 	case PARTICIONES_DINAMICAS:
 		particionesOcupadas = inicializarListaMutex();
 		particionesLibres = inicializarListaMutex();
+		addListaMutex(particionesLibres,(void*) crearPrimeraParticionLibre());
 		break;
 	}
 }

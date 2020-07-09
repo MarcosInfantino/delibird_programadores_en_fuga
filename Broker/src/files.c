@@ -79,39 +79,36 @@ void almacenarParticionLibreEnArchivo(lineaFileLibre* particionVacia){
 }*/
 
 void serializarLineaOcupada (lineaFile* particionE){
-	t_list* particiones = list_create();
-	list_add_all(particiones, particionesOcupadas);
-	list_add_all(particiones, particionesLibres);
-	list_sort(particiones, menorAmayorSegunOffset);
-	for(int i =0; i<sizeListaMutex(particiones); i++){
-		particion* particionAEscribir = (particion*)list_get(particiones, i);
-		char* buffer = string_new();
-		char* nroParticion = string_from_format("Particion %d:", i);
-		string_append(&buffer, nroParticion);
-		string_append(&buffer, " ");
-		char* inicioParticion = string_from_format("%p", memoria + particionAEscribir->offset);
-		string_append(&buffer, inicioParticion);
-		string_append(&buffer, "-");
-		char* finParticion = string_from_format("%p", memoria+particionAEscribir->offset+particionAEscribir->sizeParticion);
-		string_append(&buffer, finParticion);
-		string_append(&buffer, ".");
-		string_append(&buffer, "  ");
-		if(particionAEscribir->estadoParticion == PARTICION_LIBRE){
-			string_append(&buffer,"%s\n", LIBREP);
-			escribirArchivo(buffer);
-		}else{
-			string_append(&buffer, OCUPADA);
-		}
-		string_append(&buffer, "    ");
-		string_append(&buffer, "LRU: ");
-		char* valorLru = string_from_format("%i:", "%i:", "%i:", particionAEscribir->lru.tm_hour, particionAEscribir->lru.tm_min, particionAEscribir->lru.tm_sec);
-		string_append(&buffer, valorLru);
-		string_append("   ");
-		string_append(&buffer, "COLA: ");
-
-	}
-
-
+//	t_list* particiones = list_create();
+//	list_add_all(particiones, particionesOcupadas);
+//	list_add_all(particiones, particionesLibres);
+//	list_sort(particiones, menorAmayorSegunOffset);
+//	for(int i =0; i<sizeListaMutex(particiones); i++){
+//		particion* particionAEscribir = (particion*)list_get(particiones, i);
+//		char* buffer = string_new();
+//		char* nroParticion = string_from_format("Particion %d:", i);
+//		string_append(&buffer, nroParticion);
+//		string_append(&buffer, " ");
+//		char* inicioParticion = string_from_format("%p", memoria + particionAEscribir->offset);
+//		string_append(&buffer, inicioParticion);
+//		string_append(&buffer, "-");
+//		char* finParticion = string_from_format("%p", memoria+particionAEscribir->offset+particionAEscribir->sizeParticion);
+//		string_append(&buffer, finParticion);
+//		string_append(&buffer, ".");
+//		string_append(&buffer, "  ");
+//		if(particionAEscribir->estadoParticion == PARTICION_LIBRE){
+//			string_append(&buffer,("%s\n", LIBREP));
+//			escribirArchivo(buffer);
+//		}else{
+//			string_append(&buffer, OCUPADA);
+//		}
+//		string_append(&buffer, "    ");
+//		string_append(&buffer, "LRU: ");
+//		char* valorLru = string_from_format("%i:", "%i:", "%i:", particionAEscribir->lru.tm_hour, particionAEscribir->lru.tm_min, particionAEscribir->lru.tm_sec);
+//		string_append(&buffer, valorLru);
+//		string_append(&buffer, "   ");
+//		string_append(&buffer, "COLA: ");
+//	}
 }
 
 void recorrerArbolYgrabarArchivo(){ //TODO recorrer arbol y por cada particion que este ocupada o libre pero NO particionada recolecto datos y mando
