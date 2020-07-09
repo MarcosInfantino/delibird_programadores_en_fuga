@@ -54,6 +54,7 @@ typedef struct{
 	t_list* archivosHijos;
 	char* pathArchivo;
 	char* nombreArchivo;
+	pthread_mutex_t* mutex;
 	//struct archivoHeader* archivoPadre;
 }archivoHeader;
 
