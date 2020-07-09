@@ -1,6 +1,7 @@
 
 #include "broker.h"
 #include "memoria.h"
+#include "memoriaParticiones.h"
 
 bool menorAMayorSegunTiempoCarga (void* part1, void* part2){
 	particion* parti1 = (particion*) part1;
@@ -14,6 +15,42 @@ bool menorAMayorSegunLru (void* part1, void* part2){
 	return (parti1->lru.tm_hour < parti2->lru.tm_hour || (parti1->lru.tm_hour==parti2->lru.tm_hour && parti1->lru.tm_min<parti2->lru.tm_min));
 }
 
+particion* particionLibreALaIzquierda(particion* particionLibreNueva){
+	for(int i = 0; i<sizeListaMutex(particionesLibres); i++){
+		particion* partiActual = getListaMutex(particionesLibres, i);
+		if(partiActual->offset + partiActual->sizeParticion == particionLibreNueva->offset){
+			removeListaMutex(particionesLibres, i);
+			return partiActual;
+		}
+	}
+	return NULL;
+}
+
+particion* particionLibreALaDerecha(particion* particionLibreNueva){
+	for(int i = 0; i<sizeListaMutex(particionesLibres); i++){
+		particion* partiActual = getListaMutex(particionesLibres, i);
+		if(partiActual->offset == (particionLibreNueva->offset + particionLibreNueva->sizeParticion)){
+			removeListaMutex(particionesLibres, i);
+			return partiActual;
+		}
+	}
+	return NULL;
+}
+
+void consolidarSiSePuede(particion* particionLibre){
+	 if(particionLibreALaDerecha(particionLibre)!= NULL){
+		 particion* partAConsolidar = particionLibreALaDerecha(particionLibre);
+		 particionLibre->sizeParticion = particionLibre->sizeParticion + partAConsolidar->sizeParticion;
+		 destroyParticionLibre(partAConsolidar);
+	 }
+	 if(particionLibreALaIzquierda(particionLibre)!=NULL){
+		 particion* partAConsolidar = particionLibreALaIzquierda(particionLibre);
+		 particionLibre->offset = partAConsolidar->offset;
+		 particionLibre->sizeParticion = particionLibre->sizeParticion + partAConsolidar->sizeParticion;
+		 destroyParticionLibre(partAConsolidar);
+	 }
+}
+
 void eliminarParticion (particion* part){
 	particion* partiNueva = malloc(sizeof(particion));
 	partiNueva->offset = part->offset;
@@ -21,6 +58,7 @@ void eliminarParticion (particion* part){
 	partiNueva->estadoParticion = PARTICION_LIBRE;
 	addListaMutex(particionesLibres, (void*)partiNueva);
 	removeAndDestroyElementListaMutex(particionesOcupadas, 0, destroyParticionOcupada);
+	consolidarSiSePuede(partiNueva);
 }
 
 void elegirParticionVictimaYEliminarla(){
@@ -71,7 +109,6 @@ void registrarEnParticiones(msgMemoriaBroker* mensajeNuevo){
 	}
 	log_info(brokerLogger2, "Voy a asignar mensaje");
 	asignarMensajeAParticion(particionLibre, mensajeNuevo);
-//	asignarPuntero(particionLibre->offset, mensajeNuevo->stream, mensajeNuevo->sizeStream);
 }
 
 void asignarMensajeAParticion(particion* partiLibre, msgMemoriaBroker* mensaje){
@@ -82,7 +119,11 @@ void asignarMensajeAParticion(particion* partiLibre, msgMemoriaBroker* mensaje){
 	log_info(brokerLogger2, "Creando part");
 	partiOcupada->offset = partiLibre->offset;
 	partiOcupada->mensaje = mensaje;
-	partiOcupada->sizeParticion = mensaje->sizeStream;
+	if(mensaje->sizeStream > particionMinima){
+		partiOcupada->sizeParticion = mensaje->sizeStream;
+	}else{
+		partiOcupada->sizeParticion = particionMinima;
+	}
 	partiOcupada->estadoParticion = PARTICION_OCUPADA;
 	time_t t;
 	t=time(NULL);
@@ -92,6 +133,7 @@ void asignarMensajeAParticion(particion* partiLibre, msgMemoriaBroker* mensaje){
 	memcpy(memoria + partiOcupada->offset, mensaje->stream, mensaje->sizeStream);
 	mensaje->stream = memoria + partiOcupada->offset;
 	addListaMutex(particionesOcupadas, (void*)partiOcupada);
+
 	if(partiLibre->sizeParticion > mensaje->sizeStream){
 		log_info(brokerLogger2, "GENERO POR MAYOR");
 		partiLibre->offset = partiLibre->offset + mensaje->sizeStream;
@@ -114,8 +156,6 @@ particion* crearPrimeraParticionLibre(void){
 	particionADevolver->offset = 0;
 	particionADevolver->sizeParticion = tamMemoria;
 	particionADevolver->estadoParticion = PARTICION_LIBRE;
-
-	particionADevolver->mensaje = malloc (sizeof(msgMemoriaBroker));
 	return particionADevolver;
 }
 
@@ -163,7 +203,6 @@ void generarParticionLibre(uint32_t base){
 	for(int j=0; j<sizeListaMutex(particionesLibres); j++){
 		removeAndDestroyElementListaMutex(particionesLibres,j,destroyParticionLibre); //o free normal
 	}
-
 	addListaMutex(particionesLibres,(void*) nuevaParticion);
 }
 

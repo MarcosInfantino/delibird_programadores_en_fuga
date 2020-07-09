@@ -360,20 +360,3 @@ void definirAlgoritmo(algoritmoParameter parAlgoritmo, uint32_t * varInt){
 			printf("%s", parAlgoritmo.error);
 		}
 }
-
-void definirComienzoDeMemoria(){
-	memoria = malloc(tamMemoria);
-	switch(algoritmoMemoria){
-	case BUDDY_SYSTEM:
-		nodoRaizMemoria = crearRaizArbol();
-		nodoRaizMemoria->offset = 0;
-		nodosOcupados = inicializarListaMutex();
-		break;
-
-	case PARTICIONES_DINAMICAS:
-		particionesOcupadas = inicializarListaMutex();
-		particionesLibres = inicializarListaMutex();
-		addListaMutex(particionesLibres,(void*) crearPrimeraParticionLibre());
-		break;
-	}
-}

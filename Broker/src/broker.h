@@ -97,7 +97,6 @@ void definirAlgoritmoMemoria(t_config*);
 void definirAlgoritmoParticionLibre(t_config*);
 void definirAlgoritmoReemplazo(t_config*);
 void definirAlgoritmo(algoritmoParameter , uint32_t*);
-void definirComienzoDeMemoria();
 void levantarDatosDeConfig(char *, uint32_t);
 
 void esperar_cliente(uint32_t);

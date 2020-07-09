@@ -41,12 +41,15 @@ typedef struct{
 uint32_t contadorFile;
 
 void iniciarArchivoMutex();
+void escribirEnArchivo(char* buffer);
+void registrarParticionesLibresYocupadas();
+
 void almacenarEnArchivo(msgMemoriaBroker* mensajeNuevo);
 listaMutex * leerNodosEnArchivo();
 void agregarListaABuddySystem(listaMutex * lista, struct nodoMemoria* partActual);
 void almacenarParticionEnArchivo(lineaFile* particion);
 void almacenarParticionLibreEnArchivo(lineaFileLibre* particionVacia);
-void registrarParticionesLibresYocupadas();
+//void registrarParticionesLibresYocupadas();
 void recorrerArbolYgrabarArchivo();
 char* estadoEnString(uint32_t estado);
 

@@ -78,3 +78,9 @@ listaMutex* convertirAListaMutex(t_list* lista){
 	list->lista=lista;
 	return list;
 }
+
+void listAddAllMutex(t_list* list, listaMutex* list1){
+	pthread_mutex_lock(list1->mutex);
+	list_add_all(list,list1->lista);
+	pthread_mutex_unlock(list1->mutex);
+}

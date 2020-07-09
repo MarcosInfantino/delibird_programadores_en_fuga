@@ -8,11 +8,9 @@
 #include "broker.h"
 #include "memoria.h"
 #include "files.h"
+#include "memoriaParticiones.h"
 
 void iniciarArchivoMutex(){
-	//archivoMutex* archivo = malloc(sizeof(archivoMutex));
-//	archivo->mutex = malloc(sizeof(pthread_mutex_t));
-//	archivo->archivo = malloc(sizeof(FILE));
 
 	archivoSem = malloc(sizeof(archivoMutex));
 	archivoSem->mutex = malloc(sizeof(pthread_mutex_t));
@@ -23,9 +21,11 @@ void iniciarArchivoMutex(){
 	time( &rawtime );
 	info = localtime( &rawtime );
 
-//	time_t t;
-//	t = time(NULL);
-//	struct tm *tiempoActual = *localtime(&t);
+	archivoSem->archivo = fopen("dumpDeCache.db",modoEscrituraEnBinario);
+	fwrite("Dump: ", sizeof(strlen("Dump: ")), 1, archivoSem->archivo);
+	fwrite(info, sizeof(struct tm), 1, archivoSem->archivo);
+	fclose(archivoSem->archivo);
+	registrarParticionesLibresYocupadas();
 
 	//char * nombre = "dumpDeCache";
 	//char * extension = ".db";
@@ -34,31 +34,79 @@ void iniciarArchivoMutex(){
 	//strcat(nombreCompleto, version);
 	//strcat(nombreCompleto, extension);
 
-	archivoSem->archivo = fopen("dumpDeCache.db",modoEscrituraEnBinario);
-	fwrite(info, sizeof(struct tm), 1, archivoSem->archivo);
-	fclose(archivoSem->archivo);
+
 	//return archivo;
 }
 
-void almacenarParticionEnArchivo(lineaFile* particion){
-	pthread_mutex_lock(archivoSem->mutex);
-	archivoSem->archivo = fopen("dumpDeCache.db",modoEscrituraEnBinario);
-	if(archivoSem->archivo){
-		fwrite(particion, sizeof(lineaFile), 1, archivoSem->archivo);
-		fclose(archivoSem->archivo);
+void registrarParticionesLibresYocupadas(){
+	t_list* particiones = list_create();
+	listAddAllMutex(particiones, particionesOcupadas);
+	listAddAllMutex(particiones, particionesLibres);
+	list_sort(particiones, menorAmayorSegunOffset);
+	for(int i =0; i<list_size(particiones); i++){
+		particion* particionAEscribir = (particion*)list_get(particiones, i);
+		char* buffer = string_new();
+		string_append_with_format(&buffer, "Particion %d:", i);
+		string_append(&buffer, " ");
+		string_append_with_format(&buffer, "%p", memoria + particionAEscribir->offset);
+		string_append(&buffer, "-");
+		string_append_with_format(&buffer, "%p", memoria+particionAEscribir->offset+particionAEscribir->sizeParticion);
+		string_append(&buffer, ".");
+		string_append(&buffer, "  ");
+		if(particionAEscribir->estadoParticion == PARTICION_LIBRE){
+			string_append(&buffer, LIBREP);
+			string_append(&buffer, "   ");
+			string_append(&buffer, "Size: ");
+			string_append_with_format(&buffer, "%i\n", particionAEscribir->sizeParticion);
+		}else{
+			string_append(&buffer, OCUPADA);
+			string_append(&buffer, "   ");
+			string_append(&buffer, "Size: ");
+			string_append_with_format(&buffer, "%i", particionAEscribir->sizeParticion);
+			string_append(&buffer, "   ");
+			string_append(&buffer, "LRU: ");
+			string_append_with_format(&buffer, "%i:%i:%i", particionAEscribir->lru.tm_hour, particionAEscribir->lru.tm_min, particionAEscribir->lru.tm_sec);
+			string_append(&buffer, "   ");
+			string_append(&buffer, "Cola: ");
+			string_append(&buffer, nombreDeCola(particionAEscribir->mensaje->cola));
+			string_append(&buffer, "   ");
+			string_append(&buffer, "ID: ");
+			string_append_with_format(&buffer, "%i\n", particionAEscribir->mensaje->idMensaje);
+			}
+		escribirEnArchivo(buffer);
 	}
-	pthread_mutex_unlock(archivoSem->mutex);
 }
 
-void almacenarParticionLibreEnArchivo(lineaFileLibre* particionVacia){
+void escribirEnArchivo(char* buffer){
 	pthread_mutex_lock(archivoSem->mutex);
-	archivoSem->archivo = fopen("dumpDeCache.db", modoEscrituraEnBinario);
+	fopen("dumpDeCache.db", "wb");
 	if(archivoSem->archivo){
-		fwrite(particionVacia, sizeof(lineaFileLibre), 1, archivoSem->archivo);
+		fwrite(buffer, sizeof(strlen(buffer)), 1, archivoSem->archivo);
 		fclose(archivoSem->archivo);
 	}
 	pthread_mutex_unlock(archivoSem->mutex);
+	free(buffer);
 }
+
+//void almacenarParticionEnArchivo(lineaFile* particion){
+//	pthread_mutex_lock(archivoSem->mutex);
+//archivoSem->archivo = fopen("dumpDeCache.db",modoEscrituraEnBinario);
+//	if(archivoSem->archivo){
+//		fwrite(particion, sizeof(lineaFile), 1, archivoSem->archivo);
+//		fclose(archivoSem->archivo);
+//	}
+//	pthread_mutex_unlock(archivoSem->mutex);
+//}
+//
+//void almacenarParticionLibreEnArchivo(lineaFileLibre* particionVacia){
+//	pthread_mutex_lock(archivoSem->mutex);
+//	archivoSem->archivo = fopen("dumpDeCache.db", modoEscrituraEnBinario);
+//	if(archivoSem->archivo){
+//		fwrite(particionVacia, sizeof(lineaFileLibre), 1, archivoSem->archivo);
+//		fclose(archivoSem->archivo);
+//	}
+//	pthread_mutex_unlock(archivoSem->mutex);
+//}
 /*char* posicionCantidadToString(posicionCantidad* pos){
     char* posX=string_itoa((pos->posicion).x);
     char* posY=string_itoa((pos->posicion).y);
@@ -78,105 +126,72 @@ void almacenarParticionLibreEnArchivo(lineaFileLibre* particionVacia){
     return buffer;
 }*/
 
-void serializarLineaOcupada (lineaFile* particionE){
-//	t_list* particiones = list_create();
-//	list_add_all(particiones, particionesOcupadas);
-//	list_add_all(particiones, particionesLibres);
-//	list_sort(particiones, menorAmayorSegunOffset);
-//	for(int i =0; i<sizeListaMutex(particiones); i++){
-//		particion* particionAEscribir = (particion*)list_get(particiones, i);
-//		char* buffer = string_new();
-//		char* nroParticion = string_from_format("Particion %d:", i);
-//		string_append(&buffer, nroParticion);
-//		string_append(&buffer, " ");
-//		char* inicioParticion = string_from_format("%p", memoria + particionAEscribir->offset);
-//		string_append(&buffer, inicioParticion);
-//		string_append(&buffer, "-");
-//		char* finParticion = string_from_format("%p", memoria+particionAEscribir->offset+particionAEscribir->sizeParticion);
-//		string_append(&buffer, finParticion);
-//		string_append(&buffer, ".");
-//		string_append(&buffer, "  ");
-//		if(particionAEscribir->estadoParticion == PARTICION_LIBRE){
-//			string_append(&buffer,("%s\n", LIBREP));
-//			escribirArchivo(buffer);
-//		}else{
-//			string_append(&buffer, OCUPADA);
-//		}
-//		string_append(&buffer, "    ");
-//		string_append(&buffer, "LRU: ");
-//		char* valorLru = string_from_format("%i:", "%i:", "%i:", particionAEscribir->lru.tm_hour, particionAEscribir->lru.tm_min, particionAEscribir->lru.tm_sec);
-//		string_append(&buffer, valorLru);
-//		string_append(&buffer, "   ");
-//		string_append(&buffer, "COLA: ");
+//void recorrerArbolYgrabarArchivo(){ //TODO recorrer arbol y por cada particion que este ocupada o libre pero NO particionada recolecto datos y mando
+//	lineaFile* datosParticion = malloc(sizeof(lineaFile));
+//	struct nodoMemoria* particionActual = malloc(sizeof(struct nodoMemoria));
+//	lineaFileLibre* datosParticionVacia = malloc(sizeof(lineaFileLibre));
+//
+//	pthread_mutex_lock(mutexMemoria);
+//	datosParticion->idMensaje = particionActual->mensaje->idMensaje;
+//	datosParticion->base      = particionActual->offset + memoria;
+//	datosParticion->lru       = particionActual->header.ultimoAcceso;
+//	datosParticion->tamanio   = particionActual->header.size;
+//	datosParticion->limite    = particionActual->offset + memoria + particionActual->header.size;
+//	strcpy(datosParticion->estado,OCUPADA);
+//	//strcpy(datosParticion->estado,estadoEnString(particionActual->header.status));
+//	pthread_mutex_unlock(mutexMemoria);
+//
+//	almacenarParticionEnArchivo(datosParticion);
+//
+//	//y si está libre sólo esto
+//	datosParticionVacia->base    = particionActual->offset + memoria;
+//	datosParticionVacia->limite  = particionActual->offset + memoria + particionActual->header.size;
+//	datosParticionVacia->tamanio = particionActual->header.size;
+//	strcpy(datosParticionVacia->estado,LIBREP);
+//
+//	almacenarParticionLibreEnArchivo(datosParticionVacia);
+//
+//
+//	free(datosParticion);
+//}
+
+//void registrarParticionesLibresYocupadas(){ //TODO esto debería ir por orden de offset
+//	lineaFile* datosParticion = malloc(sizeof(lineaFile));
+//	lineaFileLibre* datosParticionVacia = malloc(sizeof(lineaFileLibre));
+//	particionLibre* partLibre;
+//	particionOcupada* partOcupada;
+//
+//	pthread_mutex_lock(mutexMemoria);
+//	for(int i=0; i< sizeListaMutex(particionesLibres);i++){
+//		partLibre = getListaMutex(particionesLibres, i);
+//		datosParticionVacia->base    = memoria + partLibre->offset;
+//		datosParticionVacia->tamanio = partLibre->sizeParticion;
+//		datosParticionVacia->limite  = partLibre->offset + memoria + partLibre->sizeParticion;
+//		strcpy(datosParticionVacia->estado, LIBREP);
+//
+//		almacenarParticionLibreEnArchivo(datosParticionVacia);
 //	}
-}
-
-void recorrerArbolYgrabarArchivo(){ //TODO recorrer arbol y por cada particion que este ocupada o libre pero NO particionada recolecto datos y mando
-	lineaFile* datosParticion = malloc(sizeof(lineaFile));
-	struct nodoMemoria* particionActual = malloc(sizeof(struct nodoMemoria));
-	lineaFileLibre* datosParticionVacia = malloc(sizeof(lineaFileLibre));
-
-	pthread_mutex_lock(mutexMemoria);
-	datosParticion->idMensaje = particionActual->mensaje->idMensaje;
-	datosParticion->base      = particionActual->offset + memoria;
-	datosParticion->lru       = particionActual->header.ultimoAcceso;
-	datosParticion->tamanio   = particionActual->header.size;
-	datosParticion->limite    = particionActual->offset + memoria + particionActual->header.size;
-	strcpy(datosParticion->estado,OCUPADA);
-	//strcpy(datosParticion->estado,estadoEnString(particionActual->header.status));
-	pthread_mutex_unlock(mutexMemoria);
-
-	almacenarParticionEnArchivo(datosParticion);
-
-	//y si está libre sólo esto
-	datosParticionVacia->base    = particionActual->offset + memoria;
-	datosParticionVacia->limite  = particionActual->offset + memoria + particionActual->header.size;
-	datosParticionVacia->tamanio = particionActual->header.size;
-	strcpy(datosParticionVacia->estado,LIBREP);
-
-	almacenarParticionLibreEnArchivo(datosParticionVacia);
-
-
-	free(datosParticion);
-}
-
-void registrarParticionesLibresYocupadas(){ //TODO esto debería ir por orden de offset
-	lineaFile* datosParticion = malloc(sizeof(lineaFile));
-	lineaFileLibre* datosParticionVacia = malloc(sizeof(lineaFileLibre));
-	particionLibre* partLibre;
-	particionOcupada* partOcupada;
-
-	pthread_mutex_lock(mutexMemoria);
-	for(int i=0; i< sizeListaMutex(particionesLibres);i++){
-		partLibre = getListaMutex(particionesLibres, i);
-		datosParticionVacia->base    = memoria + partLibre->offset;
-		datosParticionVacia->tamanio = partLibre->sizeParticion;
-		datosParticionVacia->limite  = partLibre->offset + memoria + partLibre->sizeParticion;
-		strcpy(datosParticionVacia->estado, LIBREP);
-
-		almacenarParticionLibreEnArchivo(datosParticionVacia);
-	}
-
-	pthread_mutex_unlock(mutexMemoria);
-
-	pthread_mutex_lock(mutexMemoria);
-	for(int i=0; i< sizeListaMutex(particionesOcupadas);i++){
-		partOcupada = getListaMutex(particionesOcupadas, i);
-		datosParticion->idMensaje = partOcupada->mensaje->idMensaje;
-		datosParticion->base      = partOcupada->offset + memoria;
-		datosParticion->lru       = partOcupada->lru;
-		datosParticion->tamanio   = partOcupada->mensaje->sizeStream;
-		datosParticion->limite    = partOcupada->offset + memoria + partOcupada->mensaje->sizeStream;
-		strcpy(datosParticion->estado, OCUPADA);
-
-		almacenarParticionEnArchivo(datosParticion);
-	}
-
-	pthread_mutex_unlock(mutexMemoria);
-
-	free(datosParticion);
-	free(datosParticionVacia);
-}
+//
+//	pthread_mutex_unlock(mutexMemoria);
+//
+//	pthread_mutex_lock(mutexMemoria);
+//	for(int i=0; i< sizeListaMutex(particionesOcupadas);i++){
+//		partOcupada = getListaMutex(particionesOcupadas, i);
+//		datosParticion->idMensaje = partOcupada->mensaje->idMensaje;
+//		datosParticion->base      = partOcupada->offset + memoria;
+//		datosParticion->lru       = partOcupada->lru;
+//		datosParticion->tamanio   = partOcupada->mensaje->sizeStream;
+//		datosParticion->limite    = partOcupada->offset + memoria + partOcupada->mensaje->sizeStream;
+//		strcpy(datosParticion->estado, OCUPADA);
+//
+//		almacenarParticionEnArchivo(datosParticion);
+//	}
+//
+//	pthread_mutex_unlock(mutexMemoria);
+//
+//	free(datosParticion);
+//	free(datosParticionVacia);
+//}
 
 char* estadoEnString(uint32_t estado){
 	if(estado == 1){

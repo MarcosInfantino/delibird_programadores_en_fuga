@@ -7,6 +7,24 @@
 
 #include "broker.h"
 #include "memoria.h"
+#include "memoriaParticiones.h"
+
+void definirComienzoDeMemoria(){
+	memoria = malloc(tamMemoria);
+	switch(algoritmoMemoria){
+	case BUDDY_SYSTEM:
+		nodoRaizMemoria = crearRaizArbol();
+		nodoRaizMemoria->offset = 0;
+		nodosOcupados = inicializarListaMutex();
+		break;
+
+	case PARTICIONES_DINAMICAS:
+		particionesOcupadas = inicializarListaMutex();
+		particionesLibres = inicializarListaMutex();
+		addListaMutex(particionesLibres,(void*) crearPrimeraParticionLibre());
+		break;
+	}
+}
 
 void registrarMensajeEnMemoria(uint32_t idMensaje, paquete* paq, algoritmoMem metodo){
 	if(paq->tipoMensaje == CATCH_POKEMON || paq->tipoMensaje == GET_POKEMON){
@@ -123,10 +141,9 @@ void crearDumpDeCache(){
 	log_info(loggerBroker,"Se solicitó dump de cache.");
 	log_info(brokerLogger2,"Se solicitó dump de cache.");
 
-	//archivoMutex* archivo = iniciarArchivoMutex();
 	iniciarArchivoMutex();
 	if(algoritmoMemoria == BUDDY_SYSTEM){
-		recorrerArbolYgrabarArchivo();
+		//recorrerArbolYgrabarArchivo();
 	}else{
 		registrarParticionesLibresYocupadas();
 	}
