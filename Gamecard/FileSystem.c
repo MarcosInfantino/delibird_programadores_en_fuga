@@ -158,12 +158,12 @@ archivoHeader* crearDirectorio(char* nombre, char* pathDestino, uint32_t tipo){
 	status = mkdir(direc, 0755);
 	if(status != 0){
 		if(errno == EEXIST){
-			log_info(gamecardLogger2,"El directorio ya existe");
+			//log_info(gamecardLogger2,"El directorio ya existe");
 			//Ver que hacer aca
 			//si el directorio ya existe devuelve null
 		}
 		if(status < 0){
-			log_info(gamecardLogger2,"Error al crear el directorio");
+			//log_info(gamecardLogger2,"Error al crear el directorio");
 			//return -1;
 		}
 	}
@@ -220,7 +220,8 @@ archivoHeader* crearMetadata(char* nombre, uint32_t tipo, char* direccion){
 		metadataFile->bloquesUsados = list_create();
 		metadataFile->tamanioArchivo = 0;
 		metadataFile->tipo = ARCHIVO;
-
+		metadataFile->mutex=malloc(sizeof(pthread_mutex_t));
+		pthread_mutex_init(metadataFile->mutex,NULL);
 		escribirMetadata(metadataFile);
 		break;
 	default:; log_info(gamecardLogger2,"Manqueada");break;
@@ -333,7 +334,7 @@ void escribirBloque2(int32_t bloque, char* buffer){
 int32_t escribirBloque(int32_t bloque, int32_t offset, int32_t longitud, char* buffer) {
 	blockHeader* headerBloque=obtenerBloquePorId(bloque);
 	if(tieneCapacidad(headerBloque,longitud)){
-	disminuirCapacidad(headerBloque, longitud);
+	//disminuirCapacidad(headerBloque, longitud);
 	log_info(gamecardLogger2, "Escribiendo bloque:%d, offset=%d, longitud=%d, buffer=%s", bloque, offset, longitud, buffer);
 	//const char* bufferin = buffer;
 	//FILE* block = fopen(string_from_format("%s%d.bin", pathBlocks, bloque), "w+b");
@@ -342,7 +343,9 @@ int32_t escribirBloque(int32_t bloque, int32_t offset, int32_t longitud, char* b
 	FILE* block = fopen(pathBloque(bloque),"r+");
 	fseek(block, offset, SEEK_SET);
 	//fwrite(buffer, strlen(buffer)+1, 1, block);
-	fwrite(buffer, strlen(buffer), 1, block);
+	//fwrite(buffer, strlen(buffer), 1, block);
+
+	fwrite(buffer, longitud, 1, block);
 	//fputs(buffer,block);
 	headerBloque->pos=ftell(block);
 	fclose(block);

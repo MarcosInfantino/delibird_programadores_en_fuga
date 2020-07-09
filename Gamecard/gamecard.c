@@ -38,13 +38,13 @@ int main(void) {
 	iniciarMetadata();
 	iniciarBitmap();
 	inicializarListaBloques();
-	archivoHeader* pikachu=crearDirectorio("Pikachu",pathFiles,ARCHIVO);
+	//archivoHeader* pikachu=crearDirectorio("Pikachu",pathFiles,ARCHIVO);
 
 //	char* string=string_new();
 //	sprintf(string, "%s\n",string_repeat('a', 135));
-	if(!estaLibre(5)){
-		printf("esta ocupado el 5\n");
-	}
+//	if(!estaLibre(5)){
+//		printf("esta ocupado el 5\n");
+//	}
 	//reescribirArchivo("Pikachu", string_repeat('a', 600));
 
 	//char* s=leerBloque(obtenerBloquePorId(1));
@@ -72,17 +72,17 @@ int main(void) {
 //	log_info(gamecardLogger2, "%s             %s                  %s", (char*) list_get(listaPosicionesString,0),(char*) list_get(listaPosicionesString,1), (char*) list_get(listaPosicionesString,2));
 //
 
-	t_list* listaPosicionCantidad= obtenerListaPosicionCantidadDeString("1-1=10\n10-11=1\n158-1=112\n");
-
-	posicionCantidad* posCantidad1=list_get(listaPosicionCantidad,0);
-	posicionCantidad* posCantidad2=list_get(listaPosicionCantidad,1);
-	posicionCantidad* posCantidad3=list_get(listaPosicionCantidad,2);
-
-	log_info(gamecardLogger2, "Traduccion: %i-%i=%i", (posCantidad1->posicion).x, (posCantidad1->posicion).y, posCantidad1->cantidad);
-	log_info(gamecardLogger2, "Traduccion: %i-%i=%i", (posCantidad2->posicion).x, (posCantidad2->posicion).y, posCantidad2->cantidad);
-	log_info(gamecardLogger2, "Traduccion: %i-%i=%i", (posCantidad3->posicion).x, (posCantidad3->posicion).y, posCantidad3->cantidad);
-
-	actualizarPosicionesArchivo(pikachu,listaPosicionCantidad);
+//	t_list* listaPosicionCantidad= obtenerListaPosicionCantidadDeString("1-1=10\n10-11=1\n158-1=112\n");
+//
+//	posicionCantidad* posCantidad1=list_get(listaPosicionCantidad,0);
+//	posicionCantidad* posCantidad2=list_get(listaPosicionCantidad,1);
+//	posicionCantidad* posCantidad3=list_get(listaPosicionCantidad,2);
+//
+//	log_info(gamecardLogger2, "Traduccion: %i-%i=%i", (posCantidad1->posicion).x, (posCantidad1->posicion).y, posCantidad1->cantidad);
+//	log_info(gamecardLogger2, "Traduccion: %i-%i=%i", (posCantidad2->posicion).x, (posCantidad2->posicion).y, posCantidad2->cantidad);
+//	log_info(gamecardLogger2, "Traduccion: %i-%i=%i", (posCantidad3->posicion).x, (posCantidad3->posicion).y, posCantidad3->cantidad);
+//
+//	actualizarPosicionesArchivo(pikachu,listaPosicionCantidad);
 	//log_info(gamecardLogger2, "pos en string: %s",posicionCantidadToString(posCantidad1));
 	//log_info(gamecardLogger2, "lista en string: %s",listaPosicionCantidadToString(listaPosicionCantidad));
 
@@ -103,7 +103,7 @@ int main(void) {
 //
 //	removerBloque(var,1038423);
 
-	suscribirseColasBroker(configGamecard);
+	//suscribirseColasBroker(configGamecard);
 	pthread_t hiloServidorDeEscucha;
 	crearHiloServidorGameboy(&hiloServidorDeEscucha);
 	return EXIT_SUCCESS;
@@ -231,6 +231,7 @@ int crearHiloServidorGameboy(pthread_t* hilo) {
 	}
 
 	pthread_detach(*hilo);
+	while(1);//despues sacarlo
 	return 0;
 }
 
@@ -321,10 +322,11 @@ void* atenderNew(void* paq) {
 
 	//free(msg);
 	//To do :
+	log_info(gamecardLogger2,"Atiendo new del pokemon: %s. Posicion: (%i, %i).", msgNew->pokemon, msgNew->posX, msgNew->posY);
 	archivoHeader* archivoPoke= obtenerArchivoPokemon(pokeEnPosicion->pokemon);
 
 
-	FILE* archivoMetadata=verificarApertura(archivoPoke);
+	FILE* archivoMetadata=abrirArchivo(archivoPoke);
 
 	t_list* listaPosCantidad=obtenerListaPosicionCantidadDeArchivo(archivoPoke);
 	posicionCantidad* encontrado= buscarPosicionCantidad(listaPosCantidad, pokeEnPosicion->posicion);
@@ -339,12 +341,16 @@ void* atenderNew(void* paq) {
 		list_add(listaPosCantidad, (void*) posAgregar);
 	}
 
+	actualizarPosicionesArchivo(archivoPoke,listaPosCantidad);
+	list_destroy_and_destroy_elements(listaPosCantidad, free);
 	//Verificar que el pokemon este en nuestro FileSystem
 	//Una vez encontrado (o creado) verificar si puedo abrirlo
 	//Verificar si las posiciones existen en el archivo
 	//IF SUCCESS
 	sleep(tiempoRetardoGC);
 	//CERRAR ARCHIVO
+	cerrarArchivo(archivoPoke,archivoMetadata);
+	log_info(gamecardLogger2,"Cierro el archivo del pokemon: %s. Posicion: (%i, %i).", msgNew->pokemon, msgNew->posX, msgNew->posY);
 	enviarAppeared(pokeEnPosicion);
 	return NULL;
 
@@ -459,6 +465,7 @@ void enviarCaught(pokemonAAtrapar* pokeAAtrapar) {
 FILE* verificarApertura(archivoHeader* archivo){
 	while(estaAbierto(archivo)){
 		sleep(tiempoReintentoOperacion);
+		log_info(gamecardLogger2, "Reintento abrir el archivo en %i sengundos. ", tiempoReintentoOperacion);
 	}
 	return abrirArchivo(archivo);
 }

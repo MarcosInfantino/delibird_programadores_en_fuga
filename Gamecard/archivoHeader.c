@@ -8,17 +8,17 @@
 #include "gamecard.h"
 
 bool estaAbierto(archivoHeader* metadata){
-	if(metadata->tipo==ARCHIVO){
-			t_config* config=config_create(metadata->pathArchivo);
-			char* valorOpen=config_get_string_value(config,"OPEN");
-			config_destroy(config);
-			if(strcmp(valorOpen, "Y")==0){
-				return true;
-			}
-
-
-		}
-	return false;
+//	if(metadata->tipo==ARCHIVO){
+//			t_config* config=config_create(metadata->pathArchivo);
+//			char* valorOpen=config_get_string_value(config,"OPEN");
+//			config_destroy(config);
+//			if(strcmp(valorOpen, "Y")==0){
+//				return true;
+//			}
+//
+//
+//		}
+	return metadata->estaAbierto;
 }
 
 void cerrarArchivo(archivoHeader* metadata, FILE* archivo){
@@ -29,16 +29,35 @@ void cerrarArchivo(archivoHeader* metadata, FILE* archivo){
 		config_save(config);
 		config_destroy(config);
 		metadata->estaAbierto=false;
+		pthread_mutex_unlock(metadata->mutex);
 	}
 }
 
 FILE* abrirArchivo(archivoHeader* metadata){
+	//uint32_t i=1;
+
+
+	//pthread_mutex_lock(metadata->mutex);
+	//pthread_mutex_lock(metadata->mutex);
 	if(metadata->tipo==ARCHIVO){
-		metadata->estaAbierto=true;
+
 		t_config* config=config_create(metadata->pathArchivo);
+
+		//pthread_mutex_lock(metadata->mutex);
+		while(estaAbierto(metadata)){
+					//pthread_mutex_unlock(metadata->mutex);
+					log_info(gamecardLogger2, "Reintento abrir el archivo en %i sengundos. ", tiempoReintentoOperacion);
+					sleep(tiempoReintentoOperacion);
+					//pthread_mutex_lock(metadata->mutex);
+				}
+
+		metadata->estaAbierto=true;
 		config_set_value(config,"OPEN","Y");
 		config_save(config);
 		config_destroy(config);
+
+		//pthread_mutex_unlock(metadata->mutex);
+
 		return fopen(metadata->pathArchivo,"r+");
 
 	}
@@ -288,6 +307,7 @@ void reescribirArchivo(char* pokemon, char* stringAEscribir){
 	archivoHeader* headerPoke= buscarArchivoHeaderPokemon(pokemon);
 
 	uint32_t bytesAEscribir=strlen(stringAEscribir);
+	//log_info(gamecardLogger2, "CANTIDAD DE BYTES A ESCRIBIR: %i", bytesAEscribir);
 	uint32_t bloquesNecesarios=(bytesAEscribir/tallGrass.block_size)+1;
 
 	while(bloquesNecesarios<cantidadBloquesArchivo(headerPoke)){
@@ -301,8 +321,9 @@ void reescribirArchivo(char* pokemon, char* stringAEscribir){
 	for(uint32_t i=0;i<list_size(listaBloques);i++){
 		blockHeader* bloqueActual=(blockHeader*) list_get(listaBloques,i);
 		char* subString;
-		if(bytesAEscribir<tallGrass.block_size){
+		if(bytesAEscribir<=tallGrass.block_size){
 			subString= string_substring(stringAEscribir, i* tallGrass.block_size, bytesAEscribir);
+			//log_info(gamecardLogger2, "SUBSTRING: %s", subString);
 
 			escribirBloque(bloqueActual->id, 0, bytesAEscribir, subString);
 
@@ -355,6 +376,7 @@ posicionCantidad* buscarPosicionCantidad(t_list* lista, posicion pos){
 
 t_list* obtenerListaPosicionCantidadDeArchivo(archivoHeader* archivo){
 	char* stringPosCant=leerArchivo(archivo->nombreArchivo);
+	log_info(gamecardLogger2, "LecturaArchivo: %s.", stringPosCant);
 	return obtenerListaPosicionCantidadDeString(stringPosCant);
 }
 
@@ -384,7 +406,7 @@ char* listaPosicionCantidadToString(t_list* lista){
 		posicionCantidad* actual= (posicionCantidad*) list_get(lista, i);
 
 		char* stringActual=posicionCantidadToString(actual);
-
+		//log_info(gamecardLogger2, "stringActual: %s", stringActual);
 		string_append(&buffer, stringActual);
 		free(stringActual);
 	}
@@ -396,6 +418,7 @@ void actualizarPosicionesArchivo(archivoHeader* archivo, t_list* listaPosicionCa
 	if(archivo->tipo==ARCHIVO){
 
 		char* listaString=listaPosicionCantidadToString(listaPosicionCantidad);
+		//log_info(gamecardLogger2, "string de lista: %s", listaString);
 		reescribirArchivo(archivo->nombreArchivo, listaString);
 	}
 
