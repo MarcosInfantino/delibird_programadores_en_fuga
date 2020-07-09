@@ -15,9 +15,10 @@ bool menorAMayorSegunLru (void* part1, void* part2){
 }
 
 void eliminarParticion (particion* part){
-	particion* partiNueva = malloc(sizeof(particionLibre));
+	particion* partiNueva = malloc(sizeof(particion));
 	partiNueva->offset = part->offset;
 	partiNueva->sizeParticion = part->mensaje->sizeStream;
+	partiNueva->estadoParticion = PARTICION_LIBRE;
 	addListaMutex(particionesLibres, (void*)partiNueva);
 	removeAndDestroyElementListaMutex(particionesOcupadas, 0, destroyParticionOcupada);
 }
@@ -36,17 +37,6 @@ void elegirParticionVictimaYEliminarla(){
 	}
 	eliminarParticion(particionVictima);
 }
-
-//void sustituirParticion(particionOcupada* particionASustituir, msgMemoriaBroker* mensajeAGuardar){
-//	if(particionASustituir->mensaje->sizeStream > mensajeAGuardar->sizeStream){
-//		particionLibre* particionLibreNueva = malloc(sizeof(particionLibre));
-//		particionLibreNueva->offset = particionASustituir->offset + mensajeAGuardar->sizeStream;
-//		particionLibreNueva->sizeParticion = particionASustituir->mensaje->sizeStream - mensajeAGuardar->sizeStream;
-//	}
-//	particionASustituir->mensaje=mensajeAGuardar;
-//	//actualizar LRU y tiempo de carga.
-//	memcpy(memoria + particionASustituir->offset, mensajeAGuardar->stream, mensajeAGuardar->sizeStream);
-//}
 
 bool sePuedeCompactar(){
 	if(frecuenciaCompactacion==-1){
@@ -82,8 +72,10 @@ void registrarEnParticiones(msgMemoriaBroker* mensajeNuevo){
 
 void asignarMensajeAParticion(particion* partiLibre, msgMemoriaBroker* mensaje){
 	particion* partiOcupada = malloc(sizeof(particion));
-	partiOcupada->offset=partiLibre->offset;
-	partiOcupada->mensaje=mensaje;
+	partiOcupada->offset = partiLibre->offset;
+	partiOcupada->mensaje = mensaje;
+	partiOcupada->sizeParticion = mensaje->sizeStream;
+	partiOcupada->estadoParticion = PARTICION_OCUPADA;
 	//asignar LRU y tiempo de carga
 	memcpy(memoria + partiOcupada->offset, mensaje->stream, mensaje->sizeStream);
 	mensaje->stream = memoria + partiOcupada->offset;
@@ -132,6 +124,7 @@ void generarParticionLibre(uint32_t base){
 	particion* nuevaParticion = malloc(sizeof(particion));
 	nuevaParticion->offset = base;
 	nuevaParticion->sizeParticion = tamMemoria - base;
+	nuevaParticion->estadoParticion = PARTICION_LIBRE;
 
 	for(int j=0; j<sizeListaMutex(particionesLibres); j++){
 		removeAndDestroyElementListaMutex(particionesLibres,j,destroyParticionLibre); //o free normal
