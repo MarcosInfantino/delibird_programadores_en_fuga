@@ -129,6 +129,10 @@ bool estaOcupado(struct nodoMemoria* partActual);
 bool ambosHijosOcupados(struct nodoMemoria* padre);
 
 void enviarMensajesPreviosEnMemoria(uint32_t* socket, uint32_t cola);
+bool estaEnListaEnviados (uint32_t socket, msgMemoriaBroker* mensaje);
+void guardarYaEnviados (paquete* paq, uint32_t socket);
+bool estaEnListaACK(uint32_t socket, msgMemoriaBroker* mensaje);
+void guardarMensajeACK (paquete* paq, uint32_t socket);
 
 void crearDumpDeCache();
 void asignarPuntero(uint32_t offset, void* stream, uint32_t sizeStream);
@@ -136,6 +140,7 @@ void asignarPuntero(uint32_t offset, void* stream, uint32_t sizeStream);
 bool yaEstaEnMemoria(paquete* paq);
 bool yaSeGuardoEnMemoria(mensajeCatch* msgCatch, mensajeGet* msgGet);
 bool existeMensajeEnMemoriaBuddy(mensajeGet* msgGet, mensajeCatch*  msgCatch);
+bool existeMensajeEnParticionesDinamicas(mensajeCatch* msgCatch, mensajeGet* msgGet);
 bool compararCatch(mensajeCatch*  elemLista, mensajeCatch*  msgCatch);
 bool compararGet(mensajeGet* elemLista, mensajeGet* msgGet);
 

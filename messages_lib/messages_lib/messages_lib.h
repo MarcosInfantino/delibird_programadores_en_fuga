@@ -138,6 +138,7 @@ typedef struct {
 }colaMensajes;
 
 mensajeAppeared* llenarAppeared(char* pokemon, uint32_t posX, uint32_t posY);
+mensajeAppeared* llenarAppearedMemoria(char* pokemon, uint32_t posX, uint32_t posY);
 void* serializarAppeared(mensajeAppeared* mensaje);
 mensajeAppeared* deserializarAppeared (void* streamRecibido);
 void destruirAppeared(mensajeAppeared* msg);

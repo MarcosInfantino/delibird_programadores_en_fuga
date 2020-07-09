@@ -35,15 +35,12 @@ void* serializarCatch(mensajeCatch* mensaje){
 }
 
 mensajeCatch* deserializarCatch (void* streamRecibido){
-	printf("Numero 2.2.2.1 \n");
 	mensajeCatch* mensaje = malloc(sizeof(mensajeCatch));
 	uint32_t offset = 0;
-	printf("Numero 2.2.2.2 \n");
 	memcpy(&(mensaje->sizePokemon), streamRecibido+offset, sizeof(uint32_t));
 	offset+=sizeof(uint32_t);
 	mensaje->pokemon=malloc(mensaje->sizePokemon);
 	memcpy(mensaje->pokemon, streamRecibido+offset, mensaje->sizePokemon);
-	printf("Numero 2.2.2.3 \n");
 	offset+=(mensaje->sizePokemon);
 	memcpy(&(mensaje->posX), streamRecibido+offset, sizeof(uint32_t));
 	offset+=sizeof(uint32_t);

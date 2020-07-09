@@ -35,11 +35,9 @@ bool validarPertenencia(colaMensajes * cola, uint32_t socket) {
 	for (i = 0; i < sizeListaMutex(cola->suscriptores); i++) {
 		socketLista = getListaMutex(cola->suscriptores, i);
 		if (*((uint32_t*) socketLista) == socket) {
-			//printf("Me aprobo validar pertenencia\n");
 			return true;
 		}
 	}
-	//printf("Me rechazo validar pertenencia\n");
 	return false;
 
 }
@@ -89,7 +87,6 @@ void suscribir(colaMensajes * cola, paquete paq, uint32_t* socket,uint32_t ident
 	} else {
 		responderMensaje(*socket, INCORRECTO);
 		free(socket);
-		//printf("suscripcion incorrecta\n");
 	}
 }
 

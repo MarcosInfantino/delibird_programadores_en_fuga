@@ -15,19 +15,14 @@
 int main(void) {
 	iteraciones = 0;
     brokerLogger2 = log_create("brokerLoggerSecundario.log", "Broker", true, LOG_LEVEL_INFO);
-
     log_info(brokerLogger2, "pid : %i", getpid());
     //log_info(brokerLogger2, armarStringEnvioXsub(2));
-
 	signal(SIGUSR1, crearDumpDeCache);
-
 	//levantarDatosDeConfig("Broker.config", 1); 			//1 para datos de config, otro para hardcode
 	levantarDatosDeConfig("pruebaBaseBroker.config", 1);
 	//levantarDatosDeConfig("pruebaBS.config", 1);
 
-	char* nombreLog   = "logBroker.log";
-	char* programName = "BROKER";
-	loggerBroker = iniciar_logger(nombreLog, programName);
+	loggerBroker = iniciar_logger("loggerBroker.log", "BROKER");
 
 	mutexMemoria = malloc(sizeof(pthread_mutex_t));
 	pthread_mutex_init(mutexMemoria,NULL);
@@ -170,15 +165,14 @@ void manejarTipoDeMensaje(paquete* paq, uint32_t* socket) {
 			 meterEnCola( &newPokemon, paq, *socket);
 			 break;
 		 case CAUGHT_POKEMON:;
-			 //mensajeCaught* caught = deserializarCaught(paq->stream);
-			// log_info(brokerLogger2, "Id del caught: %i", caught->resultadoCaught);
 			 meterEnCola( &caughtPokemon, paq, *socket);
 			 break;
 		 case CATCH_POKEMON:
-			 //log_info(brokerLogger2,"Me llegó un catch. Código de mensaje: %i. ",paq->tipoMensaje);
+			 log_info(brokerLogger2, "Manejo catch");
 			 meterEnCola( &catchPokemon, paq, *socket);
 			 break;
 		 case GET_POKEMON:
+			 log_info(brokerLogger2, "Manejo GET");
 			 meterEnCola( &getPokemon, paq, *socket);
 			 break;
 		 case LOCALIZED_POKEMON:
@@ -196,7 +190,7 @@ void manejarTipoDeMensaje(paquete* paq, uint32_t* socket) {
 			 suscribirPorTiempo((void*) &structTiempo);
 			 break;
 		 case ACK:
-			 guardarEnListaMemoria(paq->idCorrelativo, *socket, CONFIRMADO);
+			 guardarMensajeACK(paq, *socket);
 			 break;
 		 default:
 			 pthread_exit(NULL);
@@ -204,15 +198,13 @@ void manejarTipoDeMensaje(paquete* paq, uint32_t* socket) {
 }
 
 void meterEnCola( colaMensajes* structCola, paquete * paq, uint32_t  socket){
-	//log_info(loggerBroker, armarStringMsgNuevoLog(paq->tipoMensaje));
-	//log_info(brokerLogger2, armarStringMsgNuevoLog(paq->tipoMensaje));
 
 	incrementarContador();
 	pthread_mutex_lock(contador.mutexContador);
 	insertarIdPaquete(paq,contador.contador);
 	send(socket,(void*)(&contador.contador),sizeof(uint32_t),0);
 	pthread_mutex_unlock(contador.mutexContador);
-
+	log_info(brokerLogger2, "meti msj en cola");
 	registrarMensajeEnMemoria(contador.contador, paq, algoritmoMemoria);
 
 	pushColaMutex(structCola->cola, (void *) paq);
@@ -244,10 +236,6 @@ void * chequearMensajesEnCola(void * colaVoid){
 		sem_wait(cola->mensajesEnCola);
 		log_info(brokerLogger2,"Comienza el proceso de envío del mensaje a todos los suscriptores.");
 		paquete* paq = (paquete*) popColaMutex(cola->cola);
-
-		//if(paq->tipoMensaje == CAUGHT_POKEMON){
-		//mensajeCaught* msg = deserializarCaught(paq->stream);}
-
 		void * paqSerializado = serializarPaquete(paq);
 
 		for(i = 0; i < sizeListaMutex(cola->suscriptores) ;i ++){
@@ -258,7 +246,7 @@ void * chequearMensajesEnCola(void * colaVoid){
 			log_info(brokerLogger2, "Envié mensaje a suscriptor: %d -.-", *socketActual);
 			log_info(loggerBroker, "Envié mensaje a suscriptor: %d -.-", *socketActual);
 
-			guardarEnListaMemoria(paq->id, *socketActual, SUBSYAENVIADOS);
+			guardarYaEnviados(paq, *socketActual);
 		}
 
 		destruirPaquete(paq);

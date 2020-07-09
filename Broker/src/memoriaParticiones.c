@@ -57,6 +57,7 @@ void eliminarParticion (particion* part){
 	partiNueva->sizeParticion = part->mensaje->sizeStream;
 	partiNueva->estadoParticion = PARTICION_LIBRE;
 	addListaMutex(particionesLibres, (void*)partiNueva);
+	log_info(loggerBroker, "Elimino particion que comienza en: %p", memoria + part->offset);
 	removeAndDestroyElementListaMutex(particionesOcupadas, 0, destroyParticionOcupada);
 	consolidarSiSePuede(partiNueva);
 }
@@ -88,35 +89,26 @@ bool sePuedeCompactar(){
 void registrarEnParticiones(msgMemoriaBroker* mensajeNuevo){
 	particion* particionLibre;
 	particionLibre = obtenerParticionLibrePARTICIONES(mensajeNuevo->sizeStream);
-	log_info(brokerLogger2, "OBTUVE PARTICION");
 	if(particionLibre == NULL){
-		log_info(brokerLogger2, "Particion nula");
 		cantidadBusquedasFallidas++;
 		if(sePuedeCompactar()){
 			compactar();
 			particionLibre = obtenerParticionLibrePARTICIONES(mensajeNuevo->sizeStream);
 			if(particionLibre == NULL){
-				log_info(brokerLogger2, "Particion nula 2");
 				cantidadBusquedasFallidas++;
 				elegirParticionVictimaYEliminarla();
 				registrarEnParticiones (mensajeNuevo);
 			}
 		}else{
-			log_info(brokerLogger2, "Particion nula 3");
 			elegirParticionVictimaYEliminarla();
 			registrarEnParticiones(mensajeNuevo);
 		}
 	}
-	log_info(brokerLogger2, "Voy a asignar mensaje");
 	asignarMensajeAParticion(particionLibre, mensajeNuevo);
 }
 
 void asignarMensajeAParticion(particion* partiLibre, msgMemoriaBroker* mensaje){
-	log_info(brokerLogger2, "ENTRO part");
-	log_info(brokerLogger2, "MI MENSAJE TIENE TAMAÑO %i", mensaje->sizeStream);
 	particion* partiOcupada = inicializarParticion();
-	printf("\nEl offset es %i \n", partiLibre->offset);
-	log_info(brokerLogger2, "Creando part");
 	partiOcupada->offset = partiLibre->offset;
 	partiOcupada->mensaje = mensaje;
 	if(mensaje->sizeStream > particionMinima){
@@ -129,11 +121,10 @@ void asignarMensajeAParticion(particion* partiLibre, msgMemoriaBroker* mensaje){
 	t=time(NULL);
 	partiOcupada->lru = *localtime(&t);
 	partiOcupada->tiempoDeCargaPart = *localtime(&t);
-
 	memcpy(memoria + partiOcupada->offset, mensaje->stream, mensaje->sizeStream);
 	mensaje->stream = memoria + partiOcupada->offset;
 	addListaMutex(particionesOcupadas, (void*)partiOcupada);
-
+	log_info(loggerBroker, "Almaceno mensaje en partición que comienza en: %i", partiOcupada->offset);
 	if(partiLibre->sizeParticion > mensaje->sizeStream){
 		log_info(brokerLogger2, "GENERO POR MAYOR");
 		partiLibre->offset = partiLibre->offset + mensaje->sizeStream;
@@ -190,6 +181,7 @@ void compactar(){
 		elemento->offset = base;
 		base  += elemento->mensaje->sizeStream;
 	}
+	log_info(loggerBroker, "Se realiza la compactacion");
 	generarParticionLibre(base);
 	cantidadBusquedasFallidas = 0;
 }
@@ -201,7 +193,7 @@ void generarParticionLibre(uint32_t base){
 	nuevaParticion->estadoParticion = PARTICION_LIBRE;
 
 	for(int j=0; j<sizeListaMutex(particionesLibres); j++){
-		removeAndDestroyElementListaMutex(particionesLibres,j,destroyParticionLibre); //o free normal
+		removeAndDestroyElementListaMutex(particionesLibres,j,destroyParticionLibre);
 	}
 	addListaMutex(particionesLibres,(void*) nuevaParticion);
 }

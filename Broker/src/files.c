@@ -27,14 +27,6 @@ void iniciarArchivoMutex(){
 	fclose(archivoSem->archivo);
 	registrarParticionesLibresYocupadas();
 
-	//char * nombre = "dumpDeCache";
-	//char * extension = ".db";
-	//char* nombreCompleto = malloc(sizeof(nombre) + sizeof(version) + sizeof(extension) + 1);
-	//strcpy(nombreCompleto,nombre);
-	//strcat(nombreCompleto, version);
-	//strcat(nombreCompleto, extension);
-
-
 	//return archivo;
 }
 
@@ -46,32 +38,21 @@ void registrarParticionesLibresYocupadas(){
 	for(int i =0; i<list_size(particiones); i++){
 		particion* particionAEscribir = (particion*)list_get(particiones, i);
 		char* buffer = string_new();
-		string_append_with_format(&buffer, "Particion %d:", i);
-		string_append(&buffer, " ");
-		string_append_with_format(&buffer, "%p", memoria + particionAEscribir->offset);
-		string_append(&buffer, "-");
-		string_append_with_format(&buffer, "%p", memoria+particionAEscribir->offset+particionAEscribir->sizeParticion);
-		string_append(&buffer, ".");
-		string_append(&buffer, "  ");
+		string_append_with_format(&buffer, "Particion %d: ", i);
+		string_append_with_format(&buffer, "%p-%p.  ", memoria + particionAEscribir->offset, memoria+particionAEscribir->offset+particionAEscribir->sizeParticion);
 		if(particionAEscribir->estadoParticion == PARTICION_LIBRE){
 			string_append(&buffer, LIBREP);
 			string_append(&buffer, "   ");
-			string_append(&buffer, "Size: ");
-			string_append_with_format(&buffer, "%i\n", particionAEscribir->sizeParticion);
+			string_append_with_format(&buffer, "Size: %i\n", particionAEscribir->sizeParticion);
 		}else{
 			string_append(&buffer, OCUPADA);
 			string_append(&buffer, "   ");
-			string_append(&buffer, "Size: ");
-			string_append_with_format(&buffer, "%i", particionAEscribir->sizeParticion);
-			string_append(&buffer, "   ");
-			string_append(&buffer, "LRU: ");
-			string_append_with_format(&buffer, "%i:%i:%i", particionAEscribir->lru.tm_hour, particionAEscribir->lru.tm_min, particionAEscribir->lru.tm_sec);
-			string_append(&buffer, "   ");
+			string_append_with_format(&buffer, "Size: %i   ", particionAEscribir->sizeParticion);
+			string_append_with_format(&buffer, "LRU: %i:%i:%i   ", particionAEscribir->lru.tm_hour, particionAEscribir->lru.tm_min, particionAEscribir->lru.tm_sec);
 			string_append(&buffer, "Cola: ");
 			string_append(&buffer, nombreDeCola(particionAEscribir->mensaje->cola));
 			string_append(&buffer, "   ");
-			string_append(&buffer, "ID: ");
-			string_append_with_format(&buffer, "%i\n", particionAEscribir->mensaje->idMensaje);
+			string_append_with_format(&buffer, "ID: %i\n", particionAEscribir->mensaje->idMensaje);
 			}
 		escribirEnArchivo(buffer);
 	}

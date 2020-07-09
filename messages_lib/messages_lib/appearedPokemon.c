@@ -17,7 +17,36 @@ mensajeAppeared* llenarAppeared(char* pokemon, uint32_t posX, uint32_t posY){
 
 	return msg;
 }
+
+mensajeAppeared* llenarAppearedMemoria(char* pokemon, uint32_t posX, uint32_t posY){
+	mensajeAppeared* msg = malloc(sizeof(mensajeAppeared));
+	msg->sizePokemon=strlen(pokemon);
+	msg->pokemon=malloc(msg->sizePokemon);
+	memcpy(msg->pokemon,pokemon,msg->sizePokemon);
+	msg->posX=posX;
+	msg->posY=posY;
+
+	return msg;
+}
+
+
 void* serializarAppeared(mensajeAppeared* mensaje){
+	void* stream    = malloc(sizeof(uint32_t)*3 + mensaje->sizePokemon);
+	uint32_t offset = 0;
+
+	memcpy(stream+offset, &(mensaje->sizePokemon), sizeof(uint32_t));
+	offset+= sizeof(uint32_t);
+	memcpy(stream+offset, mensaje->pokemon, mensaje->sizePokemon);
+	offset+=(mensaje->sizePokemon);
+	memcpy(stream+offset, &(mensaje->posX), sizeof(uint32_t));
+	offset+= sizeof(uint32_t);
+	memcpy(stream+offset, &(mensaje->posY), sizeof(uint32_t));
+	offset+= sizeof(uint32_t);
+
+	return stream;
+}
+
+void* serializarAppearedMemoria (mensajeAppeared* mensaje){
 	void* stream    = malloc(sizeof(uint32_t)*3 + mensaje->sizePokemon);
 	uint32_t offset = 0;
 
