@@ -24,12 +24,13 @@ bool estaAbierto(archivoHeader* metadata){
 void cerrarArchivo(archivoHeader* metadata, FILE* archivo){
 	if(metadata->tipo==ARCHIVO){
 		fclose(archivo);
+
 		t_config* config=config_create(metadata->pathArchivo);
 		config_set_value(config,"OPEN","N");
 		config_save(config);
 		config_destroy(config);
 		metadata->estaAbierto=false;
-		pthread_mutex_unlock(metadata->mutex);
+		//pthread_mutex_unlock(metadata->mutex);
 	}
 }
 
@@ -43,12 +44,12 @@ FILE* abrirArchivo(archivoHeader* metadata){
 
 		t_config* config=config_create(metadata->pathArchivo);
 
-		//pthread_mutex_lock(metadata->mutex);
+		pthread_mutex_lock(metadata->mutex);
 		while(estaAbierto(metadata)){
-					//pthread_mutex_unlock(metadata->mutex);
+					pthread_mutex_unlock(metadata->mutex);
 					log_info(gamecardLogger2, "Reintento abrir el archivo en %i sengundos. ", tiempoReintentoOperacion);
 					sleep(tiempoReintentoOperacion);
-					//pthread_mutex_lock(metadata->mutex);
+					pthread_mutex_lock(metadata->mutex);
 				}
 
 		metadata->estaAbierto=true;
@@ -56,7 +57,7 @@ FILE* abrirArchivo(archivoHeader* metadata){
 		config_save(config);
 		config_destroy(config);
 
-		//pthread_mutex_unlock(metadata->mutex);
+		pthread_mutex_unlock(metadata->mutex);
 
 		return fopen(metadata->pathArchivo,"r+");
 
@@ -109,6 +110,17 @@ char* obtenerStringListaBloques(archivoHeader* metadata){
 
 	}
 	return buffer;
+}
+
+t_list* arrayBloquesStringToList(char** listaArray){
+
+	t_list* lista=list_create();
+	for(uint32_t i=0; *(listaArray + i)!=NULL;i++){
+		uint32_t idBloqueActual= atoi(*(listaArray +i));
+		blockHeader* bloqueActual= obtenerBloquePorId(idBloqueActual);
+		list_add(lista, (void*) bloqueActual);
+	}
+	return lista;
 }
 
 char* agregarIdBloque(char* string, uint32_t id){
@@ -353,10 +365,15 @@ uint32_t capacidadTotalArchivo(archivoHeader* archivo){
 
 char* leerArchivo(char* pokemon){
 	archivoHeader* headerPoke= buscarArchivoHeaderPokemon(pokemon);
+
+
 	char* buffer=string_new();
+
 	for(uint32_t i=0; i<list_size(headerPoke->bloquesUsados);i++){
+		//log_info(gamecardLogger2, "hola3.");
 		blockHeader* bloqueActual= (blockHeader*) list_get(headerPoke->bloquesUsados,i);
 		char* stringActual= leerBloque(bloqueActual);
+		//log_info(gamecardLogger2, "LecturaArchivo: %s.", stringActual);
 		string_append(&buffer, stringActual);
 		free(stringActual);
 	}
@@ -375,8 +392,9 @@ posicionCantidad* buscarPosicionCantidad(t_list* lista, posicion pos){
 }
 
 t_list* obtenerListaPosicionCantidadDeArchivo(archivoHeader* archivo){
+
 	char* stringPosCant=leerArchivo(archivo->nombreArchivo);
-	log_info(gamecardLogger2, "LecturaArchivo: %s.", stringPosCant);
+	//log_info(gamecardLogger2, "LecturaArchivo: %s.", stringPosCant);
 	return obtenerListaPosicionCantidadDeString(stringPosCant);
 }
 

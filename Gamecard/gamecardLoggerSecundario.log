@@ -6731,3 +6731,2049 @@ HolacomoAndas
 65-93
 [INFO] 21:05:53:337 gamecard/(9919:10159): Escribiendo bloque:3, offset=0, longitud=6, buffer==3001
 
+[INFO] 21:42:28:580 gamecard/(13087:13087): Puerto Broker:5002
+[INFO] 21:42:28:581 gamecard/(13087:13087): Soy directorio
+[INFO] 21:42:28:581 gamecard/(13087:13087): Se encontro el directorio metadata
+[INFO] 21:42:28:581 gamecard/(13087:13087): No se encontro el archivo metadata.bin
+[INFO] 21:42:28:609 gamecard/(13087:13092): Estoy escuchando
+[INFO] 21:42:28:609 gamecard/(13087:13092): Espero un nuevo cliente
+[INFO] 21:45:03:652 gamecard/(13323:13323): Puerto Broker:5002
+[INFO] 21:45:03:652 gamecard/(13323:13323): Soy directorio
+[INFO] 21:45:03:652 gamecard/(13323:13323): Se encontro el directorio metadata
+[INFO] 21:45:03:652 gamecard/(13323:13323): Se encontro el archivo metadata.bin
+[INFO] 21:45:03:652 gamecard/(13323:13323): Inicio de Metadata, Tamanio bloques: 64,  Cantidad de bloques: 64,  Magic number: TALL_GRASS
+[INFO] 21:45:03:659 gamecard/(13323:13332): Estoy escuchando
+[INFO] 21:45:03:659 gamecard/(13323:13332): Espero un nuevo cliente
+[INFO] 21:47:22:109 gamecard/(13544:13544): Puerto Broker:5002
+[INFO] 21:47:22:109 gamecard/(13544:13544): Soy directorio
+[INFO] 21:47:22:109 gamecard/(13544:13544): Se encontro el directorio metadata
+[INFO] 21:47:22:109 gamecard/(13544:13544): Se encontro el archivo metadata.bin
+[INFO] 21:47:22:109 gamecard/(13544:13544): Inicio de Metadata, Tamanio bloques: 64,  Cantidad de bloques: 64,  Magic number: TALL_GRASS
+[INFO] 21:47:22:113 gamecard/(13544:13549): Estoy escuchando
+[INFO] 21:47:22:113 gamecard/(13544:13549): Espero un nuevo cliente
+[INFO] 21:47:50:648 gamecard/(13596:13596): Puerto Broker:5002
+[INFO] 21:47:50:648 gamecard/(13596:13596): Soy directorio
+[INFO] 21:47:50:649 gamecard/(13596:13596): Se encontro el directorio metadata
+[INFO] 21:47:50:649 gamecard/(13596:13596): Se encontro el archivo metadata.bin
+[INFO] 21:47:50:649 gamecard/(13596:13596): Inicio de Metadata, Tamanio bloques: 64,  Cantidad de bloques: 64,  Magic number: TALL_GRASS
+[INFO] 21:47:50:652 gamecard/(13596:13601): Estoy escuchando
+[INFO] 21:47:50:652 gamecard/(13596:13601): Espero un nuevo cliente
+[INFO] 21:55:58:141 gamecard/(14377:14377): Puerto Broker:5002
+[INFO] 21:55:58:142 gamecard/(14377:14377): Soy directorio
+[INFO] 21:55:58:142 gamecard/(14377:14377): Se encontro el directorio metadata
+[INFO] 21:55:58:142 gamecard/(14377:14377): Se encontro el archivo metadata.bin
+[INFO] 21:55:58:142 gamecard/(14377:14377): Inicio de Metadata, Tamanio bloques: 64,  Cantidad de bloques: 64,  Magic number: TALL_GRASS
+[INFO] 21:55:58:146 gamecard/(14377:14382): Estoy escuchando
+[INFO] 21:55:58:146 gamecard/(14377:14382): Espero un nuevo cliente
+[INFO] 22:01:33:694 gamecard/(14841:14841): Puerto Broker:5002
+[INFO] 22:01:33:694 gamecard/(14841:14841): Soy directorio
+[INFO] 22:01:33:694 gamecard/(14841:14841): Se encontro el directorio metadata
+[INFO] 22:01:33:694 gamecard/(14841:14841): Se encontro el archivo metadata.bin
+[INFO] 22:01:33:694 gamecard/(14841:14841): Inicio de Metadata, Tamanio bloques: 64,  Cantidad de bloques: 64,  Magic number: TALL_GRASS
+[INFO] 22:01:33:763 gamecard/(14841:14846): Estoy escuchando
+[INFO] 22:01:33:763 gamecard/(14841:14846): Espero un nuevo cliente
+[INFO] 22:01:40:159 gamecard/(14841:14846): Gestiono un nuevo cliente
+[INFO] 22:01:40:159 gamecard/(14841:14846): Espero un nuevo cliente
+[INFO] 22:01:40:159 gamecard/(14841:14855): atiendo cliente
+[INFO] 22:01:40:159 gamecard/(14841:14855): hola llegue
+[INFO] 22:01:40:170 gamecard/(14841:14855): hice el send: 1
+[INFO] 22:01:40:170 gamecard/(14841:14855): recibi: 24
+[INFO] 22:01:40:170 gamecard/(14841:14855): deserializado
+[INFO] 22:01:40:170 gamecard/(14841:14855): Atiendo new del pokemon: Pikachu. Posicion: (1, 9).
+[INFO] 22:01:40:171 gamecard/(14841:14855): Soy archivo
+[INFO] 22:01:40:171 gamecard/(14841:14855): LecturaArchivo: .
+[INFO] 22:01:40:171 gamecard/(14841:14855): Escribiendo bloque:1, offset=0, longitud=6, buffer=1-9=3
+
+[INFO] 22:01:40:173 gamecard/(14841:14846): Gestiono un nuevo cliente
+[INFO] 22:01:40:174 gamecard/(14841:14846): Espero un nuevo cliente
+[INFO] 22:01:40:174 gamecard/(14841:14859): atiendo cliente
+[INFO] 22:01:40:174 gamecard/(14841:14859): hola llegue
+[INFO] 22:01:40:174 gamecard/(14841:14859): hice el send: 1
+[INFO] 22:01:40:174 gamecard/(14841:14859): recibi: 27
+[INFO] 22:01:40:174 gamecard/(14841:14859): deserializado
+[INFO] 22:01:40:174 gamecard/(14841:14859): Atiendo new del pokemon: Charmander. Posicion: (4, 1).
+[INFO] 22:01:40:174 gamecard/(14841:14859): Soy archivo
+[INFO] 22:01:40:174 gamecard/(14841:14859): LecturaArchivo: .
+[INFO] 22:01:40:174 gamecard/(14841:14859): Escribiendo bloque:2, offset=0, longitud=8, buffer=4-1=101
+
+[INFO] 22:01:40:176 gamecard/(14841:14846): Gestiono un nuevo cliente
+[INFO] 22:01:40:176 gamecard/(14841:14846): Espero un nuevo cliente
+[INFO] 22:01:40:176 gamecard/(14841:14862): atiendo cliente
+[INFO] 22:01:40:176 gamecard/(14841:14862): hola llegue
+[INFO] 22:01:40:176 gamecard/(14841:14862): hice el send: 1
+[INFO] 22:01:40:176 gamecard/(14841:14862): recibi: 27
+[INFO] 22:01:40:176 gamecard/(14841:14862): deserializado
+[INFO] 22:01:40:176 gamecard/(14841:14862): Atiendo new del pokemon: Charmander. Posicion: (517, 2046).
+[INFO] 22:01:40:176 gamecard/(14841:14862): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 22:01:40:177 gamecard/(14841:14846): Gestiono un nuevo cliente
+[INFO] 22:01:40:178 gamecard/(14841:14846): Espero un nuevo cliente
+[INFO] 22:01:40:178 gamecard/(14841:14865): atiendo cliente
+[INFO] 22:01:40:178 gamecard/(14841:14865): hola llegue
+[INFO] 22:01:40:191 gamecard/(14841:14865): hice el send: 1
+[INFO] 22:01:40:191 gamecard/(14841:14865): recibi: 27
+[INFO] 22:01:40:191 gamecard/(14841:14865): deserializado
+[INFO] 22:01:40:191 gamecard/(14841:14865): Atiendo new del pokemon: Charmander. Posicion: (413, 17).
+[INFO] 22:01:40:191 gamecard/(14841:14865): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 22:01:40:194 gamecard/(14841:14846): Gestiono un nuevo cliente
+[INFO] 22:01:40:194 gamecard/(14841:14846): Espero un nuevo cliente
+[INFO] 22:01:40:194 gamecard/(14841:14868): atiendo cliente
+[INFO] 22:01:40:194 gamecard/(14841:14868): hola llegue
+[INFO] 22:01:40:195 gamecard/(14841:14868): hice el send: 1
+[INFO] 22:01:40:195 gamecard/(14841:14868): recibi: 27
+[INFO] 22:01:40:195 gamecard/(14841:14868): deserializado
+[INFO] 22:01:40:195 gamecard/(14841:14868): Atiendo new del pokemon: Charmander. Posicion: (723, 97).
+[INFO] 22:01:40:195 gamecard/(14841:14868): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 22:01:40:196 gamecard/(14841:14846): Gestiono un nuevo cliente
+[INFO] 22:01:40:196 gamecard/(14841:14846): Espero un nuevo cliente
+[INFO] 22:01:40:196 gamecard/(14841:14871): atiendo cliente
+[INFO] 22:01:40:196 gamecard/(14841:14871): hola llegue
+[INFO] 22:01:40:196 gamecard/(14841:14871): hice el send: 1
+[INFO] 22:01:40:196 gamecard/(14841:14871): recibi: 27
+[INFO] 22:01:40:196 gamecard/(14841:14871): deserializado
+[INFO] 22:01:40:196 gamecard/(14841:14871): Atiendo new del pokemon: Charmander. Posicion: (65, 93).
+[INFO] 22:01:40:196 gamecard/(14841:14871): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 22:01:40:197 gamecard/(14841:14846): Gestiono un nuevo cliente
+[INFO] 22:01:40:198 gamecard/(14841:14846): Espero un nuevo cliente
+[INFO] 22:01:40:198 gamecard/(14841:14874): atiendo cliente
+[INFO] 22:01:40:198 gamecard/(14841:14874): hola llegue
+[INFO] 22:01:40:198 gamecard/(14841:14874): hice el send: 1
+[INFO] 22:01:40:198 gamecard/(14841:14874): recibi: 27
+[INFO] 22:01:40:198 gamecard/(14841:14874): deserializado
+[INFO] 22:01:40:198 gamecard/(14841:14874): Atiendo new del pokemon: Charmander. Posicion: (12, 17).
+[INFO] 22:01:40:198 gamecard/(14841:14874): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 22:01:40:199 gamecard/(14841:14846): Gestiono un nuevo cliente
+[INFO] 22:01:40:199 gamecard/(14841:14846): Espero un nuevo cliente
+[INFO] 22:01:40:199 gamecard/(14841:14877): atiendo cliente
+[INFO] 22:01:40:199 gamecard/(14841:14877): hola llegue
+[INFO] 22:01:40:199 gamecard/(14841:14877): hice el send: 1
+[INFO] 22:01:40:199 gamecard/(14841:14877): recibi: 27
+[INFO] 22:01:40:199 gamecard/(14841:14877): deserializado
+[INFO] 22:01:40:199 gamecard/(14841:14877): Atiendo new del pokemon: Charmander. Posicion: (129, 547).
+[INFO] 22:01:40:199 gamecard/(14841:14877): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 22:01:45:173 gamecard/(14841:14855): Cierro el archivo del pokemon: Pikachu. Posicion: (1, 9).
+[INFO] 22:01:45:174 gamecard/(14841:14859): Cierro el archivo del pokemon: Charmander. Posicion: (4, 1).
+[INFO] 22:01:45:176 gamecard/(14841:14862): LecturaArchivo: 4-1=101
+.
+[INFO] 22:01:45:177 gamecard/(14841:14862): Escribiendo bloque:2, offset=0, longitud=20, buffer=4-1=101
+517-2046=15
+
+[INFO] 22:01:45:193 gamecard/(14841:14865): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 22:01:45:196 gamecard/(14841:14868): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 22:01:45:198 gamecard/(14841:14871): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 22:01:45:200 gamecard/(14841:14874): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 22:01:45:200 gamecard/(14841:14877): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 22:01:50:186 gamecard/(14841:14862): Cierro el archivo del pokemon: Charmander. Posicion: (517, 2046).
+[INFO] 22:01:50:194 gamecard/(14841:14865): LecturaArchivo: 4-1=101
+517-2046=15
+.
+[INFO] 22:01:50:194 gamecard/(14841:14865): Escribiendo bloque:2, offset=0, longitud=29, buffer=4-1=101
+517-2046=15
+413-17=1
+
+[INFO] 22:01:50:197 gamecard/(14841:14868): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 22:01:50:199 gamecard/(14841:14871): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 22:01:50:201 gamecard/(14841:14877): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 22:01:50:201 gamecard/(14841:14874): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 22:01:55:194 gamecard/(14841:14865): Cierro el archivo del pokemon: Charmander. Posicion: (413, 17).
+[INFO] 22:01:55:199 gamecard/(14841:14871): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 22:01:55:201 gamecard/(14841:14874): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 22:01:55:201 gamecard/(14841:14877): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 22:01:55:220 gamecard/(14841:14868): LecturaArchivo: 4-1=101
+517-2046=15
+413-17=1
+.
+[INFO] 22:01:55:220 gamecard/(14841:14868): Escribiendo bloque:2, offset=0, longitud=39, buffer=4-1=101
+517-2046=15
+413-17=1
+723-97=29
+
+[INFO] 22:02:00:202 gamecard/(14841:14877): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 22:02:00:204 gamecard/(14841:14871): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 22:02:00:205 gamecard/(14841:14874): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 22:02:00:222 gamecard/(14841:14868): Cierro el archivo del pokemon: Charmander. Posicion: (723, 97).
+[INFO] 22:02:05:203 gamecard/(14841:14877): LecturaArchivo: 4-1=101
+517-2046=15
+413-17=1
+723-97=29
+.
+[INFO] 22:02:05:203 gamecard/(14841:14877): Escribiendo bloque:2, offset=0, longitud=50, buffer=4-1=101
+517-2046=15
+413-17=1
+723-97=29
+129-547=11
+
+[INFO] 22:02:05:205 gamecard/(14841:14871): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 22:02:05:205 gamecard/(14841:14874): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 22:02:10:205 gamecard/(14841:14871): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 22:02:10:205 gamecard/(14841:14874): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 22:02:10:205 gamecard/(14841:14877): Cierro el archivo del pokemon: Charmander. Posicion: (129, 547).
+[INFO] 22:02:15:210 gamecard/(14841:14874): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 22:02:15:211 gamecard/(14841:14871): LecturaArchivo: 4-1=101
+517-2046=15
+413-17=1
+723-97=29
+129-547=11
+.
+[INFO] 22:02:15:211 gamecard/(14841:14871): Escribiendo bloque:2, offset=0, longitud=61, buffer=4-1=101
+517-2046=15
+413-17=1
+723-97=29
+129-547=11
+65-93=3001
+
+[INFO] 22:02:20:211 gamecard/(14841:14874): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 22:02:20:211 gamecard/(14841:14871): Cierro el archivo del pokemon: Charmander. Posicion: (65, 93).
+[INFO] 22:02:25:213 gamecard/(14841:14874): LecturaArchivo: 4-1=101
+517-2046=15
+413-17=1
+723-97=29
+129-547=11
+65-93=3001
+.
+[INFO] 22:02:25:230 gamecard/(14841:14874): Escribiendo bloque:2, offset=0, longitud=64, buffer=4-1=101
+517-2046=15
+413-17=1
+723-97=29
+129-547=11
+65-93=3001
+12-
+[INFO] 22:02:25:230 gamecard/(14841:14874): Escribiendo bloque:3, offset=0, longitud=6, buffer=17=34
+
+[INFO] 22:02:30:231 gamecard/(14841:14874): Cierro el archivo del pokemon: Charmander. Posicion: (12, 17).
+[INFO] 22:50:57:475 gamecard/(19417:19417): Puerto Broker:5002
+[INFO] 22:50:57:476 gamecard/(19417:19417): Se encontro el directorio metadata
+[INFO] 22:50:57:476 gamecard/(19417:19417): Se encontro el archivo metadata.bin
+[INFO] 22:50:57:476 gamecard/(19417:19417): Inicio de Metadata, Tamanio bloques: 64,  Cantidad de bloques: 64,  Magic number: TALL_GRASS
+[INFO] 22:50:57:494 gamecard/(19417:19417): tamanio archivo: 0
+[INFO] 22:50:57:494 gamecard/(19417:19417): bloques usados:
+[INFO] 22:50:57:494 gamecard/(19417:19417): bloque: 3
+[INFO] 22:50:57:494 gamecard/(19417:19417): bloque: 3
+[INFO] 22:50:57:494 gamecard/(19417:19424): Estoy escuchando
+[INFO] 22:50:57:494 gamecard/(19417:19424): Espero un nuevo cliente
+[INFO] 22:52:02:51 gamecard/(19524:19524): Puerto Broker:5002
+[INFO] 22:52:25:414 gamecard/(19524:19524): Se encontro el directorio metadata
+[INFO] 22:52:25:414 gamecard/(19524:19524): Se encontro el archivo metadata.bin
+[INFO] 22:52:25:414 gamecard/(19524:19524): Inicio de Metadata, Tamanio bloques: 64,  Cantidad de bloques: 64,  Magic number: TALL_GRASS
+[INFO] 22:53:21:400 gamecard/(19754:19754): Puerto Broker:5002
+[INFO] 22:53:21:400 gamecard/(19754:19754): Se encontro el directorio metadata
+[INFO] 22:53:21:400 gamecard/(19754:19754): Se encontro el archivo metadata.bin
+[INFO] 22:53:21:400 gamecard/(19754:19754): Inicio de Metadata, Tamanio bloques: 64,  Cantidad de bloques: 64,  Magic number: TALL_GRASS
+[INFO] 22:53:21:414 gamecard/(19754:19754): tamanio archivo: 0
+[INFO] 22:53:21:414 gamecard/(19754:19754): bloques usados:
+[INFO] 22:53:21:414 gamecard/(19754:19754): bloque: 2
+[INFO] 22:53:21:414 gamecard/(19754:19754): bloque: 3
+[INFO] 22:53:21:425 gamecard/(19754:19760): Estoy escuchando
+[INFO] 22:53:21:426 gamecard/(19754:19760): Espero un nuevo cliente
+[INFO] 22:55:03:337 gamecard/(19916:19916): Puerto Broker:5002
+[INFO] 22:55:03:338 gamecard/(19916:19916): Se encontro el directorio metadata
+[INFO] 22:55:03:338 gamecard/(19916:19916): Se encontro el archivo metadata.bin
+[INFO] 22:55:03:338 gamecard/(19916:19916): Inicio de Metadata, Tamanio bloques: 64,  Cantidad de bloques: 64,  Magic number: TALL_GRASS
+[INFO] 22:55:03:386 gamecard/(19916:19916): tamanio archivo: 0
+[INFO] 22:55:03:386 gamecard/(19916:19916): bloques usados:
+[INFO] 22:55:03:390 gamecard/(19916:19922): Estoy escuchando
+[INFO] 22:55:03:390 gamecard/(19916:19922): Espero un nuevo cliente
+[INFO] 22:55:06:562 gamecard/(19916:19922): Gestiono un nuevo cliente
+[INFO] 22:55:06:563 gamecard/(19916:19922): Espero un nuevo cliente
+[INFO] 22:55:06:563 gamecard/(19916:19930): atiendo cliente
+[INFO] 22:55:06:563 gamecard/(19916:19930): hola llegue
+[INFO] 22:55:06:571 gamecard/(19916:19930): hice el send: 1
+[INFO] 22:55:06:571 gamecard/(19916:19930): recibi: 24
+[INFO] 22:55:06:571 gamecard/(19916:19930): deserializado
+[INFO] 22:55:06:571 gamecard/(19916:19930): Atiendo new del pokemon: Pikachu. Posicion: (1, 9).
+[INFO] 22:55:22:226 gamecard/(19973:19973): Puerto Broker:5002
+[INFO] 22:55:22:227 gamecard/(19973:19973): Se encontro el directorio metadata
+[INFO] 22:55:22:227 gamecard/(19973:19973): Se encontro el archivo metadata.bin
+[INFO] 22:55:22:227 gamecard/(19973:19973): Inicio de Metadata, Tamanio bloques: 64,  Cantidad de bloques: 64,  Magic number: TALL_GRASS
+[INFO] 22:55:22:244 gamecard/(19973:19973): tamanio archivo: 0
+[INFO] 22:55:22:244 gamecard/(19973:19973): bloques usados:
+[INFO] 22:55:22:257 gamecard/(19973:19979): Estoy escuchando
+[INFO] 22:55:22:257 gamecard/(19973:19979): Espero un nuevo cliente
+[INFO] 22:55:27:969 gamecard/(19973:19979): Gestiono un nuevo cliente
+[INFO] 22:55:27:970 gamecard/(19973:19979): Espero un nuevo cliente
+[INFO] 22:55:27:977 gamecard/(19973:19989): atiendo cliente
+[INFO] 22:55:27:977 gamecard/(19973:19989): hola llegue
+[INFO] 22:55:27:977 gamecard/(19973:19989): hice el send: 1
+[INFO] 22:55:27:977 gamecard/(19973:19989): recibi: 24
+[INFO] 22:55:27:977 gamecard/(19973:19989): deserializado
+[INFO] 22:55:27:977 gamecard/(19973:19989): Atiendo new del pokemon: Pikachu. Posicion: (1, 9).
+[INFO] 22:56:18:914 gamecard/(20088:20088): Puerto Broker:5002
+[INFO] 22:56:22:130 gamecard/(20088:20088): Se encontro el directorio metadata
+[INFO] 22:56:22:130 gamecard/(20088:20088): Se encontro el archivo metadata.bin
+[INFO] 22:56:22:130 gamecard/(20088:20088): Inicio de Metadata, Tamanio bloques: 64,  Cantidad de bloques: 64,  Magic number: TALL_GRASS
+[INFO] 22:56:23:246 gamecard/(20088:20088): tamanio archivo: 0
+[INFO] 22:56:23:246 gamecard/(20088:20088): bloques usados:
+[INFO] 22:56:23:247 gamecard/(20088:20113): Estoy escuchando
+[INFO] 22:56:23:247 gamecard/(20088:20113): Espero un nuevo cliente
+[INFO] 22:56:26:974 gamecard/(20088:20113): Gestiono un nuevo cliente
+[INFO] 22:56:26:974 gamecard/(20088:20124): atiendo cliente
+[INFO] 22:56:26:974 gamecard/(20088:20124): hola llegue
+[INFO] 22:56:26:975 gamecard/(20088:20124): hice el send: 1
+[INFO] 22:56:26:975 gamecard/(20088:20124): recibi: 24
+[INFO] 22:56:26:975 gamecard/(20088:20124): deserializado
+[INFO] 22:56:26:975 gamecard/(20088:20124): Atiendo new del pokemon: Pikachu. Posicion: (1, 9).
+[INFO] 22:56:26:975 gamecard/(20088:20113): Espero un nuevo cliente
+[INFO] 22:56:30:468 gamecard/(20088:20113): Gestiono un nuevo cliente
+[INFO] 22:56:30:472 gamecard/(20088:20113): Espero un nuevo cliente
+[INFO] 22:56:30:473 gamecard/(20088:20135): atiendo cliente
+[INFO] 22:56:30:473 gamecard/(20088:20135): hola llegue
+[INFO] 22:56:32:309 gamecard/(20088:20113): Gestiono un nuevo cliente
+[INFO] 22:56:32:310 gamecard/(20088:20135): hice el send: 1
+[INFO] 22:56:32:310 gamecard/(20088:20135): recibi: 27
+[INFO] 22:56:32:310 gamecard/(20088:20135): deserializado
+[INFO] 22:56:32:310 gamecard/(20088:20135): Atiendo new del pokemon: Charmander. Posicion: (4, 1).
+[INFO] 22:56:37:809 gamecard/(20088:20141): atiendo cliente
+[INFO] 22:56:37:809 gamecard/(20088:20141): hola llegue
+[INFO] 22:56:37:809 gamecard/(20088:20141): hice el send: 1
+[INFO] 22:56:37:809 gamecard/(20088:20141): recibi: 27
+[INFO] 22:56:37:809 gamecard/(20088:20141): deserializado
+[INFO] 22:56:37:809 gamecard/(20088:20141): Atiendo new del pokemon: Charmander. Posicion: (517, 2046).
+[INFO] 22:56:37:809 gamecard/(20088:20113): Espero un nuevo cliente
+[INFO] 22:56:50:317 gamecard/(20088:20113): Gestiono un nuevo cliente
+[INFO] 22:58:29:336 gamecard/(20345:20345): Puerto Broker:5002
+[INFO] 22:58:29:336 gamecard/(20345:20345): Se encontro el directorio metadata
+[INFO] 22:58:29:336 gamecard/(20345:20345): Se encontro el archivo metadata.bin
+[INFO] 22:58:29:336 gamecard/(20345:20345): Inicio de Metadata, Tamanio bloques: 64,  Cantidad de bloques: 64,  Magic number: TALL_GRASS
+[INFO] 22:58:29:366 gamecard/(20345:20345): entro a cargar metadata
+[INFO] 22:58:29:366 gamecard/(20345:20345): empiezo con los bloques Charmander
+[INFO] 22:58:29:366 gamecard/(20345:20345): tamanio archivo: 0
+[INFO] 22:58:29:366 gamecard/(20345:20345): bloques usados:
+[INFO] 22:58:29:366 gamecard/(20345:20352): Estoy escuchando
+[INFO] 22:58:29:366 gamecard/(20345:20352): Espero un nuevo cliente
+[INFO] 22:58:43:401 gamecard/(20345:20352): Gestiono un nuevo cliente
+[INFO] 22:58:43:401 gamecard/(20345:20352): Espero un nuevo cliente
+[INFO] 22:58:43:407 gamecard/(20345:20372): atiendo cliente
+[INFO] 22:58:43:407 gamecard/(20345:20372): hola llegue
+[INFO] 22:58:43:407 gamecard/(20345:20372): hice el send: 1
+[INFO] 22:58:43:407 gamecard/(20345:20372): recibi: 24
+[INFO] 22:58:43:407 gamecard/(20345:20372): deserializado
+[INFO] 22:58:43:407 gamecard/(20345:20372): Atiendo new del pokemon: Pikachu. Posicion: (1, 9).
+[INFO] 22:58:43:407 gamecard/(20345:20372): entro a cargar metadata
+[INFO] 22:58:43:407 gamecard/(20345:20372): empiezo con los bloques Pikachu
+[INFO] 22:59:11:151 gamecard/(20459:20459): Puerto Broker:5002
+[INFO] 22:59:11:153 gamecard/(20459:20459): Se encontro el directorio metadata
+[INFO] 22:59:11:153 gamecard/(20459:20459): Se encontro el archivo metadata.bin
+[INFO] 22:59:11:153 gamecard/(20459:20459): Inicio de Metadata, Tamanio bloques: 64,  Cantidad de bloques: 64,  Magic number: TALL_GRASS
+[INFO] 22:59:11:272 gamecard/(20459:20459): entro a cargar metadata
+[INFO] 22:59:11:272 gamecard/(20459:20459): empiezo con los bloques Charmander
+[INFO] 22:59:11:272 gamecard/(20459:20459): termino con los bloques Charmander
+[INFO] 22:59:11:272 gamecard/(20459:20459): tamanio archivo: 0
+[INFO] 22:59:11:272 gamecard/(20459:20459): bloques usados:
+[INFO] 22:59:11:272 gamecard/(20459:20466): Estoy escuchando
+[INFO] 22:59:11:272 gamecard/(20459:20466): Espero un nuevo cliente
+[INFO] 22:59:56:584 gamecard/(20524:20524): Puerto Broker:5002
+[INFO] 22:59:56:584 gamecard/(20524:20524): Se encontro el directorio metadata
+[INFO] 22:59:56:584 gamecard/(20524:20524): Se encontro el archivo metadata.bin
+[INFO] 22:59:56:584 gamecard/(20524:20524): Inicio de Metadata, Tamanio bloques: 64,  Cantidad de bloques: 64,  Magic number: TALL_GRASS
+[INFO] 22:59:56:626 gamecard/(20524:20524): entro a cargar metadata
+[INFO] 22:59:56:627 gamecard/(20524:20524): empiezo con los bloques Charmander
+[INFO] 22:59:56:627 gamecard/(20524:20524): termino con los bloques Charmander
+[INFO] 22:59:56:627 gamecard/(20524:20524): tamanio archivo: 0
+[INFO] 22:59:56:627 gamecard/(20524:20524): bloques usados:
+[INFO] 22:59:56:627 gamecard/(20524:20530): Estoy escuchando
+[INFO] 22:59:56:627 gamecard/(20524:20530): Espero un nuevo cliente
+[INFO] 22:59:59:714 gamecard/(20524:20530): Gestiono un nuevo cliente
+[INFO] 22:59:59:715 gamecard/(20524:20530): Espero un nuevo cliente
+[INFO] 22:59:59:715 gamecard/(20524:20535): atiendo cliente
+[INFO] 22:59:59:715 gamecard/(20524:20535): hola llegue
+[INFO] 22:59:59:715 gamecard/(20524:20535): hice el send: 1
+[INFO] 22:59:59:715 gamecard/(20524:20535): recibi: 24
+[INFO] 22:59:59:715 gamecard/(20524:20535): deserializado
+[INFO] 22:59:59:715 gamecard/(20524:20535): Atiendo new del pokemon: Pikachu. Posicion: (1, 9).
+[INFO] 22:59:59:715 gamecard/(20524:20535): entro a cargar metadata
+[INFO] 22:59:59:715 gamecard/(20524:20535): empiezo con los bloques Pikachu
+[INFO] 22:59:59:715 gamecard/(20524:20535): termino con los bloques Pikachu
+[INFO] 23:00:45:983 gamecard/(20654:20654): Puerto Broker:5002
+[INFO] 23:00:45:983 gamecard/(20654:20654): Se encontro el directorio metadata
+[INFO] 23:00:45:983 gamecard/(20654:20654): Se encontro el archivo metadata.bin
+[INFO] 23:00:45:983 gamecard/(20654:20654): Inicio de Metadata, Tamanio bloques: 64,  Cantidad de bloques: 64,  Magic number: TALL_GRASS
+[INFO] 23:00:46:23 gamecard/(20654:20654): entro a cargar metadata
+[INFO] 23:00:46:23 gamecard/(20654:20654): empiezo con los bloques Charmander
+[INFO] 23:00:46:23 gamecard/(20654:20654): termino con los bloques Charmander
+[INFO] 23:00:46:23 gamecard/(20654:20654): tamanio archivo: 0
+[INFO] 23:00:46:23 gamecard/(20654:20654): bloques usados:
+[INFO] 23:00:46:23 gamecard/(20654:20660): Estoy escuchando
+[INFO] 23:00:46:23 gamecard/(20654:20660): Espero un nuevo cliente
+[INFO] 23:00:50:984 gamecard/(20654:20660): Gestiono un nuevo cliente
+[INFO] 23:00:50:984 gamecard/(20654:20660): Espero un nuevo cliente
+[INFO] 23:00:50:984 gamecard/(20654:20671): atiendo cliente
+[INFO] 23:00:50:984 gamecard/(20654:20671): hola llegue
+[INFO] 23:00:50:985 gamecard/(20654:20671): hice el send: 1
+[INFO] 23:00:50:985 gamecard/(20654:20671): recibi: 24
+[INFO] 23:00:50:985 gamecard/(20654:20671): deserializado
+[INFO] 23:00:50:985 gamecard/(20654:20671): Atiendo new del pokemon: Pikachu. Posicion: (1, 9).
+[INFO] 23:00:50:985 gamecard/(20654:20671): entro a cargar metadata
+[INFO] 23:00:50:985 gamecard/(20654:20671): empiezo con los bloques Pikachu
+[INFO] 23:00:50:985 gamecard/(20654:20671): termino con los bloques Pikachu
+[INFO] 23:01:45:694 gamecard/(20850:20850): Puerto Broker:5002
+[INFO] 23:01:45:694 gamecard/(20850:20850): Se encontro el directorio metadata
+[INFO] 23:01:45:694 gamecard/(20850:20850): Se encontro el archivo metadata.bin
+[INFO] 23:01:45:694 gamecard/(20850:20850): Inicio de Metadata, Tamanio bloques: 64,  Cantidad de bloques: 64,  Magic number: TALL_GRASS
+[INFO] 23:01:45:792 gamecard/(20850:20850): entro a cargar metadata
+[INFO] 23:01:45:792 gamecard/(20850:20850): empiezo con los bloques Charmander
+[INFO] 23:01:45:792 gamecard/(20850:20850): termino con los bloques Charmander
+[INFO] 23:01:45:792 gamecard/(20850:20850): tamanio archivo: 0
+[INFO] 23:01:45:792 gamecard/(20850:20850): bloques usados:
+[INFO] 23:01:45:792 gamecard/(20850:20856): Estoy escuchando
+[INFO] 23:01:45:792 gamecard/(20850:20856): Espero un nuevo cliente
+[INFO] 23:01:47:822 gamecard/(20850:20856): Gestiono un nuevo cliente
+[INFO] 23:01:47:822 gamecard/(20850:20856): Espero un nuevo cliente
+[INFO] 23:01:47:822 gamecard/(20850:20865): atiendo cliente
+[INFO] 23:01:47:822 gamecard/(20850:20865): hola llegue
+[INFO] 23:01:47:828 gamecard/(20850:20865): hice el send: 1
+[INFO] 23:01:47:828 gamecard/(20850:20865): recibi: 24
+[INFO] 23:01:47:828 gamecard/(20850:20865): deserializado
+[INFO] 23:01:47:828 gamecard/(20850:20865): Atiendo new del pokemon: Pikachu. Posicion: (1, 9).
+[INFO] 23:01:47:828 gamecard/(20850:20865): entro a cargar metadata
+[INFO] 23:01:47:828 gamecard/(20850:20865): empiezo con los bloques Pikachu
+[INFO] 23:01:47:828 gamecard/(20850:20865): termino con los bloques Pikachu
+[INFO] 23:02:45:163 gamecard/(20992:20992): Puerto Broker:5002
+[INFO] 23:02:45:673 gamecard/(20992:20992): Se encontro el directorio metadata
+[INFO] 23:02:45:673 gamecard/(20992:20992): Se encontro el archivo metadata.bin
+[INFO] 23:02:45:673 gamecard/(20992:20992): Inicio de Metadata, Tamanio bloques: 64,  Cantidad de bloques: 64,  Magic number: TALL_GRASS
+[INFO] 23:02:46:372 gamecard/(20992:20992): entro a cargar metadata
+[INFO] 23:02:46:372 gamecard/(20992:20992): empiezo con los bloques Charmander
+[INFO] 23:02:46:372 gamecard/(20992:20992): termino con los bloques Charmander
+[INFO] 23:02:46:372 gamecard/(20992:20992): tamanio archivo: 0
+[INFO] 23:02:46:372 gamecard/(20992:20992): bloques usados:
+[INFO] 23:02:46:380 gamecard/(20992:21011): Estoy escuchando
+[INFO] 23:02:46:380 gamecard/(20992:21011): Espero un nuevo cliente
+[INFO] 23:02:50:132 gamecard/(20992:21011): Gestiono un nuevo cliente
+[INFO] 23:02:50:133 gamecard/(20992:21011): Espero un nuevo cliente
+[INFO] 23:02:50:133 gamecard/(20992:21021): atiendo cliente
+[INFO] 23:02:50:134 gamecard/(20992:21021): hola llegue
+[INFO] 23:02:50:141 gamecard/(20992:21021): hice el send: 1
+[INFO] 23:02:50:141 gamecard/(20992:21021): recibi: 24
+[INFO] 23:02:50:141 gamecard/(20992:21021): deserializado
+[INFO] 23:02:50:141 gamecard/(20992:21021): Atiendo new del pokemon: Pikachu. Posicion: (1, 9).
+[INFO] 23:02:52:209 gamecard/(20992:21011): Gestiono un nuevo cliente
+[INFO] 23:02:52:209 gamecard/(20992:21011): Espero un nuevo cliente
+[INFO] 23:02:54:259 gamecard/(20992:21026): atiendo cliente
+[INFO] 23:02:54:259 gamecard/(20992:21026): hola llegue
+[INFO] 23:02:54:259 gamecard/(20992:21026): hice el send: 1
+[INFO] 23:02:54:259 gamecard/(20992:21026): recibi: 27
+[INFO] 23:02:54:259 gamecard/(20992:21026): deserializado
+[INFO] 23:02:54:259 gamecard/(20992:21026): Atiendo new del pokemon: Charmander. Posicion: (4, 1).
+[INFO] 23:02:54:260 gamecard/(20992:21021): entro a cargar metadata
+[INFO] 23:02:54:260 gamecard/(20992:21021): empiezo con los bloques Pikachu
+[INFO] 23:02:54:260 gamecard/(20992:21021): termino con los bloques Pikachu
+[INFO] 23:02:55:836 gamecard/(20992:21011): Gestiono un nuevo cliente
+[INFO] 23:02:59:894 gamecard/(20992:21053): atiendo cliente
+[INFO] 23:02:59:894 gamecard/(20992:21053): hola llegue
+[INFO] 23:02:59:894 gamecard/(20992:21053): hice el send: 1
+[INFO] 23:02:59:894 gamecard/(20992:21053): recibi: 27
+[INFO] 23:02:59:894 gamecard/(20992:21053): deserializado
+[INFO] 23:02:59:894 gamecard/(20992:21053): Atiendo new del pokemon: Charmander. Posicion: (517, 2046).
+[INFO] 23:02:59:894 gamecard/(20992:21011): Espero un nuevo cliente
+[INFO] 23:03:04:168 gamecard/(20992:21011): Gestiono un nuevo cliente
+[INFO] 23:03:04:168 gamecard/(20992:21060): atiendo cliente
+[INFO] 23:03:04:168 gamecard/(20992:21060): hola llegue
+[INFO] 23:03:06:166 gamecard/(20992:21011): Espero un nuevo cliente
+[INFO] 23:03:06:166 gamecard/(20992:21060): hice el send: 1
+[INFO] 23:03:06:166 gamecard/(20992:21060): recibi: 27
+[INFO] 23:03:06:166 gamecard/(20992:21060): deserializado
+[INFO] 23:03:06:166 gamecard/(20992:21060): Atiendo new del pokemon: Charmander. Posicion: (413, 17).
+[INFO] 23:03:06:166 gamecard/(20992:21011): Gestiono un nuevo cliente
+[INFO] 23:03:06:167 gamecard/(20992:21011): Espero un nuevo cliente
+[INFO] 23:03:07:268 gamecard/(20992:21075): atiendo cliente
+[INFO] 23:03:07:268 gamecard/(20992:21075): hola llegue
+[INFO] 23:03:07:268 gamecard/(20992:21075): hice el send: 1
+[INFO] 23:03:07:268 gamecard/(20992:21075): recibi: 27
+[INFO] 23:03:07:268 gamecard/(20992:21075): deserializado
+[INFO] 23:03:07:268 gamecard/(20992:21075): Atiendo new del pokemon: Charmander. Posicion: (723, 97).
+[INFO] 23:04:39:645 gamecard/(21253:21253): Puerto Broker:5002
+[INFO] 23:04:39:645 gamecard/(21253:21253): Se encontro el directorio metadata
+[INFO] 23:04:39:645 gamecard/(21253:21253): Se encontro el archivo metadata.bin
+[INFO] 23:04:39:645 gamecard/(21253:21253): Inicio de Metadata, Tamanio bloques: 64,  Cantidad de bloques: 64,  Magic number: TALL_GRASS
+[INFO] 23:04:39:832 gamecard/(21253:21253): entro a cargar metadata
+[INFO] 23:04:39:832 gamecard/(21253:21253): empiezo con los bloques Charmander
+[INFO] 23:04:39:832 gamecard/(21253:21253): termino con los bloques Charmander
+[INFO] 23:04:39:832 gamecard/(21253:21253): tamanio archivo: 0
+[INFO] 23:04:39:832 gamecard/(21253:21253): bloques usados:
+[INFO] 23:04:39:835 gamecard/(21253:21259): Estoy escuchando
+[INFO] 23:04:39:835 gamecard/(21253:21259): Espero un nuevo cliente
+[INFO] 23:04:42:359 gamecard/(21253:21259): Gestiono un nuevo cliente
+[INFO] 23:04:42:359 gamecard/(21253:21259): Espero un nuevo cliente
+[INFO] 23:04:42:364 gamecard/(21253:21268): atiendo cliente
+[INFO] 23:04:42:364 gamecard/(21253:21268): hola llegue
+[INFO] 23:04:42:364 gamecard/(21253:21268): hice el send: 1
+[INFO] 23:04:42:364 gamecard/(21253:21268): recibi: 24
+[INFO] 23:04:42:364 gamecard/(21253:21268): deserializado
+[INFO] 23:04:42:364 gamecard/(21253:21268): Atiendo new del pokemon: Pikachu. Posicion: (1, 9).
+[INFO] 23:04:42:364 gamecard/(21253:21268): entro a cargar metadata
+[INFO] 23:04:42:364 gamecard/(21253:21268): empiezo con los bloques Pikachu
+[INFO] 23:04:42:364 gamecard/(21253:21268): termino con los bloques Pikachu
+[INFO] 23:05:30:125 gamecard/(21376:21376): Puerto Broker:5002
+[INFO] 23:05:30:125 gamecard/(21376:21376): Se encontro el directorio metadata
+[INFO] 23:05:30:125 gamecard/(21376:21376): Se encontro el archivo metadata.bin
+[INFO] 23:05:30:125 gamecard/(21376:21376): Inicio de Metadata, Tamanio bloques: 64,  Cantidad de bloques: 64,  Magic number: TALL_GRASS
+[INFO] 23:05:30:196 gamecard/(21376:21376): entro a cargar metadata
+[INFO] 23:05:30:196 gamecard/(21376:21376): empiezo con los bloques Charmander
+[INFO] 23:05:30:196 gamecard/(21376:21376): termino con los bloques Charmander
+[INFO] 23:05:30:196 gamecard/(21376:21376): tamanio archivo: 0
+[INFO] 23:05:30:196 gamecard/(21376:21376): bloques usados:
+[INFO] 23:05:30:196 gamecard/(21376:21382): Estoy escuchando
+[INFO] 23:05:30:196 gamecard/(21376:21382): Espero un nuevo cliente
+[INFO] 23:05:32:291 gamecard/(21376:21382): Gestiono un nuevo cliente
+[INFO] 23:05:32:291 gamecard/(21376:21382): Espero un nuevo cliente
+[INFO] 23:05:32:291 gamecard/(21376:21386): atiendo cliente
+[INFO] 23:05:32:291 gamecard/(21376:21386): hola llegue
+[INFO] 23:05:32:292 gamecard/(21376:21386): hice el send: 1
+[INFO] 23:05:32:292 gamecard/(21376:21386): recibi: 24
+[INFO] 23:05:32:292 gamecard/(21376:21386): deserializado
+[INFO] 23:05:32:292 gamecard/(21376:21386): Atiendo new del pokemon: Pikachu. Posicion: (1, 9).
+[INFO] 23:05:32:292 gamecard/(21376:21386): entro a cargar metadata
+[INFO] 23:05:32:292 gamecard/(21376:21386): empiezo con los bloques Pikachu
+[INFO] 23:05:32:292 gamecard/(21376:21386): termino con los bloques Pikachu
+[INFO] 23:05:32:292 gamecard/(21376:21386): comienzo a obtener lista de Pikachu
+[INFO] 23:05:59:396 gamecard/(21479:21479): Puerto Broker:5002
+[INFO] 23:05:59:396 gamecard/(21479:21479): Se encontro el directorio metadata
+[INFO] 23:05:59:396 gamecard/(21479:21479): Se encontro el archivo metadata.bin
+[INFO] 23:05:59:396 gamecard/(21479:21479): Inicio de Metadata, Tamanio bloques: 64,  Cantidad de bloques: 64,  Magic number: TALL_GRASS
+[INFO] 23:05:59:460 gamecard/(21479:21479): entro a cargar metadata
+[INFO] 23:05:59:460 gamecard/(21479:21479): empiezo con los bloques Charmander
+[INFO] 23:05:59:460 gamecard/(21479:21479): termino con los bloques Charmander
+[INFO] 23:05:59:460 gamecard/(21479:21479): tamanio archivo: 0
+[INFO] 23:05:59:460 gamecard/(21479:21479): bloques usados:
+[INFO] 23:05:59:460 gamecard/(21479:21485): Estoy escuchando
+[INFO] 23:05:59:460 gamecard/(21479:21485): Espero un nuevo cliente
+[INFO] 23:06:04:246 gamecard/(21479:21485): Gestiono un nuevo cliente
+[INFO] 23:06:04:247 gamecard/(21479:21485): Espero un nuevo cliente
+[INFO] 23:06:04:247 gamecard/(21479:21496): atiendo cliente
+[INFO] 23:06:04:262 gamecard/(21479:21496): hola llegue
+[INFO] 23:06:04:262 gamecard/(21479:21496): hice el send: 1
+[INFO] 23:06:04:262 gamecard/(21479:21496): recibi: 24
+[INFO] 23:06:04:262 gamecard/(21479:21496): deserializado
+[INFO] 23:06:04:263 gamecard/(21479:21496): Atiendo new del pokemon: Pikachu. Posicion: (1, 9).
+[INFO] 23:06:04:263 gamecard/(21479:21496): entro a cargar metadata
+[INFO] 23:06:04:263 gamecard/(21479:21496): empiezo con los bloques Pikachu
+[INFO] 23:06:04:263 gamecard/(21479:21496): termino con los bloques Pikachu
+[INFO] 23:06:04:263 gamecard/(21479:21496): comienzo a obtener lista de Pikachu
+[INFO] 23:07:10:688 gamecard/(21628:21628): Puerto Broker:5002
+[INFO] 23:07:10:689 gamecard/(21628:21628): Se encontro el directorio metadata
+[INFO] 23:07:10:689 gamecard/(21628:21628): Se encontro el archivo metadata.bin
+[INFO] 23:07:10:689 gamecard/(21628:21628): Inicio de Metadata, Tamanio bloques: 64,  Cantidad de bloques: 64,  Magic number: TALL_GRASS
+[INFO] 23:07:10:693 gamecard/(21628:21628): entro a cargar metadata
+[INFO] 23:07:10:693 gamecard/(21628:21628): empiezo con los bloques Charmander
+[INFO] 23:07:10:693 gamecard/(21628:21628): termino con los bloques Charmander
+[INFO] 23:07:10:693 gamecard/(21628:21628): tamanio archivo: 0
+[INFO] 23:07:10:693 gamecard/(21628:21628): bloques usados:
+[INFO] 23:07:10:693 gamecard/(21628:21634): Estoy escuchando
+[INFO] 23:07:10:693 gamecard/(21628:21634): Espero un nuevo cliente
+[INFO] 23:07:12:929 gamecard/(21628:21634): Gestiono un nuevo cliente
+[INFO] 23:07:12:930 gamecard/(21628:21634): Espero un nuevo cliente
+[INFO] 23:07:12:930 gamecard/(21628:21638): atiendo cliente
+[INFO] 23:07:12:930 gamecard/(21628:21638): hola llegue
+[INFO] 23:07:12:930 gamecard/(21628:21638): hice el send: 1
+[INFO] 23:07:12:930 gamecard/(21628:21638): recibi: 24
+[INFO] 23:07:12:930 gamecard/(21628:21638): deserializado
+[INFO] 23:07:12:930 gamecard/(21628:21638): Atiendo new del pokemon: Pikachu. Posicion: (1, 9).
+[INFO] 23:07:12:930 gamecard/(21628:21638): entro a cargar metadata
+[INFO] 23:07:12:930 gamecard/(21628:21638): empiezo con los bloques Pikachu
+[INFO] 23:07:12:930 gamecard/(21628:21638): termino con los bloques Pikachu
+[INFO] 23:07:12:930 gamecard/(21628:21638): comienzo a obtener lista de Pikachu
+[INFO] 23:07:40:926 gamecard/(21729:21729): Puerto Broker:5002
+[INFO] 23:07:40:927 gamecard/(21729:21729): Se encontro el directorio metadata
+[INFO] 23:07:40:927 gamecard/(21729:21729): Se encontro el archivo metadata.bin
+[INFO] 23:07:40:927 gamecard/(21729:21729): Inicio de Metadata, Tamanio bloques: 64,  Cantidad de bloques: 64,  Magic number: TALL_GRASS
+[INFO] 23:07:41:26 gamecard/(21729:21729): entro a cargar metadata
+[INFO] 23:07:41:26 gamecard/(21729:21729): empiezo con los bloques Charmander
+[INFO] 23:07:41:27 gamecard/(21729:21729): termino con los bloques Charmander
+[INFO] 23:07:41:27 gamecard/(21729:21729): tamanio archivo: 0
+[INFO] 23:07:41:27 gamecard/(21729:21729): bloques usados:
+[INFO] 23:07:41:27 gamecard/(21729:21735): Estoy escuchando
+[INFO] 23:07:41:27 gamecard/(21729:21735): Espero un nuevo cliente
+[INFO] 23:07:43:101 gamecard/(21729:21735): Gestiono un nuevo cliente
+[INFO] 23:07:43:101 gamecard/(21729:21735): Espero un nuevo cliente
+[INFO] 23:07:43:106 gamecard/(21729:21740): atiendo cliente
+[INFO] 23:07:43:106 gamecard/(21729:21740): hola llegue
+[INFO] 23:07:43:106 gamecard/(21729:21740): hice el send: 1
+[INFO] 23:07:43:107 gamecard/(21729:21740): recibi: 24
+[INFO] 23:07:43:107 gamecard/(21729:21740): deserializado
+[INFO] 23:07:43:107 gamecard/(21729:21740): Atiendo new del pokemon: Pikachu. Posicion: (1, 9).
+[INFO] 23:07:43:107 gamecard/(21729:21740): entro a cargar metadata
+[INFO] 23:07:43:107 gamecard/(21729:21740): empiezo con los bloques Pikachu
+[INFO] 23:07:43:107 gamecard/(21729:21740): termino con los bloques Pikachu
+[INFO] 23:07:43:107 gamecard/(21729:21740): comienzo a obtener lista de Pikachu
+[INFO] 23:07:43:107 gamecard/(21729:21740): hola
+[INFO] 23:08:32:650 gamecard/(21858:21858): Puerto Broker:5002
+[INFO] 23:08:32:650 gamecard/(21858:21858): Se encontro el directorio metadata
+[INFO] 23:08:32:650 gamecard/(21858:21858): Se encontro el archivo metadata.bin
+[INFO] 23:08:32:650 gamecard/(21858:21858): Inicio de Metadata, Tamanio bloques: 64,  Cantidad de bloques: 64,  Magic number: TALL_GRASS
+[INFO] 23:08:32:696 gamecard/(21858:21858): entro a cargar metadata
+[INFO] 23:08:32:696 gamecard/(21858:21858): empiezo con los bloques Charmander
+[INFO] 23:08:32:696 gamecard/(21858:21858): termino con los bloques Charmander
+[INFO] 23:08:32:696 gamecard/(21858:21858): tamanio archivo: 0
+[INFO] 23:08:32:696 gamecard/(21858:21858): bloques usados:
+[INFO] 23:08:32:696 gamecard/(21858:21864): Estoy escuchando
+[INFO] 23:08:32:696 gamecard/(21858:21864): Espero un nuevo cliente
+[INFO] 23:08:41:229 gamecard/(21858:21864): Gestiono un nuevo cliente
+[INFO] 23:08:41:230 gamecard/(21858:21864): Espero un nuevo cliente
+[INFO] 23:08:41:230 gamecard/(21858:21877): atiendo cliente
+[INFO] 23:08:41:235 gamecard/(21858:21877): hola llegue
+[INFO] 23:08:41:235 gamecard/(21858:21877): hice el send: 1
+[INFO] 23:08:41:235 gamecard/(21858:21877): recibi: 24
+[INFO] 23:08:41:235 gamecard/(21858:21877): deserializado
+[INFO] 23:08:41:235 gamecard/(21858:21877): Atiendo new del pokemon: Pikachu. Posicion: (1, 9).
+[INFO] 23:08:41:235 gamecard/(21858:21877): entro a cargar metadata
+[INFO] 23:08:41:235 gamecard/(21858:21877): empiezo con los bloques Pikachu
+[INFO] 23:08:41:236 gamecard/(21858:21877): termino con los bloques Pikachu
+[INFO] 23:08:41:236 gamecard/(21858:21877): comienzo a obtener lista de Pikachu
+[INFO] 23:08:41:236 gamecard/(21858:21877): hola
+[INFO] 23:08:41:236 gamecard/(21858:21877): hola2.
+[INFO] 23:09:04:267 gamecard/(21956:21956): Puerto Broker:5002
+[INFO] 23:09:04:267 gamecard/(21956:21956): Se encontro el directorio metadata
+[INFO] 23:09:04:267 gamecard/(21956:21956): Se encontro el archivo metadata.bin
+[INFO] 23:09:04:267 gamecard/(21956:21956): Inicio de Metadata, Tamanio bloques: 64,  Cantidad de bloques: 64,  Magic number: TALL_GRASS
+[INFO] 23:09:04:289 gamecard/(21956:21956): entro a cargar metadata
+[INFO] 23:09:04:289 gamecard/(21956:21956): empiezo con los bloques Charmander
+[INFO] 23:09:04:289 gamecard/(21956:21956): termino con los bloques Charmander
+[INFO] 23:09:04:289 gamecard/(21956:21956): tamanio archivo: 0
+[INFO] 23:09:04:289 gamecard/(21956:21956): bloques usados:
+[INFO] 23:09:04:289 gamecard/(21956:21962): Estoy escuchando
+[INFO] 23:09:04:289 gamecard/(21956:21962): Espero un nuevo cliente
+[INFO] 23:09:12:954 gamecard/(21956:21962): Gestiono un nuevo cliente
+[INFO] 23:09:12:954 gamecard/(21956:21962): Espero un nuevo cliente
+[INFO] 23:09:12:954 gamecard/(21956:21976): atiendo cliente
+[INFO] 23:09:12:955 gamecard/(21956:21976): hola llegue
+[INFO] 23:09:12:955 gamecard/(21956:21976): hice el send: 1
+[INFO] 23:09:12:955 gamecard/(21956:21976): recibi: 24
+[INFO] 23:09:12:955 gamecard/(21956:21976): deserializado
+[INFO] 23:09:12:955 gamecard/(21956:21976): Atiendo new del pokemon: Pikachu. Posicion: (1, 9).
+[INFO] 23:09:12:955 gamecard/(21956:21976): entro a cargar metadata
+[INFO] 23:09:12:955 gamecard/(21956:21976): empiezo con los bloques Pikachu
+[INFO] 23:09:12:955 gamecard/(21956:21976): termino con los bloques Pikachu
+[INFO] 23:09:12:955 gamecard/(21956:21976): comienzo a obtener lista de Pikachu
+[INFO] 23:09:12:955 gamecard/(21956:21976): hola
+[INFO] 23:09:12:955 gamecard/(21956:21976): hola2.
+[INFO] 23:10:30:537 gamecard/(22134:22134): Puerto Broker:5002
+[INFO] 23:10:30:537 gamecard/(22134:22134): Se encontro el directorio metadata
+[INFO] 23:10:30:537 gamecard/(22134:22134): Se encontro el archivo metadata.bin
+[INFO] 23:10:30:537 gamecard/(22134:22134): Inicio de Metadata, Tamanio bloques: 64,  Cantidad de bloques: 64,  Magic number: TALL_GRASS
+[INFO] 23:10:30:713 gamecard/(22134:22134): entro a cargar metadata
+[INFO] 23:10:30:713 gamecard/(22134:22134): empiezo con los bloques Charmander
+[INFO] 23:10:30:713 gamecard/(22134:22134): termino con los bloques Charmander
+[INFO] 23:10:30:713 gamecard/(22134:22134): tamanio archivo: 0
+[INFO] 23:10:30:713 gamecard/(22134:22134): bloques usados:
+[INFO] 23:10:30:713 gamecard/(22134:22134): 2
+[INFO] 23:10:30:713 gamecard/(22134:22140): Estoy escuchando
+[INFO] 23:10:30:713 gamecard/(22134:22140): Espero un nuevo cliente
+[INFO] 23:10:50:377 gamecard/(22201:22201): Puerto Broker:5002
+[INFO] 23:10:50:377 gamecard/(22201:22201): Se encontro el directorio metadata
+[INFO] 23:10:50:377 gamecard/(22201:22201): Se encontro el archivo metadata.bin
+[INFO] 23:10:50:377 gamecard/(22201:22201): Inicio de Metadata, Tamanio bloques: 64,  Cantidad de bloques: 64,  Magic number: TALL_GRASS
+[INFO] 23:10:50:381 gamecard/(22201:22201): entro a cargar metadata
+[INFO] 23:10:50:381 gamecard/(22201:22201): empiezo con los bloques Pikachu
+[INFO] 23:10:50:381 gamecard/(22201:22201): termino con los bloques Pikachu
+[INFO] 23:10:50:381 gamecard/(22201:22201): tamanio archivo: 0
+[INFO] 23:10:50:381 gamecard/(22201:22201): bloques usados:
+[INFO] 23:10:50:381 gamecard/(22201:22201): 1
+[INFO] 23:10:50:381 gamecard/(22201:22206): Estoy escuchando
+[INFO] 23:10:50:381 gamecard/(22201:22206): Espero un nuevo cliente
+[INFO] 23:11:37:989 gamecard/(22329:22329): Puerto Broker:5002
+[INFO] 23:11:37:989 gamecard/(22329:22329): Se encontro el directorio metadata
+[INFO] 23:11:37:989 gamecard/(22329:22329): Se encontro el archivo metadata.bin
+[INFO] 23:11:37:989 gamecard/(22329:22329): Inicio de Metadata, Tamanio bloques: 64,  Cantidad de bloques: 64,  Magic number: TALL_GRASS
+[INFO] 23:11:38:123 gamecard/(22329:22335): Estoy escuchando
+[INFO] 23:11:38:123 gamecard/(22329:22335): Espero un nuevo cliente
+[INFO] 23:11:42:999 gamecard/(22329:22335): Gestiono un nuevo cliente
+[INFO] 23:11:42:999 gamecard/(22329:22335): Espero un nuevo cliente
+[INFO] 23:11:42:4 gamecard/(22329:22345): atiendo cliente
+[INFO] 23:11:42:4 gamecard/(22329:22345): hola llegue
+[INFO] 23:11:42:4 gamecard/(22329:22345): hice el send: 1
+[INFO] 23:11:42:4 gamecard/(22329:22345): recibi: 24
+[INFO] 23:11:42:4 gamecard/(22329:22345): deserializado
+[INFO] 23:11:42:4 gamecard/(22329:22345): Atiendo new del pokemon: Pikachu. Posicion: (1, 9).
+[INFO] 23:11:42:4 gamecard/(22329:22345): entro a cargar metadata
+[INFO] 23:11:42:4 gamecard/(22329:22345): empiezo con los bloques Pikachu
+[INFO] 23:11:42:4 gamecard/(22329:22345): termino con los bloques Pikachu
+[INFO] 23:11:42:4 gamecard/(22329:22345): comienzo a obtener lista de Pikachu
+[INFO] 23:11:42:4 gamecard/(22329:22345): hola
+[INFO] 23:11:42:4 gamecard/(22329:22345): hola2.
+[INFO] 23:12:27:481 gamecard/(22449:22449): Puerto Broker:5002
+[INFO] 23:12:27:481 gamecard/(22449:22449): Se encontro el directorio metadata
+[INFO] 23:12:27:481 gamecard/(22449:22449): Se encontro el archivo metadata.bin
+[INFO] 23:12:27:481 gamecard/(22449:22449): Inicio de Metadata, Tamanio bloques: 64,  Cantidad de bloques: 64,  Magic number: TALL_GRASS
+[INFO] 23:12:27:485 gamecard/(22449:22454): Estoy escuchando
+[INFO] 23:12:27:485 gamecard/(22449:22454): Espero un nuevo cliente
+[INFO] 23:12:28:691 gamecard/(22449:22454): Gestiono un nuevo cliente
+[INFO] 23:12:28:692 gamecard/(22449:22454): Espero un nuevo cliente
+[INFO] 23:12:28:692 gamecard/(22449:22461): atiendo cliente
+[INFO] 23:12:28:692 gamecard/(22449:22461): hola llegue
+[INFO] 23:12:28:699 gamecard/(22449:22461): hice el send: 1
+[INFO] 23:12:28:699 gamecard/(22449:22461): recibi: 24
+[INFO] 23:12:28:699 gamecard/(22449:22461): deserializado
+[INFO] 23:12:28:699 gamecard/(22449:22461): Atiendo new del pokemon: Pikachu. Posicion: (1, 9).
+[INFO] 23:12:28:699 gamecard/(22449:22461): entro a cargar metadata
+[INFO] 23:12:28:699 gamecard/(22449:22461): empiezo con los bloques Pikachu
+[INFO] 23:12:28:700 gamecard/(22449:22461): termino con los bloques Pikachu
+[INFO] 23:12:28:700 gamecard/(22449:22461): comienzo a obtener lista de Pikachu
+[INFO] 23:12:28:700 gamecard/(22449:22461): hola
+[INFO] 23:12:44:173 gamecard/(22516:22516): Puerto Broker:5002
+[INFO] 23:12:44:203 gamecard/(22516:22516): Se encontro el directorio metadata
+[INFO] 23:12:44:204 gamecard/(22516:22516): Se encontro el archivo metadata.bin
+[INFO] 23:12:44:206 gamecard/(22516:22516): Inicio de Metadata, Tamanio bloques: 64,  Cantidad de bloques: 64,  Magic number: TALL_GRASS
+[INFO] 23:12:44:249 gamecard/(22516:22522): Estoy escuchando
+[INFO] 23:12:44:251 gamecard/(22516:22522): Espero un nuevo cliente
+[INFO] 23:12:45:351 gamecard/(22516:22522): Gestiono un nuevo cliente
+[INFO] 23:12:45:358 gamecard/(22516:22529): atiendo cliente
+[INFO] 23:12:45:358 gamecard/(22516:22529): hola llegue
+[INFO] 23:12:45:358 gamecard/(22516:22522): Espero un nuevo cliente
+[INFO] 23:12:45:372 gamecard/(22516:22529): hice el send: 1
+[INFO] 23:12:45:374 gamecard/(22516:22529): recibi: 24
+[INFO] 23:12:45:373 gamecard/(22516:22522): Gestiono un nuevo cliente
+[INFO] 23:12:45:375 gamecard/(22516:22522): Espero un nuevo cliente
+[INFO] 23:12:45:378 gamecard/(22516:22529): deserializado
+[INFO] 23:12:45:378 gamecard/(22516:22529): Atiendo new del pokemon: Pikachu. Posicion: (1, 9).
+[INFO] 23:12:45:380 gamecard/(22516:22529): entro a cargar metadata
+[INFO] 23:12:45:381 gamecard/(22516:22532): atiendo cliente
+[INFO] 23:12:45:452 gamecard/(22516:22529): empiezo con los bloques Pikachu
+[INFO] 23:12:45:457 gamecard/(22516:22529): termino con los bloques Pikachu
+[INFO] 23:12:45:463 gamecard/(22516:22532): hola llegue
+[INFO] 23:12:45:465 gamecard/(22516:22532): hice el send: 1
+[INFO] 23:12:45:465 gamecard/(22516:22532): recibi: 27
+[INFO] 23:12:45:466 gamecard/(22516:22532): deserializado
+[INFO] 23:12:45:466 gamecard/(22516:22532): Atiendo new del pokemon: Charmander. Posicion: (4, 1).
+[INFO] 23:12:45:466 gamecard/(22516:22522): Gestiono un nuevo cliente
+[INFO] 23:12:45:467 gamecard/(22516:22522): Espero un nuevo cliente
+[INFO] 23:12:45:468 gamecard/(22516:22532): entro a cargar metadata
+[INFO] 23:12:45:468 gamecard/(22516:22532): empiezo con los bloques Charmander
+[INFO] 23:12:45:468 gamecard/(22516:22535): atiendo cliente
+[INFO] 23:12:45:477 gamecard/(22516:22532): termino con los bloques Charmander
+[INFO] 23:12:45:482 gamecard/(22516:22532): comienzo a obtener lista de Charmander
+[INFO] 23:12:45:487 gamecard/(22516:22529): comienzo a obtener lista de Pikachu
+[INFO] 23:12:45:499 gamecard/(22516:22535): hola llegue
+[INFO] 23:12:45:499 gamecard/(22516:22535): hice el send: 1
+[INFO] 23:12:45:500 gamecard/(22516:22529): hola
+[INFO] 23:15:33:302 gamecard/(22815:22815): Puerto Broker:5002
+[INFO] 23:15:35:891 gamecard/(22815:22815): Se encontro el directorio metadata
+[INFO] 23:15:35:891 gamecard/(22815:22815): Se encontro el archivo metadata.bin
+[INFO] 23:15:35:891 gamecard/(22815:22815): Inicio de Metadata, Tamanio bloques: 64,  Cantidad de bloques: 64,  Magic number: TALL_GRASS
+[INFO] 23:15:35:914 gamecard/(22815:22833): Estoy escuchando
+[INFO] 23:15:35:914 gamecard/(22815:22833): Espero un nuevo cliente
+[INFO] 23:15:50:959 gamecard/(22815:22833): Gestiono un nuevo cliente
+[INFO] 23:15:50:960 gamecard/(22815:22833): Espero un nuevo cliente
+[INFO] 23:15:50:960 gamecard/(22815:22851): atiendo cliente
+[INFO] 23:15:50:960 gamecard/(22815:22851): hola llegue
+[INFO] 23:15:50:960 gamecard/(22815:22851): hice el send: 1
+[INFO] 23:15:50:960 gamecard/(22815:22851): recibi: 24
+[INFO] 23:15:50:960 gamecard/(22815:22851): deserializado
+[INFO] 23:15:50:960 gamecard/(22815:22851): Atiendo new del pokemon: Pikachu. Posicion: (1, 9).
+[INFO] 23:15:53:134 gamecard/(22815:22833): Gestiono un nuevo cliente
+[INFO] 23:15:53:135 gamecard/(22815:22833): Espero un nuevo cliente
+[INFO] 23:15:53:881 gamecard/(22815:22851): entro a cargar metadata
+[INFO] 23:15:53:881 gamecard/(22815:22851): empiezo con los bloques Pikachu
+[INFO] 23:15:53:881 gamecard/(22815:22851): termino con los bloques Pikachu
+[INFO] 23:15:53:886 gamecard/(22815:22859): atiendo cliente
+[INFO] 23:15:53:886 gamecard/(22815:22859): hola llegue
+[INFO] 23:15:53:886 gamecard/(22815:22859): hice el send: 1
+[INFO] 23:15:53:886 gamecard/(22815:22859): recibi: 27
+[INFO] 23:15:53:886 gamecard/(22815:22859): deserializado
+[INFO] 23:15:53:886 gamecard/(22815:22859): Atiendo new del pokemon: Charmander. Posicion: (4, 1).
+[INFO] 23:15:55:846 gamecard/(22815:22851): comienzo a obtener lista de Pikachu
+[INFO] 23:15:55:846 gamecard/(22815:22851): hola
+[INFO] 23:15:55:850 gamecard/(22815:22833): Gestiono un nuevo cliente
+[INFO] 23:15:56:651 gamecard/(22815:22876): atiendo cliente
+[INFO] 23:15:56:651 gamecard/(22815:22833): Espero un nuevo cliente
+[INFO] 23:15:56:651 gamecard/(22815:22876): hola llegue
+[INFO] 23:15:56:651 gamecard/(22815:22876): hice el send: 1
+[INFO] 23:15:56:651 gamecard/(22815:22876): recibi: 27
+[INFO] 23:15:56:651 gamecard/(22815:22876): deserializado
+[INFO] 23:15:57:971 gamecard/(22815:22859): entro a cargar metadata
+[INFO] 23:15:57:971 gamecard/(22815:22876): Atiendo new del pokemon: Charmander. Posicion: (517, 2046).
+[INFO] 23:15:57:972 gamecard/(22815:22859): empiezo con los bloques Charmander
+[INFO] 23:15:59:121 gamecard/(22815:22859): termino con los bloques Charmander
+[INFO] 23:15:59:121 gamecard/(22815:22833): Gestiono un nuevo cliente
+[INFO] 23:15:59:131 gamecard/(22815:22833): Espero un nuevo cliente
+[INFO] 23:16:02:269 gamecard/(22815:22898): atiendo cliente
+[INFO] 23:16:02:269 gamecard/(22815:22898): hola llegue
+[INFO] 23:16:25:983 gamecard/(22966:22966): Puerto Broker:5002
+[INFO] 23:16:35:238 gamecard/(22966:22966): Se encontro el directorio metadata
+[INFO] 23:16:35:239 gamecard/(22966:22966): Se encontro el archivo metadata.bin
+[INFO] 23:16:35:239 gamecard/(22966:22966): Inicio de Metadata, Tamanio bloques: 64,  Cantidad de bloques: 64,  Magic number: TALL_GRASS
+[INFO] 23:16:35:254 gamecard/(22966:23026): Estoy escuchando
+[INFO] 23:16:35:254 gamecard/(22966:23026): Espero un nuevo cliente
+[INFO] 23:16:38:627 gamecard/(22966:23026): Gestiono un nuevo cliente
+[INFO] 23:16:38:634 gamecard/(22966:23026): Espero un nuevo cliente
+[INFO] 23:16:38:639 gamecard/(22966:23035): atiendo cliente
+[INFO] 23:16:38:641 gamecard/(22966:23035): hola llegue
+[INFO] 23:16:38:641 gamecard/(22966:23035): hice el send: 1
+[INFO] 23:16:38:641 gamecard/(22966:23035): recibi: 24
+[INFO] 23:16:38:641 gamecard/(22966:23035): deserializado
+[INFO] 23:16:38:641 gamecard/(22966:23035): Atiendo new del pokemon: Pikachu. Posicion: (1, 9).
+[INFO] 23:16:40:923 gamecard/(22966:23026): Gestiono un nuevo cliente
+[INFO] 23:16:40:925 gamecard/(22966:23026): Espero un nuevo cliente
+[INFO] 23:16:41:583 gamecard/(22966:23040): atiendo cliente
+[INFO] 23:16:41:583 gamecard/(22966:23040): hola llegue
+[INFO] 23:16:41:583 gamecard/(22966:23040): hice el send: 1
+[INFO] 23:16:41:583 gamecard/(22966:23040): recibi: 27
+[INFO] 23:16:41:584 gamecard/(22966:23040): deserializado
+[INFO] 23:16:41:584 gamecard/(22966:23040): Atiendo new del pokemon: Charmander. Posicion: (4, 1).
+[INFO] 23:16:42:404 gamecard/(22966:23026): Gestiono un nuevo cliente
+[INFO] 23:16:42:404 gamecard/(22966:23035): entro a cargar metadata
+[INFO] 23:16:42:405 gamecard/(22966:23035): empiezo con los bloques Pikachu
+[INFO] 23:16:42:405 gamecard/(22966:23035): termino con los bloques Pikachu
+[INFO] 23:16:44:18 gamecard/(22966:23040): entro a cargar metadata
+[INFO] 23:16:44:18 gamecard/(22966:23040): empiezo con los bloques Charmander
+[INFO] 23:16:44:18 gamecard/(22966:23040): termino con los bloques Charmander
+[INFO] 23:16:44:23 gamecard/(22966:23026): Espero un nuevo cliente
+[INFO] 23:16:44:23 gamecard/(22966:23049): atiendo cliente
+[INFO] 23:16:44:23 gamecard/(22966:23049): hola llegue
+[INFO] 23:16:44:23 gamecard/(22966:23049): hice el send: 1
+[INFO] 23:16:44:23 gamecard/(22966:23049): recibi: 27
+[INFO] 23:16:44:23 gamecard/(22966:23049): deserializado
+[INFO] 23:16:44:23 gamecard/(22966:23049): Atiendo new del pokemon: Charmander. Posicion: (517, 2046).
+[INFO] 23:16:46:781 gamecard/(22966:23040): comienzo a obtener lista de Charmander
+[INFO] 23:16:46:781 gamecard/(22966:23040): hola
+[INFO] 23:16:46:784 gamecard/(22966:23026): Gestiono un nuevo cliente
+[INFO] 23:16:46:784 gamecard/(22966:23035): comienzo a obtener lista de Pikachu
+[INFO] 23:16:46:784 gamecard/(22966:23035): hola
+[INFO] 23:18:18:465 gamecard/(23237:23237): Puerto Broker:5002
+[INFO] 23:18:18:465 gamecard/(23237:23237): Se encontro el directorio metadata
+[INFO] 23:18:18:465 gamecard/(23237:23237): Se encontro el archivo metadata.bin
+[INFO] 23:18:18:465 gamecard/(23237:23237): Inicio de Metadata, Tamanio bloques: 64,  Cantidad de bloques: 64,  Magic number: TALL_GRASS
+[INFO] 23:18:18:616 gamecard/(23237:23243): Estoy escuchando
+[INFO] 23:18:18:616 gamecard/(23237:23243): Espero un nuevo cliente
+[INFO] 23:18:20:163 gamecard/(23237:23243): Gestiono un nuevo cliente
+[INFO] 23:18:20:163 gamecard/(23237:23243): Espero un nuevo cliente
+[INFO] 23:18:20:165 gamecard/(23237:23251): atiendo cliente
+[INFO] 23:18:20:165 gamecard/(23237:23251): hola llegue
+[INFO] 23:18:20:166 gamecard/(23237:23251): hice el send: 1
+[INFO] 23:18:20:166 gamecard/(23237:23251): recibi: 24
+[INFO] 23:18:20:166 gamecard/(23237:23251): deserializado
+[INFO] 23:18:20:166 gamecard/(23237:23251): Atiendo new del pokemon: Pikachu. Posicion: (1, 9).
+[INFO] 23:18:20:166 gamecard/(23237:23251): entro a cargar metadata
+[INFO] 23:18:20:166 gamecard/(23237:23251): empiezo con los bloques Pikachu
+[INFO] 23:18:20:166 gamecard/(23237:23251): termino con los bloques Pikachu
+[INFO] 23:18:20:166 gamecard/(23237:23251): comienzo a obtener lista de Pikachu
+[INFO] 23:18:20:166 gamecard/(23237:23251): hola
+[INFO] 23:18:20:166 gamecard/(23237:23251):  siiiiiiize 1
+[INFO] 23:18:20:166 gamecard/(23237:23251): hola2.
+[INFO] 23:18:20:166 gamecard/(23237:23251): hola3.
+[INFO] 23:18:20:166 gamecard/(23237:23251): LecturaArchivo: 1-9=3
+.
+[INFO] 23:18:20:166 gamecard/(23237:23251): LecturaArchivo: 1-9=3
+.
+[INFO] 23:18:20:166 gamecard/(23237:23251): termino de obtener lista de Pikachu
+[INFO] 23:18:20:166 gamecard/(23237:23251): comienzo a actualizar posiciones de Pikachu
+[INFO] 23:18:20:166 gamecard/(23237:23251): termino de actualizar posiciones de Pikachu
+[INFO] 23:18:20:179 gamecard/(23237:23243): Gestiono un nuevo cliente
+[INFO] 23:18:20:179 gamecard/(23237:23243): Espero un nuevo cliente
+[INFO] 23:18:20:184 gamecard/(23237:23256): atiendo cliente
+[INFO] 23:18:20:184 gamecard/(23237:23256): hola llegue
+[INFO] 23:18:20:184 gamecard/(23237:23256): hice el send: 1
+[INFO] 23:18:20:184 gamecard/(23237:23256): recibi: 27
+[INFO] 23:18:20:185 gamecard/(23237:23256): deserializado
+[INFO] 23:18:20:185 gamecard/(23237:23256): Atiendo new del pokemon: Charmander. Posicion: (4, 1).
+[INFO] 23:18:20:185 gamecard/(23237:23256): entro a cargar metadata
+[INFO] 23:18:20:185 gamecard/(23237:23256): empiezo con los bloques Charmander
+[INFO] 23:18:20:185 gamecard/(23237:23256): termino con los bloques Charmander
+[INFO] 23:18:20:185 gamecard/(23237:23256): comienzo a obtener lista de Charmander
+[INFO] 23:18:20:185 gamecard/(23237:23256): hola
+[INFO] 23:18:20:185 gamecard/(23237:23256):  siiiiiiize 2
+[INFO] 23:18:20:185 gamecard/(23237:23256): hola2.
+[INFO] 23:18:20:185 gamecard/(23237:23256): hola3.
+[INFO] 23:18:20:185 gamecard/(23237:23256): LecturaArchivo: 4-1=101
+517-2046=15
+413-17=1
+723-97=29
+129-547=11
+65-93=3001
+12-.
+[INFO] 23:18:20:185 gamecard/(23237:23256): hola3.
+[INFO] 23:18:20:185 gamecard/(23237:23256): LecturaArchivo: 17=34
+.
+[INFO] 23:18:20:185 gamecard/(23237:23256): LecturaArchivo: 4-1=101
+517-2046=15
+413-17=1
+723-97=29
+129-547=11
+65-93=3001
+12-17=34
+.
+[INFO] 23:18:20:186 gamecard/(23237:23256): termino de obtener lista de Charmander
+[INFO] 23:18:20:186 gamecard/(23237:23256): comienzo a actualizar posiciones de Charmander
+[INFO] 23:18:20:186 gamecard/(23237:23256): termino de actualizar posiciones de Charmander
+[INFO] 23:18:20:194 gamecard/(23237:23243): Gestiono un nuevo cliente
+[INFO] 23:18:20:194 gamecard/(23237:23243): Espero un nuevo cliente
+[INFO] 23:18:20:195 gamecard/(23237:23259): atiendo cliente
+[INFO] 23:18:20:196 gamecard/(23237:23259): hola llegue
+[INFO] 23:18:20:198 gamecard/(23237:23259): hice el send: 1
+[INFO] 23:18:20:199 gamecard/(23237:23259): recibi: 27
+[INFO] 23:18:20:199 gamecard/(23237:23259): deserializado
+[INFO] 23:18:20:199 gamecard/(23237:23259): Atiendo new del pokemon: Charmander. Posicion: (517, 2046).
+[INFO] 23:18:20:199 gamecard/(23237:23259): comienzo a obtener lista de Charmander
+[INFO] 23:18:20:199 gamecard/(23237:23259): hola
+[INFO] 23:18:20:199 gamecard/(23237:23259):  siiiiiiize 2
+[INFO] 23:18:20:199 gamecard/(23237:23259): hola2.
+[INFO] 23:18:20:199 gamecard/(23237:23259): hola3.
+[INFO] 23:18:20:199 gamecard/(23237:23259): LecturaArchivo: 4-1=101
+517-2046=15
+413-17=1
+723-97=29
+129-547=11
+65-93=3001
+12-.
+[INFO] 23:18:20:199 gamecard/(23237:23259): hola3.
+[INFO] 23:18:20:199 gamecard/(23237:23259): LecturaArchivo: 17=34
+.
+[INFO] 23:18:20:199 gamecard/(23237:23259): LecturaArchivo: 4-1=101
+517-2046=15
+413-17=1
+723-97=29
+129-547=11
+65-93=3001
+12-17=34
+.
+[INFO] 23:18:20:199 gamecard/(23237:23259): termino de obtener lista de Charmander
+[INFO] 23:18:20:199 gamecard/(23237:23259): comienzo a actualizar posiciones de Charmander
+[INFO] 23:18:20:199 gamecard/(23237:23259): termino de actualizar posiciones de Charmander
+[INFO] 23:18:20:202 gamecard/(23237:23243): Gestiono un nuevo cliente
+[INFO] 23:18:20:202 gamecard/(23237:23243): Espero un nuevo cliente
+[INFO] 23:18:20:203 gamecard/(23237:23261): atiendo cliente
+[INFO] 23:18:20:203 gamecard/(23237:23261): hola llegue
+[INFO] 23:18:20:205 gamecard/(23237:23261): hice el send: 1
+[INFO] 23:18:20:207 gamecard/(23237:23261): recibi: 27
+[INFO] 23:18:20:208 gamecard/(23237:23261): deserializado
+[INFO] 23:18:20:209 gamecard/(23237:23261): Atiendo new del pokemon: Charmander. Posicion: (413, 17).
+[INFO] 23:18:20:209 gamecard/(23237:23261): comienzo a obtener lista de Charmander
+[INFO] 23:18:20:209 gamecard/(23237:23261): hola
+[INFO] 23:18:20:209 gamecard/(23237:23261):  siiiiiiize 2
+[INFO] 23:18:20:210 gamecard/(23237:23261): hola2.
+[INFO] 23:18:20:210 gamecard/(23237:23261): hola3.
+[INFO] 23:18:20:210 gamecard/(23237:23261): LecturaArchivo: 4-1=101
+517-2046=15
+413-17=1
+723-97=29
+129-547=11
+65-93=3001
+12-.
+[INFO] 23:18:20:210 gamecard/(23237:23261): hola3.
+[INFO] 23:18:20:210 gamecard/(23237:23261): LecturaArchivo: 17=34
+.
+[INFO] 23:18:20:210 gamecard/(23237:23261): LecturaArchivo: 4-1=101
+517-2046=15
+413-17=1
+723-97=29
+129-547=11
+65-93=3001
+12-17=34
+.
+[INFO] 23:18:20:210 gamecard/(23237:23261): termino de obtener lista de Charmander
+[INFO] 23:18:20:210 gamecard/(23237:23261): comienzo a actualizar posiciones de Charmander
+[INFO] 23:18:20:210 gamecard/(23237:23261): termino de actualizar posiciones de Charmander
+[INFO] 23:18:20:212 gamecard/(23237:23243): Gestiono un nuevo cliente
+[INFO] 23:18:20:212 gamecard/(23237:23243): Espero un nuevo cliente
+[INFO] 23:18:20:213 gamecard/(23237:23264): atiendo cliente
+[INFO] 23:18:20:218 gamecard/(23237:23264): hola llegue
+[INFO] 23:18:20:220 gamecard/(23237:23264): hice el send: 1
+[INFO] 23:18:20:221 gamecard/(23237:23264): recibi: 27
+[INFO] 23:18:20:221 gamecard/(23237:23264): deserializado
+[INFO] 23:18:20:221 gamecard/(23237:23264): Atiendo new del pokemon: Charmander. Posicion: (723, 97).
+[INFO] 23:18:20:221 gamecard/(23237:23264): comienzo a obtener lista de Charmander
+[INFO] 23:18:20:221 gamecard/(23237:23264): hola
+[INFO] 23:18:20:221 gamecard/(23237:23264):  siiiiiiize 2
+[INFO] 23:18:20:221 gamecard/(23237:23264): hola2.
+[INFO] 23:18:20:221 gamecard/(23237:23264): hola3.
+[INFO] 23:18:20:222 gamecard/(23237:23264): LecturaArchivo: 4-1=101
+517-2046=15
+413-17=1
+723-97=29
+129-547=11
+65-93=3001
+12-.
+[INFO] 23:18:20:222 gamecard/(23237:23264): hola3.
+[INFO] 23:18:20:222 gamecard/(23237:23264): LecturaArchivo: 17=34
+.
+[INFO] 23:18:20:222 gamecard/(23237:23264): LecturaArchivo: 4-1=101
+517-2046=15
+413-17=1
+723-97=29
+129-547=11
+65-93=3001
+12-17=34
+.
+[INFO] 23:18:20:222 gamecard/(23237:23264): termino de obtener lista de Charmander
+[INFO] 23:18:20:222 gamecard/(23237:23264): comienzo a actualizar posiciones de Charmander
+[INFO] 23:18:20:222 gamecard/(23237:23264): termino de actualizar posiciones de Charmander
+[INFO] 23:18:20:223 gamecard/(23237:23243): Gestiono un nuevo cliente
+[INFO] 23:18:20:224 gamecard/(23237:23243): Espero un nuevo cliente
+[INFO] 23:18:20:224 gamecard/(23237:23267): atiendo cliente
+[INFO] 23:18:20:226 gamecard/(23237:23267): hola llegue
+[INFO] 23:18:20:227 gamecard/(23237:23267): hice el send: 1
+[INFO] 23:18:20:228 gamecard/(23237:23267): recibi: 27
+[INFO] 23:18:20:229 gamecard/(23237:23267): deserializado
+[INFO] 23:18:20:230 gamecard/(23237:23267): Atiendo new del pokemon: Charmander. Posicion: (65, 93).
+[INFO] 23:18:20:236 gamecard/(23237:23267): comienzo a obtener lista de Charmander
+[INFO] 23:18:20:236 gamecard/(23237:23267): hola
+[INFO] 23:18:20:237 gamecard/(23237:23267):  siiiiiiize 2
+[INFO] 23:18:20:237 gamecard/(23237:23267): hola2.
+[INFO] 23:18:20:237 gamecard/(23237:23267): hola3.
+[INFO] 23:18:20:237 gamecard/(23237:23267): LecturaArchivo: 4-1=101
+517-2046=15
+413-17=1
+723-97=29
+129-547=11
+65-93=3001
+12-.
+[INFO] 23:18:20:237 gamecard/(23237:23267): hola3.
+[INFO] 23:18:20:237 gamecard/(23237:23267): LecturaArchivo: 17=34
+.
+[INFO] 23:18:20:237 gamecard/(23237:23267): LecturaArchivo: 4-1=101
+517-2046=15
+413-17=1
+723-97=29
+129-547=11
+65-93=3001
+12-17=34
+.
+[INFO] 23:18:20:237 gamecard/(23237:23267): termino de obtener lista de Charmander
+[INFO] 23:18:20:237 gamecard/(23237:23267): comienzo a actualizar posiciones de Charmander
+[INFO] 23:18:20:237 gamecard/(23237:23267): termino de actualizar posiciones de Charmander
+[INFO] 23:18:20:239 gamecard/(23237:23243): Gestiono un nuevo cliente
+[INFO] 23:18:20:239 gamecard/(23237:23243): Espero un nuevo cliente
+[INFO] 23:18:20:241 gamecard/(23237:23270): atiendo cliente
+[INFO] 23:18:20:242 gamecard/(23237:23270): hola llegue
+[INFO] 23:18:20:243 gamecard/(23237:23270): hice el send: 1
+[INFO] 23:18:20:245 gamecard/(23237:23270): recibi: 27
+[INFO] 23:18:20:246 gamecard/(23237:23270): deserializado
+[INFO] 23:18:20:248 gamecard/(23237:23243): Gestiono un nuevo cliente
+[INFO] 23:18:20:250 gamecard/(23237:23243): Espero un nuevo cliente
+[INFO] 23:18:20:250 gamecard/(23237:23270): Atiendo new del pokemon: Charmander. Posicion: (12, 17).
+[INFO] 23:18:20:251 gamecard/(23237:23270): comienzo a obtener lista de Charmander
+[INFO] 23:18:20:251 gamecard/(23237:23270): hola
+[INFO] 23:18:20:251 gamecard/(23237:23270):  siiiiiiize 2
+[INFO] 23:18:20:251 gamecard/(23237:23270): hola2.
+[INFO] 23:18:20:251 gamecard/(23237:23270): hola3.
+[INFO] 23:18:20:251 gamecard/(23237:23270): LecturaArchivo: 4-1=101
+517-2046=15
+413-17=1
+723-97=29
+129-547=11
+65-93=3001
+12-.
+[INFO] 23:18:20:251 gamecard/(23237:23273): atiendo cliente
+[INFO] 23:18:20:251 gamecard/(23237:23270): hola3.
+[INFO] 23:18:20:251 gamecard/(23237:23270): LecturaArchivo: 17=34
+.
+[INFO] 23:18:20:251 gamecard/(23237:23270): LecturaArchivo: 4-1=101
+517-2046=15
+413-17=1
+723-97=29
+129-547=11
+65-93=3001
+12-17=34
+.
+[INFO] 23:18:20:251 gamecard/(23237:23270): termino de obtener lista de Charmander
+[INFO] 23:18:20:251 gamecard/(23237:23270): comienzo a actualizar posiciones de Charmander
+[INFO] 23:18:20:251 gamecard/(23237:23270): termino de actualizar posiciones de Charmander
+[INFO] 23:18:20:253 gamecard/(23237:23273): hola llegue
+[INFO] 23:18:20:253 gamecard/(23237:23273): hice el send: 1
+[INFO] 23:18:20:253 gamecard/(23237:23273): recibi: 27
+[INFO] 23:18:20:253 gamecard/(23237:23273): deserializado
+[INFO] 23:18:20:253 gamecard/(23237:23273): Atiendo new del pokemon: Charmander. Posicion: (129, 547).
+[INFO] 23:18:20:253 gamecard/(23237:23273): comienzo a obtener lista de Charmander
+[INFO] 23:18:20:253 gamecard/(23237:23273): hola
+[INFO] 23:18:20:254 gamecard/(23237:23273):  siiiiiiize 2
+[INFO] 23:18:20:254 gamecard/(23237:23273): hola2.
+[INFO] 23:18:20:254 gamecard/(23237:23273): hola3.
+[INFO] 23:18:20:254 gamecard/(23237:23273): LecturaArchivo: 4-1=101
+517-2046=15
+413-17=1
+723-97=29
+129-547=11
+65-93=3001
+12-.
+[INFO] 23:18:20:254 gamecard/(23237:23273): hola3.
+[INFO] 23:18:20:254 gamecard/(23237:23273): LecturaArchivo: 17=34
+.
+[INFO] 23:18:20:254 gamecard/(23237:23273): LecturaArchivo: 4-1=101
+517-2046=15
+413-17=1
+723-97=29
+129-547=11
+65-93=3001
+12-17=34
+.
+[INFO] 23:18:20:254 gamecard/(23237:23273): termino de obtener lista de Charmander
+[INFO] 23:18:20:255 gamecard/(23237:23273): comienzo a actualizar posiciones de Charmander
+[INFO] 23:18:20:255 gamecard/(23237:23273): termino de actualizar posiciones de Charmander
+[INFO] 23:18:25:170 gamecard/(23237:23251): Cierro el archivo del pokemon: Pikachu. Posicion: (1, 9).
+[INFO] 23:18:25:186 gamecard/(23237:23256): Cierro el archivo del pokemon: Charmander. Posicion: (4, 1).
+[INFO] 23:18:25:202 gamecard/(23237:23259): Cierro el archivo del pokemon: Charmander. Posicion: (517, 2046).
+[INFO] 23:18:25:211 gamecard/(23237:23261): Cierro el archivo del pokemon: Charmander. Posicion: (413, 17).
+[INFO] 23:18:25:222 gamecard/(23237:23264): Cierro el archivo del pokemon: Charmander. Posicion: (723, 97).
+[INFO] 23:18:25:237 gamecard/(23237:23267): Cierro el archivo del pokemon: Charmander. Posicion: (65, 93).
+[INFO] 23:18:25:253 gamecard/(23237:23270): Cierro el archivo del pokemon: Charmander. Posicion: (12, 17).
+[INFO] 23:18:25:255 gamecard/(23237:23273): Cierro el archivo del pokemon: Charmander. Posicion: (129, 547).
+[INFO] 23:25:11:56 gamecard/(24022:24022): Puerto Broker:5002
+[INFO] 23:25:11:56 gamecard/(24022:24022): Se encontro el directorio metadata
+[INFO] 23:25:11:56 gamecard/(24022:24022): Se encontro el archivo metadata.bin
+[INFO] 23:25:11:56 gamecard/(24022:24022): Inicio de Metadata, Tamanio bloques: 64,  Cantidad de bloques: 64,  Magic number: TALL_GRASS
+[INFO] 23:25:29:724 gamecard/(24058:24058): Puerto Broker:5002
+[INFO] 23:25:29:724 gamecard/(24058:24058): Se encontro el directorio metadata
+[INFO] 23:25:29:724 gamecard/(24058:24058): Se encontro el archivo metadata.bin
+[INFO] 23:25:29:724 gamecard/(24058:24058): Inicio de Metadata, Tamanio bloques: 64,  Cantidad de bloques: 64,  Magic number: TALL_GRASS
+[INFO] 23:25:29:773 gamecard/(24058:24064): Estoy escuchando
+[INFO] 23:25:29:773 gamecard/(24058:24064): Espero un nuevo cliente
+[INFO] 23:25:31:576 gamecard/(24058:24064): Gestiono un nuevo cliente
+[INFO] 23:25:31:576 gamecard/(24058:24064): Espero un nuevo cliente
+[INFO] 23:25:31:577 gamecard/(24058:24073): atiendo cliente
+[INFO] 23:25:31:577 gamecard/(24058:24073): hola llegue
+[INFO] 23:25:31:578 gamecard/(24058:24073): hice el send: 1
+[INFO] 23:25:31:580 gamecard/(24058:24073): recibi: 24
+[INFO] 23:25:31:581 gamecard/(24058:24073): deserializado
+[INFO] 23:25:31:585 gamecard/(24058:24073): Atiendo new del pokemon: Pikachu. Posicion: (1, 9).
+[INFO] 23:25:31:588 gamecard/(24058:24073): entro a cargar metadata
+[INFO] 23:25:31:589 gamecard/(24058:24073): empiezo con los bloques Pikachu
+[INFO] 23:25:31:589 gamecard/(24058:24073): termino con los bloques Pikachu
+[INFO] 23:25:31:589 gamecard/(24058:24073): comienzo a obtener lista de Pikachu
+[INFO] 23:25:31:590 gamecard/(24058:24073): hola3.
+[INFO] 23:25:31:590 gamecard/(24058:24073): LecturaArchivo: 1-9=3
+.
+[INFO] 23:25:31:590 gamecard/(24058:24073): termino de obtener lista de Pikachu
+[INFO] 23:25:31:590 gamecard/(24058:24073): comienzo a actualizar posiciones de Pikachu
+[INFO] 23:25:31:590 gamecard/(24058:24073): termino de actualizar posiciones de Pikachu
+[INFO] 23:25:31:591 gamecard/(24058:24064): Gestiono un nuevo cliente
+[INFO] 23:25:31:591 gamecard/(24058:24064): Espero un nuevo cliente
+[INFO] 23:25:31:591 gamecard/(24058:24077): atiendo cliente
+[INFO] 23:25:31:595 gamecard/(24058:24077): hola llegue
+[INFO] 23:25:31:597 gamecard/(24058:24077): hice el send: 1
+[INFO] 23:25:31:598 gamecard/(24058:24077): recibi: 27
+[INFO] 23:25:31:602 gamecard/(24058:24077): deserializado
+[INFO] 23:25:31:604 gamecard/(24058:24077): Atiendo new del pokemon: Charmander. Posicion: (4, 1).
+[INFO] 23:25:31:604 gamecard/(24058:24077): entro a cargar metadata
+[INFO] 23:25:31:604 gamecard/(24058:24077): empiezo con los bloques Charmander
+[INFO] 23:25:31:604 gamecard/(24058:24077): termino con los bloques Charmander
+[INFO] 23:25:31:604 gamecard/(24058:24077): comienzo a obtener lista de Charmander
+[INFO] 23:25:31:605 gamecard/(24058:24077): hola3.
+[INFO] 23:25:31:605 gamecard/(24058:24077): LecturaArchivo: 4-1=101
+517-2046=15
+413-17=1
+723-97=29
+129-547=11
+65-93=3001
+12-.
+[INFO] 23:25:31:605 gamecard/(24058:24077): hola3.
+[INFO] 23:25:31:605 gamecard/(24058:24077): LecturaArchivo: 17=34
+.
+[INFO] 23:25:31:605 gamecard/(24058:24077): termino de obtener lista de Charmander
+[INFO] 23:25:31:605 gamecard/(24058:24077): comienzo a actualizar posiciones de Charmander
+[INFO] 23:25:31:605 gamecard/(24058:24077): termino de actualizar posiciones de Charmander
+[INFO] 23:25:31:607 gamecard/(24058:24064): Gestiono un nuevo cliente
+[INFO] 23:25:31:607 gamecard/(24058:24064): Espero un nuevo cliente
+[INFO] 23:25:31:608 gamecard/(24058:24079): atiendo cliente
+[INFO] 23:25:31:610 gamecard/(24058:24079): hola llegue
+[INFO] 23:25:31:611 gamecard/(24058:24079): hice el send: 1
+[INFO] 23:25:31:612 gamecard/(24058:24079): recibi: 27
+[INFO] 23:25:31:614 gamecard/(24058:24079): deserializado
+[INFO] 23:25:31:615 gamecard/(24058:24079): Atiendo new del pokemon: Charmander. Posicion: (517, 2046).
+[INFO] 23:25:31:616 gamecard/(24058:24079): comienzo a obtener lista de Charmander
+[INFO] 23:25:31:616 gamecard/(24058:24079): hola3.
+[INFO] 23:25:31:616 gamecard/(24058:24079): LecturaArchivo: 4-1=101
+517-2046=15
+413-17=1
+723-97=29
+129-547=11
+65-93=3001
+12-.
+[INFO] 23:25:31:616 gamecard/(24058:24079): hola3.
+[INFO] 23:25:31:616 gamecard/(24058:24079): LecturaArchivo: 17=34
+.
+[INFO] 23:25:31:616 gamecard/(24058:24079): termino de obtener lista de Charmander
+[INFO] 23:25:31:616 gamecard/(24058:24079): comienzo a actualizar posiciones de Charmander
+[INFO] 23:25:31:616 gamecard/(24058:24079): termino de actualizar posiciones de Charmander
+[INFO] 23:25:31:618 gamecard/(24058:24064): Gestiono un nuevo cliente
+[INFO] 23:25:31:618 gamecard/(24058:24064): Espero un nuevo cliente
+[INFO] 23:25:31:618 gamecard/(24058:24082): atiendo cliente
+[INFO] 23:25:31:618 gamecard/(24058:24082): hola llegue
+[INFO] 23:25:31:618 gamecard/(24058:24082): hice el send: 1
+[INFO] 23:25:31:618 gamecard/(24058:24082): recibi: 27
+[INFO] 23:25:31:618 gamecard/(24058:24082): deserializado
+[INFO] 23:25:31:618 gamecard/(24058:24082): Atiendo new del pokemon: Charmander. Posicion: (413, 17).
+[INFO] 23:25:31:618 gamecard/(24058:24082): comienzo a obtener lista de Charmander
+[INFO] 23:25:31:618 gamecard/(24058:24082): hola3.
+[INFO] 23:25:31:618 gamecard/(24058:24082): LecturaArchivo: 4-1=101
+517-2046=15
+413-17=1
+723-97=29
+129-547=11
+65-93=3001
+12-.
+[INFO] 23:25:31:618 gamecard/(24058:24082): hola3.
+[INFO] 23:25:31:618 gamecard/(24058:24082): LecturaArchivo: 17=34
+.
+[INFO] 23:25:31:618 gamecard/(24058:24082): termino de obtener lista de Charmander
+[INFO] 23:25:31:618 gamecard/(24058:24082): comienzo a actualizar posiciones de Charmander
+[INFO] 23:25:31:618 gamecard/(24058:24082): termino de actualizar posiciones de Charmander
+[INFO] 23:25:31:619 gamecard/(24058:24064): Gestiono un nuevo cliente
+[INFO] 23:25:31:619 gamecard/(24058:24064): Espero un nuevo cliente
+[INFO] 23:25:31:619 gamecard/(24058:24085): atiendo cliente
+[INFO] 23:25:31:619 gamecard/(24058:24085): hola llegue
+[INFO] 23:25:31:619 gamecard/(24058:24085): hice el send: 1
+[INFO] 23:25:31:619 gamecard/(24058:24085): recibi: 27
+[INFO] 23:25:31:619 gamecard/(24058:24085): deserializado
+[INFO] 23:25:31:619 gamecard/(24058:24085): Atiendo new del pokemon: Charmander. Posicion: (723, 97).
+[INFO] 23:25:31:620 gamecard/(24058:24085): comienzo a obtener lista de Charmander
+[INFO] 23:25:31:620 gamecard/(24058:24085): hola3.
+[INFO] 23:25:31:620 gamecard/(24058:24085): LecturaArchivo: 4-1=101
+517-2046=15
+413-17=1
+723-97=29
+129-547=11
+65-93=3001
+12-.
+[INFO] 23:25:31:620 gamecard/(24058:24085): hola3.
+[INFO] 23:25:31:620 gamecard/(24058:24085): LecturaArchivo: 17=34
+.
+[INFO] 23:25:31:620 gamecard/(24058:24085): termino de obtener lista de Charmander
+[INFO] 23:25:31:620 gamecard/(24058:24085): comienzo a actualizar posiciones de Charmander
+[INFO] 23:25:31:620 gamecard/(24058:24085): termino de actualizar posiciones de Charmander
+[INFO] 23:25:31:621 gamecard/(24058:24064): Gestiono un nuevo cliente
+[INFO] 23:25:31:621 gamecard/(24058:24064): Espero un nuevo cliente
+[INFO] 23:25:31:621 gamecard/(24058:24088): atiendo cliente
+[INFO] 23:25:31:621 gamecard/(24058:24088): hola llegue
+[INFO] 23:25:31:621 gamecard/(24058:24088): hice el send: 1
+[INFO] 23:25:31:621 gamecard/(24058:24088): recibi: 27
+[INFO] 23:25:31:621 gamecard/(24058:24088): deserializado
+[INFO] 23:25:31:621 gamecard/(24058:24088): Atiendo new del pokemon: Charmander. Posicion: (65, 93).
+[INFO] 23:25:31:621 gamecard/(24058:24088): comienzo a obtener lista de Charmander
+[INFO] 23:25:31:621 gamecard/(24058:24088): hola3.
+[INFO] 23:25:31:621 gamecard/(24058:24088): LecturaArchivo: 4-1=101
+517-2046=15
+413-17=1
+723-97=29
+129-547=11
+65-93=3001
+12-.
+[INFO] 23:25:31:621 gamecard/(24058:24088): hola3.
+[INFO] 23:25:31:621 gamecard/(24058:24088): LecturaArchivo: 17=34
+.
+[INFO] 23:25:31:621 gamecard/(24058:24088): termino de obtener lista de Charmander
+[INFO] 23:25:31:621 gamecard/(24058:24088): comienzo a actualizar posiciones de Charmander
+[INFO] 23:25:31:621 gamecard/(24058:24088): termino de actualizar posiciones de Charmander
+[INFO] 23:25:31:622 gamecard/(24058:24064): Gestiono un nuevo cliente
+[INFO] 23:25:31:622 gamecard/(24058:24064): Espero un nuevo cliente
+[INFO] 23:25:31:622 gamecard/(24058:24091): atiendo cliente
+[INFO] 23:25:31:622 gamecard/(24058:24091): hola llegue
+[INFO] 23:25:31:623 gamecard/(24058:24091): hice el send: 1
+[INFO] 23:25:31:623 gamecard/(24058:24091): recibi: 27
+[INFO] 23:25:31:623 gamecard/(24058:24091): deserializado
+[INFO] 23:25:31:623 gamecard/(24058:24091): Atiendo new del pokemon: Charmander. Posicion: (12, 17).
+[INFO] 23:25:31:623 gamecard/(24058:24091): comienzo a obtener lista de Charmander
+[INFO] 23:25:31:623 gamecard/(24058:24091): hola3.
+[INFO] 23:25:31:623 gamecard/(24058:24091): LecturaArchivo: 4-1=101
+517-2046=15
+413-17=1
+723-97=29
+129-547=11
+65-93=3001
+12-.
+[INFO] 23:25:31:623 gamecard/(24058:24091): hola3.
+[INFO] 23:25:31:623 gamecard/(24058:24091): LecturaArchivo: 17=34
+.
+[INFO] 23:25:31:623 gamecard/(24058:24091): termino de obtener lista de Charmander
+[INFO] 23:25:31:623 gamecard/(24058:24091): comienzo a actualizar posiciones de Charmander
+[INFO] 23:25:31:623 gamecard/(24058:24091): termino de actualizar posiciones de Charmander
+[INFO] 23:25:31:624 gamecard/(24058:24064): Gestiono un nuevo cliente
+[INFO] 23:25:31:624 gamecard/(24058:24064): Espero un nuevo cliente
+[INFO] 23:25:31:624 gamecard/(24058:24094): atiendo cliente
+[INFO] 23:25:31:624 gamecard/(24058:24094): hola llegue
+[INFO] 23:25:31:624 gamecard/(24058:24094): hice el send: 1
+[INFO] 23:25:31:624 gamecard/(24058:24094): recibi: 27
+[INFO] 23:25:31:624 gamecard/(24058:24094): deserializado
+[INFO] 23:25:31:624 gamecard/(24058:24094): Atiendo new del pokemon: Charmander. Posicion: (129, 547).
+[INFO] 23:25:31:624 gamecard/(24058:24094): comienzo a obtener lista de Charmander
+[INFO] 23:25:31:625 gamecard/(24058:24094): hola3.
+[INFO] 23:25:31:625 gamecard/(24058:24094): LecturaArchivo: 4-1=101
+517-2046=15
+413-17=1
+723-97=29
+129-547=11
+65-93=3001
+12-.
+[INFO] 23:25:31:625 gamecard/(24058:24094): hola3.
+[INFO] 23:25:31:625 gamecard/(24058:24094): LecturaArchivo: 17=34
+.
+[INFO] 23:25:31:625 gamecard/(24058:24094): termino de obtener lista de Charmander
+[INFO] 23:25:31:625 gamecard/(24058:24094): comienzo a actualizar posiciones de Charmander
+[INFO] 23:25:31:625 gamecard/(24058:24094): termino de actualizar posiciones de Charmander
+[INFO] 23:25:36:590 gamecard/(24058:24073): Cierro el archivo del pokemon: Pikachu. Posicion: (1, 9).
+[INFO] 23:25:36:606 gamecard/(24058:24077): Cierro el archivo del pokemon: Charmander. Posicion: (4, 1).
+[INFO] 23:25:36:617 gamecard/(24058:24079): Cierro el archivo del pokemon: Charmander. Posicion: (517, 2046).
+[INFO] 23:25:36:621 gamecard/(24058:24082): Cierro el archivo del pokemon: Charmander. Posicion: (413, 17).
+[INFO] 23:25:36:621 gamecard/(24058:24085): Cierro el archivo del pokemon: Charmander. Posicion: (723, 97).
+[INFO] 23:25:36:622 gamecard/(24058:24088): Cierro el archivo del pokemon: Charmander. Posicion: (65, 93).
+[INFO] 23:25:36:623 gamecard/(24058:24091): Cierro el archivo del pokemon: Charmander. Posicion: (12, 17).
+[INFO] 23:25:36:627 gamecard/(24058:24094): Cierro el archivo del pokemon: Charmander. Posicion: (129, 547).
+[INFO] 23:27:38:987 gamecard/(24321:24321): Puerto Broker:5002
+[INFO] 23:27:38:987 gamecard/(24321:24321): Se encontro el directorio metadata
+[INFO] 23:27:38:987 gamecard/(24321:24321): Se encontro el archivo metadata.bin
+[INFO] 23:27:38:987 gamecard/(24321:24321): Inicio de Metadata, Tamanio bloques: 64,  Cantidad de bloques: 64,  Magic number: TALL_GRASS
+[INFO] 23:27:39:78 gamecard/(24321:24327): Estoy escuchando
+[INFO] 23:27:39:78 gamecard/(24321:24327): Espero un nuevo cliente
+[INFO] 23:27:40:458 gamecard/(24321:24327): Gestiono un nuevo cliente
+[INFO] 23:27:40:459 gamecard/(24321:24327): Espero un nuevo cliente
+[INFO] 23:27:40:469 gamecard/(24321:24337): atiendo cliente
+[INFO] 23:27:40:469 gamecard/(24321:24337): hola llegue
+[INFO] 23:27:40:472 gamecard/(24321:24337): hice el send: 1
+[INFO] 23:27:40:472 gamecard/(24321:24337): recibi: 24
+[INFO] 23:27:40:472 gamecard/(24321:24337): deserializado
+[INFO] 23:27:40:472 gamecard/(24321:24337): Atiendo new del pokemon: Pikachu. Posicion: (1, 9).
+[INFO] 23:27:40:473 gamecard/(24321:24337): entro a cargar metadata
+[INFO] 23:27:40:473 gamecard/(24321:24337): empiezo con los bloques Pikachu
+[INFO] 23:27:40:473 gamecard/(24321:24337): termino con los bloques Pikachu
+[INFO] 23:27:40:473 gamecard/(24321:24337): comienzo a obtener lista de Pikachu
+[INFO] 23:27:40:474 gamecard/(24321:24337): hola3.
+[INFO] 23:27:40:474 gamecard/(24321:24337): LecturaArchivo: 1-9=3
+.
+[INFO] 23:27:40:474 gamecard/(24321:24337): termino de obtener lista de Pikachu
+[INFO] 23:27:40:474 gamecard/(24321:24337): comienzo a actualizar posiciones de Pikachu
+[INFO] 23:27:40:475 gamecard/(24321:24337): termino de actualizar posiciones de Pikachu
+[INFO] 23:27:40:476 gamecard/(24321:24327): Gestiono un nuevo cliente
+[INFO] 23:27:40:476 gamecard/(24321:24327): Espero un nuevo cliente
+[INFO] 23:27:40:477 gamecard/(24321:24340): atiendo cliente
+[INFO] 23:27:40:477 gamecard/(24321:24340): hola llegue
+[INFO] 23:27:40:478 gamecard/(24321:24340): hice el send: 1
+[INFO] 23:27:40:478 gamecard/(24321:24340): recibi: 27
+[INFO] 23:27:40:478 gamecard/(24321:24340): deserializado
+[INFO] 23:27:40:478 gamecard/(24321:24340): Atiendo new del pokemon: Charmander. Posicion: (4, 1).
+[INFO] 23:27:40:478 gamecard/(24321:24340): entro a cargar metadata
+[INFO] 23:27:40:478 gamecard/(24321:24340): empiezo con los bloques Charmander
+[INFO] 23:27:40:478 gamecard/(24321:24340): termino con los bloques Charmander
+[INFO] 23:27:40:478 gamecard/(24321:24340): comienzo a obtener lista de Charmander
+[INFO] 23:27:40:479 gamecard/(24321:24340): hola3.
+[INFO] 23:27:40:479 gamecard/(24321:24340): LecturaArchivo: 4-1=101
+517-2046=15
+413-17=1
+723-97=29
+129-547=11
+65-93=3001
+12-.
+[INFO] 23:27:40:479 gamecard/(24321:24340): hola3.
+[INFO] 23:27:40:479 gamecard/(24321:24340): LecturaArchivo: 17=34
+.
+[INFO] 23:27:40:480 gamecard/(24321:24340): termino de obtener lista de Charmander
+[INFO] 23:27:40:480 gamecard/(24321:24340): comienzo a actualizar posiciones de Charmander
+[INFO] 23:27:40:480 gamecard/(24321:24340): termino de actualizar posiciones de Charmander
+[INFO] 23:27:40:481 gamecard/(24321:24327): Gestiono un nuevo cliente
+[INFO] 23:27:40:481 gamecard/(24321:24327): Espero un nuevo cliente
+[INFO] 23:27:40:481 gamecard/(24321:24342): atiendo cliente
+[INFO] 23:27:40:481 gamecard/(24321:24342): hola llegue
+[INFO] 23:27:40:485 gamecard/(24321:24342): hice el send: 1
+[INFO] 23:27:40:485 gamecard/(24321:24342): recibi: 27
+[INFO] 23:27:40:487 gamecard/(24321:24342): deserializado
+[INFO] 23:27:40:489 gamecard/(24321:24342): Atiendo new del pokemon: Charmander. Posicion: (517, 2046).
+[INFO] 23:27:40:489 gamecard/(24321:24342): comienzo a obtener lista de Charmander
+[INFO] 23:27:40:490 gamecard/(24321:24342): hola3.
+[INFO] 23:27:40:491 gamecard/(24321:24342): LecturaArchivo: 4-1=101
+517-2046=15
+413-17=1
+723-97=29
+129-547=11
+65-93=3001
+12-.
+[INFO] 23:27:40:492 gamecard/(24321:24342): hola3.
+[INFO] 23:27:40:492 gamecard/(24321:24342): LecturaArchivo: 17=34
+.
+[INFO] 23:27:40:492 gamecard/(24321:24342): termino de obtener lista de Charmander
+[INFO] 23:27:40:492 gamecard/(24321:24342): comienzo a actualizar posiciones de Charmander
+[INFO] 23:27:40:492 gamecard/(24321:24342): termino de actualizar posiciones de Charmander
+[INFO] 23:27:40:494 gamecard/(24321:24327): Gestiono un nuevo cliente
+[INFO] 23:27:40:494 gamecard/(24321:24327): Espero un nuevo cliente
+[INFO] 23:27:40:495 gamecard/(24321:24346): atiendo cliente
+[INFO] 23:27:40:495 gamecard/(24321:24346): hola llegue
+[INFO] 23:27:40:496 gamecard/(24321:24346): hice el send: 1
+[INFO] 23:27:40:496 gamecard/(24321:24346): recibi: 27
+[INFO] 23:27:40:497 gamecard/(24321:24346): deserializado
+[INFO] 23:27:40:498 gamecard/(24321:24346): Atiendo new del pokemon: Charmander. Posicion: (413, 17).
+[INFO] 23:27:40:499 gamecard/(24321:24346): comienzo a obtener lista de Charmander
+[INFO] 23:27:40:499 gamecard/(24321:24346): hola3.
+[INFO] 23:27:40:499 gamecard/(24321:24346): LecturaArchivo: 4-1=101
+517-2046=15
+413-17=1
+723-97=29
+129-547=11
+65-93=3001
+12-.
+[INFO] 23:27:40:499 gamecard/(24321:24346): hola3.
+[INFO] 23:27:40:500 gamecard/(24321:24346): LecturaArchivo: 17=34
+.
+[INFO] 23:27:40:500 gamecard/(24321:24346): termino de obtener lista de Charmander
+[INFO] 23:27:40:500 gamecard/(24321:24346): comienzo a actualizar posiciones de Charmander
+[INFO] 23:27:40:500 gamecard/(24321:24346): termino de actualizar posiciones de Charmander
+[INFO] 23:27:40:501 gamecard/(24321:24327): Gestiono un nuevo cliente
+[INFO] 23:27:40:502 gamecard/(24321:24327): Espero un nuevo cliente
+[INFO] 23:27:40:504 gamecard/(24321:24349): atiendo cliente
+[INFO] 23:27:40:504 gamecard/(24321:24349): hola llegue
+[INFO] 23:27:40:506 gamecard/(24321:24349): hice el send: 1
+[INFO] 23:27:40:506 gamecard/(24321:24349): recibi: 27
+[INFO] 23:27:40:506 gamecard/(24321:24349): deserializado
+[INFO] 23:27:40:506 gamecard/(24321:24349): Atiendo new del pokemon: Charmander. Posicion: (723, 97).
+[INFO] 23:27:40:507 gamecard/(24321:24349): comienzo a obtener lista de Charmander
+[INFO] 23:27:40:508 gamecard/(24321:24349): hola3.
+[INFO] 23:27:40:509 gamecard/(24321:24349): LecturaArchivo: 4-1=101
+517-2046=15
+413-17=1
+723-97=29
+129-547=11
+65-93=3001
+12-.
+[INFO] 23:27:40:511 gamecard/(24321:24349): hola3.
+[INFO] 23:27:40:511 gamecard/(24321:24349): LecturaArchivo: 17=34
+.
+[INFO] 23:27:40:511 gamecard/(24321:24349): termino de obtener lista de Charmander
+[INFO] 23:27:40:511 gamecard/(24321:24349): comienzo a actualizar posiciones de Charmander
+[INFO] 23:27:40:511 gamecard/(24321:24349): termino de actualizar posiciones de Charmander
+[INFO] 23:27:40:514 gamecard/(24321:24327): Gestiono un nuevo cliente
+[INFO] 23:27:40:514 gamecard/(24321:24327): Espero un nuevo cliente
+[INFO] 23:27:40:514 gamecard/(24321:24352): atiendo cliente
+[INFO] 23:27:40:514 gamecard/(24321:24352): hola llegue
+[INFO] 23:27:40:516 gamecard/(24321:24352): hice el send: 1
+[INFO] 23:27:40:516 gamecard/(24321:24352): recibi: 27
+[INFO] 23:27:40:516 gamecard/(24321:24352): deserializado
+[INFO] 23:27:40:516 gamecard/(24321:24352): Atiendo new del pokemon: Charmander. Posicion: (65, 93).
+[INFO] 23:27:40:516 gamecard/(24321:24352): comienzo a obtener lista de Charmander
+[INFO] 23:27:40:516 gamecard/(24321:24352): hola3.
+[INFO] 23:27:40:516 gamecard/(24321:24352): LecturaArchivo: 4-1=101
+517-2046=15
+413-17=1
+723-97=29
+129-547=11
+65-93=3001
+12-.
+[INFO] 23:27:40:516 gamecard/(24321:24352): hola3.
+[INFO] 23:27:40:516 gamecard/(24321:24352): LecturaArchivo: 17=34
+.
+[INFO] 23:27:40:516 gamecard/(24321:24352): termino de obtener lista de Charmander
+[INFO] 23:27:40:516 gamecard/(24321:24352): comienzo a actualizar posiciones de Charmander
+[INFO] 23:27:40:516 gamecard/(24321:24352): termino de actualizar posiciones de Charmander
+[INFO] 23:27:40:527 gamecard/(24321:24327): Gestiono un nuevo cliente
+[INFO] 23:27:40:527 gamecard/(24321:24327): Espero un nuevo cliente
+[INFO] 23:27:40:531 gamecard/(24321:24355): atiendo cliente
+[INFO] 23:27:40:531 gamecard/(24321:24355): hola llegue
+[INFO] 23:27:40:531 gamecard/(24321:24355): hice el send: 1
+[INFO] 23:27:40:531 gamecard/(24321:24355): recibi: 27
+[INFO] 23:27:40:531 gamecard/(24321:24355): deserializado
+[INFO] 23:27:40:531 gamecard/(24321:24355): Atiendo new del pokemon: Charmander. Posicion: (12, 17).
+[INFO] 23:27:40:531 gamecard/(24321:24355): comienzo a obtener lista de Charmander
+[INFO] 23:27:40:531 gamecard/(24321:24355): hola3.
+[INFO] 23:27:40:531 gamecard/(24321:24355): LecturaArchivo: 4-1=101
+517-2046=15
+413-17=1
+723-97=29
+129-547=11
+65-93=3001
+12-.
+[INFO] 23:27:40:531 gamecard/(24321:24355): hola3.
+[INFO] 23:27:40:531 gamecard/(24321:24355): LecturaArchivo: 17=34
+.
+[INFO] 23:27:40:532 gamecard/(24321:24355): termino de obtener lista de Charmander
+[INFO] 23:27:40:532 gamecard/(24321:24355): comienzo a actualizar posiciones de Charmander
+[INFO] 23:27:40:532 gamecard/(24321:24355): termino de actualizar posiciones de Charmander
+[INFO] 23:27:40:533 gamecard/(24321:24327): Gestiono un nuevo cliente
+[INFO] 23:27:40:534 gamecard/(24321:24327): Espero un nuevo cliente
+[INFO] 23:27:40:536 gamecard/(24321:24358): atiendo cliente
+[INFO] 23:27:40:536 gamecard/(24321:24358): hola llegue
+[INFO] 23:27:40:537 gamecard/(24321:24358): hice el send: 1
+[INFO] 23:27:40:537 gamecard/(24321:24358): recibi: 27
+[INFO] 23:27:40:537 gamecard/(24321:24358): deserializado
+[INFO] 23:27:40:537 gamecard/(24321:24358): Atiendo new del pokemon: Charmander. Posicion: (129, 547).
+[INFO] 23:27:40:537 gamecard/(24321:24358): comienzo a obtener lista de Charmander
+[INFO] 23:27:40:537 gamecard/(24321:24358): hola3.
+[INFO] 23:27:40:537 gamecard/(24321:24358): LecturaArchivo: 4-1=101
+517-2046=15
+413-17=1
+723-97=29
+129-547=11
+65-93=3001
+12-.
+[INFO] 23:27:40:537 gamecard/(24321:24358): hola3.
+[INFO] 23:27:40:537 gamecard/(24321:24358): LecturaArchivo: 17=34
+.
+[INFO] 23:27:40:537 gamecard/(24321:24358): termino de obtener lista de Charmander
+[INFO] 23:27:40:537 gamecard/(24321:24358): comienzo a actualizar posiciones de Charmander
+[INFO] 23:27:40:537 gamecard/(24321:24358): termino de actualizar posiciones de Charmander
+[INFO] 23:27:45:476 gamecard/(24321:24337): Cierro el archivo del pokemon: Pikachu. Posicion: (1, 9).
+[INFO] 23:27:45:480 gamecard/(24321:24340): Cierro el archivo del pokemon: Charmander. Posicion: (4, 1).
+[INFO] 23:27:45:494 gamecard/(24321:24342): Cierro el archivo del pokemon: Charmander. Posicion: (517, 2046).
+[INFO] 23:27:45:502 gamecard/(24321:24346): Cierro el archivo del pokemon: Charmander. Posicion: (413, 17).
+[INFO] 23:27:45:512 gamecard/(24321:24349): Cierro el archivo del pokemon: Charmander. Posicion: (723, 97).
+[INFO] 23:27:45:517 gamecard/(24321:24352): Cierro el archivo del pokemon: Charmander. Posicion: (65, 93).
+[INFO] 23:27:45:532 gamecard/(24321:24355): Cierro el archivo del pokemon: Charmander. Posicion: (12, 17).
+[INFO] 23:27:45:538 gamecard/(24321:24358): Cierro el archivo del pokemon: Charmander. Posicion: (129, 547).
+[INFO] 23:30:59:6 gamecard/(24612:24612): Puerto Broker:5002
+[INFO] 23:30:59:7 gamecard/(24612:24612): Se encontro el directorio metadata
+[INFO] 23:30:59:7 gamecard/(24612:24612): Se encontro el archivo metadata.bin
+[INFO] 23:30:59:7 gamecard/(24612:24612): Inicio de Metadata, Tamanio bloques: 64,  Cantidad de bloques: 64,  Magic number: TALL_GRASS
+[INFO] 23:30:59:37 gamecard/(24612:24621): Estoy escuchando
+[INFO] 23:30:59:37 gamecard/(24612:24621): Espero un nuevo cliente
+[INFO] 23:31:12:394 gamecard/(24612:24621): Gestiono un nuevo cliente
+[INFO] 23:31:12:394 gamecard/(24612:24621): Espero un nuevo cliente
+[INFO] 23:31:12:403 gamecard/(24612:24635): atiendo cliente
+[INFO] 23:31:12:404 gamecard/(24612:24635): hola llegue
+[INFO] 23:31:12:404 gamecard/(24612:24635): hice el send: 1
+[INFO] 23:31:12:404 gamecard/(24612:24635): recibi: 24
+[INFO] 23:31:12:404 gamecard/(24612:24635): deserializado
+[INFO] 23:31:12:405 gamecard/(24612:24635): Atiendo new del pokemon: Pikachu. Posicion: (11, 3).
+[INFO] 23:31:12:405 gamecard/(24612:24635): entro a cargar metadata
+[INFO] 23:31:12:405 gamecard/(24612:24635): empiezo con los bloques Pikachu
+[INFO] 23:31:12:405 gamecard/(24612:24635): termino con los bloques Pikachu
+[INFO] 23:31:12:405 gamecard/(24612:24635): comienzo a obtener lista de Pikachu
+[INFO] 23:31:12:405 gamecard/(24612:24635): hola3.
+[INFO] 23:31:12:405 gamecard/(24612:24635): LecturaArchivo: 1-9=3
+.
+[INFO] 23:31:12:405 gamecard/(24612:24635): termino de obtener lista de Pikachu
+[INFO] 23:31:12:405 gamecard/(24612:24635): comienzo a actualizar posiciones de Pikachu
+[INFO] 23:31:12:405 gamecard/(24612:24635): termino de actualizar posiciones de Pikachu
+[INFO] 23:31:17:405 gamecard/(24612:24635): Cierro el archivo del pokemon: Pikachu. Posicion: (11, 3).
+[INFO] 23:32:00:277 gamecard/(24612:24621): Gestiono un nuevo cliente
+[INFO] 23:32:00:277 gamecard/(24612:24621): Espero un nuevo cliente
+[INFO] 23:32:00:285 gamecard/(24612:24719): atiendo cliente
+[INFO] 23:32:00:285 gamecard/(24612:24719): hola llegue
+[INFO] 23:32:00:286 gamecard/(24612:24719): hice el send: 1
+[INFO] 23:32:00:287 gamecard/(24612:24719): recibi: 24
+[INFO] 23:32:00:287 gamecard/(24612:24719): deserializado
+[INFO] 23:32:00:287 gamecard/(24612:24719): Atiendo new del pokemon: Pikachu. Posicion: (11, 3).
+[INFO] 23:32:00:287 gamecard/(24612:24719): comienzo a obtener lista de Pikachu
+[INFO] 23:32:00:287 gamecard/(24612:24719): hola3.
+[INFO] 23:32:00:287 gamecard/(24612:24719): LecturaArchivo: 1-9=3
+.
+[INFO] 23:32:00:287 gamecard/(24612:24719): termino de obtener lista de Pikachu
+[INFO] 23:32:00:287 gamecard/(24612:24719): comienzo a actualizar posiciones de Pikachu
+[INFO] 23:32:00:287 gamecard/(24612:24719): termino de actualizar posiciones de Pikachu
+[INFO] 23:32:05:287 gamecard/(24612:24719): Cierro el archivo del pokemon: Pikachu. Posicion: (11, 3).
+[INFO] 23:33:14:762 gamecard/(24868:24868): Puerto Broker:5002
+[INFO] 23:33:14:762 gamecard/(24868:24868): Se encontro el directorio metadata
+[INFO] 23:33:14:762 gamecard/(24868:24868): Se encontro el archivo metadata.bin
+[INFO] 23:33:14:763 gamecard/(24868:24868): Inicio de Metadata, Tamanio bloques: 64,  Cantidad de bloques: 64,  Magic number: TALL_GRASS
+[INFO] 23:33:14:821 gamecard/(24868:24874): Estoy escuchando
+[INFO] 23:33:14:821 gamecard/(24868:24874): Espero un nuevo cliente
+[INFO] 23:33:23:755 gamecard/(24868:24874): Gestiono un nuevo cliente
+[INFO] 23:33:23:755 gamecard/(24868:24874): Espero un nuevo cliente
+[INFO] 23:33:23:756 gamecard/(24868:24886): atiendo cliente
+[INFO] 23:33:23:756 gamecard/(24868:24886): hola llegue
+[INFO] 23:33:23:757 gamecard/(24868:24886): hice el send: 1
+[INFO] 23:33:23:757 gamecard/(24868:24886): recibi: 24
+[INFO] 23:33:23:757 gamecard/(24868:24886): deserializado
+[INFO] 23:33:23:757 gamecard/(24868:24886): Atiendo new del pokemon: Pikachu. Posicion: (11, 3).
+[INFO] 23:33:23:757 gamecard/(24868:24886): entro a cargar metadata
+[INFO] 23:33:23:757 gamecard/(24868:24886): empiezo con los bloques Pikachu
+[INFO] 23:33:23:758 gamecard/(24868:24886): termino con los bloques Pikachu
+[INFO] 23:33:23:758 gamecard/(24868:24886): comienzo a obtener lista de Pikachu
+[INFO] 23:33:23:758 gamecard/(24868:24886): hola3.
+[INFO] 23:33:23:758 gamecard/(24868:24886): LecturaArchivo: 1-9=3
+.
+[INFO] 23:33:23:758 gamecard/(24868:24886): termino de obtener lista de Pikachu
+[INFO] 23:33:23:758 gamecard/(24868:24886): comienzo a actualizar posiciones de Pikachu
+[INFO] 23:33:23:758 gamecard/(24868:24886): termino de actualizar posiciones de Pikachu
+[INFO] 23:33:28:759 gamecard/(24868:24886): Cierro el archivo del pokemon: Pikachu. Posicion: (11, 3).
+[INFO] 23:35:35:681 gamecard/(25083:25083): Puerto Broker:5002
+[INFO] 23:35:35:681 gamecard/(25083:25083): Se encontro el directorio metadata
+[INFO] 23:35:35:681 gamecard/(25083:25083): Se encontro el archivo metadata.bin
+[INFO] 23:35:35:681 gamecard/(25083:25083): Inicio de Metadata, Tamanio bloques: 64,  Cantidad de bloques: 64,  Magic number: TALL_GRASS
+[INFO] 23:35:35:787 gamecard/(25083:25089): Estoy escuchando
+[INFO] 23:35:35:787 gamecard/(25083:25089): Espero un nuevo cliente
+[INFO] 23:35:38:797 gamecard/(25083:25089): Gestiono un nuevo cliente
+[INFO] 23:35:38:798 gamecard/(25083:25089): Espero un nuevo cliente
+[INFO] 23:35:38:799 gamecard/(25083:25096): atiendo cliente
+[INFO] 23:35:38:799 gamecard/(25083:25096): hola llegue
+[INFO] 23:35:38:799 gamecard/(25083:25096): hice el send: 1
+[INFO] 23:35:38:799 gamecard/(25083:25096): recibi: 24
+[INFO] 23:35:38:799 gamecard/(25083:25096): deserializado
+[INFO] 23:35:38:799 gamecard/(25083:25096): Atiendo new del pokemon: Pikachu. Posicion: (11, 3).
+[INFO] 23:35:38:799 gamecard/(25083:25096): entro a cargar metadata
+[INFO] 23:35:38:799 gamecard/(25083:25096): empiezo con los bloques Pikachu
+[INFO] 23:35:38:799 gamecard/(25083:25096): termino con los bloques Pikachu
+[INFO] 23:35:38:810 gamecard/(25083:25096): comienzo a obtener lista de Pikachu
+[INFO] 23:35:38:820 gamecard/(25083:25096): hola3.
+[INFO] 23:35:38:823 gamecard/(25083:25096): LecturaArchivo: 1-9=3
+.
+[INFO] 23:35:38:823 gamecard/(25083:25096): termino de obtener lista de Pikachu
+[INFO] 23:35:38:824 gamecard/(25083:25096): comienzo a actualizar posiciones de Pikachu
+[INFO] 23:35:38:824 gamecard/(25083:25096): string de lista: 1-9=3
+11-3=10
+
+[INFO] 23:35:38:824 gamecard/(25083:25096): Escribiendo bloque:1, offset=0, longitud=14, buffer=1-9=3
+11-3=10
+
+[INFO] 23:35:38:824 gamecard/(25083:25096): termino de actualizar posiciones de Pikachu
+[INFO] 23:35:43:825 gamecard/(25083:25096): Cierro el archivo del pokemon: Pikachu. Posicion: (11, 3).
+[INFO] 23:36:02:150 gamecard/(25083:25089): Gestiono un nuevo cliente
+[INFO] 23:36:02:150 gamecard/(25083:25089): Espero un nuevo cliente
+[INFO] 23:36:02:151 gamecard/(25083:25138): atiendo cliente
+[INFO] 23:36:02:151 gamecard/(25083:25138): hola llegue
+[INFO] 23:36:02:152 gamecard/(25083:25138): hice el send: 1
+[INFO] 23:36:02:152 gamecard/(25083:25138): recibi: 24
+[INFO] 23:36:02:152 gamecard/(25083:25138): deserializado
+[INFO] 23:36:02:152 gamecard/(25083:25138): Atiendo new del pokemon: Pikachu. Posicion: (1, 9).
+[INFO] 23:36:02:152 gamecard/(25083:25138): comienzo a obtener lista de Pikachu
+[INFO] 23:36:02:153 gamecard/(25083:25138): hola3.
+[INFO] 23:36:02:153 gamecard/(25083:25138): LecturaArchivo: 1-9=3
+11-3=10
+.
+[INFO] 23:36:02:153 gamecard/(25083:25138): termino de obtener lista de Pikachu
+[INFO] 23:36:02:153 gamecard/(25083:25138): comienzo a actualizar posiciones de Pikachu
+[INFO] 23:36:02:153 gamecard/(25083:25138): string de lista: 1-9=6
+11-3=10
+
+[INFO] 23:36:02:154 gamecard/(25083:25138): Escribiendo bloque:1, offset=0, longitud=14, buffer=1-9=6
+11-3=10
+
+[INFO] 23:36:02:154 gamecard/(25083:25138): termino de actualizar posiciones de Pikachu
+[INFO] 23:36:02:155 gamecard/(25083:25089): Gestiono un nuevo cliente
+[INFO] 23:36:02:156 gamecard/(25083:25089): Espero un nuevo cliente
+[INFO] 23:36:02:157 gamecard/(25083:25142): atiendo cliente
+[INFO] 23:36:02:157 gamecard/(25083:25142): hola llegue
+[INFO] 23:36:02:158 gamecard/(25083:25142): hice el send: 1
+[INFO] 23:36:02:159 gamecard/(25083:25142): recibi: 27
+[INFO] 23:36:02:164 gamecard/(25083:25142): deserializado
+[INFO] 23:36:02:173 gamecard/(25083:25142): Atiendo new del pokemon: Charmander. Posicion: (4, 1).
+[INFO] 23:36:02:174 gamecard/(25083:25142): entro a cargar metadata
+[INFO] 23:36:02:174 gamecard/(25083:25142): empiezo con los bloques Charmander
+[INFO] 23:36:02:174 gamecard/(25083:25142): termino con los bloques Charmander
+[INFO] 23:36:02:174 gamecard/(25083:25142): comienzo a obtener lista de Charmander
+[INFO] 23:36:02:176 gamecard/(25083:25142): hola3.
+[INFO] 23:36:02:176 gamecard/(25083:25142): LecturaArchivo: 4-1=101
+517-2046=15
+413-17=1
+723-97=29
+129-547=11
+65-93=3001
+12-.
+[INFO] 23:36:02:176 gamecard/(25083:25142): hola3.
+[INFO] 23:36:02:176 gamecard/(25083:25142): LecturaArchivo: 17=34
+.
+[INFO] 23:36:02:176 gamecard/(25083:25142): termino de obtener lista de Charmander
+[INFO] 23:36:02:176 gamecard/(25083:25142): comienzo a actualizar posiciones de Charmander
+[INFO] 23:36:02:176 gamecard/(25083:25142): string de lista: 4-1=202
+517-2046=15
+413-17=1
+723-97=29
+129-547=11
+65-93=3001
+12-17=34
+
+[INFO] 23:36:02:177 gamecard/(25083:25142): Escribiendo bloque:2, offset=0, longitud=64, buffer=4-1=202
+517-2046=15
+413-17=1
+723-97=29
+129-547=11
+65-93=3001
+12-
+[INFO] 23:36:02:177 gamecard/(25083:25142): Escribiendo bloque:3, offset=0, longitud=6, buffer=17=34
+
+[INFO] 23:36:02:177 gamecard/(25083:25142): termino de actualizar posiciones de Charmander
+[INFO] 23:36:02:179 gamecard/(25083:25089): Gestiono un nuevo cliente
+[INFO] 23:36:02:179 gamecard/(25083:25089): Espero un nuevo cliente
+[INFO] 23:36:02:179 gamecard/(25083:25145): atiendo cliente
+[INFO] 23:36:02:180 gamecard/(25083:25145): hola llegue
+[INFO] 23:36:02:180 gamecard/(25083:25145): hice el send: 1
+[INFO] 23:36:02:181 gamecard/(25083:25145): recibi: 27
+[INFO] 23:36:02:181 gamecard/(25083:25145): deserializado
+[INFO] 23:36:02:181 gamecard/(25083:25145): Atiendo new del pokemon: Charmander. Posicion: (517, 2046).
+[INFO] 23:36:02:181 gamecard/(25083:25145): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 23:36:02:182 gamecard/(25083:25089): Gestiono un nuevo cliente
+[INFO] 23:36:02:183 gamecard/(25083:25089): Espero un nuevo cliente
+[INFO] 23:36:02:184 gamecard/(25083:25148): atiendo cliente
+[INFO] 23:36:02:184 gamecard/(25083:25148): hola llegue
+[INFO] 23:36:02:185 gamecard/(25083:25148): hice el send: 1
+[INFO] 23:36:02:186 gamecard/(25083:25148): recibi: 27
+[INFO] 23:36:02:186 gamecard/(25083:25148): deserializado
+[INFO] 23:36:02:187 gamecard/(25083:25148): Atiendo new del pokemon: Charmander. Posicion: (413, 17).
+[INFO] 23:36:02:187 gamecard/(25083:25148): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 23:36:02:189 gamecard/(25083:25089): Gestiono un nuevo cliente
+[INFO] 23:36:02:189 gamecard/(25083:25089): Espero un nuevo cliente
+[INFO] 23:36:02:190 gamecard/(25083:25151): atiendo cliente
+[INFO] 23:36:02:190 gamecard/(25083:25151): hola llegue
+[INFO] 23:36:02:190 gamecard/(25083:25151): hice el send: 1
+[INFO] 23:36:02:191 gamecard/(25083:25151): recibi: 27
+[INFO] 23:36:02:191 gamecard/(25083:25151): deserializado
+[INFO] 23:36:02:191 gamecard/(25083:25151): Atiendo new del pokemon: Charmander. Posicion: (723, 97).
+[INFO] 23:36:02:192 gamecard/(25083:25151): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 23:36:02:193 gamecard/(25083:25089): Gestiono un nuevo cliente
+[INFO] 23:36:02:194 gamecard/(25083:25089): Espero un nuevo cliente
+[INFO] 23:36:02:195 gamecard/(25083:25154): atiendo cliente
+[INFO] 23:36:02:195 gamecard/(25083:25154): hola llegue
+[INFO] 23:36:02:196 gamecard/(25083:25154): hice el send: 1
+[INFO] 23:36:02:196 gamecard/(25083:25154): recibi: 27
+[INFO] 23:36:02:197 gamecard/(25083:25154): deserializado
+[INFO] 23:36:02:198 gamecard/(25083:25154): Atiendo new del pokemon: Charmander. Posicion: (65, 93).
+[INFO] 23:36:02:198 gamecard/(25083:25154): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 23:36:02:200 gamecard/(25083:25089): Gestiono un nuevo cliente
+[INFO] 23:36:02:200 gamecard/(25083:25089): Espero un nuevo cliente
+[INFO] 23:36:02:200 gamecard/(25083:25157): atiendo cliente
+[INFO] 23:36:02:201 gamecard/(25083:25157): hola llegue
+[INFO] 23:36:02:201 gamecard/(25083:25157): hice el send: 1
+[INFO] 23:36:02:202 gamecard/(25083:25157): recibi: 27
+[INFO] 23:36:02:202 gamecard/(25083:25157): deserializado
+[INFO] 23:36:02:202 gamecard/(25083:25157): Atiendo new del pokemon: Charmander. Posicion: (12, 17).
+[INFO] 23:36:02:203 gamecard/(25083:25157): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 23:36:02:208 gamecard/(25083:25089): Gestiono un nuevo cliente
+[INFO] 23:36:02:208 gamecard/(25083:25089): Espero un nuevo cliente
+[INFO] 23:36:02:209 gamecard/(25083:25161): atiendo cliente
+[INFO] 23:36:02:209 gamecard/(25083:25161): hola llegue
+[INFO] 23:36:02:209 gamecard/(25083:25161): hice el send: 1
+[INFO] 23:36:02:209 gamecard/(25083:25161): recibi: 27
+[INFO] 23:36:02:209 gamecard/(25083:25161): deserializado
+[INFO] 23:36:02:209 gamecard/(25083:25161): Atiendo new del pokemon: Charmander. Posicion: (129, 547).
+[INFO] 23:36:02:209 gamecard/(25083:25161): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 23:36:07:154 gamecard/(25083:25138): Cierro el archivo del pokemon: Pikachu. Posicion: (1, 9).
+[INFO] 23:36:07:179 gamecard/(25083:25142): Cierro el archivo del pokemon: Charmander. Posicion: (4, 1).
+[INFO] 23:36:07:181 gamecard/(25083:25145): comienzo a obtener lista de Charmander
+[INFO] 23:36:07:181 gamecard/(25083:25145): hola3.
+[INFO] 23:36:07:181 gamecard/(25083:25145): LecturaArchivo: 4-1=202
+517-2046=15
+413-17=1
+723-97=29
+129-547=11
+65-93=3001
+12-.
+[INFO] 23:36:07:182 gamecard/(25083:25145): hola3.
+[INFO] 23:36:07:182 gamecard/(25083:25145): LecturaArchivo: 17=34
+.
+[INFO] 23:36:07:182 gamecard/(25083:25145): termino de obtener lista de Charmander
+[INFO] 23:36:07:182 gamecard/(25083:25145): comienzo a actualizar posiciones de Charmander
+[INFO] 23:36:07:182 gamecard/(25083:25145): string de lista: 4-1=202
+517-2046=30
+413-17=1
+723-97=29
+129-547=11
+65-93=3001
+12-17=34
+
+[INFO] 23:36:07:182 gamecard/(25083:25145): Escribiendo bloque:2, offset=0, longitud=64, buffer=4-1=202
+517-2046=30
+413-17=1
+723-97=29
+129-547=11
+65-93=3001
+12-
+[INFO] 23:36:07:182 gamecard/(25083:25145): Escribiendo bloque:3, offset=0, longitud=6, buffer=17=34
+
+[INFO] 23:36:07:182 gamecard/(25083:25145): termino de actualizar posiciones de Charmander
+[INFO] 23:36:07:189 gamecard/(25083:25148): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 23:36:07:194 gamecard/(25083:25151): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 23:36:07:200 gamecard/(25083:25154): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 23:36:07:204 gamecard/(25083:25157): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 23:36:07:209 gamecard/(25083:25161): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 23:36:12:183 gamecard/(25083:25145): Cierro el archivo del pokemon: Charmander. Posicion: (517, 2046).
+[INFO] 23:36:12:190 gamecard/(25083:25148): comienzo a obtener lista de Charmander
+[INFO] 23:36:12:190 gamecard/(25083:25148): hola3.
+[INFO] 23:36:12:190 gamecard/(25083:25148): LecturaArchivo: 4-1=202
+517-2046=30
+413-17=1
+723-97=29
+129-547=11
+65-93=3001
+12-.
+[INFO] 23:36:12:190 gamecard/(25083:25148): hola3.
+[INFO] 23:36:12:190 gamecard/(25083:25148): LecturaArchivo: 17=34
+.
+[INFO] 23:36:12:190 gamecard/(25083:25148): termino de obtener lista de Charmander
+[INFO] 23:36:12:190 gamecard/(25083:25148): comienzo a actualizar posiciones de Charmander
+[INFO] 23:36:12:191 gamecard/(25083:25148): string de lista: 4-1=202
+517-2046=30
+413-17=2
+723-97=29
+129-547=11
+65-93=3001
+12-17=34
+
+[INFO] 23:36:12:191 gamecard/(25083:25148): Escribiendo bloque:2, offset=0, longitud=64, buffer=4-1=202
+517-2046=30
+413-17=2
+723-97=29
+129-547=11
+65-93=3001
+12-
+[INFO] 23:36:12:191 gamecard/(25083:25148): Escribiendo bloque:3, offset=0, longitud=6, buffer=17=34
+
+[INFO] 23:36:12:191 gamecard/(25083:25148): termino de actualizar posiciones de Charmander
+[INFO] 23:36:12:195 gamecard/(25083:25151): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 23:36:12:201 gamecard/(25083:25154): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 23:36:12:205 gamecard/(25083:25157): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 23:36:12:210 gamecard/(25083:25161): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 23:36:17:192 gamecard/(25083:25148): Cierro el archivo del pokemon: Charmander. Posicion: (413, 17).
+[INFO] 23:36:17:195 gamecard/(25083:25151): comienzo a obtener lista de Charmander
+[INFO] 23:36:17:195 gamecard/(25083:25151): hola3.
+[INFO] 23:36:17:196 gamecard/(25083:25151): LecturaArchivo: 4-1=202
+517-2046=30
+413-17=2
+723-97=29
+129-547=11
+65-93=3001
+12-.
+[INFO] 23:36:17:196 gamecard/(25083:25151): hola3.
+[INFO] 23:36:17:196 gamecard/(25083:25151): LecturaArchivo: 17=34
+.
+[INFO] 23:36:17:196 gamecard/(25083:25151): termino de obtener lista de Charmander
+[INFO] 23:36:17:196 gamecard/(25083:25151): comienzo a actualizar posiciones de Charmander
+[INFO] 23:36:17:196 gamecard/(25083:25151): string de lista: 4-1=202
+517-2046=30
+413-17=2
+723-97=58
+129-547=11
+65-93=3001
+12-17=34
+
+[INFO] 23:36:17:196 gamecard/(25083:25151): Escribiendo bloque:2, offset=0, longitud=64, buffer=4-1=202
+517-2046=30
+413-17=2
+723-97=58
+129-547=11
+65-93=3001
+12-
+[INFO] 23:36:17:196 gamecard/(25083:25151): Escribiendo bloque:3, offset=0, longitud=6, buffer=17=34
+
+[INFO] 23:36:17:201 gamecard/(25083:25154): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 23:36:17:201 gamecard/(25083:25151): termino de actualizar posiciones de Charmander
+[INFO] 23:36:17:207 gamecard/(25083:25157): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 23:36:17:211 gamecard/(25083:25161): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 23:36:22:203 gamecard/(25083:25151): Cierro el archivo del pokemon: Charmander. Posicion: (723, 97).
+[INFO] 23:36:22:203 gamecard/(25083:25154): comienzo a obtener lista de Charmander
+[INFO] 23:36:22:203 gamecard/(25083:25154): hola3.
+[INFO] 23:36:22:203 gamecard/(25083:25154): LecturaArchivo: 4-1=202
+517-2046=30
+413-17=2
+723-97=58
+129-547=11
+65-93=3001
+12-.
+[INFO] 23:36:22:203 gamecard/(25083:25154): hola3.
+[INFO] 23:36:22:203 gamecard/(25083:25154): LecturaArchivo: 17=34
+.
+[INFO] 23:36:22:203 gamecard/(25083:25154): termino de obtener lista de Charmander
+[INFO] 23:36:22:203 gamecard/(25083:25154): comienzo a actualizar posiciones de Charmander
+[INFO] 23:36:22:203 gamecard/(25083:25154): string de lista: 4-1=202
+517-2046=30
+413-17=2
+723-97=58
+129-547=11
+65-93=6002
+12-17=34
+
+[INFO] 23:36:22:204 gamecard/(25083:25154): Escribiendo bloque:2, offset=0, longitud=64, buffer=4-1=202
+517-2046=30
+413-17=2
+723-97=58
+129-547=11
+65-93=6002
+12-
+[INFO] 23:36:22:204 gamecard/(25083:25154): Escribiendo bloque:3, offset=0, longitud=6, buffer=17=34
+
+[INFO] 23:36:22:204 gamecard/(25083:25154): termino de actualizar posiciones de Charmander
+[INFO] 23:36:22:207 gamecard/(25083:25157): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 23:36:22:212 gamecard/(25083:25161): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 23:36:27:204 gamecard/(25083:25154): Cierro el archivo del pokemon: Charmander. Posicion: (65, 93).
+[INFO] 23:36:27:226 gamecard/(25083:25157): comienzo a obtener lista de Charmander
+[INFO] 23:36:27:226 gamecard/(25083:25157): hola3.
+[INFO] 23:36:27:226 gamecard/(25083:25157): LecturaArchivo: 4-1=202
+517-2046=30
+413-17=2
+723-97=58
+129-547=11
+65-93=6002
+12-.
+[INFO] 23:36:27:226 gamecard/(25083:25157): hola3.
+[INFO] 23:36:27:226 gamecard/(25083:25157): LecturaArchivo: 17=34
+.
+[INFO] 23:36:27:226 gamecard/(25083:25157): termino de obtener lista de Charmander
+[INFO] 23:36:27:226 gamecard/(25083:25161): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 23:36:27:226 gamecard/(25083:25157): comienzo a actualizar posiciones de Charmander
+[INFO] 23:36:27:227 gamecard/(25083:25157): string de lista: 4-1=202
+517-2046=30
+413-17=2
+723-97=58
+129-547=11
+65-93=6002
+12-17=68
+
+[INFO] 23:36:27:227 gamecard/(25083:25157): Escribiendo bloque:2, offset=0, longitud=64, buffer=4-1=202
+517-2046=30
+413-17=2
+723-97=58
+129-547=11
+65-93=6002
+12-
+[INFO] 23:36:27:227 gamecard/(25083:25157): Escribiendo bloque:3, offset=0, longitud=6, buffer=17=68
+
+[INFO] 23:36:27:227 gamecard/(25083:25157): termino de actualizar posiciones de Charmander
+[INFO] 23:36:32:227 gamecard/(25083:25161): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 23:36:32:227 gamecard/(25083:25157): Cierro el archivo del pokemon: Charmander. Posicion: (12, 17).
+[INFO] 23:36:37:228 gamecard/(25083:25161): comienzo a obtener lista de Charmander
+[INFO] 23:36:37:228 gamecard/(25083:25161): hola3.
+[INFO] 23:36:37:228 gamecard/(25083:25161): LecturaArchivo: 4-1=202
+517-2046=30
+413-17=2
+723-97=58
+129-547=11
+65-93=6002
+12-.
+[INFO] 23:36:37:228 gamecard/(25083:25161): hola3.
+[INFO] 23:36:37:228 gamecard/(25083:25161): LecturaArchivo: 17=68
+.
+[INFO] 23:36:37:229 gamecard/(25083:25161): termino de obtener lista de Charmander
+[INFO] 23:36:37:229 gamecard/(25083:25161): comienzo a actualizar posiciones de Charmander
+[INFO] 23:36:37:229 gamecard/(25083:25161): string de lista: 4-1=202
+517-2046=30
+413-17=2
+723-97=58
+129-547=22
+65-93=6002
+12-17=68
+
+[INFO] 23:36:37:229 gamecard/(25083:25161): Escribiendo bloque:2, offset=0, longitud=64, buffer=4-1=202
+517-2046=30
+413-17=2
+723-97=58
+129-547=22
+65-93=6002
+12-
+[INFO] 23:36:37:229 gamecard/(25083:25161): Escribiendo bloque:3, offset=0, longitud=6, buffer=17=68
+
+[INFO] 23:36:37:229 gamecard/(25083:25161): termino de actualizar posiciones de Charmander
+[INFO] 23:36:42:229 gamecard/(25083:25161): Cierro el archivo del pokemon: Charmander. Posicion: (129, 547).
+[INFO] 23:39:17:128 gamecard/(25470:25470): Puerto Broker:5002
+[INFO] 23:39:17:128 gamecard/(25470:25470): Se encontro el directorio metadata
+[INFO] 23:39:17:128 gamecard/(25470:25470): Se encontro el archivo metadata.bin
+[INFO] 23:39:17:128 gamecard/(25470:25470): Inicio de Metadata, Tamanio bloques: 64,  Cantidad de bloques: 64,  Magic number: TALL_GRASS
+[INFO] 23:39:17:235 gamecard/(25470:25476): Estoy escuchando
+[INFO] 23:39:17:235 gamecard/(25470:25476): Espero un nuevo cliente
+[INFO] 23:39:25:650 gamecard/(25470:25476): Gestiono un nuevo cliente
+[INFO] 23:39:25:650 gamecard/(25470:25476): Espero un nuevo cliente
+[INFO] 23:39:25:651 gamecard/(25470:25486): atiendo cliente
+[INFO] 23:39:25:651 gamecard/(25470:25486): hola llegue
+[INFO] 23:39:25:651 gamecard/(25470:25486): hice el send: 1
+[INFO] 23:39:25:651 gamecard/(25470:25486): recibi: 24
+[INFO] 23:39:25:651 gamecard/(25470:25486): deserializado
+[INFO] 23:39:25:651 gamecard/(25470:25486): Atiendo new del pokemon: Pikachu. Posicion: (1, 9).
+[INFO] 23:39:25:651 gamecard/(25470:25486): entro a cargar metadata
+[INFO] 23:39:25:651 gamecard/(25470:25486): empiezo con los bloques Pikachu
+[INFO] 23:39:25:651 gamecard/(25470:25486): termino con los bloques Pikachu
+[INFO] 23:39:25:652 gamecard/(25470:25486): comienzo a obtener lista de Pikachu
+[INFO] 23:39:25:652 gamecard/(25470:25486): termino de obtener lista de Pikachu
+[INFO] 23:39:25:652 gamecard/(25470:25486): comienzo a actualizar posiciones de Pikachu
+[INFO] 23:39:25:652 gamecard/(25470:25486): termino de actualizar posiciones de Pikachu
+[INFO] 23:39:25:653 gamecard/(25470:25476): Gestiono un nuevo cliente
+[INFO] 23:39:25:653 gamecard/(25470:25476): Espero un nuevo cliente
+[INFO] 23:39:25:664 gamecard/(25470:25490): atiendo cliente
+[INFO] 23:39:25:665 gamecard/(25470:25490): hola llegue
+[INFO] 23:39:25:666 gamecard/(25470:25490): hice el send: 1
+[INFO] 23:39:25:666 gamecard/(25470:25490): recibi: 27
+[INFO] 23:39:25:666 gamecard/(25470:25490): deserializado
+[INFO] 23:39:25:667 gamecard/(25470:25490): Atiendo new del pokemon: Charmander. Posicion: (4, 1).
+[INFO] 23:39:25:668 gamecard/(25470:25490): entro a cargar metadata
+[INFO] 23:39:25:668 gamecard/(25470:25490): empiezo con los bloques Charmander
+[INFO] 23:39:25:669 gamecard/(25470:25490): termino con los bloques Charmander
+[INFO] 23:39:25:670 gamecard/(25470:25490): comienzo a obtener lista de Charmander
+[INFO] 23:39:25:670 gamecard/(25470:25490): termino de obtener lista de Charmander
+[INFO] 23:39:25:671 gamecard/(25470:25490): comienzo a actualizar posiciones de Charmander
+[INFO] 23:39:25:672 gamecard/(25470:25490): termino de actualizar posiciones de Charmander
+[INFO] 23:39:25:673 gamecard/(25470:25476): Gestiono un nuevo cliente
+[INFO] 23:39:25:674 gamecard/(25470:25476): Espero un nuevo cliente
+[INFO] 23:39:25:674 gamecard/(25470:25493): atiendo cliente
+[INFO] 23:39:25:674 gamecard/(25470:25493): hola llegue
+[INFO] 23:39:25:679 gamecard/(25470:25493): hice el send: 1
+[INFO] 23:39:25:679 gamecard/(25470:25493): recibi: 27
+[INFO] 23:39:25:681 gamecard/(25470:25493): deserializado
+[INFO] 23:39:25:681 gamecard/(25470:25493): Atiendo new del pokemon: Charmander. Posicion: (517, 2046).
+[INFO] 23:39:25:681 gamecard/(25470:25493): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 23:39:25:683 gamecard/(25470:25476): Gestiono un nuevo cliente
+[INFO] 23:39:25:683 gamecard/(25470:25476): Espero un nuevo cliente
+[INFO] 23:39:25:684 gamecard/(25470:25496): atiendo cliente
+[INFO] 23:39:25:684 gamecard/(25470:25496): hola llegue
+[INFO] 23:39:25:686 gamecard/(25470:25496): hice el send: 1
+[INFO] 23:39:25:687 gamecard/(25470:25496): recibi: 27
+[INFO] 23:39:25:687 gamecard/(25470:25496): deserializado
+[INFO] 23:39:25:687 gamecard/(25470:25496): Atiendo new del pokemon: Charmander. Posicion: (413, 17).
+[INFO] 23:39:25:687 gamecard/(25470:25496): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 23:39:25:691 gamecard/(25470:25476): Gestiono un nuevo cliente
+[INFO] 23:39:25:691 gamecard/(25470:25476): Espero un nuevo cliente
+[INFO] 23:39:25:698 gamecard/(25470:25499): atiendo cliente
+[INFO] 23:39:25:698 gamecard/(25470:25499): hola llegue
+[INFO] 23:39:25:698 gamecard/(25470:25499): hice el send: 1
+[INFO] 23:39:25:698 gamecard/(25470:25499): recibi: 27
+[INFO] 23:39:25:698 gamecard/(25470:25499): deserializado
+[INFO] 23:39:25:698 gamecard/(25470:25499): Atiendo new del pokemon: Charmander. Posicion: (723, 97).
+[INFO] 23:39:25:698 gamecard/(25470:25499): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 23:39:25:703 gamecard/(25470:25476): Gestiono un nuevo cliente
+[INFO] 23:39:25:703 gamecard/(25470:25476): Espero un nuevo cliente
+[INFO] 23:39:25:703 gamecard/(25470:25502): atiendo cliente
+[INFO] 23:39:25:703 gamecard/(25470:25502): hola llegue
+[INFO] 23:39:25:703 gamecard/(25470:25502): hice el send: 1
+[INFO] 23:39:25:703 gamecard/(25470:25502): recibi: 27
+[INFO] 23:39:25:703 gamecard/(25470:25502): deserializado
+[INFO] 23:39:25:703 gamecard/(25470:25502): Atiendo new del pokemon: Charmander. Posicion: (65, 93).
+[INFO] 23:39:25:703 gamecard/(25470:25502): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 23:39:25:704 gamecard/(25470:25476): Gestiono un nuevo cliente
+[INFO] 23:39:25:704 gamecard/(25470:25476): Espero un nuevo cliente
+[INFO] 23:39:25:704 gamecard/(25470:25505): atiendo cliente
+[INFO] 23:39:25:704 gamecard/(25470:25505): hola llegue
+[INFO] 23:39:25:704 gamecard/(25470:25505): hice el send: 1
+[INFO] 23:39:25:704 gamecard/(25470:25505): recibi: 27
+[INFO] 23:39:25:704 gamecard/(25470:25505): deserializado
+[INFO] 23:39:25:704 gamecard/(25470:25505): Atiendo new del pokemon: Charmander. Posicion: (12, 17).
+[INFO] 23:39:25:704 gamecard/(25470:25505): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 23:39:25:705 gamecard/(25470:25476): Gestiono un nuevo cliente
+[INFO] 23:39:25:705 gamecard/(25470:25476): Espero un nuevo cliente
+[INFO] 23:39:25:705 gamecard/(25470:25508): atiendo cliente
+[INFO] 23:39:25:705 gamecard/(25470:25508): hola llegue
+[INFO] 23:39:25:706 gamecard/(25470:25508): hice el send: 1
+[INFO] 23:39:25:706 gamecard/(25470:25508): recibi: 27
+[INFO] 23:39:25:706 gamecard/(25470:25508): deserializado
+[INFO] 23:39:25:706 gamecard/(25470:25508): Atiendo new del pokemon: Charmander. Posicion: (129, 547).
+[INFO] 23:39:25:706 gamecard/(25470:25508): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 23:39:30:653 gamecard/(25470:25486): Cierro el archivo del pokemon: Pikachu. Posicion: (1, 9).
+[INFO] 23:39:30:673 gamecard/(25470:25490): Cierro el archivo del pokemon: Charmander. Posicion: (4, 1).
+[INFO] 23:39:30:683 gamecard/(25470:25493): comienzo a obtener lista de Charmander
+[INFO] 23:39:30:684 gamecard/(25470:25493): termino de obtener lista de Charmander
+[INFO] 23:39:30:684 gamecard/(25470:25493): comienzo a actualizar posiciones de Charmander
+[INFO] 23:39:30:684 gamecard/(25470:25493): termino de actualizar posiciones de Charmander
+[INFO] 23:39:30:688 gamecard/(25470:25496): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 23:39:30:700 gamecard/(25470:25499): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 23:39:30:706 gamecard/(25470:25505): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 23:39:30:706 gamecard/(25470:25502): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 23:39:30:708 gamecard/(25470:25508): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 23:39:35:684 gamecard/(25470:25493): Cierro el archivo del pokemon: Charmander. Posicion: (517, 2046).
+[INFO] 23:39:35:781 gamecard/(25470:25496): comienzo a obtener lista de Charmander
+[INFO] 23:39:35:781 gamecard/(25470:25499): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 23:39:35:781 gamecard/(25470:25505): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 23:39:35:781 gamecard/(25470:25502): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 23:39:35:781 gamecard/(25470:25508): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 23:39:35:781 gamecard/(25470:25496): termino de obtener lista de Charmander
+[INFO] 23:39:35:781 gamecard/(25470:25496): comienzo a actualizar posiciones de Charmander
+[INFO] 23:39:35:781 gamecard/(25470:25496): termino de actualizar posiciones de Charmander
+[INFO] 23:39:40:784 gamecard/(25470:25508): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 23:39:40:784 gamecard/(25470:25505): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 23:39:40:784 gamecard/(25470:25499): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 23:39:40:784 gamecard/(25470:25502): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 23:39:40:785 gamecard/(25470:25496): Cierro el archivo del pokemon: Charmander. Posicion: (413, 17).
+[INFO] 23:39:45:785 gamecard/(25470:25508): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 23:39:45:785 gamecard/(25470:25499): comienzo a obtener lista de Charmander
+[INFO] 23:39:45:785 gamecard/(25470:25505): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 23:39:45:785 gamecard/(25470:25502): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 23:39:45:785 gamecard/(25470:25499): termino de obtener lista de Charmander
+[INFO] 23:39:45:785 gamecard/(25470:25499): comienzo a actualizar posiciones de Charmander
+[INFO] 23:39:45:785 gamecard/(25470:25499): termino de actualizar posiciones de Charmander
+[INFO] 23:39:50:786 gamecard/(25470:25508): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 23:39:50:786 gamecard/(25470:25499): Cierro el archivo del pokemon: Charmander. Posicion: (723, 97).
+[INFO] 23:39:50:786 gamecard/(25470:25502): comienzo a obtener lista de Charmander
+[INFO] 23:39:50:786 gamecard/(25470:25505): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 23:39:50:786 gamecard/(25470:25502): termino de obtener lista de Charmander
+[INFO] 23:39:50:786 gamecard/(25470:25502): comienzo a actualizar posiciones de Charmander
+[INFO] 23:39:50:786 gamecard/(25470:25502): termino de actualizar posiciones de Charmander
+[INFO] 23:39:55:788 gamecard/(25470:25505): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 23:39:55:788 gamecard/(25470:25502): Cierro el archivo del pokemon: Charmander. Posicion: (65, 93).
+[INFO] 23:39:55:788 gamecard/(25470:25508): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 23:40:00:789 gamecard/(25470:25505): comienzo a obtener lista de Charmander
+[INFO] 23:40:00:790 gamecard/(25470:25508): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 23:40:00:790 gamecard/(25470:25505): termino de obtener lista de Charmander
+[INFO] 23:40:00:790 gamecard/(25470:25505): comienzo a actualizar posiciones de Charmander
+[INFO] 23:40:00:790 gamecard/(25470:25505): termino de actualizar posiciones de Charmander
+[INFO] 23:40:05:791 gamecard/(25470:25508): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 23:40:05:792 gamecard/(25470:25505): Cierro el archivo del pokemon: Charmander. Posicion: (12, 17).
+[INFO] 23:40:10:792 gamecard/(25470:25508): comienzo a obtener lista de Charmander
+[INFO] 23:40:10:793 gamecard/(25470:25508): termino de obtener lista de Charmander
+[INFO] 23:40:10:793 gamecard/(25470:25508): comienzo a actualizar posiciones de Charmander
+[INFO] 23:40:10:793 gamecard/(25470:25508): termino de actualizar posiciones de Charmander
+[INFO] 23:40:15:794 gamecard/(25470:25508): Cierro el archivo del pokemon: Charmander. Posicion: (129, 547).

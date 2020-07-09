@@ -38,6 +38,19 @@ int main(void) {
 	iniciarMetadata();
 	iniciarBitmap();
 	inicializarListaBloques();
+
+//	archivoHeader* charmander=crearDirectorio("Pikachu", pathFiles, ARCHIVO);
+//	log_info(gamecardLogger2, "tamanio archivo: %i", charmander->tamanioArchivo);
+//	log_info(gamecardLogger2, "bloques usados:");
+//	log_info(gamecardLogger2, "%i", list_size(charmander->bloquesUsados));
+//	for(uint32_t i=0; i<list_size(charmander->bloquesUsados);i++){
+//		log_info(gamecardLogger2, "bloque: %i", ((blockHeader*) list_get(charmander->bloquesUsados,i))->id);
+//	}
+//	 ocuparBloque(1);
+//	 ocuparBloque(2);
+//	 ocuparBloque(5);
+//	 ocuparBloque(7);
+//
 	//archivoHeader* pikachu=crearDirectorio("Pikachu",pathFiles,ARCHIVO);
 
 //	char* string=string_new();
@@ -327,8 +340,9 @@ void* atenderNew(void* paq) {
 
 
 	FILE* archivoMetadata=abrirArchivo(archivoPoke);
-
+	log_info(gamecardLogger2, "comienzo a obtener lista de %s", msgNew->pokemon);
 	t_list* listaPosCantidad=obtenerListaPosicionCantidadDeArchivo(archivoPoke);
+	log_info(gamecardLogger2, "termino de obtener lista de %s", msgNew->pokemon);
 	posicionCantidad* encontrado= buscarPosicionCantidad(listaPosCantidad, pokeEnPosicion->posicion);
 
 	if(encontrado!=NULL){
@@ -340,8 +354,9 @@ void* atenderNew(void* paq) {
 		(posAgregar->posicion).y=(pokeEnPosicion->posicion).y;
 		list_add(listaPosCantidad, (void*) posAgregar);
 	}
-
+	log_info(gamecardLogger2, "comienzo a actualizar posiciones de %s", msgNew->pokemon);
 	actualizarPosicionesArchivo(archivoPoke,listaPosCantidad);
+	log_info(gamecardLogger2, "termino de actualizar posiciones de %s", msgNew->pokemon);
 	list_destroy_and_destroy_elements(listaPosCantidad, free);
 	//Verificar que el pokemon este en nuestro FileSystem
 	//Una vez encontrado (o creado) verificar si puedo abrirlo

@@ -51,10 +51,9 @@ typedef struct{
 	bool estaAbierto;
 	tipoMetadata tipo;
 	//FILE* archivoMetadata;
-	t_list* archivosHijos;
 	char* pathArchivo;
 	char* nombreArchivo;
-	pthread_mutex_t* mutex;
+	pthread_mutex_t* mutex;//despues ver de sacarlo
 	//struct archivoHeader* archivoPadre;
 }archivoHeader;
 
@@ -138,7 +137,7 @@ void iniciarFileSystem();
 void iniciarMetadata();
 void iniciarBitmap();
 uint32_t directorioExiste (char *path);
-uint32_t archivoExiste(char* path);
+bool archivoExiste(char* path);
 void actualizarArchivoBitmap();
 int32_t crearArchivoBloque(blockHeader* bloque);
 bool poseeArchivo(blockHeader* bloque);
@@ -190,4 +189,6 @@ t_list* obtenerListaPosicionCantidadDeArchivo(archivoHeader* archivo);
 char* posicionCantidadToString(posicionCantidad* pos);
 char* listaPosicionCantidadToString(t_list* lista);
 void actualizarPosicionesArchivo(archivoHeader* archivo, t_list* listaPosicionCantidad);
+t_list* arrayBloquesStringToList(char** listaArray);
+archivoHeader* cargarMetadata(char* path, uint32_t tipo, char* nombre);
 #endif /* GAMECARD_H_ */

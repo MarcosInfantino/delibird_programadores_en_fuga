@@ -16,13 +16,13 @@ char* buscarPath (char *path){
 	return direccion;
 }
 
-uint32_t archivoExiste(char* path) {
+bool archivoExiste(char* path) {
 	if(access(path, F_OK) != -1) {
 		//printf("Se encontro el archivo: \"%s\" \n", path);
-		return 1;
+		return true;
 	} else {
 		//printf("No se encontro el archivo: \"%s\" \n",path);
-		return -1;
+		return false;
 	}
 }
 
@@ -52,7 +52,7 @@ void iniciarMetadata() {
 		log_info(gamecardLogger2,"No se encontro el directorio metadata");
 	}else{
 		log_info(gamecardLogger2,"Se encontro el directorio metadata");
-		if(archivoExiste(buscarPath("/Metadata/Metadata.bin"))<0){
+		if(!archivoExiste("/home/utnso/tp-2020-1c-Programadores-en-Fuga/Gamecard/TALL_GRASS/Metadata/metadata.bin")){
 			log_info(gamecardLogger2,"No se encontro el archivo metadata.bin");
 		}
 		else{
@@ -102,13 +102,15 @@ void iniciarBitmap() {
 
 void iniciarBitmap() {
 	char* pathBitmap = "/home/utnso/tp-2020-1c-Programadores-en-Fuga/Gamecard/TALL_GRASS/Metadata/bitmap.bin";
+	if(!archivoExiste(pathBitmap)){
+		FILE* archivoBitmap = fopen(pathBitmap,"w+b");
+			fseek(archivoBitmap,0, SEEK_SET);
+			for(uint32_t i=0;i<tallGrass.blocks;i++){
+				fputs("0",archivoBitmap);
+			}
+			fclose(archivoBitmap);
+	}
 
-//	FILE* archivoBitmap = fopen(pathBitmap,"w+b");
-//	fseek(archivoBitmap,0, SEEK_SET);
-//	for(uint32_t i=0;i<tallGrass.blocks;i++){
-//		fputs("0",archivoBitmap);
-//	}
-//	fclose(archivoBitmap);
 
 	//uint32_t fd = open(string_from_format("%s/Blocks/%d.bin", puntoMontaje, bloque->id),O_RDWR|O_CREAT,0777);
 
@@ -117,16 +119,16 @@ void iniciarBitmap() {
 	uint32_t descriptor = open(pathBitmap, O_RDWR , S_IRUSR | S_IWUSR | O_RDWR|O_CREAT, 0777);
 	ftruncate(descriptor,tallGrass.blocks);
 	fsync(descriptor);
-	mmapBitmap = mmap(NULL, tallGrass.blocks, PROT_READ | PROT_WRITE, MAP_SHARED, descriptor, 0);
+	mmapBitmap = (char*) mmap(NULL, tallGrass.blocks, PROT_READ | PROT_WRITE, MAP_SHARED, descriptor, 0);
 
 
 	close(descriptor);
 
-	 bitmap = bitarray_create_with_mode((char*) mmapBitmap, tallGrass.blocks, LSB_FIRST);
+	 //bitmap = bitarray_create_with_mode((char*) mmapBitmap, tallGrass.blocks, LSB_FIRST);
 
-	 for(uint32_t i=0;i<tallGrass.blocks;i++){
-	 	bitarray_clean_bit(bitmap,i);
-	 }
+//	 for(uint32_t i=0;i<tallGrass.blocks;i++){
+//	 	bitarray_clean_bit(bitmap,i);
+//	 }
 
 	//bitmap = bitarray_create_(mmapBitmap, sb.st_size);
 //	for(uint32_t i = 0; i < tallGrass.blocks; i++){
@@ -141,9 +143,13 @@ void iniciarBitmap() {
 int32_t crearArchivoBloque(blockHeader* bloque) {
 
 	//FILE* archivoBloque = fopen(string_from_format("%s/Blocks/%d.bin", puntoMontaje, bloque->id), "w");
-	uint32_t fd = open(string_from_format("%s/Blocks/%d.bin", puntoMontaje, bloque->id),O_RDWR|O_CREAT,0777);
-	ftruncate(fd,tallGrass.block_size);
-	close(fd);
+	char* pathArchivoBloque=string_from_format("%s/Blocks/%d.bin", puntoMontaje, bloque->id);
+	if(!archivoExiste(pathArchivoBloque)){
+		uint32_t fd = open(string_from_format("%s/Blocks/%d.bin", puntoMontaje, bloque->id),O_RDWR|O_CREAT,0777);
+		ftruncate(fd,tallGrass.block_size);
+		close(fd);
+	}
+
 		//ocuparBloque(bloque->id);
 	return 0;
 }
@@ -189,13 +195,19 @@ void eliminarDirectorio(char* path){
 
 archivoHeader* crearMetadata(char* nombre, uint32_t tipo, char* direccion){
 	archivoHeader* metadataFile;
-	if(!archivoHeaderYaRegistrado(nombre)){
-	 metadataFile= malloc(sizeof(archivoHeader));
 	char* nuevaDirec = malloc(strlen(direccion)+strlen("metadata.bin")+1);
 	strcpy(nuevaDirec,direccion);
 	string_append(&nuevaDirec,"/metadata.bin");
+
+
+
+
+	if(!archivoHeaderYaRegistrado(nombre) && !archivoExiste(nuevaDirec)){
+	 metadataFile= malloc(sizeof(archivoHeader));
+
 	metadataFile->pathArchivo = malloc(strlen(nuevaDirec)+1);
 	strcpy(metadataFile->pathArchivo,nuevaDirec);
+
 	FILE *archivoMetadata=fopen(nuevaDirec,"w+b");
 
 	metadataFile->nombreArchivo=malloc(strlen(nombre)+1);
@@ -210,6 +222,8 @@ archivoHeader* crearMetadata(char* nombre, uint32_t tipo, char* direccion){
 		metadataFile->tamanioArchivo = 0;
 		metadataFile->tipo = DIRECTORIO;
 		escribirMetadata(metadataFile);
+		metadataFile->mutex=malloc(sizeof(pthread_mutex_t));
+		pthread_mutex_init(metadataFile->mutex,NULL);
 		//fwrite(&metadataFile,sizeof(archivoHeader),1, metadataArchivo);
 
 		break;
@@ -232,11 +246,57 @@ archivoHeader* crearMetadata(char* nombre, uint32_t tipo, char* direccion){
 	if(tipo==ARCHIVO){
 		addListaMutex(listaArchivos, (void*)metadataFile);
 	}
-	}else{
+	}else if(archivoExiste(nuevaDirec) && archivoHeaderYaRegistrado(nombre)){
 		metadataFile=buscarArchivoHeaderPokemon(nombre);
+	}else{
+
+		metadataFile= cargarMetadata(nuevaDirec,tipo, nombre);
+		addListaMutex(listaArchivos, (void*)metadataFile);
 	}
+
 	return metadataFile;
 
+}
+
+archivoHeader* cargarMetadata(char* path, uint32_t tipo, char* nombre){
+
+	archivoHeader* archivo=malloc(sizeof(archivoHeader));
+	archivo->nombreArchivo=malloc(strlen(nombre)+1);
+	strcpy(archivo->nombreArchivo, nombre);
+	t_config* configLoco=config_create(path);
+	archivo->pathArchivo=path;
+		switch(tipo){
+		case DIRECTORIO:;
+
+			//fputs("DIRECTORY=Y\n",archivoMetadata);
+			archivo->esDirectorio=*(config_get_string_value(configLoco, "DIRECTORY"));
+			archivo->mutex=malloc(sizeof(pthread_mutex_t));
+			pthread_mutex_init(archivo->mutex,NULL);
+			archivo->tipo=DIRECTORIO;
+			break;
+		case ARCHIVO:;
+
+	//		fputs("DIRECTORY=N\n", archivoMetadata);
+	//		fputs("SIZE=0\n", archivoMetadata);
+	//		fputs("BLOCKS=[]\n",archivoMetadata);
+	//		fputs("OPEN=N\n", archivoMetadata);
+			log_info(gamecardLogger2, "entro a cargar metadata");
+			archivo->esDirectorio=*(config_get_string_value(configLoco, "DIRECTORY"));
+			archivo->tamanioArchivo=config_get_int_value(configLoco, "SIZE");
+			log_info(gamecardLogger2, "empiezo con los bloques %s", nombre);
+			char** listaBloques=config_get_array_value(configLoco, "BLOCKS");
+			archivo->bloquesUsados=arrayBloquesStringToList(listaBloques);
+			log_info(gamecardLogger2, "termino con los bloques %s", nombre);
+			archivo->estaAbierto=false;
+
+			archivo->mutex=malloc(sizeof(pthread_mutex_t));
+			pthread_mutex_init(archivo->mutex,NULL);
+			archivo->tipo=ARCHIVO;
+			break;
+
+		}
+		config_destroy(configLoco);
+		return archivo;
 }
 
 void actualizarArchivoBitmap() {
@@ -263,16 +323,28 @@ bool poseeArchivo(blockHeader* bloque){
 	return bloque->file!=NULL;
 }
 
+//bool estaLibre(uint32_t idBloque){
+//	return !bitarray_test_bit(bitmap, idBloque-1);
+//}
+//
+//void ocuparBloque(uint32_t idBloque){
+//	bitarray_set_bit(bitmap,idBloque-1);
+//}
+//
+//void liberarBloque(uint32_t idBloque){
+//	bitarray_clean_bit(bitmap,idBloque-1);
+//}
+
 bool estaLibre(uint32_t idBloque){
-	return !bitarray_test_bit(bitmap, idBloque-1);
+	return *(mmapBitmap + idBloque-1)=='0';
 }
 
 void ocuparBloque(uint32_t idBloque){
-	bitarray_set_bit(bitmap,idBloque-1);
+	*(mmapBitmap + idBloque-1)='1';
 }
 
 void liberarBloque(uint32_t idBloque){
-	bitarray_clean_bit(bitmap,idBloque-1);
+	*(mmapBitmap + idBloque-1)='0';
 }
 
 blockHeader* obtenerBloquePorId(uint32_t id){
@@ -335,7 +407,7 @@ int32_t escribirBloque(int32_t bloque, int32_t offset, int32_t longitud, char* b
 	blockHeader* headerBloque=obtenerBloquePorId(bloque);
 	if(tieneCapacidad(headerBloque,longitud)){
 	//disminuirCapacidad(headerBloque, longitud);
-	log_info(gamecardLogger2, "Escribiendo bloque:%d, offset=%d, longitud=%d, buffer=%s", bloque, offset, longitud, buffer);
+	//log_info(gamecardLogger2, "Escribiendo bloque:%d, offset=%d, longitud=%d, buffer=%s", bloque, offset, longitud, buffer);
 	//const char* bufferin = buffer;
 	//FILE* block = fopen(string_from_format("%s%d.bin", pathBlocks, bloque), "w+b");
 	//FILE* block = fopen(string_from_format("%s1.bin", pathBlocks), "r+");
