@@ -61,14 +61,6 @@ typedef struct{
 	uint32_t y;
 } posicion;
 
-//typedef struct{
-//	uint32_t sizePokemon;
-//	char* pokemon;
-//	uint32_t posX;
-//	uint32_t posY;
-//	uint32_t idCorrelativo;
-//}mensajeAppearedBroker;
-
 typedef struct{
 	uint32_t sizePokemon;
 	char* pokemon;
@@ -84,29 +76,12 @@ typedef struct{
 	uint32_t cantidad;
 }mensajeNew;
 
-//typedef struct{
-//	uint32_t sizePokemon;
-//	char* pokemon;
-//	uint32_t posX;
-//	uint32_t posY;
-//	uint32_t cantidad;
-//	uint32_t id;
-//}mensajeNewGamecard;
-
 typedef struct{
 	uint32_t sizePokemon;
 	char* pokemon;
 	uint32_t posX;
 	uint32_t posY;
 }mensajeCatch;
-
-//typedef struct{
-//	uint32_t sizePokemon;
-//	char* pokemon;
-//	uint32_t posX;
-//	uint32_t posY;
-//	uint32_t id;
-//}mensajeCatchGamecard;
 
 typedef struct{
 	uint32_t resultadoCaught;
@@ -116,12 +91,6 @@ typedef struct{
 	uint32_t sizePokemon;
 	char* pokemon;
 }mensajeGet;
-
-//typedef struct{
-//	uint32_t sizePokemon;
-//	char* pokemon;
-//	uint32_t id;
-//}mensajeGetGamecard;
 
 typedef struct{
 	uint32_t sizePokemon;
@@ -168,11 +137,6 @@ typedef struct {
 	sem_t* mensajesEnCola;
 }colaMensajes;
 
-//mensajeAppearedBroker* llenarMensajeAppearedBroker(char* pokemon, uint32_t posX,uint32_t posY, uint32_t idCorrelativo);
-//void* serializarAppearedBroker(mensajeAppearedBroker* mensaje);
-//mensajeAppearedBroker* deserializarAppearedBroker(void* streamRecibido);
-//void destruirAppearedBroker(mensajeAppearedBroker* msg);
-
 mensajeAppeared* llenarAppeared(char* pokemon, uint32_t posX, uint32_t posY);
 void* serializarAppeared(mensajeAppeared* mensaje);
 mensajeAppeared* deserializarAppeared (void* streamRecibido);
@@ -182,21 +146,11 @@ mensajeNew* llenarNew(char* pokemon, uint32_t posX, uint32_t posY, uint32_t cant
 void* serializarNew(mensajeNew* mensaje);
 mensajeNew* deserializarNew (void* streamRecibido);
 void destruirNew(mensajeNew* msg);
-//
-//mensajeNewGamecard* llenarMensajeNewGameCard(char* pokemon, uint32_t posX, uint32_t posY, uint32_t cantidad, uint32_t id);
-//void* serializarNewGamecard(mensajeNewGamecard* mensaje);
-//mensajeNewGamecard* deserializarNewGamecard (void* streamRecibido);
-//void destruirNewGamecard(mensajeNewGamecard* msg);
 
 mensajeCatch* llenarCatch(char* pokemon, uint32_t posX, uint32_t posY);
 void* serializarCatch(mensajeCatch* mensaje);
 mensajeCatch* deserializarCatch (void* streamRecibido);
 void destruirCatch(mensajeCatch* msg);
-
-//mensajeCatchGamecard* llenarMensajeCatchGamecard(char* pokemon, uint32_t posX, uint32_t posY, uint32_t id);
-//void* serializarCatchGamecard(mensajeCatchGamecard* mensaje);
-//mensajeCatchGamecard* deserializarCatchGamecard (void* streamRecibido);
-//void destruirCatchGamecard(mensajeCatchGamecard* msg);
 
 mensajeCaught* llenarCaught(uint32_t resultadoCaught);
 void* serializarCaught (mensajeCaught* mensaje);
@@ -207,11 +161,6 @@ mensajeGet* llenarGet(char* pokemon);
 void* serializarGet (mensajeGet* mensaje);
 mensajeGet* deserializarGet (void* streamRecibido);
 void destruirGet(mensajeGet* msg);
-
-//mensajeGetGamecard* llenarMensajeGetGamecard(char* pokemon, uint32_t id);
-//void* serializarGetGamecard (mensajeGetGamecard* mensaje);
-//mensajeGetGamecard* deserializarGetGamecard (void* streamRecibido);
-//void destruirGetGamecard(mensajeGetGamecard* msg);
 
 mensajeLocalized* llenarLocalized(char* pokemon, uint32_t cantidad, posicion* posiciones);
 void* serializarLocalized(mensajeLocalized* mensaje);

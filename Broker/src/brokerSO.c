@@ -8,20 +8,6 @@
  ============================================================================
  */
 
-#include <stdio.h>
-#include <stdlib.h>
-#include <pthread.h>
-#include <stdio.h>
-#include <sys/types.h>
-#include <sys/socket.h>
-#include <netdb.h>
-#include <netinet/in.h>
-#include <arpa/inet.h>
-#include <stdlib.h>
-#include <string.h>
-#include <signal.h>
-#include <unistd.h>
-#include <errno.h>
 #include "broker.h"
 #include "memoria.h"
 #include "files.h"
@@ -66,6 +52,7 @@ void levantarDatosDeConfig(char * pathConfig, uint32_t intMock){
 		particionMinima   = config_get_int_value(configBroker, "TAMANO_MINIMO_PARTICION");
 		ip_broker         = config_get_string_value(configBroker, "IP_BROKER");
 		puerto_broker     = config_get_int_value(configBroker, "PUERTO_BROKER");
+		frecuenciaCompactacion = config_get_int_value (configBroker, "FRECUENCIA_COMPACTACION");
 
 		definirAlgoritmoMemoria(configBroker);
 		definirAlgoritmoParticionLibre(configBroker);
@@ -376,11 +363,16 @@ void definirAlgoritmo(algoritmoParameter parAlgoritmo, uint32_t * varInt){
 
 void definirComienzoDeMemoria(){
 	memoria = malloc(tamMemoria);
-	/*if(algoritmoMemoria == BUDDY_SYSTEM){*/
-	nodoRaizMemoria = crearRaizArbol();
-	nodoRaizMemoria->offset = 0;
-	nodosOcupados = inicializarListaMutex();
-	/*}else if(algoritmoMemoria == PARTICIONES_DINAMICAS){
-			memoriaPARTICIONES = iniciarMemoriaPARTICIONES();
-	}*/
+	switch(algoritmoMemoria){
+	case BUDDY_SYSTEM:
+		nodoRaizMemoria = crearRaizArbol();
+		nodoRaizMemoria->offset = 0;
+		nodosOcupados = inicializarListaMutex();
+		break;
+
+	case PARTICIONES_DINAMICAS:
+		particionesOcupadas = inicializarListaMutex();
+		particionesLibres = inicializarListaMutex();
+		break;
+	}
 }

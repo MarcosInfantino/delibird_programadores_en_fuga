@@ -5,18 +5,6 @@
  *      Author: utnso
  */
 
-#include <stdio.h>
-#include <stdlib.h>
-#include <pthread.h>
-#include <stdio.h>
-#include <sys/types.h>
-#include <sys/socket.h>
-#include <netdb.h>
-#include <netinet/in.h>
-#include <arpa/inet.h>
-#include <stdlib.h>
-#include <string.h>
-#include <stdbool.h>
 #include "broker.h"
 #include "memoria.h"
 
@@ -34,6 +22,7 @@ void registrarMensajeEnMemoria(uint32_t idMensaje, paquete* paq, algoritmoMem me
 	msgNuevo->subsYaEnviado = inicializarListaMutex();
 	msgNuevo->sizeStream 	= paq->sizeStream;
 	msgNuevo->stream 		= paq->stream;
+	msgNuevo->modulo = paq->modulo;
 
 	uint32_t sizePrevio;
 
@@ -41,7 +30,7 @@ void registrarMensajeEnMemoria(uint32_t idMensaje, paquete* paq, algoritmoMem me
 	switch(metodo){
 	case PARTICIONES_DINAMICAS:
 		pthread_mutex_lock(mutexMemoria);
-		registrarEnMemoriaPARTICIONES(msgNuevo);
+		registrarEnParticiones(msgNuevo);
 		pthread_mutex_unlock(mutexMemoria);
 		break;
 	case BUDDY_SYSTEM:
@@ -83,7 +72,8 @@ void guardarEnListaMemoria(uint32_t idMensaje, uint32_t socket, ListasMemoria li
 	if( lista == CONFIRMADO){
 		if(estaEnLista(socket,lista, mensaje ))
 		{	printf("Ya está en la lista");
-			return;}
+			return;
+		}
 		pthread_mutex_lock(mutexMemoria);
 		addListaMutex(mensaje->subsYaEnviado, (void*) socket);
 		pthread_mutex_unlock(mutexMemoria);
@@ -91,21 +81,12 @@ void guardarEnListaMemoria(uint32_t idMensaje, uint32_t socket, ListasMemoria li
 		if(estaEnLista(socket,lista, mensaje ))
 		{
 			printf("Ya está en la lista");
-			return;}
+			return;
+		}
 		pthread_mutex_lock(mutexMemoria);
 		addListaMutex(mensaje->subsACK, (void*) socket);
 		pthread_mutex_unlock(mutexMemoria);
 	}
-}
-
-msgMemoriaBroker* buscarMensajeEnMemoria(uint32_t idMensajeBuscado){
-
-	/*if(algoritmoMemoria == BUDDY_SYSTEM){*/
-		return buscarMensajeEnMemoriaBuddy(idMensajeBuscado);
-		/*}else{
-		return buscarMensajeEnMemoriaParticiones(idMensajeBuscado);
-	}*/
-
 }
 
 bool estaEnLista(uint32_t socket, ListasMemoria lista, msgMemoriaBroker* mensaje){
@@ -174,8 +155,8 @@ bool yaSeGuardoEnMemoria(mensajeCatch* msgCatch, mensajeGet* msgGet){
 			return existeMensajeEnMemoriaBuddy(msgGet,NULL);
 		}
 	}else{
-		for(int i=0; i<sizeListaMutex(memoriaPARTICIONES); i++){
-		  partOcupada = getListaMutex(memoriaPARTICIONES, i);
+		for(int i=0; i<sizeListaMutex(particionesOcupadas); i++){
+		  partOcupada = getListaMutex(particionesOcupadas, i);
 		  if(partOcupada->mensaje->cola == CATCH_POKEMON && msgCatch != NULL){
 			  if(compararCatch(deserializarCatch(partOcupada->mensaje->stream), msgCatch))
 				  return true;
@@ -203,4 +184,23 @@ bool compararGet(mensajeGet* elemLista, mensajeGet* msgGet){
 	if(strcmp(elemLista->pokemon, msgGet->pokemon) == 0){
 		return true;}
 	return false;
+}
+
+msgMemoriaBroker* buscarMensajeEnMemoria(uint32_t idMensajeBuscado){
+	switch(algoritmoMemoria){
+	case BUDDY_SYSTEM:
+		return buscarMensajeEnMemoriaBuddy(idMensajeBuscado);
+	case PARTICIONES_DINAMICAS:
+		return buscarMensajeEnMemoriaParticiones(idMensajeBuscado);
+	}
+	return NULL;
+}
+
+void enviarMensajesPreviosEnMemoria(uint32_t* socket, uint32_t cola){
+	switch(algoritmoMemoria){
+	case BUDDY_SYSTEM:
+		//enviarMsjsASuscriptorNuevoBuddySystem (cola, socket);
+	case PARTICIONES_DINAMICAS:
+		enviarMsjsASuscriptorNuevoParticiones (cola, socket);
+	}
 }

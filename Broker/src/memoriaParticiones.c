@@ -1,39 +1,100 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <pthread.h>
-#include <stdio.h>
-#include <sys/types.h>
-#include <sys/socket.h>
-#include <netdb.h>
-#include <netinet/in.h>
-#include <arpa/inet.h>
-#include <stdlib.h>
-#include <string.h>
-#include <stdbool.h>
+
 #include "broker.h"
 #include "memoria.h"
 
+bool menorAMayorSegunTiempoCarga (void* part1, void* part2){
+	particion* parti1 = (particion*) part1;
+	particion* parti2 = (particion*) part2;
+	return (parti1->tiempoDeCargaPart.tm_hour < parti2->tiempoDeCargaPart.tm_hour || (parti1->tiempoDeCargaPart.tm_hour == parti2->tiempoDeCargaPart.tm_hour && parti1->tiempoDeCargaPart.tm_min < parti2->tiempoDeCargaPart.tm_min));
+}
 
-/*Procedimiento para almacenamiento de datos
-Se buscará una partición libre que tenga suficiente memoria continua como para contener el valor.
- En caso de no encontrarla, se pasará al paso siguiente (si corresponde, en caso contrario se pasará al paso 3
-  directamente).
-Se compactará la memoria y se realizará una nueva búsqueda. En caso de no encontrarla, se pasará al paso siguiente.
-Se procederá a eliminar una partición de datos. Luego, si no se pudo encontrar una partición con suficiente memoria
-como para contener el valor, se volverá al paso 2 o al 3 según corresponda.*/
+bool menorAMayorSegunLru (void* part1, void* part2){
+	particion* parti1 = (particion*) part1;
+	particion* parti2 = (particion*) part2;
+	return (parti1->lru.tm_hour < parti2->lru.tm_hour || (parti1->lru.tm_hour==parti2->lru.tm_hour && parti1->lru.tm_min<parti2->lru.tm_min));
+}
 
+void eliminarParticion (particion* part){
+	particion* partiNueva = malloc(sizeof(particionLibre));
+	partiNueva->offset = part->offset;
+	partiNueva->sizeParticion = part->mensaje->sizeStream;
+	addListaMutex(particionesLibres, (void*)partiNueva);
+	removeAndDestroyElementListaMutex(particionesOcupadas, 0, destroyParticionOcupada);
+}
 
-void registrarEnMemoriaPARTICIONES(msgMemoriaBroker* mensajeNuevo){
-	particionLibre* particionLibre = malloc(sizeof(particionLibre));
+void elegirParticionVictimaYEliminarla(){
+	particion* particionVictima;
+	switch(algoritmoReemplazo){
+	case FIFO:
+		list_sort_Mutex(particionesOcupadas, menorAMayorSegunTiempoCarga);
+		 particionVictima = (particion*)getListaMutex(particionesOcupadas, 0);
+		break;
+	case LRU:
+		list_sort_Mutex(particionesLibres, menorAMayorSegunLru);
+		particionVictima = (particion*)getListaMutex(particionesOcupadas, 0);
+		break;
+	}
+	eliminarParticion(particionVictima);
+}
+
+//void sustituirParticion(particionOcupada* particionASustituir, msgMemoriaBroker* mensajeAGuardar){
+//	if(particionASustituir->mensaje->sizeStream > mensajeAGuardar->sizeStream){
+//		particionLibre* particionLibreNueva = malloc(sizeof(particionLibre));
+//		particionLibreNueva->offset = particionASustituir->offset + mensajeAGuardar->sizeStream;
+//		particionLibreNueva->sizeParticion = particionASustituir->mensaje->sizeStream - mensajeAGuardar->sizeStream;
+//	}
+//	particionASustituir->mensaje=mensajeAGuardar;
+//	//actualizar LRU y tiempo de carga.
+//	memcpy(memoria + particionASustituir->offset, mensajeAGuardar->stream, mensajeAGuardar->sizeStream);
+//}
+
+bool sePuedeCompactar(){
+	if(frecuenciaCompactacion==-1){
+		return (sizeListaMutex(particionesOcupadas)==0);
+	}else if(frecuenciaCompactacion>=0){
+		return cantidadBusquedasFallidas >= frecuenciaCompactacion;
+	}
+	return NULL;
+}
+
+void registrarEnParticiones(msgMemoriaBroker* mensajeNuevo){
+	particion* particionLibre;
 	particionLibre = obtenerParticionLibrePARTICIONES(mensajeNuevo->sizeStream);
 
 	if(particionLibre == NULL){
-		//COMPACTAR y volver a llamar a obtenerpart... si vuelve a devolver nulo, eliminamos una particion segun
-		//los algoritmos y vuelvo a ejecutar obtenerPArt... si devuelve null vuelvo a compactar y así sucesivamente
+		cantidadBusquedasFallidas++;
+		if(sePuedeCompactar()){
+			compactar();
+			particionLibre = obtenerParticionLibrePARTICIONES(mensajeNuevo->sizeStream);
+			if(particionLibre == NULL){
+				cantidadBusquedasFallidas++;
+				elegirParticionVictimaYEliminarla();
+				registrarEnParticiones (mensajeNuevo);
+		}else{
+			elegirParticionVictimaYEliminarla();
+			registrarEnParticiones(mensajeNuevo);
+		}
 	}
+	asignarMensajeAParticion(particionLibre, mensajeNuevo);
+//	asignarPuntero(particionLibre->offset, mensajeNuevo->stream, mensajeNuevo->sizeStream);
+	}
+}
 
-	asignarPuntero(particionLibre->offset, mensajeNuevo->stream, mensajeNuevo->sizeStream);
-	free(particionLibre);
+void asignarMensajeAParticion(particion* partiLibre, msgMemoriaBroker* mensaje){
+	particion* partiOcupada = malloc(sizeof(particion));
+	partiOcupada->offset=partiLibre->offset;
+	partiOcupada->mensaje=mensaje;
+	//asignar LRU y tiempo de carga
+	memcpy(memoria + partiOcupada->offset, mensaje->stream, mensaje->sizeStream);
+	mensaje->stream = memoria + partiOcupada->offset;
+	addListaMutex(particionesOcupadas, (void*)partiOcupada);
+
+	if(partiLibre->sizeParticion > mensaje->sizeStream){
+		partiLibre->offset += mensaje->sizeStream;
+		partiLibre->sizeParticion-= mensaje->sizeStream;
+	}else{ //osea que el tamaño es igual
+		destroyParticionLibre (partiLibre);
+	}
 }
 
 particionLibre* obtenerParticionLibrePARTICIONES(uint32_t tamStream){
@@ -43,65 +104,101 @@ particionLibre* obtenerParticionLibrePARTICIONES(uint32_t tamStream){
 		return NULL;
 
 	if (algoritmoParticionLibre == FIRST_FIT){
-
 		list_sort_Mutex(particionesLibres, menorAmayorSegunOffset);
-		return list_remove_by_condition(particionesLibres->lista, esSuficientementeGrandeParaElMSG );
+		return list_remove_by_condition_Mutex(particionesLibres, esSuficientementeGrandeParaElMSG );
 
 	}else if(algoritmoParticionLibre == BEST_FIT){
 		list_sort_Mutex(particionesLibres, menorAmayorSegunSize);
-		return list_remove_by_condition(particionesLibres->lista, esSuficientementeGrandeParaElMSG );
+		return list_remove_by_condition_Mutex(particionesLibres, esSuficientementeGrandeParaElMSG );
 	}
 	return NULL;
 }
 
 void compactar(){
-	particionOcupada* elemento;
+	particion* elemento;
 	uint32_t base = 0;
-	list_sort_Mutex(memoriaPARTICIONES, menorAmayorSegunOffset);
-	for(int i=0; i<sizeListaMutex(memoriaPARTICIONES); i++){
-		elemento = getListaMutex(memoriaPARTICIONES, i);
-
+	list_sort_Mutex(particionesOcupadas, menorAmayorSegunOffset);
+	for(int i=0; i<sizeListaMutex(particionesOcupadas); i++){
+		elemento = getListaMutex(particionesOcupadas, i);
 		memcpy(memoria + base, memoria + elemento->offset, elemento->mensaje->sizeStream);
 		elemento->offset = base;
 		base  += elemento->mensaje->sizeStream;
 	}
-
 	generarParticionLibre(base);
+	cantidadBusquedasFallidas = 0;
 }
 
 void generarParticionLibre(uint32_t base){
-	particionLibre* nuevaParticion = malloc(sizeof(particionLibre));
+	particion* nuevaParticion = malloc(sizeof(particion));
 	nuevaParticion->offset = base;
 	nuevaParticion->sizeParticion = tamMemoria - base;
 
 	for(int j=0; j<sizeListaMutex(particionesLibres); j++){
-		removeAndDestroyElementListaMutex(particionesLibres,j,destroyParticion); //o free normal
+		removeAndDestroyElementListaMutex(particionesLibres,j,destroyParticionLibre); //o free normal
 	}
 
 	addListaMutex(particionesLibres,(void*) nuevaParticion);
 }
 
-void destroyParticion(void* particion){
-	particionLibre* part = (particionLibre*)particion;
+void destroyParticionLibre(void* parti){
+	particion* part = (particion*)parti;
 	free(part);
 }
 
+void destroyParticionOcupada (void* part){
+	particion* parti = (particion*) part;
+	free(parti->mensaje); //ver si destruir las listas o no
+	free(parti);
+}
+
 bool menorAmayorSegunOffset(void* primero, void* segundo){
-	return ((particionLibre*)primero)->offset < ((particionLibre*)segundo)->offset;}
+	return ((particion*)primero)->offset < ((particion*)segundo)->offset;
+}
 
 bool menorAmayorSegunSize(void* primero, void* segundo){
-	return ((particionLibre*)primero)->sizeParticion < ((particionLibre*)segundo)->sizeParticion;}
+	return ((particion*)primero)->sizeParticion < ((particion*)segundo)->sizeParticion;
+}
 
 bool esSuficientementeGrandeParaElMSG(void* elemento){
-	particionLibre* partLibre = (particionLibre*)elemento;
+	particion* partLibre = (particion*)elemento;
 	return partLibre->sizeParticion >= auxTamanioStreamGlobal;
 }
 
-/*msgMemoriaBroker*  buscarMensajeEnMemoriaParticiones(idMensajeBuscado){
-
-}*/
-
-
-listaMutex* iniciarMemoriaPARTICIONES(){
-	return inicializarListaMutex();
+t_list* buscarMensajesDeColaEnParticiones (uint32_t cola){
+	particion* particion1;
+	t_list* msjsDeCola = list_create();
+	for(int i = 0; i<sizeListaMutex(particionesOcupadas); i++){
+		particion1 = (particion*) getListaMutex(particionesOcupadas, i);
+		if(particion1->mensaje->cola==cola){
+			list_add(msjsDeCola, (void*)particion1->mensaje);
+		}
+	}
+	return msjsDeCola;
 }
+
+void enviarMsjsASuscriptorNuevoParticiones (uint32_t cola, uint32_t* socket){
+	t_list* listMsjs = buscarMensajesDeColaEnParticiones(cola);
+	msgMemoriaBroker* msg;
+	paquete* paqueteASerializar;
+	void* paqueteSerializado;
+	for(int i = 0; i<list_size(listMsjs); i++){
+		msg = (msgMemoriaBroker*) list_get(listMsjs, i);
+		paqueteASerializar = llenarPaquete(msg->modulo, msg->cola, msg->sizeStream, msg->stream);
+		paqueteSerializado = serializarPaquete(paqueteASerializar);
+		send(*socket, paqueteSerializado, sizePaquete(paqueteASerializar),0);
+		addListaMutex(msg->subsYaEnviado, (void*)socket);
+	}
+	list_destroy(listMsjs);
+}
+
+msgMemoriaBroker*  buscarMensajeEnMemoriaParticiones(uint32_t idMensajeBuscado){
+	particion* particion1;
+	for(int i = 0; i<sizeListaMutex(particionesOcupadas); i++){
+		particion1 = (particion*) getListaMutex (particionesOcupadas, i);
+		if(particion1->mensaje->idMensaje == idMensajeBuscado){
+			return particion1->mensaje;
+		}
+	}
+	return NULL;
+}
+

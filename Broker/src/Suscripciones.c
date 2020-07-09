@@ -73,6 +73,7 @@ void suscribirSegunCola(paquete paq, uint32_t* socket) {
 			break;
 		case LOCALIZED_POKEMON:
 			suscribir(&localizedPokemon, paq, socket, LOCALIZED_POKEMON);
+			break;
 	}
 	//enviar todos los mensajes que hubiesen en la cola antes de suscribirse
 	//cuando se envien mensajes que no sean suscripción asignarles un numero para posibles respuestas en otra cola
@@ -82,8 +83,7 @@ void suscribir(colaMensajes * cola, paquete paq, uint32_t* socket,uint32_t ident
 	if (validarParaSuscripcion(cola, paq, *socket,identificadorCola)) {
 		suscribirACola(socket, cola);
 		responderMensaje(*socket, CORRECTO);
-
-		//enviarMensajesPreviosEnMemoria(socket, identificadorCola);
+		enviarMensajesPreviosEnMemoria(socket, identificadorCola);
 		log_info(loggerBroker, armarStringSuscripLog(paq.modulo, paq.tipoMensaje));
 		log_info(brokerLogger2, armarStringSuscripLog(paq.modulo, paq.tipoMensaje));
 	} else {
