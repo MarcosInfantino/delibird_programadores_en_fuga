@@ -11,6 +11,7 @@
 #include "broker.h"
 #include "memoria.h"
 #include "files.h"
+#include "memoriaParticiones.h"
 
 //int main(void){
 ////	mensajeAppeared* msg= llenarAppeared("Pikachu", 0, 0);
@@ -30,6 +31,7 @@
 //}
 int main(void) {
 	iteraciones = 0;
+	TC=0;
     brokerLogger2 = log_create("brokerLoggerSecundario.log", "Broker", true, LOG_LEVEL_INFO);
     log_info(brokerLogger2, "pid : %i", getpid());
     //log_info(brokerLogger2, armarStringEnvioXsub(2));

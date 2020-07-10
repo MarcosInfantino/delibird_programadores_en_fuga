@@ -11,6 +11,8 @@
 #include "broker.h"
 #include "memoria.h"
 
+uint32_t TC;
+
 typedef enum{
 	PARTICION_LIBRE,
 	PARTICION_OCUPADA
@@ -20,7 +22,8 @@ typedef struct{
 	uint32_t offset;
 	uint32_t sizeParticion;
 	struct tm lru;
-	struct tm tiempoDeCargaPart;
+	//struct tm tiempoDeCargaPart;
+	uint32_t tiempoDeCargaPart;
 	msgMemoriaBroker* mensaje;
 	uint32_t estadoParticion;
 }particion;

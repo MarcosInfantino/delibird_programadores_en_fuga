@@ -3,11 +3,15 @@
 #include "memoria.h"
 #include "memoriaParticiones.h"
 
-bool menorAMayorSegunTiempoCarga (void* part1, void* part2){
-	particion* parti1 = (particion*) part1;
-	particion* parti2 = (particion*) part2;
-	return (parti1->tiempoDeCargaPart.tm_hour < parti2->tiempoDeCargaPart.tm_hour || (parti1->tiempoDeCargaPart.tm_hour == parti2->tiempoDeCargaPart.tm_hour && parti1->tiempoDeCargaPart.tm_min < parti2->tiempoDeCargaPart.tm_min));
-}
+//bool menorAMayorSegunTiempoCarga (void* part1, void* part2){
+//	particion* parti1 = (particion*) part1;
+//	particion* parti2 = (particion*) part2;
+//	return (((parti1->tiempoDeCargaPart.tm_hour == parti2->tiempoDeCargaPart.tm_hour) &&
+//			(parti1->tiempoDeCargaPart.tm_min < parti2->tiempoDeCargaPart.tm_min)) ||
+//					((parti1->tiempoDeCargaPart.tm_hour == parti2->tiempoDeCargaPart.tm_hour) &&
+//					(parti1->tiempoDeCargaPart.tm_min == parti2->tiempoDeCargaPart.tm_min) &&
+//					(parti1->tiempoDeCargaPart.tm_sec < parti2->tiempoDeCargaPart.tm_sec)));
+//}
 
 bool menorAMayorSegunLru (void* part1, void* part2){
 	particion* parti1 = (particion*) part1;
@@ -26,6 +30,17 @@ particion* particionLibreALaIzquierda(particion* particionLibreNueva){
 	return NULL;
 }
 
+bool hayParticionLibreALaDerecha(particion* particionLibreNueva){
+	for(int i = 0; i<sizeListaMutex(particionesLibres); i++){
+		particion* partiActual = getListaMutex(particionesLibres, i);
+		if(partiActual->offset == (particionLibreNueva->offset + particionLibreNueva->sizeParticion)){
+			printf("Hay para consolidar a derecha\n");
+			return true;
+		}
+	}
+		return false;
+}
+
 particion* particionLibreALaDerecha(particion* particionLibreNueva){
 	for(int i = 0; i<sizeListaMutex(particionesLibres); i++){
 		particion* partiActual = getListaMutex(particionesLibres, i);
@@ -37,16 +52,29 @@ particion* particionLibreALaDerecha(particion* particionLibreNueva){
 	return NULL;
 }
 
+bool hayParticionLibreALaIzquierda(particion* particionLibre){
+	for(int i = 0; i<sizeListaMutex(particionesLibres); i++){
+		particion* partiActual = getListaMutex(particionesLibres, i);
+		if(partiActual->offset + partiActual->sizeParticion == particionLibre->offset){
+			printf("Hay para consolidar a izquierda\n");
+			return true;
+		}
+	}
+	return false;
+}
+
 void consolidarSiSePuede(particion* particionLibre){
-	 if(particionLibreALaDerecha(particionLibre)!= NULL){
+	printf("Entro a consolidar\n");
+	 if(hayParticionLibreALaDerecha(particionLibre)== true){
 		 particion* partAConsolidar = particionLibreALaDerecha(particionLibre);
 		 particionLibre->sizeParticion = particionLibre->sizeParticion + partAConsolidar->sizeParticion;
 		 destroyParticionLibre(partAConsolidar);
-	 }
-	 if(particionLibreALaIzquierda(particionLibre)!=NULL){
+		 printf("Mi particion consolidada comienza en: %i\n", particionLibre->offset);
+	 }else if(hayParticionLibreALaIzquierda(particionLibre)==true){
 		 particion* partAConsolidar = particionLibreALaIzquierda(particionLibre);
 		 particionLibre->offset = partAConsolidar->offset;
 		 particionLibre->sizeParticion = particionLibre->sizeParticion + partAConsolidar->sizeParticion;
+		 printf("Como queda despues de consolidar: base: %i, size: %i\n", particionLibre->offset, particionLibre->sizeParticion);
 		 destroyParticionLibre(partAConsolidar);
 	 }
 }
@@ -54,20 +82,27 @@ void consolidarSiSePuede(particion* particionLibre){
 void eliminarParticion (particion* part){
 	particion* partiNueva = malloc(sizeof(particion));
 	partiNueva->offset = part->offset;
-	partiNueva->sizeParticion = part->mensaje->sizeStream;
+	partiNueva->sizeParticion = part->sizeParticion;
 	partiNueva->estadoParticion = PARTICION_LIBRE;
 	addListaMutex(particionesLibres, (void*)partiNueva);
-	log_info(loggerBroker, "Elimino particion que comienza en: %p", memoria + part->offset);
+	log_info(loggerBroker, "Elimino particion que comienza en: %i", part->offset);
 	removeAndDestroyElementListaMutex(particionesOcupadas, 0, destroyParticionOcupada);
 	consolidarSiSePuede(partiNueva);
+}
+
+bool menorAMayorSegunTC(void* part1, void* part2){
+	particion* parti1 = (particion*) part1;
+	particion* parti2 = (particion*) part2;
+	return parti1->tiempoDeCargaPart<parti2->tiempoDeCargaPart;
 }
 
 void elegirParticionVictimaYEliminarla(){
 	particion* particionVictima;
 	switch(algoritmoReemplazo){
 	case FIFO:
-		list_sort_Mutex(particionesOcupadas, menorAMayorSegunTiempoCarga);
-		 particionVictima = (particion*)getListaMutex(particionesOcupadas, 0);
+		//list_sort_Mutex(particionesOcupadas, menorAMayorSegunTiempoCarga);
+		list_sort_Mutex(particionesOcupadas, menorAMayorSegunTC);
+		particionVictima = (particion*)getListaMutex(particionesOcupadas, 0);
 		break;
 	case LRU:
 		list_sort_Mutex(particionesLibres, menorAMayorSegunLru);
@@ -108,6 +143,7 @@ void registrarEnParticiones(msgMemoriaBroker* mensajeNuevo){
 }
 
 void asignarMensajeAParticion(particion* partiLibre, msgMemoriaBroker* mensaje){
+	printf("Entro a asignar particion: base: %i, size: %i\n", partiLibre->offset, partiLibre->sizeParticion);
 	particion* partiOcupada = inicializarParticion();
 	partiOcupada->offset = partiLibre->offset;
 	partiOcupada->mensaje = mensaje;
@@ -117,18 +153,22 @@ void asignarMensajeAParticion(particion* partiLibre, msgMemoriaBroker* mensaje){
 		partiOcupada->sizeParticion = particionMinima;
 	}
 	partiOcupada->estadoParticion = PARTICION_OCUPADA;
-	time_t t;
-	t=time(NULL);
-	partiOcupada->lru = *localtime(&t);
-	partiOcupada->tiempoDeCargaPart = *localtime(&t);
+//	time_t t;
+//	t=time(NULL);
+//	partiOcupada->lru = *localtime(&t);
+//	partiOcupada->tiempoDeCargaPart = *localtime(&t);
+	partiOcupada->tiempoDeCargaPart=TC;
+	TC++;
 	memcpy(memoria + partiOcupada->offset, mensaje->stream, mensaje->sizeStream);
-	mensaje->stream = memoria + partiOcupada->offset;
+	//mensaje->stream = memoria + partiOcupada->offset;
 	addListaMutex(particionesOcupadas, (void*)partiOcupada);
 	log_info(loggerBroker, "Almaceno mensaje en partición que comienza en: %i", partiOcupada->offset);
-	if(partiLibre->sizeParticion > mensaje->sizeStream){
-		partiLibre->offset = partiLibre->offset + mensaje->sizeStream;
-		partiLibre->sizeParticion = partiLibre->sizeParticion - mensaje->sizeStream;
+	printf("Ocupada generada: base: %i, size: %i\n", partiOcupada->offset, partiOcupada->sizeParticion);
+	if(partiLibre->sizeParticion > partiOcupada->sizeParticion){
+		partiLibre->offset += partiOcupada->sizeParticion;
+		partiLibre->sizeParticion -= partiOcupada->sizeParticion;
 		partiLibre->estadoParticion = PARTICION_LIBRE;
+		printf("Parti libre generada: base: %i, size: %i\n", partiLibre->offset, partiLibre->sizeParticion);
 		addListaMutex(particionesLibres, (void*)partiLibre);
 	}else{ //osea que el tamaño es igual
 		destroyParticionLibre (partiLibre);
@@ -148,17 +188,26 @@ particion* crearPrimeraParticionLibre(void){
 	return particionADevolver;
 }
 
+uint32_t cantidadMemoriaLibre (){
+	uint32_t memoriaLibre;
+	for(int i = 0; i<sizeListaMutex(particionesLibres); i++){
+		particion* parti = (particion*)getListaMutex(particionesLibres,i);
+		memoriaLibre += parti->sizeParticion;
+	}
+	return memoriaLibre;
+}
 
 particion* obtenerParticionLibrePARTICIONES(uint32_t tamStream){
 	auxTamanioStreamGlobal = tamStream;
 
-	if(sizeListaMutex(particionesLibres) == 0)
+	if(sizeListaMutex(particionesLibres) == 0 || cantidadMemoriaLibre()<tamStream){
 		return NULL;
+	}
 
 	if (algoritmoParticionLibre == FIRST_FIT){
 		list_sort_Mutex(particionesLibres, menorAmayorSegunOffset);
 		particion* pSeleccionadaFIRST = (particion*)list_remove_by_condition_Mutex(particionesLibres, esSuficientementeGrandeParaElMSG);
-		printf("FIRST FIT Selecciono %i , cuyo estado es: %i \n", pSeleccionadaFIRST->offset, pSeleccionadaFIRST->estadoParticion);
+		printf("FIRST FIT offset %i\n", pSeleccionadaFIRST->offset);
 		return pSeleccionadaFIRST;
 	}else if(algoritmoParticionLibre == BEST_FIT){
 		list_sort_Mutex(particionesLibres, menorAmayorSegunSize);
@@ -170,6 +219,7 @@ particion* obtenerParticionLibrePARTICIONES(uint32_t tamStream){
 }
 
 void compactar(){
+	printf("Hay que compactar\n");
 	particion* elemento;
 	uint32_t base = 0;
 	list_sort_Mutex(particionesOcupadas, menorAmayorSegunOffset);
