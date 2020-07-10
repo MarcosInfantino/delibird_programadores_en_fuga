@@ -10,7 +10,7 @@
 mensajeCatch* llenarCatch(char* pokemon, uint32_t posX, uint32_t posY){
 
 	mensajeCatch* msg = malloc(sizeof(mensajeCatch));
-	msg->sizePokemon=strlen(pokemon)+1;
+	msg->sizePokemon=strlen(pokemon);
 	msg->pokemon=malloc(msg->sizePokemon);
 	strcpy(msg->pokemon,pokemon);
 	msg->posX=posX;
@@ -39,9 +39,12 @@ mensajeCatch* deserializarCatch (void* streamRecibido){
 	uint32_t offset = 0;
 	memcpy(&(mensaje->sizePokemon), streamRecibido+offset, sizeof(uint32_t));
 	offset+=sizeof(uint32_t);
-	mensaje->pokemon=malloc(mensaje->sizePokemon);
+
+	mensaje->pokemon=malloc(mensaje->sizePokemon+1);
 	memcpy(mensaje->pokemon, streamRecibido+offset, mensaje->sizePokemon);
 	offset+=(mensaje->sizePokemon);
+	*(mensaje->pokemon + mensaje->sizePokemon)='\0';
+
 	memcpy(&(mensaje->posX), streamRecibido+offset, sizeof(uint32_t));
 	offset+=sizeof(uint32_t);
 	memcpy(&(mensaje->posY), streamRecibido+offset, sizeof(uint32_t));

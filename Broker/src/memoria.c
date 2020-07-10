@@ -27,30 +27,30 @@ void definirComienzoDeMemoria(){
 }
 
 paquete* generarStreamParaAlmacenar(paquete* paq){
-	switch(paq->tipoMensaje){
-		case APPEARED_POKEMON: ;
-			mensajeAppeared* msjApp = deserializarAppeared(paq->stream);
-			mensajeAppeared* msjAppNuevo = llenarAppearedMemoria(msjApp->pokemon, msjApp->posX, msjApp->posY);
-			paq->stream = serializarAppeared(msjAppNuevo);
-			paq->sizeStream -= 1;
-			return paq;
-			break;
-		case NEW_POKEMON:
-			return NULL;
-			break;
-		case CAUGHT_POKEMON:;
-			return NULL;
-			break;
-		case CATCH_POKEMON:
-			return NULL;
-			break;
-		case GET_POKEMON:
-			return NULL;
-			break;
-		case LOCALIZED_POKEMON:
-			return NULL;
-			break;
-	}
+//	switch(paq->tipoMensaje){
+//		case APPEARED_POKEMON: ;
+//			mensajeAppeared* msjApp = deserializarAppeared(paq->stream);
+//			mensajeAppeared* msjAppNuevo = llenarAppearedMemoria(msjApp->pokemon, msjApp->posX, msjApp->posY);
+//			paq->stream = serializarAppeared(msjAppNuevo);
+//			paq->sizeStream -= 1;
+//			return paq;
+//			break;
+//		case NEW_POKEMON:
+//			return NULL;
+//			break;
+//		case CAUGHT_POKEMON:;
+//			return NULL;
+//			break;
+//		case CATCH_POKEMON:
+//			return NULL;
+//			break;
+//		case GET_POKEMON:
+//			return NULL;
+//			break;
+//		case LOCALIZED_POKEMON:
+//			return NULL;
+//			break;
+//	}
 	return NULL;
 }
 
@@ -109,7 +109,7 @@ void registrarMensajeEnMemoria(uint32_t idMensaje, paquete* paq, algoritmoMem me
 		return;
 	}
 	log_info(brokerLogger2, "Registre el mensaje en memoria.");
-	free(msgNuevo);
+	//free(msgNuevo);
 }
 
 bool estaEnListaACK(uint32_t socket, msgMemoriaBroker* mensaje){
@@ -245,17 +245,21 @@ bool existeMensajeEnParticionesDinamicas(mensajeCatch* msgCatch, mensajeGet* msg
 	log_info(brokerLogger2, "entro a ver si existe mensaje");
 	for(int i = 0; i < sizeListaMutex(particionesOcupadas); i++){
 		particion* partActual = getListaMutex (particionesOcupadas, i);
-		log_info(brokerLogger2, "El id es:", partActual->mensaje->idMensaje);
+		log_info(brokerLogger2, "El id es: %i", partActual->mensaje->idMensaje);
 		if(msgCatch != NULL && partActual->mensaje->cola == CATCH_POKEMON){
 			log_info(brokerLogger2, "Entro a el if de catch");
+
 			if(compararCatch(deserializarCatch(partActual->mensaje->stream), msgCatch)){
 				return true;
 			}
+
 		}else if(msgGet != NULL && partActual->mensaje->cola == GET_POKEMON){
 			log_info(brokerLogger2, "Entro a el if de get");
-			if(compararGet(deserializarGet(partActual->mensaje->stream), msgGet)==0){
+
+			if(compararGet(deserializarGet(partActual->mensaje->stream), msgGet)){
 				return true;
 			}
+
 		}
 	}
 	log_info(brokerLogger2, "no hay mensajes aun");

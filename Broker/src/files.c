@@ -60,10 +60,10 @@ void registrarParticionesLibresYocupadas(){
 
 void escribirEnArchivo(char* buffer){
 	pthread_mutex_lock(archivoSem->mutex);
-	fopen("dumpDeCache.db", "wb");
+	FILE* f=fopen("dumpDeCache.db", "wb");
 	if(archivoSem->archivo){
-		fwrite(buffer, sizeof(strlen(buffer)), 1, archivoSem->archivo);
-		fclose(archivoSem->archivo);
+		fwrite(buffer, sizeof(strlen(buffer)), 1, f);
+		fclose(f);
 	}
 	pthread_mutex_unlock(archivoSem->mutex);
 	free(buffer);

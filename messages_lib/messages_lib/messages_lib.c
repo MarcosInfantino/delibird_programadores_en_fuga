@@ -25,15 +25,15 @@ uint32_t sizeArgumentos (uint32_t colaMensaje, char* nombrePokemon, uint32_t can
 	uint32_t size;
 	switch(colaMensaje){
 	case NEW_POKEMON:
-		size = strlen(nombrePokemon) + 1 + sizeof(uint32_t)*4;
+		size = strlen(nombrePokemon) +  sizeof(uint32_t)*4;
 		break;
 
 	case APPEARED_POKEMON:
-		size = strlen(nombrePokemon) + 1 +sizeof(uint32_t)*3;
+		size = strlen(nombrePokemon) + sizeof(uint32_t)*3;
 		break;
 
 	case CATCH_POKEMON:
-		size = strlen(nombrePokemon) + 1 + sizeof(uint32_t)*3;
+		size = strlen(nombrePokemon) + sizeof(uint32_t)*3;
 		break;
 
 	case CAUGHT_POKEMON:
@@ -41,14 +41,14 @@ uint32_t sizeArgumentos (uint32_t colaMensaje, char* nombrePokemon, uint32_t can
 		break;
 
 	case GET_POKEMON:
-		size = strlen(nombrePokemon) + 1 + sizeof(uint32_t);
+		size = strlen(nombrePokemon) +  sizeof(uint32_t);
 		break;
 
 	case SUSCRIPCION_TIEMPO:
 		size=2*sizeof(uint32_t);  break;
 
 	case LOCALIZED_POKEMON:
-		size=2*sizeof(uint32_t)+strlen(nombrePokemon)+1+cantidadPokemon*2*sizeof(uint32_t); break;
+		size=2*sizeof(uint32_t)+strlen(nombrePokemon)+cantidadPokemon*2*sizeof(uint32_t); break;
 
 	default:
 		printf("Error: el caso ingresado no esta contemplado \n");

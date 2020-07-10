@@ -12,6 +12,22 @@
 #include "memoria.h"
 #include "files.h"
 
+//int main(void){
+////	mensajeAppeared* msg= llenarAppeared("Pikachu", 0, 0);
+////	void* streamMensaje= serializarAppeared(msg);
+////	paquete* paq=llenarPaquete( BROKER,APPEARED_POKEMON, sizeArgumentos(APPEARED_POKEMON, "Pikachu", 0),streamMensaje);
+////	void* paqueteSerializado= serializarPaquete(paq);
+////	paquete* paq2=deserializarPaquete(paqueteSerializado);
+////	mensajeAppeared* msg2=deserializarAppeared(paq2->stream);
+////	printf("sizeStream: %i \n", paq2->sizeStream);
+////	printf("sizePokemon: %i\n", msg2->sizePokemon);
+////
+////	printf("pokemon: %s\n", msg2->pokemon);
+////	printf("posX: %i\n", msg2->posX);
+////	printf("posY: %i\n", msg2->posY);
+//	printf("%i", strcmp("hola","hola\0"));
+//
+//}
 int main(void) {
 	iteraciones = 0;
     brokerLogger2 = log_create("brokerLoggerSecundario.log", "Broker", true, LOG_LEVEL_INFO);

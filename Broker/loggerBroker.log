@@ -142,3 +142,99 @@
 [INFO] 19:08:26:994 BROKER/(26386:26405): Almaceno mensaje en partición que comienza en: 0
 [INFO] 19:08:33:885 BROKER/(26386:26411): Se conectó un proceso GameBoy
 [INFO] 19:11:57:574 BROKER/(26481:26481): Estoy escuchando!
+[INFO] 19:21:38:272 BROKER/(9614:9614): Estoy escuchando!
+[INFO] 19:22:39:593 BROKER/(9614:9793): Se conectó un proceso GameBoy
+[INFO] 19:22:39:623 BROKER/(9614:9793): Almaceno mensaje en partición que comienza en: 0
+[INFO] 19:22:48:664 BROKER/(9614:9815): Se conectó un proceso GameBoy
+[INFO] 19:23:11:658 BROKER/(9614:9863): Se conectó un proceso GameBoy
+[INFO] 19:23:11:664 BROKER/(9614:9863): Almaceno mensaje en partición que comienza en: 12
+[INFO] 19:26:16:310 BROKER/(10414:10414): Estoy escuchando!
+[INFO] 19:26:28:990 BROKER/(10414:10455): Se conectó un proceso GameBoy
+[INFO] 19:26:28:990 BROKER/(10414:10455): Almaceno mensaje en partición que comienza en: 0
+[INFO] 19:26:31:845 BROKER/(10414:10467): Se conectó un proceso GameBoy
+[INFO] 19:26:31:846 BROKER/(10414:10467): Almaceno mensaje en partición que comienza en: 12
+[INFO] 19:26:34:921 BROKER/(10414:10475): Se conectó un proceso GameBoy
+[INFO] 19:26:34:921 BROKER/(10414:10475): Almaceno mensaje en partición que comienza en: 27
+[INFO] 19:27:53:726 BROKER/(10675:10675): Estoy escuchando!
+[INFO] 19:27:56:926 BROKER/(10675:10706): Se conectó un proceso GameBoy
+[INFO] 19:27:56:944 BROKER/(10675:10706): Almaceno mensaje en partición que comienza en: 0
+[INFO] 19:27:59:582 BROKER/(10675:10713): Se conectó un proceso GameBoy
+[INFO] 19:28:03:345 BROKER/(10675:10725): Se conectó un proceso GameBoy
+[INFO] 19:28:03:350 BROKER/(10675:10725): Almaceno mensaje en partición que comienza en: 12
+[INFO] 19:29:35:563 BROKER/(10943:10943): Estoy escuchando!
+[INFO] 19:29:48:99 BROKER/(10943:10990): Se conectó un proceso GameBoy
+[INFO] 19:29:48:99 BROKER/(10943:10990): Almaceno mensaje en partición que comienza en: 0
+[INFO] 19:29:50:595 BROKER/(10943:10998): Se conectó un proceso GameBoy
+[INFO] 19:29:52:621 BROKER/(10943:11003): Se conectó un proceso GameBoy
+[INFO] 19:29:52:622 BROKER/(10943:11003): Almaceno mensaje en partición que comienza en: 12
+[INFO] 19:31:15:450 BROKER/(10943:11152): Se conectó un proceso GameBoy
+[INFO] 19:31:15:452 BROKER/(10943:11152): Almaceno mensaje en partición que comienza en: 32
+[INFO] 19:31:50:593 BROKER/(10943:11213): Se conectó un proceso GameBoy
+[INFO] 19:31:50:594 BROKER/(10943:11213): Almaceno mensaje en partición que comienza en: 52
+[INFO] 19:32:11:845 BROKER/(10943:11260): Se conectó un proceso GameBoy
+[INFO] 19:32:39:124 BROKER/(11312:11312): Estoy escuchando!
+[INFO] 19:32:41:829 BROKER/(11312:11336): Se conectó un proceso GameBoy
+[INFO] 19:32:41:830 BROKER/(11312:11336): Almaceno mensaje en partición que comienza en: 0
+[INFO] 19:32:47:837 BROKER/(11312:11354): Se conectó un proceso GameBoy
+[INFO] 19:33:04:44 BROKER/(11312:11389): Se conectó un proceso GameBoy
+[INFO] 19:33:04:44 BROKER/(11312:11389): Almaceno mensaje en partición que comienza en: 15
+[INFO] 19:33:08:650 BROKER/(11312:11401): Se conectó un proceso GameBoy
+[INFO] 19:34:41:472 BROKER/(11630:11630): Estoy escuchando!
+[INFO] 19:34:49:509 BROKER/(11672:11672): Estoy escuchando!
+[INFO] 19:34:54:998 BROKER/(11672:11703): Se conectó un proceso GameBoy
+[INFO] 19:34:54:999 BROKER/(11672:11703): Almaceno mensaje en partición que comienza en: 0
+[INFO] 19:34:58:46 BROKER/(11672:11713): Se conectó un proceso GameBoy
+[INFO] 19:34:58:46 BROKER/(11672:11713): Almaceno mensaje en partición que comienza en: 12
+[INFO] 19:35:10:244 BROKER/(11740:11740): Estoy escuchando!
+[INFO] 19:35:47:831 BROKER/(11740:11838): Se conectó un proceso GameBoy
+[INFO] 19:35:47:833 BROKER/(11740:11838): Almaceno mensaje en partición que comienza en: 0
+[INFO] 19:35:47:833 BROKER/(11740:11841): Se conectó un proceso GameBoy
+[INFO] 19:35:47:834 BROKER/(11740:11841): Almaceno mensaje en partición que comienza en: 13
+[INFO] 19:36:37:109 BROKER/(11740:11932): Se conectó un proceso GameBoy
+[INFO] 19:36:37:109 BROKER/(11740:11932): Almaceno mensaje en partición que comienza en: 28
+[INFO] 19:36:37:116 BROKER/(11740:11935): Se conectó un proceso GameBoy
+[INFO] 19:36:37:117 BROKER/(11740:11935): Almaceno mensaje en partición que comienza en: 48
+[INFO] 19:36:37:124 BROKER/(11740:11940): Se conectó un proceso GameBoy
+[INFO] 19:36:37:126 BROKER/(11740:11943): Se conectó un proceso GameBoy
+[INFO] 19:36:37:126 BROKER/(11740:11940): Almaceno mensaje en partición que comienza en: 69
+[INFO] 19:36:37:127 BROKER/(11740:11943): Almaceno mensaje en partición que comienza en: 73
+[INFO] 19:36:37:128 BROKER/(11740:11947): Se conectó un proceso GameBoy
+[INFO] 19:36:37:129 BROKER/(11740:11947): Almaceno mensaje en partición que comienza en: 77
+[INFO] 19:36:37:131 BROKER/(11740:11950): Se conectó un proceso GameBoy
+[INFO] 19:36:37:139 BROKER/(11740:11950): Almaceno mensaje en partición que comienza en: 99
+[INFO] 19:36:37:141 BROKER/(11740:11954): Se conectó un proceso GameBoy
+[INFO] 19:36:37:142 BROKER/(11740:11954): Almaceno mensaje en partición que comienza en: 122
+[INFO] 19:36:37:142 BROKER/(11740:11957): Se conectó un proceso GameBoy
+[INFO] 19:36:37:143 BROKER/(11740:11957): Almaceno mensaje en partición que comienza en: 132
+[INFO] 19:39:54:733 BROKER/(12482:12482): Estoy escuchando!
+[INFO] 19:40:01:462 BROKER/(12482:12517): Se conectó un proceso GameBoy
+[INFO] 19:40:01:463 BROKER/(12482:12517): Almaceno mensaje en partición que comienza en: 0
+[INFO] 19:40:01:466 BROKER/(12482:12522): Se conectó un proceso GameBoy
+[INFO] 19:40:01:467 BROKER/(12482:12522): Almaceno mensaje en partición que comienza en: 13
+[INFO] 19:40:03:648 BROKER/(12482:12530): Se conectó un proceso GameBoy
+[INFO] 19:40:03:649 BROKER/(12482:12530): Almaceno mensaje en partición que comienza en: 28
+[INFO] 19:40:03:650 BROKER/(12482:12534): Se conectó un proceso GameBoy
+[INFO] 19:40:03:650 BROKER/(12482:12534): Almaceno mensaje en partición que comienza en: 48
+[INFO] 19:40:03:651 BROKER/(12482:12537): Se conectó un proceso GameBoy
+[INFO] 19:40:03:651 BROKER/(12482:12537): Almaceno mensaje en partición que comienza en: 69
+[INFO] 19:40:03:652 BROKER/(12482:12540): Se conectó un proceso GameBoy
+[INFO] 19:40:03:653 BROKER/(12482:12540): Almaceno mensaje en partición que comienza en: 73
+[INFO] 19:40:03:654 BROKER/(12482:12543): Se conectó un proceso GameBoy
+[INFO] 19:40:03:654 BROKER/(12482:12543): Almaceno mensaje en partición que comienza en: 77
+[INFO] 19:40:03:658 BROKER/(12482:12545): Se conectó un proceso GameBoy
+[INFO] 19:40:03:660 BROKER/(12482:12545): Almaceno mensaje en partición que comienza en: 99
+[INFO] 19:40:03:661 BROKER/(12482:12549): Se conectó un proceso GameBoy
+[INFO] 19:40:03:661 BROKER/(12482:12549): Almaceno mensaje en partición que comienza en: 122
+[INFO] 19:40:03:664 BROKER/(12482:12552): Se conectó un proceso GameBoy
+[INFO] 19:40:03:667 BROKER/(12482:12552): Almaceno mensaje en partición que comienza en: 133
+[INFO] 20:36:34:445 BROKER/(20962:20962): Estoy escuchando!
+[INFO] 20:36:50:376 BROKER/(20962:21090): Se conectó un proceso Team
+[INFO] 20:36:50:376 BROKER/(20962:21090): Almaceno mensaje en partición que comienza en: 0
+[INFO] 20:36:50:377 BROKER/(20962:21092): Se conectó un proceso Team
+[INFO] 20:36:50:377 BROKER/(20962:21089): Se conectó un proceso Team
+[INFO] 20:36:50:377 BROKER/(20962:21089): Almaceno mensaje en partición que comienza en: 11
+[INFO] 21:03:19:462 BROKER/(25783:25783): Estoy escuchando!
+[INFO] 21:03:31:27 BROKER/(25783:25825): Se conectó un proceso GameBoy
+[INFO] 21:03:31:27 BROKER/(25783:25825): Almaceno mensaje en partición que comienza en: 0
+[INFO] 21:03:31:29 BROKER/(25783:25832): Se conectó un proceso GameBoy
+[INFO] 21:03:31:31 BROKER/(25783:25832): Almaceno mensaje en partición que comienza en: 12

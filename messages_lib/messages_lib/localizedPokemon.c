@@ -9,7 +9,7 @@
 
 mensajeLocalized* llenarLocalized(char* pokemon, uint32_t cantidad, posicion* posiciones){
 	mensajeLocalized* msg = malloc(sizeof(mensajeLocalized));
-	msg->sizePokemon=strlen(pokemon)+1;
+	msg->sizePokemon=strlen(pokemon);
 	msg->pokemon=malloc(msg->sizePokemon);
 	strcpy(msg->pokemon,pokemon);
 	msg->cantidad=cantidad;
@@ -69,9 +69,12 @@ mensajeLocalized* deserializarLocalized(void* stream){
 	uint32_t offset=0;
 	memcpy(&sizePokemon, stream+offset,sizeof(uint32_t));
 	offset+=sizeof(uint32_t);
-	char* pokemon=malloc(sizePokemon);
-	memcpy(pokemon,stream+offset,sizePokemon);
-	offset+=sizePokemon;
+
+	char* pokemon=malloc(sizePokemon+1);
+	memcpy(pokemon, stream+offset,sizePokemon);
+	offset+=(sizePokemon);
+	*(pokemon + sizePokemon)='\0';
+
 	memcpy(&cantidad,stream+offset,sizeof(uint32_t));
 	offset+=sizeof(uint32_t);
 	mensajeLocalized* msg=malloc(sizeof(mensajeLocalized));
