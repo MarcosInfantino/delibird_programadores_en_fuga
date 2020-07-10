@@ -328,7 +328,6 @@ void* atenderNew(void* paq) {
 	log_info(gamecardLogger2,"deserializado");
 
 	pokemonEnPosicion* pokeEnPosicion = malloc(sizeof(pokemonEnPosicion));
-	//addListaMutex(especiesLocalizadas,(void*)(msg->pokemon));
 	pokeEnPosicion->pokemon = msgNew->pokemon;
 	pokeEnPosicion->cantidad = msgNew->cantidad;
 	pokeEnPosicion->id = idNew;
@@ -339,18 +338,17 @@ void* atenderNew(void* paq) {
 	//To do :
 	log_info(gamecardLogger2,"Atiendo new del pokemon: %s. Posicion: (%i, %i).", msgNew->pokemon, msgNew->posX, msgNew->posY);
 	archivoHeader* archivoPoke= obtenerArchivoPokemon(pokeEnPosicion->pokemon);
-	obtenerListaBloquesConfig(archivoPoke, "ATENDER NEW 0");
+
 
 	FILE* archivoMetadata=abrirArchivo(archivoPoke);
-	obtenerListaBloquesConfig(archivoPoke, "ATENDER NEW 0.25");
+
 
 	log_info(gamecardLogger2, "comienzo a obtener lista de %s", msgNew->pokemon);
 	t_list* listaPosCantidad=obtenerListaPosicionCantidadDeArchivo(archivoPoke);
 
-	obtenerListaBloquesConfig(archivoPoke, "ATENDER NEW 0.5");
 	log_info(gamecardLogger2, "termino de obtener lista de %s", msgNew->pokemon);
 	posicionCantidad* encontrado= buscarPosicionCantidad(listaPosCantidad, pokeEnPosicion->posicion);
-	obtenerListaBloquesConfig(archivoPoke, "ATENDER NEW 1");
+
 
 	if(encontrado!=NULL){
 		(encontrado->cantidad)+=pokeEnPosicion->cantidad;
@@ -362,13 +360,9 @@ void* atenderNew(void* paq) {
 		list_add(listaPosCantidad, (void*) posAgregar);
 	}
 
-	obtenerListaBloquesConfig(archivoPoke, "ATENDER NEW 2");
-
-
 	log_info(gamecardLogger2, "comienzo a actualizar posiciones de %s", msgNew->pokemon);
 	actualizarPosicionesArchivo(archivoPoke,listaPosCantidad);
 	log_info(gamecardLogger2, "termino de actualizar posiciones de %s", msgNew->pokemon);
-	obtenerListaBloquesConfig(archivoPoke, "ATENDER NEW 3");
 	list_destroy_and_destroy_elements(listaPosCantidad, free);
 	//Verificar que el pokemon este en nuestro FileSystem
 	//Una vez encontrado (o creado) verificar si puedo abrirlo
@@ -378,10 +372,8 @@ void* atenderNew(void* paq) {
 	//CERRAR ARCHIVO
 	cerrarArchivo(archivoPoke,archivoMetadata);
 
-	obtenerListaBloquesConfig(archivoPoke, "ATENDER NEW 4");
 	log_info(gamecardLogger2,"Cierro el archivo del pokemon: %s. Posicion: (%i, %i).", msgNew->pokemon, msgNew->posX, msgNew->posY);
 	enviarAppeared(pokeEnPosicion);
-	obtenerListaBloquesConfig(archivoPoke, "ATENDER NEW 5");
 	return NULL;
 
 }
@@ -389,11 +381,12 @@ void* atenderNew(void* paq) {
 void enviarAppeared(pokemonEnPosicion* pokeEnPosicion) {
 	uint32_t cliente = crearSocketCliente(ipBrokerGC, puertoBrokerGC);
 	mensajeAppeared* msgAppeared = malloc(sizeof(mensajeAppeared));
-	msgAppeared->pokemon = pokeEnPosicion->pokemon;
-	msgAppeared->posX = (pokeEnPosicion->posicion).x;
-	msgAppeared->posY = (pokeEnPosicion->posicion).y;
-	//msgAppeared->idCorrelativo =pokeEnPosicion->id;
-	msgAppeared->sizePokemon = strlen(msgAppeared->pokemon) + 1;
+	llenarAppeared(pokeEnPosicion->pokemon,(pokeEnPosicion->posicion).x,(pokeEnPosicion->posicion).y);
+//	msgAppeared->pokemon = pokeEnPosicion->pokemon;
+//	msgAppeared->posX = (pokeEnPosicion->posicion).x;
+//	msgAppeared->posY = (pokeEnPosicion->posicion).y;
+//	msgAppeared->idCorrelativo =pokeEnPosicion->id;
+//	msgAppeared->sizePokemon = strlen(msgAppeared->pokemon) + 1;
 	void* streamMsg = serializarAppeared(msgAppeared);
 	paquete* paq = llenarPaquete(GAMECARD, APPEARED_POKEMON,sizeArgumentos(APPEARED_POKEMON, msgAppeared->pokemon, BROKER),streamMsg);
 	insertarIdCorrelativoPaquete(paq, (pokeEnPosicion->id));
@@ -416,6 +409,18 @@ void* atenderGet(void* paq) {
 	pokeADevolver->pokemon = msgGet->pokemon;
 	pokeADevolver->id = idGet;
 	//Todo :
+	log_info(gamecardLogger2,"Atiendo Get del pokemon: %s", msgGet->pokemon);
+
+	if(archivoExiste(string_from_format(pathFiles,pokeADevolver->pokemon))){
+		archivoHeader* archivoPoke= obtenerArchivoPokemon(pokeADevolver->pokemon);
+		FILE* archivoMetadata=abrirArchivo(archivoPoke);
+		posicion* posiciones;
+		posiciones= conseguirPosiciones(archivoPoke);
+
+	}
+
+
+
 	//Verificar que el pokemon este en nuestro FileSystem (si no encuentra mando posiciones vacias)
 	//Una vez encontrado verificar si puedo abrirlo
 	//Verificar si las posiciones existen en el archivo
@@ -433,10 +438,11 @@ void* atenderGet(void* paq) {
 void enviarLocalized(pokemonADevolver* pokeADevolver) {
 	uint32_t cliente = crearSocketCliente(ipBrokerGC, puertoBrokerGC);
 	mensajeLocalized* msgLocalized = malloc(sizeof(mensajeLocalized));
-	msgLocalized->pokemon = pokeADevolver->pokemon;
-	msgLocalized->cantidad = pokeADevolver->cantPosiciones;
-	msgLocalized->arrayPosiciones = pokeADevolver->posicion;
-	msgLocalized->sizePokemon = strlen(msgLocalized->pokemon) + 1;
+	llenarLocalized(pokeADevolver->pokemon,pokeADevolver->cantPosiciones,pokeADevolver->posicion);
+	//msgLocalized->pokemon = pokeADevolver->pokemon;
+	//msgLocalized->cantidad = pokeADevolver->cantPosiciones;
+	//msgLocalized->arrayPosiciones = pokeADevolver->posicion;
+	//msgLocalized->sizePokemon = strlen(msgLocalized->pokemon) + 1;
 	void* streamMsg = serializarLocalized(msgLocalized);
 	paquete* paq = llenarPaquete(GAMECARD, LOCALIZED_POKEMON,
 			sizeArgumentos(LOCALIZED_POKEMON, msgLocalized->pokemon, BROKER),
@@ -496,7 +502,8 @@ void* atenderCatch(void* paq) {
 void enviarCaught(pokemonAAtrapar* pokeAAtrapar) {
 	uint32_t cliente = crearSocketCliente(ipBrokerGC, puertoBrokerGC);
 	mensajeCaught* msgCaught = malloc(sizeof(mensajeCaught));
-	msgCaught->resultadoCaught = pokeAAtrapar->resultado;
+	llenarCaught(pokeAAtrapar->resultado);
+	//msgCaught->resultadoCaught = pokeAAtrapar->resultado;
 	void* streamMsg = serializarCaught(msgCaught);
 	paquete* paq = llenarPaquete(GAMECARD, CAUGHT_POKEMON,
 	sizeArgumentos(CAUGHT_POKEMON, NULL, BROKER), streamMsg);

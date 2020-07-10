@@ -518,3 +518,18 @@ void reiniciarBloquesDeArchivo(archivoHeader* headerPoke){
 	}
 
 }
+
+posicion* conseguirPosiciones(archivoHeader* pokeArchivo){
+	t_list* listaPosCantidad=obtenerListaPosicionCantidadDeArchivo(pokeArchivo);
+	uint32_t cantPosiciones = list_size(listaPosCantidad);
+	posicion* arrayPosiciones = malloc(cantPosiciones*sizeof(posicion));
+	for(uint32_t i=0;i<cantPosiciones;i++){
+		posicionCantidad* auxPosCan = (posicionCantidad*) list_get(listaPosCantidad,i);
+		posicion aux;
+		aux = auxPosCan->posicion;
+		*(arrayPosiciones+i) = aux;
+	}
+	return arrayPosiciones;
+}
+
+
