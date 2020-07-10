@@ -208,7 +208,7 @@ void insertarIdCorrelativoPaquete(paquete* paq, uint32_t idCorrelativo);
 //mensajeACK* deserializarACK(void* stream);
 
 uint32_t crearSocketCliente (char* ip, uint32_t puerto);
-uint32_t sizeArgumentos (uint32_t colaMensaje, char* nombrePokemon, uint32_t cantidadPokemon);
+uint32_t sizeArgumentos (uint32_t colaMensaje, char* nombrePokemon, uint32_t sizeListaPosicionCantidad);
 
 uint32_t enviarACK(uint32_t socket, uint32_t modulo, uint32_t id);
 
