@@ -11,7 +11,7 @@ mensajeCatch* llenarCatch(char* pokemon, uint32_t posX, uint32_t posY){
 
 	mensajeCatch* msg = malloc(sizeof(mensajeCatch));
 	msg->sizePokemon=strlen(pokemon);
-	msg->pokemon=malloc(msg->sizePokemon);
+	msg->pokemon=malloc(msg->sizePokemon + 1);
 	strcpy(msg->pokemon,pokemon);
 	msg->posX=posX;
 	msg->posY=posY;

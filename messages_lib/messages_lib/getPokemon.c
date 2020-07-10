@@ -10,7 +10,7 @@
 mensajeGet* llenarGet(char* pokemon){
 	mensajeGet* msg = malloc(sizeof(mensajeGet));
 	msg->sizePokemon = strlen(pokemon);
-	msg->pokemon=malloc(msg->sizePokemon);
+	msg->pokemon=malloc(msg->sizePokemon + 1);
 	strcpy(msg->pokemon,pokemon);
 	return msg;
 }

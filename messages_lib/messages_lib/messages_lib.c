@@ -40,7 +40,9 @@ uint32_t sizeArgumentos (uint32_t colaMensaje, char* nombrePokemon, uint32_t can
 		size = sizeof(uint32_t);
 		break;
 
-	case GET_POKEMON:
+	case GET_POKEMON: ;
+		printf("El poke del poke: %s\n", nombrePokemon);
+		printf("El size es: %i\n", strlen(nombrePokemon));
 		size = strlen(nombrePokemon) +  sizeof(uint32_t);
 		break;
 

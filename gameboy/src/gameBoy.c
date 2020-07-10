@@ -45,7 +45,10 @@ int main(int argc, char* argv[]) {
 	}else{
 		procesoDestinatario = obtenerNombreProceso(argv[1]);
 		stream 				= generarStreamArgumentos(colaMensaje, argv);
+		printf("El nombre es: %s\n", argv[3]);
+		printf("El size es: %i\n", strlen(argv[3]));
 		sizeStream 			= sizeArgumentos (colaMensaje, argv[3],1);
+		printf("El sizeStream es: %i\n", sizeStream);
 		paquete				= llenarPaquete(GAMEBOY, colaMensaje, sizeStream, stream);
 		asignarIds(argv,procesoDestinatario,paquete);
 

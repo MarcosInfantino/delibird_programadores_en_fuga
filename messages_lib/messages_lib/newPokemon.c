@@ -10,7 +10,7 @@
 mensajeNew* llenarNew(char* pokemon, uint32_t posX, uint32_t posY, uint32_t cantidad){
 	mensajeNew* msg=malloc(sizeof(mensajeNew));
 		msg->sizePokemon=strlen(pokemon);
-		msg->pokemon=malloc(msg->sizePokemon);
+		msg->pokemon=malloc(msg->sizePokemon + 1);
 		strcpy(msg->pokemon,pokemon);
 		msg->posX=posX;
 		msg->posY=posY;

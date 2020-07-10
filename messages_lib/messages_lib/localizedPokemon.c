@@ -10,7 +10,7 @@
 mensajeLocalized* llenarLocalized(char* pokemon, uint32_t cantidad, posicion* posiciones){
 	mensajeLocalized* msg = malloc(sizeof(mensajeLocalized));
 	msg->sizePokemon=strlen(pokemon);
-	msg->pokemon=malloc(msg->sizePokemon);
+	msg->pokemon=malloc(msg->sizePokemon + 1);
 	strcpy(msg->pokemon,pokemon);
 	msg->cantidad=cantidad;
 	msg->arrayPosiciones=malloc(cantidad*sizeof(posicion));

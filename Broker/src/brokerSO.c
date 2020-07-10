@@ -188,6 +188,7 @@ void manejarTipoDeMensaje(paquete* paq, uint32_t* socket) {
 			 meterEnCola( &catchPokemon, paq, *socket);
 			 break;
 		 case GET_POKEMON:
+			 log_info(brokerLogger2, "GetPikachu sizeStream: %i", paq->sizeStream);
 			 log_info(brokerLogger2, "Manejo GET");
 			 meterEnCola( &getPokemon, paq, *socket);
 			 break;
