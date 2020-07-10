@@ -18,6 +18,8 @@ uint32_t puertoGamecardGC = 5001;
 
 int main(void) {
 	listaArchivos=inicializarListaMutex();
+	mutexPrueba=malloc(sizeof(pthread_mutex_t));
+	pthread_mutex_init(mutexPrueba,NULL);
 
 	gamecardLogger2=log_create("gamecardLoggerSecundario.log","gamecard", true, LOG_LEVEL_INFO);
 	t_config * configGamecard = config_create("Gamecard.config");
@@ -337,13 +339,18 @@ void* atenderNew(void* paq) {
 	//To do :
 	log_info(gamecardLogger2,"Atiendo new del pokemon: %s. Posicion: (%i, %i).", msgNew->pokemon, msgNew->posX, msgNew->posY);
 	archivoHeader* archivoPoke= obtenerArchivoPokemon(pokeEnPosicion->pokemon);
-
+	obtenerListaBloquesConfig(archivoPoke, "ATENDER NEW 0");
 
 	FILE* archivoMetadata=abrirArchivo(archivoPoke);
+	obtenerListaBloquesConfig(archivoPoke, "ATENDER NEW 0.25");
+
 	log_info(gamecardLogger2, "comienzo a obtener lista de %s", msgNew->pokemon);
 	t_list* listaPosCantidad=obtenerListaPosicionCantidadDeArchivo(archivoPoke);
+
+	obtenerListaBloquesConfig(archivoPoke, "ATENDER NEW 0.5");
 	log_info(gamecardLogger2, "termino de obtener lista de %s", msgNew->pokemon);
 	posicionCantidad* encontrado= buscarPosicionCantidad(listaPosCantidad, pokeEnPosicion->posicion);
+	obtenerListaBloquesConfig(archivoPoke, "ATENDER NEW 1");
 
 	if(encontrado!=NULL){
 		(encontrado->cantidad)+=pokeEnPosicion->cantidad;
@@ -354,9 +361,14 @@ void* atenderNew(void* paq) {
 		(posAgregar->posicion).y=(pokeEnPosicion->posicion).y;
 		list_add(listaPosCantidad, (void*) posAgregar);
 	}
+
+	obtenerListaBloquesConfig(archivoPoke, "ATENDER NEW 2");
+
+
 	log_info(gamecardLogger2, "comienzo a actualizar posiciones de %s", msgNew->pokemon);
 	actualizarPosicionesArchivo(archivoPoke,listaPosCantidad);
 	log_info(gamecardLogger2, "termino de actualizar posiciones de %s", msgNew->pokemon);
+	obtenerListaBloquesConfig(archivoPoke, "ATENDER NEW 3");
 	list_destroy_and_destroy_elements(listaPosCantidad, free);
 	//Verificar que el pokemon este en nuestro FileSystem
 	//Una vez encontrado (o creado) verificar si puedo abrirlo
@@ -365,8 +377,11 @@ void* atenderNew(void* paq) {
 	sleep(tiempoRetardoGC);
 	//CERRAR ARCHIVO
 	cerrarArchivo(archivoPoke,archivoMetadata);
+
+	obtenerListaBloquesConfig(archivoPoke, "ATENDER NEW 4");
 	log_info(gamecardLogger2,"Cierro el archivo del pokemon: %s. Posicion: (%i, %i).", msgNew->pokemon, msgNew->posX, msgNew->posY);
 	enviarAppeared(pokeEnPosicion);
+	obtenerListaBloquesConfig(archivoPoke, "ATENDER NEW 5");
 	return NULL;
 
 }

@@ -157,6 +157,7 @@ int32_t crearArchivoBloque(blockHeader* bloque) {
 }
 
 archivoHeader* crearDirectorio(char* nombre, char* pathDestino, uint32_t tipo){
+
 	int32_t status;
 	errno = 0;
 	char* direc = string_new();
@@ -176,6 +177,7 @@ archivoHeader* crearDirectorio(char* nombre, char* pathDestino, uint32_t tipo){
 		}
 	}
 	if(strcmp("Blocks", nombre)==0){
+
 		return NULL;
 	}else{
 		return crearMetadata(nombre,tipo, direc);
@@ -420,7 +422,7 @@ int32_t escribirBloque(int32_t bloque, int32_t offset, int32_t longitud, char* b
 	//fwrite(buffer, strlen(buffer), 1, block);
 
 	uint32_t resultado=fwrite(buffer, longitud, 1, block);
-	log_info(gamecardLogger2,"RESULTADO DEL FWRITE:%i",resultado);
+	//log_info(gamecardLogger2,"RESULTADO DEL FWRITE:%i",resultado);
 	//fputs(buffer,block);
 	headerBloque->pos=ftell(block);
 	fclose(block);

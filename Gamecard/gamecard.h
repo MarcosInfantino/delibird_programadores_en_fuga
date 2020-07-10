@@ -119,6 +119,7 @@ struct nodoArbolDirectorio* raizDirectorio;
 listaMutex* listaArchivos;//lista de archivoHeader
 uint32_t tiempoRetardoGC;
 uint32_t tiempoReintentoOperacion;
+pthread_mutex_t* mutexPrueba;
 
 void* suscribirseCola(void* msgSuscripcion);
 void* suscribirseColasBroker(void* config);
@@ -195,4 +196,5 @@ uint32_t buscarIdCantidad(t_list* lista, posicion pos);
 void reiniciarBloquesDeArchivo(archivoHeader* headerPoke);
 void reiniciarArchivoBloque(uint32_t idBloque);
 void setearSize(archivoHeader* archivo,uint32_t size);
+void obtenerListaBloquesConfig(archivoHeader* archivo, char* estado);
 #endif /* GAMECARD_H_ */
