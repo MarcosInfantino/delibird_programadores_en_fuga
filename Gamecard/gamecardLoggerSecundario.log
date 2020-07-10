@@ -33350,3 +33350,105 @@ HolacomoAndas
 [INFO] 00:42:57:333 gamecard/(22084:22148): ----------------------------Lista bloques del config del archivo Charmander: [2,3]. ATENDER NEW 4
 [INFO] 00:42:57:333 gamecard/(22084:22148): Cierro el archivo del pokemon: Charmander. Posicion: (129, 547).
 [INFO] 00:42:57:333 gamecard/(22084:22148): ----------------------------Lista bloques del config del archivo Charmander: [2,3]. ATENDER NEW 5
+[INFO] 17:10:39:189 gamecard/(11693:11693): Pokemon:Pikachu
+[INFO] 17:10:39:196 gamecard/(11693:11693): Posicion1: 1 - 1 =  10 
+[INFO] 17:10:39:196 gamecard/(11693:11693): Posicion2: 2 - 2 =  10 
+[INFO] 17:10:39:197 gamecard/(11693:11693): Posicion3: 3 - 3 =  10 
+[INFO] 17:12:09:1 gamecard/(11818:11818): Size del stream:51 
+[INFO] 17:12:10:4 gamecard/(11818:11818): Pokemon:Pikachu
+[INFO] 17:12:10:4 gamecard/(11818:11818): Posicion1: 1 - 1 =  10 
+[INFO] 17:12:10:4 gamecard/(11818:11818): Posicion2: 2 - 2 =  10 
+[INFO] 17:12:10:4 gamecard/(11818:11818): Posicion3: 3 - 3 =  10 
+[INFO] 17:33:41:187 gamecard/(12556:12556): Puerto Broker:5002
+[INFO] 17:33:41:188 gamecard/(12556:12556): Soy directorio
+[INFO] 17:33:41:188 gamecard/(12556:12556): Se encontro el directorio metadata
+[INFO] 17:33:41:188 gamecard/(12556:12556): Se encontro el archivo metadata.bin
+[INFO] 17:33:41:193 gamecard/(12556:12556): Inicio de Metadata, Tamanio bloques: 64,  Cantidad de bloques: 20,  Magic number: TALL_GRASS
+[INFO] 17:33:41:211 gamecard/(12556:12561): Estoy escuchando
+[INFO] 17:33:41:212 gamecard/(12556:12561): Espero un nuevo cliente
+[INFO] 17:35:05:685 gamecard/(12556:12561): Gestiono un nuevo cliente
+[INFO] 17:35:05:685 gamecard/(12556:12561): Espero un nuevo cliente
+[INFO] 17:35:05:690 gamecard/(12556:12614): atiendo cliente
+[INFO] 17:35:05:690 gamecard/(12556:12614): hola llegue
+[INFO] 17:35:05:691 gamecard/(12556:12614): hice el send: 1
+[INFO] 17:35:05:691 gamecard/(12556:12614): recibi: 11
+[INFO] 17:35:05:691 gamecard/(12556:12614): deserializado
+[INFO] 17:35:05:691 gamecard/(12556:12614): Atiendo Get del pokemon: Pikachu
+[INFO] 17:35:05:692 gamecard/(12556:12614): Soy archivo
+[INFO] 17:35:05:692 gamecard/(12556:12614): ----------------------------Lista bloques del config del archivo Pikachu: []. ABRIR ARCHIVO FUERA 1
+[INFO] 17:35:05:706 gamecard/(12556:12614): ----------------------------Lista bloques del config del archivo Pikachu: []. ABRIR ARCHIVO FUERA 2
+[INFO] 17:36:17:761 gamecard/(12556:12561): Gestiono un nuevo cliente
+[INFO] 17:36:17:762 gamecard/(12556:12561): Espero un nuevo cliente
+[INFO] 17:36:17:762 gamecard/(12556:12640): atiendo cliente
+[INFO] 17:36:17:762 gamecard/(12556:12640): hola llegue
+[INFO] 17:36:17:762 gamecard/(12556:12640): hice el send: 1
+[INFO] 17:36:17:762 gamecard/(12556:12640): recibi: 11
+[INFO] 17:36:17:762 gamecard/(12556:12640): deserializado
+[INFO] 17:36:17:762 gamecard/(12556:12640): Atiendo Get del pokemon: Pikachu
+[INFO] 17:36:17:762 gamecard/(12556:12640): entro a cargar metadata
+[INFO] 17:40:47:847 gamecard/(12748:12748): Puerto Broker:5002
+[INFO] 17:40:47:852 gamecard/(12748:12748): Soy directorio
+[INFO] 17:40:47:853 gamecard/(12748:12748): Se encontro el directorio metadata
+[INFO] 17:40:47:853 gamecard/(12748:12748): Se encontro el archivo metadata.bin
+[INFO] 17:40:47:853 gamecard/(12748:12748): Inicio de Metadata, Tamanio bloques: 64,  Cantidad de bloques: 20,  Magic number: TALL_GRASS
+[INFO] 17:40:47:868 gamecard/(12748:12753): Estoy escuchando
+[INFO] 17:40:47:868 gamecard/(12748:12753): Espero un nuevo cliente
+[INFO] 17:42:11:81 gamecard/(12748:12753): Gestiono un nuevo cliente
+[INFO] 17:42:11:81 gamecard/(12748:12753): Espero un nuevo cliente
+[INFO] 17:42:11:81 gamecard/(12748:12766): atiendo cliente
+[INFO] 17:42:11:82 gamecard/(12748:12766): hola llegue
+[INFO] 17:42:11:82 gamecard/(12748:12766): hice el send: 1
+[INFO] 17:42:11:82 gamecard/(12748:12766): recibi: 11
+[INFO] 17:42:11:82 gamecard/(12748:12766): deserializado
+[INFO] 17:42:11:82 gamecard/(12748:12766): Atiendo Get del pokemon: Pikachu
+[INFO] 17:42:11:82 gamecard/(12748:12766): Soy archivo
+[INFO] 17:42:11:83 gamecard/(12748:12766): ----------------------------Lista bloques del config del archivo Pikachu: []. ABRIR ARCHIVO FUERA 1
+[INFO] 17:42:11:92 gamecard/(12748:12766): ----------------------------Lista bloques del config del archivo Pikachu: []. ABRIR ARCHIVO FUERA 2
+[INFO] 17:45:43:428 gamecard/(12880:12880): Puerto Broker:5002
+[INFO] 17:45:46:53 gamecard/(12880:12880): Soy directorio
+[INFO] 17:45:57:148 gamecard/(12880:12880): Se encontro el directorio metadata
+[INFO] 17:45:57:149 gamecard/(12880:12880): Se encontro el archivo metadata.bin
+[INFO] 17:45:57:149 gamecard/(12880:12880): Inicio de Metadata, Tamanio bloques: 64,  Cantidad de bloques: 20,  Magic number: TALL_GRASS
+[INFO] 17:45:59:739 gamecard/(12880:12916): Estoy escuchando
+[INFO] 17:45:59:739 gamecard/(12880:12916): Espero un nuevo cliente
+[INFO] 17:46:08:837 gamecard/(12880:12916): Gestiono un nuevo cliente
+[INFO] 17:46:08:838 gamecard/(12880:12916): Espero un nuevo cliente
+[INFO] 17:46:08:849 gamecard/(12880:12921): atiendo cliente
+[INFO] 17:46:08:849 gamecard/(12880:12921): hola llegue
+[INFO] 17:46:08:849 gamecard/(12880:12921): hice el send: 1
+[INFO] 17:46:08:849 gamecard/(12880:12921): recibi: 11
+[INFO] 17:46:27:529 gamecard/(12880:12921): deserializado
+[INFO] 17:46:39:482 gamecard/(12880:12921): Atiendo Get del pokemon: Pikachu
+[INFO] 17:47:25:808 gamecard/(12976:12976): Puerto Broker:5002
+[INFO] 17:47:26:103 gamecard/(12976:12976): Soy directorio
+[INFO] 17:47:26:801 gamecard/(12976:12976): Se encontro el directorio metadata
+[INFO] 17:47:26:801 gamecard/(12976:12976): Se encontro el archivo metadata.bin
+[INFO] 17:47:26:801 gamecard/(12976:12976): Inicio de Metadata, Tamanio bloques: 64,  Cantidad de bloques: 20,  Magic number: TALL_GRASS
+[INFO] 17:47:28:35 gamecard/(12976:13002): Estoy escuchando
+[INFO] 17:47:28:36 gamecard/(12976:13002): Espero un nuevo cliente
+[INFO] 17:47:32:920 gamecard/(12976:13002): Gestiono un nuevo cliente
+[INFO] 17:47:32:921 gamecard/(12976:13002): Espero un nuevo cliente
+[INFO] 17:47:32:928 gamecard/(12976:13008): atiendo cliente
+[INFO] 17:47:32:932 gamecard/(12976:13008): hola llegue
+[INFO] 17:47:32:932 gamecard/(12976:13008): hice el send: 1
+[INFO] 17:47:32:932 gamecard/(12976:13008): recibi: 11
+[INFO] 17:47:34:837 gamecard/(12976:13008): deserializado
+[INFO] 17:47:40:6 gamecard/(12976:13008): Atiendo Get del pokemon: Pikachu
+[INFO] 17:51:08:14 gamecard/(13214:13214): Puerto Broker:5002
+[INFO] 17:51:08:15 gamecard/(13214:13214): Soy directorio
+[INFO] 17:51:08:15 gamecard/(13214:13214): Se encontro el directorio metadata
+[INFO] 17:51:08:15 gamecard/(13214:13214): Se encontro el archivo metadata.bin
+[INFO] 17:51:08:15 gamecard/(13214:13214): Inicio de Metadata, Tamanio bloques: 64,  Cantidad de bloques: 20,  Magic number: TALL_GRASS
+[INFO] 17:51:08:24 gamecard/(13214:13220): Estoy escuchando
+[INFO] 17:51:08:24 gamecard/(13214:13220): Espero un nuevo cliente
+[INFO] 17:51:12:565 gamecard/(13214:13220): Gestiono un nuevo cliente
+[INFO] 17:51:12:566 gamecard/(13214:13220): Espero un nuevo cliente
+[INFO] 17:51:12:566 gamecard/(13214:13228): atiendo cliente
+[INFO] 17:51:12:566 gamecard/(13214:13228): hola llegue
+[INFO] 17:51:12:566 gamecard/(13214:13228): hice el send: 1
+[INFO] 17:51:12:566 gamecard/(13214:13228): recibi: 11
+[INFO] 17:51:12:566 gamecard/(13214:13228): deserializado
+[INFO] 17:51:12:567 gamecard/(13214:13228): Atiendo Get del pokemon: Pikachu
+[INFO] 17:51:12:567 gamecard/(13214:13228): Soy archivo
+[INFO] 17:51:12:567 gamecard/(13214:13228): ----------------------------Lista bloques del config del archivo Pikachu: []. ABRIR ARCHIVO FUERA 1
+[INFO] 17:51:12:576 gamecard/(13214:13228): ----------------------------Lista bloques del config del archivo Pikachu: []. ABRIR ARCHIVO FUERA 2

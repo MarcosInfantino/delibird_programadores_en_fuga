@@ -518,18 +518,17 @@ void reiniciarBloquesDeArchivo(archivoHeader* headerPoke){
 	}
 
 }
-
-posicion* conseguirPosiciones(archivoHeader* pokeArchivo){
-	t_list* listaPosCantidad=obtenerListaPosicionCantidadDeArchivo(pokeArchivo);
-	uint32_t cantPosiciones = list_size(listaPosCantidad);
-	posicion* arrayPosiciones = malloc(cantPosiciones*sizeof(posicion));
-	for(uint32_t i=0;i<cantPosiciones;i++){
-		posicionCantidad* auxPosCan = (posicionCantidad*) list_get(listaPosCantidad,i);
-		posicion aux;
-		aux = auxPosCan->posicion;
-		*(arrayPosiciones+i) = aux;
-	}
-	return arrayPosiciones;
-}
+//
+//t_list* conseguirPosicionesCantidad(archivoHeader* pokeArchivo){
+//	t_list* listaPosCantidad=obtenerListaPosicionCantidadDeArchivo(pokeArchivo);
+//	uint32_t cantPosiciones = list_size(listaPosCantidad);
+//	posicionCantidad* arrayPosicionCantidad = malloc(cantPosiciones*sizeof(posicionCantidad));
+//	for(uint32_t i=0;i<cantPosiciones;i++){
+//		posicionCantidad* auxPosCan = (posicionCantidad*) list_get(listaPosCantidad,i);
+//
+//		*(arrayPosicionCantidad+i) = *auxPosCan;
+//	}
+//	return arrayPosicionCantidad;
+//}
 
 

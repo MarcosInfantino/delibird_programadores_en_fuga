@@ -15,6 +15,55 @@ uint32_t tiempoReconexionGC;
 
 uint32_t puertoGamecardGC = 5001;
 
+//int main (void){
+//	gamecardLogger2=log_create("gamecardLoggerSecundario.log","gamecard", true, LOG_LEVEL_INFO);
+//
+//	posicionCantidad* pos1= malloc(sizeof(posicionCantidad));
+//	posicionCantidad* pos2= malloc(sizeof(posicionCantidad));
+//	posicionCantidad* pos3= malloc(sizeof(posicionCantidad));
+//
+//	(pos1->posicion).x = 1;
+//	(pos1->posicion).y = 1;
+//	 pos1->cantidad = 10;
+//
+//	 (pos2->posicion).x = 2;
+//	 (pos2->posicion).y = 2;
+//	  pos2->cantidad = 10;
+//
+//	 (pos3->posicion).x = 3;
+//	 (pos3->posicion).y = 3;
+//	  pos3->cantidad = 10;
+//
+//	  t_list* listaLoca = list_create();
+//
+//	  list_add(listaLoca,(void*) pos1);
+//	  list_add(listaLoca,(void*) pos2);
+//	  list_add(listaLoca,(void*) pos3);
+//
+//	  mensajeLocalized* msgLocalized = llenarLocalized("Pikachu",listaLoca);
+//	  void* stream = serializarLocalized(msgLocalized);
+//	  paquete* paq = llenarPaquete(GAMECARD,LOCALIZED_POKEMON,sizeArgumentos(LOCALIZED_POKEMON,"Pikachu",3),stream);
+//
+//
+//	  log_info(gamecardLogger2,"Size del stream:%i ",paq->sizeStream );
+//	  void* paqSerializado = serializarPaquete(paq);
+//
+//	  paquete* paqDeserializado = deserializarPaquete(paqSerializado);
+//	  mensajeLocalized* msgLocalizedDeserializado = deserializarLocalized(paqDeserializado->stream);
+//
+//	  posicionCantidad* p1 = (posicionCantidad*) list_get(msgLocalizedDeserializado->listaPosicionCantidad,0);
+//	  posicionCantidad* p2 = (posicionCantidad*) list_get(msgLocalizedDeserializado->listaPosicionCantidad,1);
+//	  posicionCantidad* p3 = (posicionCantidad*) list_get(msgLocalizedDeserializado->listaPosicionCantidad,2);
+//
+//	  log_info(gamecardLogger2, "Pokemon:%s",msgLocalizedDeserializado->pokemon);
+//	  log_info(gamecardLogger2, "Posicion1: %i - %i = % i ",(p1->posicion).x,(p1->posicion).y,p1->cantidad);
+//	  log_info(gamecardLogger2, "Posicion2: %i - %i = % i ",(p2->posicion).x,(p2->posicion).y,p2->cantidad);
+//	  log_info(gamecardLogger2, "Posicion3: %i - %i = % i ",(p3->posicion).x,(p3->posicion).y,p3->cantidad);
+//
+//
+//	return 0;
+//}
+
 
 int main(void) {
 	listaArchivos=inicializarListaMutex();
@@ -30,10 +79,6 @@ int main(void) {
 	puntoMontaje = config_get_string_value(configGamecard, "PUNTO_MONTAJE_TALLGRASS");
 	log_info(gamecardLogger2,"Puerto Broker:%i",puertoBrokerGC);
 
-	//iniciarFileSystem(); //"/home/utnso/tp-2020-1c-Programadores-en-Fuga/Gamecard/TALL_GRASS"; //
-
-	//crearDirectorio("TALL_GRASS", "/home/utnso/tp-2020-1c-Programadores-en-Fuga/Gamecard/", DIRECTORIO);
-	//crearDirectorio("Metadata", "/home/utnso/tp-2020-1c-Programadores-en-Fuga/Gamecard/TALL_GRASS/", DIRECTORIO);
 	crearDirectorio("Files","/home/utnso/tp-2020-1c-Programadores-en-Fuga/Gamecard/TALL_GRASS/", DIRECTORIO);
 	crearDirectorio("Blocks","/home/utnso/tp-2020-1c-Programadores-en-Fuga/Gamecard/TALL_GRASS/", DIRECTORIO);
 
@@ -41,82 +86,6 @@ int main(void) {
 	iniciarBitmap();
 	inicializarListaBloques();
 
-//	archivoHeader* charmander=crearDirectorio("Pikachu", pathFiles, ARCHIVO);
-//	log_info(gamecardLogger2, "tamanio archivo: %i", charmander->tamanioArchivo);
-//	log_info(gamecardLogger2, "bloques usados:");
-//	log_info(gamecardLogger2, "%i", list_size(charmander->bloquesUsados));
-//	for(uint32_t i=0; i<list_size(charmander->bloquesUsados);i++){
-//		log_info(gamecardLogger2, "bloque: %i", ((blockHeader*) list_get(charmander->bloquesUsados,i))->id);
-//	}
-//	 ocuparBloque(1);
-//	 ocuparBloque(2);
-//	 ocuparBloque(5);
-//	 ocuparBloque(7);
-//
-	//archivoHeader* pikachu=crearDirectorio("Pikachu",pathFiles,ARCHIVO);
-
-//	char* string=string_new();
-//	sprintf(string, "%s\n",string_repeat('a', 135));
-//	if(!estaLibre(5)){
-//		printf("esta ocupado el 5\n");
-//	}
-	//reescribirArchivo("Pikachu", string_repeat('a', 600));
-
-	//char* s=leerBloque(obtenerBloquePorId(1));
-
-//	log_info(gamecardLogger2, "%i",strlen(s));
-//	log_info(gamecardLogger2, "lectura bloque1: %s",s);
-//	log_info(gamecardLogger2, "lecuta archivo: %s",leerArchivo("Pikachu"));
-//	ocuparBloque(1);
-//	ocuparBloque(2);
-//	ocuparBloque(3);
-//	if(!estaLibre(1) && !estaLibre(2) && !estaLibre(3) ){
-//		log_info(gamecardLogger2,"SE OCUPARON TODOS");
-//	}
-//	agregarBloque(pikachu, obtenerBloquePorId(1));
-//	agregarBloque(pikachu, obtenerBloquePorId(2));
-//	agregarBloque(pikachu, obtenerBloquePorId(5));
-//	escribirBloque(1,0,strlen("Hola")+1,"Hola\n");
-//	escribirBloque(1,5,strlen("Hola"),"Hola");
-//	escribirBloque(2,0,strlen("comoAndas"),"comoAndas");
-
-
-//	log_info(gamecardLogger2,"Lectura bloque: %s", obtenerStringArchivo("Pikachu"));
-//
-//	t_list* listaPosicionesString=obtenerListaPosicionesString("1-1=10\n10-11=1\n158-1=112\n");
-//	log_info(gamecardLogger2, "%s             %s                  %s", (char*) list_get(listaPosicionesString,0),(char*) list_get(listaPosicionesString,1), (char*) list_get(listaPosicionesString,2));
-//
-
-//	t_list* listaPosicionCantidad= obtenerListaPosicionCantidadDeString("1-1=10\n10-11=1\n158-1=112\n");
-//
-//	posicionCantidad* posCantidad1=list_get(listaPosicionCantidad,0);
-//	posicionCantidad* posCantidad2=list_get(listaPosicionCantidad,1);
-//	posicionCantidad* posCantidad3=list_get(listaPosicionCantidad,2);
-//
-//	log_info(gamecardLogger2, "Traduccion: %i-%i=%i", (posCantidad1->posicion).x, (posCantidad1->posicion).y, posCantidad1->cantidad);
-//	log_info(gamecardLogger2, "Traduccion: %i-%i=%i", (posCantidad2->posicion).x, (posCantidad2->posicion).y, posCantidad2->cantidad);
-//	log_info(gamecardLogger2, "Traduccion: %i-%i=%i", (posCantidad3->posicion).x, (posCantidad3->posicion).y, posCantidad3->cantidad);
-//
-//	actualizarPosicionesArchivo(pikachu,listaPosicionCantidad);
-	//log_info(gamecardLogger2, "pos en string: %s",posicionCantidadToString(posCantidad1));
-	//log_info(gamecardLogger2, "lista en string: %s",listaPosicionCantidadToString(listaPosicionCantidad));
-
-	//escribirBloque2(1,"Hola");
-	//printf("El resultado fue: %i\n",resul);
-//	blockHeader* bloque= malloc(sizeof(blockHeader));
-//	bloque->id=10;
-	//agregarBloque(var,bloque);
-//	blockHeader* bloque2= malloc(sizeof(blockHeader));
-//		bloque2->id=1023214234;
-//	agregarBloque(var,bloque2);
-//	blockHeader* bloque3= malloc(sizeof(blockHeader));
-//		bloque3->id=102384724;
-//	agregarBloque(var,bloque3);
-//	blockHeader* bloque4= malloc(sizeof(blockHeader));
-//		bloque4->id=103345232;
-//	agregarBloque(var,bloque4);
-//
-//	removerBloque(var,1038423);
 
 	//suscribirseColasBroker(configGamecard);
 	pthread_t hiloServidorDeEscucha;
@@ -403,23 +372,22 @@ void* atenderGet(void* paq) {
 	mensajeGet* msgGet = deserializarGet(paqueteGet->stream);
 	uint32_t idGet = paqueteGet->id;
 	log_info(gamecardLogger2,"deserializado");
-	//destruirPaquete(paquete);
+	destruirPaquete(paqueteGet);
 
 	pokemonADevolver* pokeADevolver = malloc(sizeof(pokemonADevolver));
 	pokeADevolver->pokemon = msgGet->pokemon;
 	pokeADevolver->id = idGet;
-	//Todo :
 	log_info(gamecardLogger2,"Atiendo Get del pokemon: %s", msgGet->pokemon);
 
 	if(archivoExiste(string_from_format(pathFiles,pokeADevolver->pokemon))){
-		archivoHeader* archivoPoke= obtenerArchivoPokemon(pokeADevolver->pokemon);
-		FILE* archivoMetadata=abrirArchivo(archivoPoke);
-		posicion* posiciones;
-		posiciones= conseguirPosiciones(archivoPoke);
-
+		archivoHeader* archivoPoke = obtenerArchivoPokemon(pokeADevolver->pokemon);
+		FILE* archivoMetadata = abrirArchivo(archivoPoke);
+		pokeADevolver->posicionCantidad = obtenerListaPosicionCantidadDeArchivo(archivoPoke);
+		sleep(tiempoRetardoGC);
+		cerrarArchivo(archivoPoke,archivoMetadata);
+	}else{
+		//pokeADevolver->posicionCantidad = NULL;
 	}
-
-
 
 	//Verificar que el pokemon este en nuestro FileSystem (si no encuentra mando posiciones vacias)
 	//Una vez encontrado verificar si puedo abrirlo
@@ -429,8 +397,7 @@ void* atenderGet(void* paq) {
 	//pokeADevolver->posicion= DEL FILESYSTEM
 	//free(msg);
 	//IF SUCCESS
-	sleep(tiempoRetardoGC);
-	//CERRAR ARCHIVO
+
 	enviarLocalized(pokeADevolver);
 	return NULL;
 }
@@ -438,15 +405,13 @@ void* atenderGet(void* paq) {
 void enviarLocalized(pokemonADevolver* pokeADevolver) {
 	uint32_t cliente = crearSocketCliente(ipBrokerGC, puertoBrokerGC);
 	mensajeLocalized* msgLocalized = malloc(sizeof(mensajeLocalized));
-	llenarLocalized(pokeADevolver->pokemon,pokeADevolver->cantPosiciones,pokeADevolver->posicion);
+	msgLocalized = llenarLocalized(pokeADevolver->pokemon,pokeADevolver->posicionCantidad);
 	//msgLocalized->pokemon = pokeADevolver->pokemon;
 	//msgLocalized->cantidad = pokeADevolver->cantPosiciones;
 	//msgLocalized->arrayPosiciones = pokeADevolver->posicion;
 	//msgLocalized->sizePokemon = strlen(msgLocalized->pokemon) + 1;
 	void* streamMsg = serializarLocalized(msgLocalized);
-	paquete* paq = llenarPaquete(GAMECARD, LOCALIZED_POKEMON,
-			sizeArgumentos(LOCALIZED_POKEMON, msgLocalized->pokemon, BROKER),
-			streamMsg);
+	paquete* paq = llenarPaquete(GAMECARD, LOCALIZED_POKEMON,sizeArgumentos(LOCALIZED_POKEMON, msgLocalized->pokemon, BROKER),streamMsg);
 	insertarIdCorrelativoPaquete(paq, (pokeADevolver->id));
 	void* paqueteSerializado = serializarPaquete(paq);
 	//free(msgLocalized);

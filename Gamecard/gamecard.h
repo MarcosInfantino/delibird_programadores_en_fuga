@@ -95,7 +95,7 @@ typedef struct{
 	char* pokemon;
 	uint32_t id;
 	uint32_t cantPosiciones;
-	posicion* posicion;
+	t_list* posicionCantidad;
 } pokemonADevolver;
 
 typedef struct{
