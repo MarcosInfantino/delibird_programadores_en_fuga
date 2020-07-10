@@ -18850,3 +18850,10 @@ HolacomoAndas
 [INFO] 22:23:20:67 gamecard/(4903:4932): RESULTADO DEL FWRITE:1
 [INFO] 22:23:20:67 gamecard/(4903:4932): termino de actualizar posiciones de Charmander
 [INFO] 22:23:25:68 gamecard/(4903:4932): Cierro el archivo del pokemon: Charmander. Posicion: (12, 17).
+[INFO] 22:45:47:643 gamecard/(5628:5628): Puerto Broker:5002
+[INFO] 22:45:47:643 gamecard/(5628:5628): Soy directorio
+[INFO] 22:45:47:643 gamecard/(5628:5628): Se encontro el directorio metadata
+[INFO] 22:45:47:644 gamecard/(5628:5628): Se encontro el archivo metadata.bin
+[INFO] 22:45:47:644 gamecard/(5628:5628): Inicio de Metadata, Tamanio bloques: 64,  Cantidad de bloques: 20,  Magic number: TALL_GRASS
+[INFO] 22:45:47:682 gamecard/(5628:5635): Estoy escuchando
+[INFO] 22:45:47:682 gamecard/(5628:5635): Espero un nuevo cliente
