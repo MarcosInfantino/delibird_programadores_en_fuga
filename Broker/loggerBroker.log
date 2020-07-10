@@ -238,3 +238,13 @@
 [INFO] 21:03:31:27 BROKER/(25783:25825): Almaceno mensaje en partición que comienza en: 0
 [INFO] 21:03:31:29 BROKER/(25783:25832): Se conectó un proceso GameBoy
 [INFO] 21:03:31:31 BROKER/(25783:25832): Almaceno mensaje en partición que comienza en: 12
+[INFO] 21:29:21:698 BROKER/(29088:29088): Estoy escuchando!
+[INFO] 21:29:27:89 BROKER/(29088:29166): Se conectó un proceso Team
+[INFO] 21:29:27:89 BROKER/(29088:29166): Almaceno mensaje en partición que comienza en: 0
+[INFO] 21:29:27:90 BROKER/(29088:29170): Se conectó un proceso Team
+[INFO] 21:29:27:90 BROKER/(29088:29170): Almaceno mensaje en partición que comienza en: 12
+[INFO] 21:29:27:90 BROKER/(29088:29171): Se conectó un proceso Team
+[INFO] 21:29:27:90 BROKER/(29088:29172): Se conectó un proceso Team
+[INFO] 21:29:27:91 BROKER/(29088:29171): Almaceno mensaje en partición que comienza en: 23
+[INFO] 21:29:27:91 BROKER/(29088:29172): Almaceno mensaje en partición que comienza en: 34
+[INFO] 21:29:27:91 BROKER/(29088:29176): Se conectó un proceso Team
