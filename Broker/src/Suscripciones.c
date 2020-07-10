@@ -82,8 +82,8 @@ void suscribir(colaMensajes * cola, paquete paq, uint32_t* socket,uint32_t ident
 		suscribirACola(socket, cola);
 		responderMensaje(*socket, CORRECTO);
 		enviarMensajesPreviosEnMemoria(socket, identificadorCola);
-		log_info(loggerBroker, armarStringSuscripLog(paq.modulo, paq.tipoMensaje));
-		log_info(brokerLogger2, armarStringSuscripLog(paq.modulo, paq.tipoMensaje));
+		//log_info(loggerBroker, armarStringSuscripLog(paq.modulo, paq.tipoMensaje));
+		//log_info(brokerLogger2, armarStringSuscripLog(paq.modulo, paq.tipoMensaje));
 	} else {
 		responderMensaje(*socket, INCORRECTO);
 		free(socket);
@@ -92,13 +92,10 @@ void suscribir(colaMensajes * cola, paquete paq, uint32_t* socket,uint32_t ident
 
 void suscribirPorTiempo(void* estructura){
 
-	//suscribir(colaMensajes cola, paquete paq, uint32_t socket);
 	suscripcionTiempo* structPorTiempo = (suscripcionTiempo*) estructura;
 	suscribir(obtenerCola(structPorTiempo->cola), structPorTiempo->paq, structPorTiempo->socket, structPorTiempo->cola);
-
-	log_info(loggerBroker, armarStringSuscripLog(GAMEBOY, structPorTiempo->cola));
-	log_info(brokerLogger2, armarStringSuscripLog(GAMEBOY, structPorTiempo->cola));
-
+	//log_info(loggerBroker, armarStringSuscripLog(GAMEBOY, structPorTiempo->cola));
+	//log_info(brokerLogger2, armarStringSuscripLog(GAMEBOY, structPorTiempo->cola));
 	sleep(structPorTiempo->tiempo);
 
 	desuscribir(*(structPorTiempo->socket), structPorTiempo->cola);

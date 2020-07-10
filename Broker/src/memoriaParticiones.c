@@ -126,13 +126,11 @@ void asignarMensajeAParticion(particion* partiLibre, msgMemoriaBroker* mensaje){
 	addListaMutex(particionesOcupadas, (void*)partiOcupada);
 	log_info(loggerBroker, "Almaceno mensaje en partición que comienza en: %i", partiOcupada->offset);
 	if(partiLibre->sizeParticion > mensaje->sizeStream){
-		log_info(brokerLogger2, "GENERO POR MAYOR");
 		partiLibre->offset = partiLibre->offset + mensaje->sizeStream;
 		partiLibre->sizeParticion = partiLibre->sizeParticion - mensaje->sizeStream;
 		partiLibre->estadoParticion = PARTICION_LIBRE;
 		addListaMutex(particionesLibres, (void*)partiLibre);
 	}else{ //osea que el tamaño es igual
-		log_info(brokerLogger2, "DESTRUYO PART");
 		destroyParticionLibre (partiLibre);
 	}
 }

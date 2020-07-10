@@ -138,7 +138,7 @@ char* nombreDeCola(uint32_t cola){
 	return "0";
 }
 
-char* armarStringSuscripLog(uint32_t modulo, uint32_t cola){
+/*char* armarStringSuscripLog(uint32_t modulo, uint32_t cola){
 	char* suscripcionDeUnProceso = "Se suscribrió el proceso ";
 	char* suscripcionAcola       = " a la cola ";
 	char* cadena = malloc(sizeof(suscripcionDeUnProceso) + sizeof(suscripcionAcola) + sizeof(nombreDeProceso(modulo)) + sizeof(nombreDeCola(cola)) + 1);
@@ -148,7 +148,7 @@ char* armarStringSuscripLog(uint32_t modulo, uint32_t cola){
 	strcat(cadena, nombreDeCola(cola));
 
 	return cadena;
-}
+}*/
 
 
 char* armarStringMsgNuevoLog(uint32_t cola){

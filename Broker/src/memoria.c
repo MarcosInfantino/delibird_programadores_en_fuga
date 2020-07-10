@@ -57,18 +57,13 @@ paquete* generarStreamParaAlmacenar(paquete* paq){
 void registrarMensajeEnMemoria(uint32_t idMensaje, paquete* paq, algoritmoMem metodo){
 	log_info(brokerLogger2, "Entro a registrar mensaje en memoria");
 	if(paq->tipoMensaje == CATCH_POKEMON || paq->tipoMensaje == GET_POKEMON){
-		log_info(brokerLogger2, "entre al if");
 		if(yaEstaEnMemoria(paq)){
 			log_info(brokerLogger2, "el msj ya esta");
-			log_info(brokerLogger2, "El tipo de mensaje es: %i", paq->tipoMensaje);
 			return;
 		}
 	}
-	log_info(brokerLogger2, "sali del if");
-	//paquete* paqueteCorregido = generarStreamParaAlmacenar(paq);
 	msgMemoriaBroker* msgNuevo = malloc(sizeof(msgMemoriaBroker));
 	msgNuevo->cola          = paq->tipoMensaje;
-	log_info(brokerLogger2, "El tipo de mensaje es: %i", paq->tipoMensaje);
 	msgNuevo->idMensaje     = idMensaje;
 	msgNuevo->subsACK       = inicializarListaMutex();
 	msgNuevo->subsYaEnviado = inicializarListaMutex();
@@ -93,7 +88,6 @@ void registrarMensajeEnMemoria(uint32_t idMensaje, paquete* paq, algoritmoMem me
 	case BUDDY_SYSTEM:
 		pthread_mutex_lock(mutexMemoria);
 		log_info(brokerLogger2, "Selecciono administración de memoria con buddy system.");
-		log_info(brokerLogger2, "Numero 3");
 		sizePrevio = sizeListaMutex(nodosOcupados);
 		registrarEnMemoriaBUDDYSYSTEM(msgNuevo, nodoRaizMemoria);
 		while (sizeListaMutex(nodosOcupados) == sizePrevio){
@@ -245,16 +239,13 @@ bool existeMensajeEnParticionesDinamicas(mensajeCatch* msgCatch, mensajeGet* msg
 	log_info(brokerLogger2, "entro a ver si existe mensaje");
 	for(int i = 0; i < sizeListaMutex(particionesOcupadas); i++){
 		particion* partActual = getListaMutex (particionesOcupadas, i);
-		log_info(brokerLogger2, "El id es: %i", partActual->mensaje->idMensaje);
 		if(msgCatch != NULL && partActual->mensaje->cola == CATCH_POKEMON){
-			log_info(brokerLogger2, "Entro a el if de catch");
 
 			if(compararCatch(deserializarCatch(partActual->mensaje->stream), msgCatch)){
 				return true;
 			}
 
 		}else if(msgGet != NULL && partActual->mensaje->cola == GET_POKEMON){
-			log_info(brokerLogger2, "Entro a el if de get");
 
 			if(compararGet(deserializarGet(partActual->mensaje->stream), msgGet)){
 				return true;
@@ -262,7 +253,6 @@ bool existeMensajeEnParticionesDinamicas(mensajeCatch* msgCatch, mensajeGet* msg
 
 		}
 	}
-	log_info(brokerLogger2, "no hay mensajes aun");
 	return false;
 }
 
@@ -277,7 +267,6 @@ bool yaSeGuardoEnMemoria(mensajeCatch* msgCatch, mensajeGet* msgGet){
 	case BUDDY_SYSTEM:
 		return existeMensajeEnMemoriaBuddy(msgGet, msgCatch);
 	case PARTICIONES_DINAMICAS:
-		log_info(brokerLogger2, "Entro a ver si ya esta en memoria");
 		return existeMensajeEnParticionesDinamicas(msgCatch, msgGet);
 	}
 	return false;
@@ -307,7 +296,6 @@ bool yaSeGuardoEnMemoria(mensajeCatch* msgCatch, mensajeGet* msgGet){
 bool compararCatch(mensajeCatch*  elemLista, mensajeCatch*  msgCatch){
 	if(strcmp(elemLista->pokemon, msgCatch->pokemon) == 0){
 		if(elemLista->posX == msgCatch->posX && elemLista->posY == msgCatch->posY){
-			log_info(brokerLogger2, "Los catch son iguales");
 			return true;
 		}
 	}

@@ -35,8 +35,9 @@ int main(void) {
     //log_info(brokerLogger2, armarStringEnvioXsub(2));
 	signal(SIGUSR1, crearDumpDeCache);
 	//levantarDatosDeConfig("Broker.config", 1); 			//1 para datos de config, otro para hardcode
-	levantarDatosDeConfig("pruebaBaseBroker.config", 1);
+	//levantarDatosDeConfig("pruebaBaseBroker.config", 1);
 	//levantarDatosDeConfig("pruebaBS.config", 1);
+	levantarDatosDeConfig("pruebaConsolidacion.config", 1);
 
 	loggerBroker = iniciar_logger("loggerBroker.log", "BROKER");
 
@@ -143,27 +144,23 @@ void esperar_cliente(uint32_t servidor) {
 
 	*socketCliente = accept(servidor, (void*) &dir_cliente, &tam_direccion);
 
-	//printf("Gestiono un nuevo cliente\n");
 	pthread_t thread;
 	pthread_create(&thread, NULL, atenderCliente, (void*) (socketCliente));
 
 	pthread_detach(thread);
-	//printf("cree el hilo\n");
 }
 
 void* atenderCliente(void* sock) {
-//	printf("Atiendo cliente\n");
 	uint32_t* socket = (uint32_t*) sock;
-	paquete* paquete = recibirPaquete(*socket);
+	paquete* paqueteRecibido = recibirPaquete(*socket);
+	//log_info(loggerBroker,armarConexionNuevoProcesoLog(paquete->modulo));
 
-	log_info(loggerBroker,armarConexionNuevoProcesoLog(paquete->modulo));
-
-	if( paquete == NULL){
+	if( paqueteRecibido == NULL){
 		printf("RESPONDO MENSAJE ERRONEO\n");
 		responderMensaje(*socket, INCORRECTO);
 		free(socket);
 		}else{
-			manejarTipoDeMensaje(paquete, socket);
+			manejarTipoDeMensaje(paqueteRecibido, socket);
 		}
 	return NULL;
 }
@@ -184,12 +181,9 @@ void manejarTipoDeMensaje(paquete* paq, uint32_t* socket) {
 			 meterEnCola( &caughtPokemon, paq, *socket);
 			 break;
 		 case CATCH_POKEMON:
-			 log_info(brokerLogger2, "Manejo catch");
 			 meterEnCola( &catchPokemon, paq, *socket);
 			 break;
 		 case GET_POKEMON:
-			 log_info(brokerLogger2, "GetPikachu sizeStream: %i", paq->sizeStream);
-			 log_info(brokerLogger2, "Manejo GET");
 			 meterEnCola( &getPokemon, paq, *socket);
 			 break;
 		 case LOCALIZED_POKEMON:
@@ -221,7 +215,6 @@ void meterEnCola( colaMensajes* structCola, paquete * paq, uint32_t  socket){
 	insertarIdPaquete(paq,contador.contador);
 	send(socket,(void*)(&contador.contador),sizeof(uint32_t),0);
 	pthread_mutex_unlock(contador.mutexContador);
-	log_info(brokerLogger2, "meti msj en cola");
 	registrarMensajeEnMemoria(contador.contador, paq, algoritmoMemoria);
 
 	pushColaMutex(structCola->cola, (void *) paq);
