@@ -435,6 +435,7 @@ void enviarLocalized(pokemonADevolver* pokeADevolver) {
 }
 
 void* atenderCatch(void* paq) {
+	log_info(gamecardLogger2,"Entro al catch");
 	paquete* paqueteCatch = (paquete*) paq;
 	uint32_t idCatch = paqueteCatch->id;
 	mensajeCatch* msgCatch = deserializarCatch(paqueteCatch->stream);
@@ -442,21 +443,37 @@ void* atenderCatch(void* paq) {
 	pokemonAAtrapar* pokeAAtrapar = malloc(sizeof(pokemonAAtrapar));
 	pokeAAtrapar->id = idCatch;
 	pokeAAtrapar->pokemon = msgCatch->pokemon;
-	pokeAAtrapar->posicion->x = msgCatch->posX;
-	pokeAAtrapar->posicion->y = msgCatch->posY;
+	(pokeAAtrapar->posicion).x = msgCatch->posX;
+	(pokeAAtrapar->posicion).y = msgCatch->posY;
+	log_info(gamecardLogger2,"Pokemon:%s, posicion:%i-%i",pokeAAtrapar->pokemon,(pokeAAtrapar->posicion).x,(pokeAAtrapar->posicion).y);
 
-	//Todo :
-	//Verificar que el pokemon este en nuestro FileSystem (si no encuentra mando ERROR)
-	//Una vez encontrado verificar si puedo abrirlo
-	//Verificar si las posiciones existen en el archivo (SI NO MANDO ERROR)
-	//Si la cantidad del pokemon es 1 elimino la linea, si no la reduzco en 1
-	//free(msg);
-	//IF SUCCESS
-	pokeAAtrapar->resultado = 1;
-	//else pokeAAtrapar->resultado = 0;
+	archivoHeader* archivoPokeCatch= obtenerArchivoPokemon(pokeAAtrapar->pokemon);
+	FILE* archivoMetadata=abrirArchivo(archivoPokeCatch);
+	t_list* listaPosCantidadCatch=obtenerListaPosicionCantidadDeArchivo(archivoPokeCatch);
+	posicionCantidad* encontrado= buscarPosicionCantidad(listaPosCantidadCatch, pokeAAtrapar->posicion);
+	log_info(gamecardLogger2,"Size lista antes de comprobar:%i",list_size(listaPosCantidadCatch));
+	if(encontrado == NULL){
+		log_info(gamecardLogger2,"NULLACIO");
+		pokeAAtrapar->resultado = FAIL;
+	}else{
+		uint32_t idPosicion = buscarIdCantidad(listaPosCantidadCatch, pokeAAtrapar->posicion);
+		if(encontrado->cantidad>1){
+			log_info(gamecardLogger2,"Reemplazo");
+
+			encontrado->cantidad = encontrado->cantidad - 1;
+			//list_replace(listaPosCantidadCatch, idPosicion, encontrado);
+		}else{
+			log_info(gamecardLogger2,"Elimino linea");
+			list_remove(listaPosCantidadCatch, idPosicion);
+			//list_remove_and_destroy_element(listaPosCantidadCatch, idPosicion, free);
+		}
+		actualizarPosicionesArchivo(archivoPokeCatch,listaPosCantidadCatch);
+		pokeAAtrapar->resultado = OK;
+	}
+	log_info(gamecardLogger2,"Size lista despues de comprobar:%i",list_size(listaPosCantidadCatch));
+
 	sleep(tiempoRetardoGC);
-	//Cerramos
-
+	cerrarArchivo(archivoPokeCatch,archivoMetadata);
 	enviarCaught(pokeAAtrapar); //Momentaneo hasta saber bien que hacer con fileSystem
 	return NULL;
 }

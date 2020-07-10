@@ -100,6 +100,8 @@ void iniciarBitmap() {
 }
 */
 
+
+
 void iniciarBitmap() {
 	char* pathBitmap = "/home/utnso/tp-2020-1c-Programadores-en-Fuga/Gamecard/TALL_GRASS/Metadata/bitmap.bin";
 	if(!archivoExiste(pathBitmap)){
@@ -417,11 +419,11 @@ int32_t escribirBloque(int32_t bloque, int32_t offset, int32_t longitud, char* b
 	//fwrite(buffer, strlen(buffer)+1, 1, block);
 	//fwrite(buffer, strlen(buffer), 1, block);
 
-	fwrite(buffer, longitud, 1, block);
+	uint32_t resultado=fwrite(buffer, longitud, 1, block);
+	log_info(gamecardLogger2,"RESULTADO DEL FWRITE:%i",resultado);
 	//fputs(buffer,block);
 	headerBloque->pos=ftell(block);
 	fclose(block);
-
 	return 0;
 	}else{
 		return -1;
