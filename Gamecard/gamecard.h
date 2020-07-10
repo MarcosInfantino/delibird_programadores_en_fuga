@@ -24,7 +24,7 @@
 #include <sys/stat.h>
 #include <fcntl.h>
 #include <sys/mman.h>
-
+#include <math.h>
 #ifndef GAMECARD_H_
 #define GAMECARD_H_
 
@@ -101,8 +101,8 @@ typedef struct{
 typedef struct{
 	char* pokemon;
 	uint32_t id;
-	posicion* posicion;
-	bool resultado;
+	posicion posicion;
+	uint32_t resultado;
 } pokemonAAtrapar;
 
 uint32_t tamanioBloque;
@@ -191,4 +191,8 @@ char* listaPosicionCantidadToString(t_list* lista);
 void actualizarPosicionesArchivo(archivoHeader* archivo, t_list* listaPosicionCantidad);
 t_list* arrayBloquesStringToList(char** listaArray);
 archivoHeader* cargarMetadata(char* path, uint32_t tipo, char* nombre);
+uint32_t buscarIdCantidad(t_list* lista, posicion pos);
+void reiniciarBloquesDeArchivo(archivoHeader* headerPoke);
+void reiniciarArchivoBloque(uint32_t idBloque);
+void setearSize(archivoHeader* archivo,uint32_t size);
 #endif /* GAMECARD_H_ */

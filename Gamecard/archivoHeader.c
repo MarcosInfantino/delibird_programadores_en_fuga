@@ -90,6 +90,7 @@ void agregarBloque(archivoHeader* metadata, blockHeader* bloque){
 }
 
 void agregarUnBloque(archivoHeader* metadata){
+	log_info(gamecardLogger2,"Agrego un bloque.");
 	blockHeader* bloqueLibre= encontrarBloqueLibre();
 	agregarBloque(metadata, bloqueLibre);
 }
@@ -97,18 +98,20 @@ void agregarUnBloque(archivoHeader* metadata){
 char* obtenerStringListaBloques(archivoHeader* metadata){
 	t_list* listaBloques=metadata->bloquesUsados;
 	char* buffer=malloc(500);
-	for(uint32_t i=0; i<list_size(listaBloques);i++){
-		uint32_t idBloqueActual=((blockHeader*) list_get(listaBloques,i))->id;
+	if(list_size(listaBloques)==0){
+		sprintf(buffer,"[]");
+	}else{
+		for(uint32_t i=0; i<list_size(listaBloques);i++){
+			uint32_t idBloqueActual=((blockHeader*) list_get(listaBloques,i))->id;
 
-		if(i==0){
-			sprintf(buffer, "[%i]", idBloqueActual);
-		}else{
-			buffer=agregarIdBloque(buffer,idBloqueActual);
-
+			if(i==0){
+				sprintf(buffer, "[%i]", idBloqueActual);
+			}else{
+					buffer=agregarIdBloque(buffer,idBloqueActual);
+			}
 		}
-
-
 	}
+
 	return buffer;
 }
 
@@ -152,6 +155,7 @@ void removerBloque(archivoHeader* metadata, uint32_t idBloque){
 	config_destroy(config);
 	free(listaB);
 	liberarBloque(idBloque);
+	reiniciarArchivoBloque(idBloque);
 }
 
 void removerUnBloque(archivoHeader* metadata){
@@ -313,15 +317,27 @@ t_list* obtenerListaPosicionCantidadDeString(char* string){
 	return obtenerListaPosicionCantidad(obtenerListaPosicionesString(string));
 }
 
+void setearSize(archivoHeader* archivo,uint32_t size){
 
+	archivo->tamanioArchivo = size;
+	t_config* config=config_create(archivo->pathArchivo);
+	config_set_value(config,"SIZE",string_itoa(size));
+	config_save(config);
+	config_destroy(config);
+}
 
 void reescribirArchivo(char* pokemon, char* stringAEscribir){
 	archivoHeader* headerPoke= buscarArchivoHeaderPokemon(pokemon);
-
 	uint32_t bytesAEscribir=strlen(stringAEscribir);
 	//log_info(gamecardLogger2, "CANTIDAD DE BYTES A ESCRIBIR: %i", bytesAEscribir);
-	uint32_t bloquesNecesarios=(bytesAEscribir/tallGrass.block_size)+1;
-
+	uint32_t bloquesNecesarios;
+	setearSize(headerPoke,bytesAEscribir);
+	if (bytesAEscribir == 0){
+		 bloquesNecesarios=0;
+	}else{
+		 bloquesNecesarios=(bytesAEscribir/tallGrass.block_size)+1;
+	}
+	log_info(gamecardLogger2,"-------------BLOQUES NECESARIOS= %i",bloquesNecesarios);
 	while(bloquesNecesarios<cantidadBloquesArchivo(headerPoke)){
 		removerUnBloque(headerPoke);
 	}
@@ -329,6 +345,7 @@ void reescribirArchivo(char* pokemon, char* stringAEscribir){
 		agregarUnBloque(headerPoke);
 	}
 
+	reiniciarBloquesDeArchivo(headerPoke);
 	t_list* listaBloques= headerPoke->bloquesUsados;
 	for(uint32_t i=0;i<list_size(listaBloques);i++){
 		blockHeader* bloqueActual=(blockHeader*) list_get(listaBloques,i);
@@ -391,6 +408,17 @@ posicionCantidad* buscarPosicionCantidad(t_list* lista, posicion pos){
 	return NULL;
 }
 
+uint32_t buscarIdCantidad(t_list* lista, posicion pos){
+	for(uint32_t i=0; i< list_size(lista);i++ ){
+			posicionCantidad* actual= (posicionCantidad*) list_get(lista,i);
+
+			if((actual->posicion).x==pos.x && (actual->posicion).y==pos.y){
+				return i;
+			}
+		}
+		return -1;
+}
+
 t_list* obtenerListaPosicionCantidadDeArchivo(archivoHeader* archivo){
 
 	char* stringPosCant=leerArchivo(archivo->nombreArchivo);
@@ -399,47 +427,62 @@ t_list* obtenerListaPosicionCantidadDeArchivo(archivoHeader* archivo){
 }
 
 char* posicionCantidadToString(posicionCantidad* pos){
-	char* posX=string_itoa((pos->posicion).x);
-	char* posY=string_itoa((pos->posicion).y);
-	char* cantidad=string_itoa(pos->cantidad);
-	char * buffer=string_new();
-	string_append(&buffer,posX );
-	string_append(&buffer,"-");
-	string_append(&buffer,posY );
-	string_append(&buffer, "=" );
-	string_append(&buffer,cantidad);
-	string_append(&buffer,"\n" );
 
-	free(posX);
-	free(posY);
-	free(cantidad);
+		char* posX=string_itoa((pos->posicion).x);
+		char* posY=string_itoa((pos->posicion).y);
+		char* cantidad=string_itoa(pos->cantidad);
+		char * buffer=string_new();
+		string_append(&buffer,posX );
+		string_append(&buffer,"-");
+		string_append(&buffer,posY );
+		string_append(&buffer, "=" );
+		string_append(&buffer,cantidad);
+		string_append(&buffer,"\n" );
 
-	return buffer;
+		free(posX);
+		free(posY);
+		free(cantidad);
+
+		return buffer;
 }
 
 char* listaPosicionCantidadToString(t_list* lista){
 	char* buffer=string_new();
-
-	for(uint32_t i=0; i<list_size(lista);i++){
-		posicionCantidad* actual= (posicionCantidad*) list_get(lista, i);
-
-		char* stringActual=posicionCantidadToString(actual);
-		//log_info(gamecardLogger2, "stringActual: %s", stringActual);
-		string_append(&buffer, stringActual);
-		free(stringActual);
-	}
+			for(uint32_t i=0; i<list_size(lista);i++){
+				posicionCantidad* actual= (posicionCantidad*) list_get(lista, i);
+				char* stringActual=posicionCantidadToString(actual);
+				log_info(gamecardLogger2, "stringActual: %s", stringActual);
+				string_append(&buffer, stringActual);
+				free(stringActual);
+			}
 	return buffer;
-
 }
 
 void actualizarPosicionesArchivo(archivoHeader* archivo, t_list* listaPosicionCantidad){//listaPosicionCantidad
 	if(archivo->tipo==ARCHIVO){
-
 		char* listaString=listaPosicionCantidadToString(listaPosicionCantidad);
-		//log_info(gamecardLogger2, "string de lista: %s", listaString);
+		log_info(gamecardLogger2, "string de lista: %s", listaString);
 		reescribirArchivo(archivo->nombreArchivo, listaString);
 	}
+}
+
+void reiniciarArchivoBloque(uint32_t idBloque){
+
+	FILE* archivoBloque = fopen(pathBloque(idBloque),"w+");
+	fclose(archivoBloque);
+
+	uint32_t blockfd = open(pathBloque(idBloque),O_RDWR| S_IRUSR | S_IWUSR,0777);
+			ftruncate(blockfd,tallGrass.block_size);
+			close(blockfd);
+}
+
+void reiniciarBloquesDeArchivo(archivoHeader* headerPoke){
 
 
+
+	for(uint32_t i;i<list_size(headerPoke->bloquesUsados);i++){
+		blockHeader* bloque = list_get(headerPoke->bloquesUsados,i);
+		reiniciarArchivoBloque(bloque->id);
+	}
 
 }
