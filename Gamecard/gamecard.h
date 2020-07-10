@@ -86,10 +86,10 @@ typedef struct{
 	uint32_t id;
 } pokemonEnPosicion;
 
-typedef struct{
-	posicion posicion;
-	uint32_t cantidad;
-}posicionCantidad;
+//typedef struct{
+//	posicion posicion;
+//	uint32_t cantidad;
+//}posicionCantidad;
 
 typedef struct{
 	char* pokemon;
