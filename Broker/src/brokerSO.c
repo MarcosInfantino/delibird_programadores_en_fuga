@@ -39,8 +39,8 @@ int main(void) {
 	//levantarDatosDeConfig("Broker.config", 1); 			//1 para datos de config, otro para hardcode
 	//levantarDatosDeConfig("pruebaBaseBroker.config", 1);
 	//levantarDatosDeConfig("pruebaBS.config", 1);
-	levantarDatosDeConfig("pruebaConsolidacion.config", 1);
-
+	//levantarDatosDeConfig("pruebaConsolidacion.config", 1);
+	levantarDatosDeConfig("pruebaCompactacion.config", 1);
 	loggerBroker = iniciar_logger("loggerBroker.log", "BROKER");
 
 	mutexMemoria = malloc(sizeof(pthread_mutex_t));
@@ -218,7 +218,7 @@ void meterEnCola( colaMensajes* structCola, paquete * paq, uint32_t  socket){
 	send(socket,(void*)(&contador.contador),sizeof(uint32_t),0);
 	pthread_mutex_unlock(contador.mutexContador);
 	registrarMensajeEnMemoria(contador.contador, paq, algoritmoMemoria);
-
+	printf("Termino de registrar el mensaje\n");
 	pushColaMutex(structCola->cola, (void *) paq);
 
 	sem_post(structCola->mensajesEnCola);

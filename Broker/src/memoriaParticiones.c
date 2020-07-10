@@ -33,6 +33,7 @@ particion* particionLibreALaIzquierda(particion* particionLibreNueva){
 bool hayParticionLibreALaDerecha(particion* particionLibreNueva){
 	for(int i = 0; i<sizeListaMutex(particionesLibres); i++){
 		particion* partiActual = getListaMutex(particionesLibres, i);
+		printf("PartiActual: base: %i, size: %i\n", partiActual->offset, partiActual->sizeParticion);
 		if(partiActual->offset == (particionLibreNueva->offset + particionLibreNueva->sizeParticion)){
 			printf("Hay para consolidar a derecha\n");
 			return true;
@@ -44,6 +45,9 @@ bool hayParticionLibreALaDerecha(particion* particionLibreNueva){
 particion* particionLibreALaDerecha(particion* particionLibreNueva){
 	for(int i = 0; i<sizeListaMutex(particionesLibres); i++){
 		particion* partiActual = getListaMutex(particionesLibres, i);
+		printf("EL size de las libre es: %i\n", sizeListaMutex(particionesLibres));
+//		printf("La parti libre base: %i size: %i", particionLibreNueva->offset, particionLibreNueva->sizeParticion);
+//		printf("La parti actual base: %i size: %i", partiActual->offset, partiActual->sizeParticion);
 		if(partiActual->offset == (particionLibreNueva->offset + particionLibreNueva->sizeParticion)){
 			removeListaMutex(particionesLibres, i);
 			return partiActual;
@@ -55,6 +59,8 @@ particion* particionLibreALaDerecha(particion* particionLibreNueva){
 bool hayParticionLibreALaIzquierda(particion* particionLibre){
 	for(int i = 0; i<sizeListaMutex(particionesLibres); i++){
 		particion* partiActual = getListaMutex(particionesLibres, i);
+		printf("EL size de las libre es: %i\n", sizeListaMutex(particionesLibres));
+		//printf("PartiActual: base: %i, size: %i\n", partiActual->offset, partiActual->sizeParticion);
 		if(partiActual->offset + partiActual->sizeParticion == particionLibre->offset){
 			printf("Hay para consolidar a izquierda\n");
 			return true;
@@ -66,17 +72,20 @@ bool hayParticionLibreALaIzquierda(particion* particionLibre){
 void consolidarSiSePuede(particion* particionLibre){
 	printf("Entro a consolidar\n");
 	 if(hayParticionLibreALaDerecha(particionLibre)== true){
+		 printf("hay a la derecha\n");
 		 particion* partAConsolidar = particionLibreALaDerecha(particionLibre);
 		 particionLibre->sizeParticion = particionLibre->sizeParticion + partAConsolidar->sizeParticion;
 		 destroyParticionLibre(partAConsolidar);
 		 printf("Mi particion consolidada comienza en: %i\n", particionLibre->offset);
 	 }else if(hayParticionLibreALaIzquierda(particionLibre)==true){
+		 printf("hay a la izquierda\n");
 		 particion* partAConsolidar = particionLibreALaIzquierda(particionLibre);
 		 particionLibre->offset = partAConsolidar->offset;
 		 particionLibre->sizeParticion = particionLibre->sizeParticion + partAConsolidar->sizeParticion;
 		 printf("Como queda despues de consolidar: base: %i, size: %i\n", particionLibre->offset, particionLibre->sizeParticion);
 		 destroyParticionLibre(partAConsolidar);
 	 }
+	 printf("No se puede consolidar\n");
 }
 
 void eliminarParticion (particion* part){
@@ -86,6 +95,7 @@ void eliminarParticion (particion* part){
 	partiNueva->estadoParticion = PARTICION_LIBRE;
 	addListaMutex(particionesLibres, (void*)partiNueva);
 	log_info(loggerBroker, "Elimino particion que comienza en: %i", part->offset);
+	printf("Elimino particion base: %i, size: %i\n", partiNueva->offset, partiNueva->sizeParticion);
 	removeAndDestroyElementListaMutex(particionesOcupadas, 0, destroyParticionOcupada);
 	consolidarSiSePuede(partiNueva);
 }
@@ -126,6 +136,7 @@ void registrarEnParticiones(msgMemoriaBroker* mensajeNuevo){
 	particionLibre = obtenerParticionLibrePARTICIONES(mensajeNuevo->sizeStream);
 	if(particionLibre == NULL){
 		cantidadBusquedasFallidas++;
+		printf("Cantidad de busquedas fallidas: %i\n", cantidadBusquedasFallidas);
 		if(sePuedeCompactar()){
 			compactar();
 			particionLibre = obtenerParticionLibrePARTICIONES(mensajeNuevo->sizeStream);
@@ -140,6 +151,7 @@ void registrarEnParticiones(msgMemoriaBroker* mensajeNuevo){
 		}
 	}
 	asignarMensajeAParticion(particionLibre, mensajeNuevo);
+	printf("Asigno mensaje a particion\n");
 }
 
 void asignarMensajeAParticion(particion* partiLibre, msgMemoriaBroker* mensaje){
@@ -197,15 +209,29 @@ uint32_t cantidadMemoriaLibre (){
 	return memoriaLibre;
 }
 
+//bool noHayNingunaSuficientementeGrande(uint32_t tamStream){
+//	for(int i =0; i<sizeListaMutex(particionesLibres); i++){
+//		particion* parti = getListaMutex(particionesLibres, i);
+//		if(parti->sizeParticion>=tamStream){
+//			return true;
+//		}
+//	}
+//	return false;
+//}
+
 particion* obtenerParticionLibrePARTICIONES(uint32_t tamStream){
 	auxTamanioStreamGlobal = tamStream;
 
 	if(sizeListaMutex(particionesLibres) == 0 || cantidadMemoriaLibre()<tamStream){
 		return NULL;
 	}
-
+	printf("Entro a ver si hay libres\n");
+	printf("El size es: %i\n", sizeListaMutex(particionesLibres));
 	if (algoritmoParticionLibre == FIRST_FIT){
-		list_sort_Mutex(particionesLibres, menorAmayorSegunOffset);
+		if(sizeListaMutex(particionesLibres)>1){
+			list_sort_Mutex(particionesLibres, menorAmayorSegunOffset);
+			printf("Ordeno lista\n");
+		}
 		particion* pSeleccionadaFIRST = (particion*)list_remove_by_condition_Mutex(particionesLibres, esSuficientementeGrandeParaElMSG);
 		printf("FIRST FIT offset %i\n", pSeleccionadaFIRST->offset);
 		return pSeleccionadaFIRST;
@@ -225,9 +251,10 @@ void compactar(){
 	list_sort_Mutex(particionesOcupadas, menorAmayorSegunOffset);
 	for(int i=0; i<sizeListaMutex(particionesOcupadas); i++){
 		elemento = getListaMutex(particionesOcupadas, i);
-		memcpy(memoria + base, memoria + elemento->offset, elemento->mensaje->sizeStream);
+		memcpy(memoria + base, memoria + elemento->offset, elemento->sizeParticion);
 		elemento->offset = base;
-		base  += elemento->mensaje->sizeStream;
+		base += elemento->sizeParticion;
+		printf("La particion ocupada tiene base: %i y size: %i\n", elemento->offset, elemento->sizeParticion);
 	}
 	log_info(loggerBroker, "Se realiza la compactacion");
 	generarParticionLibre(base);
@@ -239,11 +266,15 @@ void generarParticionLibre(uint32_t base){
 	nuevaParticion->offset = base;
 	nuevaParticion->sizeParticion = tamMemoria - base;
 	nuevaParticion->estadoParticion = PARTICION_LIBRE;
-
-	for(int j=0; j<sizeListaMutex(particionesLibres); j++){
-		removeAndDestroyElementListaMutex(particionesLibres,j,destroyParticionLibre);
+	printf("La particion libre generada es: base: %i, size: %i\n", nuevaParticion->offset,nuevaParticion->sizeParticion);
+	uint32_t size = sizeListaMutex(particionesLibres);
+	for(int j=0; j<size; j++){
+		printf("Size lista: %i\n", sizeListaMutex(particionesLibres));
+		removeAndDestroyElementListaMutex(particionesLibres, 0, destroyParticionLibre);
 	}
+	printf("El size luego de eliminar es: %i\n", sizeListaMutex(particionesLibres));
 	addListaMutex(particionesLibres,(void*) nuevaParticion);
+	printf("El size de particionesLibres es: %i\n", sizeListaMutex(particionesLibres));
 }
 
 void destroyParticionLibre(void* parti){

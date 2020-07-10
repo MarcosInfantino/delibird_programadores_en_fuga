@@ -26,42 +26,14 @@ void definirComienzoDeMemoria(){
 	}
 }
 
-paquete* generarStreamParaAlmacenar(paquete* paq){
-//	switch(paq->tipoMensaje){
-//		case APPEARED_POKEMON: ;
-//			mensajeAppeared* msjApp = deserializarAppeared(paq->stream);
-//			mensajeAppeared* msjAppNuevo = llenarAppearedMemoria(msjApp->pokemon, msjApp->posX, msjApp->posY);
-//			paq->stream = serializarAppeared(msjAppNuevo);
-//			paq->sizeStream -= 1;
-//			return paq;
-//			break;
-//		case NEW_POKEMON:
-//			return NULL;
-//			break;
-//		case CAUGHT_POKEMON:;
-//			return NULL;
-//			break;
-//		case CATCH_POKEMON:
-//			return NULL;
-//			break;
-//		case GET_POKEMON:
-//			return NULL;
-//			break;
-//		case LOCALIZED_POKEMON:
-//			return NULL;
-//			break;
-//	}
-	return NULL;
-}
-
 void registrarMensajeEnMemoria(uint32_t idMensaje, paquete* paq, algoritmoMem metodo){
 	log_info(brokerLogger2, "Entro a registrar mensaje en memoria");
-	if(paq->tipoMensaje == CATCH_POKEMON || paq->tipoMensaje == GET_POKEMON){
-		if(yaEstaEnMemoria(paq)){
-			log_info(brokerLogger2, "el msj ya esta");
-			return;
-		}
-	}
+//	if(paq->tipoMensaje == CATCH_POKEMON || paq->tipoMensaje == GET_POKEMON){
+//		if(yaEstaEnMemoria(paq)){
+//			log_info(brokerLogger2, "el msj ya esta");
+//			return;
+//		}
+//	}
 	msgMemoriaBroker* msgNuevo = malloc(sizeof(msgMemoriaBroker));
 	msgNuevo->cola          = paq->tipoMensaje;
 	msgNuevo->idMensaje     = idMensaje;
