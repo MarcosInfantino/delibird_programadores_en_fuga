@@ -12,7 +12,7 @@
 #include "memoria.h"
 #include "files.h"
 #include "memoriaParticiones.h"
-
+//./gameboy SUSCRIPTOR CAUGHT_POKEMON 10
 //int main(void){
 ////	mensajeAppeared* msg= llenarAppeared("Pikachu", 0, 0);
 ////	void* streamMensaje= serializarAppeared(msg);
@@ -248,7 +248,9 @@ void * chequearMensajesEnCola(void * colaVoid){
 		sem_wait(cola->mensajesEnCola);
 		log_info(brokerLogger2,"Comienza el proceso de envío del mensaje a todos los suscriptores.");
 		paquete* paq = (paquete*) popColaMutex(cola->cola);
+
 		void * paqSerializado = serializarPaquete(paq);
+
 
 		for(i = 0; i < sizeListaMutex(cola->suscriptores) ;i ++){
 			uint32_t * socketActual = (uint32_t *) getListaMutex(cola->suscriptores, i);

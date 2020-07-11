@@ -28,19 +28,22 @@ void definirComienzoDeMemoria(){
 
 void registrarMensajeEnMemoria(uint32_t idMensaje, paquete* paq, algoritmoMem metodo){
 	log_info(brokerLogger2, "Entro a registrar mensaje en memoria");
-//	if(paq->tipoMensaje == CATCH_POKEMON || paq->tipoMensaje == GET_POKEMON){
-//		if(yaEstaEnMemoria(paq)){
-//			log_info(brokerLogger2, "el msj ya esta");
-//			return;
-//		}
-//	}
+	if(paq->tipoMensaje == CATCH_POKEMON || paq->tipoMensaje == GET_POKEMON){
+		if(yaEstaEnMemoria(paq)){
+			log_info(brokerLogger2, "el msj ya esta");
+			return;
+		}
+	}
 	msgMemoriaBroker* msgNuevo = malloc(sizeof(msgMemoriaBroker));
 	msgNuevo->cola          = paq->tipoMensaje;
 	msgNuevo->idMensaje     = idMensaje;
 	msgNuevo->subsACK       = inicializarListaMutex();
 	msgNuevo->subsYaEnviado = inicializarListaMutex();
 	msgNuevo->sizeStream 	= paq->sizeStream;
-	msgNuevo->stream 		= paq->stream;
+	msgNuevo->stream=paq->stream;
+//	msgNuevo->stream 		= malloc(msgNuevo->sizeStream);
+//	memcpy(msgNuevo->stream , paq->stream, msgNuevo->sizeStream);
+
 	msgNuevo->modulo = paq->modulo;
 
 	uint32_t sizePrevio;
@@ -51,8 +54,8 @@ void registrarMensajeEnMemoria(uint32_t idMensaje, paquete* paq, algoritmoMem me
 		log_info(brokerLogger2, "ITERACION: %i", iteraciones);
 		iteraciones = iteraciones + 1;
 		pthread_mutex_lock(mutexMemoria);
-		particion* part = (particion*) getListaMutex(particionesLibres,0);
-		log_info(brokerLogger2, "Mi primera particion tiene offset: %i", part -> offset);
+//		particion* part = (particion*) getListaMutex(particionesLibres,0);
+//		log_info(brokerLogger2, "Mi primera particion tiene offset: %i", part -> offset);
 		registrarEnParticiones(msgNuevo);
 		log_info(brokerLogger2, "Registre en particiones");
 		pthread_mutex_unlock(mutexMemoria);
@@ -103,8 +106,13 @@ void guardarMensajeACK (paquete* paq, uint32_t socket){
 }
 
 bool estaEnListaEnviados (uint32_t socket, msgMemoriaBroker* mensaje){
+	log_info(brokerLogger2, "SOCKET: %i", socket);
 	for(int i =0; i<sizeListaMutex(mensaje->subsYaEnviado); i++){
-		if(*(uint32_t*)getListaMutex(mensaje->subsYaEnviado, i) == socket){ //tengo que cambiar el void* por un uint32_t
+		log_info(brokerLogger2, "sizeStream: %i", mensaje->sizeStream);
+		uint32_t* intActual=((uint32_t*)getListaMutex(mensaje->subsYaEnviado, i));
+		log_info(brokerLogger2, "intActual: %i", intActual);
+		if(*intActual == socket){ //tengo que cambiar el void* por un uint32_t
+			log_info(brokerLogger2, "hola");
 			return true;
 		}
 	}
@@ -113,17 +121,21 @@ bool estaEnListaEnviados (uint32_t socket, msgMemoriaBroker* mensaje){
 
 void guardarYaEnviados (paquete* paq, uint32_t socket){
 	msgMemoriaBroker* mensaje = buscarMensajeEnMemoria(paq->idCorrelativo);
+	log_info(brokerLogger2, "ENCIMA LOS VOLVIERON A VOTAR");
 	if(mensaje == NULL){
 		printf("No se encontró el mensaje en memoria, ERROR");
-		return;
+
 	}
-	if(estaEnListaEnviados (socket, mensaje)){
-		printf("Ya esta en la lista de enviados");
-		return;
+//	else if(estaEnListaEnviados (socket, mensaje)){
+//		printf("Ya esta en la lista de enviados");
+//
+//	}
+	else{
+		addListaMutex(mensaje->subsYaEnviado, (void*) socket);
 	}
-	pthread_mutex_lock(mutexMemoria);
-	addListaMutex(mensaje->subsYaEnviado, (void*) socket);
-	pthread_mutex_unlock(mutexMemoria);
+
+
+
 }
 
 //void guardarEnListaMemoria(uint32_t idMensaje, uint32_t socket, ListasMemoria lista){
@@ -195,7 +207,9 @@ void crearDumpDeCache(){
 
 bool yaEstaEnMemoria(paquete* paq){
 	switch(paq->tipoMensaje){
-	case CATCH_POKEMON:
+	case CATCH_POKEMON:;
+		mensajeCatch* msg=deserializarCatch(paq->stream);
+		log_info(brokerLogger2, "POKEMOOOOOOOOOOOOOOON: %s", msg->pokemon);
 		return yaSeGuardoEnMemoria(deserializarCatch(paq->stream), NULL);
 		break;
 	case GET_POKEMON:
@@ -210,21 +224,28 @@ bool yaEstaEnMemoria(paquete* paq){
 bool existeMensajeEnParticionesDinamicas(mensajeCatch* msgCatch, mensajeGet* msgGet){
 	log_info(brokerLogger2, "entro a ver si existe mensaje");
 	for(int i = 0; i < sizeListaMutex(particionesOcupadas); i++){
-		particion* partActual = getListaMutex (particionesOcupadas, i);
-		if(msgCatch != NULL && partActual->mensaje->cola == CATCH_POKEMON){
+		particion* partActual = (particion*)getListaMutex (particionesOcupadas, i);
 
+		mensajeCatch* msg=deserializarCatch(partActual->mensaje->stream);
+		log_info(brokerLogger2, "PARTiCION DESERIALIZADA %s", msg->pokemon);
+		if(msgCatch != NULL && partActual->mensaje->cola == CATCH_POKEMON){
+			printf("A NISMAN LO MATARON\n");
 			if(compararCatch(deserializarCatch(partActual->mensaje->stream), msgCatch)){
+				printf("Catch\n");
 				return true;
 			}
 
 		}else if(msgGet != NULL && partActual->mensaje->cola == GET_POKEMON){
-
+			printf("A NISMAN LO MATARON\n");
 			if(compararGet(deserializarGet(partActual->mensaje->stream), msgGet)){
+				printf("get\n");
 				return true;
 			}
 
 		}
 	}
+
+	printf("CRISTINA KIRCHNER\n");
 	return false;
 }
 
@@ -268,9 +289,11 @@ bool yaSeGuardoEnMemoria(mensajeCatch* msgCatch, mensajeGet* msgGet){
 bool compararCatch(mensajeCatch*  elemLista, mensajeCatch*  msgCatch){
 	if(strcmp(elemLista->pokemon, msgCatch->pokemon) == 0){
 		if(elemLista->posX == msgCatch->posX && elemLista->posY == msgCatch->posY){
+
 			return true;
 		}
 	}
+
 		return false;
 }
 

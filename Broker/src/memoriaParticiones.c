@@ -71,13 +71,13 @@ bool hayParticionLibreALaIzquierda(particion* particionLibre){
 
 void consolidarSiSePuede(particion* particionLibre){
 	printf("Entro a consolidar\n");
-	 if(hayParticionLibreALaDerecha(particionLibre)== true){
+	 if(hayParticionLibreALaDerecha(particionLibre)){
 		 printf("hay a la derecha\n");
 		 particion* partAConsolidar = particionLibreALaDerecha(particionLibre);
 		 particionLibre->sizeParticion = particionLibre->sizeParticion + partAConsolidar->sizeParticion;
 		 destroyParticionLibre(partAConsolidar);
 		 printf("Mi particion consolidada comienza en: %i\n", particionLibre->offset);
-	 }else if(hayParticionLibreALaIzquierda(particionLibre)==true){
+	 }else if(hayParticionLibreALaIzquierda(particionLibre)){
 		 printf("hay a la izquierda\n");
 		 particion* partAConsolidar = particionLibreALaIzquierda(particionLibre);
 		 particionLibre->offset = partAConsolidar->offset;
@@ -90,6 +90,7 @@ void consolidarSiSePuede(particion* particionLibre){
 
 void eliminarParticion (particion* part){
 	particion* partiNueva = malloc(sizeof(particion));
+	log_info(brokerLogger2,"---------------------%i",part->offset );
 	partiNueva->offset = part->offset;
 	partiNueva->sizeParticion = part->sizeParticion;
 	partiNueva->estadoParticion = PARTICION_LIBRE;
@@ -150,8 +151,12 @@ void registrarEnParticiones(msgMemoriaBroker* mensajeNuevo){
 			registrarEnParticiones(mensajeNuevo);
 		}
 	}
-	asignarMensajeAParticion(particionLibre, mensajeNuevo);
-	printf("Asigno mensaje a particion\n");
+
+	if(particionLibre != NULL){
+		asignarMensajeAParticion(particionLibre, mensajeNuevo);
+	}
+
+	//printf("Asigno mensaje a particion\n");
 }
 
 void asignarMensajeAParticion(particion* partiLibre, msgMemoriaBroker* mensaje){
@@ -172,7 +177,9 @@ void asignarMensajeAParticion(particion* partiLibre, msgMemoriaBroker* mensaje){
 	partiOcupada->tiempoDeCargaPart=TC;
 	TC++;
 	memcpy(memoria + partiOcupada->offset, mensaje->stream, mensaje->sizeStream);
-	//mensaje->stream = memoria + partiOcupada->offset;
+
+	mensaje->stream = memoria + partiOcupada->offset;//ESTO ES INDISPENSABLE NO SE QUIEN LO COMENTO PERO QUE NO VUELVA A PASAR Atte. Marquitos :)
+
 	addListaMutex(particionesOcupadas, (void*)partiOcupada);
 	log_info(loggerBroker, "Almaceno mensaje en partición que comienza en: %i", partiOcupada->offset);
 	printf("Ocupada generada: base: %i, size: %i\n", partiOcupada->offset, partiOcupada->sizeParticion);
@@ -186,7 +193,7 @@ void asignarMensajeAParticion(particion* partiLibre, msgMemoriaBroker* mensaje){
 		destroyParticionLibre (partiLibre);
 	}
 }
-particion* inicializarParticion(){
+particion* inicializarParticion(){//ESTA FUNCION ES AL PEDO
 	particion* particionADevolver = malloc(sizeof(particion));
 	particionADevolver->mensaje = malloc (sizeof(msgMemoriaBroker));
 	return particionADevolver;
@@ -201,7 +208,7 @@ particion* crearPrimeraParticionLibre(void){
 }
 
 uint32_t cantidadMemoriaLibre (){
-	uint32_t memoriaLibre;
+	uint32_t memoriaLibre=0;
 	for(int i = 0; i<sizeListaMutex(particionesLibres); i++){
 		particion* parti = (particion*)getListaMutex(particionesLibres,i);
 		memoriaLibre += parti->sizeParticion;
@@ -209,20 +216,23 @@ uint32_t cantidadMemoriaLibre (){
 	return memoriaLibre;
 }
 
-//bool noHayNingunaSuficientementeGrande(uint32_t tamStream){
-//	for(int i =0; i<sizeListaMutex(particionesLibres); i++){
-//		particion* parti = getListaMutex(particionesLibres, i);
-//		if(parti->sizeParticion>=tamStream){
-//			return true;
-//		}
-//	}
-//	return false;
-//}
+bool noHayNingunaSuficientementeGrande(uint32_t tamStream){
+
+	for(int i =0; i<sizeListaMutex(particionesLibres); i++){
+		particion* parti = (particion*)getListaMutex(particionesLibres, i);
+		if(parti->sizeParticion>=tamStream){
+			return false;
+		}
+	}
+	//printf("Holiiii\n");
+	return true;
+}
 
 particion* obtenerParticionLibrePARTICIONES(uint32_t tamStream){
-	auxTamanioStreamGlobal = tamStream;
+	//auxTamanioStreamGlobal = tamStream;
+	log_info(brokerLogger2,"----------------------------------- tamStream: %i", tamStream);
+	if(noHayNingunaSuficientementeGrande(tamStream) || cantidadMemoriaLibre()<tamStream){
 
-	if(sizeListaMutex(particionesLibres) == 0 || cantidadMemoriaLibre()<tamStream){
 		return NULL;
 	}
 	printf("Entro a ver si hay libres\n");
@@ -250,8 +260,17 @@ void compactar(){
 	uint32_t base = 0;
 	list_sort_Mutex(particionesOcupadas, menorAmayorSegunOffset);
 	for(int i=0; i<sizeListaMutex(particionesOcupadas); i++){
-		elemento = getListaMutex(particionesOcupadas, i);
-		memcpy(memoria + base, memoria + elemento->offset, elemento->sizeParticion);
+		elemento = (particion*)getListaMutex(particionesOcupadas, i);
+
+		void* aux= malloc(elemento->sizeParticion);
+		memcpy(aux, memoria + elemento->offset, elemento->sizeParticion);
+
+//		memcpy(memoria + base, memoria + elemento->offset, elemento->sizeParticion);
+		memcpy(memoria + base, aux, elemento->sizeParticion);
+
+		elemento->mensaje->stream=memoria + base;//IMPORTANTISIMO
+		free(aux);
+
 		elemento->offset = base;
 		base += elemento->sizeParticion;
 		printf("La particion ocupada tiene base: %i y size: %i\n", elemento->offset, elemento->sizeParticion);
