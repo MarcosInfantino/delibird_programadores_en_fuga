@@ -24,8 +24,15 @@
 #include "broker.h"
 #include <time.h>
 
+typedef enum{
+	LIBRE,
+	OCUPADO,
+	PARTICIONADO
+}nodeStatus;
+
 typedef struct {
 	uint32_t idMensaje;
+	uint32_t idCorrelativo;
 	uint32_t cola;
 	listaMutex* subsYaEnviado;
 	listaMutex* subsACK;
@@ -34,11 +41,6 @@ typedef struct {
 	uint32_t modulo;
 }msgMemoriaBroker;
 
-typedef enum{
-	LIBRE,
-	OCUPADO,
-	PARTICIONADO
-}nodeStatus;
 
 typedef struct{
 	nodeStatus status;
@@ -99,7 +101,7 @@ struct nodoMemoria* crearRaizArbol(void);
 struct nodoMemoria* inicializarNodo();
 void liberarNodo(struct nodoMemoria* nodo);
 
-void registrarMensajeEnMemoria(uint32_t idMensaje, paquete* paq, algoritmoMem metodo);
+void registrarMensajeEnMemoria(paquete* paq, algoritmoMem metodo);
 void registrarEnMemoriaBUDDYSYSTEM(msgMemoriaBroker* mensajeNuevo, struct nodoMemoria* partActual);
 
 void enviarMsjsASuscriptorNuevoBuddySystem(uint32_t colaParametro, uint32_t* socket);

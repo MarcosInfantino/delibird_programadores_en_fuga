@@ -355,9 +355,12 @@ void enviarMsjsASuscriptorNuevoBuddySystem(uint32_t colaParametro, uint32_t* soc
 		struct nodoMemoria* nodoEvaluado = (struct nodoMemoria*) getListaMutex (nodosOcupados, varI);
 		if(nodoEvaluado->mensaje->cola == colaParametro){
 			if(!envieMensajeDeNodoASocket(nodoEvaluado, socket)){
-				paquete * paqueteAEnviar = llenarPaquete(BROKER, nodoEvaluado->mensaje->cola, nodoEvaluado->mensaje->sizeStream,nodoEvaluado->mensaje->stream);
+				paquete * paqueteAEnviar = llenarPaquete(nodoEvaluado->mensaje->modulo, nodoEvaluado->mensaje->cola, nodoEvaluado->mensaje->sizeStream,nodoEvaluado->mensaje->stream);
 				paqueteAEnviar->id = nodoEvaluado->mensaje->idMensaje;
-				send(*socket, serializarPaquete(paqueteAEnviar), sizePaquete(paqueteAEnviar), 0);
+				paqueteAEnviar->idCorrelativo = nodoEvaluado->mensaje->idCorrelativo;
+				void* paqStream = serializarPaquete(paqueteAEnviar);
+				send(*socket, paqStream, sizePaquete(paqueteAEnviar), 0);
+				free(paqStream);
 				log_info(brokerLogger2, "GUARDO ENVIADO POR ENVIAR MENSAJES, id: %i, id cor: %i", paqueteAEnviar->id, paqueteAEnviar->idCorrelativo);
 				guardarYaEnviados(paqueteAEnviar, *socket);
 			}

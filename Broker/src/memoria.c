@@ -26,7 +26,7 @@ void definirComienzoDeMemoria(){
 	}
 }
 
-void registrarMensajeEnMemoria(uint32_t idMensaje, paquete* paq, algoritmoMem metodo){
+void registrarMensajeEnMemoria(paquete* paq, algoritmoMem metodo){
 	if(paq->tipoMensaje == CATCH_POKEMON || paq->tipoMensaje == GET_POKEMON){
 		if(yaEstaEnMemoria(paq)){
 			log_info(brokerLogger2, "el msj ya esta");
@@ -35,7 +35,8 @@ void registrarMensajeEnMemoria(uint32_t idMensaje, paquete* paq, algoritmoMem me
 	}
 	msgMemoriaBroker* msgNuevo = malloc(sizeof(msgMemoriaBroker));
 	msgNuevo->cola          = paq->tipoMensaje;
-	msgNuevo->idMensaje     = idMensaje;
+	msgNuevo->idMensaje     = paq->id;
+	msgNuevo->idCorrelativo = paq->idCorrelativo;
 	msgNuevo->subsACK       = inicializarListaMutex();
 	msgNuevo->subsYaEnviado = inicializarListaMutex();
 	msgNuevo->sizeStream 	= paq->sizeStream;
@@ -315,6 +316,7 @@ void enviarMensajesPreviosEnMemoria(uint32_t* socket, uint32_t cola){
 		enviarMsjsASuscriptorNuevoBuddySystem (cola, socket);
 		break;
 	case PARTICIONES_DINAMICAS:
+		//TODO: Revisar esto, fijarse en buddy tema id correlativos y id del mensaje
 		enviarMsjsASuscriptorNuevoParticiones (cola, socket);
 		break;
 	default:

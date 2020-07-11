@@ -219,7 +219,7 @@ void meterEnCola( colaMensajes* structCola, paquete * paq, uint32_t  socket){
 	insertarIdPaquete(paq,contador.contador);
 	send(socket,(void*)(&contador.contador),sizeof(uint32_t),0);
 	pthread_mutex_unlock(contador.mutexContador);
-	registrarMensajeEnMemoria(contador.contador, paq, algoritmoMemoria);
+	registrarMensajeEnMemoria(paq, algoritmoMemoria);
 	printf("Termino de registrar el mensaje\n");
 	pushColaMutex(structCola->cola, (void *) paq);
 

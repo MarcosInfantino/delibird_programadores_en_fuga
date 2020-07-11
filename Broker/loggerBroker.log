@@ -2764,3 +2764,16 @@
 [INFO] 17:08:04:648 BROKER/(5575:5603): Se almacena mensaje en memoria en posición: 0x20 -.-
 [INFO] 17:08:04:650 BROKER/(5575:5606): Se almacena mensaje en memoria en posición: 0x10 -.-
 [INFO] 17:08:15:654 BROKER/(5575:5612): Se almacena mensaje en memoria en posición: (nil) -.-
+[INFO] 17:46:22:153 BROKER/(3852:3852): Estoy escuchando!
+[INFO] 17:47:12:984 BROKER/(3852:3885): Se almacena mensaje en memoria en posición: (nil) -.-
+[INFO] 17:47:12:985 BROKER/(3852:3888): Se almacena mensaje en memoria en posición: 0x4 -.-
+[INFO] 17:47:12:989 BROKER/(3852:3890): Se almacena mensaje en memoria en posición: 0x20 -.-
+[INFO] 17:47:12:990 BROKER/(3852:3894): Se almacena mensaje en memoria en posición: 0x10 -.-
+[INFO] 17:47:22:0 BROKER/(3852:3907): Se almacena mensaje en memoria en posición: 0x20 -.-
+[INFO] 17:47:57:647 BROKER/(3940:3940): Estoy escuchando!
+[INFO] 17:48:03:459 BROKER/(3966:3966): Estoy escuchando!
+[INFO] 17:48:05:924 BROKER/(3966:3986): Se almacena mensaje en memoria en posición: (nil) -.-
+[INFO] 17:48:05:925 BROKER/(3966:3989): Se almacena mensaje en memoria en posición: 0x4 -.-
+[INFO] 17:48:05:926 BROKER/(3966:3992): Se almacena mensaje en memoria en posición: 0x20 -.-
+[INFO] 17:48:05:927 BROKER/(3966:3996): Se almacena mensaje en memoria en posición: 0x10 -.-
+[INFO] 17:48:16:933 BROKER/(3966:4003): Se almacena mensaje en memoria en posición: (nil) -.-
