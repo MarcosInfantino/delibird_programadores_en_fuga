@@ -26,6 +26,13 @@ bool archivoExiste(char* path) {
 	}
 }
 
+int32_t existe(char *path){
+  int32_t fd=open(path, O_RDONLY);
+  if (fd<0)
+    return (errno==ENOENT)?-1:-2;
+  close(fd);
+  return 0;
+}
 
 uint32_t directorioExiste (char *path){
   int descriptor = open(path, O_RDONLY);

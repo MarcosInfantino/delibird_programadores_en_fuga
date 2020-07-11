@@ -95,7 +95,7 @@ typedef struct{
 	char* pokemon;
 	uint32_t id;
 	uint32_t cantPosiciones;
-	t_list* posicionCantidad;
+	posicion* posiciones;
 } pokemonADevolver;
 
 typedef struct{
@@ -113,7 +113,11 @@ tallGrassHeader tallGrass;
 char* mmapBitmap;
 t_list* listaBloques;
 t_log* gamecardLogger2;
-
+pthread_t threadSuscripcionNew;
+pthread_t threadSuscripcionCatch;
+pthread_t threadSuscripcionGet;
+pthread_t hiloServidorDeEscucha;
+pthread_t hiloConexionBroker;
 struct nodoArbolDirectorio* raizDirectorio;
 
 listaMutex* listaArchivos;//lista de archivoHeader
@@ -197,4 +201,8 @@ void reiniciarBloquesDeArchivo(archivoHeader* headerPoke);
 void reiniciarArchivoBloque(uint32_t idBloque);
 void setearSize(archivoHeader* archivo,uint32_t size);
 void obtenerListaBloquesConfig(archivoHeader* archivo, char* estado);
+posicion* conseguirPosicionesCantidad(archivoHeader* pokeArchivo);
+int32_t existe(char *path);
+uint32_t reconectarseAlBroker(uint32_t cliente,void* direccionServidor,socklen_t length);
+int crearHiloConexionBroker(void* config, pthread_t* hilo);
 #endif /* GAMECARD_H_ */

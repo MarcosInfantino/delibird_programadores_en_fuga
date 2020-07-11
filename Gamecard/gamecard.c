@@ -77,6 +77,7 @@ int main(void) {
 	tiempoRetardoGC = config_get_int_value(configGamecard, "TIEMPO_DE_RETARDO_OPERACION"); //
 	tiempoReintentoOperacion=config_get_int_value(configGamecard, "TIEMPO_DE_REINTENTO_OPERACION"); //
 	puntoMontaje = config_get_string_value(configGamecard, "PUNTO_MONTAJE_TALLGRASS");
+	tiempoReconexionGC = config_get_int_value(configGamecard, "TIEMPO_DE_REINTENTO_CONEXION");
 	log_info(gamecardLogger2,"Puerto Broker:%i",puertoBrokerGC);
 
 	crearDirectorio("Files","/home/utnso/tp-2020-1c-Programadores-en-Fuga/Gamecard/TALL_GRASS/", DIRECTORIO);
@@ -86,43 +87,45 @@ int main(void) {
 	iniciarBitmap();
 	inicializarListaBloques();
 
-
+	crearHiloConexionBroker(configGamecard,&hiloConexionBroker);
 	//suscribirseColasBroker(configGamecard);
-	pthread_t hiloServidorDeEscucha;
 	crearHiloServidorGameboy(&hiloServidorDeEscucha);
+
 	return EXIT_SUCCESS;
+}
+
+int crearHiloConexionBroker(void* config, pthread_t* hilo){
+	uint32_t err=pthread_create(hilo,NULL,suscribirseColasBroker,(void*)config);
+				if(err!=0){
+					printf("Hubo un problema en la creación del hilo para conectarse al broker \n");
+					return err;
+				}
+
+	pthread_detach(*hilo);
+	return 0;
 }
 
 
 void* suscribirseColasBroker(void* config) {
 
-	t_config* confi = (t_config*) config;
-	tiempoReconexionGC = config_get_int_value(confi,"TIEMPO_DE_REINTENTO_CONEXION");
+	mensajeSuscripcion* mensajeSuscripcionNew=llenarSuscripcion(NEW_POKEMON);
+	mensajeSuscripcion * mensajeSuscripcionCatch=llenarSuscripcion(CATCH_POKEMON);
+	mensajeSuscripcion* mensajeSuscripcionGet=llenarSuscripcion(GET_POKEMON);
 
-	mensajeSuscripcion* mensajeNew = malloc(sizeof(mensajeSuscripcion));
-	mensajeSuscripcion * mensajeCatch = malloc(sizeof(mensajeSuscripcion));
-	mensajeSuscripcion* mensajeGet = malloc(sizeof(mensajeSuscripcion));
 
-	mensajeNew->cola = NEW_POKEMON;
-
-	mensajeCatch->cola = CATCH_POKEMON;
-
-	mensajeGet->cola = GET_POKEMON;
-
-	pthread_t threadSuscripcionNew;
-	pthread_create(&threadSuscripcionNew, NULL, suscribirseCola,(void*) mensajeNew);
+	pthread_create(&threadSuscripcionNew, NULL, suscribirseCola,(void*) (mensajeSuscripcionNew));
 	pthread_detach(threadSuscripcionNew);
 
-	pthread_t threadSuscripcionCatch;
-	pthread_create(&threadSuscripcionCatch, NULL, suscribirseCola,(void*) mensajeCatch);
+
+	pthread_create(&threadSuscripcionCatch, NULL, suscribirseCola,(void*) (mensajeSuscripcionCatch));
 	pthread_detach(threadSuscripcionCatch);
 
-	pthread_t threadSuscripcionGet;
-	pthread_create(&threadSuscripcionGet, NULL, suscribirseCola,(void*) mensajeGet);
+
+	pthread_create(&threadSuscripcionGet, NULL, suscribirseCola,(void*) (mensajeSuscripcionGet));
 	pthread_detach(threadSuscripcionGet);
 
 	while (1);
-	free(confi);
+
 	return NULL;
 }
 
@@ -130,6 +133,7 @@ void* suscribirseCola(void* msgSuscripcion) {
 	mensajeSuscripcion* msg = (mensajeSuscripcion*) msgSuscripcion;
 	uint32_t sizeStream = sizeof(uint32_t);
 	void* streamMsgSuscripcion = serializarSuscripcion(msg);
+	destruirSuscripcion(msg);
 	log_info(gamecardLogger2,"Voy a llenar el paquete");
 	paquete* paq = llenarPaquete(GAMECARD, SUSCRIPCION, sizeStream,streamMsgSuscripcion);
 
@@ -140,10 +144,19 @@ void* suscribirseCola(void* msgSuscripcion) {
 
 	uint32_t cliente = socket(AF_INET, SOCK_STREAM, 0);
 	log_info(gamecardLogger2,"cliente: %d", cliente);
-	while (connect(cliente, (void*) &direccionServidor,sizeof(direccionServidor)) < 0) {
-		log_info(gamecardLogger2,"Conexión fallida con el Broker reintentando en %i segundos...",tiempoReconexionGC);
-		sleep(tiempoReconexionGC);
+
+
+	if(connect(cliente, (void*) &direccionServidor,sizeof(direccionServidor)) <0){
+
+		reconectarseAlBroker(cliente,(void*) &direccionServidor,sizeof(direccionServidor));
+
 	}
+
+//	while (connect(cliente, (void*) &direccionServidor,sizeof(direccionServidor)) < 0) {
+//		log_info(gamecardLogger2,"Conexión fallida con el Broker reintentando en %i segundos...",tiempoReconexionGC);
+//		sleep(tiempoReconexionGC);
+//	}
+
 	log_info(gamecardLogger2,"Comienzo suscripcion a %i", paq->tipoMensaje);
 	uint32_t bytes = sizeof(uint32_t) * 5 + paq->sizeStream;
 
@@ -153,7 +166,9 @@ void* suscribirseCola(void* msgSuscripcion) {
 
 	send(cliente, stream, bytes, 0);
 
-	//free(stream);
+	destruirPaquete(paq);
+	free(stream);
+
 
 	uint32_t respuesta;
 	log_info(gamecardLogger2,"Espero respuesta");
@@ -166,9 +181,9 @@ void* suscribirseCola(void* msgSuscripcion) {
 			paquete* paqueteRespuesta = recibirPaquete(cliente);
 
 			while (enviarACK(cliente, GAMECARD, paqueteRespuesta->id) < 0) {
-
-				log_info(gamecardLogger2,"Conexión fallida con el Broker reintentando en %i segundos",tiempoReconexionGC);
-				sleep(tiempoReconexionGC);
+				reconectarseAlBroker(cliente,(void*) &direccionServidor,sizeof(direccionServidor));
+//				log_info(gamecardLogger2,"Conexión fallida con el Broker reintentando en %i segundos",tiempoReconexionGC);
+//				sleep(tiempoReconexionGC);
 
 			}
 
@@ -195,8 +210,8 @@ void* suscribirseCola(void* msgSuscripcion) {
 			}
 
 			while (send(cliente, (void*) (&respuesta), sizeof(uint32_t), 0) < 0) {
-				sleep(tiempoReconexionGC);
-				//reconectarseAlBroker(cliente, (void*) &direccionServidor,sizeof(direccionServidor));
+
+				reconectarseAlBroker(cliente, (void*) &direccionServidor,sizeof(direccionServidor));
 			}
 		}
 	} else {
@@ -206,6 +221,26 @@ void* suscribirseCola(void* msgSuscripcion) {
 	}
 	return NULL;
 }
+
+
+
+uint32_t reconectarseAlBroker(uint32_t cliente,void* direccionServidor,socklen_t length){
+	log_info(gamecardLogger2, "Conexión fallida con el Broker\n");
+	log_info(gamecardLogger2, "Reintentando conexión en %i segundos...\n",tiempoReconexionGC);
+	sleep(tiempoReconexionGC);
+	while(connect(cliente, direccionServidor,length)<0){
+		log_info(gamecardLogger2,"El reintento de conexión no fue exitoso\n");
+		log_info(gamecardLogger2, "Reintentando conexión en %i segundos...\n",tiempoReconexionGC);
+		sleep(tiempoReconexionGC);
+
+
+	}
+	//log_info(teamLogger, "El reintento de conexión fue exitoso\n");
+	return 0;
+}
+
+
+
 
 int crearHiloServidorGameboy(pthread_t* hilo) {
 	uint32_t err = pthread_create(hilo, NULL, iniciarServidorGameboy, NULL);
@@ -350,7 +385,7 @@ void* atenderNew(void* paq) {
 void enviarAppeared(pokemonEnPosicion* pokeEnPosicion) {
 	uint32_t cliente = crearSocketCliente(ipBrokerGC, puertoBrokerGC);
 	mensajeAppeared* msgAppeared = malloc(sizeof(mensajeAppeared));
-	llenarAppeared(pokeEnPosicion->pokemon,(pokeEnPosicion->posicion).x,(pokeEnPosicion->posicion).y);
+	msgAppeared = llenarAppeared(pokeEnPosicion->pokemon,(pokeEnPosicion->posicion).x,(pokeEnPosicion->posicion).y);
 //	msgAppeared->pokemon = pokeEnPosicion->pokemon;
 //	msgAppeared->posX = (pokeEnPosicion->posicion).x;
 //	msgAppeared->posY = (pokeEnPosicion->posicion).y;
@@ -379,14 +414,30 @@ void* atenderGet(void* paq) {
 	pokeADevolver->id = idGet;
 	log_info(gamecardLogger2,"Atiendo Get del pokemon: %s", msgGet->pokemon);
 
-	if(archivoExiste(string_from_format(pathFiles,pokeADevolver->pokemon))){
+//	int32_t resultloco = existe(string_from_format(pathFiles,pokeADevolver->pokemon));
+//
+//	log_info(gamecardLogger2,"%s",string_from_format("%s%s",pathFiles,pokeADevolver->pokemon));
+//	if(resultloco == 0){
+//		log_info(gamecardLogger2,"EXISTE");
+//	}else{
+//		log_info(gamecardLogger2,"NO EXISTE");
+//	}
+
+	if(archivoExiste(string_from_format("%s%s",pathFiles,pokeADevolver->pokemon))){
+		log_info(gamecardLogger2,"EXISTE");
 		archivoHeader* archivoPoke = obtenerArchivoPokemon(pokeADevolver->pokemon);
 		FILE* archivoMetadata = abrirArchivo(archivoPoke);
-		pokeADevolver->posicionCantidad = obtenerListaPosicionCantidadDeArchivo(archivoPoke);
+		t_list* listaPosCantidad=obtenerListaPosicionCantidadDeArchivo(archivoPoke);
+		uint32_t cantPosiciones = list_size(listaPosCantidad);
+		list_destroy_and_destroy_elements(listaPosCantidad,free);
+		pokeADevolver->cantPosiciones = cantPosiciones;
+		pokeADevolver->posiciones = conseguirPosicionesCantidad(archivoPoke);
 		sleep(tiempoRetardoGC);
 		cerrarArchivo(archivoPoke,archivoMetadata);
 	}else{
-		//pokeADevolver->posicionCantidad = NULL;
+		log_info(gamecardLogger2,"NO EXISTE");
+		pokeADevolver->posiciones = NULL;
+		pokeADevolver->cantPosiciones=0;
 	}
 
 	//Verificar que el pokemon este en nuestro FileSystem (si no encuentra mando posiciones vacias)
@@ -397,6 +448,13 @@ void* atenderGet(void* paq) {
 	//pokeADevolver->posicion= DEL FILESYSTEM
 	//free(msg);
 	//IF SUCCESS
+	log_info(gamecardLogger2,"Pokemon:%s",pokeADevolver->pokemon);
+	log_info(gamecardLogger2,"Cantidad de Posiciones:%i",pokeADevolver->cantPosiciones);
+
+	for(uint32_t i=0;i<pokeADevolver->cantPosiciones;i++){
+		posicion aux = *(pokeADevolver->posiciones+i);
+		log_info(gamecardLogger2,"Posicion: %i-%i",aux.x,aux.y);
+	}
 
 	enviarLocalized(pokeADevolver);
 	return NULL;
@@ -405,7 +463,7 @@ void* atenderGet(void* paq) {
 void enviarLocalized(pokemonADevolver* pokeADevolver) {
 	uint32_t cliente = crearSocketCliente(ipBrokerGC, puertoBrokerGC);
 	mensajeLocalized* msgLocalized = malloc(sizeof(mensajeLocalized));
-	msgLocalized = llenarLocalized(pokeADevolver->pokemon,pokeADevolver->posicionCantidad);
+	msgLocalized = llenarLocalized(pokeADevolver->pokemon,pokeADevolver->cantPosiciones,pokeADevolver->posiciones);
 	//msgLocalized->pokemon = pokeADevolver->pokemon;
 	//msgLocalized->cantidad = pokeADevolver->cantPosiciones;
 	//msgLocalized->arrayPosiciones = pokeADevolver->posicion;

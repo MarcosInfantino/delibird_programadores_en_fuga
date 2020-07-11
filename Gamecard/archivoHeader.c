@@ -510,8 +510,6 @@ void reiniciarArchivoBloque(uint32_t idBloque){
 
 void reiniciarBloquesDeArchivo(archivoHeader* headerPoke){
 
-
-
 	for(uint32_t i;i<list_size(headerPoke->bloquesUsados);i++){
 		blockHeader* bloque = list_get(headerPoke->bloquesUsados,i);
 		reiniciarArchivoBloque(bloque->id);
@@ -519,17 +517,17 @@ void reiniciarBloquesDeArchivo(archivoHeader* headerPoke){
 
 }
 
-//
-//t_list* conseguirPosicionesCantidad(archivoHeader* pokeArchivo){
-//	t_list* listaPosCantidad=obtenerListaPosicionCantidadDeArchivo(pokeArchivo);
-//	uint32_t cantPosiciones = list_size(listaPosCantidad);
-//	posicionCantidad* arrayPosicionCantidad = malloc(cantPosiciones*sizeof(posicionCantidad));
-//	for(uint32_t i=0;i<cantPosiciones;i++){
-//		posicionCantidad* auxPosCan = (posicionCantidad*) list_get(listaPosCantidad,i);
-//
-//		*(arrayPosicionCantidad+i) = *auxPosCan;
-//	}
-//	return arrayPosicionCantidad;
-//}
+
+posicion* conseguirPosicionesCantidad(archivoHeader* pokeArchivo){
+	t_list* listaPosCantidad=obtenerListaPosicionCantidadDeArchivo(pokeArchivo);
+	uint32_t cantPosiciones = list_size(listaPosCantidad);
+	posicion* arrayPosicion = malloc(cantPosiciones*sizeof(posicion));
+	for(uint32_t i=0;i<cantPosiciones;i++){
+		posicionCantidad* auxPosCan = (posicionCantidad*) list_get(listaPosCantidad,i);
+		posicion auxPos = auxPosCan->posicion;
+		*(arrayPosicion+i) = auxPos;
+	}
+	return arrayPosicion;
+}
 
 
