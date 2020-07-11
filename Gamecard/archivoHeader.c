@@ -518,6 +518,7 @@ void reiniciarBloquesDeArchivo(archivoHeader* headerPoke){
 	}
 
 }
+
 //
 //t_list* conseguirPosicionesCantidad(archivoHeader* pokeArchivo){
 //	t_list* listaPosCantidad=obtenerListaPosicionCantidadDeArchivo(pokeArchivo);
