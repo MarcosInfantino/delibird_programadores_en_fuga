@@ -62,11 +62,6 @@ typedef struct{
 } posicion;
 
 typedef struct{
-	posicion posicion;
-	uint32_t cantidad;
-}posicionCantidad;
-
-typedef struct{
 	uint32_t sizePokemon;
 	char* pokemon;
 	uint32_t posX;
@@ -100,9 +95,8 @@ typedef struct{
 typedef struct{
 	uint32_t sizePokemon;
 	char* pokemon;
-	//uint32_t cantidad;
-	//posicion* arrayPosiciones;
-	t_list* listaPosicionCantidad;
+	uint32_t cantidad;
+	posicion* arrayPosiciones;
 }mensajeLocalized;
 
 typedef struct{
@@ -143,8 +137,6 @@ typedef struct {
 	sem_t* mensajesEnCola;
 }colaMensajes;
 
-
-
 mensajeAppeared* llenarAppeared(char* pokemon, uint32_t posX, uint32_t posY);
 mensajeAppeared* llenarAppearedMemoria(char* pokemon, uint32_t posX, uint32_t posY);
 void* serializarAppeared(mensajeAppeared* mensaje);
@@ -171,8 +163,7 @@ void* serializarGet (mensajeGet* mensaje);
 mensajeGet* deserializarGet (void* streamRecibido);
 void destruirGet(mensajeGet* msg);
 
-//mensajeLocalized* llenarLocalized(char* pokemon, uint32_t cantidad, posicion* posiciones);
-mensajeLocalized* llenarLocalized(char* pokemon, t_list* listaPosicionCantidad);
+mensajeLocalized* llenarLocalized(char* pokemon, uint32_t cantidad, posicion* posiciones);
 void* serializarLocalized(mensajeLocalized* mensaje);
 void* serializarArrayPosiciones(posicion* pos, uint32_t cantidad);
 void* serializarPosicion(posicion* pos);
@@ -180,10 +171,6 @@ mensajeLocalized* deserializarLocalized(void* streamRecibido);
 posicion* deserializarArrayPosiciones(void* stream,uint32_t cantidad);
 posicion* deserializarPosicion(void* stream);
 void destruirLocalized(mensajeLocalized* msg);
-void* serializarListaPosicionCantidad(t_list* lista);
-void* serializarPosicionCantidad(posicionCantidad* posCant);
-posicionCantidad* deserializarPosicionCantidad(void* stream);
-t_list* deserializarListaPosicionCantidad(void* stream);
 
 mensajeSuscripcionTiempo* llenarSuscripcionTiempo(uint32_t cola, uint32_t tiempo);
 void* serializarSuscripcionTiempo(mensajeSuscripcionTiempo* mensaje);
@@ -208,7 +195,7 @@ void insertarIdCorrelativoPaquete(paquete* paq, uint32_t idCorrelativo);
 //mensajeACK* deserializarACK(void* stream);
 
 uint32_t crearSocketCliente (char* ip, uint32_t puerto);
-uint32_t sizeArgumentos (uint32_t colaMensaje, char* nombrePokemon, uint32_t sizeListaPosicionCantidad);
+uint32_t sizeArgumentos (uint32_t colaMensaje, char* nombrePokemon, uint32_t cantidadPokemon);
 
 uint32_t enviarACK(uint32_t socket, uint32_t modulo, uint32_t id);
 

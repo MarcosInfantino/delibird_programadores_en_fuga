@@ -65,17 +65,17 @@ void loggearMensaje (paquete* paqueteRespuesta, t_log* logger){
 			break;
 
 		case LOCALIZED_POKEMON: ;
-//			mensajeLocalized* msgLocalized = deserializarLocalized(paqueteRespuesta->stream);
-//			log_info(logger, "Recibi mensaje localized. El pokemon es: %s. La cantidad es: %i.\n",
-//					msgLocalized->pokemon, msgLocalized->cantidad);
-//			log_info(logger,"Las posiciones son: ");
-//			posicion* posActual=malloc(sizeof(posicion));
-//			for(int j = 0; j<msgLocalized->cantidad; j++){
-//				*posActual=*((msgLocalized->arrayPosiciones) + j);
-//				log_info(logger, "(%i,%i)", posActual->x, posActual->y);
-//			}
-//			free(posActual);
-//			destruirLocalized(msgLocalized);
+			mensajeLocalized* msgLocalized = deserializarLocalized(paqueteRespuesta->stream);
+			log_info(logger, "Recibi mensaje localized. El pokemon es: %s. La cantidad es: %i.\n",
+					msgLocalized->pokemon, msgLocalized->cantidad);
+			log_info(logger,"Las posiciones son: ");
+			posicion* posActual=malloc(sizeof(posicion));
+			for(int j = 0; j<msgLocalized->cantidad; j++){
+				*posActual=*((msgLocalized->arrayPosiciones) + j);
+				log_info(logger, "(%i,%i)", posActual->x, posActual->y);
+			}
+			free(posActual);
+			destruirLocalized(msgLocalized);
 			break;
 		}
 }

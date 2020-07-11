@@ -225,25 +225,14 @@ void* atenderLocalized(void* paq){
 	strcpy(pokemonAAgregar,msg->pokemon);
 	if(!especieFueLocalizada(msg->pokemon)&& localizedMeInteresa(paqueteLocalized)){
 		uint32_t i;
-//		for(i=0;i<msg->cantidad;i++){
-//			posicion posActual= *((msg->arrayPosiciones)+i);
-//			mensajeAppeared* msgAppeared=llenarAppeared(pokemonAAgregar,posActual.x,posActual.y);
-//			void* streamAppeared=serializarAppeared(msgAppeared);
-//			paquete* paqueteAppeared=llenarPaquete(TEAM,APPEARED_POKEMON, sizeArgumentos(APPEARED_POKEMON, msgAppeared->pokemon,0), streamAppeared);
-//			atenderAppeared(paqueteAppeared);
-//		}
-		for(i=0; i<list_size(msg->listaPosicionCantidad);i++){
-			posicionCantidad* posCantActual= (posicionCantidad*) list_get(msg->listaPosicionCantidad,i);
-			for(uint32_t j=0; j<posCantActual->cantidad;j++){
-				posicion posActual= posCantActual->posicion;
-				mensajeAppeared* msgAppeared=llenarAppeared(pokemonAAgregar,posActual.x,posActual.y);
-				void* streamAppeared=serializarAppeared(msgAppeared);
-				paquete* paqueteAppeared=llenarPaquete(TEAM,APPEARED_POKEMON, sizeArgumentos(APPEARED_POKEMON, msgAppeared->pokemon,0), streamAppeared);
-				atenderAppeared(paqueteAppeared);//pensar que pasaria si aca le mando un hilo al atender
-			}
+		for(i=0;i<msg->cantidad;i++){
+			posicion posActual= *((msg->arrayPosiciones)+i);
+			mensajeAppeared* msgAppeared=llenarAppeared(pokemonAAgregar,posActual.x,posActual.y);
+			void* streamAppeared=serializarAppeared(msgAppeared);
+			paquete* paqueteAppeared=llenarPaquete(TEAM,APPEARED_POKEMON, sizeArgumentos(APPEARED_POKEMON, msgAppeared->pokemon,0), streamAppeared);
+			atenderAppeared(paqueteAppeared);
 		}
 	}
-	destruirLocalized(msg);
 
 	destruirPaquete(paqueteLocalized);
 	return NULL;

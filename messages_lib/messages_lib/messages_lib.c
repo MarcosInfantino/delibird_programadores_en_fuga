@@ -21,7 +21,7 @@ uint32_t crearSocketCliente (char* ip, uint32_t puerto){
 	return cliente;
 }
 
-uint32_t sizeArgumentos (uint32_t colaMensaje, char* nombrePokemon, uint32_t sizeListaPosicionCantidad){
+uint32_t sizeArgumentos (uint32_t colaMensaje, char* nombrePokemon, uint32_t cantidadPokemon){
 	uint32_t size;
 	switch(colaMensaje){
 	case NEW_POKEMON:
@@ -50,8 +50,8 @@ uint32_t sizeArgumentos (uint32_t colaMensaje, char* nombrePokemon, uint32_t siz
 		size=2*sizeof(uint32_t);  break;
 
 	case LOCALIZED_POKEMON:
-		//size=2*sizeof(uint32_t)+strlen(nombrePokemon)+cantidadPokemon*2*sizeof(uint32_t); break;
-		size=  sizeof(uint32_t)+strlen(nombrePokemon) +        3*sizeof(uint32_t)* sizeListaPosicionCantidad + sizeof(uint32_t);break;
+		size=2*sizeof(uint32_t)+strlen(nombrePokemon)+cantidadPokemon*2*sizeof(uint32_t); break;
+
 	default:
 		printf("Error: el caso ingresado no esta contemplado \n");
 		break;
