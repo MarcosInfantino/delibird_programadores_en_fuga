@@ -12,6 +12,7 @@
 #include "memoria.h"
 #include "files.h"
 #include "memoriaParticiones.h"
+
 //./gameboy SUSCRIPTOR CAUGHT_POKEMON 10
 //int main(void){
 ////	mensajeAppeared* msg= llenarAppeared("Pikachu", 0, 0);
@@ -33,15 +34,15 @@ int main(void) {
 	iteraciones = 0;
 	TC=0;
     brokerLogger2 = log_create("brokerLoggerSecundario.log", "Broker", true, LOG_LEVEL_INFO);
-    log_info(brokerLogger2, "pid : %i", getpid());
+    log_info(brokerLogger2, "pid del proceso broker: %i", getpid());
     //log_info(brokerLogger2, armarStringEnvioXsub(2));
 	signal(SIGUSR1, crearDumpDeCache);
 
 	//levantarDatosDeConfig("Broker.config", 1); 			//1 para datos de config, otro para hardcode
 	//levantarDatosDeConfig("pruebaBaseBroker.config", 1);
-	levantarDatosDeConfig("pruebaBS.config", 1);
+	//levantarDatosDeConfig("pruebaBS.config", 1);
 	//levantarDatosDeConfig("pruebaConsolidacion.config", 1);
-	//levantarDatosDeConfig("pruebaCompactacion.config", 1);
+	levantarDatosDeConfig("pruebaCompactacion.config", 1);
 
 	loggerBroker = iniciar_logger("loggerBroker.log", "BROKER");
 
@@ -49,8 +50,6 @@ int main(void) {
 	pthread_mutex_init(mutexMemoria,NULL);
 
 	definirComienzoDeMemoria();
-
-	//archivoSem = iniciarArchivoMutex();
 
 	iniciarHilos();
 	inicializarContador();
@@ -99,7 +98,7 @@ void* iniciarServidor(){
 		perror("Falló el bind");
 	}
 
-	log_info(loggerBroker, "Estoy escuchando!");
+	log_info(loggerBroker, "Inició el Broker.");
 
 
 	while (1)
@@ -220,7 +219,7 @@ void meterEnCola( colaMensajes* structCola, paquete * paq, uint32_t  socket){
 	send(socket,(void*)(&contador.contador),sizeof(uint32_t),0);
 	pthread_mutex_unlock(contador.mutexContador);
 	registrarMensajeEnMemoria(paq, algoritmoMemoria);
-	printf("Termino de registrar el mensaje\n");
+	log_info(brokerLogger2,"Terminó de registrar el mensaje en memoria.");
 	pushColaMutex(structCola->cola, (void *) paq);
 
 	sem_post(structCola->mensajesEnCola);
@@ -249,7 +248,7 @@ void * chequearMensajesEnCola(void * colaVoid){
 	while (1){
 		sem_wait(cola->mensajesEnCola);
 		paquete* paq = (paquete*) popColaMutex(cola->cola);
-		log_info(brokerLogger2,"ENVIO MENSAJE A SUSCRIPTORES COLA", nombreDeCola(paq->tipoMensaje));
+		log_info(brokerLogger2,"Envio el mensaje a los suscriptores de la cola: %s", nombreDeCola(paq->tipoMensaje));
 
 		void * paqSerializado = serializarPaquete(paq);
 

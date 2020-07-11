@@ -32,7 +32,7 @@ void elegirVictimaDeReemplazoYeliminarBD(){
 		victima = buscarVictimaPor(tiempoDeCargaMenor);
 	}else{ //LRU
 		victima = buscarVictimaPor(tiempoDeUsoMenor);
-		log_info(brokerLogger2,"VICTIMA: msg id %i" , victima->mensaje->idMensaje );
+		log_info(brokerLogger2,"VICTIMA: id de mensaje: %i" , victima->mensaje->idMensaje );
 	}
 	modificarNodoAlibre(victima);
 }
@@ -189,7 +189,7 @@ bool existeMensajeEnMemoriaBuddy(mensajeGet* msgGet, mensajeCatch*  msgCatch){
 		return false;
 	}
 	if(msgGet != NULL){
-		log_info(brokerLogger2, "Existe Get");
+		log_info(brokerLogger2, "Valido si ya existe el mensaje Get en memoria buddy.");
 		for (uint32_t o = 0; o < sizeListaMutex(nodosOcupados); o ++){
 			aux = (struct nodoMemoria*) getListaMutex(nodosOcupados, o);
 			if (aux->mensaje->cola == GET_POKEMON){
@@ -202,7 +202,7 @@ bool existeMensajeEnMemoriaBuddy(mensajeGet* msgGet, mensajeCatch*  msgCatch){
 		pthread_mutex_unlock(mutexMemoria);
 		return false;
 	}else if(msgCatch != NULL){
-		log_info(brokerLogger2, "Existe Catch");
+		log_info(brokerLogger2, "Valido si ya existe el mensaje Catch en memoria buddy.");
 		for (uint32_t p = 0; p < sizeListaMutex(nodosOcupados); p ++){
 			aux = (struct nodoMemoria*) getListaMutex(nodosOcupados, p);
 					if (aux->mensaje->cola == CATCH_POKEMON){

@@ -2777,3 +2777,23 @@
 [INFO] 17:48:05:926 BROKER/(3966:3992): Se almacena mensaje en memoria en posición: 0x20 -.-
 [INFO] 17:48:05:927 BROKER/(3966:3996): Se almacena mensaje en memoria en posición: 0x10 -.-
 [INFO] 17:48:16:933 BROKER/(3966:4003): Se almacena mensaje en memoria en posición: (nil) -.-
+[INFO] 18:15:16:498 BROKER/(13089:13089): Estoy escuchando!
+[INFO] 18:15:23:82 BROKER/(13089:13109): Se almacena mensaje en memoria en posición: (nil) -.-
+[INFO] 18:15:23:118 BROKER/(13089:13113): Se almacena mensaje en memoria en posición: 0x4 -.-
+[INFO] 18:15:23:136 BROKER/(13089:13116): Se almacena mensaje en memoria en posición: 0x20 -.-
+[INFO] 18:15:23:175 BROKER/(13089:13122): Se almacena mensaje en memoria en posición: 0x10 -.-
+[INFO] 18:15:35:218 BROKER/(13089:13132): Se almacena mensaje en memoria en posición: 0x20 -.-
+[INFO] 18:29:34:970 BROKER/(13307:13307): Estoy escuchando!
+[INFO] 18:29:36:341 BROKER/(13307:13327): Almaceno mensaje en partición que comienza en: 0
+[INFO] 18:29:36:359 BROKER/(13307:13331): Almaceno mensaje en partición que comienza en: 4
+[INFO] 18:29:36:376 BROKER/(13307:13334): Almaceno mensaje en partición que comienza en: 8
+[INFO] 18:29:36:386 BROKER/(13307:13337): Almaceno mensaje en partición que comienza en: 27
+[INFO] 18:29:36:427 BROKER/(13307:13340): Almaceno mensaje en partición que comienza en: 47
+[INFO] 18:29:46:464 BROKER/(13307:13352): Se realiza la compactacion
+[INFO] 18:29:46:466 BROKER/(13307:13352): Elimino particion que comienza en: 0
+[INFO] 18:29:46:472 BROKER/(13307:13352): Se realiza la compactacion
+[INFO] 18:29:46:474 BROKER/(13307:13352): Elimino particion que comienza en: 0
+[INFO] 18:29:46:479 BROKER/(13307:13352): Se realiza la compactacion
+[INFO] 18:29:46:479 BROKER/(13307:13352): Elimino particion que comienza en: 0
+[INFO] 18:29:46:480 BROKER/(13307:13352): Se realiza la compactacion
+[INFO] 18:29:46:481 BROKER/(13307:13352): Almaceno mensaje en partición que comienza en: 36
