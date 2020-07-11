@@ -36,11 +36,13 @@ int main(void) {
     log_info(brokerLogger2, "pid : %i", getpid());
     //log_info(brokerLogger2, armarStringEnvioXsub(2));
 	signal(SIGUSR1, crearDumpDeCache);
+
 	//levantarDatosDeConfig("Broker.config", 1); 			//1 para datos de config, otro para hardcode
 	//levantarDatosDeConfig("pruebaBaseBroker.config", 1);
-	//levantarDatosDeConfig("pruebaBS.config", 1);
+	levantarDatosDeConfig("pruebaBS.config", 1);
 	//levantarDatosDeConfig("pruebaConsolidacion.config", 1);
-	levantarDatosDeConfig("pruebaCompactacion.config", 1);
+	//levantarDatosDeConfig("pruebaCompactacion.config", 1);
+
 	loggerBroker = iniciar_logger("loggerBroker.log", "BROKER");
 
 	mutexMemoria = malloc(sizeof(pthread_mutex_t));
@@ -246,11 +248,10 @@ void * chequearMensajesEnCola(void * colaVoid){
 	uint32_t i;
 	while (1){
 		sem_wait(cola->mensajesEnCola);
-		log_info(brokerLogger2,"Comienza el proceso de envío del mensaje a todos los suscriptores.");
 		paquete* paq = (paquete*) popColaMutex(cola->cola);
+		log_info(brokerLogger2,"ENVIO MENSAJE A SUSCRIPTORES COLA", nombreDeCola(paq->tipoMensaje));
 
 		void * paqSerializado = serializarPaquete(paq);
-
 
 		for(i = 0; i < sizeListaMutex(cola->suscriptores) ;i ++){
 			uint32_t * socketActual = (uint32_t *) getListaMutex(cola->suscriptores, i);

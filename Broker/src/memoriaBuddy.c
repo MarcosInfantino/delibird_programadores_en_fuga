@@ -26,27 +26,26 @@ void registrarEnMemoriaBUDDYSYSTEM(msgMemoriaBroker* mensajeNuevo, struct nodoMe
 }
 
 void elegirVictimaDeReemplazoYeliminarBD(){
-	log_info(brokerLogger2, "Numero 6");
 	struct nodoMemoria* victima;
 
 	if(algoritmoReemplazo == FIFO){
 		victima = buscarVictimaPor(tiempoDeCargaMenor);
 	}else{ //LRU
 		victima = buscarVictimaPor(tiempoDeUsoMenor);
+		log_info(brokerLogger2,"VICTIMA: msg id %i" , victima->mensaje->idMensaje );
 	}
 	modificarNodoAlibre(victima);
 }
 
 struct nodoMemoria* buscarVictimaPor(bool(*condition)(struct nodoMemoria*,struct nodoMemoria*)){
-	log_info(brokerLogger2, "Numero 7");
 	struct nodoMemoria* minimo = getListaMutex(nodosOcupados, 0);
-	struct nodoMemoria* aux;
+	struct nodoMemoria* elNuevoNodo;
 
-	for(int i=1; i<sizeListaMutex(nodosOcupados);i++){
-		aux = getListaMutex(nodosOcupados, i);
+	for(uint32_t i=1; i<sizeListaMutex(nodosOcupados);i++){
+		elNuevoNodo = getListaMutex(nodosOcupados, i);
 
-		if(condition(aux,minimo)){
-			minimo = aux;
+		if(condition(elNuevoNodo,minimo)){
+			minimo = elNuevoNodo;
 		}
 	}
 	return minimo;
@@ -55,12 +54,19 @@ struct nodoMemoria* buscarVictimaPor(bool(*condition)(struct nodoMemoria*,struct
 void modificarNodoAlibre(struct nodoMemoria* victima){
 	victima->header.status = LIBRE;
 
+	log_info(brokerLogger2,"ELIMINO el mensaje en nodo con offset: %i del msg con ID %i", victima->offset, victima->mensaje->idMensaje);
+	log_info(brokerLogger2,"TIEMPO DE CARGA: %i:%i:%i ULTIMO ACCESO: %i:%i:%i",
+			victima->header.tiempoDeCarga.tm_hour,
+			victima->header.tiempoDeCarga.tm_min,
+			victima->header.tiempoDeCarga.tm_sec,
+			victima->header.ultimoAcceso.tm_hour,
+			victima->header.ultimoAcceso.tm_min,
+			victima->header.ultimoAcceso.tm_sec);
 	removerDeListaOcupados(victima);
 	evaluarConsolidacion(victima);
 }
 
 void evaluarConsolidacion(struct nodoMemoria* nodo){
-	log_info(brokerLogger2, "Numero 8");
 	struct nodoMemoria* buddie;
 
 	if(nodo->padre->hijoDer == nodo){
@@ -68,18 +74,16 @@ void evaluarConsolidacion(struct nodoMemoria* nodo){
 	}else{
 		buddie = nodo->padre->hijoDer;
 	}
-	log_info(brokerLogger2, "Numero 9");
 	if(estaLibre(buddie)){
 		nodo->padre->header.status = LIBRE;
 		struct nodoMemoria* partActual = nodo->padre;
+		log_info(brokerLogger2,"CONSOLIDO buddy con offset: %i con su buddy con offset %i", nodo->offset, buddie->offset);
 		liberarNodo(nodo);
 		liberarNodo(buddie);
 		partActual->hijoDer = malloc(sizeof(struct nodoMemoria));
 		partActual->hijoIzq = malloc(sizeof(struct nodoMemoria));
 		evaluarConsolidacion(partActual);
-		log_info(brokerLogger2, "Numero 9.1");
 	}else{
-		log_info(brokerLogger2, "Numero 9.2");
 		return;
 	}
 
@@ -99,13 +103,10 @@ uint32_t intentarRamaIzquierda(msgMemoriaBroker* mensajeNuevo,struct nodoMemoria
 }
 
 uint32_t evaluarTamanioParticionYasignar(struct nodoMemoria* partActual, msgMemoriaBroker* msg){
-	log_info(brokerLogger2,"Entre a particionar para el mensaje: %d y la cola %d", msg->idMensaje, msg->cola);
-
 	uint32_t tamanioMsg = msg->sizeStream;
-
-	log_info(brokerLogger2, "Comienzo a evaluar el tamaño de la particion y asignar.");
 	if(tamanioParticion(partActual) >= tamanioMsg){
 		while(tamanioParticion(partActual)/2 >= tamanioMsg && tamanioParticion(partActual)/2>=particionMinima){
+			log_info(brokerLogger2,"PARTICIONO: para msg %d y la cola %s", msg->idMensaje, nombreDeCola(msg->cola));
 			particionarMemoriaBUDDY(partActual);
 			partActual->header.status = PARTICIONADO;
 			partActual = partActual->hijoIzq;
@@ -118,8 +119,9 @@ uint32_t evaluarTamanioParticionYasignar(struct nodoMemoria* partActual, msgMemo
 		time_t t;
 		t=time(NULL);
 		partActual->header.tiempoDeCarga = *localtime(&t);
+		partActual->header.ultimoAcceso = *localtime(&t);
 		asignarPuntero(partActual->offset, partActual->mensaje->stream, partActual->mensaje->sizeStream);
-		log_info(brokerLogger2,"ASIGNE: Size: %i. Id mensaje: %i. Size del mensaje: %i.", (partActual->header).size, partActual->mensaje->idMensaje, partActual->mensaje->sizeStream);
+		log_info(brokerLogger2,"ASIGNE: Size de buddy: %i. Id mensaje: %i. Size del mensaje: %i.", (partActual->header).size, partActual->mensaje->idMensaje, partActual->mensaje->sizeStream);
 		return 1;
 	}
 
@@ -131,6 +133,7 @@ uint32_t tamanioMinimo(struct nodoMemoria* partActual){
 
 
 void particionarMemoriaBUDDY(struct nodoMemoria* particionActual){
+	log_info(brokerLogger2,"NODO A PARTICIONAR: su offset %i, su tamaño: %i", particionActual->offset, particionActual->header.size);
 	particionActual->hijoIzq = inicializarNodo();
 	particionActual->hijoDer = inicializarNodo();
 	uint32_t tamanoHijos = tamanioParticion(particionActual)/2;
@@ -172,9 +175,6 @@ msgMemoriaBroker* buscarMensajeEnMemoriaBuddy(uint32_t id){
 	}
 	pthread_mutex_unlock(mutexMemoria);
 
-	time_t t;
-	t=time(NULL);
-	nodoActual->header.ultimoAcceso = *localtime(&t); //actualizo la fecha de acceso
 
 	return nodoActual->mensaje;
 }
@@ -247,6 +247,17 @@ bool buscarPorRamaCatch(mensajeCatch* msgCatch, struct nodoMemoria* partActual )
 
 msgMemoriaBroker* buscarPorRama(uint32_t id, struct nodoMemoria* partActual ){
 	if (estaOcupado(partActual) && (partActual->mensaje->idMensaje)==id){
+		log_info(brokerLogger2, "Duermo para generar bache de 1 segundo y diferenciar LRU/FIFO");
+		sleep(1);
+
+		time_t sTime;
+		sTime=time(NULL);
+		partActual->header.ultimoAcceso = *localtime(&sTime); //actualizo la fecha de acceso
+
+		log_info(brokerLogger2, "Encontre mensaje en mem: %i:%i:%i",
+				partActual->header.ultimoAcceso.tm_hour,
+				partActual->header.ultimoAcceso.tm_min,
+				partActual->header.ultimoAcceso.tm_sec);
 		return partActual->mensaje;
 	}else if (estaParticionado(partActual)){
 		msgMemoriaBroker* retorno = buscarPorRama(id,partActual->hijoIzq);
@@ -339,14 +350,52 @@ struct tm tiempoUso(struct nodoMemoria* nodo){
 	return nodo->header.ultimoAcceso;
 }
 
-bool tiempoDeCargaMenor(struct nodoMemoria* nodo, struct nodoMemoria* otroNodo){
-	return tiempoCarga(nodo).tm_hour < tiempoCarga(otroNodo).tm_hour
-			&& tiempoCarga(nodo).tm_min < tiempoCarga(otroNodo).tm_min
-			&& tiempoCarga(nodo).tm_sec < tiempoCarga(otroNodo).tm_sec;
+void enviarMsjsASuscriptorNuevoBuddySystem(uint32_t colaParametro, uint32_t* socket){
+	for(uint32_t varI = 0; varI < sizeListaMutex(nodosOcupados); varI ++){
+		struct nodoMemoria* nodoEvaluado = (struct nodoMemoria*) getListaMutex (nodosOcupados, varI);
+		if(nodoEvaluado->mensaje->cola == colaParametro){
+			if(!envieMensajeDeNodoASocket(nodoEvaluado, socket)){
+				paquete * paqueteAEnviar = llenarPaquete(BROKER, nodoEvaluado->mensaje->cola, nodoEvaluado->mensaje->sizeStream,nodoEvaluado->mensaje->stream);
+				paqueteAEnviar->id = nodoEvaluado->mensaje->idMensaje;
+				send(*socket, serializarPaquete(paqueteAEnviar), sizePaquete(paqueteAEnviar), 0);
+				log_info(brokerLogger2, "GUARDO ENVIADO POR ENVIAR MENSAJES, id: %i, id cor: %i", paqueteAEnviar->id, paqueteAEnviar->idCorrelativo);
+				guardarYaEnviados(paqueteAEnviar, *socket);
+			}
+		}
+	}
 }
 
-bool tiempoDeUsoMenor(struct nodoMemoria* nodo, struct nodoMemoria* otroNodo){
-	return tiempoUso(nodo).tm_hour < tiempoUso(otroNodo).tm_hour
-			&& tiempoUso(nodo).tm_min < tiempoUso(otroNodo).tm_min
-			&& tiempoUso(nodo).tm_sec < tiempoUso(otroNodo).tm_sec;
+bool envieMensajeDeNodoASocket(struct nodoMemoria* nodoEvaluado, uint32_t* socket){
+	for(uint32_t varH = 0; varH < sizeListaMutex(nodoEvaluado->mensaje->subsYaEnviado); varH ++){
+		uint32_t* socketEvaluado = (uint32_t*) getListaMutex (nodoEvaluado->mensaje->subsYaEnviado, varH);
+		if (socketEvaluado == socket){
+			return true;
+		}
+	}
+	return false;
+}
+
+
+
+
+bool tiempoDeCargaMenor(struct nodoMemoria* nuevoNodo, struct nodoMemoria* minimoHastaElMomento){
+	if (tiempoCarga(nuevoNodo).tm_hour < tiempoCarga(minimoHastaElMomento).tm_hour){
+			return true;
+		}else if(tiempoCarga(nuevoNodo).tm_min < tiempoCarga(minimoHastaElMomento).tm_min){
+			return true;
+		}else if (tiempoCarga(nuevoNodo).tm_sec < tiempoCarga(minimoHastaElMomento).tm_sec){
+			return true;
+		}
+	return false;
+}
+
+bool tiempoDeUsoMenor(struct nodoMemoria* nuevoNodo, struct nodoMemoria* minimoHastaElMomento){
+	if (tiempoUso(nuevoNodo).tm_hour < tiempoUso(minimoHastaElMomento).tm_hour){
+		return true;
+	}else if(tiempoUso(nuevoNodo).tm_min < tiempoUso(minimoHastaElMomento).tm_min){
+		return true;
+	}else if (tiempoUso(nuevoNodo).tm_sec < tiempoUso(minimoHastaElMomento).tm_sec){
+		return true;
+	}
+	return false;
 }

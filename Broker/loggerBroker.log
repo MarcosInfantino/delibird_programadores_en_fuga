@@ -2416,3 +2416,351 @@
 [INFO] 02:10:55:822 BROKER/(10253:10439): Se realiza la compactacion
 [INFO] 02:10:55:823 BROKER/(10253:10439): Elimino particion que comienza en: 0
 [INFO] 02:10:55:823 BROKER/(10253:10439): Almaceno mensaje en partición que comienza en: 0
+[INFO] 13:52:15:768 BROKER/(5606:5606): Estoy escuchando!
+[INFO] 13:52:36:68 BROKER/(5606:5637): Almaceno mensaje en partición que comienza en: 0
+[INFO] 13:52:36:69 BROKER/(5606:5640): Almaceno mensaje en partición que comienza en: 4
+[INFO] 13:52:36:70 BROKER/(5606:5642): Almaceno mensaje en partición que comienza en: 8
+[INFO] 13:52:36:71 BROKER/(5606:5646): Almaceno mensaje en partición que comienza en: 31
+[INFO] 13:52:46:78 BROKER/(5606:5652): Se realiza la compactacion
+[INFO] 13:52:46:78 BROKER/(5606:5652): Elimino particion que comienza en: 0
+[INFO] 13:52:46:78 BROKER/(5606:5652): Se realiza la compactacion
+[INFO] 13:52:46:79 BROKER/(5606:5652): Elimino particion que comienza en: 0
+[INFO] 13:52:46:79 BROKER/(5606:5652): Se realiza la compactacion
+[INFO] 13:52:46:79 BROKER/(5606:5652): Almaceno mensaje en partición que comienza en: 39
+[INFO] 13:54:14:394 BROKER/(5733:5733): Estoy escuchando!
+[INFO] 13:54:25:712 BROKER/(5766:5766): Estoy escuchando!
+[INFO] 13:54:29:313 BROKER/(5766:5786): Almaceno mensaje en partición que comienza en: 0
+[INFO] 13:54:29:314 BROKER/(5766:5789): Almaceno mensaje en partición que comienza en: 4
+[INFO] 13:54:29:315 BROKER/(5766:5792): Almaceno mensaje en partición que comienza en: 8
+[INFO] 13:54:29:318 BROKER/(5766:5794): Almaceno mensaje en partición que comienza en: 31
+[INFO] 13:54:39:321 BROKER/(5766:5802): Almaceno mensaje en partición que comienza en: 47
+[INFO] 13:55:01:421 BROKER/(5846:5846): Estoy escuchando!
+[INFO] 13:55:13:690 BROKER/(5879:5879): Estoy escuchando!
+[INFO] 13:55:15:585 BROKER/(5879:5899): Se almacena mensaje en memoria en posición: (nil) -.-
+[INFO] 13:55:15:586 BROKER/(5879:5901): Se almacena mensaje en memoria en posición: 0x4 -.-
+[INFO] 13:55:15:587 BROKER/(5879:5905): Se almacena mensaje en memoria en posición: 0x20 -.-
+[INFO] 13:55:15:589 BROKER/(5879:5907): Se almacena mensaje en memoria en posición: 0x10 -.-
+[INFO] 13:55:25:593 BROKER/(5879:5914): Se almacena mensaje en memoria en posición: 0x20 -.-
+[INFO] 14:02:57:864 BROKER/(5879:6016): Se almacena mensaje en memoria en posición: (nil) -.-
+[INFO] 14:02:57:865 BROKER/(5879:6020): Se almacena mensaje en memoria en posición: 0x4 -.-
+[INFO] 14:02:57:867 BROKER/(5879:6022): Se almacena mensaje en memoria en posición: 0x20 -.-
+[INFO] 14:02:57:868 BROKER/(5879:6026): Se almacena mensaje en memoria en posición: 0x10 -.-
+[INFO] 14:03:07:872 BROKER/(5879:6033): Se almacena mensaje en memoria en posición: 0x20 -.-
+[INFO] 14:03:18:574 BROKER/(5879:6038): Se almacena mensaje en memoria en posición: (nil) -.-
+[INFO] 14:03:18:575 BROKER/(5879:6041): Se almacena mensaje en memoria en posición: 0x4 -.-
+[INFO] 14:03:18:577 BROKER/(5879:6044): Se almacena mensaje en memoria en posición: 0x20 -.-
+[INFO] 14:03:18:578 BROKER/(5879:6047): Se almacena mensaje en memoria en posición: 0x10 -.-
+[INFO] 14:03:28:582 BROKER/(5879:6053): Se almacena mensaje en memoria en posición: 0x20 -.-
+[INFO] 14:03:36:669 BROKER/(5879:6056): Se almacena mensaje en memoria en posición: (nil) -.-
+[INFO] 14:03:36:671 BROKER/(5879:6059): Se almacena mensaje en memoria en posición: 0x4 -.-
+[INFO] 14:03:36:672 BROKER/(5879:6062): Se almacena mensaje en memoria en posición: 0x20 -.-
+[INFO] 14:03:36:673 BROKER/(5879:6066): Se almacena mensaje en memoria en posición: 0x10 -.-
+[INFO] 14:05:29:267 BROKER/(6103:6103): Estoy escuchando!
+[INFO] 14:06:03:402 BROKER/(6103:6130): Se almacena mensaje en memoria en posición: (nil) -.-
+[INFO] 14:06:03:403 BROKER/(6103:6133): Se almacena mensaje en memoria en posición: 0x4 -.-
+[INFO] 14:06:03:405 BROKER/(6103:6136): Se almacena mensaje en memoria en posición: 0x20 -.-
+[INFO] 14:06:03:406 BROKER/(6103:6138): Se almacena mensaje en memoria en posición: 0x10 -.-
+[INFO] 14:06:13:408 BROKER/(6103:6145): Se almacena mensaje en memoria en posición: 0x20 -.-
+[INFO] 14:06:18:564 BROKER/(6103:6154): Se almacena mensaje en memoria en posición: (nil) -.-
+[INFO] 14:06:18:565 BROKER/(6103:6157): Se almacena mensaje en memoria en posición: 0x4 -.-
+[INFO] 14:06:18:567 BROKER/(6103:6159): Se almacena mensaje en memoria en posición: 0x20 -.-
+[INFO] 14:06:18:568 BROKER/(6103:6164): Se almacena mensaje en memoria en posición: 0x10 -.-
+[INFO] 14:06:28:571 BROKER/(6103:6170): Se almacena mensaje en memoria en posición: 0x20 -.-
+[INFO] 14:06:37:558 BROKER/(6103:6175): Se almacena mensaje en memoria en posición: (nil) -.-
+[INFO] 14:06:37:559 BROKER/(6103:6178): Se almacena mensaje en memoria en posición: 0x4 -.-
+[INFO] 14:06:37:561 BROKER/(6103:6180): Se almacena mensaje en memoria en posición: 0x20 -.-
+[INFO] 14:06:37:562 BROKER/(6103:6184): Se almacena mensaje en memoria en posición: 0x10 -.-
+[INFO] 14:06:47:566 BROKER/(6103:6190): Se almacena mensaje en memoria en posición: 0x20 -.-
+[INFO] 14:06:57:141 BROKER/(6103:6198): Se almacena mensaje en memoria en posición: (nil) -.-
+[INFO] 14:06:57:142 BROKER/(6103:6202): Se almacena mensaje en memoria en posición: 0x4 -.-
+[INFO] 14:06:57:144 BROKER/(6103:6204): Se almacena mensaje en memoria en posición: 0x20 -.-
+[INFO] 14:06:57:145 BROKER/(6103:6207): Se almacena mensaje en memoria en posición: 0x10 -.-
+[INFO] 14:07:07:148 BROKER/(6103:6221): Se almacena mensaje en memoria en posición: 0x20 -.-
+[INFO] 14:07:14:521 BROKER/(6103:6224): Se almacena mensaje en memoria en posición: (nil) -.-
+[INFO] 14:07:14:522 BROKER/(6103:6228): Se almacena mensaje en memoria en posición: 0x4 -.-
+[INFO] 14:07:14:524 BROKER/(6103:6230): Se almacena mensaje en memoria en posición: 0x20 -.-
+[INFO] 14:07:14:525 BROKER/(6103:6234): Se almacena mensaje en memoria en posición: 0x10 -.-
+[INFO] 14:07:24:529 BROKER/(6103:6239): Se almacena mensaje en memoria en posición: 0x20 -.-
+[INFO] 14:07:32:569 BROKER/(6103:6244): Se almacena mensaje en memoria en posición: (nil) -.-
+[INFO] 14:07:32:571 BROKER/(6103:6247): Se almacena mensaje en memoria en posición: 0x4 -.-
+[INFO] 14:07:32:575 BROKER/(6103:6250): Se almacena mensaje en memoria en posición: 0x20 -.-
+[INFO] 14:07:32:576 BROKER/(6103:6253): Se almacena mensaje en memoria en posición: 0x10 -.-
+[INFO] 14:07:42:579 BROKER/(6103:6258): Se almacena mensaje en memoria en posición: 0x20 -.-
+[INFO] 14:07:50:526 BROKER/(6103:6267): Se almacena mensaje en memoria en posición: (nil) -.-
+[INFO] 14:07:50:527 BROKER/(6103:6271): Se almacena mensaje en memoria en posición: 0x4 -.-
+[INFO] 14:07:50:529 BROKER/(6103:6273): Se almacena mensaje en memoria en posición: 0x20 -.-
+[INFO] 14:07:50:529 BROKER/(6103:6276): Se almacena mensaje en memoria en posición: 0x10 -.-
+[INFO] 14:08:00:533 BROKER/(6103:6282): Se almacena mensaje en memoria en posición: 0x20 -.-
+[INFO] 14:08:06:784 BROKER/(6103:6289): Se almacena mensaje en memoria en posición: (nil) -.-
+[INFO] 14:08:06:786 BROKER/(6103:6291): Se almacena mensaje en memoria en posición: 0x4 -.-
+[INFO] 14:08:06:787 BROKER/(6103:6295): Se almacena mensaje en memoria en posición: 0x20 -.-
+[INFO] 14:08:06:794 BROKER/(6103:6297): Se almacena mensaje en memoria en posición: 0x10 -.-
+[INFO] 14:08:16:798 BROKER/(6103:6303): Se almacena mensaje en memoria en posición: 0x20 -.-
+[INFO] 14:08:44:403 BROKER/(6103:6309): Se almacena mensaje en memoria en posición: (nil) -.-
+[INFO] 14:08:44:404 BROKER/(6103:6311): Se almacena mensaje en memoria en posición: 0x4 -.-
+[INFO] 14:08:44:406 BROKER/(6103:6314): Se almacena mensaje en memoria en posición: 0x20 -.-
+[INFO] 14:08:44:407 BROKER/(6103:6317): Se almacena mensaje en memoria en posición: 0x10 -.-
+[INFO] 14:08:54:411 BROKER/(6103:6324): Se almacena mensaje en memoria en posición: 0x20 -.-
+[INFO] 14:08:57:615 BROKER/(6103:6328): Se almacena mensaje en memoria en posición: (nil) -.-
+[INFO] 14:08:57:616 BROKER/(6103:6330): Se almacena mensaje en memoria en posición: 0x4 -.-
+[INFO] 14:08:57:617 BROKER/(6103:6334): Se almacena mensaje en memoria en posición: 0x20 -.-
+[INFO] 14:08:57:618 BROKER/(6103:6337): Se almacena mensaje en memoria en posición: 0x10 -.-
+[INFO] 14:09:07:622 BROKER/(6103:6350): Se almacena mensaje en memoria en posición: 0x20 -.-
+[INFO] 14:09:28:423 BROKER/(6103:6359): Se almacena mensaje en memoria en posición: (nil) -.-
+[INFO] 14:09:28:425 BROKER/(6103:6362): Se almacena mensaje en memoria en posición: 0x4 -.-
+[INFO] 14:09:28:426 BROKER/(6103:6364): Se almacena mensaje en memoria en posición: 0x20 -.-
+[INFO] 14:09:28:428 BROKER/(6103:6368): Se almacena mensaje en memoria en posición: 0x10 -.-
+[INFO] 14:09:38:430 BROKER/(6103:6373): Se almacena mensaje en memoria en posición: 0x20 -.-
+[INFO] 14:11:31:739 BROKER/(6103:6392): Se almacena mensaje en memoria en posición: (nil) -.-
+[INFO] 14:11:31:741 BROKER/(6103:6396): Se almacena mensaje en memoria en posición: 0x4 -.-
+[INFO] 14:11:31:743 BROKER/(6103:6399): Se almacena mensaje en memoria en posición: 0x20 -.-
+[INFO] 14:11:31:744 BROKER/(6103:6402): Se almacena mensaje en memoria en posición: 0x10 -.-
+[INFO] 14:11:41:749 BROKER/(6103:6414): Se almacena mensaje en memoria en posición: 0x20 -.-
+[INFO] 14:12:08:227 BROKER/(6103:6419): Se almacena mensaje en memoria en posición: (nil) -.-
+[INFO] 14:12:08:229 BROKER/(6103:6423): Se almacena mensaje en memoria en posición: 0x4 -.-
+[INFO] 14:12:08:230 BROKER/(6103:6425): Se almacena mensaje en memoria en posición: 0x20 -.-
+[INFO] 14:12:08:231 BROKER/(6103:6428): Se almacena mensaje en memoria en posición: 0x10 -.-
+[INFO] 14:12:18:245 BROKER/(6103:6435): Se almacena mensaje en memoria en posición: 0x20 -.-
+[INFO] 14:12:44:94 BROKER/(6103:6439): Se almacena mensaje en memoria en posición: (nil) -.-
+[INFO] 14:12:44:96 BROKER/(6103:6443): Se almacena mensaje en memoria en posición: 0x4 -.-
+[INFO] 14:12:44:97 BROKER/(6103:6445): Se almacena mensaje en memoria en posición: 0x20 -.-
+[INFO] 14:12:44:98 BROKER/(6103:6449): Se almacena mensaje en memoria en posición: 0x10 -.-
+[INFO] 14:12:54:103 BROKER/(6103:6461): Se almacena mensaje en memoria en posición: 0x20 -.-
+[INFO] 14:14:16:515 BROKER/(6103:6470): Se almacena mensaje en memoria en posición: (nil) -.-
+[INFO] 14:14:16:516 BROKER/(6103:6474): Se almacena mensaje en memoria en posición: 0x4 -.-
+[INFO] 14:14:16:518 BROKER/(6103:6477): Se almacena mensaje en memoria en posición: 0x20 -.-
+[INFO] 14:14:16:518 BROKER/(6103:6479): Se almacena mensaje en memoria en posición: 0x10 -.-
+[INFO] 14:14:26:522 BROKER/(6103:6486): Se almacena mensaje en memoria en posición: 0x20 -.-
+[INFO] 14:14:34:728 BROKER/(6103:6491): Se almacena mensaje en memoria en posición: (nil) -.-
+[INFO] 14:14:34:730 BROKER/(6103:6493): Se almacena mensaje en memoria en posición: 0x4 -.-
+[INFO] 14:14:34:731 BROKER/(6103:6497): Se almacena mensaje en memoria en posición: 0x20 -.-
+[INFO] 14:14:34:733 BROKER/(6103:6500): Se almacena mensaje en memoria en posición: 0x10 -.-
+[INFO] 14:14:44:736 BROKER/(6103:6506): Se almacena mensaje en memoria en posición: 0x20 -.-
+[INFO] 14:14:48:750 BROKER/(6103:6510): Se almacena mensaje en memoria en posición: (nil) -.-
+[INFO] 14:14:48:751 BROKER/(6103:6513): Se almacena mensaje en memoria en posición: 0x4 -.-
+[INFO] 14:14:48:753 BROKER/(6103:6516): Se almacena mensaje en memoria en posición: 0x20 -.-
+[INFO] 14:14:48:754 BROKER/(6103:6519): Se almacena mensaje en memoria en posición: 0x10 -.-
+[INFO] 14:14:58:758 BROKER/(6103:6525): Se almacena mensaje en memoria en posición: 0x20 -.-
+[INFO] 14:15:00:705 BROKER/(6103:6529): Se almacena mensaje en memoria en posición: (nil) -.-
+[INFO] 14:15:00:706 BROKER/(6103:6531): Se almacena mensaje en memoria en posición: 0x4 -.-
+[INFO] 14:15:00:708 BROKER/(6103:6535): Se almacena mensaje en memoria en posición: 0x20 -.-
+[INFO] 14:15:00:709 BROKER/(6103:6538): Se almacena mensaje en memoria en posición: 0x10 -.-
+[INFO] 14:15:10:716 BROKER/(6103:6546): Se almacena mensaje en memoria en posición: 0x20 -.-
+[INFO] 14:15:12:387 BROKER/(6103:6550): Se almacena mensaje en memoria en posición: (nil) -.-
+[INFO] 14:15:12:388 BROKER/(6103:6553): Se almacena mensaje en memoria en posición: 0x4 -.-
+[INFO] 14:15:12:390 BROKER/(6103:6556): Se almacena mensaje en memoria en posición: 0x20 -.-
+[INFO] 14:15:12:391 BROKER/(6103:6559): Se almacena mensaje en memoria en posición: 0x10 -.-
+[INFO] 14:15:36:287 BROKER/(6103:6569): Se almacena mensaje en memoria en posición: 0x8 -.-
+[INFO] 14:15:36:288 BROKER/(6103:6572): Se almacena mensaje en memoria en posición: 0xc -.-
+[INFO] 14:15:36:291 BROKER/(6103:6574): Se almacena mensaje en memoria en posición: 0x20 -.-
+[INFO] 14:15:36:291 BROKER/(6103:6578): Se almacena mensaje en memoria en posición: 0x10 -.-
+[INFO] 14:37:24:753 BROKER/(6954:6954): Estoy escuchando!
+[INFO] 14:37:27:248 BROKER/(6954:6974): Se almacena mensaje en memoria en posición: (nil) -.-
+[INFO] 14:37:27:250 BROKER/(6954:6977): Se almacena mensaje en memoria en posición: 0x4 -.-
+[INFO] 14:37:27:251 BROKER/(6954:6980): Se almacena mensaje en memoria en posición: 0x20 -.-
+[INFO] 14:37:27:252 BROKER/(6954:6983): Se almacena mensaje en memoria en posición: 0x10 -.-
+[INFO] 14:37:37:259 BROKER/(6954:6995): Se almacena mensaje en memoria en posición: 0x20 -.-
+[INFO] 14:41:11:899 BROKER/(7092:7092): Estoy escuchando!
+[INFO] 14:41:18:50 BROKER/(7120:7120): Estoy escuchando!
+[INFO] 14:41:20:53 BROKER/(7120:7140): Se almacena mensaje en memoria en posición: (nil) -.-
+[INFO] 14:41:20:55 BROKER/(7120:7142): Se almacena mensaje en memoria en posición: 0x4 -.-
+[INFO] 14:41:20:56 BROKER/(7120:7146): Se almacena mensaje en memoria en posición: 0x20 -.-
+[INFO] 14:41:20:57 BROKER/(7120:7148): Se almacena mensaje en memoria en posición: 0x10 -.-
+[INFO] 14:41:30:67 BROKER/(7120:7155): Se almacena mensaje en memoria en posición: 0x20 -.-
+[INFO] 14:45:13:478 BROKER/(7330:7330): Estoy escuchando!
+[INFO] 14:45:18:895 BROKER/(7358:7358): Estoy escuchando!
+[INFO] 14:45:21:740 BROKER/(7358:7378): Se almacena mensaje en memoria en posición: (nil) -.-
+[INFO] 14:45:21:741 BROKER/(7358:7381): Se almacena mensaje en memoria en posición: 0x4 -.-
+[INFO] 14:45:21:742 BROKER/(7358:7384): Se almacena mensaje en memoria en posición: 0x20 -.-
+[INFO] 14:45:21:743 BROKER/(7358:7387): Se almacena mensaje en memoria en posición: 0x10 -.-
+[INFO] 14:45:31:753 BROKER/(7358:7393): Se almacena mensaje en memoria en posición: 0x20 -.-
+[INFO] 14:45:56:871 BROKER/(7426:7426): Estoy escuchando!
+[INFO] 14:46:01:236 BROKER/(7453:7453): Estoy escuchando!
+[INFO] 14:46:02:641 BROKER/(7453:7472): Se almacena mensaje en memoria en posición: (nil) -.-
+[INFO] 14:46:02:642 BROKER/(7453:7476): Se almacena mensaje en memoria en posición: 0x4 -.-
+[INFO] 14:46:02:644 BROKER/(7453:7478): Se almacena mensaje en memoria en posición: 0x20 -.-
+[INFO] 14:46:02:646 BROKER/(7453:7482): Se almacena mensaje en memoria en posición: 0x10 -.-
+[INFO] 14:46:12:649 BROKER/(7453:7490): Se almacena mensaje en memoria en posición: 0x20 -.-
+[INFO] 14:48:41:296 BROKER/(7577:7577): Estoy escuchando!
+[INFO] 14:48:45:840 BROKER/(7605:7605): Estoy escuchando!
+[INFO] 14:49:07:524 BROKER/(7605:7627): Se almacena mensaje en memoria en posición: (nil) -.-
+[INFO] 14:49:07:525 BROKER/(7605:7631): Se almacena mensaje en memoria en posición: 0x4 -.-
+[INFO] 14:49:07:526 BROKER/(7605:7634): Se almacena mensaje en memoria en posición: 0x20 -.-
+[INFO] 14:49:07:527 BROKER/(7605:7637): Se almacena mensaje en memoria en posición: 0x10 -.-
+[INFO] 14:49:17:535 BROKER/(7605:7642): Se almacena mensaje en memoria en posición: 0x20 -.-
+[INFO] 14:51:44:329 BROKER/(7721:7721): Estoy escuchando!
+[INFO] 14:51:48:992 BROKER/(7748:7748): Estoy escuchando!
+[INFO] 14:51:58:882 BROKER/(7748:7768): Se almacena mensaje en memoria en posición: (nil) -.-
+[INFO] 14:51:58:883 BROKER/(7748:7771): Se almacena mensaje en memoria en posición: 0x4 -.-
+[INFO] 14:51:58:885 BROKER/(7748:7773): Se almacena mensaje en memoria en posición: 0x20 -.-
+[INFO] 14:51:58:886 BROKER/(7748:7777): Se almacena mensaje en memoria en posición: 0x10 -.-
+[INFO] 14:52:08:955 BROKER/(7748:7784): Se almacena mensaje en memoria en posición: 0x20 -.-
+[INFO] 14:53:28:43 BROKER/(7855:7855): Estoy escuchando!
+[INFO] 14:53:31:881 BROKER/(7855:7874): Se almacena mensaje en memoria en posición: (nil) -.-
+[INFO] 14:53:31:883 BROKER/(7855:7877): Se almacena mensaje en memoria en posición: 0x4 -.-
+[INFO] 14:53:31:884 BROKER/(7855:7881): Se almacena mensaje en memoria en posición: 0x20 -.-
+[INFO] 14:53:31:885 BROKER/(7855:7883): Se almacena mensaje en memoria en posición: 0x10 -.-
+[INFO] 14:53:41:895 BROKER/(7855:7889): Se almacena mensaje en memoria en posición: 0x20 -.-
+[INFO] 14:54:50:250 BROKER/(7953:7953): Estoy escuchando!
+[INFO] 14:54:56:969 BROKER/(7981:7981): Estoy escuchando!
+[INFO] 14:54:59:218 BROKER/(7981:8000): Se almacena mensaje en memoria en posición: (nil) -.-
+[INFO] 14:54:59:220 BROKER/(7981:8003): Se almacena mensaje en memoria en posición: 0x4 -.-
+[INFO] 14:54:59:221 BROKER/(7981:8006): Se almacena mensaje en memoria en posición: 0x20 -.-
+[INFO] 14:54:59:222 BROKER/(7981:8010): Se almacena mensaje en memoria en posición: 0x10 -.-
+[INFO] 14:55:09:225 BROKER/(7981:8018): Se almacena mensaje en memoria en posición: 0x20 -.-
+[INFO] 14:56:45:329 BROKER/(8119:8119): Estoy escuchando!
+[INFO] 14:56:48:42 BROKER/(8119:8139): Se almacena mensaje en memoria en posición: (nil) -.-
+[INFO] 14:56:48:43 BROKER/(8119:8141): Se almacena mensaje en memoria en posición: 0x4 -.-
+[INFO] 14:56:48:44 BROKER/(8119:8144): Se almacena mensaje en memoria en posición: 0x20 -.-
+[INFO] 14:56:48:45 BROKER/(8119:8147): Se almacena mensaje en memoria en posición: 0x10 -.-
+[INFO] 14:56:58:50 BROKER/(8119:8154): Se almacena mensaje en memoria en posición: 0x20 -.-
+[INFO] 14:58:25:735 BROKER/(8269:8269): Estoy escuchando!
+[INFO] 14:58:31:106 BROKER/(8296:8296): Estoy escuchando!
+[INFO] 14:58:34:74 BROKER/(8296:8316): Se almacena mensaje en memoria en posición: (nil) -.-
+[INFO] 14:58:34:75 BROKER/(8296:8319): Se almacena mensaje en memoria en posición: 0x4 -.-
+[INFO] 14:58:34:76 BROKER/(8296:8321): Se almacena mensaje en memoria en posición: 0x20 -.-
+[INFO] 14:58:34:77 BROKER/(8296:8324): Se almacena mensaje en memoria en posición: 0x10 -.-
+[INFO] 14:58:44:80 BROKER/(8296:8331): Se almacena mensaje en memoria en posición: 0x20 -.-
+[INFO] 14:59:58:58 BROKER/(8378:8378): Estoy escuchando!
+[INFO] 14:59:59:310 BROKER/(8378:8397): Se almacena mensaje en memoria en posición: (nil) -.-
+[INFO] 14:59:59:311 BROKER/(8378:8400): Se almacena mensaje en memoria en posición: 0x4 -.-
+[INFO] 14:59:59:312 BROKER/(8378:8404): Se almacena mensaje en memoria en posición: 0x20 -.-
+[INFO] 14:59:59:313 BROKER/(8378:8406): Se almacena mensaje en memoria en posición: 0x10 -.-
+[INFO] 15:01:27:305 BROKER/(8480:8480): Estoy escuchando!
+[INFO] 15:01:30:430 BROKER/(8480:8504): Se almacena mensaje en memoria en posición: (nil) -.-
+[INFO] 15:01:30:431 BROKER/(8480:8507): Se almacena mensaje en memoria en posición: 0x4 -.-
+[INFO] 15:01:30:433 BROKER/(8480:8510): Se almacena mensaje en memoria en posición: 0x20 -.-
+[INFO] 15:01:30:434 BROKER/(8480:8514): Se almacena mensaje en memoria en posición: 0x10 -.-
+[INFO] 15:01:40:437 BROKER/(8480:8520): Se almacena mensaje en memoria en posición: 0x20 -.-
+[INFO] 15:02:43:728 BROKER/(8559:8559): Estoy escuchando!
+[INFO] 15:02:44:918 BROKER/(8559:8578): Se almacena mensaje en memoria en posición: (nil) -.-
+[INFO] 15:02:44:919 BROKER/(8559:8582): Se almacena mensaje en memoria en posición: 0x4 -.-
+[INFO] 15:02:44:921 BROKER/(8559:8584): Se almacena mensaje en memoria en posición: 0x20 -.-
+[INFO] 15:02:44:922 BROKER/(8559:8588): Se almacena mensaje en memoria en posición: 0x10 -.-
+[INFO] 15:02:54:925 BROKER/(8559:8600): Se almacena mensaje en memoria en posición: 0x20 -.-
+[INFO] 15:11:04:633 BROKER/(8831:8831): Estoy escuchando!
+[INFO] 15:11:07:562 BROKER/(8831:8851): Se almacena mensaje en memoria en posición: (nil) -.-
+[INFO] 15:11:07:563 BROKER/(8831:8854): Se almacena mensaje en memoria en posición: 0x4 -.-
+[INFO] 15:11:07:564 BROKER/(8831:8857): Se almacena mensaje en memoria en posición: 0x20 -.-
+[INFO] 15:11:07:566 BROKER/(8831:8860): Se almacena mensaje en memoria en posición: 0x10 -.-
+[INFO] 15:12:11:233 BROKER/(8897:8897): Estoy escuchando!
+[INFO] 15:12:14:238 BROKER/(8897:8917): Se almacena mensaje en memoria en posición: (nil) -.-
+[INFO] 15:12:14:239 BROKER/(8897:8920): Se almacena mensaje en memoria en posición: 0x4 -.-
+[INFO] 15:12:14:240 BROKER/(8897:8923): Se almacena mensaje en memoria en posición: 0x20 -.-
+[INFO] 15:12:14:241 BROKER/(8897:8926): Se almacena mensaje en memoria en posición: 0x10 -.-
+[INFO] 15:12:24:244 BROKER/(8897:8932): Se almacena mensaje en memoria en posición: 0x20 -.-
+[INFO] 15:13:42:423 BROKER/(8982:8982): Estoy escuchando!
+[INFO] 15:13:45:221 BROKER/(8982:9002): Se almacena mensaje en memoria en posición: (nil) -.-
+[INFO] 15:13:45:222 BROKER/(8982:9004): Se almacena mensaje en memoria en posición: 0x4 -.-
+[INFO] 15:13:45:223 BROKER/(8982:9008): Se almacena mensaje en memoria en posición: 0x20 -.-
+[INFO] 15:13:45:225 BROKER/(8982:9011): Se almacena mensaje en memoria en posición: 0x10 -.-
+[INFO] 15:13:55:229 BROKER/(8982:9019): Se almacena mensaje en memoria en posición: 0x20 -.-
+[INFO] 15:16:29:487 BROKER/(9189:9189): Estoy escuchando!
+[INFO] 15:16:35:417 BROKER/(9218:9218): Estoy escuchando!
+[INFO] 15:16:40:729 BROKER/(9218:9237): Se almacena mensaje en memoria en posición: (nil) -.-
+[INFO] 15:16:40:730 BROKER/(9218:9240): Se almacena mensaje en memoria en posición: 0x4 -.-
+[INFO] 15:16:40:732 BROKER/(9218:9244): Se almacena mensaje en memoria en posición: 0x20 -.-
+[INFO] 15:16:40:733 BROKER/(9218:9246): Se almacena mensaje en memoria en posición: 0x10 -.-
+[INFO] 15:16:50:737 BROKER/(9218:9258): Se almacena mensaje en memoria en posición: 0x20 -.-
+[INFO] 15:18:05:277 BROKER/(9329:9329): Estoy escuchando!
+[INFO] 15:18:09:556 BROKER/(9358:9358): Estoy escuchando!
+[INFO] 15:18:11:626 BROKER/(9358:9379): Se almacena mensaje en memoria en posición: (nil) -.-
+[INFO] 15:18:11:628 BROKER/(9358:9382): Se almacena mensaje en memoria en posición: 0x4 -.-
+[INFO] 15:18:11:629 BROKER/(9358:9386): Se almacena mensaje en memoria en posición: 0x20 -.-
+[INFO] 15:18:11:630 BROKER/(9358:9388): Se almacena mensaje en memoria en posición: 0x10 -.-
+[INFO] 15:18:21:633 BROKER/(9358:9395): Se almacena mensaje en memoria en posición: 0x20 -.-
+[INFO] 15:23:42:133 BROKER/(9523:9523): Estoy escuchando!
+[INFO] 15:23:50:575 BROKER/(9550:9550): Estoy escuchando!
+[INFO] 15:23:52:296 BROKER/(9550:9569): Se almacena mensaje en memoria en posición: (nil) -.-
+[INFO] 15:23:52:297 BROKER/(9550:9573): Se almacena mensaje en memoria en posición: 0x4 -.-
+[INFO] 15:23:52:299 BROKER/(9550:9576): Se almacena mensaje en memoria en posición: 0x20 -.-
+[INFO] 15:23:52:300 BROKER/(9550:9579): Se almacena mensaje en memoria en posición: 0x10 -.-
+[INFO] 15:24:15:42 BROKER/(9600:9600): Estoy escuchando!
+[INFO] 15:24:17:31 BROKER/(9600:9620): Se almacena mensaje en memoria en posición: (nil) -.-
+[INFO] 15:24:17:32 BROKER/(9600:9623): Se almacena mensaje en memoria en posición: 0x4 -.-
+[INFO] 15:24:17:33 BROKER/(9600:9626): Se almacena mensaje en memoria en posición: 0x20 -.-
+[INFO] 15:24:17:35 BROKER/(9600:9629): Se almacena mensaje en memoria en posición: 0x10 -.-
+[INFO] 15:24:27:39 BROKER/(9600:9635): Se almacena mensaje en memoria en posición: 0x20 -.-
+[INFO] 15:28:50:150 BROKER/(9828:9828): Estoy escuchando!
+[INFO] 15:28:55:172 BROKER/(9858:9858): Estoy escuchando!
+[INFO] 15:28:56:995 BROKER/(9858:9879): Se almacena mensaje en memoria en posición: (nil) -.-
+[INFO] 15:28:56:996 BROKER/(9858:9882): Se almacena mensaje en memoria en posición: 0x4 -.-
+[INFO] 15:28:56:997 BROKER/(9858:9884): Se almacena mensaje en memoria en posición: 0x20 -.-
+[INFO] 15:28:56:998 BROKER/(9858:9888): Se almacena mensaje en memoria en posición: 0x10 -.-
+[INFO] 15:29:06:3 BROKER/(9858:9894): Se almacena mensaje en memoria en posición: 0x20 -.-
+[INFO] 16:14:57:284 BROKER/(11829:11829): Estoy escuchando!
+[INFO] 16:15:04:652 BROKER/(11856:11856): Estoy escuchando!
+[INFO] 16:15:14:406 BROKER/(11883:11883): Estoy escuchando!
+[INFO] 16:15:51:856 BROKER/(11995:11995): Estoy escuchando!
+[INFO] 16:16:51:732 BROKER/(12034:12034): Estoy escuchando!
+[INFO] 16:20:12:265 BROKER/(3118:3118): Estoy escuchando!
+[INFO] 16:20:52:282 BROKER/(3118:3250): Se almacena mensaje en memoria en posición: (nil) -.-
+[INFO] 16:20:52:283 BROKER/(3118:3253): Se almacena mensaje en memoria en posición: 0x4 -.-
+[INFO] 16:20:52:291 BROKER/(3118:3256): Se almacena mensaje en memoria en posición: 0x20 -.-
+[INFO] 16:20:52:294 BROKER/(3118:3259): Se almacena mensaje en memoria en posición: 0x10 -.-
+[INFO] 16:21:02:299 BROKER/(3118:3265): Se almacena mensaje en memoria en posición: 0x20 -.-
+[INFO] 16:22:44:737 BROKER/(3367:3367): Estoy escuchando!
+[INFO] 16:22:50:31 BROKER/(3408:3408): Estoy escuchando!
+[INFO] 16:22:52:659 BROKER/(3408:3464): Se almacena mensaje en memoria en posición: (nil) -.-
+[INFO] 16:22:52:660 BROKER/(3408:3467): Se almacena mensaje en memoria en posición: 0x4 -.-
+[INFO] 16:22:52:662 BROKER/(3408:3470): Se almacena mensaje en memoria en posición: 0x20 -.-
+[INFO] 16:22:52:663 BROKER/(3408:3473): Se almacena mensaje en memoria en posición: 0x10 -.-
+[INFO] 16:23:02:675 BROKER/(3408:3484): Se almacena mensaje en memoria en posición: 0x20 -.-
+[INFO] 16:32:01:896 BROKER/(3932:3932): Estoy escuchando!
+[INFO] 16:32:16:353 BROKER/(3974:3974): Estoy escuchando!
+[INFO] 16:32:19:350 BROKER/(3974:3994): Se almacena mensaje en memoria en posición: (nil) -.-
+[INFO] 16:32:19:351 BROKER/(3974:3996): Se almacena mensaje en memoria en posición: 0x4 -.-
+[INFO] 16:32:19:352 BROKER/(3974:3999): Se almacena mensaje en memoria en posición: 0x20 -.-
+[INFO] 16:32:19:353 BROKER/(3974:4002): Se almacena mensaje en memoria en posición: 0x10 -.-
+[INFO] 16:32:29:356 BROKER/(3974:4009): Se almacena mensaje en memoria en posición: 0x20 -.-
+[INFO] 16:34:22:741 BROKER/(4096:4096): Estoy escuchando!
+[INFO] 16:34:28:813 BROKER/(4096:4122): Se almacena mensaje en memoria en posición: (nil) -.-
+[INFO] 16:34:28:814 BROKER/(4096:4125): Se almacena mensaje en memoria en posición: 0x4 -.-
+[INFO] 16:34:28:815 BROKER/(4096:4128): Se almacena mensaje en memoria en posición: 0x20 -.-
+[INFO] 16:34:28:816 BROKER/(4096:4131): Se almacena mensaje en memoria en posición: 0x10 -.-
+[INFO] 16:34:38:821 BROKER/(4096:4138): Se almacena mensaje en memoria en posición: 0x20 -.-
+[INFO] 16:37:33:331 BROKER/(4254:4254): Estoy escuchando!
+[INFO] 16:37:35:35 BROKER/(4254:4274): Se almacena mensaje en memoria en posición: (nil) -.-
+[INFO] 16:37:35:36 BROKER/(4254:4278): Se almacena mensaje en memoria en posición: 0x4 -.-
+[INFO] 16:37:35:37 BROKER/(4254:4281): Se almacena mensaje en memoria en posición: 0x20 -.-
+[INFO] 16:37:35:39 BROKER/(4254:4283): Se almacena mensaje en memoria en posición: 0x10 -.-
+[INFO] 16:37:45:42 BROKER/(4254:4290): Se almacena mensaje en memoria en posición: 0x20 -.-
+[INFO] 16:43:56:17 BROKER/(4519:4519): Estoy escuchando!
+[INFO] 16:44:02:645 BROKER/(4546:4546): Estoy escuchando!
+[INFO] 16:44:04:995 BROKER/(4546:4567): Se almacena mensaje en memoria en posición: (nil) -.-
+[INFO] 16:44:04:996 BROKER/(4546:4570): Se almacena mensaje en memoria en posición: 0x4 -.-
+[INFO] 16:44:04:998 BROKER/(4546:4573): Se almacena mensaje en memoria en posición: 0x20 -.-
+[INFO] 16:44:04:999 BROKER/(4546:4575): Se almacena mensaje en memoria en posición: 0x10 -.-
+[INFO] 16:44:15:4 BROKER/(4546:4586): Se almacena mensaje en memoria en posición: 0x20 -.-
+[INFO] 16:46:09:868 BROKER/(4712:4712): Estoy escuchando!
+[INFO] 16:46:12:218 BROKER/(4712:4732): Se almacena mensaje en memoria en posición: (nil) -.-
+[INFO] 16:46:12:220 BROKER/(4712:4736): Se almacena mensaje en memoria en posición: 0x4 -.-
+[INFO] 16:46:12:221 BROKER/(4712:4739): Se almacena mensaje en memoria en posición: 0x20 -.-
+[INFO] 16:46:12:225 BROKER/(4712:4742): Se almacena mensaje en memoria en posición: 0x10 -.-
+[INFO] 16:46:24:229 BROKER/(4712:4753): Se almacena mensaje en memoria en posición: 0x20 -.-
+[INFO] 16:58:34:360 BROKER/(5142:5142): Estoy escuchando!
+[INFO] 16:58:39:695 BROKER/(5171:5171): Estoy escuchando!
+[INFO] 16:58:42:473 BROKER/(5171:5191): Se almacena mensaje en memoria en posición: (nil) -.-
+[INFO] 16:58:42:474 BROKER/(5171:5195): Se almacena mensaje en memoria en posición: 0x4 -.-
+[INFO] 16:58:42:475 BROKER/(5171:5197): Se almacena mensaje en memoria en posición: 0x20 -.-
+[INFO] 16:58:42:476 BROKER/(5171:5200): Se almacena mensaje en memoria en posición: 0x10 -.-
+[INFO] 16:58:54:480 BROKER/(5171:5217): Se almacena mensaje en memoria en posición: 0x20 -.-
+[INFO] 17:06:23:489 BROKER/(5401:5401): Estoy escuchando!
+[INFO] 17:06:26:343 BROKER/(5401:5422): Se almacena mensaje en memoria en posición: (nil) -.-
+[INFO] 17:06:26:344 BROKER/(5401:5425): Se almacena mensaje en memoria en posición: 0x4 -.-
+[INFO] 17:06:26:346 BROKER/(5401:5428): Se almacena mensaje en memoria en posición: 0x20 -.-
+[INFO] 17:06:26:347 BROKER/(5401:5430): Se almacena mensaje en memoria en posición: 0x10 -.-
+[INFO] 17:06:38:351 BROKER/(5401:5439): Se almacena mensaje en memoria en posición: (nil) -.-
+[INFO] 17:07:18:897 BROKER/(5476:5476): Estoy escuchando!
+[INFO] 17:07:21:794 BROKER/(5476:5498): Se almacena mensaje en memoria en posición: (nil) -.-
+[INFO] 17:07:21:794 BROKER/(5476:5501): Se almacena mensaje en memoria en posición: 0x4 -.-
+[INFO] 17:07:21:795 BROKER/(5476:5504): Se almacena mensaje en memoria en posición: 0x20 -.-
+[INFO] 17:07:21:798 BROKER/(5476:5506): Se almacena mensaje en memoria en posición: 0x10 -.-
+[INFO] 17:07:31:804 BROKER/(5476:5513): Se almacena mensaje en memoria en posición: 0x20 -.-
+[INFO] 17:07:54:410 BROKER/(5548:5548): Estoy escuchando!
+[INFO] 17:08:02:704 BROKER/(5575:5575): Estoy escuchando!
+[INFO] 17:08:04:643 BROKER/(5575:5597): Se almacena mensaje en memoria en posición: (nil) -.-
+[INFO] 17:08:04:644 BROKER/(5575:5600): Se almacena mensaje en memoria en posición: 0x4 -.-
+[INFO] 17:08:04:648 BROKER/(5575:5603): Se almacena mensaje en memoria en posición: 0x20 -.-
+[INFO] 17:08:04:650 BROKER/(5575:5606): Se almacena mensaje en memoria en posición: 0x10 -.-
+[INFO] 17:08:15:654 BROKER/(5575:5612): Se almacena mensaje en memoria en posición: (nil) -.-

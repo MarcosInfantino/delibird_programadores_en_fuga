@@ -81,7 +81,7 @@ void suscribir(colaMensajes * cola, paquete paq, uint32_t* socket,uint32_t ident
 	if (validarParaSuscripcion(cola, paq, *socket,identificadorCola)) {
 		suscribirACola(socket, cola);
 		responderMensaje(*socket, CORRECTO);
-		//enviarMensajesPreviosEnMemoria(socket, identificadorCola);
+		enviarMensajesPreviosEnMemoria(socket, identificadorCola);
 		//log_info(loggerBroker, armarStringSuscripLog(paq.modulo, paq.tipoMensaje));
 		//log_info(brokerLogger2, armarStringSuscripLog(paq.modulo, paq.tipoMensaje));
 	} else {

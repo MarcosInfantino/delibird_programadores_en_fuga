@@ -27,7 +27,6 @@ void definirComienzoDeMemoria(){
 }
 
 void registrarMensajeEnMemoria(uint32_t idMensaje, paquete* paq, algoritmoMem metodo){
-	log_info(brokerLogger2, "Entro a registrar mensaje en memoria");
 	if(paq->tipoMensaje == CATCH_POKEMON || paq->tipoMensaje == GET_POKEMON){
 		if(yaEstaEnMemoria(paq)){
 			log_info(brokerLogger2, "el msj ya esta");
@@ -45,10 +44,8 @@ void registrarMensajeEnMemoria(uint32_t idMensaje, paquete* paq, algoritmoMem me
 //	memcpy(msgNuevo->stream , paq->stream, msgNuevo->sizeStream);
 
 	msgNuevo->modulo = paq->modulo;
-
 	uint32_t sizePrevio;
 
-	log_info(brokerLogger2, "Comienzo a registrar el mensaje en memoria.");
 	switch(metodo){
 	case PARTICIONES_DINAMICAS:
 		log_info(brokerLogger2, "ITERACION: %i", iteraciones);
@@ -62,7 +59,6 @@ void registrarMensajeEnMemoria(uint32_t idMensaje, paquete* paq, algoritmoMem me
 		break;
 	case BUDDY_SYSTEM:
 		pthread_mutex_lock(mutexMemoria);
-		log_info(brokerLogger2, "Selecciono administración de memoria con buddy system.");
 		sizePrevio = sizeListaMutex(nodosOcupados);
 		registrarEnMemoriaBUDDYSYSTEM(msgNuevo, nodoRaizMemoria);
 		while (sizeListaMutex(nodosOcupados) == sizePrevio){
@@ -120,11 +116,10 @@ bool estaEnListaEnviados (uint32_t socket, msgMemoriaBroker* mensaje){
 }
 
 void guardarYaEnviados (paquete* paq, uint32_t socket){
-	msgMemoriaBroker* mensaje = buscarMensajeEnMemoria(paq->idCorrelativo);
+	msgMemoriaBroker* mensaje = buscarMensajeEnMemoria(paq->id);
 	log_info(brokerLogger2, "ENCIMA LOS VOLVIERON A VOTAR");
 	if(mensaje == NULL){
 		printf("No se encontró el mensaje en memoria, ERROR");
-
 	}
 //	else if(estaEnListaEnviados (socket, mensaje)){
 //		printf("Ya esta en la lista de enviados");
@@ -188,8 +183,8 @@ void guardarYaEnviados (paquete* paq, uint32_t socket){
 
 
 void asignarPuntero(uint32_t offset, void* stream, uint32_t sizeStream){
-	log_info(brokerLogger2,"Se almacena mensaje en posición: %p (de memoria) -.-", memoria - memoria+ offset);
-	log_info(loggerBroker, "Se almacena mensaje en memoria en posición: %p -.-", memoria - memoria + offset);
+	log_info(brokerLogger2,"ALMACENO: mensaje en posición: %p (de memoria) -.-", 0 + offset);
+	log_info(loggerBroker, "Se almacena mensaje en memoria en posición: %p -.-", 0 + offset);
 	memcpy(memoria + offset, stream, sizeStream);
 }
 
@@ -317,8 +312,12 @@ msgMemoriaBroker* buscarMensajeEnMemoria(uint32_t idMensajeBuscado){
 void enviarMensajesPreviosEnMemoria(uint32_t* socket, uint32_t cola){
 	switch(algoritmoMemoria){
 	case BUDDY_SYSTEM:
-		//enviarMsjsASuscriptorNuevoBuddySystem (cola, socket);
+		enviarMsjsASuscriptorNuevoBuddySystem (cola, socket);
+		break;
 	case PARTICIONES_DINAMICAS:
 		enviarMsjsASuscriptorNuevoParticiones (cola, socket);
+		break;
+	default:
+		printf("Error en algoritmo memoria");
 	}
 }

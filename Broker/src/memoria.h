@@ -102,6 +102,9 @@ void liberarNodo(struct nodoMemoria* nodo);
 void registrarMensajeEnMemoria(uint32_t idMensaje, paquete* paq, algoritmoMem metodo);
 void registrarEnMemoriaBUDDYSYSTEM(msgMemoriaBroker* mensajeNuevo, struct nodoMemoria* partActual);
 
+void enviarMsjsASuscriptorNuevoBuddySystem(uint32_t colaParametro, uint32_t* socket);
+bool envieMensajeDeNodoASocket(struct nodoMemoria* nodoEvaluado, uint32_t* socket);
+
 void particionarMemoriaBUDDY(struct nodoMemoria*);
 void evaluarTamanioParticion(struct nodoMemoria* partActual, msgMemoriaBroker* msg);
 uint32_t evaluarTamanioParticionYasignar(struct nodoMemoria* partActual, msgMemoriaBroker* msg);
