@@ -31,8 +31,6 @@
 #define pathFiles "/home/utnso/tp-2020-1c-Programadores-en-Fuga/Gamecard/TALL_GRASS/Files/"
 #define pathBlocks "/home/utnso/tp-2020-1c-Programadores-en-Fuga/Gamecard/TALL_GRASS/Blocks/"
 
-
-
 typedef struct{
 	uint32_t block_size;
 	uint32_t blocks;
@@ -105,25 +103,41 @@ typedef struct{
 	uint32_t resultado;
 } pokemonAAtrapar;
 
+
+//------------Variables globales del config
+
+uint32_t tiempoRetardoGC;
+uint32_t tiempoReintentoOperacion;
+uint32_t tiempoReconexionGC;
+uint32_t puertoBrokerGC;
+char* ipBrokerGC;
+char* puntoMontaje;
+char* pathLoggerPrincipal;
+
+//-----------Variables Globales de Metadata
+
+tallGrassHeader tallGrass;
 uint32_t tamanioBloque;
 uint32_t cantidadBloques;
-t_bitarray* bitmap;
-char* puntoMontaje;
-tallGrassHeader tallGrass;
-char* mmapBitmap;
-t_list* listaBloques;
-t_log* gamecardLogger2;
+
+//------------------Threads
+
 pthread_t threadSuscripcionNew;
 pthread_t threadSuscripcionCatch;
 pthread_t threadSuscripcionGet;
 pthread_t hiloServidorDeEscucha;
 pthread_t hiloConexionBroker;
-struct nodoArbolDirectorio* raizDirectorio;
+pthread_mutex_t* mutexPrueba;
+
 
 listaMutex* listaArchivos;//lista de archivoHeader
-uint32_t tiempoRetardoGC;
-uint32_t tiempoReintentoOperacion;
-pthread_mutex_t* mutexPrueba;
+t_bitarray* bitmap;
+char* mmapBitmap;
+t_list* listaBloques;
+t_log * gamecardLogger;
+t_log* gamecardLogger2;
+
+
 
 void* suscribirseCola(void* msgSuscripcion);
 void* suscribirseColasBroker(void* config);
@@ -205,4 +219,6 @@ posicion* conseguirPosicionesCantidad(archivoHeader* pokeArchivo);
 int32_t existe(char *path);
 uint32_t reconectarseAlBroker(uint32_t cliente,void* direccionServidor,socklen_t length);
 int crearHiloConexionBroker(void* config, pthread_t* hilo);
+void liberarPrograma(t_config* configGamecard,t_log* gamecardLogger);
+t_config* crearYleerConfig();
 #endif /* GAMECARD_H_ */

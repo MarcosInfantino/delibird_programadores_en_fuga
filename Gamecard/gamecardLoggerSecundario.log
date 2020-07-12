@@ -45879,3 +45879,934 @@ HolacomoAndas
 
 [INFO] 00:28:39:654 gamecard/(20514:20522): Reintentando conexión en 10 segundos...
 
+[INFO] 15:57:29:620 gamecard/(26895:26895): Inicio de programa: Gamecard.
+[INFO] 15:57:29:622 gamecard/(26895:26895): Se encontro el directorio metadata
+[INFO] 15:57:29:622 gamecard/(26895:26895): Se encontro el archivo metadata.bin
+[INFO] 15:57:29:622 gamecard/(26895:26895): Inicio de Metadata, Tamanio bloques: 64,  Cantidad de bloques: 20,  Magic number: TALL_GRASS
+[INFO] 15:57:29:662 gamecard/(26895:26901): Estoy escuchando
+[INFO] 15:57:29:662 gamecard/(26895:26901): Espero un nuevo cliente
+[INFO] 15:57:29:672 gamecard/(26895:26904): Voy a llenar el paquete
+[INFO] 15:57:29:672 gamecard/(26895:26904): cliente: 7
+[INFO] 15:57:29:672 gamecard/(26895:26903): Voy a llenar el paquete
+[INFO] 15:57:29:672 gamecard/(26895:26903): cliente: 8
+[INFO] 15:57:29:672 gamecard/(26895:26904): Conexión fallida con el Broker
+
+[INFO] 15:57:29:672 gamecard/(26895:26904): Reintentando conexión en 10 segundos...
+
+[INFO] 15:57:29:672 gamecard/(26895:26903): Conexión fallida con el Broker
+
+[INFO] 15:57:29:674 gamecard/(26895:26903): Reintentando conexión en 10 segundos...
+
+[INFO] 15:57:29:674 gamecard/(26895:26902): Voy a llenar el paquete
+[INFO] 15:57:29:674 gamecard/(26895:26902): cliente: 9
+[INFO] 15:57:29:674 gamecard/(26895:26902): Conexión fallida con el Broker
+
+[INFO] 15:57:29:674 gamecard/(26895:26902): Reintentando conexión en 10 segundos...
+
+[INFO] 15:57:39:673 gamecard/(26895:26904): El reintento de conexión no fue exitoso
+
+[INFO] 15:57:39:673 gamecard/(26895:26904): Reintentando conexión en 10 segundos...
+
+[INFO] 15:57:39:675 gamecard/(26895:26902): El reintento de conexión no fue exitoso
+
+[INFO] 15:57:39:675 gamecard/(26895:26903): El reintento de conexión no fue exitoso
+
+[INFO] 15:57:39:675 gamecard/(26895:26902): Reintentando conexión en 10 segundos...
+
+[INFO] 15:57:39:675 gamecard/(26895:26903): Reintentando conexión en 10 segundos...
+
+[INFO] 15:57:49:674 gamecard/(26895:26904): Comienzo suscripcion a 6
+[INFO] 15:57:49:674 gamecard/(26895:26904): Espero respuesta
+[INFO] 15:57:49:675 gamecard/(26895:26903): Comienzo suscripcion a 6
+[INFO] 15:57:49:675 gamecard/(26895:26902): Comienzo suscripcion a 6
+[INFO] 15:57:49:675 gamecard/(26895:26903): Espero respuesta
+[INFO] 15:57:49:675 gamecard/(26895:26902): Espero respuesta
+[INFO] 15:57:49:677 gamecard/(26895:26903): Se suscribio correctamente
+[INFO] 15:57:49:677 gamecard/(26895:26904): Se suscribio correctamente
+[INFO] 15:57:49:677 gamecard/(26895:26902): Se suscribio correctamente
+[INFO] 15:58:25:430 gamecard/(27017:27017): Inicio de programa: Gamecard.
+[INFO] 15:58:25:430 gamecard/(27017:27017): Se encontro el directorio metadata
+[INFO] 15:58:25:430 gamecard/(27017:27017): Se encontro el archivo metadata.bin
+[INFO] 15:58:25:430 gamecard/(27017:27017): Inicio de Metadata, Tamanio bloques: 64,  Cantidad de bloques: 20,  Magic number: TALL_GRASS
+[INFO] 15:58:25:490 gamecard/(27017:27023): Estoy escuchando
+[INFO] 15:58:25:491 gamecard/(27017:27023): Espero un nuevo cliente
+[INFO] 15:58:25:498 gamecard/(27017:27026): Voy a llenar el paquete
+[INFO] 15:58:25:498 gamecard/(27017:27026): cliente: 7
+[INFO] 15:58:25:498 gamecard/(27017:27025): Voy a llenar el paquete
+[INFO] 15:58:25:498 gamecard/(27017:27026): Conexión fallida con el Broker
+
+[INFO] 15:58:25:498 gamecard/(27017:27025): cliente: 8
+[INFO] 15:58:25:498 gamecard/(27017:27026): Reintentando conexión en 10 segundos...
+
+[INFO] 15:58:25:498 gamecard/(27017:27025): Conexión fallida con el Broker
+
+[INFO] 15:58:25:498 gamecard/(27017:27025): Reintentando conexión en 10 segundos...
+
+[INFO] 15:58:25:498 gamecard/(27017:27024): Voy a llenar el paquete
+[INFO] 15:58:25:498 gamecard/(27017:27024): cliente: 9
+[INFO] 15:58:25:498 gamecard/(27017:27024): Conexión fallida con el Broker
+
+[INFO] 15:58:25:498 gamecard/(27017:27024): Reintentando conexión en 10 segundos...
+
+[INFO] 15:58:28:854 gamecard/(27017:27023): Gestiono un nuevo cliente
+[INFO] 15:58:28:855 gamecard/(27017:27023): Espero un nuevo cliente
+[INFO] 15:58:28:855 gamecard/(27017:27029): atiendo cliente
+[INFO] 15:58:28:856 gamecard/(27017:27029): hola llegue
+[INFO] 15:58:28:856 gamecard/(27017:27029): deserializado
+[INFO] 15:58:28:857 gamecard/(27017:27029): Atiendo new del pokemon: Pikachu. Posicion: (1, 1).
+[INFO] 15:58:28:857 gamecard/(27017:27029): entro a cargar metadata
+[INFO] 15:58:28:857 gamecard/(27017:27029): empiezo con los bloques Pikachu
+[INFO] 15:58:28:857 gamecard/(27017:27029): termino con los bloques Pikachu
+[INFO] 15:58:28:857 gamecard/(27017:27029): ----------------------------Lista bloques del config del archivo Pikachu: [1]. ABRIR ARCHIVO FUERA 1
+[INFO] 15:58:28:857 gamecard/(27017:27029): ----------------------------Lista bloques del config del archivo Pikachu: [1]. ABRIR ARCHIVO FUERA 2
+[INFO] 15:58:28:857 gamecard/(27017:27029): comienzo a obtener lista de Pikachu
+[INFO] 15:58:28:857 gamecard/(27017:27029): termino de obtener lista de Pikachu
+[INFO] 15:58:28:857 gamecard/(27017:27029): comienzo a actualizar posiciones de Pikachu
+[INFO] 15:58:28:857 gamecard/(27017:27029): ----------------------------Lista bloques del config del archivo Pikachu: [1]. COMIENZO
+[INFO] 15:58:28:862 gamecard/(27017:27029): -------------BLOQUES NECESARIOS= 1
+[INFO] 15:58:28:862 gamecard/(27017:27029): ----------------------------Lista bloques del config del archivo Pikachu: [1]. FINAL
+[INFO] 15:58:28:862 gamecard/(27017:27029): termino de actualizar posiciones de Pikachu
+[INFO] 15:58:29:862 gamecard/(27017:27029): Cierro el archivo del pokemon: Pikachu. Posicion: (1, 1).
+[INFO] 15:58:35:499 gamecard/(27017:27024): El reintento de conexión no fue exitoso
+
+[INFO] 15:58:35:499 gamecard/(27017:27025): El reintento de conexión no fue exitoso
+
+[INFO] 15:58:35:499 gamecard/(27017:27026): El reintento de conexión no fue exitoso
+
+[INFO] 15:58:35:499 gamecard/(27017:27024): Reintentando conexión en 10 segundos...
+
+[INFO] 15:58:35:499 gamecard/(27017:27026): Reintentando conexión en 10 segundos...
+
+[INFO] 15:58:35:499 gamecard/(27017:27025): Reintentando conexión en 10 segundos...
+
+[INFO] 15:58:45:500 gamecard/(27017:27025): El reintento de conexión no fue exitoso
+
+[INFO] 15:58:45:501 gamecard/(27017:27026): El reintento de conexión no fue exitoso
+
+[INFO] 15:58:45:501 gamecard/(27017:27024): El reintento de conexión no fue exitoso
+
+[INFO] 15:58:45:501 gamecard/(27017:27025): Reintentando conexión en 10 segundos...
+
+[INFO] 15:58:45:501 gamecard/(27017:27024): Reintentando conexión en 10 segundos...
+
+[INFO] 15:58:45:501 gamecard/(27017:27026): Reintentando conexión en 10 segundos...
+
+[INFO] 15:59:56:362 gamecard/(27057:27057): Inicio de programa: Gamecard.
+[INFO] 15:59:56:363 gamecard/(27057:27057): Se encontro el directorio metadata
+[INFO] 15:59:56:363 gamecard/(27057:27057): Se encontro el archivo metadata.bin
+[INFO] 15:59:56:363 gamecard/(27057:27057): Inicio de Metadata, Tamanio bloques: 64,  Cantidad de bloques: 20,  Magic number: TALL_GRASS
+[INFO] 15:59:56:377 gamecard/(27057:27063): Estoy escuchando
+[INFO] 15:59:56:377 gamecard/(27057:27063): Espero un nuevo cliente
+[INFO] 15:59:56:387 gamecard/(27057:27066): Voy a llenar el paquete
+[INFO] 15:59:56:387 gamecard/(27057:27066): cliente: 7
+[INFO] 15:59:56:387 gamecard/(27057:27066): Conexión fallida con el Broker
+
+[INFO] 15:59:56:387 gamecard/(27057:27066): Reintentando conexión en 10 segundos...
+
+[INFO] 15:59:56:387 gamecard/(27057:27065): Voy a llenar el paquete
+[INFO] 15:59:56:387 gamecard/(27057:27065): cliente: 8
+[INFO] 15:59:56:387 gamecard/(27057:27065): Conexión fallida con el Broker
+
+[INFO] 15:59:56:387 gamecard/(27057:27065): Reintentando conexión en 10 segundos...
+
+[INFO] 15:59:56:387 gamecard/(27057:27064): Voy a llenar el paquete
+[INFO] 15:59:56:387 gamecard/(27057:27064): cliente: 9
+[INFO] 15:59:56:388 gamecard/(27057:27064): Conexión fallida con el Broker
+
+[INFO] 15:59:56:388 gamecard/(27057:27064): Reintentando conexión en 10 segundos...
+
+[INFO] 16:00:12:176 gamecard/(27090:27090): Inicio de programa: Gamecard.
+[INFO] 16:00:15:23 gamecard/(27090:27090): Se encontro el directorio metadata
+[INFO] 16:00:15:23 gamecard/(27090:27090): Se encontro el archivo metadata.bin
+[INFO] 16:00:15:23 gamecard/(27090:27090): Inicio de Metadata, Tamanio bloques: 64,  Cantidad de bloques: 20,  Magic number: TALL_GRASS
+[INFO] 16:00:20:398 gamecard/(27090:27120): Voy a llenar el paquete
+[INFO] 16:00:20:398 gamecard/(27090:27120): cliente: 5
+[INFO] 16:00:20:398 gamecard/(27090:27120): Conexión fallida con el Broker
+
+[INFO] 16:00:20:398 gamecard/(27090:27120): Reintentando conexión en 10 segundos...
+
+[INFO] 16:00:20:400 gamecard/(27090:27121): Voy a llenar el paquete
+[INFO] 16:00:20:400 gamecard/(27090:27121): cliente: 6
+[INFO] 16:00:20:401 gamecard/(27090:27121): Conexión fallida con el Broker
+
+[INFO] 16:00:20:401 gamecard/(27090:27121): Reintentando conexión en 10 segundos...
+
+[INFO] 16:00:20:413 gamecard/(27090:27122): Voy a llenar el paquete
+[INFO] 16:00:20:413 gamecard/(27090:27122): cliente: 7
+[INFO] 16:00:20:413 gamecard/(27090:27122): Conexión fallida con el Broker
+
+[INFO] 16:00:20:413 gamecard/(27090:27122): Reintentando conexión en 10 segundos...
+
+[INFO] 16:00:20:421 gamecard/(27090:27123): Estoy escuchando
+[INFO] 16:00:20:422 gamecard/(27090:27123): Espero un nuevo cliente
+[INFO] 16:00:24:264 gamecard/(27090:27123): Gestiono un nuevo cliente
+[INFO] 16:00:24:272 gamecard/(27090:27123): Espero un nuevo cliente
+[INFO] 16:00:24:273 gamecard/(27090:27126): atiendo cliente
+[INFO] 16:00:24:273 gamecard/(27090:27126): hola llegue
+[INFO] 16:00:40:667 gamecard/(27090:27121): El reintento de conexión no fue exitoso
+
+[INFO] 16:00:40:667 gamecard/(27090:27122): El reintento de conexión no fue exitoso
+
+[INFO] 16:00:40:667 gamecard/(27090:27121): Reintentando conexión en 10 segundos...
+
+[INFO] 16:00:40:667 gamecard/(27090:27120): El reintento de conexión no fue exitoso
+
+[INFO] 16:00:40:667 gamecard/(27090:27120): Reintentando conexión en 10 segundos...
+
+[INFO] 16:00:40:667 gamecard/(27090:27122): Reintentando conexión en 10 segundos...
+
+[INFO] 16:02:21:566 gamecard/(27207:27207): Se encontro el directorio metadata
+[INFO] 16:02:21:570 gamecard/(27207:27207): Se encontro el archivo metadata.bin
+[INFO] 16:02:21:570 gamecard/(27207:27207): Inicio de Metadata, Tamanio bloques: 64,  Cantidad de bloques: 20,  Magic number: TALL_GRASS
+[INFO] 16:02:21:598 gamecard/(27207:27213): Estoy escuchando
+[INFO] 16:02:21:598 gamecard/(27207:27213): Espero un nuevo cliente
+[INFO] 16:02:21:605 gamecard/(27207:27216): Voy a llenar el paquete
+[INFO] 16:02:21:606 gamecard/(27207:27216): cliente: 7
+[INFO] 16:02:21:606 gamecard/(27207:27216): Conexión fallida con el Broker
+
+[INFO] 16:02:21:606 gamecard/(27207:27215): Voy a llenar el paquete
+[INFO] 16:02:21:606 gamecard/(27207:27216): Reintentando conexión en 10 segundos...
+
+[INFO] 16:02:21:606 gamecard/(27207:27215): cliente: 8
+[INFO] 16:02:21:606 gamecard/(27207:27215): Conexión fallida con el Broker
+
+[INFO] 16:02:21:606 gamecard/(27207:27215): Reintentando conexión en 10 segundos...
+
+[INFO] 16:02:21:606 gamecard/(27207:27214): Voy a llenar el paquete
+[INFO] 16:02:21:606 gamecard/(27207:27214): cliente: 9
+[INFO] 16:02:21:606 gamecard/(27207:27214): Conexión fallida con el Broker
+
+[INFO] 16:02:21:606 gamecard/(27207:27214): Reintentando conexión en 10 segundos...
+
+[INFO] 16:02:31:606 gamecard/(27207:27215): El reintento de conexión no fue exitoso
+
+[INFO] 16:02:31:606 gamecard/(27207:27216): El reintento de conexión no fue exitoso
+
+[INFO] 16:02:31:606 gamecard/(27207:27215): Reintentando conexión en 10 segundos...
+
+[INFO] 16:02:31:606 gamecard/(27207:27216): Reintentando conexión en 10 segundos...
+
+[INFO] 16:02:31:607 gamecard/(27207:27214): El reintento de conexión no fue exitoso
+
+[INFO] 16:02:31:607 gamecard/(27207:27214): Reintentando conexión en 10 segundos...
+
+[INFO] 16:02:41:607 gamecard/(27207:27216): El reintento de conexión no fue exitoso
+
+[INFO] 16:02:41:607 gamecard/(27207:27215): El reintento de conexión no fue exitoso
+
+[INFO] 16:02:41:607 gamecard/(27207:27216): Reintentando conexión en 10 segundos...
+
+[INFO] 16:02:41:607 gamecard/(27207:27215): Reintentando conexión en 10 segundos...
+
+[INFO] 16:02:41:608 gamecard/(27207:27214): El reintento de conexión no fue exitoso
+
+[INFO] 16:02:41:608 gamecard/(27207:27214): Reintentando conexión en 10 segundos...
+
+[INFO] 16:03:46:480 gamecard/(27286:27286): Se encontro el directorio metadata
+[INFO] 16:03:46:480 gamecard/(27286:27286): Se encontro el archivo metadata.bin
+[INFO] 16:03:46:480 gamecard/(27286:27286): Inicio de Metadata, Tamanio bloques: 64,  Cantidad de bloques: 20,  Magic number: TALL_GRASS
+[INFO] 16:03:46:497 gamecard/(27286:27292): Estoy escuchando
+[INFO] 16:03:46:497 gamecard/(27286:27292): Espero un nuevo cliente
+[INFO] 16:03:46:501 gamecard/(27286:27295): Voy a llenar el paquete
+[INFO] 16:03:46:501 gamecard/(27286:27295): cliente: 7
+[INFO] 16:03:46:501 gamecard/(27286:27295): Conexión fallida con el Broker
+
+[INFO] 16:03:46:501 gamecard/(27286:27295): Reintentando conexión en 10 segundos...
+
+[INFO] 16:03:46:501 gamecard/(27286:27294): Voy a llenar el paquete
+[INFO] 16:03:46:501 gamecard/(27286:27294): cliente: 8
+[INFO] 16:03:46:501 gamecard/(27286:27294): Conexión fallida con el Broker
+
+[INFO] 16:03:46:501 gamecard/(27286:27294): Reintentando conexión en 10 segundos...
+
+[INFO] 16:03:46:502 gamecard/(27286:27293): Voy a llenar el paquete
+[INFO] 16:03:46:502 gamecard/(27286:27293): cliente: 9
+[INFO] 16:03:46:502 gamecard/(27286:27293): Conexión fallida con el Broker
+
+[INFO] 16:03:46:502 gamecard/(27286:27293): Reintentando conexión en 10 segundos...
+
+[INFO] 16:05:33:300 gamecard/(27409:27409): Se encontro el directorio metadata
+[INFO] 16:05:33:300 gamecard/(27409:27409): Se encontro el archivo metadata.bin
+[INFO] 16:05:33:300 gamecard/(27409:27409): Inicio de Metadata, Tamanio bloques: 64,  Cantidad de bloques: 20,  Magic number: TALL_GRASS
+[INFO] 16:05:33:317 gamecard/(27409:27419): Estoy escuchando
+[INFO] 16:05:33:317 gamecard/(27409:27419): Espero un nuevo cliente
+[INFO] 16:05:33:318 gamecard/(27409:27420): Voy a llenar el paquete
+[INFO] 16:05:33:318 gamecard/(27409:27421): Voy a llenar el paquete
+[INFO] 16:05:33:318 gamecard/(27409:27422): Voy a llenar el paquete
+[INFO] 16:05:33:318 gamecard/(27409:27420): cliente: 7
+[INFO] 16:05:33:321 gamecard/(27409:27422): cliente: 8
+[INFO] 16:05:33:321 gamecard/(27409:27421): cliente: 9
+[INFO] 16:05:33:321 gamecard/(27409:27421): Conexión fallida con el Broker
+
+[INFO] 16:05:33:321 gamecard/(27409:27422): Conexión fallida con el Broker
+
+[INFO] 16:05:33:321 gamecard/(27409:27421): Reintentando conexión en 10 segundos...
+
+[INFO] 16:05:33:321 gamecard/(27409:27422): Reintentando conexión en 10 segundos...
+
+[INFO] 16:05:33:322 gamecard/(27409:27420): Conexión fallida con el Broker
+
+[INFO] 16:05:33:322 gamecard/(27409:27420): Reintentando conexión en 10 segundos...
+
+[INFO] 16:05:39:478 gamecard/(27409:27419): Gestiono un nuevo cliente
+[INFO] 16:05:39:478 gamecard/(27409:27419): Espero un nuevo cliente
+[INFO] 16:05:39:480 gamecard/(27409:27426): atiendo cliente
+[INFO] 16:05:39:480 gamecard/(27409:27426): hola llegue
+[INFO] 16:05:39:487 gamecard/(27409:27426): deserializado
+[INFO] 16:05:39:488 gamecard/(27409:27426): Atiendo new del pokemon: Pikachu. Posicion: (1, 1).
+[INFO] 16:05:39:488 gamecard/(27409:27426): entro a cargar metadata
+[INFO] 16:05:39:488 gamecard/(27409:27426): empiezo con los bloques Pikachu
+[INFO] 16:05:39:488 gamecard/(27409:27426): termino con los bloques Pikachu
+[INFO] 16:05:39:488 gamecard/(27409:27426): ----------------------------Lista bloques del config del archivo Pikachu: [1]. ABRIR ARCHIVO FUERA 1
+[INFO] 16:05:39:488 gamecard/(27409:27426): ----------------------------Lista bloques del config del archivo Pikachu: [1]. ABRIR ARCHIVO FUERA 2
+[INFO] 16:05:39:489 gamecard/(27409:27426): comienzo a obtener lista de Pikachu
+[INFO] 16:05:39:489 gamecard/(27409:27426): termino de obtener lista de Pikachu
+[INFO] 16:05:39:489 gamecard/(27409:27426): comienzo a actualizar posiciones de Pikachu
+[INFO] 16:05:39:493 gamecard/(27409:27426): ----------------------------Lista bloques del config del archivo Pikachu: [1]. COMIENZO
+[INFO] 16:05:39:493 gamecard/(27409:27426): -------------BLOQUES NECESARIOS= 1
+[INFO] 16:05:39:493 gamecard/(27409:27426): ----------------------------Lista bloques del config del archivo Pikachu: [1]. FINAL
+[INFO] 16:05:39:493 gamecard/(27409:27426): termino de actualizar posiciones de Pikachu
+[INFO] 16:05:40:494 gamecard/(27409:27426): Cierro el archivo del pokemon: Pikachu. Posicion: (1, 1).
+[INFO] 16:05:43:322 gamecard/(27409:27420): El reintento de conexión no fue exitoso
+
+[INFO] 16:05:43:323 gamecard/(27409:27422): El reintento de conexión no fue exitoso
+
+[INFO] 16:05:43:323 gamecard/(27409:27421): El reintento de conexión no fue exitoso
+
+[INFO] 16:05:43:323 gamecard/(27409:27420): Reintentando conexión en 10 segundos...
+
+[INFO] 16:05:43:323 gamecard/(27409:27421): Reintentando conexión en 10 segundos...
+
+[INFO] 16:05:43:323 gamecard/(27409:27422): Reintentando conexión en 10 segundos...
+
+[INFO] 16:05:53:324 gamecard/(27409:27422): El reintento de conexión no fue exitoso
+
+[INFO] 16:05:53:324 gamecard/(27409:27421): El reintento de conexión no fue exitoso
+
+[INFO] 16:05:53:324 gamecard/(27409:27420): El reintento de conexión no fue exitoso
+
+[INFO] 16:05:53:325 gamecard/(27409:27422): Reintentando conexión en 10 segundos...
+
+[INFO] 16:05:53:325 gamecard/(27409:27420): Reintentando conexión en 10 segundos...
+
+[INFO] 16:05:53:325 gamecard/(27409:27421): Reintentando conexión en 10 segundos...
+
+[INFO] 16:05:59:75 gamecard/(27409:27419): Gestiono un nuevo cliente
+[INFO] 16:05:59:75 gamecard/(27409:27419): Espero un nuevo cliente
+[INFO] 16:05:59:75 gamecard/(27409:27441): atiendo cliente
+[INFO] 16:05:59:75 gamecard/(27409:27441): hola llegue
+[INFO] 16:05:59:75 gamecard/(27409:27441): deserializado
+[INFO] 16:05:59:75 gamecard/(27409:27441): Atiendo Get del pokemon: Pikachu
+[INFO] 16:05:59:75 gamecard/(27409:27441): EXISTE
+[INFO] 16:05:59:75 gamecard/(27409:27441): ----------------------------Lista bloques del config del archivo Pikachu: [1]. ABRIR ARCHIVO FUERA 1
+[INFO] 16:05:59:76 gamecard/(27409:27441): ----------------------------Lista bloques del config del archivo Pikachu: [1]. ABRIR ARCHIVO FUERA 2
+[INFO] 16:06:00:76 gamecard/(27409:27441): Pokemon:Pikachu
+[INFO] 16:06:00:77 gamecard/(27409:27441): Cantidad de Posiciones:1
+[INFO] 16:06:00:77 gamecard/(27409:27441): Posicion: 1-1
+[INFO] 16:06:03:325 gamecard/(27409:27421): El reintento de conexión no fue exitoso
+
+[INFO] 16:06:03:326 gamecard/(27409:27420): El reintento de conexión no fue exitoso
+
+[INFO] 16:06:03:326 gamecard/(27409:27422): El reintento de conexión no fue exitoso
+
+[INFO] 16:06:03:326 gamecard/(27409:27421): Reintentando conexión en 10 segundos...
+
+[INFO] 16:06:03:326 gamecard/(27409:27420): Reintentando conexión en 10 segundos...
+
+[INFO] 16:06:03:326 gamecard/(27409:27422): Reintentando conexión en 10 segundos...
+
+[INFO] 16:06:13:326 gamecard/(27409:27422): El reintento de conexión no fue exitoso
+
+[INFO] 16:06:13:326 gamecard/(27409:27420): El reintento de conexión no fue exitoso
+
+[INFO] 16:06:13:326 gamecard/(27409:27421): El reintento de conexión no fue exitoso
+
+[INFO] 16:06:13:327 gamecard/(27409:27422): Reintentando conexión en 10 segundos...
+
+[INFO] 16:06:13:327 gamecard/(27409:27421): Reintentando conexión en 10 segundos...
+
+[INFO] 16:06:13:327 gamecard/(27409:27420): Reintentando conexión en 10 segundos...
+
+[INFO] 16:06:23:328 gamecard/(27409:27420): El reintento de conexión no fue exitoso
+
+[INFO] 16:06:23:328 gamecard/(27409:27421): El reintento de conexión no fue exitoso
+
+[INFO] 16:06:23:328 gamecard/(27409:27422): El reintento de conexión no fue exitoso
+
+[INFO] 16:06:23:329 gamecard/(27409:27420): Reintentando conexión en 10 segundos...
+
+[INFO] 16:06:23:329 gamecard/(27409:27422): Reintentando conexión en 10 segundos...
+
+[INFO] 16:06:23:329 gamecard/(27409:27421): Reintentando conexión en 10 segundos...
+
+[INFO] 16:06:33:330 gamecard/(27409:27421): El reintento de conexión no fue exitoso
+
+[INFO] 16:06:33:330 gamecard/(27409:27422): El reintento de conexión no fue exitoso
+
+[INFO] 16:06:33:330 gamecard/(27409:27420): El reintento de conexión no fue exitoso
+
+[INFO] 16:06:33:331 gamecard/(27409:27421): Reintentando conexión en 10 segundos...
+
+[INFO] 16:06:33:331 gamecard/(27409:27420): Reintentando conexión en 10 segundos...
+
+[INFO] 16:06:33:331 gamecard/(27409:27422): Reintentando conexión en 10 segundos...
+
+[INFO] 16:07:06:366 gamecard/(27473:27473): Se encontro el directorio metadata
+[INFO] 16:07:06:366 gamecard/(27473:27473): Se encontro el archivo metadata.bin
+[INFO] 16:07:06:366 gamecard/(27473:27473): Inicio de Metadata, Tamanio bloques: 64,  Cantidad de bloques: 20,  Magic number: TALL_GRASS
+[INFO] 16:07:06:391 gamecard/(27473:27482): Estoy escuchando
+[INFO] 16:07:06:392 gamecard/(27473:27482): Espero un nuevo cliente
+[INFO] 16:07:06:396 gamecard/(27473:27485): Voy a llenar el paquete
+[INFO] 16:07:06:398 gamecard/(27473:27485): cliente: 7
+[INFO] 16:07:06:401 gamecard/(27473:27485): Conexión fallida con el Broker
+
+[INFO] 16:07:06:401 gamecard/(27473:27484): Voy a llenar el paquete
+[INFO] 16:07:06:401 gamecard/(27473:27485): Reintentando conexión en 10 segundos...
+
+[INFO] 16:07:06:402 gamecard/(27473:27484): cliente: 8
+[INFO] 16:07:06:402 gamecard/(27473:27484): Conexión fallida con el Broker
+
+[INFO] 16:07:06:402 gamecard/(27473:27484): Reintentando conexión en 10 segundos...
+
+[INFO] 16:07:06:402 gamecard/(27473:27483): Voy a llenar el paquete
+[INFO] 16:07:06:402 gamecard/(27473:27483): cliente: 9
+[INFO] 16:07:06:402 gamecard/(27473:27483): Conexión fallida con el Broker
+
+[INFO] 16:07:06:402 gamecard/(27473:27483): Reintentando conexión en 10 segundos...
+
+[INFO] 16:07:12:343 gamecard/(27473:27482): Gestiono un nuevo cliente
+[INFO] 16:07:12:343 gamecard/(27473:27482): Espero un nuevo cliente
+[INFO] 16:07:12:345 gamecard/(27473:27496): atiendo cliente
+[INFO] 16:07:12:345 gamecard/(27473:27496): hola llegue
+[INFO] 16:07:12:353 gamecard/(27473:27496): deserializado
+[INFO] 16:07:12:353 gamecard/(27473:27496): Atiendo Get del pokemon: Pikachu
+[INFO] 16:07:12:353 gamecard/(27473:27496): EXISTE
+[INFO] 16:07:12:353 gamecard/(27473:27496): entro a cargar metadata
+[INFO] 16:07:12:353 gamecard/(27473:27496): empiezo con los bloques Pikachu
+[INFO] 16:07:12:353 gamecard/(27473:27496): termino con los bloques Pikachu
+[INFO] 16:07:12:353 gamecard/(27473:27496): ----------------------------Lista bloques del config del archivo Pikachu: [1]. ABRIR ARCHIVO FUERA 1
+[INFO] 16:07:12:354 gamecard/(27473:27496): ----------------------------Lista bloques del config del archivo Pikachu: [1]. ABRIR ARCHIVO FUERA 2
+[INFO] 16:07:13:355 gamecard/(27473:27496): Pokemon:Pikachu
+[INFO] 16:07:13:355 gamecard/(27473:27496): Cantidad de Posiciones:1
+[INFO] 16:07:13:355 gamecard/(27473:27496): Posicion: 1-1
+[INFO] 16:07:16:402 gamecard/(27473:27484): El reintento de conexión no fue exitoso
+
+[INFO] 16:07:16:402 gamecard/(27473:27485): El reintento de conexión no fue exitoso
+
+[INFO] 16:07:16:402 gamecard/(27473:27483): El reintento de conexión no fue exitoso
+
+[INFO] 16:07:16:402 gamecard/(27473:27484): Reintentando conexión en 10 segundos...
+
+[INFO] 16:07:16:402 gamecard/(27473:27485): Reintentando conexión en 10 segundos...
+
+[INFO] 16:07:16:403 gamecard/(27473:27483): Reintentando conexión en 10 segundos...
+
+[INFO] 16:07:26:405 gamecard/(27473:27483): El reintento de conexión no fue exitoso
+
+[INFO] 16:07:26:406 gamecard/(27473:27485): El reintento de conexión no fue exitoso
+
+[INFO] 16:07:26:406 gamecard/(27473:27484): El reintento de conexión no fue exitoso
+
+[INFO] 16:07:26:406 gamecard/(27473:27483): Reintentando conexión en 10 segundos...
+
+[INFO] 16:07:26:406 gamecard/(27473:27484): Reintentando conexión en 10 segundos...
+
+[INFO] 16:07:26:406 gamecard/(27473:27485): Reintentando conexión en 10 segundos...
+
+[INFO] 16:07:36:407 gamecard/(27473:27485): El reintento de conexión no fue exitoso
+
+[INFO] 16:07:36:407 gamecard/(27473:27484): El reintento de conexión no fue exitoso
+
+[INFO] 16:07:36:407 gamecard/(27473:27483): El reintento de conexión no fue exitoso
+
+[INFO] 16:07:36:408 gamecard/(27473:27485): Reintentando conexión en 10 segundos...
+
+[INFO] 16:07:36:408 gamecard/(27473:27483): Reintentando conexión en 10 segundos...
+
+[INFO] 16:07:36:408 gamecard/(27473:27484): Reintentando conexión en 10 segundos...
+
+[INFO] 16:16:28:489 gamecard/(27671:27671): Se encontro el directorio metadata
+[INFO] 16:16:28:492 gamecard/(27671:27671): Se encontro el archivo metadata.bin
+[INFO] 16:16:28:492 gamecard/(27671:27671): Inicio de Metadata, Tamanio bloques: 64,  Cantidad de bloques: 20,  Magic number: TALL_GRASS
+[INFO] 16:16:28:510 gamecard/(27671:27678): Estoy escuchando
+[INFO] 16:16:28:510 gamecard/(27671:27678): Espero un nuevo cliente
+[INFO] 16:16:28:515 gamecard/(27671:27681): Voy a llenar el paquete
+[INFO] 16:16:28:515 gamecard/(27671:27681): cliente: 7
+[INFO] 16:16:28:515 gamecard/(27671:27681): Conexión fallida con el Broker
+
+[INFO] 16:16:28:515 gamecard/(27671:27681): Reintentando conexión en 10 segundos...
+
+[INFO] 16:16:28:515 gamecard/(27671:27680): Voy a llenar el paquete
+[INFO] 16:16:28:515 gamecard/(27671:27680): cliente: 8
+[INFO] 16:16:28:515 gamecard/(27671:27680): Conexión fallida con el Broker
+
+[INFO] 16:16:28:515 gamecard/(27671:27680): Reintentando conexión en 10 segundos...
+
+[INFO] 16:16:28:515 gamecard/(27671:27679): Voy a llenar el paquete
+[INFO] 16:16:28:515 gamecard/(27671:27679): cliente: 9
+[INFO] 16:16:28:515 gamecard/(27671:27679): Conexión fallida con el Broker
+
+[INFO] 16:16:28:515 gamecard/(27671:27679): Reintentando conexión en 10 segundos...
+
+[INFO] 16:16:43:33 gamecard/(27696:27696): Se encontro el directorio metadata
+[INFO] 16:16:43:36 gamecard/(27696:27696): Se encontro el archivo metadata.bin
+[INFO] 16:16:43:36 gamecard/(27696:27696): Inicio de Metadata, Tamanio bloques: 64,  Cantidad de bloques: 20,  Magic number: TALL_GRASS
+[INFO] 16:16:43:50 gamecard/(27696:27703): Estoy escuchando
+[INFO] 16:16:43:50 gamecard/(27696:27703): Espero un nuevo cliente
+[INFO] 16:16:43:58 gamecard/(27696:27706): Voy a llenar el paquete
+[INFO] 16:16:43:58 gamecard/(27696:27706): cliente: 7
+[INFO] 16:16:43:58 gamecard/(27696:27705): Voy a llenar el paquete
+[INFO] 16:16:43:58 gamecard/(27696:27706): Conexión fallida con el Broker
+
+[INFO] 16:16:43:58 gamecard/(27696:27705): cliente: 8
+[INFO] 16:16:43:58 gamecard/(27696:27706): Reintentando conexión en 10 segundos...
+
+[INFO] 16:16:43:58 gamecard/(27696:27705): Conexión fallida con el Broker
+
+[INFO] 16:16:43:58 gamecard/(27696:27705): Reintentando conexión en 10 segundos...
+
+[INFO] 16:16:43:58 gamecard/(27696:27704): Voy a llenar el paquete
+[INFO] 16:16:43:58 gamecard/(27696:27704): cliente: 9
+[INFO] 16:16:43:58 gamecard/(27696:27704): Conexión fallida con el Broker
+
+[INFO] 16:16:43:58 gamecard/(27696:27704): Reintentando conexión en 10 segundos...
+
+[INFO] 16:17:16:517 gamecard/(27772:27772): Se encontro el directorio metadata
+[INFO] 16:17:16:520 gamecard/(27772:27772): Se encontro el archivo metadata.bin
+[INFO] 16:17:16:520 gamecard/(27772:27772): Inicio de Metadata, Tamanio bloques: 64,  Cantidad de bloques: 20,  Magic number: TALL_GRASS
+[INFO] 16:17:16:545 gamecard/(27772:27779): Estoy escuchando
+[INFO] 16:17:16:545 gamecard/(27772:27779): Espero un nuevo cliente
+[INFO] 16:17:16:549 gamecard/(27772:27782): Voy a llenar el paquete
+[INFO] 16:17:16:549 gamecard/(27772:27782): cliente: 7
+[INFO] 16:17:16:549 gamecard/(27772:27782): Conexión fallida con el Broker
+[INFO] 16:17:16:549 gamecard/(27772:27781): Voy a llenar el paquete
+[INFO] 16:17:16:549 gamecard/(27772:27782): Reintentando conexión en 10 segundos...
+[INFO] 16:17:16:549 gamecard/(27772:27781): cliente: 8
+[INFO] 16:17:16:549 gamecard/(27772:27781): Conexión fallida con el Broker
+[INFO] 16:17:16:549 gamecard/(27772:27781): Reintentando conexión en 10 segundos...
+[INFO] 16:17:16:549 gamecard/(27772:27780): Voy a llenar el paquete
+[INFO] 16:17:16:549 gamecard/(27772:27780): cliente: 9
+[INFO] 16:17:16:549 gamecard/(27772:27780): Conexión fallida con el Broker
+[INFO] 16:17:16:549 gamecard/(27772:27780): Reintentando conexión en 10 segundos...
+[INFO] 16:17:26:550 gamecard/(27772:27780): El reintento de conexión no fue exitoso
+[INFO] 16:17:26:550 gamecard/(27772:27781): El reintento de conexión no fue exitoso
+[INFO] 16:17:26:550 gamecard/(27772:27782): El reintento de conexión no fue exitoso
+[INFO] 16:17:26:550 gamecard/(27772:27780): Reintentando conexión en 10 segundos...
+[INFO] 16:17:26:551 gamecard/(27772:27782): Reintentando conexión en 10 segundos...
+[INFO] 16:17:26:551 gamecard/(27772:27781): Reintentando conexión en 10 segundos...
+[INFO] 16:17:36:551 gamecard/(27772:27781): El reintento de conexión no fue exitoso
+[INFO] 16:17:36:552 gamecard/(27772:27782): El reintento de conexión no fue exitoso
+[INFO] 16:17:36:552 gamecard/(27772:27780): El reintento de conexión no fue exitoso
+[INFO] 16:17:36:552 gamecard/(27772:27781): Reintentando conexión en 10 segundos...
+[INFO] 16:17:36:552 gamecard/(27772:27780): Reintentando conexión en 10 segundos...
+[INFO] 16:17:36:552 gamecard/(27772:27782): Reintentando conexión en 10 segundos...
+[INFO] 16:17:46:552 gamecard/(27772:27780): El reintento de conexión no fue exitoso
+[INFO] 16:17:46:553 gamecard/(27772:27781): El reintento de conexión no fue exitoso
+[INFO] 16:17:46:553 gamecard/(27772:27782): El reintento de conexión no fue exitoso
+[INFO] 16:17:46:553 gamecard/(27772:27780): Reintentando conexión en 10 segundos...
+[INFO] 16:17:46:554 gamecard/(27772:27781): Reintentando conexión en 10 segundos...
+[INFO] 16:17:46:554 gamecard/(27772:27782): Reintentando conexión en 10 segundos...
+[INFO] 16:18:06:740 gamecard/(27802:27802): Se encontro el directorio metadata
+[INFO] 16:18:06:740 gamecard/(27802:27802): Se encontro el archivo metadata.bin
+[INFO] 16:18:06:740 gamecard/(27802:27802): Inicio de Metadata, Tamanio bloques: 64,  Cantidad de bloques: 20,  Magic number: TALL_GRASS
+[INFO] 16:18:06:776 gamecard/(27802:27811): Estoy escuchando
+[INFO] 16:18:06:776 gamecard/(27802:27811): Espero un nuevo cliente
+[INFO] 16:18:06:783 gamecard/(27802:27814): Voy a llenar el paquete
+[INFO] 16:18:06:783 gamecard/(27802:27814): cliente: 7
+[INFO] 16:18:06:785 gamecard/(27802:27813): Voy a llenar el paquete
+[INFO] 16:18:06:785 gamecard/(27802:27814): Conexión fallida con el Broker
+[INFO] 16:18:06:785 gamecard/(27802:27813): cliente: 8
+[INFO] 16:18:06:786 gamecard/(27802:27814): Reintentando conexión en 10 segundos...
+[INFO] 16:18:06:786 gamecard/(27802:27813): Conexión fallida con el Broker
+[INFO] 16:18:06:786 gamecard/(27802:27813): Reintentando conexión en 10 segundos...
+[INFO] 16:18:06:789 gamecard/(27802:27812): Voy a llenar el paquete
+[INFO] 16:18:06:789 gamecard/(27802:27812): cliente: 9
+[INFO] 16:18:06:789 gamecard/(27802:27812): Conexión fallida con el Broker
+[INFO] 16:18:06:789 gamecard/(27802:27812): Reintentando conexión en 10 segundos...
+[INFO] 16:18:13:613 gamecard/(27802:27811): Gestiono un nuevo cliente
+[INFO] 16:18:13:613 gamecard/(27802:27811): Espero un nuevo cliente
+[INFO] 16:18:13:618 gamecard/(27802:27820): atiendo cliente
+[INFO] 16:18:13:618 gamecard/(27802:27820): hola llegue
+[INFO] 16:18:13:622 gamecard/(27802:27820): deserializado
+[INFO] 16:18:13:622 gamecard/(27802:27820): Atiendo new del pokemon: Pikachu. Posicion: (1, 1).
+[INFO] 16:18:13:622 gamecard/(27802:27820): entro a cargar metadata
+[INFO] 16:18:13:622 gamecard/(27802:27820): empiezo con los bloques Pikachu
+[INFO] 16:18:13:622 gamecard/(27802:27820): termino con los bloques Pikachu
+[INFO] 16:18:13:623 gamecard/(27802:27820): comienzo a obtener lista de Pikachu
+[INFO] 16:18:13:623 gamecard/(27802:27820): termino de obtener lista de Pikachu
+[INFO] 16:18:13:623 gamecard/(27802:27820): comienzo a actualizar posiciones de Pikachu
+[INFO] 16:18:13:623 gamecard/(27802:27820): -------------BLOQUES NECESARIOS= 1
+[INFO] 16:18:13:623 gamecard/(27802:27820): termino de actualizar posiciones de Pikachu
+[INFO] 16:18:14:624 gamecard/(27802:27820): Cierro el archivo del pokemon: Pikachu. Posicion: (1, 1).
+[INFO] 16:18:16:786 gamecard/(27802:27813): El reintento de conexión no fue exitoso
+[INFO] 16:18:16:787 gamecard/(27802:27814): El reintento de conexión no fue exitoso
+[INFO] 16:18:16:787 gamecard/(27802:27813): Reintentando conexión en 10 segundos...
+[INFO] 16:18:16:787 gamecard/(27802:27814): Reintentando conexión en 10 segundos...
+[INFO] 16:18:16:790 gamecard/(27802:27812): El reintento de conexión no fue exitoso
+[INFO] 16:18:16:790 gamecard/(27802:27812): Reintentando conexión en 10 segundos...
+[INFO] 16:21:11:191 gamecard/(27934:27934): Se encontro el directorio metadata
+[INFO] 16:21:11:194 gamecard/(27934:27934): Se encontro el archivo metadata.bin
+[INFO] 16:21:11:194 gamecard/(27934:27934): Inicio de Metadata, Tamanio bloques: 64,  Cantidad de bloques: 20,  Magic number: TALL_GRASS
+[INFO] 16:21:11:201 gamecard/(27934:27941): Estoy escuchando
+[INFO] 16:21:11:201 gamecard/(27934:27941): Espero un nuevo cliente
+[INFO] 16:21:11:214 gamecard/(27934:27944): Voy a llenar el paquete
+[INFO] 16:21:11:214 gamecard/(27934:27944): cliente: 7
+[INFO] 16:21:11:214 gamecard/(27934:27944): Conexión fallida con el Broker
+[INFO] 16:21:11:214 gamecard/(27934:27944): Reintentando conexión en 10 segundos...
+[INFO] 16:21:11:214 gamecard/(27934:27943): Voy a llenar el paquete
+[INFO] 16:21:11:214 gamecard/(27934:27943): cliente: 8
+[INFO] 16:21:11:214 gamecard/(27934:27943): Conexión fallida con el Broker
+[INFO] 16:21:11:214 gamecard/(27934:27943): Reintentando conexión en 10 segundos...
+[INFO] 16:21:11:214 gamecard/(27934:27942): Voy a llenar el paquete
+[INFO] 16:21:11:214 gamecard/(27934:27942): cliente: 9
+[INFO] 16:21:11:214 gamecard/(27934:27942): Conexión fallida con el Broker
+[INFO] 16:21:11:214 gamecard/(27934:27942): Reintentando conexión en 10 segundos...
+[INFO] 16:21:14:5 gamecard/(27934:27941): Gestiono un nuevo cliente
+[INFO] 16:21:14:5 gamecard/(27934:27941): Espero un nuevo cliente
+[INFO] 16:21:14:5 gamecard/(27934:27949): entro a cargar metadata
+[INFO] 16:21:14:5 gamecard/(27934:27949): empiezo con los bloques Pikachu
+[INFO] 16:21:14:5 gamecard/(27934:27949): termino con los bloques Pikachu
+[INFO] 16:21:15:5 gamecard/(27934:27949): -------------BLOQUES NECESARIOS= 1
+[INFO] 16:21:16:7 gamecard/(27934:27949): Cierro el archivo del pokemon: Pikachu. Posicion: (1, 1).
+[INFO] 16:21:21:215 gamecard/(27934:27942): El reintento de conexión no fue exitoso
+[INFO] 16:21:21:215 gamecard/(27934:27943): El reintento de conexión no fue exitoso
+[INFO] 16:21:21:215 gamecard/(27934:27944): El reintento de conexión no fue exitoso
+[INFO] 16:21:21:216 gamecard/(27934:27942): Reintentando conexión en 10 segundos...
+[INFO] 16:21:21:216 gamecard/(27934:27944): Reintentando conexión en 10 segundos...
+[INFO] 16:21:21:216 gamecard/(27934:27943): Reintentando conexión en 10 segundos...
+[INFO] 16:22:52:60 gamecard/(28085:28085): Se encontro el directorio metadata
+[INFO] 16:22:52:63 gamecard/(28085:28085): Se encontro el archivo metadata.bin
+[INFO] 16:22:52:63 gamecard/(28085:28085): Inicio de Metadata, Tamanio bloques: 64,  Cantidad de bloques: 20,  Magic number: TALL_GRASS
+[INFO] 16:22:52:75 gamecard/(28085:28092): Estoy escuchando
+[INFO] 16:22:52:75 gamecard/(28085:28092): Espero un nuevo cliente
+[INFO] 16:22:52:89 gamecard/(28085:28095): Voy a llenar el paquete
+[INFO] 16:22:52:89 gamecard/(28085:28095): cliente: 7
+[INFO] 16:22:52:89 gamecard/(28085:28095): Conexión fallida con el Broker
+[INFO] 16:22:52:89 gamecard/(28085:28095): Reintentando conexión en 10 segundos...
+[INFO] 16:22:52:89 gamecard/(28085:28094): Voy a llenar el paquete
+[INFO] 16:22:52:89 gamecard/(28085:28094): cliente: 8
+[INFO] 16:22:52:89 gamecard/(28085:28094): Conexión fallida con el Broker
+[INFO] 16:22:52:89 gamecard/(28085:28094): Reintentando conexión en 10 segundos...
+[INFO] 16:22:52:89 gamecard/(28085:28093): Voy a llenar el paquete
+[INFO] 16:22:52:90 gamecard/(28085:28093): cliente: 9
+[INFO] 16:22:52:90 gamecard/(28085:28093): Conexión fallida con el Broker
+[INFO] 16:22:52:90 gamecard/(28085:28093): Reintentando conexión en 10 segundos...
+[INFO] 16:22:55:238 gamecard/(28085:28092): Gestiono un nuevo cliente
+[INFO] 16:22:55:239 gamecard/(28085:28092): Espero un nuevo cliente
+[INFO] 16:22:55:246 gamecard/(28085:28098): empiezo con los bloques Pikachu
+[INFO] 16:22:55:246 gamecard/(28085:28098): termino con los bloques Pikachu
+[INFO] 16:22:55:246 gamecard/(28085:28098): -------------BLOQUES NECESARIOS= 1
+[INFO] 16:22:56:247 gamecard/(28085:28098): Cierro el archivo del pokemon: Pikachu. Posicion: (1, 1).
+[INFO] 16:23:02:90 gamecard/(28085:28094): El reintento de conexión no fue exitoso
+[INFO] 16:23:02:90 gamecard/(28085:28095): El reintento de conexión no fue exitoso
+[INFO] 16:23:02:91 gamecard/(28085:28093): El reintento de conexión no fue exitoso
+[INFO] 16:23:02:91 gamecard/(28085:28094): Reintentando conexión en 10 segundos...
+[INFO] 16:23:02:91 gamecard/(28085:28095): Reintentando conexión en 10 segundos...
+[INFO] 16:23:02:91 gamecard/(28085:28093): Reintentando conexión en 10 segundos...
+[INFO] 16:23:12:91 gamecard/(28085:28093): El reintento de conexión no fue exitoso
+[INFO] 16:23:12:91 gamecard/(28085:28095): El reintento de conexión no fue exitoso
+[INFO] 16:23:12:91 gamecard/(28085:28094): El reintento de conexión no fue exitoso
+[INFO] 16:23:12:91 gamecard/(28085:28093): Reintentando conexión en 10 segundos...
+[INFO] 16:23:12:92 gamecard/(28085:28094): Reintentando conexión en 10 segundos...
+[INFO] 16:23:12:92 gamecard/(28085:28095): Reintentando conexión en 10 segundos...
+[INFO] 16:24:19:797 gamecard/(28183:28183): Se encontro el directorio metadata
+[INFO] 16:24:19:800 gamecard/(28183:28183): Se encontro el archivo metadata.bin
+[INFO] 16:24:19:801 gamecard/(28183:28183): Inicio de Metadata, Tamanio bloques: 64,  Cantidad de bloques: 20,  Magic number: TALL_GRASS
+[INFO] 16:24:19:871 gamecard/(28183:28190): Estoy escuchando
+[INFO] 16:24:19:871 gamecard/(28183:28190): Espero un nuevo cliente
+[INFO] 16:24:19:877 gamecard/(28183:28193): Voy a llenar el paquete
+[INFO] 16:24:19:878 gamecard/(28183:28193): cliente: 7
+[INFO] 16:24:19:878 gamecard/(28183:28193): Conexión fallida con el Broker
+[INFO] 16:24:19:878 gamecard/(28183:28193): Reintentando conexión en 10 segundos...
+[INFO] 16:24:19:878 gamecard/(28183:28192): Voy a llenar el paquete
+[INFO] 16:24:19:878 gamecard/(28183:28192): cliente: 8
+[INFO] 16:24:19:878 gamecard/(28183:28192): Conexión fallida con el Broker
+[INFO] 16:24:19:878 gamecard/(28183:28192): Reintentando conexión en 10 segundos...
+[INFO] 16:24:19:878 gamecard/(28183:28191): Voy a llenar el paquete
+[INFO] 16:24:19:878 gamecard/(28183:28191): cliente: 9
+[INFO] 16:24:19:878 gamecard/(28183:28191): Conexión fallida con el Broker
+[INFO] 16:24:19:878 gamecard/(28183:28191): Reintentando conexión en 10 segundos...
+[INFO] 16:24:57:584 gamecard/(28245:28245): Se encontro el directorio metadata
+[INFO] 16:24:57:587 gamecard/(28245:28245): Se encontro el archivo metadata.bin
+[INFO] 16:24:57:596 gamecard/(28245:28252): Estoy escuchando
+[INFO] 16:24:57:596 gamecard/(28245:28252): Espero un nuevo cliente
+[INFO] 16:24:57:609 gamecard/(28245:28255): Voy a llenar el paquete
+[INFO] 16:24:57:609 gamecard/(28245:28255): cliente: 7
+[INFO] 16:24:57:609 gamecard/(28245:28255): Conexión fallida con el Broker
+[INFO] 16:24:57:609 gamecard/(28245:28254): Voy a llenar el paquete
+[INFO] 16:24:57:610 gamecard/(28245:28255): Reintentando conexión en 10 segundos...
+[INFO] 16:24:57:610 gamecard/(28245:28254): cliente: 8
+[INFO] 16:24:57:610 gamecard/(28245:28254): Conexión fallida con el Broker
+[INFO] 16:24:57:610 gamecard/(28245:28254): Reintentando conexión en 10 segundos...
+[INFO] 16:24:57:610 gamecard/(28245:28253): Voy a llenar el paquete
+[INFO] 16:24:57:610 gamecard/(28245:28253): cliente: 9
+[INFO] 16:24:57:610 gamecard/(28245:28253): Conexión fallida con el Broker
+[INFO] 16:24:57:610 gamecard/(28245:28253): Reintentando conexión en 10 segundos...
+[INFO] 16:25:04:932 gamecard/(28245:28252): Gestiono un nuevo cliente
+[INFO] 16:25:04:933 gamecard/(28245:28252): Espero un nuevo cliente
+[INFO] 16:25:04:941 gamecard/(28245:28259): empiezo con los bloques Pikachu
+[INFO] 16:25:04:941 gamecard/(28245:28259): termino con los bloques Pikachu
+[INFO] 16:25:05:944 gamecard/(28245:28259): Cierro el archivo del pokemon: Pikachu. Posicion: (1, 1).
+[INFO] 16:25:07:611 gamecard/(28245:28254): El reintento de conexión no fue exitoso
+[INFO] 16:25:07:611 gamecard/(28245:28253): El reintento de conexión no fue exitoso
+[INFO] 16:25:07:611 gamecard/(28245:28255): El reintento de conexión no fue exitoso
+[INFO] 16:25:07:611 gamecard/(28245:28254): Reintentando conexión en 10 segundos...
+[INFO] 16:25:07:611 gamecard/(28245:28255): Reintentando conexión en 10 segundos...
+[INFO] 16:25:07:611 gamecard/(28245:28253): Reintentando conexión en 10 segundos...
+[INFO] 16:26:38:677 gamecard/(28338:28345): Estoy escuchando
+[INFO] 16:26:38:681 gamecard/(28338:28345): Espero un nuevo cliente
+[INFO] 16:26:38:685 gamecard/(28338:28348): Voy a llenar el paquete
+[INFO] 16:26:38:689 gamecard/(28338:28348): cliente: 7
+[INFO] 16:26:38:689 gamecard/(28338:28347): Voy a llenar el paquete
+[INFO] 16:26:38:689 gamecard/(28338:28347): cliente: 8
+[INFO] 16:26:38:689 gamecard/(28338:28348): Conexión fallida con el Broker
+[INFO] 16:26:38:689 gamecard/(28338:28348): Reintentando conexión en 10 segundos...
+[INFO] 16:26:38:689 gamecard/(28338:28347): Conexión fallida con el Broker
+[INFO] 16:26:38:689 gamecard/(28338:28347): Reintentando conexión en 10 segundos...
+[INFO] 16:26:38:689 gamecard/(28338:28346): Voy a llenar el paquete
+[INFO] 16:26:38:689 gamecard/(28338:28346): cliente: 9
+[INFO] 16:26:38:689 gamecard/(28338:28346): Conexión fallida con el Broker
+[INFO] 16:26:38:690 gamecard/(28338:28346): Reintentando conexión en 10 segundos...
+[INFO] 16:26:48:689 gamecard/(28338:28347): El reintento de conexión no fue exitoso
+[INFO] 16:26:48:690 gamecard/(28338:28348): El reintento de conexión no fue exitoso
+[INFO] 16:26:48:690 gamecard/(28338:28346): El reintento de conexión no fue exitoso
+[INFO] 16:26:48:691 gamecard/(28338:28347): Reintentando conexión en 10 segundos...
+[INFO] 16:26:48:691 gamecard/(28338:28348): Reintentando conexión en 10 segundos...
+[INFO] 16:26:48:691 gamecard/(28338:28346): Reintentando conexión en 10 segundos...
+[INFO] 16:26:50:618 gamecard/(28338:28345): Gestiono un nuevo cliente
+[INFO] 16:26:50:619 gamecard/(28338:28345): Espero un nuevo cliente
+[INFO] 16:26:50:624 gamecard/(28338:28354): empiezo con los bloques Pikachu
+[INFO] 16:26:50:624 gamecard/(28338:28354): termino con los bloques Pikachu
+[INFO] 16:26:51:625 gamecard/(28338:28354): Cierro el archivo del pokemon: Pikachu. Posicion: (1, 1).
+[INFO] 16:26:58:692 gamecard/(28338:28346): El reintento de conexión no fue exitoso
+[INFO] 16:26:58:692 gamecard/(28338:28348): El reintento de conexión no fue exitoso
+[INFO] 16:26:58:692 gamecard/(28338:28347): El reintento de conexión no fue exitoso
+[INFO] 16:26:58:693 gamecard/(28338:28346): Reintentando conexión en 10 segundos...
+[INFO] 16:26:58:693 gamecard/(28338:28347): Reintentando conexión en 10 segundos...
+[INFO] 16:26:58:693 gamecard/(28338:28348): Reintentando conexión en 10 segundos...
+[INFO] 16:27:08:693 gamecard/(28338:28348): El reintento de conexión no fue exitoso
+[INFO] 16:27:08:693 gamecard/(28338:28347): El reintento de conexión no fue exitoso
+[INFO] 16:27:08:693 gamecard/(28338:28346): El reintento de conexión no fue exitoso
+[INFO] 16:27:08:693 gamecard/(28338:28348): Reintentando conexión en 10 segundos...
+[INFO] 16:27:08:694 gamecard/(28338:28346): Reintentando conexión en 10 segundos...
+[INFO] 16:27:08:694 gamecard/(28338:28347): Reintentando conexión en 10 segundos...
+[INFO] 16:27:12:330 gamecard/(28338:28345): Gestiono un nuevo cliente
+[INFO] 16:27:12:330 gamecard/(28338:28345): Espero un nuevo cliente
+[INFO] 16:27:12:330 gamecard/(28338:28371): Entro al catch
+[INFO] 16:27:12:331 gamecard/(28338:28371): deserializado
+[INFO] 16:27:12:331 gamecard/(28338:28371): Pokemon:Pikachu, posicion:1-1
+[INFO] 16:27:12:331 gamecard/(28338:28371): Size lista antes de comprobar:1
+[INFO] 16:27:12:333 gamecard/(28338:28371): Reemplazo
+[INFO] 16:27:12:333 gamecard/(28338:28371): Size lista despues de comprobar:1
+[INFO] 16:27:18:695 gamecard/(28338:28347): El reintento de conexión no fue exitoso
+[INFO] 16:27:18:695 gamecard/(28338:28346): El reintento de conexión no fue exitoso
+[INFO] 16:27:18:695 gamecard/(28338:28348): El reintento de conexión no fue exitoso
+[INFO] 16:27:18:696 gamecard/(28338:28347): Reintentando conexión en 10 segundos...
+[INFO] 16:27:18:696 gamecard/(28338:28348): Reintentando conexión en 10 segundos...
+[INFO] 16:27:18:696 gamecard/(28338:28346): Reintentando conexión en 10 segundos...
+[INFO] 16:29:32:850 gamecard/(28507:28514): Estoy escuchando
+[INFO] 16:29:32:850 gamecard/(28507:28514): Espero un nuevo cliente
+[INFO] 16:29:32:853 gamecard/(28507:28517): Voy a llenar el paquete
+[INFO] 16:29:32:853 gamecard/(28507:28517): cliente: 7
+[INFO] 16:29:32:854 gamecard/(28507:28517): Conexión fallida con el Broker
+[INFO] 16:29:32:854 gamecard/(28507:28517): Reintentando conexión en 10 segundos...
+[INFO] 16:29:32:854 gamecard/(28507:28516): Voy a llenar el paquete
+[INFO] 16:29:32:854 gamecard/(28507:28516): cliente: 8
+[INFO] 16:29:32:854 gamecard/(28507:28516): Conexión fallida con el Broker
+[INFO] 16:29:32:854 gamecard/(28507:28516): Reintentando conexión en 10 segundos...
+[INFO] 16:29:32:854 gamecard/(28507:28515): Voy a llenar el paquete
+[INFO] 16:29:32:854 gamecard/(28507:28515): cliente: 9
+[INFO] 16:29:32:854 gamecard/(28507:28515): Conexión fallida con el Broker
+[INFO] 16:29:32:854 gamecard/(28507:28515): Reintentando conexión en 10 segundos...
+[INFO] 16:33:10:15 gamecard/(28640:28648): Estoy escuchando
+[INFO] 16:33:10:15 gamecard/(28640:28648): Espero un nuevo cliente
+[INFO] 16:33:10:19 gamecard/(28640:28651): Voy a llenar el paquete
+[INFO] 16:33:10:20 gamecard/(28640:28651): cliente: 7
+[INFO] 16:33:10:20 gamecard/(28640:28650): Voy a llenar el paquete
+[INFO] 16:33:10:20 gamecard/(28640:28650): cliente: 8
+[INFO] 16:33:10:21 gamecard/(28640:28649): Voy a llenar el paquete
+[INFO] 16:33:10:21 gamecard/(28640:28649): cliente: 9
+[INFO] 16:33:21:306 gamecard/(28640:28648): Gestiono un nuevo cliente
+[INFO] 16:33:21:306 gamecard/(28640:28648): Espero un nuevo cliente
+[INFO] 16:33:21:311 gamecard/(28640:28659): Entro al catch
+[INFO] 16:33:21:312 gamecard/(28640:28659): deserializado
+[INFO] 16:33:21:312 gamecard/(28640:28659): Pokemon:Pikachu, posicion:1-1
+[INFO] 16:33:21:312 gamecard/(28640:28659): empiezo con los bloques Pikachu
+[INFO] 16:33:21:312 gamecard/(28640:28659): termino con los bloques Pikachu
+[INFO] 16:33:21:312 gamecard/(28640:28659): Size lista antes de comprobar:1
+[INFO] 16:33:21:312 gamecard/(28640:28659): Reemplazo
+[INFO] 16:33:21:312 gamecard/(28640:28659): Size lista despues de comprobar:1
+[INFO] 16:38:04:613 gamecard/(28800:28807): Estoy escuchando
+[INFO] 16:38:04:613 gamecard/(28800:28807): Espero un nuevo cliente
+[INFO] 16:38:04:617 gamecard/(28800:28810): Voy a llenar el paquete
+[INFO] 16:38:04:617 gamecard/(28800:28810): cliente: 7
+[INFO] 16:38:04:618 gamecard/(28800:28809): Voy a llenar el paquete
+[INFO] 16:38:04:618 gamecard/(28800:28809): cliente: 8
+[INFO] 16:38:04:621 gamecard/(28800:28808): Voy a llenar el paquete
+[INFO] 16:38:04:621 gamecard/(28800:28808): cliente: 9
+[INFO] 16:38:08:507 gamecard/(28800:28807): Gestiono un nuevo cliente
+[INFO] 16:38:08:507 gamecard/(28800:28807): Espero un nuevo cliente
+[INFO] 16:38:08:514 gamecard/(28800:28813): Inicia proceso de atencion al catch
+[INFO] 16:38:08:514 gamecard/(28800:28813): deserializado
+[INFO] 16:38:08:514 gamecard/(28800:28813): Pokemon:Pikachu, posicion:1-1
+[INFO] 16:38:08:514 gamecard/(28800:28813): empiezo con los bloques Pikachu
+[INFO] 16:38:08:514 gamecard/(28800:28813): termino con los bloques Pikachu
+[INFO] 16:38:08:514 gamecard/(28800:28813): Size lista antes de comprobar:1
+[INFO] 16:38:08:514 gamecard/(28800:28813): Reemplazo
+[INFO] 16:38:08:514 gamecard/(28800:28813): Size lista despues de comprobar:1
+[INFO] 16:38:35:705 gamecard/(28800:28807): Gestiono un nuevo cliente
+[INFO] 16:38:35:705 gamecard/(28800:28807): Espero un nuevo cliente
+[INFO] 16:38:36:717 gamecard/(28800:28824): Cierro el archivo del pokemon: Pikachu. Posicion: (1, 1).
+[INFO] 16:38:39:487 gamecard/(28800:28807): Gestiono un nuevo cliente
+[INFO] 16:38:39:487 gamecard/(28800:28807): Espero un nuevo cliente
+[INFO] 16:38:39:494 gamecard/(28800:28828): Inicia proceso de atencion al catch
+[INFO] 16:38:39:494 gamecard/(28800:28828): deserializado
+[INFO] 16:38:39:494 gamecard/(28800:28828): Pokemon:Pikachu, posicion:1-1
+[INFO] 16:38:39:494 gamecard/(28800:28828): Size lista antes de comprobar:1
+[INFO] 16:38:39:494 gamecard/(28800:28828): Reemplazo
+[INFO] 16:38:39:494 gamecard/(28800:28828): Size lista despues de comprobar:1
+[INFO] 16:41:46:917 gamecard/(28971:28978): Estoy escuchando
+[INFO] 16:41:46:917 gamecard/(28971:28978): Espero un nuevo cliente
+[INFO] 16:41:46:922 gamecard/(28971:28981): Voy a llenar el paquete
+[INFO] 16:41:46:922 gamecard/(28971:28981): cliente: 7
+[INFO] 16:41:46:925 gamecard/(28971:28980): Voy a llenar el paquete
+[INFO] 16:41:46:925 gamecard/(28971:28980): cliente: 8
+[INFO] 16:41:46:925 gamecard/(28971:28979): Voy a llenar el paquete
+[INFO] 16:41:46:925 gamecard/(28971:28979): cliente: 9
+[INFO] 16:41:51:782 gamecard/(28971:28978): Gestiono un nuevo cliente
+[INFO] 16:41:51:782 gamecard/(28971:28978): Espero un nuevo cliente
+[INFO] 16:41:51:786 gamecard/(28971:28985): empiezo con los bloques Pikachu
+[INFO] 16:41:51:786 gamecard/(28971:28985): termino con los bloques Pikachu
+[INFO] 16:41:52:474 gamecard/(28971:28978): Gestiono un nuevo cliente
+[INFO] 16:41:52:474 gamecard/(28971:28978): Espero un nuevo cliente
+[INFO] 16:41:52:480 gamecard/(28971:28989): Reintento abrir el archivo en 1 sengundos. 
+[INFO] 16:41:52:787 gamecard/(28971:28985): Cierro el archivo del pokemon: Pikachu. Posicion: (1, 1).
+[INFO] 16:41:53:99 gamecard/(28971:28978): Gestiono un nuevo cliente
+[INFO] 16:41:53:99 gamecard/(28971:28978): Espero un nuevo cliente
+[INFO] 16:41:53:481 gamecard/(28971:28989): Reintento abrir el archivo en 1 sengundos. 
+[INFO] 16:41:53:652 gamecard/(28971:28978): Gestiono un nuevo cliente
+[INFO] 16:41:53:652 gamecard/(28971:28978): Espero un nuevo cliente
+[INFO] 16:41:53:652 gamecard/(28971:28995): Reintento abrir el archivo en 1 sengundos. 
+[INFO] 16:41:54:107 gamecard/(28971:28992): Cierro el archivo del pokemon: Pikachu. Posicion: (1, 1).
+[INFO] 16:41:54:652 gamecard/(28971:28995): Reintento abrir el archivo en 1 sengundos. 
+[INFO] 16:41:55:482 gamecard/(28971:28989): Cierro el archivo del pokemon: Pikachu. Posicion: (1, 1).
+[INFO] 16:41:56:655 gamecard/(28971:28995): Cierro el archivo del pokemon: Pikachu. Posicion: (1, 1).
+[INFO] 16:45:46:745 gamecard/(29114:29122): Estoy escuchando
+[INFO] 16:45:46:745 gamecard/(29114:29122): Espero un nuevo cliente
+[INFO] 16:45:46:753 gamecard/(29114:29125): Voy a llenar el paquete
+[INFO] 16:45:46:753 gamecard/(29114:29125): cliente: 7
+[INFO] 16:45:46:753 gamecard/(29114:29124): Voy a llenar el paquete
+[INFO] 16:45:46:753 gamecard/(29114:29124): cliente: 8
+[INFO] 16:45:46:757 gamecard/(29114:29123): Voy a llenar el paquete
+[INFO] 16:45:46:757 gamecard/(29114:29123): cliente: 9
+[INFO] 16:45:48:574 gamecard/(29114:29122): Gestiono un nuevo cliente
+[INFO] 16:45:48:574 gamecard/(29114:29122): Espero un nuevo cliente
+[INFO] 16:45:48:581 gamecard/(29114:29129): empiezo con los bloques Pikachu
+[INFO] 16:45:48:581 gamecard/(29114:29129): termino con los bloques Pikachu
+[INFO] 16:45:48:586 gamecard/(29114:29122): Gestiono un nuevo cliente
+[INFO] 16:45:48:586 gamecard/(29114:29122): Espero un nuevo cliente
+[INFO] 16:45:48:586 gamecard/(29114:29132): Agrego un bloque.
+[INFO] 16:45:48:589 gamecard/(29114:29132): LISTA BLOQUES: [2].
+[INFO] 16:45:48:589 gamecard/(29114:29132): LISTA BLOQUES AGREGADA: [2].
+[INFO] 16:45:48:595 gamecard/(29114:29122): Gestiono un nuevo cliente
+[INFO] 16:45:48:595 gamecard/(29114:29122): Espero un nuevo cliente
+[INFO] 16:45:48:600 gamecard/(29114:29135): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 16:45:48:603 gamecard/(29114:29122): Gestiono un nuevo cliente
+[INFO] 16:45:48:603 gamecard/(29114:29122): Espero un nuevo cliente
+[INFO] 16:45:48:609 gamecard/(29114:29138): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 16:45:48:613 gamecard/(29114:29122): Gestiono un nuevo cliente
+[INFO] 16:45:48:613 gamecard/(29114:29122): Espero un nuevo cliente
+[INFO] 16:45:48:619 gamecard/(29114:29141): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 16:45:48:627 gamecard/(29114:29122): Gestiono un nuevo cliente
+[INFO] 16:45:48:627 gamecard/(29114:29122): Espero un nuevo cliente
+[INFO] 16:45:48:630 gamecard/(29114:29144): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 16:45:48:631 gamecard/(29114:29122): Gestiono un nuevo cliente
+[INFO] 16:45:48:631 gamecard/(29114:29122): Espero un nuevo cliente
+[INFO] 16:45:48:634 gamecard/(29114:29147): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 16:45:48:638 gamecard/(29114:29122): Gestiono un nuevo cliente
+[INFO] 16:45:48:638 gamecard/(29114:29122): Espero un nuevo cliente
+[INFO] 16:45:48:642 gamecard/(29114:29150): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 16:45:49:583 gamecard/(29114:29129): Cierro el archivo del pokemon: Pikachu. Posicion: (1, 9).
+[INFO] 16:45:49:590 gamecard/(29114:29132): Cierro el archivo del pokemon: Charmander. Posicion: (4, 1).
+[INFO] 16:45:53:610 gamecard/(29114:29138): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 16:45:53:619 gamecard/(29114:29141): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 16:45:53:631 gamecard/(29114:29144): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 16:45:53:634 gamecard/(29114:29147): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 16:45:53:642 gamecard/(29114:29150): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 16:45:54:601 gamecard/(29114:29135): Cierro el archivo del pokemon: Charmander. Posicion: (517, 2046).
+[INFO] 16:45:58:620 gamecard/(29114:29141): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 16:45:58:632 gamecard/(29114:29144): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 16:45:58:635 gamecard/(29114:29147): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 16:45:58:643 gamecard/(29114:29150): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 16:45:59:619 gamecard/(29114:29138): Cierro el archivo del pokemon: Charmander. Posicion: (413, 17).
+[INFO] 16:46:03:652 gamecard/(29114:29144): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 16:46:03:652 gamecard/(29114:29150): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 16:46:03:652 gamecard/(29114:29147): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 16:46:04:652 gamecard/(29114:29141): Cierro el archivo del pokemon: Charmander. Posicion: (723, 97).
+[INFO] 16:46:08:653 gamecard/(29114:29147): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 16:46:08:653 gamecard/(29114:29150): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 16:46:09:654 gamecard/(29114:29144): Cierro el archivo del pokemon: Charmander. Posicion: (65, 93).
+[INFO] 16:46:13:667 gamecard/(29114:29150): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 16:46:14:668 gamecard/(29114:29147): Cierro el archivo del pokemon: Charmander. Posicion: (12, 17).
+[INFO] 16:47:19:773 gamecard/(29233:29241): Estoy escuchando
+[INFO] 16:47:19:773 gamecard/(29233:29241): Espero un nuevo cliente
+[INFO] 16:47:19:778 gamecard/(29233:29244): Voy a llenar el paquete
+[INFO] 16:47:19:778 gamecard/(29233:29244): cliente: 7
+[INFO] 16:47:19:781 gamecard/(29233:29243): Voy a llenar el paquete
+[INFO] 16:47:19:781 gamecard/(29233:29243): cliente: 8
+[INFO] 16:47:19:781 gamecard/(29233:29242): Voy a llenar el paquete
+[INFO] 16:47:19:781 gamecard/(29233:29242): cliente: 9
+[INFO] 16:47:26:354 gamecard/(29233:29241): Gestiono un nuevo cliente
+[INFO] 16:47:26:354 gamecard/(29233:29241): Espero un nuevo cliente
+[INFO] 16:47:26:359 gamecard/(29233:29249): Agrego un bloque.
+[INFO] 16:47:26:359 gamecard/(29233:29249): LISTA BLOQUES: [1].
+[INFO] 16:47:26:359 gamecard/(29233:29249): LISTA BLOQUES AGREGADA: [1].
+[INFO] 16:47:26:361 gamecard/(29233:29241): Gestiono un nuevo cliente
+[INFO] 16:47:26:361 gamecard/(29233:29241): Espero un nuevo cliente
+[INFO] 16:47:26:370 gamecard/(29233:29252): Agrego un bloque.
+[INFO] 16:47:26:370 gamecard/(29233:29252): LISTA BLOQUES: [2].
+[INFO] 16:47:26:370 gamecard/(29233:29252): LISTA BLOQUES AGREGADA: [2].
+[INFO] 16:47:26:371 gamecard/(29233:29241): Gestiono un nuevo cliente
+[INFO] 16:47:26:371 gamecard/(29233:29241): Espero un nuevo cliente
+[INFO] 16:47:26:379 gamecard/(29233:29255): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 16:47:26:382 gamecard/(29233:29241): Gestiono un nuevo cliente
+[INFO] 16:47:26:382 gamecard/(29233:29241): Espero un nuevo cliente
+[INFO] 16:47:26:389 gamecard/(29233:29258): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 16:47:26:394 gamecard/(29233:29241): Gestiono un nuevo cliente
+[INFO] 16:47:26:394 gamecard/(29233:29241): Espero un nuevo cliente
+[INFO] 16:47:26:396 gamecard/(29233:29261): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 16:47:26:401 gamecard/(29233:29241): Gestiono un nuevo cliente
+[INFO] 16:47:26:401 gamecard/(29233:29241): Espero un nuevo cliente
+[INFO] 16:47:26:406 gamecard/(29233:29264): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 16:47:26:407 gamecard/(29233:29241): Gestiono un nuevo cliente
+[INFO] 16:47:26:407 gamecard/(29233:29241): Espero un nuevo cliente
+[INFO] 16:47:26:414 gamecard/(29233:29267): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 16:47:26:418 gamecard/(29233:29241): Gestiono un nuevo cliente
+[INFO] 16:47:26:418 gamecard/(29233:29241): Espero un nuevo cliente
+[INFO] 16:47:26:419 gamecard/(29233:29270): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 16:47:27:360 gamecard/(29233:29249): Cierro el archivo del pokemon: Pikachu. Posicion: (1, 9).
+[INFO] 16:47:27:371 gamecard/(29233:29252): Cierro el archivo del pokemon: Charmander. Posicion: (4, 1).
+[INFO] 16:47:31:390 gamecard/(29233:29258): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 16:47:31:397 gamecard/(29233:29261): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 16:47:31:407 gamecard/(29233:29264): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 16:47:31:414 gamecard/(29233:29267): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 16:47:31:419 gamecard/(29233:29270): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 16:47:32:382 gamecard/(29233:29255): Cierro el archivo del pokemon: Charmander. Posicion: (517, 2046).
+[INFO] 16:47:36:402 gamecard/(29233:29261): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 16:47:36:407 gamecard/(29233:29264): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 16:47:36:415 gamecard/(29233:29267): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 16:47:36:420 gamecard/(29233:29270): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 16:47:37:402 gamecard/(29233:29258): Cierro el archivo del pokemon: Charmander. Posicion: (413, 17).
+[INFO] 16:47:41:418 gamecard/(29233:29264): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 16:47:41:418 gamecard/(29233:29267): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 16:47:41:421 gamecard/(29233:29270): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 16:47:42:420 gamecard/(29233:29261): Cierro el archivo del pokemon: Charmander. Posicion: (723, 97).
+[INFO] 16:47:46:460 gamecard/(29233:29267): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 16:47:46:460 gamecard/(29233:29270): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 16:47:47:460 gamecard/(29233:29264): Cierro el archivo del pokemon: Charmander. Posicion: (65, 93).
+[INFO] 16:47:51:501 gamecard/(29233:29270): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 16:47:52:502 gamecard/(29233:29267): Cierro el archivo del pokemon: Charmander. Posicion: (12, 17).
+[INFO] 16:47:56:525 gamecard/(29233:29270): Agrego un bloque.
+[INFO] 16:47:56:525 gamecard/(29233:29270): LISTA BLOQUES: [2,3].
+[INFO] 16:47:56:526 gamecard/(29233:29270): LISTA BLOQUES AGREGADA: [2,3].
+[INFO] 16:47:57:526 gamecard/(29233:29270): Cierro el archivo del pokemon: Charmander. Posicion: (129, 547).

@@ -50,6 +50,7 @@ FILE* abrirArchivo(archivoHeader* metadata){
 		pthread_mutex_lock(metadata->mutex);
 		while(estaAbierto(metadata)){
 					pthread_mutex_unlock(metadata->mutex);
+					log_info(gamecardLogger, "Reintento abrir el archivo en %i sengundos. ", tiempoReintentoOperacion);
 					log_info(gamecardLogger2, "Reintento abrir el archivo en %i sengundos. ", tiempoReintentoOperacion);
 					obtenerListaBloquesConfig(metadata, "ABRIR ARCHIVO");
 					sleep(tiempoReintentoOperacion);
@@ -83,7 +84,7 @@ void modificarSize(archivoHeader* metadata,uint32_t size){
 
 void obtenerListaBloquesConfig(archivoHeader* archivo, char* estado){
 	t_config* config=config_create(archivo->pathArchivo);
-	log_info(gamecardLogger2, "----------------------------Lista bloques del config del archivo %s: %s. %s", archivo->nombreArchivo, config_get_string_value(config, "BLOCKS"), estado);
+	//log_info(gamecardLogger2, "----------------------------Lista bloques del config del archivo %s: %s. %s", archivo->nombreArchivo, config_get_string_value(config, "BLOCKS"), estado);
 	config_destroy(config);
 }
 
@@ -368,7 +369,7 @@ void reescribirArchivo(char* pokemon, char* stringAEscribir){
 	}else{
 		 bloquesNecesarios=(bytesAEscribir/tallGrass.block_size)+1;
 	}
-	log_info(gamecardLogger2,"-------------BLOQUES NECESARIOS= %i",bloquesNecesarios);
+	//log_info(gamecardLogger2,"-------------BLOQUES NECESARIOS= %i",bloquesNecesarios);
 	while(bloquesNecesarios<cantidadBloquesArchivo(headerPoke)){
 		removerUnBloque(headerPoke);
 	}

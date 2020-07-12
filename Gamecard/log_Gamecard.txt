@@ -1,0 +1,324 @@
+[INFO] 16:05:33:300 gamecard/(27409:27409): Inicio de programa: Gamecard.
+[INFO] 16:05:39:487 gamecard/(27409:27426): Recibi mensaje new pokemon. El pokemon es: Pikachu. La posicion es: (1,1). La cantidad es: 1.
+
+[INFO] 16:05:59:75 gamecard/(27409:27441): Recibi mensaje get pokemon. El pokemon es: Pikachu. 
+
+[INFO] 16:07:06:366 gamecard/(27473:27473): Inicio de programa: Gamecard.
+[INFO] 16:07:12:353 gamecard/(27473:27496): Recibi mensaje get pokemon. El pokemon es: Pikachu. 
+
+[INFO] 16:16:28:483 gamecard/(27671:27671): Inicio de programa: Gamecard.
+[INFO] 16:16:43:26 gamecard/(27696:27696): Inicio de programa: Gamecard.
+[INFO] 16:17:16:510 gamecard/(27772:27772): Inicio de programa: Gamecard.
+[INFO] 16:18:06:740 gamecard/(27802:27802): Inicio de programa: Gamecard.
+[INFO] 16:18:13:622 gamecard/(27802:27820): Recibi mensaje new pokemon. El pokemon es: Pikachu. La posicion es: (1,1). La cantidad es: 1.
+
+[INFO] 16:21:11:186 gamecard/(27934:27934): Inicio de programa: Gamecard.
+[INFO] 16:21:14:5 gamecard/(27934:27949): Recibi mensaje new pokemon. El pokemon es: Pikachu. La posicion es: (1,1). La cantidad es: 1.
+
+[INFO] 16:22:52:56 gamecard/(28085:28085): Inicio de programa: Gamecard.
+[INFO] 16:22:55:246 gamecard/(28085:28098): Recibi mensaje new pokemon. El pokemon es: Pikachu. La posicion es: (1,1). La cantidad es: 1.
+
+[INFO] 16:24:19:789 gamecard/(28183:28183): Inicio de programa: Gamecard.
+[INFO] 16:24:57:581 gamecard/(28245:28245): Inicio de programa: Gamecard.
+[INFO] 16:24:57:587 gamecard/(28245:28245): Inicio de Metadata, Tamanio bloques: 64,  Cantidad de bloques: 20,  Magic number: TALL_GRASS
+[INFO] 16:25:04:937 gamecard/(28245:28259): Recibi mensaje new pokemon. El pokemon es: Pikachu. La posicion es: (1,1). La cantidad es: 1.
+
+[INFO] 16:26:38:627 gamecard/(28338:28338): Inicio de programa: Gamecard.
+[INFO] 16:26:38:631 gamecard/(28338:28338): Se encontro el directorio metadata
+[INFO] 16:26:38:631 gamecard/(28338:28338): Se encontro el archivo metadata.bin
+[INFO] 16:26:38:631 gamecard/(28338:28338): Inicio de Metadata, Tamanio bloques: 64,  Cantidad de bloques: 20,  Magic number: TALL_GRASS
+[INFO] 16:26:50:624 gamecard/(28338:28354): Recibi mensaje new pokemon. El pokemon es: Pikachu. La posicion es: (1,1). La cantidad es: 1.
+
+[INFO] 16:27:12:330 gamecard/(28338:28371): Recibi mensaje catch pokemon. El pokemon es: Pikachu. La posicion es: (1,1).
+
+[INFO] 16:29:32:823 gamecard/(28507:28507): Inicio de programa: Gamecard.
+[INFO] 16:29:32:826 gamecard/(28507:28507): Se encontro el directorio metadata
+[INFO] 16:29:32:827 gamecard/(28507:28507): Se encontro el archivo metadata.bin
+[INFO] 16:29:32:827 gamecard/(28507:28507): Inicio de Metadata, Tamanio bloques: 64,  Cantidad de bloques: 20,  Magic number: TALL_GRASS
+[INFO] 16:33:09:3 gamecard/(28640:28640): Inicio de programa: Gamecard.
+[INFO] 16:33:10:6 gamecard/(28640:28640): Se encontro el directorio metadata
+[INFO] 16:33:10:6 gamecard/(28640:28640): Se encontro el archivo metadata.bin
+[INFO] 16:33:10:6 gamecard/(28640:28640): Inicio de Metadata, Tamanio bloques: 64,  Cantidad de bloques: 20,  Magic number: TALL_GRASS
+[INFO] 16:33:10:20 gamecard/(28640:28651): Conexión fallida con el Broker
+[INFO] 16:33:10:20 gamecard/(28640:28651): Reintentando conexión en 10 segundos...
+[INFO] 16:33:10:20 gamecard/(28640:28650): Conexión fallida con el Broker
+[INFO] 16:33:10:20 gamecard/(28640:28650): Reintentando conexión en 10 segundos...
+[INFO] 16:33:10:21 gamecard/(28640:28649): Conexión fallida con el Broker
+[INFO] 16:33:10:21 gamecard/(28640:28649): Reintentando conexión en 10 segundos...
+[INFO] 16:33:20:21 gamecard/(28640:28650): El reintento de conexión no fue exitoso
+[INFO] 16:33:20:21 gamecard/(28640:28651): El reintento de conexión no fue exitoso
+[INFO] 16:33:20:21 gamecard/(28640:28650): Reintentando conexión en 10 segundos...
+[INFO] 16:33:20:22 gamecard/(28640:28649): El reintento de conexión no fue exitoso
+[INFO] 16:33:20:22 gamecard/(28640:28651): Reintentando conexión en 10 segundos...
+[INFO] 16:33:20:22 gamecard/(28640:28649): Reintentando conexión en 10 segundos...
+[INFO] 16:33:21:311 gamecard/(28640:28659): Recibi mensaje catch pokemon. El pokemon es: Pikachu. La posicion es: (1,1).
+
+[INFO] 16:33:30:23 gamecard/(28640:28649): El reintento de conexión no fue exitoso
+[INFO] 16:33:30:23 gamecard/(28640:28651): El reintento de conexión no fue exitoso
+[INFO] 16:33:30:23 gamecard/(28640:28650): El reintento de conexión no fue exitoso
+[INFO] 16:33:30:24 gamecard/(28640:28649): Reintentando conexión en 10 segundos...
+[INFO] 16:33:30:24 gamecard/(28640:28650): Reintentando conexión en 10 segundos...
+[INFO] 16:33:30:24 gamecard/(28640:28651): Reintentando conexión en 10 segundos...
+[INFO] 16:38:04:583 gamecard/(28800:28800): Inicio de programa: Gamecard.
+[INFO] 16:38:04:591 gamecard/(28800:28800): Se encontro el directorio metadata
+[INFO] 16:38:04:591 gamecard/(28800:28800): Se encontro el archivo metadata.bin
+[INFO] 16:38:04:591 gamecard/(28800:28800): Inicio de Metadata, Tamanio bloques: 64,  Cantidad de bloques: 20,  Magic number: TALL_GRASS
+[INFO] 16:38:04:617 gamecard/(28800:28810): Conexión fallida con el Broker
+[INFO] 16:38:04:617 gamecard/(28800:28810): Reintentando conexión en 10 segundos...
+[INFO] 16:38:04:618 gamecard/(28800:28809): Conexión fallida con el Broker
+[INFO] 16:38:04:618 gamecard/(28800:28809): Reintentando conexión en 10 segundos...
+[INFO] 16:38:04:621 gamecard/(28800:28808): Conexión fallida con el Broker
+[INFO] 16:38:04:621 gamecard/(28800:28808): Reintentando conexión en 10 segundos...
+[INFO] 16:38:08:513 gamecard/(28800:28813): Recibi mensaje catch pokemon. El pokemon es: Pikachu. La posicion es: (1,1).
+
+[INFO] 16:38:09:514 gamecard/(28800:28813): Cierro el archivo del pokemon: Pikachu. Posicion: (1, 1).
+[INFO] 16:38:09:514 gamecard/(28800:28813): Inicia proceso envio caught
+[INFO] 16:38:14:618 gamecard/(28800:28809): El reintento de conexión no fue exitoso
+[INFO] 16:38:14:618 gamecard/(28800:28810): El reintento de conexión no fue exitoso
+[INFO] 16:38:14:618 gamecard/(28800:28809): Reintentando conexión en 10 segundos...
+[INFO] 16:38:14:618 gamecard/(28800:28810): Reintentando conexión en 10 segundos...
+[INFO] 16:38:14:626 gamecard/(28800:28808): El reintento de conexión no fue exitoso
+[INFO] 16:38:14:626 gamecard/(28800:28808): Reintentando conexión en 10 segundos...
+[INFO] 16:38:24:619 gamecard/(28800:28810): El reintento de conexión no fue exitoso
+[INFO] 16:38:24:620 gamecard/(28800:28809): El reintento de conexión no fue exitoso
+[INFO] 16:38:24:620 gamecard/(28800:28810): Reintentando conexión en 10 segundos...
+[INFO] 16:38:24:620 gamecard/(28800:28809): Reintentando conexión en 10 segundos...
+[INFO] 16:38:24:628 gamecard/(28800:28808): El reintento de conexión no fue exitoso
+[INFO] 16:38:24:628 gamecard/(28800:28808): Reintentando conexión en 10 segundos...
+[INFO] 16:38:34:621 gamecard/(28800:28809): El reintento de conexión no fue exitoso
+[INFO] 16:38:34:621 gamecard/(28800:28809): Reintentando conexión en 10 segundos...
+[INFO] 16:38:34:621 gamecard/(28800:28810): El reintento de conexión no fue exitoso
+[INFO] 16:38:34:622 gamecard/(28800:28810): Reintentando conexión en 10 segundos...
+[INFO] 16:38:34:629 gamecard/(28800:28808): El reintento de conexión no fue exitoso
+[INFO] 16:38:34:629 gamecard/(28800:28808): Reintentando conexión en 10 segundos...
+[INFO] 16:38:35:715 gamecard/(28800:28824): Recibi mensaje new pokemon. El pokemon es: Pikachu. La posicion es: (1,1). La cantidad es: 1.
+
+[INFO] 16:38:36:717 gamecard/(28800:28824): Cierro el archivo del pokemon: Pikachu. Posicion: (1, 1).
+[INFO] 16:38:39:494 gamecard/(28800:28828): Recibi mensaje catch pokemon. El pokemon es: Pikachu. La posicion es: (1,1).
+
+[INFO] 16:38:40:496 gamecard/(28800:28828): Cierro el archivo del pokemon: Pikachu. Posicion: (1, 1).
+[INFO] 16:38:40:496 gamecard/(28800:28828): Inicia proceso envio caught
+[INFO] 16:38:44:622 gamecard/(28800:28810): El reintento de conexión no fue exitoso
+[INFO] 16:38:44:622 gamecard/(28800:28809): El reintento de conexión no fue exitoso
+[INFO] 16:38:44:622 gamecard/(28800:28810): Reintentando conexión en 10 segundos...
+[INFO] 16:38:44:623 gamecard/(28800:28809): Reintentando conexión en 10 segundos...
+[INFO] 16:38:44:630 gamecard/(28800:28808): El reintento de conexión no fue exitoso
+[INFO] 16:38:44:630 gamecard/(28800:28808): Reintentando conexión en 10 segundos...
+[INFO] 16:38:54:623 gamecard/(28800:28809): El reintento de conexión no fue exitoso
+[INFO] 16:38:54:623 gamecard/(28800:28810): El reintento de conexión no fue exitoso
+[INFO] 16:38:54:624 gamecard/(28800:28809): Reintentando conexión en 10 segundos...
+[INFO] 16:38:54:624 gamecard/(28800:28810): Reintentando conexión en 10 segundos...
+[INFO] 16:38:54:638 gamecard/(28800:28808): El reintento de conexión no fue exitoso
+[INFO] 16:38:54:639 gamecard/(28800:28808): Reintentando conexión en 10 segundos...
+[INFO] 16:41:46:863 gamecard/(28971:28971): Inicio de programa: Gamecard.
+[INFO] 16:41:46:869 gamecard/(28971:28971): Se encontro el directorio metadata
+[INFO] 16:41:46:869 gamecard/(28971:28971): Se encontro el archivo metadata.bin
+[INFO] 16:41:46:869 gamecard/(28971:28971): Inicio de Metadata, Tamanio bloques: 64,  Cantidad de bloques: 20,  Magic number: TALL_GRASS
+[INFO] 16:41:46:924 gamecard/(28971:28981): Conexión fallida con el Broker
+[INFO] 16:41:46:925 gamecard/(28971:28981): Reintentando conexión en 10 segundos...
+[INFO] 16:41:46:925 gamecard/(28971:28980): Conexión fallida con el Broker
+[INFO] 16:41:46:925 gamecard/(28971:28980): Reintentando conexión en 10 segundos...
+[INFO] 16:41:46:925 gamecard/(28971:28979): Conexión fallida con el Broker
+[INFO] 16:41:46:925 gamecard/(28971:28979): Reintentando conexión en 10 segundos...
+[INFO] 16:41:51:785 gamecard/(28971:28985): Recibi mensaje new pokemon. El pokemon es: Pikachu. La posicion es: (1,1). La cantidad es: 1.
+
+[INFO] 16:41:51:786 gamecard/(28971:28985): Inicia proceso de atencion al New
+[INFO] 16:41:52:477 gamecard/(28971:28989): Recibi mensaje new pokemon. El pokemon es: Pikachu. La posicion es: (1,1). La cantidad es: 1.
+
+[INFO] 16:41:52:480 gamecard/(28971:28989): Inicia proceso de atencion al New
+[INFO] 16:41:52:787 gamecard/(28971:28985): Cierro el archivo del pokemon: Pikachu. Posicion: (1, 1).
+[INFO] 16:41:52:787 gamecard/(28971:28985): Inicia proceso envio Appeared
+[INFO] 16:41:53:104 gamecard/(28971:28992): Recibi mensaje new pokemon. El pokemon es: Pikachu. La posicion es: (1,1). La cantidad es: 1.
+
+[INFO] 16:41:53:104 gamecard/(28971:28992): Inicia proceso de atencion al New
+[INFO] 16:41:53:652 gamecard/(28971:28995): Recibi mensaje new pokemon. El pokemon es: Pikachu. La posicion es: (1,1). La cantidad es: 1.
+
+[INFO] 16:41:53:652 gamecard/(28971:28995): Inicia proceso de atencion al New
+[INFO] 16:41:54:107 gamecard/(28971:28992): Cierro el archivo del pokemon: Pikachu. Posicion: (1, 1).
+[INFO] 16:41:54:107 gamecard/(28971:28992): Inicia proceso envio Appeared
+[INFO] 16:41:55:482 gamecard/(28971:28989): Cierro el archivo del pokemon: Pikachu. Posicion: (1, 1).
+[INFO] 16:41:55:483 gamecard/(28971:28989): Inicia proceso envio Appeared
+[INFO] 16:41:56:655 gamecard/(28971:28995): Cierro el archivo del pokemon: Pikachu. Posicion: (1, 1).
+[INFO] 16:41:56:655 gamecard/(28971:28995): Inicia proceso envio Appeared
+[INFO] 16:41:56:925 gamecard/(28971:28981): El reintento de conexión no fue exitoso
+[INFO] 16:41:56:925 gamecard/(28971:28981): Reintentando conexión en 10 segundos...
+[INFO] 16:41:56:926 gamecard/(28971:28979): El reintento de conexión no fue exitoso
+[INFO] 16:41:56:926 gamecard/(28971:28980): El reintento de conexión no fue exitoso
+[INFO] 16:41:56:926 gamecard/(28971:28979): Reintentando conexión en 10 segundos...
+[INFO] 16:41:56:926 gamecard/(28971:28980): Reintentando conexión en 10 segundos...
+[INFO] 16:42:06:925 gamecard/(28971:28981): El reintento de conexión no fue exitoso
+[INFO] 16:42:06:926 gamecard/(28971:28980): El reintento de conexión no fue exitoso
+[INFO] 16:42:06:926 gamecard/(28971:28979): El reintento de conexión no fue exitoso
+[INFO] 16:42:06:926 gamecard/(28971:28981): Reintentando conexión en 10 segundos...
+[INFO] 16:42:06:927 gamecard/(28971:28979): Reintentando conexión en 10 segundos...
+[INFO] 16:42:06:927 gamecard/(28971:28980): Reintentando conexión en 10 segundos...
+[INFO] 16:42:16:929 gamecard/(28971:28980): El reintento de conexión no fue exitoso
+[INFO] 16:42:16:929 gamecard/(28971:28979): El reintento de conexión no fue exitoso
+[INFO] 16:42:16:929 gamecard/(28971:28981): El reintento de conexión no fue exitoso
+[INFO] 16:42:16:930 gamecard/(28971:28980): Reintentando conexión en 10 segundos...
+[INFO] 16:42:16:930 gamecard/(28971:28981): Reintentando conexión en 10 segundos...
+[INFO] 16:42:16:930 gamecard/(28971:28979): Reintentando conexión en 10 segundos...
+[INFO] 16:42:26:931 gamecard/(28971:28979): El reintento de conexión no fue exitoso
+[INFO] 16:42:26:931 gamecard/(28971:28981): El reintento de conexión no fue exitoso
+[INFO] 16:42:26:931 gamecard/(28971:28980): El reintento de conexión no fue exitoso
+[INFO] 16:42:26:932 gamecard/(28971:28979): Reintentando conexión en 10 segundos...
+[INFO] 16:42:26:932 gamecard/(28971:28980): Reintentando conexión en 10 segundos...
+[INFO] 16:42:26:932 gamecard/(28971:28981): Reintentando conexión en 10 segundos...
+[INFO] 16:45:46:698 gamecard/(29114:29114): Inicio de programa: Gamecard.
+[INFO] 16:45:46:698 gamecard/(29114:29114): Se encontro el directorio metadata
+[INFO] 16:45:46:698 gamecard/(29114:29114): Se encontro el archivo metadata.bin
+[INFO] 16:45:46:698 gamecard/(29114:29114): Inicio de Metadata, Tamanio bloques: 64,  Cantidad de bloques: 20,  Magic number: TALL_GRASS
+[INFO] 16:45:46:753 gamecard/(29114:29125): Conexión fallida con el Broker
+[INFO] 16:45:46:753 gamecard/(29114:29125): Reintentando conexión en 10 segundos...
+[INFO] 16:45:46:753 gamecard/(29114:29124): Conexión fallida con el Broker
+[INFO] 16:45:46:753 gamecard/(29114:29124): Reintentando conexión en 10 segundos...
+[INFO] 16:45:46:757 gamecard/(29114:29123): Conexión fallida con el Broker
+[INFO] 16:45:46:757 gamecard/(29114:29123): Reintentando conexión en 10 segundos...
+[INFO] 16:45:48:581 gamecard/(29114:29129): Recibi mensaje new pokemon. El pokemon es: Pikachu. La posicion es: (1,9). La cantidad es: 3.
+
+[INFO] 16:45:48:581 gamecard/(29114:29129): Inicia proceso de atencion al New
+[INFO] 16:45:48:586 gamecard/(29114:29132): Recibi mensaje new pokemon. El pokemon es: Charmander. La posicion es: (4,1). La cantidad es: 101.
+
+[INFO] 16:45:48:586 gamecard/(29114:29132): Inicia proceso de atencion al New
+[INFO] 16:45:48:600 gamecard/(29114:29135): Recibi mensaje new pokemon. El pokemon es: Charmander. La posicion es: (517,2046). La cantidad es: 15.
+
+[INFO] 16:45:48:600 gamecard/(29114:29135): Inicia proceso de atencion al New
+[INFO] 16:45:48:600 gamecard/(29114:29135): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 16:45:48:609 gamecard/(29114:29138): Recibi mensaje new pokemon. El pokemon es: Charmander. La posicion es: (413,17). La cantidad es: 1.
+
+[INFO] 16:45:48:609 gamecard/(29114:29138): Inicia proceso de atencion al New
+[INFO] 16:45:48:609 gamecard/(29114:29138): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 16:45:48:619 gamecard/(29114:29141): Recibi mensaje new pokemon. El pokemon es: Charmander. La posicion es: (723,97). La cantidad es: 29.
+
+[INFO] 16:45:48:619 gamecard/(29114:29141): Inicia proceso de atencion al New
+[INFO] 16:45:48:619 gamecard/(29114:29141): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 16:45:48:630 gamecard/(29114:29144): Recibi mensaje new pokemon. El pokemon es: Charmander. La posicion es: (65,93). La cantidad es: 3001.
+
+[INFO] 16:45:48:630 gamecard/(29114:29144): Inicia proceso de atencion al New
+[INFO] 16:45:48:630 gamecard/(29114:29144): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 16:45:48:634 gamecard/(29114:29147): Recibi mensaje new pokemon. El pokemon es: Charmander. La posicion es: (12,17). La cantidad es: 34.
+
+[INFO] 16:45:48:634 gamecard/(29114:29147): Inicia proceso de atencion al New
+[INFO] 16:45:48:634 gamecard/(29114:29147): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 16:45:48:641 gamecard/(29114:29150): Recibi mensaje new pokemon. El pokemon es: Charmander. La posicion es: (129,547). La cantidad es: 11.
+
+[INFO] 16:45:48:642 gamecard/(29114:29150): Inicia proceso de atencion al New
+[INFO] 16:45:48:642 gamecard/(29114:29150): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 16:45:49:583 gamecard/(29114:29129): Cierro el archivo del pokemon: Pikachu. Posicion: (1, 9).
+[INFO] 16:45:49:583 gamecard/(29114:29129): Inicia proceso envio Appeared
+[INFO] 16:45:49:590 gamecard/(29114:29132): Cierro el archivo del pokemon: Charmander. Posicion: (4, 1).
+[INFO] 16:45:49:590 gamecard/(29114:29132): Inicia proceso envio Appeared
+[INFO] 16:45:53:610 gamecard/(29114:29138): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 16:45:53:619 gamecard/(29114:29141): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 16:45:53:631 gamecard/(29114:29144): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 16:45:53:634 gamecard/(29114:29147): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 16:45:53:642 gamecard/(29114:29150): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 16:45:54:601 gamecard/(29114:29135): Cierro el archivo del pokemon: Charmander. Posicion: (517, 2046).
+[INFO] 16:45:54:602 gamecard/(29114:29135): Inicia proceso envio Appeared
+[INFO] 16:45:56:754 gamecard/(29114:29124): El reintento de conexión no fue exitoso
+[INFO] 16:45:56:754 gamecard/(29114:29125): El reintento de conexión no fue exitoso
+[INFO] 16:45:56:754 gamecard/(29114:29124): Reintentando conexión en 10 segundos...
+[INFO] 16:45:56:754 gamecard/(29114:29125): Reintentando conexión en 10 segundos...
+[INFO] 16:45:56:758 gamecard/(29114:29123): El reintento de conexión no fue exitoso
+[INFO] 16:45:56:758 gamecard/(29114:29123): Reintentando conexión en 10 segundos...
+[INFO] 16:45:58:620 gamecard/(29114:29141): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 16:45:58:632 gamecard/(29114:29144): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 16:45:58:635 gamecard/(29114:29147): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 16:45:58:642 gamecard/(29114:29150): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 16:45:59:619 gamecard/(29114:29138): Cierro el archivo del pokemon: Charmander. Posicion: (413, 17).
+[INFO] 16:45:59:619 gamecard/(29114:29138): Inicia proceso envio Appeared
+[INFO] 16:46:03:651 gamecard/(29114:29144): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 16:46:03:651 gamecard/(29114:29147): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 16:46:03:651 gamecard/(29114:29150): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 16:46:04:652 gamecard/(29114:29141): Cierro el archivo del pokemon: Charmander. Posicion: (723, 97).
+[INFO] 16:46:04:652 gamecard/(29114:29141): Inicia proceso envio Appeared
+[INFO] 16:46:06:755 gamecard/(29114:29125): El reintento de conexión no fue exitoso
+[INFO] 16:46:06:755 gamecard/(29114:29124): El reintento de conexión no fue exitoso
+[INFO] 16:46:06:756 gamecard/(29114:29125): Reintentando conexión en 10 segundos...
+[INFO] 16:46:06:756 gamecard/(29114:29124): Reintentando conexión en 10 segundos...
+[INFO] 16:46:06:758 gamecard/(29114:29123): El reintento de conexión no fue exitoso
+[INFO] 16:46:06:758 gamecard/(29114:29123): Reintentando conexión en 10 segundos...
+[INFO] 16:46:08:653 gamecard/(29114:29147): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 16:46:08:653 gamecard/(29114:29150): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 16:46:09:654 gamecard/(29114:29144): Cierro el archivo del pokemon: Charmander. Posicion: (65, 93).
+[INFO] 16:46:09:654 gamecard/(29114:29144): Inicia proceso envio Appeared
+[INFO] 16:46:13:667 gamecard/(29114:29150): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 16:46:14:668 gamecard/(29114:29147): Cierro el archivo del pokemon: Charmander. Posicion: (12, 17).
+[INFO] 16:46:14:668 gamecard/(29114:29147): Inicia proceso envio Appeared
+[INFO] 16:47:19:759 gamecard/(29233:29233): Inicio de programa: Gamecard.
+[INFO] 16:47:19:761 gamecard/(29233:29233): Se encontro el directorio metadata
+[INFO] 16:47:19:761 gamecard/(29233:29233): Se encontro el archivo metadata.bin
+[INFO] 16:47:19:762 gamecard/(29233:29233): Inicio de Metadata, Tamanio bloques: 64,  Cantidad de bloques: 20,  Magic number: TALL_GRASS
+[INFO] 16:47:19:778 gamecard/(29233:29244): Conexión fallida con el Broker
+[INFO] 16:47:19:781 gamecard/(29233:29244): Reintentando conexión en 120 segundos...
+[INFO] 16:47:19:781 gamecard/(29233:29243): Conexión fallida con el Broker
+[INFO] 16:47:19:781 gamecard/(29233:29243): Reintentando conexión en 120 segundos...
+[INFO] 16:47:19:781 gamecard/(29233:29242): Conexión fallida con el Broker
+[INFO] 16:47:19:781 gamecard/(29233:29242): Reintentando conexión en 120 segundos...
+[INFO] 16:47:26:358 gamecard/(29233:29249): Recibi mensaje new pokemon. El pokemon es: Pikachu. La posicion es: (1,9). La cantidad es: 3.
+
+[INFO] 16:47:26:358 gamecard/(29233:29249): Inicia proceso de atencion al New
+[INFO] 16:47:26:370 gamecard/(29233:29252): Recibi mensaje new pokemon. El pokemon es: Charmander. La posicion es: (4,1). La cantidad es: 101.
+
+[INFO] 16:47:26:370 gamecard/(29233:29252): Inicia proceso de atencion al New
+[INFO] 16:47:26:378 gamecard/(29233:29255): Recibi mensaje new pokemon. El pokemon es: Charmander. La posicion es: (517,2046). La cantidad es: 15.
+
+[INFO] 16:47:26:379 gamecard/(29233:29255): Inicia proceso de atencion al New
+[INFO] 16:47:26:379 gamecard/(29233:29255): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 16:47:26:389 gamecard/(29233:29258): Recibi mensaje new pokemon. El pokemon es: Charmander. La posicion es: (413,17). La cantidad es: 1.
+
+[INFO] 16:47:26:389 gamecard/(29233:29258): Inicia proceso de atencion al New
+[INFO] 16:47:26:389 gamecard/(29233:29258): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 16:47:26:396 gamecard/(29233:29261): Recibi mensaje new pokemon. El pokemon es: Charmander. La posicion es: (723,97). La cantidad es: 29.
+
+[INFO] 16:47:26:396 gamecard/(29233:29261): Inicia proceso de atencion al New
+[INFO] 16:47:26:396 gamecard/(29233:29261): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 16:47:26:406 gamecard/(29233:29264): Recibi mensaje new pokemon. El pokemon es: Charmander. La posicion es: (65,93). La cantidad es: 3001.
+
+[INFO] 16:47:26:406 gamecard/(29233:29264): Inicia proceso de atencion al New
+[INFO] 16:47:26:406 gamecard/(29233:29264): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 16:47:26:414 gamecard/(29233:29267): Recibi mensaje new pokemon. El pokemon es: Charmander. La posicion es: (12,17). La cantidad es: 34.
+
+[INFO] 16:47:26:414 gamecard/(29233:29267): Inicia proceso de atencion al New
+[INFO] 16:47:26:414 gamecard/(29233:29267): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 16:47:26:418 gamecard/(29233:29270): Recibi mensaje new pokemon. El pokemon es: Charmander. La posicion es: (129,547). La cantidad es: 11.
+
+[INFO] 16:47:26:418 gamecard/(29233:29270): Inicia proceso de atencion al New
+[INFO] 16:47:26:418 gamecard/(29233:29270): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 16:47:27:360 gamecard/(29233:29249): Cierro el archivo del pokemon: Pikachu. Posicion: (1, 9).
+[INFO] 16:47:27:360 gamecard/(29233:29249): Inicia proceso envio Appeared
+[INFO] 16:47:27:371 gamecard/(29233:29252): Cierro el archivo del pokemon: Charmander. Posicion: (4, 1).
+[INFO] 16:47:27:371 gamecard/(29233:29252): Inicia proceso envio Appeared
+[INFO] 16:47:31:390 gamecard/(29233:29258): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 16:47:31:397 gamecard/(29233:29261): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 16:47:31:407 gamecard/(29233:29264): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 16:47:31:414 gamecard/(29233:29267): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 16:47:31:419 gamecard/(29233:29270): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 16:47:32:382 gamecard/(29233:29255): Cierro el archivo del pokemon: Charmander. Posicion: (517, 2046).
+[INFO] 16:47:32:382 gamecard/(29233:29255): Inicia proceso envio Appeared
+[INFO] 16:47:36:402 gamecard/(29233:29261): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 16:47:36:407 gamecard/(29233:29264): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 16:47:36:415 gamecard/(29233:29267): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 16:47:36:420 gamecard/(29233:29270): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 16:47:37:402 gamecard/(29233:29258): Cierro el archivo del pokemon: Charmander. Posicion: (413, 17).
+[INFO] 16:47:37:403 gamecard/(29233:29258): Inicia proceso envio Appeared
+[INFO] 16:47:41:418 gamecard/(29233:29264): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 16:47:41:418 gamecard/(29233:29267): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 16:47:41:421 gamecard/(29233:29270): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 16:47:42:420 gamecard/(29233:29261): Cierro el archivo del pokemon: Charmander. Posicion: (723, 97).
+[INFO] 16:47:42:420 gamecard/(29233:29261): Inicia proceso envio Appeared
+[INFO] 16:47:46:459 gamecard/(29233:29267): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 16:47:46:459 gamecard/(29233:29270): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 16:47:47:460 gamecard/(29233:29264): Cierro el archivo del pokemon: Charmander. Posicion: (65, 93).
+[INFO] 16:47:47:461 gamecard/(29233:29264): Inicia proceso envio Appeared
+[INFO] 16:47:51:501 gamecard/(29233:29270): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 16:47:52:502 gamecard/(29233:29267): Cierro el archivo del pokemon: Charmander. Posicion: (12, 17).
+[INFO] 16:47:52:504 gamecard/(29233:29267): Inicia proceso envio Appeared
+[INFO] 16:47:57:526 gamecard/(29233:29270): Cierro el archivo del pokemon: Charmander. Posicion: (129, 547).
+[INFO] 16:47:57:528 gamecard/(29233:29270): Inicia proceso envio Appeared
+[INFO] 16:49:19:782 gamecard/(29233:29242): El reintento de conexión no fue exitoso
+[INFO] 16:49:19:782 gamecard/(29233:29243): El reintento de conexión no fue exitoso
+[INFO] 16:49:19:782 gamecard/(29233:29244): El reintento de conexión no fue exitoso
+[INFO] 16:49:19:782 gamecard/(29233:29242): Reintentando conexión en 120 segundos...
+[INFO] 16:49:19:782 gamecard/(29233:29244): Reintentando conexión en 120 segundos...
+[INFO] 16:49:19:782 gamecard/(29233:29243): Reintentando conexión en 120 segundos...

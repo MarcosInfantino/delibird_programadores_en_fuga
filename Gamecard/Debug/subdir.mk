@@ -7,22 +7,19 @@ C_SRCS += \
 ../FileSystem.c \
 ../arbolDirectorio.c \
 ../archivoHeader.c \
-../gamecard.c \
-../manejoArchivos.c 
+../gamecard.c 
 
 OBJS += \
 ./FileSystem.o \
 ./arbolDirectorio.o \
 ./archivoHeader.o \
-./gamecard.o \
-./manejoArchivos.o 
+./gamecard.o 
 
 C_DEPS += \
 ./FileSystem.d \
 ./arbolDirectorio.d \
 ./archivoHeader.d \
-./gamecard.d \
-./manejoArchivos.d 
+./gamecard.d 
 
 
 # Each subdirectory must supply rules for building sources it contributes

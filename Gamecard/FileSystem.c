@@ -45,35 +45,31 @@ uint32_t directorioExiste (char *path){
   return -1;
 }
 
-//void iniciarFileSystem(){
-//
-//	//iniciarMetadata();
-//	//iniciarBitmap();
-//
-//	//crear cliente
-//}
-
+FILE* verificarApertura(archivoHeader* archivo){
+	while(estaAbierto(archivo)){
+		sleep(tiempoReintentoOperacion);
+		log_info(gamecardLogger2, "Reintento abrir el archivo en %i sengundos. ", tiempoReintentoOperacion);
+	}
+	return abrirArchivo(archivo);
+}
 
 void iniciarMetadata() {
 	if(directorioExiste(buscarPath("/Metadata"))<0){
-		log_info(gamecardLogger2,"No se encontro el directorio metadata");
+		log_info(gamecardLogger,"No se encontro el directorio metadata");
+		//log_info(gamecardLogger2,"No se encontro el directorio metadata");
 	}else{
-		log_info(gamecardLogger2,"Se encontro el directorio metadata");
+		log_info(gamecardLogger,"Se encontro el directorio metadata");
+		//log_info(gamecardLogger2,"Se encontro el directorio metadata");
 		if(!archivoExiste("/home/utnso/tp-2020-1c-Programadores-en-Fuga/Gamecard/TALL_GRASS/Metadata/metadata.bin")){
-			log_info(gamecardLogger2,"No se encontro el archivo metadata.bin");
+			log_info(gamecardLogger,"No se encontro el archivo metadata.bin");
 		}
 		else{
-			log_info(gamecardLogger2,"Se encontro el archivo metadata.bin");
-			//char* pathMetadata = buscarPath("/Metadata/Metadata.bin");
-		//	int descriptorFichero = open(pathMetadata,O_RDONLY);
-		//	fstat(descriptorFichero,&bufferEstado);
-		//	char* memoria = mmap(NULL,bufferEstado.st_size,PROT_READ,MAP_PRIVATE,descriptorFichero,0);
-
+			log_info(gamecardLogger,"Se encontro el archivo metadata.bin");
 			t_config* config_metadata = config_create("/home/utnso/tp-2020-1c-Programadores-en-Fuga/Gamecard/TALL_GRASS/Metadata/metadata.bin");
 			tallGrass.block_size  = config_get_int_value(config_metadata, "BLOCK_SIZE");
 			tallGrass.blocks = config_get_int_value(config_metadata, "BLOCKS");
 			tallGrass.magic_number = config_get_string_value(config_metadata, "MAGIC_NUMBER");
-			log_info(gamecardLogger2,"Inicio de Metadata, Tamanio bloques: %i,  Cantidad de bloques: %i,  Magic number: %s", tallGrass.block_size, tallGrass.blocks, tallGrass.magic_number);
+			log_info(gamecardLogger,"Inicio de Metadata, Tamanio bloques: %i,  Cantidad de bloques: %i,  Magic number: %s", tallGrass.block_size, tallGrass.blocks, tallGrass.magic_number);
 			config_destroy(config_metadata);
 		}
 	}
@@ -226,7 +222,7 @@ archivoHeader* crearMetadata(char* nombre, uint32_t tipo, char* direccion){
 
 	switch(tipo){
 	case DIRECTORIO:;
-		log_info(gamecardLogger2,"Soy directorio");
+		//log_info(gamecardLogger2,"Soy directorio");
 		metadataFile->esDirectorio = 'Y';
 		metadataFile->estaAbierto = false;
 		metadataFile->bloquesUsados = NULL;
@@ -239,7 +235,7 @@ archivoHeader* crearMetadata(char* nombre, uint32_t tipo, char* direccion){
 
 		break;
 	case ARCHIVO:;
-		log_info(gamecardLogger2,"Soy archivo");
+		//log_info(gamecardLogger2,"Soy archivo");
 		metadataFile->esDirectorio = 'N';
 		metadataFile->estaAbierto = false;
 		metadataFile->bloquesUsados = list_create();
@@ -291,7 +287,7 @@ archivoHeader* cargarMetadata(char* path, uint32_t tipo, char* nombre){
 	//		fputs("SIZE=0\n", archivoMetadata);
 	//		fputs("BLOCKS=[]\n",archivoMetadata);
 	//		fputs("OPEN=N\n", archivoMetadata);
-			log_info(gamecardLogger2, "entro a cargar metadata");
+			//log_info(gamecardLogger2, "entro a cargar metadata");
 			archivo->esDirectorio=*(config_get_string_value(configLoco, "DIRECTORY"));
 			archivo->tamanioArchivo=config_get_int_value(configLoco, "SIZE");
 			log_info(gamecardLogger2, "empiezo con los bloques %s", nombre);
