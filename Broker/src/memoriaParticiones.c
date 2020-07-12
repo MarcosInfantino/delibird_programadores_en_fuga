@@ -161,7 +161,8 @@ void registrarEnParticiones(msgMemoriaBroker* mensajeNuevo){
 
 void asignarMensajeAParticion(particion* partiLibre, msgMemoriaBroker* mensaje){
 	printf("Entro a asignar particion: base: %i, size: %i\n", partiLibre->offset, partiLibre->sizeParticion);
-	particion* partiOcupada = inicializarParticion();
+	//particion* partiOcupada = inicializarParticion();
+	particion* partiOcupada = malloc(sizeof(particion));
 	partiOcupada->offset = partiLibre->offset;
 	partiOcupada->mensaje = mensaje;
 	if(mensaje->sizeStream > particionMinima){
@@ -178,7 +179,7 @@ void asignarMensajeAParticion(particion* partiLibre, msgMemoriaBroker* mensaje){
 	TC++;
 	memcpy(memoria + partiOcupada->offset, mensaje->stream, mensaje->sizeStream);
 
-	mensaje->stream = memoria + partiOcupada->offset;//ESTO ES INDISPENSABLE NO SE QUIEN LO COMENTO PERO QUE NO VUELVA A PASAR Atte. Marquitos :)
+	mensaje->stream = memoria + partiOcupada->offset;
 
 	addListaMutex(particionesOcupadas, (void*)partiOcupada);
 	log_info(loggerBroker, "Almaceno mensaje en partición que comienza en: %i", partiOcupada->offset);
@@ -193,11 +194,11 @@ void asignarMensajeAParticion(particion* partiLibre, msgMemoriaBroker* mensaje){
 		destroyParticionLibre (partiLibre);
 	}
 }
-particion* inicializarParticion(){//ESTA FUNCION ES AL PEDO
-	particion* particionADevolver = malloc(sizeof(particion));
-	particionADevolver->mensaje = malloc (sizeof(msgMemoriaBroker));
-	return particionADevolver;
-}
+//particion* inicializarParticion(){//ESTA FUNCION ES AL PEDO
+//	particion* particionADevolver = malloc(sizeof(particion));
+//	particionADevolver->mensaje = malloc (sizeof(msgMemoriaBroker));
+//	return particionADevolver;
+//}
 
 particion* crearPrimeraParticionLibre(void){
 	particion* particionADevolver = malloc(sizeof(particion));
@@ -224,13 +225,10 @@ bool noHayNingunaSuficientementeGrande(uint32_t tamStream){
 			return false;
 		}
 	}
-	//printf("Holiiii\n");
 	return true;
 }
 
 particion* obtenerParticionLibrePARTICIONES(uint32_t tamStream){
-	//auxTamanioStreamGlobal = tamStream;
-	log_info(brokerLogger2,"----------------------------------- tamStream: %i", tamStream);
 	if(noHayNingunaSuficientementeGrande(tamStream) || cantidadMemoriaLibre()<tamStream){
 
 		return NULL;
@@ -340,6 +338,8 @@ void enviarMsjsASuscriptorNuevoParticiones (uint32_t cola, uint32_t* socket){
 	for(int i = 0; i<list_size(listMsjs); i++){
 		msg = (msgMemoriaBroker*) list_get(listMsjs, i);
 		paqueteASerializar = llenarPaquete(msg->modulo, msg->cola, msg->sizeStream, msg->stream);
+		insertarIdPaquete(paqueteASerializar, msg->idMensaje);
+		insertarIdCorrelativoPaquete(paqueteASerializar, msg->idCorrelativo);
 		paqueteSerializado = serializarPaquete(paqueteASerializar);
 		send(*socket, paqueteSerializado, sizePaquete(paqueteASerializar),0);
 		addListaMutex(msg->subsYaEnviado, (void*)socket);
@@ -357,4 +357,3 @@ msgMemoriaBroker*  buscarMensajeEnMemoriaParticiones(uint32_t idMensajeBuscado){
 	}
 	return NULL;
 }
-

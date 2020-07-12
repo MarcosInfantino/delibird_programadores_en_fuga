@@ -113,7 +113,6 @@ uint32_t evaluarTamanioParticionYasignar(struct nodoMemoria* partActual, msgMemo
 		}
 		partActual->header.status = OCUPADO;
 		partActual->mensaje = msg;
-
 		addListaMutex(nodosOcupados,partActual);
 
 		time_t t;
@@ -121,6 +120,9 @@ uint32_t evaluarTamanioParticionYasignar(struct nodoMemoria* partActual, msgMemo
 		partActual->header.tiempoDeCarga = *localtime(&t);
 		partActual->header.ultimoAcceso = *localtime(&t);
 		asignarPuntero(partActual->offset, partActual->mensaje->stream, partActual->mensaje->sizeStream);
+
+		//memoria + partActual->offset = msg->stream; HAY QUE AGREGAR ESTO Y REVISAR QUE FUNCIONE
+
 		log_info(brokerLogger2,"ASIGNE: Size de buddy: %i. Id mensaje: %i. Size del mensaje: %i.", (partActual->header).size, partActual->mensaje->idMensaje, partActual->mensaje->sizeStream);
 		return 1;
 	}
