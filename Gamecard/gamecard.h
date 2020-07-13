@@ -110,6 +110,7 @@ uint32_t tiempoRetardoGC;
 uint32_t tiempoReintentoOperacion;
 uint32_t tiempoReconexionGC;
 uint32_t puertoBrokerGC;
+uint32_t idProcesoGamecard;
 char* ipBrokerGC;
 char* puntoMontaje;
 char* pathLoggerPrincipal;
@@ -140,6 +141,7 @@ t_log* gamecardLogger2;
 
 
 void* suscribirseCola(void* msgSuscripcion);
+uint32_t enviarSuscripcion(uint32_t socket, mensajeSuscripcion* msg);
 void* suscribirseColasBroker(void* config);
 void* iniciarServidorGameboy(void* arg);
 int crearHiloServidorGameboy(pthread_t* hilo);
@@ -217,7 +219,8 @@ void setearSize(archivoHeader* archivo,uint32_t size);
 void obtenerListaBloquesConfig(archivoHeader* archivo, char* estado);
 posicion* conseguirPosicionesCantidad(archivoHeader* pokeArchivo);
 int32_t existe(char *path);
-uint32_t reconectarseAlBroker(uint32_t cliente,void* direccionServidor,socklen_t length);
+uint32_t reconectarseAlBroker();
+//uint32_t reconectarseAlBroker(uint32_t cliente,void* direccionServidor,socklen_t length);
 int crearHiloConexionBroker(void* config, pthread_t* hilo);
 void liberarPrograma(t_config* configGamecard,t_log* gamecardLogger);
 t_config* crearYleerConfig();

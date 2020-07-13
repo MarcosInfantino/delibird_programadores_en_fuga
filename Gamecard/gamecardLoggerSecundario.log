@@ -46810,3 +46810,132 @@ HolacomoAndas
 [INFO] 16:47:56:525 gamecard/(29233:29270): LISTA BLOQUES: [2,3].
 [INFO] 16:47:56:526 gamecard/(29233:29270): LISTA BLOQUES AGREGADA: [2,3].
 [INFO] 16:47:57:526 gamecard/(29233:29270): Cierro el archivo del pokemon: Charmander. Posicion: (129, 547).
+[INFO] 18:20:02:734 gamecard/(5470:5477): Estoy escuchando
+[INFO] 18:20:02:760 gamecard/(5470:5477): Espero un nuevo cliente
+[INFO] 18:20:02:743 gamecard/(5470:5480): Voy a llenar el paquete
+[INFO] 18:20:02:760 gamecard/(5470:5480): cliente: 7
+[INFO] 18:20:02:743 gamecard/(5470:5479): Voy a llenar el paquete
+[INFO] 18:20:02:760 gamecard/(5470:5479): cliente: 8
+[INFO] 18:20:02:745 gamecard/(5470:5478): Voy a llenar el paquete
+[INFO] 18:20:02:760 gamecard/(5470:5478): cliente: 9
+[INFO] 18:20:02:760 gamecard/(5470:5478): Conexión fallida con el Broker
+
+[INFO] 18:20:02:760 gamecard/(5470:5479): Conexión fallida con el Broker
+
+[INFO] 18:20:02:760 gamecard/(5470:5480): Conexión fallida con el Broker
+
+[INFO] 18:23:33:131 gamecard/(5600:5611): Estoy escuchando
+[INFO] 18:23:33:131 gamecard/(5600:5611): Espero un nuevo cliente
+[INFO] 18:23:33:137 gamecard/(5600:5614): Voy a llenar el paquete
+[INFO] 18:23:33:137 gamecard/(5600:5614): cliente: 7
+[INFO] 18:23:33:137 gamecard/(5600:5614): Conexión fallida con el Broker
+
+[INFO] 18:23:33:137 gamecard/(5600:5613): Voy a llenar el paquete
+[INFO] 18:23:33:137 gamecard/(5600:5613): cliente: 8
+[INFO] 18:23:33:137 gamecard/(5600:5613): Conexión fallida con el Broker
+
+[INFO] 18:23:33:137 gamecard/(5600:5612): Voy a llenar el paquete
+[INFO] 18:23:33:137 gamecard/(5600:5612): cliente: 9
+[INFO] 18:23:33:137 gamecard/(5600:5612): Conexión fallida con el Broker
+
+[INFO] 18:23:53:138 gamecard/(5600:5614): El reintento de conexión fue exitoso
+
+[INFO] 18:32:14:641 gamecard/(6005:6011): Estoy escuchando
+[INFO] 18:32:14:641 gamecard/(6005:6011): Espero un nuevo cliente
+[INFO] 18:32:14:645 gamecard/(6005:6014): Voy a llenar el paquete
+[INFO] 18:32:14:645 gamecard/(6005:6014): cliente: 7
+[INFO] 18:32:14:646 gamecard/(6005:6013): Voy a llenar el paquete
+[INFO] 18:32:14:646 gamecard/(6005:6013): cliente: 8
+[INFO] 18:32:14:647 gamecard/(6005:6012): Voy a llenar el paquete
+[INFO] 18:32:14:647 gamecard/(6005:6012): cliente: 9
+[INFO] 18:37:46:984 gamecard/(6163:6170): Estoy escuchando
+[INFO] 18:37:46:984 gamecard/(6163:6170): Espero un nuevo cliente
+[INFO] 18:37:46:993 gamecard/(6163:6173): Voy a llenar el paquete
+[INFO] 18:37:46:993 gamecard/(6163:6173): cliente: 7
+[INFO] 18:37:46:993 gamecard/(6163:6173): Conexión fallida con el Broker
+
+[INFO] 18:37:46:993 gamecard/(6163:6172): Voy a llenar el paquete
+[INFO] 18:37:46:993 gamecard/(6163:6172): cliente: 8
+[INFO] 18:37:46:994 gamecard/(6163:6172): Conexión fallida con el Broker
+
+[INFO] 18:37:46:995 gamecard/(6163:6171): Voy a llenar el paquete
+[INFO] 18:37:46:995 gamecard/(6163:6171): cliente: 9
+[INFO] 18:37:46:995 gamecard/(6163:6171): Conexión fallida con el Broker
+
+[INFO] 18:37:53:747 gamecard/(6163:6170): Gestiono un nuevo cliente
+[INFO] 18:37:53:747 gamecard/(6163:6170): Espero un nuevo cliente
+[INFO] 18:37:53:757 gamecard/(6163:6176): Agrego un bloque.
+[INFO] 18:37:53:757 gamecard/(6163:6176): LISTA BLOQUES: [1].
+[INFO] 18:37:53:757 gamecard/(6163:6176): LISTA BLOQUES AGREGADA: [1].
+[INFO] 18:37:54:758 gamecard/(6163:6176): Cierro el archivo del pokemon: Pikachu. Posicion: (2, 5).
+[INFO] 18:38:06:995 gamecard/(6163:6173): El reintento de conexión no fue exitoso
+
+[INFO] 18:38:06:996 gamecard/(6163:6172): El reintento de conexión no fue exitoso
+
+[INFO] 18:38:06:997 gamecard/(6163:6171): El reintento de conexión no fue exitoso
+
+[INFO] 18:38:16:996 gamecard/(6163:6173): El reintento de conexión no fue exitoso
+
+[INFO] 18:38:16:996 gamecard/(6163:6172): El reintento de conexión no fue exitoso
+
+[INFO] 18:38:16:997 gamecard/(6163:6171): El reintento de conexión no fue exitoso
+
+[INFO] 18:39:51:229 gamecard/(6264:6273): Voy a llenar el paquete
+[INFO] 18:39:51:229 gamecard/(6264:6273): cliente: 7
+[INFO] 18:39:51:229 gamecard/(6264:6272): Voy a llenar el paquete
+[INFO] 18:39:51:229 gamecard/(6264:6272): cliente: 8
+[INFO] 18:39:51:230 gamecard/(6264:6273): Conexión fallida con el Broker
+
+[INFO] 18:39:51:230 gamecard/(6264:6272): Conexión fallida con el Broker
+
+[INFO] 18:39:51:230 gamecard/(6264:6271): Voy a llenar el paquete
+[INFO] 18:39:51:230 gamecard/(6264:6271): cliente: 9
+[INFO] 18:39:51:234 gamecard/(6264:6271): Conexión fallida con el Broker
+
+[INFO] 18:40:11:233 gamecard/(6264:6273): El reintento de conexión fue exitoso
+
+[INFO] 18:40:11:233 gamecard/(6264:6272): El reintento de conexión fue exitoso
+
+[INFO] 18:40:11:236 gamecard/(6264:6271): El reintento de conexión fue exitoso
+
+[INFO] 18:40:21:52 gamecard/(6264:6318): empiezo con los bloques Pikachu
+[INFO] 18:40:21:52 gamecard/(6264:6318): termino con los bloques Pikachu
+[INFO] 18:40:22:53 gamecard/(6264:6318): Cierro el archivo del pokemon: Pikachu. Posicion: (2, 5).
+[INFO] 18:40:22:947 gamecard/(6264:6328): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 18:40:23:288 gamecard/(6264:6324): Cierro el archivo del pokemon: Pikachu. Posicion: (2, 5).
+[INFO] 18:40:24:536 gamecard/(6264:6332): Cierro el archivo del pokemon: Pikachu. Posicion: (2, 5).
+[INFO] 18:40:28:949 gamecard/(6264:6328): Cierro el archivo del pokemon: Pikachu. Posicion: (2, 5).
+[INFO] 18:40:58:711 gamecard/(6264:6361): deserializado
+[INFO] 18:40:58:711 gamecard/(6264:6361): Pokemon:Pikachu, posicion:2-5
+[INFO] 18:40:58:716 gamecard/(6264:6361): Size lista antes de comprobar:1
+[INFO] 18:40:58:716 gamecard/(6264:6361): Reemplazo
+[INFO] 18:40:58:717 gamecard/(6264:6361): Size lista despues de comprobar:1
+[INFO] 18:41:01:93 gamecard/(6264:6367): deserializado
+[INFO] 18:41:01:93 gamecard/(6264:6367): Pokemon:Pikachu, posicion:2-5
+[INFO] 18:41:01:93 gamecard/(6264:6367): Size lista antes de comprobar:1
+[INFO] 18:41:01:93 gamecard/(6264:6367): Reemplazo
+[INFO] 18:41:01:95 gamecard/(6264:6367): Size lista despues de comprobar:1
+[INFO] 18:41:01:727 gamecard/(6264:6371): deserializado
+[INFO] 18:41:01:727 gamecard/(6264:6371): Pokemon:Pikachu, posicion:2-5
+[INFO] 18:41:01:727 gamecard/(6264:6371): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 18:41:02:228 gamecard/(6264:6375): deserializado
+[INFO] 18:41:02:228 gamecard/(6264:6375): Pokemon:Pikachu, posicion:2-5
+[INFO] 18:41:02:228 gamecard/(6264:6375): Size lista antes de comprobar:1
+[INFO] 18:41:02:228 gamecard/(6264:6375): Reemplazo
+[INFO] 18:41:02:228 gamecard/(6264:6375): Size lista despues de comprobar:1
+[INFO] 18:41:02:665 gamecard/(6264:6378): deserializado
+[INFO] 18:41:02:665 gamecard/(6264:6378): Pokemon:Pikachu, posicion:2-5
+[INFO] 18:41:02:665 gamecard/(6264:6378): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 18:41:03:106 gamecard/(6264:6381): deserializado
+[INFO] 18:41:03:106 gamecard/(6264:6381): Pokemon:Pikachu, posicion:2-5
+[INFO] 18:41:03:107 gamecard/(6264:6381): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 18:41:06:727 gamecard/(6264:6371): Size lista antes de comprobar:1
+[INFO] 18:41:06:727 gamecard/(6264:6371): Reemplazo
+[INFO] 18:41:06:728 gamecard/(6264:6371): Size lista despues de comprobar:1
+[INFO] 18:41:07:665 gamecard/(6264:6378): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 18:41:08:108 gamecard/(6264:6381): Size lista antes de comprobar:1
+[INFO] 18:41:08:108 gamecard/(6264:6381): Reemplazo
+[INFO] 18:41:08:108 gamecard/(6264:6381): Size lista despues de comprobar:1
+[INFO] 18:41:12:666 gamecard/(6264:6378): Size lista antes de comprobar:1
+[INFO] 18:41:12:666 gamecard/(6264:6378): Reemplazo
+[INFO] 18:41:12:667 gamecard/(6264:6378): Size lista despues de comprobar:1

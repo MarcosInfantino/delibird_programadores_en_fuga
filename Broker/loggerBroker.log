@@ -3323,3 +3323,21 @@
 [INFO] 16:34:41:861 BROKER/(5483:5652): Almaceno mensaje en partición que comienza en: 11
 [INFO] 16:34:55:774 BROKER/(5483:5793): Almaceno mensaje en partición que comienza en: 25
 [INFO] 16:34:55:775 BROKER/(5483:5495): Envié mensaje a suscriptor: 101 -.-
+[INFO] 18:20:12:207 BROKER/(5495:5495): Inició el Broker.
+[INFO] 18:23:45:924 BROKER/(5624:5624): Inició el Broker.
+[INFO] 18:32:09:175 BROKER/(5978:5978): Inició el Broker.
+[INFO] 18:40:03:234 BROKER/(6289:6289): Inició el Broker.
+[INFO] 18:40:22:55 BROKER/(6289:6321): Almaceno mensaje en partición que comienza en: 0
+[INFO] 18:40:23:291 BROKER/(6289:6330): Almaceno mensaje en partición que comienza en: 20
+[INFO] 18:40:24:538 BROKER/(6289:6339): Almaceno mensaje en partición que comienza en: 40
+[INFO] 18:40:28:954 BROKER/(6289:6340): Se realiza la compactacion
+[INFO] 18:40:28:954 BROKER/(6289:6340): Elimino particion que comienza en: 0
+[INFO] 18:40:28:954 BROKER/(6289:6340): Almaceno mensaje en partición que comienza en: 0
+[INFO] 18:40:59:725 BROKER/(6289:6364): Almaceno mensaje en partición que comienza en: 60
+[INFO] 18:41:02:99 BROKER/(6289:6373): Se realiza la compactacion
+[INFO] 18:41:02:99 BROKER/(6289:6373): Elimino particion que comienza en: 20
+[INFO] 18:41:02:99 BROKER/(6289:6373): Almaceno mensaje en partición que comienza en: 20
+[INFO] 18:41:03:235 BROKER/(6289:6383): Almaceno mensaje en partición que comienza en: 24
+[INFO] 18:41:07:731 BROKER/(6289:6384): Almaceno mensaje en partición que comienza en: 28
+[INFO] 18:41:09:112 BROKER/(6289:6385): Almaceno mensaje en partición que comienza en: 32
+[INFO] 18:41:13:669 BROKER/(6289:6386): Almaceno mensaje en partición que comienza en: 36

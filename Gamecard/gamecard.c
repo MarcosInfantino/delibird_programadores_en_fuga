@@ -98,6 +98,7 @@ t_config* crearYleerConfig(){
 	puntoMontaje = config_get_string_value(configGamecard, "PUNTO_MONTAJE_TALLGRASS");
 	tiempoReconexionGC = config_get_int_value(configGamecard, "TIEMPO_DE_REINTENTO_CONEXION");
 	pathLoggerPrincipal=config_get_string_value(configGamecard, "LOG_FILE");
+	idProcesoGamecard = config_get_int_value(configGamecard, "ID_PROCESO");
 	return configGamecard;
 }
 
@@ -116,9 +117,9 @@ int crearHiloConexionBroker(void* config, pthread_t* hilo){
 
 void* suscribirseColasBroker(void* config) {
 
-	mensajeSuscripcion* mensajeSuscripcionNew=llenarSuscripcion(NEW_POKEMON);
-	mensajeSuscripcion * mensajeSuscripcionCatch=llenarSuscripcion(CATCH_POKEMON);
-	mensajeSuscripcion* mensajeSuscripcionGet=llenarSuscripcion(GET_POKEMON);
+	mensajeSuscripcion* mensajeSuscripcionNew=llenarSuscripcion(NEW_POKEMON,idProcesoGamecard);
+	mensajeSuscripcion * mensajeSuscripcionCatch=llenarSuscripcion(CATCH_POKEMON,idProcesoGamecard);
+	mensajeSuscripcion* mensajeSuscripcionGet=llenarSuscripcion(GET_POKEMON,idProcesoGamecard);
 
 
 	pthread_create(&threadSuscripcionNew, NULL, suscribirseCola,(void*) (mensajeSuscripcionNew));
@@ -137,13 +138,102 @@ void* suscribirseColasBroker(void* config) {
 	return NULL;
 }
 
+//void* suscribirseCola(void* msgSuscripcion) {
+//	mensajeSuscripcion* msg = (mensajeSuscripcion*) msgSuscripcion;
+//	uint32_t sizeStream = sizeof(uint32_t);
+//	void* streamMsgSuscripcion = serializarSuscripcion(msg);
+//	destruirSuscripcion(msg);
+//	log_info(gamecardLogger2,"Voy a llenar el paquete");
+//	paquete* paq = llenarPaquete(GAMECARD, SUSCRIPCION, sizeStream,streamMsgSuscripcion);
+//
+//	struct sockaddr_in direccionServidor;
+//	direccionServidor.sin_family = AF_INET;
+//	direccionServidor.sin_addr.s_addr = inet_addr(ipBrokerGC);
+//	direccionServidor.sin_port = htons(puertoBrokerGC);
+//
+//	uint32_t cliente = socket(AF_INET, SOCK_STREAM, 0);
+//	log_info(gamecardLogger2,"cliente: %d", cliente);
+//
+//
+//	if(connect(cliente, (void*) &direccionServidor,sizeof(direccionServidor)) <0){
+//		reconectarseAlBroker(cliente,(void*) &direccionServidor,sizeof(direccionServidor));
+//	}
+//	cliente=enviarSuscripcion(cliente, msgSuscripcion);
+//
+//	//log_info(gamecardLogger,"Comienzo suscripcion a %i", paq->tipoMensaje);
+//	//log_info(gamecardLogger2,"Comienzo suscripcion a %i", paq->tipoMensaje);
+//	//uint32_t bytes = sizeof(uint32_t) * 5 + paq->sizeStream;
+//	//void* stream = serializarPaquete(paq);
+//	//free(streamMsgSuscripcion);
+//
+//
+//
+//	send(cliente, stream, bytes, 0);
+//
+//	destruirPaquete(paq);
+//	free(stream);
+//
+//
+//	uint32_t respuesta;
+//	log_info(gamecardLogger,"Espero respuesta");
+//	log_info(gamecardLogger2,"Espero respuesta");
+//	recv(cliente, &respuesta, sizeof(uint32_t), 0);
+//
+//	if (respuesta == CORRECTO) {
+//		log_info(gamecardLogger,"Gamecard se suscribio correctamente a:%i",msg->cola);
+//		log_info(gamecardLogger2,"Gamecard se suscribio correctamente a:%i",msg->cola);
+//		while (1) {
+//
+//			paquete* paqueteRespuesta = recibirPaquete(cliente);
+//
+//			while (enviarACK(cliente, GAMECARD, paqueteRespuesta->id,idProcesoGamecard) < 0) {
+//				reconectarseAlBroker(cliente,(void*) &direccionServidor,sizeof(direccionServidor));
+////				log_info(gamecardLogger2,"Conexión fallida con el Broker reintentando en %i segundos",tiempoReconexionGC);
+////				sleep(tiempoReconexionGC);
+//
+//			}
+//
+//			switch (paqueteRespuesta->tipoMensaje) {
+//			case NEW_POKEMON:;
+//				pthread_t threadNew;
+//				pthread_create(&threadNew, NULL, atenderNew, (void*)(paqueteRespuesta));
+//				pthread_detach(threadNew);
+//
+//				break;
+//			case GET_POKEMON:;
+//				pthread_t threadGet;
+//				pthread_create(&threadGet, NULL, atenderGet, (void*)(paqueteRespuesta));
+//				pthread_detach(threadGet);
+//				break;
+//			case CATCH_POKEMON:;
+//				pthread_t threadCatch;
+//				pthread_create(&threadCatch, NULL, atenderCatch, (void*)(paqueteRespuesta));
+//				pthread_detach(threadCatch);
+//				break;
+//			default:
+//				break;
+//
+//			}
+//
+//			while (send(cliente, (void*) (&respuesta), sizeof(uint32_t), 0) < 0) {
+//
+//				reconectarseAlBroker(cliente, (void*) &direccionServidor,sizeof(direccionServidor));
+//			}
+//		}
+//	} else {
+//		log_info(gamecardLogger2,"Mensaje recibido incorrectamente\n");
+//
+//	}
+//	return NULL;
+//}
+
 void* suscribirseCola(void* msgSuscripcion) {
 	mensajeSuscripcion* msg = (mensajeSuscripcion*) msgSuscripcion;
-	uint32_t sizeStream = sizeof(uint32_t);
-	void* streamMsgSuscripcion = serializarSuscripcion(msg);
-	destruirSuscripcion(msg);
+	//uint32_t sizeStream = sizeof(uint32_t);
+	//void* streamMsgSuscripcion = serializarSuscripcion(msg);
+	//destruirSuscripcion(msg);
 	log_info(gamecardLogger2,"Voy a llenar el paquete");
-	paquete* paq = llenarPaquete(GAMECARD, SUSCRIPCION, sizeStream,streamMsgSuscripcion);
+	//paquete* paq = llenarPaquete(GAMECARD, SUSCRIPCION, sizeStream,streamMsgSuscripcion);
 
 	struct sockaddr_in direccionServidor;
 	direccionServidor.sin_family = AF_INET;
@@ -155,94 +245,133 @@ void* suscribirseCola(void* msgSuscripcion) {
 
 
 	if(connect(cliente, (void*) &direccionServidor,sizeof(direccionServidor)) <0){
-
-		reconectarseAlBroker(cliente,(void*) &direccionServidor,sizeof(direccionServidor));
-
+		cliente=reconectarseAlBroker();
 	}
-	log_info(gamecardLogger,"Comienzo suscripcion a %i", paq->tipoMensaje);
-	log_info(gamecardLogger2,"Comienzo suscripcion a %i", paq->tipoMensaje);
-	uint32_t bytes = sizeof(uint32_t) * 5 + paq->sizeStream;
+	cliente=enviarSuscripcion(cliente, msgSuscripcion);
 
-	void* stream = serializarPaquete(paq);
+	while(1){
+		paquete* paqueteRespuesta=recibirPaquete(cliente);
 
-	//free(streamMsgSuscripcion);
+		while(paqueteRespuesta==NULL){
+			cliente=reconectarseAlBroker();
+			cliente=enviarSuscripcion(cliente, msg);
+			paqueteRespuesta=recibirPaquete(cliente);
+		}
 
-	send(cliente, stream, bytes, 0);
+		loggearMensaje(paqueteRespuesta, gamecardLogger);
 
-	destruirPaquete(paq);
-	free(stream);
+		while(enviarACK(cliente, GAMECARD, paqueteRespuesta->id, idProcesoGamecard)<0){
+			cliente=reconectarseAlBroker();
+			cliente=enviarSuscripcion(cliente, msg);
+		}
 
-
-	uint32_t respuesta;
-	log_info(gamecardLogger,"Espero respuesta");
-	log_info(gamecardLogger2,"Espero respuesta");
-	recv(cliente, &respuesta, sizeof(uint32_t), 0);
-
-	if (respuesta == CORRECTO) {
-		log_info(gamecardLogger,"Gamecard se suscribio correctamente a:%i",msg->cola);
-		log_info(gamecardLogger2,"Gamecard se suscribio correctamente a:%i",msg->cola);
-		while (1) {
-
-			paquete* paqueteRespuesta = recibirPaquete(cliente);
-
-			while (enviarACK(cliente, GAMECARD, paqueteRespuesta->id) < 0) {
-				reconectarseAlBroker(cliente,(void*) &direccionServidor,sizeof(direccionServidor));
-//				log_info(gamecardLogger2,"Conexión fallida con el Broker reintentando en %i segundos",tiempoReconexionGC);
-//				sleep(tiempoReconexionGC);
-
-			}
-
-			switch (paqueteRespuesta->tipoMensaje) {
+		switch(paqueteRespuesta->tipoMensaje){
 			case NEW_POKEMON:;
-				pthread_t threadNew;
-				pthread_create(&threadNew, NULL, atenderNew, (void*)(paqueteRespuesta));
-				pthread_detach(threadNew);
-
+				pthread_t threadAppeared;
+				pthread_create(&threadAppeared, NULL, atenderNew,(void*) (paqueteRespuesta));
+				pthread_detach(threadAppeared);
 				break;
 			case GET_POKEMON:;
-				pthread_t threadGet;
-				pthread_create(&threadGet, NULL, atenderGet, (void*)(paqueteRespuesta));
-				pthread_detach(threadGet);
+				pthread_t threadLocalized;
+				pthread_create(&threadLocalized, NULL, atenderGet,(void*) (paqueteRespuesta));
+				pthread_detach(threadLocalized);//recordar destruir el paquete
 				break;
 			case CATCH_POKEMON:;
-				pthread_t threadCatch;
-				pthread_create(&threadCatch, NULL, atenderCatch, (void*)(paqueteRespuesta));
-				pthread_detach(threadCatch);
+				pthread_t threadCaught;
+				pthread_create(&threadCaught, NULL, atenderCatch, (void*) (paqueteRespuesta));
+				pthread_detach(threadCaught);
 				break;
-			default:
-				break;
-
+			default: break; //esto no puede pasar
 			}
 
-			while (send(cliente, (void*) (&respuesta), sizeof(uint32_t), 0) < 0) {
-
-				reconectarseAlBroker(cliente, (void*) &direccionServidor,sizeof(direccionServidor));
+//				while(send(cliente,(void*)(&respuesta),sizeof(uint32_t),0)<0){
+//					cliente=reconectarseAlBroker();
+//					cliente=enviarSuscripcion(cliente, msg);
+//
+//				}
 			}
-		}
-	} else {
-		log_info(gamecardLogger2,"Mensaje recibido incorrectamente\n");
-
-	}
+//	uint32_t respuesta;
+//	log_info(gamecardLogger,"Espero respuesta");
+//	log_info(gamecardLogger2,"Espero respuesta");
+//	recv(cliente, &respuesta, sizeof(uint32_t), 0);
 	return NULL;
 }
 
+//uint32_t reconectarseAlBroker(uint32_t cliente,void* direccionServidor,socklen_t length){
+//	log_info(gamecardLogger, "Conexión fallida con el Broker");
+//	log_info(gamecardLogger, "Reintentando conexión en %i segundos...",tiempoReconexionGC);
+//	sleep(tiempoReconexionGC);
+//	while(connect(cliente, direccionServidor,length)<0){
+//		log_info(gamecardLogger,"El reintento de conexión no fue exitoso");
+//		log_info(gamecardLogger, "Reintentando conexión en %i segundos...",tiempoReconexionGC);
+//		sleep(tiempoReconexionGC);
+//
+//
+//	}
+//	//log_info(teamLogger, "El reintento de conexión fue exitoso\n");
+//	return 0;
+//}
 
+uint32_t enviarSuscripcion(uint32_t socket, mensajeSuscripcion* msg){
+	uint32_t cliente=socket;
 
-uint32_t reconectarseAlBroker(uint32_t cliente,void* direccionServidor,socklen_t length){
-	log_info(gamecardLogger, "Conexión fallida con el Broker");
-	log_info(gamecardLogger, "Reintentando conexión en %i segundos...",tiempoReconexionGC);
-	sleep(tiempoReconexionGC);
-	while(connect(cliente, direccionServidor,length)<0){
-		log_info(gamecardLogger,"El reintento de conexión no fue exitoso");
-		log_info(gamecardLogger, "Reintentando conexión en %i segundos...",tiempoReconexionGC);
-		sleep(tiempoReconexionGC);
+	void* streamMsgSuscripcion=serializarSuscripcion(msg);
 
+	paquete* paq=llenarPaquete(GAMECARD,SUSCRIPCION,sizeArgumentos(SUSCRIPCION, "",0), streamMsgSuscripcion);
 
+	uint32_t bytes = sizePaquete(paq);
+
+	void* stream   = serializarPaquete(paq);
+
+	while(send(cliente,stream,bytes,0)<0){
+		cliente=reconectarseAlBroker();
 	}
-	//log_info(teamLogger, "El reintento de conexión fue exitoso\n");
-	return 0;
+
+	uint32_t respuesta = -1;
+
+	recv(cliente,&respuesta,sizeof(uint32_t),0);
+	printf("Socket: %i, cola: %i\n", cliente, msg->cola);
+
+	if(respuesta!=CORRECTO){
+		log_info(gamecardLogger, "Hubo un problema con la suscripción a una cola.");
+	}
+
+	destruirPaquete(paq);
+	free(stream);
+	return cliente;
 }
 
+uint32_t reconectarseAlBroker(){
+	log_info(gamecardLogger, "Conexión fallida con el Broker\n");
+	log_info(gamecardLogger2, "Conexión fallida con el Broker\n");
+	log_info(gamecardLogger, "Reintentando conexión en %i segundos...\n",tiempoReconexionGC);
+	sleep(tiempoReconexionGC);
+	uint32_t cliente;
+	struct sockaddr_in direccionServidor;
+	uint32_t i=0;
+	do{
+
+
+		direccionServidor.sin_family      = AF_INET;
+		direccionServidor.sin_addr.s_addr = inet_addr(ipBrokerGC);
+		direccionServidor.sin_port        = htons(puertoBrokerGC);
+
+		cliente=socket(AF_INET,SOCK_STREAM,0);
+		if(i>0){
+			log_info(gamecardLogger,"El reintento de conexión no fue exitoso\n");
+			log_info(gamecardLogger2,"El reintento de conexión no fue exitoso\n");
+		}
+		i++;
+		log_info(gamecardLogger, "Reintentando conexión en %i segundos...\n",tiempoReconexionGC);
+		sleep(tiempoReconexionGC);
+
+	}while(connect(cliente,(void*) &direccionServidor,sizeof(direccionServidor))<0);
+
+	log_info(gamecardLogger, "El reintento de conexión fue exitoso\n");
+	log_info(gamecardLogger2, "El reintento de conexión fue exitoso\n");
+
+	return cliente;
+}
 
 
 
@@ -270,7 +399,7 @@ void* iniciarServidorGameboy(void* arg) {
 		perror("Falló el bind");
 
 	} else {
-		log_info(gamecardLogger2,"Estoy escuchando");
+		log_info(gamecardLogger,"Estoy escuchando");
 		while (1)  						//para recibir n cantidad de conexiones
 			esperar_cliente(servidor);
 	}
@@ -283,10 +412,10 @@ void esperar_cliente(uint32_t servidor) {
 	struct sockaddr_in dir_cliente;
 
 	uint32_t tam_direccion = sizeof(struct sockaddr_in);
-	log_info(gamecardLogger2,"Espero un nuevo cliente");
+	log_info(gamecardLogger,"Espero un nuevo cliente");
 	uint32_t* socket_cliente = malloc(sizeof(uint32_t));
 	*socket_cliente = accept(servidor, (void*) &dir_cliente, &tam_direccion);
-	log_info(gamecardLogger2,"Gestiono un nuevo cliente");
+	log_info(gamecardLogger,"Gestiono un nuevo cliente");
 	pthread_t threadAtencionGameboy;
 	pthread_create(&threadAtencionGameboy, NULL, atenderCliente,(void*) (socket_cliente));
 	pthread_detach(threadAtencionGameboy);
