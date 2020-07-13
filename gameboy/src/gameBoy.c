@@ -256,7 +256,7 @@ void* enviarMensajeSuscripcion(void* paqueteySocket){
 	}
 	paquete* paqueteRespuesta=recibirPaquete(paqueteConSocket->socketCliente);
 	while(paqueteRespuesta->tipoMensaje!=SUSCRIPCION_FINALIZADA){
-		enviarACK(paqueteConSocket->socketCliente, GAMEBOY, paqueteRespuesta->id);
+		enviarACK(paqueteConSocket->socketCliente, GAMEBOY, paqueteRespuesta->id, idProcesoGameboy);
 		loggearMensaje(paqueteRespuesta, gameboyLogger);
 		destruirPaquete(paqueteRespuesta);
 		paqueteRespuesta=recibirPaquete(paqueteConSocket->socketCliente);

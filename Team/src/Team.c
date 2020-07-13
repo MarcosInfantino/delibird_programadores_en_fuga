@@ -482,15 +482,14 @@ uint32_t enviarSuscripcion(uint32_t socket, mensajeSuscripcion* msg){
 
 	void* stream   = serializarPaquete(paq);
 
-
 	while(send(cliente,stream,bytes,0)<0){
 		cliente=reconectarseAlBroker();
-
 	}
 
 	uint32_t respuesta = -1;
 
 	recv(cliente,&respuesta,sizeof(uint32_t),0);
+	printf("Socket: %i, cola: %i\n", cliente, msg->cola);
 
 	if(respuesta!=CORRECTO){
 		log_info(teamLogger2, "Hubo un problema con la suscripción a una cola.");
@@ -499,7 +498,6 @@ uint32_t enviarSuscripcion(uint32_t socket, mensajeSuscripcion* msg){
 	destruirPaquete(paq);
 	free(stream);
 	return cliente;
-
 }
 
 void* suscribirseCola(void* msgSuscripcion){
@@ -514,59 +512,47 @@ void* suscribirseCola(void* msgSuscripcion){
 	uint32_t cliente=socket(AF_INET,SOCK_STREAM,0);
 
 	if(connect(cliente,(void*) &direccionServidor,sizeof(direccionServidor))<0){
-
-
 		cliente=reconectarseAlBroker();
-
 	}
 
 	cliente=enviarSuscripcion(cliente, msg);
+	printf("socket: %i\n", cliente);
+	log_info(teamLogger2,"Suscripción realizada correctamente\n");
 
+	while(1){
+		paquete* paqueteRespuesta=recibirPaquete(cliente);
 
-			log_info(teamLogger2,"Suscripción realizada correctamente\n");
-			while(1){
+		while(paqueteRespuesta==NULL){
+			cliente=reconectarseAlBroker();
+			cliente=enviarSuscripcion(cliente, msg);
+			paqueteRespuesta=recibirPaquete(cliente);
+		}
 
+		loggearMensaje(paqueteRespuesta, teamLogger);
 
-				paquete* paqueteRespuesta=recibirPaquete(cliente);
+		while(enviarACK(cliente, TEAM, paqueteRespuesta->id, idProcesoTeam)<0){
+			cliente=reconectarseAlBroker();
+			cliente=enviarSuscripcion(cliente, msg);
+		}
 
-				while(paqueteRespuesta==NULL){
-					cliente=reconectarseAlBroker();
-					enviarSuscripcion(cliente, msg);
-					paqueteRespuesta=malloc(sizeof(paquete));
-					paqueteRespuesta=recibirPaquete(cliente);
-				}
-
-
-				log_info(teamLogger2, "holaaaa");
-				loggearMensaje(paqueteRespuesta, teamLogger);
-
-				while(enviarACK(cliente, TEAM, paqueteRespuesta->id, idProcesoTeam)<0){
-
-									cliente=reconectarseAlBroker();
-									cliente=enviarSuscripcion(cliente, msg);
-				}
-
-				switch(paqueteRespuesta->tipoMensaje){
-					case APPEARED_POKEMON:;
-						pthread_t threadAppeared;
-						pthread_create(&threadAppeared, NULL, atenderAppeared,(void*) (paqueteRespuesta));
-						pthread_detach(threadAppeared);
-
-						break;
-					case LOCALIZED_POKEMON:;
-						pthread_t threadLocalized;
-						pthread_create(&threadLocalized, NULL, atenderLocalized,(void*) (paqueteRespuesta));
-						pthread_detach(threadLocalized);//recordar destruir el paquete
-						break;
-					case CAUGHT_POKEMON:;
-						pthread_t threadCaught;
-						pthread_create(&threadCaught, NULL, atenderCaught,(void*) (paqueteRespuesta));
-						pthread_detach(threadCaught);
-						break;
-					default: break; //esto no puede pasar
-
-
-				}
+		switch(paqueteRespuesta->tipoMensaje){
+			case APPEARED_POKEMON:;
+				pthread_t threadAppeared;
+				pthread_create(&threadAppeared, NULL, atenderAppeared,(void*) (paqueteRespuesta));
+				pthread_detach(threadAppeared);
+				break;
+			case LOCALIZED_POKEMON:;
+				pthread_t threadLocalized;
+				pthread_create(&threadLocalized, NULL, atenderLocalized,(void*) (paqueteRespuesta));
+				pthread_detach(threadLocalized);//recordar destruir el paquete
+				break;
+			case CAUGHT_POKEMON:;
+				pthread_t threadCaught;
+				pthread_create(&threadCaught, NULL, atenderCaught,(void*) (paqueteRespuesta));
+				pthread_detach(threadCaught);
+				break;
+			default: break; //esto no puede pasar
+			}
 
 //				while(send(cliente,(void*)(&respuesta),sizeof(uint32_t),0)<0){
 //					cliente=reconectarseAlBroker();

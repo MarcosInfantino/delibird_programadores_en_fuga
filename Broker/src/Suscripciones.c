@@ -94,8 +94,6 @@ void suscribirSegunCola(paquete paq, uint32_t* socket) {
 
 void suscribir(colaMensajes * cola, paquete paq, uint32_t* socket,uint32_t identificadorCola, uint32_t idProceso) {
 
-
-
 	log_info(brokerLogger2, "---------------------------- Suscribo a %i", idProceso);
 
 	if (validarParaSuscripcion(cola, paq, *socket,identificadorCola)) {

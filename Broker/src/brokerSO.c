@@ -175,7 +175,6 @@ void manejarTipoDeMensaje(paquete* paq, uint32_t* socket) {
 	log_info(brokerLogger2,"-------------------------TIPO DE PAQUETE RECIBIDO: %i", paq->tipoMensaje);
 	switch(paq->tipoMensaje){
 		 case APPEARED_POKEMON:
-
 			 meterEnCola(&appearedPokemon, paq, *socket );
 			 break;
 		 case NEW_POKEMON:
@@ -205,7 +204,6 @@ void manejarTipoDeMensaje(paquete* paq, uint32_t* socket) {
 			 suscribirPorTiempo((void*) &structTiempo);
 			 break;
 		 case ACK:
-			 log_info(brokerLogger2, "Me llegó un ACK");
 			 guardarMensajeACK(paq);
 			 break;
 		 default:
@@ -224,8 +222,8 @@ void meterEnCola( colaMensajes* structCola, paquete * paq, uint32_t  socket){
 	log_info(brokerLogger2,"Terminó de registrar el mensaje en memoria.");
 	pushColaMutex(structCola->cola, (void *) paq);
 
-	sem_post(structCola->mensajesEnCola);
 	log_info(brokerLogger2,"Aviso que hay mensajes en cola.");
+	sem_post(structCola->mensajesEnCola);
 }
 
 void abrirHiloParaEnviarMensajes(){
@@ -262,8 +260,9 @@ void * chequearMensajesEnCola(void * colaVoid){
 			log_info(brokerLogger2, "Envié mensaje a suscriptor: %d -.-", actual->idProceso);
 			log_info(loggerBroker, "Envié mensaje a suscriptor: %d -.-", actual->idProceso);
 
-
 			guardarYaEnviados(paq, actual->idProceso);
+//			paquete* paqueteACK = recibirPaquete(actual->socket);
+//			guardarMensajeACK(paqueteACK);
 		}
 
 		destruirPaquete(paq);
@@ -355,6 +354,7 @@ void definirAlgoritmoReemplazo(t_config* config){
 
 	definirAlgoritmo(parAlgoritmo, &algoritmoReemplazo);
 }
+
 void definirAlgoritmo(algoritmoParameter parAlgoritmo, uint32_t * varInt){
 	char* algoritmo = config_get_string_value(parAlgoritmo.config, parAlgoritmo.configAtributo);
 		if( strcmp(algoritmo, parAlgoritmo.OPCION1) == 0){

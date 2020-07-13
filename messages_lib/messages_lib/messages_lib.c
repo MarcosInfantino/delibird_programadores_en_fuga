@@ -63,7 +63,6 @@ uint32_t sizeArgumentos (uint32_t colaMensaje, char* nombrePokemon, uint32_t can
 }
 
 uint32_t enviarACK(uint32_t socket, uint32_t modulo, uint32_t id, uint32_t idProceso){
-//	printf("Envio ACK\n");
 	uint32_t idAEnviar=idProceso;
 	void* stream= malloc(sizeof(uint32_t));
 	memcpy(stream, &idAEnviar, sizeof(uint32_t));
@@ -73,7 +72,8 @@ uint32_t enviarACK(uint32_t socket, uint32_t modulo, uint32_t id, uint32_t idPro
 	insertarIdCorrelativoPaquete(paqueteACK, id);
 	void* paqueteACKSerializado = serializarPaquete(paqueteACK);
 	uint32_t i= send(socket, paqueteACKSerializado, sizePaquete(paqueteACK), 0);
-//	printf("Socket ack: %i\n", socket);
+	printf("Envio ACK\n");
+	printf("Socket ack: %i\n", socket);
 //	printf("Resultado send ack: %i\n", i);
 	destruirPaquete(paqueteACK);
 	free(paqueteACKSerializado);
