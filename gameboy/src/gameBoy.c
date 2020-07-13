@@ -30,20 +30,23 @@ int main(int argc, char* argv[]) {
 
 	log_info(gameboyLogger, "Arranco\n");
 	t_config * config = config_create("gameBoy1.config");
+	idProcesoGameboy=config_get_int_value(config, "ID_PROCESO");
 	void* stream;
 	paquete* paquete;
 	uint32_t sizeStream, procesoDestinatario;
 	uint32_t colaMensaje = obtenerColaMensaje(argv[2]);
 
+	printf("id del gameboy: %i\n", idProcesoGameboy);
 	if(strcmp(argv[1], "SUSCRIPTOR") == 0){
 		procesoDestinatario 					= BROKER;
-		mensajeSuscripcionTiempo* mensajeEnviar = llenarSuscripcionTiempo(colaMensaje, atoi(argv[3]));
+		mensajeSuscripcionTiempo* mensajeEnviar = llenarSuscripcionTiempo(colaMensaje, atoi(argv[3]), idProcesoGameboy);
 		stream 									= serializarSuscripcionTiempo(mensajeEnviar);
 		destruirSuscripcionTiempo(mensajeEnviar);
-		sizeStream								= sizeof(uint32_t)*2;
-		paquete 								= llenarPaquete(GAMEBOY, SUSCRIPCION_TIEMPO, sizeStream, stream);
+		//sizeStream								= sizeof(uint32_t)*2;
+		paquete 								= llenarPaquete(GAMEBOY, SUSCRIPCION_TIEMPO, sizeArgumentos(SUSCRIPCION_TIEMPO, "", 0), stream);
 	}else{
 		procesoDestinatario = obtenerNombreProceso(argv[1]);
+
 		stream 				= generarStreamArgumentos(colaMensaje, argv);
 		sizeStream 			= sizeArgumentos (colaMensaje, argv[3],1);
 		paquete				= llenarPaquete(GAMEBOY, colaMensaje, sizeStream, stream);

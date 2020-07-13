@@ -47,7 +47,10 @@ uint32_t sizeArgumentos (uint32_t colaMensaje, char* nombrePokemon, uint32_t can
 		break;
 
 	case SUSCRIPCION_TIEMPO:
-		size=2*sizeof(uint32_t);  break;
+		size=3*sizeof(uint32_t);  break;
+
+	case SUSCRIPCION:
+		size=2*sizeof(uint32_t);break;
 
 	case LOCALIZED_POKEMON:
 		size=2*sizeof(uint32_t)+strlen(nombrePokemon)+cantidadPokemon*2*sizeof(uint32_t); break;
@@ -59,14 +62,27 @@ uint32_t sizeArgumentos (uint32_t colaMensaje, char* nombrePokemon, uint32_t can
 	return size;
 }
 
-uint32_t enviarACK(uint32_t socket, uint32_t modulo, uint32_t id){
-	paquete* paqueteACK = llenarPaquete(modulo, ACK, 0, NULL);
+uint32_t enviarACK(uint32_t socket, uint32_t modulo, uint32_t id, uint32_t idProceso){
+//	printf("Envio ACK\n");
+	uint32_t idAEnviar=idProceso;
+	void* stream= malloc(sizeof(uint32_t));
+	memcpy(stream, &idAEnviar, sizeof(uint32_t));
+
+	paquete* paqueteACK = llenarPaquete(modulo, ACK, sizeof(uint32_t), stream);
+
 	insertarIdCorrelativoPaquete(paqueteACK, id);
 	void* paqueteACKSerializado = serializarPaquete(paqueteACK);
-	uint32_t i= send(socket, paqueteACKSerializado, sizePaquete(paqueteACKSerializado), 0);
-
+	uint32_t i= send(socket, paqueteACKSerializado, sizePaquete(paqueteACK), 0);
+//	printf("Socket ack: %i\n", socket);
+//	printf("Resultado send ack: %i\n", i);
 	destruirPaquete(paqueteACK);
 	free(paqueteACKSerializado);
 	return i;
+}
+
+uint32_t obtenerIdProcesoDeAck(void* stream){
+	uint32_t id;
+	memcpy(&id, stream, sizeof(uint32_t));
+	return id;
 }
 

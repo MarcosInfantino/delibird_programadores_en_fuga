@@ -74,50 +74,58 @@ void registrarMensajeEnMemoria(paquete* paq, algoritmoMem metodo){
 	log_info(brokerLogger2, "Registré el mensaje en memoria.");
 }
 
-bool estaEnListaACK(uint32_t socket, msgMemoriaBroker* mensaje){
+bool estaEnListaACK(uint32_t idProceso, msgMemoriaBroker* mensaje){
 	for(int i =0; i<sizeListaMutex(mensaje->subsACK); i++){
-		if(*(uint32_t*)getListaMutex(mensaje->subsACK, i) == socket){ //tengo que cambiar el void* por un uint32_t
+		uint32_t actual=*((uint32_t*)getListaMutex(mensaje->subsACK, i));
+		if(actual == idProceso){
 			return true;
 		}
 	}
 	return false;
 }
 
-void guardarMensajeACK (paquete* paq, uint32_t socket){
+void guardarMensajeACK (paquete* paq){
+	uint32_t* idProceso=malloc(sizeof(uint32_t));
+	*idProceso=obtenerIdProcesoDeAck(paq->stream);
+	log_info(brokerLogger2, "----------------------Guardo ACK del proceso %i",obtenerIdProcesoDeAck(paq->stream) );
 	msgMemoriaBroker* mensaje = buscarMensajeEnMemoria(paq->idCorrelativo);
 	if(mensaje == NULL){
 		printf("No se encontró el mensaje en memoria, ERROR");
 		return;
 	}
-	if(estaEnListaACK (socket, mensaje)){
-		printf("El sub ya está en la lista de ACK");
-		return;
-	}
+
+//	if(estaEnListaACK (socket, mensaje)){//esto en realidad no puede pasar
+//		printf("El sub ya está en la lista de ACK");
+//		return;
+//	}
 	pthread_mutex_lock(mutexMemoria);
-	addListaMutex(mensaje->subsACK, (void*) socket);
+	addListaMutex(mensaje->subsACK, (void*) idProceso);
 	pthread_mutex_unlock(mutexMemoria);
 }
 
-bool estaEnListaEnviados (uint32_t socket, msgMemoriaBroker* mensaje){
-	log_info(brokerLogger2, "SOCKET: %i", socket);
-	for(int i =0; i<sizeListaMutex(mensaje->subsYaEnviado); i++){
-		log_info(brokerLogger2, "sizeStream: %i", mensaje->sizeStream);
-		uint32_t* intActual=((uint32_t*)getListaMutex(mensaje->subsYaEnviado, i));
-		log_info(brokerLogger2, "intActual: %i", intActual);
-		if(*intActual == socket){ //tengo que cambiar el void* por un uint32_t
-			return true;
-		}
-	}
-	return false;
-}
+//DEPRECATED
+//bool estaEnListaEnviados (uint32_t socket, msgMemoriaBroker* mensaje){
+//	log_info(brokerLogger2, "SOCKET: %i", socket);
+//	for(int i =0; i<sizeListaMutex(mensaje->subsYaEnviado); i++){
+//		log_info(brokerLogger2, "sizeStream: %i", mensaje->sizeStream);
+//		uint32_t* intActual=((uint32_t*)getListaMutex(mensaje->subsYaEnviado, i));
+//		log_info(brokerLogger2, "intActual: %i", intActual);
+//		if(*intActual == socket){ //tengo que cambiar el void* por un uint32_t
+//			return true;
+//		}
+//	}
+//	return false;
+//}
 
-void guardarYaEnviados (paquete* paq, uint32_t socket){
+void guardarYaEnviados (paquete* paq, uint32_t idProceso){
 	msgMemoriaBroker* mensaje = buscarMensajeEnMemoria(paq->id);
 	if(mensaje == NULL){
 		printf("No se encontró el mensaje en memoria, ERROR");
 	}
 	else{
-		addListaMutex(mensaje->subsYaEnviado, (void*) socket);
+		uint32_t* idProcesoAgregar=malloc(sizeof(uint32_t));
+		*idProcesoAgregar=idProceso;
+		addListaMutex(mensaje->subsYaEnviado, (void*) idProcesoAgregar);
 	}
 
 
@@ -262,14 +270,14 @@ msgMemoriaBroker* buscarMensajeEnMemoria(uint32_t idMensajeBuscado){
 	return NULL;
 }
 
-void enviarMensajesPreviosEnMemoria(uint32_t* socket, uint32_t cola){
+void enviarMensajesPreviosEnMemoria(uint32_t socket, uint32_t idProceso, uint32_t cola){
 	switch(algoritmoMemoria){
 	case BUDDY_SYSTEM:
-		enviarMsjsASuscriptorNuevoBuddySystem (cola, socket);
+		enviarMsjsASuscriptorNuevoBuddySystem (cola, socket, idProceso);
 		break;
 	case PARTICIONES_DINAMICAS:
 		//TODO: Revisar esto, fijarse en buddy tema id correlativos y id del mensaje
-		enviarMsjsASuscriptorNuevoParticiones (cola, socket);
+		enviarMsjsASuscriptorNuevoParticiones (cola,socket,  idProceso);
 		break;
 	default:
 		printf("Error en algoritmo memoria");

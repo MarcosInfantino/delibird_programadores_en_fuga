@@ -52,6 +52,7 @@ uint32_t tiempoReconexion;
 uint32_t retardoCicloCpu;
 uint32_t algoritmoPlanificacion;
 uint32_t estimacionInicial;
+uint32_t idProcesoTeam;
 
 sem_t semaforoEjecucionCpu;
 sem_t* entrenadorEnCola;
@@ -324,7 +325,7 @@ void loggearPokemonAAtrapar(dataEntrenador* entrenador, t_log* teamLogger);
 
 uint32_t crearSocketClienteBroker (char* ip, uint32_t puerto);
 
-uint32_t reconectarseAlBroker(uint32_t cliente,void* direccionServidor,socklen_t length);
+uint32_t reconectarseAlBroker();
 
 void atraparPokemonYReplanificar (dataEntrenador* entrenador);
 

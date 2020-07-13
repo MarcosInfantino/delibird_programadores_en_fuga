@@ -109,6 +109,7 @@ t_config* crearYLeerConfig(char* pathConfig){
 	ipBroker           = config_get_string_value(config,"IP_BROKER");
 	logFilePrincipal=config_get_string_value(config, "LOG_FILE");
 	puertoTeam=config_get_int_value(config,"PUERTO_TEAM");
+	idProcesoTeam=config_get_int_value(config, "ID_PROCESO");
 
 	return config;
 }
@@ -396,26 +397,61 @@ void* enviarGets(void* arg){
 	return NULL;
 }
 
-uint32_t reconectarseAlBroker(uint32_t cliente,void* direccionServidor,socklen_t length){
+//uint32_t reconectarseAlBroker(uint32_t cliente,void* direccionServidor,socklen_t length){
+//	log_info(teamLogger, "Conexión fallida con el Broker\n");
+//	log_info(teamLogger2, "Conexión fallida con el Broker\n");
+//	log_info(teamLogger, "Reintentando conexión en %i segundos...\n",tiempoReconexion);
+//	sleep(tiempoReconexion);
+//	while(connect(cliente, direccionServidor,length)<0){
+//		log_info(teamLogger,"El reintento de conexión no fue exitoso\n");
+//		log_info(teamLogger2,"El reintento de conexión no fue exitoso\n");
+//		log_info(teamLogger, "Reintentando conexión en %i segundos...\n",tiempoReconexion);
+//		sleep(tiempoReconexion);
+//
+//
+//	}
+//	log_info(teamLogger, "El reintento de conexión fue exitoso\n");
+//	log_info(teamLogger2, "El reintento de conexión fue exitoso\n");
+//	return 0;
+//}
+
+uint32_t reconectarseAlBroker(){
 	log_info(teamLogger, "Conexión fallida con el Broker\n");
+	log_info(teamLogger2, "Conexión fallida con el Broker\n");
 	log_info(teamLogger, "Reintentando conexión en %i segundos...\n",tiempoReconexion);
 	sleep(tiempoReconexion);
-	while(connect(cliente, direccionServidor,length)<0){
-		log_info(teamLogger,"El reintento de conexión no fue exitoso\n");
+	uint32_t cliente;
+	struct sockaddr_in direccionServidor;
+	uint32_t i=0;
+	do{
+
+
+		direccionServidor.sin_family      = AF_INET;
+		direccionServidor.sin_addr.s_addr = inet_addr(ipBroker);
+		direccionServidor.sin_port        = htons(puertoBroker);
+
+		cliente=socket(AF_INET,SOCK_STREAM,0);
+		if(i>0){
+			log_info(teamLogger,"El reintento de conexión no fue exitoso\n");
+			log_info(teamLogger2,"El reintento de conexión no fue exitoso\n");
+		}
+		i++;
 		log_info(teamLogger, "Reintentando conexión en %i segundos...\n",tiempoReconexion);
 		sleep(tiempoReconexion);
 
+	}while(connect(cliente,(void*) &direccionServidor,sizeof(direccionServidor))<0);
 
-	}
 	log_info(teamLogger, "El reintento de conexión fue exitoso\n");
-	return 0;
+	log_info(teamLogger2, "El reintento de conexión fue exitoso\n");
+
+	return cliente;
 }
 
 void* suscribirseColasBroker(void* conf){
 
-	mensajeSuscripcion* mensajeSuscripcionAppeared=llenarSuscripcion(APPEARED_POKEMON);
-	mensajeSuscripcion * mensajeSuscripcionCaught=llenarSuscripcion(CAUGHT_POKEMON);
-	mensajeSuscripcion* mensajeSuscripcionLocalized=llenarSuscripcion(LOCALIZED_POKEMON);
+	mensajeSuscripcion* mensajeSuscripcionAppeared=llenarSuscripcion(APPEARED_POKEMON, idProcesoTeam);
+	mensajeSuscripcion * mensajeSuscripcionCaught=llenarSuscripcion(CAUGHT_POKEMON, idProcesoTeam);
+	mensajeSuscripcion* mensajeSuscripcionLocalized=llenarSuscripcion(LOCALIZED_POKEMON, idProcesoTeam);
 
 
 	pthread_create(&threadSuscripcionAppeared, NULL, suscribirseCola, (void*)(mensajeSuscripcionAppeared));
@@ -435,14 +471,40 @@ void* suscribirseColasBroker(void* conf){
 	return NULL;
 }
 
+uint32_t enviarSuscripcion(uint32_t socket, mensajeSuscripcion* msg){
+	uint32_t cliente=socket;
 
+	void* streamMsgSuscripcion=serializarSuscripcion(msg);
+
+	paquete* paq=llenarPaquete(TEAM,SUSCRIPCION,sizeArgumentos(SUSCRIPCION, "",0), streamMsgSuscripcion);
+
+	uint32_t bytes = sizePaquete(paq);
+
+	void* stream   = serializarPaquete(paq);
+
+
+	while(send(cliente,stream,bytes,0)<0){
+		cliente=reconectarseAlBroker();
+
+	}
+
+	uint32_t respuesta = -1;
+
+	recv(cliente,&respuesta,sizeof(uint32_t),0);
+
+	if(respuesta!=CORRECTO){
+		log_info(teamLogger2, "Hubo un problema con la suscripción a una cola.");
+	}
+
+	destruirPaquete(paq);
+	free(stream);
+	return cliente;
+
+}
 
 void* suscribirseCola(void* msgSuscripcion){
 	mensajeSuscripcion* msg=(mensajeSuscripcion*)msgSuscripcion;
-	uint32_t sizeStream=sizeof(uint32_t);
-	void* streamMsgSuscripcion=serializarSuscripcion(msg);
-	destruirSuscripcion(msg);
-	paquete* paq=llenarPaquete(TEAM,SUSCRIPCION,sizeStream, streamMsgSuscripcion);
+	//uint32_t sizeStream=sizeof(uint32_t);
 
 	struct sockaddr_in direccionServidor;
 	direccionServidor.sin_family      = AF_INET;
@@ -454,42 +516,41 @@ void* suscribirseCola(void* msgSuscripcion){
 	if(connect(cliente,(void*) &direccionServidor,sizeof(direccionServidor))<0){
 
 
-		reconectarseAlBroker(cliente,(void*) &direccionServidor,sizeof(direccionServidor));
+		cliente=reconectarseAlBroker();
 
 	}
 
-	uint32_t bytes = sizeof(uint32_t)*5+paq->sizeStream;
-
-	void* stream   = serializarPaquete(paq);
-
-	send(cliente,stream,bytes,0);
+	cliente=enviarSuscripcion(cliente, msg);
 
 
-
-	destruirPaquete(paq);
-	free(stream);
-
-	uint32_t respuesta = -1;
-
-	recv(cliente,&respuesta,sizeof(uint32_t),0);
-
-		if(respuesta == CORRECTO){
 			log_info(teamLogger2,"Suscripción realizada correctamente\n");
 			while(1){
 
 
 				paquete* paqueteRespuesta=recibirPaquete(cliente);
+
+				while(paqueteRespuesta==NULL){
+					cliente=reconectarseAlBroker();
+					enviarSuscripcion(cliente, msg);
+					paqueteRespuesta=malloc(sizeof(paquete));
+					paqueteRespuesta=recibirPaquete(cliente);
+				}
+
+
+				log_info(teamLogger2, "holaaaa");
 				loggearMensaje(paqueteRespuesta, teamLogger);
 
-				while(enviarACK(cliente, TEAM, paqueteRespuesta->id)<0){
-									reconectarseAlBroker(cliente,(void*) &direccionServidor,sizeof(direccionServidor));
+				while(enviarACK(cliente, TEAM, paqueteRespuesta->id, idProcesoTeam)<0){
+
+									cliente=reconectarseAlBroker();
+									cliente=enviarSuscripcion(cliente, msg);
 				}
 
 				switch(paqueteRespuesta->tipoMensaje){
 					case APPEARED_POKEMON:;
-					pthread_t threadAppeared;
-					pthread_create(&threadAppeared, NULL, atenderAppeared,(void*) (paqueteRespuesta));
-					pthread_detach(threadAppeared);
+						pthread_t threadAppeared;
+						pthread_create(&threadAppeared, NULL, atenderAppeared,(void*) (paqueteRespuesta));
+						pthread_detach(threadAppeared);
 
 						break;
 					case LOCALIZED_POKEMON:;
@@ -507,17 +568,14 @@ void* suscribirseCola(void* msgSuscripcion){
 
 				}
 
-				while(send(cliente,(void*)(&respuesta),sizeof(uint32_t),0)<0){
-					reconectarseAlBroker(cliente,(void*) &direccionServidor,sizeof(direccionServidor));
-
-				}
+//				while(send(cliente,(void*)(&respuesta),sizeof(uint32_t),0)<0){
+//					cliente=reconectarseAlBroker();
+//					cliente=enviarSuscripcion(cliente, msg);
+//
+//				}
 			}
 
-		}else{
-			log_info(teamLogger2, "Hubo un problema con la suscripción a una cola.");
 
-
-		}
 
 
 

@@ -46,7 +46,7 @@ bool menorAMayorSegunTiempoCarga (void* part1, void* part2);
 bool menorAMayorSegunLru (void* part1, void* part2);
 bool sePuedeCompactar();
 t_list* buscarMensajesDeColaEnParticiones (uint32_t cola);
-void enviarMsjsASuscriptorNuevoParticiones (uint32_t cola, uint32_t* socket);
+void enviarMsjsASuscriptorNuevoParticiones (uint32_t cola, uint32_t socket, uint32_t idProceso);
 msgMemoriaBroker*  buscarMensajeEnMemoriaParticiones(uint32_t idMensajeBuscado);
 void consolidarSiSePuede(particion* particionLibre);
 particion* particionLibreALaIzquierda(particion* particionLibreNueva);

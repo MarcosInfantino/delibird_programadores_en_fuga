@@ -84,29 +84,43 @@ paquete* deserializarPaquete(void* paqueteRecibido){
 
 paquete* recibirPaquete(uint32_t socket){
 	paquete* paq = malloc(sizeof(paquete));
+	//|| recv(socket,&(paq->modulo),sizeof(uint32_t),0)==0
 
-	if(recv(socket,&(paq->modulo),sizeof(uint32_t),0)==-1){
+	int32_t recv1=recv(socket,&(paq->modulo),sizeof(uint32_t),0);
+	if(recv1<=0){
 		return NULL;
 	}
-	if(recv(socket,&(paq->tipoMensaje),sizeof(uint32_t),0)==-1){
+
+
+	int32_t recv2=recv(socket,&(paq->tipoMensaje),sizeof(uint32_t),0);
+	if(recv2<=0){
 		return NULL;
 	}
-	if(recv(socket,&(paq->id),sizeof(uint32_t),0)==-1){
+
+	int32_t recv3=recv(socket,&(paq->id),sizeof(uint32_t),0);
+	if(recv3<=0){
 		return NULL;
 	}
-	if(recv(socket,&(paq->idCorrelativo),sizeof(uint32_t),0)==-1){
+
+	int32_t recv4=recv(socket,&(paq->idCorrelativo),sizeof(uint32_t),0);
+	if(recv4<=0){
 		return NULL;
 	}
-	if(recv(socket,&(paq->sizeStream),sizeof(uint32_t),0)==-1){
+
+	int32_t recv5=recv(socket,&(paq->sizeStream),sizeof(uint32_t),0);
+	if(recv5<=0){
 		return NULL;
 	}
 
 	if(paq->sizeStream>0){
 	paq->stream = malloc(paq->sizeStream);
 
-	if(recv(socket,paq->stream,(paq->sizeStream),0)==-1){
+	int32_t recv6=recv(socket,paq->stream,(paq->sizeStream),0);
+
+	if(recv6<=0){
 		return NULL;
-	}}else{
+	}
+	}else{
 		paq->stream=NULL;
 	}
 

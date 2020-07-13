@@ -102,10 +102,12 @@ typedef struct{
 typedef struct{
 	uint32_t cola;
 	uint32_t tiempo;
+	uint32_t idProceso;
 }mensajeSuscripcionTiempo;
 
 typedef struct{
 	uint32_t cola;
+	uint32_t idProceso;
 }mensajeSuscripcion;
 
 typedef struct{
@@ -133,7 +135,7 @@ typedef struct{
 
 typedef struct {
 	colaMutex* cola;
-	listaMutex* suscriptores;
+	listaMutex* suscriptores;//lista de socketIdProceso
 	sem_t* mensajesEnCola;
 }colaMensajes;
 
@@ -172,12 +174,12 @@ posicion* deserializarArrayPosiciones(void* stream,uint32_t cantidad);
 posicion* deserializarPosicion(void* stream);
 void destruirLocalized(mensajeLocalized* msg);
 
-mensajeSuscripcionTiempo* llenarSuscripcionTiempo(uint32_t cola, uint32_t tiempo);
+mensajeSuscripcionTiempo* llenarSuscripcionTiempo(uint32_t cola, uint32_t tiempo, uint32_t idProceso);
 void* serializarSuscripcionTiempo(mensajeSuscripcionTiempo* mensaje);
 mensajeSuscripcionTiempo* deserializarSuscripcionTiempo(void* streamRecibido);
 void destruirSuscripcionTiempo(mensajeSuscripcionTiempo* msg);
 
-mensajeSuscripcion* llenarSuscripcion(uint32_t cola);
+mensajeSuscripcion* llenarSuscripcion(uint32_t cola, uint32_t idProceso);
 void* serializarSuscripcion(mensajeSuscripcion* mensaje);
 mensajeSuscripcion* deserializarSuscripcion (void* streamRecibido);
 void destruirSuscripcion(mensajeSuscripcion* msg);
@@ -197,7 +199,8 @@ void insertarIdCorrelativoPaquete(paquete* paq, uint32_t idCorrelativo);
 uint32_t crearSocketCliente (char* ip, uint32_t puerto);
 uint32_t sizeArgumentos (uint32_t colaMensaje, char* nombrePokemon, uint32_t cantidadPokemon);
 
-uint32_t enviarACK(uint32_t socket, uint32_t modulo, uint32_t id);
+uint32_t enviarACK(uint32_t socket, uint32_t modulo, uint32_t id, uint32_t idProceso);
+uint32_t obtenerIdProcesoDeAck(void* stream);
 
 listaMutex* inicializarListaMutex();
 void destruirListaEntrenadoresLibres();

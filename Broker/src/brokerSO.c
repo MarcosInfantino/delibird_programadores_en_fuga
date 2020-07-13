@@ -172,9 +172,10 @@ void manejarTipoDeMensaje(paquete* paq, uint32_t* socket) {
 
 	suscripcionTiempo structTiempo;
 	mensajeSuscripcionTiempo* datosSuscribir;
-
+	log_info(brokerLogger2,"-------------------------TIPO DE PAQUETE RECIBIDO: %i", paq->tipoMensaje);
 	switch(paq->tipoMensaje){
 		 case APPEARED_POKEMON:
+
 			 meterEnCola(&appearedPokemon, paq, *socket );
 			 break;
 		 case NEW_POKEMON:
@@ -204,7 +205,8 @@ void manejarTipoDeMensaje(paquete* paq, uint32_t* socket) {
 			 suscribirPorTiempo((void*) &structTiempo);
 			 break;
 		 case ACK:
-			 guardarMensajeACK(paq, *socket);
+			 log_info(brokerLogger2, "Me llegó un ACK");
+			 guardarMensajeACK(paq);
 			 break;
 		 default:
 			 pthread_exit(NULL);
@@ -253,14 +255,15 @@ void * chequearMensajesEnCola(void * colaVoid){
 		void * paqSerializado = serializarPaquete(paq);
 
 		for(i = 0; i < sizeListaMutex(cola->suscriptores) ;i ++){
-			uint32_t * socketActual = (uint32_t *) getListaMutex(cola->suscriptores, i);
+			socketIdProceso * actual = (socketIdProceso *) getListaMutex(cola->suscriptores, i);
 
-			send(*socketActual, paqSerializado , sizePaquete(paq), 0);
+			send(actual->socket, paqSerializado , sizePaquete(paq), 0);
 
-			log_info(brokerLogger2, "Envié mensaje a suscriptor: %d -.-", *socketActual);
-			log_info(loggerBroker, "Envié mensaje a suscriptor: %d -.-", *socketActual);
+			log_info(brokerLogger2, "Envié mensaje a suscriptor: %d -.-", actual->idProceso);
+			log_info(loggerBroker, "Envié mensaje a suscriptor: %d -.-", actual->idProceso);
 
-			guardarYaEnviados(paq, *socketActual);
+
+			guardarYaEnviados(paq, actual->idProceso);
 		}
 
 		destruirPaquete(paq);

@@ -13,7 +13,7 @@
 #include <messages_lib/messages_lib.h>
 
 t_log* gameboyLogger;
-
+uint32_t idProcesoGameboy;
 typedef struct{
 	void * paqueteAEnviar;
 	uint32_t socketCliente;

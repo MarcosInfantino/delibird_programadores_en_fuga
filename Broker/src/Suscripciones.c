@@ -29,98 +29,131 @@ bool validarSuscripcionSegunModulo(uint32_t modulo, uint32_t cola) {
 	return false;
 }
 
-bool validarPertenencia(colaMensajes * cola, uint32_t socket) {
-	uint32_t i;
-	void* socketLista;
-	for (i = 0; i < sizeListaMutex(cola->suscriptores); i++) {
-		socketLista = getListaMutex(cola->suscriptores, i);
-		if (*((uint32_t*) socketLista) == socket) {
-			return true;
-		}
-	}
-	return false;
-
-}
+//bool validarPertenencia(colaMensajes * cola, uint32_t socket) {
+//	uint32_t i;
+//	void* socketLista;
+//	for (i = 0; i < sizeListaMutex(cola->suscriptores); i++) {
+//		socketLista = getListaMutex(cola->suscriptores, i);
+//		if (*((uint32_t*) socketLista) == socket) {
+//			return true;
+//		}
+//	}
+//	return false;
+//
+//}
 
 bool validarParaSuscripcion(colaMensajes * cola, paquete paq, uint32_t socket, uint32_t identificadorCola){
-	return (validarSuscripcionSegunModulo(paq.modulo, identificadorCola)
-			&& !validarPertenencia(cola, socket));
+	return validarSuscripcionSegunModulo(paq.modulo, identificadorCola);
 }
 
-void suscribirACola(uint32_t* socket, colaMensajes * cola){
-	addListaMutex(cola->suscriptores, (void*) socket);
+int suscribirACola(uint32_t* socket, uint32_t idProceso, colaMensajes * cola){
+
+
+	for(uint32_t i=0; i<sizeListaMutex(cola->suscriptores);i++){
+		socketIdProceso* actual= getListaMutex(cola->suscriptores, i);
+		if(actual->idProceso==idProceso){
+			actual->socket=*socket;
+			return 0;
+		}
+	}
+
+	socketIdProceso* socket_id=malloc(sizeof(socketIdProceso));
+	socket_id->socket=*socket;
+	socket_id->idProceso=idProceso;
+	addListaMutex(cola->suscriptores, (void*) socket_id);
+	return 0;
+
 	log_info(brokerLogger2,"Realizo suscripción a una cola. Socket suscripto: %i" ,*socket);
 }
 
 void suscribirSegunCola(paquete paq, uint32_t* socket) {
-	switch (deserializarSuscripcion(paq.stream)->cola) {
+		mensajeSuscripcion* msgSuscripcion=deserializarSuscripcion(paq.stream);
+	switch (msgSuscripcion->cola) {
 		case APPEARED_POKEMON:
-			suscribir(&appearedPokemon, paq, socket,APPEARED_POKEMON);
+			suscribir(&appearedPokemon, paq, socket,APPEARED_POKEMON, msgSuscripcion->idProceso);
 			break;
 		case NEW_POKEMON:
-			suscribir(&newPokemon, paq, socket,NEW_POKEMON);
+			suscribir(&newPokemon, paq, socket,NEW_POKEMON, msgSuscripcion->idProceso);
 			break;
 		case CAUGHT_POKEMON:
-			suscribir(&caughtPokemon, paq, socket, CAUGHT_POKEMON);
+			suscribir(&caughtPokemon, paq, socket, CAUGHT_POKEMON, msgSuscripcion->idProceso);
 			break;
 		case CATCH_POKEMON:
-			suscribir(&catchPokemon, paq, socket, CATCH_POKEMON);
+			suscribir(&catchPokemon, paq, socket, CATCH_POKEMON, msgSuscripcion->idProceso);
 			break;
 		case GET_POKEMON:
-			suscribir(&getPokemon, paq, socket, GET_POKEMON);
+			suscribir(&getPokemon, paq, socket, GET_POKEMON, msgSuscripcion->idProceso);
 			break;
 		case LOCALIZED_POKEMON:
-			suscribir(&localizedPokemon, paq, socket, LOCALIZED_POKEMON);
+			suscribir(&localizedPokemon, paq, socket, LOCALIZED_POKEMON, msgSuscripcion->idProceso);
 			break;
 	}
 	//enviar todos los mensajes que hubiesen en la cola antes de suscribirse
 	//cuando se envien mensajes que no sean suscripción asignarles un numero para posibles respuestas en otra cola
 }
 
-void suscribir(colaMensajes * cola, paquete paq, uint32_t* socket,uint32_t identificadorCola) {
+void suscribir(colaMensajes * cola, paquete paq, uint32_t* socket,uint32_t identificadorCola, uint32_t idProceso) {
+
+
+
+	log_info(brokerLogger2, "---------------------------- Suscribo a %i", idProceso);
+
 	if (validarParaSuscripcion(cola, paq, *socket,identificadorCola)) {
-		suscribirACola(socket, cola);
+		suscribirACola(socket, idProceso,cola);
 		responderMensaje(*socket, CORRECTO);
-		enviarMensajesPreviosEnMemoria(socket, identificadorCola);
+
+		enviarMensajesPreviosEnMemoria(*socket, idProceso, identificadorCola);
+
 		//log_info(loggerBroker, armarStringSuscripLog(paq.modulo, paq.tipoMensaje));
 		//log_info(brokerLogger2, armarStringSuscripLog(paq.modulo, paq.tipoMensaje));
 	} else {
 		responderMensaje(*socket, INCORRECTO);
 		free(socket);
 	}
+
 }
 
 void suscribirPorTiempo(void* estructura){
 
 	suscripcionTiempo* structPorTiempo = (suscripcionTiempo*) estructura;
-	suscribir(obtenerCola(structPorTiempo->cola), structPorTiempo->paq, structPorTiempo->socket, structPorTiempo->cola);
+	mensajeSuscripcionTiempo* msgSuscripcion= deserializarSuscripcionTiempo((structPorTiempo->paq).stream);
+
+	log_info(brokerLogger2, "---------------------Suscribo por tiempo al proceso %i", msgSuscripcion->idProceso);
+
+	suscribir(obtenerCola(structPorTiempo->cola), structPorTiempo->paq, structPorTiempo->socket, structPorTiempo->cola, msgSuscripcion->idProceso);
 	//log_info(loggerBroker, armarStringSuscripLog(GAMEBOY, structPorTiempo->cola));
 	//log_info(brokerLogger2, armarStringSuscripLog(GAMEBOY, structPorTiempo->cola));
 	sleep(structPorTiempo->tiempo);
 
-	desuscribir(*(structPorTiempo->socket), structPorTiempo->cola);
+	desuscribir(msgSuscripcion->idProceso, structPorTiempo->cola);
 
 }
 
-void desuscribir(uint32_t socket, uint32_t cola ){
+int desuscribir(uint32_t idProceso, uint32_t cola ){
 	uint32_t i;
 
-	void* socketLista;
+	//void* socketLista;
 	colaMensajes* punteroACola = obtenerCola(cola);
 
 	for(i = 0; i < sizeListaMutex(punteroACola->suscriptores); i++){
-		socketLista = (uint32_t*)getListaMutex(punteroACola->suscriptores, i);
-		if (*((uint32_t*) socketLista) == socket) {
-			removeListaMutex(punteroACola->suscriptores, i);
-			free(socketLista);
+		socketIdProceso* actual = (socketIdProceso*)getListaMutex(punteroACola->suscriptores, i);
+
+		if (idProceso==actual->idProceso) {
+
+			uint32_t respuestaDesuscripcion=SUSCRIPCION_FINALIZADA;
+			paquete* paqueteDesuscripcion=llenarPaquete(GAMEBOY,SUSCRIPCION_FINALIZADA,4,(void*)(&respuestaDesuscripcion));
+			void* paqueteSerializado=serializarPaquete(paqueteDesuscripcion);
+
+			send(actual->socket,paqueteSerializado,sizePaquete(paqueteDesuscripcion),0);
+			destruirPaquete(paqueteDesuscripcion);
+			free(paqueteSerializado);
+
+			removeAndDestroyElementListaMutex(punteroACola->suscriptores, i, free);
+
+			return 0;
 		}
+
 	}
-	uint32_t respuestaDesuscripcion=SUSCRIPCION_FINALIZADA;
-	paquete* paqueteDesuscripcion=llenarPaquete(GAMEBOY,SUSCRIPCION_FINALIZADA,4,(void*)(&respuestaDesuscripcion));
-	void* paqueteSerializado=serializarPaquete(paqueteDesuscripcion);
 
-	send(socket,paqueteSerializado,sizePaquete(paqueteDesuscripcion),0);
-	destruirPaquete(paqueteDesuscripcion);
-	free(paqueteSerializado);
-
+	return 0;
 }

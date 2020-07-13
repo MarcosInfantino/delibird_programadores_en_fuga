@@ -330,7 +330,7 @@ t_list* buscarMensajesDeColaEnParticiones (uint32_t cola){
 	return msjsDeCola;
 }
 
-void enviarMsjsASuscriptorNuevoParticiones (uint32_t cola, uint32_t* socket){
+void enviarMsjsASuscriptorNuevoParticiones (uint32_t cola, uint32_t socket, uint32_t idProceso){
 	t_list* listMsjs = buscarMensajesDeColaEnParticiones(cola);
 	msgMemoriaBroker* msg;
 	paquete* paqueteASerializar;
@@ -341,8 +341,11 @@ void enviarMsjsASuscriptorNuevoParticiones (uint32_t cola, uint32_t* socket){
 		insertarIdPaquete(paqueteASerializar, msg->idMensaje);
 		insertarIdCorrelativoPaquete(paqueteASerializar, msg->idCorrelativo);
 		paqueteSerializado = serializarPaquete(paqueteASerializar);
-		send(*socket, paqueteSerializado, sizePaquete(paqueteASerializar),0);
-		addListaMutex(msg->subsYaEnviado, (void*)socket);
+		send(socket, paqueteSerializado, sizePaquete(paqueteASerializar),0);
+
+		//memory leak
+		//addListaMutex(msg->subsYaEnviado, (void*)socket);
+		guardarYaEnviados(paqueteASerializar, idProceso);
 	}
 	list_destroy(listMsjs);
 }

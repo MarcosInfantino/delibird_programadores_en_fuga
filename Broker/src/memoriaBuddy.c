@@ -121,7 +121,12 @@ uint32_t evaluarTamanioParticionYasignar(struct nodoMemoria* partActual, msgMemo
 		partActual->header.ultimoAcceso = *localtime(&t);
 		asignarPuntero(partActual->offset, partActual->mensaje->stream, partActual->mensaje->sizeStream);
 
-		//memoria + partActual->offset = msg->stream; HAY QUE AGREGAR ESTO Y REVISAR QUE FUNCIONE
+
+
+		//msg->stream=memoria+partActual->offset;HAY QUE AGREGAR ESTO Y REVISAR QUE FUNCIONE. Es necesario, en particiones lo hicimos asi
+		//Atte Mari y Marquitos :D
+
+
 
 		log_info(brokerLogger2,"ASIGNE: Size de buddy: %i. Id mensaje: %i. Size del mensaje: %i.", (partActual->header).size, partActual->mensaje->idMensaje, partActual->mensaje->sizeStream);
 		return 1;
@@ -352,28 +357,31 @@ struct tm tiempoUso(struct nodoMemoria* nodo){
 	return nodo->header.ultimoAcceso;
 }
 
-void enviarMsjsASuscriptorNuevoBuddySystem(uint32_t colaParametro, uint32_t* socket){
+void enviarMsjsASuscriptorNuevoBuddySystem(uint32_t colaParametro, uint32_t socket, uint32_t idProceso){
 	for(uint32_t varI = 0; varI < sizeListaMutex(nodosOcupados); varI ++){
 		struct nodoMemoria* nodoEvaluado = (struct nodoMemoria*) getListaMutex (nodosOcupados, varI);
 		if(nodoEvaluado->mensaje->cola == colaParametro){
-			if(!envieMensajeDeNodoASocket(nodoEvaluado, socket)){
+			if(!envieMensajeDeNodoAIdProceso(nodoEvaluado, idProceso)){
 				paquete * paqueteAEnviar = llenarPaquete(nodoEvaluado->mensaje->modulo, nodoEvaluado->mensaje->cola, nodoEvaluado->mensaje->sizeStream,nodoEvaluado->mensaje->stream);
+
 				paqueteAEnviar->id = nodoEvaluado->mensaje->idMensaje;
 				paqueteAEnviar->idCorrelativo = nodoEvaluado->mensaje->idCorrelativo;
 				void* paqStream = serializarPaquete(paqueteAEnviar);
-				send(*socket, paqStream, sizePaquete(paqueteAEnviar), 0);
+				send(socket, paqStream, sizePaquete(paqueteAEnviar), 0);
 				free(paqStream);
 				log_info(brokerLogger2, "GUARDO ENVIADO POR ENVIAR MENSAJES, id: %i, id cor: %i", paqueteAEnviar->id, paqueteAEnviar->idCorrelativo);
-				guardarYaEnviados(paqueteAEnviar, *socket);
+				guardarYaEnviados(paqueteAEnviar, idProceso);
+				//memory leak para el paquete
 			}
 		}
 	}
 }
 
-bool envieMensajeDeNodoASocket(struct nodoMemoria* nodoEvaluado, uint32_t* socket){
+bool envieMensajeDeNodoAIdProceso(struct nodoMemoria* nodoEvaluado, uint32_t idProceso){
 	for(uint32_t varH = 0; varH < sizeListaMutex(nodoEvaluado->mensaje->subsYaEnviado); varH ++){
-		uint32_t* socketEvaluado = (uint32_t*) getListaMutex (nodoEvaluado->mensaje->subsYaEnviado, varH);
-		if (socketEvaluado == socket){
+		uint32_t* idActual = (uint32_t*) getListaMutex (nodoEvaluado->mensaje->subsYaEnviado, varH);
+
+		if (*idActual == idProceso){
 			return true;
 		}
 	}

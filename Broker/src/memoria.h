@@ -104,8 +104,9 @@ void liberarNodo(struct nodoMemoria* nodo);
 void registrarMensajeEnMemoria(paquete* paq, algoritmoMem metodo);
 void registrarEnMemoriaBUDDYSYSTEM(msgMemoriaBroker* mensajeNuevo, struct nodoMemoria* partActual);
 
-void enviarMsjsASuscriptorNuevoBuddySystem(uint32_t colaParametro, uint32_t* socket);
-bool envieMensajeDeNodoASocket(struct nodoMemoria* nodoEvaluado, uint32_t* socket);
+void enviarMsjsASuscriptorNuevoBuddySystem(uint32_t colaParametro, uint32_t socket, uint32_t idProceso);
+bool envieMensajeDeNodoAIdProceso(struct nodoMemoria* nodoEvaluado, uint32_t idProceso);
+//bool envieMensajeDeNodoASocket(struct nodoMemoria* nodoEvaluado, uint32_t* socket);
 
 void particionarMemoriaBUDDY(struct nodoMemoria*);
 void evaluarTamanioParticion(struct nodoMemoria* partActual, msgMemoriaBroker* msg);
@@ -133,11 +134,11 @@ bool estaParticionado(struct nodoMemoria* partActual);
 bool estaOcupado(struct nodoMemoria* partActual);
 bool ambosHijosOcupados(struct nodoMemoria* padre);
 
-void enviarMensajesPreviosEnMemoria(uint32_t* socket, uint32_t cola);
-bool estaEnListaEnviados (uint32_t socket, msgMemoriaBroker* mensaje);
-void guardarYaEnviados (paquete* paq, uint32_t socket);
-bool estaEnListaACK(uint32_t socket, msgMemoriaBroker* mensaje);
-void guardarMensajeACK (paquete* paq, uint32_t socket);
+void enviarMensajesPreviosEnMemoria(uint32_t socket, uint32_t idProceso, uint32_t cola);
+//bool estaEnListaEnviados (uint32_t socket, msgMemoriaBroker* mensaje);
+void guardarYaEnviados (paquete* paq, uint32_t idProceso);
+bool estaEnListaACK(uint32_t idProceso, msgMemoriaBroker* mensaje);
+void guardarMensajeACK (paquete* paq);
 
 void crearDumpDeCache();
 void asignarPuntero(uint32_t offset, void* stream, uint32_t sizeStream);

@@ -58,6 +58,10 @@ typedef struct{
 	pthread_mutex_t* mutexContador;
 }contadorMensajes;
 
+typedef struct{
+	uint32_t idProceso;
+	uint32_t socket;
+}socketIdProceso;
 
 //typedef struct {
 //	paquete paquete;
@@ -105,7 +109,7 @@ uint32_t obtenerIDultimoMensaje();
 void* atenderCliente(void* sock);
 void manejarTipoDeMensaje(paquete* paq, uint32_t* socket);
 void suscribirSegunCola(paquete paq, uint32_t* socket);
-void suscribir(colaMensajes * cola, paquete paq, uint32_t* socket,uint32_t identificadorCola);
+void suscribir(colaMensajes * cola, paquete paq, uint32_t* socket,uint32_t identificadorCola, uint32_t idProceso) ;
 void responderMensaje(uint32_t socketCliente, uint32_t respuesta);
 
 bool validarParaSuscripcion(colaMensajes *cola, paquete paq, uint32_t socket, uint32_t identificadorCola);
@@ -121,9 +125,9 @@ char* armarStringMsgNuevoLog(uint32_t modulo);
 void meterEnCola( colaMensajes* structCola, paquete* paq, uint32_t  socket);
 colaMensajes* obtenerCola(uint32_t colaInt);
 
-void desuscribir(uint32_t socket, uint32_t cola );
+int desuscribir(uint32_t idProceso, uint32_t cola );
 void suscribirPorTiempo(void* estructura);
-void suscribirACola(uint32_t* socket, colaMensajes * cola);
+int suscribirACola(uint32_t* socket, uint32_t idProceso, colaMensajes * cola);
 
 void inicializarContador();
 void abrirHiloParaEnviarMensajes();

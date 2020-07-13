@@ -2797,3 +2797,430 @@
 [INFO] 18:29:46:479 BROKER/(13307:13352): Elimino particion que comienza en: 0
 [INFO] 18:29:46:480 BROKER/(13307:13352): Se realiza la compactacion
 [INFO] 18:29:46:481 BROKER/(13307:13352): Almaceno mensaje en partición que comienza en: 36
+[INFO] 22:11:12:643 BROKER/(27972:27972): Inició el Broker.
+[INFO] 22:11:16:387 BROKER/(27972:28029): Almaceno mensaje en partición que comienza en: 0
+[INFO] 22:11:16:387 BROKER/(27972:28034): Almaceno mensaje en partición que comienza en: 12
+[INFO] 22:11:16:388 BROKER/(27972:28033): Almaceno mensaje en partición que comienza en: 23
+[INFO] 22:11:16:390 BROKER/(27972:28035): Almaceno mensaje en partición que comienza en: 34
+[INFO] 22:11:16:390 BROKER/(27972:28036): Almaceno mensaje en partición que comienza en: 45
+[INFO] 22:18:08:528 BROKER/(27972:29053): Se realiza la compactacion
+[INFO] 22:18:08:528 BROKER/(27972:29053): Elimino particion que comienza en: 0
+[INFO] 22:18:08:531 BROKER/(27972:29053): Se realiza la compactacion
+[INFO] 22:18:08:531 BROKER/(27972:29053): Almaceno mensaje en partición que comienza en: 43
+[INFO] 22:18:08:531 BROKER/(27972:27983): Envié mensaje a suscriptor: 0 -.-
+[INFO] 22:20:53:313 BROKER/(29431:29431): Inició el Broker.
+[INFO] 22:20:55:750 BROKER/(29431:29492): Almaceno mensaje en partición que comienza en: 0
+[INFO] 22:20:55:754 BROKER/(29431:29491): Almaceno mensaje en partición que comienza en: 10
+[INFO] 22:20:55:755 BROKER/(29431:29490): Almaceno mensaje en partición que comienza en: 21
+[INFO] 22:20:55:764 BROKER/(29431:29488): Almaceno mensaje en partición que comienza en: 32
+[INFO] 22:20:55:764 BROKER/(29431:29489): Almaceno mensaje en partición que comienza en: 44
+[INFO] 22:23:38:989 BROKER/(29879:29879): Inició el Broker.
+[INFO] 22:23:46:369 BROKER/(29919:29919): Inició el Broker.
+[INFO] 22:23:48:448 BROKER/(29919:29977): Almaceno mensaje en partición que comienza en: 0
+[INFO] 22:23:48:448 BROKER/(29919:29978): Almaceno mensaje en partición que comienza en: 11
+[INFO] 22:23:48:449 BROKER/(29919:29979): Almaceno mensaje en partición que comienza en: 22
+[INFO] 22:23:48:450 BROKER/(29919:29976): Almaceno mensaje en partición que comienza en: 33
+[INFO] 22:23:48:455 BROKER/(29919:29970): Almaceno mensaje en partición que comienza en: 43
+[INFO] 22:23:52:365 BROKER/(29919:29992): Se realiza la compactacion
+[INFO] 22:23:52:366 BROKER/(29919:29992): Elimino particion que comienza en: 0
+[INFO] 22:23:52:366 BROKER/(29919:29992): Se realiza la compactacion
+[INFO] 22:23:52:367 BROKER/(29919:29992): Almaceno mensaje en partición que comienza en: 44
+[INFO] 22:23:52:367 BROKER/(29919:29930): Envié mensaje a suscriptor: -1270874048 -.-
+[INFO] 22:25:16:467 BROKER/(30215:30215): Inició el Broker.
+[INFO] 22:25:19:28 BROKER/(30215:30275): Almaceno mensaje en partición que comienza en: 0
+[INFO] 22:25:19:28 BROKER/(30215:30274): Almaceno mensaje en partición que comienza en: 12
+[INFO] 22:25:19:29 BROKER/(30215:30273): Almaceno mensaje en partición que comienza en: 22
+[INFO] 22:25:19:29 BROKER/(30215:30272): Almaceno mensaje en partición que comienza en: 33
+[INFO] 22:25:19:29 BROKER/(30215:30271): Almaceno mensaje en partición que comienza en: 44
+[INFO] 22:25:23:875 BROKER/(30215:30289): Se realiza la compactacion
+[INFO] 22:25:23:876 BROKER/(30215:30289): Elimino particion que comienza en: 0
+[INFO] 22:25:23:876 BROKER/(30215:30289): Se realiza la compactacion
+[INFO] 22:25:23:876 BROKER/(30215:30289): Almaceno mensaje en partición que comienza en: 43
+[INFO] 22:25:23:877 BROKER/(30215:30226): Envié mensaje a suscriptor: 103 -.-
+[INFO] 22:25:41:904 BROKER/(30215:30323): Se realiza la compactacion
+[INFO] 22:25:41:904 BROKER/(30215:30323): Elimino particion que comienza en: 0
+[INFO] 22:25:41:904 BROKER/(30215:30323): Se realiza la compactacion
+[INFO] 22:25:41:904 BROKER/(30215:30323): Elimino particion que comienza en: 0
+[INFO] 22:25:41:904 BROKER/(30215:30323): Se realiza la compactacion
+[INFO] 22:25:41:904 BROKER/(30215:30323): Almaceno mensaje en partición que comienza en: 41
+[INFO] 22:25:41:905 BROKER/(30215:30226): Envié mensaje a suscriptor: 103 -.-
+[INFO] 22:25:44:911 BROKER/(30215:30331): Se realiza la compactacion
+[INFO] 22:25:44:911 BROKER/(30215:30331): Elimino particion que comienza en: 0
+[INFO] 22:25:44:911 BROKER/(30215:30331): Se realiza la compactacion
+[INFO] 22:25:44:911 BROKER/(30215:30331): Elimino particion que comienza en: 0
+[INFO] 22:25:44:911 BROKER/(30215:30331): Se realiza la compactacion
+[INFO] 22:25:44:912 BROKER/(30215:30331): Almaceno mensaje en partición que comienza en: 39
+[INFO] 22:30:12:484 BROKER/(30923:30923): Inició el Broker.
+[INFO] 22:32:34:479 BROKER/(31243:31243): Inició el Broker.
+[INFO] 22:33:01:950 BROKER/(31243:31357): Almaceno mensaje en partición que comienza en: 0
+[INFO] 22:33:01:954 BROKER/(31243:31356): Almaceno mensaje en partición que comienza en: 10
+[INFO] 22:33:01:955 BROKER/(31243:31355): Almaceno mensaje en partición que comienza en: 21
+[INFO] 22:33:01:959 BROKER/(31243:31354): Almaceno mensaje en partición que comienza en: 32
+[INFO] 22:33:01:960 BROKER/(31243:31353): Almaceno mensaje en partición que comienza en: 43
+[INFO] 22:58:00:174 BROKER/(2954:2954): Inició el Broker.
+[INFO] 22:58:30:902 BROKER/(2954:3062): Almaceno mensaje en partición que comienza en: 0
+[INFO] 22:58:36:100 BROKER/(2954:3113): Almaceno mensaje en partición que comienza en: 20
+[INFO] 22:58:36:100 BROKER/(2954:3114): Almaceno mensaje en partición que comienza en: 31
+[INFO] 22:58:36:101 BROKER/(2954:3115): Almaceno mensaje en partición que comienza en: 42
+[INFO] 22:58:36:101 BROKER/(2954:3112): Se realiza la compactacion
+[INFO] 22:58:36:101 BROKER/(2954:3112): Elimino particion que comienza en: 0
+[INFO] 22:58:36:101 BROKER/(2954:3112): Almaceno mensaje en partición que comienza en: 0
+[INFO] 22:58:36:101 BROKER/(2954:3116): Almaceno mensaje en partición que comienza en: 12
+[INFO] 22:58:39:125 BROKER/(2954:3125): Se realiza la compactacion
+[INFO] 22:58:39:125 BROKER/(2954:3125): Elimino particion que comienza en: 22
+[INFO] 22:58:39:125 BROKER/(2954:3125): Se realiza la compactacion
+[INFO] 22:58:39:126 BROKER/(2954:3125): Almaceno mensaje en partición que comienza en: 44
+[INFO] 22:58:48:73 BROKER/(2954:3173): Se realiza la compactacion
+[INFO] 22:58:48:73 BROKER/(2954:3173): Elimino particion que comienza en: 22
+[INFO] 22:58:48:73 BROKER/(2954:3173): Almaceno mensaje en partición que comienza en: 22
+[INFO] 22:58:48:77 BROKER/(2954:3172): Se realiza la compactacion
+[INFO] 22:58:48:77 BROKER/(2954:3172): Elimino particion que comienza en: 33
+[INFO] 22:58:48:77 BROKER/(2954:3172): Almaceno mensaje en partición que comienza en: 33
+[INFO] 22:58:48:78 BROKER/(2954:3178): Se realiza la compactacion
+[INFO] 22:58:48:78 BROKER/(2954:3178): Elimino particion que comienza en: 0
+[INFO] 22:58:48:78 BROKER/(2954:3178): Almaceno mensaje en partición que comienza en: 0
+[INFO] 22:58:48:78 BROKER/(2954:3179): Se realiza la compactacion
+[INFO] 22:58:48:79 BROKER/(2954:3179): Elimino particion que comienza en: 11
+[INFO] 22:58:48:79 BROKER/(2954:3179): Se realiza la compactacion
+[INFO] 22:58:48:79 BROKER/(2954:3179): Elimino particion que comienza en: 33
+[INFO] 22:58:48:79 BROKER/(2954:3179): Almaceno mensaje en partición que comienza en: 33
+[INFO] 23:19:11:741 BROKER/(6272:6272): Inició el Broker.
+[INFO] 23:19:17:601 BROKER/(6272:6329): Almaceno mensaje en partición que comienza en: 0
+[INFO] 23:19:17:601 BROKER/(6272:6328): Almaceno mensaje en partición que comienza en: 11
+[INFO] 23:19:17:602 BROKER/(6272:6337): Almaceno mensaje en partición que comienza en: 23
+[INFO] 23:19:17:608 BROKER/(6272:6338): Almaceno mensaje en partición que comienza en: 34
+[INFO] 23:19:17:609 BROKER/(6272:6336): Almaceno mensaje en partición que comienza en: 44
+[INFO] 23:19:29:470 BROKER/(6272:6368): Se realiza la compactacion
+[INFO] 23:19:29:470 BROKER/(6272:6368): Elimino particion que comienza en: 0
+[INFO] 23:19:29:471 BROKER/(6272:6368): Se realiza la compactacion
+[INFO] 23:19:29:471 BROKER/(6272:6368): Almaceno mensaje en partición que comienza en: 44
+[INFO] 23:19:29:471 BROKER/(6272:6283): Envié mensaje a suscriptor: 103 -.-
+[INFO] 23:19:32:473 BROKER/(6272:6376): Se realiza la compactacion
+[INFO] 23:19:32:473 BROKER/(6272:6376): Elimino particion que comienza en: 0
+[INFO] 23:19:32:473 BROKER/(6272:6376): Se realiza la compactacion
+[INFO] 23:19:32:473 BROKER/(6272:6376): Elimino particion que comienza en: 0
+[INFO] 23:19:32:473 BROKER/(6272:6376): Se realiza la compactacion
+[INFO] 23:19:32:473 BROKER/(6272:6376): Almaceno mensaje en partición que comienza en: 41
+[INFO] 23:21:04:85 BROKER/(6600:6600): Inició el Broker.
+[INFO] 23:21:07:769 BROKER/(6600:6671): Almaceno mensaje en partición que comienza en: 0
+[INFO] 23:21:07:769 BROKER/(6600:6677): Almaceno mensaje en partición que comienza en: 12
+[INFO] 23:21:07:772 BROKER/(6600:6672): Almaceno mensaje en partición que comienza en: 23
+[INFO] 23:21:07:774 BROKER/(6600:6684): Almaceno mensaje en partición que comienza en: 34
+[INFO] 23:21:07:774 BROKER/(6600:6683): Almaceno mensaje en partición que comienza en: 44
+[INFO] 23:21:13:47 BROKER/(6600:6702): Se realiza la compactacion
+[INFO] 23:21:13:48 BROKER/(6600:6702): Elimino particion que comienza en: 0
+[INFO] 23:21:13:48 BROKER/(6600:6702): Se realiza la compactacion
+[INFO] 23:21:13:48 BROKER/(6600:6702): Almaceno mensaje en partición que comienza en: 43
+[INFO] 23:21:13:48 BROKER/(6600:6611): Envié mensaje a suscriptor: 103 -.-
+[INFO] 23:21:16:53 BROKER/(6600:6714): Se realiza la compactacion
+[INFO] 23:21:16:53 BROKER/(6600:6714): Elimino particion que comienza en: 0
+[INFO] 23:21:16:53 BROKER/(6600:6714): Se realiza la compactacion
+[INFO] 23:21:16:53 BROKER/(6600:6714): Elimino particion que comienza en: 0
+[INFO] 23:21:16:53 BROKER/(6600:6714): Se realiza la compactacion
+[INFO] 23:21:16:53 BROKER/(6600:6714): Almaceno mensaje en partición que comienza en: 41
+[INFO] 23:24:12:17 BROKER/(7078:7078): Inició el Broker.
+[INFO] 23:24:15:245 BROKER/(7078:7218): Almaceno mensaje en partición que comienza en: 0
+[INFO] 23:24:15:247 BROKER/(7078:7220): Almaceno mensaje en partición que comienza en: 12
+[INFO] 23:24:15:247 BROKER/(7078:7226): Almaceno mensaje en partición que comienza en: 23
+[INFO] 23:24:15:247 BROKER/(7078:7227): Almaceno mensaje en partición que comienza en: 34
+[INFO] 23:24:15:251 BROKER/(7078:7222): Almaceno mensaje en partición que comienza en: 45
+[INFO] 23:24:18:39 BROKER/(7078:7272): Se realiza la compactacion
+[INFO] 23:24:18:39 BROKER/(7078:7272): Elimino particion que comienza en: 0
+[INFO] 23:24:18:39 BROKER/(7078:7272): Se realiza la compactacion
+[INFO] 23:24:18:40 BROKER/(7078:7272): Almaceno mensaje en partición que comienza en: 43
+[INFO] 23:24:18:40 BROKER/(7078:7090): Envié mensaje a suscriptor: 103 -.-
+[INFO] 23:24:21:58 BROKER/(7078:7295): Se realiza la compactacion
+[INFO] 23:24:21:58 BROKER/(7078:7295): Elimino particion que comienza en: 0
+[INFO] 23:24:21:58 BROKER/(7078:7295): Se realiza la compactacion
+[INFO] 23:24:21:58 BROKER/(7078:7295): Elimino particion que comienza en: 0
+[INFO] 23:24:21:58 BROKER/(7078:7295): Se realiza la compactacion
+[INFO] 23:24:21:58 BROKER/(7078:7295): Almaceno mensaje en partición que comienza en: 41
+[INFO] 23:29:52:278 BROKER/(7973:7973): Inició el Broker.
+[INFO] 23:29:55:146 BROKER/(7973:8057): Almaceno mensaje en partición que comienza en: 0
+[INFO] 23:29:55:146 BROKER/(7973:8058): Almaceno mensaje en partición que comienza en: 11
+[INFO] 23:29:55:146 BROKER/(7973:8056): Almaceno mensaje en partición que comienza en: 23
+[INFO] 23:29:55:147 BROKER/(7973:8055): Almaceno mensaje en partición que comienza en: 34
+[INFO] 23:29:55:147 BROKER/(7973:8054): Almaceno mensaje en partición que comienza en: 45
+[INFO] 23:29:57:112 BROKER/(7973:8067): Se realiza la compactacion
+[INFO] 23:29:57:112 BROKER/(7973:8067): Elimino particion que comienza en: 0
+[INFO] 23:29:57:113 BROKER/(7973:8067): Se realiza la compactacion
+[INFO] 23:29:57:113 BROKER/(7973:8067): Almaceno mensaje en partición que comienza en: 44
+[INFO] 23:29:57:113 BROKER/(7973:7985): Envié mensaje a suscriptor: 103 -.-
+[INFO] 23:30:00:134 BROKER/(7973:8075): Se realiza la compactacion
+[INFO] 23:30:00:134 BROKER/(7973:8075): Elimino particion que comienza en: 0
+[INFO] 23:30:00:134 BROKER/(7973:8075): Se realiza la compactacion
+[INFO] 23:30:00:134 BROKER/(7973:8075): Elimino particion que comienza en: 0
+[INFO] 23:30:00:134 BROKER/(7973:8075): Se realiza la compactacion
+[INFO] 23:30:00:134 BROKER/(7973:8075): Almaceno mensaje en partición que comienza en: 41
+[INFO] 23:33:56:554 BROKER/(8578:8578): Inició el Broker.
+[INFO] 23:33:58:758 BROKER/(8578:8655): Almaceno mensaje en partición que comienza en: 0
+[INFO] 23:33:58:758 BROKER/(8578:8660): Almaceno mensaje en partición que comienza en: 12
+[INFO] 23:33:58:761 BROKER/(8578:8663): Almaceno mensaje en partición que comienza en: 23
+[INFO] 23:33:58:762 BROKER/(8578:8664): Almaceno mensaje en partición que comienza en: 34
+[INFO] 23:33:58:762 BROKER/(8578:8665): Almaceno mensaje en partición que comienza en: 45
+[INFO] 23:34:02:675 BROKER/(8578:8673): Se realiza la compactacion
+[INFO] 23:34:02:675 BROKER/(8578:8673): Elimino particion que comienza en: 0
+[INFO] 23:34:02:675 BROKER/(8578:8673): Se realiza la compactacion
+[INFO] 23:34:02:675 BROKER/(8578:8673): Almaceno mensaje en partición que comienza en: 43
+[INFO] 23:34:02:675 BROKER/(8578:8589): Envié mensaje a suscriptor: 103 -.-
+[INFO] 23:34:05:699 BROKER/(8578:8681): Se realiza la compactacion
+[INFO] 23:34:05:699 BROKER/(8578:8681): Elimino particion que comienza en: 0
+[INFO] 23:34:05:699 BROKER/(8578:8681): Se realiza la compactacion
+[INFO] 23:34:05:699 BROKER/(8578:8681): Elimino particion que comienza en: 0
+[INFO] 23:34:05:699 BROKER/(8578:8681): Se realiza la compactacion
+[INFO] 23:34:05:699 BROKER/(8578:8681): Almaceno mensaje en partición que comienza en: 41
+[INFO] 23:37:40:486 BROKER/(9187:9187): Inició el Broker.
+[INFO] 23:37:42:782 BROKER/(9187:9262): Almaceno mensaje en partición que comienza en: 0
+[INFO] 23:37:42:783 BROKER/(9187:9267): Almaceno mensaje en partición que comienza en: 12
+[INFO] 23:37:42:783 BROKER/(9187:9270): Almaceno mensaje en partición que comienza en: 23
+[INFO] 23:37:42:783 BROKER/(9187:9271): Almaceno mensaje en partición que comienza en: 34
+[INFO] 23:37:42:784 BROKER/(9187:9272): Almaceno mensaje en partición que comienza en: 45
+[INFO] 23:37:47:283 BROKER/(9187:9288): Se realiza la compactacion
+[INFO] 23:37:47:284 BROKER/(9187:9288): Elimino particion que comienza en: 0
+[INFO] 23:37:47:284 BROKER/(9187:9288): Se realiza la compactacion
+[INFO] 23:37:47:284 BROKER/(9187:9288): Almaceno mensaje en partición que comienza en: 43
+[INFO] 23:37:47:284 BROKER/(9187:9198): Envié mensaje a suscriptor: 103 -.-
+[INFO] 23:37:50:299 BROKER/(9187:9296): Se realiza la compactacion
+[INFO] 23:37:50:299 BROKER/(9187:9296): Elimino particion que comienza en: 0
+[INFO] 23:37:50:299 BROKER/(9187:9296): Se realiza la compactacion
+[INFO] 23:37:50:299 BROKER/(9187:9296): Elimino particion que comienza en: 0
+[INFO] 23:37:50:299 BROKER/(9187:9296): Se realiza la compactacion
+[INFO] 23:37:50:299 BROKER/(9187:9296): Almaceno mensaje en partición que comienza en: 41
+[INFO] 23:41:24:202 BROKER/(9878:9878): Inició el Broker.
+[INFO] 23:41:27:330 BROKER/(9878:9954): Almaceno mensaje en partición que comienza en: 0
+[INFO] 23:41:27:330 BROKER/(9878:9971): Almaceno mensaje en partición que comienza en: 12
+[INFO] 23:41:27:334 BROKER/(9878:9974): Almaceno mensaje en partición que comienza en: 23
+[INFO] 23:41:27:334 BROKER/(9878:9976): Almaceno mensaje en partición que comienza en: 34
+[INFO] 23:41:27:334 BROKER/(9878:9977): Almaceno mensaje en partición que comienza en: 45
+[INFO] 23:43:55:747 BROKER/(10381:10381): Inició el Broker.
+[INFO] 23:44:00:402 BROKER/(10381:10477): Almaceno mensaje en partición que comienza en: 0
+[INFO] 23:44:00:405 BROKER/(10381:10483): Almaceno mensaje en partición que comienza en: 4
+[INFO] 23:44:00:405 BROKER/(10381:10484): Almaceno mensaje en partición que comienza en: 9
+[INFO] 23:44:00:405 BROKER/(10381:10489): Almaceno mensaje en partición que comienza en: 13
+[INFO] 23:44:00:406 BROKER/(10381:10488): Almaceno mensaje en partición que comienza en: 19
+[INFO] 23:44:00:406 BROKER/(10381:10487): Almaceno mensaje en partición que comienza en: 26
+[INFO] 23:44:00:408 BROKER/(10381:10486): Almaceno mensaje en partición que comienza en: 33
+[INFO] 23:44:00:408 BROKER/(10381:10485): Almaceno mensaje en partición que comienza en: 40
+[INFO] 23:44:15:11 BROKER/(10552:10552): Inició el Broker.
+[INFO] 23:46:12:727 BROKER/(11003:11003): Inició el Broker.
+[INFO] 23:46:14:849 BROKER/(11003:11089): Almaceno mensaje en partición que comienza en: 0
+[INFO] 23:46:14:853 BROKER/(11003:11091): Almaceno mensaje en partición que comienza en: 7
+[INFO] 23:46:14:853 BROKER/(11003:11088): Almaceno mensaje en partición que comienza en: 14
+[INFO] 23:46:14:854 BROKER/(11003:11087): Almaceno mensaje en partición que comienza en: 22
+[INFO] 23:46:14:854 BROKER/(11003:11093): Almaceno mensaje en partición que comienza en: 29
+[INFO] 23:46:14:854 BROKER/(11003:11094): Almaceno mensaje en partición que comienza en: 35
+[INFO] 23:46:14:855 BROKER/(11003:11097): Almaceno mensaje en partición que comienza en: 39
+[INFO] 23:46:14:861 BROKER/(11003:11098): Almaceno mensaje en partición que comienza en: 44
+[INFO] 23:46:49:709 BROKER/(11199:11199): Inició el Broker.
+[INFO] 23:46:52:267 BROKER/(11199:11281): Almaceno mensaje en partición que comienza en: 0
+[INFO] 23:46:52:267 BROKER/(11199:11287): Almaceno mensaje en partición que comienza en: 4
+[INFO] 23:46:52:267 BROKER/(11199:11289): Almaceno mensaje en partición que comienza en: 9
+[INFO] 23:46:52:267 BROKER/(11199:11290): Almaceno mensaje en partición que comienza en: 13
+[INFO] 23:46:52:268 BROKER/(11199:11288): Almaceno mensaje en partición que comienza en: 19
+[INFO] 23:46:52:268 BROKER/(11199:11291): Almaceno mensaje en partición que comienza en: 26
+[INFO] 23:46:52:271 BROKER/(11199:11292): Almaceno mensaje en partición que comienza en: 33
+[INFO] 23:46:52:277 BROKER/(11199:11293): Almaceno mensaje en partición que comienza en: 40
+[INFO] 23:47:38:891 BROKER/(11448:11448): Inició el Broker.
+[INFO] 23:47:41:574 BROKER/(11448:11542): Almaceno mensaje en partición que comienza en: 0
+[INFO] 23:47:41:574 BROKER/(11448:11547): Almaceno mensaje en partición que comienza en: 10
+[INFO] 23:47:41:574 BROKER/(11448:11545): Almaceno mensaje en partición que comienza en: 21
+[INFO] 23:47:41:575 BROKER/(11448:11548): Almaceno mensaje en partición que comienza en: 33
+[INFO] 23:47:41:575 BROKER/(11448:11546): Almaceno mensaje en partición que comienza en: 44
+[INFO] 23:50:40:911 BROKER/(11965:11965): Inició el Broker.
+[INFO] 23:50:56:696 BROKER/(12123:12123): Inició el Broker.
+[INFO] 23:51:14:197 BROKER/(12177:12177): Inició el Broker.
+[INFO] 00:10:21:620 BROKER/(14880:14880): Inició el Broker.
+[INFO] 00:10:24:582 BROKER/(14880:14966): Almaceno mensaje en partición que comienza en: 0
+[INFO] 00:10:24:583 BROKER/(14880:14970): Almaceno mensaje en partición que comienza en: 12
+[INFO] 00:10:24:584 BROKER/(14880:14973): Almaceno mensaje en partición que comienza en: 23
+[INFO] 00:10:24:585 BROKER/(14880:14972): Almaceno mensaje en partición que comienza en: 33
+[INFO] 00:10:24:589 BROKER/(14880:14971): Almaceno mensaje en partición que comienza en: 44
+[INFO] 00:10:45:870 BROKER/(15050:15050): Inició el Broker.
+[INFO] 00:14:44:413 BROKER/(15632:15632): Inició el Broker.
+[INFO] 00:16:52:88 BROKER/(16044:16044): Inició el Broker.
+[INFO] 00:16:54:826 BROKER/(16044:16134): Almaceno mensaje en partición que comienza en: 0
+[INFO] 00:16:54:826 BROKER/(16044:16138): Almaceno mensaje en partición que comienza en: 12
+[INFO] 00:16:54:826 BROKER/(16044:16137): Almaceno mensaje en partición que comienza en: 22
+[INFO] 00:16:54:827 BROKER/(16044:16136): Almaceno mensaje en partición que comienza en: 33
+[INFO] 00:16:54:828 BROKER/(16044:16135): Almaceno mensaje en partición que comienza en: 44
+[INFO] 00:17:18:67 BROKER/(16221:16221): Inició el Broker.
+[INFO] 00:20:46:63 BROKER/(16890:16890): Inició el Broker.
+[INFO] 00:20:48:620 BROKER/(16890:16979): Almaceno mensaje en partición que comienza en: 0
+[INFO] 00:20:48:624 BROKER/(16890:16982): Almaceno mensaje en partición que comienza en: 11
+[INFO] 00:20:48:625 BROKER/(16890:16983): Almaceno mensaje en partición que comienza en: 23
+[INFO] 00:20:48:625 BROKER/(16890:16985): Almaceno mensaje en partición que comienza en: 34
+[INFO] 00:20:48:625 BROKER/(16890:16984): Almaceno mensaje en partición que comienza en: 44
+[INFO] 00:21:00:114 BROKER/(17052:17052): Inició el Broker.
+[INFO] 00:27:41:605 BROKER/(17910:17910): Inició el Broker.
+[INFO] 00:29:33:331 BROKER/(18295:18295): Inició el Broker.
+[INFO] 00:40:50:704 BROKER/(19808:19808): Inició el Broker.
+[INFO] 00:40:53:92 BROKER/(19808:19905): Almaceno mensaje en partición que comienza en: 0
+[INFO] 00:40:53:92 BROKER/(19808:19901): Almaceno mensaje en partición que comienza en: 11
+[INFO] 00:40:53:93 BROKER/(19808:19902): Almaceno mensaje en partición que comienza en: 22
+[INFO] 00:40:53:93 BROKER/(19808:19904): Almaceno mensaje en partición que comienza en: 32
+[INFO] 00:40:53:93 BROKER/(19808:19900): Almaceno mensaje en partición que comienza en: 44
+[INFO] 00:41:07:457 BROKER/(19971:19971): Inició el Broker.
+[INFO] 00:41:47:443 BROKER/(20066:20066): Inició el Broker.
+[INFO] 00:41:52:319 BROKER/(20066:20166): Almaceno mensaje en partición que comienza en: 0
+[INFO] 00:41:52:319 BROKER/(20066:20167): Almaceno mensaje en partición que comienza en: 12
+[INFO] 00:41:52:319 BROKER/(20066:20168): Almaceno mensaje en partición que comienza en: 23
+[INFO] 00:41:52:319 BROKER/(20066:20170): Almaceno mensaje en partición que comienza en: 34
+[INFO] 00:41:52:320 BROKER/(20066:20169): Almaceno mensaje en partición que comienza en: 44
+[INFO] 00:42:15:974 BROKER/(20317:20317): Inició el Broker.
+[INFO] 00:42:18:256 BROKER/(20317:20408): Almaceno mensaje en partición que comienza en: 0
+[INFO] 00:42:18:257 BROKER/(20317:20410): Almaceno mensaje en partición que comienza en: 10
+[INFO] 00:42:18:257 BROKER/(20317:20407): Almaceno mensaje en partición que comienza en: 21
+[INFO] 00:42:18:257 BROKER/(20317:20409): Almaceno mensaje en partición que comienza en: 32
+[INFO] 00:42:18:257 BROKER/(20317:20411): Almaceno mensaje en partición que comienza en: 43
+[INFO] 00:42:27:874 BROKER/(20465:20465): Inició el Broker.
+[INFO] 00:42:51:727 BROKER/(20465:20533): Almaceno mensaje en partición que comienza en: 0
+[INFO] 00:42:51:727 BROKER/(20465:20476): Envié mensaje a suscriptor: 103 -.-
+[INFO] 00:45:16:368 BROKER/(20896:20896): Inició el Broker.
+[INFO] 00:45:22:860 BROKER/(20937:20937): Inició el Broker.
+[INFO] 00:45:26:225 BROKER/(20937:21022): Almaceno mensaje en partición que comienza en: 0
+[INFO] 00:45:26:226 BROKER/(20937:21028): Almaceno mensaje en partición que comienza en: 12
+[INFO] 00:45:26:226 BROKER/(20937:21029): Almaceno mensaje en partición que comienza en: 23
+[INFO] 00:45:26:227 BROKER/(20937:21031): Almaceno mensaje en partición que comienza en: 34
+[INFO] 00:45:26:227 BROKER/(20937:21030): Almaceno mensaje en partición que comienza en: 44
+[INFO] 00:45:37:139 BROKER/(21090:21090): Inició el Broker.
+[INFO] 00:46:17:438 BROKER/(21090:21192): Almaceno mensaje en partición que comienza en: 0
+[INFO] 00:46:17:438 BROKER/(21090:21102): Envié mensaje a suscriptor: 103 -.-
+[INFO] 00:47:05:169 BROKER/(21372:21372): Inició el Broker.
+[INFO] 00:47:07:122 BROKER/(21372:21461): Almaceno mensaje en partición que comienza en: 0
+[INFO] 00:47:07:123 BROKER/(21372:21462): Almaceno mensaje en partición que comienza en: 10
+[INFO] 00:47:07:123 BROKER/(21372:21463): Almaceno mensaje en partición que comienza en: 21
+[INFO] 00:47:07:124 BROKER/(21372:21464): Almaceno mensaje en partición que comienza en: 32
+[INFO] 00:47:07:125 BROKER/(21372:21465): Almaceno mensaje en partición que comienza en: 43
+[INFO] 00:47:18:179 BROKER/(21524:21524): Inició el Broker.
+[INFO] 00:47:38:373 BROKER/(21524:21583): Almaceno mensaje en partición que comienza en: 0
+[INFO] 00:47:38:373 BROKER/(21524:21535): Envié mensaje a suscriptor: 103 -.-
+[INFO] 00:49:56:124 BROKER/(21908:21908): Inició el Broker.
+[INFO] 00:50:02:755 BROKER/(21943:21943): Inició el Broker.
+[INFO] 00:50:04:774 BROKER/(21943:21968): Almaceno mensaje en partición que comienza en: 0
+[INFO] 00:50:14:904 BROKER/(21943:22057): Almaceno mensaje en partición que comienza en: 20
+[INFO] 00:50:14:913 BROKER/(21943:22063): Almaceno mensaje en partición que comienza en: 32
+[INFO] 00:50:14:914 BROKER/(21943:22065): Almaceno mensaje en partición que comienza en: 43
+[INFO] 00:50:14:914 BROKER/(21943:22064): Almaceno mensaje en partición que comienza en: 54
+[INFO] 00:50:17:913 BROKER/(21943:22072): Se realiza la compactacion
+[INFO] 00:50:17:913 BROKER/(21943:22072): Elimino particion que comienza en: 0
+[INFO] 00:50:17:913 BROKER/(21943:22072): Almaceno mensaje en partición que comienza en: 0
+[INFO] 00:50:36:51 BROKER/(22142:22142): Inició el Broker.
+[INFO] 00:50:55:923 BROKER/(22142:22201): Almaceno mensaje en partición que comienza en: 0
+[INFO] 00:50:55:925 BROKER/(22142:22153): Envié mensaje a suscriptor: 103 -.-
+[INFO] 00:51:47:69 BROKER/(22425:22425): Inició el Broker.
+[INFO] 00:52:05:29 BROKER/(22425:22481): Almaceno mensaje en partición que comienza en: 0
+[INFO] 00:52:05:29 BROKER/(22425:22436): Envié mensaje a suscriptor: 103 -.-
+[INFO] 00:52:09:463 BROKER/(22425:22493): Almaceno mensaje en partición que comienza en: 20
+[INFO] 00:52:23:806 BROKER/(22523:22523): Inició el Broker.
+[INFO] 00:52:36:94 BROKER/(22523:22563): Almaceno mensaje en partición que comienza en: 0
+[INFO] 00:56:02:60 BROKER/(23067:23067): Inició el Broker.
+[INFO] 00:56:20:250 BROKER/(23131:23131): Inició el Broker.
+[INFO] 00:56:22:672 BROKER/(23131:23218): Almaceno mensaje en partición que comienza en: 0
+[INFO] 00:56:22:674 BROKER/(23131:23223): Almaceno mensaje en partición que comienza en: 11
+[INFO] 00:56:22:674 BROKER/(23131:23217): Almaceno mensaje en partición que comienza en: 21
+[INFO] 00:56:22:674 BROKER/(23131:23219): Almaceno mensaje en partición que comienza en: 33
+[INFO] 00:56:22:674 BROKER/(23131:23221): Almaceno mensaje en partición que comienza en: 44
+[INFO] 00:56:35:44 BROKER/(23287:23287): Inició el Broker.
+[INFO] 00:56:39:194 BROKER/(23287:23314): Almaceno mensaje en partición que comienza en: 0
+[INFO] 00:56:39:195 BROKER/(23287:23298): Envié mensaje a suscriptor: 103 -.-
+[INFO] 00:58:00:837 BROKER/(23563:23563): Inició el Broker.
+[INFO] 00:58:03:624 BROKER/(23563:23649): Almaceno mensaje en partición que comienza en: 0
+[INFO] 00:58:03:624 BROKER/(23563:23650): Almaceno mensaje en partición que comienza en: 12
+[INFO] 00:58:03:625 BROKER/(23563:23651): Almaceno mensaje en partición que comienza en: 23
+[INFO] 00:58:03:625 BROKER/(23563:23653): Almaceno mensaje en partición que comienza en: 34
+[INFO] 00:58:03:625 BROKER/(23563:23652): Almaceno mensaje en partición que comienza en: 44
+[INFO] 00:58:15:60 BROKER/(23716:23716): Inició el Broker.
+[INFO] 00:58:18:567 BROKER/(23716:23751): Almaceno mensaje en partición que comienza en: 0
+[INFO] 00:58:18:568 BROKER/(23716:23732): Envié mensaje a suscriptor: 103 -.-
+[INFO] 00:58:59:594 BROKER/(23942:23942): Inició el Broker.
+[INFO] 00:59:01:783 BROKER/(23942:24036): Almaceno mensaje en partición que comienza en: 0
+[INFO] 00:59:01:783 BROKER/(23942:24035): Almaceno mensaje en partición que comienza en: 10
+[INFO] 00:59:01:785 BROKER/(23942:24034): Almaceno mensaje en partición que comienza en: 21
+[INFO] 00:59:01:788 BROKER/(23942:24033): Almaceno mensaje en partición que comienza en: 32
+[INFO] 00:59:01:789 BROKER/(23942:24032): Almaceno mensaje en partición que comienza en: 43
+[INFO] 00:59:10:76 BROKER/(24091:24091): Inició el Broker.
+[INFO] 00:59:16:398 BROKER/(24091:24125): Almaceno mensaje en partición que comienza en: 0
+[INFO] 00:59:16:398 BROKER/(24091:24102): Envié mensaje a suscriptor: 103 -.-
+[INFO] 01:00:44:126 BROKER/(24299:24299): Inició el Broker.
+[INFO] 01:07:24:692 BROKER/(25305:25305): Inició el Broker.
+[INFO] 01:07:26:734 BROKER/(25305:25394): Almaceno mensaje en partición que comienza en: 0
+[INFO] 01:07:26:734 BROKER/(25305:25395): Almaceno mensaje en partición que comienza en: 11
+[INFO] 01:07:26:734 BROKER/(25305:25396): Almaceno mensaje en partición que comienza en: 22
+[INFO] 01:07:26:735 BROKER/(25305:25393): Almaceno mensaje en partición que comienza en: 32
+[INFO] 01:07:26:735 BROKER/(25305:25392): Almaceno mensaje en partición que comienza en: 43
+[INFO] 01:07:33:380 BROKER/(25450:25450): Inició el Broker.
+[INFO] 01:07:40:861 BROKER/(25450:25486): Almaceno mensaje en partición que comienza en: 0
+[INFO] 01:07:40:862 BROKER/(25450:25462): Envié mensaje a suscriptor: 103 -.-
+[INFO] 01:07:42:104 BROKER/(25450:25489): Almaceno mensaje en partición que comienza en: 20
+[INFO] 01:07:42:104 BROKER/(25450:25462): Envié mensaje a suscriptor: 103 -.-
+[INFO] 01:07:43:165 BROKER/(25450:25497): Almaceno mensaje en partición que comienza en: 40
+[INFO] 01:07:43:165 BROKER/(25450:25462): Envié mensaje a suscriptor: 103 -.-
+[INFO] 01:08:18:113 BROKER/(25699:25699): Inició el Broker.
+[INFO] 01:09:02:786 BROKER/(25699:25807): Almaceno mensaje en partición que comienza en: 0
+[INFO] 01:09:02:787 BROKER/(25699:25711): Envié mensaje a suscriptor: 103 -.-
+[INFO] 01:09:10:881 BROKER/(25699:25823): Almaceno mensaje en partición que comienza en: 20
+[INFO] 01:09:50:765 BROKER/(26000:26000): Inició el Broker.
+[INFO] 01:09:56:388 BROKER/(26000:26039): Almaceno mensaje en partición que comienza en: 0
+[INFO] 01:09:56:388 BROKER/(26000:26015): Envié mensaje a suscriptor: 103 -.-
+[INFO] 01:11:16:174 BROKER/(26273:26273): Inició el Broker.
+[INFO] 01:11:18:723 BROKER/(26273:26365): Almaceno mensaje en partición que comienza en: 0
+[INFO] 01:11:18:724 BROKER/(26273:26366): Almaceno mensaje en partición que comienza en: 11
+[INFO] 01:11:18:724 BROKER/(26273:26367): Almaceno mensaje en partición que comienza en: 22
+[INFO] 01:11:18:725 BROKER/(26273:26364): Almaceno mensaje en partición que comienza en: 32
+[INFO] 01:11:18:725 BROKER/(26273:26362): Almaceno mensaje en partición que comienza en: 43
+[INFO] 01:11:28:414 BROKER/(26426:26426): Inició el Broker.
+[INFO] 01:11:32:466 BROKER/(26426:26453): Almaceno mensaje en partición que comienza en: 0
+[INFO] 01:11:32:466 BROKER/(26426:26438): Envié mensaje a suscriptor: 103 -.-
+[INFO] 01:16:13:961 BROKER/(27071:27071): Inició el Broker.
+[INFO] 01:16:18:69 BROKER/(27071:27162): Almaceno mensaje en partición que comienza en: 0
+[INFO] 01:16:18:69 BROKER/(27071:27167): Almaceno mensaje en partición que comienza en: 12
+[INFO] 01:16:18:70 BROKER/(27071:27171): Almaceno mensaje en partición que comienza en: 23
+[INFO] 01:16:18:70 BROKER/(27071:27172): Almaceno mensaje en partición que comienza en: 34
+[INFO] 01:16:18:70 BROKER/(27071:27170): Almaceno mensaje en partición que comienza en: 44
+[INFO] 01:16:27:939 BROKER/(27233:27233): Inició el Broker.
+[INFO] 01:16:35:532 BROKER/(27233:27267): Almaceno mensaje en partición que comienza en: 0
+[INFO] 01:16:35:532 BROKER/(27233:27244): Envié mensaje a suscriptor: 103 -.-
+[INFO] 01:18:23:554 BROKER/(27551:27551): Inició el Broker.
+[INFO] 01:18:25:814 BROKER/(27551:27634): Almaceno mensaje en partición que comienza en: 0
+[INFO] 01:18:25:815 BROKER/(27551:27641): Almaceno mensaje en partición que comienza en: 12
+[INFO] 01:18:25:816 BROKER/(27551:27642): Almaceno mensaje en partición que comienza en: 22
+[INFO] 01:18:25:816 BROKER/(27551:27643): Almaceno mensaje en partición que comienza en: 33
+[INFO] 01:18:25:816 BROKER/(27551:27644): Almaceno mensaje en partición que comienza en: 44
+[INFO] 01:18:37:903 BROKER/(27712:27712): Inició el Broker.
+[INFO] 01:18:40:816 BROKER/(27712:27736): Almaceno mensaje en partición que comienza en: 0
+[INFO] 01:20:01:717 BROKER/(27981:27981): Inició el Broker.
+[INFO] 01:22:01:759 BROKER/(28379:28379): Inició el Broker.
+[INFO] 01:22:07:842 BROKER/(28419:28419): Inició el Broker.
+[INFO] 01:22:10:372 BROKER/(28419:28508): Almaceno mensaje en partición que comienza en: 0
+[INFO] 01:22:10:373 BROKER/(28419:28509): Almaceno mensaje en partición que comienza en: 10
+[INFO] 01:22:10:373 BROKER/(28419:28510): Almaceno mensaje en partición que comienza en: 21
+[INFO] 01:22:10:373 BROKER/(28419:28511): Almaceno mensaje en partición que comienza en: 32
+[INFO] 01:22:10:374 BROKER/(28419:28512): Almaceno mensaje en partición que comienza en: 43
+[INFO] 01:22:19:40 BROKER/(28567:28567): Inició el Broker.
+[INFO] 01:22:22:435 BROKER/(28567:28594): Almaceno mensaje en partición que comienza en: 0
+[INFO] 01:22:22:436 BROKER/(28567:28579): Envié mensaje a suscriptor: 103 -.-
+[INFO] 01:22:25:442 BROKER/(28567:28606): Almaceno mensaje en partición que comienza en: 20
+[INFO] 01:24:05:787 BROKER/(28894:28894): Inició el Broker.
+[INFO] 01:24:08:564 BROKER/(28894:28986): Almaceno mensaje en partición que comienza en: 0
+[INFO] 01:24:08:565 BROKER/(28894:28994): Almaceno mensaje en partición que comienza en: 12
+[INFO] 01:24:08:565 BROKER/(28894:28991): Almaceno mensaje en partición que comienza en: 23
+[INFO] 01:24:08:566 BROKER/(28894:28996): Almaceno mensaje en partición que comienza en: 34
+[INFO] 01:24:08:566 BROKER/(28894:28995): Almaceno mensaje en partición que comienza en: 44
+[INFO] 01:24:26:166 BROKER/(29073:29073): Inició el Broker.
+[INFO] 01:24:34:129 BROKER/(29073:29114): Almaceno mensaje en partición que comienza en: 0
+[INFO] 01:24:34:129 BROKER/(29073:29084): Envié mensaje a suscriptor: 103 -.-
+[INFO] 01:24:35:631 BROKER/(29073:29121): Almaceno mensaje en partición que comienza en: 20
+[INFO] 01:24:35:633 BROKER/(29073:29084): Envié mensaje a suscriptor: 103 -.-
+[INFO] 01:24:37:181 BROKER/(29073:29126): Almaceno mensaje en partición que comienza en: 40
+[INFO] 01:24:41:810 BROKER/(29073:29137): Se realiza la compactacion
+[INFO] 01:24:41:810 BROKER/(29073:29137): Elimino particion que comienza en: 0
+[INFO] 01:24:41:810 BROKER/(29073:29137): Almaceno mensaje en partición que comienza en: 0
+[INFO] 01:24:41:811 BROKER/(29073:29084): Envié mensaje a suscriptor: 103 -.-
+[INFO] 01:24:45:415 BROKER/(29073:29145): Se realiza la compactacion
+[INFO] 01:24:45:415 BROKER/(29073:29145): Elimino particion que comienza en: 20
+[INFO] 01:24:45:415 BROKER/(29073:29145): Almaceno mensaje en partición que comienza en: 20
+[INFO] 01:24:45:415 BROKER/(29073:29084): Envié mensaje a suscriptor: 103 -.-
+[INFO] 01:24:48:445 BROKER/(29073:29157): Se realiza la compactacion
+[INFO] 01:24:48:445 BROKER/(29073:29157): Elimino particion que comienza en: 40
+[INFO] 01:24:48:445 BROKER/(29073:29157): Almaceno mensaje en partición que comienza en: 40
+[INFO] 01:24:48:445 BROKER/(29073:29084): Envié mensaje a suscriptor: 103 -.-
