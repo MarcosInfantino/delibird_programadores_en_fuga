@@ -38,7 +38,7 @@ void* ejecucionHiloEntrenador(void* argEntrenador){
 
 		//removeListaMutex(entrenadoresLibres,encontrarPosicionEntrenadorLibre(infoEntrenador));
 		poneteEnReady(infoEntrenador);
-
+		log_info(teamLogger2, "---------------El entrenador %i paso por aca", infoEntrenador->id);
 		entrarEnEjecucion(infoEntrenador); //despues de esto enviaria el catch, recibe id y se pone en BLOCKED
 		//IMPORTANTE: CUANDO LLEGUE LA RESPUESTA DEL CATCH SE TIENE QUE HACER UN UNLOCK AL ENTRENADOR CORRESPONDIENTE
 		sem_wait(semaforoEntrenador);//OK2 // ESPERA A QUE EL TEAM LE AVISE QUE LLEGO LA RESPUESTA DEL POKEMON QUE QUISO ATRAPAR
@@ -72,7 +72,7 @@ void entrarEnEjecucion(dataEntrenador* infoEntrenador){
 	sem_wait((infoEntrenador->semaforo)); //OK4
 	loggearPokemonAAtrapar(infoEntrenador, teamLogger);
 
-	//log_info(teamLogger2,"El entrenador %i entro en ejecución.", infoEntrenador->id);
+	log_info(teamLogger2,"El entrenador %i entro en ejecución.", infoEntrenador->id);
 
 	ponerEnEjecucion(infoEntrenador);
 	moverEntrenadorAPosicion(infoEntrenador, ((infoEntrenador->pokemonAAtrapar)->posicion));
@@ -81,11 +81,15 @@ void entrarEnEjecucion(dataEntrenador* infoEntrenador){
 	poneteEnBlocked(infoEntrenador);
 
 	recalcularEstimacion(infoEntrenador);
-	infoEntrenador->ejecucionEnPausa=false;
+
+//	infoEntrenador->ejecucionEnPausa=false;
+//	resetearSemaforo(infoEntrenador->semaforoResultadoInterrupcion);
+
+	atraparPokemonYReplanificar (infoEntrenador);
 	sem_post(&semaforoEjecucionCpu);
 
 	log_info(teamLogger2, "El entrenador %i libera la CPU por su cuenta.", infoEntrenador->id);
-	atraparPokemonYReplanificar (infoEntrenador);
+
 }
 
 void replanificarEntrenador(dataEntrenador* entrenador){
@@ -122,7 +126,7 @@ void replanificarEntrenador(dataEntrenador* entrenador){
 				if(todosLosEntrenadoresTerminaronDeAtrapar()){
 									log_info(teamLogger, "Se encontró deadlock.");
 									log_info(teamLogger2, "Entrenadores en deadlock %i.", sizeListaMutex(entrenadoresDeadlock));
-									habilitarHiloEntrenador(entrenador->id);
+									//habilitarHiloEntrenador(entrenador->id);
 									sem_post(iniciarResolucionDeadlock);
 									//resolverDeadlock();
 									}else{
@@ -221,7 +225,7 @@ void interrumpir(dataEntrenador* entrenador){
 	enviarResultadoInterrupcion(entrenador);
 //	poneteEnReady(entrenador);
 //	sem_post(&semaforoEjecucionCpu);
-	log_info(teamLogger2, "El entrenador %i fue sacado de ejecución.", entrenador->id);
+
 
 }
 
@@ -404,7 +408,8 @@ bool leFaltaCantidadDePokemones(dataEntrenador* entrenador){
 
 double obtenerEstimacion(dataEntrenador* entrenador){
 	if((entrenador->rafagaCpuAnterior)==0){
-		return (double)entrenador->estimacionAnterior;
+		log_info(teamLogger2, "CALCULO ESTIMACION");
+		return (double)entrenador->estimacionAnterior - (double) obtenerContadorRafagas(entrenador);
 	}else{
 		return ((double)(entrenador->rafagaCpuAnterior)+(entrenador->estimacionAnterior))/2 - (double)obtenerContadorRafagas(entrenador);
 	}
@@ -431,6 +436,7 @@ void actualizarRafagaAnterior(dataEntrenador* entrenador){
 void recalcularEstimacion(dataEntrenador* entrenador){
 	actualizarRafagaAnterior(entrenador);
 	entrenador->estimacionAnterior=obtenerEstimacion(entrenador);
+	log_info(teamLogger2,"La nueva estimación del entrenador %i es: %f", entrenador->id, entrenador->estimacionAnterior);
 }
 
 void retomarEjecucion(dataEntrenador* entrenador){
@@ -464,20 +470,30 @@ void entrarEnEjecucionParaDeadlock(dataEntrenador* infoEntrenador){
 
 	//actualizarRafagaAnterior(infoEntrenador);
 	recalcularEstimacion(infoEntrenador);
-	infoEntrenador->ejecucionEnPausa=false;
+
+//	infoEntrenador->ejecucionEnPausa=false;
+//	resetearSemaforo(infoEntrenador->semaforoResultadoInterrupcion);
+
 	sem_post(&semaforoEjecucionCpu);
 }
 
 void esperarHabilitacionPlanificador(dataEntrenador* entrenador){
 	switch(algoritmoPlanificacion){
 		case SJFCD:
+
 		case RR:
+
 			esperarResultadoInterrupcion(entrenador);
+
 			log_info(teamLogger2, "Al entrenador %i le llega el resultado de la interrupción.", entrenador->id);
 			if(fueInterrumpido(entrenador)){
 				poneteEnReady(entrenador);
 				sem_post(&semaforoEjecucionCpu);
+				log_info(teamLogger2, "El entrenador %i fue sacado de ejecución.", entrenador->id);
 			}
+//			else{
+//				//log_info(teamLogger2, "Al entrenador %i no lo interrumpieron", entrenador->id);
+//			}
 
 
 			sem_wait(entrenador->semaforoContinuarEjecucion);
@@ -506,11 +522,42 @@ void esperarTerminoCiclo(){
 	sem_wait(finalizacionCicloCpu);
 }
 void simularCicloCpu(uint32_t cantidadCiclos, dataEntrenador* entrenador){
+
 	for(uint32_t i=0;i<cantidadCiclos;i++){
+
+
+
 		simularUnidadCicloCpu(entrenador);
 	}
 
 }
+
+
+//void simularCicloCpuRR(uint32_t cantidadCiclos, dataEntrenador* entrenador){
+//	int32_t quantumDisponible=quantumRR;
+//	for(uint32_t i=0;i<cantidadCiclos;i++){
+//			if(quantumDisponible==0){
+//				poneteEnReady(entrenador);
+//				sem_post(&semaforoEjecucionCpu);
+//				log_info(teamLogger2, "El entrenador %i fue sacado de ejecución.", entrenador->id);
+//				sem_wait(entrenador->semaforoContinuarEjecucion);
+//			}
+//
+//
+//			simularUnidadCicloCpu(entrenador);
+//		}
+//}
+//
+//
+//void simularCicloCpu(uint32_t cantidadCiclos, dataEntrenador* entrenador){
+//
+//	switch(algoritmoPlanificacion){
+//		case FIFO:
+//		case SJF:
+//			simularCicloCpuFifo(cantidadCiclos, entrenador); break;
+//	}
+//
+//}
 
 void simularUnidadCicloCpu(dataEntrenador* entrenador){
 	pedirCicloCpu(entrenador);
@@ -524,6 +571,7 @@ void simularUnidadCicloCpu(dataEntrenador* entrenador){
 //		log_info(teamLogger2, "El entrenador %i fue sacado de ejecución.", entrenador->id);
 //		sem_wait((entrenador->semaforoContinuarEjecucion));
 //	}
+	log_info(teamLogger2, "-----------------EL ENTRENADOR %i EJECUTA UN CICLO", entrenador->id);
 	sleep(retardoCicloCpu);
 	entrenador->cantidadCiclosCpu ++;
 	incrementarContadorRafagas(entrenador);

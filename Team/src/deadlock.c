@@ -31,14 +31,16 @@ bool mismaListaPokemones(t_list* listaPokemones1, t_list* listaPokemones2){
 }
 
 bool entrenadorEnDeadlock(dataEntrenador* entrenador){ //para saber si un entrenador esta en deadlock
-	return(entrenador->estado == BLOCKED && !cumplioObjetivo(entrenador) && !leFaltaCantidadDePokemones(entrenador));
+	//return(entrenador->estado == BLOCKED && !cumplioObjetivo(entrenador) && !leFaltaCantidadDePokemones(entrenador));
+	return(!cumplioObjetivo(entrenador) && !leFaltaCantidadDePokemones(entrenador));
 }
 
 
 
 void realizarIntercambio(dataEntrenador* entrenadorQueSeMueve){
-	simularCicloCpu(5,entrenadorQueSeMueve);
+
 	log_info(teamLogger2, "El entrenador %i comienza con el intercambio con el entrenador %i.", entrenadorQueSeMueve->id, entrenadorBloqueadoParaDeadlock->id);
+	simularCicloCpu(5,entrenadorQueSeMueve);
 	t_list* pokemonesSobrantesEntrenadorBloqueado=obtenerPokemonesSobrantes(entrenadorBloqueadoParaDeadlock);
 
 	//char* pueba=(char*)list_get(pokemonesSobrantesEntrenadorBloqueado,0);

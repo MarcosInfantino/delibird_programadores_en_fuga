@@ -462,7 +462,7 @@ void liberarMemoria();
 
 void terminarPlanificador();
 
-void resetearSemaforo(sem_t* semaforo);
+//void resetearSemaforo(sem_t* semaforo);
 
 void destruirHilosEntrenadores();
 
@@ -487,5 +487,7 @@ bool yaEstaEnReserva(pokemonPosicion* poke);
 void enviarResultadoInterrupcion(dataEntrenador* entrenador);
 
 void esperarResultadoInterrupcion(dataEntrenador* entrenador);
+
+void resetearSemaforo(sem_t* semaforo);
 
 #endif /* TEAM_H_ */

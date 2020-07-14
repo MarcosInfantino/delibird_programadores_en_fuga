@@ -91,15 +91,15 @@ void ejecucionPlanificadorRR(){
 
 				if(fueInterrumpido(entrenadorAEjecutar)){
 
-					retomarEjecucion(entrenadorAEjecutar);
+					//retomarEjecucion(entrenadorAEjecutar);
 
 
 				}else{
 					ponerEnEjecucion(entrenadorAEjecutar);
 					sem_post((entrenadorAEjecutar->semaforo)); //OK1 //OK4
-					esperarPedidoCicloCpu(entrenadorAEjecutar);
+					//esperarPedidoCicloCpu(entrenadorAEjecutar);
 
-					enviarResultadoInterrupcion(entrenadorAEjecutar);
+					//enviarResultadoInterrupcion(entrenadorAEjecutar);
 				}
 
 				pthread_t hiloTimer;
@@ -109,12 +109,14 @@ void ejecucionPlanificadorRR(){
 				//ACA VA CAMBIO DE CONTEXTO
 
 				sem_wait(&semaforoEjecucionCpu);
+				log_info(teamLogger2,"le devolvieron la ejecucion al plani");
 				pthread_cancel(hiloTimer);
 
-				if(esperaPedido>0){
-					sem_post(entrenadorAEjecutar->semaforoPedidoCiclo);
-					esperaPedido--;
-					}
+//				if(esperaPedido>0){
+//					sem_post(entrenadorAEjecutar->semaforoPedidoCiclo);
+//					esperaPedido--;
+//					}
+//				resetearSemaforo(entrenadorAEjecutar->semaforoPedidoCiclo);
 
 		}
 }
@@ -169,10 +171,10 @@ void ejecucionPlanificadorSjfConDesalojo(){
 						sem_wait(&semaforoEjecucionCpu);
 						pthread_cancel(hiloVerificacionDesalojo);
 
-						if(esperaPedido>0){
-							sem_post(entrenadorAEjecutar->semaforoPedidoCiclo);
-							esperaPedido--;
-						}
+//						if(esperaPedido>0){
+//							sem_post(entrenadorAEjecutar->semaforoPedidoCiclo);
+//							esperaPedido--;
+//						}
 
 
 
@@ -222,18 +224,23 @@ dataEntrenador* obtenerEntrenadorMenorEstimacion(){
 void* verificarDesalojo(void* arg){
 	dataEntrenador* entrenador=(dataEntrenador*) arg;
 	while(1){
+		log_info(teamLogger2, "hola");
+
 			habilitarCiclo(entrenador);
 			esperarTerminoCiclo();
 			esperarPedidoCicloCpu(entrenador);
+
 			dataEntrenador* entrenadorMenorEstimacion=obtenerEntrenadorMenorEstimacion();
+
+			log_info(teamLogger2, "ESTIMACION DEL ENTRENADOR %i: %f",entrenador->id,obtenerEstimacion(entrenador) );
 
 			if(entrenadorMenorEstimacion!=NULL && obtenerEstimacion(entrenador)> obtenerEstimacion( entrenadorMenorEstimacion )){
 				interrumpir(entrenador);
+
 				log_info(teamLogger2, "interrumpo al entrendador %i ", entrenador->id);
-				return NULL;
-			}else{
 
 			}
+
 			enviarResultadoInterrupcion(entrenador);
 		}
 	return NULL;
@@ -242,21 +249,36 @@ void* verificarDesalojo(void* arg){
 
 void* setearTimer(void* arg){
 
-	uint32_t quantum=quantumRR;
+	int32_t quantum=quantumRR;
 	dataEntrenador* entrenador=(dataEntrenador*) arg;
 
 	while(quantum>0){
+		if(fueInterrumpido(entrenador)){
+
+			retomarEjecucion(entrenador);
+			log_info(teamLogger2, "IF");
+		}else{
+
+			esperarPedidoCicloCpu(entrenador);
+			enviarResultadoInterrupcion(entrenador);
+			log_info(teamLogger2, "ELSE");
+
+		}
+
 		habilitarCiclo(entrenador);
 
 		esperarTerminoCiclo();
 		quantum--;
-		esperarPedidoCicloCpu(entrenador);
+		//esperarPedidoCicloCpu(entrenador);
 
-		if(quantum>0)
-			enviarResultadoInterrupcion(entrenador);
+//		if(quantum>0){
+//			log_info(teamLogger2, "Envio interrupcion en while al entrenador %i", entrenador->id);
+//
+//		}
+
 
 	}
-
+	esperarPedidoCicloCpu(entrenador);
 	//solo sale del while si hizo un pedido de más, en caso contrario se queda esperando en el while y el hilo es terminado
 	interrumpir(entrenador);
 
@@ -298,7 +320,16 @@ void pedirCicloCpu(dataEntrenador* entrenador){
 	sem_post(entrenador->semaforoPedidoCiclo);
 	int valorSemaforo=-500;
 	sem_getvalue(entrenador->semaforoPedidoCiclo,&valorSemaforo);
-	//log_info(teamLogger2,"El entrenador %i pide un ciclo. Valor del semaforo: %i. ", entrenador->id, valorSemaforo);
+	log_info(teamLogger2,"El entrenador %i pide un ciclo. Valor del semaforo: %i. ", entrenador->id, valorSemaforo);
+}
+
+void resetearSemaforo(sem_t* semaforo){
+	int valorSemaforo=0;
+	sem_getvalue(semaforo,&valorSemaforo);
+	while(valorSemaforo>0){
+		sem_wait(semaforo);
+		valorSemaforo--;
+	}
 }
 
 int esperarPedidoCicloCpu(dataEntrenador* entrenador){

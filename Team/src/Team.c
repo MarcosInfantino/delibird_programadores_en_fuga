@@ -32,8 +32,10 @@
 //./gameboy TEAM APPEARED_POKEMON Gengar 7 5
 
 int main(int argc , char* argv[]){
+
 	char* pathConfig   = argv[1];
 	t_config* config = crearYLeerConfig(pathConfig);
+	estimacionInicial=5;
 	esperaPedido=0;
 	teamLogger = iniciar_logger(logFilePrincipal, "TEAM");
 
@@ -103,6 +105,7 @@ void crearHilos(t_config* config){
 t_config* crearYLeerConfig(char* pathConfig){
 	t_config* config   = config_create(pathConfig);
 	estimacionInicial=config_get_int_value(config, "ESTIMACION_INICIAL");
+	//log_info(teamLogger2, "ESTIMACION INICIAL= %d", estimacionInicial);
 	retardoCicloCpu    = config_get_int_value(config,"RETARDO_CICLO_CPU");
 	tiempoReconexion= config_get_int_value(config,"TIEMPO_RECONEXION");
 	puertoBroker       = config_get_int_value(config,"PUERTO_BROKER");
@@ -205,6 +208,7 @@ void gestionarBusquedaPokemon(pokemonPosicion* pokePosicion){
 			}else{
 				log_info(teamLogger2, "No hay entrenadores disponibles para atrapar a %s. ",pokePosicion->pokemon);
 				pushColaMutex(pokemonesPendientes,(void*)pokePosicion);
+
 			}
 		}else if(seEstaGestionandoCatch(pokePosicion->pokemon)){
 			log_info(teamLogger2, "se esta gestionando el catch.");
@@ -578,6 +582,7 @@ void enviarCatch(dataEntrenador* infoEntrenador){
 
 	int32_t cliente=crearSocketCliente(ipBroker,puertoBroker);
 	log_info(teamLogger2, "El entrenador %i envia el catch para el pokemon %s.", infoEntrenador->id, infoEntrenador->pokemonAAtrapar->pokemon);
+	simularCicloCpu(1,infoEntrenador);
 	if(cliente!=-1){
 
 
@@ -588,7 +593,7 @@ void enviarCatch(dataEntrenador* infoEntrenador){
 		destruirCatch(msgCatch);
 
 		if(send(cliente,paqueteSerializado, sizePaquete(paq), 0)!=-1){
-			simularCicloCpu(1,infoEntrenador);
+
 
 			log_info(teamLogger2,"El entrenador %i hace el send del catch.", infoEntrenador->id);
 
@@ -611,13 +616,13 @@ void enviarCatch(dataEntrenador* infoEntrenador){
 			}
 		}else{
 			log_info(teamLogger, "Fallo de comunicación con el Broker al enviar un catch. Se realizará la operación por default.");
-			simularCicloCpu(1,infoEntrenador);
+
 			log_info(teamLogger2,"El entrenador % i TERMINÓ DE SIMULAR EL CATCH.", infoEntrenador->id);
 			//atraparPokemonYReplanificar (infoEntrenador);
 		}
 		free(paqueteSerializado);
 	}else{
-		simularCicloCpu(1,infoEntrenador);
+
 		log_info(teamLogger2,"El entrenador % i TERMINÓ DE SIMULAR EL CATCH.", infoEntrenador->id);
 		log_info(teamLogger, "Fallo de comunicación con el Broker al enviar un catch. Se realizará la operación por default.");
 		//atraparPokemonYReplanificar (infoEntrenador);
@@ -782,7 +787,8 @@ dataTeam* inicializarTeam(t_config* config){
 		sem_init((infoEntrenador->semaforoPedidoCiclo), 0,0);
 		sem_init((infoEntrenador->semaforoResultadoInterrupcion), 0,0);
 		infoEntrenador->rafagaCpuAnterior=0;
-		infoEntrenador->estimacionAnterior=estimacionInicial;
+		//infoEntrenador->estimacionAnterior=estimacionInicial;
+		infoEntrenador->estimacionAnterior=5;
 		infoEntrenador->contadorCpu=inicializarContadorRafagas();
 		list_add(entrenadoresLibres->lista,(void*)infoEntrenador);
 		list_add(infoTeam->entrenadores,infoEntrenador);
@@ -961,14 +967,14 @@ void loggearPokemonAAtrapar(dataEntrenador* entrenador, t_log* teamLogger){
 
 
 
-void resetearSemaforo(sem_t* semaforo){
-	int32_t valor;
-	sem_getvalue(semaforo,&valor);
-	while(valor<0){
-		sem_post(semaforo);
-		valor++;
-	}
-}
+//void resetearSemaforo(sem_t* semaforo){
+//	int32_t valor;
+//	sem_getvalue(semaforo,&valor);
+//	while(valor<0){
+//		sem_post(semaforo);
+//		valor++;
+//	}
+//}
 
 
 
