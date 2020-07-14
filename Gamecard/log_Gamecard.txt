@@ -1943,3 +1943,434 @@
 [INFO] 00:34:37:731 gamecard/(30317:30868): Inicia proceso de atencion al Catch
 [INFO] 00:34:38:732 gamecard/(30317:30868): Cierro el archivo del pokemon: Espeon. Posicion: (1, 1).
 [INFO] 00:34:38:732 gamecard/(30317:30868): Inicia proceso envio Caught
+[INFO] 08:57:21:847 gamecard/(7261:7261): Inicio de programa: Gamecard.
+[INFO] 08:57:21:888 gamecard/(7261:7261): Se encontro el directorio metadata
+[INFO] 08:57:21:888 gamecard/(7261:7261): Se encontro el archivo metadata.bin
+[INFO] 08:57:21:898 gamecard/(7261:7261): Inicio de Metadata, Tamanio bloques: 64,  Cantidad de bloques: 20,  Magic number: TALL_GRASS
+[INFO] 08:57:21:913 gamecard/(7261:7268): Estoy escuchando
+[INFO] 08:57:21:913 gamecard/(7261:7268): Espero un nuevo cliente
+[INFO] 08:57:25:917 gamecard/(7261:7271): Recibi mensaje get pokemon. El pokemon es: Vaporeon. 
+
+[INFO] 08:57:25:918 gamecard/(7261:7324): Inicia proceso de atencion al Get
+[INFO] 08:57:26:920 gamecard/(7261:7271): Recibi mensaje get pokemon. El pokemon es: Espeon. 
+
+[INFO] 08:57:26:925 gamecard/(7261:7326): Inicia proceso de atencion al Get
+[INFO] 08:57:26:938 gamecard/(7261:7324): Inicia proceso envio Localized
+[INFO] 08:57:27:953 gamecard/(7261:7326): Inicia proceso envio Localized
+[INFO] 08:57:28:921 gamecard/(7261:7271): Recibi mensaje get pokemon. El pokemon es: Flareon. 
+
+[INFO] 08:57:28:932 gamecard/(7261:7334): Inicia proceso de atencion al Get
+[INFO] 08:57:29:923 gamecard/(7261:7271): Recibi mensaje get pokemon. El pokemon es: Jolteon. 
+
+[INFO] 08:57:29:929 gamecard/(7261:7340): Inicia proceso de atencion al Get
+[INFO] 08:57:29:955 gamecard/(7261:7334): Inicia proceso envio Localized
+[INFO] 08:57:30:925 gamecard/(7261:7271): Recibi mensaje get pokemon. El pokemon es: Umbreon. 
+
+[INFO] 08:57:30:928 gamecard/(7261:7343): Inicia proceso de atencion al Get
+[INFO] 08:57:30:940 gamecard/(7261:7340): Inicia proceso envio Localized
+[INFO] 08:57:31:948 gamecard/(7261:7343): Inicia proceso envio Localized
+[INFO] 08:57:39:993 gamecard/(7261:7270): Recibi mensaje catch pokemon. El pokemon es: Espeon. La posicion es: (1,1).
+
+[INFO] 08:57:39:1 gamecard/(7261:7390): Inicia proceso de atencion al Catch
+[INFO] 08:57:40:4 gamecard/(7261:7390): Cierro el archivo del pokemon: Espeon. Posicion: (1, 1).
+[INFO] 08:57:40:4 gamecard/(7261:7390): Inicia proceso envio Caught
+[INFO] 08:58:08:137 gamecard/(7261:7270): Recibi mensaje catch pokemon. El pokemon es: Vaporeon. La posicion es: (1,1).
+
+[INFO] 08:58:08:142 gamecard/(7261:7462): Inicia proceso de atencion al Catch
+[INFO] 08:58:09:148 gamecard/(7261:7462): Cierro el archivo del pokemon: Vaporeon. Posicion: (1, 1).
+[INFO] 08:58:09:148 gamecard/(7261:7462): Inicia proceso envio Caught
+[INFO] 08:58:12:145 gamecard/(7261:7270): Recibi mensaje catch pokemon. El pokemon es: Flareon. La posicion es: (1,1).
+
+[INFO] 08:58:12:158 gamecard/(7261:7480): Inicia proceso de atencion al Catch
+[INFO] 08:58:13:165 gamecard/(7261:7480): Cierro el archivo del pokemon: Flareon. Posicion: (1, 1).
+[INFO] 08:58:13:165 gamecard/(7261:7480): Inicia proceso envio Caught
+[INFO] 08:58:14:148 gamecard/(7261:7270): Recibi mensaje catch pokemon. El pokemon es: Jolteon. La posicion es: (1,1).
+
+[INFO] 08:58:14:154 gamecard/(7261:7485): Inicia proceso de atencion al Catch
+[INFO] 08:58:15:156 gamecard/(7261:7485): Cierro el archivo del pokemon: Jolteon. Posicion: (1, 1).
+[INFO] 08:58:15:156 gamecard/(7261:7485): Inicia proceso envio Caught
+[INFO] 08:58:21:209 gamecard/(7261:7270): Recibi mensaje catch pokemon. El pokemon es: Umbreon. La posicion es: (1,1).
+
+[INFO] 08:58:21:216 gamecard/(7261:7513): Inicia proceso de atencion al Catch
+[INFO] 08:58:22:217 gamecard/(7261:7513): Cierro el archivo del pokemon: Umbreon. Posicion: (1, 1).
+[INFO] 08:58:22:217 gamecard/(7261:7513): Inicia proceso envio Caught
+[INFO] 09:05:30:201 gamecard/(8616:8616): Inicio de programa: Gamecard.
+[INFO] 09:05:30:202 gamecard/(8616:8616): Se encontro el directorio metadata
+[INFO] 09:05:30:202 gamecard/(8616:8616): Se encontro el archivo metadata.bin
+[INFO] 09:05:30:202 gamecard/(8616:8616): Inicio de Metadata, Tamanio bloques: 64,  Cantidad de bloques: 20,  Magic number: TALL_GRASS
+[INFO] 09:05:39:980 gamecard/(8654:8654): Inicio de programa: Gamecard.
+[INFO] 09:05:39:980 gamecard/(8654:8654): Se encontro el directorio metadata
+[INFO] 09:05:39:980 gamecard/(8654:8654): Se encontro el archivo metadata.bin
+[INFO] 09:05:39:980 gamecard/(8654:8654): Inicio de Metadata, Tamanio bloques: 64,  Cantidad de bloques: 20,  Magic number: TALL_GRASS
+[INFO] 09:05:40:52 gamecard/(8654:8660): Estoy escuchando
+[INFO] 09:05:40:52 gamecard/(8654:8660): Espero un nuevo cliente
+[INFO] 09:05:40:61 gamecard/(8654:8663): Conexión fallida con el Broker
+
+[INFO] 09:05:40:61 gamecard/(8654:8663): Reintentando conexión en 10 segundos...
+
+[INFO] 09:05:40:65 gamecard/(8654:8662): Conexión fallida con el Broker
+
+[INFO] 09:05:40:65 gamecard/(8654:8662): Reintentando conexión en 10 segundos...
+
+[INFO] 09:05:40:68 gamecard/(8654:8661): Conexión fallida con el Broker
+
+[INFO] 09:05:40:69 gamecard/(8654:8661): Reintentando conexión en 10 segundos...
+
+[INFO] 09:05:50:61 gamecard/(8654:8663): Reintentando conexión en 10 segundos...
+
+[INFO] 09:05:50:66 gamecard/(8654:8662): Reintentando conexión en 10 segundos...
+
+[INFO] 09:05:50:69 gamecard/(8654:8661): Reintentando conexión en 10 segundos...
+
+[INFO] 09:06:00:62 gamecard/(8654:8663): El reintento de conexión no fue exitoso
+
+[INFO] 09:06:00:62 gamecard/(8654:8663): Reintentando conexión en 10 segundos...
+
+[INFO] 09:06:00:67 gamecard/(8654:8662): El reintento de conexión no fue exitoso
+
+[INFO] 09:06:00:67 gamecard/(8654:8662): Reintentando conexión en 10 segundos...
+
+[INFO] 09:06:00:71 gamecard/(8654:8661): El reintento de conexión no fue exitoso
+
+[INFO] 09:06:00:71 gamecard/(8654:8661): Reintentando conexión en 10 segundos...
+
+[INFO] 09:06:10:63 gamecard/(8654:8663): El reintento de conexión no fue exitoso
+
+[INFO] 09:06:10:63 gamecard/(8654:8663): Reintentando conexión en 10 segundos...
+
+[INFO] 09:06:10:68 gamecard/(8654:8662): El reintento de conexión no fue exitoso
+
+[INFO] 09:06:10:69 gamecard/(8654:8662): Reintentando conexión en 10 segundos...
+
+[INFO] 09:06:10:72 gamecard/(8654:8661): El reintento de conexión no fue exitoso
+
+[INFO] 09:06:10:73 gamecard/(8654:8661): Reintentando conexión en 10 segundos...
+
+[INFO] 09:06:20:64 gamecard/(8654:8663): El reintento de conexión no fue exitoso
+
+[INFO] 09:06:20:65 gamecard/(8654:8663): Reintentando conexión en 10 segundos...
+
+[INFO] 09:06:20:70 gamecard/(8654:8662): El reintento de conexión no fue exitoso
+
+[INFO] 09:06:20:70 gamecard/(8654:8662): Reintentando conexión en 10 segundos...
+
+[INFO] 09:06:20:74 gamecard/(8654:8661): El reintento de conexión no fue exitoso
+
+[INFO] 09:06:20:74 gamecard/(8654:8661): Reintentando conexión en 10 segundos...
+
+[INFO] 09:06:30:65 gamecard/(8654:8663): El reintento de conexión no fue exitoso
+
+[INFO] 09:06:30:65 gamecard/(8654:8663): Reintentando conexión en 10 segundos...
+
+[INFO] 09:06:30:70 gamecard/(8654:8662): El reintento de conexión no fue exitoso
+
+[INFO] 09:06:30:70 gamecard/(8654:8662): Reintentando conexión en 10 segundos...
+
+[INFO] 09:06:30:76 gamecard/(8654:8661): El reintento de conexión no fue exitoso
+
+[INFO] 09:06:30:76 gamecard/(8654:8661): Reintentando conexión en 10 segundos...
+
+[INFO] 09:06:40:67 gamecard/(8654:8663): El reintento de conexión no fue exitoso
+
+[INFO] 09:06:40:67 gamecard/(8654:8663): Reintentando conexión en 10 segundos...
+
+[INFO] 09:06:40:71 gamecard/(8654:8662): El reintento de conexión no fue exitoso
+
+[INFO] 09:06:40:72 gamecard/(8654:8662): Reintentando conexión en 10 segundos...
+
+[INFO] 09:06:40:77 gamecard/(8654:8661): El reintento de conexión no fue exitoso
+
+[INFO] 09:06:40:78 gamecard/(8654:8661): Reintentando conexión en 10 segundos...
+
+[INFO] 09:06:50:67 gamecard/(8654:8663): El reintento de conexión no fue exitoso
+
+[INFO] 09:06:50:68 gamecard/(8654:8663): Reintentando conexión en 10 segundos...
+
+[INFO] 09:06:50:72 gamecard/(8654:8662): El reintento de conexión no fue exitoso
+
+[INFO] 09:06:50:73 gamecard/(8654:8662): Reintentando conexión en 10 segundos...
+
+[INFO] 09:06:50:79 gamecard/(8654:8661): El reintento de conexión no fue exitoso
+
+[INFO] 09:06:50:79 gamecard/(8654:8661): Reintentando conexión en 10 segundos...
+
+[INFO] 09:07:00:68 gamecard/(8654:8663): El reintento de conexión no fue exitoso
+
+[INFO] 09:07:00:68 gamecard/(8654:8663): Reintentando conexión en 10 segundos...
+
+[INFO] 09:07:00:73 gamecard/(8654:8662): El reintento de conexión no fue exitoso
+
+[INFO] 09:07:00:73 gamecard/(8654:8662): Reintentando conexión en 10 segundos...
+
+[INFO] 09:07:00:80 gamecard/(8654:8661): El reintento de conexión no fue exitoso
+
+[INFO] 09:07:00:80 gamecard/(8654:8661): Reintentando conexión en 10 segundos...
+
+[INFO] 09:07:10:70 gamecard/(8654:8663): El reintento de conexión no fue exitoso
+
+[INFO] 09:07:10:70 gamecard/(8654:8663): Reintentando conexión en 10 segundos...
+
+[INFO] 09:07:10:74 gamecard/(8654:8662): El reintento de conexión no fue exitoso
+
+[INFO] 09:07:10:74 gamecard/(8654:8662): Reintentando conexión en 10 segundos...
+
+[INFO] 09:07:10:81 gamecard/(8654:8661): El reintento de conexión no fue exitoso
+
+[INFO] 09:07:10:81 gamecard/(8654:8661): Reintentando conexión en 10 segundos...
+
+[INFO] 09:07:17:442 gamecard/(8654:8660): Gestiono un nuevo cliente
+[INFO] 09:07:17:443 gamecard/(8654:8660): Espero un nuevo cliente
+[INFO] 09:07:17:448 gamecard/(8654:8842): Recibi mensaje new pokemon. El pokemon es: Pikachu. La posicion es: (0,0). La cantidad es: 10.
+
+[INFO] 09:07:17:448 gamecard/(8654:8842): Inicia proceso de atencion al New
+[INFO] 09:07:18:452 gamecard/(8654:8842): Cierro el archivo del pokemon: Pikachu. Posicion: (0, 0).
+[INFO] 09:07:18:452 gamecard/(8654:8842): Inicia proceso envio Appeared
+[INFO] 09:07:20:74 gamecard/(8654:8663): El reintento de conexión no fue exitoso
+
+[INFO] 09:07:20:74 gamecard/(8654:8663): Reintentando conexión en 10 segundos...
+
+[INFO] 09:07:20:76 gamecard/(8654:8662): El reintento de conexión no fue exitoso
+
+[INFO] 09:07:20:76 gamecard/(8654:8662): Reintentando conexión en 10 segundos...
+
+[INFO] 09:07:20:82 gamecard/(8654:8661): El reintento de conexión no fue exitoso
+
+[INFO] 09:07:20:82 gamecard/(8654:8661): Reintentando conexión en 10 segundos...
+
+[INFO] 09:07:30:79 gamecard/(8654:8662): El reintento de conexión no fue exitoso
+
+[INFO] 09:07:30:79 gamecard/(8654:8663): El reintento de conexión no fue exitoso
+
+[INFO] 09:07:30:79 gamecard/(8654:8662): Reintentando conexión en 10 segundos...
+
+[INFO] 09:07:30:79 gamecard/(8654:8663): Reintentando conexión en 10 segundos...
+
+[INFO] 09:07:30:83 gamecard/(8654:8661): El reintento de conexión no fue exitoso
+
+[INFO] 09:07:30:83 gamecard/(8654:8661): Reintentando conexión en 10 segundos...
+
+[INFO] 09:07:40:80 gamecard/(8654:8663): El reintento de conexión no fue exitoso
+
+[INFO] 09:07:40:80 gamecard/(8654:8663): Reintentando conexión en 10 segundos...
+
+[INFO] 09:07:40:80 gamecard/(8654:8662): El reintento de conexión no fue exitoso
+
+[INFO] 09:07:40:80 gamecard/(8654:8662): Reintentando conexión en 10 segundos...
+
+[INFO] 09:07:40:84 gamecard/(8654:8661): El reintento de conexión no fue exitoso
+
+[INFO] 09:07:40:84 gamecard/(8654:8661): Reintentando conexión en 10 segundos...
+
+[INFO] 09:07:50:82 gamecard/(8654:8662): El reintento de conexión no fue exitoso
+
+[INFO] 09:07:50:82 gamecard/(8654:8663): El reintento de conexión no fue exitoso
+
+[INFO] 09:07:50:82 gamecard/(8654:8662): Reintentando conexión en 10 segundos...
+
+[INFO] 09:07:50:82 gamecard/(8654:8663): Reintentando conexión en 10 segundos...
+
+[INFO] 09:07:50:85 gamecard/(8654:8661): El reintento de conexión no fue exitoso
+
+[INFO] 09:07:50:85 gamecard/(8654:8661): Reintentando conexión en 10 segundos...
+
+[INFO] 09:08:00:82 gamecard/(8654:8663): El reintento de conexión no fue exitoso
+
+[INFO] 09:08:00:83 gamecard/(8654:8662): El reintento de conexión no fue exitoso
+
+[INFO] 09:08:00:83 gamecard/(8654:8663): Reintentando conexión en 10 segundos...
+
+[INFO] 09:08:00:83 gamecard/(8654:8662): Reintentando conexión en 10 segundos...
+
+[INFO] 09:08:00:85 gamecard/(8654:8661): El reintento de conexión no fue exitoso
+
+[INFO] 09:08:00:88 gamecard/(8654:8661): Reintentando conexión en 10 segundos...
+
+[INFO] 09:08:09:854 gamecard/(8654:8663): El reintento de conexión no fue exitoso
+
+[INFO] 09:08:09:854 gamecard/(8654:8663): Reintentando conexión en 10 segundos...
+
+[INFO] 09:08:09:854 gamecard/(8654:8662): El reintento de conexión no fue exitoso
+
+[INFO] 09:08:09:854 gamecard/(8654:8662): Reintentando conexión en 10 segundos...
+
+[INFO] 09:08:09:858 gamecard/(8654:8661): El reintento de conexión no fue exitoso
+
+[INFO] 09:08:09:858 gamecard/(8654:8661): Reintentando conexión en 10 segundos...
+
+[INFO] 09:08:19:855 gamecard/(8654:8662): El reintento de conexión no fue exitoso
+
+[INFO] 09:08:19:855 gamecard/(8654:8663): El reintento de conexión no fue exitoso
+
+[INFO] 09:08:19:855 gamecard/(8654:8662): Reintentando conexión en 10 segundos...
+
+[INFO] 09:08:19:855 gamecard/(8654:8663): Reintentando conexión en 10 segundos...
+
+[INFO] 09:08:19:858 gamecard/(8654:8661): El reintento de conexión no fue exitoso
+
+[INFO] 09:08:19:858 gamecard/(8654:8661): Reintentando conexión en 10 segundos...
+
+[INFO] 09:08:29:855 gamecard/(8654:8663): El reintento de conexión no fue exitoso
+
+[INFO] 09:08:29:856 gamecard/(8654:8662): El reintento de conexión no fue exitoso
+
+[INFO] 09:08:29:856 gamecard/(8654:8663): Reintentando conexión en 10 segundos...
+
+[INFO] 09:08:29:856 gamecard/(8654:8662): Reintentando conexión en 10 segundos...
+
+[INFO] 09:08:29:859 gamecard/(8654:8661): El reintento de conexión no fue exitoso
+
+[INFO] 09:08:29:859 gamecard/(8654:8661): Reintentando conexión en 10 segundos...
+
+[INFO] 09:08:37:890 gamecard/(8654:8660): Gestiono un nuevo cliente
+[INFO] 09:08:37:890 gamecard/(8654:8660): Espero un nuevo cliente
+[INFO] 09:08:37:896 gamecard/(8654:9066): Recibi mensaje catch pokemon. El pokemon es: Pikachu. La posicion es: (0,0).
+
+[INFO] 09:08:37:896 gamecard/(8654:9066): Inicia proceso de atencion al Catch
+[INFO] 09:08:38:900 gamecard/(8654:9066): Cierro el archivo del pokemon: Pikachu. Posicion: (0, 0).
+[INFO] 09:08:38:900 gamecard/(8654:9066): Inicia proceso envio Caught
+[INFO] 09:08:39:856 gamecard/(8654:8662): El reintento de conexión no fue exitoso
+
+[INFO] 09:08:39:857 gamecard/(8654:8663): El reintento de conexión no fue exitoso
+
+[INFO] 09:08:39:857 gamecard/(8654:8662): Reintentando conexión en 10 segundos...
+
+[INFO] 09:08:39:857 gamecard/(8654:8663): Reintentando conexión en 10 segundos...
+
+[INFO] 09:08:39:860 gamecard/(8654:8661): El reintento de conexión no fue exitoso
+
+[INFO] 09:08:39:860 gamecard/(8654:8661): Reintentando conexión en 10 segundos...
+
+[INFO] 09:08:49:859 gamecard/(8654:8663): El reintento de conexión no fue exitoso
+
+[INFO] 09:08:49:859 gamecard/(8654:8662): El reintento de conexión no fue exitoso
+
+[INFO] 09:08:49:859 gamecard/(8654:8663): Reintentando conexión en 10 segundos...
+
+[INFO] 09:08:49:859 gamecard/(8654:8662): Reintentando conexión en 10 segundos...
+
+[INFO] 09:08:49:861 gamecard/(8654:8661): El reintento de conexión no fue exitoso
+
+[INFO] 09:08:49:861 gamecard/(8654:8661): Reintentando conexión en 10 segundos...
+
+[INFO] 09:08:59:859 gamecard/(8654:8662): El reintento de conexión no fue exitoso
+
+[INFO] 09:08:59:859 gamecard/(8654:8663): El reintento de conexión no fue exitoso
+
+[INFO] 09:08:59:859 gamecard/(8654:8662): Reintentando conexión en 10 segundos...
+
+[INFO] 09:08:59:859 gamecard/(8654:8663): Reintentando conexión en 10 segundos...
+
+[INFO] 09:08:59:861 gamecard/(8654:8661): El reintento de conexión no fue exitoso
+
+[INFO] 09:08:59:861 gamecard/(8654:8661): Reintentando conexión en 10 segundos...
+
+[INFO] 09:09:09:862 gamecard/(8654:8661): El reintento de conexión no fue exitoso
+
+[INFO] 09:09:09:862 gamecard/(8654:8663): El reintento de conexión no fue exitoso
+
+[INFO] 09:09:09:862 gamecard/(8654:8662): El reintento de conexión no fue exitoso
+
+[INFO] 09:09:09:863 gamecard/(8654:8661): Reintentando conexión en 10 segundos...
+
+[INFO] 09:09:09:863 gamecard/(8654:8662): Reintentando conexión en 10 segundos...
+
+[INFO] 09:09:09:863 gamecard/(8654:8663): Reintentando conexión en 10 segundos...
+
+[INFO] 09:09:19:863 gamecard/(8654:8661): El reintento de conexión no fue exitoso
+
+[INFO] 09:09:19:863 gamecard/(8654:8663): El reintento de conexión no fue exitoso
+
+[INFO] 09:09:19:863 gamecard/(8654:8662): El reintento de conexión no fue exitoso
+
+[INFO] 09:09:19:864 gamecard/(8654:8661): Reintentando conexión en 10 segundos...
+
+[INFO] 09:09:19:864 gamecard/(8654:8662): Reintentando conexión en 10 segundos...
+
+[INFO] 09:09:19:864 gamecard/(8654:8663): Reintentando conexión en 10 segundos...
+
+[INFO] 09:12:37:957 gamecard/(9700:9700): Inicio de programa: Gamecard.
+[INFO] 09:12:37:957 gamecard/(9700:9700): Se encontro el directorio metadata
+[INFO] 09:12:37:957 gamecard/(9700:9700): Se encontro el archivo metadata.bin
+[INFO] 09:12:37:957 gamecard/(9700:9700): Inicio de Metadata, Tamanio bloques: 64,  Cantidad de bloques: 20,  Magic number: TALL_GRASS
+[INFO] 09:12:38:37 gamecard/(9700:9706): Estoy escuchando
+[INFO] 09:12:38:37 gamecard/(9700:9706): Espero un nuevo cliente
+[INFO] 09:12:38:40 gamecard/(9700:9709): Conexión fallida con el Broker
+
+[INFO] 09:12:38:40 gamecard/(9700:9709): Reintentando conexión en 10 segundos...
+
+[INFO] 09:12:38:41 gamecard/(9700:9708): Conexión fallida con el Broker
+
+[INFO] 09:12:38:41 gamecard/(9700:9708): Reintentando conexión en 10 segundos...
+
+[INFO] 09:12:38:41 gamecard/(9700:9707): Conexión fallida con el Broker
+
+[INFO] 09:12:38:41 gamecard/(9700:9707): Reintentando conexión en 10 segundos...
+
+[INFO] 09:12:42:72 gamecard/(9700:9706): Gestiono un nuevo cliente
+[INFO] 09:12:42:72 gamecard/(9700:9706): Espero un nuevo cliente
+[INFO] 09:12:42:76 gamecard/(9700:9721): Recibi mensaje new pokemon. El pokemon es: Pikachu. La posicion es: (0,0). La cantidad es: 10.
+
+[INFO] 09:12:42:76 gamecard/(9700:9721): Inicia proceso de atencion al New
+[INFO] 09:12:43:82 gamecard/(9700:9721): Cierro el archivo del pokemon: Pikachu. Posicion: (0, 0).
+[INFO] 09:12:43:82 gamecard/(9700:9721): Inicia proceso envio Appeared
+[INFO] 09:12:48:41 gamecard/(9700:9709): Reintentando conexión en 10 segundos...
+
+[INFO] 09:12:48:41 gamecard/(9700:9708): Reintentando conexión en 10 segundos...
+
+[INFO] 09:12:48:41 gamecard/(9700:9707): Reintentando conexión en 10 segundos...
+
+[INFO] 09:12:55:382 gamecard/(9700:9706): Gestiono un nuevo cliente
+[INFO] 09:12:55:382 gamecard/(9700:9706): Espero un nuevo cliente
+[INFO] 09:12:55:387 gamecard/(9700:9746): Recibi mensaje catch pokemon. El pokemon es: Pikachu. La posicion es: (0,0).
+
+[INFO] 09:12:55:387 gamecard/(9700:9746): Inicia proceso de atencion al Catch
+[INFO] 09:12:56:389 gamecard/(9700:9746): Cierro el archivo del pokemon: Pikachu. Posicion: (0, 0).
+[INFO] 09:12:56:389 gamecard/(9700:9746): Inicia proceso envio Caught
+[INFO] 09:12:58:46 gamecard/(9700:9707): El reintento de conexión no fue exitoso
+
+[INFO] 09:12:58:46 gamecard/(9700:9707): Reintentando conexión en 10 segundos...
+
+[INFO] 09:12:58:46 gamecard/(9700:9708): El reintento de conexión no fue exitoso
+
+[INFO] 09:12:58:46 gamecard/(9700:9708): Reintentando conexión en 10 segundos...
+
+[INFO] 09:12:58:47 gamecard/(9700:9709): El reintento de conexión no fue exitoso
+
+[INFO] 09:12:58:47 gamecard/(9700:9709): Reintentando conexión en 10 segundos...
+
+[INFO] 09:13:08:46 gamecard/(9700:9707): El reintento de conexión no fue exitoso
+
+[INFO] 09:13:08:46 gamecard/(9700:9708): El reintento de conexión no fue exitoso
+
+[INFO] 09:13:08:47 gamecard/(9700:9709): El reintento de conexión no fue exitoso
+
+[INFO] 09:13:08:48 gamecard/(9700:9707): Reintentando conexión en 10 segundos...
+
+[INFO] 09:13:08:48 gamecard/(9700:9709): Reintentando conexión en 10 segundos...
+
+[INFO] 09:13:08:48 gamecard/(9700:9708): Reintentando conexión en 10 segundos...
+
+[INFO] 09:13:17:713 gamecard/(9700:9708): El reintento de conexión no fue exitoso
+
+[INFO] 09:13:17:713 gamecard/(9700:9708): Reintentando conexión en 10 segundos...
+
+[INFO] 09:13:17:714 gamecard/(9700:9709): El reintento de conexión no fue exitoso
+
+[INFO] 09:13:17:714 gamecard/(9700:9707): El reintento de conexión no fue exitoso
+
+[INFO] 09:13:17:714 gamecard/(9700:9709): Reintentando conexión en 10 segundos...
+
+[INFO] 09:13:17:714 gamecard/(9700:9707): Reintentando conexión en 10 segundos...
+
+[INFO] 09:13:27:714 gamecard/(9700:9708): El reintento de conexión no fue exitoso
+
+[INFO] 09:13:27:714 gamecard/(9700:9708): Reintentando conexión en 10 segundos...
+
+[INFO] 09:13:27:715 gamecard/(9700:9707): El reintento de conexión no fue exitoso
+
+[INFO] 09:13:27:715 gamecard/(9700:9707): Reintentando conexión en 10 segundos...
+
+[INFO] 09:13:27:715 gamecard/(9700:9709): El reintento de conexión no fue exitoso
+
+[INFO] 09:13:27:715 gamecard/(9700:9709): Reintentando conexión en 10 segundos...
+

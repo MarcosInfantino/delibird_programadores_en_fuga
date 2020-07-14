@@ -92,6 +92,7 @@ struct nodoMemoria* nodoRaizMemoria;
 listaMutex* particionesOcupadas;
 listaMutex* particionesLibres;
 listaMutex* nodosOcupados;
+listaMutex* idsMensajesYaRespondidos;
 
 uint32_t auxTamanioStreamGlobal;
 
@@ -158,5 +159,8 @@ void removerDeListaOcupados(struct nodoMemoria* nodo);
 bool tiempoDeCargaMenor(struct nodoMemoria* nodo, struct nodoMemoria* otroNodo);
 bool tiempoDeUsoMenor(struct nodoMemoria* nodo, struct nodoMemoria* otroNodo);
 void evaluarConsolidacion(struct nodoMemoria* nodo);
+
+bool yaSeEnvioEstaRespuesta(paquete* paq);
+void agregarRespuestaARespuestasEnviadas(paquete* paq);
 
 #endif /* MEMORIA_H_ */

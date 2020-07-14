@@ -81,8 +81,11 @@ void entrarEnEjecucion(dataEntrenador* infoEntrenador){
 	poneteEnBlocked(infoEntrenador);
 
 	recalcularEstimacion(infoEntrenador);
+	infoEntrenador->ejecucionEnPausa=false;
 	sem_post(&semaforoEjecucionCpu);
+
 	log_info(teamLogger2, "El entrenador %i libera la CPU por su cuenta.", infoEntrenador->id);
+	atraparPokemonYReplanificar (infoEntrenador);
 }
 
 void replanificarEntrenador(dataEntrenador* entrenador){
@@ -106,18 +109,39 @@ void replanificarEntrenador(dataEntrenador* entrenador){
 		if(cumplioObjetivo(entrenador)){
 			log_info(teamLogger2, "El entrenador %i cumplio su objetivo.", entrenador->id);
 			poneteEnExit(entrenador);
-			habilitarHiloEntrenador(entrenador->id); //preguntar si aca se mata el hilo
+			//habilitarHiloEntrenador(entrenador->id); //preguntar si aca se mata el hilo
 			//addListaMutex(entrenadoresExit, (void*)entrenador);
+
+
 			if(objetivoCumplido()){
 				sem_post(semaforoObjetivoCumplido);
+			}else{
+				//log_info(teamLogger2, "El entrenador %i forma parte de un interbloqueo.", entrenador->id);
+				log_info(teamLogger2, "Inicio del algoritmo de detección de deadlock.");
+				log_info(teamLogger, "Inicio del algoritmo de detección de deadlock.");
+				if(todosLosEntrenadoresTerminaronDeAtrapar()){
+									log_info(teamLogger, "Se encontró deadlock.");
+									log_info(teamLogger2, "Entrenadores en deadlock %i.", sizeListaMutex(entrenadoresDeadlock));
+									habilitarHiloEntrenador(entrenador->id);
+									sem_post(iniciarResolucionDeadlock);
+									//resolverDeadlock();
+									}else{
+										//habilitarHiloEntrenador(entrenador->id);
+										log_info(teamLogger, "No se encontró deadlock.");
+										log_info(teamLogger2, "No se encontró deadlock.");
+									}
+
+
 			}
 			}else{	//DEADLOCK
 				log_info(teamLogger2, "El entrenador %i forma parte de un interbloqueo.", entrenador->id);
 				log_info(teamLogger2, "Inicio del algoritmo de detección de deadlock.");
 				log_info(teamLogger, "Inicio del algoritmo de detección de deadlock.");
 				addListaMutex(entrenadoresDeadlock, (void*) entrenador);
+
 				if(todosLosEntrenadoresTerminaronDeAtrapar()){
 					log_info(teamLogger, "Se encontró deadlock.");
+					log_info(teamLogger2, "Entrenadores en deadlock %i.", sizeListaMutex(entrenadoresDeadlock));
 					habilitarHiloEntrenador(entrenador->id);
 					sem_post(iniciarResolucionDeadlock);
 					//resolverDeadlock();
@@ -192,9 +216,11 @@ bool estaBloqueado(dataEntrenador* entrenador){
 }
 
 void interrumpir(dataEntrenador* entrenador){
+	log_info(teamLogger2, "INTERRUMPO A %i", entrenador->id);
 	guardarContexto(entrenador);
-	poneteEnReady(entrenador);
-	sem_post(&semaforoEjecucionCpu);
+	enviarResultadoInterrupcion(entrenador);
+//	poneteEnReady(entrenador);
+//	sem_post(&semaforoEjecucionCpu);
 	log_info(teamLogger2, "El entrenador %i fue sacado de ejecución.", entrenador->id);
 
 }
@@ -438,6 +464,7 @@ void entrarEnEjecucionParaDeadlock(dataEntrenador* infoEntrenador){
 
 	//actualizarRafagaAnterior(infoEntrenador);
 	recalcularEstimacion(infoEntrenador);
+	infoEntrenador->ejecucionEnPausa=false;
 	sem_post(&semaforoEjecucionCpu);
 }
 
@@ -445,6 +472,14 @@ void esperarHabilitacionPlanificador(dataEntrenador* entrenador){
 	switch(algoritmoPlanificacion){
 		case SJFCD:
 		case RR:
+			esperarResultadoInterrupcion(entrenador);
+			log_info(teamLogger2, "Al entrenador %i le llega el resultado de la interrupción.", entrenador->id);
+			if(fueInterrumpido(entrenador)){
+				poneteEnReady(entrenador);
+				sem_post(&semaforoEjecucionCpu);
+			}
+
+
 			sem_wait(entrenador->semaforoContinuarEjecucion);
 			break;
 		default:

@@ -36,7 +36,7 @@ int main(int argc, char* argv[]) {
 	uint32_t sizeStream, procesoDestinatario;
 	uint32_t colaMensaje = obtenerColaMensaje(argv[2]);
 
-	printf("id del gameboy: %i\n", idProcesoGameboy);
+
 	if(strcmp(argv[1], "SUSCRIPTOR") == 0){
 		procesoDestinatario 					= BROKER;
 		mensajeSuscripcionTiempo* mensajeEnviar = llenarSuscripcionTiempo(colaMensaje, atoi(argv[3]), idProcesoGameboy);

@@ -65,7 +65,7 @@
 //
 //	return 0;
 //}
-uint32_t puertoGamecardGC = 5001;
+
 //
 
 int main(void) {
@@ -106,6 +106,7 @@ t_config* crearYleerConfig(){
 	tiempoReconexionGC = config_get_int_value(configGamecard, "TIEMPO_DE_REINTENTO_CONEXION");
 	pathLoggerPrincipal=config_get_string_value(configGamecard, "LOG_FILE");
 	idProcesoGamecard = config_get_int_value(configGamecard, "ID_PROCESO");
+	puertoGamecardGC=config_get_int_value(configGamecard, "PUERTO_GAMECARD");
 	return configGamecard;
 }
 

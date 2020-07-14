@@ -507,6 +507,7 @@ void actualizarPosicionesArchivo(archivoHeader* archivo, t_list* listaPosicionCa
 }
 
 void reiniciarArchivoBloque(uint32_t idBloque){
+	remove(pathBloque(idBloque));
 
 	FILE* archivoBloque = fopen(pathBloque(idBloque),"w+");
 	fclose(archivoBloque);

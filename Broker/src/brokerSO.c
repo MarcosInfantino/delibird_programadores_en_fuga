@@ -32,6 +32,7 @@
 //}
 
 int main(void) {
+	idsMensajesYaRespondidos=inicializarListaMutex();
 	iteraciones = 0;
 	TC=0;
     brokerLogger2 = log_create("brokerLoggerSecundario.log", "Broker", true, LOG_LEVEL_INFO);
@@ -221,7 +222,10 @@ void meterEnCola( colaMensajes* structCola, paquete * paq, uint32_t  socket){
 	pthread_mutex_unlock(contador.mutexContador);
 	registrarMensajeEnMemoria(paq, algoritmoMemoria);
 	log_info(brokerLogger2,"Terminó de registrar el mensaje en memoria.");
-	pushColaMutex(structCola->cola, (void *) paq);
+	if(!yaSeEnvioEstaRespuesta(paq)){
+		pushColaMutex(structCola->cola, (void *) paq);
+	}
+
 
 	log_info(brokerLogger2,"Aviso que hay mensajes en cola.");
 	sem_post(structCola->mensajesEnCola);
@@ -250,7 +254,7 @@ void * chequearMensajesEnCola(void * colaVoid){
 		sem_wait(cola->mensajesEnCola);
 		paquete* paq = (paquete*) popColaMutex(cola->cola);
 		log_info(brokerLogger2,"Envio el mensaje a los suscriptores de la cola: %s", nombreDeCola(paq->tipoMensaje));
-
+		agregarRespuestaARespuestasEnviadas(paq);
 		void * paqSerializado = serializarPaquete(paq);
 
 		for(i = 0; i < sizeListaMutex(cola->suscriptores) ;i ++){
@@ -365,4 +369,24 @@ void definirAlgoritmo(algoritmoParameter parAlgoritmo, uint32_t * varInt){
 		}else{
 			printf("%s", parAlgoritmo.error);
 		}
+}
+
+bool yaSeEnvioEstaRespuesta(paquete* paq){
+	if(paq->idCorrelativo!=0){
+		for(uint32_t i=0;i<sizeListaMutex(idsMensajesYaRespondidos);i++){
+			uint32_t* idActual= (uint32_t*) getListaMutex(idsMensajesYaRespondidos,i);
+			if(*idActual==paq->idCorrelativo){
+				return true;
+			}
+		}
+	}
+	return false;
+}
+
+void agregarRespuestaARespuestasEnviadas(paquete* paq){
+	if(paq->idCorrelativo!=0){
+		uint32_t* id=malloc(sizeof(uint32_t));
+		*id=paq->idCorrelativo;
+		addListaMutex(idsMensajesYaRespondidos, (void*)id);
+	}
 }

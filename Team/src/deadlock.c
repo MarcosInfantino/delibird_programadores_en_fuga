@@ -38,7 +38,7 @@ bool entrenadorEnDeadlock(dataEntrenador* entrenador){ //para saber si un entren
 
 void realizarIntercambio(dataEntrenador* entrenadorQueSeMueve){
 	simularCicloCpu(5,entrenadorQueSeMueve);
-	log_info(teamLogger2, "El entrenador %i comienza con el intercambio.", entrenadorQueSeMueve->id);
+	log_info(teamLogger2, "El entrenador %i comienza con el intercambio con el entrenador %i.", entrenadorQueSeMueve->id, entrenadorBloqueadoParaDeadlock->id);
 	t_list* pokemonesSobrantesEntrenadorBloqueado=obtenerPokemonesSobrantes(entrenadorBloqueadoParaDeadlock);
 
 	//char* pueba=(char*)list_get(pokemonesSobrantesEntrenadorBloqueado,0);
@@ -224,7 +224,7 @@ void resolverEsperaCircular(t_list* entrenadoresEsperaCircular){
 	for(uint32_t i=0; i<list_size(entrenadoresEsperaCircular)-1;i++){
 
 		entrenadorBloqueadoParaDeadlock=(dataEntrenador*) list_get(entrenadoresEsperaCircular,i);
-
+		log_info(teamLogger2, "Espera circular. Entrenador bloqueado: %i.", entrenadorBloqueadoParaDeadlock->id);
 		listaMutex* listaMutexEntrenadoresEsperaCircular= convertirAListaMutex(entrenadoresEsperaCircular);
 		t_list* listaPokemonesSobrantes=obtenerPokemonesSobrantesTeam(listaMutexEntrenadoresEsperaCircular);
 
@@ -250,6 +250,9 @@ void resolverEsperaCircular(t_list* entrenadoresEsperaCircular){
 		(team->cantidadDeadlocksResueltos)++;
 
 		list_destroy_and_destroy_elements(listaPokemonesSobrantes,destruirPokemonSobrante);
+
+
+
 		//free(pokeSobrante);
 
 

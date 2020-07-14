@@ -612,13 +612,15 @@ void enviarCatch(dataEntrenador* infoEntrenador){
 		}else{
 			log_info(teamLogger, "Fallo de comunicación con el Broker al enviar un catch. Se realizará la operación por default.");
 			simularCicloCpu(1,infoEntrenador);
-			atraparPokemonYReplanificar (infoEntrenador);
+			log_info(teamLogger2,"El entrenador % i TERMINÓ DE SIMULAR EL CATCH.", infoEntrenador->id);
+			//atraparPokemonYReplanificar (infoEntrenador);
 		}
 		free(paqueteSerializado);
 	}else{
 		simularCicloCpu(1,infoEntrenador);
+		log_info(teamLogger2,"El entrenador % i TERMINÓ DE SIMULAR EL CATCH.", infoEntrenador->id);
 		log_info(teamLogger, "Fallo de comunicación con el Broker al enviar un catch. Se realizará la operación por default.");
-		atraparPokemonYReplanificar (infoEntrenador);
+		//atraparPokemonYReplanificar (infoEntrenador);
 	}
 
 	close(cliente);
@@ -774,9 +776,11 @@ dataTeam* inicializarTeam(t_config* config){
 		infoEntrenador->semaforo=malloc(sizeof(sem_t));
 		infoEntrenador->semaforoContinuarEjecucion=malloc(sizeof(sem_t));
 		infoEntrenador->semaforoPedidoCiclo=malloc(sizeof(sem_t));
+		infoEntrenador->semaforoResultadoInterrupcion=malloc(sizeof(sem_t));
 		sem_init((infoEntrenador->semaforo), 0,0);
 		sem_init((infoEntrenador->semaforoContinuarEjecucion), 0,0);
 		sem_init((infoEntrenador->semaforoPedidoCiclo), 0,0);
+		sem_init((infoEntrenador->semaforoResultadoInterrupcion), 0,0);
 		infoEntrenador->rafagaCpuAnterior=0;
 		infoEntrenador->estimacionAnterior=estimacionInicial;
 		infoEntrenador->contadorCpu=inicializarContadorRafagas();

@@ -90,6 +90,7 @@ void ejecucionPlanificadorRR(){
 				log_info(teamLogger2, "Elijo al entrenador %i para ejecutar.", entrenadorAEjecutar->id);
 
 				if(fueInterrumpido(entrenadorAEjecutar)){
+
 					retomarEjecucion(entrenadorAEjecutar);
 
 
@@ -97,6 +98,8 @@ void ejecucionPlanificadorRR(){
 					ponerEnEjecucion(entrenadorAEjecutar);
 					sem_post((entrenadorAEjecutar->semaforo)); //OK1 //OK4
 					esperarPedidoCicloCpu(entrenadorAEjecutar);
+
+					enviarResultadoInterrupcion(entrenadorAEjecutar);
 				}
 
 				pthread_t hiloTimer;
@@ -154,6 +157,7 @@ void ejecucionPlanificadorSjfConDesalojo(){
 								ponerEnEjecucion(entrenadorAEjecutar);
 								sem_post((entrenadorAEjecutar->semaforo));
 								esperarPedidoCicloCpu(entrenadorAEjecutar);
+								enviarResultadoInterrupcion(entrenadorAEjecutar);
 								log_info(teamLogger2, "Le llego el pedido de ciclo del entrenador %i al planificador. ", entrenadorAEjecutar->id);
 						}
 
@@ -227,8 +231,10 @@ void* verificarDesalojo(void* arg){
 				interrumpir(entrenador);
 				log_info(teamLogger2, "interrumpo al entrendador %i ", entrenador->id);
 				return NULL;
-			}
+			}else{
 
+			}
+			enviarResultadoInterrupcion(entrenador);
 		}
 	return NULL;
 
@@ -246,12 +252,24 @@ void* setearTimer(void* arg){
 		quantum--;
 		esperarPedidoCicloCpu(entrenador);
 
+		if(quantum>0)
+			enviarResultadoInterrupcion(entrenador);
+
 	}
 
 	//solo sale del while si hizo un pedido de más, en caso contrario se queda esperando en el while y el hilo es terminado
 	interrumpir(entrenador);
 
 	return NULL;
+}
+
+void enviarResultadoInterrupcion(dataEntrenador* entrenador){
+	sem_post(entrenador->semaforoResultadoInterrupcion);
+	log_info(teamLogger2, "Envié el resultado de interrupción al entrenador %i", entrenador->id);
+}
+
+void esperarResultadoInterrupcion(dataEntrenador* entrenador){
+	sem_wait(entrenador->semaforoResultadoInterrupcion);
 }
 
 void obtenerAlgoritmoPlanificacion(t_config* config){

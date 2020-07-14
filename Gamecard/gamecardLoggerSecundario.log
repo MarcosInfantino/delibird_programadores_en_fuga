@@ -51046,3 +51046,432 @@ HolacomoAndas
 [INFO] 00:34:37:731 gamecard/(30317:30868): Size lista antes de comprobar:1
 [INFO] 00:34:37:731 gamecard/(30317:30868): Reemplazo
 [INFO] 00:34:37:732 gamecard/(30317:30868): Size lista despues de comprobar:1
+[INFO] 08:57:21:911 gamecard/(7261:7269): Voy a llenar el paquete
+[INFO] 08:57:21:913 gamecard/(7261:7271): Voy a llenar el paquete
+[INFO] 08:57:21:921 gamecard/(7261:7269): cliente: 7
+[INFO] 08:57:21:913 gamecard/(7261:7270): Voy a llenar el paquete
+[INFO] 08:57:21:921 gamecard/(7261:7271): cliente: 8
+[INFO] 08:57:21:922 gamecard/(7261:7270): cliente: 9
+[INFO] 08:57:25:918 gamecard/(7261:7324): deserializado
+[INFO] 08:57:25:918 gamecard/(7261:7324): Atiendo Get del pokemon: Vaporeon
+[INFO] 08:57:25:918 gamecard/(7261:7324): EXISTE
+[INFO] 08:57:25:936 gamecard/(7261:7324): empiezo con los bloques Vaporeon
+[INFO] 08:57:25:936 gamecard/(7261:7324): termino con los bloques Vaporeon
+[INFO] 08:57:25:937 gamecard/(7261:7324): Posicion en la lectura del bloque 1: 12
+[INFO] 08:57:25:937 gamecard/(7261:7324): LECTURA BLOQUE: 1-1=8
+0-0=0
+.
+[INFO] 08:57:25:937 gamecard/(7261:7324): LecturaArchivo: 1-1=8
+0-0=0
+.
+[INFO] 08:57:25:937 gamecard/(7261:7324): char*posiciones: 1-1=8
+0-0=0
+
+[INFO] 08:57:25:937 gamecard/(7261:7324): BUFFER FUNCION LISTA STRING: 1-1=8
+[INFO] 08:57:25:937 gamecard/(7261:7324): BUFFER FUNCION LISTA STRING: 0-0=0
+[INFO] 08:57:25:937 gamecard/(7261:7324): I DE LA FUNCION DE LISTAS: 0
+[INFO] 08:57:25:937 gamecard/(7261:7324): I DE LA FUNCION DE LISTAS: 1
+[INFO] 08:57:25:937 gamecard/(7261:7324): CANTIDAD POSICIONES 2
+[INFO] 08:57:25:937 gamecard/(7261:7324): Entro a conseguirPosicionesCantidad
+[INFO] 08:57:25:937 gamecard/(7261:7324): Localized. Pos x: 1. Pos y: 1.
+[INFO] 08:57:25:937 gamecard/(7261:7324): Localized. Pos x: 1397706784. Pos y: 1330201417.
+[INFO] 08:57:26:925 gamecard/(7261:7326): deserializado
+[INFO] 08:57:26:925 gamecard/(7261:7326): Atiendo Get del pokemon: Espeon
+[INFO] 08:57:26:925 gamecard/(7261:7326): EXISTE
+[INFO] 08:57:26:935 gamecard/(7261:7326): empiezo con los bloques Espeon
+[INFO] 08:57:26:935 gamecard/(7261:7326): termino con los bloques Espeon
+[INFO] 08:57:26:938 gamecard/(7261:7324): Pokemon:Vaporeon
+[INFO] 08:57:26:938 gamecard/(7261:7324): Cantidad de Posiciones:2
+[INFO] 08:57:26:938 gamecard/(7261:7324): Posicion: 1-1
+[INFO] 08:57:26:938 gamecard/(7261:7324): Posicion: 1397706784-1330201417
+[INFO] 08:57:26:938 gamecard/(7261:7324): Recibi mensaje localized. El pokemon es: Vaporeon. La cantidad es: 2.
+
+[INFO] 08:57:26:938 gamecard/(7261:7324): Las posiciones son: 
+[INFO] 08:57:26:938 gamecard/(7261:7324): (1,1)
+[INFO] 08:57:26:938 gamecard/(7261:7324): (1397706784,1330201417)
+[INFO] 08:57:26:950 gamecard/(7261:7326): Posicion en la lectura del bloque 5: 6
+[INFO] 08:57:26:951 gamecard/(7261:7326): LECTURA BLOQUE: 1-1=6
+.
+[INFO] 08:57:26:951 gamecard/(7261:7326): LecturaArchivo: 1-1=6
+.
+[INFO] 08:57:26:951 gamecard/(7261:7326): char*posiciones: 1-1=6
+
+[INFO] 08:57:26:951 gamecard/(7261:7326): BUFFER FUNCION LISTA STRING: 1-1=6
+[INFO] 08:57:26:951 gamecard/(7261:7326): I DE LA FUNCION DE LISTAS: 0
+[INFO] 08:57:26:951 gamecard/(7261:7326): CANTIDAD POSICIONES 1
+[INFO] 08:57:26:951 gamecard/(7261:7326): Entro a conseguirPosicionesCantidad
+[INFO] 08:57:26:951 gamecard/(7261:7326): Localized. Pos x: 1. Pos y: 1.
+[INFO] 08:57:27:953 gamecard/(7261:7326): Pokemon:Espeon
+[INFO] 08:57:27:953 gamecard/(7261:7326): Cantidad de Posiciones:1
+[INFO] 08:57:27:953 gamecard/(7261:7326): Posicion: 1-1
+[INFO] 08:57:27:953 gamecard/(7261:7326): Recibi mensaje localized. El pokemon es: Espeon. La cantidad es: 1.
+
+[INFO] 08:57:27:953 gamecard/(7261:7326): Las posiciones son: 
+[INFO] 08:57:27:953 gamecard/(7261:7326): (1,1)
+[INFO] 08:57:28:932 gamecard/(7261:7334): deserializado
+[INFO] 08:57:28:932 gamecard/(7261:7334): Atiendo Get del pokemon: Flareon
+[INFO] 08:57:28:932 gamecard/(7261:7334): EXISTE
+[INFO] 08:57:28:952 gamecard/(7261:7334): empiezo con los bloques Flareon
+[INFO] 08:57:28:952 gamecard/(7261:7334): termino con los bloques Flareon
+[INFO] 08:57:28:953 gamecard/(7261:7334): Posicion en la lectura del bloque 3: 6
+[INFO] 08:57:28:953 gamecard/(7261:7334): LECTURA BLOQUE: 1-1=6
+.
+[INFO] 08:57:28:953 gamecard/(7261:7334): LecturaArchivo: 1-1=6
+.
+[INFO] 08:57:28:953 gamecard/(7261:7334): char*posiciones: 1-1=6
+
+[INFO] 08:57:28:953 gamecard/(7261:7334): BUFFER FUNCION LISTA STRING: 1-1=6
+[INFO] 08:57:28:953 gamecard/(7261:7334): I DE LA FUNCION DE LISTAS: 0
+[INFO] 08:57:28:953 gamecard/(7261:7334): CANTIDAD POSICIONES 1
+[INFO] 08:57:28:953 gamecard/(7261:7334): Entro a conseguirPosicionesCantidad
+[INFO] 08:57:28:953 gamecard/(7261:7334): Localized. Pos x: 1. Pos y: 1.
+[INFO] 08:57:29:929 gamecard/(7261:7340): deserializado
+[INFO] 08:57:29:929 gamecard/(7261:7340): Atiendo Get del pokemon: Jolteon
+[INFO] 08:57:29:929 gamecard/(7261:7340): EXISTE
+[INFO] 08:57:29:938 gamecard/(7261:7340): empiezo con los bloques Jolteon
+[INFO] 08:57:29:939 gamecard/(7261:7340): termino con los bloques Jolteon
+[INFO] 08:57:29:939 gamecard/(7261:7340): Posicion en la lectura del bloque 2: 6
+[INFO] 08:57:29:939 gamecard/(7261:7340): LECTURA BLOQUE: 1-1=6
+.
+[INFO] 08:57:29:939 gamecard/(7261:7340): LecturaArchivo: 1-1=6
+.
+[INFO] 08:57:29:939 gamecard/(7261:7340): char*posiciones: 1-1=6
+
+[INFO] 08:57:29:939 gamecard/(7261:7340): BUFFER FUNCION LISTA STRING: 1-1=6
+[INFO] 08:57:29:939 gamecard/(7261:7340): I DE LA FUNCION DE LISTAS: 0
+[INFO] 08:57:29:939 gamecard/(7261:7340): CANTIDAD POSICIONES 1
+[INFO] 08:57:29:939 gamecard/(7261:7340): Entro a conseguirPosicionesCantidad
+[INFO] 08:57:29:939 gamecard/(7261:7340): Localized. Pos x: 1. Pos y: 1.
+[INFO] 08:57:29:954 gamecard/(7261:7334): Pokemon:Flareon
+[INFO] 08:57:29:954 gamecard/(7261:7334): Cantidad de Posiciones:1
+[INFO] 08:57:29:955 gamecard/(7261:7334): Posicion: 1-1
+[INFO] 08:57:29:955 gamecard/(7261:7334): Recibi mensaje localized. El pokemon es: Flareon. La cantidad es: 1.
+
+[INFO] 08:57:29:955 gamecard/(7261:7334): Las posiciones son: 
+[INFO] 08:57:29:955 gamecard/(7261:7334): (1,1)
+[INFO] 08:57:30:928 gamecard/(7261:7343): deserializado
+[INFO] 08:57:30:929 gamecard/(7261:7343): Atiendo Get del pokemon: Umbreon
+[INFO] 08:57:30:929 gamecard/(7261:7343): EXISTE
+[INFO] 08:57:30:936 gamecard/(7261:7343): empiezo con los bloques Umbreon
+[INFO] 08:57:30:936 gamecard/(7261:7343): termino con los bloques Umbreon
+[INFO] 08:57:30:940 gamecard/(7261:7340): Pokemon:Jolteon
+[INFO] 08:57:30:940 gamecard/(7261:7340): Cantidad de Posiciones:1
+[INFO] 08:57:30:940 gamecard/(7261:7340): Posicion: 1-1
+[INFO] 08:57:30:940 gamecard/(7261:7340): Recibi mensaje localized. El pokemon es: Jolteon. La cantidad es: 1.
+
+[INFO] 08:57:30:940 gamecard/(7261:7340): Las posiciones son: 
+[INFO] 08:57:30:940 gamecard/(7261:7340): (1,1)
+[INFO] 08:57:30:948 gamecard/(7261:7343): Posicion en la lectura del bloque 4: 6
+[INFO] 08:57:30:948 gamecard/(7261:7343): LECTURA BLOQUE: 1-1=6
+.
+[INFO] 08:57:30:948 gamecard/(7261:7343): LecturaArchivo: 1-1=6
+.
+[INFO] 08:57:30:948 gamecard/(7261:7343): char*posiciones: 1-1=6
+
+[INFO] 08:57:30:948 gamecard/(7261:7343): BUFFER FUNCION LISTA STRING: 1-1=6
+[INFO] 08:57:30:948 gamecard/(7261:7343): I DE LA FUNCION DE LISTAS: 0
+[INFO] 08:57:30:948 gamecard/(7261:7343): CANTIDAD POSICIONES 1
+[INFO] 08:57:30:948 gamecard/(7261:7343): Entro a conseguirPosicionesCantidad
+[INFO] 08:57:30:948 gamecard/(7261:7343): Localized. Pos x: 1. Pos y: 1.
+[INFO] 08:57:31:948 gamecard/(7261:7343): Pokemon:Umbreon
+[INFO] 08:57:31:948 gamecard/(7261:7343): Cantidad de Posiciones:1
+[INFO] 08:57:31:948 gamecard/(7261:7343): Posicion: 1-1
+[INFO] 08:57:31:948 gamecard/(7261:7343): Recibi mensaje localized. El pokemon es: Umbreon. La cantidad es: 1.
+
+[INFO] 08:57:31:948 gamecard/(7261:7343): Las posiciones son: 
+[INFO] 08:57:31:948 gamecard/(7261:7343): (1,1)
+[INFO] 08:57:39:1 gamecard/(7261:7390): deserializado
+[INFO] 08:57:39:1 gamecard/(7261:7390): Pokemon:Espeon, posicion:1-1
+[INFO] 08:57:39:1 gamecard/(7261:7390): Posicion en la lectura del bloque 5: 6
+[INFO] 08:57:39:1 gamecard/(7261:7390): LECTURA BLOQUE: 1-1=6
+.
+[INFO] 08:57:39:1 gamecard/(7261:7390): LecturaArchivo: 1-1=6
+.
+[INFO] 08:57:39:1 gamecard/(7261:7390): char*posiciones: 1-1=6
+
+[INFO] 08:57:39:1 gamecard/(7261:7390): BUFFER FUNCION LISTA STRING: 1-1=6
+[INFO] 08:57:39:1 gamecard/(7261:7390): I DE LA FUNCION DE LISTAS: 0
+[INFO] 08:57:39:1 gamecard/(7261:7390): Size lista antes de comprobar:1
+[INFO] 08:57:39:1 gamecard/(7261:7390): Reemplazo
+[INFO] 08:57:39:3 gamecard/(7261:7390): Size lista despues de comprobar:1
+[INFO] 08:58:08:142 gamecard/(7261:7462): deserializado
+[INFO] 08:58:08:142 gamecard/(7261:7462): Pokemon:Vaporeon, posicion:1-1
+[INFO] 08:58:08:142 gamecard/(7261:7462): Posicion en la lectura del bloque 1: 12
+[INFO] 08:58:08:142 gamecard/(7261:7462): LECTURA BLOQUE: 1-1=8
+0-0=0
+.
+[INFO] 08:58:08:142 gamecard/(7261:7462): LecturaArchivo: 1-1=8
+0-0=0
+.
+[INFO] 08:58:08:142 gamecard/(7261:7462): char*posiciones: 1-1=8
+0-0=0
+
+[INFO] 08:58:08:142 gamecard/(7261:7462): BUFFER FUNCION LISTA STRING: 1-1=8
+[INFO] 08:58:08:142 gamecard/(7261:7462): BUFFER FUNCION LISTA STRING: 0-0=0
+[INFO] 08:58:08:142 gamecard/(7261:7462): I DE LA FUNCION DE LISTAS: 0
+[INFO] 08:58:08:142 gamecard/(7261:7462): I DE LA FUNCION DE LISTAS: 1
+[INFO] 08:58:08:142 gamecard/(7261:7462): Size lista antes de comprobar:2
+[INFO] 08:58:08:142 gamecard/(7261:7462): Reemplazo
+[INFO] 08:58:08:143 gamecard/(7261:7462): Size lista despues de comprobar:2
+[INFO] 08:58:12:158 gamecard/(7261:7480): deserializado
+[INFO] 08:58:12:158 gamecard/(7261:7480): Pokemon:Flareon, posicion:1-1
+[INFO] 08:58:12:158 gamecard/(7261:7480): Posicion en la lectura del bloque 3: 6
+[INFO] 08:58:12:158 gamecard/(7261:7480): LECTURA BLOQUE: 1-1=6
+.
+[INFO] 08:58:12:158 gamecard/(7261:7480): LecturaArchivo: 1-1=6
+.
+[INFO] 08:58:12:158 gamecard/(7261:7480): char*posiciones: 1-1=6
+
+[INFO] 08:58:12:158 gamecard/(7261:7480): BUFFER FUNCION LISTA STRING: 1-1=6
+[INFO] 08:58:12:158 gamecard/(7261:7480): I DE LA FUNCION DE LISTAS: 0
+[INFO] 08:58:12:158 gamecard/(7261:7480): Size lista antes de comprobar:1
+[INFO] 08:58:12:158 gamecard/(7261:7480): Reemplazo
+[INFO] 08:58:12:164 gamecard/(7261:7480): Size lista despues de comprobar:1
+[INFO] 08:58:14:154 gamecard/(7261:7485): deserializado
+[INFO] 08:58:14:155 gamecard/(7261:7485): Pokemon:Jolteon, posicion:1-1
+[INFO] 08:58:14:155 gamecard/(7261:7485): Posicion en la lectura del bloque 2: 6
+[INFO] 08:58:14:155 gamecard/(7261:7485): LECTURA BLOQUE: 1-1=6
+.
+[INFO] 08:58:14:155 gamecard/(7261:7485): LecturaArchivo: 1-1=6
+.
+[INFO] 08:58:14:155 gamecard/(7261:7485): char*posiciones: 1-1=6
+
+[INFO] 08:58:14:155 gamecard/(7261:7485): BUFFER FUNCION LISTA STRING: 1-1=6
+[INFO] 08:58:14:155 gamecard/(7261:7485): I DE LA FUNCION DE LISTAS: 0
+[INFO] 08:58:14:155 gamecard/(7261:7485): Size lista antes de comprobar:1
+[INFO] 08:58:14:155 gamecard/(7261:7485): Reemplazo
+[INFO] 08:58:14:155 gamecard/(7261:7485): Size lista despues de comprobar:1
+[INFO] 08:58:21:216 gamecard/(7261:7513): deserializado
+[INFO] 08:58:21:216 gamecard/(7261:7513): Pokemon:Umbreon, posicion:1-1
+[INFO] 08:58:21:216 gamecard/(7261:7513): Posicion en la lectura del bloque 4: 6
+[INFO] 08:58:21:216 gamecard/(7261:7513): LECTURA BLOQUE: 1-1=6
+.
+[INFO] 08:58:21:216 gamecard/(7261:7513): LecturaArchivo: 1-1=6
+.
+[INFO] 08:58:21:216 gamecard/(7261:7513): char*posiciones: 1-1=6
+
+[INFO] 08:58:21:216 gamecard/(7261:7513): BUFFER FUNCION LISTA STRING: 1-1=6
+[INFO] 08:58:21:216 gamecard/(7261:7513): I DE LA FUNCION DE LISTAS: 0
+[INFO] 08:58:21:216 gamecard/(7261:7513): Size lista antes de comprobar:1
+[INFO] 08:58:21:216 gamecard/(7261:7513): Reemplazo
+[INFO] 08:58:21:216 gamecard/(7261:7513): Size lista despues de comprobar:1
+[INFO] 09:05:30:229 gamecard/(8616:8627): Voy a llenar el paquete
+[INFO] 09:05:30:229 gamecard/(8616:8628): Voy a llenar el paquete
+[INFO] 09:05:30:229 gamecard/(8616:8629): Voy a llenar el paquete
+[INFO] 09:05:30:229 gamecard/(8616:8627): cliente: 6
+[INFO] 09:05:30:229 gamecard/(8616:8629): cliente: 7
+[INFO] 09:05:30:229 gamecard/(8616:8628): cliente: 8
+[INFO] 09:05:40:60 gamecard/(8654:8663): Voy a llenar el paquete
+[INFO] 09:05:40:61 gamecard/(8654:8663): cliente: 7
+[INFO] 09:05:40:61 gamecard/(8654:8663): Conexión fallida con el Broker
+
+[INFO] 09:05:40:65 gamecard/(8654:8662): Voy a llenar el paquete
+[INFO] 09:05:40:65 gamecard/(8654:8662): cliente: 8
+[INFO] 09:05:40:65 gamecard/(8654:8662): Conexión fallida con el Broker
+
+[INFO] 09:05:40:68 gamecard/(8654:8661): Voy a llenar el paquete
+[INFO] 09:05:40:68 gamecard/(8654:8661): cliente: 9
+[INFO] 09:05:40:69 gamecard/(8654:8661): Conexión fallida con el Broker
+
+[INFO] 09:06:00:62 gamecard/(8654:8663): El reintento de conexión no fue exitoso
+
+[INFO] 09:06:00:67 gamecard/(8654:8662): El reintento de conexión no fue exitoso
+
+[INFO] 09:06:00:71 gamecard/(8654:8661): El reintento de conexión no fue exitoso
+
+[INFO] 09:06:10:63 gamecard/(8654:8663): El reintento de conexión no fue exitoso
+
+[INFO] 09:06:10:68 gamecard/(8654:8662): El reintento de conexión no fue exitoso
+
+[INFO] 09:06:10:72 gamecard/(8654:8661): El reintento de conexión no fue exitoso
+
+[INFO] 09:06:20:64 gamecard/(8654:8663): El reintento de conexión no fue exitoso
+
+[INFO] 09:06:20:70 gamecard/(8654:8662): El reintento de conexión no fue exitoso
+
+[INFO] 09:06:20:74 gamecard/(8654:8661): El reintento de conexión no fue exitoso
+
+[INFO] 09:06:30:65 gamecard/(8654:8663): El reintento de conexión no fue exitoso
+
+[INFO] 09:06:30:70 gamecard/(8654:8662): El reintento de conexión no fue exitoso
+
+[INFO] 09:06:30:76 gamecard/(8654:8661): El reintento de conexión no fue exitoso
+
+[INFO] 09:06:40:67 gamecard/(8654:8663): El reintento de conexión no fue exitoso
+
+[INFO] 09:06:40:71 gamecard/(8654:8662): El reintento de conexión no fue exitoso
+
+[INFO] 09:06:40:77 gamecard/(8654:8661): El reintento de conexión no fue exitoso
+
+[INFO] 09:06:50:67 gamecard/(8654:8663): El reintento de conexión no fue exitoso
+
+[INFO] 09:06:50:72 gamecard/(8654:8662): El reintento de conexión no fue exitoso
+
+[INFO] 09:06:50:79 gamecard/(8654:8661): El reintento de conexión no fue exitoso
+
+[INFO] 09:07:00:68 gamecard/(8654:8663): El reintento de conexión no fue exitoso
+
+[INFO] 09:07:00:73 gamecard/(8654:8662): El reintento de conexión no fue exitoso
+
+[INFO] 09:07:00:80 gamecard/(8654:8661): El reintento de conexión no fue exitoso
+
+[INFO] 09:07:10:70 gamecard/(8654:8663): El reintento de conexión no fue exitoso
+
+[INFO] 09:07:10:74 gamecard/(8654:8662): El reintento de conexión no fue exitoso
+
+[INFO] 09:07:10:81 gamecard/(8654:8661): El reintento de conexión no fue exitoso
+
+[INFO] 09:07:17:448 gamecard/(8654:8842): LecturaArchivo: .
+[INFO] 09:07:17:449 gamecard/(8654:8842): char*posiciones: 
+[INFO] 09:07:17:449 gamecard/(8654:8842): Agrego un bloque.
+[INFO] 09:07:17:449 gamecard/(8654:8842): LISTA BLOQUES: [1].
+[INFO] 09:07:17:449 gamecard/(8654:8842): LISTA BLOQUES AGREGADA: [1].
+[INFO] 09:07:18:452 gamecard/(8654:8842): Cierro el archivo del pokemon: Pikachu. Posicion: (0, 0).
+[INFO] 09:07:20:74 gamecard/(8654:8663): El reintento de conexión no fue exitoso
+
+[INFO] 09:07:20:76 gamecard/(8654:8662): El reintento de conexión no fue exitoso
+
+[INFO] 09:07:20:82 gamecard/(8654:8661): El reintento de conexión no fue exitoso
+
+[INFO] 09:07:30:79 gamecard/(8654:8662): El reintento de conexión no fue exitoso
+
+[INFO] 09:07:30:79 gamecard/(8654:8663): El reintento de conexión no fue exitoso
+
+[INFO] 09:07:30:83 gamecard/(8654:8661): El reintento de conexión no fue exitoso
+
+[INFO] 09:07:40:80 gamecard/(8654:8663): El reintento de conexión no fue exitoso
+
+[INFO] 09:07:40:80 gamecard/(8654:8662): El reintento de conexión no fue exitoso
+
+[INFO] 09:07:40:84 gamecard/(8654:8661): El reintento de conexión no fue exitoso
+
+[INFO] 09:07:50:82 gamecard/(8654:8662): El reintento de conexión no fue exitoso
+
+[INFO] 09:07:50:82 gamecard/(8654:8663): El reintento de conexión no fue exitoso
+
+[INFO] 09:07:50:85 gamecard/(8654:8661): El reintento de conexión no fue exitoso
+
+[INFO] 09:08:00:82 gamecard/(8654:8663): El reintento de conexión no fue exitoso
+
+[INFO] 09:08:00:83 gamecard/(8654:8662): El reintento de conexión no fue exitoso
+
+[INFO] 09:08:00:85 gamecard/(8654:8661): El reintento de conexión no fue exitoso
+
+[INFO] 09:08:09:854 gamecard/(8654:8663): El reintento de conexión no fue exitoso
+
+[INFO] 09:08:09:854 gamecard/(8654:8662): El reintento de conexión no fue exitoso
+
+[INFO] 09:08:09:858 gamecard/(8654:8661): El reintento de conexión no fue exitoso
+
+[INFO] 09:08:19:855 gamecard/(8654:8662): El reintento de conexión no fue exitoso
+
+[INFO] 09:08:19:855 gamecard/(8654:8663): El reintento de conexión no fue exitoso
+
+[INFO] 09:08:19:858 gamecard/(8654:8661): El reintento de conexión no fue exitoso
+
+[INFO] 09:08:29:856 gamecard/(8654:8663): El reintento de conexión no fue exitoso
+
+[INFO] 09:08:29:856 gamecard/(8654:8662): El reintento de conexión no fue exitoso
+
+[INFO] 09:08:29:859 gamecard/(8654:8661): El reintento de conexión no fue exitoso
+
+[INFO] 09:08:37:896 gamecard/(8654:9066): deserializado
+[INFO] 09:08:37:897 gamecard/(8654:9066): Pokemon:Pikachu, posicion:0-0
+[INFO] 09:08:37:897 gamecard/(8654:9066): Posicion en la lectura del bloque 1: 64
+[INFO] 09:08:37:897 gamecard/(8654:9066): LECTURA BLOQUE: 0-0=10
+.
+[INFO] 09:08:37:897 gamecard/(8654:9066): LecturaArchivo: 0-0=10
+.
+[INFO] 09:08:37:897 gamecard/(8654:9066): char*posiciones: 0-0=10
+
+[INFO] 09:08:37:897 gamecard/(8654:9066): BUFFER FUNCION LISTA STRING: 0-0=10
+[INFO] 09:08:37:897 gamecard/(8654:9066): I DE LA FUNCION DE LISTAS: 0
+[INFO] 09:08:37:897 gamecard/(8654:9066): Size lista antes de comprobar:1
+[INFO] 09:08:37:897 gamecard/(8654:9066): Reemplazo
+[INFO] 09:08:37:898 gamecard/(8654:9066): Size lista despues de comprobar:1
+[INFO] 09:08:39:856 gamecard/(8654:8662): El reintento de conexión no fue exitoso
+
+[INFO] 09:08:39:857 gamecard/(8654:8663): El reintento de conexión no fue exitoso
+
+[INFO] 09:08:39:860 gamecard/(8654:8661): El reintento de conexión no fue exitoso
+
+[INFO] 09:08:49:859 gamecard/(8654:8663): El reintento de conexión no fue exitoso
+
+[INFO] 09:08:49:859 gamecard/(8654:8662): El reintento de conexión no fue exitoso
+
+[INFO] 09:08:49:861 gamecard/(8654:8661): El reintento de conexión no fue exitoso
+
+[INFO] 09:08:59:859 gamecard/(8654:8662): El reintento de conexión no fue exitoso
+
+[INFO] 09:08:59:859 gamecard/(8654:8663): El reintento de conexión no fue exitoso
+
+[INFO] 09:08:59:861 gamecard/(8654:8661): El reintento de conexión no fue exitoso
+
+[INFO] 09:09:09:862 gamecard/(8654:8661): El reintento de conexión no fue exitoso
+
+[INFO] 09:09:09:862 gamecard/(8654:8663): El reintento de conexión no fue exitoso
+
+[INFO] 09:09:09:862 gamecard/(8654:8662): El reintento de conexión no fue exitoso
+
+[INFO] 09:09:19:863 gamecard/(8654:8661): El reintento de conexión no fue exitoso
+
+[INFO] 09:09:19:863 gamecard/(8654:8663): El reintento de conexión no fue exitoso
+
+[INFO] 09:09:19:864 gamecard/(8654:8662): El reintento de conexión no fue exitoso
+
+[INFO] 09:12:38:40 gamecard/(9700:9709): Voy a llenar el paquete
+[INFO] 09:12:38:40 gamecard/(9700:9709): cliente: 7
+[INFO] 09:12:38:40 gamecard/(9700:9709): Conexión fallida con el Broker
+
+[INFO] 09:12:38:40 gamecard/(9700:9708): Voy a llenar el paquete
+[INFO] 09:12:38:41 gamecard/(9700:9708): cliente: 8
+[INFO] 09:12:38:41 gamecard/(9700:9708): Conexión fallida con el Broker
+
+[INFO] 09:12:38:41 gamecard/(9700:9707): Voy a llenar el paquete
+[INFO] 09:12:38:41 gamecard/(9700:9707): cliente: 9
+[INFO] 09:12:38:41 gamecard/(9700:9707): Conexión fallida con el Broker
+
+[INFO] 09:12:42:77 gamecard/(9700:9721): LecturaArchivo: .
+[INFO] 09:12:42:78 gamecard/(9700:9721): char*posiciones: 
+[INFO] 09:12:42:78 gamecard/(9700:9721): Agrego un bloque.
+[INFO] 09:12:42:78 gamecard/(9700:9721): LISTA BLOQUES: [1].
+[INFO] 09:12:42:78 gamecard/(9700:9721): LISTA BLOQUES AGREGADA: [1].
+[INFO] 09:12:43:81 gamecard/(9700:9721): Cierro el archivo del pokemon: Pikachu. Posicion: (0, 0).
+[INFO] 09:12:55:387 gamecard/(9700:9746): deserializado
+[INFO] 09:12:55:388 gamecard/(9700:9746): Pokemon:Pikachu, posicion:0-0
+[INFO] 09:12:55:388 gamecard/(9700:9746): Posicion en la lectura del bloque 1: 64
+[INFO] 09:12:55:388 gamecard/(9700:9746): LECTURA BLOQUE: 0-0=10
+.
+[INFO] 09:12:55:388 gamecard/(9700:9746): LecturaArchivo: 0-0=10
+.
+[INFO] 09:12:55:388 gamecard/(9700:9746): char*posiciones: 0-0=10
+
+[INFO] 09:12:55:388 gamecard/(9700:9746): BUFFER FUNCION LISTA STRING: 0-0=10
+[INFO] 09:12:55:388 gamecard/(9700:9746): I DE LA FUNCION DE LISTAS: 0
+[INFO] 09:12:55:388 gamecard/(9700:9746): Size lista antes de comprobar:1
+[INFO] 09:12:55:388 gamecard/(9700:9746): Reemplazo
+[INFO] 09:12:55:389 gamecard/(9700:9746): Size lista despues de comprobar:1
+[INFO] 09:12:58:46 gamecard/(9700:9707): El reintento de conexión no fue exitoso
+
+[INFO] 09:12:58:46 gamecard/(9700:9708): El reintento de conexión no fue exitoso
+
+[INFO] 09:12:58:47 gamecard/(9700:9709): El reintento de conexión no fue exitoso
+
+[INFO] 09:13:08:46 gamecard/(9700:9707): El reintento de conexión no fue exitoso
+
+[INFO] 09:13:08:46 gamecard/(9700:9708): El reintento de conexión no fue exitoso
+
+[INFO] 09:13:08:47 gamecard/(9700:9709): El reintento de conexión no fue exitoso
+
+[INFO] 09:13:17:713 gamecard/(9700:9708): El reintento de conexión no fue exitoso
+
+[INFO] 09:13:17:714 gamecard/(9700:9709): El reintento de conexión no fue exitoso
+
+[INFO] 09:13:17:714 gamecard/(9700:9707): El reintento de conexión no fue exitoso
+
+[INFO] 09:13:27:714 gamecard/(9700:9708): El reintento de conexión no fue exitoso
+
+[INFO] 09:13:27:715 gamecard/(9700:9707): El reintento de conexión no fue exitoso
+
+[INFO] 09:13:27:715 gamecard/(9700:9709): El reintento de conexión no fue exitoso
+

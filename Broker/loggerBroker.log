@@ -4494,3 +4494,44 @@
 [INFO] 00:34:37:720 BROKER/(30164:30180): Envié mensaje a suscriptor: 201 -.-
 [INFO] 00:34:39:721 BROKER/(30164:30869): Se almacena mensaje en memoria en posición: 0x30 -.-
 [INFO] 00:34:39:721 BROKER/(30164:30179): Envié mensaje a suscriptor: 103 -.-
+[INFO] 08:55:44:907 BROKER/(6710:6710): Inició el Broker.
+[INFO] 08:57:25:917 BROKER/(6710:7322): Se almacena mensaje en memoria en posición: (nil) -.-
+[INFO] 08:57:25:917 BROKER/(6710:6725): Envié mensaje a suscriptor: 201 -.-
+[INFO] 08:57:26:919 BROKER/(6710:7318): Se almacena mensaje en memoria en posición: 0x10 -.-
+[INFO] 08:57:26:920 BROKER/(6710:7316): Se almacena mensaje en memoria en posición: 0x20 -.-
+[INFO] 08:57:26:920 BROKER/(6710:6725): Envié mensaje a suscriptor: 201 -.-
+[INFO] 08:57:26:920 BROKER/(6710:7315): Se almacena mensaje en memoria en posición: 0x30 -.-
+[INFO] 08:57:28:921 BROKER/(6710:6725): Envié mensaje a suscriptor: 201 -.-
+[INFO] 08:57:29:923 BROKER/(6710:6725): Envié mensaje a suscriptor: 201 -.-
+[INFO] 08:57:30:924 BROKER/(6710:7327): Se almacena mensaje en memoria en posición: 0x20 -.-
+[INFO] 08:57:30:924 BROKER/(6710:7332): Se almacena mensaje en memoria en posición: (nil) -.-
+[INFO] 08:57:30:925 BROKER/(6710:7317): Se almacena mensaje en memoria en posición: 0x20 -.-
+[INFO] 08:57:30:925 BROKER/(6710:6725): Envié mensaje a suscriptor: 201 -.-
+[INFO] 08:57:30:925 BROKER/(6710:7341): Se almacena mensaje en memoria en posición: (nil) -.-
+[INFO] 08:57:30:925 BROKER/(6710:6726): Envié mensaje a suscriptor: 103 -.-
+[INFO] 08:57:31:926 BROKER/(6710:6726): Envié mensaje a suscriptor: 103 -.-
+[INFO] 08:57:32:926 BROKER/(6710:7346): Se almacena mensaje en memoria en posición: (nil) -.-
+[INFO] 08:57:32:927 BROKER/(6710:6726): Envié mensaje a suscriptor: 103 -.-
+[INFO] 08:57:32:927 BROKER/(6710:6726): Envié mensaje a suscriptor: 103 -.-
+[INFO] 08:57:33:927 BROKER/(6710:7350): Se almacena mensaje en memoria en posición: 0x20 -.-
+[INFO] 08:57:33:927 BROKER/(6710:6726): Envié mensaje a suscriptor: 103 -.-
+[INFO] 08:57:39:993 BROKER/(6710:7388): Se almacena mensaje en memoria en posición: (nil) -.-
+[INFO] 08:57:39:993 BROKER/(6710:6724): Envié mensaje a suscriptor: 201 -.-
+[INFO] 08:57:41:996 BROKER/(6710:7392): Se almacena mensaje en memoria en posición: 0x20 -.-
+[INFO] 08:57:41:996 BROKER/(6710:6723): Envié mensaje a suscriptor: 103 -.-
+[INFO] 08:58:08:136 BROKER/(6710:7461): Se almacena mensaje en memoria en posición: (nil) -.-
+[INFO] 08:58:08:137 BROKER/(6710:6724): Envié mensaje a suscriptor: 201 -.-
+[INFO] 08:58:10:142 BROKER/(6710:7469): Se almacena mensaje en memoria en posición: 0x24 -.-
+[INFO] 08:58:10:143 BROKER/(6710:6723): Envié mensaje a suscriptor: 103 -.-
+[INFO] 08:58:12:144 BROKER/(6710:7473): Se almacena mensaje en memoria en posición: (nil) -.-
+[INFO] 08:58:12:144 BROKER/(6710:6724): Envié mensaje a suscriptor: 201 -.-
+[INFO] 08:58:14:148 BROKER/(6710:7481): Se almacena mensaje en memoria en posición: (nil) -.-
+[INFO] 08:58:14:148 BROKER/(6710:7483): Se almacena mensaje en memoria en posición: 0x24 -.-
+[INFO] 08:58:14:148 BROKER/(6710:6724): Envié mensaje a suscriptor: 201 -.-
+[INFO] 08:58:14:148 BROKER/(6710:6723): Envié mensaje a suscriptor: 103 -.-
+[INFO] 08:58:18:154 BROKER/(6710:7492): Se almacena mensaje en memoria en posición: 0x28 -.-
+[INFO] 08:58:18:154 BROKER/(6710:6723): Envié mensaje a suscriptor: 103 -.-
+[INFO] 08:58:21:208 BROKER/(6710:7510): Se almacena mensaje en memoria en posición: (nil) -.-
+[INFO] 08:58:21:209 BROKER/(6710:6724): Envié mensaje a suscriptor: 201 -.-
+[INFO] 08:58:23:213 BROKER/(6710:7514): Se almacena mensaje en memoria en posición: 0x2c -.-
+[INFO] 08:58:23:213 BROKER/(6710:6723): Envié mensaje a suscriptor: 103 -.-

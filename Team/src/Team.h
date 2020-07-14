@@ -132,6 +132,7 @@ typedef struct {
 	uint32_t cantidadCiclosCpu;
 	sem_t* semaforoContinuarEjecucion;
 	sem_t* semaforoPedidoCiclo;
+	sem_t* semaforoResultadoInterrupcion;
 	bool ejecucionEnPausa;
 	double estimacionAnterior;
 	uint32_t rafagaCpuAnterior;
@@ -482,5 +483,9 @@ bool mismoPokemonPosicion(pokemonPosicion* poke1, pokemonPosicion* poke2);
 void agregarPokemonPosicionAReserva(pokemonPosicion* poke);
 
 bool yaEstaEnReserva(pokemonPosicion* poke);
+
+void enviarResultadoInterrupcion(dataEntrenador* entrenador);
+
+void esperarResultadoInterrupcion(dataEntrenador* entrenador);
 
 #endif /* TEAM_H_ */

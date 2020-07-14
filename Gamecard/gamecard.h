@@ -111,6 +111,7 @@ uint32_t tiempoReintentoOperacion;
 uint32_t tiempoReconexionGC;
 uint32_t puertoBrokerGC;
 uint32_t idProcesoGamecard;
+uint32_t puertoGamecardGC;
 char* ipBrokerGC;
 char* puntoMontaje;
 char* pathLoggerPrincipal;
