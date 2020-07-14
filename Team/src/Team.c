@@ -787,8 +787,8 @@ dataTeam* inicializarTeam(t_config* config){
 		sem_init((infoEntrenador->semaforoPedidoCiclo), 0,0);
 		sem_init((infoEntrenador->semaforoResultadoInterrupcion), 0,0);
 		infoEntrenador->rafagaCpuAnterior=0;
-		//infoEntrenador->estimacionAnterior=estimacionInicial;
-		infoEntrenador->estimacionAnterior=5;
+		infoEntrenador->estimacionAnterior=estimacionInicial;
+		//infoEntrenador->estimacionAnterior=5;
 		infoEntrenador->contadorCpu=inicializarContadorRafagas();
 		list_add(entrenadoresLibres->lista,(void*)infoEntrenador);
 		list_add(infoTeam->entrenadores,infoEntrenador);

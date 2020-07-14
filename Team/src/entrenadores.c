@@ -143,19 +143,33 @@ void replanificarEntrenador(dataEntrenador* entrenador){
 				log_info(teamLogger, "Inicio del algoritmo de detección de deadlock.");
 				addListaMutex(entrenadoresDeadlock, (void*) entrenador);
 
+				habilitarHiloEntrenador(entrenador->id);
+
 				if(todosLosEntrenadoresTerminaronDeAtrapar()){
 					log_info(teamLogger, "Se encontró deadlock.");
 					log_info(teamLogger2, "Entrenadores en deadlock %i.", sizeListaMutex(entrenadoresDeadlock));
-					habilitarHiloEntrenador(entrenador->id);
+
 					sem_post(iniciarResolucionDeadlock);
 					//resolverDeadlock();
 					}else{
-						habilitarHiloEntrenador(entrenador->id);
+
 						log_info(teamLogger, "No se encontró deadlock.");
 						log_info(teamLogger2, "No se encontró deadlock.");
 					}
 				}
 	}
+//		if(todosLosEntrenadoresTerminaronDeAtrapar()){
+//							log_info(teamLogger, "Se encontró deadlock.");
+//							log_info(teamLogger2, "Entrenadores en deadlock %i.", sizeListaMutex(entrenadoresDeadlock));
+//
+//							sem_post(iniciarResolucionDeadlock);
+//							//resolverDeadlock();
+//							}else{
+//								habilitarHiloEntrenador(entrenador->id);
+//								log_info(teamLogger, "No se encontró deadlock.");
+//								log_info(teamLogger2, "No se encontró deadlock.");
+//							}
+//						}
 }
 
 bool cumplioObjetivo(dataEntrenador* entrenador){
