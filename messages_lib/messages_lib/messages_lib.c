@@ -62,8 +62,22 @@ uint32_t sizeArgumentos (uint32_t colaMensaje, char* nombrePokemon, uint32_t can
 	return size;
 }
 
-uint32_t enviarACK(uint32_t socket, uint32_t modulo, uint32_t id, uint32_t idProceso){
+int32_t enviarACK(uint32_t puerto,char* ip,  uint32_t modulo, uint32_t id, uint32_t idProceso){
 	uint32_t idAEnviar=idProceso;
+
+
+
+	struct sockaddr_in direccionServidor;
+	direccionServidor.sin_family      = AF_INET;
+	direccionServidor.sin_addr.s_addr = inet_addr(ip);
+	direccionServidor.sin_port        = htons(puerto);
+
+	uint32_t cliente=socket(AF_INET,SOCK_STREAM,0);
+
+	if(connect(cliente,(void*) &direccionServidor,sizeof(direccionServidor))<0){
+			return -1;
+		}
+
 	void* stream= malloc(sizeof(uint32_t));
 	memcpy(stream, &idAEnviar, sizeof(uint32_t));
 
@@ -71,9 +85,11 @@ uint32_t enviarACK(uint32_t socket, uint32_t modulo, uint32_t id, uint32_t idPro
 
 	insertarIdCorrelativoPaquete(paqueteACK, id);
 	void* paqueteACKSerializado = serializarPaquete(paqueteACK);
-	uint32_t i= send(socket, paqueteACKSerializado, sizePaquete(paqueteACK), 0);
-	printf("Envio ACK\n");
-	printf("Socket ack: %i\n", socket);
+
+	uint32_t i= send(cliente, paqueteACKSerializado, sizePaquete(paqueteACK), 0);
+
+//	printf("Envio ACK\n");
+//	printf("Socket ack: %i\n", socket);
 //	printf("Resultado send ack: %i\n", i);
 	destruirPaquete(paqueteACK);
 	free(paqueteACKSerializado);

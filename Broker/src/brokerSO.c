@@ -30,6 +30,7 @@
 //	printf("%i", strcmp("hola","hola\0"));
 //
 //}
+
 int main(void) {
 	iteraciones = 0;
 	TC=0;
@@ -40,9 +41,9 @@ int main(void) {
 
 	//levantarDatosDeConfig("Broker.config", 1); 			//1 para datos de config, otro para hardcode
 	//levantarDatosDeConfig("pruebaBaseBroker.config", 1);
-	//levantarDatosDeConfig("pruebaBS.config", 1);
+	levantarDatosDeConfig("pruebaBS.config", 1);
 	//levantarDatosDeConfig("pruebaConsolidacion.config", 1);
-	levantarDatosDeConfig("pruebaCompactacion.config", 1);
+	//levantarDatosDeConfig("pruebaCompactacion.config", 1);
 
 	loggerBroker = iniciar_logger("loggerBroker.log", "BROKER");
 

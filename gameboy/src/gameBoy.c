@@ -55,7 +55,10 @@ int main(int argc, char* argv[]) {
 		}
 
 	char* ipProcesoDestinatario        = obtenerIpProceso (procesoDestinatario, config);
+	ipGlobal=malloc(strlen(ipProcesoDestinatario)+1);
+	strcpy(ipGlobal, ipProcesoDestinatario);
 	uint32_t puertoProcesoDestinatario = obtenerPuertoProceso (procesoDestinatario, config);
+	puertoGlobal=puertoProcesoDestinatario;
 	paqueteYSocket* paqueteySocket 	   = malloc(sizeof(paqueteYSocket));
 	paqueteySocket->paqueteAEnviar 	   = serializarPaquete(paquete);
 	paqueteySocket->socketCliente      = crearSocketCliente (ipProcesoDestinatario, puertoProcesoDestinatario);
@@ -256,7 +259,7 @@ void* enviarMensajeSuscripcion(void* paqueteySocket){
 	}
 	paquete* paqueteRespuesta=recibirPaquete(paqueteConSocket->socketCliente);
 	while(paqueteRespuesta->tipoMensaje!=SUSCRIPCION_FINALIZADA){
-		enviarACK(paqueteConSocket->socketCliente, GAMEBOY, paqueteRespuesta->id, idProcesoGameboy);
+		enviarACK(puertoGlobal,ipGlobal, GAMEBOY, paqueteRespuesta->id, idProcesoGameboy);
 		loggearMensaje(paqueteRespuesta, gameboyLogger);
 		destruirPaquete(paqueteRespuesta);
 		paqueteRespuesta=recibirPaquete(paqueteConSocket->socketCliente);

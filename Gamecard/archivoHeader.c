@@ -237,11 +237,13 @@ char* leerBloque(blockHeader* bloque){
 	fseek(archivoBloque, 0, SEEK_SET);
 	char* resultado= malloc(pos+1);
 	//fread(buffer, pos, 1, archivoBloque);
+	log_info(gamecardLogger2, "Posicion en la lectura del bloque %i: %i", bloque->id, pos);
 	fread(resultado, 1, pos, archivoBloque);
 //	if(string_contains(resultado, "\n")){
 //		log_info(gamecardLogger2, "Encontre el  barra n.");
 	*(resultado+pos)='\0';
 	fclose(archivoBloque);
+
 //	char* resultado=string_new();
 //	string_append(&resultado,buffer);
 //	string_append(&resultado,"\0");
@@ -265,9 +267,12 @@ uint32_t posBloque(blockHeader* bloque){
 t_list* obtenerListaPosicionesString(char* posiciones){
 	t_list* lista=list_create();
 	char* buffer=string_new();
+	log_info(gamecardLogger2, "char*posiciones: %s", posiciones);
 	for(uint32_t i=0;i<(strlen(posiciones)+1);i++){
+
 		char caracterActual= posiciones[i];
 		if(caracterActual=='\n'){
+			log_info(gamecardLogger2, "BUFFER FUNCION LISTA STRING: %s", buffer);
 			list_add(lista, (void*) buffer);
 			buffer=string_new();
 		}else{
@@ -333,6 +338,7 @@ t_list * obtenerListaPosicionCantidad(t_list* listaString){
 	for(uint32_t i=0; i<list_size(listaString);i++){
 		char* stringActual= (char*) list_get(listaString,i);
 		posicionCantidad* posActual=obtenerPosicionCantidadDeString(stringActual);
+		log_info(gamecardLogger2, "I DE LA FUNCION DE LISTAS: %i", i);
 		list_add(lista, (void*) posActual);
 	}
 	list_destroy_and_destroy_elements(listaString, free);
@@ -423,6 +429,7 @@ char* leerArchivo(char* pokemon){
 		//log_info(gamecardLogger2, "hola3.");
 		blockHeader* bloqueActual= (blockHeader*) list_get(headerPoke->bloquesUsados,i);
 		char* stringActual= leerBloque(bloqueActual);
+		log_info(gamecardLogger2,"LECTURA BLOQUE: %s.", stringActual);
 		//log_info(gamecardLogger2, "LecturaArchivo: %s.", stringActual);
 		string_append(&buffer, stringActual);
 		free(stringActual);
@@ -455,7 +462,7 @@ uint32_t buscarIdCantidad(t_list* lista, posicion pos){
 t_list* obtenerListaPosicionCantidadDeArchivo(archivoHeader* archivo){
 
 	char* stringPosCant=leerArchivo(archivo->nombreArchivo);
-	//log_info(gamecardLogger2, "LecturaArchivo: %s.", stringPosCant);
+	log_info(gamecardLogger2, "LecturaArchivo: %s.", stringPosCant);
 	return obtenerListaPosicionCantidadDeString(stringPosCant);
 }
 
@@ -519,14 +526,21 @@ void reiniciarBloquesDeArchivo(archivoHeader* headerPoke){
 }
 
 
-posicion* conseguirPosicionesCantidad(archivoHeader* pokeArchivo){
-	t_list* listaPosCantidad=obtenerListaPosicionCantidadDeArchivo(pokeArchivo);
-	uint32_t cantPosiciones = list_size(listaPosCantidad);
-	posicion* arrayPosicion = malloc(cantPosiciones*sizeof(posicion));
+posicion* conseguirPosicionesCantidad(t_list* lista){
+	log_info(gamecardLogger2, "Entro a conseguirPosicionesCantidad");
+//	t_list* listaPosCantidad=obtenerListaPosicionCantidadDeArchivo(pokeArchivo);
+	uint32_t cantPosiciones = list_size(lista);
+	posicion* arrayPosicion = malloc(cantPosiciones*sizeof(uint32_t)*2);
+
 	for(uint32_t i=0;i<cantPosiciones;i++){
-		posicionCantidad* auxPosCan = (posicionCantidad*) list_get(listaPosCantidad,i);
+		uint32_t offset=2*sizeof(uint32_t)*i;
+		posicionCantidad* auxPosCan = (posicionCantidad*) list_get(lista,i);
 		posicion auxPos = auxPosCan->posicion;
-		*(arrayPosicion+i) = auxPos;
+
+		memcpy(arrayPosicion+offset,&auxPos,2*sizeof(uint32_t));
+
+		//*(arrayPosicion+i) = auxPos;
+		log_info(gamecardLogger2, "Localized. Pos x: %i. Pos y: %i.", (arrayPosicion+i)->x, (arrayPosicion+i)->y);
 	}
 	return arrayPosicion;
 }

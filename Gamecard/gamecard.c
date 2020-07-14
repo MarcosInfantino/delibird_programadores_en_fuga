@@ -10,35 +10,41 @@
 #include "gamecard.h"
 
 
-
+//
 //int main (void){
 //	gamecardLogger2=log_create("gamecardLoggerSecundario.log","gamecard", true, LOG_LEVEL_INFO);
 //
-//	posicionCantidad* pos1= malloc(sizeof(posicionCantidad));
-//	posicionCantidad* pos2= malloc(sizeof(posicionCantidad));
-//	posicionCantidad* pos3= malloc(sizeof(posicionCantidad));
+////	posicionCantidad* pos1= malloc(sizeof(posicionCantidad));
+////	posicionCantidad* pos2= malloc(sizeof(posicionCantidad));
+////	posicionCantidad* pos3= malloc(sizeof(posicionCantidad));
+////
+////	(pos1->posicion).x = 1;
+////	(pos1->posicion).y = 1;
+////	 pos1->cantidad = 10;
+////
+////	 (pos2->posicion).x = 2;
+////	 (pos2->posicion).y = 2;
+////	  pos2->cantidad = 10;
+////
+////	 (pos3->posicion).x = 3;
+////	 (pos3->posicion).y = 3;
+////	  pos3->cantidad = 10;
 //
-//	(pos1->posicion).x = 1;
-//	(pos1->posicion).y = 1;
-//	 pos1->cantidad = 10;
+//	  posicion* posiciones=malloc(3*2*sizeof(uint32_t));
+//	  posicion pos1={11,59};
+//	  posicion pos2={12,118};
+//	  posicion pos3={11,1};
+//	  *posiciones=pos1;
+////	  *(posiciones+1)=pos2;
+////	  *(posiciones+2)=pos3;
 //
-//	 (pos2->posicion).x = 2;
-//	 (pos2->posicion).y = 2;
-//	  pos2->cantidad = 10;
+////	  list_add(listaLoca,(void*) pos1);
+////	  list_add(listaLoca,(void*) pos2);
+////	  list_add(listaLoca,(void*) pos3);
 //
-//	 (pos3->posicion).x = 3;
-//	 (pos3->posicion).y = 3;
-//	  pos3->cantidad = 10;
-//
-//	  t_list* listaLoca = list_create();
-//
-//	  list_add(listaLoca,(void*) pos1);
-//	  list_add(listaLoca,(void*) pos2);
-//	  list_add(listaLoca,(void*) pos3);
-//
-//	  mensajeLocalized* msgLocalized = llenarLocalized("Pikachu",listaLoca);
+//	  mensajeLocalized* msgLocalized = llenarLocalized("Pikachu",1,posiciones);
 //	  void* stream = serializarLocalized(msgLocalized);
-//	  paquete* paq = llenarPaquete(GAMECARD,LOCALIZED_POKEMON,sizeArgumentos(LOCALIZED_POKEMON,"Pikachu",3),stream);
+//	  paquete* paq = llenarPaquete(GAMECARD,LOCALIZED_POKEMON,sizeArgumentos(LOCALIZED_POKEMON,"Pikachu",1),stream);
 //
 //
 //	  log_info(gamecardLogger2,"Size del stream:%i ",paq->sizeStream );
@@ -46,27 +52,28 @@
 //
 //	  paquete* paqDeserializado = deserializarPaquete(paqSerializado);
 //	  mensajeLocalized* msgLocalizedDeserializado = deserializarLocalized(paqDeserializado->stream);
-//
-//	  posicionCantidad* p1 = (posicionCantidad*) list_get(msgLocalizedDeserializado->listaPosicionCantidad,0);
-//	  posicionCantidad* p2 = (posicionCantidad*) list_get(msgLocalizedDeserializado->listaPosicionCantidad,1);
-//	  posicionCantidad* p3 = (posicionCantidad*) list_get(msgLocalizedDeserializado->listaPosicionCantidad,2);
-//
-//	  log_info(gamecardLogger2, "Pokemon:%s",msgLocalizedDeserializado->pokemon);
-//	  log_info(gamecardLogger2, "Posicion1: %i - %i = % i ",(p1->posicion).x,(p1->posicion).y,p1->cantidad);
-//	  log_info(gamecardLogger2, "Posicion2: %i - %i = % i ",(p2->posicion).x,(p2->posicion).y,p2->cantidad);
-//	  log_info(gamecardLogger2, "Posicion3: %i - %i = % i ",(p3->posicion).x,(p3->posicion).y,p3->cantidad);
+//	  loggearMensaje(paqDeserializado,gamecardLogger2);
+////	  posicionCantidad* p1 = (posicionCantidad*) list_get(msgLocalizedDeserializado->listaPosicionCantidad,0);
+////	  posicionCantidad* p2 = (posicionCantidad*) list_get(msgLocalizedDeserializado->listaPosicionCantidad,1);
+////	  posicionCantidad* p3 = (posicionCantidad*) list_get(msgLocalizedDeserializado->listaPosicionCantidad,2);
+////
+////	  log_info(gamecardLogger2, "Pokemon:%s",msgLocalizedDeserializado->pokemon);
+////	  log_info(gamecardLogger2, "Posicion1: %i - %i = % i ",(p1->posicion).x,(p1->posicion).y,p1->cantidad);
+////	  log_info(gamecardLogger2, "Posicion2: %i - %i = % i ",(p2->posicion).x,(p2->posicion).y,p2->cantidad);
+////	  log_info(gamecardLogger2, "Posicion3: %i - %i = % i ",(p3->posicion).x,(p3->posicion).y,p3->cantidad);
 //
 //
 //	return 0;
 //}
 uint32_t puertoGamecardGC = 5001;
+//
 
 int main(void) {
 	t_config* configGamecard;
 	configGamecard = crearYleerConfig();
-	gamecardLogger = log_create(pathLoggerPrincipal,"gamecard",true,LOG_LEVEL_INFO);
+	gamecardLogger = log_create(pathLoggerPrincipal,"gamecard",false,LOG_LEVEL_INFO);
 	//iniciar_logger(pathLoggerPrincipal, "GAMECARD"); //no se que culo le pasa q no lo crea
-	gamecardLogger2=log_create("gamecardLoggerSecundario.log","gamecard", false, LOG_LEVEL_INFO);
+	gamecardLogger2=log_create("gamecardLoggerSecundario.log","gamecard", true, LOG_LEVEL_INFO);
 
 
 	log_info(gamecardLogger, "Inicio de programa: Gamecard.");
@@ -260,10 +267,17 @@ void* suscribirseCola(void* msgSuscripcion) {
 
 		loggearMensaje(paqueteRespuesta, gamecardLogger);
 
-		while(enviarACK(cliente, GAMECARD, paqueteRespuesta->id, idProcesoGamecard)<0){
-			cliente=reconectarseAlBroker();
-			cliente=enviarSuscripcion(cliente, msg);
-		}
+//		while(enviarACK(cliente, GAMECARD, paqueteRespuesta->id, idProcesoGamecard)<0){
+//			cliente=reconectarseAlBroker();
+//			cliente=enviarSuscripcion(cliente, msg);
+//		}
+		//ACA ACTUALICE
+		int32_t resultadoAck=enviarACK(puertoBrokerGC,ipBrokerGC,  GAMECARD, paqueteRespuesta->id, idProcesoGamecard);
+				while(resultadoAck<0){
+					cliente=reconectarseAlBroker();
+					cliente=enviarSuscripcion(cliente, msg);
+					resultadoAck=enviarACK(puertoBrokerGC,ipBrokerGC,  GAMECARD, paqueteRespuesta->id, idProcesoGamecard);
+				}
 
 		switch(paqueteRespuesta->tipoMensaje){
 			case NEW_POKEMON:;
@@ -560,15 +574,19 @@ void* atenderGet(void* paq) {
 		archivoHeader* archivoPoke = obtenerArchivoPokemon(pokeADevolver->pokemon);
 		FILE* archivoMetadata = abrirArchivo(archivoPoke);
 		t_list* listaPosCantidad=obtenerListaPosicionCantidadDeArchivo(archivoPoke);
+
 		uint32_t cantPosiciones = list_size(listaPosCantidad);
-		list_destroy_and_destroy_elements(listaPosCantidad,free);
+		log_info(gamecardLogger2, "CANTIDAD POSICIONES %i", cantPosiciones);
+
 		pokeADevolver->cantPosiciones = cantPosiciones;
-		pokeADevolver->posiciones = conseguirPosicionesCantidad(archivoPoke);
+		pokeADevolver->posiciones = conseguirPosicionesCantidad(listaPosCantidad);
+
+		//list_destroy_and_destroy_elements(listaPosCantidad,free);
 		sleep(tiempoRetardoGC);
 		cerrarArchivo(archivoPoke,archivoMetadata);
 	}else{
 		log_info(gamecardLogger2,"NO EXISTE");
-		pokeADevolver->posiciones = NULL;
+		pokeADevolver->posiciones = NULL;//revisar este caso luego
 		pokeADevolver->cantPosiciones=0;
 	}
 
@@ -580,6 +598,7 @@ void* atenderGet(void* paq) {
 	//pokeADevolver->posicion= DEL FILESYSTEM
 	//free(msg);
 	//IF SUCCESS
+
 	log_info(gamecardLogger2,"Pokemon:%s",pokeADevolver->pokemon);
 	log_info(gamecardLogger2,"Cantidad de Posiciones:%i",pokeADevolver->cantPosiciones);
 
@@ -596,17 +615,29 @@ void enviarLocalized(pokemonADevolver* pokeADevolver) {
 	log_info(gamecardLogger,"Inicia proceso envio Localized");
 	uint32_t cliente = crearSocketCliente(ipBrokerGC, puertoBrokerGC);
 	mensajeLocalized* msgLocalized = malloc(sizeof(mensajeLocalized));
+
 	msgLocalized = llenarLocalized(pokeADevolver->pokemon,pokeADevolver->cantPosiciones,pokeADevolver->posiciones);
+
+
+
 	//msgLocalized->pokemon = pokeADevolver->pokemon;
 	//msgLocalized->cantidad = pokeADevolver->cantPosiciones;
 	//msgLocalized->arrayPosiciones = pokeADevolver->posicion;
 	//msgLocalized->sizePokemon = strlen(msgLocalized->pokemon) + 1;
 	void* streamMsg = serializarLocalized(msgLocalized);
-	paquete* paq = llenarPaquete(GAMECARD, LOCALIZED_POKEMON,sizeArgumentos(LOCALIZED_POKEMON, msgLocalized->pokemon, BROKER),streamMsg);
+
+//	mensajeLocalized* msg2=deserializarLocalized(streamMsg);
+//	log_info(gamecardLogger2,"-------------------------------------");
+//	for(uint32_t i=0;i<msg2->cantidad;i++){
+//				posicion aux = *(msg2->arrayPosiciones + i);
+//				log_info(gamecardLogger2,"Posicion: %i-%i",aux.x,aux.y);
+//			}
+	paquete* paq = llenarPaquete(GAMECARD, LOCALIZED_POKEMON,sizeArgumentos(LOCALIZED_POKEMON, msgLocalized->pokemon, msgLocalized->cantidad),streamMsg);
 	insertarIdCorrelativoPaquete(paq, (pokeADevolver->id));
 	void* paqueteSerializado = serializarPaquete(paq);
 	//free(msgLocalized);
 	//destruirPaquete(paq);
+	loggearMensaje(paq, gamecardLogger2);
 	send(cliente, paqueteSerializado, sizePaquete(paq), 0);
 	free(paqueteSerializado);
 }
@@ -662,7 +693,7 @@ void enviarCaught(pokemonAAtrapar* pokeAAtrapar) {
 	uint32_t cliente = crearSocketCliente(ipBrokerGC, puertoBrokerGC);
 	mensajeCaught* msgCaught = malloc(sizeof(mensajeCaught));
 	llenarCaught(pokeAAtrapar->resultado);
-	//msgCaught->resultadoCaught = pokeAAtrapar->resultado;
+	msgCaught->resultadoCaught = pokeAAtrapar->resultado;
 	void* streamMsg = serializarCaught(msgCaught);
 	paquete* paq = llenarPaquete(GAMECARD, CAUGHT_POKEMON,
 	sizeArgumentos(CAUGHT_POKEMON, NULL, BROKER), streamMsg);

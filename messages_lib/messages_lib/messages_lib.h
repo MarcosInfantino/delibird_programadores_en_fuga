@@ -199,7 +199,7 @@ void insertarIdCorrelativoPaquete(paquete* paq, uint32_t idCorrelativo);
 uint32_t crearSocketCliente (char* ip, uint32_t puerto);
 uint32_t sizeArgumentos (uint32_t colaMensaje, char* nombrePokemon, uint32_t cantidadPokemon);
 
-uint32_t enviarACK(uint32_t socket, uint32_t modulo, uint32_t id, uint32_t idProceso);
+int32_t enviarACK(uint32_t puerto,char* ip,  uint32_t modulo, uint32_t id, uint32_t idProceso);
 uint32_t obtenerIdProcesoDeAck(void* stream);
 
 listaMutex* inicializarListaMutex();

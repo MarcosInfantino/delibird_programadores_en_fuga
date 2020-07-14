@@ -1,3 +1,4 @@
+#!/bin/sh
 ./gameboy BROKER CAUGHT_POKEMON 1 OK
 ./gameboy BROKER CAUGHT_POKEMON 1 FAIL
 

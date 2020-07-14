@@ -409,7 +409,7 @@ void escribirBloque2(int32_t bloque, char* buffer){
 	fclose(block);
 }
 */
-
+//1-1=9\n\n
 int32_t escribirBloque(int32_t bloque, int32_t offset, int32_t longitud, char* buffer) {
 	blockHeader* headerBloque=obtenerBloquePorId(bloque);
 	if(tieneCapacidad(headerBloque,longitud)){

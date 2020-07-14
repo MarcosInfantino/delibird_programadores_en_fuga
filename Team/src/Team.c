@@ -530,9 +530,11 @@ void* suscribirseCola(void* msgSuscripcion){
 
 		loggearMensaje(paqueteRespuesta, teamLogger);
 
-		while(enviarACK(cliente, TEAM, paqueteRespuesta->id, idProcesoTeam)<0){
+		int32_t resultadoAck=enviarACK(puertoBroker,ipBroker,  TEAM, paqueteRespuesta->id, idProcesoTeam);
+		while(resultadoAck<0){
 			cliente=reconectarseAlBroker();
 			cliente=enviarSuscripcion(cliente, msg);
+			resultadoAck=enviarACK(puertoBroker,ipBroker,  TEAM, paqueteRespuesta->id, idProcesoTeam);
 		}
 
 		switch(paqueteRespuesta->tipoMensaje){

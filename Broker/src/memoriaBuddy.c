@@ -123,7 +123,7 @@ uint32_t evaluarTamanioParticionYasignar(struct nodoMemoria* partActual, msgMemo
 
 
 
-		//msg->stream=memoria+partActual->offset;HAY QUE AGREGAR ESTO Y REVISAR QUE FUNCIONE. Es necesario, en particiones lo hicimos asi
+		msg->stream=memoria+partActual->offset;//HAY QUE AGREGAR ESTO Y REVISAR QUE FUNCIONE. Es necesario, en particiones lo hicimos asi
 		//Atte Mari y Marquitos :D
 
 

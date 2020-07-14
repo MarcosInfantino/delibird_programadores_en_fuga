@@ -217,7 +217,7 @@ void reiniciarBloquesDeArchivo(archivoHeader* headerPoke);
 void reiniciarArchivoBloque(uint32_t idBloque);
 void setearSize(archivoHeader* archivo,uint32_t size);
 void obtenerListaBloquesConfig(archivoHeader* archivo, char* estado);
-posicion* conseguirPosicionesCantidad(archivoHeader* pokeArchivo);
+posicion* conseguirPosicionesCantidad(t_list* lista);
 int32_t existe(char *path);
 uint32_t reconectarseAlBroker();
 //uint32_t reconectarseAlBroker(uint32_t cliente,void* direccionServidor,socklen_t length);

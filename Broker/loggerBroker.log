@@ -3341,3 +3341,1156 @@
 [INFO] 18:41:07:731 BROKER/(6289:6384): Almaceno mensaje en partición que comienza en: 28
 [INFO] 18:41:09:112 BROKER/(6289:6385): Almaceno mensaje en partición que comienza en: 32
 [INFO] 18:41:13:669 BROKER/(6289:6386): Almaceno mensaje en partición que comienza en: 36
+[INFO] 22:01:24:600 BROKER/(809:809): Inició el Broker.
+[INFO] 22:01:29:649 BROKER/(809:1006): Almaceno mensaje en partición que comienza en: 0
+[INFO] 22:01:29:649 BROKER/(809:1008): Almaceno mensaje en partición que comienza en: 11
+[INFO] 22:01:29:649 BROKER/(809:1007): Almaceno mensaje en partición que comienza en: 22
+[INFO] 22:01:29:650 BROKER/(809:1005): Almaceno mensaje en partición que comienza en: 32
+[INFO] 22:01:29:650 BROKER/(809:1004): Almaceno mensaje en partición que comienza en: 44
+[INFO] 22:01:35:758 BROKER/(809:1020): Se realiza la compactacion
+[INFO] 22:01:35:758 BROKER/(809:1020): Elimino particion que comienza en: 0
+[INFO] 22:01:35:758 BROKER/(809:1020): Se realiza la compactacion
+[INFO] 22:01:35:758 BROKER/(809:1020): Almaceno mensaje en partición que comienza en: 44
+[INFO] 22:01:35:759 BROKER/(809:825): Envié mensaje a suscriptor: 103 -.-
+[INFO] 22:01:49:885 BROKER/(1184:1184): Inició el Broker.
+[INFO] 22:01:53:713 BROKER/(1184:1383): Almaceno mensaje en partición que comienza en: 0
+[INFO] 22:01:53:713 BROKER/(1184:1377): Almaceno mensaje en partición que comienza en: 11
+[INFO] 22:01:53:714 BROKER/(1184:1388): Almaceno mensaje en partición que comienza en: 23
+[INFO] 22:01:53:715 BROKER/(1184:1390): Almaceno mensaje en partición que comienza en: 34
+[INFO] 22:01:53:715 BROKER/(1184:1392): Almaceno mensaje en partición que comienza en: 45
+[INFO] 22:01:56:371 BROKER/(1184:1400): Se realiza la compactacion
+[INFO] 22:01:56:371 BROKER/(1184:1400): Elimino particion que comienza en: 0
+[INFO] 22:01:56:371 BROKER/(1184:1400): Se realiza la compactacion
+[INFO] 22:01:56:371 BROKER/(1184:1400): Almaceno mensaje en partición que comienza en: 44
+[INFO] 22:01:56:371 BROKER/(1184:1196): Envié mensaje a suscriptor: 103 -.-
+[INFO] 22:02:29:561 BROKER/(1608:1608): Inició el Broker.
+[INFO] 22:02:38:977 BROKER/(1608:1806): Almaceno mensaje en partición que comienza en: 0
+[INFO] 22:02:38:982 BROKER/(1608:1809): Almaceno mensaje en partición que comienza en: 12
+[INFO] 22:02:38:986 BROKER/(1608:1817): Almaceno mensaje en partición que comienza en: 23
+[INFO] 22:02:38:997 BROKER/(1608:1822): Almaceno mensaje en partición que comienza en: 34
+[INFO] 22:02:38:997 BROKER/(1608:1823): Almaceno mensaje en partición que comienza en: 45
+[INFO] 22:02:42:806 BROKER/(1608:1832): Se realiza la compactacion
+[INFO] 22:02:42:806 BROKER/(1608:1832): Elimino particion que comienza en: 0
+[INFO] 22:02:42:806 BROKER/(1608:1832): Se realiza la compactacion
+[INFO] 22:02:42:806 BROKER/(1608:1832): Almaceno mensaje en partición que comienza en: 43
+[INFO] 22:02:42:807 BROKER/(1608:1620): Envié mensaje a suscriptor: 103 -.-
+[INFO] 22:04:50:799 BROKER/(2445:2445): Inició el Broker.
+[INFO] 22:04:53:842 BROKER/(2445:2694): Almaceno mensaje en partición que comienza en: 0
+[INFO] 22:04:53:842 BROKER/(2445:2696): Almaceno mensaje en partición que comienza en: 12
+[INFO] 22:04:53:842 BROKER/(2445:2695): Almaceno mensaje en partición que comienza en: 23
+[INFO] 22:04:53:843 BROKER/(2445:2698): Almaceno mensaje en partición que comienza en: 34
+[INFO] 22:04:53:844 BROKER/(2445:2697): Almaceno mensaje en partición que comienza en: 44
+[INFO] 22:04:57:98 BROKER/(2445:2712): Se realiza la compactacion
+[INFO] 22:04:57:98 BROKER/(2445:2712): Elimino particion que comienza en: 0
+[INFO] 22:04:57:98 BROKER/(2445:2712): Se realiza la compactacion
+[INFO] 22:04:57:98 BROKER/(2445:2712): Almaceno mensaje en partición que comienza en: 43
+[INFO] 22:04:57:98 BROKER/(2445:2460): Envié mensaje a suscriptor: 103 -.-
+[INFO] 22:05:00:103 BROKER/(2445:2724): Se realiza la compactacion
+[INFO] 22:05:00:103 BROKER/(2445:2724): Elimino particion que comienza en: 0
+[INFO] 22:05:00:103 BROKER/(2445:2724): Se realiza la compactacion
+[INFO] 22:05:00:103 BROKER/(2445:2724): Elimino particion que comienza en: 0
+[INFO] 22:05:00:103 BROKER/(2445:2724): Se realiza la compactacion
+[INFO] 22:05:00:103 BROKER/(2445:2724): Almaceno mensaje en partición que comienza en: 41
+[INFO] 22:07:43:319 BROKER/(3548:3548): Inició el Broker.
+[INFO] 22:07:49:277 BROKER/(3548:3738): Almaceno mensaje en partición que comienza en: 0
+[INFO] 22:07:49:281 BROKER/(3548:3741): Almaceno mensaje en partición que comienza en: 12
+[INFO] 22:07:49:285 BROKER/(3548:3743): Almaceno mensaje en partición que comienza en: 22
+[INFO] 22:07:49:285 BROKER/(3548:3744): Almaceno mensaje en partición que comienza en: 33
+[INFO] 22:07:49:285 BROKER/(3548:3745): Almaceno mensaje en partición que comienza en: 44
+[INFO] 22:07:55:621 BROKER/(3889:3889): Inició el Broker.
+[INFO] 22:08:19:892 BROKER/(3889:4256): Almaceno mensaje en partición que comienza en: 0
+[INFO] 22:08:19:892 BROKER/(3889:3905): Envié mensaje a suscriptor: 201 -.-
+[INFO] 22:08:19:893 BROKER/(3889:4257): Almaceno mensaje en partición que comienza en: 12
+[INFO] 22:08:19:893 BROKER/(3889:3905): Envié mensaje a suscriptor: 201 -.-
+[INFO] 22:08:19:893 BROKER/(3889:4258): Almaceno mensaje en partición que comienza en: 23
+[INFO] 22:08:19:893 BROKER/(3889:4259): Almaceno mensaje en partición que comienza en: 34
+[INFO] 22:08:19:894 BROKER/(3889:3905): Envié mensaje a suscriptor: 201 -.-
+[INFO] 22:08:19:894 BROKER/(3889:3905): Envié mensaje a suscriptor: 201 -.-
+[INFO] 22:08:19:894 BROKER/(3889:4260): Almaceno mensaje en partición que comienza en: 45
+[INFO] 22:08:19:894 BROKER/(3889:3905): Envié mensaje a suscriptor: 201 -.-
+[INFO] 22:08:19:902 BROKER/(3889:4268): Se realiza la compactacion
+[INFO] 22:08:19:902 BROKER/(3889:4268): Elimino particion que comienza en: 0
+[INFO] 22:08:19:902 BROKER/(3889:4268): Se realiza la compactacion
+[INFO] 22:08:19:902 BROKER/(3889:4268): Almaceno mensaje en partición que comienza en: 43
+[INFO] 22:08:19:902 BROKER/(3889:3906): Envié mensaje a suscriptor: 103 -.-
+[INFO] 22:08:19:905 BROKER/(3889:4272): Se realiza la compactacion
+[INFO] 22:08:19:905 BROKER/(3889:4272): Elimino particion que comienza en: 0
+[INFO] 22:08:19:905 BROKER/(3889:4272): Se realiza la compactacion
+[INFO] 22:08:19:905 BROKER/(3889:4272): Almaceno mensaje en partición que comienza en: 47
+[INFO] 22:08:19:905 BROKER/(3889:3906): Envié mensaje a suscriptor: 103 -.-
+[INFO] 22:08:19:906 BROKER/(3889:4276): Se realiza la compactacion
+[INFO] 22:08:19:906 BROKER/(3889:4276): Elimino particion que comienza en: 0
+[INFO] 22:08:19:906 BROKER/(3889:4276): Se realiza la compactacion
+[INFO] 22:08:19:906 BROKER/(3889:4276): Elimino particion que comienza en: 0
+[INFO] 22:08:19:906 BROKER/(3889:4276): Se realiza la compactacion
+[INFO] 22:08:19:906 BROKER/(3889:4276): Almaceno mensaje en partición que comienza en: 41
+[INFO] 22:08:19:906 BROKER/(3889:3906): Envié mensaje a suscriptor: 103 -.-
+[INFO] 22:08:19:908 BROKER/(3889:4275): Se realiza la compactacion
+[INFO] 22:08:19:908 BROKER/(3889:4275): Elimino particion que comienza en: 0
+[INFO] 22:08:19:909 BROKER/(3889:4275): Se realiza la compactacion
+[INFO] 22:08:19:909 BROKER/(3889:4275): Almaceno mensaje en partición que comienza en: 46
+[INFO] 22:08:19:909 BROKER/(3889:3906): Envié mensaje a suscriptor: 103 -.-
+[INFO] 22:08:19:909 BROKER/(3889:4277): Se realiza la compactacion
+[INFO] 22:08:19:909 BROKER/(3889:4277): Elimino particion que comienza en: 0
+[INFO] 22:08:19:909 BROKER/(3889:4277): Almaceno mensaje en partición que comienza en: 0
+[INFO] 22:08:19:909 BROKER/(3889:3906): Envié mensaje a suscriptor: 103 -.-
+[INFO] 22:10:58:847 BROKER/(3889:4581): Se realiza la compactacion
+[INFO] 22:10:58:847 BROKER/(3889:4581): Elimino particion que comienza en: 14
+[INFO] 22:10:58:847 BROKER/(3889:4581): Se realiza la compactacion
+[INFO] 22:10:58:848 BROKER/(3889:4581): Elimino particion que comienza en: 14
+[INFO] 22:10:58:848 BROKER/(3889:4581): Se realiza la compactacion
+[INFO] 22:10:58:848 BROKER/(3889:4581): Almaceno mensaje en partición que comienza en: 29
+[INFO] 22:10:58:849 BROKER/(3889:3902): Envié mensaje a suscriptor: 201 -.-
+[INFO] 22:10:59:861 BROKER/(3889:4585): Se realiza la compactacion
+[INFO] 22:10:59:861 BROKER/(3889:4585): Elimino particion que comienza en: 14
+[INFO] 22:10:59:861 BROKER/(3889:4585): Se realiza la compactacion
+[INFO] 22:10:59:861 BROKER/(3889:4585): Almaceno mensaje en partición que comienza en: 38
+[INFO] 22:10:59:861 BROKER/(3889:3901): Envié mensaje a suscriptor: 103 -.-
+[INFO] 22:11:02:897 BROKER/(3889:4594): Se realiza la compactacion
+[INFO] 22:11:02:897 BROKER/(3889:4594): Elimino particion que comienza en: 0
+[INFO] 22:11:02:897 BROKER/(3889:4594): Se realiza la compactacion
+[INFO] 22:11:02:897 BROKER/(3889:4594): Almaceno mensaje en partición que comienza en: 44
+[INFO] 22:11:02:897 BROKER/(3889:3904): Envié mensaje a suscriptor: 201 -.-
+[INFO] 22:11:03:911 BROKER/(3889:4601): Se realiza la compactacion
+[INFO] 22:11:03:911 BROKER/(3889:4601): Elimino particion que comienza en: 0
+[INFO] 22:11:03:911 BROKER/(3889:4601): Almaceno mensaje en partición que comienza en: 0
+[INFO] 22:11:03:911 BROKER/(3889:3903): Envié mensaje a suscriptor: 103 -.-
+[INFO] 22:14:03:273 BROKER/(5192:5192): Inició el Broker.
+[INFO] 22:14:13:259 BROKER/(5192:5527): Almaceno mensaje en partición que comienza en: 0
+[INFO] 22:14:13:260 BROKER/(5192:5207): Envié mensaje a suscriptor: 201 -.-
+[INFO] 22:14:13:260 BROKER/(5192:5530): Almaceno mensaje en partición que comienza en: 11
+[INFO] 22:14:13:261 BROKER/(5192:5207): Envié mensaje a suscriptor: 201 -.-
+[INFO] 22:14:13:261 BROKER/(5192:5528): Almaceno mensaje en partición que comienza en: 21
+[INFO] 22:14:13:261 BROKER/(5192:5207): Envié mensaje a suscriptor: 201 -.-
+[INFO] 22:14:13:262 BROKER/(5192:5529): Almaceno mensaje en partición que comienza en: 32
+[INFO] 22:14:13:262 BROKER/(5192:5207): Envié mensaje a suscriptor: 201 -.-
+[INFO] 22:14:13:263 BROKER/(5192:5534): Almaceno mensaje en partición que comienza en: 43
+[INFO] 22:14:13:263 BROKER/(5192:5207): Envié mensaje a suscriptor: 201 -.-
+[INFO] 22:14:13:270 BROKER/(5192:5546): Se realiza la compactacion
+[INFO] 22:14:13:270 BROKER/(5192:5546): Elimino particion que comienza en: 0
+[INFO] 22:14:13:271 BROKER/(5192:5546): Se realiza la compactacion
+[INFO] 22:14:13:271 BROKER/(5192:5546): Almaceno mensaje en partición que comienza en: 44
+[INFO] 22:14:13:271 BROKER/(5192:5208): Envié mensaje a suscriptor: 103 -.-
+[INFO] 22:14:13:271 BROKER/(5192:5547): Se realiza la compactacion
+[INFO] 22:14:13:271 BROKER/(5192:5547): Elimino particion que comienza en: 0
+[INFO] 22:14:13:271 BROKER/(5192:5547): Se realiza la compactacion
+[INFO] 22:14:13:271 BROKER/(5192:5547): Almaceno mensaje en partición que comienza en: 49
+[INFO] 22:14:13:271 BROKER/(5192:5208): Envié mensaje a suscriptor: 103 -.-
+[INFO] 22:14:13:271 BROKER/(5192:5548): Se realiza la compactacion
+[INFO] 22:14:13:271 BROKER/(5192:5548): Elimino particion que comienza en: 0
+[INFO] 22:14:13:271 BROKER/(5192:5548): Se realiza la compactacion
+[INFO] 22:14:13:271 BROKER/(5192:5548): Elimino particion que comienza en: 0
+[INFO] 22:14:13:271 BROKER/(5192:5548): Se realiza la compactacion
+[INFO] 22:14:13:271 BROKER/(5192:5548): Almaceno mensaje en partición que comienza en: 41
+[INFO] 22:14:13:271 BROKER/(5192:5208): Envié mensaje a suscriptor: 103 -.-
+[INFO] 22:14:13:272 BROKER/(5192:5549): Se realiza la compactacion
+[INFO] 22:14:13:272 BROKER/(5192:5549): Elimino particion que comienza en: 0
+[INFO] 22:14:13:272 BROKER/(5192:5549): Se realiza la compactacion
+[INFO] 22:14:13:272 BROKER/(5192:5549): Almaceno mensaje en partición que comienza en: 44
+[INFO] 22:14:13:272 BROKER/(5192:5208): Envié mensaje a suscriptor: 103 -.-
+[INFO] 22:14:14:270 BROKER/(5192:5562): Se realiza la compactacion
+[INFO] 22:14:14:270 BROKER/(5192:5562): Elimino particion que comienza en: 0
+[INFO] 22:14:14:270 BROKER/(5192:5562): Se realiza la compactacion
+[INFO] 22:14:14:270 BROKER/(5192:5562): Almaceno mensaje en partición que comienza en: 44
+[INFO] 22:14:14:270 BROKER/(5192:5208): Envié mensaje a suscriptor: 103 -.-
+[INFO] 22:19:32:675 BROKER/(6481:6481): Inició el Broker.
+[INFO] 22:19:35:849 BROKER/(6512:6512): Inició el Broker.
+[INFO] 22:19:41:328 BROKER/(6548:6548): Inició el Broker.
+[INFO] 22:19:53:893 BROKER/(6870:6870): Inició el Broker.
+[INFO] 22:20:04:75 BROKER/(6870:7049): Almaceno mensaje en partición que comienza en: 0
+[INFO] 22:20:04:76 BROKER/(6870:6882): Envié mensaje a suscriptor: 201 -.-
+[INFO] 22:20:05:85 BROKER/(6870:7056): Almaceno mensaje en partición que comienza en: 24
+[INFO] 22:20:21:205 BROKER/(6870:7235): Almaceno mensaje en partición que comienza en: 44
+[INFO] 22:20:21:206 BROKER/(6870:6885): Envié mensaje a suscriptor: 201 -.-
+[INFO] 22:20:21:206 BROKER/(6870:7241): Se realiza la compactacion
+[INFO] 22:20:21:206 BROKER/(6870:7241): Elimino particion que comienza en: 0
+[INFO] 22:20:21:206 BROKER/(6870:7241): Almaceno mensaje en partición que comienza en: 0
+[INFO] 22:20:21:206 BROKER/(6870:6885): Envié mensaje a suscriptor: 201 -.-
+[INFO] 22:20:21:208 BROKER/(6870:7238): Almaceno mensaje en partición que comienza en: 10
+[INFO] 22:20:21:208 BROKER/(6870:6885): Envié mensaje a suscriptor: 201 -.-
+[INFO] 22:20:21:209 BROKER/(6870:7239): Se realiza la compactacion
+[INFO] 22:20:21:209 BROKER/(6870:7239): Almaceno mensaje en partición que comienza en: 53
+[INFO] 22:20:21:209 BROKER/(6870:6885): Envié mensaje a suscriptor: 201 -.-
+[INFO] 22:20:21:209 BROKER/(6870:7240): Se realiza la compactacion
+[INFO] 22:20:21:209 BROKER/(6870:7240): Elimino particion que comienza en: 21
+[INFO] 22:20:21:209 BROKER/(6870:7240): Almaceno mensaje en partición que comienza en: 21
+[INFO] 22:20:21:209 BROKER/(6870:6885): Envié mensaje a suscriptor: 201 -.-
+[INFO] 22:20:21:214 BROKER/(6870:7255): Se realiza la compactacion
+[INFO] 22:20:21:214 BROKER/(6870:7255): Elimino particion que comienza en: 32
+[INFO] 22:20:21:214 BROKER/(6870:7255): Se realiza la compactacion
+[INFO] 22:20:21:214 BROKER/(6870:7255): Almaceno mensaje en partición que comienza en: 43
+[INFO] 22:20:21:214 BROKER/(6870:7254): Se realiza la compactacion
+[INFO] 22:20:21:214 BROKER/(6870:7254): Elimino particion que comienza en: 0
+[INFO] 22:20:21:214 BROKER/(6870:7254): Se realiza la compactacion
+[INFO] 22:20:21:214 BROKER/(6870:7254): Almaceno mensaje en partición que comienza en: 47
+[INFO] 22:20:21:214 BROKER/(6870:6886): Envié mensaje a suscriptor: 103 -.-
+[INFO] 22:20:21:218 BROKER/(6870:7257): Se realiza la compactacion
+[INFO] 22:20:21:218 BROKER/(6870:7257): Elimino particion que comienza en: 0
+[INFO] 22:20:21:218 BROKER/(6870:7257): Se realiza la compactacion
+[INFO] 22:20:21:218 BROKER/(6870:7257): Elimino particion que comienza en: 11
+[INFO] 22:20:21:218 BROKER/(6870:7257): Se realiza la compactacion
+[INFO] 22:20:21:218 BROKER/(6870:7257): Almaceno mensaje en partición que comienza en: 40
+[INFO] 22:20:21:218 BROKER/(6870:6886): Envié mensaje a suscriptor: 103 -.-
+[INFO] 22:20:21:218 BROKER/(6870:7256): Se realiza la compactacion
+[INFO] 22:20:21:218 BROKER/(6870:7256): Elimino particion que comienza en: 0
+[INFO] 22:20:21:218 BROKER/(6870:7256): Se realiza la compactacion
+[INFO] 22:20:21:218 BROKER/(6870:7256): Almaceno mensaje en partición que comienza en: 44
+[INFO] 22:20:21:218 BROKER/(6870:6886): Envié mensaje a suscriptor: 103 -.-
+[INFO] 22:20:21:223 BROKER/(6870:6886): Envié mensaje a suscriptor: 103 -.-
+[INFO] 22:20:22:215 BROKER/(6870:7267): Se realiza la compactacion
+[INFO] 22:20:22:215 BROKER/(6870:7267): Elimino particion que comienza en: 0
+[INFO] 22:20:22:215 BROKER/(6870:7267): Se realiza la compactacion
+[INFO] 22:20:22:215 BROKER/(6870:7267): Almaceno mensaje en partición que comienza en: 45
+[INFO] 22:20:22:215 BROKER/(6870:6886): Envié mensaje a suscriptor: 103 -.-
+[INFO] 22:20:24:246 BROKER/(6870:7275): Se realiza la compactacion
+[INFO] 22:20:24:246 BROKER/(6870:7275): Elimino particion que comienza en: 0
+[INFO] 22:20:24:246 BROKER/(6870:7275): Se realiza la compactacion
+[INFO] 22:20:24:246 BROKER/(6870:7275): Elimino particion que comienza en: 0
+[INFO] 22:20:24:246 BROKER/(6870:7275): Se realiza la compactacion
+[INFO] 22:20:24:246 BROKER/(6870:7275): Almaceno mensaje en partición que comienza en: 31
+[INFO] 22:20:24:246 BROKER/(6870:6884): Envié mensaje a suscriptor: 201 -.-
+[INFO] 22:20:25:262 BROKER/(6870:7283): Almaceno mensaje en partición que comienza en: 51
+[INFO] 22:20:25:262 BROKER/(6870:6883): Envié mensaje a suscriptor: 103 -.-
+[INFO] 22:21:02:864 BROKER/(6870:7349): Se realiza la compactacion
+[INFO] 22:21:02:864 BROKER/(6870:7349): Elimino particion que comienza en: 0
+[INFO] 22:21:02:864 BROKER/(6870:7349): Se realiza la compactacion
+[INFO] 22:21:02:864 BROKER/(6870:7349): Almaceno mensaje en partición que comienza en: 40
+[INFO] 22:21:02:865 BROKER/(6870:6882): Envié mensaje a suscriptor: 201 -.-
+[INFO] 22:21:03:880 BROKER/(6870:7353): Se realiza la compactacion
+[INFO] 22:21:03:880 BROKER/(6870:7353): Elimino particion que comienza en: 0
+[INFO] 22:21:03:880 BROKER/(6870:7353): Se realiza la compactacion
+[INFO] 22:21:03:880 BROKER/(6870:7353): Elimino particion que comienza en: 0
+[INFO] 22:21:03:880 BROKER/(6870:7353): Almaceno mensaje en partición que comienza en: 0
+[INFO] 22:21:03:881 BROKER/(6870:6881): Envié mensaje a suscriptor: 103 -.-
+[INFO] 22:21:12:925 BROKER/(6870:7377): Se realiza la compactacion
+[INFO] 22:21:12:925 BROKER/(6870:7377): Elimino particion que comienza en: 20
+[INFO] 22:21:12:925 BROKER/(6870:7377): Se realiza la compactacion
+[INFO] 22:21:12:925 BROKER/(6870:7377): Almaceno mensaje en partición que comienza en: 43
+[INFO] 22:21:12:925 BROKER/(6870:6884): Envié mensaje a suscriptor: 201 -.-
+[INFO] 22:21:13:934 BROKER/(6870:7380): Se realiza la compactacion
+[INFO] 22:21:13:934 BROKER/(6870:7380): Elimino particion que comienza en: 20
+[INFO] 22:21:13:934 BROKER/(6870:7380): Almaceno mensaje en partición que comienza en: 20
+[INFO] 22:21:13:935 BROKER/(6870:6883): Envié mensaje a suscriptor: 103 -.-
+[INFO] 22:21:18:50 BROKER/(6870:7393): Se realiza la compactacion
+[INFO] 22:21:18:50 BROKER/(6870:7393): Elimino particion que comienza en: 0
+[INFO] 22:21:18:51 BROKER/(6870:7393): Se realiza la compactacion
+[INFO] 22:21:18:51 BROKER/(6870:7393): Almaceno mensaje en partición que comienza en: 23
+[INFO] 22:21:18:52 BROKER/(6870:6882): Envié mensaje a suscriptor: 201 -.-
+[INFO] 22:21:19:65 BROKER/(6870:7396): Se realiza la compactacion
+[INFO] 22:21:19:65 BROKER/(6870:7396): Elimino particion que comienza en: 4
+[INFO] 22:21:19:65 BROKER/(6870:7396): Se realiza la compactacion
+[INFO] 22:21:19:65 BROKER/(6870:7396): Almaceno mensaje en partición que comienza en: 27
+[INFO] 22:21:19:65 BROKER/(6870:6881): Envié mensaje a suscriptor: 103 -.-
+[INFO] 22:21:25:487 BROKER/(6870:7414): Se realiza la compactacion
+[INFO] 22:21:25:487 BROKER/(6870:7414): Elimino particion que comienza en: 0
+[INFO] 22:21:25:487 BROKER/(6870:7414): Se realiza la compactacion
+[INFO] 22:21:25:487 BROKER/(6870:7414): Elimino particion que comienza en: 0
+[INFO] 22:21:25:487 BROKER/(6870:7414): Almaceno mensaje en partición que comienza en: 0
+[INFO] 22:21:25:487 BROKER/(6870:6882): Envié mensaje a suscriptor: 201 -.-
+[INFO] 22:21:26:506 BROKER/(6870:7420): Almaceno mensaje en partición que comienza en: 43
+[INFO] 22:21:26:506 BROKER/(6870:6881): Envié mensaje a suscriptor: 103 -.-
+[INFO] 22:21:30:126 BROKER/(6870:7429): Se realiza la compactacion
+[INFO] 22:21:30:126 BROKER/(6870:7429): Elimino particion que comienza en: 23
+[INFO] 22:21:30:126 BROKER/(6870:7429): Almaceno mensaje en partición que comienza en: 23
+[INFO] 22:21:30:127 BROKER/(6870:6884): Envié mensaje a suscriptor: 201 -.-
+[INFO] 22:21:31:142 BROKER/(6870:7438): Se realiza la compactacion
+[INFO] 22:21:31:142 BROKER/(6870:7438): Elimino particion que comienza en: 0
+[INFO] 22:21:31:142 BROKER/(6870:7438): Almaceno mensaje en partición que comienza en: 0
+[INFO] 22:21:31:142 BROKER/(6870:6883): Envié mensaje a suscriptor: 103 -.-
+[INFO] 22:21:32:706 BROKER/(6870:7449): Se realiza la compactacion
+[INFO] 22:21:32:706 BROKER/(6870:7449): Elimino particion que comienza en: 23
+[INFO] 22:21:32:706 BROKER/(6870:7449): Almaceno mensaje en partición que comienza en: 23
+[INFO] 22:21:32:708 BROKER/(6870:6882): Envié mensaje a suscriptor: 201 -.-
+[INFO] 22:21:33:729 BROKER/(6870:7453): Se realiza la compactacion
+[INFO] 22:21:33:729 BROKER/(6870:7453): Elimino particion que comienza en: 4
+[INFO] 22:21:33:729 BROKER/(6870:7453): Se realiza la compactacion
+[INFO] 22:21:33:729 BROKER/(6870:7453): Almaceno mensaje en partición que comienza en: 26
+[INFO] 22:21:33:729 BROKER/(6870:6881): Envié mensaje a suscriptor: 103 -.-
+[INFO] 22:21:42:182 BROKER/(6870:7472): Se realiza la compactacion
+[INFO] 22:21:42:182 BROKER/(6870:7472): Elimino particion que comienza en: 0
+[INFO] 22:21:42:182 BROKER/(6870:7472): Se realiza la compactacion
+[INFO] 22:21:42:182 BROKER/(6870:7472): Almaceno mensaje en partición que comienza en: 42
+[INFO] 22:21:42:182 BROKER/(6870:6884): Envié mensaje a suscriptor: 201 -.-
+[INFO] 22:21:43:205 BROKER/(6870:7480): Se realiza la compactacion
+[INFO] 22:21:43:205 BROKER/(6870:7480): Elimino particion que comienza en: 0
+[INFO] 22:21:43:205 BROKER/(6870:7480): Almaceno mensaje en partición que comienza en: 0
+[INFO] 22:21:43:205 BROKER/(6870:6883): Envié mensaje a suscriptor: 103 -.-
+[INFO] 22:21:55:231 BROKER/(6870:7508): Almaceno mensaje en partición que comienza en: 4
+[INFO] 22:21:55:231 BROKER/(6870:6884): Envié mensaje a suscriptor: 201 -.-
+[INFO] 22:21:56:249 BROKER/(6870:7512): Se realiza la compactacion
+[INFO] 22:21:56:249 BROKER/(6870:7512): Elimino particion que comienza en: 22
+[INFO] 22:21:56:249 BROKER/(6870:7512): Almaceno mensaje en partición que comienza en: 22
+[INFO] 22:21:56:249 BROKER/(6870:6883): Envié mensaje a suscriptor: 103 -.-
+[INFO] 22:23:04:910 BROKER/(6870:7674): Almaceno mensaje en partición que comienza en: 26
+[INFO] 22:23:04:910 BROKER/(6870:6885): Envié mensaje a suscriptor: 201 -.-
+[INFO] 22:23:04:913 BROKER/(6870:7678): Se realiza la compactacion
+[INFO] 22:23:04:913 BROKER/(6870:7678): Elimino particion que comienza en: 38
+[INFO] 22:23:04:913 BROKER/(6870:7678): Almaceno mensaje en partición que comienza en: 38
+[INFO] 22:23:04:914 BROKER/(6870:7680): Almaceno mensaje en partición que comienza en: 49
+[INFO] 22:23:04:914 BROKER/(6870:7681): Se realiza la compactacion
+[INFO] 22:23:04:914 BROKER/(6870:7681): Elimino particion que comienza en: 0
+[INFO] 22:23:04:914 BROKER/(6870:7681): Se realiza la compactacion
+[INFO] 22:23:04:914 BROKER/(6870:7681): Elimino particion que comienza en: 0
+[INFO] 22:23:04:914 BROKER/(6870:7681): Almaceno mensaje en partición que comienza en: 0
+[INFO] 22:23:04:914 BROKER/(6870:6885): Envié mensaje a suscriptor: 201 -.-
+[INFO] 22:23:04:914 BROKER/(6870:6885): Envié mensaje a suscriptor: 201 -.-
+[INFO] 22:23:04:914 BROKER/(6870:6885): Envié mensaje a suscriptor: 201 -.-
+[INFO] 22:23:04:925 BROKER/(6870:7679): Se realiza la compactacion
+[INFO] 22:23:04:925 BROKER/(6870:7679): Almaceno mensaje en partición que comienza en: 48
+[INFO] 22:23:04:925 BROKER/(6870:6885): Envié mensaje a suscriptor: 201 -.-
+[INFO] 22:23:05:923 BROKER/(6870:7696): Se realiza la compactacion
+[INFO] 22:23:05:923 BROKER/(6870:7696): Elimino particion que comienza en: 10
+[INFO] 22:23:05:923 BROKER/(6870:7696): Se realiza la compactacion
+[INFO] 22:23:05:923 BROKER/(6870:7696): Elimino particion que comienza en: 10
+[INFO] 22:23:05:923 BROKER/(6870:7696): Se realiza la compactacion
+[INFO] 22:23:05:923 BROKER/(6870:7696): Almaceno mensaje en partición que comienza en: 43
+[INFO] 22:23:05:923 BROKER/(6870:6886): Envié mensaje a suscriptor: 103 -.-
+[INFO] 22:23:05:923 BROKER/(6870:7697): Se realiza la compactacion
+[INFO] 22:23:05:923 BROKER/(6870:7697): Elimino particion que comienza en: 10
+[INFO] 22:23:05:923 BROKER/(6870:7697): Se realiza la compactacion
+[INFO] 22:23:05:923 BROKER/(6870:7697): Almaceno mensaje en partición que comienza en: 48
+[INFO] 22:23:05:923 BROKER/(6870:6886): Envié mensaje a suscriptor: 103 -.-
+[INFO] 22:23:05:923 BROKER/(6870:7698): Se realiza la compactacion
+[INFO] 22:23:05:923 BROKER/(6870:7698): Elimino particion que comienza en: 10
+[INFO] 22:23:05:923 BROKER/(6870:7698): Se realiza la compactacion
+[INFO] 22:23:05:923 BROKER/(6870:7698): Elimino particion que comienza en: 0
+[INFO] 22:23:05:923 BROKER/(6870:7698): Se realiza la compactacion
+[INFO] 22:23:05:923 BROKER/(6870:7698): Almaceno mensaje en partición que comienza en: 42
+[INFO] 22:23:05:923 BROKER/(6870:6886): Envié mensaje a suscriptor: 103 -.-
+[INFO] 22:23:05:923 BROKER/(6870:7699): Se realiza la compactacion
+[INFO] 22:23:05:923 BROKER/(6870:7699): Elimino particion que comienza en: 0
+[INFO] 22:23:05:923 BROKER/(6870:7699): Se realiza la compactacion
+[INFO] 22:23:05:923 BROKER/(6870:7699): Almaceno mensaje en partición que comienza en: 46
+[INFO] 22:23:05:923 BROKER/(6870:6886): Envié mensaje a suscriptor: 103 -.-
+[INFO] 22:23:05:942 BROKER/(6870:7709): Se realiza la compactacion
+[INFO] 22:23:05:942 BROKER/(6870:7709): Elimino particion que comienza en: 0
+[INFO] 22:23:05:942 BROKER/(6870:7709): Almaceno mensaje en partición que comienza en: 0
+[INFO] 22:23:05:942 BROKER/(6870:6886): Envié mensaje a suscriptor: 103 -.-
+[INFO] 22:26:16:950 BROKER/(6870:8432): Se realiza la compactacion
+[INFO] 22:26:16:950 BROKER/(6870:8432): Elimino particion que comienza en: 15
+[INFO] 22:26:16:950 BROKER/(6870:8432): Almaceno mensaje en partición que comienza en: 15
+[INFO] 22:26:16:950 BROKER/(6870:8435): Se realiza la compactacion
+[INFO] 22:26:16:950 BROKER/(6870:8435): Elimino particion que comienza en: 27
+[INFO] 22:26:16:950 BROKER/(6870:8435): Almaceno mensaje en partición que comienza en: 27
+[INFO] 22:26:16:951 BROKER/(6870:6885): Envié mensaje a suscriptor: 201 -.-
+[INFO] 22:26:16:951 BROKER/(6870:8434): Se realiza la compactacion
+[INFO] 22:26:16:951 BROKER/(6870:8434): Almaceno mensaje en partición que comienza en: 52
+[INFO] 22:26:16:952 BROKER/(6870:8436): Se realiza la compactacion
+[INFO] 22:26:16:952 BROKER/(6870:8436): Elimino particion que comienza en: 38
+[INFO] 22:26:16:952 BROKER/(6870:8436): Almaceno mensaje en partición que comienza en: 38
+[INFO] 22:26:16:952 BROKER/(6870:6885): Envié mensaje a suscriptor: 201 -.-
+[INFO] 22:26:16:952 BROKER/(6870:6885): Envié mensaje a suscriptor: 201 -.-
+[INFO] 22:26:16:952 BROKER/(6870:6885): Envié mensaje a suscriptor: 201 -.-
+[INFO] 22:26:37:220 BROKER/(8614:8614): Inició el Broker.
+[INFO] 22:26:46:97 BROKER/(8614:8952): Almaceno mensaje en partición que comienza en: 0
+[INFO] 22:26:46:97 BROKER/(8614:8630): Envié mensaje a suscriptor: 201 -.-
+[INFO] 22:26:46:97 BROKER/(8614:8953): Almaceno mensaje en partición que comienza en: 12
+[INFO] 22:26:46:97 BROKER/(8614:8630): Envié mensaje a suscriptor: 201 -.-
+[INFO] 22:26:46:98 BROKER/(8614:8954): Almaceno mensaje en partición que comienza en: 23
+[INFO] 22:26:46:98 BROKER/(8614:8630): Envié mensaje a suscriptor: 201 -.-
+[INFO] 22:26:46:98 BROKER/(8614:8955): Almaceno mensaje en partición que comienza en: 33
+[INFO] 22:26:46:98 BROKER/(8614:8630): Envié mensaje a suscriptor: 201 -.-
+[INFO] 22:26:46:98 BROKER/(8614:8951): Almaceno mensaje en partición que comienza en: 44
+[INFO] 22:26:46:99 BROKER/(8614:8630): Envié mensaje a suscriptor: 201 -.-
+[INFO] 22:26:47:106 BROKER/(8614:8967): Se realiza la compactacion
+[INFO] 22:26:47:106 BROKER/(8614:8967): Elimino particion que comienza en: 0
+[INFO] 22:26:47:106 BROKER/(8614:8967): Se realiza la compactacion
+[INFO] 22:26:47:106 BROKER/(8614:8967): Almaceno mensaje en partición que comienza en: 43
+[INFO] 22:26:47:107 BROKER/(8614:8631): Envié mensaje a suscriptor: 103 -.-
+[INFO] 22:26:47:113 BROKER/(8614:8970): Se realiza la compactacion
+[INFO] 22:26:47:113 BROKER/(8614:8970): Elimino particion que comienza en: 0
+[INFO] 22:26:47:113 BROKER/(8614:8970): Se realiza la compactacion
+[INFO] 22:26:47:113 BROKER/(8614:8970): Almaceno mensaje en partición que comienza en: 48
+[INFO] 22:26:47:113 BROKER/(8614:8973): Se realiza la compactacion
+[INFO] 22:26:47:113 BROKER/(8614:8973): Elimino particion que comienza en: 0
+[INFO] 22:26:47:113 BROKER/(8614:8973): Se realiza la compactacion
+[INFO] 22:26:47:113 BROKER/(8614:8973): Elimino particion que comienza en: 0
+[INFO] 22:26:47:113 BROKER/(8614:8973): Se realiza la compactacion
+[INFO] 22:26:47:113 BROKER/(8614:8973): Almaceno mensaje en partición que comienza en: 42
+[INFO] 22:26:47:113 BROKER/(8614:8631): Envié mensaje a suscriptor: 103 -.-
+[INFO] 22:26:47:113 BROKER/(8614:8972): Se realiza la compactacion
+[INFO] 22:26:47:113 BROKER/(8614:8972): Elimino particion que comienza en: 0
+[INFO] 22:26:47:113 BROKER/(8614:8972): Se realiza la compactacion
+[INFO] 22:26:47:113 BROKER/(8614:8972): Almaceno mensaje en partición que comienza en: 46
+[INFO] 22:26:47:113 BROKER/(8614:8971): Se realiza la compactacion
+[INFO] 22:26:47:113 BROKER/(8614:8971): Elimino particion que comienza en: 0
+[INFO] 22:26:47:113 BROKER/(8614:8971): Almaceno mensaje en partición que comienza en: 0
+[INFO] 22:26:47:113 BROKER/(8614:8631): Envié mensaje a suscriptor: 103 -.-
+[INFO] 22:26:47:113 BROKER/(8614:8631): Envié mensaje a suscriptor: 103 -.-
+[INFO] 22:26:47:114 BROKER/(8614:8631): Envié mensaje a suscriptor: 103 -.-
+[INFO] 22:32:21:419 BROKER/(9970:9970): Inició el Broker.
+[INFO] 22:32:31:134 BROKER/(9970:10318): Almaceno mensaje en partición que comienza en: 0
+[INFO] 22:32:31:134 BROKER/(9970:9987): Envié mensaje a suscriptor: 201 -.-
+[INFO] 22:32:31:135 BROKER/(9970:10320): Almaceno mensaje en partición que comienza en: 11
+[INFO] 22:32:31:135 BROKER/(9970:9987): Envié mensaje a suscriptor: 201 -.-
+[INFO] 22:32:31:135 BROKER/(9970:10319): Almaceno mensaje en partición que comienza en: 22
+[INFO] 22:32:31:135 BROKER/(9970:9987): Envié mensaje a suscriptor: 201 -.-
+[INFO] 22:32:31:135 BROKER/(9970:10321): Almaceno mensaje en partición que comienza en: 34
+[INFO] 22:32:31:135 BROKER/(9970:9987): Envié mensaje a suscriptor: 201 -.-
+[INFO] 22:32:31:136 BROKER/(9970:10317): Almaceno mensaje en partición que comienza en: 45
+[INFO] 22:32:31:136 BROKER/(9970:9987): Envié mensaje a suscriptor: 201 -.-
+[INFO] 22:32:32:201 BROKER/(9970:10336): Se realiza la compactacion
+[INFO] 22:32:32:201 BROKER/(9970:10336): Elimino particion que comienza en: 0
+[INFO] 22:32:32:201 BROKER/(9970:10336): Se realiza la compactacion
+[INFO] 22:32:32:201 BROKER/(9970:10336): Almaceno mensaje en partición que comienza en: 44
+[INFO] 22:32:32:201 BROKER/(9970:10337): Se realiza la compactacion
+[INFO] 22:32:32:201 BROKER/(9970:10337): Elimino particion que comienza en: 0
+[INFO] 22:32:32:201 BROKER/(9970:10337): Se realiza la compactacion
+[INFO] 22:32:32:201 BROKER/(9970:10337): Almaceno mensaje en partición que comienza en: 48
+[INFO] 22:32:32:201 BROKER/(9970:9988): Envié mensaje a suscriptor: 103 -.-
+[INFO] 22:32:32:201 BROKER/(9970:10335): Se realiza la compactacion
+[INFO] 22:32:32:201 BROKER/(9970:9988): Envié mensaje a suscriptor: 103 -.-
+[INFO] 22:32:32:201 BROKER/(9970:10335): Elimino particion que comienza en: 0
+[INFO] 22:32:32:201 BROKER/(9970:10335): Se realiza la compactacion
+[INFO] 22:32:32:201 BROKER/(9970:10335): Elimino particion que comienza en: 0
+[INFO] 22:32:32:201 BROKER/(9970:10335): Se realiza la compactacion
+[INFO] 22:32:32:201 BROKER/(9970:10335): Almaceno mensaje en partición que comienza en: 40
+[INFO] 22:32:32:202 BROKER/(9970:9988): Envié mensaje a suscriptor: 103 -.-
+[INFO] 22:32:32:205 BROKER/(9970:10339): Se realiza la compactacion
+[INFO] 22:32:32:205 BROKER/(9970:10339): Elimino particion que comienza en: 0
+[INFO] 22:32:32:205 BROKER/(9970:10339): Se realiza la compactacion
+[INFO] 22:32:32:205 BROKER/(9970:10339): Almaceno mensaje en partición que comienza en: 46
+[INFO] 22:32:32:205 BROKER/(9970:9988): Envié mensaje a suscriptor: 103 -.-
+[INFO] 22:32:32:205 BROKER/(9970:10338): Se realiza la compactacion
+[INFO] 22:32:32:205 BROKER/(9970:10338): Elimino particion que comienza en: 0
+[INFO] 22:32:32:205 BROKER/(9970:10338): Almaceno mensaje en partición que comienza en: 0
+[INFO] 22:32:32:205 BROKER/(9970:9988): Envié mensaje a suscriptor: 103 -.-
+[INFO] 22:42:08:735 BROKER/(11799:11799): Inició el Broker.
+[INFO] 22:42:14:13 BROKER/(11799:11829): Se almacena mensaje en memoria en posición: (nil) -.-
+[INFO] 22:42:14:14 BROKER/(11799:11832): Se almacena mensaje en memoria en posición: 0x4 -.-
+[INFO] 22:42:14:15 BROKER/(11799:11835): Se almacena mensaje en memoria en posición: 0x20 -.-
+[INFO] 22:42:14:16 BROKER/(11799:11838): Se almacena mensaje en memoria en posición: 0x10 -.-
+[INFO] 22:42:25:20 BROKER/(11799:11861): Se almacena mensaje en memoria en posición: (nil) -.-
+[INFO] 22:57:54:893 BROKER/(13753:13753): Inició el Broker.
+[INFO] 22:58:02:497 BROKER/(13753:13956): Se almacena mensaje en memoria en posición: (nil) -.-
+[INFO] 22:58:02:497 BROKER/(13753:13768): Envié mensaje a suscriptor: 201 -.-
+[INFO] 22:58:03:498 BROKER/(13753:13957): Se almacena mensaje en memoria en posición: 0x10 -.-
+[INFO] 22:58:03:498 BROKER/(13753:13959): Se almacena mensaje en memoria en posición: 0x20 -.-
+[INFO] 22:58:03:498 BROKER/(13753:13768): Envié mensaje a suscriptor: 201 -.-
+[INFO] 22:58:03:498 BROKER/(13753:13962): Se almacena mensaje en memoria en posición: 0x30 -.-
+[INFO] 22:58:05:500 BROKER/(13753:13768): Envié mensaje a suscriptor: 201 -.-
+[INFO] 22:58:05:500 BROKER/(13753:13958): Se almacena mensaje en memoria en posición: 0x20 -.-
+[INFO] 22:58:05:500 BROKER/(13753:13969): Se almacena mensaje en memoria en posición: 0x30 -.-
+[INFO] 22:58:05:501 BROKER/(13753:13769): Envié mensaje a suscriptor: 103 -.-
+[INFO] 22:58:05:501 BROKER/(13753:13972): Se almacena mensaje en memoria en posición: (nil) -.-
+[INFO] 22:58:05:501 BROKER/(13753:13768): Envié mensaje a suscriptor: 201 -.-
+[INFO] 22:58:07:505 BROKER/(13753:13769): Envié mensaje a suscriptor: 103 -.-
+[INFO] 22:58:07:505 BROKER/(13753:13768): Envié mensaje a suscriptor: 201 -.-
+[INFO] 22:58:08:506 BROKER/(13753:13981): Se almacena mensaje en memoria en posición: 0x20 -.-
+[INFO] 22:58:08:506 BROKER/(13753:13982): Se almacena mensaje en memoria en posición: (nil) -.-
+[INFO] 22:58:08:506 BROKER/(13753:13769): Envié mensaje a suscriptor: 103 -.-
+[INFO] 22:58:09:507 BROKER/(13753:13769): Envié mensaje a suscriptor: 103 -.-
+[INFO] 22:58:10:508 BROKER/(13753:13995): Se almacena mensaje en memoria en posición: 0x10 -.-
+[INFO] 22:58:11:509 BROKER/(13753:13769): Envié mensaje a suscriptor: 103 -.-
+[INFO] 23:01:39:318 BROKER/(14518:14518): Inició el Broker.
+[INFO] 23:02:19:794 BROKER/(13753:14900): Se almacena mensaje en memoria en posición: 0x30 -.-
+[INFO] 23:02:19:794 BROKER/(13753:13768): Envié mensaje a suscriptor: 201 -.-
+[INFO] 23:02:20:796 BROKER/(13753:14901): Se almacena mensaje en memoria en posición: 0x30 -.-
+[INFO] 23:02:20:796 BROKER/(13753:14903): Se almacena mensaje en memoria en posición: 0x30 -.-
+[INFO] 23:02:20:796 BROKER/(13753:14902): Se almacena mensaje en memoria en posición: 0x30 -.-
+[INFO] 23:02:20:797 BROKER/(13753:14904): Se almacena mensaje en memoria en posición: 0x30 -.-
+[INFO] 23:02:20:797 BROKER/(13753:13768): Envié mensaje a suscriptor: 201 -.-
+[INFO] 23:02:20:797 BROKER/(13753:13768): Envié mensaje a suscriptor: 201 -.-
+[INFO] 23:02:20:797 BROKER/(13753:13768): Envié mensaje a suscriptor: 201 -.-
+[INFO] 23:02:20:797 BROKER/(13753:13768): Envié mensaje a suscriptor: 201 -.-
+[INFO] 23:02:22:798 BROKER/(13753:14919): Se almacena mensaje en memoria en posición: 0x30 -.-
+[INFO] 23:02:22:799 BROKER/(13753:14922): Se almacena mensaje en memoria en posición: 0x30 -.-
+[INFO] 23:02:22:799 BROKER/(13753:13769): Envié mensaje a suscriptor: 103 -.-
+[INFO] 23:02:22:799 BROKER/(13753:14921): Se almacena mensaje en memoria en posición: 0x30 -.-
+[INFO] 23:02:22:799 BROKER/(13753:14920): Se almacena mensaje en memoria en posición: 0x30 -.-
+[INFO] 23:02:22:799 BROKER/(13753:14923): Se almacena mensaje en memoria en posición: 0x30 -.-
+[INFO] 23:02:22:800 BROKER/(13753:13769): Envié mensaje a suscriptor: 103 -.-
+[INFO] 23:02:22:800 BROKER/(13753:13769): Envié mensaje a suscriptor: 103 -.-
+[INFO] 23:02:22:800 BROKER/(13753:13769): Envié mensaje a suscriptor: 103 -.-
+[INFO] 23:02:23:801 BROKER/(13753:13769): Envié mensaje a suscriptor: 103 -.-
+[INFO] 23:05:26:478 BROKER/(13753:15448): Se almacena mensaje en memoria en posición: 0x30 -.-
+[INFO] 23:05:26:478 BROKER/(13753:13768): Envié mensaje a suscriptor: 201 -.-
+[INFO] 23:05:27:479 BROKER/(13753:15452): Se almacena mensaje en memoria en posición: 0x30 -.-
+[INFO] 23:05:27:479 BROKER/(13753:15453): Se almacena mensaje en memoria en posición: 0x30 -.-
+[INFO] 23:05:27:479 BROKER/(13753:13768): Envié mensaje a suscriptor: 201 -.-
+[INFO] 23:05:27:479 BROKER/(13753:15450): Se almacena mensaje en memoria en posición: 0x30 -.-
+[INFO] 23:05:27:480 BROKER/(13753:13768): Envié mensaje a suscriptor: 201 -.-
+[INFO] 23:05:27:480 BROKER/(13753:15454): Se almacena mensaje en memoria en posición: 0x30 -.-
+[INFO] 23:05:27:480 BROKER/(13753:13768): Envié mensaje a suscriptor: 201 -.-
+[INFO] 23:05:27:480 BROKER/(13753:13768): Envié mensaje a suscriptor: 201 -.-
+[INFO] 23:05:29:481 BROKER/(13753:15471): Se almacena mensaje en memoria en posición: 0x30 -.-
+[INFO] 23:05:29:481 BROKER/(13753:13769): Envié mensaje a suscriptor: 103 -.-
+[INFO] 23:05:29:482 BROKER/(13753:15474): Se almacena mensaje en memoria en posición: 0x30 -.-
+[INFO] 23:05:29:482 BROKER/(13753:15472): Se almacena mensaje en memoria en posición: 0x30 -.-
+[INFO] 23:05:29:482 BROKER/(13753:15473): Se almacena mensaje en memoria en posición: 0x30 -.-
+[INFO] 23:05:29:482 BROKER/(13753:15475): Se almacena mensaje en memoria en posición: 0x30 -.-
+[INFO] 23:05:29:482 BROKER/(13753:13769): Envié mensaje a suscriptor: 103 -.-
+[INFO] 23:05:29:482 BROKER/(13753:13769): Envié mensaje a suscriptor: 103 -.-
+[INFO] 23:05:29:482 BROKER/(13753:13769): Envié mensaje a suscriptor: 103 -.-
+[INFO] 23:05:29:483 BROKER/(13753:13769): Envié mensaje a suscriptor: 103 -.-
+[INFO] 23:09:02:346 BROKER/(13753:16012): Se almacena mensaje en memoria en posición: 0x30 -.-
+[INFO] 23:09:02:346 BROKER/(13753:13768): Envié mensaje a suscriptor: 201 -.-
+[INFO] 23:09:02:347 BROKER/(13753:16008): Se almacena mensaje en memoria en posición: 0x30 -.-
+[INFO] 23:09:02:348 BROKER/(13753:16007): Se almacena mensaje en memoria en posición: 0x30 -.-
+[INFO] 23:09:02:348 BROKER/(13753:13768): Envié mensaje a suscriptor: 201 -.-
+[INFO] 23:09:03:350 BROKER/(13753:13768): Envié mensaje a suscriptor: 201 -.-
+[INFO] 23:09:03:350 BROKER/(13753:16006): Se almacena mensaje en memoria en posición: 0x30 -.-
+[INFO] 23:09:03:350 BROKER/(13753:16005): Se almacena mensaje en memoria en posición: 0x30 -.-
+[INFO] 23:09:03:350 BROKER/(13753:13768): Envié mensaje a suscriptor: 201 -.-
+[INFO] 23:09:03:350 BROKER/(13753:13768): Envié mensaje a suscriptor: 201 -.-
+[INFO] 23:09:05:355 BROKER/(13753:16028): Se almacena mensaje en memoria en posición: 0x30 -.-
+[INFO] 23:09:05:355 BROKER/(13753:13769): Envié mensaje a suscriptor: 103 -.-
+[INFO] 23:09:05:356 BROKER/(13753:16029): Se almacena mensaje en memoria en posición: 0x30 -.-
+[INFO] 23:09:05:356 BROKER/(13753:16030): Se almacena mensaje en memoria en posición: 0x30 -.-
+[INFO] 23:09:05:356 BROKER/(13753:16031): Se almacena mensaje en memoria en posición: 0x30 -.-
+[INFO] 23:09:05:356 BROKER/(13753:16032): Se almacena mensaje en memoria en posición: 0x30 -.-
+[INFO] 23:09:05:357 BROKER/(13753:13769): Envié mensaje a suscriptor: 103 -.-
+[INFO] 23:09:05:357 BROKER/(13753:13769): Envié mensaje a suscriptor: 103 -.-
+[INFO] 23:09:05:357 BROKER/(13753:13769): Envié mensaje a suscriptor: 103 -.-
+[INFO] 23:09:05:357 BROKER/(13753:13769): Envié mensaje a suscriptor: 103 -.-
+[INFO] 23:09:47:693 BROKER/(13753:16406): Se almacena mensaje en memoria en posición: 0x30 -.-
+[INFO] 23:09:47:693 BROKER/(13753:13768): Envié mensaje a suscriptor: 201 -.-
+[INFO] 23:09:48:694 BROKER/(13753:16405): Se almacena mensaje en memoria en posición: 0x30 -.-
+[INFO] 23:09:48:694 BROKER/(13753:13768): Envié mensaje a suscriptor: 201 -.-
+[INFO] 23:09:48:694 BROKER/(13753:16404): Se almacena mensaje en memoria en posición: 0x30 -.-
+[INFO] 23:09:48:694 BROKER/(13753:16402): Se almacena mensaje en memoria en posición: 0x30 -.-
+[INFO] 23:09:48:695 BROKER/(13753:13768): Envié mensaje a suscriptor: 201 -.-
+[INFO] 23:09:48:695 BROKER/(13753:13768): Envié mensaje a suscriptor: 201 -.-
+[INFO] 23:09:49:696 BROKER/(13753:16403): Se almacena mensaje en memoria en posición: 0x30 -.-
+[INFO] 23:09:49:697 BROKER/(13753:16419): Se almacena mensaje en memoria en posición: 0x30 -.-
+[INFO] 23:09:49:697 BROKER/(13753:13769): Envié mensaje a suscriptor: 103 -.-
+[INFO] 23:09:49:698 BROKER/(13753:13768): Envié mensaje a suscriptor: 201 -.-
+[INFO] 23:09:51:699 BROKER/(13753:16429): Se almacena mensaje en memoria en posición: 0x30 -.-
+[INFO] 23:09:51:699 BROKER/(13753:13769): Envié mensaje a suscriptor: 103 -.-
+[INFO] 23:09:51:699 BROKER/(13753:16430): Se almacena mensaje en memoria en posición: 0x30 -.-
+[INFO] 23:09:51:699 BROKER/(13753:16431): Se almacena mensaje en memoria en posición: 0x30 -.-
+[INFO] 23:09:51:700 BROKER/(13753:16437): Se almacena mensaje en memoria en posición: 0x30 -.-
+[INFO] 23:10:16:933 BROKER/(16591:16591): Inició el Broker.
+[INFO] 23:10:35:821 BROKER/(16591:16925): Se almacena mensaje en memoria en posición: (nil) -.-
+[INFO] 23:10:35:821 BROKER/(16591:16607): Envié mensaje a suscriptor: 201 -.-
+[INFO] 23:10:36:822 BROKER/(16591:16926): Se almacena mensaje en memoria en posición: 0x10 -.-
+[INFO] 23:10:36:822 BROKER/(16591:16924): Se almacena mensaje en memoria en posición: 0x20 -.-
+[INFO] 23:10:36:823 BROKER/(16591:16607): Envié mensaje a suscriptor: 201 -.-
+[INFO] 23:10:37:825 BROKER/(16591:16923): Se almacena mensaje en memoria en posición: 0x30 -.-
+[INFO] 23:10:38:826 BROKER/(16591:16607): Envié mensaje a suscriptor: 201 -.-
+[INFO] 23:10:39:827 BROKER/(16591:16935): Se almacena mensaje en memoria en posición: 0x20 -.-
+[INFO] 23:10:39:827 BROKER/(16591:16608): Envié mensaje a suscriptor: 103 -.-
+[INFO] 23:10:39:827 BROKER/(16591:16922): Se almacena mensaje en memoria en posición: (nil) -.-
+[INFO] 23:10:39:827 BROKER/(16591:16607): Envié mensaje a suscriptor: 201 -.-
+[INFO] 23:10:40:827 BROKER/(16591:16936): Se almacena mensaje en memoria en posición: 0x30 -.-
+[INFO] 23:10:40:828 BROKER/(16591:16943): Se almacena mensaje en memoria en posición: 0x10 -.-
+[INFO] 23:10:40:828 BROKER/(16591:16608): Envié mensaje a suscriptor: 103 -.-
+[INFO] 23:10:40:828 BROKER/(16591:16607): Envié mensaje a suscriptor: 201 -.-
+[INFO] 23:10:42:829 BROKER/(16591:16608): Envié mensaje a suscriptor: 103 -.-
+[INFO] 23:10:45:834 BROKER/(16591:16951): Se almacena mensaje en memoria en posición: 0x30 -.-
+[INFO] 23:10:45:834 BROKER/(16591:16956): Se almacena mensaje en memoria en posición: 0x20 -.-
+[INFO] 23:12:42:757 BROKER/(17342:17342): Inició el Broker.
+[INFO] 23:13:02:986 BROKER/(17342:17701): Se almacena mensaje en memoria en posición: (nil) -.-
+[INFO] 23:13:02:987 BROKER/(17342:17357): Envié mensaje a suscriptor: 201 -.-
+[INFO] 23:13:03:987 BROKER/(17342:17707): Se almacena mensaje en memoria en posición: 0x10 -.-
+[INFO] 23:13:03:987 BROKER/(17342:17703): Se almacena mensaje en memoria en posición: 0x20 -.-
+[INFO] 23:13:03:988 BROKER/(17342:17357): Envié mensaje a suscriptor: 201 -.-
+[INFO] 23:13:04:989 BROKER/(17342:17706): Se almacena mensaje en memoria en posición: 0x30 -.-
+[INFO] 23:13:05:989 BROKER/(17342:17357): Envié mensaje a suscriptor: 201 -.-
+[INFO] 23:13:06:990 BROKER/(17342:17714): Se almacena mensaje en memoria en posición: 0x20 -.-
+[INFO] 23:13:06:990 BROKER/(17342:17358): Envié mensaje a suscriptor: 103 -.-
+[INFO] 23:13:06:991 BROKER/(17342:17705): Se almacena mensaje en memoria en posición: (nil) -.-
+[INFO] 23:13:06:991 BROKER/(17342:17357): Envié mensaje a suscriptor: 201 -.-
+[INFO] 23:13:07:991 BROKER/(17342:17715): Se almacena mensaje en memoria en posición: 0x30 -.-
+[INFO] 23:13:07:991 BROKER/(17342:17357): Envié mensaje a suscriptor: 201 -.-
+[INFO] 23:13:07:991 BROKER/(17342:17358): Envié mensaje a suscriptor: 103 -.-
+[INFO] 23:13:08:992 BROKER/(17342:17723): Se almacena mensaje en memoria en posición: 0x10 -.-
+[INFO] 23:13:10:994 BROKER/(17342:17358): Envié mensaje a suscriptor: 103 -.-
+[INFO] 23:13:12:996 BROKER/(17342:17732): Se almacena mensaje en memoria en posición: 0x20 -.-
+[INFO] 23:13:12:996 BROKER/(17342:17734): Se almacena mensaje en memoria en posición: 0x10 -.-
+[INFO] 23:13:12:996 BROKER/(17342:17358): Envié mensaje a suscriptor: 103 -.-
+[INFO] 23:17:35:705 BROKER/(18209:18209): Inició el Broker.
+[INFO] 23:18:01:602 BROKER/(18209:18457): Almaceno mensaje en partición que comienza en: 0
+[INFO] 23:18:01:602 BROKER/(18209:18225): Envié mensaje a suscriptor: 201 -.-
+[INFO] 23:18:01:603 BROKER/(18209:18458): Almaceno mensaje en partición que comienza en: 12
+[INFO] 23:18:01:603 BROKER/(18209:18225): Envié mensaje a suscriptor: 201 -.-
+[INFO] 23:18:01:603 BROKER/(18209:18461): Almaceno mensaje en partición que comienza en: 23
+[INFO] 23:18:01:603 BROKER/(18209:18225): Envié mensaje a suscriptor: 201 -.-
+[INFO] 23:18:01:603 BROKER/(18209:18459): Almaceno mensaje en partición que comienza en: 33
+[INFO] 23:18:01:604 BROKER/(18209:18225): Envié mensaje a suscriptor: 201 -.-
+[INFO] 23:18:01:604 BROKER/(18209:18460): Almaceno mensaje en partición que comienza en: 44
+[INFO] 23:18:01:604 BROKER/(18209:18225): Envié mensaje a suscriptor: 201 -.-
+[INFO] 23:18:02:654 BROKER/(18209:18474): Se realiza la compactacion
+[INFO] 23:18:02:654 BROKER/(18209:18474): Elimino particion que comienza en: 0
+[INFO] 23:18:02:654 BROKER/(18209:18474): Se realiza la compactacion
+[INFO] 23:18:02:654 BROKER/(18209:18474): Almaceno mensaje en partición que comienza en: 43
+[INFO] 23:18:02:655 BROKER/(18209:18226): Envié mensaje a suscriptor: 103 -.-
+[INFO] 23:18:02:655 BROKER/(18209:18473): Se realiza la compactacion
+[INFO] 23:18:02:655 BROKER/(18209:18473): Elimino particion que comienza en: 0
+[INFO] 23:18:02:655 BROKER/(18209:18473): Se realiza la compactacion
+[INFO] 23:18:02:655 BROKER/(18209:18473): Almaceno mensaje en partición que comienza en: 46
+[INFO] 23:18:02:672 BROKER/(18209:18479): Se realiza la compactacion
+[INFO] 23:18:02:672 BROKER/(18209:18479): Elimino particion que comienza en: 0
+[INFO] 23:18:02:672 BROKER/(18209:18479): Se realiza la compactacion
+[INFO] 23:18:02:672 BROKER/(18209:18479): Elimino particion que comienza en: 0
+[INFO] 23:18:02:672 BROKER/(18209:18479): Se realiza la compactacion
+[INFO] 23:18:02:672 BROKER/(18209:18479): Almaceno mensaje en partición que comienza en: 41
+[INFO] 23:18:02:672 BROKER/(18209:18475): Se realiza la compactacion
+[INFO] 23:18:02:672 BROKER/(18209:18475): Elimino particion que comienza en: 0
+[INFO] 23:18:02:672 BROKER/(18209:18226): Envié mensaje a suscriptor: 103 -.-
+[INFO] 23:18:02:672 BROKER/(18209:18475): Se realiza la compactacion
+[INFO] 23:18:02:672 BROKER/(18209:18226): Envié mensaje a suscriptor: 103 -.-
+[INFO] 23:18:02:672 BROKER/(18209:18475): Almaceno mensaje en partición que comienza en: 45
+[INFO] 23:18:02:673 BROKER/(18209:18226): Envié mensaje a suscriptor: 103 -.-
+[INFO] 23:18:02:687 BROKER/(18209:18486): Se realiza la compactacion
+[INFO] 23:18:02:687 BROKER/(18209:18486): Elimino particion que comienza en: 0
+[INFO] 23:18:02:687 BROKER/(18209:18486): Se realiza la compactacion
+[INFO] 23:18:02:687 BROKER/(18209:18486): Almaceno mensaje en partición que comienza en: 46
+[INFO] 23:18:02:688 BROKER/(18209:18226): Envié mensaje a suscriptor: 103 -.-
+[INFO] 23:21:19:361 BROKER/(18850:18850): Inició el Broker.
+[INFO] 23:21:30:78 BROKER/(18850:19176): Almaceno mensaje en partición que comienza en: 0
+[INFO] 23:21:30:78 BROKER/(18850:18865): Envié mensaje a suscriptor: 201 -.-
+[INFO] 23:21:30:84 BROKER/(18850:19177): Almaceno mensaje en partición que comienza en: 12
+[INFO] 23:21:30:85 BROKER/(18850:18865): Envié mensaje a suscriptor: 201 -.-
+[INFO] 23:21:30:85 BROKER/(18850:19178): Almaceno mensaje en partición que comienza en: 23
+[INFO] 23:21:30:85 BROKER/(18850:18865): Envié mensaje a suscriptor: 201 -.-
+[INFO] 23:21:30:85 BROKER/(18850:19179): Almaceno mensaje en partición que comienza en: 34
+[INFO] 23:21:30:85 BROKER/(18850:18865): Envié mensaje a suscriptor: 201 -.-
+[INFO] 23:21:30:86 BROKER/(18850:19180): Almaceno mensaje en partición que comienza en: 45
+[INFO] 23:21:30:86 BROKER/(18850:18865): Envié mensaje a suscriptor: 201 -.-
+[INFO] 23:21:31:90 BROKER/(18850:19199): Se realiza la compactacion
+[INFO] 23:21:31:90 BROKER/(18850:19199): Elimino particion que comienza en: 0
+[INFO] 23:21:31:90 BROKER/(18850:19199): Se realiza la compactacion
+[INFO] 23:21:31:90 BROKER/(18850:19199): Almaceno mensaje en partición que comienza en: 43
+[INFO] 23:21:31:91 BROKER/(18850:18866): Envié mensaje a suscriptor: 103 -.-
+[INFO] 23:21:31:93 BROKER/(18850:19200): Se realiza la compactacion
+[INFO] 23:21:31:94 BROKER/(18850:19200): Elimino particion que comienza en: 0
+[INFO] 23:21:31:94 BROKER/(18850:19200): Se realiza la compactacion
+[INFO] 23:21:31:94 BROKER/(18850:19200): Almaceno mensaje en partición que comienza en: 48
+[INFO] 23:21:31:94 BROKER/(18850:18866): Envié mensaje a suscriptor: 103 -.-
+[INFO] 23:21:31:94 BROKER/(18850:19201): Se realiza la compactacion
+[INFO] 23:21:31:94 BROKER/(18850:19201): Elimino particion que comienza en: 0
+[INFO] 23:21:31:94 BROKER/(18850:19201): Se realiza la compactacion
+[INFO] 23:21:31:94 BROKER/(18850:19201): Elimino particion que comienza en: 0
+[INFO] 23:21:31:94 BROKER/(18850:19201): Se realiza la compactacion
+[INFO] 23:21:31:94 BROKER/(18850:19201): Almaceno mensaje en partición que comienza en: 41
+[INFO] 23:21:31:94 BROKER/(18850:18866): Envié mensaje a suscriptor: 103 -.-
+[INFO] 23:21:31:94 BROKER/(18850:19202): Se realiza la compactacion
+[INFO] 23:21:31:96 BROKER/(18850:19202): Elimino particion que comienza en: 0
+[INFO] 23:21:31:96 BROKER/(18850:19202): Se realiza la compactacion
+[INFO] 23:21:31:96 BROKER/(18850:19202): Almaceno mensaje en partición que comienza en: 46
+[INFO] 23:21:31:97 BROKER/(18850:19205): Se realiza la compactacion
+[INFO] 23:21:31:97 BROKER/(18850:19205): Elimino particion que comienza en: 0
+[INFO] 23:21:31:97 BROKER/(18850:19205): Almaceno mensaje en partición que comienza en: 0
+[INFO] 23:21:31:97 BROKER/(18850:18866): Envié mensaje a suscriptor: 103 -.-
+[INFO] 23:21:31:97 BROKER/(18850:18866): Envié mensaje a suscriptor: 103 -.-
+[INFO] 23:26:12:838 BROKER/(18850:19863): Se realiza la compactacion
+[INFO] 23:26:12:838 BROKER/(18850:19863): Elimino particion que comienza en: 14
+[INFO] 23:26:12:838 BROKER/(18850:19863): Almaceno mensaje en partición que comienza en: 14
+[INFO] 23:26:12:838 BROKER/(18850:18865): Envié mensaje a suscriptor: 201 -.-
+[INFO] 23:26:12:839 BROKER/(18850:19862): Se realiza la compactacion
+[INFO] 23:26:12:839 BROKER/(18850:19862): Elimino particion que comienza en: 25
+[INFO] 23:26:12:839 BROKER/(18850:19862): Almaceno mensaje en partición que comienza en: 25
+[INFO] 23:26:12:839 BROKER/(18850:18865): Envié mensaje a suscriptor: 201 -.-
+[INFO] 23:26:12:839 BROKER/(18850:19864): Se realiza la compactacion
+[INFO] 23:26:12:839 BROKER/(18850:19864): Almaceno mensaje en partición que comienza en: 52
+[INFO] 23:26:12:839 BROKER/(18850:18865): Envié mensaje a suscriptor: 201 -.-
+[INFO] 23:26:12:839 BROKER/(18850:19860): Se realiza la compactacion
+[INFO] 23:26:12:839 BROKER/(18850:19860): Elimino particion que comienza en: 37
+[INFO] 23:26:12:839 BROKER/(18850:19860): Almaceno mensaje en partición que comienza en: 37
+[INFO] 23:26:12:840 BROKER/(18850:18865): Envié mensaje a suscriptor: 201 -.-
+[INFO] 23:26:12:840 BROKER/(18850:19858): Se realiza la compactacion
+[INFO] 23:26:12:840 BROKER/(18850:19858): Elimino particion que comienza en: 0
+[INFO] 23:26:12:840 BROKER/(18850:19858): Almaceno mensaje en partición que comienza en: 0
+[INFO] 23:26:12:840 BROKER/(18850:18865): Envié mensaje a suscriptor: 201 -.-
+[INFO] 23:26:13:894 BROKER/(18850:19884): Se realiza la compactacion
+[INFO] 23:26:13:894 BROKER/(18850:19884): Elimino particion que comienza en: 10
+[INFO] 23:26:13:894 BROKER/(18850:19884): Se realiza la compactacion
+[INFO] 23:26:13:894 BROKER/(18850:19884): Almaceno mensaje en partición que comienza en: 44
+[INFO] 23:26:13:895 BROKER/(18850:18866): Envié mensaje a suscriptor: 103 -.-
+[INFO] 23:26:13:895 BROKER/(18850:19885): Se realiza la compactacion
+[INFO] 23:26:13:895 BROKER/(18850:19885): Elimino particion que comienza en: 10
+[INFO] 23:26:13:895 BROKER/(18850:19885): Se realiza la compactacion
+[INFO] 23:26:13:895 BROKER/(18850:19885): Almaceno mensaje en partición que comienza en: 47
+[INFO] 23:26:13:895 BROKER/(18850:18866): Envié mensaje a suscriptor: 103 -.-
+[INFO] 23:26:13:895 BROKER/(18850:19886): Se realiza la compactacion
+[INFO] 23:26:13:895 BROKER/(18850:19886): Elimino particion que comienza en: 21
+[INFO] 23:26:13:895 BROKER/(18850:19886): Se realiza la compactacion
+[INFO] 23:26:13:895 BROKER/(18850:19886): Elimino particion que comienza en: 10
+[INFO] 23:26:13:895 BROKER/(18850:19886): Se realiza la compactacion
+[INFO] 23:26:13:895 BROKER/(18850:19886): Almaceno mensaje en partición que comienza en: 40
+[INFO] 23:26:13:896 BROKER/(18850:18866): Envié mensaje a suscriptor: 103 -.-
+[INFO] 23:26:13:896 BROKER/(18850:19887): Se realiza la compactacion
+[INFO] 23:26:13:896 BROKER/(18850:19887): Elimino particion que comienza en: 0
+[INFO] 23:26:13:896 BROKER/(18850:19887): Se realiza la compactacion
+[INFO] 23:26:13:896 BROKER/(18850:19887): Almaceno mensaje en partición que comienza en: 46
+[INFO] 23:26:13:896 BROKER/(18850:18866): Envié mensaje a suscriptor: 103 -.-
+[INFO] 23:26:13:909 BROKER/(18850:19896): Se realiza la compactacion
+[INFO] 23:26:13:909 BROKER/(18850:19896): Elimino particion que comienza en: 0
+[INFO] 23:26:13:909 BROKER/(18850:19896): Almaceno mensaje en partición que comienza en: 0
+[INFO] 23:26:13:910 BROKER/(18850:18866): Envié mensaje a suscriptor: 103 -.-
+[INFO] 23:29:52:155 BROKER/(18850:20488): Se realiza la compactacion
+[INFO] 23:29:52:155 BROKER/(18850:20488): Elimino particion que comienza en: 14
+[INFO] 23:29:52:155 BROKER/(18850:20488): Almaceno mensaje en partición que comienza en: 14
+[INFO] 23:29:52:155 BROKER/(18850:18865): Envié mensaje a suscriptor: 201 -.-
+[INFO] 23:29:52:156 BROKER/(18850:20492): Se realiza la compactacion
+[INFO] 23:29:52:156 BROKER/(18850:20492): Elimino particion que comienza en: 26
+[INFO] 23:29:52:156 BROKER/(18850:20492): Almaceno mensaje en partición que comienza en: 26
+[INFO] 23:29:52:156 BROKER/(18850:20489): Se realiza la compactacion
+[INFO] 23:29:52:156 BROKER/(18850:20489): Almaceno mensaje en partición que comienza en: 51
+[INFO] 23:29:52:157 BROKER/(18850:18865): Envié mensaje a suscriptor: 201 -.-
+[INFO] 23:29:52:157 BROKER/(18850:18865): Envié mensaje a suscriptor: 201 -.-
+[INFO] 23:29:52:157 BROKER/(18850:20490): Se realiza la compactacion
+[INFO] 23:29:52:157 BROKER/(18850:20490): Elimino particion que comienza en: 36
+[INFO] 23:29:52:157 BROKER/(18850:20490): Almaceno mensaje en partición que comienza en: 36
+[INFO] 23:29:52:157 BROKER/(18850:18865): Envié mensaje a suscriptor: 201 -.-
+[INFO] 23:29:52:158 BROKER/(18850:20491): Se realiza la compactacion
+[INFO] 23:29:52:158 BROKER/(18850:20491): Elimino particion que comienza en: 0
+[INFO] 23:29:52:158 BROKER/(18850:20491): Almaceno mensaje en partición que comienza en: 0
+[INFO] 23:29:52:158 BROKER/(18850:18865): Envié mensaje a suscriptor: 201 -.-
+[INFO] 23:29:53:165 BROKER/(18850:20514): Se realiza la compactacion
+[INFO] 23:29:53:165 BROKER/(18850:20514): Elimino particion que comienza en: 11
+[INFO] 23:29:53:165 BROKER/(18850:20514): Se realiza la compactacion
+[INFO] 23:29:53:165 BROKER/(18850:20514): Almaceno mensaje en partición que comienza en: 43
+[INFO] 23:29:53:166 BROKER/(18850:18866): Envié mensaje a suscriptor: 103 -.-
+[INFO] 23:29:53:168 BROKER/(18850:20512): Se realiza la compactacion
+[INFO] 23:29:53:168 BROKER/(18850:20512): Elimino particion que comienza en: 11
+[INFO] 23:29:53:168 BROKER/(18850:20512): Se realiza la compactacion
+[INFO] 23:29:53:168 BROKER/(18850:20512): Almaceno mensaje en partición que comienza en: 48
+[INFO] 23:29:53:169 BROKER/(18850:20516): Se realiza la compactacion
+[INFO] 23:29:53:169 BROKER/(18850:20516): Elimino particion que comienza en: 22
+[INFO] 23:29:53:169 BROKER/(18850:20516): Se realiza la compactacion
+[INFO] 23:29:53:169 BROKER/(18850:20516): Elimino particion que comienza en: 11
+[INFO] 23:29:53:169 BROKER/(18850:20516): Se realiza la compactacion
+[INFO] 23:29:53:169 BROKER/(18850:20516): Almaceno mensaje en partición que comienza en: 42
+[INFO] 23:29:53:169 BROKER/(18850:18866): Envié mensaje a suscriptor: 103 -.-
+[INFO] 23:29:53:171 BROKER/(18850:20515): Se realiza la compactacion
+[INFO] 23:29:53:171 BROKER/(18850:20515): Elimino particion que comienza en: 0
+[INFO] 23:29:53:171 BROKER/(18850:20515): Se realiza la compactacion
+[INFO] 23:29:53:171 BROKER/(18850:20515): Almaceno mensaje en partición que comienza en: 46
+[INFO] 23:29:53:171 BROKER/(18850:18866): Envié mensaje a suscriptor: 103 -.-
+[INFO] 23:29:53:171 BROKER/(18850:20513): Se realiza la compactacion
+[INFO] 23:29:53:171 BROKER/(18850:20513): Elimino particion que comienza en: 0
+[INFO] 23:29:53:171 BROKER/(18850:20513): Almaceno mensaje en partición que comienza en: 0
+[INFO] 23:29:53:171 BROKER/(18850:18866): Envié mensaje a suscriptor: 103 -.-
+[INFO] 23:29:53:171 BROKER/(18850:18866): Envié mensaje a suscriptor: 103 -.-
+[INFO] 23:39:30:210 BROKER/(18850:21571): Se realiza la compactacion
+[INFO] 23:39:30:210 BROKER/(18850:21571): Elimino particion que comienza en: 14
+[INFO] 23:39:30:210 BROKER/(18850:21571): Almaceno mensaje en partición que comienza en: 14
+[INFO] 23:39:30:211 BROKER/(18850:21572): Se realiza la compactacion
+[INFO] 23:39:30:211 BROKER/(18850:21572): Elimino particion que comienza en: 26
+[INFO] 23:39:30:211 BROKER/(18850:21572): Almaceno mensaje en partición que comienza en: 26
+[INFO] 23:39:30:211 BROKER/(18850:18865): Envié mensaje a suscriptor: 201 -.-
+[INFO] 23:39:30:211 BROKER/(18850:21575): Se realiza la compactacion
+[INFO] 23:39:30:211 BROKER/(18850:21575): Almaceno mensaje en partición que comienza en: 52
+[INFO] 23:39:30:211 BROKER/(18850:18865): Envié mensaje a suscriptor: 201 -.-
+[INFO] 23:39:30:211 BROKER/(18850:21573): Se realiza la compactacion
+[INFO] 23:39:30:211 BROKER/(18850:21573): Elimino particion que comienza en: 37
+[INFO] 23:39:30:211 BROKER/(18850:21573): Almaceno mensaje en partición que comienza en: 37
+[INFO] 23:39:30:212 BROKER/(18850:18865): Envié mensaje a suscriptor: 201 -.-
+[INFO] 23:39:30:212 BROKER/(18850:21574): Se realiza la compactacion
+[INFO] 23:39:30:212 BROKER/(18850:21574): Elimino particion que comienza en: 0
+[INFO] 23:39:30:212 BROKER/(18850:21574): Almaceno mensaje en partición que comienza en: 0
+[INFO] 23:39:30:212 BROKER/(18850:18865): Envié mensaje a suscriptor: 201 -.-
+[INFO] 23:39:30:212 BROKER/(18850:18865): Envié mensaje a suscriptor: 201 -.-
+[INFO] 23:39:31:229 BROKER/(18850:21591): Se realiza la compactacion
+[INFO] 23:39:31:229 BROKER/(18850:21591): Elimino particion que comienza en: 11
+[INFO] 23:39:31:229 BROKER/(18850:21591): Se realiza la compactacion
+[INFO] 23:39:31:229 BROKER/(18850:21591): Almaceno mensaje en partición que comienza en: 43
+[INFO] 23:39:31:229 BROKER/(18850:18866): Envié mensaje a suscriptor: 103 -.-
+[INFO] 23:39:31:233 BROKER/(18850:21592): Se realiza la compactacion
+[INFO] 23:39:31:233 BROKER/(18850:21592): Elimino particion que comienza en: 11
+[INFO] 23:39:31:233 BROKER/(18850:21592): Se realiza la compactacion
+[INFO] 23:39:31:233 BROKER/(18850:21592): Almaceno mensaje en partición que comienza en: 47
+[INFO] 23:39:31:233 BROKER/(18850:18866): Envié mensaje a suscriptor: 103 -.-
+[INFO] 23:39:31:239 BROKER/(18850:21597): Se realiza la compactacion
+[INFO] 23:39:31:239 BROKER/(18850:21597): Elimino particion que comienza en: 22
+[INFO] 23:39:31:239 BROKER/(18850:21597): Se realiza la compactacion
+[INFO] 23:39:31:239 BROKER/(18850:21597): Elimino particion que comienza en: 11
+[INFO] 23:39:31:239 BROKER/(18850:21597): Se realiza la compactacion
+[INFO] 23:39:31:239 BROKER/(18850:21597): Almaceno mensaje en partición que comienza en: 41
+[INFO] 23:39:31:240 BROKER/(18850:18866): Envié mensaje a suscriptor: 103 -.-
+[INFO] 23:39:31:258 BROKER/(18850:21601): Se realiza la compactacion
+[INFO] 23:39:31:258 BROKER/(18850:21601): Elimino particion que comienza en: 0
+[INFO] 23:39:31:258 BROKER/(18850:21601): Se realiza la compactacion
+[INFO] 23:39:31:258 BROKER/(18850:21601): Almaceno mensaje en partición que comienza en: 44
+[INFO] 23:39:31:258 BROKER/(18850:18866): Envié mensaje a suscriptor: 103 -.-
+[INFO] 23:39:31:325 BROKER/(18850:21604): Se realiza la compactacion
+[INFO] 23:39:31:325 BROKER/(18850:21604): Elimino particion que comienza en: 0
+[INFO] 23:39:31:325 BROKER/(18850:21604): Se realiza la compactacion
+[INFO] 23:39:31:325 BROKER/(18850:21604): Almaceno mensaje en partición que comienza en: 44
+[INFO] 23:39:31:325 BROKER/(18850:18866): Envié mensaje a suscriptor: 103 -.-
+[INFO] 23:41:30:234 BROKER/(18850:21796): Se realiza la compactacion
+[INFO] 23:41:30:234 BROKER/(18850:21796): Elimino particion que comienza en: 0
+[INFO] 23:41:30:234 BROKER/(18850:21796): Almaceno mensaje en partición que comienza en: 0
+[INFO] 23:41:30:234 BROKER/(18850:18865): Envié mensaje a suscriptor: 201 -.-
+[INFO] 23:41:30:234 BROKER/(18850:21795): Se realiza la compactacion
+[INFO] 23:41:30:234 BROKER/(18850:21795): Elimino particion que comienza en: 11
+[INFO] 23:41:30:234 BROKER/(18850:21795): Almaceno mensaje en partición que comienza en: 11
+[INFO] 23:41:44:17 BROKER/(21941:21941): Inició el Broker.
+[INFO] 23:46:54:625 BROKER/(22672:22672): Inició el Broker.
+[INFO] 23:47:03:133 BROKER/(22672:22994): Almaceno mensaje en partición que comienza en: 0
+[INFO] 23:47:03:133 BROKER/(22672:22687): Envié mensaje a suscriptor: 201 -.-
+[INFO] 23:47:03:134 BROKER/(22672:22998): Almaceno mensaje en partición que comienza en: 12
+[INFO] 23:47:03:134 BROKER/(22672:22996): Almaceno mensaje en partición que comienza en: 22
+[INFO] 23:47:03:134 BROKER/(22672:22687): Envié mensaje a suscriptor: 201 -.-
+[INFO] 23:47:03:134 BROKER/(22672:22687): Envié mensaje a suscriptor: 201 -.-
+[INFO] 23:47:03:135 BROKER/(22672:22997): Almaceno mensaje en partición que comienza en: 33
+[INFO] 23:47:03:135 BROKER/(22672:22687): Envié mensaje a suscriptor: 201 -.-
+[INFO] 23:47:03:135 BROKER/(22672:22995): Almaceno mensaje en partición que comienza en: 44
+[INFO] 23:47:03:135 BROKER/(22672:22687): Envié mensaje a suscriptor: 201 -.-
+[INFO] 23:47:04:246 BROKER/(22672:23015): Se realiza la compactacion
+[INFO] 23:47:04:246 BROKER/(22672:23015): Elimino particion que comienza en: 0
+[INFO] 23:47:04:246 BROKER/(22672:23015): Se realiza la compactacion
+[INFO] 23:47:04:246 BROKER/(22672:23015): Almaceno mensaje en partición que comienza en: 43
+[INFO] 23:47:04:246 BROKER/(22672:23014): Se realiza la compactacion
+[INFO] 23:47:04:246 BROKER/(22672:23014): Elimino particion que comienza en: 0
+[INFO] 23:47:04:246 BROKER/(22672:23014): Se realiza la compactacion
+[INFO] 23:47:04:246 BROKER/(22672:23014): Almaceno mensaje en partición que comienza en: 49
+[INFO] 23:47:04:246 BROKER/(22672:22688): Envié mensaje a suscriptor: 103 -.-
+[INFO] 23:47:04:246 BROKER/(22672:22688): Envié mensaje a suscriptor: 103 -.-
+[INFO] 23:47:04:256 BROKER/(22672:23016): Se realiza la compactacion
+[INFO] 23:47:04:256 BROKER/(22672:23016): Elimino particion que comienza en: 0
+[INFO] 23:47:04:256 BROKER/(22672:23016): Se realiza la compactacion
+[INFO] 23:47:04:256 BROKER/(22672:23016): Elimino particion que comienza en: 0
+[INFO] 23:47:04:256 BROKER/(22672:23016): Se realiza la compactacion
+[INFO] 23:47:04:256 BROKER/(22672:23016): Almaceno mensaje en partición que comienza en: 42
+[INFO] 23:47:04:256 BROKER/(22672:23021): Se realiza la compactacion
+[INFO] 23:47:04:256 BROKER/(22672:23021): Elimino particion que comienza en: 0
+[INFO] 23:47:04:256 BROKER/(22672:23021): Se realiza la compactacion
+[INFO] 23:47:04:256 BROKER/(22672:23021): Almaceno mensaje en partición que comienza en: 46
+[INFO] 23:47:04:257 BROKER/(22672:23022): Se realiza la compactacion
+[INFO] 23:47:04:257 BROKER/(22672:22688): Envié mensaje a suscriptor: 103 -.-
+[INFO] 23:47:04:257 BROKER/(22672:23022): Elimino particion que comienza en: 0
+[INFO] 23:47:04:257 BROKER/(22672:23022): Almaceno mensaje en partición que comienza en: 0
+[INFO] 23:47:04:257 BROKER/(22672:22688): Envié mensaje a suscriptor: 103 -.-
+[INFO] 23:47:04:257 BROKER/(22672:22688): Envié mensaje a suscriptor: 103 -.-
+[INFO] 23:58:15:471 BROKER/(24390:24390): Inició el Broker.
+[INFO] 23:58:25:650 BROKER/(24390:24727): Almaceno mensaje en partición que comienza en: 0
+[INFO] 23:58:25:650 BROKER/(24390:24409): Envié mensaje a suscriptor: 201 -.-
+[INFO] 23:58:25:651 BROKER/(24390:24723): Almaceno mensaje en partición que comienza en: 12
+[INFO] 23:58:25:651 BROKER/(24390:24409): Envié mensaje a suscriptor: 201 -.-
+[INFO] 23:58:25:652 BROKER/(24390:24722): Almaceno mensaje en partición que comienza en: 22
+[INFO] 23:58:25:652 BROKER/(24390:24409): Envié mensaje a suscriptor: 201 -.-
+[INFO] 23:58:25:652 BROKER/(24390:24721): Almaceno mensaje en partición que comienza en: 33
+[INFO] 23:58:25:652 BROKER/(24390:24409): Envié mensaje a suscriptor: 201 -.-
+[INFO] 23:58:25:653 BROKER/(24390:24720): Almaceno mensaje en partición que comienza en: 44
+[INFO] 23:58:25:654 BROKER/(24390:24409): Envié mensaje a suscriptor: 201 -.-
+[INFO] 23:58:26:660 BROKER/(24390:24744): Se realiza la compactacion
+[INFO] 23:58:26:660 BROKER/(24390:24744): Elimino particion que comienza en: 0
+[INFO] 23:58:26:660 BROKER/(24390:24744): Se realiza la compactacion
+[INFO] 23:58:26:660 BROKER/(24390:24744): Almaceno mensaje en partición que comienza en: 43
+[INFO] 23:58:26:661 BROKER/(24390:24410): Envié mensaje a suscriptor: 103 -.-
+[INFO] 23:58:26:661 BROKER/(24390:24743): Se realiza la compactacion
+[INFO] 23:58:26:661 BROKER/(24390:24743): Elimino particion que comienza en: 0
+[INFO] 23:58:26:661 BROKER/(24390:24743): Se realiza la compactacion
+[INFO] 23:58:26:661 BROKER/(24390:24743): Almaceno mensaje en partición que comienza en: 47
+[INFO] 23:58:26:661 BROKER/(24390:24410): Envié mensaje a suscriptor: 103 -.-
+[INFO] 23:58:26:676 BROKER/(24390:24752): Se realiza la compactacion
+[INFO] 23:58:26:676 BROKER/(24390:24752): Elimino particion que comienza en: 0
+[INFO] 23:58:26:676 BROKER/(24390:24752): Se realiza la compactacion
+[INFO] 23:58:26:676 BROKER/(24390:24752): Elimino particion que comienza en: 0
+[INFO] 23:58:26:676 BROKER/(24390:24752): Se realiza la compactacion
+[INFO] 23:58:26:676 BROKER/(24390:24752): Almaceno mensaje en partición que comienza en: 41
+[INFO] 23:58:26:676 BROKER/(24390:24410): Envié mensaje a suscriptor: 103 -.-
+[INFO] 23:58:26:681 BROKER/(24390:24750): Se realiza la compactacion
+[INFO] 23:58:26:681 BROKER/(24390:24750): Elimino particion que comienza en: 0
+[INFO] 23:58:26:681 BROKER/(24390:24750): Se realiza la compactacion
+[INFO] 23:58:26:681 BROKER/(24390:24750): Almaceno mensaje en partición que comienza en: 45
+[INFO] 23:58:26:681 BROKER/(24390:24410): Envié mensaje a suscriptor: 103 -.-
+[INFO] 23:58:26:682 BROKER/(24390:24751): Se realiza la compactacion
+[INFO] 23:58:26:682 BROKER/(24390:24751): Elimino particion que comienza en: 0
+[INFO] 23:58:26:682 BROKER/(24390:24751): Se realiza la compactacion
+[INFO] 23:58:26:682 BROKER/(24390:24751): Almaceno mensaje en partición que comienza en: 46
+[INFO] 23:58:26:682 BROKER/(24390:24410): Envié mensaje a suscriptor: 103 -.-
+[INFO] 00:09:15:161 BROKER/(24390:25865): Se realiza la compactacion
+[INFO] 00:09:15:161 BROKER/(24390:25865): Elimino particion que comienza en: 0
+[INFO] 00:09:15:161 BROKER/(24390:25865): Almaceno mensaje en partición que comienza en: 0
+[INFO] 00:09:15:162 BROKER/(24390:24409): Envié mensaje a suscriptor: 201 -.-
+[INFO] 00:09:15:163 BROKER/(24390:25864): Se realiza la compactacion
+[INFO] 00:09:15:163 BROKER/(24390:25864): Elimino particion que comienza en: 10
+[INFO] 00:09:15:163 BROKER/(24390:25864): Almaceno mensaje en partición que comienza en: 10
+[INFO] 00:09:15:163 BROKER/(24390:24409): Envié mensaje a suscriptor: 201 -.-
+[INFO] 00:09:15:164 BROKER/(24390:25863): Se realiza la compactacion
+[INFO] 00:09:15:164 BROKER/(24390:25863): Almaceno mensaje en partición que comienza en: 51
+[INFO] 00:09:15:164 BROKER/(24390:24409): Envié mensaje a suscriptor: 201 -.-
+[INFO] 00:09:15:164 BROKER/(24390:25862): Se realiza la compactacion
+[INFO] 00:09:15:164 BROKER/(24390:25862): Elimino particion que comienza en: 21
+[INFO] 00:09:15:164 BROKER/(24390:25862): Almaceno mensaje en partición que comienza en: 21
+[INFO] 00:09:15:167 BROKER/(24390:24409): Envié mensaje a suscriptor: 201 -.-
+[INFO] 00:09:15:167 BROKER/(24390:25861): Se realiza la compactacion
+[INFO] 00:09:15:167 BROKER/(24390:25861): Elimino particion que comienza en: 32
+[INFO] 00:09:15:167 BROKER/(24390:25861): Almaceno mensaje en partición que comienza en: 32
+[INFO] 00:09:15:168 BROKER/(24390:24409): Envié mensaje a suscriptor: 201 -.-
+[INFO] 00:09:16:230 BROKER/(24390:25885): Se realiza la compactacion
+[INFO] 00:09:16:230 BROKER/(24390:25885): Elimino particion que comienza en: 0
+[INFO] 00:09:16:230 BROKER/(24390:25885): Se realiza la compactacion
+[INFO] 00:09:16:230 BROKER/(24390:25885): Almaceno mensaje en partición que comienza en: 45
+[INFO] 00:09:16:231 BROKER/(24390:24410): Envié mensaje a suscriptor: 103 -.-
+[INFO] 00:09:16:236 BROKER/(24390:25886): Se realiza la compactacion
+[INFO] 00:09:16:237 BROKER/(24390:25886): Elimino particion que comienza en: 0
+[INFO] 00:09:16:237 BROKER/(24390:25886): Se realiza la compactacion
+[INFO] 00:09:16:237 BROKER/(24390:25886): Almaceno mensaje en partición que comienza en: 48
+[INFO] 00:09:16:237 BROKER/(24390:25888): Se realiza la compactacion
+[INFO] 00:09:16:237 BROKER/(24390:25888): Elimino particion que comienza en: 23
+[INFO] 00:09:16:237 BROKER/(24390:25888): Se realiza la compactacion
+[INFO] 00:09:16:237 BROKER/(24390:25888): Elimino particion que comienza en: 0
+[INFO] 00:09:16:237 BROKER/(24390:25888): Se realiza la compactacion
+[INFO] 00:09:16:237 BROKER/(24390:25888): Almaceno mensaje en partición que comienza en: 41
+[INFO] 00:09:16:239 BROKER/(24390:24410): Envié mensaje a suscriptor: 103 -.-
+[INFO] 00:09:16:240 BROKER/(24390:24410): Envié mensaje a suscriptor: 103 -.-
+[INFO] 00:09:16:246 BROKER/(24390:25890): Se realiza la compactacion
+[INFO] 00:09:16:247 BROKER/(24390:25890): Elimino particion que comienza en: 0
+[INFO] 00:09:16:247 BROKER/(24390:25890): Se realiza la compactacion
+[INFO] 00:09:16:247 BROKER/(24390:25890): Almaceno mensaje en partición que comienza en: 44
+[INFO] 00:09:16:247 BROKER/(24390:25891): Se realiza la compactacion
+[INFO] 00:09:16:247 BROKER/(24390:25891): Elimino particion que comienza en: 0
+[INFO] 00:09:16:247 BROKER/(24390:25891): Se realiza la compactacion
+[INFO] 00:09:16:247 BROKER/(24390:25891): Almaceno mensaje en partición que comienza en: 46
+[INFO] 00:09:16:247 BROKER/(24390:24410): Envié mensaje a suscriptor: 103 -.-
+[INFO] 00:09:16:247 BROKER/(24390:24410): Envié mensaje a suscriptor: 103 -.-
+[INFO] 00:11:31:873 BROKER/(24390:26424): Se realiza la compactacion
+[INFO] 00:11:31:873 BROKER/(24390:26424): Elimino particion que comienza en: 0
+[INFO] 00:11:31:873 BROKER/(24390:26424): Almaceno mensaje en partición que comienza en: 0
+[INFO] 00:11:31:874 BROKER/(24390:24409): Envié mensaje a suscriptor: 201 -.-
+[INFO] 00:11:31:874 BROKER/(24390:26425): Se realiza la compactacion
+[INFO] 00:11:31:874 BROKER/(24390:26425): Elimino particion que comienza en: 12
+[INFO] 00:11:31:874 BROKER/(24390:26425): Almaceno mensaje en partición que comienza en: 12
+[INFO] 00:11:31:874 BROKER/(24390:24409): Envié mensaje a suscriptor: 201 -.-
+[INFO] 00:11:31:874 BROKER/(24390:26427): Se realiza la compactacion
+[INFO] 00:11:31:874 BROKER/(24390:26427): Elimino particion que comienza en: 23
+[INFO] 00:11:31:874 BROKER/(24390:26427): Almaceno mensaje en partición que comienza en: 23
+[INFO] 00:11:31:874 BROKER/(24390:24409): Envié mensaje a suscriptor: 201 -.-
+[INFO] 00:11:31:875 BROKER/(24390:26428): Almaceno mensaje en partición que comienza en: 34
+[INFO] 00:11:31:875 BROKER/(24390:24409): Envié mensaje a suscriptor: 201 -.-
+[INFO] 00:11:31:880 BROKER/(24390:26426): Se realiza la compactacion
+[INFO] 00:11:31:880 BROKER/(24390:26426): Elimino particion que comienza en: 44
+[INFO] 00:11:31:880 BROKER/(24390:26426): Almaceno mensaje en partición que comienza en: 44
+[INFO] 00:11:31:881 BROKER/(24390:24409): Envié mensaje a suscriptor: 201 -.-
+[INFO] 00:11:32:882 BROKER/(24390:26450): Se realiza la compactacion
+[INFO] 00:11:32:882 BROKER/(24390:26450): Elimino particion que comienza en: 0
+[INFO] 00:11:32:882 BROKER/(24390:26450): Se realiza la compactacion
+[INFO] 00:11:32:882 BROKER/(24390:26450): Almaceno mensaje en partición que comienza en: 43
+[INFO] 00:11:32:882 BROKER/(24390:24410): Envié mensaje a suscriptor: 103 -.-
+[INFO] 00:11:32:882 BROKER/(24390:26449): Se realiza la compactacion
+[INFO] 00:11:32:882 BROKER/(24390:26449): Elimino particion que comienza en: 0
+[INFO] 00:11:32:882 BROKER/(24390:26449): Se realiza la compactacion
+[INFO] 00:11:32:882 BROKER/(24390:26449): Almaceno mensaje en partición que comienza en: 47
+[INFO] 00:11:52:685 BROKER/(26598:26598): Inició el Broker.
+[INFO] 00:12:01:905 BROKER/(26598:26927): Almaceno mensaje en partición que comienza en: 0
+[INFO] 00:12:01:905 BROKER/(26598:26931): Almaceno mensaje en partición que comienza en: 12
+[INFO] 00:12:01:905 BROKER/(26598:26613): Envié mensaje a suscriptor: 201 -.-
+[INFO] 00:12:01:909 BROKER/(26598:26928): Almaceno mensaje en partición que comienza en: 22
+[INFO] 00:12:01:909 BROKER/(26598:26613): Envié mensaje a suscriptor: 201 -.-
+[INFO] 00:12:01:909 BROKER/(26598:26930): Almaceno mensaje en partición que comienza en: 33
+[INFO] 00:12:01:910 BROKER/(26598:26613): Envié mensaje a suscriptor: 201 -.-
+[INFO] 00:12:01:910 BROKER/(26598:26613): Envié mensaje a suscriptor: 201 -.-
+[INFO] 00:12:01:910 BROKER/(26598:26929): Almaceno mensaje en partición que comienza en: 44
+[INFO] 00:12:01:910 BROKER/(26598:26613): Envié mensaje a suscriptor: 201 -.-
+[INFO] 00:12:02:915 BROKER/(26598:26946): Se realiza la compactacion
+[INFO] 00:12:02:915 BROKER/(26598:26946): Elimino particion que comienza en: 0
+[INFO] 00:12:02:915 BROKER/(26598:26946): Se realiza la compactacion
+[INFO] 00:12:02:915 BROKER/(26598:26946): Almaceno mensaje en partición que comienza en: 43
+[INFO] 00:12:02:915 BROKER/(26598:26614): Envié mensaje a suscriptor: 103 -.-
+[INFO] 00:12:02:931 BROKER/(26598:26949): Se realiza la compactacion
+[INFO] 00:12:02:931 BROKER/(26598:26949): Elimino particion que comienza en: 0
+[INFO] 00:12:02:931 BROKER/(26598:26949): Se realiza la compactacion
+[INFO] 00:12:02:931 BROKER/(26598:26949): Almaceno mensaje en partición que comienza en: 49
+[INFO] 00:12:02:932 BROKER/(26598:26950): Se realiza la compactacion
+[INFO] 00:12:02:932 BROKER/(26598:26950): Elimino particion que comienza en: 0
+[INFO] 00:12:02:932 BROKER/(26598:26950): Se realiza la compactacion
+[INFO] 00:12:02:932 BROKER/(26598:26950): Elimino particion que comienza en: 0
+[INFO] 00:12:02:932 BROKER/(26598:26950): Se realiza la compactacion
+[INFO] 00:12:02:932 BROKER/(26598:26950): Almaceno mensaje en partición que comienza en: 42
+[INFO] 00:12:02:932 BROKER/(26598:26614): Envié mensaje a suscriptor: 103 -.-
+[INFO] 00:12:02:932 BROKER/(26598:26951): Se realiza la compactacion
+[INFO] 00:12:02:932 BROKER/(26598:26951): Elimino particion que comienza en: 0
+[INFO] 00:12:02:932 BROKER/(26598:26951): Se realiza la compactacion
+[INFO] 00:12:02:932 BROKER/(26598:26951): Almaceno mensaje en partición que comienza en: 46
+[INFO] 00:12:02:932 BROKER/(26598:26614): Envié mensaje a suscriptor: 103 -.-
+[INFO] 00:12:02:932 BROKER/(26598:26952): Se realiza la compactacion
+[INFO] 00:12:02:933 BROKER/(26598:26952): Elimino particion que comienza en: 0
+[INFO] 00:12:02:933 BROKER/(26598:26952): Almaceno mensaje en partición que comienza en: 0
+[INFO] 00:12:02:933 BROKER/(26598:26614): Envié mensaje a suscriptor: 103 -.-
+[INFO] 00:12:02:933 BROKER/(26598:26614): Envié mensaje a suscriptor: 103 -.-
+[INFO] 00:24:47:489 BROKER/(28505:28505): Inició el Broker.
+[INFO] 00:24:57:982 BROKER/(28505:28838): Almaceno mensaje en partición que comienza en: 0
+[INFO] 00:24:57:983 BROKER/(28505:28837): Almaceno mensaje en partición que comienza en: 10
+[INFO] 00:24:57:983 BROKER/(28505:28520): Envié mensaje a suscriptor: 201 -.-
+[INFO] 00:24:57:983 BROKER/(28505:28836): Almaceno mensaje en partición que comienza en: 21
+[INFO] 00:24:57:983 BROKER/(28505:28520): Envié mensaje a suscriptor: 201 -.-
+[INFO] 00:24:57:983 BROKER/(28505:28835): Almaceno mensaje en partición que comienza en: 32
+[INFO] 00:24:57:983 BROKER/(28505:28520): Envié mensaje a suscriptor: 201 -.-
+[INFO] 00:24:57:984 BROKER/(28505:28520): Envié mensaje a suscriptor: 201 -.-
+[INFO] 00:24:57:984 BROKER/(28505:28834): Almaceno mensaje en partición que comienza en: 43
+[INFO] 00:24:57:985 BROKER/(28505:28520): Envié mensaje a suscriptor: 201 -.-
+[INFO] 00:24:59:36 BROKER/(28505:28855): Se realiza la compactacion
+[INFO] 00:24:59:36 BROKER/(28505:28855): Elimino particion que comienza en: 0
+[INFO] 00:24:59:36 BROKER/(28505:28855): Se realiza la compactacion
+[INFO] 00:24:59:36 BROKER/(28505:28855): Almaceno mensaje en partición que comienza en: 45
+[INFO] 00:24:59:36 BROKER/(28505:28521): Envié mensaje a suscriptor: 103 -.-
+[INFO] 00:24:59:36 BROKER/(28505:28854): Se realiza la compactacion
+[INFO] 00:24:59:36 BROKER/(28505:28854): Elimino particion que comienza en: 0
+[INFO] 00:24:59:36 BROKER/(28505:28854): Se realiza la compactacion
+[INFO] 00:24:59:36 BROKER/(28505:28854): Almaceno mensaje en partición que comienza en: 49
+[INFO] 00:24:59:37 BROKER/(28505:28521): Envié mensaje a suscriptor: 103 -.-
+[INFO] 00:24:59:92 BROKER/(28505:28862): Se realiza la compactacion
+[INFO] 00:24:59:92 BROKER/(28505:28862): Elimino particion que comienza en: 0
+[INFO] 00:24:59:92 BROKER/(28505:28862): Se realiza la compactacion
+[INFO] 00:24:59:92 BROKER/(28505:28862): Elimino particion que comienza en: 0
+[INFO] 00:24:59:92 BROKER/(28505:28862): Se realiza la compactacion
+[INFO] 00:24:59:92 BROKER/(28505:28862): Almaceno mensaje en partición que comienza en: 41
+[INFO] 00:24:59:92 BROKER/(28505:28521): Envié mensaje a suscriptor: 103 -.-
+[INFO] 00:24:59:97 BROKER/(28505:28861): Se realiza la compactacion
+[INFO] 00:24:59:97 BROKER/(28505:28861): Elimino particion que comienza en: 0
+[INFO] 00:24:59:97 BROKER/(28505:28861): Se realiza la compactacion
+[INFO] 00:24:59:97 BROKER/(28505:28861): Almaceno mensaje en partición que comienza en: 44
+[INFO] 00:24:59:97 BROKER/(28505:28521): Envié mensaje a suscriptor: 103 -.-
+[INFO] 00:24:59:105 BROKER/(28505:28865): Se realiza la compactacion
+[INFO] 00:24:59:105 BROKER/(28505:28865): Elimino particion que comienza en: 0
+[INFO] 00:24:59:105 BROKER/(28505:28865): Almaceno mensaje en partición que comienza en: 0
+[INFO] 00:24:59:105 BROKER/(28505:28521): Envié mensaje a suscriptor: 103 -.-
+[INFO] 00:28:10:12 BROKER/(29355:29355): Inició el Broker.
+[INFO] 00:28:30:222 BROKER/(29355:29689): Almaceno mensaje en partición que comienza en: 0
+[INFO] 00:28:30:222 BROKER/(29355:29370): Envié mensaje a suscriptor: 201 -.-
+[INFO] 00:28:30:222 BROKER/(29355:29693): Almaceno mensaje en partición que comienza en: 10
+[INFO] 00:28:30:222 BROKER/(29355:29695): Almaceno mensaje en partición que comienza en: 22
+[INFO] 00:28:30:222 BROKER/(29355:29370): Envié mensaje a suscriptor: 201 -.-
+[INFO] 00:28:30:223 BROKER/(29355:29691): Almaceno mensaje en partición que comienza en: 33
+[INFO] 00:28:30:223 BROKER/(29355:29370): Envié mensaje a suscriptor: 201 -.-
+[INFO] 00:28:30:223 BROKER/(29355:29694): Almaceno mensaje en partición que comienza en: 44
+[INFO] 00:28:30:223 BROKER/(29355:29370): Envié mensaje a suscriptor: 201 -.-
+[INFO] 00:28:30:224 BROKER/(29355:29370): Envié mensaje a suscriptor: 201 -.-
+[INFO] 00:28:31:254 BROKER/(29355:29709): Se realiza la compactacion
+[INFO] 00:28:31:254 BROKER/(29355:29709): Elimino particion que comienza en: 0
+[INFO] 00:28:31:254 BROKER/(29355:29709): Se realiza la compactacion
+[INFO] 00:28:31:254 BROKER/(29355:29709): Elimino particion que comienza en: 0
+[INFO] 00:28:31:254 BROKER/(29355:29709): Se realiza la compactacion
+[INFO] 00:28:31:254 BROKER/(29355:29709): Almaceno mensaje en partición que comienza en: 33
+[INFO] 00:28:31:254 BROKER/(29355:29371): Envié mensaje a suscriptor: 103 -.-
+[INFO] 00:28:31:255 BROKER/(29355:29708): Se realiza la compactacion
+[INFO] 00:28:31:255 BROKER/(29355:29708): Elimino particion que comienza en: 0
+[INFO] 00:28:31:255 BROKER/(29355:29708): Se realiza la compactacion
+[INFO] 00:28:31:255 BROKER/(29355:29708): Elimino particion que comienza en: 0
+[INFO] 00:28:31:255 BROKER/(29355:29708): Se realiza la compactacion
+[INFO] 00:28:31:255 BROKER/(29355:29708): Almaceno mensaje en partición que comienza en: 34
+[INFO] 00:28:31:255 BROKER/(29355:29371): Envié mensaje a suscriptor: 103 -.-
+[INFO] 00:28:31:302 BROKER/(29355:29716): Se realiza la compactacion
+[INFO] 00:28:31:302 BROKER/(29355:29716): Elimino particion que comienza en: 0
+[INFO] 00:28:31:302 BROKER/(29355:29716): Se realiza la compactacion
+[INFO] 00:28:31:302 BROKER/(29355:29716): Elimino particion que comienza en: 0
+[INFO] 00:28:31:302 BROKER/(29355:29716): Almaceno mensaje en partición que comienza en: 0
+[INFO] 00:28:31:302 BROKER/(29355:29715): Se realiza la compactacion
+[INFO] 00:28:31:302 BROKER/(29355:29715): Elimino particion que comienza en: 23
+[INFO] 00:28:31:302 BROKER/(29355:29715): Almaceno mensaje en partición que comienza en: 23
+[INFO] 00:28:31:302 BROKER/(29355:29371): Envié mensaje a suscriptor: 103 -.-
+[INFO] 00:28:31:302 BROKER/(29355:29371): Envié mensaje a suscriptor: 103 -.-
+[INFO] 00:28:31:305 BROKER/(29355:29717): Se realiza la compactacion
+[INFO] 00:28:31:305 BROKER/(29355:29717): Elimino particion que comienza en: 0
+[INFO] 00:28:31:305 BROKER/(29355:29717): Almaceno mensaje en partición que comienza en: 0
+[INFO] 00:28:31:305 BROKER/(29355:29371): Envié mensaje a suscriptor: 103 -.-
+[INFO] 00:28:42:313 BROKER/(29355:29738): Se realiza la compactacion
+[INFO] 00:28:42:313 BROKER/(29355:29738): Elimino particion que comienza en: 23
+[INFO] 00:28:42:313 BROKER/(29355:29738): Almaceno mensaje en partición que comienza en: 23
+[INFO] 00:28:42:313 BROKER/(29355:29369): Envié mensaje a suscriptor: 201 -.-
+[INFO] 00:28:43:324 BROKER/(29355:29742): Almaceno mensaje en partición que comienza en: 42
+[INFO] 00:28:43:325 BROKER/(29355:29368): Envié mensaje a suscriptor: 103 -.-
+[INFO] 00:29:08:448 BROKER/(29355:29780): Almaceno mensaje en partición que comienza en: 46
+[INFO] 00:29:08:448 BROKER/(29355:29369): Envié mensaje a suscriptor: 201 -.-
+[INFO] 00:29:09:466 BROKER/(29355:29784): Se realiza la compactacion
+[INFO] 00:29:09:466 BROKER/(29355:29784): Elimino particion que comienza en: 0
+[INFO] 00:29:09:466 BROKER/(29355:29784): Almaceno mensaje en partición que comienza en: 0
+[INFO] 00:29:09:466 BROKER/(29355:29368): Envié mensaje a suscriptor: 103 -.-
+[INFO] 00:29:10:458 BROKER/(29355:29787): Almaceno mensaje en partición que comienza en: 4
+[INFO] 00:29:10:459 BROKER/(29355:29369): Envié mensaje a suscriptor: 201 -.-
+[INFO] 00:29:11:550 BROKER/(29355:29795): Se realiza la compactacion
+[INFO] 00:29:11:550 BROKER/(29355:29795): Elimino particion que comienza en: 23
+[INFO] 00:29:11:550 BROKER/(29355:29795): Almaceno mensaje en partición que comienza en: 23
+[INFO] 00:29:11:550 BROKER/(29355:29368): Envié mensaje a suscriptor: 103 -.-
+[INFO] 00:29:12:474 BROKER/(29355:29798): Se realiza la compactacion
+[INFO] 00:29:12:474 BROKER/(29355:29798): Elimino particion que comienza en: 27
+[INFO] 00:29:12:474 BROKER/(29355:29798): Se realiza la compactacion
+[INFO] 00:29:12:474 BROKER/(29355:29798): Elimino particion que comienza en: 27
+[INFO] 00:29:12:474 BROKER/(29355:29798): Almaceno mensaje en partición que comienza en: 27
+[INFO] 00:29:12:474 BROKER/(29355:29369): Envié mensaje a suscriptor: 201 -.-
+[INFO] 00:29:13:486 BROKER/(29355:29802): Almaceno mensaje en partición que comienza en: 47
+[INFO] 00:29:13:486 BROKER/(29355:29368): Envié mensaje a suscriptor: 103 -.-
+[INFO] 00:29:21:510 BROKER/(29355:29816): Se realiza la compactacion
+[INFO] 00:29:21:510 BROKER/(29355:29816): Elimino particion que comienza en: 0
+[INFO] 00:29:21:510 BROKER/(29355:29816): Se realiza la compactacion
+[INFO] 00:29:21:510 BROKER/(29355:29816): Elimino particion que comienza en: 0
+[INFO] 00:29:21:510 BROKER/(29355:29816): Almaceno mensaje en partición que comienza en: 0
+[INFO] 00:29:21:510 BROKER/(29355:29369): Envié mensaje a suscriptor: 201 -.-
+[INFO] 00:29:22:529 BROKER/(29355:29820): Almaceno mensaje en partición que comienza en: 47
+[INFO] 00:29:22:529 BROKER/(29355:29368): Envié mensaje a suscriptor: 103 -.-
+[INFO] 00:31:26:229 BROKER/(30164:30164): Inició el Broker.
+[INFO] 00:31:38:229 BROKER/(30164:30488): Se almacena mensaje en memoria en posición: (nil) -.-
+[INFO] 00:31:38:229 BROKER/(30164:30181): Envié mensaje a suscriptor: 201 -.-
+[INFO] 00:31:39:231 BROKER/(30164:30490): Se almacena mensaje en memoria en posición: 0x10 -.-
+[INFO] 00:31:39:231 BROKER/(30164:30489): Se almacena mensaje en memoria en posición: 0x20 -.-
+[INFO] 00:31:39:231 BROKER/(30164:30181): Envié mensaje a suscriptor: 201 -.-
+[INFO] 00:31:40:232 BROKER/(30164:30492): Se almacena mensaje en memoria en posición: 0x30 -.-
+[INFO] 00:31:40:232 BROKER/(30164:30491): Se almacena mensaje en memoria en posición: 0x10 -.-
+[INFO] 00:31:40:233 BROKER/(30164:30181): Envié mensaje a suscriptor: 201 -.-
+[INFO] 00:31:41:235 BROKER/(30164:30181): Envié mensaje a suscriptor: 201 -.-
+[INFO] 00:31:42:235 BROKER/(30164:30181): Envié mensaje a suscriptor: 201 -.-
+[INFO] 00:31:43:236 BROKER/(30164:30508): Se almacena mensaje en memoria en posición: (nil) -.-
+[INFO] 00:31:43:237 BROKER/(30164:30182): Envié mensaje a suscriptor: 103 -.-
+[INFO] 00:31:43:237 BROKER/(30164:30501): Se almacena mensaje en memoria en posición: 0x20 -.-
+[INFO] 00:31:43:237 BROKER/(30164:30511): Se almacena mensaje en memoria en posición: (nil) -.-
+[INFO] 00:31:43:237 BROKER/(30164:30514): Se almacena mensaje en memoria en posición: 0x20 -.-
+[INFO] 00:31:43:237 BROKER/(30164:30182): Envié mensaje a suscriptor: 103 -.-
+[INFO] 00:31:43:237 BROKER/(30164:30182): Envié mensaje a suscriptor: 103 -.-
+[INFO] 00:31:44:238 BROKER/(30164:30182): Envié mensaje a suscriptor: 103 -.-
+[INFO] 00:31:45:239 BROKER/(30164:30521): Se almacena mensaje en memoria en posición: 0x20 -.-
+[INFO] 00:31:45:239 BROKER/(30164:30182): Envié mensaje a suscriptor: 103 -.-
+[INFO] 00:31:52:288 BROKER/(30164:30542): Se almacena mensaje en memoria en posición: (nil) -.-
+[INFO] 00:31:52:289 BROKER/(30164:30180): Envié mensaje a suscriptor: 201 -.-
+[INFO] 00:31:54:291 BROKER/(30164:30546): Se almacena mensaje en memoria en posición: 0x20 -.-
+[INFO] 00:31:54:291 BROKER/(30164:30179): Envié mensaje a suscriptor: 103 -.-
+[INFO] 00:32:20:421 BROKER/(30164:30587): Se almacena mensaje en memoria en posición: (nil) -.-
+[INFO] 00:32:20:421 BROKER/(30164:30180): Envié mensaje a suscriptor: 201 -.-
+[INFO] 00:32:22:423 BROKER/(30164:30595): Se almacena mensaje en memoria en posición: 0x24 -.-
+[INFO] 00:32:22:423 BROKER/(30164:30179): Envié mensaje a suscriptor: 103 -.-
+[INFO] 00:32:24:425 BROKER/(30164:30596): Se almacena mensaje en memoria en posición: (nil) -.-
+[INFO] 00:32:24:426 BROKER/(30164:30180): Envié mensaje a suscriptor: 201 -.-
+[INFO] 00:32:26:429 BROKER/(30164:30602): Se almacena mensaje en memoria en posición: (nil) -.-
+[INFO] 00:32:26:429 BROKER/(30164:30604): Se almacena mensaje en memoria en posición: 0x24 -.-
+[INFO] 00:32:26:429 BROKER/(30164:30180): Envié mensaje a suscriptor: 201 -.-
+[INFO] 00:32:26:429 BROKER/(30164:30179): Envié mensaje a suscriptor: 103 -.-
+[INFO] 00:32:30:438 BROKER/(30164:30613): Se almacena mensaje en memoria en posición: 0x28 -.-
+[INFO] 00:32:30:438 BROKER/(30164:30179): Envié mensaje a suscriptor: 103 -.-
+[INFO] 00:32:33:474 BROKER/(30164:30623): Se almacena mensaje en memoria en posición: (nil) -.-
+[INFO] 00:32:33:474 BROKER/(30164:30180): Envié mensaje a suscriptor: 201 -.-
+[INFO] 00:32:35:477 BROKER/(30164:30627): Se almacena mensaje en memoria en posición: 0x24 -.-
+[INFO] 00:32:35:477 BROKER/(30164:30179): Envié mensaje a suscriptor: 103 -.-
+[INFO] 00:33:45:461 BROKER/(30164:30736): Se almacena mensaje en memoria en posición: 0x30 -.-
+[INFO] 00:33:45:461 BROKER/(30164:30181): Envié mensaje a suscriptor: 201 -.-
+[INFO] 00:33:46:463 BROKER/(30164:30737): Se almacena mensaje en memoria en posición: (nil) -.-
+[INFO] 00:33:46:464 BROKER/(30164:30740): Se almacena mensaje en memoria en posición: 0x10 -.-
+[INFO] 00:33:46:464 BROKER/(30164:30181): Envié mensaje a suscriptor: 201 -.-
+[INFO] 00:33:47:464 BROKER/(30164:30738): Se almacena mensaje en memoria en posición: (nil) -.-
+[INFO] 00:33:47:465 BROKER/(30164:30739): Se almacena mensaje en memoria en posición: 0x10 -.-
+[INFO] 00:33:47:465 BROKER/(30164:30181): Envié mensaje a suscriptor: 201 -.-
+[INFO] 00:33:47:465 BROKER/(30164:30746): Se almacena mensaje en memoria en posición: (nil) -.-
+[INFO] 00:33:47:465 BROKER/(30164:30182): Envié mensaje a suscriptor: 103 -.-
+[INFO] 00:33:48:467 BROKER/(30164:30181): Envié mensaje a suscriptor: 201 -.-
+[INFO] 00:33:48:467 BROKER/(30164:30181): Envié mensaje a suscriptor: 201 -.-
+[INFO] 00:33:48:472 BROKER/(30164:30751): Se almacena mensaje en memoria en posición: (nil) -.-
+[INFO] 00:33:48:472 BROKER/(30164:30182): Envié mensaje a suscriptor: 103 -.-
+[INFO] 00:33:50:474 BROKER/(30164:30762): Se almacena mensaje en memoria en posición: (nil) -.-
+[INFO] 00:33:50:474 BROKER/(30164:30765): Se almacena mensaje en memoria en posición: (nil) -.-
+[INFO] 00:33:50:474 BROKER/(30164:30766): Se almacena mensaje en memoria en posición: (nil) -.-
+[INFO] 00:33:50:474 BROKER/(30164:30182): Envié mensaje a suscriptor: 103 -.-
+[INFO] 00:33:50:474 BROKER/(30164:30182): Envié mensaje a suscriptor: 103 -.-
+[INFO] 00:33:50:474 BROKER/(30164:30182): Envié mensaje a suscriptor: 103 -.-
+[INFO] 00:33:52:514 BROKER/(30164:30775): Se almacena mensaje en memoria en posición: (nil) -.-
+[INFO] 00:33:52:514 BROKER/(30164:30180): Envié mensaje a suscriptor: 201 -.-
+[INFO] 00:33:54:515 BROKER/(30164:30783): Se almacena mensaje en memoria en posición: 0x24 -.-
+[INFO] 00:33:54:515 BROKER/(30164:30179): Envié mensaje a suscriptor: 103 -.-
+[INFO] 00:34:24:653 BROKER/(30164:30833): Se almacena mensaje en memoria en posición: (nil) -.-
+[INFO] 00:34:24:654 BROKER/(30164:30180): Envié mensaje a suscriptor: 201 -.-
+[INFO] 00:34:26:656 BROKER/(30164:30837): Se almacena mensaje en memoria en posición: 0x28 -.-
+[INFO] 00:34:26:656 BROKER/(30164:30179): Envié mensaje a suscriptor: 103 -.-
+[INFO] 00:34:28:658 BROKER/(30164:30840): Se almacena mensaje en memoria en posición: (nil) -.-
+[INFO] 00:34:28:658 BROKER/(30164:30180): Envié mensaje a suscriptor: 201 -.-
+[INFO] 00:34:30:661 BROKER/(30164:30844): Se almacena mensaje en memoria en posición: (nil) -.-
+[INFO] 00:34:30:661 BROKER/(30164:30850): Se almacena mensaje en memoria en posición: 0x28 -.-
+[INFO] 00:34:30:661 BROKER/(30164:30180): Envié mensaje a suscriptor: 201 -.-
+[INFO] 00:34:30:661 BROKER/(30164:30179): Envié mensaje a suscriptor: 103 -.-
+[INFO] 00:34:34:668 BROKER/(30164:30855): Se almacena mensaje en memoria en posición: 0x2c -.-
+[INFO] 00:34:34:669 BROKER/(30164:30179): Envié mensaje a suscriptor: 103 -.-
+[INFO] 00:34:37:720 BROKER/(30164:30865): Se almacena mensaje en memoria en posición: (nil) -.-
+[INFO] 00:34:37:720 BROKER/(30164:30180): Envié mensaje a suscriptor: 201 -.-
+[INFO] 00:34:39:721 BROKER/(30164:30869): Se almacena mensaje en memoria en posición: 0x30 -.-
+[INFO] 00:34:39:721 BROKER/(30164:30179): Envié mensaje a suscriptor: 103 -.-

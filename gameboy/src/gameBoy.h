@@ -14,6 +14,8 @@
 
 t_log* gameboyLogger;
 uint32_t idProcesoGameboy;
+uint32_t puertoGlobal;
+char* ipGlobal;
 typedef struct{
 	void * paqueteAEnviar;
 	uint32_t socketCliente;
