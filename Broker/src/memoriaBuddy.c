@@ -1,7 +1,7 @@
 
 #include "broker.h"
 #include "memoria.h"
-//
+
 //void registrarEnMemoriaBUDDYSYSTEM(msgMemoriaBroker* mensajeNuevo, struct nodoMemoria* partActual){
 //	struct nodoMemoria* backUp = partActual;
 //	uint32_t response = intentarRamaIzquierda(mensajeNuevo, partActual);
@@ -28,11 +28,14 @@ void registrarEnMemoriaBUDDYSYSTEM(msgMemoriaBroker* mensajeNuevo, struct nodoMe
 void elegirVictimaDeReemplazoYeliminarBD(){
 	struct nodoMemoria* victima;
 
-	if(algoritmoReemplazo == FIFO){
-		victima = buscarVictimaPor(tiempoDeCargaMenor);
-	}else{ //LRU
-		victima = buscarVictimaPor(tiempoDeUsoMenor);
+	switch(algoritmoReemplazo){
+	case FIFO:
+		victima = buscarVictimaPor(menorTiempo);
+		break;
+	case LRU:
+		victima = buscarVictimaPor(menorTiempo);
 		log_info(brokerLogger2,"VICTIMA: id de mensaje: %i" , victima->mensaje->idMensaje );
+		break;
 	}
 	modificarNodoAlibre(victima);
 }
@@ -55,13 +58,13 @@ void modificarNodoAlibre(struct nodoMemoria* victima){
 	victima->header.status = LIBRE;
 
 	log_info(brokerLogger2,"ELIMINO el mensaje en nodo con offset: %i del msg con ID %i", victima->offset, victima->mensaje->idMensaje);
-	log_info(brokerLogger2,"TIEMPO DE CARGA: %i:%i:%i ULTIMO ACCESO: %i:%i:%i",
-			victima->header.tiempoDeCarga.tm_hour,
-			victima->header.tiempoDeCarga.tm_min,
-			victima->header.tiempoDeCarga.tm_sec,
-			victima->header.ultimoAcceso.tm_hour,
-			victima->header.ultimoAcceso.tm_min,
-			victima->header.ultimoAcceso.tm_sec);
+//	log_info(brokerLogger2,"TIEMPO DE CARGA: %i:%i:%i ULTIMO ACCESO: %i:%i:%i",
+//			victima->header.tiempoDeCarga.tm_hour,
+//			victima->header.tiempoDeCarga.tm_min,
+//			victima->header.tiempoDeCarga.tm_sec,
+//			victima->header.ultimoAcceso.tm_hour,
+//			victima->header.ultimoAcceso.tm_min,
+//			victima->header.ultimoAcceso.tm_sec);
 	removerDeListaOcupados(victima);
 	evaluarConsolidacion(victima);
 }
@@ -115,18 +118,17 @@ uint32_t evaluarTamanioParticionYasignar(struct nodoMemoria* partActual, msgMemo
 		partActual->mensaje = msg;
 		addListaMutex(nodosOcupados,partActual);
 
-		time_t t;
-		t=time(NULL);
-		partActual->header.tiempoDeCarga = *localtime(&t);
-		partActual->header.ultimoAcceso = *localtime(&t);
+//		time_t t;
+//		t=time(NULL);
+//		partActual->header.tiempoDeCarga = *localtime(&t);
+//		partActual->header.ultimoAcceso = *localtime(&t);
+
+		partActual->header.tiempoDeCarga=temporal_get_string_time();
+		partActual->header.ultimoAcceso=temporal_get_string_time();
 		asignarPuntero(partActual->offset, partActual->mensaje->stream, partActual->mensaje->sizeStream);
-
-
 
 		msg->stream=memoria+partActual->offset;//HAY QUE AGREGAR ESTO Y REVISAR QUE FUNCIONE. Es necesario, en particiones lo hicimos asi
 		//Atte Mari y Marquitos :D
-
-
 
 		log_info(brokerLogger2,"ASIGNE: Size de buddy: %i. Id mensaje: %i. Size del mensaje: %i.", (partActual->header).size, partActual->mensaje->idMensaje, partActual->mensaje->sizeStream);
 		return 1;
@@ -254,17 +256,17 @@ bool buscarPorRamaCatch(mensajeCatch* msgCatch, struct nodoMemoria* partActual )
 
 msgMemoriaBroker* buscarPorRama(uint32_t id, struct nodoMemoria* partActual ){
 	if (estaOcupado(partActual) && (partActual->mensaje->idMensaje)==id){
-		log_info(brokerLogger2, "Duermo para generar bache de 1 segundo y diferenciar LRU/FIFO");
-		sleep(1);
+		//log_info(brokerLogger2, "Duermo para generar bache de 1 segundo y diferenciar LRU/FIFO");
+		//sleep(1);
 
-		time_t sTime;
-		sTime=time(NULL);
-		partActual->header.ultimoAcceso = *localtime(&sTime); //actualizo la fecha de acceso
-
-		log_info(brokerLogger2, "Encontre mensaje en mem: %i:%i:%i",
-				partActual->header.ultimoAcceso.tm_hour,
-				partActual->header.ultimoAcceso.tm_min,
-				partActual->header.ultimoAcceso.tm_sec);
+//		time_t sTime;
+//		sTime=time(NULL);
+//		partActual->header.ultimoAcceso = *localtime(&sTime); //actualizo la fecha de acceso
+		partActual->header.ultimoAcceso=temporal_get_string_time();
+		log_info(brokerLogger2, "Encontre mensaje en mem: %s", partActual->header.ultimoAcceso);
+//				partActual->header.ultimoAcceso.tm_hour,
+//				partActual->header.ultimoAcceso.tm_min,
+//				partActual->header.ultimoAcceso.tm_sec);
 		return partActual->mensaje;
 	}else if (estaParticionado(partActual)){
 		msgMemoriaBroker* retorno = buscarPorRama(id,partActual->hijoIzq);
@@ -275,8 +277,6 @@ msgMemoriaBroker* buscarPorRama(uint32_t id, struct nodoMemoria* partActual ){
 		return NULL;
 	}
 }
-
-
 
 struct nodoMemoria* crearRaizArbol(void){
 	struct nodoMemoria* nodoRaiz = inicializarNodo();    //no estoy liberando malloc
@@ -349,11 +349,11 @@ uint32_t tamanioParticion(struct nodoMemoria* part){
 	return part->header.size;
 }
 
-struct tm tiempoCarga(struct nodoMemoria* nodo){
+char* tiempoCarga(struct nodoMemoria* nodo){
 	return nodo->header.tiempoDeCarga;
 }
 
-struct tm tiempoUso(struct nodoMemoria* nodo){
+char* tiempoUso(struct nodoMemoria* nodo){
 	return nodo->header.ultimoAcceso;
 }
 
@@ -371,7 +371,7 @@ void enviarMsjsASuscriptorNuevoBuddySystem(uint32_t colaParametro, uint32_t sock
 				free(paqStream);
 				log_info(brokerLogger2, "GUARDO ENVIADO POR ENVIAR MENSAJES, id: %i, id cor: %i", paqueteAEnviar->id, paqueteAEnviar->idCorrelativo);
 				guardarYaEnviados(paqueteAEnviar, idProceso);
-				//memory leak para el paquete
+ 				//memory leak para el paquete
 			}
 		}
 	}
@@ -388,27 +388,3 @@ bool envieMensajeDeNodoAIdProceso(struct nodoMemoria* nodoEvaluado, uint32_t idP
 	return false;
 }
 
-
-
-
-bool tiempoDeCargaMenor(struct nodoMemoria* nuevoNodo, struct nodoMemoria* minimoHastaElMomento){
-	if (tiempoCarga(nuevoNodo).tm_hour < tiempoCarga(minimoHastaElMomento).tm_hour){
-			return true;
-		}else if(tiempoCarga(nuevoNodo).tm_min < tiempoCarga(minimoHastaElMomento).tm_min){
-			return true;
-		}else if (tiempoCarga(nuevoNodo).tm_sec < tiempoCarga(minimoHastaElMomento).tm_sec){
-			return true;
-		}
-	return false;
-}
-
-bool tiempoDeUsoMenor(struct nodoMemoria* nuevoNodo, struct nodoMemoria* minimoHastaElMomento){
-	if (tiempoUso(nuevoNodo).tm_hour < tiempoUso(minimoHastaElMomento).tm_hour){
-		return true;
-	}else if(tiempoUso(nuevoNodo).tm_min < tiempoUso(minimoHastaElMomento).tm_min){
-		return true;
-	}else if (tiempoUso(nuevoNodo).tm_sec < tiempoUso(minimoHastaElMomento).tm_sec){
-		return true;
-	}
-	return false;
-}

@@ -31,22 +31,17 @@
 //
 //}
 
-int main(void) {
+int main(int argc, char* argv[]) {
 	idsMensajesYaRespondidos=inicializarListaMutex();
 	iteraciones = 0;
-	TC=0;
+	TiempoCarga=0;
     brokerLogger2 = log_create("brokerLoggerSecundario.log", "Broker", true, LOG_LEVEL_INFO);
     log_info(brokerLogger2, "pid del proceso broker: %i", getpid());
     //log_info(brokerLogger2, armarStringEnvioXsub(2));
 	signal(SIGUSR1, crearDumpDeCache);
 
-	//levantarDatosDeConfig("Broker.config", 1); 			//1 para datos de config, otro para hardcode
-	//levantarDatosDeConfig("pruebaBaseBroker.config", 1);
-	levantarDatosDeConfig("pruebaBS.config", 1);
-	//levantarDatosDeConfig("pruebaConsolidacion.config", 1);
-	//levantarDatosDeConfig("pruebaCompactacion.config", 1);
-
-	loggerBroker = iniciar_logger("loggerBroker.log", "BROKER");
+	levantarDatosDeConfig(argv[1], 1);
+	loggerBroker = iniciar_logger(pathLog, "BROKER");
 
 	mutexMemoria = malloc(sizeof(pthread_mutex_t));
 	pthread_mutex_init(mutexMemoria,NULL);
@@ -70,6 +65,7 @@ void levantarDatosDeConfig(char * pathConfig, uint32_t intMock){
 		ip_broker         = config_get_string_value(configBroker, "IP_BROKER");
 		puerto_broker     = config_get_int_value(configBroker, "PUERTO_BROKER");
 		frecuenciaCompactacion = config_get_int_value (configBroker, "FRECUENCIA_COMPACTACION");
+		pathLog = config_get_string_value(configBroker, "LOG_FILE");
 
 		definirAlgoritmoMemoria(configBroker);
 		definirAlgoritmoParticionLibre(configBroker);
@@ -222,13 +218,12 @@ void meterEnCola( colaMensajes* structCola, paquete * paq, uint32_t  socket){
 	pthread_mutex_unlock(contador.mutexContador);
 	registrarMensajeEnMemoria(paq, algoritmoMemoria);
 	log_info(brokerLogger2,"Terminó de registrar el mensaje en memoria.");
-	if(!yaSeEnvioEstaRespuesta(paq)){
+
+	if((paq->idCorrelativo == 0) || (!yaSeEnvioEstaRespuesta(paq))){
 		pushColaMutex(structCola->cola, (void *) paq);
+		log_info(brokerLogger2,"Aviso que hay mensajes en cola.");
+		sem_post(structCola->mensajesEnCola);
 	}
-
-
-	log_info(brokerLogger2,"Aviso que hay mensajes en cola.");
-	sem_post(structCola->mensajesEnCola);
 }
 
 void abrirHiloParaEnviarMensajes(){
@@ -266,8 +261,6 @@ void * chequearMensajesEnCola(void * colaVoid){
 			log_info(loggerBroker, "Envié mensaje a suscriptor: %d -.-", actual->idProceso);
 
 			guardarYaEnviados(paq, actual->idProceso);
-//			paquete* paqueteACK = recibirPaquete(actual->socket);
-//			guardarMensajeACK(paqueteACK);
 		}
 
 		destruirPaquete(paq);

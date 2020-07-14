@@ -48,7 +48,7 @@ void registrarParticionesLibresYocupadas(){
 			string_append(&buffer, OCUPADA);
 			string_append(&buffer, "   ");
 			string_append_with_format(&buffer, "Size: %i   ", particionAEscribir->sizeParticion);
-			string_append_with_format(&buffer, "LRU: %i:%i:%i   ", particionAEscribir->lru.tm_hour, particionAEscribir->lru.tm_min, particionAEscribir->lru.tm_sec);
+			string_append_with_format(&buffer, "LRU: %s   ", particionAEscribir->lru);
 			string_append(&buffer, "Cola: ");
 			string_append(&buffer, nombreDeCola(particionAEscribir->mensaje->cola));
 			string_append(&buffer, "   ");

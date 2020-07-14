@@ -45,8 +45,10 @@ typedef struct {
 typedef struct{
 	nodeStatus status;
 	uint32_t size;
-	struct tm tiempoDeCarga;
-	struct tm ultimoAcceso;
+//	struct tm tiempoDeCarga;
+//	struct tm ultimoAcceso;
+	char* tiempoDeCarga;
+	char* ultimoAcceso;
 }nodeData;
 
 struct nodoMemoria {
@@ -154,11 +156,12 @@ bool compararGet(mensajeGet* elemLista, mensajeGet* msgGet);
 void elegirVictimaDeReemplazoYeliminarBD();
 struct nodoMemoria* buscarVictimaPor(bool(*condition)(struct nodoMemoria*,struct nodoMemoria*));
 void modificarNodoAlibre(struct nodoMemoria* victima);
-struct tm tiempoCarga(struct nodoMemoria* nodo);
 void removerDeListaOcupados(struct nodoMemoria* nodo);
 bool tiempoDeCargaMenor(struct nodoMemoria* nodo, struct nodoMemoria* otroNodo);
 bool tiempoDeUsoMenor(struct nodoMemoria* nodo, struct nodoMemoria* otroNodo);
 void evaluarConsolidacion(struct nodoMemoria* nodo);
+
+bool menorTiempo(char* tiempo1, char* tiempo2);
 
 bool yaSeEnvioEstaRespuesta(paquete* paq);
 void agregarRespuestaARespuestasEnviadas(paquete* paq);

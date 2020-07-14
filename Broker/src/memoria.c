@@ -179,8 +179,8 @@ void guardarYaEnviados (paquete* paq, uint32_t idProceso){
 
 
 void asignarPuntero(uint32_t offset, void* stream, uint32_t sizeStream){
-	log_info(brokerLogger2,"ALMACENO mensaje en posición: %p (de memoria) -.-", 0 + offset);
-	log_info(loggerBroker, "Se almacena mensaje en memoria en posición: %p -.-", 0 + offset);
+	log_info(brokerLogger2,"ALMACENO mensaje en posición: %itim (de memoria)", offset);
+	log_info(loggerBroker, "Se almacena mensaje en memoria en posición: %i", offset);
 	memcpy(memoria + offset, stream, sizeStream);
 }
 
@@ -282,4 +282,32 @@ void enviarMensajesPreviosEnMemoria(uint32_t socket, uint32_t idProceso, uint32_
 	default:
 		printf("Error en algoritmo memoria");
 	}
+}
+
+bool menorTiempo(char* tiempo1, char* tiempo2){
+	char** time1Separado = string_split(tiempo1, ":");
+	char** time2Separado = string_split(tiempo2, ":");
+
+	uint32_t hora1 = atoi(time1Separado[0]);
+	uint32_t hora2 = atoi(time2Separado[0]);
+
+	uint32_t min1 = atoi(time1Separado[1]);
+	uint32_t min2 = atoi(time2Separado[1]);
+
+	uint32_t sec1 = atoi(time1Separado[2]);
+	uint32_t sec2 = atoi(time2Separado[2]);
+
+	uint32_t ms1 = atoi(time1Separado[3]);
+	uint32_t ms2 = atoi(time2Separado[3]);
+
+	if(hora1<hora2){
+		return true;
+	}else if((hora1==hora2) && (min1<min2)){
+		return true;
+	}else if((hora1==hora2) && (min1==min2) && (sec1<sec2)){
+		return true;
+	}else if((hora1==hora2) && (min1==min2) && (sec1==sec2) && (ms1<ms2)){
+		return true;
+	}
+	return false;
 }

@@ -27,7 +27,7 @@
 #include <messages_lib/messages_lib.h>
 #include "memoria.h"
 #include "files.h"
-
+#include <commons/temporal.h>
 
 uint32_t puerto_broker;
 char* ip_broker;
@@ -36,6 +36,7 @@ t_log* brokerLogger2;
 uint32_t tamMemoria;
 uint32_t particionMinima;
 uint32_t iteraciones;
+char* pathLog;
 
 uint32_t frecuenciaCompactacion;
 uint32_t cantidadBusquedasFallidas;
