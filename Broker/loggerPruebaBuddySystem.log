@@ -285,3 +285,8 @@
 [INFO] 19:22:46:943 BROKER/(23152:23836): Se almacena mensaje en memoria en posición: 40
 [INFO] 19:22:47:188 BROKER/(23152:23839): Se almacena mensaje en memoria en posición: 44
 [INFO] 19:22:47:634 BROKER/(23152:23845): Se almacena mensaje en memoria en posición: 48
+[INFO] 19:48:03:510 BROKER/(27230:27230): Inició el Broker.
+[INFO] 19:49:29:723 BROKER/(27230:27470): Se conectó un proceso GAMEBOY.
+[INFO] 19:50:22:104 BROKER/(27610:27610): Inició el Broker.
+[INFO] 19:50:29:636 BROKER/(27610:27643): Se conectó un proceso GAMEBOY.
+[INFO] 19:50:29:637 BROKER/(27610:27643): Un proceso GAMEBOY se sucribió a la cola APPEARED_POKEMON.

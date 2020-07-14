@@ -137,6 +137,7 @@ typedef struct {
 	colaMutex* cola;
 	listaMutex* suscriptores;//lista de socketIdProceso
 	sem_t* mensajesEnCola;
+
 }colaMensajes;
 
 mensajeAppeared* llenarAppeared(char* pokemon, uint32_t posX, uint32_t posY);

@@ -87,6 +87,9 @@ bool estaEnListaACK(uint32_t idProceso, msgMemoriaBroker* mensaje){
 void guardarMensajeACK (paquete* paq){
 	uint32_t* idProceso=malloc(sizeof(uint32_t));
 	*idProceso=obtenerIdProcesoDeAck(paq->stream);
+
+	log_info(loggerBroker, "Me llegó el ACK del proceso de id %i (Mensaje %i).",obtenerIdProcesoDeAck(paq->stream), paq->idCorrelativo);
+
 	log_info(brokerLogger2, "----------------------Guardo ACK del proceso %i",obtenerIdProcesoDeAck(paq->stream) );
 	msgMemoriaBroker* mensaje = buscarMensajeEnMemoria(paq->idCorrelativo);
 	if(mensaje == NULL){

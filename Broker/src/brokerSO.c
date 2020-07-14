@@ -158,7 +158,7 @@ void* atenderCliente(void* sock) {
 	uint32_t* socket = (uint32_t*) sock;
 	paquete* paqueteRecibido = recibirPaquete(*socket);
 
-	log_info(loggerBroker,"Se conectó un proceso %s.", inToModulo(paqueteRecibido->tipoMensaje));
+	log_info(loggerBroker,"Se conectó un proceso %s.", intToModulo(paqueteRecibido->modulo));
 
 	if( paqueteRecibido == NULL){
 		printf("RESPONDO MENSAJE ERRONEO\n");
@@ -265,6 +265,9 @@ void * chequearMensajesEnCola(void * colaVoid){
 	uint32_t i;
 	while (1){
 		sem_wait(cola->mensajesEnCola);
+
+		log_info(loggerBroker, "Llegó un nuevo mensaje a la cola %s.", colaToString(cola));
+
 		paquete* paq = (paquete*) popColaMutex(cola->cola);
 		log_info(brokerLogger2,"Envio el mensaje a los suscriptores de la cola: %s", nombreDeCola(paq->tipoMensaje));
 		agregarRespuestaARespuestasEnviadas(paq);
@@ -275,8 +278,10 @@ void * chequearMensajesEnCola(void * colaVoid){
 
 			send(actual->socket, paqSerializado , sizePaquete(paq), 0);
 
+
+
 			log_info(brokerLogger2, "Envié mensaje a suscriptor: %d -.-", actual->idProceso);
-			log_info(loggerBroker, "Envié mensaje a suscriptor: %d -.-", actual->idProceso);
+			log_info(loggerBroker, "Envié mensaje al suscriptor de id: %d.", actual->idProceso);
 
 			guardarYaEnviados(paq, actual->idProceso);
 		}

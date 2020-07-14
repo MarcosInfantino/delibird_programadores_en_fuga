@@ -140,5 +140,6 @@ uint32_t obtenerContador();
 t_config* leer_config(void);
 
 char* intToModulo(uint32_t modulo);
+char* colaToString(colaMensajes* cola);
 
 #endif /* BROKER_H_ */

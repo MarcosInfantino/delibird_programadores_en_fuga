@@ -5929,3 +5929,11 @@
 [INFO] 19:22:47:634 Broker/(23152:23845): ASIGNE: Size de buddy: 4. Id mensaje: 189. Size del mensaje: 4.
 [INFO] 19:22:47:634 Broker/(23152:23845): Registré el mensaje en memoria.
 [INFO] 19:22:47:634 Broker/(23152:23845): Terminó de registrar el mensaje en memoria.
+[INFO] 19:48:03:510 Broker/(27230:27230): pid del proceso broker: 27230
+[INFO] 19:49:29:723 Broker/(27230:27470): -------------------------TIPO DE PAQUETE RECIBIDO: 7
+[INFO] 19:49:29:723 Broker/(27230:27470): ---------------------Suscribo por tiempo al proceso 1
+[INFO] 19:49:29:723 Broker/(27230:27470): ---------------------------- Suscribo a 1
+[INFO] 19:50:22:103 Broker/(27610:27610): pid del proceso broker: 27610
+[INFO] 19:50:29:636 Broker/(27610:27643): -------------------------TIPO DE PAQUETE RECIBIDO: 7
+[INFO] 19:50:29:637 Broker/(27610:27643): ---------------------Suscribo por tiempo al proceso 1
+[INFO] 19:50:29:637 Broker/(27610:27643): ---------------------------- Suscribo a 1
