@@ -284,6 +284,15 @@ void enviarMensajesPreviosEnMemoria(uint32_t socket, uint32_t idProceso, uint32_
 	}
 }
 
+
+bool lruNodos(struct nodoMemoria* nodo1, struct nodoMemoria* nodo2){
+	return menorTiempo((nodo1->header).ultimoAcceso,(nodo2->header).ultimoAcceso );
+}
+
+bool fifoNodos(struct nodoMemoria* nodo1, struct nodoMemoria* nodo2){
+	return menorTiempo((nodo1->header).tiempoDeCarga,(nodo2->header).tiempoDeCarga );
+}
+
 bool menorTiempo(char* tiempo1, char* tiempo2){
 	char** time1Separado = string_split(tiempo1, ":");
 	char** time2Separado = string_split(tiempo2, ":");

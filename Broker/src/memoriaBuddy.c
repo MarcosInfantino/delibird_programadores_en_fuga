@@ -30,15 +30,17 @@ void elegirVictimaDeReemplazoYeliminarBD(){
 
 	switch(algoritmoReemplazo){
 	case FIFO:
-		victima = buscarVictimaPor(menorTiempo);
+		victima = buscarVictimaPor(fifoNodos);
 		break;
 	case LRU:
-		victima = buscarVictimaPor(menorTiempo);
+		victima = buscarVictimaPor(lruNodos);
 		log_info(brokerLogger2,"VICTIMA: id de mensaje: %i" , victima->mensaje->idMensaje );
 		break;
 	}
 	modificarNodoAlibre(victima);
 }
+
+
 
 struct nodoMemoria* buscarVictimaPor(bool(*condition)(struct nodoMemoria*,struct nodoMemoria*)){
 	struct nodoMemoria* minimo = getListaMutex(nodosOcupados, 0);
@@ -367,6 +369,10 @@ void enviarMsjsASuscriptorNuevoBuddySystem(uint32_t colaParametro, uint32_t sock
 				paqueteAEnviar->id = nodoEvaluado->mensaje->idMensaje;
 				paqueteAEnviar->idCorrelativo = nodoEvaluado->mensaje->idCorrelativo;
 				void* paqStream = serializarPaquete(paqueteAEnviar);
+
+				(nodoEvaluado->header).ultimoAcceso=temporal_get_string_time();//actualizo el LRU
+
+				log_info(brokerLogger2, "Actualizo el ultimo acceso del MENSAJE %i : %s ",nodoEvaluado->mensaje->idMensaje ,(nodoEvaluado->header).ultimoAcceso);
 				send(socket, paqStream, sizePaquete(paqueteAEnviar), 0);
 				free(paqStream);
 				log_info(brokerLogger2, "GUARDO ENVIADO POR ENVIAR MENSAJES, id: %i, id cor: %i", paqueteAEnviar->id, paqueteAEnviar->idCorrelativo);

@@ -8,7 +8,7 @@
 #ifndef FILES_H_
 #define FILES_H_
 #define modoLecturaEnBinario "rb"
-#define modoEscrituraEnBinario "wb"
+#define modoEscrituraEnBinario "w"
 #define OCUPADA "[X]"
 #define LIBREP "[L]"
 

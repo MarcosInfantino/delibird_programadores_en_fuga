@@ -29,6 +29,7 @@
 #include "files.h"
 #include <commons/temporal.h>
 
+t_log* brokerLogger;
 uint32_t puerto_broker;
 char* ip_broker;
 t_log* loggerBroker;
@@ -137,5 +138,7 @@ void incrementarContador();
 uint32_t obtenerContador();
 
 t_config* leer_config(void);
+
+char* intToModulo(uint32_t modulo);
 
 #endif /* BROKER_H_ */

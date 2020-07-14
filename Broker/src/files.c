@@ -16,16 +16,24 @@ void iniciarArchivoMutex(){
 	archivoSem->mutex = malloc(sizeof(pthread_mutex_t));
 	archivoSem->archivo = malloc(sizeof(FILE));
 
-	time_t rawtime;
-	struct tm *info;
-	time( &rawtime );
-	info = localtime( &rawtime );
+//	time_t rawtime;
+//	struct tm *info;
+//	time( &rawtime );
+//	info = localtime( &rawtime );
 
 	archivoSem->archivo = fopen("dumpDeCache.db",modoEscrituraEnBinario);
-	fwrite("Dump: ", sizeof(strlen("Dump: ")), 1, archivoSem->archivo);
-	fwrite(info, sizeof(struct tm), 1, archivoSem->archivo);
+	fwrite("Dump: ", strlen("Dump: "), 1, archivoSem->archivo);
+	char* tiempo=temporal_get_string_time();
+	char* tiempoAEscribir=string_new();
+	string_append_with_format(&tiempoAEscribir, "%s\n", tiempo);
+
+
+	fwrite(tiempoAEscribir, strlen(tiempoAEscribir), 1, archivoSem->archivo);
+
+	free(tiempo);
+	free(tiempoAEscribir);
 	fclose(archivoSem->archivo);
-	registrarParticionesLibresYocupadas();
+	//registrarParticionesLibresYocupadas();
 
 	//return archivo;
 }
@@ -35,11 +43,19 @@ void registrarParticionesLibresYocupadas(){
 	listAddAllMutex(particiones, particionesOcupadas);
 	listAddAllMutex(particiones, particionesLibres);
 	list_sort(particiones, menorAmayorSegunOffset);
-	for(int i =0; i<list_size(particiones); i++){
-		particion* particionAEscribir = (particion*)list_get(particiones, i);
+	log_info(brokerLogger2, "SIZE OCUPADAS: %i",sizeListaMutex(particionesOcupadas) );
+	log_info(brokerLogger2, "SIZE LIBRES: %i",sizeListaMutex(particionesLibres) );
+	log_info(brokerLogger2, "SIZE TOTAL: %i",list_size(particiones) );
+	for(int j =0; j<list_size(particiones); j++){
+
+		particion* particionAEscribir = (particion*)list_get(particiones, j);
+		//log_info(brokerLogger2, "PARTICION DUMP: %i", particionAEscribir->offset);
+
 		char* buffer = string_new();
-		string_append_with_format(&buffer, "Particion %d: ", i);
-		string_append_with_format(&buffer, "%p-%p.  ", memoria + particionAEscribir->offset, memoria+particionAEscribir->offset+particionAEscribir->sizeParticion);
+		string_append_with_format(&buffer, "Particion %d: ", j);
+//		string_append_with_format(&buffer, "%p-%p.  ", memoria + particionAEscribir->offset, memoria+particionAEscribir->offset+particionAEscribir->sizeParticion);
+		string_append_with_format(&buffer, "%p-%p.  ",particionAEscribir->offset, particionAEscribir->offset+particionAEscribir->sizeParticion);
+
 		if(particionAEscribir->estadoParticion == PARTICION_LIBRE){
 			string_append(&buffer, LIBREP);
 			string_append(&buffer, "   ");
@@ -59,13 +75,16 @@ void registrarParticionesLibresYocupadas(){
 }
 
 void escribirEnArchivo(char* buffer){
-	pthread_mutex_lock(archivoSem->mutex);
-	FILE* f=fopen("dumpDeCache.db", "wb");
+	//log_info(brokerLogger2, "BUFFER CHACHE: %s", buffer);
+
+	//pthread_mutex_lock(archivoSem->mutex);
+	FILE* f=fopen("dumpDeCache.db", "r+");
+	fseek(f,0,SEEK_END);
 	if(archivoSem->archivo){
-		fwrite(buffer, sizeof(strlen(buffer)), 1, f);
+		fwrite(buffer,strlen(buffer), 1, f);
 		fclose(f);
 	}
-	pthread_mutex_unlock(archivoSem->mutex);
+	//pthread_mutex_unlock(archivoSem->mutex);
 	free(buffer);
 }
 

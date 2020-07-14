@@ -35,12 +35,15 @@ int main(int argc, char* argv[]) {
 	idsMensajesYaRespondidos=inicializarListaMutex();
 	iteraciones = 0;
 	TiempoCarga=0;
+//	char* pathBrokerLogger=config_get_string_value(config, "LOG_FILE");
+//	brokerLogger=log_create(pathBrokerLogger, "Broker", false,);
     brokerLogger2 = log_create("brokerLoggerSecundario.log", "Broker", true, LOG_LEVEL_INFO);
     log_info(brokerLogger2, "pid del proceso broker: %i", getpid());
     //log_info(brokerLogger2, armarStringEnvioXsub(2));
 	signal(SIGUSR1, crearDumpDeCache);
 
 	levantarDatosDeConfig(argv[1], 1);
+
 	loggerBroker = iniciar_logger(pathLog, "BROKER");
 
 	mutexMemoria = malloc(sizeof(pthread_mutex_t));
@@ -154,7 +157,8 @@ void esperar_cliente(uint32_t servidor) {
 void* atenderCliente(void* sock) {
 	uint32_t* socket = (uint32_t*) sock;
 	paquete* paqueteRecibido = recibirPaquete(*socket);
-	//log_info(loggerBroker,armarConexionNuevoProcesoLog(paquete->modulo));
+
+	log_info(loggerBroker,"Se conectó un proceso %s.", inToModulo(paqueteRecibido->tipoMensaje));
 
 	if( paqueteRecibido == NULL){
 		printf("RESPONDO MENSAJE ERRONEO\n");
@@ -164,6 +168,20 @@ void* atenderCliente(void* sock) {
 			manejarTipoDeMensaje(paqueteRecibido, socket);
 		}
 	return NULL;
+}
+
+char* intToModulo(uint32_t modulo){
+	switch(modulo){
+		case TEAM:
+			return "TEAM";break;
+		case GAMEBOY:
+			return "GAMEBOY";break;
+		case GAMECARD:
+			return "GAMECARD"; break;
+		default:
+			return ""; break;
+	}
+
 }
 
 void manejarTipoDeMensaje(paquete* paq, uint32_t* socket) {

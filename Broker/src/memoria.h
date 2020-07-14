@@ -166,4 +166,7 @@ bool menorTiempo(char* tiempo1, char* tiempo2);
 bool yaSeEnvioEstaRespuesta(paquete* paq);
 void agregarRespuestaARespuestasEnviadas(paquete* paq);
 
+bool lruNodos(struct nodoMemoria* nodo1, struct nodoMemoria* nodo2);
+bool fifoNodos(struct nodoMemoria* nodo1, struct nodoMemoria* nodo2);
+
 #endif /* MEMORIA_H_ */
