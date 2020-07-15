@@ -45,8 +45,6 @@ typedef struct {
 typedef struct{
 	nodeStatus status;
 	uint32_t size;
-//	struct tm tiempoDeCarga;
-//	struct tm ultimoAcceso;
 	char* tiempoDeCarga;
 	char* ultimoAcceso;
 }nodeData;
@@ -94,6 +92,7 @@ struct nodoMemoria* nodoRaizMemoria;
 listaMutex* particionesOcupadas;
 listaMutex* particionesLibres;
 listaMutex* nodosOcupados;
+listaMutex* nodosLibres;
 listaMutex* idsMensajesYaRespondidos;
 
 uint32_t auxTamanioStreamGlobal;
@@ -156,7 +155,7 @@ bool compararGet(mensajeGet* elemLista, mensajeGet* msgGet);
 void elegirVictimaDeReemplazoYeliminarBD();
 struct nodoMemoria* buscarVictimaPor(bool(*condition)(struct nodoMemoria*,struct nodoMemoria*));
 void modificarNodoAlibre(struct nodoMemoria* victima);
-void removerDeListaOcupados(struct nodoMemoria* nodo);
+void removerDeListaBuddy(listaMutex* lista, struct nodoMemoria* nodo);
 bool tiempoDeCargaMenor(struct nodoMemoria* nodo, struct nodoMemoria* otroNodo);
 bool tiempoDeUsoMenor(struct nodoMemoria* nodo, struct nodoMemoria* otroNodo);
 void evaluarConsolidacion(struct nodoMemoria* nodo);

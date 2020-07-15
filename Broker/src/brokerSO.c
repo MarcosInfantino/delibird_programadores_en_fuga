@@ -34,7 +34,7 @@
 int main(int argc, char* argv[]) {
 	idsMensajesYaRespondidos=inicializarListaMutex();
 	iteraciones = 0;
-	TiempoCarga=0;
+	TiempoCarga = 0;
 //	char* pathBrokerLogger=config_get_string_value(config, "LOG_FILE");
 //	brokerLogger=log_create(pathBrokerLogger, "Broker", false,);
     brokerLogger2 = log_create("brokerLoggerSecundario.log", "Broker", true, LOG_LEVEL_INFO);

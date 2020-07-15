@@ -60,14 +60,11 @@ void modificarNodoAlibre(struct nodoMemoria* victima){
 	victima->header.status = LIBRE;
 
 	log_info(brokerLogger2,"ELIMINO el mensaje en nodo con offset: %i del msg con ID %i", victima->offset, victima->mensaje->idMensaje);
-//	log_info(brokerLogger2,"TIEMPO DE CARGA: %i:%i:%i ULTIMO ACCESO: %i:%i:%i",
-//			victima->header.tiempoDeCarga.tm_hour,
-//			victima->header.tiempoDeCarga.tm_min,
-//			victima->header.tiempoDeCarga.tm_sec,
-//			victima->header.ultimoAcceso.tm_hour,
-//			victima->header.ultimoAcceso.tm_min,
-//			victima->header.ultimoAcceso.tm_sec);
-	removerDeListaOcupados(victima);
+	//removerDeListaOcupados(victima);
+	removerDeListaBuddy(nodosOcupados,victima);
+	addListaMutex(nodosLibres, victima);
+	log_info(brokerLogger2,"agrego a lista libres victima: status %i",victima->header.status);
+
 	evaluarConsolidacion(victima);
 }
 
@@ -81,6 +78,14 @@ void evaluarConsolidacion(struct nodoMemoria* nodo){
 	}
 	if(estaLibre(buddie)){
 		nodo->padre->header.status = LIBRE;
+
+		addListaMutex(nodosLibres, nodo->padre);
+		log_info(brokerLogger2,"agrego a lista libre a padre de consolidacion: status %i",nodo->padre->header.status);
+		removerDeListaBuddy(nodosLibres, buddie);
+		log_info(brokerLogger2,"remuevo de lista libres a hijo: status %i",buddie->header.status);
+		removerDeListaBuddy(nodosLibres, nodo);
+		log_info(brokerLogger2,"remuevo de lista libres a otro hijo: status %i",nodo->header.status);
+
 		struct nodoMemoria* partActual = nodo->padre;
 		log_info(brokerLogger2,"CONSOLIDO buddy con offset: %i con su buddy con offset %i", nodo->offset, buddie->offset);
 		liberarNodo(nodo);
@@ -108,28 +113,30 @@ uint32_t intentarRamaIzquierda(msgMemoriaBroker* mensajeNuevo,struct nodoMemoria
 }
 
 uint32_t evaluarTamanioParticionYasignar(struct nodoMemoria* partActual, msgMemoriaBroker* msg){
+	struct nodoMemoria* nodo;
 	uint32_t tamanioMsg = msg->sizeStream;
 	if(tamanioParticion(partActual) >= tamanioMsg){
 		while(tamanioParticion(partActual)/2 >= tamanioMsg && tamanioParticion(partActual)/2>=particionMinima){
 			log_info(brokerLogger2,"PARTICIONO: para msg %d y la cola %s", msg->idMensaje, nombreDeCola(msg->cola));
 			particionarMemoriaBUDDY(partActual);
 			partActual->header.status = PARTICIONADO;
+			removerDeListaBuddy(nodosLibres, partActual);
+			log_info(brokerLogger2,"remuevo de lista libres porque particiono: status %i",partActual->header.status);
+
 			partActual = partActual->hijoIzq;
 		}
 		partActual->header.status = OCUPADO;
 		partActual->mensaje = msg;
 		addListaMutex(nodosOcupados,partActual);
-
-//		time_t t;
-//		t=time(NULL);
-//		partActual->header.tiempoDeCarga = *localtime(&t);
-//		partActual->header.ultimoAcceso = *localtime(&t);
+		removerDeListaBuddy(nodosLibres, partActual);
+		log_info(brokerLogger2,"remuevo de lista libres por ocupar particion: status %i",partActual->header.status);
 
 		partActual->header.tiempoDeCarga=temporal_get_string_time();
 		partActual->header.ultimoAcceso=temporal_get_string_time();
 		asignarPuntero(partActual->offset, partActual->mensaje->stream, partActual->mensaje->sizeStream);
 
-		msg->stream=memoria+partActual->offset;//HAY QUE AGREGAR ESTO Y REVISAR QUE FUNCIONE. Es necesario, en particiones lo hicimos asi
+		msg->stream = memoria + partActual->offset;
+		//TODO HAY QUE AGREGAR ESTO Y REVISAR QUE FUNCIONE. Es necesario, en particiones lo hicimos asi
 		//Atte Mari y Marquitos :D
 
 		log_info(brokerLogger2,"ASIGNE: Size de buddy: %i. Id mensaje: %i. Size del mensaje: %i.", (partActual->header).size, partActual->mensaje->idMensaje, partActual->mensaje->sizeStream);
@@ -153,6 +160,11 @@ void particionarMemoriaBUDDY(struct nodoMemoria* particionActual){
 	particionActual->hijoDer->header.status = LIBRE;
 	particionActual->hijoIzq->header.size   = tamanoHijos;
 	particionActual->hijoDer->header.size   = tamanoHijos;
+
+	addListaMutex(nodosLibres,particionActual->hijoIzq);
+	log_info(brokerLogger2,"agrego a lista libre hijo de nueva particion: status %i",particionActual->hijoIzq->header.status);
+	addListaMutex(nodosLibres,particionActual->hijoDer);
+	log_info(brokerLogger2,"agrego a lista libre hijo de nueva particion: status %i",particionActual->hijoDer->header.status);
 
 	particionActual->hijoIzq->padre   = particionActual;
 	particionActual->hijoDer->padre   = particionActual;
@@ -258,17 +270,10 @@ bool buscarPorRamaCatch(mensajeCatch* msgCatch, struct nodoMemoria* partActual )
 
 msgMemoriaBroker* buscarPorRama(uint32_t id, struct nodoMemoria* partActual ){
 	if (estaOcupado(partActual) && (partActual->mensaje->idMensaje)==id){
-		//log_info(brokerLogger2, "Duermo para generar bache de 1 segundo y diferenciar LRU/FIFO");
-		//sleep(1);
 
-//		time_t sTime;
-//		sTime=time(NULL);
-//		partActual->header.ultimoAcceso = *localtime(&sTime); //actualizo la fecha de acceso
 		partActual->header.ultimoAcceso=temporal_get_string_time();
 		log_info(brokerLogger2, "Encontre mensaje en mem: %s", partActual->header.ultimoAcceso);
-//				partActual->header.ultimoAcceso.tm_hour,
-//				partActual->header.ultimoAcceso.tm_min,
-//				partActual->header.ultimoAcceso.tm_sec);
+
 		return partActual->mensaje;
 	}else if (estaParticionado(partActual)){
 		msgMemoriaBroker* retorno = buscarPorRama(id,partActual->hijoIzq);
@@ -299,22 +304,18 @@ struct nodoMemoria* inicializarNodo(){
 }
 
 void liberarNodo(struct nodoMemoria* nodo){
-//	free(nodo->mensaje->subsYaEnviado);
-//	free(nodo->mensaje->subsACK);
-//	free(nodo->mensaje->stream);
-//    free(nodo->mensaje);
     free(nodo->hijoIzq);
     free(nodo->hijoDer);
     free(nodo);
 }
 
-void removerDeListaOcupados(struct nodoMemoria* nodo){
+void removerDeListaBuddy(listaMutex* lista, struct nodoMemoria* nodo){
 	struct nodoMemoria* aux;
 
-	for(int i=0; i<sizeListaMutex(nodosOcupados);i++){
-		aux = getListaMutex(nodosOcupados, i);
+	for(int i=0; i<sizeListaMutex(lista);i++){
+		aux = getListaMutex(lista, i);
 		if(aux == nodo){
-			removeListaMutex(nodosOcupados,i);
+			removeListaMutex(lista,i);
 		}
 	}
 }

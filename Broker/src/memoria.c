@@ -16,6 +16,10 @@ void definirComienzoDeMemoria(){
 		nodoRaizMemoria = crearRaizArbol();
 		nodoRaizMemoria->offset = 0;
 		nodosOcupados = inicializarListaMutex();
+		nodosLibres   = inicializarListaMutex();
+
+		addListaMutex(nodosLibres, nodoRaizMemoria);
+		log_info(brokerLogger2,"agrego a la lista de libres a la raiz: status %i",nodoRaizMemoria->header.status);
 		break;
 
 	case PARTICIONES_DINAMICAS:
@@ -193,7 +197,7 @@ void crearDumpDeCache(){
 
 	iniciarArchivoMutex();
 	if(algoritmoMemoria == BUDDY_SYSTEM){
-		//recorrerArbolYgrabarArchivo();
+		recorrerArbolYgrabarArchivo();
 	}else{
 		registrarParticionesLibresYocupadas();
 	}
