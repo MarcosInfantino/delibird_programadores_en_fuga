@@ -88,7 +88,7 @@ uint32_t intentarRamaIzquierda(msgMemoriaBroker* mensajeNuevo,struct nodoMemoria
 }
 
 uint32_t evaluarTamanioParticionYasignar(struct nodoMemoria* partActual, msgMemoriaBroker* msg){
-	struct nodoMemoria* nodo;
+	//struct nodoMemoria* nodo;
 	uint32_t tamanioMsg = msg->sizeStream;
 
 	if(tamanioParticion(partActual) >= tamanioMsg){

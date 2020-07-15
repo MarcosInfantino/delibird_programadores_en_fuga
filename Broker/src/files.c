@@ -77,7 +77,7 @@ void escribirEnArchivo(char* buffer){
 
 void recorrerArbolYgrabarArchivo(){
 	t_list* particiones = list_create();
-	uint32_t inicio;
+
 	listAddAllMutex(particiones, nodosOcupados);
 	listAddAllMutex(particiones, nodosLibres);
 	list_sort(particiones, menorAmayorSegunOffset);

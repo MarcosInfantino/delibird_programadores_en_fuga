@@ -158,7 +158,7 @@ bool existeMensajeEnParticionesDinamicas(mensajeCatch* msgCatch, mensajeGet* msg
 		particion* partActual = (particion*)getListaMutex (particionesOcupadas, i);
 
 		mensajeCatch* msg = deserializarCatch(partActual->mensaje->stream);
-		log_info(brokerLogger2, "Partición deserializada %s", msg->pokemon); //TODO no está mostrando el nombre del pokemon
+		log_info(brokerLogger2, "Partición deserializada %s", msg->pokemon);
 		if(msgCatch != NULL && partActual->mensaje->cola == CATCH_POKEMON){
 			if(compararCatch(deserializarCatch(partActual->mensaje->stream), msgCatch)){
 				return true;

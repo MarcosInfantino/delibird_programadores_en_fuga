@@ -6390,3 +6390,169 @@
 [INFO] 00:32:45:338 Broker/(20769:20769): SIZE OCUPADAS: 2
 [INFO] 00:32:45:339 Broker/(20769:20769): SIZE LIBRES: 1
 [INFO] 00:32:45:340 Broker/(20769:20769): SIZE TOTAL: 3
+[INFO] 01:27:15:752 Broker/(22307:22307): pid del proceso broker: 22307
+[INFO] 01:28:33:329 Broker/(22307:22336): -------------------------TIPO DE PAQUETE RECIBIDO: 4
+[INFO] 01:28:33:332 Broker/(22307:22336): Veo si existe mensaje en particiones.
+[INFO] 01:28:33:341 Broker/(22307:22336): ITERACION: 0
+[INFO] 01:28:33:341 Broker/(22307:22336): Registré el mensaje en memoria.
+[INFO] 01:28:33:342 Broker/(22307:22336): Terminó de registrar el mensaje en memoria.
+[INFO] 01:28:33:342 Broker/(22307:22336): Aviso que hay mensajes en cola.
+[INFO] 01:28:33:342 Broker/(22307:22324): Envio el mensaje a los suscriptores de la cola: GET_POKEMON
+[INFO] 01:28:33:358 Broker/(22307:22342): -------------------------TIPO DE PAQUETE RECIBIDO: 4
+[INFO] 01:28:33:368 Broker/(22307:22342): Veo si existe mensaje en particiones.
+[INFO] 01:28:33:368 Broker/(22307:22342): Partición deserializada Pikachu
+[INFO] 01:28:33:368 Broker/(22307:22342): ITERACION: 1
+[INFO] 01:28:33:368 Broker/(22307:22342): Registré el mensaje en memoria.
+[INFO] 01:28:33:369 Broker/(22307:22342): Terminó de registrar el mensaje en memoria.
+[INFO] 01:28:33:369 Broker/(22307:22342): Aviso que hay mensajes en cola.
+[INFO] 01:28:33:382 Broker/(22307:22324): Envio el mensaje a los suscriptores de la cola: GET_POKEMON
+[INFO] 01:57:36:411 Broker/(22991:22991): pid del proceso broker: 22991
+[INFO] 01:57:58:227 Broker/(23022:23022): pid del proceso broker: 23022
+[INFO] 01:58:07:82 Broker/(23022:23044): -------------------------TIPO DE PAQUETE RECIBIDO: 4
+[INFO] 01:58:07:83 Broker/(23022:23044): Veo si existe mensaje en particiones.
+[INFO] 01:58:07:83 Broker/(23022:23044): ITERACION: 0
+[INFO] 01:58:07:83 Broker/(23022:23044): ASIGNE: size de partición: 4096. Id mensaje: 1. Size del mensaje: 11.
+[INFO] 01:58:07:83 Broker/(23022:23044): Registré el mensaje en memoria.
+[INFO] 01:58:07:83 Broker/(23022:23044): Terminó de registrar el mensaje en memoria.
+[INFO] 01:58:07:83 Broker/(23022:23044): Aviso que hay mensajes en cola.
+[INFO] 01:58:07:83 Broker/(23022:23039): Envio el mensaje a los suscriptores de la cola: GET_POKEMON
+[INFO] 01:58:07:109 Broker/(23022:23048): -------------------------TIPO DE PAQUETE RECIBIDO: 4
+[INFO] 01:58:07:109 Broker/(23022:23048): Veo si existe mensaje en particiones.
+[INFO] 01:58:07:109 Broker/(23022:23048): Partición deserializada Pikachu
+[INFO] 01:58:07:110 Broker/(23022:23048): ITERACION: 1
+[INFO] 01:58:07:110 Broker/(23022:23048): ASIGNE: size de partición: 4080. Id mensaje: 2. Size del mensaje: 14.
+[INFO] 01:58:07:110 Broker/(23022:23048): Registré el mensaje en memoria.
+[INFO] 01:58:07:110 Broker/(23022:23048): Terminó de registrar el mensaje en memoria.
+[INFO] 01:58:07:110 Broker/(23022:23048): Aviso que hay mensajes en cola.
+[INFO] 01:58:07:111 Broker/(23022:23039): Envio el mensaje a los suscriptores de la cola: GET_POKEMON
+[INFO] 01:59:32:499 Broker/(23022:23022): Se solicitó dump de cache.
+[INFO] 01:59:32:499 Broker/(23022:23022): SIZE OCUPADAS: 2
+[INFO] 01:59:32:500 Broker/(23022:23022): SIZE LIBRES: 1
+[INFO] 01:59:32:500 Broker/(23022:23022): SIZE TOTAL: 3
+[INFO] 02:12:55:259 Broker/(23306:23306): pid del proceso broker: 23306
+[INFO] 02:13:56:722 Broker/(23306:23332): -------------------------TIPO DE PAQUETE RECIBIDO: 4
+[INFO] 02:13:56:723 Broker/(23306:23332): Veo si existe mensaje en particiones.
+[INFO] 02:13:56:723 Broker/(23306:23332): ITERACION: 0
+[INFO] 02:13:56:723 Broker/(23306:23332): ASIGNE: size de partición: 4096. Id mensaje: 1. Size del mensaje: 11.
+[INFO] 02:13:56:724 Broker/(23306:23332): Registré el mensaje en memoria.
+[INFO] 02:13:56:724 Broker/(23306:23332): Terminó de registrar el mensaje en memoria.
+[INFO] 02:13:56:724 Broker/(23306:23332): Aviso que hay mensajes en cola.
+[INFO] 02:13:56:725 Broker/(23306:23321): Envio el mensaje a los suscriptores de la cola: GET_POKEMON
+[INFO] 02:13:56:731 Broker/(23306:23335): -------------------------TIPO DE PAQUETE RECIBIDO: 4
+[INFO] 02:13:56:731 Broker/(23306:23335): Veo si existe mensaje en particiones.
+[INFO] 02:13:56:735 Broker/(23306:23335): Partición deserializada Pikachu
+[INFO] 02:13:56:735 Broker/(23306:23335): ITERACION: 1
+[INFO] 02:13:56:735 Broker/(23306:23335): ASIGNE: size de partición: 4085. Id mensaje: 2. Size del mensaje: 14.
+[INFO] 02:13:56:735 Broker/(23306:23335): Registré el mensaje en memoria.
+[INFO] 02:13:56:735 Broker/(23306:23335): Terminó de registrar el mensaje en memoria.
+[INFO] 02:13:56:735 Broker/(23306:23335): Aviso que hay mensajes en cola.
+[INFO] 02:13:56:736 Broker/(23306:23321): Envio el mensaje a los suscriptores de la cola: GET_POKEMON
+[INFO] 02:14:35:291 Broker/(23306:23306): Se solicitó dump de cache.
+[INFO] 02:14:35:291 Broker/(23306:23306): SIZE OCUPADAS: 2
+[INFO] 02:14:35:292 Broker/(23306:23306): SIZE LIBRES: 1
+[INFO] 02:14:35:292 Broker/(23306:23306): SIZE TOTAL: 3
+[INFO] 02:19:04:159 Broker/(23306:23406): -------------------------TIPO DE PAQUETE RECIBIDO: 3
+[INFO] 02:19:04:160 Broker/(23306:23406): Busco si Pokemon: Pikachu ya está en memoria
+[INFO] 02:19:04:161 Broker/(23306:23406): Veo si existe mensaje en particiones.
+[INFO] 02:19:04:161 Broker/(23306:23406): Partición deserializada Pikachu
+[INFO] 02:19:04:161 Broker/(23306:23406): Partición deserializada Charmander
+[INFO] 02:19:04:161 Broker/(23306:23406): ITERACION: 2
+[INFO] 02:19:04:161 Broker/(23306:23406): ASIGNE: size de partición: 4071. Id mensaje: 3. Size del mensaje: 19.
+[INFO] 02:19:04:162 Broker/(23306:23406): Registré el mensaje en memoria.
+[INFO] 02:19:04:163 Broker/(23306:23406): Terminó de registrar el mensaje en memoria.
+[INFO] 02:19:04:163 Broker/(23306:23406): Aviso que hay mensajes en cola.
+[INFO] 02:19:04:163 Broker/(23306:23320): Envio el mensaje a los suscriptores de la cola: CATCH_POKEMON
+[INFO] 02:19:04:184 Broker/(23306:23411): -------------------------TIPO DE PAQUETE RECIBIDO: 3
+[INFO] 02:19:04:184 Broker/(23306:23411): Busco si Pokemon: Squirtle ya está en memoria
+[INFO] 02:19:04:184 Broker/(23306:23411): Veo si existe mensaje en particiones.
+[INFO] 02:19:04:184 Broker/(23306:23411): Partición deserializada Pikachu
+[INFO] 02:19:04:184 Broker/(23306:23411): Partición deserializada Charmander
+[INFO] 02:19:04:185 Broker/(23306:23411): Partición deserializada Pikachu
+[INFO] 02:19:04:185 Broker/(23306:23411): ITERACION: 3
+[INFO] 02:19:04:186 Broker/(23306:23411): ASIGNE: size de partición: 4052. Id mensaje: 4. Size del mensaje: 20.
+[INFO] 02:19:04:187 Broker/(23306:23411): Registré el mensaje en memoria.
+[INFO] 02:19:04:187 Broker/(23306:23411): Terminó de registrar el mensaje en memoria.
+[INFO] 02:19:04:187 Broker/(23306:23411): Aviso que hay mensajes en cola.
+[INFO] 02:19:04:187 Broker/(23306:23320): Envio el mensaje a los suscriptores de la cola: CATCH_POKEMON
+[INFO] 02:19:04:199 Broker/(23306:23415): -------------------------TIPO DE PAQUETE RECIBIDO: 2
+[INFO] 02:19:04:202 Broker/(23306:23415): ITERACION: 4
+[INFO] 02:19:04:202 Broker/(23306:23415): ASIGNE: size de partición: 4032. Id mensaje: 5. Size del mensaje: 4.
+[INFO] 02:19:04:203 Broker/(23306:23415): Registré el mensaje en memoria.
+[INFO] 02:19:04:203 Broker/(23306:23415): Terminó de registrar el mensaje en memoria.
+[INFO] 02:19:04:203 Broker/(23306:23415): Aviso que hay mensajes en cola.
+[INFO] 02:19:04:203 Broker/(23306:23319): Envio el mensaje a los suscriptores de la cola: CAUGHT_POKEMON
+[INFO] 02:19:04:205 Broker/(23306:23418): -------------------------TIPO DE PAQUETE RECIBIDO: 2
+[INFO] 02:19:04:206 Broker/(23306:23418): ITERACION: 5
+[INFO] 02:19:04:226 Broker/(23306:23418): ASIGNE: size de partición: 4028. Id mensaje: 6. Size del mensaje: 4.
+[INFO] 02:19:04:226 Broker/(23306:23418): Registré el mensaje en memoria.
+[INFO] 02:19:04:228 Broker/(23306:23418): Terminó de registrar el mensaje en memoria.
+[INFO] 02:19:04:231 Broker/(23306:23418): Aviso que hay mensajes en cola.
+[INFO] 02:19:04:231 Broker/(23306:23319): Envio el mensaje a los suscriptores de la cola: CAUGHT_POKEMON
+[INFO] 02:19:04:253 Broker/(23306:23421): -------------------------TIPO DE PAQUETE RECIBIDO: 3
+[INFO] 02:19:04:253 Broker/(23306:23421): Busco si Pokemon: Bulbasaur ya está en memoria
+[INFO] 02:19:04:253 Broker/(23306:23421): Veo si existe mensaje en particiones.
+[INFO] 02:19:04:253 Broker/(23306:23421): Partición deserializada Pikachu
+[INFO] 02:19:04:253 Broker/(23306:23421): Partición deserializada Charmander
+[INFO] 02:19:04:253 Broker/(23306:23421): Partición deserializada Pikachu
+[INFO] 02:19:04:254 Broker/(23306:23421): Partición deserializada Squirtle
+[INFO] 02:19:04:254 Broker/(23306:23421): Partición deserializada 
+[INFO] 02:19:04:254 Broker/(23306:23421): Partición deserializada 
+[INFO] 02:19:04:255 Broker/(23306:23421): ITERACION: 6
+[INFO] 02:19:04:255 Broker/(23306:23421): ASIGNE: size de partición: 4024. Id mensaje: 7. Size del mensaje: 21.
+[INFO] 02:19:04:255 Broker/(23306:23421): Registré el mensaje en memoria.
+[INFO] 02:19:04:255 Broker/(23306:23421): Terminó de registrar el mensaje en memoria.
+[INFO] 02:19:04:259 Broker/(23306:23421): Aviso que hay mensajes en cola.
+[INFO] 02:19:04:259 Broker/(23306:23320): Envio el mensaje a los suscriptores de la cola: CATCH_POKEMON
+[INFO] 02:19:04:284 Broker/(23306:23424): -------------------------TIPO DE PAQUETE RECIBIDO: 3
+[INFO] 02:19:04:284 Broker/(23306:23424): Busco si Pokemon: Charmander ya está en memoria
+[INFO] 02:19:04:284 Broker/(23306:23424): Veo si existe mensaje en particiones.
+[INFO] 02:19:04:284 Broker/(23306:23424): Partición deserializada Pikachu
+[INFO] 02:19:04:284 Broker/(23306:23424): Partición deserializada Charmander
+[INFO] 02:19:04:284 Broker/(23306:23424): Partición deserializada Pikachu
+[INFO] 02:19:04:285 Broker/(23306:23424): Partición deserializada Squirtle
+[INFO] 02:19:04:285 Broker/(23306:23424): Partición deserializada 
+[INFO] 02:19:04:285 Broker/(23306:23424): Partición deserializada 
+[INFO] 02:19:04:285 Broker/(23306:23424): Partición deserializada Bulbasaur
+[INFO] 02:19:04:285 Broker/(23306:23424): ITERACION: 7
+[INFO] 02:19:04:285 Broker/(23306:23424): ASIGNE: size de partición: 4003. Id mensaje: 8. Size del mensaje: 22.
+[INFO] 02:19:04:285 Broker/(23306:23424): Registré el mensaje en memoria.
+[INFO] 02:19:04:285 Broker/(23306:23424): Terminó de registrar el mensaje en memoria.
+[INFO] 02:19:04:286 Broker/(23306:23424): Aviso que hay mensajes en cola.
+[INFO] 02:19:04:286 Broker/(23306:23320): Envio el mensaje a los suscriptores de la cola: CATCH_POKEMON
+[INFO] 02:19:04:295 Broker/(23306:23427): -------------------------TIPO DE PAQUETE RECIBIDO: 4
+[INFO] 02:19:04:295 Broker/(23306:23427): Veo si existe mensaje en particiones.
+[INFO] 02:19:04:295 Broker/(23306:23427): Partición deserializada Pikachu
+[INFO] 02:19:04:295 Broker/(23306:23427): Partición deserializada Charmander
+[INFO] 02:19:04:296 Broker/(23306:23427): Partición deserializada Pikachu
+[INFO] 02:19:04:296 Broker/(23306:23427): Partición deserializada Squirtle
+[INFO] 02:19:04:296 Broker/(23306:23427): Partición deserializada 
+[INFO] 02:19:04:296 Broker/(23306:23427): Partición deserializada 
+[INFO] 02:19:04:296 Broker/(23306:23427): Partición deserializada Bulbasaur
+[INFO] 02:19:04:296 Broker/(23306:23427): Partición deserializada Charmander
+[INFO] 02:19:04:296 Broker/(23306:23427): ITERACION: 8
+[INFO] 02:19:04:296 Broker/(23306:23427): ASIGNE: size de partición: 3981. Id mensaje: 9. Size del mensaje: 9.
+[INFO] 02:19:04:297 Broker/(23306:23427): Registré el mensaje en memoria.
+[INFO] 02:19:04:297 Broker/(23306:23427): Terminó de registrar el mensaje en memoria.
+[INFO] 02:19:04:298 Broker/(23306:23427): Aviso que hay mensajes en cola.
+[INFO] 02:19:04:298 Broker/(23306:23321): Envio el mensaje a los suscriptores de la cola: GET_POKEMON
+[INFO] 02:19:04:308 Broker/(23306:23430): -------------------------TIPO DE PAQUETE RECIBIDO: 4
+[INFO] 02:19:04:308 Broker/(23306:23430): Veo si existe mensaje en particiones.
+[INFO] 02:19:04:308 Broker/(23306:23430): Partición deserializada Pikachu
+[INFO] 02:19:04:313 Broker/(23306:23430): Partición deserializada Charmander
+[INFO] 02:19:04:313 Broker/(23306:23430): Partición deserializada Pikachu
+[INFO] 02:19:04:313 Broker/(23306:23430): Partición deserializada Squirtle
+[INFO] 02:19:04:313 Broker/(23306:23430): Partición deserializada 
+[INFO] 02:19:04:313 Broker/(23306:23430): Partición deserializada 
+[INFO] 02:19:04:314 Broker/(23306:23430): Partición deserializada Bulbasaur
+[INFO] 02:19:04:314 Broker/(23306:23430): Partición deserializada Charmander
+[INFO] 02:19:04:317 Broker/(23306:23430): Partición deserializada Pichu
+[INFO] 02:19:04:318 Broker/(23306:23430): ITERACION: 9
+[INFO] 02:19:04:318 Broker/(23306:23430): ASIGNE: size de partición: 3972. Id mensaje: 10. Size del mensaje: 10.
+[INFO] 02:19:04:318 Broker/(23306:23430): Registré el mensaje en memoria.
+[INFO] 02:19:04:318 Broker/(23306:23430): Terminó de registrar el mensaje en memoria.
+[INFO] 02:19:04:319 Broker/(23306:23430): Aviso que hay mensajes en cola.
+[INFO] 02:19:04:319 Broker/(23306:23321): Envio el mensaje a los suscriptores de la cola: GET_POKEMON
+[INFO] 02:19:19:274 Broker/(23306:23306): Se solicitó dump de cache.
+[INFO] 02:19:19:275 Broker/(23306:23306): SIZE OCUPADAS: 10
+[INFO] 02:19:19:276 Broker/(23306:23306): SIZE LIBRES: 1
+[INFO] 02:19:19:276 Broker/(23306:23306): SIZE TOTAL: 11

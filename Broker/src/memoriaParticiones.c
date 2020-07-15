@@ -172,6 +172,9 @@ void asignarMensajeAParticion(particion* partiLibre, msgMemoriaBroker* mensaje){
 
 	mensaje->stream = memoria + partiOcupada->offset;
 
+	log_info(brokerLogger2,"ASIGNE: size de partición: %i. Id mensaje: %i. Size del mensaje: %i.", partiOcupada->sizeParticion, mensaje->idMensaje, mensaje->sizeStream);
+
+
 	addListaMutex(particionesOcupadas, (void*)partiOcupada);
 	log_info(loggerBroker, "Almaceno mensaje en partición que comienza en: %i", partiOcupada->offset);
 	if(partiLibre->sizeParticion > partiOcupada->sizeParticion){
