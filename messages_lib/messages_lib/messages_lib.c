@@ -41,8 +41,7 @@ uint32_t sizeArgumentos (uint32_t colaMensaje, char* nombrePokemon, uint32_t can
 		break;
 
 	case GET_POKEMON: ;
-//		printf("El poke del poke: %s\n", nombrePokemon);
-//		printf("El size es: %i\n", strlen(nombrePokemon));
+
 		size = strlen(nombrePokemon) +  sizeof(uint32_t);
 		break;
 
@@ -56,7 +55,7 @@ uint32_t sizeArgumentos (uint32_t colaMensaje, char* nombrePokemon, uint32_t can
 		size=2*sizeof(uint32_t)+strlen(nombrePokemon)+cantidadPokemon*2*sizeof(uint32_t); break;
 
 	default:
-		printf("Error: el caso ingresado no esta contemplado \n");
+		printf("Error: el caso ingresado no esta contemplado\n");
 		break;
 	}
 	return size;
@@ -88,9 +87,6 @@ int32_t enviarACK(uint32_t puerto,char* ip,  uint32_t modulo, uint32_t id, uint3
 
 	uint32_t i= send(cliente, paqueteACKSerializado, sizePaquete(paqueteACK), 0);
 
-//	printf("Envio ACK\n");
-//	printf("Socket ack: %i\n", socket);
-//	printf("Resultado send ack: %i\n", i);
 	destruirPaquete(paqueteACK);
 	free(paqueteACKSerializado);
 	return i;

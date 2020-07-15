@@ -8,6 +8,7 @@
 #include "broker.h"
 #include "memoria.h"
 #include "memoriaParticiones.h"
+#include "files.h"
 
 void definirComienzoDeMemoria(){
 	memoria = malloc(tamMemoria);
@@ -127,20 +128,15 @@ void asignarPuntero(uint32_t offset, void* stream, uint32_t sizeStream){
 void crearDumpDeCache(){
 	log_info(loggerBroker,"Se solicitó dump de cache.");
 	log_info(brokerLogger2,"Se solicitó dump de cache.");
+	iniciarEscrituraDump();
 
-	iniciarArchivoMutex();
-	if(algoritmoMemoria == BUDDY_SYSTEM){
-		recorrerArbolYgrabarArchivo();
-	}else{
-		registrarParticionesLibresYocupadas();
-	}
+
 }
 
 bool yaEstaEnMemoria(paquete* paq){
 	switch(paq->tipoMensaje){
 	case CATCH_POKEMON:;
-		mensajeCatch* msg=deserializarCatch(paq->stream);
-		log_info(brokerLogger2, "Busco si Pokemon: %s ya está en memoria", msg->pokemon);
+
 		return yaSeGuardoEnMemoria(deserializarCatch(paq->stream), NULL);
 		break;
 	case GET_POKEMON:
@@ -157,8 +153,8 @@ bool existeMensajeEnParticionesDinamicas(mensajeCatch* msgCatch, mensajeGet* msg
 	for(int i = 0; i < sizeListaMutex(particionesOcupadas); i++){
 		particion* partActual = (particion*)getListaMutex (particionesOcupadas, i);
 
-		mensajeCatch* msg = deserializarCatch(partActual->mensaje->stream);
-		log_info(brokerLogger2, "Partición deserializada %s", msg->pokemon);
+
+
 		if(msgCatch != NULL && partActual->mensaje->cola == CATCH_POKEMON){
 			if(compararCatch(deserializarCatch(partActual->mensaje->stream), msgCatch)){
 				return true;

@@ -10,23 +10,41 @@
 #include "files.h"
 #include "memoriaParticiones.h"
 
+
 void iniciarArchivoMutex(){
 
 	archivoSem = malloc(sizeof(archivoMutex));
 	archivoSem->mutex = malloc(sizeof(pthread_mutex_t));
-	archivoSem->archivo = malloc(sizeof(FILE));
+	archivoSem->path="dumpDeCache.db";
+	pthread_mutex_init(archivoSem->mutex,NULL);
+}
 
-	archivoSem->archivo = fopen("dumpDeCache.db",modoEscrituraEnBinario);
-	fwrite("Dump: ", strlen("Dump: "), 1, archivoSem->archivo);
+void iniciarEscrituraDump(){
+
+	log_info(loggerBroker,"Se solicitó dump de cache.");
+	log_info(brokerLogger2,"Se solicitó dump de cache.");
+
+	FILE* f= fopen(archivoSem->path,modoEscrituraEnBinario);
+	fwrite("Dump: ", strlen("Dump: "), 1, f);
 	char* tiempo=temporal_get_string_time();
 	char* tiempoAEscribir=string_new();
 	string_append_with_format(&tiempoAEscribir, "%s\n", tiempo);
 
-	fwrite(tiempoAEscribir, strlen(tiempoAEscribir), 1, archivoSem->archivo);
+	fwrite(tiempoAEscribir, strlen(tiempoAEscribir), 1, f);
 
 	free(tiempo);
 	free(tiempoAEscribir);
-	fclose(archivoSem->archivo);
+	fclose(f);
+
+
+	switch(algoritmoMemoria){
+		case BUDDY_SYSTEM:
+			recorrerArbolYgrabarArchivo();break;
+		case PARTICIONES_DINAMICAS:
+			registrarParticionesLibresYocupadas();break;
+		default: break;
+	}
+
 }
 
 void registrarParticionesLibresYocupadas(){
@@ -34,9 +52,7 @@ void registrarParticionesLibresYocupadas(){
 	listAddAllMutex(particiones, particionesOcupadas);
 	listAddAllMutex(particiones, particionesLibres);
 	list_sort(particiones, menorAmayorSegunOffset);
-	log_info(brokerLogger2, "SIZE OCUPADAS: %i",sizeListaMutex(particionesOcupadas) );
-	log_info(brokerLogger2, "SIZE LIBRES: %i",sizeListaMutex(particionesLibres) );
-	log_info(brokerLogger2, "SIZE TOTAL: %i",list_size(particiones) );
+
 	for(int j =0; j<list_size(particiones); j++){
 
 		particion* particionAEscribir = (particion*)list_get(particiones, j);
@@ -69,14 +85,14 @@ void registrarParticionesLibresYocupadas(){
 }
 
 void escribirEnArchivo(char* buffer){
-	//pthread_mutex_lock(archivoSem->mutex);
+	pthread_mutex_lock(archivoSem->mutex);
 	FILE* f=fopen("dumpDeCache.db", "r+");
 	fseek(f,0,SEEK_END);
-	if(archivoSem->archivo){
-		fwrite(buffer,strlen(buffer), 1, f);
-		fclose(f);
-	}
-	//pthread_mutex_unlock(archivoSem->mutex);
+	//if(archivoSem->archivo){
+	fwrite(buffer,strlen(buffer), 1, f);
+	fclose(f);
+	//}
+	pthread_mutex_unlock(archivoSem->mutex);
 	free(buffer);
 }
 

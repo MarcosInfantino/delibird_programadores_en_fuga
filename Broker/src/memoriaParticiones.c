@@ -55,12 +55,12 @@ particion* particionLibreALaDerecha(particion* particionLibreNueva){
 void consolidarSiSePuede(particion* particionLibre){
 	 if(hayParticionLibreALaDerecha(particionLibre)){
 		 particion* partAConsolidar = particionLibreALaDerecha(particionLibre);
-		 log_info(loggerBroker, "Se consolidan las particiones que comienzan en: %i y %i\n", particionLibre->offset, partAConsolidar->offset);
+		 log_info(loggerBroker, "Se consolidan las particiones que comienzan en: %i y %i", particionLibre->offset, partAConsolidar->offset);
 		 particionLibre->sizeParticion = particionLibre->sizeParticion + partAConsolidar->sizeParticion;
 		 destroyParticionLibre(partAConsolidar);
 	 }else if(hayParticionLibreALaIzquierda(particionLibre)){
 		 particion* partAConsolidar = particionLibreALaIzquierda(particionLibre);
-		 log_info(loggerBroker, "Se consolidan las particiones que comienzan en: %i y %i\n", partAConsolidar->offset, particionLibre->offset);
+		 log_info(loggerBroker, "Se consolidan las particiones que comienzan en: %i y %i", partAConsolidar->offset, particionLibre->offset);
 		 particionLibre->offset = partAConsolidar->offset;
 		 particionLibre->sizeParticion = particionLibre->sizeParticion + partAConsolidar->sizeParticion;
 		 destroyParticionLibre(partAConsolidar);
@@ -221,13 +221,17 @@ particion* obtenerParticionLibrePARTICIONES(uint32_t tamStream){
 		return NULL;
 	}
 	if (algoritmoParticionLibre == FIRST_FIT){
-		if(sizeListaMutex(particionesLibres)>1){
+
+		if(sizeListaMutex(particionesLibres)>1)
 			list_sort_Mutex(particionesLibres, menorAmayorSegunOffset);
-		}
+
 		particion* pSeleccionadaFIRST = (particion*)list_remove_by_condition_Mutex(particionesLibres, esSuficientementeGrandeParaElMSG);
 		return pSeleccionadaFIRST;
 	}else if(algoritmoParticionLibre == BEST_FIT){
-		list_sort_Mutex(particionesLibres, menorAmayorSegunSize);
+
+		if(sizeListaMutex(particionesLibres)>1)
+			list_sort_Mutex(particionesLibres, menorAmayorSegunSize);
+
 		particion* pSeleccionadaBEST = (particion*)list_remove_by_condition_Mutex(particionesLibres, esSuficientementeGrandeParaElMSG);
 		return pSeleccionadaBEST;
 	}

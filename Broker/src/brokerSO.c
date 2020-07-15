@@ -13,34 +13,17 @@
 #include "files.h"
 #include "memoriaParticiones.h"
 
-//./gameboy SUSCRIPTOR CAUGHT_POKEMON 10
-//int main(void){
-////	mensajeAppeared* msg= llenarAppeared("Pikachu", 0, 0);
-////	void* streamMensaje= serializarAppeared(msg);
-////	paquete* paq=llenarPaquete( BROKER,APPEARED_POKEMON, sizeArgumentos(APPEARED_POKEMON, "Pikachu", 0),streamMensaje);
-////	void* paqueteSerializado= serializarPaquete(paq);
-////	paquete* paq2=deserializarPaquete(paqueteSerializado);
-////	mensajeAppeared* msg2=deserializarAppeared(paq2->stream);
-////	printf("sizeStream: %i \n", paq2->sizeStream);
-////	printf("sizePokemon: %i\n", msg2->sizePokemon);
-////
-////	printf("pokemon: %s\n", msg2->pokemon);
-////	printf("posX: %i\n", msg2->posX);
-////	printf("posY: %i\n", msg2->posY);
-//	printf("%i", strcmp("hola","hola\0"));
-//
-//}
 
 int main(int argc, char* argv[]) {
 	idsMensajesYaRespondidos=inicializarListaMutex();
 	iteraciones = 0;
 	TiempoCarga = 0;
-//	char* pathBrokerLogger=config_get_string_value(config, "LOG_FILE");
-//	brokerLogger=log_create(pathBrokerLogger, "Broker", false,);
+
     brokerLogger2 = log_create("brokerLoggerSecundario.log", "Broker", true, LOG_LEVEL_INFO);
     log_info(brokerLogger2, "pid del proceso broker: %i", getpid());
 
-	signal(SIGUSR1, crearDumpDeCache);
+	signal(SIGUSR1, iniciarEscrituraDump);
+
 
 	levantarDatosDeConfig(argv[1], 1);
 
@@ -51,6 +34,7 @@ int main(int argc, char* argv[]) {
 
 	definirComienzoDeMemoria();
 
+	iniciarArchivoMutex();
 	iniciarHilos();
 	inicializarContador();
 	abrirHiloParaEnviarMensajes();
@@ -99,7 +83,7 @@ void* iniciarServidor(){
 		perror("Falló el bind");
 	}
 
-	log_info(loggerBroker, "Inició el Broker.");
+
 
 
 	while (1)

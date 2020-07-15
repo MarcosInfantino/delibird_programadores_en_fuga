@@ -13,6 +13,8 @@ t_log* iniciar_logger(char* file, char* program_name)
 		printf("No pude crear el logger\n");
 		exit(1);
 	}
+	log_info(logger, "___________________________________________________________________________________________________________");
+	log_info(logger, "Inició el %s", program_name);
 	return logger;
 }
 
@@ -20,7 +22,7 @@ void loggearMensaje (paquete* paqueteRespuesta, t_log* logger){
 	switch(paqueteRespuesta->tipoMensaje){
 		case APPEARED_POKEMON: ;
 			mensajeAppeared* msgAppeared=deserializarAppeared(paqueteRespuesta->stream);
-			log_info(logger, "Recibi mensaje appeared pokemon. El pokemon es: %s. La posicion es: (%i,%i). \n",
+			log_info(logger, "Recibi mensaje appeared pokemon. El pokemon es: %s. La posicion es: (%i,%i).",
 					msgAppeared->pokemon, msgAppeared->posX,msgAppeared->posY);
 
 			destruirAppeared(msgAppeared);
@@ -28,7 +30,7 @@ void loggearMensaje (paquete* paqueteRespuesta, t_log* logger){
 
 		case NEW_POKEMON: ;
 			mensajeNew* msgNew = deserializarNew(paqueteRespuesta->stream);
-			log_info(logger, "Recibi mensaje new pokemon. El pokemon es: %s. La posicion es: (%i,%i). La cantidad es: %i.\n",
+			log_info(logger, "Recibi mensaje new pokemon. El pokemon es: %s. La posicion es: (%i,%i). La cantidad es: %i.",
 					msgNew->pokemon,msgNew->posX, msgNew->posY,msgNew->cantidad);
 
 			destruirNew(msgNew);
@@ -36,7 +38,7 @@ void loggearMensaje (paquete* paqueteRespuesta, t_log* logger){
 
 		case CATCH_POKEMON: ;
 			mensajeCatch* msgCatch = deserializarCatch (paqueteRespuesta->stream);
-			log_info(logger, "Recibi mensaje catch pokemon. El pokemon es: %s. La posicion es: (%i,%i).\n",
+			log_info(logger, "Recibi mensaje catch pokemon. El pokemon es: %s. La posicion es: (%i,%i).",
 					msgCatch->pokemon,msgCatch->posX,msgCatch->posY);
 
 			destruirCatch(msgCatch);
@@ -46,22 +48,22 @@ void loggearMensaje (paquete* paqueteRespuesta, t_log* logger){
 			mensajeCaught* msgCaught = deserializarCaught (paqueteRespuesta->stream);
 
 			if(msgCaught->resultadoCaught==CORRECTO){
-				log_info(logger, "Recibi mensaje caught pokemon. El pokemon fue atrapado. \n");
+				log_info(logger, "Recibi mensaje caught pokemon. El pokemon fue atrapado.");
 			}else{
-				log_info(logger, "Recibi mensaje caught pokemon. El pokemon no fue atrapado. \n");
+				log_info(logger, "Recibi mensaje caught pokemon. El pokemon no fue atrapado.");
 			}
 			destruirCaught(msgCaught);
 			break;
 
 		case GET_POKEMON: ;
 			mensajeGet* msgGet = deserializarGet (paqueteRespuesta->stream);
-			log_info(logger, "Recibi mensaje get pokemon. El pokemon es: %s. \n", msgGet->pokemon);
+			log_info(logger, "Recibi mensaje get pokemon. El pokemon es: %s.", msgGet->pokemon);
 			destruirGet(msgGet);
 			break;
 
 		case LOCALIZED_POKEMON: ;
 			mensajeLocalized* msgLocalized = deserializarLocalized(paqueteRespuesta->stream);
-			log_info(logger, "Recibi mensaje localized. El pokemon es: %s. La cantidad es: %i.\n",
+			log_info(logger, "Recibi mensaje localized. El pokemon es: %s. La cantidad es: %i.",
 					msgLocalized->pokemon, msgLocalized->cantidad);
 			log_info(logger,"Las posiciones son: ");
 			posicion* posActual=malloc(sizeof(posicion));

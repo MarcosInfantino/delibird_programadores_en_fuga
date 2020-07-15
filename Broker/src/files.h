@@ -15,8 +15,9 @@
 //#include <mathcalls.h>
 
 typedef struct{
-	FILE* archivo;
+	//FILE* archivo;
 	pthread_mutex_t* mutex;
+	char* path;
 }archivoMutex;
 
 typedef struct{
@@ -52,5 +53,5 @@ void almacenarParticionLibreEnArchivo(lineaFileLibre* particionVacia);
 //void registrarParticionesLibresYocupadas();
 void recorrerArbolYgrabarArchivo();
 char* estadoEnString(uint32_t estado);
-
+void iniciarEscrituraDump();
 #endif /* FILES_H_ */

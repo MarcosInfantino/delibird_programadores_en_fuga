@@ -140,7 +140,7 @@ void guardarYaEnviados (paquete* paq, uint32_t idProceso);
 bool estaEnListaACK(uint32_t idProceso, msgMemoriaBroker* mensaje);
 void guardarMensajeACK (paquete* paq);
 
-void crearDumpDeCache();
+//void crearDumpDeCache();
 void asignarPuntero(uint32_t offset, void* stream, uint32_t sizeStream);
 
 bool yaEstaEnMemoria(paquete* paq);
