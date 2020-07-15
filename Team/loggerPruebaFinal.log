@@ -24779,3 +24779,19 @@
 [INFO] 12:54:39:402 TEAM/(21861:21861): Cantidad de ciclos de CPU realizados por el entrenador 0: 7.
 [INFO] 12:54:39:402 TEAM/(21861:21861): Cantidad de ciclos de CPU realizados por el entrenador 1: 21.
 [INFO] 12:54:39:402 TEAM/(21861:21861): Cantidad de ciclos de CPU realizados por el entrenador 2: 19.
+[INFO] 13:46:14:415 TEAM/(26869:26890): Fallo de comunicación con el Broker al enviar un get. Se realizará la operación por default.
+[INFO] 13:46:14:415 TEAM/(26869:26891): Fallo de comunicación con el Broker al enviar un get. Se realizará la operación por default.
+[INFO] 13:46:14:415 TEAM/(26869:26893): Fallo de comunicación con el Broker al enviar un get. Se realizará la operación por default.
+[INFO] 13:46:14:415 TEAM/(26869:26892): Fallo de comunicación con el Broker al enviar un get. Se realizará la operación por default.
+[INFO] 13:46:14:419 TEAM/(26869:26889): Conexión fallida con el Broker
+
+[INFO] 13:46:14:419 TEAM/(26869:26888): Conexión fallida con el Broker
+
+[INFO] 13:46:14:419 TEAM/(26869:26887): Conexión fallida con el Broker
+
+[INFO] 13:46:14:481 TEAM/(26869:26889): Reintentando conexión en 30 segundos...
+
+[INFO] 13:46:14:481 TEAM/(26869:26887): Reintentando conexión en 30 segundos...
+
+[INFO] 13:46:14:481 TEAM/(26869:26888): Reintentando conexión en 30 segundos...
+
