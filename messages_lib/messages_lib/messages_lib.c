@@ -98,3 +98,11 @@ uint32_t obtenerIdProcesoDeAck(void* stream){
 	return id;
 }
 
+void liberarArrayBidimensionalChar(char** array){
+	for(uint32_t i=0; *(array + i)!=NULL;i++){
+		free(*(array+i));
+
+	}
+	free(array);
+}
+
