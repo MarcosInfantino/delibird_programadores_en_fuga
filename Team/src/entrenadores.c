@@ -34,7 +34,7 @@ void* ejecucionHiloEntrenador(void* argEntrenador){
 	dataEntrenador* infoEntrenador=(dataEntrenador*) argEntrenador;
 	sem_t* semaforoEntrenador=(infoEntrenador->semaforo);
 	while(1){
-		sem_wait(semaforoEntrenador); //OK1
+		sem_wait(semaforoEntrenador); //linea 324
 
 		//removeListaMutex(entrenadoresLibres,encontrarPosicionEntrenadorLibre(infoEntrenador));
 		poneteEnReady(infoEntrenador);
@@ -99,7 +99,7 @@ void replanificarEntrenador(dataEntrenador* entrenador){
 			log_info(teamLogger2, "El entrenador %i va a buscar pokemones pendientes.", entrenador->id);
 			pokemonPosicion* pokePosicion=(pokemonPosicion*)popColaMutex(pokemonesPendientes);
 			log_info(teamLogger2, "El entrenador %i hace pop del pokemon pendiente %s.", entrenador->id, pokePosicion->pokemon);
-			habilitarHiloEntrenador(entrenador->id);
+			//habilitarHiloEntrenador(entrenador->id); PARA MI NO VA MARI
 			asignarPokemonAEntrenador(entrenador, pokePosicion);
 			//free(pokePosicion);
 		}else{
@@ -124,18 +124,16 @@ void replanificarEntrenador(dataEntrenador* entrenador){
 				log_info(teamLogger2, "Inicio del algoritmo de detección de deadlock.");
 				log_info(teamLogger, "Inicio del algoritmo de detección de deadlock.");
 				if(todosLosEntrenadoresTerminaronDeAtrapar()){
-									log_info(teamLogger, "Se encontró deadlock.");
-									log_info(teamLogger2, "Entrenadores en deadlock %i.", sizeListaMutex(entrenadoresDeadlock));
-									//habilitarHiloEntrenador(entrenador->id);
-									sem_post(iniciarResolucionDeadlock);
-									//resolverDeadlock();
-									}else{
-										//habilitarHiloEntrenador(entrenador->id);
-										log_info(teamLogger, "No se encontró deadlock.");
-										log_info(teamLogger2, "No se encontró deadlock.");
-									}
-
-
+					log_info(teamLogger, "Se encontró deadlock.");
+					log_info(teamLogger2, "Entrenadores en deadlock %i.", sizeListaMutex(entrenadoresDeadlock));
+					//habilitarHiloEntrenador(entrenador->id);
+					sem_post(iniciarResolucionDeadlock);
+					//resolverDeadlock();
+				}else{
+					//habilitarHiloEntrenador(entrenador->id);
+					log_info(teamLogger, "No se encontró deadlock.");
+					log_info(teamLogger2, "No se encontró deadlock.");
+				}
 			}
 			}else{	//DEADLOCK
 				log_info(teamLogger2, "El entrenador %i forma parte de un interbloqueo.", entrenador->id);
@@ -204,11 +202,10 @@ void poneteEnReady(dataEntrenador* entrenador){
 		case FIFO:
 			entrenador->estado=READY;
 			pushColaMutex(colaEjecucionFifo,(void*)entrenador);
-			sem_post(entrenadorEnCola); //OK6
+			sem_post(entrenadorEnCola);
 			break;
 		case SJFCD:
 		case SJF:
-
 			entrenador->estado=READY;
 			addListaMutex(listaEjecucionSjf,(void*)entrenador);
 			sem_post(entrenadorEnCola);
@@ -315,7 +312,7 @@ void asignarPokemonAEntrenador(dataEntrenador* entrenador, pokemonPosicion* poke
 //	if(entrenador->pokemonAAtrapar!=NULL){
 //		destruirPokemonPosicion((entrenador->pokemonAAtrapar));//HACER DESTRUIR POKEMONAATRAPAR
 //	}
-	log_info(teamLogger2, "Se le asigno el posemon %s al entrenador %i.", pokePosicion->pokemon, entrenador->id);
+	log_info(teamLogger2, "Se le asigno el pokemon %s al entrenador %i.", pokePosicion->pokemon, entrenador->id);
 	char* pokemonString=malloc(strlen(pokePosicion->pokemon)+1);
 	strcpy(pokemonString,pokePosicion->pokemon);
 	addListaMutex(pokemonesConCatchPendiente, (void*) pokemonString);
@@ -330,7 +327,6 @@ void asignarPokemonAEntrenador(dataEntrenador* entrenador, pokemonPosicion* poke
 void atraparPokemonYReplanificar (dataEntrenador* entrenador){
 
 	removerPokemonConCatchPendiente(entrenador->pokemonAAtrapar->pokemon);
-
 
 	char* pokemonAtrapado=malloc(strlen(entrenador->pokemonAAtrapar->pokemon)+1);
 	strcpy(pokemonAtrapado,entrenador->pokemonAAtrapar->pokemon);
@@ -475,7 +471,6 @@ void entrarEnEjecucionParaDeadlock(dataEntrenador* infoEntrenador){
 	//log_info(teamLogger, "El entrenador %i se mueve a la posición del entrenador %i.", infoEntrenador->id, entrenadorBloqueadoParaDeadlock->id);
 	log_info(teamLogger2, "El entrenador %i entra en ejecucion para deadlock.", infoEntrenador->id);
 	sem_wait((infoEntrenador->semaforo));//espera al planificador //OK4
-
 
 	ponerEnEjecucion(infoEntrenador);
 	moverEntrenadorAPosicion(infoEntrenador, ((infoEntrenador->pokemonAAtrapar)->posicion));

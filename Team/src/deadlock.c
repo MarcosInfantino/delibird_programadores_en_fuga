@@ -204,7 +204,7 @@ void resolverIntercambioMutuo(){
 	sem_post(entrenadorAMover->semaforo);
 	log_info (teamLogger, "El entrenador %i, esta en DEADLOCK con el entrenador %i.", entrenadorBloqueadoParaDeadlock->id, entrenadorAMover->id);
 	log_info (teamLogger2, "El entrenador %i, esta en DEADLOCK con el entrenador %i.", entrenadorBloqueadoParaDeadlock->id, entrenadorAMover->id);
-				//log_info(teamLogger2, "Entrenador bloqueado: %i. Entrenador a mover: %i.", entrenadorBloqueadoParaDeadlock->id, entrenadorAMover->id);
+	//log_info(teamLogger2, "Entrenador bloqueado: %i. Entrenador a mover: %i.", entrenadorBloqueadoParaDeadlock->id, entrenadorAMover->id);
 
 	(team->cantidadDeadlocksEncontrados)++;
 

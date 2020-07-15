@@ -60,6 +60,8 @@ sem_t intercambioFinalizado;
 sem_t* iniciarResolucionDeadlock;
 sem_t* semaforoObjetivoCumplido;
 
+pthread_mutex_t* mutexPlanificador;
+
 //sem_t* pedidoCicloCpu;
 sem_t* finalizacionCicloCpu;
 
