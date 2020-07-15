@@ -299,16 +299,8 @@ void* suscribirseCola(void* msgSuscripcion) {
 			default: break; //esto no puede pasar
 			}
 
-//				while(send(cliente,(void*)(&respuesta),sizeof(uint32_t),0)<0){
-//					cliente=reconectarseAlBroker();
-//					cliente=enviarSuscripcion(cliente, msg);
-//
-//				}
 			}
-//	uint32_t respuesta;
-//	log_info(gamecardLogger,"Espero respuesta");
-//	log_info(gamecardLogger2,"Espero respuesta");
-//	recv(cliente, &respuesta, sizeof(uint32_t), 0);
+
 	return NULL;
 }
 
@@ -490,8 +482,7 @@ void* atenderNew(void* paq) {
 	(pokeEnPosicion->posicion).x = msgNew->posX;
 	(pokeEnPosicion->posicion).y = msgNew->posY;
 
-	//free(msg);
-	//To do :
+
 	//log_info(gamecardLogger2,"Atiendo new del pokemon: %s. Posicion: (%i, %i).", msgNew->pokemon, msgNew->posX, msgNew->posY);
 	archivoHeader* archivoPoke= obtenerArchivoPokemon(pokeEnPosicion->pokemon);
 
@@ -526,7 +517,9 @@ void* atenderNew(void* paq) {
 
 	log_info(gamecardLogger2,"Cierro el archivo del pokemon: %s. Posicion: (%i, %i).", msgNew->pokemon, msgNew->posX, msgNew->posY);
 	log_info(gamecardLogger,"Cierro el archivo del pokemon: %s. Posicion: (%i, %i).", msgNew->pokemon, msgNew->posX, msgNew->posY);
+	free(msgNew);
 	enviarAppeared(pokeEnPosicion);
+	destruirPaquete(paq);
 	return NULL;
 
 }
@@ -534,17 +527,19 @@ void* atenderNew(void* paq) {
 void enviarAppeared(pokemonEnPosicion* pokeEnPosicion) {
 	log_info(gamecardLogger,"Inicia proceso envio Appeared");
 	uint32_t cliente = crearSocketCliente(ipBrokerGC, puertoBrokerGC);
-	mensajeAppeared* msgAppeared = malloc(sizeof(mensajeAppeared));
-	msgAppeared = llenarAppeared(pokeEnPosicion->pokemon,(pokeEnPosicion->posicion).x,(pokeEnPosicion->posicion).y);
+	log_info(gamecardLogger2,"Nombre:%s",pokeEnPosicion->pokemon); //ojo al piojo.
+	mensajeAppeared* msgAppeared = llenarAppeared(pokeEnPosicion->pokemon,(pokeEnPosicion->posicion).x,(pokeEnPosicion->posicion).y);
 	void* streamMsg = serializarAppeared(msgAppeared);
-	paquete* paq = llenarPaquete(GAMECARD, APPEARED_POKEMON,sizeArgumentos(APPEARED_POKEMON, msgAppeared->pokemon, BROKER),streamMsg);
+	paquete* paq = llenarPaquete(GAMECARD, APPEARED_POKEMON,sizeArgumentos(APPEARED_POKEMON, msgAppeared->pokemon, pokeEnPosicion->cantidad),streamMsg);
 	insertarIdCorrelativoPaquete(paq, (pokeEnPosicion->id));
 	void* paqueteSerializado = serializarPaquete(paq);
-	free(msgAppeared);
+	destruirAppeared(msgAppeared);
+	free(pokeEnPosicion->pokemon);
+	free(pokeEnPosicion);
 	//destruirPaquete(paq);
 
 	send(cliente, paqueteSerializado, sizePaquete(paq), 0);
-	free(paqueteSerializado);
+	//free(paqueteSerializado);
 
 }
 
@@ -561,14 +556,6 @@ void* atenderGet(void* paq) {
 	pokeADevolver->id = idGet;
 	log_info(gamecardLogger2,"Atiendo Get del pokemon: %s", msgGet->pokemon);
 
-//	int32_t resultloco = existe(string_from_format(pathFiles,pokeADevolver->pokemon));
-//
-//	log_info(gamecardLogger2,"%s",string_from_format("%s%s",pathFiles,pokeADevolver->pokemon));
-//	if(resultloco == 0){
-//		log_info(gamecardLogger2,"EXISTE");
-//	}else{
-//		log_info(gamecardLogger2,"NO EXISTE");
-//	}
 
 	if(archivoExiste(string_from_format("%s%s",pathFiles,pokeADevolver->pokemon))){
 		log_info(gamecardLogger2,"EXISTE");
@@ -607,8 +594,8 @@ void* atenderGet(void* paq) {
 		posicion aux = *(pokeADevolver->posiciones+i);
 		log_info(gamecardLogger2,"Posicion: %i-%i",aux.x,aux.y);
 	}
-
 	enviarLocalized(pokeADevolver);
+	destruirPaquete(paq);
 	return NULL;
 }
 
@@ -685,7 +672,8 @@ void* atenderCatch(void* paq) {
 	cerrarArchivo(archivoPokeCatch,archivoMetadata);
 	log_info(gamecardLogger,"Cierro el archivo del pokemon: %s. Posicion: (%i, %i).", msgCatch->pokemon, msgCatch->posX, msgCatch->posY);
 
-	enviarCaught(pokeAAtrapar); //Momentaneo hasta saber bien que hacer con fileSystem
+	enviarCaught(pokeAAtrapar);
+	destruirPaquete(paq);
 	return NULL;
 }
 

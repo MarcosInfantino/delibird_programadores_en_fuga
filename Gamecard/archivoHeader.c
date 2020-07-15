@@ -142,6 +142,7 @@ t_list* arrayBloquesStringToList(char** listaArray){
 		blockHeader* bloqueActual= obtenerBloquePorId(idBloqueActual);
 		list_add(lista, (void*) bloqueActual);
 	}
+	liberarArrayBidimensionalChar(listaArray);
 	return lista;
 }
 
@@ -247,7 +248,7 @@ char* leerBloque(blockHeader* bloque){
 //	char* resultado=string_new();
 //	string_append(&resultado,buffer);
 //	string_append(&resultado,"\0");
-	//free(buffer);
+	free(path);
 	return resultado;
 	//return resultado;
 
@@ -261,6 +262,7 @@ uint32_t posBloque(blockHeader* bloque){
 	fseek(archivoBloque, 0, SEEK_END);
 	uint32_t pos= ftell(archivoBloque);
 	fclose(archivoBloque);
+	free(path);
 	return pos;
 }
 
@@ -279,9 +281,10 @@ t_list* obtenerListaPosicionesString(char* posiciones){
 			char cadena [2]=" \0";
 			cadena[0]=caracterActual;
 			string_append(&buffer, cadena);
-			//free(cadena);
+
 		}
 	}
+	free(buffer);
 	return lista;
 }
 
@@ -303,7 +306,7 @@ posicionCantidad* obtenerPosicionCantidadDeString(char* stringPos){
 					char cadena [2]=" \0";
 					cadena[0]=caracterActual;
 					string_append(&bufferPosX, cadena);
-					//free(cadena);
+
 				}
 			}else if(posY){
 				if(caracterActual=='='){
@@ -313,13 +316,13 @@ posicionCantidad* obtenerPosicionCantidadDeString(char* stringPos){
 					char cadena [2]=" \0";
 					cadena[0]=caracterActual;
 					string_append(&bufferPosY, cadena);
-					//free(cadena);
+
 				}
 			}else if(cantidad){
 				char cadena [2]=" \0";
 				cadena[0]=caracterActual;
 				string_append(&bufferCantidad, cadena);
-				//free(cadena);
+
 			}
 
 		}
@@ -328,7 +331,9 @@ posicionCantidad* obtenerPosicionCantidadDeString(char* stringPos){
 	(pos->posicion).x=atoi(bufferPosX);
 	(pos->posicion).y=atoi(bufferPosY);
 	pos->cantidad=atoi(bufferCantidad);
-
+	free(bufferPosX);
+	free(bufferPosY);
+	free(bufferCantidad);
 	return pos;
 
 }
@@ -503,6 +508,7 @@ void actualizarPosicionesArchivo(archivoHeader* archivo, t_list* listaPosicionCa
 		char* listaString=listaPosicionCantidadToString(listaPosicionCantidad);
 		//log_info(gamecardLogger2, "string de lista: %s", listaString);
 		reescribirArchivo(archivo->nombreArchivo, listaString);
+		free(listaString);//probar
 	}
 }
 
@@ -513,13 +519,13 @@ void reiniciarArchivoBloque(uint32_t idBloque){
 	fclose(archivoBloque);
 
 	uint32_t blockfd = open(pathBloque(idBloque),O_RDWR| S_IRUSR | S_IWUSR,0777);
-			ftruncate(blockfd,tallGrass.block_size);
-			close(blockfd);
+	ftruncate(blockfd,tallGrass.block_size);
+	close(blockfd);
 }
 
 void reiniciarBloquesDeArchivo(archivoHeader* headerPoke){
 
-	for(uint32_t i;i<list_size(headerPoke->bloquesUsados);i++){
+	for(uint32_t i=0;i<list_size(headerPoke->bloquesUsados);i++){
 		blockHeader* bloque = list_get(headerPoke->bloquesUsados,i);
 		reiniciarArchivoBloque(bloque->id);
 	}

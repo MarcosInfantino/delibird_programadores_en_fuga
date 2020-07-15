@@ -3197,6 +3197,1200 @@
 [INFO] 16:19:30:686 gamecard/(8187:8912): Inicia proceso de atencion al Catch
 [INFO] 16:19:35:724 gamecard/(8187:8912): Cierro el archivo del pokemon: Squirtle. Posicion: (5, 5).
 [INFO] 16:19:35:724 gamecard/(8187:8912): Inicia proceso envio Caught
+<<<<<<< HEAD
+[INFO] 16:42:42:673 gamecard/(19014:19014): Inicio de programa: Gamecard.
+[INFO] 16:42:42:725 gamecard/(19014:19014): Se encontro el directorio metadata
+[INFO] 16:42:42:726 gamecard/(19014:19014): Se encontro el archivo metadata.bin
+[INFO] 16:42:42:727 gamecard/(19014:19014): Inicio de Metadata, Tamanio bloques: 64,  Cantidad de bloques: 1024,  Magic number: TALL_GRASS
+[INFO] 16:42:42:939 gamecard/(19014:19020): Estoy escuchando
+[INFO] 16:42:42:940 gamecard/(19014:19020): Espero un nuevo cliente
+[INFO] 16:42:42:990 gamecard/(19014:19021): Conexión fallida con el Broker
+
+[INFO] 16:42:42:991 gamecard/(19014:19023): Conexión fallida con el Broker
+
+[INFO] 16:42:42:991 gamecard/(19014:19022): Conexión fallida con el Broker
+
+[INFO] 16:42:42:991 gamecard/(19014:19021): Reintentando conexión en 10 segundos...
+
+[INFO] 16:42:42:992 gamecard/(19014:19022): Reintentando conexión en 10 segundos...
+
+[INFO] 16:42:42:992 gamecard/(19014:19023): Reintentando conexión en 10 segundos...
+
+[INFO] 16:42:52:993 gamecard/(19014:19021): Reintentando conexión en 10 segundos...
+
+[INFO] 16:42:52:993 gamecard/(19014:19023): Reintentando conexión en 10 segundos...
+
+[INFO] 16:42:52:993 gamecard/(19014:19022): Reintentando conexión en 10 segundos...
+
+[INFO] 16:43:02:1 gamecard/(19014:19021): El reintento de conexión fue exitoso
+
+[INFO] 16:43:02:2 gamecard/(19014:19023): El reintento de conexión fue exitoso
+
+[INFO] 16:43:02:2 gamecard/(19014:19022): El reintento de conexión fue exitoso
+
+[INFO] 16:43:16:85 gamecard/(19014:19020): Gestiono un nuevo cliente
+[INFO] 16:43:16:89 gamecard/(19014:19020): Espero un nuevo cliente
+[INFO] 16:43:16:111 gamecard/(19014:19122): Recibi mensaje new pokemon. El pokemon es: Pikachu. La posicion es: (1,1). La cantidad es: 11.
+[INFO] 16:43:16:112 gamecard/(19014:19122): Inicia proceso de atencion al New
+[INFO] 16:43:19:210 gamecard/(19014:19020): Gestiono un nuevo cliente
+[INFO] 16:43:19:217 gamecard/(19014:19020): Espero un nuevo cliente
+[INFO] 16:43:19:222 gamecard/(19014:19125): Recibi mensaje new pokemon. El pokemon es: Espeon. La posicion es: (1,1). La cantidad es: 11.
+[INFO] 16:43:19:222 gamecard/(19014:19125): Inicia proceso de atencion al New
+[INFO] 16:43:20:434 gamecard/(19014:19020): Gestiono un nuevo cliente
+[INFO] 16:43:20:436 gamecard/(19014:19020): Espero un nuevo cliente
+[INFO] 16:43:20:442 gamecard/(19014:19128): Recibi mensaje new pokemon. El pokemon es: Pikachu. La posicion es: (1,1). La cantidad es: 11.
+[INFO] 16:43:20:442 gamecard/(19014:19128): Inicia proceso de atencion al New
+[INFO] 16:43:20:443 gamecard/(19014:19128): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 16:43:21:236 gamecard/(19014:19122): Cierro el archivo del pokemon: Pikachu. Posicion: (1, 1).
+[INFO] 16:43:21:236 gamecard/(19014:19122): Inicia proceso envio Appeared
+[INFO] 16:43:21:686 gamecard/(19014:19020): Gestiono un nuevo cliente
+[INFO] 16:43:21:697 gamecard/(19014:19020): Espero un nuevo cliente
+[INFO] 16:43:21:701 gamecard/(19014:19132): Recibi mensaje new pokemon. El pokemon es: Pikachu. La posicion es: (1,1). La cantidad es: 11.
+[INFO] 16:43:21:701 gamecard/(19014:19132): Inicia proceso de atencion al New
+[INFO] 16:43:23:750 gamecard/(19014:19020): Gestiono un nuevo cliente
+[INFO] 16:43:23:753 gamecard/(19014:19020): Espero un nuevo cliente
+[INFO] 16:43:23:763 gamecard/(19014:19135): Recibi mensaje new pokemon. El pokemon es: Umbreon. La posicion es: (1,1). La cantidad es: 11.
+[INFO] 16:43:23:763 gamecard/(19014:19135): Inicia proceso de atencion al New
+[INFO] 16:43:24:261 gamecard/(19014:19125): Cierro el archivo del pokemon: Espeon. Posicion: (1, 1).
+[INFO] 16:43:24:262 gamecard/(19014:19125): Inicia proceso envio Appeared
+[INFO] 16:43:25:455 gamecard/(19014:19128): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 16:43:25:486 gamecard/(19014:19020): Gestiono un nuevo cliente
+[INFO] 16:43:25:489 gamecard/(19014:19020): Espero un nuevo cliente
+[INFO] 16:43:25:493 gamecard/(19014:19139): Recibi mensaje new pokemon. El pokemon es: Flareon. La posicion es: (1,1). La cantidad es: 11.
+[INFO] 16:43:25:493 gamecard/(19014:19139): Inicia proceso de atencion al New
+[INFO] 16:43:26:743 gamecard/(19014:19132): Cierro el archivo del pokemon: Pikachu. Posicion: (1, 1).
+[INFO] 16:43:26:743 gamecard/(19014:19132): Inicia proceso envio Appeared
+[INFO] 16:43:28:800 gamecard/(19014:19135): Cierro el archivo del pokemon: Umbreon. Posicion: (1, 1).
+[INFO] 16:43:28:800 gamecard/(19014:19135): Inicia proceso envio Appeared
+[INFO] 16:43:30:541 gamecard/(19014:19139): Cierro el archivo del pokemon: Flareon. Posicion: (1, 1).
+[INFO] 16:43:30:541 gamecard/(19014:19139): Inicia proceso envio Appeared
+[INFO] 16:43:35:469 gamecard/(19014:19128): Cierro el archivo del pokemon: Pikachu. Posicion: (1, 1).
+[INFO] 16:43:35:469 gamecard/(19014:19128): Inicia proceso envio Appeared
+[INFO] 16:48:17:789 gamecard/(19273:19273): Inicio de programa: Gamecard.
+[INFO] 16:48:17:789 gamecard/(19273:19273): Se encontro el directorio metadata
+[INFO] 16:48:17:789 gamecard/(19273:19273): Se encontro el archivo metadata.bin
+[INFO] 16:48:17:789 gamecard/(19273:19273): Inicio de Metadata, Tamanio bloques: 64,  Cantidad de bloques: 1024,  Magic number: TALL_GRASS
+[INFO] 16:48:17:826 gamecard/(19273:19279): Estoy escuchando
+[INFO] 16:48:17:826 gamecard/(19273:19279): Espero un nuevo cliente
+[INFO] 16:48:22:781 gamecard/(19273:19279): Gestiono un nuevo cliente
+[INFO] 16:48:22:781 gamecard/(19273:19279): Espero un nuevo cliente
+[INFO] 16:48:22:787 gamecard/(19273:19287): Recibi mensaje new pokemon. El pokemon es: Flareon. La posicion es: (1,1). La cantidad es: 11.
+[INFO] 16:48:22:787 gamecard/(19273:19287): Inicia proceso de atencion al New
+[INFO] 16:48:27:789 gamecard/(19273:19287): Cierro el archivo del pokemon: Flareon. Posicion: (1, 1).
+[INFO] 16:48:27:789 gamecard/(19273:19287): Inicia proceso envio Appeared
+[INFO] 16:48:59:824 gamecard/(19309:19309): Inicio de programa: Gamecard.
+[INFO] 16:48:59:903 gamecard/(19309:19309): Se encontro el directorio metadata
+[INFO] 16:48:59:904 gamecard/(19309:19309): Se encontro el archivo metadata.bin
+[INFO] 16:48:59:918 gamecard/(19309:19309): Inicio de Metadata, Tamanio bloques: 64,  Cantidad de bloques: 1024,  Magic number: TALL_GRASS
+[INFO] 16:49:00:118 gamecard/(19309:19342): Estoy escuchando
+[INFO] 16:49:00:120 gamecard/(19309:19342): Espero un nuevo cliente
+[INFO] 16:49:07:42 gamecard/(19309:19342): Gestiono un nuevo cliente
+[INFO] 16:49:07:53 gamecard/(19309:19342): Espero un nuevo cliente
+[INFO] 16:49:07:63 gamecard/(19309:19350): Recibi mensaje new pokemon. El pokemon es: Flareon. La posicion es: (1,1). La cantidad es: 11.
+[INFO] 16:49:07:64 gamecard/(19309:19350): Inicia proceso de atencion al New
+[INFO] 16:49:12:283 gamecard/(19309:19350): Cierro el archivo del pokemon: Flareon. Posicion: (1, 1).
+[INFO] 16:49:12:284 gamecard/(19309:19350): Inicia proceso envio Appeared
+[INFO] 16:54:35:562 gamecard/(19535:19535): Inicio de programa: Gamecard.
+[INFO] 16:54:35:599 gamecard/(19535:19535): Se encontro el directorio metadata
+[INFO] 16:54:35:601 gamecard/(19535:19535): Se encontro el archivo metadata.bin
+[INFO] 16:54:35:602 gamecard/(19535:19535): Inicio de Metadata, Tamanio bloques: 64,  Cantidad de bloques: 1024,  Magic number: TALL_GRASS
+[INFO] 16:54:35:684 gamecard/(19535:19541): Estoy escuchando
+[INFO] 16:54:35:691 gamecard/(19535:19541): Espero un nuevo cliente
+[INFO] 16:54:40:468 gamecard/(19535:19543): Conexión fallida con el Broker
+
+[INFO] 16:54:40:469 gamecard/(19535:19542): Conexión fallida con el Broker
+
+[INFO] 16:54:40:469 gamecard/(19535:19544): Conexión fallida con el Broker
+
+[INFO] 16:54:40:474 gamecard/(19535:19543): Reintentando conexión en 10 segundos...
+
+[INFO] 16:54:40:475 gamecard/(19535:19544): Reintentando conexión en 10 segundos...
+
+[INFO] 16:54:40:476 gamecard/(19535:19542): Reintentando conexión en 10 segundos...
+
+[INFO] 16:54:58:29 gamecard/(19607:19607): Inicio de programa: Gamecard.
+[INFO] 16:54:59:65 gamecard/(19607:19607): Se encontro el directorio metadata
+[INFO] 16:54:59:66 gamecard/(19607:19607): Se encontro el archivo metadata.bin
+[INFO] 16:54:59:67 gamecard/(19607:19607): Inicio de Metadata, Tamanio bloques: 64,  Cantidad de bloques: 1024,  Magic number: TALL_GRASS
+[INFO] 16:54:59:143 gamecard/(19607:19613): Estoy escuchando
+[INFO] 16:54:59:145 gamecard/(19607:19613): Espero un nuevo cliente
+[INFO] 16:55:03:404 gamecard/(19607:19613): Gestiono un nuevo cliente
+[INFO] 16:55:03:410 gamecard/(19607:19613): Espero un nuevo cliente
+[INFO] 16:55:03:430 gamecard/(19607:19622): Recibi mensaje new pokemon. El pokemon es: Flareon. La posicion es: (1,1). La cantidad es: 11.
+[INFO] 16:55:03:434 gamecard/(19607:19622): Inicia proceso de atencion al New
+[INFO] 16:56:06:373 gamecard/(19714:19714): Inicio de programa: Gamecard.
+[INFO] 16:56:06:409 gamecard/(19714:19714): Se encontro el directorio metadata
+[INFO] 16:56:06:410 gamecard/(19714:19714): Se encontro el archivo metadata.bin
+[INFO] 16:56:06:411 gamecard/(19714:19714): Inicio de Metadata, Tamanio bloques: 64,  Cantidad de bloques: 1024,  Magic number: TALL_GRASS
+[INFO] 16:56:06:523 gamecard/(19714:19720): Estoy escuchando
+[INFO] 16:56:06:525 gamecard/(19714:19720): Espero un nuevo cliente
+[INFO] 16:56:20:512 gamecard/(19714:19720): Gestiono un nuevo cliente
+[INFO] 16:56:20:517 gamecard/(19714:19720): Espero un nuevo cliente
+[INFO] 16:56:20:533 gamecard/(19714:19731): Recibi mensaje new pokemon. El pokemon es: Flareon. La posicion es: (1,1). La cantidad es: 11.
+[INFO] 16:56:20:534 gamecard/(19714:19731): Inicia proceso de atencion al New
+[INFO] 16:56:25:725 gamecard/(19714:19731): Cierro el archivo del pokemon: Flareon. Posicion: (1, 1).
+[INFO] 16:56:25:725 gamecard/(19714:19731): Inicia proceso envio Appeared
+[INFO] 17:02:00:765 gamecard/(19881:19881): Inicio de programa: Gamecard.
+[INFO] 17:02:00:814 gamecard/(19881:19881): Se encontro el directorio metadata
+[INFO] 17:02:00:815 gamecard/(19881:19881): Se encontro el archivo metadata.bin
+[INFO] 17:02:00:816 gamecard/(19881:19881): Inicio de Metadata, Tamanio bloques: 64,  Cantidad de bloques: 1024,  Magic number: TALL_GRASS
+[INFO] 17:02:00:938 gamecard/(19881:19887): Estoy escuchando
+[INFO] 17:02:00:939 gamecard/(19881:19887): Espero un nuevo cliente
+[INFO] 17:02:15:907 gamecard/(19881:19887): Gestiono un nuevo cliente
+[INFO] 17:02:15:914 gamecard/(19881:19887): Espero un nuevo cliente
+[INFO] 17:02:15:937 gamecard/(19881:19932): Recibi mensaje new pokemon. El pokemon es: Flareon. La posicion es: (1,1). La cantidad es: 11.
+[INFO] 17:02:15:938 gamecard/(19881:19932): Inicia proceso de atencion al New
+[INFO] 17:02:21:129 gamecard/(19881:19932): Cierro el archivo del pokemon: Flareon. Posicion: (1, 1).
+[INFO] 17:02:21:129 gamecard/(19881:19932): Inicia proceso envio Appeared
+[INFO] 17:11:01:760 gamecard/(20193:20193): Inicio de programa: Gamecard.
+[INFO] 17:11:01:799 gamecard/(20193:20193): Se encontro el directorio metadata
+[INFO] 17:11:01:800 gamecard/(20193:20193): Se encontro el archivo metadata.bin
+[INFO] 17:11:01:801 gamecard/(20193:20193): Inicio de Metadata, Tamanio bloques: 64,  Cantidad de bloques: 1024,  Magic number: TALL_GRASS
+[INFO] 17:11:01:921 gamecard/(20193:20199): Estoy escuchando
+[INFO] 17:11:01:923 gamecard/(20193:20199): Espero un nuevo cliente
+[INFO] 17:11:13:355 gamecard/(20193:20199): Gestiono un nuevo cliente
+[INFO] 17:11:13:357 gamecard/(20193:20199): Espero un nuevo cliente
+[INFO] 17:11:13:387 gamecard/(20193:20207): Recibi mensaje new pokemon. El pokemon es: Flareon. La posicion es: (1,1). La cantidad es: 11.
+[INFO] 17:11:13:388 gamecard/(20193:20207): Inicia proceso de atencion al New
+[INFO] 17:11:18:595 gamecard/(20193:20207): Cierro el archivo del pokemon: Flareon. Posicion: (1, 1).
+[INFO] 17:11:18:596 gamecard/(20193:20207): Inicia proceso envio Appeared
+[INFO] 17:19:07:518 gamecard/(20456:20456): Inicio de programa: Gamecard.
+[INFO] 17:19:07:562 gamecard/(20456:20456): Se encontro el directorio metadata
+[INFO] 17:19:07:563 gamecard/(20456:20456): Se encontro el archivo metadata.bin
+[INFO] 17:19:07:564 gamecard/(20456:20456): Inicio de Metadata, Tamanio bloques: 64,  Cantidad de bloques: 1024,  Magic number: TALL_GRASS
+[INFO] 17:19:07:699 gamecard/(20456:20462): Estoy escuchando
+[INFO] 17:19:07:723 gamecard/(20456:20462): Espero un nuevo cliente
+[INFO] 17:19:07:761 gamecard/(20456:20464): Conexión fallida con el Broker
+
+[INFO] 17:19:07:761 gamecard/(20456:20465): Conexión fallida con el Broker
+
+[INFO] 17:19:07:761 gamecard/(20456:20463): Conexión fallida con el Broker
+
+[INFO] 17:19:07:762 gamecard/(20456:20464): Reintentando conexión en 10 segundos...
+
+[INFO] 17:19:07:763 gamecard/(20456:20463): Reintentando conexión en 10 segundos...
+
+[INFO] 17:19:07:763 gamecard/(20456:20465): Reintentando conexión en 10 segundos...
+
+[INFO] 17:19:17:767 gamecard/(20456:20465): Reintentando conexión en 10 segundos...
+
+[INFO] 17:19:17:767 gamecard/(20456:20463): Reintentando conexión en 10 segundos...
+
+[INFO] 17:19:17:767 gamecard/(20456:20464): Reintentando conexión en 10 segundos...
+
+[INFO] 17:19:27:768 gamecard/(20456:20465): El reintento de conexión fue exitoso
+
+[INFO] 17:19:27:768 gamecard/(20456:20464): El reintento de conexión fue exitoso
+
+[INFO] 17:19:27:769 gamecard/(20456:20463): El reintento de conexión fue exitoso
+
+[INFO] 17:19:42:463 gamecard/(20456:20462): Gestiono un nuevo cliente
+[INFO] 17:19:42:470 gamecard/(20456:20462): Espero un nuevo cliente
+[INFO] 17:19:42:483 gamecard/(20456:20500): Recibi mensaje new pokemon. El pokemon es: Flareon. La posicion es: (1,1). La cantidad es: 11.
+[INFO] 17:19:42:493 gamecard/(20456:20500): Inicia proceso de atencion al New
+[INFO] 17:19:47:721 gamecard/(20456:20500): Cierro el archivo del pokemon: Flareon. Posicion: (1, 1).
+[INFO] 17:19:47:722 gamecard/(20456:20500): Inicia proceso envio Appeared
+[INFO] 17:32:27:703 gamecard/(21350:21350): Inicio de programa: Gamecard.
+[INFO] 17:32:27:742 gamecard/(21350:21350): Se encontro el directorio metadata
+[INFO] 17:32:27:743 gamecard/(21350:21350): Se encontro el archivo metadata.bin
+[INFO] 17:32:27:744 gamecard/(21350:21350): Inicio de Metadata, Tamanio bloques: 64,  Cantidad de bloques: 1024,  Magic number: TALL_GRASS
+[INFO] 17:32:27:824 gamecard/(21350:21356): Estoy escuchando
+[INFO] 17:32:27:833 gamecard/(21350:21356): Espero un nuevo cliente
+[INFO] 17:32:36:109 gamecard/(21350:21356): Gestiono un nuevo cliente
+[INFO] 17:32:36:114 gamecard/(21350:21356): Espero un nuevo cliente
+[INFO] 17:32:36:127 gamecard/(21350:21365): Recibi mensaje new pokemon. El pokemon es: Flareon. La posicion es: (1,1). La cantidad es: 11.
+[INFO] 17:32:36:128 gamecard/(21350:21365): Inicia proceso de atencion al New
+[INFO] 17:32:37:274 gamecard/(21350:21356): Gestiono un nuevo cliente
+[INFO] 17:32:37:277 gamecard/(21350:21356): Espero un nuevo cliente
+[INFO] 17:32:37:289 gamecard/(21350:21368): Recibi mensaje new pokemon. El pokemon es: Umbreon. La posicion es: (1,1). La cantidad es: 11.
+[INFO] 17:32:37:289 gamecard/(21350:21368): Inicia proceso de atencion al New
+[INFO] 17:32:38:182 gamecard/(21350:21356): Gestiono un nuevo cliente
+[INFO] 17:32:38:186 gamecard/(21350:21356): Espero un nuevo cliente
+[INFO] 17:32:38:196 gamecard/(21350:21371): Recibi mensaje new pokemon. El pokemon es: Pikachu. La posicion es: (1,1). La cantidad es: 11.
+[INFO] 17:32:38:197 gamecard/(21350:21371): Inicia proceso de atencion al New
+[INFO] 17:32:39:366 gamecard/(21350:21356): Gestiono un nuevo cliente
+[INFO] 17:32:39:371 gamecard/(21350:21356): Espero un nuevo cliente
+[INFO] 17:32:39:378 gamecard/(21350:21374): Recibi mensaje new pokemon. El pokemon es: Pikachu. La posicion es: (1,1). La cantidad es: 11.
+[INFO] 17:32:39:378 gamecard/(21350:21374): Inicia proceso de atencion al New
+[INFO] 17:32:39:379 gamecard/(21350:21374): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 17:32:41:109 gamecard/(21350:21356): Gestiono un nuevo cliente
+[INFO] 17:32:41:121 gamecard/(21350:21356): Espero un nuevo cliente
+[INFO] 17:32:41:122 gamecard/(21350:21377): Recibi mensaje new pokemon. El pokemon es: Espeon. La posicion es: (1,1). La cantidad es: 11.
+[INFO] 17:32:41:122 gamecard/(21350:21377): Inicia proceso de atencion al New
+[INFO] 17:32:41:349 gamecard/(21350:21365): Cierro el archivo del pokemon: Flareon. Posicion: (1, 1).
+[INFO] 17:32:41:350 gamecard/(21350:21365): Inicia proceso envio Appeared
+[INFO] 17:32:42:328 gamecard/(21350:21368): Cierro el archivo del pokemon: Umbreon. Posicion: (1, 1).
+[INFO] 17:32:42:328 gamecard/(21350:21368): Inicia proceso envio Appeared
+[INFO] 17:32:43:237 gamecard/(21350:21371): Cierro el archivo del pokemon: Pikachu. Posicion: (1, 1).
+[INFO] 17:32:43:237 gamecard/(21350:21371): Inicia proceso envio Appeared
+[INFO] 17:32:46:162 gamecard/(21350:21377): Cierro el archivo del pokemon: Espeon. Posicion: (1, 1).
+[INFO] 17:32:46:162 gamecard/(21350:21377): Inicia proceso envio Appeared
+[INFO] 17:32:49:416 gamecard/(21350:21374): Cierro el archivo del pokemon: Pikachu. Posicion: (1, 1).
+[INFO] 17:32:49:416 gamecard/(21350:21374): Inicia proceso envio Appeared
+[INFO] 17:33:01:310 gamecard/(21350:21358): Conexión fallida con el Broker
+
+[INFO] 17:33:01:311 gamecard/(21350:21357): Conexión fallida con el Broker
+
+[INFO] 17:33:01:311 gamecard/(21350:21359): Conexión fallida con el Broker
+
+[INFO] 17:33:01:311 gamecard/(21350:21357): Reintentando conexión en 10 segundos...
+
+[INFO] 17:33:01:312 gamecard/(21350:21359): Reintentando conexión en 10 segundos...
+
+[INFO] 17:33:01:312 gamecard/(21350:21358): Reintentando conexión en 10 segundos...
+
+[INFO] 17:40:14:386 gamecard/(22088:22088): Inicio de programa: Gamecard.
+[INFO] 17:40:14:429 gamecard/(22088:22088): Se encontro el directorio metadata
+[INFO] 17:40:14:430 gamecard/(22088:22088): Se encontro el archivo metadata.bin
+[INFO] 17:40:14:436 gamecard/(22088:22088): Inicio de Metadata, Tamanio bloques: 64,  Cantidad de bloques: 1024,  Magic number: TALL_GRASS
+[INFO] 17:40:14:530 gamecard/(22088:22094): Estoy escuchando
+[INFO] 17:40:14:532 gamecard/(22088:22094): Espero un nuevo cliente
+[INFO] 17:40:24:741 gamecard/(22088:22094): Gestiono un nuevo cliente
+[INFO] 17:40:24:745 gamecard/(22088:22094): Espero un nuevo cliente
+[INFO] 17:40:24:759 gamecard/(22088:22105): Recibi mensaje new pokemon. El pokemon es: Espeon. La posicion es: (1,1). La cantidad es: 11.
+[INFO] 17:40:24:766 gamecard/(22088:22105): Inicia proceso de atencion al New
+[INFO] 17:40:25:738 gamecard/(22088:22094): Gestiono un nuevo cliente
+[INFO] 17:40:25:741 gamecard/(22088:22094): Espero un nuevo cliente
+[INFO] 17:40:25:745 gamecard/(22088:22108): Recibi mensaje new pokemon. El pokemon es: Umbreon. La posicion es: (1,1). La cantidad es: 11.
+[INFO] 17:40:25:745 gamecard/(22088:22108): Inicia proceso de atencion al New
+[INFO] 17:40:27:149 gamecard/(22088:22094): Gestiono un nuevo cliente
+[INFO] 17:40:27:150 gamecard/(22088:22094): Espero un nuevo cliente
+[INFO] 17:40:27:160 gamecard/(22088:22111): Recibi mensaje new pokemon. El pokemon es: Flareon. La posicion es: (1,1). La cantidad es: 11.
+[INFO] 17:40:27:160 gamecard/(22088:22111): Inicia proceso de atencion al New
+[INFO] 17:40:29:265 gamecard/(22088:22094): Gestiono un nuevo cliente
+[INFO] 17:40:29:268 gamecard/(22088:22094): Espero un nuevo cliente
+[INFO] 17:40:29:273 gamecard/(22088:22114): Recibi mensaje new pokemon. El pokemon es: Pikachu. La posicion es: (1,1). La cantidad es: 11.
+[INFO] 17:40:29:273 gamecard/(22088:22114): Inicia proceso de atencion al New
+[INFO] 17:40:29:946 gamecard/(22088:22105): Cierro el archivo del pokemon: Espeon. Posicion: (1, 1).
+[INFO] 17:40:29:946 gamecard/(22088:22105): Inicia proceso envio Appeared
+[INFO] 17:40:30:790 gamecard/(22088:22108): Cierro el archivo del pokemon: Umbreon. Posicion: (1, 1).
+[INFO] 17:40:30:790 gamecard/(22088:22108): Inicia proceso envio Appeared
+[INFO] 17:40:31:498 gamecard/(22088:22094): Gestiono un nuevo cliente
+[INFO] 17:40:31:514 gamecard/(22088:22094): Espero un nuevo cliente
+[INFO] 17:40:31:520 gamecard/(22088:22119): Recibi mensaje new pokemon. El pokemon es: Pikachu. La posicion es: (1,1). La cantidad es: 11.
+[INFO] 17:40:31:522 gamecard/(22088:22119): Inicia proceso de atencion al New
+[INFO] 17:40:31:529 gamecard/(22088:22119): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 17:40:32:2 gamecard/(22088:22094): Gestiono un nuevo cliente
+[INFO] 17:40:32:4 gamecard/(22088:22094): Espero un nuevo cliente
+[INFO] 17:40:32:18 gamecard/(22088:22122): Recibi mensaje new pokemon. El pokemon es: Pikachu. La posicion es: (1,1). La cantidad es: 11.
+[INFO] 17:40:32:18 gamecard/(22088:22122): Inicia proceso de atencion al New
+[INFO] 17:40:32:18 gamecard/(22088:22122): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 17:40:32:189 gamecard/(22088:22111): Cierro el archivo del pokemon: Flareon. Posicion: (1, 1).
+[INFO] 17:40:32:190 gamecard/(22088:22111): Inicia proceso envio Appeared
+[INFO] 17:40:32:478 gamecard/(22088:22094): Gestiono un nuevo cliente
+[INFO] 17:40:32:479 gamecard/(22088:22094): Espero un nuevo cliente
+[INFO] 17:40:32:490 gamecard/(22088:22125): Recibi mensaje new pokemon. El pokemon es: Pikachu. La posicion es: (1,1). La cantidad es: 11.
+[INFO] 17:40:32:490 gamecard/(22088:22125): Inicia proceso de atencion al New
+[INFO] 17:40:32:490 gamecard/(22088:22125): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 17:40:34:323 gamecard/(22088:22114): Cierro el archivo del pokemon: Pikachu. Posicion: (1, 1).
+[INFO] 17:40:34:324 gamecard/(22088:22114): Inicia proceso envio Appeared
+[INFO] 17:40:37:22 gamecard/(22088:22122): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 17:40:37:493 gamecard/(22088:22125): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 17:40:41:561 gamecard/(22088:22119): Cierro el archivo del pokemon: Pikachu. Posicion: (1, 1).
+[INFO] 17:40:41:561 gamecard/(22088:22119): Inicia proceso envio Appeared
+[INFO] 17:40:42:494 gamecard/(22088:22125): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 17:40:47:41 gamecard/(22088:22122): Cierro el archivo del pokemon: Pikachu. Posicion: (1, 1).
+[INFO] 17:40:47:41 gamecard/(22088:22122): Inicia proceso envio Appeared
+[INFO] 17:40:52:528 gamecard/(22088:22125): Cierro el archivo del pokemon: Pikachu. Posicion: (1, 1).
+[INFO] 17:40:52:528 gamecard/(22088:22125): Inicia proceso envio Appeared
+[INFO] 17:47:24:937 gamecard/(22826:22826): Inicio de programa: Gamecard.
+[INFO] 17:47:24:974 gamecard/(22826:22826): Se encontro el directorio metadata
+[INFO] 17:47:24:975 gamecard/(22826:22826): Se encontro el archivo metadata.bin
+[INFO] 17:47:24:976 gamecard/(22826:22826): Inicio de Metadata, Tamanio bloques: 64,  Cantidad de bloques: 1024,  Magic number: TALL_GRASS
+[INFO] 17:47:25:298 gamecard/(22826:22832): Estoy escuchando
+[INFO] 17:47:25:300 gamecard/(22826:22832): Espero un nuevo cliente
+[INFO] 17:47:28:452 gamecard/(22826:22832): Gestiono un nuevo cliente
+[INFO] 17:47:28:458 gamecard/(22826:22832): Espero un nuevo cliente
+[INFO] 17:47:28:477 gamecard/(22826:22841): Recibi mensaje new pokemon. El pokemon es: Pikachu. La posicion es: (1,1). La cantidad es: 11.
+[INFO] 17:47:28:482 gamecard/(22826:22841): Inicia proceso de atencion al New
+[INFO] 17:47:28:975 gamecard/(22826:22832): Gestiono un nuevo cliente
+[INFO] 17:47:28:981 gamecard/(22826:22832): Espero un nuevo cliente
+[INFO] 17:47:28:989 gamecard/(22826:22844): Recibi mensaje new pokemon. El pokemon es: Pikachu. La posicion es: (1,1). La cantidad es: 11.
+[INFO] 17:47:28:989 gamecard/(22826:22844): Inicia proceso de atencion al New
+[INFO] 17:47:28:990 gamecard/(22826:22844): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 17:47:30:202 gamecard/(22826:22832): Gestiono un nuevo cliente
+[INFO] 17:47:30:206 gamecard/(22826:22832): Espero un nuevo cliente
+[INFO] 17:47:30:222 gamecard/(22826:22847): Recibi mensaje new pokemon. El pokemon es: Umbreon. La posicion es: (1,1). La cantidad es: 11.
+[INFO] 17:47:30:224 gamecard/(22826:22847): Inicia proceso de atencion al New
+[INFO] 17:47:30:870 gamecard/(22826:22832): Gestiono un nuevo cliente
+[INFO] 17:47:30:873 gamecard/(22826:22832): Espero un nuevo cliente
+[INFO] 17:47:30:882 gamecard/(22826:22850): Recibi mensaje new pokemon. El pokemon es: Flareon. La posicion es: (1,1). La cantidad es: 11.
+[INFO] 17:47:30:885 gamecard/(22826:22850): Inicia proceso de atencion al New
+[INFO] 17:47:31:799 gamecard/(22826:22832): Gestiono un nuevo cliente
+[INFO] 17:47:31:806 gamecard/(22826:22832): Espero un nuevo cliente
+[INFO] 17:47:31:811 gamecard/(22826:22853): Recibi mensaje new pokemon. El pokemon es: Flareon. La posicion es: (1,1). La cantidad es: 11.
+[INFO] 17:47:31:811 gamecard/(22826:22853): Inicia proceso de atencion al New
+[INFO] 17:47:31:812 gamecard/(22826:22853): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 17:47:32:827 gamecard/(22826:22832): Gestiono un nuevo cliente
+[INFO] 17:47:32:829 gamecard/(22826:22832): Espero un nuevo cliente
+[INFO] 17:47:32:840 gamecard/(22826:22856): Recibi mensaje new pokemon. El pokemon es: Pikachu. La posicion es: (1,1). La cantidad es: 11.
+[INFO] 17:47:32:840 gamecard/(22826:22856): Inicia proceso de atencion al New
+[INFO] 17:47:32:840 gamecard/(22826:22856): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 17:47:33:706 gamecard/(22826:22841): Cierro el archivo del pokemon: Pikachu. Posicion: (1, 1).
+[INFO] 17:47:33:706 gamecard/(22826:22841): Inicia proceso envio Appeared
+[INFO] 17:47:33:798 gamecard/(22826:22832): Gestiono un nuevo cliente
+[INFO] 17:47:33:817 gamecard/(22826:22832): Espero un nuevo cliente
+[INFO] 17:47:33:833 gamecard/(22826:22860): Recibi mensaje new pokemon. El pokemon es: Pikachu. La posicion es: (1,1). La cantidad es: 11.
+[INFO] 17:47:33:833 gamecard/(22826:22860): Inicia proceso de atencion al New
+[INFO] 17:47:33:993 gamecard/(22826:22844): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 17:47:34:762 gamecard/(22826:22832): Gestiono un nuevo cliente
+[INFO] 17:47:34:767 gamecard/(22826:22832): Espero un nuevo cliente
+[INFO] 17:47:34:773 gamecard/(22826:22863): Recibi mensaje new pokemon. El pokemon es: Umbreon. La posicion es: (1,1). La cantidad es: 11.
+[INFO] 17:47:34:773 gamecard/(22826:22863): Inicia proceso de atencion al New
+[INFO] 17:47:34:773 gamecard/(22826:22863): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 17:47:35:256 gamecard/(22826:22847): Cierro el archivo del pokemon: Umbreon. Posicion: (1, 1).
+[INFO] 17:47:35:256 gamecard/(22826:22847): Inicia proceso envio Appeared
+[INFO] 17:47:35:922 gamecard/(22826:22850): Cierro el archivo del pokemon: Flareon. Posicion: (1, 1).
+[INFO] 17:47:35:922 gamecard/(22826:22850): Inicia proceso envio Appeared
+[INFO] 17:47:37:843 gamecard/(22826:22856): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 17:47:38:851 gamecard/(22826:22860): Cierro el archivo del pokemon: Pikachu. Posicion: (1, 1).
+[INFO] 17:47:38:851 gamecard/(22826:22860): Inicia proceso envio Appeared
+[INFO] 17:47:41:842 gamecard/(22826:22853): Cierro el archivo del pokemon: Flareon. Posicion: (1, 1).
+[INFO] 17:47:41:842 gamecard/(22826:22853): Inicia proceso envio Appeared
+[INFO] 17:47:42:852 gamecard/(22826:22856): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 17:47:44:13 gamecard/(22826:22844): Cierro el archivo del pokemon: Pikachu. Posicion: (1, 1).
+[INFO] 17:47:44:13 gamecard/(22826:22844): Inicia proceso envio Appeared
+[INFO] 17:47:44:810 gamecard/(22826:22863): Cierro el archivo del pokemon: Umbreon. Posicion: (1, 1).
+[INFO] 17:47:44:810 gamecard/(22826:22863): Inicia proceso envio Appeared
+[INFO] 17:47:52:873 gamecard/(22826:22856): Cierro el archivo del pokemon: Pikachu. Posicion: (1, 1).
+[INFO] 17:47:52:873 gamecard/(22826:22856): Inicia proceso envio Appeared
+[INFO] 17:52:24:263 gamecard/(23471:23471): Inicio de programa: Gamecard.
+[INFO] 17:52:24:300 gamecard/(23471:23471): Se encontro el directorio metadata
+[INFO] 17:52:24:301 gamecard/(23471:23471): Se encontro el archivo metadata.bin
+[INFO] 17:52:24:302 gamecard/(23471:23471): Inicio de Metadata, Tamanio bloques: 64,  Cantidad de bloques: 1024,  Magic number: TALL_GRASS
+[INFO] 17:52:24:385 gamecard/(23471:23477): Estoy escuchando
+[INFO] 17:52:24:402 gamecard/(23471:23477): Espero un nuevo cliente
+[INFO] 17:52:26:731 gamecard/(23471:23477): Gestiono un nuevo cliente
+[INFO] 17:52:26:738 gamecard/(23471:23477): Espero un nuevo cliente
+[INFO] 17:52:26:756 gamecard/(23471:23486): Recibi mensaje new pokemon. El pokemon es: Umbreon. La posicion es: (1,1). La cantidad es: 11.
+[INFO] 17:52:26:757 gamecard/(23471:23486): Inicia proceso de atencion al New
+[INFO] 17:52:27:67 gamecard/(23471:23477): Gestiono un nuevo cliente
+[INFO] 17:52:27:73 gamecard/(23471:23477): Espero un nuevo cliente
+[INFO] 17:52:27:80 gamecard/(23471:23489): Recibi mensaje new pokemon. El pokemon es: Umbreon. La posicion es: (1,1). La cantidad es: 11.
+[INFO] 17:52:27:80 gamecard/(23471:23489): Inicia proceso de atencion al New
+[INFO] 17:52:27:80 gamecard/(23471:23489): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 17:52:27:401 gamecard/(23471:23477): Gestiono un nuevo cliente
+[INFO] 17:52:27:402 gamecard/(23471:23477): Espero un nuevo cliente
+[INFO] 17:52:27:410 gamecard/(23471:23492): Recibi mensaje new pokemon. El pokemon es: Umbreon. La posicion es: (1,1). La cantidad es: 11.
+[INFO] 17:52:27:410 gamecard/(23471:23492): Inicia proceso de atencion al New
+[INFO] 17:52:27:410 gamecard/(23471:23492): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 17:52:28:474 gamecard/(23471:23477): Gestiono un nuevo cliente
+[INFO] 17:52:28:481 gamecard/(23471:23477): Espero un nuevo cliente
+[INFO] 17:52:28:485 gamecard/(23471:23495): Recibi mensaje new pokemon. El pokemon es: Flareon. La posicion es: (1,1). La cantidad es: 11.
+[INFO] 17:52:28:486 gamecard/(23471:23495): Inicia proceso de atencion al New
+[INFO] 17:52:28:775 gamecard/(23471:23477): Gestiono un nuevo cliente
+[INFO] 17:52:28:778 gamecard/(23471:23477): Espero un nuevo cliente
+[INFO] 17:52:28:794 gamecard/(23471:23498): Recibi mensaje new pokemon. El pokemon es: Flareon. La posicion es: (1,1). La cantidad es: 11.
+[INFO] 17:52:28:794 gamecard/(23471:23498): Inicia proceso de atencion al New
+[INFO] 17:52:28:795 gamecard/(23471:23498): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 17:52:29:303 gamecard/(23471:23477): Gestiono un nuevo cliente
+[INFO] 17:52:29:310 gamecard/(23471:23477): Espero un nuevo cliente
+[INFO] 17:52:29:325 gamecard/(23471:23501): Recibi mensaje new pokemon. El pokemon es: Pikachu. La posicion es: (1,1). La cantidad es: 11.
+[INFO] 17:52:29:326 gamecard/(23471:23501): Inicia proceso de atencion al New
+[INFO] 17:52:29:669 gamecard/(23471:23477): Gestiono un nuevo cliente
+[INFO] 17:52:29:673 gamecard/(23471:23477): Espero un nuevo cliente
+[INFO] 17:52:29:680 gamecard/(23471:23504): Recibi mensaje new pokemon. El pokemon es: Flareon. La posicion es: (1,1). La cantidad es: 11.
+[INFO] 17:52:29:680 gamecard/(23471:23504): Inicia proceso de atencion al New
+[INFO] 17:52:29:680 gamecard/(23471:23504): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 17:52:30:29 gamecard/(23471:23477): Gestiono un nuevo cliente
+[INFO] 17:52:30:30 gamecard/(23471:23477): Espero un nuevo cliente
+[INFO] 17:52:30:38 gamecard/(23471:23507): Recibi mensaje new pokemon. El pokemon es: Pikachu. La posicion es: (1,1). La cantidad es: 11.
+[INFO] 17:52:30:38 gamecard/(23471:23507): Inicia proceso de atencion al New
+[INFO] 17:52:30:39 gamecard/(23471:23507): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 17:52:30:397 gamecard/(23471:23477): Gestiono un nuevo cliente
+[INFO] 17:52:30:402 gamecard/(23471:23477): Espero un nuevo cliente
+[INFO] 17:52:30:413 gamecard/(23471:23510): Recibi mensaje new pokemon. El pokemon es: Flareon. La posicion es: (1,1). La cantidad es: 11.
+[INFO] 17:52:30:413 gamecard/(23471:23510): Inicia proceso de atencion al New
+[INFO] 17:52:30:413 gamecard/(23471:23510): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 17:52:30:720 gamecard/(23471:23477): Gestiono un nuevo cliente
+[INFO] 17:52:30:726 gamecard/(23471:23477): Espero un nuevo cliente
+[INFO] 17:52:30:741 gamecard/(23471:23513): Recibi mensaje new pokemon. El pokemon es: Pikachu. La posicion es: (1,1). La cantidad es: 11.
+[INFO] 17:52:30:742 gamecard/(23471:23513): Inicia proceso de atencion al New
+[INFO] 17:52:30:742 gamecard/(23471:23513): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 17:52:31:49 gamecard/(23471:23477): Gestiono un nuevo cliente
+[INFO] 17:52:31:50 gamecard/(23471:23477): Espero un nuevo cliente
+[INFO] 17:52:31:62 gamecard/(23471:23516): Recibi mensaje new pokemon. El pokemon es: Flareon. La posicion es: (1,1). La cantidad es: 11.
+[INFO] 17:52:31:63 gamecard/(23471:23516): Inicia proceso de atencion al New
+[INFO] 17:52:31:63 gamecard/(23471:23516): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 17:52:31:776 gamecard/(23471:23477): Gestiono un nuevo cliente
+[INFO] 17:52:31:784 gamecard/(23471:23519): Recibi mensaje new pokemon. El pokemon es: Flareon. La posicion es: (1,1). La cantidad es: 11.
+[INFO] 17:52:31:784 gamecard/(23471:23519): Inicia proceso de atencion al New
+[INFO] 17:52:31:784 gamecard/(23471:23519): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 17:52:31:789 gamecard/(23471:23477): Espero un nuevo cliente
+[INFO] 17:52:31:978 gamecard/(23471:23486): Cierro el archivo del pokemon: Umbreon. Posicion: (1, 1).
+[INFO] 17:52:31:979 gamecard/(23471:23486): Inicia proceso envio Appeared
+[INFO] 17:52:32:81 gamecard/(23471:23477): Gestiono un nuevo cliente
+[INFO] 17:52:32:101 gamecard/(23471:23477): Espero un nuevo cliente
+[INFO] 17:52:32:112 gamecard/(23471:23523): Recibi mensaje new pokemon. El pokemon es: Pikachu. La posicion es: (1,1). La cantidad es: 11.
+[INFO] 17:52:32:112 gamecard/(23471:23523): Inicia proceso de atencion al New
+[INFO] 17:52:32:112 gamecard/(23471:23523): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 17:52:32:415 gamecard/(23471:23492): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 17:52:33:522 gamecard/(23471:23495): Cierro el archivo del pokemon: Flareon. Posicion: (1, 1).
+[INFO] 17:52:33:522 gamecard/(23471:23495): Inicia proceso envio Appeared
+[INFO] 17:52:33:842 gamecard/(23471:23477): Gestiono un nuevo cliente
+[INFO] 17:52:33:845 gamecard/(23471:23477): Espero un nuevo cliente
+[INFO] 17:52:33:853 gamecard/(23471:23527): Recibi mensaje new pokemon. El pokemon es: Espeon. La posicion es: (1,1). La cantidad es: 11.
+[INFO] 17:52:33:853 gamecard/(23471:23527): Inicia proceso de atencion al New
+[INFO] 17:52:34:250 gamecard/(23471:23477): Gestiono un nuevo cliente
+[INFO] 17:52:34:257 gamecard/(23471:23477): Espero un nuevo cliente
+[INFO] 17:52:34:262 gamecard/(23471:23530): Recibi mensaje new pokemon. El pokemon es: Flareon. La posicion es: (1,1). La cantidad es: 11.
+[INFO] 17:52:34:262 gamecard/(23471:23530): Inicia proceso de atencion al New
+[INFO] 17:52:34:262 gamecard/(23471:23530): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 17:52:34:359 gamecard/(23471:23501): Cierro el archivo del pokemon: Pikachu. Posicion: (1, 1).
+[INFO] 17:52:34:359 gamecard/(23471:23501): Inicia proceso envio Appeared
+[INFO] 17:52:34:690 gamecard/(23471:23504): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 17:52:34:718 gamecard/(23471:23477): Gestiono un nuevo cliente
+[INFO] 17:52:34:723 gamecard/(23471:23477): Espero un nuevo cliente
+[INFO] 17:52:34:733 gamecard/(23471:23534): Recibi mensaje new pokemon. El pokemon es: Flareon. La posicion es: (1,1). La cantidad es: 11.
+[INFO] 17:52:34:733 gamecard/(23471:23534): Inicia proceso de atencion al New
+[INFO] 17:52:34:733 gamecard/(23471:23534): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 17:52:35:417 gamecard/(23471:23510): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 17:52:35:746 gamecard/(23471:23513): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 17:52:36:71 gamecard/(23471:23516): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 17:52:36:791 gamecard/(23471:23519): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 17:52:37:113 gamecard/(23471:23523): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 17:52:37:114 gamecard/(23471:23489): Cierro el archivo del pokemon: Umbreon. Posicion: (1, 1).
+[INFO] 17:52:37:114 gamecard/(23471:23489): Inicia proceso envio Appeared
+[INFO] 17:52:38:818 gamecard/(23471:23498): Cierro el archivo del pokemon: Flareon. Posicion: (1, 1).
+[INFO] 17:52:38:818 gamecard/(23471:23498): Inicia proceso envio Appeared
+[INFO] 17:52:38:884 gamecard/(23471:23527): Cierro el archivo del pokemon: Espeon. Posicion: (1, 1).
+[INFO] 17:52:38:884 gamecard/(23471:23527): Inicia proceso envio Appeared
+[INFO] 17:52:39:691 gamecard/(23471:23504): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 17:52:39:738 gamecard/(23471:23534): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 17:52:40:54 gamecard/(23471:23507): Cierro el archivo del pokemon: Pikachu. Posicion: (1, 1).
+[INFO] 17:52:40:54 gamecard/(23471:23507): Inicia proceso envio Appeared
+[INFO] 17:52:40:420 gamecard/(23471:23510): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 17:52:41:76 gamecard/(23471:23516): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 17:52:41:797 gamecard/(23471:23519): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 17:52:42:126 gamecard/(23471:23523): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 17:52:42:473 gamecard/(23471:23492): Cierro el archivo del pokemon: Umbreon. Posicion: (1, 1).
+[INFO] 17:52:42:473 gamecard/(23471:23492): Inicia proceso envio Appeared
+[INFO] 17:52:44:294 gamecard/(23471:23530): Cierro el archivo del pokemon: Flareon. Posicion: (1, 1).
+[INFO] 17:52:44:294 gamecard/(23471:23530): Inicia proceso envio Appeared
+[INFO] 17:52:44:773 gamecard/(23471:23534): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 17:52:45:432 gamecard/(23471:23510): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 17:52:45:762 gamecard/(23471:23513): Cierro el archivo del pokemon: Pikachu. Posicion: (1, 1).
+[INFO] 17:52:45:762 gamecard/(23471:23513): Inicia proceso envio Appeared
+[INFO] 17:52:46:78 gamecard/(23471:23516): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 17:52:46:801 gamecard/(23471:23519): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 17:52:49:776 gamecard/(23471:23534): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 17:52:49:777 gamecard/(23471:23504): Cierro el archivo del pokemon: Flareon. Posicion: (1, 1).
+[INFO] 17:52:49:777 gamecard/(23471:23504): Inicia proceso envio Appeared
+[INFO] 17:52:51:83 gamecard/(23471:23516): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 17:52:51:802 gamecard/(23471:23519): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 17:52:52:148 gamecard/(23471:23523): Cierro el archivo del pokemon: Pikachu. Posicion: (1, 1).
+[INFO] 17:52:52:148 gamecard/(23471:23523): Inicia proceso envio Appeared
+[INFO] 17:52:54:781 gamecard/(23471:23534): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 17:52:55:456 gamecard/(23471:23510): Cierro el archivo del pokemon: Flareon. Posicion: (1, 1).
+[INFO] 17:52:55:456 gamecard/(23471:23510): Inicia proceso envio Appeared
+[INFO] 17:52:56:804 gamecard/(23471:23519): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 17:52:59:784 gamecard/(23471:23534): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 17:53:01:110 gamecard/(23471:23516): Cierro el archivo del pokemon: Flareon. Posicion: (1, 1).
+[INFO] 17:53:01:110 gamecard/(23471:23516): Inicia proceso envio Appeared
+[INFO] 17:53:04:786 gamecard/(23471:23534): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 17:53:06:820 gamecard/(23471:23519): Cierro el archivo del pokemon: Flareon. Posicion: (1, 1).
+[INFO] 17:53:06:821 gamecard/(23471:23519): Inicia proceso envio Appeared
+[INFO] 17:53:14:810 gamecard/(23471:23534): Cierro el archivo del pokemon: Flareon. Posicion: (1, 1).
+[INFO] 17:53:14:810 gamecard/(23471:23534): Inicia proceso envio Appeared
+[INFO] 17:58:50:614 gamecard/(24551:24551): Inicio de programa: Gamecard.
+[INFO] 17:58:50:651 gamecard/(24551:24551): Se encontro el directorio metadata
+[INFO] 17:58:50:652 gamecard/(24551:24551): Se encontro el archivo metadata.bin
+[INFO] 17:58:50:653 gamecard/(24551:24551): Inicio de Metadata, Tamanio bloques: 64,  Cantidad de bloques: 1024,  Magic number: TALL_GRASS
+[INFO] 17:58:50:733 gamecard/(24551:24557): Estoy escuchando
+[INFO] 17:58:50:740 gamecard/(24551:24557): Espero un nuevo cliente
+[INFO] 17:58:55:718 gamecard/(24551:24557): Gestiono un nuevo cliente
+[INFO] 17:58:55:719 gamecard/(24551:24557): Espero un nuevo cliente
+[INFO] 17:58:55:755 gamecard/(24551:24566): Recibi mensaje new pokemon. El pokemon es: Espeon. La posicion es: (1,1). La cantidad es: 11.
+[INFO] 17:58:55:756 gamecard/(24551:24566): Inicia proceso de atencion al New
+[INFO] 17:58:56:102 gamecard/(24551:24557): Gestiono un nuevo cliente
+[INFO] 17:58:56:105 gamecard/(24551:24557): Espero un nuevo cliente
+[INFO] 17:58:56:117 gamecard/(24551:24569): Recibi mensaje new pokemon. El pokemon es: Espeon. La posicion es: (1,1). La cantidad es: 11.
+[INFO] 17:58:56:117 gamecard/(24551:24569): Inicia proceso de atencion al New
+[INFO] 17:58:56:118 gamecard/(24551:24569): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 17:58:56:422 gamecard/(24551:24557): Gestiono un nuevo cliente
+[INFO] 17:58:56:429 gamecard/(24551:24557): Espero un nuevo cliente
+[INFO] 17:58:56:429 gamecard/(24551:24572): Recibi mensaje new pokemon. El pokemon es: Espeon. La posicion es: (1,1). La cantidad es: 11.
+[INFO] 17:58:56:429 gamecard/(24551:24572): Inicia proceso de atencion al New
+[INFO] 17:58:56:429 gamecard/(24551:24572): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 17:58:56:746 gamecard/(24551:24557): Gestiono un nuevo cliente
+[INFO] 17:58:56:758 gamecard/(24551:24557): Espero un nuevo cliente
+[INFO] 17:58:56:760 gamecard/(24551:24575): Recibi mensaje new pokemon. El pokemon es: Espeon. La posicion es: (1,1). La cantidad es: 11.
+[INFO] 17:58:56:760 gamecard/(24551:24575): Inicia proceso de atencion al New
+[INFO] 17:58:56:760 gamecard/(24551:24575): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 17:58:57:407 gamecard/(24551:24557): Gestiono un nuevo cliente
+[INFO] 17:58:57:408 gamecard/(24551:24557): Espero un nuevo cliente
+[INFO] 17:58:57:422 gamecard/(24551:24577): Recibi mensaje new pokemon. El pokemon es: Flareon. La posicion es: (1,1). La cantidad es: 11.
+[INFO] 17:58:57:422 gamecard/(24551:24577): Inicia proceso de atencion al New
+[INFO] 17:58:57:882 gamecard/(24551:24557): Gestiono un nuevo cliente
+[INFO] 17:58:57:886 gamecard/(24551:24557): Espero un nuevo cliente
+[INFO] 17:58:57:894 gamecard/(24551:24581): Recibi mensaje new pokemon. El pokemon es: Flareon. La posicion es: (1,1). La cantidad es: 11.
+[INFO] 17:58:57:895 gamecard/(24551:24581): Inicia proceso de atencion al New
+[INFO] 17:58:57:895 gamecard/(24551:24581): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 17:58:58:951 gamecard/(24551:24557): Gestiono un nuevo cliente
+[INFO] 17:58:58:957 gamecard/(24551:24557): Espero un nuevo cliente
+[INFO] 17:58:58:962 gamecard/(24551:24584): Recibi mensaje new pokemon. El pokemon es: Pikachu. La posicion es: (1,1). La cantidad es: 11.
+[INFO] 17:58:58:962 gamecard/(24551:24584): Inicia proceso de atencion al New
+[INFO] 17:58:59:370 gamecard/(24551:24557): Gestiono un nuevo cliente
+[INFO] 17:58:59:376 gamecard/(24551:24557): Espero un nuevo cliente
+[INFO] 17:58:59:383 gamecard/(24551:24587): Recibi mensaje new pokemon. El pokemon es: Espeon. La posicion es: (1,1). La cantidad es: 11.
+[INFO] 17:58:59:384 gamecard/(24551:24587): Inicia proceso de atencion al New
+[INFO] 17:58:59:384 gamecard/(24551:24587): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 17:58:59:840 gamecard/(24551:24557): Gestiono un nuevo cliente
+[INFO] 17:58:59:844 gamecard/(24551:24557): Espero un nuevo cliente
+[INFO] 17:58:59:849 gamecard/(24551:24590): Recibi mensaje new pokemon. El pokemon es: Flareon. La posicion es: (1,1). La cantidad es: 11.
+[INFO] 17:58:59:849 gamecard/(24551:24590): Inicia proceso de atencion al New
+[INFO] 17:58:59:849 gamecard/(24551:24590): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 17:59:01:25 gamecard/(24551:24566): Cierro el archivo del pokemon: Espeon. Posicion: (1, 1).
+[INFO] 17:59:01:26 gamecard/(24551:24566): Inicia proceso envio Appeared
+[INFO] 17:59:01:439 gamecard/(24551:24572): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 17:59:01:763 gamecard/(24551:24575): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 17:59:02:458 gamecard/(24551:24577): Cierro el archivo del pokemon: Flareon. Posicion: (1, 1).
+[INFO] 17:59:02:458 gamecard/(24551:24577): Inicia proceso envio Appeared
+[INFO] 17:59:03:988 gamecard/(24551:24584): Cierro el archivo del pokemon: Pikachu. Posicion: (1, 1).
+[INFO] 17:59:03:988 gamecard/(24551:24584): Inicia proceso envio Appeared
+[INFO] 17:59:04:386 gamecard/(24551:24587): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 17:59:04:863 gamecard/(24551:24590): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 17:59:06:135 gamecard/(24551:24569): Cierro el archivo del pokemon: Espeon. Posicion: (1, 1).
+[INFO] 17:59:06:135 gamecard/(24551:24569): Inicia proceso envio Appeared
+[INFO] 17:59:06:765 gamecard/(24551:24575): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 17:59:07:913 gamecard/(24551:24581): Cierro el archivo del pokemon: Flareon. Posicion: (1, 1).
+[INFO] 17:59:07:913 gamecard/(24551:24581): Inicia proceso envio Appeared
+[INFO] 17:59:09:387 gamecard/(24551:24587): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 17:59:10:564 gamecard/(24551:24557): Gestiono un nuevo cliente
+[INFO] 17:59:10:577 gamecard/(24551:24557): Espero un nuevo cliente
+[INFO] 17:59:10:577 gamecard/(24551:24599): Recibi mensaje new pokemon. El pokemon es: Pikachu. La posicion es: (1,9). La cantidad es: 3.
+[INFO] 17:59:10:577 gamecard/(24551:24599): Inicia proceso de atencion al New
+[INFO] 17:59:10:593 gamecard/(24551:24557): Gestiono un nuevo cliente
+[INFO] 17:59:10:593 gamecard/(24551:24557): Espero un nuevo cliente
+[INFO] 17:59:10:601 gamecard/(24551:24602): Recibi mensaje new pokemon. El pokemon es: Charmander. La posicion es: (4,1). La cantidad es: 101.
+[INFO] 17:59:10:602 gamecard/(24551:24602): Inicia proceso de atencion al New
+[INFO] 17:59:10:607 gamecard/(24551:24557): Gestiono un nuevo cliente
+[INFO] 17:59:10:609 gamecard/(24551:24557): Espero un nuevo cliente
+[INFO] 17:59:10:625 gamecard/(24551:24605): Recibi mensaje new pokemon. El pokemon es: Charmander. La posicion es: (517,2046). La cantidad es: 15.
+[INFO] 17:59:10:625 gamecard/(24551:24605): Inicia proceso de atencion al New
+[INFO] 17:59:10:625 gamecard/(24551:24605): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 17:59:10:632 gamecard/(24551:24557): Gestiono un nuevo cliente
+[INFO] 17:59:10:639 gamecard/(24551:24557): Espero un nuevo cliente
+[INFO] 17:59:10:645 gamecard/(24551:24608): Recibi mensaje new pokemon. El pokemon es: Charmander. La posicion es: (413,17). La cantidad es: 1.
+[INFO] 17:59:10:646 gamecard/(24551:24608): Inicia proceso de atencion al New
+[INFO] 17:59:10:668 gamecard/(24551:24557): Gestiono un nuevo cliente
+[INFO] 17:59:10:674 gamecard/(24551:24557): Espero un nuevo cliente
+[INFO] 17:59:10:675 gamecard/(24551:24608): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 17:59:10:686 gamecard/(24551:24611): Recibi mensaje new pokemon. El pokemon es: Charmander. La posicion es: (723,97). La cantidad es: 29.
+[INFO] 17:59:10:686 gamecard/(24551:24611): Inicia proceso de atencion al New
+[INFO] 17:59:10:686 gamecard/(24551:24611): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 17:59:10:695 gamecard/(24551:24557): Gestiono un nuevo cliente
+[INFO] 17:59:10:709 gamecard/(24551:24557): Espero un nuevo cliente
+[INFO] 17:59:10:717 gamecard/(24551:24614): Recibi mensaje new pokemon. El pokemon es: Charmander. La posicion es: (65,93). La cantidad es: 3001.
+[INFO] 17:59:10:717 gamecard/(24551:24614): Inicia proceso de atencion al New
+[INFO] 17:59:10:717 gamecard/(24551:24614): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 17:59:10:741 gamecard/(24551:24557): Gestiono un nuevo cliente
+[INFO] 17:59:10:750 gamecard/(24551:24557): Espero un nuevo cliente
+[INFO] 17:59:10:753 gamecard/(24551:24617): Recibi mensaje new pokemon. El pokemon es: Charmander. La posicion es: (12,17). La cantidad es: 34.
+[INFO] 17:59:10:753 gamecard/(24551:24617): Inicia proceso de atencion al New
+[INFO] 17:59:10:753 gamecard/(24551:24617): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 17:59:10:762 gamecard/(24551:24557): Gestiono un nuevo cliente
+[INFO] 17:59:10:766 gamecard/(24551:24557): Espero un nuevo cliente
+[INFO] 17:59:10:771 gamecard/(24551:24620): Recibi mensaje new pokemon. El pokemon es: Charmander. La posicion es: (129,547). La cantidad es: 11.
+[INFO] 17:59:10:772 gamecard/(24551:24620): Inicia proceso de atencion al New
+[INFO] 17:59:10:772 gamecard/(24551:24620): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 17:59:11:465 gamecard/(24551:24572): Cierro el archivo del pokemon: Espeon. Posicion: (1, 1).
+[INFO] 17:59:11:466 gamecard/(24551:24572): Inicia proceso envio Appeared
+[INFO] 17:59:14:389 gamecard/(24551:24587): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 17:59:14:887 gamecard/(24551:24590): Cierro el archivo del pokemon: Flareon. Posicion: (1, 1).
+[INFO] 17:59:14:887 gamecard/(24551:24590): Inicia proceso envio Appeared
+[INFO] 17:59:15:611 gamecard/(24551:24599): Cierro el archivo del pokemon: Pikachu. Posicion: (1, 9).
+[INFO] 17:59:15:612 gamecard/(24551:24599): Inicia proceso envio Appeared
+[INFO] 17:59:15:643 gamecard/(24551:24605): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 17:59:15:681 gamecard/(24551:24602): Cierro el archivo del pokemon: Charmander. Posicion: (4, 1).
+[INFO] 17:59:15:681 gamecard/(24551:24602): Inicia proceso envio Appeared
+[INFO] 17:59:15:693 gamecard/(24551:24611): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 17:59:15:725 gamecard/(24551:24614): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 17:59:15:757 gamecard/(24551:24617): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 17:59:15:787 gamecard/(24551:24620): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 17:59:16:790 gamecard/(24551:24575): Cierro el archivo del pokemon: Espeon. Posicion: (1, 1).
+[INFO] 17:59:16:790 gamecard/(24551:24575): Inicia proceso envio Appeared
+[INFO] 17:59:20:645 gamecard/(24551:24605): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 17:59:20:687 gamecard/(24551:24608): Cierro el archivo del pokemon: Charmander. Posicion: (413, 17).
+[INFO] 17:59:20:687 gamecard/(24551:24608): Inicia proceso envio Appeared
+[INFO] 17:59:20:727 gamecard/(24551:24614): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 17:59:20:759 gamecard/(24551:24617): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 17:59:20:788 gamecard/(24551:24620): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 17:59:24:406 gamecard/(24551:24587): Cierro el archivo del pokemon: Espeon. Posicion: (1, 1).
+[INFO] 17:59:24:406 gamecard/(24551:24587): Inicia proceso envio Appeared
+[INFO] 17:59:25:653 gamecard/(24551:24605): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 17:59:25:736 gamecard/(24551:24611): Cierro el archivo del pokemon: Charmander. Posicion: (723, 97).
+[INFO] 17:59:25:736 gamecard/(24551:24611): Inicia proceso envio Appeared
+[INFO] 17:59:25:764 gamecard/(24551:24617): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 17:59:25:790 gamecard/(24551:24620): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 17:59:30:654 gamecard/(24551:24605): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 17:59:30:753 gamecard/(24551:24614): Cierro el archivo del pokemon: Charmander. Posicion: (65, 93).
+[INFO] 17:59:30:753 gamecard/(24551:24614): Inicia proceso envio Appeared
+[INFO] 17:59:30:793 gamecard/(24551:24620): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 17:59:35:656 gamecard/(24551:24605): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 17:59:35:801 gamecard/(24551:24620): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 17:59:35:810 gamecard/(24551:24617): Cierro el archivo del pokemon: Charmander. Posicion: (12, 17).
+[INFO] 17:59:35:810 gamecard/(24551:24617): Inicia proceso envio Appeared
+[INFO] 17:59:40:803 gamecard/(24551:24620): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 17:59:45:674 gamecard/(24551:24605): Cierro el archivo del pokemon: Charmander. Posicion: (517, 2046).
+[INFO] 17:59:45:674 gamecard/(24551:24605): Inicia proceso envio Appeared
+[INFO] 17:59:50:845 gamecard/(24551:24620): Cierro el archivo del pokemon: Charmander. Posicion: (129, 547).
+[INFO] 17:59:50:845 gamecard/(24551:24620): Inicia proceso envio Appeared
+[INFO] 18:07:26:834 gamecard/(25369:25369): Inicio de programa: Gamecard.
+[INFO] 18:07:26:871 gamecard/(25369:25369): Se encontro el directorio metadata
+[INFO] 18:07:26:872 gamecard/(25369:25369): Se encontro el archivo metadata.bin
+[INFO] 18:07:26:873 gamecard/(25369:25369): Inicio de Metadata, Tamanio bloques: 64,  Cantidad de bloques: 1024,  Magic number: TALL_GRASS
+[INFO] 18:07:26:982 gamecard/(25369:25375): Estoy escuchando
+[INFO] 18:07:26:984 gamecard/(25369:25375): Espero un nuevo cliente
+[INFO] 18:07:29:199 gamecard/(25369:25375): Gestiono un nuevo cliente
+[INFO] 18:07:29:206 gamecard/(25369:25375): Espero un nuevo cliente
+[INFO] 18:07:29:224 gamecard/(25369:25375): Gestiono un nuevo cliente
+[INFO] 18:07:29:227 gamecard/(25369:25385): Recibi mensaje new pokemon. El pokemon es: Pikachu. La posicion es: (1,9). La cantidad es: 3.
+[INFO] 18:07:29:228 gamecard/(25369:25385): Inicia proceso de atencion al New
+[INFO] 18:07:29:229 gamecard/(25369:25375): Espero un nuevo cliente
+[INFO] 18:07:29:239 gamecard/(25369:25388): Recibi mensaje new pokemon. El pokemon es: Charmander. La posicion es: (4,1). La cantidad es: 101.
+[INFO] 18:07:29:239 gamecard/(25369:25388): Inicia proceso de atencion al New
+[INFO] 18:07:29:250 gamecard/(25369:25375): Gestiono un nuevo cliente
+[INFO] 18:07:29:262 gamecard/(25369:25391): Recibi mensaje new pokemon. El pokemon es: Charmander. La posicion es: (517,2046). La cantidad es: 15.
+[INFO] 18:07:29:263 gamecard/(25369:25391): Inicia proceso de atencion al New
+[INFO] 18:07:29:274 gamecard/(25369:25375): Espero un nuevo cliente
+[INFO] 18:07:29:278 gamecard/(25369:25375): Gestiono un nuevo cliente
+[INFO] 18:07:29:291 gamecard/(25369:25375): Espero un nuevo cliente
+[INFO] 18:07:29:322 gamecard/(25369:25394): Recibi mensaje new pokemon. El pokemon es: Charmander. La posicion es: (413,17). La cantidad es: 1.
+[INFO] 18:07:29:322 gamecard/(25369:25394): Inicia proceso de atencion al New
+[INFO] 18:07:29:322 gamecard/(25369:25394): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 18:07:29:341 gamecard/(25369:25375): Gestiono un nuevo cliente
+[INFO] 18:07:29:358 gamecard/(25369:25375): Espero un nuevo cliente
+[INFO] 18:07:29:373 gamecard/(25369:25397): Recibi mensaje new pokemon. El pokemon es: Charmander. La posicion es: (723,97). La cantidad es: 29.
+[INFO] 18:07:29:373 gamecard/(25369:25397): Inicia proceso de atencion al New
+[INFO] 18:07:29:374 gamecard/(25369:25397): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 18:07:29:381 gamecard/(25369:25375): Gestiono un nuevo cliente
+[INFO] 18:07:29:385 gamecard/(25369:25375): Espero un nuevo cliente
+[INFO] 18:07:29:406 gamecard/(25369:25400): Recibi mensaje new pokemon. El pokemon es: Charmander. La posicion es: (65,93). La cantidad es: 3001.
+[INFO] 18:07:29:406 gamecard/(25369:25400): Inicia proceso de atencion al New
+[INFO] 18:07:29:407 gamecard/(25369:25400): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 18:07:29:421 gamecard/(25369:25375): Gestiono un nuevo cliente
+[INFO] 18:07:29:429 gamecard/(25369:25375): Espero un nuevo cliente
+[INFO] 18:07:29:452 gamecard/(25369:25403): Recibi mensaje new pokemon. El pokemon es: Charmander. La posicion es: (12,17). La cantidad es: 34.
+[INFO] 18:07:29:452 gamecard/(25369:25403): Inicia proceso de atencion al New
+[INFO] 18:07:29:452 gamecard/(25369:25403): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 18:07:29:457 gamecard/(25369:25375): Gestiono un nuevo cliente
+[INFO] 18:07:29:461 gamecard/(25369:25375): Espero un nuevo cliente
+[INFO] 18:07:29:473 gamecard/(25369:25406): Recibi mensaje new pokemon. El pokemon es: Charmander. La posicion es: (129,547). La cantidad es: 11.
+[INFO] 18:07:29:473 gamecard/(25369:25406): Inicia proceso de atencion al New
+[INFO] 18:07:29:474 gamecard/(25369:25406): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 18:07:31:250 gamecard/(25369:25375): Gestiono un nuevo cliente
+[INFO] 18:07:31:254 gamecard/(25369:25375): Espero un nuevo cliente
+[INFO] 18:07:31:265 gamecard/(25369:25409): Recibi mensaje new pokemon. El pokemon es: Espeon. La posicion es: (1,1). La cantidad es: 11.
+[INFO] 18:07:31:265 gamecard/(25369:25409): Inicia proceso de atencion al New
+[INFO] 18:07:32:449 gamecard/(25369:25375): Gestiono un nuevo cliente
+[INFO] 18:07:32:455 gamecard/(25369:25375): Espero un nuevo cliente
+[INFO] 18:07:32:465 gamecard/(25369:25413): Recibi mensaje new pokemon. El pokemon es: Pikachu. La posicion es: (1,9). La cantidad es: 3.
+[INFO] 18:07:32:465 gamecard/(25369:25413): Inicia proceso de atencion al New
+[INFO] 18:07:32:465 gamecard/(25369:25413): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 18:07:32:473 gamecard/(25369:25375): Gestiono un nuevo cliente
+[INFO] 18:07:32:478 gamecard/(25369:25375): Espero un nuevo cliente
+[INFO] 18:07:32:482 gamecard/(25369:25416): Recibi mensaje new pokemon. El pokemon es: Charmander. La posicion es: (4,1). La cantidad es: 101.
+[INFO] 18:07:32:482 gamecard/(25369:25416): Inicia proceso de atencion al New
+[INFO] 18:07:32:482 gamecard/(25369:25416): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 18:07:32:497 gamecard/(25369:25375): Gestiono un nuevo cliente
+[INFO] 18:07:32:501 gamecard/(25369:25375): Espero un nuevo cliente
+[INFO] 18:07:32:509 gamecard/(25369:25419): Recibi mensaje new pokemon. El pokemon es: Charmander. La posicion es: (517,2046). La cantidad es: 15.
+[INFO] 18:07:32:509 gamecard/(25369:25419): Inicia proceso de atencion al New
+[INFO] 18:07:32:510 gamecard/(25369:25419): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 18:07:32:519 gamecard/(25369:25375): Gestiono un nuevo cliente
+[INFO] 18:07:32:537 gamecard/(25369:25375): Espero un nuevo cliente
+[INFO] 18:07:32:543 gamecard/(25369:25422): Recibi mensaje new pokemon. El pokemon es: Charmander. La posicion es: (413,17). La cantidad es: 1.
+[INFO] 18:07:32:543 gamecard/(25369:25422): Inicia proceso de atencion al New
+[INFO] 18:07:32:543 gamecard/(25369:25422): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 18:07:32:550 gamecard/(25369:25375): Gestiono un nuevo cliente
+[INFO] 18:07:32:553 gamecard/(25369:25375): Espero un nuevo cliente
+[INFO] 18:07:32:566 gamecard/(25369:25425): Recibi mensaje new pokemon. El pokemon es: Charmander. La posicion es: (723,97). La cantidad es: 29.
+[INFO] 18:07:32:566 gamecard/(25369:25425): Inicia proceso de atencion al New
+[INFO] 18:07:32:566 gamecard/(25369:25425): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 18:07:32:588 gamecard/(25369:25375): Gestiono un nuevo cliente
+[INFO] 18:07:32:589 gamecard/(25369:25375): Espero un nuevo cliente
+[INFO] 18:07:32:595 gamecard/(25369:25428): Recibi mensaje new pokemon. El pokemon es: Charmander. La posicion es: (65,93). La cantidad es: 3001.
+[INFO] 18:07:32:595 gamecard/(25369:25428): Inicia proceso de atencion al New
+[INFO] 18:07:32:595 gamecard/(25369:25428): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 18:07:32:602 gamecard/(25369:25375): Gestiono un nuevo cliente
+[INFO] 18:07:32:606 gamecard/(25369:25375): Espero un nuevo cliente
+[INFO] 18:07:32:611 gamecard/(25369:25431): Recibi mensaje new pokemon. El pokemon es: Charmander. La posicion es: (12,17). La cantidad es: 34.
+[INFO] 18:07:32:611 gamecard/(25369:25431): Inicia proceso de atencion al New
+[INFO] 18:07:32:611 gamecard/(25369:25431): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 18:07:32:625 gamecard/(25369:25375): Gestiono un nuevo cliente
+[INFO] 18:07:32:636 gamecard/(25369:25375): Espero un nuevo cliente
+[INFO] 18:07:32:646 gamecard/(25369:25434): Recibi mensaje new pokemon. El pokemon es: Charmander. La posicion es: (129,547). La cantidad es: 11.
+[INFO] 18:07:32:646 gamecard/(25369:25434): Inicia proceso de atencion al New
+[INFO] 18:07:32:647 gamecard/(25369:25434): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 18:07:34:336 gamecard/(25369:25394): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 18:07:34:381 gamecard/(25369:25397): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 18:07:34:421 gamecard/(25369:25400): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 18:07:34:456 gamecard/(25369:25403): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 18:07:34:457 gamecard/(25369:25385): Cierro el archivo del pokemon: Pikachu. Posicion: (1, 9).
+[INFO] 18:07:34:457 gamecard/(25369:25385): Inicia proceso envio Appeared
+[INFO] 18:07:34:461 gamecard/(25369:25388): Cierro el archivo del pokemon: Charmander. Posicion: (4, 1).
+[INFO] 18:07:34:461 gamecard/(25369:25388): Inicia proceso envio Appeared
+[INFO] 18:07:34:484 gamecard/(25369:25391): Cierro el archivo del pokemon: Charmander. Posicion: (517, 2046).
+[INFO] 18:07:34:484 gamecard/(25369:25391): Inicia proceso envio Appeared
+[INFO] 18:07:36:294 gamecard/(25369:25409): Cierro el archivo del pokemon: Espeon. Posicion: (1, 1).
+[INFO] 18:07:36:294 gamecard/(25369:25409): Inicia proceso envio Appeared
+[INFO] 18:07:36:566 gamecard/(25369:25375): Gestiono un nuevo cliente
+[INFO] 18:07:36:573 gamecard/(25369:25375): Espero un nuevo cliente
+[INFO] 18:07:36:578 gamecard/(25369:25441): Recibi mensaje new pokemon. El pokemon es: Espeon. La posicion es: (1,1). La cantidad es: 11.
+[INFO] 18:07:36:578 gamecard/(25369:25441): Inicia proceso de atencion al New
+[INFO] 18:07:36:834 gamecard/(25369:25375): Gestiono un nuevo cliente
+[INFO] 18:07:36:837 gamecard/(25369:25375): Espero un nuevo cliente
+[INFO] 18:07:36:845 gamecard/(25369:25444): Recibi mensaje new pokemon. El pokemon es: Espeon. La posicion es: (1,1). La cantidad es: 11.
+[INFO] 18:07:36:845 gamecard/(25369:25444): Inicia proceso de atencion al New
+[INFO] 18:07:36:845 gamecard/(25369:25444): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 18:07:37:64 gamecard/(25369:25375): Gestiono un nuevo cliente
+[INFO] 18:07:37:64 gamecard/(25369:25375): Espero un nuevo cliente
+[INFO] 18:07:37:70 gamecard/(25369:25447): Recibi mensaje new pokemon. El pokemon es: Espeon. La posicion es: (1,1). La cantidad es: 11.
+[INFO] 18:07:37:70 gamecard/(25369:25447): Inicia proceso de atencion al New
+[INFO] 18:07:37:70 gamecard/(25369:25447): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 18:07:37:247 gamecard/(25369:25375): Gestiono un nuevo cliente
+[INFO] 18:07:37:253 gamecard/(25369:25375): Espero un nuevo cliente
+[INFO] 18:07:37:258 gamecard/(25369:25450): Recibi mensaje new pokemon. El pokemon es: Espeon. La posicion es: (1,1). La cantidad es: 11.
+[INFO] 18:07:37:258 gamecard/(25369:25450): Inicia proceso de atencion al New
+[INFO] 18:07:37:258 gamecard/(25369:25450): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 18:07:37:489 gamecard/(25369:25416): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 18:07:37:524 gamecard/(25369:25419): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 18:07:37:555 gamecard/(25369:25422): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 18:07:37:582 gamecard/(25369:25425): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 18:07:37:607 gamecard/(25369:25428): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 18:07:37:616 gamecard/(25369:25431): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 18:07:37:654 gamecard/(25369:25434): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 18:07:39:338 gamecard/(25369:25394): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 18:07:39:382 gamecard/(25369:25397): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 18:07:39:422 gamecard/(25369:25400): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 18:07:39:466 gamecard/(25369:25403): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 18:07:39:542 gamecard/(25369:25406): Cierro el archivo del pokemon: Charmander. Posicion: (129, 547).
+[INFO] 18:07:39:542 gamecard/(25369:25406): Inicia proceso envio Appeared
+[INFO] 18:07:41:614 gamecard/(25369:25441): Cierro el archivo del pokemon: Espeon. Posicion: (1, 1).
+[INFO] 18:07:41:614 gamecard/(25369:25441): Inicia proceso envio Appeared
+[INFO] 18:07:42:90 gamecard/(25369:25447): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 18:07:42:274 gamecard/(25369:25450): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 18:07:42:485 gamecard/(25369:25413): Cierro el archivo del pokemon: Pikachu. Posicion: (1, 9).
+[INFO] 18:07:42:486 gamecard/(25369:25413): Inicia proceso envio Appeared
+[INFO] 18:07:42:529 gamecard/(25369:25419): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 18:07:42:565 gamecard/(25369:25422): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 18:07:42:584 gamecard/(25369:25425): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 18:07:42:608 gamecard/(25369:25428): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 18:07:42:617 gamecard/(25369:25431): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 18:07:42:658 gamecard/(25369:25434): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 18:07:44:341 gamecard/(25369:25394): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 18:07:44:383 gamecard/(25369:25397): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 18:07:44:429 gamecard/(25369:25400): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 18:07:44:473 gamecard/(25369:25403): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 18:07:46:861 gamecard/(25369:25444): Cierro el archivo del pokemon: Espeon. Posicion: (1, 1).
+[INFO] 18:07:46:861 gamecard/(25369:25444): Inicia proceso envio Appeared
+[INFO] 18:07:47:277 gamecard/(25369:25450): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 18:07:47:521 gamecard/(25369:25416): Cierro el archivo del pokemon: Charmander. Posicion: (4, 1).
+[INFO] 18:07:47:521 gamecard/(25369:25416): Inicia proceso envio Appeared
+[INFO] 18:07:47:570 gamecard/(25369:25422): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 18:07:47:586 gamecard/(25369:25425): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 18:07:47:610 gamecard/(25369:25428): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 18:07:47:620 gamecard/(25369:25431): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 18:07:47:660 gamecard/(25369:25434): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 18:07:49:343 gamecard/(25369:25394): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 18:07:49:385 gamecard/(25369:25397): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 18:07:49:431 gamecard/(25369:25400): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 18:07:49:476 gamecard/(25369:25403): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 18:07:52:102 gamecard/(25369:25447): Cierro el archivo del pokemon: Espeon. Posicion: (1, 1).
+[INFO] 18:07:52:102 gamecard/(25369:25447): Inicia proceso envio Appeared
+[INFO] 18:07:52:594 gamecard/(25369:25425): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 18:07:52:594 gamecard/(25369:25422): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 18:07:52:613 gamecard/(25369:25428): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 18:07:52:633 gamecard/(25369:25431): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 18:07:52:650 gamecard/(25369:25419): Cierro el archivo del pokemon: Charmander. Posicion: (517, 2046).
+[INFO] 18:07:52:650 gamecard/(25369:25419): Inicia proceso envio Appeared
+[INFO] 18:07:54:348 gamecard/(25369:25394): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 18:07:54:386 gamecard/(25369:25397): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 18:07:54:437 gamecard/(25369:25400): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 18:07:54:477 gamecard/(25369:25403): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 18:07:57:306 gamecard/(25369:25450): Cierro el archivo del pokemon: Espeon. Posicion: (1, 1).
+[INFO] 18:07:57:307 gamecard/(25369:25450): Inicia proceso envio Appeared
+[INFO] 18:07:57:598 gamecard/(25369:25425): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 18:07:57:599 gamecard/(25369:25422): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 18:07:57:616 gamecard/(25369:25428): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 18:07:57:654 gamecard/(25369:25431): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 18:07:57:706 gamecard/(25369:25434): Cierro el archivo del pokemon: Charmander. Posicion: (129, 547).
+[INFO] 18:07:57:707 gamecard/(25369:25434): Inicia proceso envio Appeared
+[INFO] 18:07:59:388 gamecard/(25369:25397): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 18:07:59:438 gamecard/(25369:25400): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 18:07:59:479 gamecard/(25369:25403): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 18:08:02:600 gamecard/(25369:25422): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 18:08:02:601 gamecard/(25369:25425): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 18:08:02:617 gamecard/(25369:25428): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 18:08:02:655 gamecard/(25369:25431): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 18:08:04:390 gamecard/(25369:25397): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 18:08:04:413 gamecard/(25369:25394): Cierro el archivo del pokemon: Charmander. Posicion: (413, 17).
+[INFO] 18:08:04:414 gamecard/(25369:25394): Inicia proceso envio Appeared
+[INFO] 18:08:04:482 gamecard/(25369:25403): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 18:08:07:605 gamecard/(25369:25425): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 18:08:07:605 gamecard/(25369:25422): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 18:08:07:622 gamecard/(25369:25428): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 18:08:07:656 gamecard/(25369:25431): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 18:08:09:394 gamecard/(25369:25397): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 18:08:09:483 gamecard/(25369:25403): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 18:08:09:500 gamecard/(25369:25400): Cierro el archivo del pokemon: Charmander. Posicion: (65, 93).
+[INFO] 18:08:09:500 gamecard/(25369:25400): Inicia proceso envio Appeared
+[INFO] 18:08:12:608 gamecard/(25369:25425): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 18:08:12:623 gamecard/(25369:25428): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 18:08:12:658 gamecard/(25369:25431): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 18:08:14:397 gamecard/(25369:25397): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 18:08:14:484 gamecard/(25369:25403): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 18:08:17:611 gamecard/(25369:25425): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 18:08:17:626 gamecard/(25369:25428): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 18:08:17:630 gamecard/(25369:25422): Cierro el archivo del pokemon: Charmander. Posicion: (413, 17).
+[INFO] 18:08:17:630 gamecard/(25369:25422): Inicia proceso envio Appeared
+[INFO] 18:08:19:413 gamecard/(25369:25397): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 18:08:19:485 gamecard/(25369:25403): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 18:08:22:616 gamecard/(25369:25425): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 18:08:22:627 gamecard/(25369:25428): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 18:08:22:693 gamecard/(25369:25431): Cierro el archivo del pokemon: Charmander. Posicion: (12, 17).
+[INFO] 18:08:22:693 gamecard/(25369:25431): Inicia proceso envio Appeared
+[INFO] 18:08:24:489 gamecard/(25369:25403): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 18:08:27:619 gamecard/(25369:25425): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 18:08:27:628 gamecard/(25369:25428): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 18:08:29:448 gamecard/(25369:25397): Cierro el archivo del pokemon: Charmander. Posicion: (723, 97).
+[INFO] 18:08:29:448 gamecard/(25369:25397): Inicia proceso envio Appeared
+[INFO] 18:08:32:620 gamecard/(25369:25425): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 18:08:32:637 gamecard/(25369:25428): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 18:08:34:545 gamecard/(25369:25403): Cierro el archivo del pokemon: Charmander. Posicion: (12, 17).
+[INFO] 18:08:34:545 gamecard/(25369:25403): Inicia proceso envio Appeared
+[INFO] 18:08:37:638 gamecard/(25369:25428): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 18:08:42:640 gamecard/(25369:25428): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 18:08:42:661 gamecard/(25369:25425): Cierro el archivo del pokemon: Charmander. Posicion: (723, 97).
+[INFO] 18:08:42:661 gamecard/(25369:25425): Inicia proceso envio Appeared
+[INFO] 18:08:47:74 gamecard/(25369:25376): Conexión fallida con el Broker
+
+[INFO] 18:08:47:75 gamecard/(25369:25377): Conexión fallida con el Broker
+
+[INFO] 18:08:47:75 gamecard/(25369:25378): Conexión fallida con el Broker
+
+[INFO] 18:08:47:75 gamecard/(25369:25376): Reintentando conexión en 10 segundos...
+
+[INFO] 18:08:47:76 gamecard/(25369:25378): Reintentando conexión en 10 segundos...
+
+[INFO] 18:08:47:76 gamecard/(25369:25377): Reintentando conexión en 10 segundos...
+
+[INFO] 18:16:19:792 gamecard/(26256:26256): Inicio de programa: Gamecard.
+[INFO] 18:16:19:829 gamecard/(26256:26256): Se encontro el directorio metadata
+[INFO] 18:16:19:830 gamecard/(26256:26256): Se encontro el archivo metadata.bin
+[INFO] 18:16:19:833 gamecard/(26256:26256): Inicio de Metadata, Tamanio bloques: 64,  Cantidad de bloques: 1024,  Magic number: TALL_GRASS
+[INFO] 18:16:19:911 gamecard/(26256:26264): Estoy escuchando
+[INFO] 18:16:19:913 gamecard/(26256:26264): Espero un nuevo cliente
+[INFO] 18:16:23:29 gamecard/(26256:26264): Gestiono un nuevo cliente
+[INFO] 18:16:23:33 gamecard/(26256:26264): Espero un nuevo cliente
+[INFO] 18:16:23:51 gamecard/(26256:26264): Gestiono un nuevo cliente
+[INFO] 18:16:23:54 gamecard/(26256:26274): Recibi mensaje new pokemon. El pokemon es: Pikachu. La posicion es: (1,9). La cantidad es: 3.
+[INFO] 18:16:23:57 gamecard/(26256:26264): Espero un nuevo cliente
+[INFO] 18:16:23:59 gamecard/(26256:26274): Inicia proceso de atencion al New
+[INFO] 18:16:23:65 gamecard/(26256:26277): Recibi mensaje new pokemon. El pokemon es: Charmander. La posicion es: (4,1). La cantidad es: 101.
+[INFO] 18:16:23:65 gamecard/(26256:26277): Inicia proceso de atencion al New
+[INFO] 18:16:23:84 gamecard/(26256:26264): Gestiono un nuevo cliente
+[INFO] 18:16:23:90 gamecard/(26256:26264): Espero un nuevo cliente
+[INFO] 18:16:23:94 gamecard/(26256:26280): Recibi mensaje new pokemon. El pokemon es: Charmander. La posicion es: (517,2046). La cantidad es: 15.
+[INFO] 18:16:23:94 gamecard/(26256:26280): Inicia proceso de atencion al New
+[INFO] 18:16:23:102 gamecard/(26256:26264): Gestiono un nuevo cliente
+[INFO] 18:16:23:120 gamecard/(26256:26264): Espero un nuevo cliente
+[INFO] 18:16:23:126 gamecard/(26256:26283): Recibi mensaje new pokemon. El pokemon es: Charmander. La posicion es: (413,17). La cantidad es: 1.
+[INFO] 18:16:23:126 gamecard/(26256:26283): Inicia proceso de atencion al New
+[INFO] 18:16:23:138 gamecard/(26256:26283): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 18:16:23:143 gamecard/(26256:26264): Gestiono un nuevo cliente
+[INFO] 18:16:23:158 gamecard/(26256:26264): Espero un nuevo cliente
+[INFO] 18:16:23:162 gamecard/(26256:26286): Recibi mensaje new pokemon. El pokemon es: Charmander. La posicion es: (723,97). La cantidad es: 29.
+[INFO] 18:16:23:162 gamecard/(26256:26286): Inicia proceso de atencion al New
+[INFO] 18:16:23:162 gamecard/(26256:26286): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 18:16:23:178 gamecard/(26256:26264): Gestiono un nuevo cliente
+[INFO] 18:16:23:183 gamecard/(26256:26264): Espero un nuevo cliente
+[INFO] 18:16:23:197 gamecard/(26256:26289): Recibi mensaje new pokemon. El pokemon es: Charmander. La posicion es: (65,93). La cantidad es: 3001.
+[INFO] 18:16:23:197 gamecard/(26256:26289): Inicia proceso de atencion al New
+[INFO] 18:16:23:197 gamecard/(26256:26289): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 18:16:23:211 gamecard/(26256:26264): Gestiono un nuevo cliente
+[INFO] 18:16:23:217 gamecard/(26256:26264): Espero un nuevo cliente
+[INFO] 18:16:23:233 gamecard/(26256:26292): Recibi mensaje new pokemon. El pokemon es: Charmander. La posicion es: (12,17). La cantidad es: 34.
+[INFO] 18:16:23:233 gamecard/(26256:26292): Inicia proceso de atencion al New
+[INFO] 18:16:23:234 gamecard/(26256:26292): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 18:16:23:258 gamecard/(26256:26264): Gestiono un nuevo cliente
+[INFO] 18:16:23:261 gamecard/(26256:26264): Espero un nuevo cliente
+[INFO] 18:16:23:285 gamecard/(26256:26295): Recibi mensaje new pokemon. El pokemon es: Charmander. La posicion es: (129,547). La cantidad es: 11.
+[INFO] 18:16:23:285 gamecard/(26256:26295): Inicia proceso de atencion al New
+[INFO] 18:16:23:285 gamecard/(26256:26295): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 18:16:28:161 gamecard/(26256:26283): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 18:16:28:180 gamecard/(26256:26286): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 18:16:28:232 gamecard/(26256:26289): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 18:16:28:252 gamecard/(26256:26292): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 18:16:28:294 gamecard/(26256:26295): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 18:16:28:306 gamecard/(26256:26274): Cierro el archivo del pokemon: Pikachu. Posicion: (1, 9).
+[INFO] 18:16:28:306 gamecard/(26256:26274): Inicia proceso envio Appeared
+[INFO] 18:16:28:309 gamecard/(26256:26280): Cierro el archivo del pokemon: Charmander. Posicion: (517, 2046).
+[INFO] 18:16:28:309 gamecard/(26256:26280): Inicia proceso envio Appeared
+[INFO] 18:16:28:309 gamecard/(26256:26277): Cierro el archivo del pokemon: Charmander. Posicion: (4, 1).
+[INFO] 18:16:28:309 gamecard/(26256:26277): Inicia proceso envio Appeared
+[INFO] 18:16:33:182 gamecard/(26256:26286): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 18:16:33:234 gamecard/(26256:26289): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 18:16:33:253 gamecard/(26256:26292): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 18:16:33:309 gamecard/(26256:26295): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 18:16:38:191 gamecard/(26256:26286): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 18:16:38:200 gamecard/(26256:26283): Cierro el archivo del pokemon: Charmander. Posicion: (413, 17).
+[INFO] 18:16:38:200 gamecard/(26256:26283): Inicia proceso envio Appeared
+[INFO] 18:16:38:258 gamecard/(26256:26292): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 18:16:38:313 gamecard/(26256:26295): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 18:16:43:193 gamecard/(26256:26286): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 18:16:43:259 gamecard/(26256:26292): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 18:16:43:274 gamecard/(26256:26289): Cierro el archivo del pokemon: Charmander. Posicion: (65, 93).
+[INFO] 18:16:43:274 gamecard/(26256:26289): Inicia proceso envio Appeared
+[INFO] 18:16:48:199 gamecard/(26256:26286): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 18:16:48:261 gamecard/(26256:26292): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 18:16:48:357 gamecard/(26256:26295): Cierro el archivo del pokemon: Charmander. Posicion: (129, 547).
+[INFO] 18:16:48:357 gamecard/(26256:26295): Inicia proceso envio Appeared
+[INFO] 18:16:53:262 gamecard/(26256:26292): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 18:16:58:247 gamecard/(26256:26286): Cierro el archivo del pokemon: Charmander. Posicion: (723, 97).
+[INFO] 18:16:58:247 gamecard/(26256:26286): Inicia proceso envio Appeared
+[INFO] 18:17:03:302 gamecard/(26256:26292): Cierro el archivo del pokemon: Charmander. Posicion: (12, 17).
+[INFO] 18:17:03:302 gamecard/(26256:26292): Inicia proceso envio Appeared
+[INFO] 18:21:01:771 gamecard/(26965:26965): Inicio de programa: Gamecard.
+[INFO] 18:21:01:810 gamecard/(26965:26965): Se encontro el directorio metadata
+[INFO] 18:21:01:810 gamecard/(26965:26965): Se encontro el archivo metadata.bin
+[INFO] 18:21:01:812 gamecard/(26965:26965): Inicio de Metadata, Tamanio bloques: 64,  Cantidad de bloques: 1024,  Magic number: TALL_GRASS
+[INFO] 18:21:01:939 gamecard/(26965:26971): Estoy escuchando
+[INFO] 18:21:01:955 gamecard/(26965:26971): Espero un nuevo cliente
+[INFO] 18:21:08:557 gamecard/(26965:26971): Gestiono un nuevo cliente
+[INFO] 18:21:08:561 gamecard/(26965:26971): Espero un nuevo cliente
+[INFO] 18:21:08:580 gamecard/(26965:26981): Recibi mensaje new pokemon. El pokemon es: Espeon. La posicion es: (1,1). La cantidad es: 11.
+[INFO] 18:21:08:581 gamecard/(26965:26981): Inicia proceso de atencion al New
+[INFO] 18:21:12:863 gamecard/(26965:26971): Gestiono un nuevo cliente
+[INFO] 18:21:12:871 gamecard/(26965:26971): Espero un nuevo cliente
+[INFO] 18:21:12:877 gamecard/(26965:26984): Recibi mensaje new pokemon. El pokemon es: Flareon. La posicion es: (1,1). La cantidad es: 11.
+[INFO] 18:21:12:877 gamecard/(26965:26984): Inicia proceso de atencion al New
+[INFO] 18:21:13:775 gamecard/(26965:26981): Cierro el archivo del pokemon: Espeon. Posicion: (1, 1).
+[INFO] 18:21:13:776 gamecard/(26965:26981): Inicia proceso envio Appeared
+[INFO] 18:21:17:907 gamecard/(26965:26984): Cierro el archivo del pokemon: Flareon. Posicion: (1, 1).
+[INFO] 18:21:17:907 gamecard/(26965:26984): Inicia proceso envio Appeared
+[INFO] 18:23:14:524 gamecard/(27582:27582): Inicio de programa: Gamecard.
+[INFO] 18:23:14:561 gamecard/(27582:27582): Se encontro el directorio metadata
+[INFO] 18:23:14:562 gamecard/(27582:27582): Se encontro el archivo metadata.bin
+[INFO] 18:23:14:563 gamecard/(27582:27582): Inicio de Metadata, Tamanio bloques: 64,  Cantidad de bloques: 1024,  Magic number: TALL_GRASS
+[INFO] 18:23:14:643 gamecard/(27582:27588): Estoy escuchando
+[INFO] 18:23:14:645 gamecard/(27582:27588): Espero un nuevo cliente
+[INFO] 18:23:20:670 gamecard/(27582:27588): Gestiono un nuevo cliente
+[INFO] 18:23:20:675 gamecard/(27582:27588): Espero un nuevo cliente
+[INFO] 18:23:20:703 gamecard/(27582:27599): Recibi mensaje new pokemon. El pokemon es: Flareon. La posicion es: (1,1). La cantidad es: 11.
+[INFO] 18:23:20:704 gamecard/(27582:27599): Inicia proceso de atencion al New
+[INFO] 18:23:25:991 gamecard/(27582:27599): Cierro el archivo del pokemon: Flareon. Posicion: (1, 1).
+[INFO] 18:23:25:992 gamecard/(27582:27599): Inicia proceso envio Appeared
+[INFO] 18:23:26:159 gamecard/(27582:27588): Gestiono un nuevo cliente
+[INFO] 18:23:26:173 gamecard/(27582:27588): Espero un nuevo cliente
+[INFO] 18:23:26:174 gamecard/(27582:27603): Recibi mensaje new pokemon. El pokemon es: Espeon. La posicion es: (1,1). La cantidad es: 11.
+[INFO] 18:23:26:174 gamecard/(27582:27603): Inicia proceso de atencion al New
+[INFO] 18:23:29:350 gamecard/(27582:27588): Gestiono un nuevo cliente
+[INFO] 18:23:29:357 gamecard/(27582:27588): Espero un nuevo cliente
+[INFO] 18:23:29:363 gamecard/(27582:27606): Recibi mensaje new pokemon. El pokemon es: Flareon. La posicion es: (1,1). La cantidad es: 11.
+[INFO] 18:23:29:363 gamecard/(27582:27606): Inicia proceso de atencion al New
+[INFO] 18:23:31:205 gamecard/(27582:27603): Cierro el archivo del pokemon: Espeon. Posicion: (1, 1).
+[INFO] 18:23:31:205 gamecard/(27582:27603): Inicia proceso envio Appeared
+[INFO] 18:23:34:388 gamecard/(27582:27606): Cierro el archivo del pokemon: Flareon. Posicion: (1, 1).
+[INFO] 18:23:34:388 gamecard/(27582:27606): Inicia proceso envio Appeared
+[INFO] 18:25:53:327 gamecard/(28185:28185): Inicio de programa: Gamecard.
+[INFO] 18:25:53:363 gamecard/(28185:28185): Se encontro el directorio metadata
+[INFO] 18:25:53:364 gamecard/(28185:28185): Se encontro el archivo metadata.bin
+[INFO] 18:25:53:365 gamecard/(28185:28185): Inicio de Metadata, Tamanio bloques: 64,  Cantidad de bloques: 1024,  Magic number: TALL_GRASS
+[INFO] 18:25:53:447 gamecard/(28185:28191): Estoy escuchando
+[INFO] 18:25:53:449 gamecard/(28185:28191): Espero un nuevo cliente
+[INFO] 18:25:55:100 gamecard/(28185:28191): Gestiono un nuevo cliente
+[INFO] 18:25:55:105 gamecard/(28185:28191): Espero un nuevo cliente
+[INFO] 18:25:55:119 gamecard/(28185:28200): Recibi mensaje new pokemon. El pokemon es: Flareon. La posicion es: (1,1). La cantidad es: 11.
+[INFO] 18:25:55:134 gamecard/(28185:28200): Inicia proceso de atencion al New
+[INFO] 18:25:56:682 gamecard/(28185:28191): Gestiono un nuevo cliente
+[INFO] 18:25:56:690 gamecard/(28185:28191): Espero un nuevo cliente
+[INFO] 18:25:56:695 gamecard/(28185:28203): Recibi mensaje new pokemon. El pokemon es: Espeon. La posicion es: (1,1). La cantidad es: 11.
+[INFO] 18:25:56:695 gamecard/(28185:28203): Inicia proceso de atencion al New
+[INFO] 18:25:59:431 gamecard/(28185:28191): Gestiono un nuevo cliente
+[INFO] 18:25:59:433 gamecard/(28185:28191): Espero un nuevo cliente
+[INFO] 18:25:59:449 gamecard/(28185:28206): Recibi mensaje new pokemon. El pokemon es: Espeon. La posicion es: (1,1). La cantidad es: 11.
+[INFO] 18:25:59:449 gamecard/(28185:28206): Inicia proceso de atencion al New
+[INFO] 18:25:59:450 gamecard/(28185:28206): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 18:25:59:986 gamecard/(28185:28191): Gestiono un nuevo cliente
+[INFO] 18:25:59:989 gamecard/(28185:28191): Espero un nuevo cliente
+[INFO] 18:25:59:997 gamecard/(28185:28209): Recibi mensaje new pokemon. El pokemon es: Espeon. La posicion es: (1,1). La cantidad es: 11.
+[INFO] 18:25:59:997 gamecard/(28185:28209): Inicia proceso de atencion al New
+[INFO] 18:25:59:998 gamecard/(28185:28209): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 18:26:00:329 gamecard/(28185:28200): Cierro el archivo del pokemon: Flareon. Posicion: (1, 1).
+[INFO] 18:26:00:329 gamecard/(28185:28200): Inicia proceso envio Appeared
+[INFO] 18:26:01:738 gamecard/(28185:28203): Cierro el archivo del pokemon: Espeon. Posicion: (1, 1).
+[INFO] 18:26:01:738 gamecard/(28185:28203): Inicia proceso envio Appeared
+[INFO] 18:26:05:5 gamecard/(28185:28209): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 18:26:09:497 gamecard/(28185:28206): Cierro el archivo del pokemon: Espeon. Posicion: (1, 1).
+[INFO] 18:26:09:497 gamecard/(28185:28206): Inicia proceso envio Appeared
+[INFO] 18:26:15:17 gamecard/(28185:28209): Cierro el archivo del pokemon: Espeon. Posicion: (1, 1).
+[INFO] 18:26:15:17 gamecard/(28185:28209): Inicia proceso envio Appeared
+[INFO] 18:29:56:915 gamecard/(28721:28721): Inicio de programa: Gamecard.
+[INFO] 18:29:56:915 gamecard/(28721:28721): Se encontro el directorio metadata
+[INFO] 18:29:56:915 gamecard/(28721:28721): Se encontro el archivo metadata.bin
+[INFO] 18:29:56:915 gamecard/(28721:28721): Inicio de Metadata, Tamanio bloques: 64,  Cantidad de bloques: 1024,  Magic number: TALL_GRASS
+[INFO] 18:29:56:961 gamecard/(28721:28727): Estoy escuchando
+[INFO] 18:29:56:961 gamecard/(28721:28727): Espero un nuevo cliente
+[INFO] 18:30:03:616 gamecard/(28721:28727): Gestiono un nuevo cliente
+[INFO] 18:30:03:616 gamecard/(28721:28727): Espero un nuevo cliente
+[INFO] 18:30:03:617 gamecard/(28721:28735): Recibi mensaje new pokemon. El pokemon es: Espeon. La posicion es: (1,1). La cantidad es: 11.
+[INFO] 18:30:03:617 gamecard/(28721:28735): Inicia proceso de atencion al New
+[INFO] 18:30:08:629 gamecard/(28721:28735): Cierro el archivo del pokemon: Espeon. Posicion: (1, 1).
+[INFO] 18:30:08:629 gamecard/(28721:28735): Inicia proceso envio Appeared
+[INFO] 18:30:08:629 gamecard/(28721:28735): Nombre:Espeon
+[INFO] 18:32:19:24 gamecard/(28721:28728): Conexión fallida con el Broker
+
+[INFO] 18:32:19:24 gamecard/(28721:28729): Conexión fallida con el Broker
+
+[INFO] 18:32:19:24 gamecard/(28721:28730): Conexión fallida con el Broker
+
+[INFO] 18:32:19:25 gamecard/(28721:28728): Reintentando conexión en 10 segundos...
+
+[INFO] 18:32:19:25 gamecard/(28721:28730): Reintentando conexión en 10 segundos...
+
+[INFO] 18:32:19:25 gamecard/(28721:28729): Reintentando conexión en 10 segundos...
+
+[INFO] 18:32:31:652 gamecard/(29185:29185): Inicio de programa: Gamecard.
+[INFO] 18:32:31:652 gamecard/(29185:29185): Se encontro el directorio metadata
+[INFO] 18:32:31:652 gamecard/(29185:29185): Se encontro el archivo metadata.bin
+[INFO] 18:32:31:652 gamecard/(29185:29185): Inicio de Metadata, Tamanio bloques: 64,  Cantidad de bloques: 1024,  Magic number: TALL_GRASS
+[INFO] 18:32:31:712 gamecard/(29185:29191): Estoy escuchando
+[INFO] 18:32:31:712 gamecard/(29185:29191): Espero un nuevo cliente
+[INFO] 18:32:42:969 gamecard/(29185:29191): Gestiono un nuevo cliente
+[INFO] 18:32:42:969 gamecard/(29185:29191): Espero un nuevo cliente
+[INFO] 18:32:42:974 gamecard/(29185:29199): Recibi mensaje new pokemon. El pokemon es: Espeon. La posicion es: (1,1). La cantidad es: 11.
+[INFO] 18:32:42:974 gamecard/(29185:29199): Inicia proceso de atencion al New
+[INFO] 18:32:47:976 gamecard/(29185:29199): Cierro el archivo del pokemon: Espeon. Posicion: (1, 1).
+[INFO] 18:32:47:976 gamecard/(29185:29199): Inicia proceso envio Appeared
+[INFO] 18:33:44:104 gamecard/(29615:29615): Inicio de programa: Gamecard.
+[INFO] 18:33:44:152 gamecard/(29615:29615): Se encontro el directorio metadata
+[INFO] 18:33:44:153 gamecard/(29615:29615): Se encontro el archivo metadata.bin
+[INFO] 18:33:44:154 gamecard/(29615:29615): Inicio de Metadata, Tamanio bloques: 64,  Cantidad de bloques: 1024,  Magic number: TALL_GRASS
+[INFO] 18:33:44:283 gamecard/(29615:29621): Estoy escuchando
+[INFO] 18:33:44:285 gamecard/(29615:29621): Espero un nuevo cliente
+[INFO] 18:33:49:224 gamecard/(29615:29621): Gestiono un nuevo cliente
+[INFO] 18:33:49:235 gamecard/(29615:29621): Espero un nuevo cliente
+[INFO] 18:33:49:260 gamecard/(29615:29630): Recibi mensaje new pokemon. El pokemon es: Espeon. La posicion es: (1,1). La cantidad es: 11.
+[INFO] 18:33:49:261 gamecard/(29615:29630): Inicia proceso de atencion al New
+[INFO] 18:33:50:505 gamecard/(29615:29621): Gestiono un nuevo cliente
+[INFO] 18:33:50:509 gamecard/(29615:29621): Espero un nuevo cliente
+[INFO] 18:33:50:518 gamecard/(29615:29633): Recibi mensaje new pokemon. El pokemon es: Flareon. La posicion es: (1,1). La cantidad es: 11.
+[INFO] 18:33:50:518 gamecard/(29615:29633): Inicia proceso de atencion al New
+[INFO] 18:33:54:520 gamecard/(29615:29630): Cierro el archivo del pokemon: Espeon. Posicion: (1, 1).
+[INFO] 18:33:54:520 gamecard/(29615:29630): Inicia proceso envio Appeared
+[INFO] 18:33:55:556 gamecard/(29615:29633): Cierro el archivo del pokemon: Flareon. Posicion: (1, 1).
+[INFO] 18:33:55:556 gamecard/(29615:29633): Inicia proceso envio Appeared
+[INFO] 18:39:57:398 gamecard/(29891:29891): Inicio de programa: Gamecard.
+[INFO] 18:39:57:398 gamecard/(29891:29891): Se encontro el directorio metadata
+[INFO] 18:39:57:398 gamecard/(29891:29891): Se encontro el archivo metadata.bin
+[INFO] 18:39:57:398 gamecard/(29891:29891): Inicio de Metadata, Tamanio bloques: 64,  Cantidad de bloques: 1024,  Magic number: TALL_GRASS
+[INFO] 18:39:57:414 gamecard/(29891:29893): Estoy escuchando
+[INFO] 18:39:57:414 gamecard/(29891:29893): Espero un nuevo cliente
+[INFO] 18:40:51:856 gamecard/(30326:30326): Inicio de programa: Gamecard.
+[INFO] 18:40:51:898 gamecard/(30326:30326): Se encontro el directorio metadata
+[INFO] 18:40:51:899 gamecard/(30326:30326): Se encontro el archivo metadata.bin
+[INFO] 18:40:51:900 gamecard/(30326:30326): Inicio de Metadata, Tamanio bloques: 64,  Cantidad de bloques: 1024,  Magic number: TALL_GRASS
+[INFO] 18:40:52:19 gamecard/(30326:30332): Estoy escuchando
+[INFO] 18:40:52:21 gamecard/(30326:30332): Espero un nuevo cliente
+[INFO] 18:41:04:985 gamecard/(30326:30332): Gestiono un nuevo cliente
+[INFO] 18:41:04:993 gamecard/(30326:30332): Espero un nuevo cliente
+[INFO] 18:41:05:20 gamecard/(30326:30341): Recibi mensaje new pokemon. El pokemon es: Flareon. La posicion es: (1,1). La cantidad es: 11.
+[INFO] 18:41:05:21 gamecard/(30326:30341): Inicia proceso de atencion al New
+[INFO] 18:41:10:197 gamecard/(30326:30341): Cierro el archivo del pokemon: Flareon. Posicion: (1, 1).
+[INFO] 18:41:10:198 gamecard/(30326:30341): Inicia proceso envio Appeared
+[INFO] 18:42:18:856 gamecard/(30326:30335): Conexión fallida con el Broker
+
+[INFO] 18:42:18:856 gamecard/(30326:30333): Conexión fallida con el Broker
+
+[INFO] 18:42:18:857 gamecard/(30326:30334): Conexión fallida con el Broker
+
+[INFO] 18:42:18:857 gamecard/(30326:30335): Reintentando conexión en 10 segundos...
+
+[INFO] 18:42:18:858 gamecard/(30326:30334): Reintentando conexión en 10 segundos...
+
+[INFO] 18:42:18:858 gamecard/(30326:30333): Reintentando conexión en 10 segundos...
+
+[INFO] 18:47:23:863 gamecard/(30829:30829): Inicio de programa: Gamecard.
+[INFO] 18:47:23:863 gamecard/(30829:30829): Se encontro el directorio metadata
+[INFO] 18:47:23:863 gamecard/(30829:30829): Se encontro el archivo metadata.bin
+[INFO] 18:47:23:863 gamecard/(30829:30829): Inicio de Metadata, Tamanio bloques: 64,  Cantidad de bloques: 1024,  Magic number: TALL_GRASS
+[INFO] 18:47:23:892 gamecard/(30829:30835): Estoy escuchando
+[INFO] 18:47:23:892 gamecard/(30829:30835): Espero un nuevo cliente
+[INFO] 18:50:05:182 gamecard/(31410:31410): Inicio de programa: Gamecard.
+[INFO] 18:50:05:219 gamecard/(31410:31410): Se encontro el directorio metadata
+[INFO] 18:50:05:219 gamecard/(31410:31410): Se encontro el archivo metadata.bin
+[INFO] 18:50:05:220 gamecard/(31410:31410): Inicio de Metadata, Tamanio bloques: 64,  Cantidad de bloques: 1024,  Magic number: TALL_GRASS
+[INFO] 18:50:05:340 gamecard/(31410:31417): Estoy escuchando
+[INFO] 18:50:05:350 gamecard/(31410:31417): Espero un nuevo cliente
+[INFO] 18:50:09:173 gamecard/(31410:31417): Gestiono un nuevo cliente
+[INFO] 18:50:09:174 gamecard/(31410:31417): Espero un nuevo cliente
+[INFO] 18:50:09:191 gamecard/(31410:31426): Recibi mensaje new pokemon. El pokemon es: Flareon. La posicion es: (1,1). La cantidad es: 11.
+[INFO] 18:50:09:211 gamecard/(31410:31426): Inicia proceso de atencion al New
+[INFO] 18:50:14:408 gamecard/(31410:31426): Cierro el archivo del pokemon: Flareon. Posicion: (1, 1).
+[INFO] 18:50:14:408 gamecard/(31410:31426): Inicia proceso envio Appeared
+[INFO] 18:52:29:908 gamecard/(32035:32035): Inicio de programa: Gamecard.
+[INFO] 18:52:29:955 gamecard/(32035:32035): Se encontro el directorio metadata
+[INFO] 18:52:29:956 gamecard/(32035:32035): Se encontro el archivo metadata.bin
+[INFO] 18:52:29:957 gamecard/(32035:32035): Inicio de Metadata, Tamanio bloques: 64,  Cantidad de bloques: 1024,  Magic number: TALL_GRASS
+[INFO] 18:52:30:84 gamecard/(32035:32041): Estoy escuchando
+[INFO] 18:52:30:91 gamecard/(32035:32041): Espero un nuevo cliente
+[INFO] 18:52:34:108 gamecard/(32035:32041): Gestiono un nuevo cliente
+[INFO] 18:52:34:113 gamecard/(32035:32041): Espero un nuevo cliente
+[INFO] 18:52:34:144 gamecard/(32035:32094): Recibi mensaje new pokemon. El pokemon es: Flareon. La posicion es: (1,1). La cantidad es: 11.
+[INFO] 18:52:34:145 gamecard/(32035:32094): Inicia proceso de atencion al New
+[INFO] 18:52:39:436 gamecard/(32035:32094): Cierro el archivo del pokemon: Flareon. Posicion: (1, 1).
+[INFO] 18:52:39:436 gamecard/(32035:32094): Inicia proceso envio Appeared
+[INFO] 18:52:50:882 gamecard/(32035:32041): Gestiono un nuevo cliente
+[INFO] 18:52:50:890 gamecard/(32035:32041): Espero un nuevo cliente
+[INFO] 18:52:50:894 gamecard/(32035:32098): Recibi mensaje new pokemon. El pokemon es: Espeon. La posicion es: (1,1). La cantidad es: 11.
+[INFO] 18:52:50:894 gamecard/(32035:32098): Inicia proceso de atencion al New
+[INFO] 18:52:54:932 gamecard/(32035:32041): Gestiono un nuevo cliente
+[INFO] 18:52:54:937 gamecard/(32035:32041): Espero un nuevo cliente
+[INFO] 18:52:54:941 gamecard/(32035:32101): Recibi mensaje new pokemon. El pokemon es: Pikachu. La posicion es: (1,1). La cantidad es: 11.
+[INFO] 18:52:54:941 gamecard/(32035:32101): Inicia proceso de atencion al New
+[INFO] 18:52:55:933 gamecard/(32035:32098): Cierro el archivo del pokemon: Espeon. Posicion: (1, 1).
+[INFO] 18:52:55:933 gamecard/(32035:32098): Inicia proceso envio Appeared
+[INFO] 18:52:59:979 gamecard/(32035:32101): Cierro el archivo del pokemon: Pikachu. Posicion: (1, 1).
+[INFO] 18:52:59:979 gamecard/(32035:32101): Inicia proceso envio Appeared
+[INFO] 18:54:09:261 gamecard/(32514:32514): Inicio de programa: Gamecard.
+[INFO] 18:54:09:304 gamecard/(32514:32514): Se encontro el directorio metadata
+[INFO] 18:54:09:305 gamecard/(32514:32514): Se encontro el archivo metadata.bin
+[INFO] 18:54:09:306 gamecard/(32514:32514): Inicio de Metadata, Tamanio bloques: 64,  Cantidad de bloques: 1024,  Magic number: TALL_GRASS
+[INFO] 18:54:09:455 gamecard/(32514:32520): Estoy escuchando
+[INFO] 18:54:09:457 gamecard/(32514:32520): Espero un nuevo cliente
+[INFO] 18:55:14:915 gamecard/(32514:32520): Gestiono un nuevo cliente
+[INFO] 18:55:14:919 gamecard/(32514:32520): Espero un nuevo cliente
+[INFO] 18:55:14:939 gamecard/(32514:32532): Recibi mensaje new pokemon. El pokemon es: Pikachu. La posicion es: (1,1). La cantidad es: 11.
+[INFO] 18:55:14:950 gamecard/(32514:32532): Inicia proceso de atencion al New
+[INFO] 18:55:20:84 gamecard/(32514:32532): Cierro el archivo del pokemon: Pikachu. Posicion: (1, 1).
+[INFO] 18:55:20:84 gamecard/(32514:32532): Inicia proceso envio Appeared
+[INFO] 18:55:35:206 gamecard/(32514:32521): Conexión fallida con el Broker
+
+[INFO] 18:55:35:206 gamecard/(32514:32522): Conexión fallida con el Broker
+
+[INFO] 18:55:35:206 gamecard/(32514:32523): Conexión fallida con el Broker
+
+[INFO] 18:55:35:207 gamecard/(32514:32521): Reintentando conexión en 10 segundos...
+
+[INFO] 18:55:35:207 gamecard/(32514:32523): Reintentando conexión en 10 segundos...
+
+[INFO] 18:55:35:207 gamecard/(32514:32522): Reintentando conexión en 10 segundos...
+
+[INFO] 18:57:46:414 gamecard/(674:674): Inicio de programa: Gamecard.
+[INFO] 18:57:46:455 gamecard/(674:674): Se encontro el directorio metadata
+[INFO] 18:57:46:456 gamecard/(674:674): Se encontro el archivo metadata.bin
+[INFO] 18:57:46:457 gamecard/(674:674): Inicio de Metadata, Tamanio bloques: 64,  Cantidad de bloques: 1024,  Magic number: TALL_GRASS
+[INFO] 18:57:46:639 gamecard/(674:680): Estoy escuchando
+[INFO] 18:57:46:640 gamecard/(674:680): Espero un nuevo cliente
+[INFO] 18:57:53:34 gamecard/(674:680): Gestiono un nuevo cliente
+[INFO] 18:57:53:42 gamecard/(674:680): Espero un nuevo cliente
+[INFO] 18:57:53:54 gamecard/(674:689): Recibi mensaje new pokemon. El pokemon es: Pikachu. La posicion es: (1,1). La cantidad es: 11.
+[INFO] 18:57:53:73 gamecard/(674:689): Inicia proceso de atencion al New
+[INFO] 18:57:58:179 gamecard/(674:689): Cierro el archivo del pokemon: Pikachu. Posicion: (1, 1).
+[INFO] 18:57:58:180 gamecard/(674:689): Inicia proceso envio Appeared
+=======
 [INFO] 16:38:42:209 gamecard/(8187:8200): Conexión fallida con el Broker
 
 [INFO] 16:38:42:209 gamecard/(8187:8201): Conexión fallida con el Broker
@@ -3209,3 +4403,4 @@
 
 [INFO] 16:38:42:209 gamecard/(8187:8201): Reintentando conexión en 10 segundos...
 
+>>>>>>> d73a8884068aef9ed0cdf0d816dce3092126aef8

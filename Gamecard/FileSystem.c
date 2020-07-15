@@ -22,6 +22,7 @@ bool archivoExiste(char* path) {
 		return true;
 	} else {
 		//printf("No se encontro el archivo: \"%s\" \n",path);
+
 		return false;
 	}
 }
@@ -154,7 +155,7 @@ int32_t crearArchivoBloque(blockHeader* bloque) {
 		ftruncate(fd,tallGrass.block_size);
 		close(fd);
 	}
-
+	free(pathArchivoBloque);
 		//ocuparBloque(bloque->id);
 	return 0;
 }
@@ -186,6 +187,7 @@ archivoHeader* crearDirectorio(char* nombre, char* pathDestino, uint32_t tipo){
 		return crearMetadata(nombre,tipo, direc);
 	}
 
+//	free(direc);
 	//return crearNodoDirectorio(header, directorioPadre);
 
 
@@ -205,7 +207,7 @@ archivoHeader* crearMetadata(char* nombre, uint32_t tipo, char* direccion){
 	char* nuevaDirec = malloc(strlen(direccion)+strlen("metadata.bin")+1);
 	strcpy(nuevaDirec,direccion);
 	string_append(&nuevaDirec,"/metadata.bin");
-
+	free(direccion);
 
 
 
@@ -323,6 +325,7 @@ void inicializarListaBloques(){
 		bloqueActual->pos=0;
 		list_add(listaBloques,(void*) bloqueActual);
 		crearArchivoBloque(obtenerBloquePorId(i));//obtenerBloquePorId(1)
+		free(bloqueActual);
 	}
 }
 
