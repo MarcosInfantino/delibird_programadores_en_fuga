@@ -80,13 +80,18 @@ void entrarEnEjecucion(dataEntrenador* infoEntrenador){
 
 	poneteEnBlocked(infoEntrenador);
 
+
+
 	recalcularEstimacion(infoEntrenador);
 
 //	infoEntrenador->ejecucionEnPausa=false;
 //	resetearSemaforo(infoEntrenador->semaforoResultadoInterrupcion);
 
-	atraparPokemonYReplanificar (infoEntrenador);
-	sem_post(&semaforoEjecucionCpu);
+
+
+	pedirCicloCpu(infoEntrenador);
+	if(algoritmoPlanificacion==FIFO || algoritmoPlanificacion==SJF)
+			sem_post(&semaforoEjecucionCpu);
 
 	log_info(teamLogger2, "El entrenador %i libera la CPU por su cuenta.", infoEntrenador->id);
 
@@ -99,7 +104,7 @@ void replanificarEntrenador(dataEntrenador* entrenador){
 			log_info(teamLogger2, "El entrenador %i va a buscar pokemones pendientes.", entrenador->id);
 			pokemonPosicion* pokePosicion=(pokemonPosicion*)popColaMutex(pokemonesPendientes);
 			log_info(teamLogger2, "El entrenador %i hace pop del pokemon pendiente %s.", entrenador->id, pokePosicion->pokemon);
-			//habilitarHiloEntrenador(entrenador->id); PARA MI NO VA MARI
+			habilitarHiloEntrenador(entrenador->id); //PARA MI NO VA MARI
 			asignarPokemonAEntrenador(entrenador, pokePosicion);
 			//free(pokePosicion);
 		}else{
@@ -230,10 +235,21 @@ bool estaBloqueado(dataEntrenador* entrenador){
 	return entrenador->estado==BLOCKED;
 }
 
-void interrumpir(dataEntrenador* entrenador){
+void* interrumpir(dataEntrenador* entrenador){
 	log_info(teamLogger2, "INTERRUMPO A %i", entrenador->id);
-	guardarContexto(entrenador);
-	enviarResultadoInterrupcion(entrenador);
+
+	esperarPedidoCicloCpu(entrenador);
+	if(entrenador->estado!=EXEC){
+		sem_post(&semaforoEjecucionCpu);
+		return NULL;
+	}else{
+		guardarContexto(entrenador);
+		poneteEnReady(entrenador);
+		sem_post(&semaforoEjecucionCpu);
+		return NULL;
+	}
+
+//	enviarResultadoInterrupcion(entrenador);
 //	poneteEnReady(entrenador);
 //	sem_post(&semaforoEjecucionCpu);
 
@@ -477,13 +493,15 @@ void entrarEnEjecucionParaDeadlock(dataEntrenador* infoEntrenador){
 	realizarIntercambio(infoEntrenador);
 	poneteEnBlocked(infoEntrenador);
 
+
 	//actualizarRafagaAnterior(infoEntrenador);
 	recalcularEstimacion(infoEntrenador);
 
 //	infoEntrenador->ejecucionEnPausa=false;
 //	resetearSemaforo(infoEntrenador->semaforoResultadoInterrupcion);
-
-	sem_post(&semaforoEjecucionCpu);
+	pedirCicloCpu(infoEntrenador);
+	if(algoritmoPlanificacion==FIFO || algoritmoPlanificacion==SJF)
+		sem_post(&semaforoEjecucionCpu);
 }
 
 void esperarHabilitacionPlanificador(dataEntrenador* entrenador){
@@ -492,19 +510,17 @@ void esperarHabilitacionPlanificador(dataEntrenador* entrenador){
 
 		case RR:
 
-			esperarResultadoInterrupcion(entrenador);
+			//esperarResultadoInterrupcion(entrenador);
 
-			log_info(teamLogger2, "Al entrenador %i le llega el resultado de la interrupción.", entrenador->id);
-			if(fueInterrumpido(entrenador)){
-				poneteEnReady(entrenador);
-				sem_post(&semaforoEjecucionCpu);
-				log_info(teamLogger2, "El entrenador %i fue sacado de ejecución.", entrenador->id);
-			}
+			//log_info(teamLogger2, "Al entrenador %i le llega el resultado de la interrupción.", entrenador->id);
+//			if(fueInterrumpido(entrenador)){
+//				poneteEnReady(entrenador);
+//				sem_post(&semaforoEjecucionCpu);
+//				log_info(teamLogger2, "El entrenador %i fue sacado de ejecución.", entrenador->id);
+//			}
 //			else{
 //				//log_info(teamLogger2, "Al entrenador %i no lo interrumpieron", entrenador->id);
 //			}
-
-
 			sem_wait(entrenador->semaforoContinuarEjecucion);
 			break;
 		default:

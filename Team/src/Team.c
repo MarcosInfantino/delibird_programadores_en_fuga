@@ -199,6 +199,7 @@ void gestionarBusquedaPokemon(pokemonPosicion* pokePosicion){
 			}else{
 				log_info(teamLogger2, "No hay entrenadores disponibles para atrapar a %s. ",pokePosicion->pokemon);
 				pushColaMutex(pokemonesPendientes,(void*)pokePosicion);
+				log_info(teamLogger2, "--------------------SIZE COLA MUTEX: %i", sizeColaMutex(pokemonesPendientes));
 			}
 		}else if(seEstaGestionandoCatch(pokePosicion->pokemon)){
 			log_info(teamLogger2, "se esta gestionando el catch.");
@@ -600,17 +601,18 @@ void enviarCatch(dataEntrenador* infoEntrenador){
 				addListaMutex(listaIdsEntrenadorMensaje,(void*)parDeIds);
 
 			}else{
+				atraparPokemonYReplanificar (infoEntrenador);
 			//se recibio erroneamente
 			}
 		}else{
 			log_info(teamLogger, "Fallo de comunicación con el Broker al enviar un catch. Se realizará la operación por default.");
-
+			atraparPokemonYReplanificar (infoEntrenador);
 			log_info(teamLogger2,"El entrenador % i TERMINÓ DE SIMULAR EL CATCH.", infoEntrenador->id);
 			//atraparPokemonYReplanificar (infoEntrenador);
 		}
 		free(paqueteSerializado);
 	}else{
-
+		atraparPokemonYReplanificar (infoEntrenador);
 		log_info(teamLogger2,"El entrenador % i TERMINÓ DE SIMULAR EL CATCH.", infoEntrenador->id);
 		log_info(teamLogger, "Fallo de comunicación con el Broker al enviar un catch. Se realizará la operación por default.");
 		//atraparPokemonYReplanificar (infoEntrenador);

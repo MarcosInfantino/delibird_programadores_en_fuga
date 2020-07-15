@@ -382,7 +382,7 @@ void retomarEjecucion(dataEntrenador* entrenador);
 
 void ponerEnEjecucion(dataEntrenador* entrenador);
 
-void interrumpir(dataEntrenador* entrenador);
+void* interrumpir(dataEntrenador* entrenador);
 
 bool estaBloqueado(dataEntrenador* entrenador);
 

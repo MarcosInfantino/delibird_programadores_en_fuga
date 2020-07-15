@@ -68,6 +68,7 @@ void realizarIntercambio(dataEntrenador* entrenadorQueSeMueve){
 
 	free(entrenadorQueSeMueve->pokemonAAtrapar->pokemon);
 	free(pokemonAPedir);
+	log_info(teamLogger2, "Operación de intercambio realizada entre entrenadores %i y %i",entrenadorQueSeMueve->id, entrenadorBloqueadoParaDeadlock->id);
 	log_info(teamLogger, "Operación de intercambio realizada entre entrenadores %i y %i",entrenadorQueSeMueve->id, entrenadorBloqueadoParaDeadlock->id);
 
 	sem_post(&intercambioFinalizado); //OK5
@@ -184,9 +185,11 @@ void* resolverDeadlock(void* arg){
 
 void loggearEsperaCircular(t_list* listaEspera){
 	log_info(teamLogger2,"Encontre una espera circular. Entrenadores involucrados: ");
+	log_info(teamLogger,"Encontre una espera circular. Entrenadores involucrados: ");
 	for(uint32_t i=0; i<list_size(listaEspera);i++){
 		dataEntrenador* entrenadorActual= (dataEntrenador*) list_get(listaEspera,i);
 		log_info(teamLogger2,"Entrenador %i.", entrenadorActual->id);
+		log_info(teamLogger,"Entrenador %i.", entrenadorActual->id);
 	}
 }
 
