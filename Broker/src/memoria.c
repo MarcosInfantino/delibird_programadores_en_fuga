@@ -136,11 +136,18 @@ void crearDumpDeCache(){
 bool yaEstaEnMemoria(paquete* paq){
 	switch(paq->tipoMensaje){
 	case CATCH_POKEMON:;
-
-		return yaSeGuardoEnMemoria(deserializarCatch(paq->stream), NULL);
+		mensajeCatch* mensaje=deserializarCatch(paq->stream);
+		bool retorno1= yaSeGuardoEnMemoria(mensaje, NULL);//PROBAR
+		destruirCatch(mensaje);
+		return retorno1;
 		break;
-	case GET_POKEMON:
-		return yaSeGuardoEnMemoria(NULL, deserializarGet(paq->stream));
+	case GET_POKEMON:;
+
+		mensajeGet* mensaje2=deserializarGet(paq->stream);
+		bool retorno2= yaSeGuardoEnMemoria(NULL, mensaje2);//PROBAR
+		destruirGet(mensaje2);
+
+		return retorno2;
 		break;
 	default:
 		printf("ERROR");

@@ -67,8 +67,12 @@ void evaluarConsolidacion(struct nodoMemoria* nodo){
 		log_info(brokerLogger2,"CONSOLIDO buddy con offset: %i con su buddy con offset %i", nodo->offset, buddie->offset);
 		liberarNodo(nodo);
 		liberarNodo(buddie);
-		partActual->hijoDer = malloc(sizeof(struct nodoMemoria));
-		partActual->hijoIzq = malloc(sizeof(struct nodoMemoria));
+
+		partActual->hijoDer=NULL;
+		partActual->hijoIzq=NULL;
+
+		//partActual->hijoDer = malloc(sizeof(struct nodoMemoria));
+		//partActual->hijoIzq = malloc(sizeof(struct nodoMemoria));         //PROBAR
 		evaluarConsolidacion(partActual);
 	}else{
 		return;
@@ -111,8 +115,8 @@ uint32_t evaluarTamanioParticionYasignar(struct nodoMemoria* partActual, msgMemo
 		partActual->header.tiempoDeCarga=temporal_get_string_time();
 		partActual->header.ultimoAcceso=temporal_get_string_time();
 
-		free(auxFree1);
-		free(auxFree2);
+//		free(auxFree1);
+//		free(auxFree2);
 
 		asignarPuntero(partActual->offset, partActual->mensaje->stream, partActual->mensaje->sizeStream);
 
@@ -192,10 +196,14 @@ bool existeMensajeEnMemoriaBuddy(mensajeGet* msgGet, mensajeCatch*  msgCatch){
 		for (uint32_t o = 0; o < sizeListaMutex(nodosOcupados); o ++){
 			aux = (struct nodoMemoria*) getListaMutex(nodosOcupados, o);
 			if (aux->mensaje->cola == GET_POKEMON){
-				if (compararGet(deserializarGet(aux->mensaje->stream),msgGet)){
+				mensajeGet* mensaje=deserializarGet(aux->mensaje->stream);
+
+				if (compararGet(mensaje,msgGet)){
 					pthread_mutex_unlock(mutexMemoria);
 					return true;
 				}
+				destruirGet(mensaje);//PROBAR
+
 			}
 		}
 		pthread_mutex_unlock(mutexMemoria);
@@ -204,11 +212,14 @@ bool existeMensajeEnMemoriaBuddy(mensajeGet* msgGet, mensajeCatch*  msgCatch){
 		log_info(brokerLogger2, "Valido si ya existe el mensaje Catch en memoria buddy.");
 		for (uint32_t p = 0; p < sizeListaMutex(nodosOcupados); p ++){
 			aux = (struct nodoMemoria*) getListaMutex(nodosOcupados, p);
+
 					if (aux->mensaje->cola == CATCH_POKEMON){
-						if (compararCatch(deserializarCatch(aux->mensaje->stream),msgCatch)){
+						mensajeCatch* mensaje=deserializarCatch(aux->mensaje->stream);
+						if (compararCatch(mensaje,msgCatch)){
 							pthread_mutex_unlock(mutexMemoria);
 							return true;
 						}
+						destruirCatch(mensaje);//PROBAR
 					}
 				}
 		pthread_mutex_unlock(mutexMemoria);
@@ -271,11 +282,12 @@ struct nodoMemoria* crearRaizArbol(void){
 }
 
 struct nodoMemoria* inicializarNodo(){
-    struct nodoMemoria* nodo = malloc(sizeof(struct nodoMemoria));
-	nodo->hijoDer = malloc(sizeof(struct nodoMemoria));
-	nodo->hijoIzq = malloc(sizeof(struct nodoMemoria));
-	nodo->mensaje = malloc(sizeof(msgMemoriaBroker));
-
+    struct nodoMemoria* nodo = malloc(sizeof(struct nodoMemoria));//PROBAR
+//	nodo->hijoDer = malloc(sizeof(struct nodoMemoria));
+//	nodo->hijoIzq = malloc(sizeof(struct nodoMemoria));
+//	nodo->mensaje = malloc(sizeof(msgMemoriaBroker));
+    nodo->hijoDer=NULL;
+    nodo->hijoIzq=NULL;
 	return nodo;
 }
 

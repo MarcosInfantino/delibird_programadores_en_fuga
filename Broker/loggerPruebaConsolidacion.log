@@ -2255,3 +2255,184 @@
 [INFO] 16:49:29:106 BROKER/(11420:11420): Inició el BROKER
 [INFO] 17:06:13:392 BROKER/(12835:12835): ___________________________________________________________________________________________________________
 [INFO] 17:06:13:392 BROKER/(12835:12835): Inició el BROKER
+[INFO] 17:43:54:255 BROKER/(17313:17313): ___________________________________________________________________________________________________________
+[INFO] 17:43:54:255 BROKER/(17313:17313): Inició el BROKER
+[INFO] 17:44:02:830 BROKER/(17313:17342): Se conectó un proceso GAMEBOY.
+[INFO] 17:44:02:830 BROKER/(17313:17342): Almaceno mensaje en partición que comienza en: 0
+[INFO] 17:44:02:830 BROKER/(17313:17326): Llegó un nuevo mensaje a la cola NEW_POKEMON.
+[INFO] 17:44:02:831 BROKER/(17313:17345): Se conectó un proceso GAMEBOY.
+[INFO] 17:44:02:831 BROKER/(17313:17345): Almaceno mensaje en partición que comienza en: 20
+[INFO] 17:44:02:832 BROKER/(17313:17326): Llegó un nuevo mensaje a la cola NEW_POKEMON.
+[INFO] 17:44:02:833 BROKER/(17313:17348): Se conectó un proceso GAMEBOY.
+[INFO] 17:44:02:833 BROKER/(17313:17348): Elimino particion que comienza en: 0
+[INFO] 17:44:02:833 BROKER/(17313:17348): Se realiza la compactacion
+[INFO] 17:44:02:833 BROKER/(17313:17348): Almaceno mensaje en partición que comienza en: 22
+[INFO] 17:44:02:833 BROKER/(17313:17326): Llegó un nuevo mensaje a la cola NEW_POKEMON.
+[INFO] 17:44:02:834 BROKER/(17313:17351): Se conectó un proceso GAMEBOY.
+[INFO] 17:44:02:834 BROKER/(17313:17351): Elimino particion que comienza en: 0
+[INFO] 17:44:02:834 BROKER/(17313:17351): Se realiza la compactacion
+[INFO] 17:44:02:834 BROKER/(17313:17351): Almaceno mensaje en partición que comienza en: 24
+[INFO] 17:44:02:834 BROKER/(17313:17326): Llegó un nuevo mensaje a la cola NEW_POKEMON.
+[INFO] 17:44:02:835 BROKER/(17313:17354): Se conectó un proceso GAMEBOY.
+[INFO] 17:44:02:835 BROKER/(17313:17354): Elimino particion que comienza en: 0
+[INFO] 17:44:02:835 BROKER/(17313:17354): Almaceno mensaje en partición que comienza en: 0
+[INFO] 17:44:02:836 BROKER/(17313:17357): Se conectó un proceso GAMEBOY.
+[INFO] 17:44:02:836 BROKER/(17313:17357): Se realiza la compactacion
+[INFO] 17:44:02:836 BROKER/(17313:17357): Elimino particion que comienza en: 22
+[INFO] 17:44:02:836 BROKER/(17313:17357): Se consolidan las particiones que comienzan en: 22 y 45
+[INFO] 17:44:02:836 BROKER/(17313:17357): Almaceno mensaje en partición que comienza en: 22
+[INFO] 17:44:02:836 BROKER/(17313:17326): Llegó un nuevo mensaje a la cola NEW_POKEMON.
+[INFO] 17:44:02:836 BROKER/(17313:17326): Llegó un nuevo mensaje a la cola NEW_POKEMON.
+[INFO] 17:44:04:548 BROKER/(17313:17362): Se conectó un proceso GAMEBOY.
+[INFO] 17:44:04:548 BROKER/(17313:17362): Almaceno mensaje en partición que comienza en: 46
+[INFO] 17:44:04:548 BROKER/(17313:17327): Llegó un nuevo mensaje a la cola CAUGHT_POKEMON.
+[INFO] 17:44:04:550 BROKER/(17313:17365): Se conectó un proceso GAMEBOY.
+[INFO] 17:44:04:550 BROKER/(17313:17365): Almaceno mensaje en partición que comienza en: 50
+[INFO] 17:44:04:551 BROKER/(17313:17368): Se conectó un proceso GAMEBOY.
+[INFO] 17:44:04:551 BROKER/(17313:17368): Elimino particion que comienza en: 0
+[INFO] 17:44:04:551 BROKER/(17313:17368): Almaceno mensaje en partición que comienza en: 0
+[INFO] 17:44:04:551 BROKER/(17313:17328): Llegó un nuevo mensaje a la cola CATCH_POKEMON.
+[INFO] 17:44:04:553 BROKER/(17313:17371): Se conectó un proceso GAMEBOY.
+[INFO] 17:44:04:553 BROKER/(17313:17371): Se realiza la compactacion
+[INFO] 17:44:04:553 BROKER/(17313:17371): Elimino particion que comienza en: 19
+[INFO] 17:44:04:553 BROKER/(17313:17371): Almaceno mensaje en partición que comienza en: 19
+[INFO] 17:44:04:553 BROKER/(17313:17328): Llegó un nuevo mensaje a la cola CATCH_POKEMON.
+[INFO] 17:44:04:555 BROKER/(17313:17374): Se conectó un proceso GAMEBOY.
+[INFO] 17:44:04:555 BROKER/(17313:17374): Se realiza la compactacion
+[INFO] 17:44:04:555 BROKER/(17313:17374): Almaceno mensaje en partición que comienza en: 47
+[INFO] 17:44:04:555 BROKER/(17313:17328): Llegó un nuevo mensaje a la cola CATCH_POKEMON.
+[INFO] 17:44:04:556 BROKER/(17313:17377): Se conectó un proceso GAMEBOY.
+[INFO] 17:44:04:556 BROKER/(17313:17377): Un proceso GAMEBOY se sucribió a la cola CAUGHT_POKEMON.
+[INFO] 17:44:04:557 BROKER/(17313:17378): Se conectó un proceso GAMEBOY.
+[INFO] 17:44:04:557 BROKER/(17313:17378): Me llegó el ACK del proceso de id 1 (Mensaje 7).
+[INFO] 17:44:04:557 BROKER/(17313:17379): Se conectó un proceso GAMEBOY.
+[INFO] 17:44:04:557 BROKER/(17313:17379): Me llegó el ACK del proceso de id 1 (Mensaje 8).
+[INFO] 17:44:08:560 BROKER/(17313:17386): Se conectó un proceso GAMEBOY.
+[INFO] 17:44:08:560 BROKER/(17313:17386): Elimino particion que comienza en: 0
+[INFO] 17:44:08:560 BROKER/(17313:17386): Se realiza la compactacion
+[INFO] 17:44:08:560 BROKER/(17313:17386): Elimino particion que comienza en: 0
+[INFO] 17:44:08:560 BROKER/(17313:17386): Se realiza la compactacion
+[INFO] 17:44:08:560 BROKER/(17313:17386): Almaceno mensaje en partición que comienza en: 24
+[INFO] 17:44:08:560 BROKER/(17313:17328): Llegó un nuevo mensaje a la cola CATCH_POKEMON.
+[INFO] 17:44:24:379 BROKER/(17313:17405): Se conectó un proceso GAMEBOY.
+[INFO] 17:44:24:379 BROKER/(17313:17405): Elimino particion que comienza en: 8
+[INFO] 17:44:24:379 BROKER/(17313:17405): Se realiza la compactacion
+[INFO] 17:44:24:379 BROKER/(17313:17405): Almaceno mensaje en partición que comienza en: 30
+[INFO] 17:44:24:379 BROKER/(17313:17326): Llegó un nuevo mensaje a la cola NEW_POKEMON.
+[INFO] 17:44:24:380 BROKER/(17313:17408): Se conectó un proceso GAMEBOY.
+[INFO] 17:44:24:380 BROKER/(17313:17408): Elimino particion que comienza en: 4
+[INFO] 17:44:24:380 BROKER/(17313:17408): Se realiza la compactacion
+[INFO] 17:44:24:380 BROKER/(17313:17408): Elimino particion que comienza en: 0
+[INFO] 17:44:24:380 BROKER/(17313:17408): Se realiza la compactacion
+[INFO] 17:44:24:381 BROKER/(17313:17408): Almaceno mensaje en partición que comienza en: 42
+[INFO] 17:44:24:381 BROKER/(17313:17326): Llegó un nuevo mensaje a la cola NEW_POKEMON.
+[INFO] 17:44:24:381 BROKER/(17313:17411): Se conectó un proceso GAMEBOY.
+[INFO] 17:44:24:381 BROKER/(17313:17411): Elimino particion que comienza en: 0
+[INFO] 17:44:24:381 BROKER/(17313:17411): Elimino particion que comienza en: 22
+[INFO] 17:44:24:381 BROKER/(17313:17411): Se consolidan las particiones que comienzan en: 0 y 22
+[INFO] 17:44:24:381 BROKER/(17313:17411): Almaceno mensaje en partición que comienza en: 0
+[INFO] 17:44:24:382 BROKER/(17313:17326): Llegó un nuevo mensaje a la cola NEW_POKEMON.
+[INFO] 17:44:24:382 BROKER/(17313:17414): Se conectó un proceso GAMEBOY.
+[INFO] 17:44:24:383 BROKER/(17313:17414): Elimino particion que comienza en: 42
+[INFO] 17:44:24:383 BROKER/(17313:17414): Se consolidan las particiones que comienzan en: 24 y 42
+[INFO] 17:44:24:383 BROKER/(17313:17414): Almaceno mensaje en partición que comienza en: 24
+[INFO] 17:44:24:383 BROKER/(17313:17326): Llegó un nuevo mensaje a la cola NEW_POKEMON.
+[INFO] 17:44:24:383 BROKER/(17313:17417): Se conectó un proceso GAMEBOY.
+[INFO] 17:44:24:384 BROKER/(17313:17417): Elimino particion que comienza en: 0
+[INFO] 17:44:24:384 BROKER/(17313:17417): Almaceno mensaje en partición que comienza en: 0
+[INFO] 17:44:24:384 BROKER/(17313:17326): Llegó un nuevo mensaje a la cola NEW_POKEMON.
+[INFO] 17:44:24:384 BROKER/(17313:17420): Se conectó un proceso GAMEBOY.
+[INFO] 17:44:24:384 BROKER/(17313:17420): Se realiza la compactacion
+[INFO] 17:44:24:384 BROKER/(17313:17420): Elimino particion que comienza en: 22
+[INFO] 17:44:24:384 BROKER/(17313:17420): Se consolidan las particiones que comienzan en: 22 y 45
+[INFO] 17:44:24:384 BROKER/(17313:17420): Almaceno mensaje en partición que comienza en: 22
+[INFO] 17:44:24:385 BROKER/(17313:17326): Llegó un nuevo mensaje a la cola NEW_POKEMON.
+[INFO] 17:44:25:184 BROKER/(17313:17428): Se conectó un proceso GAMEBOY.
+[INFO] 17:44:25:185 BROKER/(17313:17428): Elimino particion que comienza en: 22
+[INFO] 17:44:25:185 BROKER/(17313:17428): Se consolidan las particiones que comienzan en: 22 y 46
+[INFO] 17:44:25:185 BROKER/(17313:17428): Almaceno mensaje en partición que comienza en: 22
+[INFO] 17:44:25:185 BROKER/(17313:17326): Llegó un nuevo mensaje a la cola NEW_POKEMON.
+[INFO] 17:44:25:185 BROKER/(17313:17432): Se conectó un proceso GAMEBOY.
+[INFO] 17:44:25:185 BROKER/(17313:17432): Almaceno mensaje en partición que comienza en: 42
+[INFO] 17:44:25:186 BROKER/(17313:17326): Llegó un nuevo mensaje a la cola NEW_POKEMON.
+[INFO] 17:44:25:187 BROKER/(17313:17435): Se conectó un proceso GAMEBOY.
+[INFO] 17:44:25:187 BROKER/(17313:17435): Elimino particion que comienza en: 0
+[INFO] 17:44:25:187 BROKER/(17313:17435): Elimino particion que comienza en: 22
+[INFO] 17:44:25:187 BROKER/(17313:17435): Se consolidan las particiones que comienzan en: 0 y 22
+[INFO] 17:44:25:187 BROKER/(17313:17435): Almaceno mensaje en partición que comienza en: 0
+[INFO] 17:44:25:188 BROKER/(17313:17326): Llegó un nuevo mensaje a la cola NEW_POKEMON.
+[INFO] 17:44:25:189 BROKER/(17313:17438): Se conectó un proceso GAMEBOY.
+[INFO] 17:44:25:189 BROKER/(17313:17438): Elimino particion que comienza en: 42
+[INFO] 17:44:25:189 BROKER/(17313:17438): Se consolidan las particiones que comienzan en: 24 y 42
+[INFO] 17:44:25:189 BROKER/(17313:17438): Almaceno mensaje en partición que comienza en: 24
+[INFO] 17:44:25:189 BROKER/(17313:17326): Llegó un nuevo mensaje a la cola NEW_POKEMON.
+[INFO] 17:44:25:190 BROKER/(17313:17441): Se conectó un proceso GAMEBOY.
+[INFO] 17:44:25:190 BROKER/(17313:17441): Elimino particion que comienza en: 0
+[INFO] 17:44:25:190 BROKER/(17313:17441): Almaceno mensaje en partición que comienza en: 0
+[INFO] 17:44:25:191 BROKER/(17313:17444): Se conectó un proceso GAMEBOY.
+[INFO] 17:44:25:191 BROKER/(17313:17326): Llegó un nuevo mensaje a la cola NEW_POKEMON.
+[INFO] 17:44:25:191 BROKER/(17313:17444): Se realiza la compactacion
+[INFO] 17:44:25:191 BROKER/(17313:17444): Elimino particion que comienza en: 22
+[INFO] 17:44:25:191 BROKER/(17313:17444): Se consolidan las particiones que comienzan en: 22 y 45
+[INFO] 17:44:25:191 BROKER/(17313:17444): Almaceno mensaje en partición que comienza en: 22
+[INFO] 17:44:25:191 BROKER/(17313:17326): Llegó un nuevo mensaje a la cola NEW_POKEMON.
+[INFO] 17:44:25:794 BROKER/(17313:17448): Se conectó un proceso GAMEBOY.
+[INFO] 17:44:25:794 BROKER/(17313:17448): Elimino particion que comienza en: 0
+[INFO] 17:44:25:794 BROKER/(17313:17448): Almaceno mensaje en partición que comienza en: 0
+[INFO] 17:44:25:794 BROKER/(17313:17326): Llegó un nuevo mensaje a la cola NEW_POKEMON.
+[INFO] 17:44:25:795 BROKER/(17313:17451): Se conectó un proceso GAMEBOY.
+[INFO] 17:44:25:795 BROKER/(17313:17451): Se realiza la compactacion
+[INFO] 17:44:25:795 BROKER/(17313:17451): Elimino particion que comienza en: 20
+[INFO] 17:44:25:795 BROKER/(17313:17451): Se consolidan las particiones que comienzan en: 20 y 44
+[INFO] 17:44:25:795 BROKER/(17313:17451): Almaceno mensaje en partición que comienza en: 20
+[INFO] 17:44:25:795 BROKER/(17313:17326): Llegó un nuevo mensaje a la cola NEW_POKEMON.
+[INFO] 17:44:25:796 BROKER/(17313:17454): Se conectó un proceso GAMEBOY.
+[INFO] 17:44:25:796 BROKER/(17313:17454): Elimino particion que comienza en: 0
+[INFO] 17:44:25:796 BROKER/(17313:17454): Se realiza la compactacion
+[INFO] 17:44:25:796 BROKER/(17313:17454): Almaceno mensaje en partición que comienza en: 22
+[INFO] 17:44:25:796 BROKER/(17313:17326): Llegó un nuevo mensaje a la cola NEW_POKEMON.
+[INFO] 17:44:25:797 BROKER/(17313:17457): Se conectó un proceso GAMEBOY.
+[INFO] 17:44:25:797 BROKER/(17313:17457): Elimino particion que comienza en: 0
+[INFO] 17:44:25:797 BROKER/(17313:17457): Se realiza la compactacion
+[INFO] 17:44:25:797 BROKER/(17313:17457): Almaceno mensaje en partición que comienza en: 24
+[INFO] 17:44:25:797 BROKER/(17313:17326): Llegó un nuevo mensaje a la cola NEW_POKEMON.
+[INFO] 17:44:25:798 BROKER/(17313:17460): Se conectó un proceso GAMEBOY.
+[INFO] 17:44:25:798 BROKER/(17313:17460): Elimino particion que comienza en: 0
+[INFO] 17:44:25:798 BROKER/(17313:17460): Almaceno mensaje en partición que comienza en: 0
+[INFO] 17:44:25:798 BROKER/(17313:17326): Llegó un nuevo mensaje a la cola NEW_POKEMON.
+[INFO] 17:44:25:799 BROKER/(17313:17463): Se conectó un proceso GAMEBOY.
+[INFO] 17:44:25:799 BROKER/(17313:17463): Se realiza la compactacion
+[INFO] 17:44:25:799 BROKER/(17313:17463): Elimino particion que comienza en: 22
+[INFO] 17:44:25:799 BROKER/(17313:17463): Se consolidan las particiones que comienzan en: 22 y 45
+[INFO] 17:44:25:799 BROKER/(17313:17463): Almaceno mensaje en partición que comienza en: 22
+[INFO] 17:44:25:800 BROKER/(17313:17326): Llegó un nuevo mensaje a la cola NEW_POKEMON.
+[INFO] 17:44:26:598 BROKER/(17313:17467): Se conectó un proceso GAMEBOY.
+[INFO] 17:44:26:598 BROKER/(17313:17467): Elimino particion que comienza en: 0
+[INFO] 17:44:26:598 BROKER/(17313:17467): Almaceno mensaje en partición que comienza en: 0
+[INFO] 17:44:26:599 BROKER/(17313:17326): Llegó un nuevo mensaje a la cola NEW_POKEMON.
+[INFO] 17:44:26:599 BROKER/(17313:17470): Se conectó un proceso GAMEBOY.
+[INFO] 17:44:26:600 BROKER/(17313:17470): Se realiza la compactacion
+[INFO] 17:44:26:600 BROKER/(17313:17470): Elimino particion que comienza en: 20
+[INFO] 17:44:26:600 BROKER/(17313:17470): Se consolidan las particiones que comienzan en: 20 y 44
+[INFO] 17:44:26:600 BROKER/(17313:17470): Almaceno mensaje en partición que comienza en: 20
+[INFO] 17:44:26:600 BROKER/(17313:17326): Llegó un nuevo mensaje a la cola NEW_POKEMON.
+[INFO] 17:44:26:600 BROKER/(17313:17473): Se conectó un proceso GAMEBOY.
+[INFO] 17:44:26:601 BROKER/(17313:17473): Elimino particion que comienza en: 0
+[INFO] 17:44:26:601 BROKER/(17313:17473): Se realiza la compactacion
+[INFO] 17:44:26:601 BROKER/(17313:17473): Almaceno mensaje en partición que comienza en: 22
+[INFO] 17:44:26:601 BROKER/(17313:17326): Llegó un nuevo mensaje a la cola NEW_POKEMON.
+[INFO] 17:44:26:602 BROKER/(17313:17476): Se conectó un proceso GAMEBOY.
+[INFO] 17:44:26:602 BROKER/(17313:17476): Elimino particion que comienza en: 0
+[INFO] 17:44:26:602 BROKER/(17313:17476): Se realiza la compactacion
+[INFO] 17:44:26:602 BROKER/(17313:17476): Almaceno mensaje en partición que comienza en: 24
+[INFO] 17:44:26:602 BROKER/(17313:17326): Llegó un nuevo mensaje a la cola NEW_POKEMON.
+[INFO] 17:44:26:603 BROKER/(17313:17479): Se conectó un proceso GAMEBOY.
+[INFO] 17:44:26:603 BROKER/(17313:17479): Elimino particion que comienza en: 0
+[INFO] 17:44:26:603 BROKER/(17313:17479): Almaceno mensaje en partición que comienza en: 0
+[INFO] 17:44:26:603 BROKER/(17313:17326): Llegó un nuevo mensaje a la cola NEW_POKEMON.
+[INFO] 17:44:26:605 BROKER/(17313:17482): Se conectó un proceso GAMEBOY.
+[INFO] 17:44:26:605 BROKER/(17313:17482): Se realiza la compactacion
+[INFO] 17:44:26:605 BROKER/(17313:17482): Elimino particion que comienza en: 22
+[INFO] 17:44:26:605 BROKER/(17313:17482): Se consolidan las particiones que comienzan en: 22 y 45
+[INFO] 17:44:26:605 BROKER/(17313:17482): Almaceno mensaje en partición que comienza en: 22
+[INFO] 17:44:26:605 BROKER/(17313:17326): Llegó un nuevo mensaje a la cola NEW_POKEMON.

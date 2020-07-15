@@ -203,6 +203,7 @@ void manejarTipoDeMensaje(paquete* paq, uint32_t* socket) {
 			 structTiempo.paq    = *paq;
 			 structTiempo.socket = socket;
 			 suscribirPorTiempo((void*) &structTiempo);
+			 destruirSuscripcionTiempo(datosSuscribir);//PROBAR
 			 break;
 		 case ACK:
 			 guardarMensajeACK(paq);
