@@ -57,6 +57,8 @@ void levantarDatosDeConfig(char * pathConfig, uint32_t intMock){
 		definirAlgoritmoMemoria(configBroker);
 		definirAlgoritmoParticionLibre(configBroker);
 		definirAlgoritmoReemplazo(configBroker);
+
+
 	}else{
 		puerto_broker   = 5002;
 		ip_broker       = "127.0.0.1";
@@ -269,6 +271,7 @@ void * chequearMensajesEnCola(void * colaVoid){
 			guardarYaEnviados(paq, actual->idProceso);
 		}
 
+		free(paqSerializado);
 		destruirPaquete(paq);
 	}
 	return NULL;

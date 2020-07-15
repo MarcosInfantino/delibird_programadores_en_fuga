@@ -291,6 +291,7 @@ void enviarMsjsASuscriptorNuevoParticiones (uint32_t cola, uint32_t socket, uint
 		paqueteSerializado = serializarPaquete(paqueteASerializar);
 		send(socket, paqueteSerializado, sizePaquete(paqueteASerializar),0);
 
+		free(paqueteSerializado);
 		//memory leak
 		guardarYaEnviados(paqueteASerializar, idProceso);
 	}

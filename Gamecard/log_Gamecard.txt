@@ -3197,3 +3197,15 @@
 [INFO] 16:19:30:686 gamecard/(8187:8912): Inicia proceso de atencion al Catch
 [INFO] 16:19:35:724 gamecard/(8187:8912): Cierro el archivo del pokemon: Squirtle. Posicion: (5, 5).
 [INFO] 16:19:35:724 gamecard/(8187:8912): Inicia proceso envio Caught
+[INFO] 16:38:42:209 gamecard/(8187:8200): Conexión fallida con el Broker
+
+[INFO] 16:38:42:209 gamecard/(8187:8201): Conexión fallida con el Broker
+
+[INFO] 16:38:42:209 gamecard/(8187:8199): Conexión fallida con el Broker
+
+[INFO] 16:38:42:209 gamecard/(8187:8200): Reintentando conexión en 10 segundos...
+
+[INFO] 16:38:42:209 gamecard/(8187:8199): Reintentando conexión en 10 segundos...
+
+[INFO] 16:38:42:209 gamecard/(8187:8201): Reintentando conexión en 10 segundos...
+

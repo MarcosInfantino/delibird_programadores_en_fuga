@@ -42,6 +42,8 @@ typedef struct {
 }msgMemoriaBroker;
 
 
+
+
 typedef struct{
 	nodeStatus status;
 	uint32_t size;
@@ -166,4 +168,5 @@ void agregarRespuestaARespuestasEnviadas(paquete* paq);
 bool lruNodos(struct nodoMemoria* nodo1, struct nodoMemoria* nodo2);
 bool fifoNodos(struct nodoMemoria* nodo1, struct nodoMemoria* nodo2);
 
+void destroyMsgMemoriaBroker(void* msg);
 #endif /* MEMORIA_H_ */

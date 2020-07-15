@@ -244,6 +244,9 @@ bool menorTiempo(char* tiempo1, char* tiempo2){
 	uint32_t ms1 = atoi(time1Separado[3]);
 	uint32_t ms2 = atoi(time2Separado[3]);
 
+	liberarArrayBidimensionalChar(time1Separado);
+	liberarArrayBidimensionalChar(time2Separado);
+
 	if(hora1<hora2){
 		return true;
 	}else if((hora1==hora2) && (min1<min2)){
@@ -253,5 +256,22 @@ bool menorTiempo(char* tiempo1, char* tiempo2){
 	}else if((hora1==hora2) && (min1==min2) && (sec1==sec2) && (ms1<ms2)){
 		return true;
 	}
+
 	return false;
 }
+
+void destroyMsgMemoriaBroker(void* msg){
+	msgMemoriaBroker* mensaje= (msgMemoriaBroker*) msg;
+
+	destruirListaMutexYElementos(mensaje->subsYaEnviado, free);
+	destruirListaMutexYElementos(mensaje->subsACK, free);
+	free(mensaje);
+}
+
+//void liberarArrayBidimensionalChar(char** array){
+//	for(uint32_t i=0; *(array + i)!=NULL;i++){
+//		free(*(array+i));
+//
+//	}
+//	free(array);
+//}

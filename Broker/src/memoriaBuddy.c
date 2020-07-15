@@ -41,7 +41,7 @@ struct nodoMemoria* buscarVictimaPor(bool(*condition)(struct nodoMemoria*,struct
 
 void modificarNodoAlibre(struct nodoMemoria* victima){
 	victima->header.status = LIBRE;
-
+	destroyMsgMemoriaBroker((void*) victima->mensaje);//PROBAR
 	removerDeListaBuddy(nodosOcupados,victima);
 	addListaMutex(nodosLibres, victima);
 
@@ -106,14 +106,18 @@ uint32_t evaluarTamanioParticionYasignar(struct nodoMemoria* partActual, msgMemo
 
 		addListaMutex(nodosOcupados,partActual);
 		removerDeListaBuddy(nodosLibres, partActual);
-
+		char* auxFree1=partActual->header.tiempoDeCarga;
+		char* auxFree2=partActual->header.ultimoAcceso;
 		partActual->header.tiempoDeCarga=temporal_get_string_time();
 		partActual->header.ultimoAcceso=temporal_get_string_time();
+
+		free(auxFree1);
+		free(auxFree2);
+
 		asignarPuntero(partActual->offset, partActual->mensaje->stream, partActual->mensaje->sizeStream);
 
 		msg->stream = memoria + partActual->offset;
-		//TODO HAY QUE AGREGAR ESTO Y REVISAR QUE FUNCIONE. Es necesario, en particiones lo hicimos asi
-		//Atte Mari y Marquitos :D
+
 
 		log_info(brokerLogger2,"ASIGNE: Size de buddy: %i. Id mensaje: %i. Size del mensaje: %i.", (partActual->header).size, partActual->mensaje->idMensaje, partActual->mensaje->sizeStream);
 		return 1;
