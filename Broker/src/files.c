@@ -22,15 +22,11 @@ void iniciarArchivoMutex(){
 	char* tiempoAEscribir=string_new();
 	string_append_with_format(&tiempoAEscribir, "%s\n", tiempo);
 
-
 	fwrite(tiempoAEscribir, strlen(tiempoAEscribir), 1, archivoSem->archivo);
 
 	free(tiempo);
 	free(tiempoAEscribir);
 	fclose(archivoSem->archivo);
-	//registrarParticionesLibresYocupadas();
-
-	//return archivo;
 }
 
 void registrarParticionesLibresYocupadas(){
@@ -47,7 +43,6 @@ void registrarParticionesLibresYocupadas(){
 
 		char* buffer = string_new();
 		string_append_with_format(&buffer, "Particion %d: ", j);
-//		string_append_with_format(&buffer, "%p-%p.  ", memoria + particionAEscribir->offset, memoria+particionAEscribir->offset+particionAEscribir->sizeParticion);
 		string_append_with_format(&buffer, "%p-%p.  ",particionAEscribir->offset, particionAEscribir->offset+particionAEscribir->sizeParticion);
 
 		if(particionAEscribir->estadoParticion == PARTICION_LIBRE){
@@ -69,7 +64,6 @@ void registrarParticionesLibresYocupadas(){
 }
 
 void escribirEnArchivo(char* buffer){
-
 	//pthread_mutex_lock(archivoSem->mutex);
 	FILE* f=fopen("dumpDeCache.db", "r+");
 	fseek(f,0,SEEK_END);
@@ -88,21 +82,14 @@ void recorrerArbolYgrabarArchivo(){
 	listAddAllMutex(particiones, nodosLibres);
 	list_sort(particiones, menorAmayorSegunOffset);
 
-	log_info(brokerLogger2, "SIZE OCUPADAS: %i",sizeListaMutex(nodosOcupados));
-	log_info(brokerLogger2, "SIZE LIBRES: %i",sizeListaMutex(nodosLibres));
-	log_info(brokerLogger2, "SIZE TOTAL: %i",list_size(particiones));
-	for(int j =0; j<list_size(particiones); j++){
+	log_info(brokerLogger2, "SIZE OCUPADAS: %i, SIZE LIBRES: %i",sizeListaMutex(nodosOcupados), sizeListaMutex(nodosLibres));
+	for(int j = 0; j<list_size(particiones); j++){
 
 	char* buffer = string_new();
 	struct nodoMemoria* particionAEscribir = (struct nodoMemoria*) list_get(particiones, j);
 	string_append_with_format(&buffer, "Particion %d: ", j);
-	if(particionAEscribir->offset == 0){
-		inicio = 0;
-	}else{
-		inicio = particionAEscribir->offset;
-	}
 
-	string_append_with_format(&buffer, "%p-%p.  ",inicio, particionAEscribir->offset+particionAEscribir->header.size);
+	string_append_with_format(&buffer, "%p-%p.  ",particionAEscribir->offset, particionAEscribir->offset+particionAEscribir->header.size);
 
 	if(particionAEscribir->header.status == LIBRE){
 		string_append(&buffer, LIBREP);
@@ -130,6 +117,7 @@ char* estadoEnString(uint32_t estado){
 	return OCUPADA;
 }
 
+//TODO NO SÉ SI SE USA POR LAS DUDAS NO LO BORRÉ. ATTE:cAMI
 /*char* intToVecChar(uint32_t intAConvertir){
     uint32_t lengthDeInt = (uint32_t)floor(log10(abs(intAConvertir))) + 1;
     uint32_t array[lengthDeInt];

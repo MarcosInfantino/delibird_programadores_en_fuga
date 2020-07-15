@@ -65,14 +65,6 @@ typedef struct{
 	uint32_t socket;
 }socketIdProceso;
 
-//typedef struct {
-//	paquete paquete;
-//	colaMensajes structCola;
-//	uint32_t socketCliente;
-//} parametroValidacion;
-
-//pthread_t thread;
-
 pthread_mutex_t mutex;
 
 archivoMutex* archivoSem;

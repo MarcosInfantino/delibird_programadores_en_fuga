@@ -108,7 +108,6 @@ void registrarEnMemoriaBUDDYSYSTEM(msgMemoriaBroker* mensajeNuevo, struct nodoMe
 
 void enviarMsjsASuscriptorNuevoBuddySystem(uint32_t colaParametro, uint32_t socket, uint32_t idProceso);
 bool envieMensajeDeNodoAIdProceso(struct nodoMemoria* nodoEvaluado, uint32_t idProceso);
-//bool envieMensajeDeNodoASocket(struct nodoMemoria* nodoEvaluado, uint32_t* socket);
 
 void particionarMemoriaBUDDY(struct nodoMemoria*);
 void evaluarTamanioParticion(struct nodoMemoria* partActual, msgMemoriaBroker* msg);
@@ -137,7 +136,6 @@ bool estaOcupado(struct nodoMemoria* partActual);
 bool ambosHijosOcupados(struct nodoMemoria* padre);
 
 void enviarMensajesPreviosEnMemoria(uint32_t socket, uint32_t idProceso, uint32_t cola);
-//bool estaEnListaEnviados (uint32_t socket, msgMemoriaBroker* mensaje);
 void guardarYaEnviados (paquete* paq, uint32_t idProceso);
 bool estaEnListaACK(uint32_t idProceso, msgMemoriaBroker* mensaje);
 void guardarMensajeACK (paquete* paq);

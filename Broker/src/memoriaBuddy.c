@@ -1,21 +1,5 @@
-
 #include "broker.h"
 #include "memoria.h"
-
-//void registrarEnMemoriaBUDDYSYSTEM(msgMemoriaBroker* mensajeNuevo, struct nodoMemoria* partActual){
-//	struct nodoMemoria* backUp = partActual;
-//	uint32_t response = intentarRamaIzquierda(mensajeNuevo, partActual);
-//
-//	if(response == 0){
-//		partActual = backUp->hijoDer;
-//		registrarEnMemoriaBUDDYSYSTEM(mensajeNuevo, partActual);
-//	}
-//
-//	if(response == 0){ //TODO VER que condición poner para que entre acá
-//		elegirVictimaDeReemplazoYeliminarBD();
-//		registrarEnMemoriaBUDDYSYSTEM(mensajeNuevo, nodoRaizMemoria);
-//	}
-//}
 
 void registrarEnMemoriaBUDDYSYSTEM(msgMemoriaBroker* mensajeNuevo, struct nodoMemoria* partActual){
 	struct nodoMemoria* backUp = partActual;
@@ -40,8 +24,6 @@ void elegirVictimaDeReemplazoYeliminarBD(){
 	modificarNodoAlibre(victima);
 }
 
-
-
 struct nodoMemoria* buscarVictimaPor(bool(*condition)(struct nodoMemoria*,struct nodoMemoria*)){
 	struct nodoMemoria* minimo = getListaMutex(nodosOcupados, 0);
 	struct nodoMemoria* elNuevoNodo;
@@ -59,11 +41,8 @@ struct nodoMemoria* buscarVictimaPor(bool(*condition)(struct nodoMemoria*,struct
 void modificarNodoAlibre(struct nodoMemoria* victima){
 	victima->header.status = LIBRE;
 
-	log_info(brokerLogger2,"ELIMINO el mensaje en nodo con offset: %i del msg con ID %i", victima->offset, victima->mensaje->idMensaje);
-	//removerDeListaOcupados(victima);
 	removerDeListaBuddy(nodosOcupados,victima);
 	addListaMutex(nodosLibres, victima);
-	log_info(brokerLogger2,"agrego a lista libres victima: status %i",victima->header.status);
 
 	evaluarConsolidacion(victima);
 }
@@ -80,11 +59,8 @@ void evaluarConsolidacion(struct nodoMemoria* nodo){
 		nodo->padre->header.status = LIBRE;
 
 		addListaMutex(nodosLibres, nodo->padre);
-		log_info(brokerLogger2,"agrego a lista libre a padre de consolidacion: status %i",nodo->padre->header.status);
 		removerDeListaBuddy(nodosLibres, buddie);
-		log_info(brokerLogger2,"remuevo de lista libres a hijo: status %i",buddie->header.status);
 		removerDeListaBuddy(nodosLibres, nodo);
-		log_info(brokerLogger2,"remuevo de lista libres a otro hijo: status %i",nodo->header.status);
 
 		struct nodoMemoria* partActual = nodo->padre;
 		log_info(brokerLogger2,"CONSOLIDO buddy con offset: %i con su buddy con offset %i", nodo->offset, buddie->offset);
@@ -96,7 +72,6 @@ void evaluarConsolidacion(struct nodoMemoria* nodo){
 	}else{
 		return;
 	}
-
 }
 
 uint32_t intentarRamaIzquierda(msgMemoriaBroker* mensajeNuevo,struct nodoMemoria* partActual){
@@ -115,21 +90,21 @@ uint32_t intentarRamaIzquierda(msgMemoriaBroker* mensajeNuevo,struct nodoMemoria
 uint32_t evaluarTamanioParticionYasignar(struct nodoMemoria* partActual, msgMemoriaBroker* msg){
 	struct nodoMemoria* nodo;
 	uint32_t tamanioMsg = msg->sizeStream;
+
 	if(tamanioParticion(partActual) >= tamanioMsg){
 		while(tamanioParticion(partActual)/2 >= tamanioMsg && tamanioParticion(partActual)/2>=particionMinima){
 			log_info(brokerLogger2,"PARTICIONO: para msg %d y la cola %s", msg->idMensaje, nombreDeCola(msg->cola));
 			particionarMemoriaBUDDY(partActual);
 			partActual->header.status = PARTICIONADO;
 			removerDeListaBuddy(nodosLibres, partActual);
-			log_info(brokerLogger2,"remuevo de lista libres porque particiono: status %i",partActual->header.status);
 
 			partActual = partActual->hijoIzq;
 		}
 		partActual->header.status = OCUPADO;
 		partActual->mensaje = msg;
+
 		addListaMutex(nodosOcupados,partActual);
 		removerDeListaBuddy(nodosLibres, partActual);
-		log_info(brokerLogger2,"remuevo de lista libres por ocupar particion: status %i",partActual->header.status);
 
 		partActual->header.tiempoDeCarga=temporal_get_string_time();
 		partActual->header.ultimoAcceso=temporal_get_string_time();
@@ -162,9 +137,7 @@ void particionarMemoriaBUDDY(struct nodoMemoria* particionActual){
 	particionActual->hijoDer->header.size   = tamanoHijos;
 
 	addListaMutex(nodosLibres,particionActual->hijoIzq);
-	log_info(brokerLogger2,"agrego a lista libre hijo de nueva particion: status %i",particionActual->hijoIzq->header.status);
 	addListaMutex(nodosLibres,particionActual->hijoDer);
-	log_info(brokerLogger2,"agrego a lista libre hijo de nueva particion: status %i",particionActual->hijoDer->header.status);
 
 	particionActual->hijoIzq->padre   = particionActual;
 	particionActual->hijoDer->padre   = particionActual;
@@ -177,7 +150,6 @@ void particionarMemoriaBUDDY(struct nodoMemoria* particionActual){
 
 msgMemoriaBroker* buscarMensajeEnMemoriaBuddy(uint32_t id){
 	pthread_mutex_lock(mutexMemoria);
-	//struct nodoMemoria* backUp = nodoActual;
 	struct nodoMemoria* nodoActual = nodoRaizMemoria;
 
 	if(estaLibre(nodoActual)) {
@@ -203,7 +175,6 @@ msgMemoriaBroker* buscarMensajeEnMemoriaBuddy(uint32_t id){
 }
 
 bool existeMensajeEnMemoriaBuddy(mensajeGet* msgGet, mensajeCatch*  msgCatch){
-	//struct nodoMemoria* backUp = nodoActual;
 	pthread_mutex_lock(mutexMemoria);
 	struct nodoMemoria* nodoActual = nodoRaizMemoria;
 	struct nodoMemoria* aux;
@@ -272,7 +243,7 @@ msgMemoriaBroker* buscarPorRama(uint32_t id, struct nodoMemoria* partActual ){
 	if (estaOcupado(partActual) && (partActual->mensaje->idMensaje)==id){
 
 		partActual->header.ultimoAcceso=temporal_get_string_time();
-		log_info(brokerLogger2, "Encontre mensaje en mem: %s", partActual->header.ultimoAcceso);
+		log_info(brokerLogger2, "Encontré mensaje en memoria: %s", partActual->header.ultimoAcceso);
 
 		return partActual->mensaje;
 	}else if (estaParticionado(partActual)){
@@ -286,7 +257,7 @@ msgMemoriaBroker* buscarPorRama(uint32_t id, struct nodoMemoria* partActual ){
 }
 
 struct nodoMemoria* crearRaizArbol(void){
-	struct nodoMemoria* nodoRaiz = inicializarNodo();    //no estoy liberando malloc
+	struct nodoMemoria* nodoRaiz = inicializarNodo();
 	nodoRaiz->header.size   = tamMemoria;
 	nodoRaiz->header.status = LIBRE;
 	nodoRaiz->offset = 0;
@@ -325,15 +296,15 @@ bool ambosHijosOcupados(struct nodoMemoria* padre){
 }
 
 bool esHijoDerecho(struct nodoMemoria* particion){
-	return particion==(particion->padre->hijoDer);
+	return particion == (particion->padre->hijoDer);
 }
 
 bool estaOcupado(struct nodoMemoria* partActual){
-	return (partActual->header).status==OCUPADO;
+	return (partActual->header).status == OCUPADO;
 }
 
 bool estaParticionado(struct nodoMemoria* partActual){
-	return (partActual->header).status==PARTICIONADO;
+	return (partActual->header).status == PARTICIONADO;
 }
 bool entraEnLaMitad(struct nodoMemoria* partActual, msgMemoriaBroker* mensajeNuevo){
 	return mensajeNuevo->sizeStream <= tamanioParticion(partActual);
@@ -371,14 +342,14 @@ void enviarMsjsASuscriptorNuevoBuddySystem(uint32_t colaParametro, uint32_t sock
 				paqueteAEnviar->idCorrelativo = nodoEvaluado->mensaje->idCorrelativo;
 				void* paqStream = serializarPaquete(paqueteAEnviar);
 
-				(nodoEvaluado->header).ultimoAcceso=temporal_get_string_time();//actualizo el LRU
+				(nodoEvaluado->header).ultimoAcceso=temporal_get_string_time();
 
 				log_info(brokerLogger2, "Actualizo el ultimo acceso del MENSAJE %i : %s ",nodoEvaluado->mensaje->idMensaje ,(nodoEvaluado->header).ultimoAcceso);
 				send(socket, paqStream, sizePaquete(paqueteAEnviar), 0);
 				free(paqStream);
 				log_info(brokerLogger2, "GUARDO ENVIADO POR ENVIAR MENSAJES, id: %i, id cor: %i", paqueteAEnviar->id, paqueteAEnviar->idCorrelativo);
 				guardarYaEnviados(paqueteAEnviar, idProceso);
- 				//memory leak para el paquete
+ 				//TODO memory leak para el paquete
 			}
 		}
 	}

@@ -39,7 +39,7 @@ int main(int argc, char* argv[]) {
 //	brokerLogger=log_create(pathBrokerLogger, "Broker", false,);
     brokerLogger2 = log_create("brokerLoggerSecundario.log", "Broker", true, LOG_LEVEL_INFO);
     log_info(brokerLogger2, "pid del proceso broker: %i", getpid());
-    //log_info(brokerLogger2, armarStringEnvioXsub(2));
+
 	signal(SIGUSR1, crearDumpDeCache);
 
 	levantarDatosDeConfig(argv[1], 1);
@@ -161,7 +161,6 @@ void* atenderCliente(void* sock) {
 	log_info(loggerBroker,"Se conectó un proceso %s.", intToModulo(paqueteRecibido->modulo));
 
 	if( paqueteRecibido == NULL){
-		printf("RESPONDO MENSAJE ERRONEO\n");
 		responderMensaje(*socket, INCORRECTO);
 		free(socket);
 		}else{
@@ -371,7 +370,7 @@ void definirAlgoritmoReemplazo(t_config* config){
 	parAlgoritmo.OPCION2 = "LRU";
 	parAlgoritmo.OP1 = FIFO;
 	parAlgoritmo.OP2 = LRU;
-	parAlgoritmo.error = "Hubo un error al definir el algoritmo de particiones de memoria libres";
+	parAlgoritmo.error = "Hubo un error al definir el algoritmo de particiones de memoria libre";
 
 	definirAlgoritmo(parAlgoritmo, &algoritmoReemplazo);
 }
@@ -388,10 +387,10 @@ void definirAlgoritmo(algoritmoParameter parAlgoritmo, uint32_t * varInt){
 }
 
 bool yaSeEnvioEstaRespuesta(paquete* paq){
-	if(paq->idCorrelativo!=0){
+	if(paq->idCorrelativo != 0){
 		for(uint32_t i=0;i<sizeListaMutex(idsMensajesYaRespondidos);i++){
-			uint32_t* idActual= (uint32_t*) getListaMutex(idsMensajesYaRespondidos,i);
-			if(*idActual==paq->idCorrelativo){
+			uint32_t* idActual = (uint32_t*) getListaMutex(idsMensajesYaRespondidos,i);
+			if(*idActual == paq->idCorrelativo){
 				return true;
 			}
 		}
@@ -400,9 +399,9 @@ bool yaSeEnvioEstaRespuesta(paquete* paq){
 }
 
 void agregarRespuestaARespuestasEnviadas(paquete* paq){
-	if(paq->idCorrelativo!=0){
-		uint32_t* id=malloc(sizeof(uint32_t));
-		*id=paq->idCorrelativo;
+	if(paq->idCorrelativo != 0){
+		uint32_t* id = malloc(sizeof(uint32_t));
+		*id = paq->idCorrelativo;
 		addListaMutex(idsMensajesYaRespondidos, (void*)id);
 	}
 }

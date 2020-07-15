@@ -38,7 +38,7 @@ bool hayParticionLibreALaDerecha(particion* particionLibreNueva){
 			return true;
 		}
 	}
-		return false;
+	return false;
 }
 
 particion* particionLibreALaDerecha(particion* particionLibreNueva){
@@ -115,13 +115,12 @@ void compactar(){
 	for(int i=0; i<sizeListaMutex(particionesOcupadas); i++){
 		elemento = (particion*)getListaMutex(particionesOcupadas, i);
 
-		void* aux= malloc(elemento->sizeParticion);
+		void* aux = malloc(elemento->sizeParticion);
 		memcpy(aux, memoria + elemento->offset, elemento->sizeParticion);
 
-//		memcpy(memoria + base, memoria + elemento->offset, elemento->sizeParticion);
 		memcpy(memoria + base, aux, elemento->sizeParticion);
 
-		elemento->mensaje->stream=memoria + base;//IMPORTANTISIMO
+		elemento->mensaje->stream = memoria + base;//IMPORTANTISIMO
 		free(aux);
 
 		elemento->offset = base;
@@ -188,7 +187,7 @@ void asignarMensajeAParticion(particion* partiLibre, msgMemoriaBroker* mensaje){
 particion* crearPrimeraParticionLibre(void){
 	particion* particionADevolver = malloc(sizeof(particion));
 	particionADevolver->offset = 0;
-	particionADevolver->sizeParticion = tamMemoria;
+	particionADevolver->sizeParticion   = tamMemoria;
 	particionADevolver->estadoParticion = PARTICION_LIBRE;
 	return particionADevolver;
 }
@@ -237,7 +236,7 @@ particion* obtenerParticionLibrePARTICIONES(uint32_t tamStream){
 void generarParticionLibre(uint32_t base){
 	particion* nuevaParticion = malloc(sizeof(particion));
 	nuevaParticion->offset = base;
-	nuevaParticion->sizeParticion = tamMemoria - base;
+	nuevaParticion->sizeParticion   = tamMemoria - base;
 	nuevaParticion->estadoParticion = PARTICION_LIBRE;
 	uint32_t size = sizeListaMutex(particionesLibres);
 	for(int j=0; j<size; j++){
@@ -264,7 +263,7 @@ t_list* buscarMensajesDeColaEnParticiones (uint32_t cola){
 	t_list* msjsDeCola = list_create();
 	for(int i = 0; i<sizeListaMutex(particionesOcupadas); i++){
 		particion1 = (particion*) getListaMutex(particionesOcupadas, i);
-		if(particion1->mensaje->cola==cola){
+		if(particion1->mensaje->cola == cola){
 			particion1->lru = temporal_get_string_time();
 			list_add(msjsDeCola, (void*)particion1->mensaje);
 		}
