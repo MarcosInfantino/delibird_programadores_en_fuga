@@ -20,8 +20,6 @@
 #include <arpa/inet.h>
 #include <stdlib.h>
 
-
-
 //TEAM APPEARED_POKEMON Pikachu 0 0
 //BROKER CAUGHT_POKEMON 4 OK
 
@@ -83,22 +81,16 @@ void inicializarSemaforos(){
 
 	finalizacionCicloCpu=malloc(sizeof(sem_t));
 	sem_init((finalizacionCicloCpu), 0,0);
+
+	mutexPlanificador = malloc(sizeof(pthread_mutex_t));
+	pthread_mutex_init(mutexPlanificador, NULL);
 }
 
 void crearHilos(t_config* config){
-
 	crearHiloParaEnviarGets(&hiloEnviarGets);
-
-
 	crearHiloResolucionDeadlock(&resolucionDeadlock);
-
-
 	crearHiloConexionColasBroker((void*)config,&hiloConexionInicialBroker);
-
-
 	crearHiloServidorGameboy(&hiloServidorGameboy);
-
-
 	crearHiloPlanificador(&hiloPlanificador);
 }
 
@@ -172,7 +164,6 @@ void* atenderAppeared(void* paq){
 		addListaMutex(especiesLocalizadas,(void*)poke);
 	}
 
-
 	pokePosicion->pokemon=malloc(strlen(msg->pokemon)+1);
 	strcpy(pokePosicion->pokemon,msg->pokemon);
 	(pokePosicion->posicion).x=msg->posX;
@@ -208,7 +199,6 @@ void gestionarBusquedaPokemon(pokemonPosicion* pokePosicion){
 			}else{
 				log_info(teamLogger2, "No hay entrenadores disponibles para atrapar a %s. ",pokePosicion->pokemon);
 				pushColaMutex(pokemonesPendientes,(void*)pokePosicion);
-
 			}
 		}else if(seEstaGestionandoCatch(pokePosicion->pokemon)){
 			log_info(teamLogger2, "se esta gestionando el catch.");
@@ -461,10 +451,8 @@ void* suscribirseColasBroker(void* conf){
 	pthread_create(&threadSuscripcionAppeared, NULL, suscribirseCola, (void*)(mensajeSuscripcionAppeared));
 	pthread_detach(threadSuscripcionAppeared);
 
-
 	pthread_create(&threadSuscripcionLocalized, NULL, suscribirseCola,(void*) (mensajeSuscripcionLocalized));
 	pthread_detach(threadSuscripcionLocalized);
-
 
 	pthread_create(&threadSuscripcionCaught, NULL, suscribirseCola, (void*)(mensajeSuscripcionCaught));
 	pthread_detach(threadSuscripcionCaught);
