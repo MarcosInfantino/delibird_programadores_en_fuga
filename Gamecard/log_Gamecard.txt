@@ -2374,3 +2374,502 @@
 
 [INFO] 09:13:27:715 gamecard/(9700:9709): Reintentando conexión en 10 segundos...
 
+[INFO] 13:05:59:709 gamecard/(23337:23337): Inicio de programa: Gamecard.
+[INFO] 13:05:59:777 gamecard/(23337:23337): Se encontro el directorio metadata
+[INFO] 13:05:59:777 gamecard/(23337:23337): Se encontro el archivo metadata.bin
+[INFO] 13:05:59:790 gamecard/(23337:23337): Inicio de Metadata, Tamanio bloques: 64,  Cantidad de bloques: 20,  Magic number: TALL_GRASS
+[INFO] 13:05:59:857 gamecard/(23337:23343): Estoy escuchando
+[INFO] 13:05:59:857 gamecard/(23337:23343): Espero un nuevo cliente
+[INFO] 13:05:59:872 gamecard/(23337:23345): Conexión fallida con el Broker
+
+[INFO] 13:05:59:872 gamecard/(23337:23346): Conexión fallida con el Broker
+
+[INFO] 13:05:59:872 gamecard/(23337:23345): Reintentando conexión en 10 segundos...
+
+[INFO] 13:05:59:872 gamecard/(23337:23346): Reintentando conexión en 10 segundos...
+
+[INFO] 13:05:59:872 gamecard/(23337:23344): Conexión fallida con el Broker
+
+[INFO] 13:05:59:872 gamecard/(23337:23344): Reintentando conexión en 10 segundos...
+
+[INFO] 13:06:09:873 gamecard/(23337:23346): Reintentando conexión en 10 segundos...
+
+[INFO] 13:06:09:873 gamecard/(23337:23345): Reintentando conexión en 10 segundos...
+
+[INFO] 13:06:09:873 gamecard/(23337:23344): Reintentando conexión en 10 segundos...
+
+[INFO] 13:06:19:874 gamecard/(23337:23345): El reintento de conexión no fue exitoso
+
+[INFO] 13:06:19:874 gamecard/(23337:23344): El reintento de conexión no fue exitoso
+
+[INFO] 13:06:19:874 gamecard/(23337:23346): El reintento de conexión no fue exitoso
+
+[INFO] 13:06:19:874 gamecard/(23337:23345): Reintentando conexión en 10 segundos...
+
+[INFO] 13:06:19:874 gamecard/(23337:23344): Reintentando conexión en 10 segundos...
+
+[INFO] 13:06:19:874 gamecard/(23337:23346): Reintentando conexión en 10 segundos...
+
+[INFO] 13:06:29:874 gamecard/(23337:23344): El reintento de conexión no fue exitoso
+
+[INFO] 13:06:29:874 gamecard/(23337:23344): Reintentando conexión en 10 segundos...
+
+[INFO] 13:06:29:875 gamecard/(23337:23346): El reintento de conexión no fue exitoso
+
+[INFO] 13:06:29:875 gamecard/(23337:23345): El reintento de conexión no fue exitoso
+
+[INFO] 13:06:29:875 gamecard/(23337:23346): Reintentando conexión en 10 segundos...
+
+[INFO] 13:06:29:875 gamecard/(23337:23345): Reintentando conexión en 10 segundos...
+
+[INFO] 13:06:39:874 gamecard/(23337:23344): El reintento de conexión no fue exitoso
+
+[INFO] 13:06:39:876 gamecard/(23337:23345): El reintento de conexión no fue exitoso
+
+[INFO] 13:06:39:875 gamecard/(23337:23346): El reintento de conexión no fue exitoso
+
+[INFO] 13:06:39:876 gamecard/(23337:23344): Reintentando conexión en 10 segundos...
+
+[INFO] 13:06:39:876 gamecard/(23337:23346): Reintentando conexión en 10 segundos...
+
+[INFO] 13:06:39:876 gamecard/(23337:23345): Reintentando conexión en 10 segundos...
+
+[INFO] 13:06:49:878 gamecard/(23337:23345): El reintento de conexión no fue exitoso
+
+[INFO] 13:06:49:878 gamecard/(23337:23346): El reintento de conexión no fue exitoso
+
+[INFO] 13:06:49:878 gamecard/(23337:23344): El reintento de conexión no fue exitoso
+
+[INFO] 13:06:49:878 gamecard/(23337:23345): Reintentando conexión en 10 segundos...
+
+[INFO] 13:06:49:878 gamecard/(23337:23344): Reintentando conexión en 10 segundos...
+
+[INFO] 13:06:49:878 gamecard/(23337:23346): Reintentando conexión en 10 segundos...
+
+[INFO] 13:06:59:878 gamecard/(23337:23346): El reintento de conexión no fue exitoso
+
+[INFO] 13:06:59:878 gamecard/(23337:23344): El reintento de conexión no fue exitoso
+
+[INFO] 13:06:59:878 gamecard/(23337:23345): El reintento de conexión no fue exitoso
+
+[INFO] 13:06:59:878 gamecard/(23337:23346): Reintentando conexión en 10 segundos...
+
+[INFO] 13:06:59:878 gamecard/(23337:23345): Reintentando conexión en 10 segundos...
+
+[INFO] 13:06:59:878 gamecard/(23337:23344): Reintentando conexión en 10 segundos...
+
+[INFO] 13:07:09:879 gamecard/(23337:23344): El reintento de conexión no fue exitoso
+
+[INFO] 13:07:09:879 gamecard/(23337:23345): El reintento de conexión no fue exitoso
+
+[INFO] 13:07:09:879 gamecard/(23337:23346): El reintento de conexión no fue exitoso
+
+[INFO] 13:07:09:879 gamecard/(23337:23344): Reintentando conexión en 10 segundos...
+
+[INFO] 13:07:09:879 gamecard/(23337:23346): Reintentando conexión en 10 segundos...
+
+[INFO] 13:07:09:879 gamecard/(23337:23345): Reintentando conexión en 10 segundos...
+
+[INFO] 13:07:21:473 gamecard/(23435:23435): Inicio de programa: Gamecard.
+[INFO] 13:07:21:473 gamecard/(23435:23435): Se encontro el directorio metadata
+[INFO] 13:07:21:473 gamecard/(23435:23435): Se encontro el archivo metadata.bin
+[INFO] 13:07:21:473 gamecard/(23435:23435): Inicio de Metadata, Tamanio bloques: 64,  Cantidad de bloques: 20,  Magic number: TALL_GRASS
+[INFO] 13:07:21:825 gamecard/(23435:23442): Estoy escuchando
+[INFO] 13:07:21:825 gamecard/(23435:23442): Espero un nuevo cliente
+[INFO] 13:07:21:825 gamecard/(23435:23445): Conexión fallida con el Broker
+
+[INFO] 13:07:21:825 gamecard/(23435:23445): Reintentando conexión en 10 segundos...
+
+[INFO] 13:07:21:825 gamecard/(23435:23444): Conexión fallida con el Broker
+
+[INFO] 13:07:21:825 gamecard/(23435:23444): Reintentando conexión en 10 segundos...
+
+[INFO] 13:07:21:825 gamecard/(23435:23443): Conexión fallida con el Broker
+
+[INFO] 13:07:21:825 gamecard/(23435:23443): Reintentando conexión en 10 segundos...
+
+[INFO] 13:07:31:825 gamecard/(23435:23444): Reintentando conexión en 10 segundos...
+
+[INFO] 13:07:31:825 gamecard/(23435:23445): Reintentando conexión en 10 segundos...
+
+[INFO] 13:07:31:825 gamecard/(23435:23443): Reintentando conexión en 10 segundos...
+
+[INFO] 13:07:41:31 gamecard/(23435:23442): Gestiono un nuevo cliente
+[INFO] 13:07:41:31 gamecard/(23435:23442): Espero un nuevo cliente
+[INFO] 13:07:41:32 gamecard/(23435:23472): Recibi mensaje new pokemon. El pokemon es: Pikachu. La posicion es: (2,5). La cantidad es: 10.
+
+[INFO] 13:07:41:32 gamecard/(23435:23472): Inicia proceso de atencion al New
+[INFO] 13:07:41:826 gamecard/(23435:23443): El reintento de conexión no fue exitoso
+
+[INFO] 13:07:41:826 gamecard/(23435:23445): El reintento de conexión no fue exitoso
+
+[INFO] 13:07:41:826 gamecard/(23435:23444): El reintento de conexión no fue exitoso
+
+[INFO] 13:07:41:826 gamecard/(23435:23443): Reintentando conexión en 10 segundos...
+
+[INFO] 13:07:41:826 gamecard/(23435:23444): Reintentando conexión en 10 segundos...
+
+[INFO] 13:07:41:826 gamecard/(23435:23445): Reintentando conexión en 10 segundos...
+
+[INFO] 13:07:42:41 gamecard/(23435:23472): Cierro el archivo del pokemon: Pikachu. Posicion: (2, 5).
+[INFO] 13:07:42:41 gamecard/(23435:23472): Inicia proceso envio Appeared
+[INFO] 13:07:51:827 gamecard/(23435:23445): El reintento de conexión no fue exitoso
+
+[INFO] 13:07:51:827 gamecard/(23435:23445): Reintentando conexión en 10 segundos...
+
+[INFO] 13:07:51:827 gamecard/(23435:23444): El reintento de conexión no fue exitoso
+
+[INFO] 13:07:51:827 gamecard/(23435:23444): Reintentando conexión en 10 segundos...
+
+[INFO] 13:07:51:827 gamecard/(23435:23443): El reintento de conexión no fue exitoso
+
+[INFO] 13:07:51:827 gamecard/(23435:23443): Reintentando conexión en 10 segundos...
+
+[INFO] 13:08:01:828 gamecard/(23435:23444): El reintento de conexión no fue exitoso
+
+[INFO] 13:08:01:828 gamecard/(23435:23444): Reintentando conexión en 10 segundos...
+
+[INFO] 13:08:01:828 gamecard/(23435:23443): El reintento de conexión no fue exitoso
+
+[INFO] 13:08:01:828 gamecard/(23435:23443): Reintentando conexión en 10 segundos...
+
+[INFO] 13:08:01:829 gamecard/(23435:23445): El reintento de conexión no fue exitoso
+
+[INFO] 13:08:01:829 gamecard/(23435:23445): Reintentando conexión en 10 segundos...
+
+[INFO] 13:08:11:829 gamecard/(23435:23444): El reintento de conexión no fue exitoso
+
+[INFO] 13:08:11:829 gamecard/(23435:23445): El reintento de conexión no fue exitoso
+
+[INFO] 13:08:11:829 gamecard/(23435:23443): El reintento de conexión no fue exitoso
+
+[INFO] 13:08:11:829 gamecard/(23435:23444): Reintentando conexión en 10 segundos...
+
+[INFO] 13:08:11:829 gamecard/(23435:23443): Reintentando conexión en 10 segundos...
+
+[INFO] 13:08:11:829 gamecard/(23435:23445): Reintentando conexión en 10 segundos...
+
+[INFO] 13:08:21:831 gamecard/(23435:23445): El reintento de conexión no fue exitoso
+
+[INFO] 13:08:21:831 gamecard/(23435:23443): El reintento de conexión no fue exitoso
+
+[INFO] 13:08:21:831 gamecard/(23435:23444): El reintento de conexión no fue exitoso
+
+[INFO] 13:08:21:831 gamecard/(23435:23445): Reintentando conexión en 10 segundos...
+
+[INFO] 13:08:21:831 gamecard/(23435:23444): Reintentando conexión en 10 segundos...
+
+[INFO] 13:08:21:831 gamecard/(23435:23443): Reintentando conexión en 10 segundos...
+
+[INFO] 13:08:31:832 gamecard/(23435:23445): El reintento de conexión no fue exitoso
+
+[INFO] 13:08:31:833 gamecard/(23435:23443): El reintento de conexión no fue exitoso
+
+[INFO] 13:08:31:832 gamecard/(23435:23444): El reintento de conexión no fue exitoso
+
+[INFO] 13:08:31:833 gamecard/(23435:23445): Reintentando conexión en 10 segundos...
+
+[INFO] 13:08:31:833 gamecard/(23435:23444): Reintentando conexión en 10 segundos...
+
+[INFO] 13:08:31:833 gamecard/(23435:23443): Reintentando conexión en 10 segundos...
+
+[INFO] 13:08:36:147 gamecard/(23435:23442): Gestiono un nuevo cliente
+[INFO] 13:08:36:147 gamecard/(23435:23442): Espero un nuevo cliente
+[INFO] 13:08:36:147 gamecard/(23435:23550): Recibi mensaje new pokemon. El pokemon es: Pikachu. La posicion es: (1,9). La cantidad es: 3.
+
+[INFO] 13:08:36:147 gamecard/(23435:23550): Inicia proceso de atencion al New
+[INFO] 13:08:36:160 gamecard/(23435:23442): Gestiono un nuevo cliente
+[INFO] 13:08:36:160 gamecard/(23435:23442): Espero un nuevo cliente
+[INFO] 13:08:36:160 gamecard/(23435:23554): Recibi mensaje new pokemon. El pokemon es: Charmander. La posicion es: (4,1). La cantidad es: 101.
+
+[INFO] 13:08:36:160 gamecard/(23435:23554): Inicia proceso de atencion al New
+[INFO] 13:08:36:170 gamecard/(23435:23442): Gestiono un nuevo cliente
+[INFO] 13:08:36:170 gamecard/(23435:23442): Espero un nuevo cliente
+[INFO] 13:08:36:170 gamecard/(23435:23557): Recibi mensaje new pokemon. El pokemon es: Charmander. La posicion es: (517,2046). La cantidad es: 15.
+
+[INFO] 13:08:36:170 gamecard/(23435:23557): Inicia proceso de atencion al New
+[INFO] 13:08:36:170 gamecard/(23435:23557): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 13:08:36:173 gamecard/(23435:23442): Gestiono un nuevo cliente
+[INFO] 13:08:36:173 gamecard/(23435:23442): Espero un nuevo cliente
+[INFO] 13:08:36:173 gamecard/(23435:23560): Recibi mensaje new pokemon. El pokemon es: Charmander. La posicion es: (413,17). La cantidad es: 1.
+
+[INFO] 13:08:36:173 gamecard/(23435:23560): Inicia proceso de atencion al New
+[INFO] 13:08:36:173 gamecard/(23435:23560): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 13:08:36:175 gamecard/(23435:23442): Gestiono un nuevo cliente
+[INFO] 13:08:36:175 gamecard/(23435:23442): Espero un nuevo cliente
+[INFO] 13:08:36:175 gamecard/(23435:23563): Recibi mensaje new pokemon. El pokemon es: Charmander. La posicion es: (723,97). La cantidad es: 29.
+
+[INFO] 13:08:36:175 gamecard/(23435:23563): Inicia proceso de atencion al New
+[INFO] 13:08:36:175 gamecard/(23435:23563): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 13:08:36:178 gamecard/(23435:23442): Gestiono un nuevo cliente
+[INFO] 13:08:36:178 gamecard/(23435:23442): Espero un nuevo cliente
+[INFO] 13:08:36:178 gamecard/(23435:23566): Recibi mensaje new pokemon. El pokemon es: Charmander. La posicion es: (65,93). La cantidad es: 3001.
+
+[INFO] 13:08:36:178 gamecard/(23435:23566): Inicia proceso de atencion al New
+[INFO] 13:08:36:178 gamecard/(23435:23566): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 13:08:36:180 gamecard/(23435:23442): Gestiono un nuevo cliente
+[INFO] 13:08:36:180 gamecard/(23435:23442): Espero un nuevo cliente
+[INFO] 13:08:36:181 gamecard/(23435:23568): Recibi mensaje new pokemon. El pokemon es: Charmander. La posicion es: (12,17). La cantidad es: 34.
+
+[INFO] 13:08:36:181 gamecard/(23435:23568): Inicia proceso de atencion al New
+[INFO] 13:08:36:181 gamecard/(23435:23568): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 13:08:36:187 gamecard/(23435:23442): Gestiono un nuevo cliente
+[INFO] 13:08:36:187 gamecard/(23435:23442): Espero un nuevo cliente
+[INFO] 13:08:36:187 gamecard/(23435:23572): Recibi mensaje new pokemon. El pokemon es: Charmander. La posicion es: (129,547). La cantidad es: 11.
+
+[INFO] 13:08:36:187 gamecard/(23435:23572): Inicia proceso de atencion al New
+[INFO] 13:08:36:187 gamecard/(23435:23572): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 13:08:37:158 gamecard/(23435:23550): Cierro el archivo del pokemon: Pikachu. Posicion: (1, 9).
+[INFO] 13:08:37:158 gamecard/(23435:23550): Inicia proceso envio Appeared
+[INFO] 13:08:37:169 gamecard/(23435:23554): Cierro el archivo del pokemon: Charmander. Posicion: (4, 1).
+[INFO] 13:08:37:169 gamecard/(23435:23554): Inicia proceso envio Appeared
+[INFO] 13:08:41:175 gamecard/(23435:23560): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 13:08:41:179 gamecard/(23435:23563): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 13:08:41:180 gamecard/(23435:23566): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 13:08:41:187 gamecard/(23435:23568): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 13:08:41:190 gamecard/(23435:23572): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 13:08:41:833 gamecard/(23435:23445): El reintento de conexión no fue exitoso
+
+[INFO] 13:08:41:833 gamecard/(23435:23444): El reintento de conexión no fue exitoso
+
+[INFO] 13:08:41:833 gamecard/(23435:23443): El reintento de conexión no fue exitoso
+
+[INFO] 13:08:41:833 gamecard/(23435:23445): Reintentando conexión en 10 segundos...
+
+[INFO] 13:08:41:833 gamecard/(23435:23443): Reintentando conexión en 10 segundos...
+
+[INFO] 13:08:41:833 gamecard/(23435:23444): Reintentando conexión en 10 segundos...
+
+[INFO] 13:08:42:175 gamecard/(23435:23557): Cierro el archivo del pokemon: Charmander. Posicion: (517, 2046).
+[INFO] 13:08:42:175 gamecard/(23435:23557): Inicia proceso envio Appeared
+[INFO] 13:08:46:180 gamecard/(23435:23563): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 13:08:46:181 gamecard/(23435:23566): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 13:08:46:188 gamecard/(23435:23568): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 13:08:46:191 gamecard/(23435:23572): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 13:08:47:179 gamecard/(23435:23560): Cierro el archivo del pokemon: Charmander. Posicion: (413, 17).
+[INFO] 13:08:47:179 gamecard/(23435:23560): Inicia proceso envio Appeared
+[INFO] 13:08:51:181 gamecard/(23435:23566): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 13:08:51:189 gamecard/(23435:23568): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 13:08:51:193 gamecard/(23435:23572): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 13:08:51:833 gamecard/(23435:23445): El reintento de conexión no fue exitoso
+
+[INFO] 13:08:51:833 gamecard/(23435:23444): El reintento de conexión no fue exitoso
+
+[INFO] 13:08:51:833 gamecard/(23435:23443): El reintento de conexión no fue exitoso
+
+[INFO] 13:08:51:833 gamecard/(23435:23445): Reintentando conexión en 10 segundos...
+
+[INFO] 13:08:51:833 gamecard/(23435:23443): Reintentando conexión en 10 segundos...
+
+[INFO] 13:08:51:833 gamecard/(23435:23444): Reintentando conexión en 10 segundos...
+
+[INFO] 13:08:52:182 gamecard/(23435:23563): Cierro el archivo del pokemon: Charmander. Posicion: (723, 97).
+[INFO] 13:08:52:182 gamecard/(23435:23563): Inicia proceso envio Appeared
+[INFO] 13:08:56:190 gamecard/(23435:23568): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 13:08:56:193 gamecard/(23435:23572): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 13:08:57:184 gamecard/(23435:23566): Cierro el archivo del pokemon: Charmander. Posicion: (65, 93).
+[INFO] 13:08:57:184 gamecard/(23435:23566): Inicia proceso envio Appeared
+[INFO] 13:09:01:195 gamecard/(23435:23572): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 13:09:01:834 gamecard/(23435:23444): El reintento de conexión no fue exitoso
+
+[INFO] 13:09:01:834 gamecard/(23435:23443): El reintento de conexión no fue exitoso
+
+[INFO] 13:09:01:834 gamecard/(23435:23444): Reintentando conexión en 10 segundos...
+
+[INFO] 13:09:01:834 gamecard/(23435:23443): Reintentando conexión en 10 segundos...
+
+[INFO] 13:09:01:834 gamecard/(23435:23445): El reintento de conexión no fue exitoso
+
+[INFO] 13:09:01:834 gamecard/(23435:23445): Reintentando conexión en 10 segundos...
+
+[INFO] 13:09:02:194 gamecard/(23435:23568): Cierro el archivo del pokemon: Charmander. Posicion: (12, 17).
+[INFO] 13:09:02:194 gamecard/(23435:23568): Inicia proceso envio Appeared
+[INFO] 13:09:07:203 gamecard/(23435:23572): Cierro el archivo del pokemon: Charmander. Posicion: (129, 547).
+[INFO] 13:09:07:203 gamecard/(23435:23572): Inicia proceso envio Appeared
+[INFO] 13:09:11:835 gamecard/(23435:23444): El reintento de conexión no fue exitoso
+
+[INFO] 13:09:11:835 gamecard/(23435:23445): El reintento de conexión no fue exitoso
+
+[INFO] 13:09:11:835 gamecard/(23435:23443): El reintento de conexión no fue exitoso
+
+[INFO] 13:09:11:835 gamecard/(23435:23444): Reintentando conexión en 10 segundos...
+
+[INFO] 13:09:11:835 gamecard/(23435:23443): Reintentando conexión en 10 segundos...
+
+[INFO] 13:09:11:835 gamecard/(23435:23445): Reintentando conexión en 10 segundos...
+
+[INFO] 13:09:21:836 gamecard/(23435:23445): El reintento de conexión no fue exitoso
+
+[INFO] 13:09:21:836 gamecard/(23435:23443): El reintento de conexión no fue exitoso
+
+[INFO] 13:09:21:836 gamecard/(23435:23444): El reintento de conexión no fue exitoso
+
+[INFO] 13:09:21:836 gamecard/(23435:23445): Reintentando conexión en 10 segundos...
+
+[INFO] 13:09:21:836 gamecard/(23435:23444): Reintentando conexión en 10 segundos...
+
+[INFO] 13:09:21:836 gamecard/(23435:23443): Reintentando conexión en 10 segundos...
+
+[INFO] 13:09:31:837 gamecard/(23435:23443): El reintento de conexión no fue exitoso
+
+[INFO] 13:09:31:837 gamecard/(23435:23444): El reintento de conexión no fue exitoso
+
+[INFO] 13:09:31:837 gamecard/(23435:23445): El reintento de conexión no fue exitoso
+
+[INFO] 13:09:31:837 gamecard/(23435:23443): Reintentando conexión en 10 segundos...
+
+[INFO] 13:09:31:837 gamecard/(23435:23445): Reintentando conexión en 10 segundos...
+
+[INFO] 13:09:31:837 gamecard/(23435:23444): Reintentando conexión en 10 segundos...
+
+[INFO] 13:09:41:839 gamecard/(23435:23444): El reintento de conexión no fue exitoso
+
+[INFO] 13:09:41:839 gamecard/(23435:23445): El reintento de conexión no fue exitoso
+
+[INFO] 13:09:41:839 gamecard/(23435:23443): El reintento de conexión no fue exitoso
+
+[INFO] 13:09:41:840 gamecard/(23435:23444): Reintentando conexión en 10 segundos...
+
+[INFO] 13:09:41:840 gamecard/(23435:23443): Reintentando conexión en 10 segundos...
+
+[INFO] 13:09:41:840 gamecard/(23435:23445): Reintentando conexión en 10 segundos...
+
+[INFO] 13:09:51:842 gamecard/(23435:23445): El reintento de conexión no fue exitoso
+
+[INFO] 13:09:51:842 gamecard/(23435:23445): Reintentando conexión en 10 segundos...
+
+[INFO] 13:09:51:842 gamecard/(23435:23443): El reintento de conexión no fue exitoso
+
+[INFO] 13:09:51:842 gamecard/(23435:23443): Reintentando conexión en 10 segundos...
+
+[INFO] 13:09:51:842 gamecard/(23435:23444): El reintento de conexión no fue exitoso
+
+[INFO] 13:09:51:842 gamecard/(23435:23444): Reintentando conexión en 10 segundos...
+
+[INFO] 13:10:01:845 gamecard/(23435:23445): El reintento de conexión no fue exitoso
+
+[INFO] 13:10:01:845 gamecard/(23435:23444): El reintento de conexión no fue exitoso
+
+[INFO] 13:10:01:845 gamecard/(23435:23443): El reintento de conexión no fue exitoso
+
+[INFO] 13:10:01:845 gamecard/(23435:23445): Reintentando conexión en 10 segundos...
+
+[INFO] 13:10:01:845 gamecard/(23435:23443): Reintentando conexión en 10 segundos...
+
+[INFO] 13:10:01:845 gamecard/(23435:23444): Reintentando conexión en 10 segundos...
+
+[INFO] 13:10:11:846 gamecard/(23435:23444): El reintento de conexión no fue exitoso
+
+[INFO] 13:10:11:847 gamecard/(23435:23443): El reintento de conexión no fue exitoso
+
+[INFO] 13:10:11:847 gamecard/(23435:23445): El reintento de conexión no fue exitoso
+
+[INFO] 13:10:11:847 gamecard/(23435:23444): Reintentando conexión en 10 segundos...
+
+[INFO] 13:10:11:847 gamecard/(23435:23445): Reintentando conexión en 10 segundos...
+
+[INFO] 13:10:11:847 gamecard/(23435:23443): Reintentando conexión en 10 segundos...
+
+[INFO] 13:10:21:847 gamecard/(23435:23443): El reintento de conexión no fue exitoso
+
+[INFO] 13:10:21:847 gamecard/(23435:23445): El reintento de conexión no fue exitoso
+
+[INFO] 13:10:21:848 gamecard/(23435:23444): El reintento de conexión no fue exitoso
+
+[INFO] 13:10:21:848 gamecard/(23435:23443): Reintentando conexión en 10 segundos...
+
+[INFO] 13:10:21:848 gamecard/(23435:23444): Reintentando conexión en 10 segundos...
+
+[INFO] 13:10:21:848 gamecard/(23435:23445): Reintentando conexión en 10 segundos...
+
+[INFO] 13:10:32:763 gamecard/(23435:23443): El reintento de conexión no fue exitoso
+
+[INFO] 13:10:32:763 gamecard/(23435:23445): El reintento de conexión no fue exitoso
+
+[INFO] 13:10:32:763 gamecard/(23435:23444): El reintento de conexión no fue exitoso
+
+[INFO] 13:10:32:763 gamecard/(23435:23443): Reintentando conexión en 10 segundos...
+
+[INFO] 13:10:32:763 gamecard/(23435:23444): Reintentando conexión en 10 segundos...
+
+[INFO] 13:10:32:764 gamecard/(23435:23445): Reintentando conexión en 10 segundos...
+
+[INFO] 13:10:40:17 gamecard/(23435:23442): Gestiono un nuevo cliente
+[INFO] 13:10:40:17 gamecard/(23435:23442): Espero un nuevo cliente
+[INFO] 13:10:40:17 gamecard/(23435:23832): Recibi mensaje catch pokemon. El pokemon es: Charmander. La posicion es: (413,17).
+
+[INFO] 13:10:40:17 gamecard/(23435:23832): Inicia proceso de atencion al Catch
+[INFO] 13:10:41:34 gamecard/(23435:23832): Cierro el archivo del pokemon: Charmander. Posicion: (413, 17).
+[INFO] 13:10:41:34 gamecard/(23435:23832): Inicia proceso envio Caught
+[INFO] 13:10:42:764 gamecard/(23435:23445): El reintento de conexión no fue exitoso
+
+[INFO] 13:10:42:764 gamecard/(23435:23444): El reintento de conexión no fue exitoso
+
+[INFO] 13:10:42:764 gamecard/(23435:23443): El reintento de conexión no fue exitoso
+
+[INFO] 13:10:42:764 gamecard/(23435:23445): Reintentando conexión en 10 segundos...
+
+[INFO] 13:10:42:764 gamecard/(23435:23443): Reintentando conexión en 10 segundos...
+
+[INFO] 13:10:42:764 gamecard/(23435:23444): Reintentando conexión en 10 segundos...
+
+[INFO] 13:10:52:765 gamecard/(23435:23444): El reintento de conexión no fue exitoso
+
+[INFO] 13:10:52:765 gamecard/(23435:23443): El reintento de conexión no fue exitoso
+
+[INFO] 13:10:52:765 gamecard/(23435:23445): El reintento de conexión no fue exitoso
+
+[INFO] 13:10:52:765 gamecard/(23435:23444): Reintentando conexión en 10 segundos...
+
+[INFO] 13:10:52:765 gamecard/(23435:23445): Reintentando conexión en 10 segundos...
+
+[INFO] 13:10:52:765 gamecard/(23435:23443): Reintentando conexión en 10 segundos...
+
+[INFO] 13:11:02:765 gamecard/(23435:23444): El reintento de conexión no fue exitoso
+
+[INFO] 13:11:02:765 gamecard/(23435:23444): Reintentando conexión en 10 segundos...
+
+[INFO] 13:11:02:766 gamecard/(23435:23443): El reintento de conexión no fue exitoso
+
+[INFO] 13:11:02:766 gamecard/(23435:23445): El reintento de conexión no fue exitoso
+
+[INFO] 13:11:02:766 gamecard/(23435:23443): Reintentando conexión en 10 segundos...
+
+[INFO] 13:11:02:766 gamecard/(23435:23445): Reintentando conexión en 10 segundos...
+
+[INFO] 13:11:12:766 gamecard/(23435:23444): El reintento de conexión no fue exitoso
+
+[INFO] 13:11:12:766 gamecard/(23435:23444): Reintentando conexión en 10 segundos...
+
+[INFO] 13:11:12:767 gamecard/(23435:23445): El reintento de conexión no fue exitoso
+
+[INFO] 13:11:12:767 gamecard/(23435:23443): El reintento de conexión no fue exitoso
+
+[INFO] 13:11:12:767 gamecard/(23435:23445): Reintentando conexión en 10 segundos...
+
+[INFO] 13:11:12:767 gamecard/(23435:23443): Reintentando conexión en 10 segundos...
+
+[INFO] 13:11:22:766 gamecard/(23435:23444): El reintento de conexión no fue exitoso
+
+[INFO] 13:11:22:766 gamecard/(23435:23444): Reintentando conexión en 10 segundos...
+
+[INFO] 13:11:22:767 gamecard/(23435:23443): El reintento de conexión no fue exitoso
+
+[INFO] 13:11:22:767 gamecard/(23435:23445): El reintento de conexión no fue exitoso
+
+[INFO] 13:11:22:767 gamecard/(23435:23443): Reintentando conexión en 10 segundos...
+
+[INFO] 13:11:22:767 gamecard/(23435:23445): Reintentando conexión en 10 segundos...
+
+[INFO] 13:11:32:767 gamecard/(23435:23445): El reintento de conexión no fue exitoso
+
+[INFO] 13:11:32:768 gamecard/(23435:23443): El reintento de conexión no fue exitoso
+
+[INFO] 13:11:32:768 gamecard/(23435:23444): El reintento de conexión no fue exitoso
+
+[INFO] 13:11:32:768 gamecard/(23435:23445): Reintentando conexión en 10 segundos...
+
+[INFO] 13:11:32:768 gamecard/(23435:23444): Reintentando conexión en 10 segundos...
+
+[INFO] 13:11:32:768 gamecard/(23435:23443): Reintentando conexión en 10 segundos...
+

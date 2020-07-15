@@ -51475,3 +51475,435 @@ HolacomoAndas
 
 [INFO] 09:13:27:715 gamecard/(9700:9709): El reintento de conexión no fue exitoso
 
+[INFO] 13:05:59:857 gamecard/(23337:23344): Voy a llenar el paquete
+[INFO] 13:05:59:857 gamecard/(23337:23345): Voy a llenar el paquete
+[INFO] 13:05:59:857 gamecard/(23337:23346): Voy a llenar el paquete
+[INFO] 13:05:59:872 gamecard/(23337:23344): cliente: 7
+[INFO] 13:05:59:872 gamecard/(23337:23346): cliente: 8
+[INFO] 13:05:59:872 gamecard/(23337:23345): cliente: 9
+[INFO] 13:05:59:872 gamecard/(23337:23345): Conexión fallida con el Broker
+
+[INFO] 13:05:59:872 gamecard/(23337:23346): Conexión fallida con el Broker
+
+[INFO] 13:05:59:872 gamecard/(23337:23344): Conexión fallida con el Broker
+
+[INFO] 13:06:19:874 gamecard/(23337:23345): El reintento de conexión no fue exitoso
+
+[INFO] 13:06:19:874 gamecard/(23337:23344): El reintento de conexión no fue exitoso
+
+[INFO] 13:06:19:874 gamecard/(23337:23346): El reintento de conexión no fue exitoso
+
+[INFO] 13:06:29:874 gamecard/(23337:23344): El reintento de conexión no fue exitoso
+
+[INFO] 13:06:29:875 gamecard/(23337:23346): El reintento de conexión no fue exitoso
+
+[INFO] 13:06:29:875 gamecard/(23337:23345): El reintento de conexión no fue exitoso
+
+[INFO] 13:06:39:875 gamecard/(23337:23344): El reintento de conexión no fue exitoso
+
+[INFO] 13:06:39:876 gamecard/(23337:23345): El reintento de conexión no fue exitoso
+
+[INFO] 13:06:39:876 gamecard/(23337:23346): El reintento de conexión no fue exitoso
+
+[INFO] 13:06:49:878 gamecard/(23337:23345): El reintento de conexión no fue exitoso
+
+[INFO] 13:06:49:878 gamecard/(23337:23346): El reintento de conexión no fue exitoso
+
+[INFO] 13:06:49:878 gamecard/(23337:23344): El reintento de conexión no fue exitoso
+
+[INFO] 13:06:59:878 gamecard/(23337:23346): El reintento de conexión no fue exitoso
+
+[INFO] 13:06:59:878 gamecard/(23337:23344): El reintento de conexión no fue exitoso
+
+[INFO] 13:06:59:878 gamecard/(23337:23345): El reintento de conexión no fue exitoso
+
+[INFO] 13:07:09:879 gamecard/(23337:23344): El reintento de conexión no fue exitoso
+
+[INFO] 13:07:09:879 gamecard/(23337:23345): El reintento de conexión no fue exitoso
+
+[INFO] 13:07:09:879 gamecard/(23337:23346): El reintento de conexión no fue exitoso
+
+[INFO] 13:07:21:825 gamecard/(23435:23445): Voy a llenar el paquete
+[INFO] 13:07:21:825 gamecard/(23435:23445): cliente: 7
+[INFO] 13:07:21:825 gamecard/(23435:23445): Conexión fallida con el Broker
+
+[INFO] 13:07:21:825 gamecard/(23435:23444): Voy a llenar el paquete
+[INFO] 13:07:21:825 gamecard/(23435:23444): cliente: 8
+[INFO] 13:07:21:825 gamecard/(23435:23444): Conexión fallida con el Broker
+
+[INFO] 13:07:21:825 gamecard/(23435:23443): Voy a llenar el paquete
+[INFO] 13:07:21:825 gamecard/(23435:23443): cliente: 9
+[INFO] 13:07:21:825 gamecard/(23435:23443): Conexión fallida con el Broker
+
+[INFO] 13:07:41:33 gamecard/(23435:23472): LecturaArchivo: .
+[INFO] 13:07:41:33 gamecard/(23435:23472): char*posiciones: 
+[INFO] 13:07:41:34 gamecard/(23435:23472): Agrego un bloque.
+[INFO] 13:07:41:34 gamecard/(23435:23472): LISTA BLOQUES: [1].
+[INFO] 13:07:41:34 gamecard/(23435:23472): LISTA BLOQUES AGREGADA: [1].
+[INFO] 13:07:41:826 gamecard/(23435:23443): El reintento de conexión no fue exitoso
+
+[INFO] 13:07:41:826 gamecard/(23435:23445): El reintento de conexión no fue exitoso
+
+[INFO] 13:07:41:826 gamecard/(23435:23444): El reintento de conexión no fue exitoso
+
+[INFO] 13:07:42:41 gamecard/(23435:23472): Cierro el archivo del pokemon: Pikachu. Posicion: (2, 5).
+[INFO] 13:07:51:827 gamecard/(23435:23445): El reintento de conexión no fue exitoso
+
+[INFO] 13:07:51:827 gamecard/(23435:23444): El reintento de conexión no fue exitoso
+
+[INFO] 13:07:51:827 gamecard/(23435:23443): El reintento de conexión no fue exitoso
+
+[INFO] 13:08:01:828 gamecard/(23435:23444): El reintento de conexión no fue exitoso
+
+[INFO] 13:08:01:828 gamecard/(23435:23443): El reintento de conexión no fue exitoso
+
+[INFO] 13:08:01:829 gamecard/(23435:23445): El reintento de conexión no fue exitoso
+
+[INFO] 13:08:11:829 gamecard/(23435:23444): El reintento de conexión no fue exitoso
+
+[INFO] 13:08:11:829 gamecard/(23435:23445): El reintento de conexión no fue exitoso
+
+[INFO] 13:08:11:829 gamecard/(23435:23443): El reintento de conexión no fue exitoso
+
+[INFO] 13:08:21:831 gamecard/(23435:23445): El reintento de conexión no fue exitoso
+
+[INFO] 13:08:21:831 gamecard/(23435:23443): El reintento de conexión no fue exitoso
+
+[INFO] 13:08:21:831 gamecard/(23435:23444): El reintento de conexión no fue exitoso
+
+[INFO] 13:08:31:833 gamecard/(23435:23445): El reintento de conexión no fue exitoso
+
+[INFO] 13:08:31:833 gamecard/(23435:23443): El reintento de conexión no fue exitoso
+
+[INFO] 13:08:31:833 gamecard/(23435:23444): El reintento de conexión no fue exitoso
+
+[INFO] 13:08:36:147 gamecard/(23435:23550): Posicion en la lectura del bloque 1: 64
+[INFO] 13:08:36:156 gamecard/(23435:23550): LECTURA BLOQUE: 2-5=10
+.
+[INFO] 13:08:36:156 gamecard/(23435:23550): LecturaArchivo: 2-5=10
+.
+[INFO] 13:08:36:156 gamecard/(23435:23550): char*posiciones: 2-5=10
+
+[INFO] 13:08:36:157 gamecard/(23435:23550): BUFFER FUNCION LISTA STRING: 2-5=10
+[INFO] 13:08:36:157 gamecard/(23435:23550): I DE LA FUNCION DE LISTAS: 0
+[INFO] 13:08:36:160 gamecard/(23435:23554): LecturaArchivo: .
+[INFO] 13:08:36:162 gamecard/(23435:23554): char*posiciones: 
+[INFO] 13:08:36:164 gamecard/(23435:23554): Agrego un bloque.
+[INFO] 13:08:36:168 gamecard/(23435:23554): LISTA BLOQUES: [2].
+[INFO] 13:08:36:168 gamecard/(23435:23554): LISTA BLOQUES AGREGADA: [2].
+[INFO] 13:08:36:170 gamecard/(23435:23557): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 13:08:36:173 gamecard/(23435:23560): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 13:08:36:175 gamecard/(23435:23563): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 13:08:36:178 gamecard/(23435:23566): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 13:08:36:181 gamecard/(23435:23568): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 13:08:36:187 gamecard/(23435:23572): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 13:08:37:158 gamecard/(23435:23550): Cierro el archivo del pokemon: Pikachu. Posicion: (1, 9).
+[INFO] 13:08:37:169 gamecard/(23435:23554): Cierro el archivo del pokemon: Charmander. Posicion: (4, 1).
+[INFO] 13:08:41:172 gamecard/(23435:23557): Posicion en la lectura del bloque 2: 64
+[INFO] 13:08:41:173 gamecard/(23435:23557): LECTURA BLOQUE: 4-1=101
+.
+[INFO] 13:08:41:173 gamecard/(23435:23557): LecturaArchivo: 4-1=101
+.
+[INFO] 13:08:41:173 gamecard/(23435:23557): char*posiciones: 4-1=101
+
+[INFO] 13:08:41:173 gamecard/(23435:23557): BUFFER FUNCION LISTA STRING: 4-1=101
+[INFO] 13:08:41:173 gamecard/(23435:23557): I DE LA FUNCION DE LISTAS: 0
+[INFO] 13:08:41:175 gamecard/(23435:23560): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 13:08:41:179 gamecard/(23435:23563): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 13:08:41:180 gamecard/(23435:23566): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 13:08:41:187 gamecard/(23435:23568): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 13:08:41:190 gamecard/(23435:23572): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 13:08:41:833 gamecard/(23435:23445): El reintento de conexión no fue exitoso
+
+[INFO] 13:08:41:833 gamecard/(23435:23444): El reintento de conexión no fue exitoso
+
+[INFO] 13:08:41:833 gamecard/(23435:23443): El reintento de conexión no fue exitoso
+
+[INFO] 13:08:42:175 gamecard/(23435:23557): Cierro el archivo del pokemon: Charmander. Posicion: (517, 2046).
+[INFO] 13:08:46:177 gamecard/(23435:23560): Posicion en la lectura del bloque 2: 64
+[INFO] 13:08:46:177 gamecard/(23435:23560): LECTURA BLOQUE: 4-1=101
+517-2046=15
+.
+[INFO] 13:08:46:177 gamecard/(23435:23560): LecturaArchivo: 4-1=101
+517-2046=15
+.
+[INFO] 13:08:46:177 gamecard/(23435:23560): char*posiciones: 4-1=101
+517-2046=15
+
+[INFO] 13:08:46:177 gamecard/(23435:23560): BUFFER FUNCION LISTA STRING: 4-1=101
+[INFO] 13:08:46:177 gamecard/(23435:23560): BUFFER FUNCION LISTA STRING: 517-2046=15
+[INFO] 13:08:46:177 gamecard/(23435:23560): I DE LA FUNCION DE LISTAS: 0
+[INFO] 13:08:46:177 gamecard/(23435:23560): I DE LA FUNCION DE LISTAS: 1
+[INFO] 13:08:46:180 gamecard/(23435:23563): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 13:08:46:181 gamecard/(23435:23566): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 13:08:46:188 gamecard/(23435:23568): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 13:08:46:191 gamecard/(23435:23572): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 13:08:47:179 gamecard/(23435:23560): Cierro el archivo del pokemon: Charmander. Posicion: (413, 17).
+[INFO] 13:08:51:181 gamecard/(23435:23563): Posicion en la lectura del bloque 2: 64
+[INFO] 13:08:51:181 gamecard/(23435:23563): LECTURA BLOQUE: 4-1=101
+517-2046=15
+413-17=1
+.
+[INFO] 13:08:51:181 gamecard/(23435:23563): LecturaArchivo: 4-1=101
+517-2046=15
+413-17=1
+.
+[INFO] 13:08:51:181 gamecard/(23435:23563): char*posiciones: 4-1=101
+517-2046=15
+413-17=1
+
+[INFO] 13:08:51:181 gamecard/(23435:23563): BUFFER FUNCION LISTA STRING: 4-1=101
+[INFO] 13:08:51:181 gamecard/(23435:23563): BUFFER FUNCION LISTA STRING: 517-2046=15
+[INFO] 13:08:51:181 gamecard/(23435:23563): BUFFER FUNCION LISTA STRING: 413-17=1
+[INFO] 13:08:51:181 gamecard/(23435:23563): I DE LA FUNCION DE LISTAS: 0
+[INFO] 13:08:51:181 gamecard/(23435:23563): I DE LA FUNCION DE LISTAS: 1
+[INFO] 13:08:51:181 gamecard/(23435:23563): I DE LA FUNCION DE LISTAS: 2
+[INFO] 13:08:51:181 gamecard/(23435:23566): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 13:08:51:189 gamecard/(23435:23568): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 13:08:51:193 gamecard/(23435:23572): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 13:08:51:833 gamecard/(23435:23445): El reintento de conexión no fue exitoso
+
+[INFO] 13:08:51:833 gamecard/(23435:23444): El reintento de conexión no fue exitoso
+
+[INFO] 13:08:51:833 gamecard/(23435:23443): El reintento de conexión no fue exitoso
+
+[INFO] 13:08:52:182 gamecard/(23435:23563): Cierro el archivo del pokemon: Charmander. Posicion: (723, 97).
+[INFO] 13:08:56:182 gamecard/(23435:23566): Posicion en la lectura del bloque 2: 64
+[INFO] 13:08:56:183 gamecard/(23435:23566): LECTURA BLOQUE: 4-1=101
+517-2046=15
+413-17=1
+723-97=29
+.
+[INFO] 13:08:56:183 gamecard/(23435:23566): LecturaArchivo: 4-1=101
+517-2046=15
+413-17=1
+723-97=29
+.
+[INFO] 13:08:56:183 gamecard/(23435:23566): char*posiciones: 4-1=101
+517-2046=15
+413-17=1
+723-97=29
+
+[INFO] 13:08:56:183 gamecard/(23435:23566): BUFFER FUNCION LISTA STRING: 4-1=101
+[INFO] 13:08:56:183 gamecard/(23435:23566): BUFFER FUNCION LISTA STRING: 517-2046=15
+[INFO] 13:08:56:183 gamecard/(23435:23566): BUFFER FUNCION LISTA STRING: 413-17=1
+[INFO] 13:08:56:183 gamecard/(23435:23566): BUFFER FUNCION LISTA STRING: 723-97=29
+[INFO] 13:08:56:183 gamecard/(23435:23566): I DE LA FUNCION DE LISTAS: 0
+[INFO] 13:08:56:183 gamecard/(23435:23566): I DE LA FUNCION DE LISTAS: 1
+[INFO] 13:08:56:183 gamecard/(23435:23566): I DE LA FUNCION DE LISTAS: 2
+[INFO] 13:08:56:183 gamecard/(23435:23566): I DE LA FUNCION DE LISTAS: 3
+[INFO] 13:08:56:190 gamecard/(23435:23568): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 13:08:56:193 gamecard/(23435:23572): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 13:08:57:184 gamecard/(23435:23566): Cierro el archivo del pokemon: Charmander. Posicion: (65, 93).
+[INFO] 13:09:01:192 gamecard/(23435:23568): Posicion en la lectura del bloque 2: 64
+[INFO] 13:09:01:192 gamecard/(23435:23568): LECTURA BLOQUE: 4-1=101
+517-2046=15
+413-17=1
+723-97=29
+65-93=3001
+.
+[INFO] 13:09:01:192 gamecard/(23435:23568): LecturaArchivo: 4-1=101
+517-2046=15
+413-17=1
+723-97=29
+65-93=3001
+.
+[INFO] 13:09:01:192 gamecard/(23435:23568): char*posiciones: 4-1=101
+517-2046=15
+413-17=1
+723-97=29
+65-93=3001
+
+[INFO] 13:09:01:192 gamecard/(23435:23568): BUFFER FUNCION LISTA STRING: 4-1=101
+[INFO] 13:09:01:192 gamecard/(23435:23568): BUFFER FUNCION LISTA STRING: 517-2046=15
+[INFO] 13:09:01:192 gamecard/(23435:23568): BUFFER FUNCION LISTA STRING: 413-17=1
+[INFO] 13:09:01:192 gamecard/(23435:23568): BUFFER FUNCION LISTA STRING: 723-97=29
+[INFO] 13:09:01:192 gamecard/(23435:23568): BUFFER FUNCION LISTA STRING: 65-93=3001
+[INFO] 13:09:01:192 gamecard/(23435:23568): I DE LA FUNCION DE LISTAS: 0
+[INFO] 13:09:01:192 gamecard/(23435:23568): I DE LA FUNCION DE LISTAS: 1
+[INFO] 13:09:01:192 gamecard/(23435:23568): I DE LA FUNCION DE LISTAS: 2
+[INFO] 13:09:01:192 gamecard/(23435:23568): I DE LA FUNCION DE LISTAS: 3
+[INFO] 13:09:01:192 gamecard/(23435:23568): I DE LA FUNCION DE LISTAS: 4
+[INFO] 13:09:01:195 gamecard/(23435:23572): Reintento abrir el archivo en 5 sengundos. 
+[INFO] 13:09:01:834 gamecard/(23435:23444): El reintento de conexión no fue exitoso
+
+[INFO] 13:09:01:834 gamecard/(23435:23443): El reintento de conexión no fue exitoso
+
+[INFO] 13:09:01:834 gamecard/(23435:23445): El reintento de conexión no fue exitoso
+
+[INFO] 13:09:02:194 gamecard/(23435:23568): Cierro el archivo del pokemon: Charmander. Posicion: (12, 17).
+[INFO] 13:09:06:199 gamecard/(23435:23572): Posicion en la lectura del bloque 2: 64
+[INFO] 13:09:06:199 gamecard/(23435:23572): LECTURA BLOQUE: 4-1=101
+517-2046=15
+413-17=1
+723-97=29
+65-93=3001
+12-17=34
+.
+[INFO] 13:09:06:199 gamecard/(23435:23572): LecturaArchivo: 4-1=101
+517-2046=15
+413-17=1
+723-97=29
+65-93=3001
+12-17=34
+.
+[INFO] 13:09:06:199 gamecard/(23435:23572): char*posiciones: 4-1=101
+517-2046=15
+413-17=1
+723-97=29
+65-93=3001
+12-17=34
+
+[INFO] 13:09:06:199 gamecard/(23435:23572): BUFFER FUNCION LISTA STRING: 4-1=101
+[INFO] 13:09:06:199 gamecard/(23435:23572): BUFFER FUNCION LISTA STRING: 517-2046=15
+[INFO] 13:09:06:199 gamecard/(23435:23572): BUFFER FUNCION LISTA STRING: 413-17=1
+[INFO] 13:09:06:199 gamecard/(23435:23572): BUFFER FUNCION LISTA STRING: 723-97=29
+[INFO] 13:09:06:199 gamecard/(23435:23572): BUFFER FUNCION LISTA STRING: 65-93=3001
+[INFO] 13:09:06:199 gamecard/(23435:23572): BUFFER FUNCION LISTA STRING: 12-17=34
+[INFO] 13:09:06:199 gamecard/(23435:23572): I DE LA FUNCION DE LISTAS: 0
+[INFO] 13:09:06:199 gamecard/(23435:23572): I DE LA FUNCION DE LISTAS: 1
+[INFO] 13:09:06:199 gamecard/(23435:23572): I DE LA FUNCION DE LISTAS: 2
+[INFO] 13:09:06:200 gamecard/(23435:23572): I DE LA FUNCION DE LISTAS: 3
+[INFO] 13:09:06:200 gamecard/(23435:23572): I DE LA FUNCION DE LISTAS: 4
+[INFO] 13:09:06:200 gamecard/(23435:23572): I DE LA FUNCION DE LISTAS: 5
+[INFO] 13:09:06:200 gamecard/(23435:23572): Agrego un bloque.
+[INFO] 13:09:06:200 gamecard/(23435:23572): LISTA BLOQUES: [2,3].
+[INFO] 13:09:06:200 gamecard/(23435:23572): LISTA BLOQUES AGREGADA: [2,3].
+[INFO] 13:09:07:203 gamecard/(23435:23572): Cierro el archivo del pokemon: Charmander. Posicion: (129, 547).
+[INFO] 13:09:11:835 gamecard/(23435:23444): El reintento de conexión no fue exitoso
+
+[INFO] 13:09:11:835 gamecard/(23435:23445): El reintento de conexión no fue exitoso
+
+[INFO] 13:09:11:835 gamecard/(23435:23443): El reintento de conexión no fue exitoso
+
+[INFO] 13:09:21:836 gamecard/(23435:23445): El reintento de conexión no fue exitoso
+
+[INFO] 13:09:21:836 gamecard/(23435:23443): El reintento de conexión no fue exitoso
+
+[INFO] 13:09:21:836 gamecard/(23435:23444): El reintento de conexión no fue exitoso
+
+[INFO] 13:09:31:837 gamecard/(23435:23443): El reintento de conexión no fue exitoso
+
+[INFO] 13:09:31:837 gamecard/(23435:23444): El reintento de conexión no fue exitoso
+
+[INFO] 13:09:31:837 gamecard/(23435:23445): El reintento de conexión no fue exitoso
+
+[INFO] 13:09:41:839 gamecard/(23435:23444): El reintento de conexión no fue exitoso
+
+[INFO] 13:09:41:839 gamecard/(23435:23445): El reintento de conexión no fue exitoso
+
+[INFO] 13:09:41:839 gamecard/(23435:23443): El reintento de conexión no fue exitoso
+
+[INFO] 13:09:51:842 gamecard/(23435:23445): El reintento de conexión no fue exitoso
+
+[INFO] 13:09:51:842 gamecard/(23435:23443): El reintento de conexión no fue exitoso
+
+[INFO] 13:09:51:842 gamecard/(23435:23444): El reintento de conexión no fue exitoso
+
+[INFO] 13:10:01:845 gamecard/(23435:23445): El reintento de conexión no fue exitoso
+
+[INFO] 13:10:01:845 gamecard/(23435:23444): El reintento de conexión no fue exitoso
+
+[INFO] 13:10:01:845 gamecard/(23435:23443): El reintento de conexión no fue exitoso
+
+[INFO] 13:10:11:846 gamecard/(23435:23444): El reintento de conexión no fue exitoso
+
+[INFO] 13:10:11:847 gamecard/(23435:23443): El reintento de conexión no fue exitoso
+
+[INFO] 13:10:11:847 gamecard/(23435:23445): El reintento de conexión no fue exitoso
+
+[INFO] 13:10:21:847 gamecard/(23435:23443): El reintento de conexión no fue exitoso
+
+[INFO] 13:10:21:847 gamecard/(23435:23445): El reintento de conexión no fue exitoso
+
+[INFO] 13:10:21:848 gamecard/(23435:23444): El reintento de conexión no fue exitoso
+
+[INFO] 13:10:32:763 gamecard/(23435:23443): El reintento de conexión no fue exitoso
+
+[INFO] 13:10:32:763 gamecard/(23435:23445): El reintento de conexión no fue exitoso
+
+[INFO] 13:10:32:763 gamecard/(23435:23444): El reintento de conexión no fue exitoso
+
+[INFO] 13:10:40:17 gamecard/(23435:23832): deserializado
+[INFO] 13:10:40:23 gamecard/(23435:23832): Pokemon:Charmander, posicion:413-17
+[INFO] 13:10:40:25 gamecard/(23435:23832): Posicion en la lectura del bloque 2: 64
+[INFO] 13:10:40:26 gamecard/(23435:23832): LECTURA BLOQUE: 4-1=101
+517-2046=15
+413-17=1
+723-97=29
+65-93=3001
+12-17=34
+129-5.
+[INFO] 13:10:40:27 gamecard/(23435:23832): Posicion en la lectura del bloque 3: 64
+[INFO] 13:10:40:27 gamecard/(23435:23832): LECTURA BLOQUE: 47=11
+.
+[INFO] 13:10:40:27 gamecard/(23435:23832): LecturaArchivo: 4-1=101
+517-2046=15
+413-17=1
+723-97=29
+65-93=3001
+12-17=34
+129-547=11
+.
+[INFO] 13:10:40:27 gamecard/(23435:23832): char*posiciones: 4-1=101
+517-2046=15
+413-17=1
+723-97=29
+65-93=3001
+12-17=34
+129-547=11
+
+[INFO] 13:10:40:27 gamecard/(23435:23832): BUFFER FUNCION LISTA STRING: 4-1=101
+[INFO] 13:10:40:27 gamecard/(23435:23832): BUFFER FUNCION LISTA STRING: 517-2046=15
+[INFO] 13:10:40:27 gamecard/(23435:23832): BUFFER FUNCION LISTA STRING: 413-17=1
+[INFO] 13:10:40:27 gamecard/(23435:23832): BUFFER FUNCION LISTA STRING: 723-97=29
+[INFO] 13:10:40:27 gamecard/(23435:23832): BUFFER FUNCION LISTA STRING: 65-93=3001
+[INFO] 13:10:40:27 gamecard/(23435:23832): BUFFER FUNCION LISTA STRING: 12-17=34
+[INFO] 13:10:40:27 gamecard/(23435:23832): BUFFER FUNCION LISTA STRING: 129-547=11
+[INFO] 13:10:40:27 gamecard/(23435:23832): I DE LA FUNCION DE LISTAS: 0
+[INFO] 13:10:40:27 gamecard/(23435:23832): I DE LA FUNCION DE LISTAS: 1
+[INFO] 13:10:40:27 gamecard/(23435:23832): I DE LA FUNCION DE LISTAS: 2
+[INFO] 13:10:40:27 gamecard/(23435:23832): I DE LA FUNCION DE LISTAS: 3
+[INFO] 13:10:40:27 gamecard/(23435:23832): I DE LA FUNCION DE LISTAS: 4
+[INFO] 13:10:40:32 gamecard/(23435:23832): I DE LA FUNCION DE LISTAS: 5
+[INFO] 13:10:40:32 gamecard/(23435:23832): I DE LA FUNCION DE LISTAS: 6
+[INFO] 13:10:40:32 gamecard/(23435:23832): Size lista antes de comprobar:7
+[INFO] 13:10:40:32 gamecard/(23435:23832): Elimino linea
+[INFO] 13:10:40:32 gamecard/(23435:23832): REMUEVO UN BLOQUE
+[INFO] 13:10:40:32 gamecard/(23435:23832): Size lista despues de comprobar:6
+[INFO] 13:10:42:764 gamecard/(23435:23445): El reintento de conexión no fue exitoso
+
+[INFO] 13:10:42:764 gamecard/(23435:23444): El reintento de conexión no fue exitoso
+
+[INFO] 13:10:42:764 gamecard/(23435:23443): El reintento de conexión no fue exitoso
+
+[INFO] 13:10:52:765 gamecard/(23435:23444): El reintento de conexión no fue exitoso
+
+[INFO] 13:10:52:765 gamecard/(23435:23443): El reintento de conexión no fue exitoso
+
+[INFO] 13:10:52:765 gamecard/(23435:23445): El reintento de conexión no fue exitoso
+
+[INFO] 13:11:02:765 gamecard/(23435:23444): El reintento de conexión no fue exitoso
+
+[INFO] 13:11:02:766 gamecard/(23435:23443): El reintento de conexión no fue exitoso
+
+[INFO] 13:11:02:766 gamecard/(23435:23445): El reintento de conexión no fue exitoso
+
+[INFO] 13:11:12:766 gamecard/(23435:23444): El reintento de conexión no fue exitoso
+
+[INFO] 13:11:12:767 gamecard/(23435:23445): El reintento de conexión no fue exitoso
+
+[INFO] 13:11:12:767 gamecard/(23435:23443): El reintento de conexión no fue exitoso
+
+[INFO] 13:11:22:766 gamecard/(23435:23444): El reintento de conexión no fue exitoso
+
+[INFO] 13:11:22:767 gamecard/(23435:23443): El reintento de conexión no fue exitoso
+
+[INFO] 13:11:22:767 gamecard/(23435:23445): El reintento de conexión no fue exitoso
+
+[INFO] 13:11:32:767 gamecard/(23435:23445): El reintento de conexión no fue exitoso
+
+[INFO] 13:11:32:768 gamecard/(23435:23443): El reintento de conexión no fue exitoso
+
+[INFO] 13:11:32:768 gamecard/(23435:23444): El reintento de conexión no fue exitoso
+
