@@ -455,3 +455,2215 @@
 [INFO] 17:43:56:17 team/(16949:16955): El entrenador 3 se mueve a : (2,1).
 [INFO] 17:43:57:18 team/(16949:16955): El entrenador 3 se mueve a : (2,2).
 [INFO] 17:43:57:18 team/(16949:16955): El entrenador 3 se movió a la posición (2, 2).
+[INFO] 15:56:15:523 team/(6642:6642): --------------------------------------------------------------------------
+[INFO] 15:56:15:711 team/(6642:6642): NUEVA EJECUCION
+[INFO] 15:56:15:711 team/(6642:6642): --------------------------------------------------------------------------
+[INFO] 15:56:15:711 team/(6642:6642): Algortimo de planificación: RR con Q=1.
+[INFO] 15:56:15:711 team/(6642:6642): --------------------------------------------------------------
+[INFO] 15:56:15:711 team/(6642:6642): OBJETIVO DEL TEAM
+[INFO] 15:56:15:711 team/(6642:6642): Objetivo 0. Pokemon: Vaporeon. Cantidad: 1.
+[INFO] 15:56:15:711 team/(6642:6642): Objetivo 1. Pokemon: Jolteon. Cantidad: 1.
+[INFO] 15:56:15:711 team/(6642:6642): Objetivo 2. Pokemon: Flareon. Cantidad: 1.
+[INFO] 15:56:15:711 team/(6642:6642): Objetivo 3. Pokemon: Umbreon. Cantidad: 1.
+[INFO] 15:56:15:711 team/(6642:6642): Objetivo 4. Pokemon: Espeon. Cantidad: 1.
+[INFO] 15:56:15:711 team/(6642:6642): --------------------------------------------------
+[INFO] 15:56:15:715 team/(6642:6652): Se inicia el planificador
+[INFO] 15:56:15:719 team/(6642:6660): Suscripción realizada correctamente
+
+[INFO] 15:56:15:724 team/(6642:6659): Suscripción realizada correctamente
+
+[INFO] 15:56:15:726 team/(6642:6658): Suscripción realizada correctamente
+
+[INFO] 15:56:15:730 team/(6642:6679): Atiendo appeared. Pokemon: Pikachu.
+[INFO] 15:56:15:730 team/(6642:6677): Atiendo appeared. Pokemon: Jolteon.
+[INFO] 15:56:15:730 team/(6642:6679): El pokemon no es objetivo
+[INFO] 15:56:15:730 team/(6642:6677): El pokemon es objetivo
+[INFO] 15:56:15:730 team/(6642:6677): Hay entrenadores disponibles para atrapar a Jolteon.
+[INFO] 15:56:15:730 team/(6642:6677): Se le asigno el pokemon Jolteon al entrenador 0.
+[INFO] 15:56:15:730 team/(6642:6643): El entrenador 0 se pone en READY.
+[INFO] 15:56:15:730 team/(6642:6652): Elijo al entrenador 0 para ejecutar.
+[INFO] 15:56:15:730 team/(6642:6643): ---------------El entrenador 0 paso por aca
+[INFO] 15:56:15:730 team/(6642:6643): El entrenador 0 entro en ejecución.
+[INFO] 15:56:15:730 team/(6642:6643): El entrenador 0, que estaba en (2,3), comenzará a moverse a (2,2).
+[INFO] 15:56:15:730 team/(6642:6652): INTERRUMPO A 0
+[INFO] 15:56:15:731 team/(6642:6643): El entrenador 0 pide un ciclo. Valor del semaforo: 0. 
+[INFO] 15:56:15:731 team/(6642:6643): -----------------EL ENTRENADOR 0 EJECUTA UN CICLO
+[INFO] 15:56:15:731 team/(6642:6677): Se selecciono el entrenador 0 para atrapar al pokemon Jolteon
+[INFO] 15:56:16:760 team/(6642:6697): Atiendo appeared. Pokemon: Flareon.
+[INFO] 15:56:16:760 team/(6642:6697): El pokemon es objetivo
+[INFO] 15:56:16:760 team/(6642:6697): Hay entrenadores disponibles para atrapar a Flareon.
+[INFO] 15:56:16:760 team/(6642:6697): Se le asigno el pokemon Flareon al entrenador 1.
+[INFO] 15:56:16:760 team/(6642:6644): El entrenador 1 se pone en READY.
+[INFO] 15:56:16:760 team/(6642:6644): ---------------El entrenador 1 paso por aca
+[INFO] 15:56:16:760 team/(6642:6697): Se selecciono el entrenador 1 para atrapar al pokemon Flareon
+[INFO] 15:56:20:731 team/(6642:6643): El entrenador 0 se mueve a : (2,2).
+[INFO] 15:56:20:731 team/(6642:6643): El entrenador 0 se movió a la posición (2, 2).
+[INFO] 15:56:20:731 team/(6642:6643): El entrenador 0 envia el catch para el pokemon Jolteon.
+[INFO] 15:56:20:731 team/(6642:6643): El entrenador 0 pide un ciclo. Valor del semaforo: 1. 
+[INFO] 15:56:20:731 team/(6642:6652): El entrenador 0 se pone en READY.
+[INFO] 15:56:20:731 team/(6642:6652): le devolvieron la ejecucion al plani
+[INFO] 15:56:20:731 team/(6642:6652): Elijo al entrenador 1 para ejecutar.
+[INFO] 15:56:20:732 team/(6642:6644): El entrenador 1 entro en ejecución.
+[INFO] 15:56:20:732 team/(6642:6644): El entrenador 1, que estaba en (6,5), comenzará a moverse a (4,6).
+[INFO] 15:56:20:732 team/(6642:6644): El entrenador 1 pide un ciclo. Valor del semaforo: 1. 
+[INFO] 15:56:20:732 team/(6642:6652): INTERRUMPO A 1
+[INFO] 15:56:20:732 team/(6642:6644): -----------------EL ENTRENADOR 1 EJECUTA UN CICLO
+[INFO] 15:56:25:732 team/(6642:6644): El entrenador 1 se mueve a : (5,5).
+[INFO] 15:56:25:732 team/(6642:6644): El entrenador 1 pide un ciclo. Valor del semaforo: 0. 
+[INFO] 15:56:25:732 team/(6642:6652): El entrenador 1 se pone en READY.
+[INFO] 15:56:25:732 team/(6642:6652): le devolvieron la ejecucion al plani
+[INFO] 15:56:25:732 team/(6642:6652): Elijo al entrenador 0 para ejecutar.
+[INFO] 15:56:25:732 team/(6642:6652): Retomo la ejecución del entrenador 0.
+[INFO] 15:56:25:732 team/(6642:6652): INTERRUMPO A 0
+[INFO] 15:56:25:732 team/(6642:6643): -----------------EL ENTRENADOR 0 EJECUTA UN CICLO
+[INFO] 15:56:30:733 team/(6642:6643): El entrenador 0 hace el send del catch.
+[INFO] 15:56:30:734 team/(6642:6643): El entrenador  0 recibió el id del catch: 19.
+[INFO] 15:56:30:734 team/(6642:6643): La nueva estimación del entrenador 0 es: 3.500000
+[INFO] 15:56:30:734 team/(6642:6643): El entrenador 0 pide un ciclo. Valor del semaforo: 0. 
+[INFO] 15:56:30:734 team/(6642:6643): El entrenador 0 libera la CPU por su cuenta.
+[INFO] 15:56:30:734 team/(6642:6652): le devolvieron la ejecucion al plani
+[INFO] 15:56:30:734 team/(6642:6652): Elijo al entrenador 1 para ejecutar.
+[INFO] 15:56:30:734 team/(6642:6652): Retomo la ejecución del entrenador 1.
+[INFO] 15:56:30:734 team/(6642:6652): INTERRUMPO A 1
+[INFO] 15:56:30:734 team/(6642:6644): -----------------EL ENTRENADOR 1 EJECUTA UN CICLO
+[INFO] 15:56:31:758 team/(6642:6718): Atiendo caught.
+[INFO] 15:56:31:759 team/(6642:6718): Resultado del caught: 1.
+[INFO] 15:56:31:759 team/(6642:6718): El caught me interesa.
+[INFO] 15:56:31:759 team/(6642:6718): 0 atrapo a Jolteon
+[INFO] 15:56:31:759 team/(6642:6718): Se registró el pokemon atrapado. Jolteon
+[INFO] 15:56:31:759 team/(6642:6718): El entrenador 0 forma parte de un interbloqueo.
+[INFO] 15:56:31:759 team/(6642:6718): Inicio del algoritmo de detección de deadlock.
+[INFO] 15:56:31:759 team/(6642:6718): Entrenadores en deadlock 1.
+[INFO] 15:56:31:759 team/(6642:6718): Entrenadores exit 0.
+[INFO] 15:56:31:759 team/(6642:6718): Entrenadores enntrenadores totales 5.
+[INFO] 15:56:31:759 team/(6642:6718): No se encontró deadlock.
+[INFO] 15:56:34:287 team/(6721:6721): --------------------------------------------------------------------------
+[INFO] 15:56:34:287 team/(6721:6721): NUEVA EJECUCION
+[INFO] 15:56:34:287 team/(6721:6721): --------------------------------------------------------------------------
+[INFO] 15:56:34:287 team/(6721:6721): Algortimo de planificación: FIFO.
+[INFO] 15:56:34:287 team/(6721:6721): --------------------------------------------------------------
+[INFO] 15:56:34:287 team/(6721:6721): OBJETIVO DEL TEAM
+[INFO] 15:56:34:287 team/(6721:6721): Objetivo 0. Pokemon: Squirtle. Cantidad: 2.
+[INFO] 15:56:34:287 team/(6721:6721): Objetivo 1. Pokemon: Pikachu. Cantidad: 1.
+[INFO] 15:56:34:287 team/(6721:6721): Objetivo 2. Pokemon: Gengar. Cantidad: 1.
+[INFO] 15:56:34:287 team/(6721:6721): Objetivo 3. Pokemon: Onix. Cantidad: 1.
+[INFO] 15:56:34:287 team/(6721:6721): --------------------------------------------------
+[INFO] 15:56:34:294 team/(6721:6729): Se inicia el planificador
+[INFO] 15:56:34:306 team/(6721:6732): Suscripción realizada correctamente
+
+[INFO] 15:56:34:306 team/(6721:6730): Suscripción realizada correctamente
+
+[INFO] 15:56:34:306 team/(6721:6731): Suscripción realizada correctamente
+
+[INFO] 15:56:34:311 team/(6721:6741): Atiendo caught.
+[INFO] 15:56:34:311 team/(6721:6741): Resultado del caught: 1.
+[INFO] 15:56:34:311 team/(6721:6741): El caught no me interesa.
+[INFO] 15:56:35:346 team/(6721:6774): Atiendo appeared. Pokemon: Pikachu.
+[INFO] 15:56:35:346 team/(6721:6774): El pokemon es objetivo
+[INFO] 15:56:35:346 team/(6721:6774): Hay entrenadores disponibles para atrapar a Pikachu.
+[INFO] 15:56:35:346 team/(6721:6774): Se le asigno el pokemon Pikachu al entrenador 1.
+[INFO] 15:56:35:346 team/(6721:6774): Se selecciono el entrenador 1 para atrapar al pokemon Pikachu
+[INFO] 15:56:35:346 team/(6721:6723): El entrenador 1 se pone en READY.
+[INFO] 15:56:35:346 team/(6721:6723): ---------------El entrenador 1 paso por aca
+[INFO] 15:56:35:346 team/(6721:6729): Hay un entrenador en cola
+[INFO] 15:56:35:347 team/(6721:6729): elijo entrenador para ejecutar
+[INFO] 15:56:35:346 team/(6721:6770): Atiendo appeared. Pokemon: Squirtle.
+[INFO] 15:56:35:347 team/(6721:6723): El entrenador 1 entro en ejecución.
+[INFO] 15:56:35:347 team/(6721:6770): El pokemon es objetivo
+[INFO] 15:56:35:347 team/(6721:6723): El entrenador 1, que estaba en (2,3), comenzará a moverse a (9,9).
+[INFO] 15:56:35:347 team/(6721:6723): El entrenador 1 pide un ciclo. Valor del semaforo: 1. 
+[INFO] 15:56:35:347 team/(6721:6723): -----------------EL ENTRENADOR 1 EJECUTA UN CICLO
+[INFO] 15:56:35:350 team/(6721:6770): Hay entrenadores disponibles para atrapar a Squirtle.
+[INFO] 15:56:35:354 team/(6721:6770): Se le asigno el pokemon Squirtle al entrenador 2.
+[INFO] 15:56:35:354 team/(6721:6770): Se selecciono el entrenador 2 para atrapar al pokemon Squirtle
+[INFO] 15:56:35:354 team/(6721:6724): El entrenador 2 se pone en READY.
+[INFO] 15:56:35:354 team/(6721:6724): ---------------El entrenador 2 paso por aca
+[INFO] 15:56:35:354 team/(6721:6729): Hay un entrenador en cola
+[INFO] 15:56:35:735 team/(6642:6644): El entrenador 1 se mueve a : (4,5).
+[INFO] 15:56:35:735 team/(6642:6644): El entrenador 1 pide un ciclo. Valor del semaforo: 0. 
+[INFO] 15:56:35:735 team/(6642:6652): El entrenador 1 se pone en READY.
+[INFO] 15:56:35:735 team/(6642:6652): le devolvieron la ejecucion al plani
+[INFO] 15:56:35:735 team/(6642:6652): Elijo al entrenador 1 para ejecutar.
+[INFO] 15:56:35:735 team/(6642:6652): Retomo la ejecución del entrenador 1.
+[INFO] 15:56:35:735 team/(6642:6652): INTERRUMPO A 1
+[INFO] 15:56:35:735 team/(6642:6644): -----------------EL ENTRENADOR 1 EJECUTA UN CICLO
+[INFO] 15:56:40:347 team/(6721:6723): El entrenador 1 se mueve a : (3,3).
+[INFO] 15:56:40:347 team/(6721:6723): El entrenador 1 pide un ciclo. Valor del semaforo: 2. 
+[INFO] 15:56:40:347 team/(6721:6723): -----------------EL ENTRENADOR 1 EJECUTA UN CICLO
+[INFO] 15:56:40:736 team/(6642:6644): El entrenador 1 se mueve a : (4,6).
+[INFO] 15:56:40:736 team/(6642:6644): El entrenador 1 se movió a la posición (4, 6).
+[INFO] 15:56:40:736 team/(6642:6644): El entrenador 1 envia el catch para el pokemon Flareon.
+[INFO] 15:56:40:736 team/(6642:6644): El entrenador 1 pide un ciclo. Valor del semaforo: 0. 
+[INFO] 15:56:40:736 team/(6642:6652): El entrenador 1 se pone en READY.
+[INFO] 15:56:40:736 team/(6642:6652): le devolvieron la ejecucion al plani
+[INFO] 15:56:40:736 team/(6642:6652): Elijo al entrenador 1 para ejecutar.
+[INFO] 15:56:40:736 team/(6642:6652): Retomo la ejecución del entrenador 1.
+[INFO] 15:56:40:736 team/(6642:6652): INTERRUMPO A 1
+[INFO] 15:56:40:736 team/(6642:6644): -----------------EL ENTRENADOR 1 EJECUTA UN CICLO
+[INFO] 15:56:45:349 team/(6721:6723): El entrenador 1 se mueve a : (4,3).
+[INFO] 15:56:45:349 team/(6721:6723): El entrenador 1 pide un ciclo. Valor del semaforo: 3. 
+[INFO] 15:56:45:349 team/(6721:6723): -----------------EL ENTRENADOR 1 EJECUTA UN CICLO
+[INFO] 15:56:45:737 team/(6642:6644): El entrenador 1 hace el send del catch.
+[INFO] 15:56:45:738 team/(6642:6644): El entrenador  1 recibió el id del catch: 29.
+[INFO] 15:56:45:738 team/(6642:6644): La nueva estimación del entrenador 1 es: 4.500000
+[INFO] 15:56:45:738 team/(6642:6644): El entrenador 1 pide un ciclo. Valor del semaforo: 1. 
+[INFO] 15:56:45:738 team/(6642:6644): El entrenador 1 libera la CPU por su cuenta.
+[INFO] 15:56:45:738 team/(6642:6652): le devolvieron la ejecucion al plani
+[INFO] 15:56:46:751 team/(6642:6793): Atiendo caught.
+[INFO] 15:56:46:751 team/(6642:6793): Resultado del caught: 1.
+[INFO] 15:56:46:751 team/(6642:6793): El caught me interesa.
+[INFO] 15:56:46:752 team/(6642:6793): 1 atrapo a Flareon
+[INFO] 15:56:46:752 team/(6642:6793): Se registró el pokemon atrapado. Flareon
+[INFO] 15:56:46:752 team/(6642:6793): El entrenador 1 forma parte de un interbloqueo.
+[INFO] 15:56:46:752 team/(6642:6793): Inicio del algoritmo de detección de deadlock.
+[INFO] 15:56:46:752 team/(6642:6793): Entrenadores en deadlock 2.
+[INFO] 15:56:46:752 team/(6642:6793): Entrenadores exit 0.
+[INFO] 15:56:46:752 team/(6642:6793): Entrenadores enntrenadores totales 5.
+[INFO] 15:56:46:752 team/(6642:6793): No se encontró deadlock.
+[INFO] 15:56:46:752 team/(6721:6795): Atiendo caught.
+[INFO] 15:56:46:752 team/(6721:6795): Resultado del caught: 1.
+[INFO] 15:56:46:752 team/(6721:6795): El caught no me interesa.
+[INFO] 15:56:50:351 team/(6721:6723): El entrenador 1 se mueve a : (5,3).
+[INFO] 15:56:50:351 team/(6721:6723): El entrenador 1 pide un ciclo. Valor del semaforo: 4. 
+[INFO] 15:56:50:351 team/(6721:6723): -----------------EL ENTRENADOR 1 EJECUTA UN CICLO
+[INFO] 15:56:55:351 team/(6721:6723): El entrenador 1 se mueve a : (6,3).
+[INFO] 15:56:55:351 team/(6721:6723): El entrenador 1 pide un ciclo. Valor del semaforo: 5. 
+[INFO] 15:56:55:351 team/(6721:6723): -----------------EL ENTRENADOR 1 EJECUTA UN CICLO
+[INFO] 15:57:00:352 team/(6721:6723): El entrenador 1 se mueve a : (7,3).
+[INFO] 15:57:00:352 team/(6721:6723): El entrenador 1 pide un ciclo. Valor del semaforo: 6. 
+[INFO] 15:57:00:352 team/(6721:6723): -----------------EL ENTRENADOR 1 EJECUTA UN CICLO
+[INFO] 15:57:05:353 team/(6721:6723): El entrenador 1 se mueve a : (8,3).
+[INFO] 15:57:05:353 team/(6721:6723): El entrenador 1 pide un ciclo. Valor del semaforo: 7. 
+[INFO] 15:57:05:353 team/(6721:6723): -----------------EL ENTRENADOR 1 EJECUTA UN CICLO
+[INFO] 15:57:10:353 team/(6721:6723): El entrenador 1 se mueve a : (9,3).
+[INFO] 15:57:10:354 team/(6721:6723): El entrenador 1 pide un ciclo. Valor del semaforo: 8. 
+[INFO] 15:57:10:354 team/(6721:6723): -----------------EL ENTRENADOR 1 EJECUTA UN CICLO
+[INFO] 15:57:15:354 team/(6721:6723): El entrenador 1 se mueve a : (9,4).
+[INFO] 15:57:15:354 team/(6721:6723): El entrenador 1 pide un ciclo. Valor del semaforo: 9. 
+[INFO] 15:57:15:354 team/(6721:6723): -----------------EL ENTRENADOR 1 EJECUTA UN CICLO
+[INFO] 15:57:20:355 team/(6721:6723): El entrenador 1 se mueve a : (9,5).
+[INFO] 15:57:20:355 team/(6721:6723): El entrenador 1 pide un ciclo. Valor del semaforo: 10. 
+[INFO] 15:57:20:355 team/(6721:6723): -----------------EL ENTRENADOR 1 EJECUTA UN CICLO
+[INFO] 15:57:25:356 team/(6721:6723): El entrenador 1 se mueve a : (9,6).
+[INFO] 15:57:25:356 team/(6721:6723): El entrenador 1 pide un ciclo. Valor del semaforo: 11. 
+[INFO] 15:57:25:356 team/(6721:6723): -----------------EL ENTRENADOR 1 EJECUTA UN CICLO
+[INFO] 15:57:30:357 team/(6721:6723): El entrenador 1 se mueve a : (9,7).
+[INFO] 15:57:30:357 team/(6721:6723): El entrenador 1 pide un ciclo. Valor del semaforo: 12. 
+[INFO] 15:57:30:357 team/(6721:6723): -----------------EL ENTRENADOR 1 EJECUTA UN CICLO
+[INFO] 15:57:35:358 team/(6721:6723): El entrenador 1 se mueve a : (9,8).
+[INFO] 15:57:35:359 team/(6721:6723): El entrenador 1 pide un ciclo. Valor del semaforo: 13. 
+[INFO] 15:57:35:359 team/(6721:6723): -----------------EL ENTRENADOR 1 EJECUTA UN CICLO
+[INFO] 15:57:40:359 team/(6721:6723): El entrenador 1 se mueve a : (9,9).
+[INFO] 15:57:40:359 team/(6721:6723): El entrenador 1 se movió a la posición (9, 9).
+[INFO] 15:57:40:360 team/(6721:6723): El entrenador 1 envia el catch para el pokemon Pikachu.
+[INFO] 15:57:40:360 team/(6721:6723): El entrenador 1 pide un ciclo. Valor del semaforo: 14. 
+[INFO] 15:57:40:360 team/(6721:6723): -----------------EL ENTRENADOR 1 EJECUTA UN CICLO
+[INFO] 15:57:45:361 team/(6721:6723): El entrenador 1 hace el send del catch.
+[INFO] 15:57:45:362 team/(6721:6723): El entrenador  1 recibió el id del catch: 31.
+[INFO] 15:57:45:362 team/(6721:6723): La nueva estimación del entrenador 1 es: 9.500000
+[INFO] 15:57:45:362 team/(6721:6723): El entrenador 1 pide un ciclo. Valor del semaforo: 15. 
+[INFO] 15:57:45:362 team/(6721:6723): El entrenador 1 libera la CPU por su cuenta.
+[INFO] 15:57:45:362 team/(6721:6729): elijo entrenador para ejecutar
+[INFO] 15:57:45:362 team/(6721:6724): El entrenador 2 entro en ejecución.
+[INFO] 15:57:45:362 team/(6721:6724): El entrenador 2, que estaba en (2,2), comenzará a moverse a (5,2).
+[INFO] 15:57:45:362 team/(6721:6724): El entrenador 2 pide un ciclo. Valor del semaforo: 1. 
+[INFO] 15:57:45:362 team/(6721:6724): -----------------EL ENTRENADOR 2 EJECUTA UN CICLO
+[INFO] 15:57:46:451 team/(6721:6880): Atiendo caught.
+[INFO] 15:57:46:451 team/(6721:6880): Resultado del caught: 1.
+[INFO] 15:57:46:451 team/(6721:6880): El caught me interesa.
+[INFO] 15:57:46:451 team/(6721:6880): 1 atrapo a Pikachu
+[INFO] 15:57:46:451 team/(6721:6880): Se registró el pokemon atrapado. Pikachu
+[INFO] 15:57:46:451 team/(6721:6880): El entrenador 1 se bloquea porque no hay pokemones para atrapar.
+[INFO] 15:57:46:454 team/(6642:6878): Atiendo caught.
+[INFO] 15:57:46:454 team/(6642:6878): Resultado del caught: 1.
+[INFO] 15:57:46:454 team/(6642:6878): El caught no me interesa.
+[INFO] 15:57:50:363 team/(6721:6724): El entrenador 2 se mueve a : (3,2).
+[INFO] 15:57:50:364 team/(6721:6724): El entrenador 2 pide un ciclo. Valor del semaforo: 2. 
+[INFO] 15:57:50:364 team/(6721:6724): -----------------EL ENTRENADOR 2 EJECUTA UN CICLO
+[INFO] 15:57:55:364 team/(6721:6724): El entrenador 2 se mueve a : (4,2).
+[INFO] 15:57:55:365 team/(6721:6724): El entrenador 2 pide un ciclo. Valor del semaforo: 3. 
+[INFO] 15:57:55:365 team/(6721:6724): -----------------EL ENTRENADOR 2 EJECUTA UN CICLO
+[INFO] 15:58:00:367 team/(6721:6724): El entrenador 2 se mueve a : (5,2).
+[INFO] 15:58:00:367 team/(6721:6724): El entrenador 2 se movió a la posición (5, 2).
+[INFO] 15:58:00:367 team/(6721:6724): El entrenador 2 envia el catch para el pokemon Squirtle.
+[INFO] 15:58:00:367 team/(6721:6724): El entrenador 2 pide un ciclo. Valor del semaforo: 4. 
+[INFO] 15:58:00:367 team/(6721:6724): -----------------EL ENTRENADOR 2 EJECUTA UN CICLO
+[INFO] 15:58:05:368 team/(6721:6724): El entrenador 2 hace el send del catch.
+[INFO] 15:58:05:369 team/(6721:6724): El entrenador  2 recibió el id del catch: 33.
+[INFO] 15:58:05:369 team/(6721:6724): La nueva estimación del entrenador 2 es: 4.500000
+[INFO] 15:58:05:369 team/(6721:6724): El entrenador 2 pide un ciclo. Valor del semaforo: 5. 
+[INFO] 15:58:05:369 team/(6721:6724): El entrenador 2 libera la CPU por su cuenta.
+[INFO] 15:58:06:415 team/(6642:6907): Atiendo caught.
+[INFO] 15:58:06:415 team/(6642:6907): Resultado del caught: 1.
+[INFO] 15:58:06:415 team/(6642:6907): El caught no me interesa.
+[INFO] 15:58:06:419 team/(6721:6906): Atiendo caught.
+[INFO] 15:58:06:420 team/(6721:6906): Resultado del caught: 1.
+[INFO] 15:58:06:421 team/(6721:6906): El caught me interesa.
+[INFO] 15:58:06:425 team/(6721:6906): 2 atrapo a Squirtle
+[INFO] 15:58:06:425 team/(6721:6906): Se registró el pokemon atrapado. Squirtle
+[INFO] 15:58:06:427 team/(6721:6906): El entrenador 2 se bloquea porque no hay pokemones para atrapar.
+[INFO] 15:58:56:862 team/(6642:7017): Atiendo appeared. Pokemon: Gengar.
+[INFO] 15:58:56:862 team/(6642:7017): El pokemon no es objetivo
+[INFO] 15:58:56:864 team/(6642:7013): Atiendo appeared. Pokemon: Onix.
+[INFO] 15:58:56:864 team/(6642:7013): El pokemon no es objetivo
+[INFO] 15:58:56:867 team/(6642:7023): Atiendo appeared. Pokemon: Squirtle.
+[INFO] 15:58:56:867 team/(6642:7023): El pokemon no es objetivo
+[INFO] 15:58:56:868 team/(6721:7014): Atiendo appeared. Pokemon: Onix.
+[INFO] 15:58:56:868 team/(6721:7014): El pokemon es objetivo
+[INFO] 15:58:56:868 team/(6721:7014): Hay entrenadores disponibles para atrapar a Onix.
+[INFO] 15:58:56:869 team/(6721:7014): Se le asigno el pokemon Onix al entrenador 0.
+[INFO] 15:58:56:869 team/(6721:7014): Se selecciono el entrenador 0 para atrapar al pokemon Onix
+[INFO] 15:58:56:869 team/(6721:6722): El entrenador 0 se pone en READY.
+[INFO] 15:58:56:869 team/(6721:6722): ---------------El entrenador 0 paso por aca
+[INFO] 15:58:56:869 team/(6721:6729): Hay un entrenador en cola
+[INFO] 15:58:56:869 team/(6721:6729): elijo entrenador para ejecutar
+[INFO] 15:58:56:869 team/(6721:6722): El entrenador 0 entro en ejecución.
+[INFO] 15:58:56:869 team/(6721:6722): El entrenador 0, que estaba en (1,3), comenzará a moverse a (2,8).
+[INFO] 15:58:56:870 team/(6721:6722): El entrenador 0 pide un ciclo. Valor del semaforo: 1. 
+[INFO] 15:58:56:870 team/(6721:6722): -----------------EL ENTRENADOR 0 EJECUTA UN CICLO
+[INFO] 15:58:56:869 team/(6721:7021): Atiendo appeared. Pokemon: Gengar.
+[INFO] 15:58:56:870 team/(6721:7021): El pokemon es objetivo
+[INFO] 15:58:56:870 team/(6721:7021): Hay entrenadores disponibles para atrapar a Gengar.
+[INFO] 15:58:56:870 team/(6721:7021): Se le asigno el pokemon Gengar al entrenador 2.
+[INFO] 15:58:56:870 team/(6721:6724): El entrenador 2 se pone en READY.
+[INFO] 15:58:56:870 team/(6721:6724): ---------------El entrenador 2 paso por aca
+[INFO] 15:58:56:870 team/(6721:6729): Hay un entrenador en cola
+[INFO] 15:58:56:870 team/(6721:7021): Se selecciono el entrenador 2 para atrapar al pokemon Gengar
+[INFO] 15:58:56:871 team/(6721:7026): Atiendo appeared. Pokemon: Squirtle.
+[INFO] 15:58:56:871 team/(6721:7026): El pokemon es objetivo
+[INFO] 15:58:56:871 team/(6721:7026): Hay entrenadores disponibles para atrapar a Squirtle.
+[INFO] 15:58:56:871 team/(6721:7026): Se le asigno el pokemon Squirtle al entrenador 1.
+[INFO] 15:58:56:871 team/(6721:6723): El entrenador 1 se pone en READY.
+[INFO] 15:58:56:871 team/(6721:6723): ---------------El entrenador 1 paso por aca
+[INFO] 15:58:56:871 team/(6721:7026): Se selecciono el entrenador 1 para atrapar al pokemon Squirtle
+[INFO] 15:58:56:874 team/(6642:7027): Atiendo appeared. Pokemon: Umbreon.
+[INFO] 15:58:56:874 team/(6642:7027): El pokemon es objetivo
+[INFO] 15:58:56:874 team/(6642:7027): Hay entrenadores disponibles para atrapar a Umbreon.
+[INFO] 15:58:56:874 team/(6642:7027): Se le asigno el pokemon Umbreon al entrenador 2.
+[INFO] 15:58:56:874 team/(6642:6645): El entrenador 2 se pone en READY.
+[INFO] 15:58:56:874 team/(6642:6645): ---------------El entrenador 2 paso por aca
+[INFO] 15:58:56:874 team/(6642:7027): Se selecciono el entrenador 2 para atrapar al pokemon Umbreon
+[INFO] 15:58:56:874 team/(6642:6652): Elijo al entrenador 2 para ejecutar.
+[INFO] 15:58:56:874 team/(6642:6645): El entrenador 2 entro en ejecución.
+[INFO] 15:58:56:874 team/(6642:6645): El entrenador 2, que estaba en (9,9), comenzará a moverse a (10,6).
+[INFO] 15:58:56:874 team/(6642:6645): El entrenador 2 pide un ciclo. Valor del semaforo: 1. 
+[INFO] 15:58:56:874 team/(6642:6652): INTERRUMPO A 2
+[INFO] 15:58:56:874 team/(6642:6645): -----------------EL ENTRENADOR 2 EJECUTA UN CICLO
+[INFO] 15:58:56:888 team/(6721:7030): Atiendo appeared. Pokemon: Umbreon.
+[INFO] 15:58:56:888 team/(6721:7030): El pokemon no es objetivo
+[INFO] 15:58:56:896 team/(6721:7036): Atiendo appeared. Pokemon: Espeon.
+[INFO] 15:58:56:896 team/(6721:7036): El pokemon no es objetivo
+[INFO] 15:58:56:897 team/(6642:7032): Atiendo appeared. Pokemon: Espeon.
+[INFO] 15:58:56:897 team/(6642:7032): El pokemon es objetivo
+[INFO] 15:58:56:897 team/(6642:7032): Hay entrenadores disponibles para atrapar a Espeon.
+[INFO] 15:58:56:897 team/(6642:7032): Se le asigno el pokemon Espeon al entrenador 3.
+[INFO] 15:58:56:897 team/(6642:6646): El entrenador 3 se pone en READY.
+[INFO] 15:58:56:897 team/(6642:6646): ---------------El entrenador 3 paso por aca
+[INFO] 15:58:56:897 team/(6642:7032): Se selecciono el entrenador 3 para atrapar al pokemon Espeon
+[INFO] 15:58:56:902 team/(6721:7038): Atiendo appeared. Pokemon: Vaporeon.
+[INFO] 15:58:56:902 team/(6721:7038): El pokemon no es objetivo
+[INFO] 15:58:56:902 team/(6642:7040): Atiendo appeared. Pokemon: Vaporeon.
+[INFO] 15:58:56:902 team/(6642:7040): El pokemon es objetivo
+[INFO] 15:58:56:902 team/(6642:7040): Hay entrenadores disponibles para atrapar a Vaporeon.
+[INFO] 15:58:56:903 team/(6642:7040): Se le asigno el pokemon Vaporeon al entrenador 4.
+[INFO] 15:58:56:903 team/(6642:6647): El entrenador 4 se pone en READY.
+[INFO] 15:58:56:903 team/(6642:6647): ---------------El entrenador 4 paso por aca
+[INFO] 15:58:56:903 team/(6642:7040): Se selecciono el entrenador 4 para atrapar al pokemon Vaporeon
+[INFO] 15:59:01:871 team/(6721:6722): El entrenador 0 se mueve a : (2,3).
+[INFO] 15:59:01:871 team/(6721:6722): El entrenador 0 pide un ciclo. Valor del semaforo: 2. 
+[INFO] 15:59:01:871 team/(6721:6722): -----------------EL ENTRENADOR 0 EJECUTA UN CICLO
+[INFO] 15:59:01:875 team/(6642:6645): El entrenador 2 se mueve a : (10,9).
+[INFO] 15:59:01:876 team/(6642:6645): El entrenador 2 pide un ciclo. Valor del semaforo: 0. 
+[INFO] 15:59:01:876 team/(6642:6652): El entrenador 2 se pone en READY.
+[INFO] 15:59:01:876 team/(6642:6652): le devolvieron la ejecucion al plani
+[INFO] 15:59:01:876 team/(6642:6652): Elijo al entrenador 3 para ejecutar.
+[INFO] 15:59:01:876 team/(6642:6646): El entrenador 3 entro en ejecución.
+[INFO] 15:59:01:876 team/(6642:6646): El entrenador 3, que estaba en (9,2), comenzará a moverse a (7,1).
+[INFO] 15:59:01:876 team/(6642:6646): El entrenador 3 pide un ciclo. Valor del semaforo: 1. 
+[INFO] 15:59:01:876 team/(6642:6652): INTERRUMPO A 3
+[INFO] 15:59:01:876 team/(6642:6646): -----------------EL ENTRENADOR 3 EJECUTA UN CICLO
+[INFO] 15:59:06:871 team/(6721:6722): El entrenador 0 se mueve a : (2,4).
+[INFO] 15:59:06:871 team/(6721:6722): El entrenador 0 pide un ciclo. Valor del semaforo: 3. 
+[INFO] 15:59:06:871 team/(6721:6722): -----------------EL ENTRENADOR 0 EJECUTA UN CICLO
+[INFO] 15:59:06:877 team/(6642:6646): El entrenador 3 se mueve a : (8,2).
+[INFO] 15:59:06:877 team/(6642:6646): El entrenador 3 pide un ciclo. Valor del semaforo: 0. 
+[INFO] 15:59:06:877 team/(6642:6652): El entrenador 3 se pone en READY.
+[INFO] 15:59:06:877 team/(6642:6652): le devolvieron la ejecucion al plani
+[INFO] 15:59:06:877 team/(6642:6652): Elijo al entrenador 4 para ejecutar.
+[INFO] 15:59:06:877 team/(6642:6647): El entrenador 4 entro en ejecución.
+[INFO] 15:59:06:877 team/(6642:6647): El entrenador 4, que estaba en (2,9), comenzará a moverse a (4,10).
+[INFO] 15:59:06:877 team/(6642:6647): El entrenador 4 pide un ciclo. Valor del semaforo: 1. 
+[INFO] 15:59:06:877 team/(6642:6652): INTERRUMPO A 4
+[INFO] 15:59:06:877 team/(6642:6647): -----------------EL ENTRENADOR 4 EJECUTA UN CICLO
+[INFO] 15:59:11:872 team/(6721:6722): El entrenador 0 se mueve a : (2,5).
+[INFO] 15:59:11:872 team/(6721:6722): El entrenador 0 pide un ciclo. Valor del semaforo: 4. 
+[INFO] 15:59:11:872 team/(6721:6722): -----------------EL ENTRENADOR 0 EJECUTA UN CICLO
+[INFO] 15:59:11:878 team/(6642:6647): El entrenador 4 se mueve a : (3,9).
+[INFO] 15:59:11:878 team/(6642:6647): El entrenador 4 pide un ciclo. Valor del semaforo: 1. 
+[INFO] 15:59:11:878 team/(6642:6652): El entrenador 4 se pone en READY.
+[INFO] 15:59:11:878 team/(6642:6652): le devolvieron la ejecucion al plani
+[INFO] 15:59:11:878 team/(6642:6652): Elijo al entrenador 2 para ejecutar.
+[INFO] 15:59:11:878 team/(6642:6652): Retomo la ejecución del entrenador 2.
+[INFO] 15:59:11:878 team/(6642:6652): INTERRUMPO A 2
+[INFO] 15:59:11:878 team/(6642:6645): -----------------EL ENTRENADOR 2 EJECUTA UN CICLO
+[INFO] 15:59:16:873 team/(6721:6722): El entrenador 0 se mueve a : (2,6).
+[INFO] 15:59:16:874 team/(6721:6722): El entrenador 0 pide un ciclo. Valor del semaforo: 5. 
+[INFO] 15:59:16:874 team/(6721:6722): -----------------EL ENTRENADOR 0 EJECUTA UN CICLO
+[INFO] 15:59:16:879 team/(6642:6645): El entrenador 2 se mueve a : (10,8).
+[INFO] 15:59:16:879 team/(6642:6645): El entrenador 2 pide un ciclo. Valor del semaforo: 0. 
+[INFO] 15:59:16:879 team/(6642:6652): El entrenador 2 se pone en READY.
+[INFO] 15:59:16:879 team/(6642:6652): le devolvieron la ejecucion al plani
+[INFO] 15:59:16:879 team/(6642:6652): Elijo al entrenador 3 para ejecutar.
+[INFO] 15:59:16:879 team/(6642:6652): Retomo la ejecución del entrenador 3.
+[INFO] 15:59:16:879 team/(6642:6652): INTERRUMPO A 3
+[INFO] 15:59:16:879 team/(6642:6646): -----------------EL ENTRENADOR 3 EJECUTA UN CICLO
+[INFO] 15:59:21:874 team/(6721:6722): El entrenador 0 se mueve a : (2,7).
+[INFO] 15:59:21:875 team/(6721:6722): El entrenador 0 pide un ciclo. Valor del semaforo: 6. 
+[INFO] 15:59:21:875 team/(6721:6722): -----------------EL ENTRENADOR 0 EJECUTA UN CICLO
+[INFO] 15:59:21:881 team/(6642:6646): El entrenador 3 se mueve a : (7,2).
+[INFO] 15:59:21:881 team/(6642:6646): El entrenador 3 pide un ciclo. Valor del semaforo: 1. 
+[INFO] 15:59:21:881 team/(6642:6652): El entrenador 3 se pone en READY.
+[INFO] 15:59:21:881 team/(6642:6652): le devolvieron la ejecucion al plani
+[INFO] 15:59:21:881 team/(6642:6652): Elijo al entrenador 4 para ejecutar.
+[INFO] 15:59:21:881 team/(6642:6652): Retomo la ejecución del entrenador 4.
+[INFO] 15:59:21:881 team/(6642:6652): INTERRUMPO A 4
+[INFO] 15:59:21:881 team/(6642:6647): -----------------EL ENTRENADOR 4 EJECUTA UN CICLO
+[INFO] 15:59:26:875 team/(6721:6722): El entrenador 0 se mueve a : (2,8).
+[INFO] 15:59:26:875 team/(6721:6722): El entrenador 0 se movió a la posición (2, 8).
+[INFO] 15:59:26:875 team/(6721:6722): El entrenador 0 envia el catch para el pokemon Onix.
+[INFO] 15:59:26:876 team/(6721:6722): El entrenador 0 pide un ciclo. Valor del semaforo: 7. 
+[INFO] 15:59:26:876 team/(6721:6722): -----------------EL ENTRENADOR 0 EJECUTA UN CICLO
+[INFO] 15:59:26:881 team/(6642:6647): El entrenador 4 se mueve a : (4,9).
+[INFO] 15:59:26:882 team/(6642:6647): El entrenador 4 pide un ciclo. Valor del semaforo: 0. 
+[INFO] 15:59:26:882 team/(6642:6652): El entrenador 4 se pone en READY.
+[INFO] 15:59:26:882 team/(6642:6652): le devolvieron la ejecucion al plani
+[INFO] 15:59:26:882 team/(6642:6652): Elijo al entrenador 2 para ejecutar.
+[INFO] 15:59:26:882 team/(6642:6652): Retomo la ejecución del entrenador 2.
+[INFO] 15:59:26:882 team/(6642:6652): INTERRUMPO A 2
+[INFO] 15:59:26:882 team/(6642:6645): -----------------EL ENTRENADOR 2 EJECUTA UN CICLO
+[INFO] 15:59:31:876 team/(6721:6722): El entrenador 0 hace el send del catch.
+[INFO] 15:59:31:876 team/(6721:6722): El entrenador  0 recibió el id del catch: 47.
+[INFO] 15:59:31:876 team/(6721:6722): La nueva estimación del entrenador 0 es: 6.000000
+[INFO] 15:59:31:876 team/(6721:6722): El entrenador 0 pide un ciclo. Valor del semaforo: 8. 
+[INFO] 15:59:31:876 team/(6721:6722): El entrenador 0 libera la CPU por su cuenta.
+[INFO] 15:59:31:876 team/(6721:6729): elijo entrenador para ejecutar
+[INFO] 15:59:31:876 team/(6721:6729): Hay un entrenador en cola
+[INFO] 15:59:31:876 team/(6721:6724): El entrenador 2 entro en ejecución.
+[INFO] 15:59:31:876 team/(6721:6724): El entrenador 2, que estaba en (5,2), comenzará a moverse a (6,6).
+[INFO] 15:59:31:876 team/(6721:6724): El entrenador 2 pide un ciclo. Valor del semaforo: 6. 
+[INFO] 15:59:31:876 team/(6721:6724): -----------------EL ENTRENADOR 2 EJECUTA UN CICLO
+[INFO] 15:59:31:882 team/(6642:6645): El entrenador 2 se mueve a : (10,7).
+[INFO] 15:59:31:883 team/(6642:6645): El entrenador 2 pide un ciclo. Valor del semaforo: 0. 
+[INFO] 15:59:31:883 team/(6642:6652): El entrenador 2 se pone en READY.
+[INFO] 15:59:31:883 team/(6642:6652): le devolvieron la ejecucion al plani
+[INFO] 15:59:31:883 team/(6642:6652): Elijo al entrenador 3 para ejecutar.
+[INFO] 15:59:31:883 team/(6642:6652): Retomo la ejecución del entrenador 3.
+[INFO] 15:59:31:883 team/(6642:6652): INTERRUMPO A 3
+[INFO] 15:59:31:883 team/(6642:6646): -----------------EL ENTRENADOR 3 EJECUTA UN CICLO
+[INFO] 15:59:32:895 team/(6642:7079): Atiendo caught.
+[INFO] 15:59:32:895 team/(6642:7079): Resultado del caught: 1.
+[INFO] 15:59:32:895 team/(6642:7079): El caught no me interesa.
+[INFO] 15:59:32:903 team/(6721:7081): Atiendo caught.
+[INFO] 15:59:32:903 team/(6721:7081): Resultado del caught: 1.
+[INFO] 15:59:32:903 team/(6721:7081): El caught me interesa.
+[INFO] 15:59:32:903 team/(6721:7081): 0 atrapo a Onix
+[INFO] 15:59:32:903 team/(6721:7081): Se registró el pokemon atrapado. Onix
+[INFO] 15:59:32:903 team/(6721:7081): El entrenador 0 forma parte de un interbloqueo.
+[INFO] 15:59:32:903 team/(6721:7081): Inicio del algoritmo de detección de deadlock.
+[INFO] 15:59:32:903 team/(6721:7081): Entrenadores en deadlock 1.
+[INFO] 15:59:32:903 team/(6721:7081): Entrenadores exit 0.
+[INFO] 15:59:32:903 team/(6721:7081): Entrenadores enntrenadores totales 3.
+[INFO] 15:59:32:904 team/(6721:7081): No se encontró deadlock.
+[INFO] 15:59:36:877 team/(6721:6724): El entrenador 2 se mueve a : (6,2).
+[INFO] 15:59:36:877 team/(6721:6724): El entrenador 2 pide un ciclo. Valor del semaforo: 7. 
+[INFO] 15:59:36:877 team/(6721:6724): -----------------EL ENTRENADOR 2 EJECUTA UN CICLO
+[INFO] 15:59:36:883 team/(6642:6646): El entrenador 3 se mueve a : (7,1).
+[INFO] 15:59:36:883 team/(6642:6646): El entrenador 3 se movió a la posición (7, 1).
+[INFO] 15:59:36:884 team/(6642:6646): El entrenador 3 envia el catch para el pokemon Espeon.
+[INFO] 15:59:36:884 team/(6642:6646): El entrenador 3 pide un ciclo. Valor del semaforo: 0. 
+[INFO] 15:59:36:884 team/(6642:6652): El entrenador 3 se pone en READY.
+[INFO] 15:59:36:884 team/(6642:6652): le devolvieron la ejecucion al plani
+[INFO] 15:59:36:884 team/(6642:6652): Elijo al entrenador 4 para ejecutar.
+[INFO] 15:59:36:884 team/(6642:6652): Retomo la ejecución del entrenador 4.
+[INFO] 15:59:36:884 team/(6642:6652): INTERRUMPO A 4
+[INFO] 15:59:36:884 team/(6642:6647): -----------------EL ENTRENADOR 4 EJECUTA UN CICLO
+[INFO] 15:59:41:877 team/(6721:6724): El entrenador 2 se mueve a : (6,3).
+[INFO] 15:59:41:877 team/(6721:6724): El entrenador 2 pide un ciclo. Valor del semaforo: 8. 
+[INFO] 15:59:41:877 team/(6721:6724): -----------------EL ENTRENADOR 2 EJECUTA UN CICLO
+[INFO] 15:59:41:885 team/(6642:6647): El entrenador 4 se mueve a : (4,10).
+[INFO] 15:59:41:885 team/(6642:6647): El entrenador 4 se movió a la posición (4, 10).
+[INFO] 15:59:41:885 team/(6642:6647): El entrenador 4 envia el catch para el pokemon Vaporeon.
+[INFO] 15:59:41:885 team/(6642:6647): El entrenador 4 pide un ciclo. Valor del semaforo: 0. 
+[INFO] 15:59:41:885 team/(6642:6652): El entrenador 4 se pone en READY.
+[INFO] 15:59:41:885 team/(6642:6652): le devolvieron la ejecucion al plani
+[INFO] 15:59:41:885 team/(6642:6652): Elijo al entrenador 2 para ejecutar.
+[INFO] 15:59:41:885 team/(6642:6652): Retomo la ejecución del entrenador 2.
+[INFO] 15:59:41:885 team/(6642:6652): INTERRUMPO A 2
+[INFO] 15:59:41:885 team/(6642:6645): -----------------EL ENTRENADOR 2 EJECUTA UN CICLO
+[INFO] 15:59:46:878 team/(6721:6724): El entrenador 2 se mueve a : (6,4).
+[INFO] 15:59:46:878 team/(6721:6724): El entrenador 2 pide un ciclo. Valor del semaforo: 9. 
+[INFO] 15:59:46:878 team/(6721:6724): -----------------EL ENTRENADOR 2 EJECUTA UN CICLO
+[INFO] 15:59:46:887 team/(6642:6645): El entrenador 2 se mueve a : (10,6).
+[INFO] 15:59:46:887 team/(6642:6645): El entrenador 2 se movió a la posición (10, 6).
+[INFO] 15:59:46:887 team/(6642:6645): El entrenador 2 envia el catch para el pokemon Umbreon.
+[INFO] 15:59:46:887 team/(6642:6645): El entrenador 2 pide un ciclo. Valor del semaforo: 0. 
+[INFO] 15:59:46:887 team/(6642:6652): El entrenador 2 se pone en READY.
+[INFO] 15:59:46:887 team/(6642:6652): le devolvieron la ejecucion al plani
+[INFO] 15:59:46:887 team/(6642:6652): Elijo al entrenador 3 para ejecutar.
+[INFO] 15:59:46:887 team/(6642:6652): Retomo la ejecución del entrenador 3.
+[INFO] 15:59:46:887 team/(6642:6652): INTERRUMPO A 3
+[INFO] 15:59:46:887 team/(6642:6646): -----------------EL ENTRENADOR 3 EJECUTA UN CICLO
+[INFO] 15:59:51:879 team/(6721:6724): El entrenador 2 se mueve a : (6,5).
+[INFO] 15:59:51:879 team/(6721:6724): El entrenador 2 pide un ciclo. Valor del semaforo: 10. 
+[INFO] 15:59:51:879 team/(6721:6724): -----------------EL ENTRENADOR 2 EJECUTA UN CICLO
+[INFO] 15:59:51:888 team/(6642:6646): El entrenador 3 hace el send del catch.
+[INFO] 15:59:51:890 team/(6642:6646): El entrenador  3 recibió el id del catch: 49.
+[INFO] 15:59:51:891 team/(6642:6646): La nueva estimación del entrenador 3 es: 4.500000
+[INFO] 15:59:51:891 team/(6642:6646): El entrenador 3 pide un ciclo. Valor del semaforo: 0. 
+[INFO] 15:59:51:891 team/(6642:6646): El entrenador 3 libera la CPU por su cuenta.
+[INFO] 15:59:51:891 team/(6642:6652): le devolvieron la ejecucion al plani
+[INFO] 15:59:51:891 team/(6642:6652): Elijo al entrenador 4 para ejecutar.
+[INFO] 15:59:51:891 team/(6642:6652): Retomo la ejecución del entrenador 4.
+[INFO] 15:59:51:891 team/(6642:6652): INTERRUMPO A 4
+[INFO] 15:59:51:891 team/(6642:6647): -----------------EL ENTRENADOR 4 EJECUTA UN CICLO
+[INFO] 15:59:52:914 team/(6642:7108): Atiendo caught.
+[INFO] 15:59:52:914 team/(6642:7108): Resultado del caught: 1.
+[INFO] 15:59:52:914 team/(6642:7108): El caught me interesa.
+[INFO] 15:59:52:914 team/(6642:7108): 3 atrapo a Espeon
+[INFO] 15:59:52:914 team/(6642:7108): Se registró el pokemon atrapado. Espeon
+[INFO] 15:59:52:914 team/(6642:7108): El entrenador 3 forma parte de un interbloqueo.
+[INFO] 15:59:52:914 team/(6642:7108): Inicio del algoritmo de detección de deadlock.
+[INFO] 15:59:52:914 team/(6642:7108): Entrenadores en deadlock 3.
+[INFO] 15:59:52:914 team/(6642:7108): Entrenadores exit 0.
+[INFO] 15:59:52:914 team/(6721:7110): Atiendo caught.
+[INFO] 15:59:52:914 team/(6721:7110): Resultado del caught: 1.
+[INFO] 15:59:52:914 team/(6642:7108): Entrenadores enntrenadores totales 5.
+[INFO] 15:59:52:914 team/(6642:7108): No se encontró deadlock.
+[INFO] 15:59:52:914 team/(6721:7110): El caught no me interesa.
+[INFO] 15:59:56:880 team/(6721:6724): El entrenador 2 se mueve a : (6,6).
+[INFO] 15:59:56:880 team/(6721:6724): El entrenador 2 se movió a la posición (6, 6).
+[INFO] 15:59:56:880 team/(6721:6724): El entrenador 2 envia el catch para el pokemon Gengar.
+[INFO] 15:59:56:880 team/(6721:6724): El entrenador 2 pide un ciclo. Valor del semaforo: 11. 
+[INFO] 15:59:56:880 team/(6721:6724): -----------------EL ENTRENADOR 2 EJECUTA UN CICLO
+[INFO] 15:59:56:892 team/(6642:6647): El entrenador 4 hace el send del catch.
+[INFO] 15:59:56:892 team/(6642:6647): El entrenador  4 recibió el id del catch: 51.
+[INFO] 15:59:56:892 team/(6642:6647): La nueva estimación del entrenador 4 es: 4.500000
+[INFO] 15:59:56:892 team/(6642:6647): El entrenador 4 pide un ciclo. Valor del semaforo: 1. 
+[INFO] 15:59:56:892 team/(6642:6647): El entrenador 4 libera la CPU por su cuenta.
+[INFO] 15:59:56:892 team/(6642:6652): le devolvieron la ejecucion al plani
+[INFO] 15:59:56:893 team/(6642:6652): Elijo al entrenador 2 para ejecutar.
+[INFO] 15:59:56:893 team/(6642:6652): Retomo la ejecución del entrenador 2.
+[INFO] 15:59:56:893 team/(6642:6652): INTERRUMPO A 2
+[INFO] 15:59:56:893 team/(6642:6645): -----------------EL ENTRENADOR 2 EJECUTA UN CICLO
+[INFO] 15:59:57:918 team/(6642:7120): Atiendo caught.
+[INFO] 15:59:57:918 team/(6642:7120): Resultado del caught: 1.
+[INFO] 15:59:57:918 team/(6642:7120): El caught me interesa.
+[INFO] 15:59:57:918 team/(6642:7120): 4 atrapo a Vaporeon
+[INFO] 15:59:57:918 team/(6642:7120): Se registró el pokemon atrapado. Vaporeon
+[INFO] 15:59:57:919 team/(6642:7120): El entrenador 4 forma parte de un interbloqueo.
+[INFO] 15:59:57:919 team/(6642:7120): Inicio del algoritmo de detección de deadlock.
+[INFO] 15:59:57:919 team/(6642:7120): Entrenadores en deadlock 4.
+[INFO] 15:59:57:919 team/(6642:7120): Entrenadores exit 0.
+[INFO] 15:59:57:919 team/(6642:7120): Entrenadores enntrenadores totales 5.
+[INFO] 15:59:57:919 team/(6642:7120): No se encontró deadlock.
+[INFO] 15:59:57:923 team/(6721:7122): Atiendo caught.
+[INFO] 15:59:57:923 team/(6721:7122): Resultado del caught: 1.
+[INFO] 15:59:57:923 team/(6721:7122): El caught no me interesa.
+[INFO] 16:00:01:882 team/(6721:6724): El entrenador 2 hace el send del catch.
+[INFO] 16:00:01:882 team/(6721:6724): El entrenador  2 recibió el id del catch: 53.
+[INFO] 16:00:01:882 team/(6721:6724): La nueva estimación del entrenador 2 es: 5.250000
+[INFO] 16:00:01:882 team/(6721:6724): El entrenador 2 pide un ciclo. Valor del semaforo: 12. 
+[INFO] 16:00:01:882 team/(6721:6724): El entrenador 2 libera la CPU por su cuenta.
+[INFO] 16:00:01:882 team/(6721:6729): elijo entrenador para ejecutar
+[INFO] 16:00:01:882 team/(6721:6723): El entrenador 1 entro en ejecución.
+[INFO] 16:00:01:883 team/(6721:6723): El entrenador 1, que estaba en (9,9), comenzará a moverse a (5,5).
+[INFO] 16:00:01:883 team/(6721:6723): El entrenador 1 pide un ciclo. Valor del semaforo: 16. 
+[INFO] 16:00:01:884 team/(6721:6723): -----------------EL ENTRENADOR 1 EJECUTA UN CICLO
+[INFO] 16:00:01:894 team/(6642:6645): El entrenador 2 hace el send del catch.
+[INFO] 16:00:01:895 team/(6642:6645): El entrenador  2 recibió el id del catch: 54.
+[INFO] 16:00:01:895 team/(6642:6645): La nueva estimación del entrenador 2 es: 5.000000
+[INFO] 16:00:01:896 team/(6642:6645): El entrenador 2 pide un ciclo. Valor del semaforo: 0. 
+[INFO] 16:00:01:896 team/(6642:6645): El entrenador 2 libera la CPU por su cuenta.
+[INFO] 16:00:01:896 team/(6642:6652): le devolvieron la ejecucion al plani
+[INFO] 16:00:02:910 team/(6642:7135): Atiendo caught.
+[INFO] 16:00:02:910 team/(6721:7137): Atiendo caught.
+[INFO] 16:00:02:910 team/(6642:7135): Resultado del caught: 1.
+[INFO] 16:00:02:910 team/(6721:7137): Resultado del caught: 1.
+[INFO] 16:00:02:910 team/(6642:7135): El caught no me interesa.
+[INFO] 16:00:02:910 team/(6721:7137): El caught me interesa.
+[INFO] 16:00:02:910 team/(6721:7137): 2 atrapo a Gengar
+[INFO] 16:00:02:910 team/(6721:7137): Se registró el pokemon atrapado. Gengar
+[INFO] 16:00:02:910 team/(6721:7137): El entrenador 2 forma parte de un interbloqueo.
+[INFO] 16:00:02:910 team/(6721:7137): Inicio del algoritmo de detección de deadlock.
+[INFO] 16:00:02:910 team/(6721:7137): Entrenadores en deadlock 2.
+[INFO] 16:00:02:910 team/(6721:7137): Entrenadores exit 0.
+[INFO] 16:00:02:910 team/(6721:7137): Entrenadores enntrenadores totales 3.
+[INFO] 16:00:02:910 team/(6721:7137): No se encontró deadlock.
+[INFO] 16:00:02:929 team/(6721:7141): Atiendo caught.
+[INFO] 16:00:02:929 team/(6721:7141): Resultado del caught: 1.
+[INFO] 16:00:02:929 team/(6721:7141): El caught no me interesa.
+[INFO] 16:00:02:929 team/(6642:7142): Atiendo caught.
+[INFO] 16:00:02:929 team/(6642:7142): Resultado del caught: 1.
+[INFO] 16:00:02:929 team/(6642:7142): El caught me interesa.
+[INFO] 16:00:02:929 team/(6642:7142): 2 atrapo a Umbreon
+[INFO] 16:00:02:929 team/(6642:7142): Se registró el pokemon atrapado. Umbreon
+[INFO] 16:00:02:929 team/(6642:7142): El entrenador 2 forma parte de un interbloqueo.
+[INFO] 16:00:02:929 team/(6642:7142): Inicio del algoritmo de detección de deadlock.
+[INFO] 16:00:02:929 team/(6642:7142): Entrenadores en deadlock 5.
+[INFO] 16:00:02:929 team/(6642:7142): Entrenadores exit 0.
+[INFO] 16:00:02:929 team/(6642:7142): Entrenadores enntrenadores totales 5.
+[INFO] 16:00:02:930 team/(6642:7142): Entrenadores en deadlock 5.
+[INFO] 16:00:02:930 team/(6642:6649): Encontre una espera circular. Entrenadores involucrados: 
+[INFO] 16:00:02:930 team/(6642:6649): Entrenador 0.
+[INFO] 16:00:02:930 team/(6642:6649): Entrenador 4.
+[INFO] 16:00:02:930 team/(6642:6649): Entrenador 3.
+[INFO] 16:00:02:930 team/(6642:6649): Entrenador 2.
+[INFO] 16:00:02:930 team/(6642:6649): Entrenador 1.
+[INFO] 16:00:02:930 team/(6642:6649): Espera circular. Entrenador bloqueado: 0.
+[INFO] 16:00:02:930 team/(6642:6649): entrenador bloqueado para deadlock : 0
+[INFO] 16:00:02:930 team/(6642:6649): hola.
+[INFO] 16:00:02:930 team/(6642:6649): Entrenador bloqueado: 0. Entrenador a mover: 4.
+[INFO] 16:00:02:930 team/(6642:6649): El entrenador 0, esta en DEADLOCK con el entrenador 4.
+[INFO] 16:00:02:930 team/(6642:6647): El entrenador 4 se pone en READY.
+[INFO] 16:00:02:930 team/(6642:6647): El entrenador 4 entra en ejecucion para deadlock.
+[INFO] 16:00:02:930 team/(6642:6652): Elijo al entrenador 4 para ejecutar.
+[INFO] 16:00:02:930 team/(6642:6647): El entrenador 4, que estaba en (4,10), comenzará a moverse a (2,2).
+[INFO] 16:00:02:930 team/(6642:6647): El entrenador 4 pide un ciclo. Valor del semaforo: 0. 
+[INFO] 16:00:02:930 team/(6642:6652): INTERRUMPO A 4
+[INFO] 16:00:02:930 team/(6642:6647): -----------------EL ENTRENADOR 4 EJECUTA UN CICLO
+[INFO] 16:00:06:884 team/(6721:6723): El entrenador 1 se mueve a : (8,9).
+[INFO] 16:00:06:884 team/(6721:6723): El entrenador 1 pide un ciclo. Valor del semaforo: 17. 
+[INFO] 16:00:06:884 team/(6721:6723): -----------------EL ENTRENADOR 1 EJECUTA UN CICLO
+[INFO] 16:00:07:930 team/(6642:6647): El entrenador 4 se mueve a : (3,10).
+[INFO] 16:00:07:930 team/(6642:6647): El entrenador 4 pide un ciclo. Valor del semaforo: 0. 
+[INFO] 16:00:07:930 team/(6642:6652): El entrenador 4 se pone en READY.
+[INFO] 16:00:07:931 team/(6642:6652): le devolvieron la ejecucion al plani
+[INFO] 16:00:07:931 team/(6642:6652): Elijo al entrenador 4 para ejecutar.
+[INFO] 16:00:07:931 team/(6642:6652): Retomo la ejecución del entrenador 4.
+[INFO] 16:00:07:931 team/(6642:6652): INTERRUMPO A 4
+[INFO] 16:00:07:931 team/(6642:6647): -----------------EL ENTRENADOR 4 EJECUTA UN CICLO
+[INFO] 16:00:11:886 team/(6721:6723): El entrenador 1 se mueve a : (7,9).
+[INFO] 16:00:11:886 team/(6721:6723): El entrenador 1 pide un ciclo. Valor del semaforo: 18. 
+[INFO] 16:00:11:886 team/(6721:6723): -----------------EL ENTRENADOR 1 EJECUTA UN CICLO
+[INFO] 16:00:12:931 team/(6642:6647): El entrenador 4 se mueve a : (2,10).
+[INFO] 16:00:12:931 team/(6642:6647): El entrenador 4 pide un ciclo. Valor del semaforo: 1. 
+[INFO] 16:00:12:931 team/(6642:6652): El entrenador 4 se pone en READY.
+[INFO] 16:00:12:931 team/(6642:6652): le devolvieron la ejecucion al plani
+[INFO] 16:00:12:931 team/(6642:6652): Elijo al entrenador 4 para ejecutar.
+[INFO] 16:00:12:931 team/(6642:6652): Retomo la ejecución del entrenador 4.
+[INFO] 16:00:12:931 team/(6642:6652): INTERRUMPO A 4
+[INFO] 16:00:12:931 team/(6642:6647): -----------------EL ENTRENADOR 4 EJECUTA UN CICLO
+[INFO] 16:00:16:887 team/(6721:6723): El entrenador 1 se mueve a : (6,9).
+[INFO] 16:00:16:888 team/(6721:6723): El entrenador 1 pide un ciclo. Valor del semaforo: 19. 
+[INFO] 16:00:16:888 team/(6721:6723): -----------------EL ENTRENADOR 1 EJECUTA UN CICLO
+[INFO] 16:00:17:931 team/(6642:6647): El entrenador 4 se mueve a : (2,9).
+[INFO] 16:00:17:931 team/(6642:6647): El entrenador 4 pide un ciclo. Valor del semaforo: 0. 
+[INFO] 16:00:17:931 team/(6642:6652): El entrenador 4 se pone en READY.
+[INFO] 16:00:17:931 team/(6642:6652): le devolvieron la ejecucion al plani
+[INFO] 16:00:17:931 team/(6642:6652): Elijo al entrenador 4 para ejecutar.
+[INFO] 16:00:17:931 team/(6642:6652): Retomo la ejecución del entrenador 4.
+[INFO] 16:00:17:931 team/(6642:6652): INTERRUMPO A 4
+[INFO] 16:00:17:931 team/(6642:6647): -----------------EL ENTRENADOR 4 EJECUTA UN CICLO
+[INFO] 16:00:21:889 team/(6721:6723): El entrenador 1 se mueve a : (5,9).
+[INFO] 16:00:21:889 team/(6721:6723): El entrenador 1 pide un ciclo. Valor del semaforo: 20. 
+[INFO] 16:00:21:889 team/(6721:6723): -----------------EL ENTRENADOR 1 EJECUTA UN CICLO
+[INFO] 16:00:22:932 team/(6642:6647): El entrenador 4 se mueve a : (2,8).
+[INFO] 16:00:22:932 team/(6642:6647): El entrenador 4 pide un ciclo. Valor del semaforo: 0. 
+[INFO] 16:00:22:932 team/(6642:6652): El entrenador 4 se pone en READY.
+[INFO] 16:00:22:932 team/(6642:6652): le devolvieron la ejecucion al plani
+[INFO] 16:00:22:932 team/(6642:6652): Elijo al entrenador 4 para ejecutar.
+[INFO] 16:00:22:933 team/(6642:6652): Retomo la ejecución del entrenador 4.
+[INFO] 16:00:22:933 team/(6642:6652): INTERRUMPO A 4
+[INFO] 16:00:22:933 team/(6642:6647): -----------------EL ENTRENADOR 4 EJECUTA UN CICLO
+[INFO] 16:00:26:892 team/(6721:6723): El entrenador 1 se mueve a : (5,8).
+[INFO] 16:00:26:892 team/(6721:6723): El entrenador 1 pide un ciclo. Valor del semaforo: 21. 
+[INFO] 16:00:26:892 team/(6721:6723): -----------------EL ENTRENADOR 1 EJECUTA UN CICLO
+[INFO] 16:00:27:934 team/(6642:6647): El entrenador 4 se mueve a : (2,7).
+[INFO] 16:00:27:934 team/(6642:6647): El entrenador 4 pide un ciclo. Valor del semaforo: 0. 
+[INFO] 16:00:27:934 team/(6642:6652): El entrenador 4 se pone en READY.
+[INFO] 16:00:27:934 team/(6642:6652): le devolvieron la ejecucion al plani
+[INFO] 16:00:27:934 team/(6642:6652): Elijo al entrenador 4 para ejecutar.
+[INFO] 16:00:27:934 team/(6642:6652): Retomo la ejecución del entrenador 4.
+[INFO] 16:00:27:934 team/(6642:6652): INTERRUMPO A 4
+[INFO] 16:00:27:934 team/(6642:6647): -----------------EL ENTRENADOR 4 EJECUTA UN CICLO
+[INFO] 16:00:31:893 team/(6721:6723): El entrenador 1 se mueve a : (5,7).
+[INFO] 16:00:31:893 team/(6721:6723): El entrenador 1 pide un ciclo. Valor del semaforo: 22. 
+[INFO] 16:00:31:893 team/(6721:6723): -----------------EL ENTRENADOR 1 EJECUTA UN CICLO
+[INFO] 16:00:32:935 team/(6642:6647): El entrenador 4 se mueve a : (2,6).
+[INFO] 16:00:32:935 team/(6642:6647): El entrenador 4 pide un ciclo. Valor del semaforo: 0. 
+[INFO] 16:00:32:935 team/(6642:6652): El entrenador 4 se pone en READY.
+[INFO] 16:00:32:935 team/(6642:6652): le devolvieron la ejecucion al plani
+[INFO] 16:00:32:935 team/(6642:6652): Elijo al entrenador 4 para ejecutar.
+[INFO] 16:00:32:935 team/(6642:6652): Retomo la ejecución del entrenador 4.
+[INFO] 16:00:32:935 team/(6642:6652): INTERRUMPO A 4
+[INFO] 16:00:32:935 team/(6642:6647): -----------------EL ENTRENADOR 4 EJECUTA UN CICLO
+[INFO] 16:00:36:894 team/(6721:6723): El entrenador 1 se mueve a : (5,6).
+[INFO] 16:00:36:894 team/(6721:6723): El entrenador 1 pide un ciclo. Valor del semaforo: 23. 
+[INFO] 16:00:36:894 team/(6721:6723): -----------------EL ENTRENADOR 1 EJECUTA UN CICLO
+[INFO] 16:00:37:936 team/(6642:6647): El entrenador 4 se mueve a : (2,5).
+[INFO] 16:00:37:936 team/(6642:6647): El entrenador 4 pide un ciclo. Valor del semaforo: 0. 
+[INFO] 16:00:37:936 team/(6642:6652): El entrenador 4 se pone en READY.
+[INFO] 16:00:37:937 team/(6642:6652): le devolvieron la ejecucion al plani
+[INFO] 16:00:37:937 team/(6642:6652): Elijo al entrenador 4 para ejecutar.
+[INFO] 16:00:37:937 team/(6642:6652): Retomo la ejecución del entrenador 4.
+[INFO] 16:00:37:937 team/(6642:6652): INTERRUMPO A 4
+[INFO] 16:00:37:937 team/(6642:6647): -----------------EL ENTRENADOR 4 EJECUTA UN CICLO
+[INFO] 16:00:41:896 team/(6721:6723): El entrenador 1 se mueve a : (5,5).
+[INFO] 16:00:41:896 team/(6721:6723): El entrenador 1 se movió a la posición (5, 5).
+[INFO] 16:00:41:896 team/(6721:6723): El entrenador 1 envia el catch para el pokemon Squirtle.
+[INFO] 16:00:41:897 team/(6721:6723): El entrenador 1 pide un ciclo. Valor del semaforo: 24. 
+[INFO] 16:00:41:897 team/(6721:6723): -----------------EL ENTRENADOR 1 EJECUTA UN CICLO
+[INFO] 16:00:42:937 team/(6642:6647): El entrenador 4 se mueve a : (2,4).
+[INFO] 16:00:42:937 team/(6642:6647): El entrenador 4 pide un ciclo. Valor del semaforo: 0. 
+[INFO] 16:00:42:937 team/(6642:6652): El entrenador 4 se pone en READY.
+[INFO] 16:00:42:937 team/(6642:6652): le devolvieron la ejecucion al plani
+[INFO] 16:00:42:937 team/(6642:6652): Elijo al entrenador 4 para ejecutar.
+[INFO] 16:00:42:937 team/(6642:6652): Retomo la ejecución del entrenador 4.
+[INFO] 16:00:42:937 team/(6642:6652): INTERRUMPO A 4
+[INFO] 16:00:42:937 team/(6642:6647): -----------------EL ENTRENADOR 4 EJECUTA UN CICLO
+[INFO] 16:00:46:897 team/(6721:6723): El entrenador 1 hace el send del catch.
+[INFO] 16:00:46:897 team/(6721:6723): El entrenador  1 recibió el id del catch: 57.
+[INFO] 16:00:46:897 team/(6721:6723): La nueva estimación del entrenador 1 es: 9.250000
+[INFO] 16:00:46:898 team/(6721:6723): El entrenador 1 pide un ciclo. Valor del semaforo: 25. 
+[INFO] 16:00:46:898 team/(6721:6723): El entrenador 1 libera la CPU por su cuenta.
+[INFO] 16:00:47:918 team/(6721:7197): Atiendo caught.
+[INFO] 16:00:47:918 team/(6721:7197): Resultado del caught: 1.
+[INFO] 16:00:47:918 team/(6721:7197): El caught me interesa.
+[INFO] 16:00:47:918 team/(6721:7197): 1 atrapo a Squirtle
+[INFO] 16:00:47:918 team/(6721:7197): Se registró el pokemon atrapado. Squirtle
+[INFO] 16:00:47:918 team/(6721:7197): El entrenador 1 forma parte de un interbloqueo.
+[INFO] 16:00:47:918 team/(6721:7197): Inicio del algoritmo de detección de deadlock.
+[INFO] 16:00:47:918 team/(6721:7197): Entrenadores en deadlock 3.
+[INFO] 16:00:47:918 team/(6721:7197): Entrenadores exit 0.
+[INFO] 16:00:47:918 team/(6721:7197): Entrenadores enntrenadores totales 3.
+[INFO] 16:00:47:918 team/(6721:7197): Entrenadores en deadlock 3.
+[INFO] 16:00:47:918 team/(6642:7198): Atiendo caught.
+[INFO] 16:00:47:918 team/(6642:7198): Resultado del caught: 1.
+[INFO] 16:00:47:918 team/(6721:6726): Encontre una espera circular. Entrenadores involucrados: 
+[INFO] 16:00:47:918 team/(6642:7198): El caught no me interesa.
+[INFO] 16:00:47:918 team/(6721:6726): Entrenador 0.
+[INFO] 16:00:47:918 team/(6721:6726): Entrenador 1.
+[INFO] 16:00:47:918 team/(6721:6726): Entrenador 2.
+[INFO] 16:00:47:918 team/(6721:6726): Espera circular. Entrenador bloqueado: 0.
+[INFO] 16:00:47:918 team/(6721:6726): entrenador bloqueado para deadlock : 0
+[INFO] 16:00:47:918 team/(6721:6726): hola.
+[INFO] 16:00:47:918 team/(6721:6726): Entrenador bloqueado: 0. Entrenador a mover: 1.
+[INFO] 16:00:47:918 team/(6721:6726): El entrenador 0, esta en DEADLOCK con el entrenador 1.
+[INFO] 16:00:47:918 team/(6721:6723): El entrenador 1 se pone en READY.
+[INFO] 16:00:47:919 team/(6721:6723): El entrenador 1 entra en ejecucion para deadlock.
+[INFO] 16:00:47:919 team/(6721:6729): Hay un entrenador en cola
+[INFO] 16:00:47:919 team/(6721:6729): elijo entrenador para ejecutar
+[INFO] 16:00:47:919 team/(6721:6723): El entrenador 1, que estaba en (5,5), comenzará a moverse a (2,8).
+[INFO] 16:00:47:919 team/(6721:6723): El entrenador 1 pide un ciclo. Valor del semaforo: 26. 
+[INFO] 16:00:47:919 team/(6721:6723): -----------------EL ENTRENADOR 1 EJECUTA UN CICLO
+[INFO] 16:00:47:937 team/(6642:6647): El entrenador 4 se mueve a : (2,3).
+[INFO] 16:00:47:937 team/(6642:6647): El entrenador 4 pide un ciclo. Valor del semaforo: 1. 
+[INFO] 16:00:47:937 team/(6642:6652): El entrenador 4 se pone en READY.
+[INFO] 16:00:47:937 team/(6642:6652): le devolvieron la ejecucion al plani
+[INFO] 16:00:47:937 team/(6642:6652): Elijo al entrenador 4 para ejecutar.
+[INFO] 16:00:47:938 team/(6642:6652): Retomo la ejecución del entrenador 4.
+[INFO] 16:00:47:938 team/(6642:6652): INTERRUMPO A 4
+[INFO] 16:00:47:938 team/(6642:6647): -----------------EL ENTRENADOR 4 EJECUTA UN CICLO
+[INFO] 16:00:52:920 team/(6721:6723): El entrenador 1 se mueve a : (4,5).
+[INFO] 16:00:52:920 team/(6721:6723): El entrenador 1 pide un ciclo. Valor del semaforo: 27. 
+[INFO] 16:00:52:920 team/(6721:6723): -----------------EL ENTRENADOR 1 EJECUTA UN CICLO
+[INFO] 16:00:52:939 team/(6642:6647): El entrenador 4 se mueve a : (2,2).
+[INFO] 16:00:52:939 team/(6642:6647): El entrenador 4 se movió a la posición (2, 2).
+[INFO] 16:00:52:939 team/(6642:6647): El entrenador 4 comienza con el intercambio con el entrenador 0.
+[INFO] 16:00:52:939 team/(6642:6647): El entrenador 4 pide un ciclo. Valor del semaforo: 0. 
+[INFO] 16:00:52:939 team/(6642:6652): El entrenador 4 se pone en READY.
+[INFO] 16:00:52:939 team/(6642:6652): le devolvieron la ejecucion al plani
+[INFO] 16:00:52:939 team/(6642:6652): Elijo al entrenador 4 para ejecutar.
+[INFO] 16:00:52:939 team/(6642:6652): Retomo la ejecución del entrenador 4.
+[INFO] 16:00:52:939 team/(6642:6652): INTERRUMPO A 4
+[INFO] 16:00:52:939 team/(6642:6647): -----------------EL ENTRENADOR 4 EJECUTA UN CICLO
+[INFO] 16:00:57:921 team/(6721:6723): El entrenador 1 se mueve a : (3,5).
+[INFO] 16:00:57:921 team/(6721:6723): El entrenador 1 pide un ciclo. Valor del semaforo: 28. 
+[INFO] 16:00:57:921 team/(6721:6723): -----------------EL ENTRENADOR 1 EJECUTA UN CICLO
+[INFO] 16:00:57:941 team/(6642:6647): El entrenador 4 pide un ciclo. Valor del semaforo: 0. 
+[INFO] 16:00:57:941 team/(6642:6652): El entrenador 4 se pone en READY.
+[INFO] 16:00:57:941 team/(6642:6652): le devolvieron la ejecucion al plani
+[INFO] 16:00:57:941 team/(6642:6652): Elijo al entrenador 4 para ejecutar.
+[INFO] 16:00:57:941 team/(6642:6652): Retomo la ejecución del entrenador 4.
+[INFO] 16:00:57:941 team/(6642:6652): INTERRUMPO A 4
+[INFO] 16:00:57:941 team/(6642:6647): -----------------EL ENTRENADOR 4 EJECUTA UN CICLO
+[INFO] 16:01:02:923 team/(6721:6723): El entrenador 1 se mueve a : (2,5).
+[INFO] 16:01:02:923 team/(6721:6723): El entrenador 1 pide un ciclo. Valor del semaforo: 29. 
+[INFO] 16:01:02:923 team/(6721:6723): -----------------EL ENTRENADOR 1 EJECUTA UN CICLO
+[INFO] 16:01:02:942 team/(6642:6647): El entrenador 4 pide un ciclo. Valor del semaforo: 0. 
+[INFO] 16:01:02:942 team/(6642:6652): El entrenador 4 se pone en READY.
+[INFO] 16:01:02:942 team/(6642:6652): le devolvieron la ejecucion al plani
+[INFO] 16:01:02:942 team/(6642:6652): Elijo al entrenador 4 para ejecutar.
+[INFO] 16:01:02:942 team/(6642:6652): Retomo la ejecución del entrenador 4.
+[INFO] 16:01:02:942 team/(6642:6652): INTERRUMPO A 4
+[INFO] 16:01:02:942 team/(6642:6647): -----------------EL ENTRENADOR 4 EJECUTA UN CICLO
+[INFO] 16:01:07:924 team/(6721:6723): El entrenador 1 se mueve a : (2,6).
+[INFO] 16:01:07:924 team/(6721:6723): El entrenador 1 pide un ciclo. Valor del semaforo: 30. 
+[INFO] 16:01:07:924 team/(6721:6723): -----------------EL ENTRENADOR 1 EJECUTA UN CICLO
+[INFO] 16:01:07:943 team/(6642:6647): El entrenador 4 pide un ciclo. Valor del semaforo: 0. 
+[INFO] 16:01:07:944 team/(6642:6652): El entrenador 4 se pone en READY.
+[INFO] 16:01:07:944 team/(6642:6652): le devolvieron la ejecucion al plani
+[INFO] 16:01:07:944 team/(6642:6652): Elijo al entrenador 4 para ejecutar.
+[INFO] 16:01:07:944 team/(6642:6652): Retomo la ejecución del entrenador 4.
+[INFO] 16:01:07:944 team/(6642:6652): INTERRUMPO A 4
+[INFO] 16:01:07:944 team/(6642:6647): -----------------EL ENTRENADOR 4 EJECUTA UN CICLO
+[INFO] 16:01:12:924 team/(6721:6723): El entrenador 1 se mueve a : (2,7).
+[INFO] 16:01:12:925 team/(6721:6723): El entrenador 1 pide un ciclo. Valor del semaforo: 31. 
+[INFO] 16:01:12:925 team/(6721:6723): -----------------EL ENTRENADOR 1 EJECUTA UN CICLO
+[INFO] 16:01:12:944 team/(6642:6647): El entrenador 4 pide un ciclo. Valor del semaforo: 0. 
+[INFO] 16:01:12:944 team/(6642:6652): El entrenador 4 se pone en READY.
+[INFO] 16:01:12:944 team/(6642:6652): le devolvieron la ejecucion al plani
+[INFO] 16:01:12:944 team/(6642:6652): Elijo al entrenador 4 para ejecutar.
+[INFO] 16:01:12:944 team/(6642:6652): Retomo la ejecución del entrenador 4.
+[INFO] 16:01:12:944 team/(6642:6652): INTERRUMPO A 4
+[INFO] 16:01:12:944 team/(6642:6647): -----------------EL ENTRENADOR 4 EJECUTA UN CICLO
+[INFO] 16:01:17:928 team/(6721:6723): El entrenador 1 se mueve a : (2,8).
+[INFO] 16:01:17:928 team/(6721:6723): El entrenador 1 se movió a la posición (2, 8).
+[INFO] 16:01:17:928 team/(6721:6723): El entrenador 1 comienza con el intercambio con el entrenador 0.
+[INFO] 16:01:17:928 team/(6721:6723): El entrenador 1 pide un ciclo. Valor del semaforo: 32. 
+[INFO] 16:01:17:928 team/(6721:6723): -----------------EL ENTRENADOR 1 EJECUTA UN CICLO
+[INFO] 16:01:17:945 team/(6642:6647): Operación de intercambio realizada entre entrenadores 4 y 0
+[INFO] 16:01:17:945 team/(6642:6647): La nueva estimación del entrenador 4 es: 9.750000
+[INFO] 16:01:17:945 team/(6642:6649): Espera circular. Entrenador bloqueado: 4.
+[INFO] 16:01:17:945 team/(6642:6647): El entrenador 4 pide un ciclo. Valor del semaforo: 0. 
+[INFO] 16:01:17:946 team/(6642:6652): le devolvieron la ejecucion al plani
+[INFO] 16:01:17:946 team/(6642:6649): entrenador bloqueado para deadlock : 4
+[INFO] 16:01:17:946 team/(6642:6649): hola.
+[INFO] 16:01:17:946 team/(6642:6649): Entrenador bloqueado: 4. Entrenador a mover: 3.
+[INFO] 16:01:17:946 team/(6642:6649): El entrenador 4, esta en DEADLOCK con el entrenador 3.
+[INFO] 16:01:17:946 team/(6642:6646): El entrenador 3 se pone en READY.
+[INFO] 16:01:17:946 team/(6642:6646): El entrenador 3 entra en ejecucion para deadlock.
+[INFO] 16:01:17:946 team/(6642:6652): Elijo al entrenador 3 para ejecutar.
+[INFO] 16:01:17:946 team/(6642:6646): El entrenador 3, que estaba en (7,1), comenzará a moverse a (2,2).
+[INFO] 16:01:17:946 team/(6642:6646): El entrenador 3 pide un ciclo. Valor del semaforo: 0. 
+[INFO] 16:01:17:946 team/(6642:6652): INTERRUMPO A 3
+[INFO] 16:01:17:946 team/(6642:6646): -----------------EL ENTRENADOR 3 EJECUTA UN CICLO
+[INFO] 16:01:22:929 team/(6721:6723): El entrenador 1 pide un ciclo. Valor del semaforo: 33. 
+[INFO] 16:01:22:929 team/(6721:6723): -----------------EL ENTRENADOR 1 EJECUTA UN CICLO
+[INFO] 16:01:22:947 team/(6642:6646): El entrenador 3 se mueve a : (6,1).
+[INFO] 16:01:22:947 team/(6642:6646): El entrenador 3 pide un ciclo. Valor del semaforo: 0. 
+[INFO] 16:01:22:947 team/(6642:6652): El entrenador 3 se pone en READY.
+[INFO] 16:01:22:948 team/(6642:6652): le devolvieron la ejecucion al plani
+[INFO] 16:01:22:948 team/(6642:6652): Elijo al entrenador 3 para ejecutar.
+[INFO] 16:01:22:948 team/(6642:6652): Retomo la ejecución del entrenador 3.
+[INFO] 16:01:22:948 team/(6642:6652): INTERRUMPO A 3
+[INFO] 16:01:22:948 team/(6642:6646): -----------------EL ENTRENADOR 3 EJECUTA UN CICLO
+[INFO] 16:01:27:929 team/(6721:6723): El entrenador 1 pide un ciclo. Valor del semaforo: 34. 
+[INFO] 16:01:27:929 team/(6721:6723): -----------------EL ENTRENADOR 1 EJECUTA UN CICLO
+[INFO] 16:01:27:948 team/(6642:6646): El entrenador 3 se mueve a : (5,1).
+[INFO] 16:01:27:948 team/(6642:6646): El entrenador 3 pide un ciclo. Valor del semaforo: 0. 
+[INFO] 16:01:27:948 team/(6642:6652): El entrenador 3 se pone en READY.
+[INFO] 16:01:27:948 team/(6642:6652): le devolvieron la ejecucion al plani
+[INFO] 16:01:27:948 team/(6642:6652): Elijo al entrenador 3 para ejecutar.
+[INFO] 16:01:27:948 team/(6642:6652): Retomo la ejecución del entrenador 3.
+[INFO] 16:01:27:948 team/(6642:6652): INTERRUMPO A 3
+[INFO] 16:01:27:948 team/(6642:6646): -----------------EL ENTRENADOR 3 EJECUTA UN CICLO
+[INFO] 16:01:32:931 team/(6721:6723): El entrenador 1 pide un ciclo. Valor del semaforo: 35. 
+[INFO] 16:01:32:931 team/(6721:6723): -----------------EL ENTRENADOR 1 EJECUTA UN CICLO
+[INFO] 16:01:32:948 team/(6642:6646): El entrenador 3 se mueve a : (4,1).
+[INFO] 16:01:32:948 team/(6642:6646): El entrenador 3 pide un ciclo. Valor del semaforo: 0. 
+[INFO] 16:01:32:948 team/(6642:6652): El entrenador 3 se pone en READY.
+[INFO] 16:01:32:948 team/(6642:6652): le devolvieron la ejecucion al plani
+[INFO] 16:01:32:948 team/(6642:6652): Elijo al entrenador 3 para ejecutar.
+[INFO] 16:01:32:948 team/(6642:6652): Retomo la ejecución del entrenador 3.
+[INFO] 16:01:32:948 team/(6642:6652): INTERRUMPO A 3
+[INFO] 16:01:32:948 team/(6642:6646): -----------------EL ENTRENADOR 3 EJECUTA UN CICLO
+[INFO] 16:01:37:932 team/(6721:6723): El entrenador 1 pide un ciclo. Valor del semaforo: 36. 
+[INFO] 16:01:37:932 team/(6721:6723): -----------------EL ENTRENADOR 1 EJECUTA UN CICLO
+[INFO] 16:01:37:949 team/(6642:6646): El entrenador 3 se mueve a : (3,1).
+[INFO] 16:01:37:949 team/(6642:6646): El entrenador 3 pide un ciclo. Valor del semaforo: 0. 
+[INFO] 16:01:37:949 team/(6642:6652): El entrenador 3 se pone en READY.
+[INFO] 16:01:37:949 team/(6642:6652): le devolvieron la ejecucion al plani
+[INFO] 16:01:37:949 team/(6642:6652): Elijo al entrenador 3 para ejecutar.
+[INFO] 16:01:37:949 team/(6642:6652): Retomo la ejecución del entrenador 3.
+[INFO] 16:01:37:949 team/(6642:6652): INTERRUMPO A 3
+[INFO] 16:01:37:949 team/(6642:6646): -----------------EL ENTRENADOR 3 EJECUTA UN CICLO
+[INFO] 16:01:42:933 team/(6721:6723): Operación de intercambio realizada entre entrenadores 1 y 0
+[INFO] 16:01:42:933 team/(6721:6723): La nueva estimación del entrenador 1 es: 10.125000
+[INFO] 16:01:42:933 team/(6721:6726): Espera circular. Entrenador bloqueado: 1.
+[INFO] 16:01:42:933 team/(6721:6723): El entrenador 1 pide un ciclo. Valor del semaforo: 37. 
+[INFO] 16:01:42:933 team/(6721:6726): entrenador bloqueado para deadlock : 1
+[INFO] 16:01:42:933 team/(6721:6726): hola.
+[INFO] 16:01:42:933 team/(6721:6726): Entrenador bloqueado: 1. Entrenador a mover: 2.
+[INFO] 16:01:42:933 team/(6721:6726): El entrenador 1, esta en DEADLOCK con el entrenador 2.
+[INFO] 16:01:42:933 team/(6721:6724): El entrenador 2 se pone en READY.
+[INFO] 16:01:42:933 team/(6721:6724): El entrenador 2 entra en ejecucion para deadlock.
+[INFO] 16:01:42:933 team/(6721:6729): Hay un entrenador en cola
+[INFO] 16:01:42:933 team/(6721:6729): elijo entrenador para ejecutar
+[INFO] 16:01:42:933 team/(6721:6724): El entrenador 2, que estaba en (6,6), comenzará a moverse a (2,8).
+[INFO] 16:01:42:933 team/(6721:6724): El entrenador 2 pide un ciclo. Valor del semaforo: 13. 
+[INFO] 16:01:42:933 team/(6721:6724): -----------------EL ENTRENADOR 2 EJECUTA UN CICLO
+[INFO] 16:01:42:949 team/(6642:6646): El entrenador 3 se mueve a : (2,1).
+[INFO] 16:01:42:949 team/(6642:6646): El entrenador 3 pide un ciclo. Valor del semaforo: 1. 
+[INFO] 16:01:42:949 team/(6642:6652): El entrenador 3 se pone en READY.
+[INFO] 16:01:42:949 team/(6642:6652): le devolvieron la ejecucion al plani
+[INFO] 16:01:42:949 team/(6642:6652): Elijo al entrenador 3 para ejecutar.
+[INFO] 16:01:42:949 team/(6642:6652): Retomo la ejecución del entrenador 3.
+[INFO] 16:01:42:949 team/(6642:6652): INTERRUMPO A 3
+[INFO] 16:01:42:949 team/(6642:6646): -----------------EL ENTRENADOR 3 EJECUTA UN CICLO
+[INFO] 16:01:47:933 team/(6721:6724): El entrenador 2 se mueve a : (5,6).
+[INFO] 16:01:47:934 team/(6721:6724): El entrenador 2 pide un ciclo. Valor del semaforo: 14. 
+[INFO] 16:01:47:934 team/(6721:6724): -----------------EL ENTRENADOR 2 EJECUTA UN CICLO
+[INFO] 16:01:47:949 team/(6642:6646): El entrenador 3 se mueve a : (2,2).
+[INFO] 16:01:47:950 team/(6642:6646): El entrenador 3 se movió a la posición (2, 2).
+[INFO] 16:01:47:950 team/(6642:6646): El entrenador 3 comienza con el intercambio con el entrenador 4.
+[INFO] 16:01:47:950 team/(6642:6646): El entrenador 3 pide un ciclo. Valor del semaforo: 1. 
+[INFO] 16:01:47:950 team/(6642:6652): El entrenador 3 se pone en READY.
+[INFO] 16:01:47:950 team/(6642:6652): le devolvieron la ejecucion al plani
+[INFO] 16:01:47:950 team/(6642:6652): Elijo al entrenador 3 para ejecutar.
+[INFO] 16:01:47:950 team/(6642:6652): Retomo la ejecución del entrenador 3.
+[INFO] 16:01:47:950 team/(6642:6652): INTERRUMPO A 3
+[INFO] 16:01:47:950 team/(6642:6646): -----------------EL ENTRENADOR 3 EJECUTA UN CICLO
+[INFO] 16:01:52:934 team/(6721:6724): El entrenador 2 se mueve a : (4,6).
+[INFO] 16:01:52:934 team/(6721:6724): El entrenador 2 pide un ciclo. Valor del semaforo: 15. 
+[INFO] 16:01:52:934 team/(6721:6724): -----------------EL ENTRENADOR 2 EJECUTA UN CICLO
+[INFO] 16:01:52:950 team/(6642:6646): El entrenador 3 pide un ciclo. Valor del semaforo: 1. 
+[INFO] 16:01:52:950 team/(6642:6652): El entrenador 3 se pone en READY.
+[INFO] 16:01:52:950 team/(6642:6652): le devolvieron la ejecucion al plani
+[INFO] 16:01:52:950 team/(6642:6652): Elijo al entrenador 3 para ejecutar.
+[INFO] 16:01:52:950 team/(6642:6652): Retomo la ejecución del entrenador 3.
+[INFO] 16:01:52:951 team/(6642:6652): INTERRUMPO A 3
+[INFO] 16:01:52:951 team/(6642:6646): -----------------EL ENTRENADOR 3 EJECUTA UN CICLO
+[INFO] 16:01:57:934 team/(6721:6724): El entrenador 2 se mueve a : (3,6).
+[INFO] 16:01:57:935 team/(6721:6724): El entrenador 2 pide un ciclo. Valor del semaforo: 16. 
+[INFO] 16:01:57:935 team/(6721:6724): -----------------EL ENTRENADOR 2 EJECUTA UN CICLO
+[INFO] 16:01:57:951 team/(6642:6646): El entrenador 3 pide un ciclo. Valor del semaforo: 0. 
+[INFO] 16:01:57:951 team/(6642:6652): El entrenador 3 se pone en READY.
+[INFO] 16:01:57:951 team/(6642:6652): le devolvieron la ejecucion al plani
+[INFO] 16:01:57:951 team/(6642:6652): Elijo al entrenador 3 para ejecutar.
+[INFO] 16:01:57:951 team/(6642:6652): Retomo la ejecución del entrenador 3.
+[INFO] 16:01:57:951 team/(6642:6652): INTERRUMPO A 3
+[INFO] 16:01:57:951 team/(6642:6646): -----------------EL ENTRENADOR 3 EJECUTA UN CICLO
+[INFO] 16:02:02:935 team/(6721:6724): El entrenador 2 se mueve a : (2,6).
+[INFO] 16:02:02:935 team/(6721:6724): El entrenador 2 pide un ciclo. Valor del semaforo: 17. 
+[INFO] 16:02:02:935 team/(6721:6724): -----------------EL ENTRENADOR 2 EJECUTA UN CICLO
+[INFO] 16:02:02:952 team/(6642:6646): El entrenador 3 pide un ciclo. Valor del semaforo: 1. 
+[INFO] 16:02:02:952 team/(6642:6652): El entrenador 3 se pone en READY.
+[INFO] 16:02:02:952 team/(6642:6652): le devolvieron la ejecucion al plani
+[INFO] 16:02:02:952 team/(6642:6652): Elijo al entrenador 3 para ejecutar.
+[INFO] 16:02:02:952 team/(6642:6652): Retomo la ejecución del entrenador 3.
+[INFO] 16:02:02:952 team/(6642:6652): INTERRUMPO A 3
+[INFO] 16:02:02:952 team/(6642:6646): -----------------EL ENTRENADOR 3 EJECUTA UN CICLO
+[INFO] 16:02:07:936 team/(6721:6724): El entrenador 2 se mueve a : (2,7).
+[INFO] 16:02:07:936 team/(6721:6724): El entrenador 2 pide un ciclo. Valor del semaforo: 18. 
+[INFO] 16:02:07:936 team/(6721:6724): -----------------EL ENTRENADOR 2 EJECUTA UN CICLO
+[INFO] 16:02:07:952 team/(6642:6646): El entrenador 3 pide un ciclo. Valor del semaforo: 1. 
+[INFO] 16:02:07:952 team/(6642:6652): El entrenador 3 se pone en READY.
+[INFO] 16:02:07:952 team/(6642:6652): le devolvieron la ejecucion al plani
+[INFO] 16:02:07:952 team/(6642:6652): Elijo al entrenador 3 para ejecutar.
+[INFO] 16:02:07:952 team/(6642:6652): Retomo la ejecución del entrenador 3.
+[INFO] 16:02:07:952 team/(6642:6652): INTERRUMPO A 3
+[INFO] 16:02:07:952 team/(6642:6646): -----------------EL ENTRENADOR 3 EJECUTA UN CICLO
+[INFO] 16:02:12:937 team/(6721:6724): El entrenador 2 se mueve a : (2,8).
+[INFO] 16:02:12:938 team/(6721:6724): El entrenador 2 se movió a la posición (2, 8).
+[INFO] 16:02:12:938 team/(6721:6724): El entrenador 2 comienza con el intercambio con el entrenador 1.
+[INFO] 16:02:12:938 team/(6721:6724): El entrenador 2 pide un ciclo. Valor del semaforo: 19. 
+[INFO] 16:02:12:938 team/(6721:6724): -----------------EL ENTRENADOR 2 EJECUTA UN CICLO
+[INFO] 16:02:12:953 team/(6642:6646): Operación de intercambio realizada entre entrenadores 3 y 4
+[INFO] 16:02:12:953 team/(6642:6646): La nueva estimación del entrenador 3 es: 7.750000
+[INFO] 16:02:12:953 team/(6642:6649): Espera circular. Entrenador bloqueado: 3.
+[INFO] 16:02:12:953 team/(6642:6646): El entrenador 3 pide un ciclo. Valor del semaforo: 0. 
+[INFO] 16:02:12:953 team/(6642:6652): le devolvieron la ejecucion al plani
+[INFO] 16:02:12:953 team/(6642:6649): entrenador bloqueado para deadlock : 3
+[INFO] 16:02:12:953 team/(6642:6649): hola.
+[INFO] 16:02:12:953 team/(6642:6649): Entrenador bloqueado: 3. Entrenador a mover: 2.
+[INFO] 16:02:12:953 team/(6642:6649): El entrenador 3, esta en DEADLOCK con el entrenador 2.
+[INFO] 16:02:12:953 team/(6642:6645): El entrenador 2 se pone en READY.
+[INFO] 16:02:12:953 team/(6642:6645): El entrenador 2 entra en ejecucion para deadlock.
+[INFO] 16:02:12:953 team/(6642:6652): Elijo al entrenador 2 para ejecutar.
+[INFO] 16:02:12:953 team/(6642:6645): El entrenador 2, que estaba en (10,6), comenzará a moverse a (2,2).
+[INFO] 16:02:12:953 team/(6642:6645): El entrenador 2 pide un ciclo. Valor del semaforo: 0. 
+[INFO] 16:02:12:953 team/(6642:6652): INTERRUMPO A 2
+[INFO] 16:02:12:953 team/(6642:6645): -----------------EL ENTRENADOR 2 EJECUTA UN CICLO
+[INFO] 16:02:17:938 team/(6721:6724): El entrenador 2 pide un ciclo. Valor del semaforo: 20. 
+[INFO] 16:02:17:938 team/(6721:6724): -----------------EL ENTRENADOR 2 EJECUTA UN CICLO
+[INFO] 16:02:17:954 team/(6642:6645): El entrenador 2 se mueve a : (9,6).
+[INFO] 16:02:17:954 team/(6642:6645): El entrenador 2 pide un ciclo. Valor del semaforo: 0. 
+[INFO] 16:02:17:954 team/(6642:6652): El entrenador 2 se pone en READY.
+[INFO] 16:02:17:954 team/(6642:6652): le devolvieron la ejecucion al plani
+[INFO] 16:02:17:954 team/(6642:6652): Elijo al entrenador 2 para ejecutar.
+[INFO] 16:02:17:954 team/(6642:6652): Retomo la ejecución del entrenador 2.
+[INFO] 16:02:17:954 team/(6642:6652): INTERRUMPO A 2
+[INFO] 16:02:17:954 team/(6642:6645): -----------------EL ENTRENADOR 2 EJECUTA UN CICLO
+[INFO] 16:02:22:938 team/(6721:6724): El entrenador 2 pide un ciclo. Valor del semaforo: 21. 
+[INFO] 16:02:22:938 team/(6721:6724): -----------------EL ENTRENADOR 2 EJECUTA UN CICLO
+[INFO] 16:02:22:954 team/(6642:6645): El entrenador 2 se mueve a : (8,6).
+[INFO] 16:02:22:954 team/(6642:6645): El entrenador 2 pide un ciclo. Valor del semaforo: 0. 
+[INFO] 16:02:22:954 team/(6642:6652): El entrenador 2 se pone en READY.
+[INFO] 16:02:22:954 team/(6642:6652): le devolvieron la ejecucion al plani
+[INFO] 16:02:22:954 team/(6642:6652): Elijo al entrenador 2 para ejecutar.
+[INFO] 16:02:22:954 team/(6642:6652): Retomo la ejecución del entrenador 2.
+[INFO] 16:02:22:954 team/(6642:6652): INTERRUMPO A 2
+[INFO] 16:02:22:954 team/(6642:6645): -----------------EL ENTRENADOR 2 EJECUTA UN CICLO
+[INFO] 16:02:27:939 team/(6721:6724): El entrenador 2 pide un ciclo. Valor del semaforo: 22. 
+[INFO] 16:02:27:939 team/(6721:6724): -----------------EL ENTRENADOR 2 EJECUTA UN CICLO
+[INFO] 16:02:27:955 team/(6642:6645): El entrenador 2 se mueve a : (7,6).
+[INFO] 16:02:27:955 team/(6642:6645): El entrenador 2 pide un ciclo. Valor del semaforo: 0. 
+[INFO] 16:02:27:955 team/(6642:6652): El entrenador 2 se pone en READY.
+[INFO] 16:02:27:955 team/(6642:6652): le devolvieron la ejecucion al plani
+[INFO] 16:02:27:955 team/(6642:6652): Elijo al entrenador 2 para ejecutar.
+[INFO] 16:02:27:955 team/(6642:6652): Retomo la ejecución del entrenador 2.
+[INFO] 16:02:27:955 team/(6642:6652): INTERRUMPO A 2
+[INFO] 16:02:27:955 team/(6642:6645): -----------------EL ENTRENADOR 2 EJECUTA UN CICLO
+[INFO] 16:02:32:940 team/(6721:6724): El entrenador 2 pide un ciclo. Valor del semaforo: 23. 
+[INFO] 16:02:32:940 team/(6721:6724): -----------------EL ENTRENADOR 2 EJECUTA UN CICLO
+[INFO] 16:02:32:955 team/(6642:6645): El entrenador 2 se mueve a : (6,6).
+[INFO] 16:02:32:955 team/(6642:6645): El entrenador 2 pide un ciclo. Valor del semaforo: 0. 
+[INFO] 16:02:32:955 team/(6642:6652): El entrenador 2 se pone en READY.
+[INFO] 16:02:32:955 team/(6642:6652): le devolvieron la ejecucion al plani
+[INFO] 16:02:32:955 team/(6642:6652): Elijo al entrenador 2 para ejecutar.
+[INFO] 16:02:32:955 team/(6642:6652): Retomo la ejecución del entrenador 2.
+[INFO] 16:02:32:955 team/(6642:6652): INTERRUMPO A 2
+[INFO] 16:02:32:955 team/(6642:6645): -----------------EL ENTRENADOR 2 EJECUTA UN CICLO
+[INFO] 16:02:37:940 team/(6721:6724): Operación de intercambio realizada entre entrenadores 2 y 1
+[INFO] 16:02:37:940 team/(6721:6724): La nueva estimación del entrenador 2 es: 8.125000
+[INFO] 16:02:37:940 team/(6721:6726): hice todos los intercambios.
+[INFO] 16:02:37:940 team/(6721:6724): El entrenador 2 pide un ciclo. Valor del semaforo: 24. 
+[INFO] 16:02:37:941 team/(6721:6726): El entrenador 0 salio del deadlock.
+[INFO] 16:02:37:941 team/(6721:6726): El entrenador 2 salio del deadlock.
+[INFO] 16:02:37:941 team/(6721:6726): El entrenador 1 salio del deadlock.
+[INFO] 16:02:37:956 team/(6642:6645): El entrenador 2 se mueve a : (5,6).
+[INFO] 16:02:37:956 team/(6642:6645): El entrenador 2 pide un ciclo. Valor del semaforo: 0. 
+[INFO] 16:02:37:956 team/(6642:6652): El entrenador 2 se pone en READY.
+[INFO] 16:02:37:956 team/(6642:6652): le devolvieron la ejecucion al plani
+[INFO] 16:02:37:956 team/(6642:6652): Elijo al entrenador 2 para ejecutar.
+[INFO] 16:02:37:956 team/(6642:6652): Retomo la ejecución del entrenador 2.
+[INFO] 16:02:37:956 team/(6642:6652): INTERRUMPO A 2
+[INFO] 16:02:37:956 team/(6642:6645): -----------------EL ENTRENADOR 2 EJECUTA UN CICLO
+[INFO] 16:02:42:956 team/(6642:6645): El entrenador 2 se mueve a : (4,6).
+[INFO] 16:02:42:956 team/(6642:6645): El entrenador 2 pide un ciclo. Valor del semaforo: 0. 
+[INFO] 16:02:42:956 team/(6642:6652): El entrenador 2 se pone en READY.
+[INFO] 16:02:42:956 team/(6642:6652): le devolvieron la ejecucion al plani
+[INFO] 16:02:42:956 team/(6642:6652): Elijo al entrenador 2 para ejecutar.
+[INFO] 16:02:42:956 team/(6642:6652): Retomo la ejecución del entrenador 2.
+[INFO] 16:02:42:956 team/(6642:6652): INTERRUMPO A 2
+[INFO] 16:02:42:956 team/(6642:6645): -----------------EL ENTRENADOR 2 EJECUTA UN CICLO
+[INFO] 16:02:47:957 team/(6642:6645): El entrenador 2 se mueve a : (3,6).
+[INFO] 16:02:47:957 team/(6642:6645): El entrenador 2 pide un ciclo. Valor del semaforo: 0. 
+[INFO] 16:02:47:957 team/(6642:6652): El entrenador 2 se pone en READY.
+[INFO] 16:02:47:958 team/(6642:6652): le devolvieron la ejecucion al plani
+[INFO] 16:02:47:958 team/(6642:6652): Elijo al entrenador 2 para ejecutar.
+[INFO] 16:02:47:958 team/(6642:6652): Retomo la ejecución del entrenador 2.
+[INFO] 16:02:47:958 team/(6642:6652): INTERRUMPO A 2
+[INFO] 16:02:47:958 team/(6642:6645): -----------------EL ENTRENADOR 2 EJECUTA UN CICLO
+[INFO] 16:02:52:958 team/(6642:6645): El entrenador 2 se mueve a : (2,6).
+[INFO] 16:02:52:958 team/(6642:6645): El entrenador 2 pide un ciclo. Valor del semaforo: 0. 
+[INFO] 16:02:52:958 team/(6642:6652): El entrenador 2 se pone en READY.
+[INFO] 16:02:52:959 team/(6642:6652): le devolvieron la ejecucion al plani
+[INFO] 16:02:52:959 team/(6642:6652): Elijo al entrenador 2 para ejecutar.
+[INFO] 16:02:52:959 team/(6642:6652): Retomo la ejecución del entrenador 2.
+[INFO] 16:02:52:959 team/(6642:6652): INTERRUMPO A 2
+[INFO] 16:02:52:959 team/(6642:6645): -----------------EL ENTRENADOR 2 EJECUTA UN CICLO
+[INFO] 16:02:57:959 team/(6642:6645): El entrenador 2 se mueve a : (2,5).
+[INFO] 16:02:57:960 team/(6642:6645): El entrenador 2 pide un ciclo. Valor del semaforo: 0. 
+[INFO] 16:02:57:960 team/(6642:6652): El entrenador 2 se pone en READY.
+[INFO] 16:02:57:960 team/(6642:6652): le devolvieron la ejecucion al plani
+[INFO] 16:02:57:960 team/(6642:6652): Elijo al entrenador 2 para ejecutar.
+[INFO] 16:02:57:960 team/(6642:6652): Retomo la ejecución del entrenador 2.
+[INFO] 16:02:57:960 team/(6642:6652): INTERRUMPO A 2
+[INFO] 16:02:57:960 team/(6642:6645): -----------------EL ENTRENADOR 2 EJECUTA UN CICLO
+[INFO] 16:03:02:960 team/(6642:6645): El entrenador 2 se mueve a : (2,4).
+[INFO] 16:03:02:960 team/(6642:6645): El entrenador 2 pide un ciclo. Valor del semaforo: 0. 
+[INFO] 16:03:02:960 team/(6642:6652): El entrenador 2 se pone en READY.
+[INFO] 16:03:02:960 team/(6642:6652): le devolvieron la ejecucion al plani
+[INFO] 16:03:02:960 team/(6642:6652): Elijo al entrenador 2 para ejecutar.
+[INFO] 16:03:02:960 team/(6642:6652): Retomo la ejecución del entrenador 2.
+[INFO] 16:03:02:961 team/(6642:6652): INTERRUMPO A 2
+[INFO] 16:03:02:961 team/(6642:6645): -----------------EL ENTRENADOR 2 EJECUTA UN CICLO
+[INFO] 16:03:07:962 team/(6642:6645): El entrenador 2 se mueve a : (2,3).
+[INFO] 16:03:07:962 team/(6642:6645): El entrenador 2 pide un ciclo. Valor del semaforo: 0. 
+[INFO] 16:03:07:962 team/(6642:6652): El entrenador 2 se pone en READY.
+[INFO] 16:03:07:962 team/(6642:6652): le devolvieron la ejecucion al plani
+[INFO] 16:03:07:962 team/(6642:6652): Elijo al entrenador 2 para ejecutar.
+[INFO] 16:03:07:962 team/(6642:6652): Retomo la ejecución del entrenador 2.
+[INFO] 16:03:07:962 team/(6642:6652): INTERRUMPO A 2
+[INFO] 16:03:07:962 team/(6642:6645): -----------------EL ENTRENADOR 2 EJECUTA UN CICLO
+[INFO] 16:03:12:964 team/(6642:6645): El entrenador 2 se mueve a : (2,2).
+[INFO] 16:03:12:964 team/(6642:6645): El entrenador 2 se movió a la posición (2, 2).
+[INFO] 16:03:12:964 team/(6642:6645): El entrenador 2 comienza con el intercambio con el entrenador 3.
+[INFO] 16:03:12:964 team/(6642:6645): El entrenador 2 pide un ciclo. Valor del semaforo: 0. 
+[INFO] 16:03:12:964 team/(6642:6652): El entrenador 2 se pone en READY.
+[INFO] 16:03:12:964 team/(6642:6652): le devolvieron la ejecucion al plani
+[INFO] 16:03:12:964 team/(6642:6652): Elijo al entrenador 2 para ejecutar.
+[INFO] 16:03:12:964 team/(6642:6652): Retomo la ejecución del entrenador 2.
+[INFO] 16:03:12:964 team/(6642:6652): INTERRUMPO A 2
+[INFO] 16:03:12:964 team/(6642:6645): -----------------EL ENTRENADOR 2 EJECUTA UN CICLO
+[INFO] 16:03:17:965 team/(6642:6645): El entrenador 2 pide un ciclo. Valor del semaforo: 0. 
+[INFO] 16:03:17:965 team/(6642:6652): El entrenador 2 se pone en READY.
+[INFO] 16:03:17:965 team/(6642:6652): le devolvieron la ejecucion al plani
+[INFO] 16:03:17:965 team/(6642:6652): Elijo al entrenador 2 para ejecutar.
+[INFO] 16:03:17:965 team/(6642:6652): Retomo la ejecución del entrenador 2.
+[INFO] 16:03:17:965 team/(6642:6652): INTERRUMPO A 2
+[INFO] 16:03:17:965 team/(6642:6645): -----------------EL ENTRENADOR 2 EJECUTA UN CICLO
+[INFO] 16:03:22:967 team/(6642:6645): El entrenador 2 pide un ciclo. Valor del semaforo: 0. 
+[INFO] 16:03:22:967 team/(6642:6652): El entrenador 2 se pone en READY.
+[INFO] 16:03:22:968 team/(6642:6652): le devolvieron la ejecucion al plani
+[INFO] 16:03:22:968 team/(6642:6652): Elijo al entrenador 2 para ejecutar.
+[INFO] 16:03:22:968 team/(6642:6652): Retomo la ejecución del entrenador 2.
+[INFO] 16:03:22:968 team/(6642:6652): INTERRUMPO A 2
+[INFO] 16:03:22:968 team/(6642:6645): -----------------EL ENTRENADOR 2 EJECUTA UN CICLO
+[INFO] 16:03:27:969 team/(6642:6645): El entrenador 2 pide un ciclo. Valor del semaforo: 0. 
+[INFO] 16:03:27:969 team/(6642:6652): El entrenador 2 se pone en READY.
+[INFO] 16:03:27:969 team/(6642:6652): le devolvieron la ejecucion al plani
+[INFO] 16:03:27:969 team/(6642:6652): Elijo al entrenador 2 para ejecutar.
+[INFO] 16:03:27:969 team/(6642:6652): Retomo la ejecución del entrenador 2.
+[INFO] 16:03:27:969 team/(6642:6652): INTERRUMPO A 2
+[INFO] 16:03:27:969 team/(6642:6645): -----------------EL ENTRENADOR 2 EJECUTA UN CICLO
+[INFO] 16:03:32:970 team/(6642:6645): El entrenador 2 pide un ciclo. Valor del semaforo: 0. 
+[INFO] 16:03:32:970 team/(6642:6652): El entrenador 2 se pone en READY.
+[INFO] 16:03:32:970 team/(6642:6652): le devolvieron la ejecucion al plani
+[INFO] 16:03:32:971 team/(6642:6652): Elijo al entrenador 2 para ejecutar.
+[INFO] 16:03:32:971 team/(6642:6652): Retomo la ejecución del entrenador 2.
+[INFO] 16:03:32:971 team/(6642:6652): INTERRUMPO A 2
+[INFO] 16:03:32:971 team/(6642:6645): -----------------EL ENTRENADOR 2 EJECUTA UN CICLO
+[INFO] 16:03:37:971 team/(6642:6645): Operación de intercambio realizada entre entrenadores 2 y 3
+[INFO] 16:03:37:971 team/(6642:6645): La nueva estimación del entrenador 2 es: 11.000000
+[INFO] 16:03:37:971 team/(6642:6645): El entrenador 2 pide un ciclo. Valor del semaforo: 1. 
+[INFO] 16:03:37:971 team/(6642:6649): Espera circular. Entrenador bloqueado: 2.
+[INFO] 16:03:37:971 team/(6642:6649): entrenador bloqueado para deadlock : 2
+[INFO] 16:03:37:971 team/(6642:6649): hola.
+[INFO] 16:03:37:971 team/(6642:6649): Entrenador bloqueado: 2. Entrenador a mover: 1.
+[INFO] 16:03:37:972 team/(6642:6649): El entrenador 2, esta en DEADLOCK con el entrenador 1.
+[INFO] 16:03:37:972 team/(6642:6644): El entrenador 1 se pone en READY.
+[INFO] 16:03:37:972 team/(6642:6644): El entrenador 1 entra en ejecucion para deadlock.
+[INFO] 16:03:37:972 team/(6642:6652): le devolvieron la ejecucion al plani
+[INFO] 16:03:37:972 team/(6642:6652): Elijo al entrenador 1 para ejecutar.
+[INFO] 16:03:37:972 team/(6642:6644): El entrenador 1, que estaba en (4,6), comenzará a moverse a (2,2).
+[INFO] 16:03:37:972 team/(6642:6644): El entrenador 1 pide un ciclo. Valor del semaforo: 0. 
+[INFO] 16:03:37:972 team/(6642:6652): INTERRUMPO A 1
+[INFO] 16:03:37:972 team/(6642:6644): -----------------EL ENTRENADOR 1 EJECUTA UN CICLO
+[INFO] 16:03:42:973 team/(6642:6644): El entrenador 1 se mueve a : (3,6).
+[INFO] 16:03:42:973 team/(6642:6644): El entrenador 1 pide un ciclo. Valor del semaforo: 0. 
+[INFO] 16:03:42:973 team/(6642:6652): El entrenador 1 se pone en READY.
+[INFO] 16:03:42:973 team/(6642:6652): le devolvieron la ejecucion al plani
+[INFO] 16:03:42:973 team/(6642:6652): Elijo al entrenador 1 para ejecutar.
+[INFO] 16:03:42:973 team/(6642:6652): Retomo la ejecución del entrenador 1.
+[INFO] 16:03:42:973 team/(6642:6652): INTERRUMPO A 1
+[INFO] 16:03:42:973 team/(6642:6644): -----------------EL ENTRENADOR 1 EJECUTA UN CICLO
+[INFO] 16:03:47:973 team/(6642:6644): El entrenador 1 se mueve a : (2,6).
+[INFO] 16:03:47:974 team/(6642:6644): El entrenador 1 pide un ciclo. Valor del semaforo: 0. 
+[INFO] 16:03:47:974 team/(6642:6652): El entrenador 1 se pone en READY.
+[INFO] 16:03:47:974 team/(6642:6652): le devolvieron la ejecucion al plani
+[INFO] 16:03:47:974 team/(6642:6652): Elijo al entrenador 1 para ejecutar.
+[INFO] 16:03:47:974 team/(6642:6652): Retomo la ejecución del entrenador 1.
+[INFO] 16:03:47:974 team/(6642:6652): INTERRUMPO A 1
+[INFO] 16:03:47:974 team/(6642:6644): -----------------EL ENTRENADOR 1 EJECUTA UN CICLO
+[INFO] 16:03:52:975 team/(6642:6644): El entrenador 1 se mueve a : (2,5).
+[INFO] 16:03:52:975 team/(6642:6644): El entrenador 1 pide un ciclo. Valor del semaforo: 0. 
+[INFO] 16:03:52:975 team/(6642:6652): El entrenador 1 se pone en READY.
+[INFO] 16:03:52:976 team/(6642:6652): le devolvieron la ejecucion al plani
+[INFO] 16:03:52:976 team/(6642:6652): Elijo al entrenador 1 para ejecutar.
+[INFO] 16:03:52:976 team/(6642:6652): Retomo la ejecución del entrenador 1.
+[INFO] 16:03:52:976 team/(6642:6652): INTERRUMPO A 1
+[INFO] 16:03:52:976 team/(6642:6644): -----------------EL ENTRENADOR 1 EJECUTA UN CICLO
+[INFO] 16:03:57:976 team/(6642:6644): El entrenador 1 se mueve a : (2,4).
+[INFO] 16:03:57:976 team/(6642:6644): El entrenador 1 pide un ciclo. Valor del semaforo: 0. 
+[INFO] 16:03:57:976 team/(6642:6652): El entrenador 1 se pone en READY.
+[INFO] 16:03:57:976 team/(6642:6652): le devolvieron la ejecucion al plani
+[INFO] 16:03:57:976 team/(6642:6652): Elijo al entrenador 1 para ejecutar.
+[INFO] 16:03:57:976 team/(6642:6652): Retomo la ejecución del entrenador 1.
+[INFO] 16:03:57:976 team/(6642:6652): INTERRUMPO A 1
+[INFO] 16:03:57:976 team/(6642:6644): -----------------EL ENTRENADOR 1 EJECUTA UN CICLO
+[INFO] 16:04:02:977 team/(6642:6644): El entrenador 1 se mueve a : (2,3).
+[INFO] 16:04:02:977 team/(6642:6644): El entrenador 1 pide un ciclo. Valor del semaforo: 0. 
+[INFO] 16:04:02:977 team/(6642:6652): El entrenador 1 se pone en READY.
+[INFO] 16:04:02:977 team/(6642:6652): le devolvieron la ejecucion al plani
+[INFO] 16:04:02:977 team/(6642:6652): Elijo al entrenador 1 para ejecutar.
+[INFO] 16:04:02:977 team/(6642:6652): Retomo la ejecución del entrenador 1.
+[INFO] 16:04:02:977 team/(6642:6652): INTERRUMPO A 1
+[INFO] 16:04:02:977 team/(6642:6644): -----------------EL ENTRENADOR 1 EJECUTA UN CICLO
+[INFO] 16:04:07:978 team/(6642:6644): El entrenador 1 se mueve a : (2,2).
+[INFO] 16:04:07:978 team/(6642:6644): El entrenador 1 se movió a la posición (2, 2).
+[INFO] 16:04:07:978 team/(6642:6644): El entrenador 1 comienza con el intercambio con el entrenador 2.
+[INFO] 16:04:07:978 team/(6642:6644): El entrenador 1 pide un ciclo. Valor del semaforo: 0. 
+[INFO] 16:04:07:978 team/(6642:6652): El entrenador 1 se pone en READY.
+[INFO] 16:04:07:978 team/(6642:6652): le devolvieron la ejecucion al plani
+[INFO] 16:04:07:978 team/(6642:6652): Elijo al entrenador 1 para ejecutar.
+[INFO] 16:04:07:978 team/(6642:6652): Retomo la ejecución del entrenador 1.
+[INFO] 16:04:07:978 team/(6642:6652): INTERRUMPO A 1
+[INFO] 16:04:07:978 team/(6642:6644): -----------------EL ENTRENADOR 1 EJECUTA UN CICLO
+[INFO] 16:04:12:978 team/(6642:6644): El entrenador 1 pide un ciclo. Valor del semaforo: 0. 
+[INFO] 16:04:12:978 team/(6642:6652): El entrenador 1 se pone en READY.
+[INFO] 16:04:12:979 team/(6642:6652): le devolvieron la ejecucion al plani
+[INFO] 16:04:12:979 team/(6642:6652): Elijo al entrenador 1 para ejecutar.
+[INFO] 16:04:12:979 team/(6642:6652): Retomo la ejecución del entrenador 1.
+[INFO] 16:04:12:979 team/(6642:6652): INTERRUMPO A 1
+[INFO] 16:04:12:979 team/(6642:6644): -----------------EL ENTRENADOR 1 EJECUTA UN CICLO
+[INFO] 16:04:17:979 team/(6642:6644): El entrenador 1 pide un ciclo. Valor del semaforo: 1. 
+[INFO] 16:04:17:980 team/(6642:6652): El entrenador 1 se pone en READY.
+[INFO] 16:04:17:980 team/(6642:6652): le devolvieron la ejecucion al plani
+[INFO] 16:04:17:980 team/(6642:6652): Elijo al entrenador 1 para ejecutar.
+[INFO] 16:04:17:980 team/(6642:6652): Retomo la ejecución del entrenador 1.
+[INFO] 16:04:17:980 team/(6642:6652): INTERRUMPO A 1
+[INFO] 16:04:17:980 team/(6642:6644): -----------------EL ENTRENADOR 1 EJECUTA UN CICLO
+[INFO] 16:04:22:981 team/(6642:6644): El entrenador 1 pide un ciclo. Valor del semaforo: 0. 
+[INFO] 16:04:22:981 team/(6642:6652): El entrenador 1 se pone en READY.
+[INFO] 16:04:22:981 team/(6642:6652): le devolvieron la ejecucion al plani
+[INFO] 16:04:22:981 team/(6642:6652): Elijo al entrenador 1 para ejecutar.
+[INFO] 16:04:22:981 team/(6642:6652): Retomo la ejecución del entrenador 1.
+[INFO] 16:04:22:981 team/(6642:6652): INTERRUMPO A 1
+[INFO] 16:04:22:981 team/(6642:6644): -----------------EL ENTRENADOR 1 EJECUTA UN CICLO
+[INFO] 16:04:27:983 team/(6642:6644): El entrenador 1 pide un ciclo. Valor del semaforo: 0. 
+[INFO] 16:04:27:983 team/(6642:6652): El entrenador 1 se pone en READY.
+[INFO] 16:04:27:984 team/(6642:6652): le devolvieron la ejecucion al plani
+[INFO] 16:04:27:984 team/(6642:6652): Elijo al entrenador 1 para ejecutar.
+[INFO] 16:04:27:984 team/(6642:6652): Retomo la ejecución del entrenador 1.
+[INFO] 16:04:27:984 team/(6642:6652): INTERRUMPO A 1
+[INFO] 16:04:27:984 team/(6642:6644): -----------------EL ENTRENADOR 1 EJECUTA UN CICLO
+[INFO] 16:04:32:986 team/(6642:6644): Operación de intercambio realizada entre entrenadores 1 y 2
+[INFO] 16:04:32:986 team/(6642:6644): La nueva estimación del entrenador 1 es: 7.750000
+[INFO] 16:04:32:986 team/(6642:6644): El entrenador 1 pide un ciclo. Valor del semaforo: 1. 
+[INFO] 16:04:32:986 team/(6642:6649): hice todos los intercambios.
+[INFO] 16:04:32:986 team/(6642:6649): El entrenador 0 salio del deadlock.
+[INFO] 16:04:32:986 team/(6642:6649): El entrenador 1 salio del deadlock.
+[INFO] 16:04:32:986 team/(6642:6649): El entrenador 3 salio del deadlock.
+[INFO] 16:04:32:986 team/(6642:6649): El entrenador 4 salio del deadlock.
+[INFO] 16:04:32:986 team/(6642:6649): El entrenador 2 salio del deadlock.
+[INFO] 16:04:32:986 team/(6642:6652): le devolvieron la ejecucion al plani
+[INFO] 16:14:33:635 team/(8292:8292): --------------------------------------------------------------------------
+[INFO] 16:14:33:635 team/(8292:8292): NUEVA EJECUCION
+[INFO] 16:14:33:635 team/(8292:8292): --------------------------------------------------------------------------
+[INFO] 16:14:33:635 team/(8292:8292): Algortimo planificacion SJF con desalojo.
+[INFO] 16:14:33:636 team/(8292:8292): --------------------------------------------------------------
+[INFO] 16:14:33:636 team/(8292:8292): OBJETIVO DEL TEAM
+[INFO] 16:14:33:636 team/(8292:8292): Objetivo 0. Pokemon: Vaporeon. Cantidad: 1.
+[INFO] 16:14:33:636 team/(8292:8292): Objetivo 1. Pokemon: Jolteon. Cantidad: 1.
+[INFO] 16:14:33:636 team/(8292:8292): Objetivo 2. Pokemon: Flareon. Cantidad: 1.
+[INFO] 16:14:33:636 team/(8292:8292): Objetivo 3. Pokemon: Umbreon. Cantidad: 1.
+[INFO] 16:14:33:636 team/(8292:8292): Objetivo 4. Pokemon: Espeon. Cantidad: 1.
+[INFO] 16:14:33:636 team/(8292:8292): --------------------------------------------------
+[INFO] 16:14:33:637 team/(8292:8304): Se inicia el planificador
+[INFO] 16:14:33:657 team/(8292:8310): Suscripción realizada correctamente
+
+[INFO] 16:14:33:661 team/(8292:8326): Atiendo appeared. Pokemon: Jolteon.
+[INFO] 16:14:33:661 team/(8292:8326): El pokemon es objetivo
+[INFO] 16:14:33:661 team/(8292:8326): Hay entrenadores disponibles para atrapar a Jolteon.
+[INFO] 16:14:33:661 team/(8292:8326): Se le asigno el pokemon Jolteon al entrenador 0.
+[INFO] 16:14:33:661 team/(8292:8295): El entrenador 0 se pone en READY.
+[INFO] 16:14:33:662 team/(8292:8295): ---------------El entrenador 0 paso por aca
+[INFO] 16:14:33:662 team/(8292:8304): Hay entrenadores en cola
+[INFO] 16:14:33:662 team/(8292:8304): CALCULO ESTIMACION
+[INFO] 16:14:33:662 team/(8292:8304): Elijo al entrenador 0 para ejecutar.
+[INFO] 16:14:33:662 team/(8292:8295): El entrenador 0 entro en ejecución.
+[INFO] 16:14:33:662 team/(8292:8295): El entrenador 0, que estaba en (2,3), comenzará a moverse a (2,2).
+[INFO] 16:14:33:662 team/(8292:8295): El entrenador 0 pide un ciclo. Valor del semaforo: 1. 
+[INFO] 16:14:33:662 team/(8292:8304): Le llego el pedido de ciclo del entrenador 0 al planificador. 
+[INFO] 16:14:33:662 team/(8292:8304): hola
+[INFO] 16:14:33:662 team/(8292:8304): CALCULO ESTIMACION
+[INFO] 16:14:33:662 team/(8292:8304): ESTIMACION DEL ENTRENADOR 0: 5.000000
+[INFO] 16:14:33:662 team/(8292:8295): -----------------EL ENTRENADOR 0 EJECUTA UN CICLO
+[INFO] 16:14:33:662 team/(8292:8326): Se selecciono el entrenador 0 para atrapar al pokemon Jolteon
+[INFO] 16:14:33:662 team/(8292:8324): Atiendo appeared. Pokemon: Flareon.
+[INFO] 16:14:33:662 team/(8292:8324): El pokemon es objetivo
+[INFO] 16:14:33:662 team/(8292:8324): Hay entrenadores disponibles para atrapar a Flareon.
+[INFO] 16:14:33:662 team/(8292:8324): Se le asigno el pokemon Flareon al entrenador 1.
+[INFO] 16:14:33:662 team/(8292:8296): El entrenador 1 se pone en READY.
+[INFO] 16:14:33:662 team/(8292:8296): ---------------El entrenador 1 paso por aca
+[INFO] 16:14:33:662 team/(8292:8324): Se selecciono el entrenador 1 para atrapar al pokemon Flareon
+[INFO] 16:14:33:664 team/(8292:8312): Suscripción realizada correctamente
+
+[INFO] 16:14:33:666 team/(8292:8311): Suscripción realizada correctamente
+
+[INFO] 16:14:38:662 team/(8292:8295): El entrenador 0 se mueve a : (2,2).
+[INFO] 16:14:38:662 team/(8292:8295): El entrenador 0 se movió a la posición (2, 2).
+[INFO] 16:14:38:662 team/(8292:8295): El entrenador 0 envia el catch para el pokemon Jolteon.
+[INFO] 16:14:38:663 team/(8292:8295): El entrenador 0 pide un ciclo. Valor del semaforo: 0. 
+[INFO] 16:14:38:663 team/(8292:8304): hola
+[INFO] 16:14:38:663 team/(8292:8304): CALCULO ESTIMACION
+[INFO] 16:14:38:663 team/(8292:8304): CALCULO ESTIMACION
+[INFO] 16:14:38:663 team/(8292:8304): ESTIMACION DEL ENTRENADOR 0: 4.000000
+[INFO] 16:14:38:663 team/(8292:8304): CALCULO ESTIMACION
+[INFO] 16:14:38:663 team/(8292:8304): CALCULO ESTIMACION
+[INFO] 16:14:38:663 team/(8292:8295): -----------------EL ENTRENADOR 0 EJECUTA UN CICLO
+[INFO] 16:14:43:663 team/(8292:8295): El entrenador 0 hace el send del catch.
+[INFO] 16:14:43:664 team/(8292:8295): El entrenador  0 recibió el id del catch: 19.
+[INFO] 16:14:43:664 team/(8292:8295): La nueva estimación del entrenador 0 es: 3.500000
+[INFO] 16:14:43:664 team/(8292:8295): El entrenador 0 pide un ciclo. Valor del semaforo: 0. 
+[INFO] 16:14:43:664 team/(8292:8295): El entrenador 0 libera la CPU por su cuenta.
+[INFO] 16:14:43:664 team/(8292:8304): El planificador detecta que el entrenador 0 termino de ejecutar.
+[INFO] 16:14:43:664 team/(8292:8304): postearon la ejecucion del cpu
+[INFO] 16:14:43:664 team/(8292:8304): Hay entrenadores en cola
+[INFO] 16:14:43:664 team/(8292:8304): CALCULO ESTIMACION
+[INFO] 16:14:43:664 team/(8292:8304): Elijo al entrenador 1 para ejecutar.
+[INFO] 16:14:43:664 team/(8292:8296): El entrenador 1 entro en ejecución.
+[INFO] 16:14:43:664 team/(8292:8296): El entrenador 1, que estaba en (6,5), comenzará a moverse a (4,6).
+[INFO] 16:14:43:664 team/(8292:8296): El entrenador 1 pide un ciclo. Valor del semaforo: 0. 
+[INFO] 16:14:43:664 team/(8292:8304): Le llego el pedido de ciclo del entrenador 1 al planificador. 
+[INFO] 16:14:43:664 team/(8292:8304): hola
+[INFO] 16:14:43:664 team/(8292:8304): CALCULO ESTIMACION
+[INFO] 16:14:43:664 team/(8292:8296): -----------------EL ENTRENADOR 1 EJECUTA UN CICLO
+[INFO] 16:14:43:664 team/(8292:8304): ESTIMACION DEL ENTRENADOR 1: 5.000000
+[INFO] 16:14:48:665 team/(8292:8296): El entrenador 1 se mueve a : (5,5).
+[INFO] 16:14:48:665 team/(8292:8296): El entrenador 1 pide un ciclo. Valor del semaforo: 1. 
+[INFO] 16:14:48:665 team/(8292:8304): hola
+[INFO] 16:14:48:666 team/(8292:8304): CALCULO ESTIMACION
+[INFO] 16:14:48:666 team/(8292:8304): ESTIMACION DEL ENTRENADOR 1: 4.000000
+[INFO] 16:14:48:666 team/(8292:8296): -----------------EL ENTRENADOR 1 EJECUTA UN CICLO
+[INFO] 16:14:48:696 team/(8292:8368): Atiendo caught.
+[INFO] 16:14:48:696 team/(8292:8368): Resultado del caught: 1.
+[INFO] 16:14:48:696 team/(8292:8368): El caught me interesa.
+[INFO] 16:14:48:696 team/(8292:8368): 0 atrapo a Jolteon
+[INFO] 16:14:48:696 team/(8292:8368): Se registró el pokemon atrapado. Jolteon
+[INFO] 16:14:48:696 team/(8292:8368): El entrenador 0 forma parte de un interbloqueo.
+[INFO] 16:14:48:696 team/(8292:8368): Inicio del algoritmo de detección de deadlock.
+[INFO] 16:14:48:696 team/(8292:8368): Entrenadores en deadlock 1.
+[INFO] 16:14:48:696 team/(8292:8368): Entrenadores exit 0.
+[INFO] 16:14:48:696 team/(8292:8368): Entrenadores enntrenadores totales 5.
+[INFO] 16:14:48:696 team/(8292:8368): No se encontró deadlock.
+[INFO] 16:14:53:667 team/(8292:8296): El entrenador 1 se mueve a : (4,5).
+[INFO] 16:14:53:667 team/(8292:8296): El entrenador 1 pide un ciclo. Valor del semaforo: 0. 
+[INFO] 16:14:53:667 team/(8292:8304): hola
+[INFO] 16:14:53:667 team/(8292:8304): CALCULO ESTIMACION
+[INFO] 16:14:53:668 team/(8292:8304): ESTIMACION DEL ENTRENADOR 1: 3.000000
+[INFO] 16:14:53:668 team/(8292:8296): -----------------EL ENTRENADOR 1 EJECUTA UN CICLO
+[INFO] 16:14:54:929 team/(8378:8378): --------------------------------------------------------------------------
+[INFO] 16:14:54:929 team/(8378:8378): NUEVA EJECUCION
+[INFO] 16:14:54:929 team/(8378:8378): --------------------------------------------------------------------------
+[INFO] 16:14:54:929 team/(8378:8378): SJF sin desalojo.
+[INFO] 16:14:54:929 team/(8378:8378): --------------------------------------------------------------
+[INFO] 16:14:54:929 team/(8378:8378): OBJETIVO DEL TEAM
+[INFO] 16:14:54:929 team/(8378:8378): Objetivo 0. Pokemon: Squirtle. Cantidad: 2.
+[INFO] 16:14:54:929 team/(8378:8378): Objetivo 1. Pokemon: Pikachu. Cantidad: 1.
+[INFO] 16:14:54:929 team/(8378:8378): Objetivo 2. Pokemon: Gengar. Cantidad: 1.
+[INFO] 16:14:54:929 team/(8378:8378): Objetivo 3. Pokemon: Onix. Cantidad: 1.
+[INFO] 16:14:54:929 team/(8378:8378): --------------------------------------------------
+[INFO] 16:14:54:930 team/(8378:8387): Se inicia el planificador
+[INFO] 16:14:54:938 team/(8378:8388): Suscripción realizada correctamente
+
+[INFO] 16:14:54:938 team/(8378:8390): Suscripción realizada correctamente
+
+[INFO] 16:14:54:942 team/(8378:8389): Suscripción realizada correctamente
+
+[INFO] 16:14:54:954 team/(8378:8401): Atiendo caught.
+[INFO] 16:14:54:954 team/(8378:8401): Resultado del caught: 1.
+[INFO] 16:14:54:954 team/(8378:8401): El caught no me interesa.
+[INFO] 16:14:58:668 team/(8292:8296): El entrenador 1 se mueve a : (4,6).
+[INFO] 16:14:58:668 team/(8292:8296): El entrenador 1 se movió a la posición (4, 6).
+[INFO] 16:14:58:668 team/(8292:8296): El entrenador 1 envia el catch para el pokemon Flareon.
+[INFO] 16:14:58:669 team/(8292:8296): El entrenador 1 pide un ciclo. Valor del semaforo: 0. 
+[INFO] 16:14:58:669 team/(8292:8304): hola
+[INFO] 16:14:58:669 team/(8292:8304): CALCULO ESTIMACION
+[INFO] 16:14:58:669 team/(8292:8304): ESTIMACION DEL ENTRENADOR 1: 2.000000
+[INFO] 16:14:58:669 team/(8292:8296): -----------------EL ENTRENADOR 1 EJECUTA UN CICLO
+[INFO] 16:14:59:954 team/(8378:8436): Atiendo appeared. Pokemon: Pikachu.
+[INFO] 16:14:59:954 team/(8378:8436): El pokemon es objetivo
+[INFO] 16:14:59:954 team/(8378:8436): Hay entrenadores disponibles para atrapar a Pikachu.
+[INFO] 16:14:59:954 team/(8378:8436): Se le asigno el pokemon Pikachu al entrenador 1.
+[INFO] 16:14:59:954 team/(8378:8436): Se selecciono el entrenador 1 para atrapar al pokemon Pikachu
+[INFO] 16:14:59:954 team/(8378:8381): El entrenador 1 se pone en READY.
+[INFO] 16:14:59:954 team/(8378:8381): ---------------El entrenador 1 paso por aca
+[INFO] 16:14:59:954 team/(8378:8387): CALCULO ESTIMACION
+[INFO] 16:14:59:954 team/(8378:8387): elijo entrenador para ejecutar
+[INFO] 16:14:59:954 team/(8378:8381): El entrenador 1 entro en ejecución.
+[INFO] 16:14:59:954 team/(8378:8381): El entrenador 1, que estaba en (2,3), comenzará a moverse a (9,9).
+[INFO] 16:14:59:954 team/(8378:8381): El entrenador 1 pide un ciclo. Valor del semaforo: 1. 
+[INFO] 16:14:59:954 team/(8378:8381): -----------------EL ENTRENADOR 1 EJECUTA UN CICLO
+[INFO] 16:14:59:954 team/(8378:8441): Atiendo appeared. Pokemon: Squirtle.
+[INFO] 16:14:59:954 team/(8378:8441): El pokemon es objetivo
+[INFO] 16:14:59:954 team/(8378:8441): Hay entrenadores disponibles para atrapar a Squirtle.
+[INFO] 16:14:59:954 team/(8378:8441): Se le asigno el pokemon Squirtle al entrenador 2.
+[INFO] 16:14:59:955 team/(8378:8382): El entrenador 2 se pone en READY.
+[INFO] 16:14:59:955 team/(8378:8382): ---------------El entrenador 2 paso por aca
+[INFO] 16:14:59:955 team/(8378:8441): Se selecciono el entrenador 2 para atrapar al pokemon Squirtle
+[INFO] 16:15:03:672 team/(8292:8296): El entrenador 1 hace el send del catch.
+[INFO] 16:15:03:672 team/(8292:8296): El entrenador  1 recibió el id del catch: 29.
+[INFO] 16:15:03:672 team/(8292:8296): La nueva estimación del entrenador 1 es: 4.500000
+[INFO] 16:15:03:672 team/(8292:8296): El entrenador 1 pide un ciclo. Valor del semaforo: 0. 
+[INFO] 16:15:03:672 team/(8292:8296): El entrenador 1 libera la CPU por su cuenta.
+[INFO] 16:15:03:672 team/(8292:8304): El planificador detecta que el entrenador 1 termino de ejecutar.
+[INFO] 16:15:03:672 team/(8292:8304): postearon la ejecucion del cpu
+[INFO] 16:15:04:955 team/(8378:8381): El entrenador 1 se mueve a : (3,3).
+[INFO] 16:15:04:955 team/(8378:8381): El entrenador 1 pide un ciclo. Valor del semaforo: 2. 
+[INFO] 16:15:04:955 team/(8378:8381): -----------------EL ENTRENADOR 1 EJECUTA UN CICLO
+[INFO] 16:15:08:686 team/(8378:8456): Atiendo caught.
+[INFO] 16:15:08:686 team/(8378:8456): Resultado del caught: 1.
+[INFO] 16:15:08:686 team/(8378:8456): El caught no me interesa.
+[INFO] 16:15:08:694 team/(8292:8457): Atiendo caught.
+[INFO] 16:15:08:694 team/(8292:8457): Resultado del caught: 1.
+[INFO] 16:15:08:694 team/(8292:8457): El caught me interesa.
+[INFO] 16:15:08:694 team/(8292:8457): 1 atrapo a Flareon
+[INFO] 16:15:08:694 team/(8292:8457): Se registró el pokemon atrapado. Flareon
+[INFO] 16:15:08:694 team/(8292:8457): El entrenador 1 forma parte de un interbloqueo.
+[INFO] 16:15:08:694 team/(8292:8457): Inicio del algoritmo de detección de deadlock.
+[INFO] 16:15:08:694 team/(8292:8457): Entrenadores en deadlock 2.
+[INFO] 16:15:08:694 team/(8292:8457): Entrenadores exit 0.
+[INFO] 16:15:08:694 team/(8292:8457): Entrenadores enntrenadores totales 5.
+[INFO] 16:15:08:694 team/(8292:8457): No se encontró deadlock.
+[INFO] 16:15:09:956 team/(8378:8381): El entrenador 1 se mueve a : (4,3).
+[INFO] 16:15:09:956 team/(8378:8381): El entrenador 1 pide un ciclo. Valor del semaforo: 3. 
+[INFO] 16:15:09:956 team/(8378:8381): -----------------EL ENTRENADOR 1 EJECUTA UN CICLO
+[INFO] 16:15:14:956 team/(8378:8381): El entrenador 1 se mueve a : (5,3).
+[INFO] 16:15:14:956 team/(8378:8381): El entrenador 1 pide un ciclo. Valor del semaforo: 4. 
+[INFO] 16:15:14:956 team/(8378:8381): -----------------EL ENTRENADOR 1 EJECUTA UN CICLO
+[INFO] 16:15:19:957 team/(8378:8381): El entrenador 1 se mueve a : (6,3).
+[INFO] 16:15:19:957 team/(8378:8381): El entrenador 1 pide un ciclo. Valor del semaforo: 5. 
+[INFO] 16:15:19:958 team/(8378:8381): -----------------EL ENTRENADOR 1 EJECUTA UN CICLO
+[INFO] 16:15:24:960 team/(8378:8381): El entrenador 1 se mueve a : (7,3).
+[INFO] 16:15:24:960 team/(8378:8381): El entrenador 1 pide un ciclo. Valor del semaforo: 6. 
+[INFO] 16:15:24:960 team/(8378:8381): -----------------EL ENTRENADOR 1 EJECUTA UN CICLO
+[INFO] 16:15:29:961 team/(8378:8381): El entrenador 1 se mueve a : (8,3).
+[INFO] 16:15:29:961 team/(8378:8381): El entrenador 1 pide un ciclo. Valor del semaforo: 7. 
+[INFO] 16:15:29:961 team/(8378:8381): -----------------EL ENTRENADOR 1 EJECUTA UN CICLO
+[INFO] 16:15:34:964 team/(8378:8381): El entrenador 1 se mueve a : (9,3).
+[INFO] 16:15:34:964 team/(8378:8381): El entrenador 1 pide un ciclo. Valor del semaforo: 8. 
+[INFO] 16:15:34:965 team/(8378:8381): -----------------EL ENTRENADOR 1 EJECUTA UN CICLO
+[INFO] 16:15:39:965 team/(8378:8381): El entrenador 1 se mueve a : (9,4).
+[INFO] 16:15:39:966 team/(8378:8381): El entrenador 1 pide un ciclo. Valor del semaforo: 9. 
+[INFO] 16:15:39:966 team/(8378:8381): -----------------EL ENTRENADOR 1 EJECUTA UN CICLO
+[INFO] 16:15:44:966 team/(8378:8381): El entrenador 1 se mueve a : (9,5).
+[INFO] 16:15:44:966 team/(8378:8381): El entrenador 1 pide un ciclo. Valor del semaforo: 10. 
+[INFO] 16:15:44:966 team/(8378:8381): -----------------EL ENTRENADOR 1 EJECUTA UN CICLO
+[INFO] 16:15:49:967 team/(8378:8381): El entrenador 1 se mueve a : (9,6).
+[INFO] 16:15:49:967 team/(8378:8381): El entrenador 1 pide un ciclo. Valor del semaforo: 11. 
+[INFO] 16:15:49:967 team/(8378:8381): -----------------EL ENTRENADOR 1 EJECUTA UN CICLO
+[INFO] 16:15:54:967 team/(8378:8381): El entrenador 1 se mueve a : (9,7).
+[INFO] 16:15:54:967 team/(8378:8381): El entrenador 1 pide un ciclo. Valor del semaforo: 12. 
+[INFO] 16:15:54:968 team/(8378:8381): -----------------EL ENTRENADOR 1 EJECUTA UN CICLO
+[INFO] 16:15:59:968 team/(8378:8381): El entrenador 1 se mueve a : (9,8).
+[INFO] 16:15:59:968 team/(8378:8381): El entrenador 1 pide un ciclo. Valor del semaforo: 13. 
+[INFO] 16:15:59:968 team/(8378:8381): -----------------EL ENTRENADOR 1 EJECUTA UN CICLO
+[INFO] 16:16:04:969 team/(8378:8381): El entrenador 1 se mueve a : (9,9).
+[INFO] 16:16:04:969 team/(8378:8381): El entrenador 1 se movió a la posición (9, 9).
+[INFO] 16:16:04:970 team/(8378:8381): El entrenador 1 envia el catch para el pokemon Pikachu.
+[INFO] 16:16:04:970 team/(8378:8381): El entrenador 1 pide un ciclo. Valor del semaforo: 14. 
+[INFO] 16:16:04:970 team/(8378:8381): -----------------EL ENTRENADOR 1 EJECUTA UN CICLO
+[INFO] 16:16:09:971 team/(8378:8381): El entrenador 1 hace el send del catch.
+[INFO] 16:16:09:972 team/(8378:8381): El entrenador  1 recibió el id del catch: 31.
+[INFO] 16:16:09:972 team/(8378:8381): La nueva estimación del entrenador 1 es: 9.500000
+[INFO] 16:16:09:972 team/(8378:8381): El entrenador 1 pide un ciclo. Valor del semaforo: 15. 
+[INFO] 16:16:09:972 team/(8378:8381): El entrenador 1 libera la CPU por su cuenta.
+[INFO] 16:16:09:972 team/(8378:8387): CALCULO ESTIMACION
+[INFO] 16:16:09:972 team/(8378:8387): elijo entrenador para ejecutar
+[INFO] 16:16:09:972 team/(8378:8382): El entrenador 2 entro en ejecución.
+[INFO] 16:16:09:972 team/(8378:8382): El entrenador 2, que estaba en (2,2), comenzará a moverse a (5,2).
+[INFO] 16:16:09:972 team/(8378:8382): El entrenador 2 pide un ciclo. Valor del semaforo: 1. 
+[INFO] 16:16:09:972 team/(8378:8382): -----------------EL ENTRENADOR 2 EJECUTA UN CICLO
+[INFO] 16:16:14:973 team/(8378:8382): El entrenador 2 se mueve a : (3,2).
+[INFO] 16:16:14:973 team/(8378:8382): El entrenador 2 pide un ciclo. Valor del semaforo: 2. 
+[INFO] 16:16:14:973 team/(8378:8382): -----------------EL ENTRENADOR 2 EJECUTA UN CICLO
+[INFO] 16:16:14:0 team/(8378:8570): Atiendo caught.
+[INFO] 16:16:14:0 team/(8378:8570): Resultado del caught: 1.
+[INFO] 16:16:14:0 team/(8378:8570): El caught me interesa.
+[INFO] 16:16:14:0 team/(8378:8570): 1 atrapo a Pikachu
+[INFO] 16:16:14:0 team/(8378:8570): Se registró el pokemon atrapado. Pikachu
+[INFO] 16:16:14:0 team/(8378:8570): El entrenador 1 se bloquea porque no hay pokemones para atrapar.
+[INFO] 16:16:14:0 team/(8292:8569): Atiendo caught.
+[INFO] 16:16:14:0 team/(8292:8569): Resultado del caught: 1.
+[INFO] 16:16:14:0 team/(8292:8569): El caught no me interesa.
+[INFO] 16:16:19:974 team/(8378:8382): El entrenador 2 se mueve a : (4,2).
+[INFO] 16:16:19:977 team/(8378:8382): El entrenador 2 pide un ciclo. Valor del semaforo: 3. 
+[INFO] 16:16:19:977 team/(8378:8382): -----------------EL ENTRENADOR 2 EJECUTA UN CICLO
+[INFO] 16:16:24:978 team/(8378:8382): El entrenador 2 se mueve a : (5,2).
+[INFO] 16:16:24:978 team/(8378:8382): El entrenador 2 se movió a la posición (5, 2).
+[INFO] 16:16:24:978 team/(8378:8382): El entrenador 2 envia el catch para el pokemon Squirtle.
+[INFO] 16:16:24:978 team/(8378:8382): El entrenador 2 pide un ciclo. Valor del semaforo: 4. 
+[INFO] 16:16:24:978 team/(8378:8382): -----------------EL ENTRENADOR 2 EJECUTA UN CICLO
+[INFO] 16:16:29:978 team/(8378:8382): El entrenador 2 hace el send del catch.
+[INFO] 16:16:29:979 team/(8378:8382): El entrenador  2 recibió el id del catch: 33.
+[INFO] 16:16:29:979 team/(8378:8382): La nueva estimación del entrenador 2 es: 4.500000
+[INFO] 16:16:29:979 team/(8378:8382): El entrenador 2 pide un ciclo. Valor del semaforo: 5. 
+[INFO] 16:16:29:979 team/(8378:8382): El entrenador 2 libera la CPU por su cuenta.
+[INFO] 16:16:35:69 team/(8292:8602): Atiendo caught.
+[INFO] 16:16:35:69 team/(8292:8602): Resultado del caught: 1.
+[INFO] 16:16:35:69 team/(8292:8602): El caught no me interesa.
+[INFO] 16:16:35:75 team/(8378:8605): Atiendo caught.
+[INFO] 16:16:35:75 team/(8378:8605): Resultado del caught: 1.
+[INFO] 16:16:35:75 team/(8378:8605): El caught me interesa.
+[INFO] 16:16:35:75 team/(8378:8605): 2 atrapo a Squirtle
+[INFO] 16:16:35:75 team/(8378:8605): Se registró el pokemon atrapado. Squirtle
+[INFO] 16:16:35:75 team/(8378:8605): El entrenador 2 se bloquea porque no hay pokemones para atrapar.
+[INFO] 16:17:40:640 team/(8378:8714): Atiendo appeared. Pokemon: Gengar.
+[INFO] 16:17:40:640 team/(8292:8715): Atiendo appeared. Pokemon: Gengar.
+[INFO] 16:17:40:640 team/(8292:8715): El pokemon no es objetivo
+[INFO] 16:17:40:640 team/(8378:8714): El pokemon es objetivo
+[INFO] 16:17:40:640 team/(8378:8714): Hay entrenadores disponibles para atrapar a Gengar.
+[INFO] 16:17:40:640 team/(8378:8714): Se le asigno el pokemon Gengar al entrenador 2.
+[INFO] 16:17:40:640 team/(8378:8714): Se selecciono el entrenador 2 para atrapar al pokemon Gengar
+[INFO] 16:17:40:640 team/(8378:8382): El entrenador 2 se pone en READY.
+[INFO] 16:17:40:640 team/(8378:8382): ---------------El entrenador 2 paso por aca
+[INFO] 16:17:40:640 team/(8378:8387): elijo entrenador para ejecutar
+[INFO] 16:17:40:640 team/(8378:8382): El entrenador 2 entro en ejecución.
+[INFO] 16:17:40:640 team/(8378:8382): El entrenador 2, que estaba en (5,2), comenzará a moverse a (6,6).
+[INFO] 16:17:40:640 team/(8378:8382): El entrenador 2 pide un ciclo. Valor del semaforo: 6. 
+[INFO] 16:17:40:640 team/(8378:8382): -----------------EL ENTRENADOR 2 EJECUTA UN CICLO
+[INFO] 16:17:40:658 team/(8378:8724): Atiendo appeared. Pokemon: Onix.
+[INFO] 16:17:40:658 team/(8378:8724): El pokemon es objetivo
+[INFO] 16:17:40:659 team/(8378:8724): Hay entrenadores disponibles para atrapar a Onix.
+[INFO] 16:17:40:659 team/(8378:8724): Se le asigno el pokemon Onix al entrenador 0.
+[INFO] 16:17:40:659 team/(8378:8380): El entrenador 0 se pone en READY.
+[INFO] 16:17:40:659 team/(8378:8380): ---------------El entrenador 0 paso por aca
+[INFO] 16:17:40:659 team/(8378:8724): Se selecciono el entrenador 0 para atrapar al pokemon Onix
+[INFO] 16:17:40:659 team/(8292:8722): Atiendo appeared. Pokemon: Onix.
+[INFO] 16:17:40:659 team/(8292:8722): El pokemon no es objetivo
+[INFO] 16:17:40:659 team/(8292:8726): Atiendo appeared. Pokemon: Squirtle.
+[INFO] 16:17:40:659 team/(8292:8726): El pokemon no es objetivo
+[INFO] 16:17:40:659 team/(8378:8727): Atiendo appeared. Pokemon: Squirtle.
+[INFO] 16:17:40:659 team/(8378:8727): El pokemon es objetivo
+[INFO] 16:17:40:659 team/(8378:8727): Hay entrenadores disponibles para atrapar a Squirtle.
+[INFO] 16:17:40:659 team/(8378:8727): Se le asigno el pokemon Squirtle al entrenador 1.
+[INFO] 16:17:40:659 team/(8378:8381): El entrenador 1 se pone en READY.
+[INFO] 16:17:40:659 team/(8378:8381): ---------------El entrenador 1 paso por aca
+[INFO] 16:17:40:659 team/(8378:8727): Se selecciono el entrenador 1 para atrapar al pokemon Squirtle
+[INFO] 16:17:40:662 team/(8378:8730): Atiendo appeared. Pokemon: Umbreon.
+[INFO] 16:17:40:662 team/(8378:8730): El pokemon no es objetivo
+[INFO] 16:17:40:663 team/(8292:8732): Atiendo appeared. Pokemon: Umbreon.
+[INFO] 16:17:40:663 team/(8292:8732): El pokemon es objetivo
+[INFO] 16:17:40:663 team/(8292:8732): Hay entrenadores disponibles para atrapar a Umbreon.
+[INFO] 16:17:40:663 team/(8292:8732): Se le asigno el pokemon Umbreon al entrenador 2.
+[INFO] 16:17:40:663 team/(8292:8732): Se selecciono el entrenador 2 para atrapar al pokemon Umbreon
+[INFO] 16:17:40:663 team/(8292:8297): El entrenador 2 se pone en READY.
+[INFO] 16:17:40:664 team/(8292:8297): ---------------El entrenador 2 paso por aca
+[INFO] 16:17:40:664 team/(8292:8304): Hay entrenadores en cola
+[INFO] 16:17:40:664 team/(8292:8304): CALCULO ESTIMACION
+[INFO] 16:17:40:664 team/(8292:8304): Elijo al entrenador 2 para ejecutar.
+[INFO] 16:17:40:664 team/(8292:8297): El entrenador 2 entro en ejecución.
+[INFO] 16:17:40:664 team/(8292:8297): El entrenador 2, que estaba en (9,9), comenzará a moverse a (10,6).
+[INFO] 16:17:40:664 team/(8292:8297): El entrenador 2 pide un ciclo. Valor del semaforo: 0. 
+[INFO] 16:17:40:664 team/(8292:8304): Le llego el pedido de ciclo del entrenador 2 al planificador. 
+[INFO] 16:17:40:664 team/(8292:8304): hola
+[INFO] 16:17:40:664 team/(8292:8304): CALCULO ESTIMACION
+[INFO] 16:17:40:664 team/(8292:8304): ESTIMACION DEL ENTRENADOR 2: 5.000000
+[INFO] 16:17:40:664 team/(8292:8297): -----------------EL ENTRENADOR 2 EJECUTA UN CICLO
+[INFO] 16:17:40:675 team/(8292:8736): Atiendo appeared. Pokemon: Vaporeon.
+[INFO] 16:17:40:675 team/(8292:8736): El pokemon es objetivo
+[INFO] 16:17:40:677 team/(8292:8736): Hay entrenadores disponibles para atrapar a Vaporeon.
+[INFO] 16:17:40:678 team/(8292:8736): Se le asigno el pokemon Vaporeon al entrenador 4.
+[INFO] 16:17:40:678 team/(8292:8299): El entrenador 4 se pone en READY.
+[INFO] 16:17:40:678 team/(8292:8299): ---------------El entrenador 4 paso por aca
+[INFO] 16:17:40:678 team/(8292:8736): Se selecciono el entrenador 4 para atrapar al pokemon Vaporeon
+[INFO] 16:17:40:679 team/(8292:8738): Atiendo appeared. Pokemon: Espeon.
+[INFO] 16:17:40:679 team/(8292:8738): El pokemon es objetivo
+[INFO] 16:17:40:680 team/(8378:8742): Atiendo appeared. Pokemon: Espeon.
+[INFO] 16:17:40:680 team/(8378:8742): El pokemon no es objetivo
+[INFO] 16:17:40:680 team/(8378:8740): Atiendo appeared. Pokemon: Vaporeon.
+[INFO] 16:17:40:680 team/(8378:8740): El pokemon no es objetivo
+[INFO] 16:17:40:683 team/(8292:8738): Hay entrenadores disponibles para atrapar a Espeon.
+[INFO] 16:17:40:683 team/(8292:8738): Se le asigno el pokemon Espeon al entrenador 3.
+[INFO] 16:17:40:684 team/(8292:8738): Se selecciono el entrenador 3 para atrapar al pokemon Espeon
+[INFO] 16:17:40:684 team/(8292:8298): El entrenador 3 se pone en READY.
+[INFO] 16:17:40:686 team/(8292:8298): ---------------El entrenador 3 paso por aca
+[INFO] 16:17:45:642 team/(8378:8382): El entrenador 2 se mueve a : (6,2).
+[INFO] 16:17:45:642 team/(8378:8382): El entrenador 2 pide un ciclo. Valor del semaforo: 7. 
+[INFO] 16:17:45:642 team/(8378:8382): -----------------EL ENTRENADOR 2 EJECUTA UN CICLO
+[INFO] 16:17:45:664 team/(8292:8297): El entrenador 2 se mueve a : (10,9).
+[INFO] 16:17:45:664 team/(8292:8297): El entrenador 2 pide un ciclo. Valor del semaforo: 0. 
+[INFO] 16:17:45:664 team/(8292:8304): hola
+[INFO] 16:17:45:665 team/(8292:8304): CALCULO ESTIMACION
+[INFO] 16:17:45:665 team/(8292:8304): CALCULO ESTIMACION
+[INFO] 16:17:45:665 team/(8292:8304): CALCULO ESTIMACION
+[INFO] 16:17:45:665 team/(8292:8304): ESTIMACION DEL ENTRENADOR 2: 4.000000
+[INFO] 16:17:45:665 team/(8292:8304): CALCULO ESTIMACION
+[INFO] 16:17:45:665 team/(8292:8304): CALCULO ESTIMACION
+[INFO] 16:17:45:665 team/(8292:8297): -----------------EL ENTRENADOR 2 EJECUTA UN CICLO
+[INFO] 16:17:50:645 team/(8378:8382): El entrenador 2 se mueve a : (6,3).
+[INFO] 16:17:50:645 team/(8378:8382): El entrenador 2 pide un ciclo. Valor del semaforo: 8. 
+[INFO] 16:17:50:645 team/(8378:8382): -----------------EL ENTRENADOR 2 EJECUTA UN CICLO
+[INFO] 16:17:50:666 team/(8292:8297): El entrenador 2 se mueve a : (10,8).
+[INFO] 16:17:50:666 team/(8292:8297): El entrenador 2 pide un ciclo. Valor del semaforo: 1. 
+[INFO] 16:17:50:666 team/(8292:8304): hola
+[INFO] 16:17:50:666 team/(8292:8304): CALCULO ESTIMACION
+[INFO] 16:17:50:666 team/(8292:8304): CALCULO ESTIMACION
+[INFO] 16:17:50:666 team/(8292:8304): CALCULO ESTIMACION
+[INFO] 16:17:50:666 team/(8292:8304): ESTIMACION DEL ENTRENADOR 2: 3.000000
+[INFO] 16:17:50:666 team/(8292:8304): CALCULO ESTIMACION
+[INFO] 16:17:50:666 team/(8292:8304): CALCULO ESTIMACION
+[INFO] 16:17:50:667 team/(8292:8297): -----------------EL ENTRENADOR 2 EJECUTA UN CICLO
+[INFO] 16:17:55:647 team/(8378:8382): El entrenador 2 se mueve a : (6,4).
+[INFO] 16:17:55:648 team/(8378:8382): El entrenador 2 pide un ciclo. Valor del semaforo: 9. 
+[INFO] 16:17:55:648 team/(8378:8382): -----------------EL ENTRENADOR 2 EJECUTA UN CICLO
+[INFO] 16:17:55:667 team/(8292:8297): El entrenador 2 se mueve a : (10,7).
+[INFO] 16:17:55:667 team/(8292:8297): El entrenador 2 pide un ciclo. Valor del semaforo: 1. 
+[INFO] 16:17:55:667 team/(8292:8304): hola
+[INFO] 16:17:55:667 team/(8292:8304): CALCULO ESTIMACION
+[INFO] 16:17:55:667 team/(8292:8304): CALCULO ESTIMACION
+[INFO] 16:17:55:667 team/(8292:8304): CALCULO ESTIMACION
+[INFO] 16:17:55:667 team/(8292:8304): ESTIMACION DEL ENTRENADOR 2: 2.000000
+[INFO] 16:17:55:667 team/(8292:8304): CALCULO ESTIMACION
+[INFO] 16:17:55:667 team/(8292:8304): CALCULO ESTIMACION
+[INFO] 16:17:55:667 team/(8292:8297): -----------------EL ENTRENADOR 2 EJECUTA UN CICLO
+[INFO] 16:18:00:649 team/(8378:8382): El entrenador 2 se mueve a : (6,5).
+[INFO] 16:18:00:649 team/(8378:8382): El entrenador 2 pide un ciclo. Valor del semaforo: 10. 
+[INFO] 16:18:00:649 team/(8378:8382): -----------------EL ENTRENADOR 2 EJECUTA UN CICLO
+[INFO] 16:18:00:668 team/(8292:8297): El entrenador 2 se mueve a : (10,6).
+[INFO] 16:18:00:668 team/(8292:8297): El entrenador 2 se movió a la posición (10, 6).
+[INFO] 16:18:00:668 team/(8292:8297): El entrenador 2 envia el catch para el pokemon Umbreon.
+[INFO] 16:18:00:669 team/(8292:8297): El entrenador 2 pide un ciclo. Valor del semaforo: 0. 
+[INFO] 16:18:00:669 team/(8292:8304): hola
+[INFO] 16:18:00:669 team/(8292:8304): CALCULO ESTIMACION
+[INFO] 16:18:00:669 team/(8292:8304): CALCULO ESTIMACION
+[INFO] 16:18:00:669 team/(8292:8304): CALCULO ESTIMACION
+[INFO] 16:18:00:669 team/(8292:8304): ESTIMACION DEL ENTRENADOR 2: 1.000000
+[INFO] 16:18:00:669 team/(8292:8304): CALCULO ESTIMACION
+[INFO] 16:18:00:669 team/(8292:8304): CALCULO ESTIMACION
+[INFO] 16:18:00:669 team/(8292:8297): -----------------EL ENTRENADOR 2 EJECUTA UN CICLO
+[INFO] 16:18:05:650 team/(8378:8382): El entrenador 2 se mueve a : (6,6).
+[INFO] 16:18:05:650 team/(8378:8382): El entrenador 2 se movió a la posición (6, 6).
+[INFO] 16:18:05:650 team/(8378:8382): El entrenador 2 envia el catch para el pokemon Gengar.
+[INFO] 16:18:05:650 team/(8378:8382): El entrenador 2 pide un ciclo. Valor del semaforo: 11. 
+[INFO] 16:18:05:650 team/(8378:8382): -----------------EL ENTRENADOR 2 EJECUTA UN CICLO
+[INFO] 16:18:05:671 team/(8292:8297): El entrenador 2 hace el send del catch.
+[INFO] 16:18:05:671 team/(8292:8297): El entrenador  2 recibió el id del catch: 47.
+[INFO] 16:18:05:672 team/(8292:8297): La nueva estimación del entrenador 2 es: 5.000000
+[INFO] 16:18:05:672 team/(8292:8297): El entrenador 2 pide un ciclo. Valor del semaforo: 0. 
+[INFO] 16:18:05:672 team/(8292:8297): El entrenador 2 libera la CPU por su cuenta.
+[INFO] 16:18:05:672 team/(8292:8304): El planificador detecta que el entrenador 2 termino de ejecutar.
+[INFO] 16:18:05:672 team/(8292:8304): postearon la ejecucion del cpu
+[INFO] 16:18:05:672 team/(8292:8304): Hay entrenadores en cola
+[INFO] 16:18:05:672 team/(8292:8304): CALCULO ESTIMACION
+[INFO] 16:18:05:672 team/(8292:8304): CALCULO ESTIMACION
+[INFO] 16:18:05:672 team/(8292:8304): Elijo al entrenador 4 para ejecutar.
+[INFO] 16:18:05:672 team/(8292:8299): El entrenador 4 entro en ejecución.
+[INFO] 16:18:05:672 team/(8292:8299): El entrenador 4, que estaba en (2,9), comenzará a moverse a (4,10).
+[INFO] 16:18:05:672 team/(8292:8299): El entrenador 4 pide un ciclo. Valor del semaforo: 1. 
+[INFO] 16:18:05:672 team/(8292:8304): Le llego el pedido de ciclo del entrenador 4 al planificador. 
+[INFO] 16:18:05:672 team/(8292:8304): hola
+[INFO] 16:18:05:672 team/(8292:8304): CALCULO ESTIMACION
+[INFO] 16:18:05:672 team/(8292:8304): CALCULO ESTIMACION
+[INFO] 16:18:05:672 team/(8292:8304): ESTIMACION DEL ENTRENADOR 4: 5.000000
+[INFO] 16:18:05:672 team/(8292:8304): CALCULO ESTIMACION
+[INFO] 16:18:05:672 team/(8292:8304): CALCULO ESTIMACION
+[INFO] 16:18:05:673 team/(8292:8299): -----------------EL ENTRENADOR 4 EJECUTA UN CICLO
+[INFO] 16:18:10:651 team/(8378:8382): El entrenador 2 hace el send del catch.
+[INFO] 16:18:10:652 team/(8378:8382): El entrenador  2 recibió el id del catch: 48.
+[INFO] 16:18:10:652 team/(8378:8382): La nueva estimación del entrenador 2 es: 5.250000
+[INFO] 16:18:10:652 team/(8378:8382): El entrenador 2 pide un ciclo. Valor del semaforo: 12. 
+[INFO] 16:18:10:653 team/(8378:8382): El entrenador 2 libera la CPU por su cuenta.
+[INFO] 16:18:10:653 team/(8378:8387): CALCULO ESTIMACION
+[INFO] 16:18:10:653 team/(8378:8387): elijo entrenador para ejecutar
+[INFO] 16:18:10:653 team/(8378:8380): El entrenador 0 entro en ejecución.
+[INFO] 16:18:10:653 team/(8378:8380): El entrenador 0, que estaba en (1,3), comenzará a moverse a (2,8).
+[INFO] 16:18:10:653 team/(8378:8380): El entrenador 0 pide un ciclo. Valor del semaforo: 1. 
+[INFO] 16:18:10:653 team/(8378:8380): -----------------EL ENTRENADOR 0 EJECUTA UN CICLO
+[INFO] 16:18:10:673 team/(8292:8299): El entrenador 4 se mueve a : (3,9).
+[INFO] 16:18:10:673 team/(8292:8299): El entrenador 4 pide un ciclo. Valor del semaforo: 0. 
+[INFO] 16:18:10:674 team/(8292:8304): hola
+[INFO] 16:18:10:674 team/(8292:8304): CALCULO ESTIMACION
+[INFO] 16:18:10:674 team/(8292:8304): CALCULO ESTIMACION
+[INFO] 16:18:10:674 team/(8292:8304): ESTIMACION DEL ENTRENADOR 4: 4.000000
+[INFO] 16:18:10:674 team/(8292:8304): CALCULO ESTIMACION
+[INFO] 16:18:10:674 team/(8292:8304): CALCULO ESTIMACION
+[INFO] 16:18:10:674 team/(8292:8299): -----------------EL ENTRENADOR 4 EJECUTA UN CICLO
+[INFO] 16:18:10:699 team/(8292:8786): Atiendo caught.
+[INFO] 16:18:10:699 team/(8292:8786): Resultado del caught: 1.
+[INFO] 16:18:10:699 team/(8292:8786): El caught me interesa.
+[INFO] 16:18:10:699 team/(8292:8786): 2 atrapo a Umbreon
+[INFO] 16:18:10:699 team/(8292:8786): Se registró el pokemon atrapado. Umbreon
+[INFO] 16:18:10:699 team/(8292:8786): El entrenador 2 forma parte de un interbloqueo.
+[INFO] 16:18:10:700 team/(8292:8786): Inicio del algoritmo de detección de deadlock.
+[INFO] 16:18:10:700 team/(8292:8786): Entrenadores en deadlock 3.
+[INFO] 16:18:10:700 team/(8292:8786): Entrenadores exit 0.
+[INFO] 16:18:10:700 team/(8292:8786): Entrenadores enntrenadores totales 5.
+[INFO] 16:18:10:700 team/(8292:8786): No se encontró deadlock.
+[INFO] 16:18:10:707 team/(8378:8788): Atiendo caught.
+[INFO] 16:18:10:707 team/(8378:8788): Resultado del caught: 1.
+[INFO] 16:18:10:707 team/(8378:8788): El caught no me interesa.
+[INFO] 16:18:15:654 team/(8378:8380): El entrenador 0 se mueve a : (2,3).
+[INFO] 16:18:15:654 team/(8378:8380): El entrenador 0 pide un ciclo. Valor del semaforo: 2. 
+[INFO] 16:18:15:654 team/(8378:8380): -----------------EL ENTRENADOR 0 EJECUTA UN CICLO
+[INFO] 16:18:15:670 team/(8378:8798): Atiendo caught.
+[INFO] 16:18:15:670 team/(8378:8798): Resultado del caught: 1.
+[INFO] 16:18:15:670 team/(8378:8798): El caught me interesa.
+[INFO] 16:18:15:671 team/(8378:8798): 2 atrapo a Gengar
+[INFO] 16:18:15:671 team/(8378:8798): Se registró el pokemon atrapado. Gengar
+[INFO] 16:18:15:671 team/(8378:8798): El entrenador 2 forma parte de un interbloqueo.
+[INFO] 16:18:15:671 team/(8378:8798): Inicio del algoritmo de detección de deadlock.
+[INFO] 16:18:15:671 team/(8378:8798): Entrenadores en deadlock 1.
+[INFO] 16:18:15:671 team/(8378:8798): Entrenadores exit 0.
+[INFO] 16:18:15:671 team/(8378:8798): Entrenadores enntrenadores totales 3.
+[INFO] 16:18:15:671 team/(8378:8798): No se encontró deadlock.
+[INFO] 16:18:15:676 team/(8292:8299): El entrenador 4 se mueve a : (4,9).
+[INFO] 16:18:15:676 team/(8292:8299): El entrenador 4 pide un ciclo. Valor del semaforo: 1. 
+[INFO] 16:18:15:676 team/(8292:8799): Atiendo caught.
+[INFO] 16:18:15:676 team/(8292:8799): Resultado del caught: 1.
+[INFO] 16:18:15:676 team/(8292:8799): El caught no me interesa.
+[INFO] 16:18:15:677 team/(8292:8304): hola
+[INFO] 16:18:15:677 team/(8292:8304): CALCULO ESTIMACION
+[INFO] 16:18:15:677 team/(8292:8304): CALCULO ESTIMACION
+[INFO] 16:18:15:677 team/(8292:8304): ESTIMACION DEL ENTRENADOR 4: 3.000000
+[INFO] 16:18:15:677 team/(8292:8299): -----------------EL ENTRENADOR 4 EJECUTA UN CICLO
+[INFO] 16:18:15:677 team/(8292:8304): CALCULO ESTIMACION
+[INFO] 16:18:15:677 team/(8292:8304): CALCULO ESTIMACION
+[INFO] 16:18:20:655 team/(8378:8380): El entrenador 0 se mueve a : (2,4).
+[INFO] 16:18:20:655 team/(8378:8380): El entrenador 0 pide un ciclo. Valor del semaforo: 3. 
+[INFO] 16:18:20:655 team/(8378:8380): -----------------EL ENTRENADOR 0 EJECUTA UN CICLO
+[INFO] 16:18:20:677 team/(8292:8299): El entrenador 4 se mueve a : (4,10).
+[INFO] 16:18:20:677 team/(8292:8299): El entrenador 4 se movió a la posición (4, 10).
+[INFO] 16:18:20:677 team/(8292:8299): El entrenador 4 envia el catch para el pokemon Vaporeon.
+[INFO] 16:18:20:678 team/(8292:8299): El entrenador 4 pide un ciclo. Valor del semaforo: 0. 
+[INFO] 16:18:20:678 team/(8292:8304): hola
+[INFO] 16:18:20:678 team/(8292:8304): CALCULO ESTIMACION
+[INFO] 16:18:20:678 team/(8292:8304): CALCULO ESTIMACION
+[INFO] 16:18:20:678 team/(8292:8304): ESTIMACION DEL ENTRENADOR 4: 2.000000
+[INFO] 16:18:20:678 team/(8292:8304): CALCULO ESTIMACION
+[INFO] 16:18:20:678 team/(8292:8304): CALCULO ESTIMACION
+[INFO] 16:18:20:678 team/(8292:8299): -----------------EL ENTRENADOR 4 EJECUTA UN CICLO
+[INFO] 16:18:25:656 team/(8378:8380): El entrenador 0 se mueve a : (2,5).
+[INFO] 16:18:25:657 team/(8378:8380): El entrenador 0 pide un ciclo. Valor del semaforo: 4. 
+[INFO] 16:18:25:657 team/(8378:8380): -----------------EL ENTRENADOR 0 EJECUTA UN CICLO
+[INFO] 16:18:25:678 team/(8292:8299): El entrenador 4 hace el send del catch.
+[INFO] 16:18:25:679 team/(8292:8299): El entrenador  4 recibió el id del catch: 51.
+[INFO] 16:18:25:679 team/(8292:8299): La nueva estimación del entrenador 4 es: 4.500000
+[INFO] 16:18:25:679 team/(8292:8299): El entrenador 4 pide un ciclo. Valor del semaforo: 0. 
+[INFO] 16:18:25:679 team/(8292:8299): El entrenador 4 libera la CPU por su cuenta.
+[INFO] 16:18:25:680 team/(8292:8304): El planificador detecta que el entrenador 4 termino de ejecutar.
+[INFO] 16:18:25:680 team/(8292:8304): postearon la ejecucion del cpu
+[INFO] 16:18:25:680 team/(8292:8304): Hay entrenadores en cola
+[INFO] 16:18:25:680 team/(8292:8304): CALCULO ESTIMACION
+[INFO] 16:18:25:680 team/(8292:8304): Elijo al entrenador 3 para ejecutar.
+[INFO] 16:18:25:680 team/(8292:8298): El entrenador 3 entro en ejecución.
+[INFO] 16:18:25:680 team/(8292:8298): El entrenador 3, que estaba en (9,2), comenzará a moverse a (7,1).
+[INFO] 16:18:25:680 team/(8292:8298): El entrenador 3 pide un ciclo. Valor del semaforo: 1. 
+[INFO] 16:18:25:680 team/(8292:8304): Le llego el pedido de ciclo del entrenador 3 al planificador. 
+[INFO] 16:18:25:680 team/(8292:8304): hola
+[INFO] 16:18:25:680 team/(8292:8304): CALCULO ESTIMACION
+[INFO] 16:18:25:680 team/(8292:8298): -----------------EL ENTRENADOR 3 EJECUTA UN CICLO
+[INFO] 16:18:25:680 team/(8292:8304): ESTIMACION DEL ENTRENADOR 3: 5.000000
+[INFO] 16:18:30:657 team/(8378:8380): El entrenador 0 se mueve a : (2,6).
+[INFO] 16:18:30:657 team/(8378:8380): El entrenador 0 pide un ciclo. Valor del semaforo: 5. 
+[INFO] 16:18:30:657 team/(8378:8380): -----------------EL ENTRENADOR 0 EJECUTA UN CICLO
+[INFO] 16:18:30:680 team/(8292:8298): El entrenador 3 se mueve a : (8,2).
+[INFO] 16:18:30:681 team/(8292:8298): El entrenador 3 pide un ciclo. Valor del semaforo: 0. 
+[INFO] 16:18:30:681 team/(8292:8304): hola
+[INFO] 16:18:30:681 team/(8292:8304): CALCULO ESTIMACION
+[INFO] 16:18:30:681 team/(8292:8304): ESTIMACION DEL ENTRENADOR 3: 4.000000
+[INFO] 16:18:30:682 team/(8292:8298): -----------------EL ENTRENADOR 3 EJECUTA UN CICLO
+[INFO] 16:18:30:697 team/(8378:8829): Atiendo caught.
+[INFO] 16:18:30:697 team/(8378:8829): Resultado del caught: 1.
+[INFO] 16:18:30:697 team/(8378:8829): El caught no me interesa.
+[INFO] 16:18:30:697 team/(8292:8828): Atiendo caught.
+[INFO] 16:18:30:697 team/(8292:8828): Resultado del caught: 1.
+[INFO] 16:18:30:697 team/(8292:8828): El caught me interesa.
+[INFO] 16:18:30:697 team/(8292:8828): 4 atrapo a Vaporeon
+[INFO] 16:18:30:697 team/(8292:8828): Se registró el pokemon atrapado. Vaporeon
+[INFO] 16:18:30:697 team/(8292:8828): El entrenador 4 forma parte de un interbloqueo.
+[INFO] 16:18:30:697 team/(8292:8828): Inicio del algoritmo de detección de deadlock.
+[INFO] 16:18:30:698 team/(8292:8828): Entrenadores en deadlock 4.
+[INFO] 16:18:30:698 team/(8292:8828): Entrenadores exit 0.
+[INFO] 16:18:30:698 team/(8292:8828): Entrenadores enntrenadores totales 5.
+[INFO] 16:18:30:698 team/(8292:8828): No se encontró deadlock.
+[INFO] 16:18:35:658 team/(8378:8380): El entrenador 0 se mueve a : (2,7).
+[INFO] 16:18:35:658 team/(8378:8380): El entrenador 0 pide un ciclo. Valor del semaforo: 6. 
+[INFO] 16:18:35:658 team/(8378:8380): -----------------EL ENTRENADOR 0 EJECUTA UN CICLO
+[INFO] 16:18:35:683 team/(8292:8298): El entrenador 3 se mueve a : (7,2).
+[INFO] 16:18:35:683 team/(8292:8298): El entrenador 3 pide un ciclo. Valor del semaforo: 1. 
+[INFO] 16:18:35:683 team/(8292:8304): hola
+[INFO] 16:18:35:683 team/(8292:8304): CALCULO ESTIMACION
+[INFO] 16:18:35:683 team/(8292:8304): ESTIMACION DEL ENTRENADOR 3: 3.000000
+[INFO] 16:18:35:683 team/(8292:8298): -----------------EL ENTRENADOR 3 EJECUTA UN CICLO
+[INFO] 16:18:40:659 team/(8378:8380): El entrenador 0 se mueve a : (2,8).
+[INFO] 16:18:40:659 team/(8378:8380): El entrenador 0 se movió a la posición (2, 8).
+[INFO] 16:18:40:660 team/(8378:8380): El entrenador 0 envia el catch para el pokemon Onix.
+[INFO] 16:18:40:660 team/(8378:8380): El entrenador 0 pide un ciclo. Valor del semaforo: 7. 
+[INFO] 16:18:40:660 team/(8378:8380): -----------------EL ENTRENADOR 0 EJECUTA UN CICLO
+[INFO] 16:18:40:684 team/(8292:8298): El entrenador 3 se mueve a : (7,1).
+[INFO] 16:18:40:684 team/(8292:8298): El entrenador 3 se movió a la posición (7, 1).
+[INFO] 16:18:40:684 team/(8292:8298): El entrenador 3 envia el catch para el pokemon Espeon.
+[INFO] 16:18:40:684 team/(8292:8298): El entrenador 3 pide un ciclo. Valor del semaforo: 0. 
+[INFO] 16:18:40:684 team/(8292:8304): hola
+[INFO] 16:18:40:684 team/(8292:8304): CALCULO ESTIMACION
+[INFO] 16:18:40:684 team/(8292:8304): ESTIMACION DEL ENTRENADOR 3: 2.000000
+[INFO] 16:18:40:684 team/(8292:8298): -----------------EL ENTRENADOR 3 EJECUTA UN CICLO
+[INFO] 16:18:45:660 team/(8378:8380): El entrenador 0 hace el send del catch.
+[INFO] 16:18:45:661 team/(8378:8380): El entrenador  0 recibió el id del catch: 53.
+[INFO] 16:18:45:662 team/(8378:8380): La nueva estimación del entrenador 0 es: 6.000000
+[INFO] 16:18:45:662 team/(8378:8380): El entrenador 0 pide un ciclo. Valor del semaforo: 8. 
+[INFO] 16:18:45:662 team/(8378:8380): El entrenador 0 libera la CPU por su cuenta.
+[INFO] 16:18:45:662 team/(8378:8387): elijo entrenador para ejecutar
+[INFO] 16:18:45:662 team/(8378:8381): El entrenador 1 entro en ejecución.
+[INFO] 16:18:45:662 team/(8378:8381): El entrenador 1, que estaba en (9,9), comenzará a moverse a (5,5).
+[INFO] 16:18:45:662 team/(8378:8381): El entrenador 1 pide un ciclo. Valor del semaforo: 16. 
+[INFO] 16:18:45:662 team/(8378:8381): -----------------EL ENTRENADOR 1 EJECUTA UN CICLO
+[INFO] 16:18:45:685 team/(8292:8298): El entrenador 3 hace el send del catch.
+[INFO] 16:18:45:685 team/(8292:8298): El entrenador  3 recibió el id del catch: 54.
+[INFO] 16:18:45:686 team/(8292:8298): La nueva estimación del entrenador 3 es: 4.500000
+[INFO] 16:18:45:686 team/(8292:8298): El entrenador 3 pide un ciclo. Valor del semaforo: 0. 
+[INFO] 16:18:45:686 team/(8292:8298): El entrenador 3 libera la CPU por su cuenta.
+[INFO] 16:18:45:686 team/(8292:8304): El planificador detecta que el entrenador 3 termino de ejecutar.
+[INFO] 16:18:45:686 team/(8292:8304): postearon la ejecucion del cpu
+[INFO] 16:18:50:663 team/(8378:8381): El entrenador 1 se mueve a : (8,9).
+[INFO] 16:18:50:663 team/(8378:8381): El entrenador 1 pide un ciclo. Valor del semaforo: 17. 
+[INFO] 16:18:50:663 team/(8378:8381): -----------------EL ENTRENADOR 1 EJECUTA UN CICLO
+[INFO] 16:18:50:686 team/(8378:8861): Atiendo caught.
+[INFO] 16:18:50:686 team/(8378:8861): Resultado del caught: 1.
+[INFO] 16:18:50:688 team/(8378:8861): El caught me interesa.
+[INFO] 16:18:50:689 team/(8378:8861): 0 atrapo a Onix
+[INFO] 16:18:50:689 team/(8378:8861): Se registró el pokemon atrapado. Onix
+[INFO] 16:18:50:689 team/(8378:8861): El entrenador 0 forma parte de un interbloqueo.
+[INFO] 16:18:50:693 team/(8378:8861): Inicio del algoritmo de detección de deadlock.
+[INFO] 16:18:50:693 team/(8292:8862): Atiendo caught.
+[INFO] 16:18:50:693 team/(8378:8861): Entrenadores en deadlock 2.
+[INFO] 16:18:50:693 team/(8292:8862): Resultado del caught: 1.
+[INFO] 16:18:50:693 team/(8292:8862): El caught no me interesa.
+[INFO] 16:18:50:693 team/(8378:8861): Entrenadores exit 0.
+[INFO] 16:18:50:693 team/(8378:8861): Entrenadores enntrenadores totales 3.
+[INFO] 16:18:50:693 team/(8378:8861): No se encontró deadlock.
+[INFO] 16:18:50:722 team/(8292:8867): Atiendo caught.
+[INFO] 16:18:50:722 team/(8292:8867): Resultado del caught: 1.
+[INFO] 16:18:50:722 team/(8292:8867): El caught me interesa.
+[INFO] 16:18:50:722 team/(8292:8867): 3 atrapo a Espeon
+[INFO] 16:18:50:722 team/(8292:8867): Se registró el pokemon atrapado. Espeon
+[INFO] 16:18:50:722 team/(8292:8867): El entrenador 3 forma parte de un interbloqueo.
+[INFO] 16:18:50:722 team/(8292:8867): Inicio del algoritmo de detección de deadlock.
+[INFO] 16:18:50:722 team/(8292:8867): Entrenadores en deadlock 5.
+[INFO] 16:18:50:722 team/(8292:8867): Entrenadores exit 0.
+[INFO] 16:18:50:722 team/(8292:8867): Entrenadores enntrenadores totales 5.
+[INFO] 16:18:50:722 team/(8292:8867): Entrenadores en deadlock 5.
+[INFO] 16:18:50:722 team/(8292:8301): Encontre una espera circular. Entrenadores involucrados: 
+[INFO] 16:18:50:722 team/(8292:8301): Entrenador 0.
+[INFO] 16:18:50:722 team/(8292:8301): Entrenador 4.
+[INFO] 16:18:50:722 team/(8292:8301): Entrenador 3.
+[INFO] 16:18:50:722 team/(8292:8301): Entrenador 2.
+[INFO] 16:18:50:722 team/(8292:8301): Entrenador 1.
+[INFO] 16:18:50:722 team/(8292:8301): Espera circular. Entrenador bloqueado: 0.
+[INFO] 16:18:50:722 team/(8292:8301): entrenador bloqueado para deadlock : 0
+[INFO] 16:18:50:722 team/(8292:8301): hola.
+[INFO] 16:18:50:722 team/(8292:8301): Entrenador bloqueado: 0. Entrenador a mover: 4.
+[INFO] 16:18:50:722 team/(8292:8301): El entrenador 0, esta en DEADLOCK con el entrenador 4.
+[INFO] 16:18:50:722 team/(8378:8868): Atiendo caught.
+[INFO] 16:18:50:722 team/(8378:8868): Resultado del caught: 1.
+[INFO] 16:18:50:722 team/(8378:8868): El caught no me interesa.
+[INFO] 16:18:50:728 team/(8292:8299): El entrenador 4 se pone en READY.
+[INFO] 16:18:50:728 team/(8292:8299): El entrenador 4 entra en ejecucion para deadlock.
+[INFO] 16:18:50:728 team/(8292:8304): Hay entrenadores en cola
+[INFO] 16:18:50:728 team/(8292:8304): Elijo al entrenador 4 para ejecutar.
+[INFO] 16:18:50:728 team/(8292:8299): El entrenador 4, que estaba en (4,10), comenzará a moverse a (2,2).
+[INFO] 16:18:50:728 team/(8292:8299): El entrenador 4 pide un ciclo. Valor del semaforo: 1. 
+[INFO] 16:18:50:728 team/(8292:8304): Le llego el pedido de ciclo del entrenador 4 al planificador. 
+[INFO] 16:18:50:728 team/(8292:8304): hola
+[INFO] 16:18:50:728 team/(8292:8304): ESTIMACION DEL ENTRENADOR 4: 4.250000
+[INFO] 16:18:50:728 team/(8292:8299): -----------------EL ENTRENADOR 4 EJECUTA UN CICLO
+[INFO] 16:18:55:663 team/(8378:8381): El entrenador 1 se mueve a : (7,9).
+[INFO] 16:18:55:663 team/(8378:8381): El entrenador 1 pide un ciclo. Valor del semaforo: 18. 
+[INFO] 16:18:55:663 team/(8378:8381): -----------------EL ENTRENADOR 1 EJECUTA UN CICLO
+[INFO] 16:18:55:729 team/(8292:8299): El entrenador 4 se mueve a : (3,10).
+[INFO] 16:18:55:729 team/(8292:8299): El entrenador 4 pide un ciclo. Valor del semaforo: 0. 
+[INFO] 16:18:55:729 team/(8292:8304): hola
+[INFO] 16:18:55:729 team/(8292:8304): ESTIMACION DEL ENTRENADOR 4: 3.250000
+[INFO] 16:18:55:729 team/(8292:8299): -----------------EL ENTRENADOR 4 EJECUTA UN CICLO
+[INFO] 16:19:00:664 team/(8378:8381): El entrenador 1 se mueve a : (6,9).
+[INFO] 16:19:00:664 team/(8378:8381): El entrenador 1 pide un ciclo. Valor del semaforo: 19. 
+[INFO] 16:19:00:665 team/(8378:8381): -----------------EL ENTRENADOR 1 EJECUTA UN CICLO
+[INFO] 16:19:00:730 team/(8292:8299): El entrenador 4 se mueve a : (2,10).
+[INFO] 16:19:00:730 team/(8292:8299): El entrenador 4 pide un ciclo. Valor del semaforo: 1. 
+[INFO] 16:19:00:730 team/(8292:8304): hola
+[INFO] 16:19:00:730 team/(8292:8304): ESTIMACION DEL ENTRENADOR 4: 2.250000
+[INFO] 16:19:00:730 team/(8292:8299): -----------------EL ENTRENADOR 4 EJECUTA UN CICLO
+[INFO] 16:19:05:667 team/(8378:8381): El entrenador 1 se mueve a : (5,9).
+[INFO] 16:19:05:667 team/(8378:8381): El entrenador 1 pide un ciclo. Valor del semaforo: 20. 
+[INFO] 16:19:05:667 team/(8378:8381): -----------------EL ENTRENADOR 1 EJECUTA UN CICLO
+[INFO] 16:19:05:730 team/(8292:8299): El entrenador 4 se mueve a : (2,9).
+[INFO] 16:19:05:731 team/(8292:8299): El entrenador 4 pide un ciclo. Valor del semaforo: 1. 
+[INFO] 16:19:05:731 team/(8292:8304): hola
+[INFO] 16:19:05:731 team/(8292:8304): ESTIMACION DEL ENTRENADOR 4: 1.250000
+[INFO] 16:19:05:731 team/(8292:8299): -----------------EL ENTRENADOR 4 EJECUTA UN CICLO
+[INFO] 16:19:10:668 team/(8378:8381): El entrenador 1 se mueve a : (5,8).
+[INFO] 16:19:10:668 team/(8378:8381): El entrenador 1 pide un ciclo. Valor del semaforo: 21. 
+[INFO] 16:19:10:668 team/(8378:8381): -----------------EL ENTRENADOR 1 EJECUTA UN CICLO
+[INFO] 16:19:10:731 team/(8292:8299): El entrenador 4 se mueve a : (2,8).
+[INFO] 16:19:10:731 team/(8292:8299): El entrenador 4 pide un ciclo. Valor del semaforo: 0. 
+[INFO] 16:19:10:731 team/(8292:8304): hola
+[INFO] 16:19:10:731 team/(8292:8304): ESTIMACION DEL ENTRENADOR 4: 0.250000
+[INFO] 16:19:10:731 team/(8292:8299): -----------------EL ENTRENADOR 4 EJECUTA UN CICLO
+[INFO] 16:19:15:668 team/(8378:8381): El entrenador 1 se mueve a : (5,7).
+[INFO] 16:19:15:668 team/(8378:8381): El entrenador 1 pide un ciclo. Valor del semaforo: 22. 
+[INFO] 16:19:15:669 team/(8378:8381): -----------------EL ENTRENADOR 1 EJECUTA UN CICLO
+[INFO] 16:19:15:732 team/(8292:8299): El entrenador 4 se mueve a : (2,7).
+[INFO] 16:19:15:732 team/(8292:8299): El entrenador 4 pide un ciclo. Valor del semaforo: 0. 
+[INFO] 16:19:15:732 team/(8292:8304): hola
+[INFO] 16:19:15:732 team/(8292:8304): ESTIMACION DEL ENTRENADOR 4: -0.750000
+[INFO] 16:19:15:732 team/(8292:8299): -----------------EL ENTRENADOR 4 EJECUTA UN CICLO
+[INFO] 16:19:20:670 team/(8378:8381): El entrenador 1 se mueve a : (5,6).
+[INFO] 16:19:20:670 team/(8378:8381): El entrenador 1 pide un ciclo. Valor del semaforo: 23. 
+[INFO] 16:19:20:670 team/(8378:8381): -----------------EL ENTRENADOR 1 EJECUTA UN CICLO
+[INFO] 16:19:20:733 team/(8292:8299): El entrenador 4 se mueve a : (2,6).
+[INFO] 16:19:20:733 team/(8292:8299): El entrenador 4 pide un ciclo. Valor del semaforo: 0. 
+[INFO] 16:19:20:733 team/(8292:8304): hola
+[INFO] 16:19:20:733 team/(8292:8304): ESTIMACION DEL ENTRENADOR 4: -1.750000
+[INFO] 16:19:20:733 team/(8292:8299): -----------------EL ENTRENADOR 4 EJECUTA UN CICLO
+[INFO] 16:19:25:671 team/(8378:8381): El entrenador 1 se mueve a : (5,5).
+[INFO] 16:19:25:671 team/(8378:8381): El entrenador 1 se movió a la posición (5, 5).
+[INFO] 16:19:25:671 team/(8378:8381): El entrenador 1 envia el catch para el pokemon Squirtle.
+[INFO] 16:19:25:671 team/(8378:8381): El entrenador 1 pide un ciclo. Valor del semaforo: 24. 
+[INFO] 16:19:25:671 team/(8378:8381): -----------------EL ENTRENADOR 1 EJECUTA UN CICLO
+[INFO] 16:19:25:733 team/(8292:8299): El entrenador 4 se mueve a : (2,5).
+[INFO] 16:19:25:733 team/(8292:8299): El entrenador 4 pide un ciclo. Valor del semaforo: 0. 
+[INFO] 16:19:25:733 team/(8292:8304): hola
+[INFO] 16:19:25:733 team/(8292:8304): ESTIMACION DEL ENTRENADOR 4: -2.750000
+[INFO] 16:19:25:733 team/(8292:8299): -----------------EL ENTRENADOR 4 EJECUTA UN CICLO
+[INFO] 16:19:30:672 team/(8378:8381): El entrenador 1 hace el send del catch.
+[INFO] 16:19:30:674 team/(8378:8381): El entrenador  1 recibió el id del catch: 57.
+[INFO] 16:19:30:674 team/(8378:8381): La nueva estimación del entrenador 1 es: 9.250000
+[INFO] 16:19:30:674 team/(8378:8381): El entrenador 1 pide un ciclo. Valor del semaforo: 25. 
+[INFO] 16:19:30:674 team/(8378:8381): El entrenador 1 libera la CPU por su cuenta.
+[INFO] 16:19:30:734 team/(8292:8299): El entrenador 4 se mueve a : (2,4).
+[INFO] 16:19:30:734 team/(8292:8299): El entrenador 4 pide un ciclo. Valor del semaforo: 0. 
+[INFO] 16:19:30:734 team/(8292:8304): hola
+[INFO] 16:19:30:734 team/(8292:8304): ESTIMACION DEL ENTRENADOR 4: -3.750000
+[INFO] 16:19:30:734 team/(8292:8299): -----------------EL ENTRENADOR 4 EJECUTA UN CICLO
+[INFO] 16:19:35:735 team/(8292:8299): El entrenador 4 se mueve a : (2,3).
+[INFO] 16:19:35:735 team/(8292:8299): El entrenador 4 pide un ciclo. Valor del semaforo: 1. 
+[INFO] 16:19:35:735 team/(8292:8304): hola
+[INFO] 16:19:35:735 team/(8292:8304): ESTIMACION DEL ENTRENADOR 4: -4.750000
+[INFO] 16:19:35:735 team/(8292:8299): -----------------EL ENTRENADOR 4 EJECUTA UN CICLO
+[INFO] 16:19:35:737 team/(8378:8921): Atiendo caught.
+[INFO] 16:19:35:737 team/(8378:8921): Resultado del caught: 1.
+[INFO] 16:19:35:737 team/(8378:8921): El caught me interesa.
+[INFO] 16:19:35:737 team/(8378:8921): 1 atrapo a Squirtle
+[INFO] 16:19:35:738 team/(8378:8921): Se registró el pokemon atrapado. Squirtle
+[INFO] 16:19:35:738 team/(8378:8921): El entrenador 1 forma parte de un interbloqueo.
+[INFO] 16:19:35:738 team/(8378:8921): Inicio del algoritmo de detección de deadlock.
+[INFO] 16:19:35:738 team/(8378:8921): Entrenadores en deadlock 3.
+[INFO] 16:19:35:738 team/(8378:8921): Entrenadores exit 0.
+[INFO] 16:19:35:738 team/(8378:8921): Entrenadores enntrenadores totales 3.
+[INFO] 16:19:35:738 team/(8378:8921): Entrenadores en deadlock 3.
+[INFO] 16:19:35:738 team/(8378:8384): Encontre una espera circular. Entrenadores involucrados: 
+[INFO] 16:19:35:738 team/(8292:8923): Atiendo caught.
+[INFO] 16:19:35:738 team/(8292:8923): Resultado del caught: 1.
+[INFO] 16:19:35:738 team/(8292:8923): El caught no me interesa.
+[INFO] 16:19:35:738 team/(8378:8384): Entrenador 2.
+[INFO] 16:19:35:738 team/(8378:8384): Entrenador 0.
+[INFO] 16:19:35:738 team/(8378:8384): Entrenador 1.
+[INFO] 16:19:35:738 team/(8378:8384): Espera circular. Entrenador bloqueado: 2.
+[INFO] 16:19:35:738 team/(8378:8384): entrenador bloqueado para deadlock : 2
+[INFO] 16:19:35:738 team/(8378:8384): hola.
+[INFO] 16:19:35:738 team/(8378:8384): Entrenador bloqueado: 2. Entrenador a mover: 0.
+[INFO] 16:19:35:738 team/(8378:8384): El entrenador 2, esta en DEADLOCK con el entrenador 0.
+[INFO] 16:19:35:738 team/(8378:8380): El entrenador 0 se pone en READY.
+[INFO] 16:19:35:738 team/(8378:8380): El entrenador 0 entra en ejecucion para deadlock.
+[INFO] 16:19:35:738 team/(8378:8387): elijo entrenador para ejecutar
+[INFO] 16:19:35:738 team/(8378:8380): El entrenador 0, que estaba en (2,8), comenzará a moverse a (6,6).
+[INFO] 16:19:35:738 team/(8378:8380): El entrenador 0 pide un ciclo. Valor del semaforo: 9. 
+[INFO] 16:19:35:738 team/(8378:8380): -----------------EL ENTRENADOR 0 EJECUTA UN CICLO
+[INFO] 16:19:40:736 team/(8292:8299): El entrenador 4 se mueve a : (2,2).
+[INFO] 16:19:40:736 team/(8292:8299): El entrenador 4 se movió a la posición (2, 2).
+[INFO] 16:19:40:737 team/(8292:8299): El entrenador 4 comienza con el intercambio con el entrenador 0.
+[INFO] 16:19:40:737 team/(8292:8299): El entrenador 4 pide un ciclo. Valor del semaforo: 0. 
+[INFO] 16:19:40:737 team/(8292:8304): hola
+[INFO] 16:19:40:737 team/(8292:8304): ESTIMACION DEL ENTRENADOR 4: -5.750000
+[INFO] 16:19:40:737 team/(8292:8299): -----------------EL ENTRENADOR 4 EJECUTA UN CICLO
+[INFO] 16:19:40:739 team/(8378:8380): El entrenador 0 se mueve a : (3,8).
+[INFO] 16:19:40:739 team/(8378:8380): El entrenador 0 pide un ciclo. Valor del semaforo: 10. 
+[INFO] 16:19:40:739 team/(8378:8380): -----------------EL ENTRENADOR 0 EJECUTA UN CICLO
+[INFO] 16:19:45:738 team/(8292:8299): El entrenador 4 pide un ciclo. Valor del semaforo: 0. 
+[INFO] 16:19:45:738 team/(8292:8304): hola
+[INFO] 16:19:45:739 team/(8292:8304): ESTIMACION DEL ENTRENADOR 4: -6.750000
+[INFO] 16:19:45:739 team/(8378:8380): El entrenador 0 se mueve a : (4,8).
+[INFO] 16:19:45:739 team/(8292:8299): -----------------EL ENTRENADOR 4 EJECUTA UN CICLO
+[INFO] 16:19:45:739 team/(8378:8380): El entrenador 0 pide un ciclo. Valor del semaforo: 11. 
+[INFO] 16:19:45:739 team/(8378:8380): -----------------EL ENTRENADOR 0 EJECUTA UN CICLO
+[INFO] 16:19:50:740 team/(8292:8299): El entrenador 4 pide un ciclo. Valor del semaforo: 1. 
+[INFO] 16:19:50:740 team/(8378:8380): El entrenador 0 se mueve a : (5,8).
+[INFO] 16:19:50:740 team/(8378:8380): El entrenador 0 pide un ciclo. Valor del semaforo: 12. 
+[INFO] 16:19:50:740 team/(8378:8380): -----------------EL ENTRENADOR 0 EJECUTA UN CICLO
+[INFO] 16:19:50:740 team/(8292:8304): hola
+[INFO] 16:19:50:740 team/(8292:8304): ESTIMACION DEL ENTRENADOR 4: -7.750000
+[INFO] 16:19:50:740 team/(8292:8299): -----------------EL ENTRENADOR 4 EJECUTA UN CICLO
+[INFO] 16:19:55:742 team/(8378:8380): El entrenador 0 se mueve a : (6,8).
+[INFO] 16:19:55:742 team/(8292:8299): El entrenador 4 pide un ciclo. Valor del semaforo: 0. 
+[INFO] 16:19:55:742 team/(8292:8304): hola
+[INFO] 16:19:55:742 team/(8292:8304): ESTIMACION DEL ENTRENADOR 4: -8.750000
+[INFO] 16:19:55:742 team/(8292:8299): -----------------EL ENTRENADOR 4 EJECUTA UN CICLO
+[INFO] 16:19:55:742 team/(8378:8380): El entrenador 0 pide un ciclo. Valor del semaforo: 13. 
+[INFO] 16:19:55:742 team/(8378:8380): -----------------EL ENTRENADOR 0 EJECUTA UN CICLO
+[INFO] 16:20:00:742 team/(8292:8299): El entrenador 4 pide un ciclo. Valor del semaforo: 0. 
+[INFO] 16:20:00:742 team/(8292:8304): hola
+[INFO] 16:20:00:742 team/(8378:8380): El entrenador 0 se mueve a : (6,7).
+[INFO] 16:20:00:743 team/(8378:8380): El entrenador 0 pide un ciclo. Valor del semaforo: 14. 
+[INFO] 16:20:00:743 team/(8292:8304): ESTIMACION DEL ENTRENADOR 4: -9.750000
+[INFO] 16:20:00:743 team/(8292:8299): -----------------EL ENTRENADOR 4 EJECUTA UN CICLO
+[INFO] 16:20:00:743 team/(8378:8380): -----------------EL ENTRENADOR 0 EJECUTA UN CICLO
+[INFO] 16:20:05:744 team/(8292:8299): Operación de intercambio realizada entre entrenadores 4 y 0
+[INFO] 16:20:05:744 team/(8378:8380): El entrenador 0 se mueve a : (6,6).
+[INFO] 16:20:05:745 team/(8378:8380): El entrenador 0 se movió a la posición (6, 6).
+[INFO] 16:20:05:745 team/(8378:8380): El entrenador 0 comienza con el intercambio con el entrenador 2.
+[INFO] 16:20:05:747 team/(8292:8299): La nueva estimación del entrenador 4 es: 9.750000
+[INFO] 16:20:05:747 team/(8378:8380): El entrenador 0 pide un ciclo. Valor del semaforo: 15. 
+[INFO] 16:20:05:747 team/(8378:8380): -----------------EL ENTRENADOR 0 EJECUTA UN CICLO
+[INFO] 16:20:05:747 team/(8292:8299): El entrenador 4 pide un ciclo. Valor del semaforo: 0. 
+[INFO] 16:20:05:747 team/(8292:8304): El planificador detecta que el entrenador 4 termino de ejecutar.
+[INFO] 16:20:05:747 team/(8292:8304): postearon la ejecucion del cpu
+[INFO] 16:20:05:748 team/(8292:8301): Espera circular. Entrenador bloqueado: 4.
+[INFO] 16:20:05:748 team/(8292:8301): entrenador bloqueado para deadlock : 4
+[INFO] 16:20:05:748 team/(8292:8301): hola.
+[INFO] 16:20:05:748 team/(8292:8301): Entrenador bloqueado: 4. Entrenador a mover: 3.
+[INFO] 16:20:05:748 team/(8292:8298): El entrenador 3 se pone en READY.
+[INFO] 16:20:05:748 team/(8292:8301): El entrenador 4, esta en DEADLOCK con el entrenador 3.
+[INFO] 16:20:05:748 team/(8292:8298): El entrenador 3 entra en ejecucion para deadlock.
+[INFO] 16:20:05:748 team/(8292:8304): Hay entrenadores en cola
+[INFO] 16:20:05:748 team/(8292:8304): Elijo al entrenador 3 para ejecutar.
+[INFO] 16:20:05:748 team/(8292:8298): El entrenador 3, que estaba en (7,1), comenzará a moverse a (2,2).
+[INFO] 16:20:05:748 team/(8292:8298): El entrenador 3 pide un ciclo. Valor del semaforo: 0. 
+[INFO] 16:20:05:748 team/(8292:8304): Le llego el pedido de ciclo del entrenador 3 al planificador. 
+[INFO] 16:20:05:748 team/(8292:8304): hola
+[INFO] 16:20:05:748 team/(8292:8304): ESTIMACION DEL ENTRENADOR 3: 4.250000
+[INFO] 16:20:05:748 team/(8292:8298): -----------------EL ENTRENADOR 3 EJECUTA UN CICLO
+[INFO] 16:20:10:747 team/(8378:8380): El entrenador 0 pide un ciclo. Valor del semaforo: 16. 
+[INFO] 16:20:10:747 team/(8378:8380): -----------------EL ENTRENADOR 0 EJECUTA UN CICLO
+[INFO] 16:20:10:749 team/(8292:8298): El entrenador 3 se mueve a : (6,1).
+[INFO] 16:20:10:749 team/(8292:8298): El entrenador 3 pide un ciclo. Valor del semaforo: 0. 
+[INFO] 16:20:10:749 team/(8292:8304): hola
+[INFO] 16:20:10:749 team/(8292:8304): ESTIMACION DEL ENTRENADOR 3: 3.250000
+[INFO] 16:20:10:749 team/(8292:8298): -----------------EL ENTRENADOR 3 EJECUTA UN CICLO
+[INFO] 16:20:15:748 team/(8378:8380): El entrenador 0 pide un ciclo. Valor del semaforo: 17. 
+[INFO] 16:20:15:748 team/(8378:8380): -----------------EL ENTRENADOR 0 EJECUTA UN CICLO
+[INFO] 16:20:15:749 team/(8292:8298): El entrenador 3 se mueve a : (5,1).
+[INFO] 16:20:15:749 team/(8292:8298): El entrenador 3 pide un ciclo. Valor del semaforo: 0. 
+[INFO] 16:20:15:749 team/(8292:8304): hola
+[INFO] 16:20:15:749 team/(8292:8304): ESTIMACION DEL ENTRENADOR 3: 2.250000
+[INFO] 16:20:15:749 team/(8292:8298): -----------------EL ENTRENADOR 3 EJECUTA UN CICLO
+[INFO] 16:20:20:749 team/(8292:8298): El entrenador 3 se mueve a : (4,1).
+[INFO] 16:20:20:750 team/(8378:8380): El entrenador 0 pide un ciclo. Valor del semaforo: 18. 
+[INFO] 16:20:20:750 team/(8378:8380): -----------------EL ENTRENADOR 0 EJECUTA UN CICLO
+[INFO] 16:20:20:750 team/(8292:8298): El entrenador 3 pide un ciclo. Valor del semaforo: 0. 
+[INFO] 16:20:20:750 team/(8292:8304): hola
+[INFO] 16:20:20:750 team/(8292:8304): ESTIMACION DEL ENTRENADOR 3: 1.250000
+[INFO] 16:20:20:750 team/(8292:8298): -----------------EL ENTRENADOR 3 EJECUTA UN CICLO
+[INFO] 16:20:25:751 team/(8292:8298): El entrenador 3 se mueve a : (3,1).
+[INFO] 16:20:25:751 team/(8292:8298): El entrenador 3 pide un ciclo. Valor del semaforo: 0. 
+[INFO] 16:20:25:751 team/(8292:8304): hola
+[INFO] 16:20:25:751 team/(8292:8304): ESTIMACION DEL ENTRENADOR 3: 0.250000
+[INFO] 16:20:25:751 team/(8292:8298): -----------------EL ENTRENADOR 3 EJECUTA UN CICLO
+[INFO] 16:20:25:751 team/(8378:8380): El entrenador 0 pide un ciclo. Valor del semaforo: 19. 
+[INFO] 16:20:25:751 team/(8378:8380): -----------------EL ENTRENADOR 0 EJECUTA UN CICLO
+[INFO] 16:20:30:752 team/(8292:8298): El entrenador 3 se mueve a : (2,1).
+[INFO] 16:20:30:753 team/(8292:8298): El entrenador 3 pide un ciclo. Valor del semaforo: 0. 
+[INFO] 16:20:30:753 team/(8378:8380): Operación de intercambio realizada entre entrenadores 0 y 2
+[INFO] 16:20:30:753 team/(8292:8304): hola
+[INFO] 16:20:30:753 team/(8292:8304): ESTIMACION DEL ENTRENADOR 3: -0.750000
+[INFO] 16:20:30:753 team/(8292:8298): -----------------EL ENTRENADOR 3 EJECUTA UN CICLO
+[INFO] 16:20:30:753 team/(8378:8380): La nueva estimación del entrenador 0 es: 8.500000
+[INFO] 16:20:30:753 team/(8378:8384): Espera circular. Entrenador bloqueado: 0.
+[INFO] 16:20:30:753 team/(8378:8380): El entrenador 0 pide un ciclo. Valor del semaforo: 20. 
+[INFO] 16:20:30:753 team/(8378:8384): entrenador bloqueado para deadlock : 0
+[INFO] 16:20:30:753 team/(8378:8384): hola.
+[INFO] 16:20:30:753 team/(8378:8384): Entrenador bloqueado: 0. Entrenador a mover: 1.
+[INFO] 16:20:30:753 team/(8378:8384): El entrenador 0, esta en DEADLOCK con el entrenador 1.
+[INFO] 16:20:30:753 team/(8378:8381): El entrenador 1 se pone en READY.
+[INFO] 16:20:30:753 team/(8378:8381): El entrenador 1 entra en ejecucion para deadlock.
+[INFO] 16:20:30:753 team/(8378:8387): elijo entrenador para ejecutar
+[INFO] 16:20:30:753 team/(8378:8381): El entrenador 1, que estaba en (5,5), comenzará a moverse a (6,6).
+[INFO] 16:20:30:753 team/(8378:8381): El entrenador 1 pide un ciclo. Valor del semaforo: 26. 
+[INFO] 16:20:30:753 team/(8378:8381): -----------------EL ENTRENADOR 1 EJECUTA UN CICLO
+[INFO] 16:20:35:753 team/(8292:8298): El entrenador 3 se mueve a : (2,2).
+[INFO] 16:20:35:754 team/(8378:8381): El entrenador 1 se mueve a : (6,5).
+[INFO] 16:20:35:754 team/(8292:8298): El entrenador 3 se movió a la posición (2, 2).
+[INFO] 16:20:35:754 team/(8378:8381): El entrenador 1 pide un ciclo. Valor del semaforo: 27. 
+[INFO] 16:20:35:754 team/(8292:8298): El entrenador 3 comienza con el intercambio con el entrenador 4.
+[INFO] 16:20:35:754 team/(8378:8381): -----------------EL ENTRENADOR 1 EJECUTA UN CICLO
+[INFO] 16:20:35:754 team/(8292:8298): El entrenador 3 pide un ciclo. Valor del semaforo: 0. 
+[INFO] 16:20:35:754 team/(8292:8304): hola
+[INFO] 16:20:35:754 team/(8292:8304): ESTIMACION DEL ENTRENADOR 3: -1.750000
+[INFO] 16:20:35:754 team/(8292:8298): -----------------EL ENTRENADOR 3 EJECUTA UN CICLO
+[INFO] 16:20:40:756 team/(8378:8381): El entrenador 1 se mueve a : (6,6).
+[INFO] 16:20:40:757 team/(8292:8298): El entrenador 3 pide un ciclo. Valor del semaforo: 0. 
+[INFO] 16:20:40:757 team/(8292:8304): hola
+[INFO] 16:20:40:757 team/(8292:8304): ESTIMACION DEL ENTRENADOR 3: -2.750000
+[INFO] 16:20:40:757 team/(8292:8298): -----------------EL ENTRENADOR 3 EJECUTA UN CICLO
+[INFO] 16:20:40:757 team/(8378:8381): El entrenador 1 se movió a la posición (6, 6).
+[INFO] 16:20:40:757 team/(8378:8381): El entrenador 1 comienza con el intercambio con el entrenador 0.
+[INFO] 16:20:40:757 team/(8378:8381): El entrenador 1 pide un ciclo. Valor del semaforo: 28. 
+[INFO] 16:20:40:757 team/(8378:8381): -----------------EL ENTRENADOR 1 EJECUTA UN CICLO
+[INFO] 16:20:45:760 team/(8378:8381): El entrenador 1 pide un ciclo. Valor del semaforo: 29. 
+[INFO] 16:20:45:760 team/(8292:8298): El entrenador 3 pide un ciclo. Valor del semaforo: 0. 
+[INFO] 16:20:45:760 team/(8292:8304): hola
+[INFO] 16:20:45:760 team/(8292:8304): ESTIMACION DEL ENTRENADOR 3: -3.750000
+[INFO] 16:20:45:760 team/(8292:8298): -----------------EL ENTRENADOR 3 EJECUTA UN CICLO
+[INFO] 16:20:45:760 team/(8378:8381): -----------------EL ENTRENADOR 1 EJECUTA UN CICLO
+[INFO] 16:20:50:760 team/(8378:8381): El entrenador 1 pide un ciclo. Valor del semaforo: 30. 
+[INFO] 16:20:50:761 team/(8292:8298): El entrenador 3 pide un ciclo. Valor del semaforo: 0. 
+[INFO] 16:20:50:761 team/(8292:8304): hola
+[INFO] 16:20:50:761 team/(8292:8304): ESTIMACION DEL ENTRENADOR 3: -4.750000
+[INFO] 16:20:50:761 team/(8292:8298): -----------------EL ENTRENADOR 3 EJECUTA UN CICLO
+[INFO] 16:20:50:761 team/(8378:8381): -----------------EL ENTRENADOR 1 EJECUTA UN CICLO
+[INFO] 16:20:55:763 team/(8378:8381): El entrenador 1 pide un ciclo. Valor del semaforo: 31. 
+[INFO] 16:20:55:763 team/(8292:8298): El entrenador 3 pide un ciclo. Valor del semaforo: 0. 
+[INFO] 16:20:55:763 team/(8292:8304): hola
+[INFO] 16:20:55:763 team/(8378:8381): -----------------EL ENTRENADOR 1 EJECUTA UN CICLO
+[INFO] 16:20:55:763 team/(8292:8304): ESTIMACION DEL ENTRENADOR 3: -5.750000
+[INFO] 16:20:55:763 team/(8292:8298): -----------------EL ENTRENADOR 3 EJECUTA UN CICLO
+[INFO] 16:21:00:764 team/(8292:8298): Operación de intercambio realizada entre entrenadores 3 y 4
+[INFO] 16:21:00:764 team/(8378:8381): El entrenador 1 pide un ciclo. Valor del semaforo: 32. 
+[INFO] 16:21:00:765 team/(8378:8381): -----------------EL ENTRENADOR 1 EJECUTA UN CICLO
+[INFO] 16:21:00:765 team/(8292:8298): La nueva estimación del entrenador 3 es: 7.750000
+[INFO] 16:21:00:765 team/(8292:8301): Espera circular. Entrenador bloqueado: 3.
+[INFO] 16:21:00:765 team/(8292:8298): El entrenador 3 pide un ciclo. Valor del semaforo: 0. 
+[INFO] 16:21:00:765 team/(8292:8304): El planificador detecta que el entrenador 3 termino de ejecutar.
+[INFO] 16:21:00:765 team/(8292:8304): postearon la ejecucion del cpu
+[INFO] 16:21:00:765 team/(8292:8301): entrenador bloqueado para deadlock : 3
+[INFO] 16:21:00:765 team/(8292:8301): hola.
+[INFO] 16:21:00:765 team/(8292:8301): Entrenador bloqueado: 3. Entrenador a mover: 2.
+[INFO] 16:21:00:765 team/(8292:8301): El entrenador 3, esta en DEADLOCK con el entrenador 2.
+[INFO] 16:21:00:765 team/(8292:8297): El entrenador 2 se pone en READY.
+[INFO] 16:21:00:765 team/(8292:8297): El entrenador 2 entra en ejecucion para deadlock.
+[INFO] 16:21:00:765 team/(8292:8304): Hay entrenadores en cola
+[INFO] 16:21:00:765 team/(8292:8304): Elijo al entrenador 2 para ejecutar.
+[INFO] 16:21:00:765 team/(8292:8297): El entrenador 2, que estaba en (10,6), comenzará a moverse a (2,2).
+[INFO] 16:21:00:765 team/(8292:8297): El entrenador 2 pide un ciclo. Valor del semaforo: 0. 
+[INFO] 16:21:00:765 team/(8292:8304): Le llego el pedido de ciclo del entrenador 2 al planificador. 
+[INFO] 16:21:00:765 team/(8292:8304): hola
+[INFO] 16:21:00:765 team/(8292:8304): ESTIMACION DEL ENTRENADOR 2: 5.000000
+[INFO] 16:21:00:765 team/(8292:8297): -----------------EL ENTRENADOR 2 EJECUTA UN CICLO
+[INFO] 16:21:05:765 team/(8378:8381): Operación de intercambio realizada entre entrenadores 1 y 0
+[INFO] 16:21:05:766 team/(8378:8381): La nueva estimación del entrenador 1 es: 8.125000
+[INFO] 16:21:05:766 team/(8378:8384): hice todos los intercambios.
+[INFO] 16:21:05:766 team/(8378:8381): El entrenador 1 pide un ciclo. Valor del semaforo: 33. 
+[INFO] 16:21:05:766 team/(8378:8384): El entrenador 2 salio del deadlock.
+[INFO] 16:21:05:766 team/(8378:8384): El entrenador 0 salio del deadlock.
+[INFO] 16:21:05:766 team/(8378:8384): El entrenador 1 salio del deadlock.
+[INFO] 16:21:05:766 team/(8292:8297): El entrenador 2 se mueve a : (9,6).
+[INFO] 16:21:05:766 team/(8292:8297): El entrenador 2 pide un ciclo. Valor del semaforo: 0. 
+[INFO] 16:21:05:766 team/(8292:8304): hola
+[INFO] 16:21:05:766 team/(8292:8304): ESTIMACION DEL ENTRENADOR 2: 4.000000
+[INFO] 16:21:05:766 team/(8292:8297): -----------------EL ENTRENADOR 2 EJECUTA UN CICLO
+[INFO] 16:21:10:767 team/(8292:8297): El entrenador 2 se mueve a : (8,6).
+[INFO] 16:21:10:769 team/(8292:8297): El entrenador 2 pide un ciclo. Valor del semaforo: 0. 
+[INFO] 16:21:10:769 team/(8292:8304): hola
+[INFO] 16:21:10:769 team/(8292:8304): ESTIMACION DEL ENTRENADOR 2: 3.000000
+[INFO] 16:21:10:769 team/(8292:8297): -----------------EL ENTRENADOR 2 EJECUTA UN CICLO
+[INFO] 16:21:15:773 team/(8292:8297): El entrenador 2 se mueve a : (7,6).
+[INFO] 16:21:15:773 team/(8292:8297): El entrenador 2 pide un ciclo. Valor del semaforo: 0. 
+[INFO] 16:21:15:773 team/(8292:8304): hola
+[INFO] 16:21:15:774 team/(8292:8304): ESTIMACION DEL ENTRENADOR 2: 2.000000
+[INFO] 16:21:15:774 team/(8292:8297): -----------------EL ENTRENADOR 2 EJECUTA UN CICLO
+[INFO] 16:21:20:774 team/(8292:8297): El entrenador 2 se mueve a : (6,6).
+[INFO] 16:21:20:774 team/(8292:8297): El entrenador 2 pide un ciclo. Valor del semaforo: 0. 
+[INFO] 16:21:20:776 team/(8292:8304): hola
+[INFO] 16:21:20:776 team/(8292:8304): ESTIMACION DEL ENTRENADOR 2: 1.000000
+[INFO] 16:21:20:776 team/(8292:8297): -----------------EL ENTRENADOR 2 EJECUTA UN CICLO
+[INFO] 16:21:25:777 team/(8292:8297): El entrenador 2 se mueve a : (5,6).
+[INFO] 16:21:25:777 team/(8292:8297): El entrenador 2 pide un ciclo. Valor del semaforo: 0. 
+[INFO] 16:21:25:777 team/(8292:8304): hola
+[INFO] 16:21:25:777 team/(8292:8304): ESTIMACION DEL ENTRENADOR 2: 0.000000
+[INFO] 16:21:25:777 team/(8292:8297): -----------------EL ENTRENADOR 2 EJECUTA UN CICLO
+[INFO] 16:21:30:777 team/(8292:8297): El entrenador 2 se mueve a : (4,6).
+[INFO] 16:21:30:778 team/(8292:8297): El entrenador 2 pide un ciclo. Valor del semaforo: 0. 
+[INFO] 16:21:30:778 team/(8292:8304): hola
+[INFO] 16:21:30:778 team/(8292:8304): ESTIMACION DEL ENTRENADOR 2: -1.000000
+[INFO] 16:21:30:778 team/(8292:8297): -----------------EL ENTRENADOR 2 EJECUTA UN CICLO
+[INFO] 16:21:35:779 team/(8292:8297): El entrenador 2 se mueve a : (3,6).
+[INFO] 16:21:35:779 team/(8292:8297): El entrenador 2 pide un ciclo. Valor del semaforo: 0. 
+[INFO] 16:21:35:779 team/(8292:8304): hola
+[INFO] 16:21:35:779 team/(8292:8304): ESTIMACION DEL ENTRENADOR 2: -2.000000
+[INFO] 16:21:35:779 team/(8292:8297): -----------------EL ENTRENADOR 2 EJECUTA UN CICLO
+[INFO] 16:21:40:781 team/(8292:8297): El entrenador 2 se mueve a : (2,6).
+[INFO] 16:21:40:781 team/(8292:8297): El entrenador 2 pide un ciclo. Valor del semaforo: 0. 
+[INFO] 16:21:40:781 team/(8292:8304): hola
+[INFO] 16:21:40:781 team/(8292:8304): ESTIMACION DEL ENTRENADOR 2: -3.000000
+[INFO] 16:21:40:781 team/(8292:8297): -----------------EL ENTRENADOR 2 EJECUTA UN CICLO
+[INFO] 16:21:45:782 team/(8292:8297): El entrenador 2 se mueve a : (2,5).
+[INFO] 16:21:45:782 team/(8292:8297): El entrenador 2 pide un ciclo. Valor del semaforo: 0. 
+[INFO] 16:21:45:782 team/(8292:8304): hola
+[INFO] 16:21:45:782 team/(8292:8304): ESTIMACION DEL ENTRENADOR 2: -4.000000
+[INFO] 16:21:45:782 team/(8292:8297): -----------------EL ENTRENADOR 2 EJECUTA UN CICLO
+[INFO] 16:21:50:782 team/(8292:8297): El entrenador 2 se mueve a : (2,4).
+[INFO] 16:21:50:782 team/(8292:8297): El entrenador 2 pide un ciclo. Valor del semaforo: 1. 
+[INFO] 16:21:50:782 team/(8292:8304): hola
+[INFO] 16:21:50:782 team/(8292:8304): ESTIMACION DEL ENTRENADOR 2: -5.000000
+[INFO] 16:21:50:782 team/(8292:8297): -----------------EL ENTRENADOR 2 EJECUTA UN CICLO
+[INFO] 16:21:55:783 team/(8292:8297): El entrenador 2 se mueve a : (2,3).
+[INFO] 16:21:55:784 team/(8292:8297): El entrenador 2 pide un ciclo. Valor del semaforo: 0. 
+[INFO] 16:21:55:784 team/(8292:8304): hola
+[INFO] 16:21:55:784 team/(8292:8304): ESTIMACION DEL ENTRENADOR 2: -6.000000
+[INFO] 16:21:55:784 team/(8292:8297): -----------------EL ENTRENADOR 2 EJECUTA UN CICLO
+[INFO] 16:22:00:784 team/(8292:8297): El entrenador 2 se mueve a : (2,2).
+[INFO] 16:22:00:784 team/(8292:8297): El entrenador 2 se movió a la posición (2, 2).
+[INFO] 16:22:00:784 team/(8292:8297): El entrenador 2 comienza con el intercambio con el entrenador 3.
+[INFO] 16:22:00:784 team/(8292:8297): El entrenador 2 pide un ciclo. Valor del semaforo: 0. 
+[INFO] 16:22:00:784 team/(8292:8304): hola
+[INFO] 16:22:00:784 team/(8292:8304): ESTIMACION DEL ENTRENADOR 2: -7.000000
+[INFO] 16:22:00:784 team/(8292:8297): -----------------EL ENTRENADOR 2 EJECUTA UN CICLO
+[INFO] 16:22:05:785 team/(8292:8297): El entrenador 2 pide un ciclo. Valor del semaforo: 0. 
+[INFO] 16:22:05:785 team/(8292:8304): hola
+[INFO] 16:22:05:786 team/(8292:8304): ESTIMACION DEL ENTRENADOR 2: -8.000000
+[INFO] 16:22:05:786 team/(8292:8297): -----------------EL ENTRENADOR 2 EJECUTA UN CICLO
+[INFO] 16:22:10:787 team/(8292:8297): El entrenador 2 pide un ciclo. Valor del semaforo: 0. 
+[INFO] 16:22:10:787 team/(8292:8304): hola
+[INFO] 16:22:10:787 team/(8292:8304): ESTIMACION DEL ENTRENADOR 2: -9.000000
+[INFO] 16:22:10:787 team/(8292:8297): -----------------EL ENTRENADOR 2 EJECUTA UN CICLO
+[INFO] 16:22:15:787 team/(8292:8297): El entrenador 2 pide un ciclo. Valor del semaforo: 0. 
+[INFO] 16:22:15:787 team/(8292:8304): hola
+[INFO] 16:22:15:787 team/(8292:8304): ESTIMACION DEL ENTRENADOR 2: -10.000000
+[INFO] 16:22:15:787 team/(8292:8297): -----------------EL ENTRENADOR 2 EJECUTA UN CICLO
+[INFO] 16:22:20:789 team/(8292:8297): El entrenador 2 pide un ciclo. Valor del semaforo: 0. 
+[INFO] 16:22:20:789 team/(8292:8304): hola
+[INFO] 16:22:20:789 team/(8292:8304): ESTIMACION DEL ENTRENADOR 2: -11.000000
+[INFO] 16:22:20:789 team/(8292:8297): -----------------EL ENTRENADOR 2 EJECUTA UN CICLO
+[INFO] 16:22:25:790 team/(8292:8297): Operación de intercambio realizada entre entrenadores 2 y 3
+[INFO] 16:22:25:792 team/(8292:8297): La nueva estimación del entrenador 2 es: 11.000000
+[INFO] 16:22:25:793 team/(8292:8297): El entrenador 2 pide un ciclo. Valor del semaforo: 0. 
+[INFO] 16:22:25:793 team/(8292:8304): El planificador detecta que el entrenador 2 termino de ejecutar.
+[INFO] 16:22:25:793 team/(8292:8304): postearon la ejecucion del cpu
+[INFO] 16:22:25:793 team/(8292:8301): Espera circular. Entrenador bloqueado: 2.
+[INFO] 16:22:25:794 team/(8292:8301): entrenador bloqueado para deadlock : 2
+[INFO] 16:22:25:794 team/(8292:8301): hola.
+[INFO] 16:22:25:794 team/(8292:8301): Entrenador bloqueado: 2. Entrenador a mover: 1.
+[INFO] 16:22:25:794 team/(8292:8301): El entrenador 2, esta en DEADLOCK con el entrenador 1.
+[INFO] 16:22:25:794 team/(8292:8296): El entrenador 1 se pone en READY.
+[INFO] 16:22:25:794 team/(8292:8296): El entrenador 1 entra en ejecucion para deadlock.
+[INFO] 16:22:25:794 team/(8292:8304): Hay entrenadores en cola
+[INFO] 16:22:25:794 team/(8292:8304): Elijo al entrenador 1 para ejecutar.
+[INFO] 16:22:25:794 team/(8292:8296): El entrenador 1, que estaba en (4,6), comenzará a moverse a (2,2).
+[INFO] 16:22:25:794 team/(8292:8296): El entrenador 1 pide un ciclo. Valor del semaforo: 0. 
+[INFO] 16:22:25:794 team/(8292:8304): Le llego el pedido de ciclo del entrenador 1 al planificador. 
+[INFO] 16:22:25:794 team/(8292:8304): hola
+[INFO] 16:22:25:794 team/(8292:8304): ESTIMACION DEL ENTRENADOR 1: 4.250000
+[INFO] 16:22:25:794 team/(8292:8296): -----------------EL ENTRENADOR 1 EJECUTA UN CICLO
+[INFO] 16:22:30:794 team/(8292:8296): El entrenador 1 se mueve a : (3,6).
+[INFO] 16:22:30:795 team/(8292:8296): El entrenador 1 pide un ciclo. Valor del semaforo: 0. 
+[INFO] 16:22:30:795 team/(8292:8304): hola
+[INFO] 16:22:30:795 team/(8292:8304): ESTIMACION DEL ENTRENADOR 1: 3.250000
+[INFO] 16:22:30:795 team/(8292:8296): -----------------EL ENTRENADOR 1 EJECUTA UN CICLO
+[INFO] 16:22:35:797 team/(8292:8296): El entrenador 1 se mueve a : (2,6).
+[INFO] 16:22:35:797 team/(8292:8296): El entrenador 1 pide un ciclo. Valor del semaforo: 0. 
+[INFO] 16:22:35:797 team/(8292:8304): hola
+[INFO] 16:22:35:797 team/(8292:8304): ESTIMACION DEL ENTRENADOR 1: 2.250000
+[INFO] 16:22:35:797 team/(8292:8296): -----------------EL ENTRENADOR 1 EJECUTA UN CICLO
+[INFO] 16:22:40:797 team/(8292:8296): El entrenador 1 se mueve a : (2,5).
+[INFO] 16:22:40:797 team/(8292:8296): El entrenador 1 pide un ciclo. Valor del semaforo: 0. 
+[INFO] 16:22:40:798 team/(8292:8304): hola
+[INFO] 16:22:40:798 team/(8292:8304): ESTIMACION DEL ENTRENADOR 1: 1.250000
+[INFO] 16:22:40:798 team/(8292:8296): -----------------EL ENTRENADOR 1 EJECUTA UN CICLO
+[INFO] 16:22:45:798 team/(8292:8296): El entrenador 1 se mueve a : (2,4).
+[INFO] 16:22:45:799 team/(8292:8296): El entrenador 1 pide un ciclo. Valor del semaforo: 0. 
+[INFO] 16:22:45:799 team/(8292:8304): hola
+[INFO] 16:22:45:799 team/(8292:8304): ESTIMACION DEL ENTRENADOR 1: 0.250000
+[INFO] 16:22:45:799 team/(8292:8296): -----------------EL ENTRENADOR 1 EJECUTA UN CICLO
+[INFO] 16:22:50:800 team/(8292:8296): El entrenador 1 se mueve a : (2,3).
+[INFO] 16:22:50:800 team/(8292:8296): El entrenador 1 pide un ciclo. Valor del semaforo: 0. 
+[INFO] 16:22:50:800 team/(8292:8304): hola
+[INFO] 16:22:50:800 team/(8292:8304): ESTIMACION DEL ENTRENADOR 1: -0.750000
+[INFO] 16:22:50:800 team/(8292:8296): -----------------EL ENTRENADOR 1 EJECUTA UN CICLO
+[INFO] 16:22:55:801 team/(8292:8296): El entrenador 1 se mueve a : (2,2).
+[INFO] 16:22:55:801 team/(8292:8296): El entrenador 1 se movió a la posición (2, 2).
+[INFO] 16:22:55:801 team/(8292:8296): El entrenador 1 comienza con el intercambio con el entrenador 2.
+[INFO] 16:22:55:802 team/(8292:8296): El entrenador 1 pide un ciclo. Valor del semaforo: 0. 
+[INFO] 16:22:55:802 team/(8292:8304): hola
+[INFO] 16:22:55:802 team/(8292:8304): ESTIMACION DEL ENTRENADOR 1: -1.750000
+[INFO] 16:22:55:802 team/(8292:8296): -----------------EL ENTRENADOR 1 EJECUTA UN CICLO
+[INFO] 16:23:00:802 team/(8292:8296): El entrenador 1 pide un ciclo. Valor del semaforo: 0. 
+[INFO] 16:23:00:803 team/(8292:8304): hola
+[INFO] 16:23:00:803 team/(8292:8304): ESTIMACION DEL ENTRENADOR 1: -2.750000
+[INFO] 16:23:00:803 team/(8292:8296): -----------------EL ENTRENADOR 1 EJECUTA UN CICLO
+[INFO] 16:23:05:804 team/(8292:8296): El entrenador 1 pide un ciclo. Valor del semaforo: 0. 
+[INFO] 16:23:05:804 team/(8292:8304): hola
+[INFO] 16:23:05:805 team/(8292:8304): ESTIMACION DEL ENTRENADOR 1: -3.750000
+[INFO] 16:23:05:805 team/(8292:8296): -----------------EL ENTRENADOR 1 EJECUTA UN CICLO
+[INFO] 16:23:10:805 team/(8292:8296): El entrenador 1 pide un ciclo. Valor del semaforo: 0. 
+[INFO] 16:23:10:805 team/(8292:8304): hola
+[INFO] 16:23:10:805 team/(8292:8304): ESTIMACION DEL ENTRENADOR 1: -4.750000
+[INFO] 16:23:10:805 team/(8292:8296): -----------------EL ENTRENADOR 1 EJECUTA UN CICLO
+[INFO] 16:23:15:808 team/(8292:8296): El entrenador 1 pide un ciclo. Valor del semaforo: 0. 
+[INFO] 16:23:15:808 team/(8292:8304): hola
+[INFO] 16:23:15:808 team/(8292:8304): ESTIMACION DEL ENTRENADOR 1: -5.750000
+[INFO] 16:23:15:808 team/(8292:8296): -----------------EL ENTRENADOR 1 EJECUTA UN CICLO
+[INFO] 16:23:20:809 team/(8292:8296): Operación de intercambio realizada entre entrenadores 1 y 2
+[INFO] 16:23:20:809 team/(8292:8296): La nueva estimación del entrenador 1 es: 7.750000
+[INFO] 16:23:20:809 team/(8292:8301): hice todos los intercambios.
+[INFO] 16:23:20:810 team/(8292:8296): El entrenador 1 pide un ciclo. Valor del semaforo: 0. 
+[INFO] 16:23:20:810 team/(8292:8304): El planificador detecta que el entrenador 1 termino de ejecutar.
+[INFO] 16:23:20:810 team/(8292:8304): postearon la ejecucion del cpu
+[INFO] 16:23:20:810 team/(8292:8301): El entrenador 0 salio del deadlock.
+[INFO] 16:23:20:810 team/(8292:8301): El entrenador 1 salio del deadlock.
+[INFO] 16:23:20:810 team/(8292:8301): El entrenador 2 salio del deadlock.
+[INFO] 16:23:20:810 team/(8292:8301): El entrenador 4 salio del deadlock.
+[INFO] 16:23:20:810 team/(8292:8301): El entrenador 3 salio del deadlock.

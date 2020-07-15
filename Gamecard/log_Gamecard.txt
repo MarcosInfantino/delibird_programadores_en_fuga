@@ -2873,3 +2873,327 @@
 
 [INFO] 13:11:32:768 gamecard/(23435:23443): Reintentando conexión en 10 segundos...
 
+[INFO] 15:28:29:301 gamecard/(4081:4081): Inicio de programa: Gamecard.
+[INFO] 15:28:29:446 gamecard/(4081:4081): Se encontro el directorio metadata
+[INFO] 15:28:29:446 gamecard/(4081:4081): Se encontro el archivo metadata.bin
+[INFO] 15:28:29:446 gamecard/(4081:4081): Inicio de Metadata, Tamanio bloques: 64,  Cantidad de bloques: 1024,  Magic number: TALL_GRASS
+[INFO] 15:28:29:501 gamecard/(4081:4088): Estoy escuchando
+[INFO] 15:28:29:501 gamecard/(4081:4088): Espero un nuevo cliente
+[INFO] 15:35:26:573 gamecard/(4821:4821): Inicio de programa: Gamecard.
+[INFO] 15:35:26:573 gamecard/(4821:4821): Se encontro el directorio metadata
+[INFO] 15:35:26:573 gamecard/(4821:4821): Se encontro el archivo metadata.bin
+[INFO] 15:35:26:573 gamecard/(4821:4821): Inicio de Metadata, Tamanio bloques: 64,  Cantidad de bloques: 1024,  Magic number: TALL_GRASS
+[INFO] 15:35:26:597 gamecard/(4821:4828): Estoy escuchando
+[INFO] 15:35:26:597 gamecard/(4821:4828): Espero un nuevo cliente
+[INFO] 15:36:54:263 gamecard/(4821:4829): Conexión fallida con el Broker
+
+[INFO] 15:36:54:264 gamecard/(4821:4830): Conexión fallida con el Broker
+
+[INFO] 15:36:54:264 gamecard/(4821:4831): Conexión fallida con el Broker
+
+[INFO] 15:36:54:264 gamecard/(4821:4829): Reintentando conexión en 10 segundos...
+
+[INFO] 15:36:54:264 gamecard/(4821:4830): Reintentando conexión en 10 segundos...
+
+[INFO] 15:36:54:264 gamecard/(4821:4831): Reintentando conexión en 10 segundos...
+
+[INFO] 15:37:13:897 gamecard/(5024:5024): Inicio de programa: Gamecard.
+[INFO] 15:37:13:897 gamecard/(5024:5024): Se encontro el directorio metadata
+[INFO] 15:37:13:897 gamecard/(5024:5024): Se encontro el archivo metadata.bin
+[INFO] 15:37:13:897 gamecard/(5024:5024): Inicio de Metadata, Tamanio bloques: 64,  Cantidad de bloques: 1024,  Magic number: TALL_GRASS
+[INFO] 15:37:13:931 gamecard/(5024:5031): Estoy escuchando
+[INFO] 15:37:13:931 gamecard/(5024:5031): Espero un nuevo cliente
+[INFO] 15:38:02:46 gamecard/(5024:5033): Recibi mensaje catch pokemon. El pokemon es: Pikachu. La posicion es: (2,3).
+[INFO] 15:38:02:47 gamecard/(5024:5123): Inicia proceso de atencion al Catch
+[INFO] 15:38:02:48 gamecard/(5024:5033): Recibi mensaje catch pokemon. El pokemon es: Squirtle. La posicion es: (5,2).
+[INFO] 15:38:02:48 gamecard/(5024:5127): Inicia proceso de atencion al Catch
+[INFO] 15:38:02:49 gamecard/(5024:5033): Recibi mensaje catch pokemon. El pokemon es: Onyx. La posicion es: (4,5).
+[INFO] 15:38:02:50 gamecard/(5024:5132): Inicia proceso de atencion al Catch
+[INFO] 15:38:03:47 gamecard/(5024:5123): Cierro el archivo del pokemon: Pikachu. Posicion: (2, 3).
+[INFO] 15:38:03:47 gamecard/(5024:5123): Inicia proceso envio Caught
+[INFO] 15:38:03:49 gamecard/(5024:5127): Cierro el archivo del pokemon: Squirtle. Posicion: (5, 2).
+[INFO] 15:38:03:49 gamecard/(5024:5127): Inicia proceso envio Caught
+[INFO] 15:38:03:51 gamecard/(5024:5132): Cierro el archivo del pokemon: Onyx. Posicion: (4, 5).
+[INFO] 15:38:03:51 gamecard/(5024:5132): Inicia proceso envio Caught
+[INFO] 15:38:06:52 gamecard/(5024:5033): Recibi mensaje catch pokemon. El pokemon es: Charmander. La posicion es: (4,5).
+[INFO] 15:38:06:55 gamecard/(5024:5152): Inicia proceso de atencion al Catch
+[INFO] 15:38:07:121 gamecard/(5024:5152): Cierro el archivo del pokemon: Charmander. Posicion: (4, 5).
+[INFO] 15:38:07:121 gamecard/(5024:5152): Inicia proceso envio Caught
+[INFO] 15:47:06:957 gamecard/(5024:5033): Conexión fallida con el Broker
+
+[INFO] 15:47:06:957 gamecard/(5024:5032): Conexión fallida con el Broker
+
+[INFO] 15:47:06:957 gamecard/(5024:5033): Reintentando conexión en 10 segundos...
+
+[INFO] 15:47:06:957 gamecard/(5024:5034): Conexión fallida con el Broker
+
+[INFO] 15:47:06:957 gamecard/(5024:5034): Reintentando conexión en 10 segundos...
+
+[INFO] 15:47:06:957 gamecard/(5024:5032): Reintentando conexión en 10 segundos...
+
+[INFO] 15:47:25:292 gamecard/(5977:5977): Inicio de programa: Gamecard.
+[INFO] 15:47:25:292 gamecard/(5977:5977): Se encontro el directorio metadata
+[INFO] 15:47:25:292 gamecard/(5977:5977): Se encontro el archivo metadata.bin
+[INFO] 15:47:25:292 gamecard/(5977:5977): Inicio de Metadata, Tamanio bloques: 64,  Cantidad de bloques: 1024,  Magic number: TALL_GRASS
+[INFO] 15:47:25:422 gamecard/(5977:5984): Estoy escuchando
+[INFO] 15:47:25:422 gamecard/(5977:5984): Espero un nuevo cliente
+[INFO] 15:54:59:222 gamecard/(6527:6527): Inicio de programa: Gamecard.
+[INFO] 15:54:59:223 gamecard/(6527:6527): Se encontro el directorio metadata
+[INFO] 15:54:59:223 gamecard/(6527:6527): Se encontro el archivo metadata.bin
+[INFO] 15:54:59:223 gamecard/(6527:6527): Inicio de Metadata, Tamanio bloques: 64,  Cantidad de bloques: 1024,  Magic number: TALL_GRASS
+[INFO] 15:54:59:248 gamecard/(6527:6534): Estoy escuchando
+[INFO] 15:54:59:248 gamecard/(6527:6534): Espero un nuevo cliente
+[INFO] 15:55:04:966 gamecard/(6527:6535): Recibi mensaje new pokemon. El pokemon es: Pikachu. La posicion es: (9,9). La cantidad es: 10.
+[INFO] 15:55:04:967 gamecard/(6527:6558): Inicia proceso de atencion al New
+[INFO] 15:55:04:970 gamecard/(6527:6535): Recibi mensaje new pokemon. El pokemon es: Squirtle. La posicion es: (5,2). La cantidad es: 10.
+[INFO] 15:55:04:970 gamecard/(6527:6535): Recibi mensaje new pokemon. El pokemon es: Jolteon. La posicion es: (2,2). La cantidad es: 10.
+[INFO] 15:55:04:970 gamecard/(6527:6535): Recibi mensaje new pokemon. El pokemon es: Flareon. La posicion es: (4,6). La cantidad es: 10.
+[INFO] 15:55:04:971 gamecard/(6527:6565): Inicia proceso de atencion al New
+[INFO] 15:55:04:971 gamecard/(6527:6567): Inicia proceso de atencion al New
+[INFO] 15:55:04:972 gamecard/(6527:6569): Inicia proceso de atencion al New
+[INFO] 15:55:05:974 gamecard/(6527:6558): Cierro el archivo del pokemon: Pikachu. Posicion: (9, 9).
+[INFO] 15:55:05:974 gamecard/(6527:6558): Inicia proceso envio Appeared
+[INFO] 15:55:05:975 gamecard/(6527:6569): Cierro el archivo del pokemon: Flareon. Posicion: (4, 6).
+[INFO] 15:55:05:975 gamecard/(6527:6569): Inicia proceso envio Appeared
+[INFO] 15:55:05:980 gamecard/(6527:6565): Cierro el archivo del pokemon: Squirtle. Posicion: (5, 2).
+[INFO] 15:55:05:980 gamecard/(6527:6565): Inicia proceso envio Appeared
+[INFO] 15:55:05:980 gamecard/(6527:6567): Cierro el archivo del pokemon: Jolteon. Posicion: (2, 2).
+[INFO] 15:55:05:980 gamecard/(6527:6567): Inicia proceso envio Appeared
+[INFO] 15:56:15:724 gamecard/(6527:6537): Recibi mensaje get pokemon. El pokemon es: Espeon.
+[INFO] 15:56:15:725 gamecard/(6527:6537): Recibi mensaje get pokemon. El pokemon es: Flareon.
+[INFO] 15:56:15:725 gamecard/(6527:6537): Recibi mensaje get pokemon. El pokemon es: Vaporeon.
+[INFO] 15:56:15:725 gamecard/(6527:6537): Recibi mensaje get pokemon. El pokemon es: Umbreon.
+[INFO] 15:56:15:726 gamecard/(6527:6537): Recibi mensaje get pokemon. El pokemon es: Jolteon.
+[INFO] 15:56:15:737 gamecard/(6527:6681): Inicia proceso de atencion al Get
+[INFO] 15:56:15:738 gamecard/(6527:6670): Inicia proceso de atencion al Get
+[INFO] 15:56:15:738 gamecard/(6527:6672): Inicia proceso de atencion al Get
+[INFO] 15:56:15:738 gamecard/(6527:6674): Inicia proceso de atencion al Get
+[INFO] 15:56:15:738 gamecard/(6527:6676): Inicia proceso de atencion al Get
+[INFO] 15:56:15:743 gamecard/(6527:6670): Inicia proceso envio Localized
+[INFO] 15:56:15:745 gamecard/(6527:6676): Inicia proceso envio Localized
+[INFO] 15:56:15:745 gamecard/(6527:6674): Inicia proceso envio Localized
+[INFO] 15:56:16:738 gamecard/(6527:6681): Inicia proceso envio Localized
+[INFO] 15:56:16:745 gamecard/(6527:6672): Inicia proceso envio Localized
+[INFO] 15:56:30:734 gamecard/(6527:6536): Recibi mensaje catch pokemon. El pokemon es: Jolteon. La posicion es: (2,2).
+[INFO] 15:56:30:738 gamecard/(6527:6712): Inicia proceso de atencion al Catch
+[INFO] 15:56:31:747 gamecard/(6527:6712): Cierro el archivo del pokemon: Jolteon. Posicion: (2, 2).
+[INFO] 15:56:31:747 gamecard/(6527:6712): Inicia proceso envio Caught
+[INFO] 15:56:34:321 gamecard/(6527:6537): Recibi mensaje get pokemon. El pokemon es: Squirtle.
+[INFO] 15:56:34:322 gamecard/(6527:6537): Recibi mensaje get pokemon. El pokemon es: Pikachu.
+[INFO] 15:56:34:323 gamecard/(6527:6537): Recibi mensaje get pokemon. El pokemon es: Gengar.
+[INFO] 15:56:34:324 gamecard/(6527:6537): Recibi mensaje get pokemon. El pokemon es: Onix.
+[INFO] 15:56:34:329 gamecard/(6527:6749): Inicia proceso de atencion al Get
+[INFO] 15:56:34:330 gamecard/(6527:6751): Inicia proceso de atencion al Get
+[INFO] 15:56:34:331 gamecard/(6527:6753): Inicia proceso de atencion al Get
+[INFO] 15:56:34:332 gamecard/(6527:6753): Inicia proceso envio Localized
+[INFO] 15:56:34:340 gamecard/(6527:6755): Inicia proceso de atencion al Get
+[INFO] 15:56:34:342 gamecard/(6527:6755): Inicia proceso envio Localized
+[INFO] 15:56:35:331 gamecard/(6527:6749): Inicia proceso envio Localized
+[INFO] 15:56:35:332 gamecard/(6527:6751): Inicia proceso envio Localized
+[INFO] 15:56:45:738 gamecard/(6527:6536): Recibi mensaje catch pokemon. El pokemon es: Flareon. La posicion es: (4,6).
+[INFO] 15:56:45:742 gamecard/(6527:6786): Inicia proceso de atencion al Catch
+[INFO] 15:56:46:745 gamecard/(6527:6786): Cierro el archivo del pokemon: Flareon. Posicion: (4, 6).
+[INFO] 15:56:46:745 gamecard/(6527:6786): Inicia proceso envio Caught
+[INFO] 15:57:45:362 gamecard/(6527:6536): Recibi mensaje catch pokemon. El pokemon es: Pikachu. La posicion es: (9,9).
+[INFO] 15:57:45:368 gamecard/(6527:6875): Inicia proceso de atencion al Catch
+[INFO] 15:57:46:436 gamecard/(6527:6875): Cierro el archivo del pokemon: Pikachu. Posicion: (9, 9).
+[INFO] 15:57:46:436 gamecard/(6527:6875): Inicia proceso envio Caught
+[INFO] 15:58:05:369 gamecard/(6527:6536): Recibi mensaje catch pokemon. El pokemon es: Squirtle. La posicion es: (5,2).
+[INFO] 15:58:05:376 gamecard/(6527:6902): Inicia proceso de atencion al Catch
+[INFO] 15:58:06:405 gamecard/(6527:6902): Cierro el archivo del pokemon: Squirtle. Posicion: (5, 2).
+[INFO] 15:58:06:405 gamecard/(6527:6902): Inicia proceso envio Caught
+[INFO] 15:58:55:827 gamecard/(6527:6535): Recibi mensaje new pokemon. El pokemon es: Onix. La posicion es: (2,8). La cantidad es: 10.
+[INFO] 15:58:55:836 gamecard/(6527:6985): Inicia proceso de atencion al New
+[INFO] 15:58:55:839 gamecard/(6527:6535): Recibi mensaje new pokemon. El pokemon es: Gengar. La posicion es: (6,6). La cantidad es: 10.
+[INFO] 15:58:55:846 gamecard/(6527:6988): Inicia proceso de atencion al New
+[INFO] 15:58:55:846 gamecard/(6527:6535): Recibi mensaje new pokemon. El pokemon es: Squirtle. La posicion es: (5,5). La cantidad es: 10.
+[INFO] 15:58:55:848 gamecard/(6527:6994): Inicia proceso de atencion al New
+[INFO] 15:58:55:852 gamecard/(6527:6535): Recibi mensaje new pokemon. El pokemon es: Umbreon. La posicion es: (10,6). La cantidad es: 10.
+[INFO] 15:58:55:853 gamecard/(6527:6999): Inicia proceso de atencion al New
+[INFO] 15:58:55:863 gamecard/(6527:6535): Recibi mensaje new pokemon. El pokemon es: Espeon. La posicion es: (7,1). La cantidad es: 10.
+[INFO] 15:58:55:866 gamecard/(6527:7005): Inicia proceso de atencion al New
+[INFO] 15:58:55:872 gamecard/(6527:6535): Recibi mensaje new pokemon. El pokemon es: Vaporeon. La posicion es: (4,10). La cantidad es: 10.
+[INFO] 15:58:55:879 gamecard/(6527:7009): Inicia proceso de atencion al New
+[INFO] 15:58:56:850 gamecard/(6527:6988): Cierro el archivo del pokemon: Gengar. Posicion: (6, 6).
+[INFO] 15:58:56:850 gamecard/(6527:6988): Inicia proceso envio Appeared
+[INFO] 15:58:56:851 gamecard/(6527:6994): Cierro el archivo del pokemon: Squirtle. Posicion: (5, 5).
+[INFO] 15:58:56:851 gamecard/(6527:6994): Inicia proceso envio Appeared
+[INFO] 15:58:56:852 gamecard/(6527:6985): Cierro el archivo del pokemon: Onix. Posicion: (2, 8).
+[INFO] 15:58:56:852 gamecard/(6527:6985): Inicia proceso envio Appeared
+[INFO] 15:58:56:863 gamecard/(6527:6999): Cierro el archivo del pokemon: Umbreon. Posicion: (10, 6).
+[INFO] 15:58:56:863 gamecard/(6527:6999): Inicia proceso envio Appeared
+[INFO] 15:58:56:871 gamecard/(6527:7005): Cierro el archivo del pokemon: Espeon. Posicion: (7, 1).
+[INFO] 15:58:56:871 gamecard/(6527:7005): Inicia proceso envio Appeared
+[INFO] 15:58:56:888 gamecard/(6527:7009): Cierro el archivo del pokemon: Vaporeon. Posicion: (4, 10).
+[INFO] 15:58:56:888 gamecard/(6527:7009): Inicia proceso envio Appeared
+[INFO] 15:59:31:876 gamecard/(6527:6536): Recibi mensaje catch pokemon. El pokemon es: Onix. La posicion es: (2,8).
+[INFO] 15:59:31:883 gamecard/(6527:7076): Inicia proceso de atencion al Catch
+[INFO] 15:59:32:885 gamecard/(6527:7076): Cierro el archivo del pokemon: Onix. Posicion: (2, 8).
+[INFO] 15:59:32:885 gamecard/(6527:7076): Inicia proceso envio Caught
+[INFO] 15:59:51:891 gamecard/(6527:6536): Recibi mensaje catch pokemon. El pokemon es: Espeon. La posicion es: (7,1).
+[INFO] 15:59:51:901 gamecard/(6527:7104): Inicia proceso de atencion al Catch
+[INFO] 15:59:52:903 gamecard/(6527:7104): Cierro el archivo del pokemon: Espeon. Posicion: (7, 1).
+[INFO] 15:59:52:903 gamecard/(6527:7104): Inicia proceso envio Caught
+[INFO] 15:59:56:893 gamecard/(6527:6536): Recibi mensaje catch pokemon. El pokemon es: Vaporeon. La posicion es: (4,10).
+[INFO] 15:59:56:900 gamecard/(6527:7117): Inicia proceso de atencion al Catch
+[INFO] 15:59:57:904 gamecard/(6527:7117): Cierro el archivo del pokemon: Vaporeon. Posicion: (4, 10).
+[INFO] 15:59:57:904 gamecard/(6527:7117): Inicia proceso envio Caught
+[INFO] 16:00:01:883 gamecard/(6527:6536): Recibi mensaje catch pokemon. El pokemon es: Gengar. La posicion es: (6,6).
+[INFO] 16:00:01:890 gamecard/(6527:7130): Inicia proceso de atencion al Catch
+[INFO] 16:00:01:896 gamecard/(6527:6536): Recibi mensaje catch pokemon. El pokemon es: Umbreon. La posicion es: (10,6).
+[INFO] 16:00:01:903 gamecard/(6527:7131): Inicia proceso de atencion al Catch
+[INFO] 16:00:02:895 gamecard/(6527:7130): Cierro el archivo del pokemon: Gengar. Posicion: (6, 6).
+[INFO] 16:00:02:895 gamecard/(6527:7130): Inicia proceso envio Caught
+[INFO] 16:00:02:912 gamecard/(6527:7131): Cierro el archivo del pokemon: Umbreon. Posicion: (10, 6).
+[INFO] 16:00:02:912 gamecard/(6527:7131): Inicia proceso envio Caught
+[INFO] 16:00:46:898 gamecard/(6527:6536): Recibi mensaje catch pokemon. El pokemon es: Squirtle. La posicion es: (5,5).
+[INFO] 16:00:46:907 gamecard/(6527:7192): Inicia proceso de atencion al Catch
+[INFO] 16:00:47:908 gamecard/(6527:7192): Cierro el archivo del pokemon: Squirtle. Posicion: (5, 5).
+[INFO] 16:00:47:908 gamecard/(6527:7192): Inicia proceso envio Caught
+[INFO] 16:08:32:3 gamecard/(6527:6537): Conexión fallida con el Broker
+
+[INFO] 16:08:32:3 gamecard/(6527:6535): Conexión fallida con el Broker
+
+[INFO] 16:08:32:3 gamecard/(6527:6537): Reintentando conexión en 10 segundos...
+
+[INFO] 16:08:32:3 gamecard/(6527:6536): Conexión fallida con el Broker
+
+[INFO] 16:08:32:4 gamecard/(6527:6536): Reintentando conexión en 10 segundos...
+
+[INFO] 16:08:32:4 gamecard/(6527:6535): Reintentando conexión en 10 segundos...
+
+[INFO] 16:12:34:109 gamecard/(8032:8032): Inicio de programa: Gamecard.
+[INFO] 16:12:34:109 gamecard/(8032:8032): Se encontro el directorio metadata
+[INFO] 16:12:34:109 gamecard/(8032:8032): Se encontro el archivo metadata.bin
+[INFO] 16:12:34:109 gamecard/(8032:8032): Inicio de Metadata, Tamanio bloques: 64,  Cantidad de bloques: 1024,  Magic number: TALL_GRASS
+[INFO] 16:12:34:196 gamecard/(8032:8039): Estoy escuchando
+[INFO] 16:12:34:196 gamecard/(8032:8039): Espero un nuevo cliente
+[INFO] 16:12:44:941 gamecard/(8032:8040): Recibi mensaje new pokemon. El pokemon es: Pikachu. La posicion es: (9,9). La cantidad es: 10.
+[INFO] 16:12:44:942 gamecard/(8032:8062): Inicia proceso de atencion al New
+[INFO] 16:12:44:943 gamecard/(8032:8040): Recibi mensaje new pokemon. El pokemon es: Squirtle. La posicion es: (5,2). La cantidad es: 10.
+[INFO] 16:12:44:944 gamecard/(8032:8068): Inicia proceso de atencion al New
+[INFO] 16:12:44:947 gamecard/(8032:8040): Recibi mensaje new pokemon. El pokemon es: Jolteon. La posicion es: (2,2). La cantidad es: 10.
+[INFO] 16:12:44:947 gamecard/(8032:8073): Inicia proceso de atencion al New
+[INFO] 16:12:44:950 gamecard/(8032:8040): Recibi mensaje new pokemon. El pokemon es: Flareon. La posicion es: (4,6). La cantidad es: 10.
+[INFO] 16:12:44:958 gamecard/(8032:8077): Inicia proceso de atencion al New
+[INFO] 16:12:45:944 gamecard/(8032:8062): Cierro el archivo del pokemon: Pikachu. Posicion: (9, 9).
+[INFO] 16:12:45:944 gamecard/(8032:8062): Inicia proceso envio Appeared
+[INFO] 16:12:45:946 gamecard/(8032:8068): Cierro el archivo del pokemon: Squirtle. Posicion: (5, 2).
+[INFO] 16:12:45:946 gamecard/(8032:8068): Inicia proceso envio Appeared
+[INFO] 16:12:45:949 gamecard/(8032:8073): Cierro el archivo del pokemon: Jolteon. Posicion: (2, 2).
+[INFO] 16:12:45:949 gamecard/(8032:8073): Inicia proceso envio Appeared
+[INFO] 16:12:45:960 gamecard/(8032:8077): Cierro el archivo del pokemon: Flareon. Posicion: (4, 6).
+[INFO] 16:12:45:960 gamecard/(8032:8077): Inicia proceso envio Appeared
+[INFO] 16:13:37:210 gamecard/(8187:8187): Inicio de programa: Gamecard.
+[INFO] 16:13:37:210 gamecard/(8187:8187): Se encontro el directorio metadata
+[INFO] 16:13:37:210 gamecard/(8187:8187): Se encontro el archivo metadata.bin
+[INFO] 16:13:37:210 gamecard/(8187:8187): Inicio de Metadata, Tamanio bloques: 64,  Cantidad de bloques: 1024,  Magic number: TALL_GRASS
+[INFO] 16:13:37:283 gamecard/(8187:8198): Estoy escuchando
+[INFO] 16:13:37:283 gamecard/(8187:8198): Espero un nuevo cliente
+[INFO] 16:13:40:382 gamecard/(8187:8199): Recibi mensaje new pokemon. El pokemon es: Pikachu. La posicion es: (9,9). La cantidad es: 10.
+[INFO] 16:13:40:384 gamecard/(8187:8215): Inicia proceso de atencion al New
+[INFO] 16:13:40:387 gamecard/(8187:8199): Recibi mensaje new pokemon. El pokemon es: Squirtle. La posicion es: (5,2). La cantidad es: 10.
+[INFO] 16:13:40:387 gamecard/(8187:8220): Inicia proceso de atencion al New
+[INFO] 16:13:40:388 gamecard/(8187:8199): Recibi mensaje new pokemon. El pokemon es: Jolteon. La posicion es: (2,2). La cantidad es: 10.
+[INFO] 16:13:40:389 gamecard/(8187:8226): Inicia proceso de atencion al New
+[INFO] 16:13:40:390 gamecard/(8187:8199): Recibi mensaje new pokemon. El pokemon es: Flareon. La posicion es: (4,6). La cantidad es: 10.
+[INFO] 16:13:40:390 gamecard/(8187:8230): Inicia proceso de atencion al New
+[INFO] 16:13:45:387 gamecard/(8187:8215): Cierro el archivo del pokemon: Pikachu. Posicion: (9, 9).
+[INFO] 16:13:45:387 gamecard/(8187:8215): Inicia proceso envio Appeared
+[INFO] 16:13:45:390 gamecard/(8187:8220): Cierro el archivo del pokemon: Squirtle. Posicion: (5, 2).
+[INFO] 16:13:45:390 gamecard/(8187:8220): Inicia proceso envio Appeared
+[INFO] 16:13:45:391 gamecard/(8187:8230): Cierro el archivo del pokemon: Flareon. Posicion: (4, 6).
+[INFO] 16:13:45:391 gamecard/(8187:8230): Inicia proceso envio Appeared
+[INFO] 16:13:45:400 gamecard/(8187:8226): Cierro el archivo del pokemon: Jolteon. Posicion: (2, 2).
+[INFO] 16:13:45:400 gamecard/(8187:8226): Inicia proceso envio Appeared
+[INFO] 16:14:33:653 gamecard/(8187:8201): Recibi mensaje get pokemon. El pokemon es: Espeon.
+[INFO] 16:14:33:660 gamecard/(8187:8201): Recibi mensaje get pokemon. El pokemon es: Flareon.
+[INFO] 16:14:33:662 gamecard/(8187:8323): Inicia proceso de atencion al Get
+[INFO] 16:14:33:662 gamecard/(8187:8323): Inicia proceso envio Localized
+[INFO] 16:14:33:663 gamecard/(8187:8201): Recibi mensaje get pokemon. El pokemon es: Vaporeon.
+[INFO] 16:14:33:666 gamecard/(8187:8201): Recibi mensaje get pokemon. El pokemon es: Jolteon.
+[INFO] 16:14:33:666 gamecard/(8187:8201): Recibi mensaje get pokemon. El pokemon es: Umbreon.
+[INFO] 16:14:33:671 gamecard/(8187:8332): Inicia proceso de atencion al Get
+[INFO] 16:14:33:671 gamecard/(8187:8336): Inicia proceso de atencion al Get
+[INFO] 16:14:33:671 gamecard/(8187:8334): Inicia proceso de atencion al Get
+[INFO] 16:14:33:672 gamecard/(8187:8336): Inicia proceso envio Localized
+[INFO] 16:14:33:672 gamecard/(8187:8332): Inicia proceso envio Localized
+[INFO] 16:14:33:673 gamecard/(8187:8329): Inicia proceso de atencion al Get
+[INFO] 16:14:38:672 gamecard/(8187:8334): Inicia proceso envio Localized
+[INFO] 16:14:38:676 gamecard/(8187:8329): Inicia proceso envio Localized
+[INFO] 16:14:43:664 gamecard/(8187:8200): Recibi mensaje catch pokemon. El pokemon es: Jolteon. La posicion es: (2,2).
+[INFO] 16:14:43:674 gamecard/(8187:8363): Inicia proceso de atencion al Catch
+[INFO] 16:14:48:679 gamecard/(8187:8363): Cierro el archivo del pokemon: Jolteon. Posicion: (2, 2).
+[INFO] 16:14:48:679 gamecard/(8187:8363): Inicia proceso envio Caught
+[INFO] 16:14:54:939 gamecard/(8187:8201): Recibi mensaje get pokemon. El pokemon es: Squirtle.
+[INFO] 16:14:54:939 gamecard/(8187:8404): Inicia proceso de atencion al Get
+[INFO] 16:14:54:940 gamecard/(8187:8201): Recibi mensaje get pokemon. El pokemon es: Pikachu.
+[INFO] 16:14:54:940 gamecard/(8187:8201): Recibi mensaje get pokemon. El pokemon es: Onix.
+[INFO] 16:14:54:940 gamecard/(8187:8201): Recibi mensaje get pokemon. El pokemon es: Gengar.
+[INFO] 16:14:54:941 gamecard/(8187:8409): Inicia proceso de atencion al Get
+[INFO] 16:14:54:941 gamecard/(8187:8411): Inicia proceso de atencion al Get
+[INFO] 16:14:54:942 gamecard/(8187:8409): Inicia proceso envio Localized
+[INFO] 16:14:54:942 gamecard/(8187:8407): Inicia proceso de atencion al Get
+[INFO] 16:14:54:942 gamecard/(8187:8411): Inicia proceso envio Localized
+[INFO] 16:14:59:944 gamecard/(8187:8404): Inicia proceso envio Localized
+[INFO] 16:14:59:944 gamecard/(8187:8407): Inicia proceso envio Localized
+[INFO] 16:15:03:673 gamecard/(8187:8200): Recibi mensaje catch pokemon. El pokemon es: Flareon. La posicion es: (4,6).
+[INFO] 16:15:03:677 gamecard/(8187:8446): Inicia proceso de atencion al Catch
+[INFO] 16:15:08:679 gamecard/(8187:8446): Cierro el archivo del pokemon: Flareon. Posicion: (4, 6).
+[INFO] 16:15:08:679 gamecard/(8187:8446): Inicia proceso envio Caught
+[INFO] 16:16:09:973 gamecard/(8187:8200): Recibi mensaje catch pokemon. El pokemon es: Pikachu. La posicion es: (9,9).
+[INFO] 16:16:09:978 gamecard/(8187:8558): Inicia proceso de atencion al Catch
+[INFO] 16:16:14:990 gamecard/(8187:8558): Cierro el archivo del pokemon: Pikachu. Posicion: (9, 9).
+[INFO] 16:16:14:990 gamecard/(8187:8558): Inicia proceso envio Caught
+[INFO] 16:16:29:979 gamecard/(8187:8200): Recibi mensaje catch pokemon. El pokemon es: Squirtle. La posicion es: (5,2).
+[INFO] 16:16:29:985 gamecard/(8187:8592): Inicia proceso de atencion al Catch
+[INFO] 16:16:35:61 gamecard/(8187:8592): Cierro el archivo del pokemon: Squirtle. Posicion: (5, 2).
+[INFO] 16:16:35:61 gamecard/(8187:8592): Inicia proceso envio Caught
+[INFO] 16:17:35:614 gamecard/(8187:8199): Recibi mensaje new pokemon. El pokemon es: Onix. La posicion es: (2,8). La cantidad es: 10.
+[INFO] 16:17:35:623 gamecard/(8187:8199): Recibi mensaje new pokemon. El pokemon es: Gengar. La posicion es: (6,6). La cantidad es: 10.
+[INFO] 16:17:35:626 gamecard/(8187:8688): Inicia proceso de atencion al New
+[INFO] 16:17:35:633 gamecard/(8187:8199): Recibi mensaje new pokemon. El pokemon es: Squirtle. La posicion es: (5,5). La cantidad es: 10.
+[INFO] 16:17:35:637 gamecard/(8187:8682): Inicia proceso de atencion al New
+[INFO] 16:17:35:638 gamecard/(8187:8692): Inicia proceso de atencion al New
+[INFO] 16:17:35:642 gamecard/(8187:8199): Recibi mensaje new pokemon. El pokemon es: Umbreon. La posicion es: (10,6). La cantidad es: 10.
+[INFO] 16:17:35:646 gamecard/(8187:8697): Inicia proceso de atencion al New
+[INFO] 16:17:35:650 gamecard/(8187:8199): Recibi mensaje new pokemon. El pokemon es: Espeon. La posicion es: (7,1). La cantidad es: 10.
+[INFO] 16:17:35:658 gamecard/(8187:8702): Inicia proceso de atencion al New
+[INFO] 16:17:35:663 gamecard/(8187:8199): Recibi mensaje new pokemon. El pokemon es: Vaporeon. La posicion es: (4,10). La cantidad es: 10.
+[INFO] 16:17:35:663 gamecard/(8187:8707): Inicia proceso de atencion al New
+[INFO] 16:17:40:632 gamecard/(8187:8688): Cierro el archivo del pokemon: Gengar. Posicion: (6, 6).
+[INFO] 16:17:40:632 gamecard/(8187:8688): Inicia proceso envio Appeared
+[INFO] 16:17:40:639 gamecard/(8187:8682): Cierro el archivo del pokemon: Onix. Posicion: (2, 8).
+[INFO] 16:17:40:639 gamecard/(8187:8682): Inicia proceso envio Appeared
+[INFO] 16:17:40:639 gamecard/(8187:8692): Cierro el archivo del pokemon: Squirtle. Posicion: (5, 5).
+[INFO] 16:17:40:639 gamecard/(8187:8692): Inicia proceso envio Appeared
+[INFO] 16:17:40:655 gamecard/(8187:8697): Cierro el archivo del pokemon: Umbreon. Posicion: (10, 6).
+[INFO] 16:17:40:655 gamecard/(8187:8697): Inicia proceso envio Appeared
+[INFO] 16:17:40:667 gamecard/(8187:8702): Cierro el archivo del pokemon: Espeon. Posicion: (7, 1).
+[INFO] 16:17:40:667 gamecard/(8187:8702): Inicia proceso envio Appeared
+[INFO] 16:17:40:667 gamecard/(8187:8707): Cierro el archivo del pokemon: Vaporeon. Posicion: (4, 10).
+[INFO] 16:17:40:667 gamecard/(8187:8707): Inicia proceso envio Appeared
+[INFO] 16:18:05:672 gamecard/(8187:8200): Recibi mensaje catch pokemon. El pokemon es: Umbreon. La posicion es: (10,6).
+[INFO] 16:18:05:682 gamecard/(8187:8776): Inicia proceso de atencion al Catch
+[INFO] 16:18:10:652 gamecard/(8187:8200): Recibi mensaje catch pokemon. El pokemon es: Gengar. La posicion es: (6,6).
+[INFO] 16:18:10:661 gamecard/(8187:8782): Inicia proceso de atencion al Catch
+[INFO] 16:18:10:684 gamecard/(8187:8776): Cierro el archivo del pokemon: Umbreon. Posicion: (10, 6).
+[INFO] 16:18:10:684 gamecard/(8187:8776): Inicia proceso envio Caught
+[INFO] 16:18:15:663 gamecard/(8187:8782): Cierro el archivo del pokemon: Gengar. Posicion: (6, 6).
+[INFO] 16:18:15:663 gamecard/(8187:8782): Inicia proceso envio Caught
+[INFO] 16:18:25:679 gamecard/(8187:8200): Recibi mensaje catch pokemon. El pokemon es: Vaporeon. La posicion es: (4,10).
+[INFO] 16:18:25:687 gamecard/(8187:8818): Inicia proceso de atencion al Catch
+[INFO] 16:18:30:689 gamecard/(8187:8818): Cierro el archivo del pokemon: Vaporeon. Posicion: (4, 10).
+[INFO] 16:18:30:689 gamecard/(8187:8818): Inicia proceso envio Caught
+[INFO] 16:18:45:662 gamecard/(8187:8200): Recibi mensaje catch pokemon. El pokemon es: Onix. La posicion es: (2,8).
+[INFO] 16:18:45:674 gamecard/(8187:8850): Inicia proceso de atencion al Catch
+[INFO] 16:18:45:686 gamecard/(8187:8200): Recibi mensaje catch pokemon. El pokemon es: Espeon. La posicion es: (7,1).
+[INFO] 16:18:45:699 gamecard/(8187:8852): Inicia proceso de atencion al Catch
+[INFO] 16:18:50:676 gamecard/(8187:8850): Cierro el archivo del pokemon: Onix. Posicion: (2, 8).
+[INFO] 16:18:50:676 gamecard/(8187:8850): Inicia proceso envio Caught
+[INFO] 16:18:50:706 gamecard/(8187:8852): Cierro el archivo del pokemon: Espeon. Posicion: (7, 1).
+[INFO] 16:18:50:706 gamecard/(8187:8852): Inicia proceso envio Caught
+[INFO] 16:19:30:674 gamecard/(8187:8200): Recibi mensaje catch pokemon. El pokemon es: Squirtle. La posicion es: (5,5).
+[INFO] 16:19:30:686 gamecard/(8187:8912): Inicia proceso de atencion al Catch
+[INFO] 16:19:35:724 gamecard/(8187:8912): Cierro el archivo del pokemon: Squirtle. Posicion: (5, 5).
+[INFO] 16:19:35:724 gamecard/(8187:8912): Inicia proceso envio Caught

@@ -51907,3 +51907,791 @@ HolacomoAndas
 
 [INFO] 13:11:32:768 gamecard/(23435:23444): El reintento de conexión no fue exitoso
 
+[INFO] 15:28:29:500 gamecard/(4081:4091): Voy a llenar el paquete
+[INFO] 15:28:29:501 gamecard/(4081:4090): Voy a llenar el paquete
+[INFO] 15:28:29:501 gamecard/(4081:4089): Voy a llenar el paquete
+[INFO] 15:28:29:517 gamecard/(4081:4091): cliente: 7
+[INFO] 15:28:29:517 gamecard/(4081:4089): cliente: 8
+[INFO] 15:28:29:517 gamecard/(4081:4090): cliente: 9
+[INFO] 15:35:26:597 gamecard/(4821:4831): Voy a llenar el paquete
+[INFO] 15:35:26:597 gamecard/(4821:4831): cliente: 7
+[INFO] 15:35:26:597 gamecard/(4821:4830): Voy a llenar el paquete
+[INFO] 15:35:26:597 gamecard/(4821:4830): cliente: 8
+[INFO] 15:35:26:598 gamecard/(4821:4829): Voy a llenar el paquete
+[INFO] 15:35:26:598 gamecard/(4821:4829): cliente: 9
+[INFO] 15:36:54:264 gamecard/(4821:4829): Conexión fallida con el Broker
+
+[INFO] 15:36:54:264 gamecard/(4821:4830): Conexión fallida con el Broker
+
+[INFO] 15:36:54:264 gamecard/(4821:4831): Conexión fallida con el Broker
+
+[INFO] 15:37:13:924 gamecard/(5024:5032): Voy a llenar el paquete
+[INFO] 15:37:13:927 gamecard/(5024:5032): cliente: 6
+[INFO] 15:37:13:936 gamecard/(5024:5034): Voy a llenar el paquete
+[INFO] 15:37:13:936 gamecard/(5024:5034): cliente: 8
+[INFO] 15:37:13:936 gamecard/(5024:5033): Voy a llenar el paquete
+[INFO] 15:37:13:936 gamecard/(5024:5033): cliente: 9
+[INFO] 15:38:02:47 gamecard/(5024:5123): deserializado
+[INFO] 15:38:02:47 gamecard/(5024:5123): Pokemon:Pikachu, posicion:2-3
+[INFO] 15:38:02:47 gamecard/(5024:5123): LecturaArchivo: .
+[INFO] 15:38:02:47 gamecard/(5024:5123): char*posiciones: 
+[INFO] 15:38:02:47 gamecard/(5024:5123): Size lista antes de comprobar:0
+[INFO] 15:38:02:47 gamecard/(5024:5123): NULLACIO
+[INFO] 15:38:02:47 gamecard/(5024:5123): Size lista despues de comprobar:0
+[INFO] 15:38:02:48 gamecard/(5024:5127): deserializado
+[INFO] 15:38:02:48 gamecard/(5024:5127): Pokemon:Squirtle, posicion:5-2
+[INFO] 15:38:02:48 gamecard/(5024:5127): LecturaArchivo: .
+[INFO] 15:38:02:48 gamecard/(5024:5127): char*posiciones: 
+[INFO] 15:38:02:48 gamecard/(5024:5127): Size lista antes de comprobar:0
+[INFO] 15:38:02:48 gamecard/(5024:5127): NULLACIO
+[INFO] 15:38:02:48 gamecard/(5024:5127): Size lista despues de comprobar:0
+[INFO] 15:38:02:50 gamecard/(5024:5132): deserializado
+[INFO] 15:38:02:50 gamecard/(5024:5132): Pokemon:Onyx, posicion:4-5
+[INFO] 15:38:02:50 gamecard/(5024:5132): LecturaArchivo: .
+[INFO] 15:38:02:50 gamecard/(5024:5132): char*posiciones: 
+[INFO] 15:38:02:50 gamecard/(5024:5132): Size lista antes de comprobar:0
+[INFO] 15:38:02:50 gamecard/(5024:5132): NULLACIO
+[INFO] 15:38:02:50 gamecard/(5024:5132): Size lista despues de comprobar:0
+[INFO] 15:38:06:55 gamecard/(5024:5152): deserializado
+[INFO] 15:38:06:55 gamecard/(5024:5152): Pokemon:Charmander, posicion:4-5
+[INFO] 15:38:06:120 gamecard/(5024:5152): LecturaArchivo: .
+[INFO] 15:38:06:120 gamecard/(5024:5152): char*posiciones: 
+[INFO] 15:38:06:120 gamecard/(5024:5152): Size lista antes de comprobar:0
+[INFO] 15:38:06:120 gamecard/(5024:5152): NULLACIO
+[INFO] 15:38:06:120 gamecard/(5024:5152): Size lista despues de comprobar:0
+[INFO] 15:47:06:957 gamecard/(5024:5033): Conexión fallida con el Broker
+
+[INFO] 15:47:06:957 gamecard/(5024:5032): Conexión fallida con el Broker
+
+[INFO] 15:47:06:957 gamecard/(5024:5034): Conexión fallida con el Broker
+
+[INFO] 15:47:25:416 gamecard/(5977:5985): Voy a llenar el paquete
+[INFO] 15:47:25:416 gamecard/(5977:5985): cliente: 6
+[INFO] 15:47:25:422 gamecard/(5977:5986): Voy a llenar el paquete
+[INFO] 15:47:25:422 gamecard/(5977:5986): cliente: 7
+[INFO] 15:47:25:425 gamecard/(5977:5988): Voy a llenar el paquete
+[INFO] 15:47:25:427 gamecard/(5977:5988): cliente: 9
+[INFO] 15:54:59:248 gamecard/(6527:6536): Voy a llenar el paquete
+[INFO] 15:54:59:248 gamecard/(6527:6536): cliente: 7
+[INFO] 15:54:59:248 gamecard/(6527:6537): Voy a llenar el paquete
+[INFO] 15:54:59:248 gamecard/(6527:6535): Voy a llenar el paquete
+[INFO] 15:54:59:248 gamecard/(6527:6537): cliente: 8
+[INFO] 15:54:59:249 gamecard/(6527:6535): cliente: 9
+[INFO] 15:55:04:967 gamecard/(6527:6558): LecturaArchivo: .
+[INFO] 15:55:04:967 gamecard/(6527:6558): char*posiciones: 
+[INFO] 15:55:04:967 gamecard/(6527:6558): Agrego un bloque.
+[INFO] 15:55:04:967 gamecard/(6527:6558): LISTA BLOQUES: [1].
+[INFO] 15:55:04:967 gamecard/(6527:6558): LISTA BLOQUES AGREGADA: [1].
+[INFO] 15:55:04:971 gamecard/(6527:6565): LecturaArchivo: .
+[INFO] 15:55:04:972 gamecard/(6527:6567): LecturaArchivo: .
+[INFO] 15:55:04:972 gamecard/(6527:6569): LecturaArchivo: .
+[INFO] 15:55:04:972 gamecard/(6527:6565): char*posiciones: 
+[INFO] 15:55:04:972 gamecard/(6527:6565): Agrego un bloque.
+[INFO] 15:55:04:972 gamecard/(6527:6565): LISTA BLOQUES: [2].
+[INFO] 15:55:04:972 gamecard/(6527:6565): LISTA BLOQUES AGREGADA: [2].
+[INFO] 15:55:04:972 gamecard/(6527:6569): char*posiciones: 
+[INFO] 15:55:04:973 gamecard/(6527:6569): Agrego un bloque.
+[INFO] 15:55:04:973 gamecard/(6527:6569): LISTA BLOQUES: [3].
+[INFO] 15:55:04:973 gamecard/(6527:6569): LISTA BLOQUES AGREGADA: [3].
+[INFO] 15:55:04:973 gamecard/(6527:6567): char*posiciones: 
+[INFO] 15:55:04:973 gamecard/(6527:6567): Agrego un bloque.
+[INFO] 15:55:04:978 gamecard/(6527:6567): LISTA BLOQUES: [4].
+[INFO] 15:55:04:979 gamecard/(6527:6567): LISTA BLOQUES AGREGADA: [4].
+[INFO] 15:55:05:973 gamecard/(6527:6558): Cierro el archivo del pokemon: Pikachu. Posicion: (9, 9).
+[INFO] 15:55:05:973 gamecard/(6527:6565): Cierro el archivo del pokemon: Squirtle. Posicion: (5, 2).
+[INFO] 15:55:05:973 gamecard/(6527:6569): Cierro el archivo del pokemon: Flareon. Posicion: (4, 6).
+[INFO] 15:55:05:980 gamecard/(6527:6567): Cierro el archivo del pokemon: Jolteon. Posicion: (2, 2).
+[INFO] 15:56:15:737 gamecard/(6527:6681): deserializado
+[INFO] 15:56:15:737 gamecard/(6527:6681): Atiendo Get del pokemon: Jolteon
+[INFO] 15:56:15:737 gamecard/(6527:6681): EXISTE
+[INFO] 15:56:15:737 gamecard/(6527:6681): Posicion en la lectura del bloque 4: 64
+[INFO] 15:56:15:738 gamecard/(6527:6681): LECTURA BLOQUE: 2-2=10
+.
+[INFO] 15:56:15:738 gamecard/(6527:6681): LecturaArchivo: 2-2=10
+.
+[INFO] 15:56:15:738 gamecard/(6527:6681): char*posiciones: 2-2=10
+
+[INFO] 15:56:15:738 gamecard/(6527:6681): BUFFER FUNCION LISTA STRING: 2-2=10
+[INFO] 15:56:15:738 gamecard/(6527:6681): I DE LA FUNCION DE LISTAS: 0
+[INFO] 15:56:15:738 gamecard/(6527:6681): CANTIDAD POSICIONES 1
+[INFO] 15:56:15:738 gamecard/(6527:6681): Entro a conseguirPosicionesCantidad
+[INFO] 15:56:15:738 gamecard/(6527:6681): Localized. Pos x: 2. Pos y: 2.
+[INFO] 15:56:15:738 gamecard/(6527:6670): deserializado
+[INFO] 15:56:15:738 gamecard/(6527:6672): deserializado
+[INFO] 15:56:15:738 gamecard/(6527:6674): deserializado
+[INFO] 15:56:15:738 gamecard/(6527:6676): deserializado
+[INFO] 15:56:15:742 gamecard/(6527:6670): Atiendo Get del pokemon: Espeon
+[INFO] 15:56:15:742 gamecard/(6527:6670): NO EXISTE
+[INFO] 15:56:15:743 gamecard/(6527:6670): Pokemon:Espeon
+[INFO] 15:56:15:743 gamecard/(6527:6670): Cantidad de Posiciones:0
+[INFO] 15:56:15:743 gamecard/(6527:6672): Atiendo Get del pokemon: Flareon
+[INFO] 15:56:15:743 gamecard/(6527:6672): EXISTE
+[INFO] 15:56:15:743 gamecard/(6527:6672): Posicion en la lectura del bloque 3: 64
+[INFO] 15:56:15:744 gamecard/(6527:6670): Recibi mensaje localized. El pokemon es: Espeon. La cantidad es: 0.
+[INFO] 15:56:15:744 gamecard/(6527:6672): LECTURA BLOQUE: 4-6=10
+.
+[INFO] 15:56:15:744 gamecard/(6527:6672): LecturaArchivo: 4-6=10
+.
+[INFO] 15:56:15:744 gamecard/(6527:6672): char*posiciones: 4-6=10
+
+[INFO] 15:56:15:744 gamecard/(6527:6672): BUFFER FUNCION LISTA STRING: 4-6=10
+[INFO] 15:56:15:744 gamecard/(6527:6672): I DE LA FUNCION DE LISTAS: 0
+[INFO] 15:56:15:744 gamecard/(6527:6672): CANTIDAD POSICIONES 1
+[INFO] 15:56:15:744 gamecard/(6527:6672): Entro a conseguirPosicionesCantidad
+[INFO] 15:56:15:744 gamecard/(6527:6672): Localized. Pos x: 4. Pos y: 6.
+[INFO] 15:56:15:745 gamecard/(6527:6670): Las posiciones son: 
+[INFO] 15:56:15:745 gamecard/(6527:6676): Atiendo Get del pokemon: Umbreon
+[INFO] 15:56:15:745 gamecard/(6527:6676): NO EXISTE
+[INFO] 15:56:15:745 gamecard/(6527:6676): Pokemon:Umbreon
+[INFO] 15:56:15:745 gamecard/(6527:6676): Cantidad de Posiciones:0
+[INFO] 15:56:15:745 gamecard/(6527:6674): Atiendo Get del pokemon: Vaporeon
+[INFO] 15:56:15:745 gamecard/(6527:6674): NO EXISTE
+[INFO] 15:56:15:745 gamecard/(6527:6674): Pokemon:Vaporeon
+[INFO] 15:56:15:745 gamecard/(6527:6674): Cantidad de Posiciones:0
+[INFO] 15:56:15:745 gamecard/(6527:6676): Recibi mensaje localized. El pokemon es: Umbreon. La cantidad es: 0.
+[INFO] 15:56:15:745 gamecard/(6527:6674): Recibi mensaje localized. El pokemon es: Vaporeon. La cantidad es: 0.
+[INFO] 15:56:15:745 gamecard/(6527:6676): Las posiciones son: 
+[INFO] 15:56:15:745 gamecard/(6527:6674): Las posiciones son: 
+[INFO] 15:56:16:738 gamecard/(6527:6681): Pokemon:Jolteon
+[INFO] 15:56:16:738 gamecard/(6527:6681): Cantidad de Posiciones:1
+[INFO] 15:56:16:738 gamecard/(6527:6681): Posicion: 2-2
+[INFO] 15:56:16:738 gamecard/(6527:6681): Recibi mensaje localized. El pokemon es: Jolteon. La cantidad es: 1.
+[INFO] 15:56:16:738 gamecard/(6527:6681): Las posiciones son: 
+[INFO] 15:56:16:738 gamecard/(6527:6681): (2,2)
+[INFO] 15:56:16:745 gamecard/(6527:6672): Pokemon:Flareon
+[INFO] 15:56:16:745 gamecard/(6527:6672): Cantidad de Posiciones:1
+[INFO] 15:56:16:745 gamecard/(6527:6672): Posicion: 4-6
+[INFO] 15:56:16:745 gamecard/(6527:6672): Recibi mensaje localized. El pokemon es: Flareon. La cantidad es: 1.
+[INFO] 15:56:16:745 gamecard/(6527:6672): Las posiciones son: 
+[INFO] 15:56:16:745 gamecard/(6527:6672): (4,6)
+[INFO] 15:56:30:738 gamecard/(6527:6712): deserializado
+[INFO] 15:56:30:738 gamecard/(6527:6712): Pokemon:Jolteon, posicion:2-2
+[INFO] 15:56:30:738 gamecard/(6527:6712): Posicion en la lectura del bloque 4: 64
+[INFO] 15:56:30:738 gamecard/(6527:6712): LECTURA BLOQUE: 2-2=10
+.
+[INFO] 15:56:30:738 gamecard/(6527:6712): LecturaArchivo: 2-2=10
+.
+[INFO] 15:56:30:738 gamecard/(6527:6712): char*posiciones: 2-2=10
+
+[INFO] 15:56:30:738 gamecard/(6527:6712): BUFFER FUNCION LISTA STRING: 2-2=10
+[INFO] 15:56:30:738 gamecard/(6527:6712): I DE LA FUNCION DE LISTAS: 0
+[INFO] 15:56:30:738 gamecard/(6527:6712): Size lista antes de comprobar:1
+[INFO] 15:56:30:738 gamecard/(6527:6712): Reemplazo
+[INFO] 15:56:30:746 gamecard/(6527:6712): Size lista despues de comprobar:1
+[INFO] 15:56:34:329 gamecard/(6527:6749): deserializado
+[INFO] 15:56:34:329 gamecard/(6527:6749): Atiendo Get del pokemon: Squirtle
+[INFO] 15:56:34:329 gamecard/(6527:6749): EXISTE
+[INFO] 15:56:34:329 gamecard/(6527:6749): Posicion en la lectura del bloque 2: 64
+[INFO] 15:56:34:329 gamecard/(6527:6749): LECTURA BLOQUE: 5-2=10
+.
+[INFO] 15:56:34:329 gamecard/(6527:6749): LecturaArchivo: 5-2=10
+.
+[INFO] 15:56:34:329 gamecard/(6527:6749): char*posiciones: 5-2=10
+
+[INFO] 15:56:34:330 gamecard/(6527:6749): BUFFER FUNCION LISTA STRING: 5-2=10
+[INFO] 15:56:34:330 gamecard/(6527:6749): I DE LA FUNCION DE LISTAS: 0
+[INFO] 15:56:34:330 gamecard/(6527:6749): CANTIDAD POSICIONES 1
+[INFO] 15:56:34:330 gamecard/(6527:6749): Entro a conseguirPosicionesCantidad
+[INFO] 15:56:34:330 gamecard/(6527:6749): Localized. Pos x: 5. Pos y: 2.
+[INFO] 15:56:34:330 gamecard/(6527:6751): deserializado
+[INFO] 15:56:34:330 gamecard/(6527:6751): Atiendo Get del pokemon: Pikachu
+[INFO] 15:56:34:330 gamecard/(6527:6751): EXISTE
+[INFO] 15:56:34:330 gamecard/(6527:6751): Posicion en la lectura del bloque 1: 64
+[INFO] 15:56:34:331 gamecard/(6527:6751): LECTURA BLOQUE: 9-9=10
+.
+[INFO] 15:56:34:331 gamecard/(6527:6751): LecturaArchivo: 9-9=10
+.
+[INFO] 15:56:34:331 gamecard/(6527:6751): char*posiciones: 9-9=10
+
+[INFO] 15:56:34:331 gamecard/(6527:6751): BUFFER FUNCION LISTA STRING: 9-9=10
+[INFO] 15:56:34:331 gamecard/(6527:6751): I DE LA FUNCION DE LISTAS: 0
+[INFO] 15:56:34:331 gamecard/(6527:6751): CANTIDAD POSICIONES 1
+[INFO] 15:56:34:331 gamecard/(6527:6751): Entro a conseguirPosicionesCantidad
+[INFO] 15:56:34:331 gamecard/(6527:6751): Localized. Pos x: 9. Pos y: 9.
+[INFO] 15:56:34:331 gamecard/(6527:6753): deserializado
+[INFO] 15:56:34:331 gamecard/(6527:6753): Atiendo Get del pokemon: Gengar
+[INFO] 15:56:34:331 gamecard/(6527:6753): NO EXISTE
+[INFO] 15:56:34:331 gamecard/(6527:6753): Pokemon:Gengar
+[INFO] 15:56:34:331 gamecard/(6527:6753): Cantidad de Posiciones:0
+[INFO] 15:56:34:332 gamecard/(6527:6753): Recibi mensaje localized. El pokemon es: Gengar. La cantidad es: 0.
+[INFO] 15:56:34:332 gamecard/(6527:6753): Las posiciones son: 
+[INFO] 15:56:34:340 gamecard/(6527:6755): deserializado
+[INFO] 15:56:34:340 gamecard/(6527:6755): Atiendo Get del pokemon: Onix
+[INFO] 15:56:34:340 gamecard/(6527:6755): NO EXISTE
+[INFO] 15:56:34:342 gamecard/(6527:6755): Pokemon:Onix
+[INFO] 15:56:34:342 gamecard/(6527:6755): Cantidad de Posiciones:0
+[INFO] 15:56:34:342 gamecard/(6527:6755): Recibi mensaje localized. El pokemon es: Onix. La cantidad es: 0.
+[INFO] 15:56:34:342 gamecard/(6527:6755): Las posiciones son: 
+[INFO] 15:56:35:331 gamecard/(6527:6749): Pokemon:Squirtle
+[INFO] 15:56:35:331 gamecard/(6527:6749): Cantidad de Posiciones:1
+[INFO] 15:56:35:331 gamecard/(6527:6749): Posicion: 5-2
+[INFO] 15:56:35:331 gamecard/(6527:6749): Recibi mensaje localized. El pokemon es: Squirtle. La cantidad es: 1.
+[INFO] 15:56:35:331 gamecard/(6527:6749): Las posiciones son: 
+[INFO] 15:56:35:331 gamecard/(6527:6749): (5,2)
+[INFO] 15:56:35:331 gamecard/(6527:6751): Pokemon:Pikachu
+[INFO] 15:56:35:332 gamecard/(6527:6751): Cantidad de Posiciones:1
+[INFO] 15:56:35:332 gamecard/(6527:6751): Posicion: 9-9
+[INFO] 15:56:35:332 gamecard/(6527:6751): Recibi mensaje localized. El pokemon es: Pikachu. La cantidad es: 1.
+[INFO] 15:56:35:332 gamecard/(6527:6751): Las posiciones son: 
+[INFO] 15:56:35:332 gamecard/(6527:6751): (9,9)
+[INFO] 15:56:45:742 gamecard/(6527:6786): deserializado
+[INFO] 15:56:45:742 gamecard/(6527:6786): Pokemon:Flareon, posicion:4-6
+[INFO] 15:56:45:743 gamecard/(6527:6786): Posicion en la lectura del bloque 3: 64
+[INFO] 15:56:45:743 gamecard/(6527:6786): LECTURA BLOQUE: 4-6=10
+.
+[INFO] 15:56:45:743 gamecard/(6527:6786): LecturaArchivo: 4-6=10
+.
+[INFO] 15:56:45:743 gamecard/(6527:6786): char*posiciones: 4-6=10
+
+[INFO] 15:56:45:743 gamecard/(6527:6786): BUFFER FUNCION LISTA STRING: 4-6=10
+[INFO] 15:56:45:743 gamecard/(6527:6786): I DE LA FUNCION DE LISTAS: 0
+[INFO] 15:56:45:743 gamecard/(6527:6786): Size lista antes de comprobar:1
+[INFO] 15:56:45:743 gamecard/(6527:6786): Reemplazo
+[INFO] 15:56:45:743 gamecard/(6527:6786): Size lista despues de comprobar:1
+[INFO] 15:57:45:368 gamecard/(6527:6875): deserializado
+[INFO] 15:57:45:368 gamecard/(6527:6875): Pokemon:Pikachu, posicion:9-9
+[INFO] 15:57:45:368 gamecard/(6527:6875): Posicion en la lectura del bloque 1: 64
+[INFO] 15:57:45:368 gamecard/(6527:6875): LECTURA BLOQUE: 9-9=10
+.
+[INFO] 15:57:45:368 gamecard/(6527:6875): LecturaArchivo: 9-9=10
+.
+[INFO] 15:57:45:368 gamecard/(6527:6875): char*posiciones: 9-9=10
+
+[INFO] 15:57:45:368 gamecard/(6527:6875): BUFFER FUNCION LISTA STRING: 9-9=10
+[INFO] 15:57:45:368 gamecard/(6527:6875): I DE LA FUNCION DE LISTAS: 0
+[INFO] 15:57:45:368 gamecard/(6527:6875): Size lista antes de comprobar:1
+[INFO] 15:57:45:368 gamecard/(6527:6875): Reemplazo
+[INFO] 15:57:45:436 gamecard/(6527:6875): Size lista despues de comprobar:1
+[INFO] 15:58:05:376 gamecard/(6527:6902): deserializado
+[INFO] 15:58:05:376 gamecard/(6527:6902): Pokemon:Squirtle, posicion:5-2
+[INFO] 15:58:05:376 gamecard/(6527:6902): Posicion en la lectura del bloque 2: 64
+[INFO] 15:58:05:376 gamecard/(6527:6902): LECTURA BLOQUE: 5-2=10
+.
+[INFO] 15:58:05:376 gamecard/(6527:6902): LecturaArchivo: 5-2=10
+.
+[INFO] 15:58:05:376 gamecard/(6527:6902): char*posiciones: 5-2=10
+
+[INFO] 15:58:05:377 gamecard/(6527:6902): BUFFER FUNCION LISTA STRING: 5-2=10
+[INFO] 15:58:05:377 gamecard/(6527:6902): I DE LA FUNCION DE LISTAS: 0
+[INFO] 15:58:05:377 gamecard/(6527:6902): Size lista antes de comprobar:1
+[INFO] 15:58:05:377 gamecard/(6527:6902): Reemplazo
+[INFO] 15:58:05:404 gamecard/(6527:6902): Size lista despues de comprobar:1
+[INFO] 15:58:55:842 gamecard/(6527:6985): LecturaArchivo: .
+[INFO] 15:58:55:845 gamecard/(6527:6985): char*posiciones: 
+[INFO] 15:58:55:846 gamecard/(6527:6988): LecturaArchivo: .
+[INFO] 15:58:55:848 gamecard/(6527:6994): Posicion en la lectura del bloque 2: 64
+[INFO] 15:58:55:848 gamecard/(6527:6988): char*posiciones: 
+[INFO] 15:58:55:848 gamecard/(6527:6988): Agrego un bloque.
+[INFO] 15:58:55:848 gamecard/(6527:6985): Agrego un bloque.
+[INFO] 15:58:55:849 gamecard/(6527:6988): LISTA BLOQUES: [5].
+[INFO] 15:58:55:849 gamecard/(6527:6988): LISTA BLOQUES AGREGADA: [5].
+[INFO] 15:58:55:849 gamecard/(6527:6994): LECTURA BLOQUE: 5-2=9
+
+.
+[INFO] 15:58:55:849 gamecard/(6527:6994): LecturaArchivo: 5-2=9
+
+.
+[INFO] 15:58:55:850 gamecard/(6527:6994): char*posiciones: 5-2=9
+
+
+[INFO] 15:58:55:850 gamecard/(6527:6994): BUFFER FUNCION LISTA STRING: 5-2=9
+[INFO] 15:58:55:850 gamecard/(6527:6994): BUFFER FUNCION LISTA STRING: 
+[INFO] 15:58:55:850 gamecard/(6527:6994): I DE LA FUNCION DE LISTAS: 0
+[INFO] 15:58:55:850 gamecard/(6527:6994): I DE LA FUNCION DE LISTAS: 1
+[INFO] 15:58:55:852 gamecard/(6527:6985): LISTA BLOQUES: [6].
+[INFO] 15:58:55:852 gamecard/(6527:6985): LISTA BLOQUES AGREGADA: [6].
+[INFO] 15:58:55:862 gamecard/(6527:6999): LecturaArchivo: .
+[INFO] 15:58:55:862 gamecard/(6527:6999): char*posiciones: 
+[INFO] 15:58:55:863 gamecard/(6527:6999): Agrego un bloque.
+[INFO] 15:58:55:863 gamecard/(6527:6999): LISTA BLOQUES: [7].
+[INFO] 15:58:55:863 gamecard/(6527:6999): LISTA BLOQUES AGREGADA: [7].
+[INFO] 15:58:55:870 gamecard/(6527:7005): LecturaArchivo: .
+[INFO] 15:58:55:870 gamecard/(6527:7005): char*posiciones: 
+[INFO] 15:58:55:870 gamecard/(6527:7005): Agrego un bloque.
+[INFO] 15:58:55:870 gamecard/(6527:7005): LISTA BLOQUES: [8].
+[INFO] 15:58:55:871 gamecard/(6527:7005): LISTA BLOQUES AGREGADA: [8].
+[INFO] 15:58:55:880 gamecard/(6527:7009): LecturaArchivo: .
+[INFO] 15:58:55:880 gamecard/(6527:7009): char*posiciones: 
+[INFO] 15:58:55:880 gamecard/(6527:7009): Agrego un bloque.
+[INFO] 15:58:55:880 gamecard/(6527:7009): LISTA BLOQUES: [9].
+[INFO] 15:58:55:885 gamecard/(6527:7009): LISTA BLOQUES AGREGADA: [9].
+[INFO] 15:58:56:850 gamecard/(6527:6988): Cierro el archivo del pokemon: Gengar. Posicion: (6, 6).
+[INFO] 15:58:56:850 gamecard/(6527:6994): Cierro el archivo del pokemon: Squirtle. Posicion: (5, 5).
+[INFO] 15:58:56:852 gamecard/(6527:6985): Cierro el archivo del pokemon: Onix. Posicion: (2, 8).
+[INFO] 15:58:56:863 gamecard/(6527:6999): Cierro el archivo del pokemon: Umbreon. Posicion: (10, 6).
+[INFO] 15:58:56:871 gamecard/(6527:7005): Cierro el archivo del pokemon: Espeon. Posicion: (7, 1).
+[INFO] 15:58:56:888 gamecard/(6527:7009): Cierro el archivo del pokemon: Vaporeon. Posicion: (4, 10).
+[INFO] 15:59:31:883 gamecard/(6527:7076): deserializado
+[INFO] 15:59:31:883 gamecard/(6527:7076): Pokemon:Onix, posicion:2-8
+[INFO] 15:59:31:883 gamecard/(6527:7076): Posicion en la lectura del bloque 6: 64
+[INFO] 15:59:31:883 gamecard/(6527:7076): LECTURA BLOQUE: 2-8=10
+.
+[INFO] 15:59:31:883 gamecard/(6527:7076): LecturaArchivo: 2-8=10
+.
+[INFO] 15:59:31:883 gamecard/(6527:7076): char*posiciones: 2-8=10
+
+[INFO] 15:59:31:883 gamecard/(6527:7076): BUFFER FUNCION LISTA STRING: 2-8=10
+[INFO] 15:59:31:883 gamecard/(6527:7076): I DE LA FUNCION DE LISTAS: 0
+[INFO] 15:59:31:883 gamecard/(6527:7076): Size lista antes de comprobar:1
+[INFO] 15:59:31:883 gamecard/(6527:7076): Reemplazo
+[INFO] 15:59:31:883 gamecard/(6527:7076): Size lista despues de comprobar:1
+[INFO] 15:59:51:901 gamecard/(6527:7104): deserializado
+[INFO] 15:59:51:901 gamecard/(6527:7104): Pokemon:Espeon, posicion:7-1
+[INFO] 15:59:51:902 gamecard/(6527:7104): Posicion en la lectura del bloque 8: 64
+[INFO] 15:59:51:902 gamecard/(6527:7104): LECTURA BLOQUE: 7-1=10
+.
+[INFO] 15:59:51:902 gamecard/(6527:7104): LecturaArchivo: 7-1=10
+.
+[INFO] 15:59:51:902 gamecard/(6527:7104): char*posiciones: 7-1=10
+
+[INFO] 15:59:51:902 gamecard/(6527:7104): BUFFER FUNCION LISTA STRING: 7-1=10
+[INFO] 15:59:51:902 gamecard/(6527:7104): I DE LA FUNCION DE LISTAS: 0
+[INFO] 15:59:51:902 gamecard/(6527:7104): Size lista antes de comprobar:1
+[INFO] 15:59:51:902 gamecard/(6527:7104): Reemplazo
+[INFO] 15:59:51:902 gamecard/(6527:7104): Size lista despues de comprobar:1
+[INFO] 15:59:56:900 gamecard/(6527:7117): deserializado
+[INFO] 15:59:56:900 gamecard/(6527:7117): Pokemon:Vaporeon, posicion:4-10
+[INFO] 15:59:56:900 gamecard/(6527:7117): Posicion en la lectura del bloque 9: 64
+[INFO] 15:59:56:900 gamecard/(6527:7117): LECTURA BLOQUE: 4-10=10
+.
+[INFO] 15:59:56:901 gamecard/(6527:7117): LecturaArchivo: 4-10=10
+.
+[INFO] 15:59:56:901 gamecard/(6527:7117): char*posiciones: 4-10=10
+
+[INFO] 15:59:56:901 gamecard/(6527:7117): BUFFER FUNCION LISTA STRING: 4-10=10
+[INFO] 15:59:56:901 gamecard/(6527:7117): I DE LA FUNCION DE LISTAS: 0
+[INFO] 15:59:56:901 gamecard/(6527:7117): Size lista antes de comprobar:1
+[INFO] 15:59:56:901 gamecard/(6527:7117): Reemplazo
+[INFO] 15:59:56:901 gamecard/(6527:7117): Size lista despues de comprobar:1
+[INFO] 16:00:01:890 gamecard/(6527:7130): deserializado
+[INFO] 16:00:01:890 gamecard/(6527:7130): Pokemon:Gengar, posicion:6-6
+[INFO] 16:00:01:891 gamecard/(6527:7130): Posicion en la lectura del bloque 5: 64
+[INFO] 16:00:01:891 gamecard/(6527:7130): LECTURA BLOQUE: 6-6=10
+.
+[INFO] 16:00:01:891 gamecard/(6527:7130): LecturaArchivo: 6-6=10
+.
+[INFO] 16:00:01:891 gamecard/(6527:7130): char*posiciones: 6-6=10
+
+[INFO] 16:00:01:891 gamecard/(6527:7130): BUFFER FUNCION LISTA STRING: 6-6=10
+[INFO] 16:00:01:891 gamecard/(6527:7130): I DE LA FUNCION DE LISTAS: 0
+[INFO] 16:00:01:891 gamecard/(6527:7130): Size lista antes de comprobar:1
+[INFO] 16:00:01:891 gamecard/(6527:7130): Reemplazo
+[INFO] 16:00:01:891 gamecard/(6527:7130): Size lista despues de comprobar:1
+[INFO] 16:00:01:903 gamecard/(6527:7131): deserializado
+[INFO] 16:00:01:904 gamecard/(6527:7131): Pokemon:Umbreon, posicion:10-6
+[INFO] 16:00:01:906 gamecard/(6527:7131): Posicion en la lectura del bloque 7: 64
+[INFO] 16:00:01:907 gamecard/(6527:7131): LECTURA BLOQUE: 10-6=10
+.
+[INFO] 16:00:01:908 gamecard/(6527:7131): LecturaArchivo: 10-6=10
+.
+[INFO] 16:00:01:909 gamecard/(6527:7131): char*posiciones: 10-6=10
+
+[INFO] 16:00:01:910 gamecard/(6527:7131): BUFFER FUNCION LISTA STRING: 10-6=10
+[INFO] 16:00:01:910 gamecard/(6527:7131): I DE LA FUNCION DE LISTAS: 0
+[INFO] 16:00:01:910 gamecard/(6527:7131): Size lista antes de comprobar:1
+[INFO] 16:00:01:911 gamecard/(6527:7131): Reemplazo
+[INFO] 16:00:01:911 gamecard/(6527:7131): Size lista despues de comprobar:1
+[INFO] 16:00:46:907 gamecard/(6527:7192): deserializado
+[INFO] 16:00:46:907 gamecard/(6527:7192): Pokemon:Squirtle, posicion:5-5
+[INFO] 16:00:46:907 gamecard/(6527:7192): Posicion en la lectura del bloque 2: 64
+[INFO] 16:00:46:907 gamecard/(6527:7192): LECTURA BLOQUE: 5-2=9
+0-0=0
+5-5=10
+.
+[INFO] 16:00:46:907 gamecard/(6527:7192): LecturaArchivo: 5-2=9
+0-0=0
+5-5=10
+.
+[INFO] 16:00:46:907 gamecard/(6527:7192): char*posiciones: 5-2=9
+0-0=0
+5-5=10
+
+[INFO] 16:00:46:907 gamecard/(6527:7192): BUFFER FUNCION LISTA STRING: 5-2=9
+[INFO] 16:00:46:907 gamecard/(6527:7192): BUFFER FUNCION LISTA STRING: 0-0=0
+[INFO] 16:00:46:908 gamecard/(6527:7192): BUFFER FUNCION LISTA STRING: 5-5=10
+[INFO] 16:00:46:908 gamecard/(6527:7192): I DE LA FUNCION DE LISTAS: 0
+[INFO] 16:00:46:908 gamecard/(6527:7192): I DE LA FUNCION DE LISTAS: 1
+[INFO] 16:00:46:908 gamecard/(6527:7192): I DE LA FUNCION DE LISTAS: 2
+[INFO] 16:00:46:908 gamecard/(6527:7192): Size lista antes de comprobar:3
+[INFO] 16:00:46:908 gamecard/(6527:7192): Reemplazo
+[INFO] 16:00:46:908 gamecard/(6527:7192): Size lista despues de comprobar:3
+[INFO] 16:08:32:3 gamecard/(6527:6537): Conexión fallida con el Broker
+
+[INFO] 16:08:32:3 gamecard/(6527:6536): Conexión fallida con el Broker
+
+[INFO] 16:08:32:3 gamecard/(6527:6535): Conexión fallida con el Broker
+
+[INFO] 16:12:34:194 gamecard/(8032:8042): Voy a llenar el paquete
+[INFO] 16:12:34:194 gamecard/(8032:8042): cliente: 5
+[INFO] 16:12:34:194 gamecard/(8032:8041): Voy a llenar el paquete
+[INFO] 16:12:34:194 gamecard/(8032:8041): cliente: 6
+[INFO] 16:12:34:198 gamecard/(8032:8040): Voy a llenar el paquete
+[INFO] 16:12:34:198 gamecard/(8032:8040): cliente: 9
+[INFO] 16:12:44:942 gamecard/(8032:8062): LecturaArchivo: .
+[INFO] 16:12:44:942 gamecard/(8032:8062): char*posiciones: 
+[INFO] 16:12:44:943 gamecard/(8032:8062): Agrego un bloque.
+[INFO] 16:12:44:943 gamecard/(8032:8062): LISTA BLOQUES: [1].
+[INFO] 16:12:44:943 gamecard/(8032:8062): LISTA BLOQUES AGREGADA: [1].
+[INFO] 16:12:44:944 gamecard/(8032:8068): LecturaArchivo: .
+[INFO] 16:12:44:944 gamecard/(8032:8068): char*posiciones: 
+[INFO] 16:12:44:944 gamecard/(8032:8068): Agrego un bloque.
+[INFO] 16:12:44:944 gamecard/(8032:8068): LISTA BLOQUES: [2].
+[INFO] 16:12:44:946 gamecard/(8032:8068): LISTA BLOQUES AGREGADA: [2].
+[INFO] 16:12:44:948 gamecard/(8032:8073): LecturaArchivo: .
+[INFO] 16:12:44:948 gamecard/(8032:8073): char*posiciones: 
+[INFO] 16:12:44:948 gamecard/(8032:8073): Agrego un bloque.
+[INFO] 16:12:44:948 gamecard/(8032:8073): LISTA BLOQUES: [3].
+[INFO] 16:12:44:948 gamecard/(8032:8073): LISTA BLOQUES AGREGADA: [3].
+[INFO] 16:12:44:959 gamecard/(8032:8077): LecturaArchivo: .
+[INFO] 16:12:44:959 gamecard/(8032:8077): char*posiciones: 
+[INFO] 16:12:44:959 gamecard/(8032:8077): Agrego un bloque.
+[INFO] 16:12:44:959 gamecard/(8032:8077): LISTA BLOQUES: [4].
+[INFO] 16:12:44:960 gamecard/(8032:8077): LISTA BLOQUES AGREGADA: [4].
+[INFO] 16:12:45:944 gamecard/(8032:8062): Cierro el archivo del pokemon: Pikachu. Posicion: (9, 9).
+[INFO] 16:12:45:946 gamecard/(8032:8068): Cierro el archivo del pokemon: Squirtle. Posicion: (5, 2).
+[INFO] 16:12:45:949 gamecard/(8032:8073): Cierro el archivo del pokemon: Jolteon. Posicion: (2, 2).
+[INFO] 16:12:45:960 gamecard/(8032:8077): Cierro el archivo del pokemon: Flareon. Posicion: (4, 6).
+[INFO] 16:13:37:281 gamecard/(8187:8199): Voy a llenar el paquete
+[INFO] 16:13:37:281 gamecard/(8187:8199): cliente: 5
+[INFO] 16:13:37:285 gamecard/(8187:8201): Voy a llenar el paquete
+[INFO] 16:13:37:285 gamecard/(8187:8201): cliente: 8
+[INFO] 16:13:37:289 gamecard/(8187:8200): Voy a llenar el paquete
+[INFO] 16:13:37:289 gamecard/(8187:8200): cliente: 9
+[INFO] 16:13:40:385 gamecard/(8187:8215): LecturaArchivo: .
+[INFO] 16:13:40:385 gamecard/(8187:8215): char*posiciones: 
+[INFO] 16:13:40:385 gamecard/(8187:8215): Agrego un bloque.
+[INFO] 16:13:40:385 gamecard/(8187:8215): LISTA BLOQUES: [1].
+[INFO] 16:13:40:385 gamecard/(8187:8215): LISTA BLOQUES AGREGADA: [1].
+[INFO] 16:13:40:388 gamecard/(8187:8220): LecturaArchivo: .
+[INFO] 16:13:40:388 gamecard/(8187:8220): char*posiciones: 
+[INFO] 16:13:40:388 gamecard/(8187:8220): Agrego un bloque.
+[INFO] 16:13:40:388 gamecard/(8187:8220): LISTA BLOQUES: [2].
+[INFO] 16:13:40:388 gamecard/(8187:8220): LISTA BLOQUES AGREGADA: [2].
+[INFO] 16:13:40:390 gamecard/(8187:8230): LecturaArchivo: .
+[INFO] 16:13:40:390 gamecard/(8187:8230): char*posiciones: 
+[INFO] 16:13:40:390 gamecard/(8187:8230): Agrego un bloque.
+[INFO] 16:13:40:391 gamecard/(8187:8230): LISTA BLOQUES: [3].
+[INFO] 16:13:40:391 gamecard/(8187:8230): LISTA BLOQUES AGREGADA: [3].
+[INFO] 16:13:40:398 gamecard/(8187:8226): LecturaArchivo: .
+[INFO] 16:13:40:398 gamecard/(8187:8226): char*posiciones: 
+[INFO] 16:13:40:398 gamecard/(8187:8226): Agrego un bloque.
+[INFO] 16:13:40:398 gamecard/(8187:8226): LISTA BLOQUES: [4].
+[INFO] 16:13:40:398 gamecard/(8187:8226): LISTA BLOQUES AGREGADA: [4].
+[INFO] 16:13:45:387 gamecard/(8187:8215): Cierro el archivo del pokemon: Pikachu. Posicion: (9, 9).
+[INFO] 16:13:45:390 gamecard/(8187:8220): Cierro el archivo del pokemon: Squirtle. Posicion: (5, 2).
+[INFO] 16:13:45:391 gamecard/(8187:8230): Cierro el archivo del pokemon: Flareon. Posicion: (4, 6).
+[INFO] 16:13:45:400 gamecard/(8187:8226): Cierro el archivo del pokemon: Jolteon. Posicion: (2, 2).
+[INFO] 16:14:33:662 gamecard/(8187:8323): deserializado
+[INFO] 16:14:33:662 gamecard/(8187:8323): Atiendo Get del pokemon: Espeon
+[INFO] 16:14:33:662 gamecard/(8187:8323): NO EXISTE
+[INFO] 16:14:33:662 gamecard/(8187:8323): Pokemon:Espeon
+[INFO] 16:14:33:662 gamecard/(8187:8323): Cantidad de Posiciones:0
+[INFO] 16:14:33:662 gamecard/(8187:8323): Recibi mensaje localized. El pokemon es: Espeon. La cantidad es: 0.
+[INFO] 16:14:33:662 gamecard/(8187:8323): Las posiciones son: 
+[INFO] 16:14:33:671 gamecard/(8187:8332): deserializado
+[INFO] 16:14:33:671 gamecard/(8187:8336): deserializado
+[INFO] 16:14:33:671 gamecard/(8187:8332): Atiendo Get del pokemon: Vaporeon
+[INFO] 16:14:33:671 gamecard/(8187:8334): deserializado
+[INFO] 16:14:33:671 gamecard/(8187:8334): Atiendo Get del pokemon: Jolteon
+[INFO] 16:14:33:671 gamecard/(8187:8334): EXISTE
+[INFO] 16:14:33:671 gamecard/(8187:8332): NO EXISTE
+[INFO] 16:14:33:672 gamecard/(8187:8334): Posicion en la lectura del bloque 4: 64
+[INFO] 16:14:33:672 gamecard/(8187:8334): LECTURA BLOQUE: 2-2=10
+.
+[INFO] 16:14:33:672 gamecard/(8187:8334): LecturaArchivo: 2-2=10
+.
+[INFO] 16:14:33:672 gamecard/(8187:8334): char*posiciones: 2-2=10
+
+[INFO] 16:14:33:672 gamecard/(8187:8334): BUFFER FUNCION LISTA STRING: 2-2=10
+[INFO] 16:14:33:672 gamecard/(8187:8334): I DE LA FUNCION DE LISTAS: 0
+[INFO] 16:14:33:672 gamecard/(8187:8334): CANTIDAD POSICIONES 1
+[INFO] 16:14:33:672 gamecard/(8187:8334): Entro a conseguirPosicionesCantidad
+[INFO] 16:14:33:672 gamecard/(8187:8334): Localized. Pos x: 2. Pos y: 2.
+[INFO] 16:14:33:672 gamecard/(8187:8336): Atiendo Get del pokemon: Umbreon
+[INFO] 16:14:33:672 gamecard/(8187:8336): NO EXISTE
+[INFO] 16:14:33:672 gamecard/(8187:8336): Pokemon:Umbreon
+[INFO] 16:14:33:672 gamecard/(8187:8336): Cantidad de Posiciones:0
+[INFO] 16:14:33:672 gamecard/(8187:8332): Pokemon:Vaporeon
+[INFO] 16:14:33:672 gamecard/(8187:8336): Recibi mensaje localized. El pokemon es: Umbreon. La cantidad es: 0.
+[INFO] 16:14:33:672 gamecard/(8187:8336): Las posiciones son: 
+[INFO] 16:14:33:672 gamecard/(8187:8332): Cantidad de Posiciones:0
+[INFO] 16:14:33:672 gamecard/(8187:8332): Recibi mensaje localized. El pokemon es: Vaporeon. La cantidad es: 0.
+[INFO] 16:14:33:672 gamecard/(8187:8332): Las posiciones son: 
+[INFO] 16:14:33:673 gamecard/(8187:8329): deserializado
+[INFO] 16:14:33:673 gamecard/(8187:8329): Atiendo Get del pokemon: Flareon
+[INFO] 16:14:33:673 gamecard/(8187:8329): EXISTE
+[INFO] 16:14:33:674 gamecard/(8187:8329): Posicion en la lectura del bloque 3: 64
+[INFO] 16:14:33:674 gamecard/(8187:8329): LECTURA BLOQUE: 4-6=10
+.
+[INFO] 16:14:33:674 gamecard/(8187:8329): LecturaArchivo: 4-6=10
+.
+[INFO] 16:14:33:674 gamecard/(8187:8329): char*posiciones: 4-6=10
+
+[INFO] 16:14:33:674 gamecard/(8187:8329): BUFFER FUNCION LISTA STRING: 4-6=10
+[INFO] 16:14:33:674 gamecard/(8187:8329): I DE LA FUNCION DE LISTAS: 0
+[INFO] 16:14:33:674 gamecard/(8187:8329): CANTIDAD POSICIONES 1
+[INFO] 16:14:33:674 gamecard/(8187:8329): Entro a conseguirPosicionesCantidad
+[INFO] 16:14:33:674 gamecard/(8187:8329): Localized. Pos x: 4. Pos y: 6.
+[INFO] 16:14:38:672 gamecard/(8187:8334): Pokemon:Jolteon
+[INFO] 16:14:38:672 gamecard/(8187:8334): Cantidad de Posiciones:1
+[INFO] 16:14:38:672 gamecard/(8187:8334): Posicion: 2-2
+[INFO] 16:14:38:672 gamecard/(8187:8334): Recibi mensaje localized. El pokemon es: Jolteon. La cantidad es: 1.
+[INFO] 16:14:38:672 gamecard/(8187:8334): Las posiciones son: 
+[INFO] 16:14:38:672 gamecard/(8187:8334): (2,2)
+[INFO] 16:14:38:676 gamecard/(8187:8329): Pokemon:Flareon
+[INFO] 16:14:38:676 gamecard/(8187:8329): Cantidad de Posiciones:1
+[INFO] 16:14:38:676 gamecard/(8187:8329): Posicion: 4-6
+[INFO] 16:14:38:677 gamecard/(8187:8329): Recibi mensaje localized. El pokemon es: Flareon. La cantidad es: 1.
+[INFO] 16:14:38:677 gamecard/(8187:8329): Las posiciones son: 
+[INFO] 16:14:38:677 gamecard/(8187:8329): (4,6)
+[INFO] 16:14:43:674 gamecard/(8187:8363): deserializado
+[INFO] 16:14:43:674 gamecard/(8187:8363): Pokemon:Jolteon, posicion:2-2
+[INFO] 16:14:43:674 gamecard/(8187:8363): Posicion en la lectura del bloque 4: 64
+[INFO] 16:14:43:674 gamecard/(8187:8363): LECTURA BLOQUE: 2-2=10
+.
+[INFO] 16:14:43:674 gamecard/(8187:8363): LecturaArchivo: 2-2=10
+.
+[INFO] 16:14:43:674 gamecard/(8187:8363): char*posiciones: 2-2=10
+
+[INFO] 16:14:43:674 gamecard/(8187:8363): BUFFER FUNCION LISTA STRING: 2-2=10
+[INFO] 16:14:43:674 gamecard/(8187:8363): I DE LA FUNCION DE LISTAS: 0
+[INFO] 16:14:43:674 gamecard/(8187:8363): Size lista antes de comprobar:1
+[INFO] 16:14:43:674 gamecard/(8187:8363): Reemplazo
+[INFO] 16:14:43:678 gamecard/(8187:8363): Size lista despues de comprobar:1
+[INFO] 16:14:54:939 gamecard/(8187:8404): deserializado
+[INFO] 16:14:54:940 gamecard/(8187:8404): Atiendo Get del pokemon: Squirtle
+[INFO] 16:14:54:940 gamecard/(8187:8404): EXISTE
+[INFO] 16:14:54:941 gamecard/(8187:8404): Posicion en la lectura del bloque 2: 64
+[INFO] 16:14:54:941 gamecard/(8187:8404): LECTURA BLOQUE: 5-2=10
+.
+[INFO] 16:14:54:941 gamecard/(8187:8404): LecturaArchivo: 5-2=10
+.
+[INFO] 16:14:54:941 gamecard/(8187:8404): char*posiciones: 5-2=10
+
+[INFO] 16:14:54:941 gamecard/(8187:8404): BUFFER FUNCION LISTA STRING: 5-2=10
+[INFO] 16:14:54:941 gamecard/(8187:8404): I DE LA FUNCION DE LISTAS: 0
+[INFO] 16:14:54:941 gamecard/(8187:8404): CANTIDAD POSICIONES 1
+[INFO] 16:14:54:941 gamecard/(8187:8404): Entro a conseguirPosicionesCantidad
+[INFO] 16:14:54:941 gamecard/(8187:8404): Localized. Pos x: 5. Pos y: 2.
+[INFO] 16:14:54:941 gamecard/(8187:8409): deserializado
+[INFO] 16:14:54:941 gamecard/(8187:8409): Atiendo Get del pokemon: Onix
+[INFO] 16:14:54:941 gamecard/(8187:8409): NO EXISTE
+[INFO] 16:14:54:941 gamecard/(8187:8411): deserializado
+[INFO] 16:14:54:941 gamecard/(8187:8409): Pokemon:Onix
+[INFO] 16:14:54:941 gamecard/(8187:8409): Cantidad de Posiciones:0
+[INFO] 16:14:54:942 gamecard/(8187:8411): Atiendo Get del pokemon: Gengar
+[INFO] 16:14:54:942 gamecard/(8187:8411): NO EXISTE
+[INFO] 16:14:54:942 gamecard/(8187:8411): Pokemon:Gengar
+[INFO] 16:14:54:942 gamecard/(8187:8411): Cantidad de Posiciones:0
+[INFO] 16:14:54:942 gamecard/(8187:8409): Recibi mensaje localized. El pokemon es: Onix. La cantidad es: 0.
+[INFO] 16:14:54:942 gamecard/(8187:8409): Las posiciones son: 
+[INFO] 16:14:54:942 gamecard/(8187:8407): deserializado
+[INFO] 16:14:54:942 gamecard/(8187:8407): Atiendo Get del pokemon: Pikachu
+[INFO] 16:14:54:942 gamecard/(8187:8407): EXISTE
+[INFO] 16:14:54:943 gamecard/(8187:8407): Posicion en la lectura del bloque 1: 64
+[INFO] 16:14:54:943 gamecard/(8187:8411): Recibi mensaje localized. El pokemon es: Gengar. La cantidad es: 0.
+[INFO] 16:14:54:943 gamecard/(8187:8407): LECTURA BLOQUE: 9-9=10
+.
+[INFO] 16:14:54:943 gamecard/(8187:8407): LecturaArchivo: 9-9=10
+.
+[INFO] 16:14:54:943 gamecard/(8187:8407): char*posiciones: 9-9=10
+
+[INFO] 16:14:54:943 gamecard/(8187:8407): BUFFER FUNCION LISTA STRING: 9-9=10
+[INFO] 16:14:54:943 gamecard/(8187:8407): I DE LA FUNCION DE LISTAS: 0
+[INFO] 16:14:54:943 gamecard/(8187:8407): CANTIDAD POSICIONES 1
+[INFO] 16:14:54:943 gamecard/(8187:8407): Entro a conseguirPosicionesCantidad
+[INFO] 16:14:54:943 gamecard/(8187:8407): Localized. Pos x: 9. Pos y: 9.
+[INFO] 16:14:54:943 gamecard/(8187:8411): Las posiciones son: 
+[INFO] 16:14:59:944 gamecard/(8187:8404): Pokemon:Squirtle
+[INFO] 16:14:59:944 gamecard/(8187:8404): Cantidad de Posiciones:1
+[INFO] 16:14:59:944 gamecard/(8187:8404): Posicion: 5-2
+[INFO] 16:14:59:944 gamecard/(8187:8407): Pokemon:Pikachu
+[INFO] 16:14:59:944 gamecard/(8187:8407): Cantidad de Posiciones:1
+[INFO] 16:14:59:944 gamecard/(8187:8407): Posicion: 9-9
+[INFO] 16:14:59:944 gamecard/(8187:8407): Recibi mensaje localized. El pokemon es: Pikachu. La cantidad es: 1.
+[INFO] 16:14:59:944 gamecard/(8187:8407): Las posiciones son: 
+[INFO] 16:14:59:944 gamecard/(8187:8407): (9,9)
+[INFO] 16:14:59:944 gamecard/(8187:8404): Recibi mensaje localized. El pokemon es: Squirtle. La cantidad es: 1.
+[INFO] 16:14:59:944 gamecard/(8187:8404): Las posiciones son: 
+[INFO] 16:14:59:945 gamecard/(8187:8404): (5,2)
+[INFO] 16:15:03:677 gamecard/(8187:8446): deserializado
+[INFO] 16:15:03:677 gamecard/(8187:8446): Pokemon:Flareon, posicion:4-6
+[INFO] 16:15:03:678 gamecard/(8187:8446): Posicion en la lectura del bloque 3: 64
+[INFO] 16:15:03:678 gamecard/(8187:8446): LECTURA BLOQUE: 4-6=10
+.
+[INFO] 16:15:03:678 gamecard/(8187:8446): LecturaArchivo: 4-6=10
+.
+[INFO] 16:15:03:678 gamecard/(8187:8446): char*posiciones: 4-6=10
+
+[INFO] 16:15:03:678 gamecard/(8187:8446): BUFFER FUNCION LISTA STRING: 4-6=10
+[INFO] 16:15:03:678 gamecard/(8187:8446): I DE LA FUNCION DE LISTAS: 0
+[INFO] 16:15:03:678 gamecard/(8187:8446): Size lista antes de comprobar:1
+[INFO] 16:15:03:678 gamecard/(8187:8446): Reemplazo
+[INFO] 16:15:03:678 gamecard/(8187:8446): Size lista despues de comprobar:1
+[INFO] 16:16:09:978 gamecard/(8187:8558): deserializado
+[INFO] 16:16:09:978 gamecard/(8187:8558): Pokemon:Pikachu, posicion:9-9
+[INFO] 16:16:09:979 gamecard/(8187:8558): Posicion en la lectura del bloque 1: 64
+[INFO] 16:16:09:979 gamecard/(8187:8558): LECTURA BLOQUE: 9-9=10
+.
+[INFO] 16:16:09:979 gamecard/(8187:8558): LecturaArchivo: 9-9=10
+.
+[INFO] 16:16:09:979 gamecard/(8187:8558): char*posiciones: 9-9=10
+
+[INFO] 16:16:09:979 gamecard/(8187:8558): BUFFER FUNCION LISTA STRING: 9-9=10
+[INFO] 16:16:09:979 gamecard/(8187:8558): I DE LA FUNCION DE LISTAS: 0
+[INFO] 16:16:09:979 gamecard/(8187:8558): Size lista antes de comprobar:1
+[INFO] 16:16:09:979 gamecard/(8187:8558): Reemplazo
+[INFO] 16:16:09:988 gamecard/(8187:8558): Size lista despues de comprobar:1
+[INFO] 16:16:29:985 gamecard/(8187:8592): deserializado
+[INFO] 16:16:29:986 gamecard/(8187:8592): Pokemon:Squirtle, posicion:5-2
+[INFO] 16:16:29:986 gamecard/(8187:8592): Posicion en la lectura del bloque 2: 64
+[INFO] 16:16:29:986 gamecard/(8187:8592): LECTURA BLOQUE: 5-2=10
+.
+[INFO] 16:16:29:986 gamecard/(8187:8592): LecturaArchivo: 5-2=10
+.
+[INFO] 16:16:29:986 gamecard/(8187:8592): char*posiciones: 5-2=10
+
+[INFO] 16:16:29:986 gamecard/(8187:8592): BUFFER FUNCION LISTA STRING: 5-2=10
+[INFO] 16:16:29:986 gamecard/(8187:8592): I DE LA FUNCION DE LISTAS: 0
+[INFO] 16:16:29:986 gamecard/(8187:8592): Size lista antes de comprobar:1
+[INFO] 16:16:29:986 gamecard/(8187:8592): Reemplazo
+[INFO] 16:16:30:60 gamecard/(8187:8592): Size lista despues de comprobar:1
+[INFO] 16:17:35:630 gamecard/(8187:8688): LecturaArchivo: .
+[INFO] 16:17:35:631 gamecard/(8187:8688): char*posiciones: 
+[INFO] 16:17:35:631 gamecard/(8187:8688): Agrego un bloque.
+[INFO] 16:17:35:631 gamecard/(8187:8688): LISTA BLOQUES: [5].
+[INFO] 16:17:35:631 gamecard/(8187:8688): LISTA BLOQUES AGREGADA: [5].
+[INFO] 16:17:35:638 gamecard/(8187:8682): LecturaArchivo: .
+[INFO] 16:17:35:638 gamecard/(8187:8682): char*posiciones: 
+[INFO] 16:17:35:638 gamecard/(8187:8682): Agrego un bloque.
+[INFO] 16:17:35:638 gamecard/(8187:8682): LISTA BLOQUES: [6].
+[INFO] 16:17:35:638 gamecard/(8187:8682): LISTA BLOQUES AGREGADA: [6].
+[INFO] 16:17:35:638 gamecard/(8187:8692): Posicion en la lectura del bloque 2: 64
+[INFO] 16:17:35:638 gamecard/(8187:8692): LECTURA BLOQUE: 5-2=9
+
+.
+[INFO] 16:17:35:638 gamecard/(8187:8692): LecturaArchivo: 5-2=9
+
+.
+[INFO] 16:17:35:639 gamecard/(8187:8692): char*posiciones: 5-2=9
+
+
+[INFO] 16:17:35:639 gamecard/(8187:8692): BUFFER FUNCION LISTA STRING: 5-2=9
+[INFO] 16:17:35:639 gamecard/(8187:8692): BUFFER FUNCION LISTA STRING: 
+[INFO] 16:17:35:639 gamecard/(8187:8692): I DE LA FUNCION DE LISTAS: 0
+[INFO] 16:17:35:639 gamecard/(8187:8692): I DE LA FUNCION DE LISTAS: 1
+[INFO] 16:17:35:653 gamecard/(8187:8697): LecturaArchivo: .
+[INFO] 16:17:35:654 gamecard/(8187:8697): char*posiciones: 
+[INFO] 16:17:35:654 gamecard/(8187:8697): Agrego un bloque.
+[INFO] 16:17:35:654 gamecard/(8187:8697): LISTA BLOQUES: [7].
+[INFO] 16:17:35:654 gamecard/(8187:8697): LISTA BLOQUES AGREGADA: [7].
+[INFO] 16:17:35:662 gamecard/(8187:8702): LecturaArchivo: .
+[INFO] 16:17:35:662 gamecard/(8187:8702): char*posiciones: 
+[INFO] 16:17:35:666 gamecard/(8187:8702): Agrego un bloque.
+[INFO] 16:17:35:666 gamecard/(8187:8702): LISTA BLOQUES: [8].
+[INFO] 16:17:35:667 gamecard/(8187:8707): LecturaArchivo: .
+[INFO] 16:17:35:667 gamecard/(8187:8707): char*posiciones: 
+[INFO] 16:17:35:667 gamecard/(8187:8702): LISTA BLOQUES AGREGADA: [8].
+[INFO] 16:17:35:667 gamecard/(8187:8707): Agrego un bloque.
+[INFO] 16:17:35:667 gamecard/(8187:8707): LISTA BLOQUES: [9].
+[INFO] 16:17:35:667 gamecard/(8187:8707): LISTA BLOQUES AGREGADA: [9].
+[INFO] 16:17:40:632 gamecard/(8187:8688): Cierro el archivo del pokemon: Gengar. Posicion: (6, 6).
+[INFO] 16:17:40:639 gamecard/(8187:8682): Cierro el archivo del pokemon: Onix. Posicion: (2, 8).
+[INFO] 16:17:40:639 gamecard/(8187:8692): Cierro el archivo del pokemon: Squirtle. Posicion: (5, 5).
+[INFO] 16:17:40:654 gamecard/(8187:8697): Cierro el archivo del pokemon: Umbreon. Posicion: (10, 6).
+[INFO] 16:17:40:667 gamecard/(8187:8702): Cierro el archivo del pokemon: Espeon. Posicion: (7, 1).
+[INFO] 16:17:40:667 gamecard/(8187:8707): Cierro el archivo del pokemon: Vaporeon. Posicion: (4, 10).
+[INFO] 16:18:05:682 gamecard/(8187:8776): deserializado
+[INFO] 16:18:05:682 gamecard/(8187:8776): Pokemon:Umbreon, posicion:10-6
+[INFO] 16:18:05:682 gamecard/(8187:8776): Posicion en la lectura del bloque 7: 64
+[INFO] 16:18:05:682 gamecard/(8187:8776): LECTURA BLOQUE: 10-6=10
+.
+[INFO] 16:18:05:682 gamecard/(8187:8776): LecturaArchivo: 10-6=10
+.
+[INFO] 16:18:05:682 gamecard/(8187:8776): char*posiciones: 10-6=10
+
+[INFO] 16:18:05:682 gamecard/(8187:8776): BUFFER FUNCION LISTA STRING: 10-6=10
+[INFO] 16:18:05:682 gamecard/(8187:8776): I DE LA FUNCION DE LISTAS: 0
+[INFO] 16:18:05:682 gamecard/(8187:8776): Size lista antes de comprobar:1
+[INFO] 16:18:05:682 gamecard/(8187:8776): Reemplazo
+[INFO] 16:18:05:682 gamecard/(8187:8776): Size lista despues de comprobar:1
+[INFO] 16:18:10:661 gamecard/(8187:8782): deserializado
+[INFO] 16:18:10:662 gamecard/(8187:8782): Pokemon:Gengar, posicion:6-6
+[INFO] 16:18:10:662 gamecard/(8187:8782): Posicion en la lectura del bloque 5: 64
+[INFO] 16:18:10:662 gamecard/(8187:8782): LECTURA BLOQUE: 6-6=10
+.
+[INFO] 16:18:10:662 gamecard/(8187:8782): LecturaArchivo: 6-6=10
+.
+[INFO] 16:18:10:662 gamecard/(8187:8782): char*posiciones: 6-6=10
+
+[INFO] 16:18:10:662 gamecard/(8187:8782): BUFFER FUNCION LISTA STRING: 6-6=10
+[INFO] 16:18:10:662 gamecard/(8187:8782): I DE LA FUNCION DE LISTAS: 0
+[INFO] 16:18:10:662 gamecard/(8187:8782): Size lista antes de comprobar:1
+[INFO] 16:18:10:662 gamecard/(8187:8782): Reemplazo
+[INFO] 16:18:10:662 gamecard/(8187:8782): Size lista despues de comprobar:1
+[INFO] 16:18:25:687 gamecard/(8187:8818): deserializado
+[INFO] 16:18:25:687 gamecard/(8187:8818): Pokemon:Vaporeon, posicion:4-10
+[INFO] 16:18:25:687 gamecard/(8187:8818): Posicion en la lectura del bloque 9: 64
+[INFO] 16:18:25:687 gamecard/(8187:8818): LECTURA BLOQUE: 4-10=10
+.
+[INFO] 16:18:25:687 gamecard/(8187:8818): LecturaArchivo: 4-10=10
+.
+[INFO] 16:18:25:687 gamecard/(8187:8818): char*posiciones: 4-10=10
+
+[INFO] 16:18:25:687 gamecard/(8187:8818): BUFFER FUNCION LISTA STRING: 4-10=10
+[INFO] 16:18:25:687 gamecard/(8187:8818): I DE LA FUNCION DE LISTAS: 0
+[INFO] 16:18:25:688 gamecard/(8187:8818): Size lista antes de comprobar:1
+[INFO] 16:18:25:688 gamecard/(8187:8818): Reemplazo
+[INFO] 16:18:25:688 gamecard/(8187:8818): Size lista despues de comprobar:1
+[INFO] 16:18:45:674 gamecard/(8187:8850): deserializado
+[INFO] 16:18:45:674 gamecard/(8187:8850): Pokemon:Onix, posicion:2-8
+[INFO] 16:18:45:674 gamecard/(8187:8850): Posicion en la lectura del bloque 6: 64
+[INFO] 16:18:45:674 gamecard/(8187:8850): LECTURA BLOQUE: 2-8=10
+.
+[INFO] 16:18:45:674 gamecard/(8187:8850): LecturaArchivo: 2-8=10
+.
+[INFO] 16:18:45:674 gamecard/(8187:8850): char*posiciones: 2-8=10
+
+[INFO] 16:18:45:674 gamecard/(8187:8850): BUFFER FUNCION LISTA STRING: 2-8=10
+[INFO] 16:18:45:674 gamecard/(8187:8850): I DE LA FUNCION DE LISTAS: 0
+[INFO] 16:18:45:674 gamecard/(8187:8850): Size lista antes de comprobar:1
+[INFO] 16:18:45:674 gamecard/(8187:8850): Reemplazo
+[INFO] 16:18:45:675 gamecard/(8187:8850): Size lista despues de comprobar:1
+[INFO] 16:18:45:699 gamecard/(8187:8852): deserializado
+[INFO] 16:18:45:701 gamecard/(8187:8852): Pokemon:Espeon, posicion:7-1
+[INFO] 16:18:45:702 gamecard/(8187:8852): Posicion en la lectura del bloque 8: 64
+[INFO] 16:18:45:702 gamecard/(8187:8852): LECTURA BLOQUE: 7-1=10
+.
+[INFO] 16:18:45:703 gamecard/(8187:8852): LecturaArchivo: 7-1=10
+.
+[INFO] 16:18:45:703 gamecard/(8187:8852): char*posiciones: 7-1=10
+
+[INFO] 16:18:45:703 gamecard/(8187:8852): BUFFER FUNCION LISTA STRING: 7-1=10
+[INFO] 16:18:45:703 gamecard/(8187:8852): I DE LA FUNCION DE LISTAS: 0
+[INFO] 16:18:45:703 gamecard/(8187:8852): Size lista antes de comprobar:1
+[INFO] 16:18:45:703 gamecard/(8187:8852): Reemplazo
+[INFO] 16:18:45:703 gamecard/(8187:8852): Size lista despues de comprobar:1
+[INFO] 16:19:30:686 gamecard/(8187:8912): deserializado
+[INFO] 16:19:30:686 gamecard/(8187:8912): Pokemon:Squirtle, posicion:5-5
+[INFO] 16:19:30:686 gamecard/(8187:8912): Posicion en la lectura del bloque 2: 64
+[INFO] 16:19:30:686 gamecard/(8187:8912): LECTURA BLOQUE: 5-2=9
+0-0=0
+5-5=10
+.
+[INFO] 16:19:30:686 gamecard/(8187:8912): LecturaArchivo: 5-2=9
+0-0=0
+5-5=10
+.
+[INFO] 16:19:30:686 gamecard/(8187:8912): char*posiciones: 5-2=9
+0-0=0
+5-5=10
+
+[INFO] 16:19:30:686 gamecard/(8187:8912): BUFFER FUNCION LISTA STRING: 5-2=9
+[INFO] 16:19:30:686 gamecard/(8187:8912): BUFFER FUNCION LISTA STRING: 0-0=0
+[INFO] 16:19:30:686 gamecard/(8187:8912): BUFFER FUNCION LISTA STRING: 5-5=10
+[INFO] 16:19:30:686 gamecard/(8187:8912): I DE LA FUNCION DE LISTAS: 0
+[INFO] 16:19:30:686 gamecard/(8187:8912): I DE LA FUNCION DE LISTAS: 1
+[INFO] 16:19:30:686 gamecard/(8187:8912): I DE LA FUNCION DE LISTAS: 2
+[INFO] 16:19:30:686 gamecard/(8187:8912): Size lista antes de comprobar:3
+[INFO] 16:19:30:686 gamecard/(8187:8912): Reemplazo
+[INFO] 16:19:30:722 gamecard/(8187:8912): Size lista despues de comprobar:3

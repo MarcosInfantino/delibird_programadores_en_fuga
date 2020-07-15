@@ -1,0 +1,8 @@
+[INFO] 15:26:14:560 BROKER/(3833:3833): ___________________________________________________________________________________________________________
+[INFO] 15:26:14:560 BROKER/(3833:3833): Inició el BROKER
+[INFO] 15:28:29:525 BROKER/(3833:4092): Se conectó un proceso GAMECARD.
+[INFO] 15:28:29:527 BROKER/(3833:4092): Un proceso GAMECARD se sucribió a la cola GET_POKEMON.
+[INFO] 15:28:29:528 BROKER/(3833:4093): Se conectó un proceso GAMECARD.
+[INFO] 15:28:29:528 BROKER/(3833:4094): Se conectó un proceso GAMECARD.
+[INFO] 15:28:29:529 BROKER/(3833:4093): Un proceso GAMECARD se sucribió a la cola NEW_POKEMON.
+[INFO] 15:28:29:529 BROKER/(3833:4094): Un proceso GAMECARD se sucribió a la cola CATCH_POKEMON.

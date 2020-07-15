@@ -232,3 +232,12 @@
 [INFO] 16:51:06:461 Broker/(20907:20907): pid : 20907
 [INFO] 16:52:59:391 Broker/(20985:20985): pid : 20985
 [INFO] 16:17:57:828 Broker/(12110:12110): pid : 12110
+[INFO] 15:25:44:366 Broker/(3789:3789): pid del proceso broker: 3789
+[INFO] 15:26:14:560 Broker/(3833:3833): pid del proceso broker: 3833
+[INFO] 15:26:14:560 Broker/(3833:3833): agrego a la lista de libres a la raiz: status 0
+[INFO] 15:28:29:525 Broker/(3833:4092): -------------------------TIPO DE PAQUETE RECIBIDO: 6
+[INFO] 15:28:29:527 Broker/(3833:4092): ---------------------------- Suscribo a 201
+[INFO] 15:28:29:528 Broker/(3833:4093): -------------------------TIPO DE PAQUETE RECIBIDO: 6
+[INFO] 15:28:29:528 Broker/(3833:4094): -------------------------TIPO DE PAQUETE RECIBIDO: 6
+[INFO] 15:28:29:529 Broker/(3833:4093): ---------------------------- Suscribo a 201
+[INFO] 15:28:29:529 Broker/(3833:4094): ---------------------------- Suscribo a 201

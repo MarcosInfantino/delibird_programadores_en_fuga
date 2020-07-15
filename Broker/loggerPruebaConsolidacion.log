@@ -1072,3 +1072,1180 @@
 [INFO] 14:29:26:799 BROKER/(31150:31210): Almaceno mensaje en partición que comienza en: 44
 [INFO] 14:29:26:799 BROKER/(31150:31168): Llegó un nuevo mensaje a la cola CATCH_POKEMON.
 [INFO] 14:29:27:251 BROKER/(31150:31150): Se solicitó dump de cache.
+[INFO] 15:33:42:878 BROKER/(4567:4567): ___________________________________________________________________________________________________________
+[INFO] 15:33:42:904 BROKER/(4567:4567): Inició el BROKER
+[INFO] 15:34:04:959 BROKER/(4621:4621): ___________________________________________________________________________________________________________
+[INFO] 15:34:04:959 BROKER/(4621:4621): Inició el BROKER
+[INFO] 15:35:08:888 BROKER/(4771:4771): ___________________________________________________________________________________________________________
+[INFO] 15:35:08:888 BROKER/(4771:4771): Inició el BROKER
+[INFO] 15:35:26:604 BROKER/(4771:4832): Se conectó un proceso GAMECARD.
+[INFO] 15:35:26:604 BROKER/(4771:4832): Un proceso GAMECARD se sucribió a la cola GET_POKEMON.
+[INFO] 15:35:26:605 BROKER/(4771:4833): Se conectó un proceso GAMECARD.
+[INFO] 15:35:26:605 BROKER/(4771:4833): Un proceso GAMECARD se sucribió a la cola CATCH_POKEMON.
+[INFO] 15:35:26:605 BROKER/(4771:4834): Se conectó un proceso GAMECARD.
+[INFO] 15:35:26:605 BROKER/(4771:4834): Un proceso GAMECARD se sucribió a la cola NEW_POKEMON.
+[INFO] 15:36:49:535 BROKER/(4771:4957): Se conectó un proceso GAMEBOY.
+[INFO] 15:36:49:535 BROKER/(4771:4957): Un proceso GAMEBOY se sucribió a la cola CATCH_POKEMON.
+[INFO] 15:37:02:756 BROKER/(4980:4980): ___________________________________________________________________________________________________________
+[INFO] 15:37:02:756 BROKER/(4980:4980): Inició el BROKER
+[INFO] 15:37:13:930 BROKER/(4980:5035): Se conectó un proceso GAMECARD.
+[INFO] 15:37:13:930 BROKER/(4980:5035): Un proceso GAMECARD se sucribió a la cola NEW_POKEMON.
+[INFO] 15:37:13:943 BROKER/(4980:5037): Se conectó un proceso GAMECARD.
+[INFO] 15:37:13:944 BROKER/(4980:5037): Un proceso GAMECARD se sucribió a la cola CATCH_POKEMON.
+[INFO] 15:37:13:944 BROKER/(4980:5036): Se conectó un proceso GAMECARD.
+[INFO] 15:37:13:944 BROKER/(4980:5036): Un proceso GAMECARD se sucribió a la cola GET_POKEMON.
+[INFO] 15:38:02:43 BROKER/(4980:5111): Se conectó un proceso GAMEBOY.
+[INFO] 15:38:02:44 BROKER/(4980:5111): Almaceno mensaje en partición que comienza en: 0
+[INFO] 15:38:02:44 BROKER/(4980:4994): Llegó un nuevo mensaje a la cola CAUGHT_POKEMON.
+[INFO] 15:38:02:44 BROKER/(4980:5116): Se conectó un proceso GAMEBOY.
+[INFO] 15:38:02:44 BROKER/(4980:5116): Almaceno mensaje en partición que comienza en: 4
+[INFO] 15:38:02:45 BROKER/(4980:5119): Se conectó un proceso GAMEBOY.
+[INFO] 15:38:02:46 BROKER/(4980:5119): Almaceno mensaje en partición que comienza en: 8
+[INFO] 15:38:02:46 BROKER/(4980:4995): Llegó un nuevo mensaje a la cola CATCH_POKEMON.
+[INFO] 15:38:02:46 BROKER/(4980:4995): Envié mensaje al suscriptor de id: 201.
+[INFO] 15:38:02:46 BROKER/(4980:5121): Se conectó un proceso GAMECARD.
+[INFO] 15:38:02:46 BROKER/(4980:5121): Me llegó el ACK del proceso de id 201 (Mensaje 3).
+[INFO] 15:38:02:47 BROKER/(4980:5124): Se conectó un proceso GAMEBOY.
+[INFO] 15:38:02:47 BROKER/(4980:5124): Almaceno mensaje en partición que comienza en: 27
+[INFO] 15:38:02:48 BROKER/(4980:4995): Llegó un nuevo mensaje a la cola CATCH_POKEMON.
+[INFO] 15:38:02:48 BROKER/(4980:4995): Envié mensaje al suscriptor de id: 201.
+[INFO] 15:38:02:48 BROKER/(4980:5126): Se conectó un proceso GAMECARD.
+[INFO] 15:38:02:48 BROKER/(4980:5126): Me llegó el ACK del proceso de id 201 (Mensaje 4).
+[INFO] 15:38:02:48 BROKER/(4980:5129): Se conectó un proceso GAMEBOY.
+[INFO] 15:38:02:49 BROKER/(4980:5129): Almaceno mensaje en partición que comienza en: 47
+[INFO] 15:38:02:49 BROKER/(4980:4995): Llegó un nuevo mensaje a la cola CATCH_POKEMON.
+[INFO] 15:38:02:49 BROKER/(4980:4995): Envié mensaje al suscriptor de id: 201.
+[INFO] 15:38:02:50 BROKER/(4980:5131): Se conectó un proceso GAMECARD.
+[INFO] 15:38:02:50 BROKER/(4980:5131): Me llegó el ACK del proceso de id 201 (Mensaje 5).
+[INFO] 15:38:02:50 BROKER/(4980:5134): Se conectó un proceso GAMEBOY.
+[INFO] 15:38:02:50 BROKER/(4980:5134): Un proceso GAMEBOY se sucribió a la cola CAUGHT_POKEMON.
+[INFO] 15:38:02:50 BROKER/(4980:5135): Se conectó un proceso GAMEBOY.
+[INFO] 15:38:02:50 BROKER/(4980:5136): Se conectó un proceso GAMEBOY.
+[INFO] 15:38:02:50 BROKER/(4980:5135): Me llegó el ACK del proceso de id 1 (Mensaje 1).
+[INFO] 15:38:02:50 BROKER/(4980:5136): Me llegó el ACK del proceso de id 1 (Mensaje 2).
+[INFO] 15:38:03:48 BROKER/(4980:5137): Se conectó un proceso GAMECARD.
+[INFO] 15:38:03:48 BROKER/(4980:5137): Elimino particion que comienza en: 8
+[INFO] 15:38:03:48 BROKER/(4980:5137): Almaceno mensaje en partición que comienza en: 8
+[INFO] 15:38:03:48 BROKER/(4980:4994): Llegó un nuevo mensaje a la cola CAUGHT_POKEMON.
+[INFO] 15:38:03:48 BROKER/(4980:4994): Envié mensaje al suscriptor de id: 1.
+[INFO] 15:38:03:48 BROKER/(4980:5138): Se conectó un proceso GAMEBOY.
+[INFO] 15:38:03:48 BROKER/(4980:5138): Me llegó el ACK del proceso de id 1 (Mensaje 6).
+[INFO] 15:38:03:49 BROKER/(4980:5139): Se conectó un proceso GAMECARD.
+[INFO] 15:38:03:49 BROKER/(4980:5139): Almaceno mensaje en partición que comienza en: 12
+[INFO] 15:38:03:49 BROKER/(4980:4994): Llegó un nuevo mensaje a la cola CAUGHT_POKEMON.
+[INFO] 15:38:03:49 BROKER/(4980:4994): Envié mensaje al suscriptor de id: 1.
+[INFO] 15:38:03:49 BROKER/(4980:5140): Se conectó un proceso GAMEBOY.
+[INFO] 15:38:03:49 BROKER/(4980:5140): Me llegó el ACK del proceso de id 1 (Mensaje 7).
+[INFO] 15:38:03:58 BROKER/(4980:5141): Se conectó un proceso GAMECARD.
+[INFO] 15:38:03:58 BROKER/(4980:5141): Almaceno mensaje en partición que comienza en: 16
+[INFO] 15:38:03:58 BROKER/(4980:4994): Llegó un nuevo mensaje a la cola CAUGHT_POKEMON.
+[INFO] 15:38:03:58 BROKER/(4980:4994): Envié mensaje al suscriptor de id: 1.
+[INFO] 15:38:03:65 BROKER/(4980:5142): Se conectó un proceso GAMEBOY.
+[INFO] 15:38:03:65 BROKER/(4980:5142): Me llegó el ACK del proceso de id 1 (Mensaje 8).
+[INFO] 15:38:06:52 BROKER/(4980:5150): Se conectó un proceso GAMEBOY.
+[INFO] 15:38:06:52 BROKER/(4980:5150): Se realiza la compactacion
+[INFO] 15:38:06:52 BROKER/(4980:5150): Elimino particion que comienza en: 20
+[INFO] 15:38:06:52 BROKER/(4980:5150): Se realiza la compactacion
+[INFO] 15:38:06:52 BROKER/(4980:5150): Almaceno mensaje en partición que comienza en: 36
+[INFO] 15:38:06:52 BROKER/(4980:4995): Llegó un nuevo mensaje a la cola CATCH_POKEMON.
+[INFO] 15:38:06:52 BROKER/(4980:4995): Envié mensaje al suscriptor de id: 201.
+[INFO] 15:38:06:55 BROKER/(4980:5151): Se conectó un proceso GAMECARD.
+[INFO] 15:38:06:55 BROKER/(4980:5151): Me llegó el ACK del proceso de id 201 (Mensaje 9).
+[INFO] 15:38:07:121 BROKER/(4980:5154): Se conectó un proceso GAMECARD.
+[INFO] 15:38:07:123 BROKER/(4980:5154): Almaceno mensaje en partición que comienza en: 58
+[INFO] 15:38:07:127 BROKER/(4980:4994): Llegó un nuevo mensaje a la cola CAUGHT_POKEMON.
+[INFO] 15:47:22:603 BROKER/(5944:5944): ___________________________________________________________________________________________________________
+[INFO] 15:47:22:603 BROKER/(5944:5944): Inició el BROKER
+[INFO] 15:47:25:422 BROKER/(5944:5987): Se conectó un proceso GAMECARD.
+[INFO] 15:47:25:422 BROKER/(5944:5987): Un proceso GAMECARD se sucribió a la cola NEW_POKEMON.
+[INFO] 15:47:25:434 BROKER/(5944:5989): Se conectó un proceso GAMECARD.
+[INFO] 15:47:25:434 BROKER/(5944:5989): Un proceso GAMECARD se sucribió a la cola CATCH_POKEMON.
+[INFO] 15:47:25:435 BROKER/(5944:5990): Se conectó un proceso GAMECARD.
+[INFO] 15:47:25:435 BROKER/(5944:5990): Un proceso GAMECARD se sucribió a la cola GET_POKEMON.
+[INFO] 15:54:57:374 BROKER/(6494:6494): ___________________________________________________________________________________________________________
+[INFO] 15:54:57:374 BROKER/(6494:6494): Inició el BROKER
+[INFO] 15:54:59:250 BROKER/(6494:6538): Se conectó un proceso GAMECARD.
+[INFO] 15:54:59:250 BROKER/(6494:6539): Se conectó un proceso GAMECARD.
+[INFO] 15:54:59:250 BROKER/(6494:6538): Un proceso GAMECARD se sucribió a la cola CATCH_POKEMON.
+[INFO] 15:54:59:250 BROKER/(6494:6539): Un proceso GAMECARD se sucribió a la cola GET_POKEMON.
+[INFO] 15:54:59:251 BROKER/(6494:6540): Se conectó un proceso GAMECARD.
+[INFO] 15:54:59:251 BROKER/(6494:6540): Un proceso GAMECARD se sucribió a la cola NEW_POKEMON.
+[INFO] 15:55:04:965 BROKER/(6494:6549): Se conectó un proceso GAMEBOY.
+[INFO] 15:55:04:965 BROKER/(6494:6549): Almaceno mensaje en partición que comienza en: 0
+[INFO] 15:55:04:965 BROKER/(6494:6507): Llegó un nuevo mensaje a la cola NEW_POKEMON.
+[INFO] 15:55:04:966 BROKER/(6494:6507): Envié mensaje al suscriptor de id: 201.
+[INFO] 15:55:04:966 BROKER/(6494:6553): Se conectó un proceso GAMEBOY.
+[INFO] 15:55:04:966 BROKER/(6494:6553): Almaceno mensaje en partición que comienza en: 23
+[INFO] 15:55:04:966 BROKER/(6494:6555): Se conectó un proceso GAMECARD.
+[INFO] 15:55:04:966 BROKER/(6494:6555): Me llegó el ACK del proceso de id 201 (Mensaje 1).
+[INFO] 15:55:04:967 BROKER/(6494:6560): Se conectó un proceso GAMEBOY.
+[INFO] 15:55:04:968 BROKER/(6494:6560): Elimino particion que comienza en: 0
+[INFO] 15:55:04:968 BROKER/(6494:6560): Almaceno mensaje en partición que comienza en: 0
+[INFO] 15:55:04:968 BROKER/(6494:6563): Se conectó un proceso GAMEBOY.
+[INFO] 15:55:04:968 BROKER/(6494:6563): Elimino particion que comienza en: 23
+[INFO] 15:55:04:968 BROKER/(6494:6563): Se consolidan las particiones que comienzan en: 23 y 47
+[INFO] 15:55:04:968 BROKER/(6494:6563): Almaceno mensaje en partición que comienza en: 23
+[INFO] 15:55:04:969 BROKER/(6494:6507): Llegó un nuevo mensaje a la cola NEW_POKEMON.
+[INFO] 15:55:04:970 BROKER/(6494:6507): Envié mensaje al suscriptor de id: 201.
+[INFO] 15:55:04:970 BROKER/(6494:6507): Llegó un nuevo mensaje a la cola NEW_POKEMON.
+[INFO] 15:55:04:970 BROKER/(6494:6507): Envié mensaje al suscriptor de id: 201.
+[INFO] 15:55:04:970 BROKER/(6494:6507): Llegó un nuevo mensaje a la cola NEW_POKEMON.
+[INFO] 15:55:04:970 BROKER/(6494:6507): Envié mensaje al suscriptor de id: 201.
+[INFO] 15:55:04:970 BROKER/(6494:6564): Se conectó un proceso GAMECARD.
+[INFO] 15:55:04:970 BROKER/(6494:6566): Se conectó un proceso GAMECARD.
+[INFO] 15:55:04:970 BROKER/(6494:6568): Se conectó un proceso GAMECARD.
+[INFO] 15:55:04:971 BROKER/(6494:6564): Me llegó el ACK del proceso de id 201 (Mensaje 2).
+[INFO] 15:55:04:971 BROKER/(6494:6568): Me llegó el ACK del proceso de id 201 (Mensaje 4).
+[INFO] 15:55:04:971 BROKER/(6494:6566): Me llegó el ACK del proceso de id 201 (Mensaje 3).
+[INFO] 15:55:05:981 BROKER/(6494:6571): Se conectó un proceso GAMECARD.
+[INFO] 15:55:05:981 BROKER/(6494:6572): Se conectó un proceso GAMECARD.
+[INFO] 15:55:05:981 BROKER/(6494:6573): Se conectó un proceso GAMECARD.
+[INFO] 15:55:05:982 BROKER/(6494:6571): Elimino particion que comienza en: 23
+[INFO] 15:55:05:982 BROKER/(6494:6571): Se consolidan las particiones que comienzan en: 23 y 46
+[INFO] 15:55:05:982 BROKER/(6494:6571): Almaceno mensaje en partición que comienza en: 23
+[INFO] 15:55:05:983 BROKER/(6494:6506): Llegó un nuevo mensaje a la cola APPEARED_POKEMON.
+[INFO] 15:55:05:983 BROKER/(6494:6573): Almaceno mensaje en partición que comienza en: 43
+[INFO] 15:55:05:983 BROKER/(6494:6506): Llegó un nuevo mensaje a la cola APPEARED_POKEMON.
+[INFO] 15:55:05:983 BROKER/(6494:6572): Elimino particion que comienza en: 0
+[INFO] 15:55:05:983 BROKER/(6494:6572): Almaceno mensaje en partición que comienza en: 0
+[INFO] 15:55:05:984 BROKER/(6494:6506): Llegó un nuevo mensaje a la cola APPEARED_POKEMON.
+[INFO] 15:55:05:984 BROKER/(6494:6570): Se conectó un proceso GAMECARD.
+[INFO] 15:55:05:984 BROKER/(6494:6570): Se realiza la compactacion
+[INFO] 15:55:05:984 BROKER/(6494:6570): Elimino particion que comienza en: 20
+[INFO] 15:55:05:984 BROKER/(6494:6570): Almaceno mensaje en partición que comienza en: 20
+[INFO] 15:55:05:985 BROKER/(6494:6506): Llegó un nuevo mensaje a la cola APPEARED_POKEMON.
+[INFO] 15:56:15:715 BROKER/(6494:6661): Se conectó un proceso TEAM.
+[INFO] 15:56:15:716 BROKER/(6494:6662): Se conectó un proceso TEAM.
+[INFO] 15:56:15:716 BROKER/(6494:6663): Se conectó un proceso TEAM.
+[INFO] 15:56:15:716 BROKER/(6494:6664): Se conectó un proceso TEAM.
+[INFO] 15:56:15:716 BROKER/(6494:6665): Se conectó un proceso TEAM.
+[INFO] 15:56:15:716 BROKER/(6494:6666): Se conectó un proceso TEAM.
+[INFO] 15:56:15:716 BROKER/(6494:6667): Se conectó un proceso TEAM.
+[INFO] 15:56:15:716 BROKER/(6494:6668): Se conectó un proceso TEAM.
+[INFO] 15:56:15:718 BROKER/(6494:6661): Un proceso TEAM se sucribió a la cola CAUGHT_POKEMON.
+[INFO] 15:56:15:723 BROKER/(6494:6665): Elimino particion que comienza en: 0
+[INFO] 15:56:15:723 BROKER/(6494:6665): Almaceno mensaje en partición que comienza en: 0
+[INFO] 15:56:15:724 BROKER/(6494:6510): Llegó un nuevo mensaje a la cola GET_POKEMON.
+[INFO] 15:56:15:724 BROKER/(6494:6667): Un proceso TEAM se sucribió a la cola LOCALIZED_POKEMON.
+[INFO] 15:56:15:724 BROKER/(6494:6510): Envié mensaje al suscriptor de id: 201.
+[INFO] 15:56:15:724 BROKER/(6494:6668): Un proceso TEAM se sucribió a la cola APPEARED_POKEMON.
+[INFO] 15:56:15:725 BROKER/(6494:6662): Se realiza la compactacion
+[INFO] 15:56:15:725 BROKER/(6494:6662): Almaceno mensaje en partición que comienza en: 50
+[INFO] 15:56:15:725 BROKER/(6494:6510): Llegó un nuevo mensaje a la cola GET_POKEMON.
+[INFO] 15:56:15:725 BROKER/(6494:6510): Envié mensaje al suscriptor de id: 201.
+[INFO] 15:56:15:725 BROKER/(6494:6663): Elimino particion que comienza en: 0
+[INFO] 15:56:15:725 BROKER/(6494:6663): Se realiza la compactacion
+[INFO] 15:56:15:725 BROKER/(6494:6663): Almaceno mensaje en partición que comienza en: 51
+[INFO] 15:56:15:725 BROKER/(6494:6510): Llegó un nuevo mensaje a la cola GET_POKEMON.
+[INFO] 15:56:15:725 BROKER/(6494:6510): Envié mensaje al suscriptor de id: 201.
+[INFO] 15:56:15:725 BROKER/(6494:6666): Elimino particion que comienza en: 51
+[INFO] 15:56:15:725 BROKER/(6494:6666): Se consolidan las particiones que comienzan en: 51 y 63
+[INFO] 15:56:15:725 BROKER/(6494:6666): Almaceno mensaje en partición que comienza en: 51
+[INFO] 15:56:15:725 BROKER/(6494:6510): Llegó un nuevo mensaje a la cola GET_POKEMON.
+[INFO] 15:56:15:725 BROKER/(6494:6510): Envié mensaje al suscriptor de id: 201.
+[INFO] 15:56:15:726 BROKER/(6494:6664): Elimino particion que comienza en: 51
+[INFO] 15:56:15:726 BROKER/(6494:6664): Se consolidan las particiones que comienzan en: 51 y 62
+[INFO] 15:56:15:726 BROKER/(6494:6664): Almaceno mensaje en partición que comienza en: 51
+[INFO] 15:56:15:726 BROKER/(6494:6510): Llegó un nuevo mensaje a la cola GET_POKEMON.
+[INFO] 15:56:15:726 BROKER/(6494:6510): Envié mensaje al suscriptor de id: 201.
+[INFO] 15:56:15:734 BROKER/(6494:6669): Se conectó un proceso GAMECARD.
+[INFO] 15:56:15:734 BROKER/(6494:6671): Se conectó un proceso GAMECARD.
+[INFO] 15:56:15:734 BROKER/(6494:6673): Se conectó un proceso GAMECARD.
+[INFO] 15:56:15:734 BROKER/(6494:6675): Se conectó un proceso GAMECARD.
+[INFO] 15:56:15:735 BROKER/(6494:6669): Me llegó el ACK del proceso de id 201 (Mensaje 9).
+[INFO] 15:56:15:736 BROKER/(6494:6671): Me llegó el ACK del proceso de id 201 (Mensaje 11).
+[INFO] 15:56:15:737 BROKER/(6494:6675): Me llegó el ACK del proceso de id 201 (Mensaje 13).
+[INFO] 15:56:15:737 BROKER/(6494:6673): Me llegó el ACK del proceso de id 201 (Mensaje 12).
+[INFO] 15:56:15:738 BROKER/(6494:6678): Se conectó un proceso TEAM.
+[INFO] 15:56:15:739 BROKER/(6494:6680): Se conectó un proceso TEAM.
+[INFO] 15:56:15:742 BROKER/(6494:6678): Me llegó el ACK del proceso de id 103 (Mensaje 6).
+[INFO] 15:56:15:742 BROKER/(6494:6680): Me llegó el ACK del proceso de id 103 (Mensaje 8).
+[INFO] 15:56:15:743 BROKER/(6494:6682): Se conectó un proceso GAMECARD.
+[INFO] 15:56:15:744 BROKER/(6494:6682): Me llegó el ACK del proceso de id 201 (Mensaje 10).
+[INFO] 15:56:15:749 BROKER/(6494:6683): Se conectó un proceso GAMECARD.
+[INFO] 15:56:15:754 BROKER/(6494:6683): Elimino particion que comienza en: 40
+[INFO] 15:56:15:754 BROKER/(6494:6683): Se realiza la compactacion
+[INFO] 15:56:15:754 BROKER/(6494:6683): Elimino particion que comienza en: 20
+[INFO] 15:56:15:755 BROKER/(6494:6683): Almaceno mensaje en partición que comienza en: 20
+[INFO] 15:56:15:755 BROKER/(6494:6511): Llegó un nuevo mensaje a la cola LOCALIZED_POKEMON.
+[INFO] 15:56:15:756 BROKER/(6494:6511): Envié mensaje al suscriptor de id: 103.
+[INFO] 15:56:15:756 BROKER/(6494:6684): Se conectó un proceso GAMECARD.
+[INFO] 15:56:15:756 BROKER/(6494:6684): Se realiza la compactacion
+[INFO] 15:56:15:756 BROKER/(6494:6684): Almaceno mensaje en partición que comienza en: 45
+[INFO] 15:56:15:756 BROKER/(6494:6511): Llegó un nuevo mensaje a la cola LOCALIZED_POKEMON.
+[INFO] 15:56:15:756 BROKER/(6494:6685): Se conectó un proceso GAMECARD.
+[INFO] 15:56:15:756 BROKER/(6494:6511): Envié mensaje al suscriptor de id: 103.
+[INFO] 15:56:15:756 BROKER/(6494:6685): Elimino particion que comienza en: 0
+[INFO] 15:56:15:756 BROKER/(6494:6685): Almaceno mensaje en partición que comienza en: 0
+[INFO] 15:56:15:759 BROKER/(6494:6687): Se conectó un proceso TEAM.
+[INFO] 15:56:15:759 BROKER/(6494:6687): Me llegó el ACK del proceso de id 103 (Mensaje 14).
+[INFO] 15:56:15:759 BROKER/(6494:6689): Se conectó un proceso TEAM.
+[INFO] 15:56:15:759 BROKER/(6494:6689): Me llegó el ACK del proceso de id 103 (Mensaje 15).
+[INFO] 15:56:15:760 BROKER/(6494:6511): Llegó un nuevo mensaje a la cola LOCALIZED_POKEMON.
+[INFO] 15:56:15:760 BROKER/(6494:6511): Envié mensaje al suscriptor de id: 103.
+[INFO] 15:56:15:763 BROKER/(6494:6691): Se conectó un proceso TEAM.
+[INFO] 15:56:15:763 BROKER/(6494:6691): Me llegó el ACK del proceso de id 103 (Mensaje 16).
+[INFO] 15:56:16:745 BROKER/(6494:6692): Se conectó un proceso GAMECARD.
+[INFO] 15:56:16:745 BROKER/(6494:6692): Se realiza la compactacion
+[INFO] 15:56:16:745 BROKER/(6494:6692): Elimino particion que comienza en: 30
+[INFO] 15:56:16:745 BROKER/(6494:6692): Se realiza la compactacion
+[INFO] 15:56:16:745 BROKER/(6494:6692): Elimino particion que comienza en: 16
+[INFO] 15:56:16:745 BROKER/(6494:6692): Se realiza la compactacion
+[INFO] 15:56:16:745 BROKER/(6494:6692): Almaceno mensaje en partición que comienza en: 31
+[INFO] 15:56:16:746 BROKER/(6494:6511): Llegó un nuevo mensaje a la cola LOCALIZED_POKEMON.
+[INFO] 15:56:16:746 BROKER/(6494:6511): Envié mensaje al suscriptor de id: 103.
+[INFO] 15:56:16:750 BROKER/(6494:6693): Se conectó un proceso GAMECARD.
+[INFO] 15:56:16:750 BROKER/(6494:6694): Se conectó un proceso TEAM.
+[INFO] 15:56:16:750 BROKER/(6494:6693): Elimino particion que comienza en: 16
+[INFO] 15:56:16:750 BROKER/(6494:6693): Se realiza la compactacion
+[INFO] 15:56:16:750 BROKER/(6494:6693): Almaceno mensaje en partición que comienza en: 39
+[INFO] 15:56:16:750 BROKER/(6494:6511): Llegó un nuevo mensaje a la cola LOCALIZED_POKEMON.
+[INFO] 15:56:16:750 BROKER/(6494:6511): Envié mensaje al suscriptor de id: 103.
+[INFO] 15:56:16:750 BROKER/(6494:6694): Me llegó el ACK del proceso de id 103 (Mensaje 17).
+[INFO] 15:56:16:760 BROKER/(6494:6696): Se conectó un proceso TEAM.
+[INFO] 15:56:16:760 BROKER/(6494:6696): Me llegó el ACK del proceso de id 103 (Mensaje 18).
+[INFO] 15:56:30:733 BROKER/(6494:6702): Se conectó un proceso TEAM.
+[INFO] 15:56:30:734 BROKER/(6494:6702): Elimino particion que comienza en: 0
+[INFO] 15:56:30:734 BROKER/(6494:6702): Se realiza la compactacion
+[INFO] 15:56:30:734 BROKER/(6494:6702): Elimino particion que comienza en: 0
+[INFO] 15:56:30:734 BROKER/(6494:6702): Almaceno mensaje en partición que comienza en: 0
+[INFO] 15:56:30:734 BROKER/(6494:6509): Llegó un nuevo mensaje a la cola CATCH_POKEMON.
+[INFO] 15:56:30:734 BROKER/(6494:6509): Envié mensaje al suscriptor de id: 201.
+[INFO] 15:56:30:737 BROKER/(6494:6711): Se conectó un proceso GAMECARD.
+[INFO] 15:56:30:737 BROKER/(6494:6711): Me llegó el ACK del proceso de id 201 (Mensaje 19).
+[INFO] 15:56:31:751 BROKER/(6494:6717): Se conectó un proceso GAMECARD.
+[INFO] 15:56:31:752 BROKER/(6494:6717): Almaceno mensaje en partición que comienza en: 19
+[INFO] 15:56:31:752 BROKER/(6494:6508): Llegó un nuevo mensaje a la cola CAUGHT_POKEMON.
+[INFO] 15:56:31:752 BROKER/(6494:6508): Envié mensaje al suscriptor de id: 103.
+[INFO] 15:56:31:759 BROKER/(6494:6719): Se conectó un proceso TEAM.
+[INFO] 15:56:31:759 BROKER/(6494:6719): Me llegó el ACK del proceso de id 103 (Mensaje 20).
+[INFO] 15:56:34:294 BROKER/(6494:6735): Se conectó un proceso TEAM.
+[INFO] 15:56:34:294 BROKER/(6494:6735): Un proceso TEAM se sucribió a la cola CAUGHT_POKEMON.
+[INFO] 15:56:34:306 BROKER/(6494:6733): Se conectó un proceso TEAM.
+[INFO] 15:56:34:306 BROKER/(6494:6733): Un proceso TEAM se sucribió a la cola APPEARED_POKEMON.
+[INFO] 15:56:34:306 BROKER/(6494:6734): Se conectó un proceso TEAM.
+[INFO] 15:56:34:306 BROKER/(6494:6734): Un proceso TEAM se sucribió a la cola LOCALIZED_POKEMON.
+[INFO] 15:56:34:311 BROKER/(6494:6742): Se conectó un proceso TEAM.
+[INFO] 15:56:34:311 BROKER/(6494:6742): Me llegó el ACK del proceso de id 105 (Mensaje 18).
+[INFO] 15:56:34:311 BROKER/(6494:6740): Se conectó un proceso TEAM.
+[INFO] 15:56:34:311 BROKER/(6494:6740): Me llegó el ACK del proceso de id 105 (Mensaje 20).
+[INFO] 15:56:34:314 BROKER/(6494:6744): Se conectó un proceso TEAM.
+[INFO] 15:56:34:316 BROKER/(6494:6745): Se conectó un proceso TEAM.
+[INFO] 15:56:34:321 BROKER/(6494:6744): Almaceno mensaje en partición que comienza en: 46
+[INFO] 15:56:34:321 BROKER/(6494:6510): Llegó un nuevo mensaje a la cola GET_POKEMON.
+[INFO] 15:56:34:321 BROKER/(6494:6510): Envié mensaje al suscriptor de id: 201.
+[INFO] 15:56:34:321 BROKER/(6494:6745): Elimino particion que comienza en: 0
+[INFO] 15:56:34:321 BROKER/(6494:6745): Almaceno mensaje en partición que comienza en: 0
+[INFO] 15:56:34:322 BROKER/(6494:6510): Llegó un nuevo mensaje a la cola GET_POKEMON.
+[INFO] 15:56:34:322 BROKER/(6494:6510): Envié mensaje al suscriptor de id: 201.
+[INFO] 15:56:34:322 BROKER/(6494:6746): Se conectó un proceso TEAM.
+[INFO] 15:56:34:322 BROKER/(6494:6747): Se conectó un proceso TEAM.
+[INFO] 15:56:34:322 BROKER/(6494:6746): Se realiza la compactacion
+[INFO] 15:56:34:323 BROKER/(6494:6746): Almaceno mensaje en partición que comienza en: 50
+[INFO] 15:56:34:323 BROKER/(6494:6510): Llegó un nuevo mensaje a la cola GET_POKEMON.
+[INFO] 15:56:34:323 BROKER/(6494:6510): Envié mensaje al suscriptor de id: 201.
+[INFO] 15:56:34:324 BROKER/(6494:6747): Elimino particion que comienza en: 15
+[INFO] 15:56:34:324 BROKER/(6494:6747): Almaceno mensaje en partición que comienza en: 15
+[INFO] 15:56:34:324 BROKER/(6494:6510): Llegó un nuevo mensaje a la cola GET_POKEMON.
+[INFO] 15:56:34:324 BROKER/(6494:6510): Envié mensaje al suscriptor de id: 201.
+[INFO] 15:56:34:327 BROKER/(6494:6748): Se conectó un proceso GAMECARD.
+[INFO] 15:56:34:328 BROKER/(6494:6748): Me llegó el ACK del proceso de id 201 (Mensaje 21).
+[INFO] 15:56:34:328 BROKER/(6494:6750): Se conectó un proceso GAMECARD.
+[INFO] 15:56:34:329 BROKER/(6494:6750): Me llegó el ACK del proceso de id 201 (Mensaje 22).
+[INFO] 15:56:34:330 BROKER/(6494:6752): Se conectó un proceso GAMECARD.
+[INFO] 15:56:34:330 BROKER/(6494:6752): Me llegó el ACK del proceso de id 201 (Mensaje 23).
+[INFO] 15:56:34:331 BROKER/(6494:6754): Se conectó un proceso GAMECARD.
+[INFO] 15:56:34:331 BROKER/(6494:6754): Me llegó el ACK del proceso de id 201 (Mensaje 24).
+[INFO] 15:56:34:339 BROKER/(6494:6756): Se conectó un proceso GAMECARD.
+[INFO] 15:56:34:339 BROKER/(6494:6756): Almaceno mensaje en partición que comienza en: 23
+[INFO] 15:56:34:339 BROKER/(6494:6511): Llegó un nuevo mensaje a la cola LOCALIZED_POKEMON.
+[INFO] 15:56:34:340 BROKER/(6494:6511): Envié mensaje al suscriptor de id: 103.
+[INFO] 15:56:34:340 BROKER/(6494:6511): Envié mensaje al suscriptor de id: 105.
+[INFO] 15:56:34:340 BROKER/(6494:6758): Se conectó un proceso TEAM.
+[INFO] 15:56:34:340 BROKER/(6494:6758): Me llegó el ACK del proceso de id 105 (Mensaje 25).
+[INFO] 15:56:34:340 BROKER/(6494:6757): Se conectó un proceso TEAM.
+[INFO] 15:56:34:340 BROKER/(6494:6757): Me llegó el ACK del proceso de id 103 (Mensaje 25).
+[INFO] 15:56:34:345 BROKER/(6494:6761): Se conectó un proceso GAMECARD.
+[INFO] 15:56:34:345 BROKER/(6494:6761): Se realiza la compactacion
+[INFO] 15:56:34:345 BROKER/(6494:6761): Elimino particion que comienza en: 11
+[INFO] 15:56:34:345 BROKER/(6494:6761): Se realiza la compactacion
+[INFO] 15:56:34:345 BROKER/(6494:6761): Elimino particion que comienza en: 33
+[INFO] 15:56:34:345 BROKER/(6494:6761): Almaceno mensaje en partición que comienza en: 33
+[INFO] 15:56:34:345 BROKER/(6494:6511): Llegó un nuevo mensaje a la cola LOCALIZED_POKEMON.
+[INFO] 15:56:34:345 BROKER/(6494:6511): Envié mensaje al suscriptor de id: 103.
+[INFO] 15:56:34:346 BROKER/(6494:6511): Envié mensaje al suscriptor de id: 105.
+[INFO] 15:56:34:346 BROKER/(6494:6763): Se conectó un proceso TEAM.
+[INFO] 15:56:34:346 BROKER/(6494:6763): Me llegó el ACK del proceso de id 105 (Mensaje 26).
+[INFO] 15:56:34:354 BROKER/(6494:6762): Se conectó un proceso TEAM.
+[INFO] 15:56:34:356 BROKER/(6494:6762): Me llegó el ACK del proceso de id 103 (Mensaje 26).
+[INFO] 15:56:35:339 BROKER/(6494:6766): Se conectó un proceso GAMECARD.
+[INFO] 15:56:35:339 BROKER/(6494:6766): Elimino particion que comienza en: 0
+[INFO] 15:56:35:339 BROKER/(6494:6766): Se realiza la compactacion
+[INFO] 15:56:35:339 BROKER/(6494:6766): Elimino particion que comienza en: 34
+[INFO] 15:56:35:339 BROKER/(6494:6766): Se consolidan las particiones que comienzan en: 34 y 44
+[INFO] 15:56:35:339 BROKER/(6494:6766): Almaceno mensaje en partición que comienza en: 34
+[INFO] 15:56:35:339 BROKER/(6494:6767): Se conectó un proceso GAMECARD.
+[INFO] 15:56:35:340 BROKER/(6494:6767): Elimino particion que comienza en: 0
+[INFO] 15:56:35:340 BROKER/(6494:6767): Se realiza la compactacion
+[INFO] 15:56:35:340 BROKER/(6494:6767): Elimino particion que comienza en: 0
+[INFO] 15:56:35:340 BROKER/(6494:6767): Se realiza la compactacion
+[INFO] 15:56:35:340 BROKER/(6494:6767): Almaceno mensaje en partición que comienza en: 36
+[INFO] 15:56:35:340 BROKER/(6494:6511): Llegó un nuevo mensaje a la cola LOCALIZED_POKEMON.
+[INFO] 15:56:35:340 BROKER/(6494:6511): Envié mensaje al suscriptor de id: 103.
+[INFO] 15:56:35:340 BROKER/(6494:6511): Envié mensaje al suscriptor de id: 105.
+[INFO] 15:56:35:340 BROKER/(6494:6511): Llegó un nuevo mensaje a la cola LOCALIZED_POKEMON.
+[INFO] 15:56:35:340 BROKER/(6494:6511): Envié mensaje al suscriptor de id: 103.
+[INFO] 15:56:35:340 BROKER/(6494:6511): Envié mensaje al suscriptor de id: 105.
+[INFO] 15:56:35:346 BROKER/(6494:6771): Se conectó un proceso TEAM.
+[INFO] 15:56:35:346 BROKER/(6494:6771): Me llegó el ACK del proceso de id 105 (Mensaje 28).
+[INFO] 15:56:35:346 BROKER/(6494:6773): Se conectó un proceso TEAM.
+[INFO] 15:56:35:346 BROKER/(6494:6773): Me llegó el ACK del proceso de id 103 (Mensaje 28).
+[INFO] 15:56:35:346 BROKER/(6494:6769): Se conectó un proceso TEAM.
+[INFO] 15:56:35:347 BROKER/(6494:6769): Me llegó el ACK del proceso de id 105 (Mensaje 27).
+[INFO] 15:56:35:347 BROKER/(6494:6768): Se conectó un proceso TEAM.
+[INFO] 15:56:35:347 BROKER/(6494:6768): Me llegó el ACK del proceso de id 103 (Mensaje 27).
+[INFO] 15:56:45:737 BROKER/(6494:6780): Se conectó un proceso TEAM.
+[INFO] 15:56:45:738 BROKER/(6494:6780): Elimino particion que comienza en: 0
+[INFO] 15:56:45:738 BROKER/(6494:6780): Se realiza la compactacion
+[INFO] 15:56:45:738 BROKER/(6494:6780): Elimino particion que comienza en: 0
+[INFO] 15:56:45:738 BROKER/(6494:6780): Almaceno mensaje en partición que comienza en: 0
+[INFO] 15:56:45:738 BROKER/(6494:6509): Llegó un nuevo mensaje a la cola CATCH_POKEMON.
+[INFO] 15:56:45:738 BROKER/(6494:6509): Envié mensaje al suscriptor de id: 201.
+[INFO] 15:56:45:744 BROKER/(6494:6785): Se conectó un proceso GAMECARD.
+[INFO] 15:56:45:746 BROKER/(6494:6785): Me llegó el ACK del proceso de id 201 (Mensaje 29).
+[INFO] 15:56:46:745 BROKER/(6494:6791): Se conectó un proceso GAMECARD.
+[INFO] 15:56:46:746 BROKER/(6494:6791): Almaceno mensaje en partición que comienza en: 19
+[INFO] 15:56:46:746 BROKER/(6494:6508): Llegó un nuevo mensaje a la cola CAUGHT_POKEMON.
+[INFO] 15:56:46:746 BROKER/(6494:6508): Envié mensaje al suscriptor de id: 103.
+[INFO] 15:56:46:746 BROKER/(6494:6508): Envié mensaje al suscriptor de id: 105.
+[INFO] 15:56:46:751 BROKER/(6494:6792): Se conectó un proceso TEAM.
+[INFO] 15:56:46:751 BROKER/(6494:6792): Me llegó el ACK del proceso de id 105 (Mensaje 30).
+[INFO] 15:56:46:751 BROKER/(6494:6794): Se conectó un proceso TEAM.
+[INFO] 15:56:46:751 BROKER/(6494:6794): Me llegó el ACK del proceso de id 103 (Mensaje 30).
+[INFO] 15:57:45:361 BROKER/(6494:6858): Se conectó un proceso TEAM.
+[INFO] 15:57:45:362 BROKER/(6494:6858): Se realiza la compactacion
+[INFO] 15:57:45:362 BROKER/(6494:6858): Elimino particion que comienza en: 23
+[INFO] 15:57:45:362 BROKER/(6494:6858): Se consolidan las particiones que comienzan en: 23 y 46
+[INFO] 15:57:45:362 BROKER/(6494:6858): Almaceno mensaje en partición que comienza en: 23
+[INFO] 15:57:45:362 BROKER/(6494:6509): Llegó un nuevo mensaje a la cola CATCH_POKEMON.
+[INFO] 15:57:45:362 BROKER/(6494:6509): Envié mensaje al suscriptor de id: 201.
+[INFO] 15:57:45:368 BROKER/(6494:6874): Se conectó un proceso GAMECARD.
+[INFO] 15:57:45:368 BROKER/(6494:6874): Me llegó el ACK del proceso de id 201 (Mensaje 31).
+[INFO] 15:57:46:446 BROKER/(6494:6876): Se conectó un proceso GAMECARD.
+[INFO] 15:57:46:446 BROKER/(6494:6876): Almaceno mensaje en partición que comienza en: 42
+[INFO] 15:57:46:447 BROKER/(6494:6508): Llegó un nuevo mensaje a la cola CAUGHT_POKEMON.
+[INFO] 15:57:46:447 BROKER/(6494:6508): Envié mensaje al suscriptor de id: 103.
+[INFO] 15:57:46:447 BROKER/(6494:6508): Envié mensaje al suscriptor de id: 105.
+[INFO] 15:57:46:448 BROKER/(6494:6877): Se conectó un proceso TEAM.
+[INFO] 15:57:46:448 BROKER/(6494:6877): Me llegó el ACK del proceso de id 103 (Mensaje 32).
+[INFO] 15:57:46:451 BROKER/(6494:6879): Se conectó un proceso TEAM.
+[INFO] 15:57:46:451 BROKER/(6494:6879): Me llegó el ACK del proceso de id 105 (Mensaje 32).
+[INFO] 15:58:05:368 BROKER/(6494:6895): Se conectó un proceso TEAM.
+[INFO] 15:58:05:369 BROKER/(6494:6895): Elimino particion que comienza en: 0
+[INFO] 15:58:05:369 BROKER/(6494:6895): Se realiza la compactacion
+[INFO] 15:58:05:369 BROKER/(6494:6895): Almaceno mensaje en partición que comienza en: 27
+[INFO] 15:58:05:369 BROKER/(6494:6509): Llegó un nuevo mensaje a la cola CATCH_POKEMON.
+[INFO] 15:58:05:369 BROKER/(6494:6509): Envié mensaje al suscriptor de id: 201.
+[INFO] 15:58:05:383 BROKER/(6494:6901): Se conectó un proceso GAMECARD.
+[INFO] 15:58:05:383 BROKER/(6494:6901): Me llegó el ACK del proceso de id 201 (Mensaje 33).
+[INFO] 15:58:06:409 BROKER/(6494:6903): Se conectó un proceso GAMECARD.
+[INFO] 15:58:06:410 BROKER/(6494:6903): Almaceno mensaje en partición que comienza en: 47
+[INFO] 15:58:06:410 BROKER/(6494:6508): Llegó un nuevo mensaje a la cola CAUGHT_POKEMON.
+[INFO] 15:58:06:410 BROKER/(6494:6508): Envié mensaje al suscriptor de id: 103.
+[INFO] 15:58:06:411 BROKER/(6494:6508): Envié mensaje al suscriptor de id: 105.
+[INFO] 15:58:06:415 BROKER/(6494:6905): Se conectó un proceso TEAM.
+[INFO] 15:58:06:417 BROKER/(6494:6905): Me llegó el ACK del proceso de id 105 (Mensaje 34).
+[INFO] 15:58:06:418 BROKER/(6494:6904): Se conectó un proceso TEAM.
+[INFO] 15:58:06:420 BROKER/(6494:6904): Me llegó el ACK del proceso de id 103 (Mensaje 34).
+[INFO] 15:58:55:827 BROKER/(6494:6980): Se conectó un proceso GAMEBOY.
+[INFO] 15:58:55:827 BROKER/(6494:6980): Elimino particion que comienza en: 0
+[INFO] 15:58:55:827 BROKER/(6494:6980): Se realiza la compactacion
+[INFO] 15:58:55:827 BROKER/(6494:6980): Elimino particion que comienza en: 0
+[INFO] 15:58:55:827 BROKER/(6494:6980): Se realiza la compactacion
+[INFO] 15:58:55:827 BROKER/(6494:6980): Almaceno mensaje en partición que comienza en: 28
+[INFO] 15:58:55:827 BROKER/(6494:6507): Llegó un nuevo mensaje a la cola NEW_POKEMON.
+[INFO] 15:58:55:828 BROKER/(6494:6507): Envié mensaje al suscriptor de id: 201.
+[INFO] 15:58:55:836 BROKER/(6494:6984): Se conectó un proceso GAMECARD.
+[INFO] 15:58:55:836 BROKER/(6494:6984): Me llegó el ACK del proceso de id 201 (Mensaje 35).
+[INFO] 15:58:55:838 BROKER/(6494:6986): Se conectó un proceso GAMEBOY.
+[INFO] 15:58:55:838 BROKER/(6494:6986): Elimino particion que comienza en: 0
+[INFO] 15:58:55:838 BROKER/(6494:6986): Se realiza la compactacion
+[INFO] 15:58:55:838 BROKER/(6494:6986): Elimino particion que comienza en: 0
+[INFO] 15:58:55:838 BROKER/(6494:6986): Se realiza la compactacion
+[INFO] 15:58:55:838 BROKER/(6494:6986): Almaceno mensaje en partición que comienza en: 24
+[INFO] 15:58:55:838 BROKER/(6494:6507): Llegó un nuevo mensaje a la cola NEW_POKEMON.
+[INFO] 15:58:55:838 BROKER/(6494:6507): Envié mensaje al suscriptor de id: 201.
+[INFO] 15:58:55:839 BROKER/(6494:6989): Se conectó un proceso GAMECARD.
+[INFO] 15:58:55:839 BROKER/(6494:6989): Me llegó el ACK del proceso de id 201 (Mensaje 36).
+[INFO] 15:58:55:846 BROKER/(6494:6991): Se conectó un proceso GAMEBOY.
+[INFO] 15:58:55:846 BROKER/(6494:6991): Elimino particion que comienza en: 0
+[INFO] 15:58:55:846 BROKER/(6494:6991): Se realiza la compactacion
+[INFO] 15:58:55:846 BROKER/(6494:6991): Elimino particion que comienza en: 0
+[INFO] 15:58:55:846 BROKER/(6494:6991): Se realiza la compactacion
+[INFO] 15:58:55:846 BROKER/(6494:6991): Almaceno mensaje en partición que comienza en: 22
+[INFO] 15:58:55:846 BROKER/(6494:6507): Llegó un nuevo mensaje a la cola NEW_POKEMON.
+[INFO] 15:58:55:846 BROKER/(6494:6507): Envié mensaje al suscriptor de id: 201.
+[INFO] 15:58:55:846 BROKER/(6494:6993): Se conectó un proceso GAMECARD.
+[INFO] 15:58:55:846 BROKER/(6494:6993): Me llegó el ACK del proceso de id 201 (Mensaje 37).
+[INFO] 15:58:55:851 BROKER/(6494:6996): Se conectó un proceso GAMEBOY.
+[INFO] 15:58:55:852 BROKER/(6494:6996): Elimino particion que comienza en: 0
+[INFO] 15:58:55:852 BROKER/(6494:6996): Se realiza la compactacion
+[INFO] 15:58:55:852 BROKER/(6494:6996): Almaceno mensaje en partición que comienza en: 24
+[INFO] 15:58:55:852 BROKER/(6494:6507): Llegó un nuevo mensaje a la cola NEW_POKEMON.
+[INFO] 15:58:55:852 BROKER/(6494:6507): Envié mensaje al suscriptor de id: 201.
+[INFO] 15:58:55:853 BROKER/(6494:6998): Se conectó un proceso GAMECARD.
+[INFO] 15:58:55:853 BROKER/(6494:6998): Me llegó el ACK del proceso de id 201 (Mensaje 38).
+[INFO] 15:58:55:862 BROKER/(6494:7001): Se conectó un proceso GAMEBOY.
+[INFO] 15:58:55:862 BROKER/(6494:7001): Elimino particion que comienza en: 0
+[INFO] 15:58:55:862 BROKER/(6494:7001): Almaceno mensaje en partición que comienza en: 0
+[INFO] 15:58:55:862 BROKER/(6494:6507): Llegó un nuevo mensaje a la cola NEW_POKEMON.
+[INFO] 15:58:55:863 BROKER/(6494:6507): Envié mensaje al suscriptor de id: 201.
+[INFO] 15:58:55:863 BROKER/(6494:7003): Se conectó un proceso GAMECARD.
+[INFO] 15:58:55:863 BROKER/(6494:7003): Me llegó el ACK del proceso de id 201 (Mensaje 39).
+[INFO] 15:58:55:871 BROKER/(6494:7006): Se conectó un proceso GAMEBOY.
+[INFO] 15:58:55:871 BROKER/(6494:7006): Se realiza la compactacion
+[INFO] 15:58:55:871 BROKER/(6494:7006): Elimino particion que comienza en: 22
+[INFO] 15:58:55:871 BROKER/(6494:7006): Se consolidan las particiones que comienzan en: 22 y 45
+[INFO] 15:58:55:871 BROKER/(6494:7006): Almaceno mensaje en partición que comienza en: 22
+[INFO] 15:58:55:871 BROKER/(6494:6507): Llegó un nuevo mensaje a la cola NEW_POKEMON.
+[INFO] 15:58:55:873 BROKER/(6494:6507): Envié mensaje al suscriptor de id: 201.
+[INFO] 15:58:55:879 BROKER/(6494:7008): Se conectó un proceso GAMECARD.
+[INFO] 15:58:55:879 BROKER/(6494:7008): Me llegó el ACK del proceso de id 201 (Mensaje 40).
+[INFO] 15:58:56:855 BROKER/(6494:7012): Se conectó un proceso GAMECARD.
+[INFO] 15:58:56:855 BROKER/(6494:7012): Elimino particion que comienza en: 0
+[INFO] 15:58:56:856 BROKER/(6494:7012): Almaceno mensaje en partición que comienza en: 0
+[INFO] 15:58:56:856 BROKER/(6494:6506): Llegó un nuevo mensaje a la cola APPEARED_POKEMON.
+[INFO] 15:58:56:856 BROKER/(6494:6506): Envié mensaje al suscriptor de id: 103.
+[INFO] 15:58:56:856 BROKER/(6494:6506): Envié mensaje al suscriptor de id: 105.
+[INFO] 15:58:56:856 BROKER/(6494:7010): Se conectó un proceso GAMECARD.
+[INFO] 15:58:56:856 BROKER/(6494:7010): Se realiza la compactacion
+[INFO] 15:58:56:856 BROKER/(6494:7010): Almaceno mensaje en partición que comienza en: 44
+[INFO] 15:58:56:856 BROKER/(6494:7011): Se conectó un proceso GAMECARD.
+[INFO] 15:58:56:856 BROKER/(6494:6506): Llegó un nuevo mensaje a la cola APPEARED_POKEMON.
+[INFO] 15:58:56:856 BROKER/(6494:6506): Envié mensaje al suscriptor de id: 103.
+[INFO] 15:58:56:857 BROKER/(6494:6506): Envié mensaje al suscriptor de id: 105.
+[INFO] 15:58:56:859 BROKER/(6494:7011): Elimino particion que comienza en: 20
+[INFO] 15:58:56:860 BROKER/(6494:7011): Almaceno mensaje en partición que comienza en: 20
+[INFO] 15:58:56:862 BROKER/(6494:7015): Se conectó un proceso TEAM.
+[INFO] 15:58:56:862 BROKER/(6494:7016): Se conectó un proceso TEAM.
+[INFO] 15:58:56:864 BROKER/(6494:7016): Me llegó el ACK del proceso de id 105 (Mensaje 41).
+[INFO] 15:58:56:864 BROKER/(6494:7015): Me llegó el ACK del proceso de id 103 (Mensaje 41).
+[INFO] 15:58:56:864 BROKER/(6494:6506): Llegó un nuevo mensaje a la cola APPEARED_POKEMON.
+[INFO] 15:58:56:864 BROKER/(6494:6506): Envié mensaje al suscriptor de id: 103.
+[INFO] 15:58:56:864 BROKER/(6494:6506): Envié mensaje al suscriptor de id: 105.
+[INFO] 15:58:56:864 BROKER/(6494:7020): Se conectó un proceso TEAM.
+[INFO] 15:58:56:864 BROKER/(6494:7020): Me llegó el ACK del proceso de id 105 (Mensaje 42).
+[INFO] 15:58:56:867 BROKER/(6494:7018): Se conectó un proceso TEAM.
+[INFO] 15:58:56:868 BROKER/(6494:7018): Me llegó el ACK del proceso de id 103 (Mensaje 42).
+[INFO] 15:58:56:868 BROKER/(6494:7024): Se conectó un proceso TEAM.
+[INFO] 15:58:56:868 BROKER/(6494:7024): Me llegó el ACK del proceso de id 103 (Mensaje 43).
+[INFO] 15:58:56:868 BROKER/(6494:7025): Se conectó un proceso TEAM.
+[INFO] 15:58:56:868 BROKER/(6494:7025): Me llegó el ACK del proceso de id 105 (Mensaje 43).
+[INFO] 15:58:56:869 BROKER/(6494:7022): Se conectó un proceso GAMECARD.
+[INFO] 15:58:56:870 BROKER/(6494:7022): Elimino particion que comienza en: 0
+[INFO] 15:58:56:870 BROKER/(6494:7022): Almaceno mensaje en partición que comienza en: 0
+[INFO] 15:58:56:870 BROKER/(6494:6506): Llegó un nuevo mensaje a la cola APPEARED_POKEMON.
+[INFO] 15:58:56:870 BROKER/(6494:6506): Envié mensaje al suscriptor de id: 103.
+[INFO] 15:58:56:870 BROKER/(6494:6506): Envié mensaje al suscriptor de id: 105.
+[INFO] 15:58:56:880 BROKER/(6494:7028): Se conectó un proceso TEAM.
+[INFO] 15:58:56:880 BROKER/(6494:7029): Se conectó un proceso TEAM.
+[INFO] 15:58:56:880 BROKER/(6494:7031): Se conectó un proceso GAMECARD.
+[INFO] 15:58:56:880 BROKER/(6494:7028): Me llegó el ACK del proceso de id 103 (Mensaje 44).
+[INFO] 15:58:56:880 BROKER/(6494:7031): Elimino particion que comienza en: 44
+[INFO] 15:58:56:880 BROKER/(6494:7031): Se consolidan las particiones que comienzan en: 40 y 44
+[INFO] 15:58:56:880 BROKER/(6494:7031): Almaceno mensaje en partición que comienza en: 40
+[INFO] 15:58:56:880 BROKER/(6494:6506): Llegó un nuevo mensaje a la cola APPEARED_POKEMON.
+[INFO] 15:58:56:888 BROKER/(6494:7029): Me llegó el ACK del proceso de id 105 (Mensaje 44).
+[INFO] 15:58:56:888 BROKER/(6494:6506): Envié mensaje al suscriptor de id: 103.
+[INFO] 15:58:56:888 BROKER/(6494:6506): Envié mensaje al suscriptor de id: 105.
+[INFO] 15:58:56:895 BROKER/(6494:7034): Se conectó un proceso GAMECARD.
+[INFO] 15:58:56:896 BROKER/(6494:7035): Se conectó un proceso TEAM.
+[INFO] 15:58:56:896 BROKER/(6494:7034): Elimino particion que comienza en: 20
+[INFO] 15:58:56:896 BROKER/(6494:7034): Almaceno mensaje en partición que comienza en: 20
+[INFO] 15:58:56:896 BROKER/(6494:6506): Llegó un nuevo mensaje a la cola APPEARED_POKEMON.
+[INFO] 15:58:56:896 BROKER/(6494:6506): Envié mensaje al suscriptor de id: 103.
+[INFO] 15:58:56:896 BROKER/(6494:6506): Envié mensaje al suscriptor de id: 105.
+[INFO] 15:58:56:896 BROKER/(6494:7035): Me llegó el ACK del proceso de id 105 (Mensaje 45).
+[INFO] 15:58:56:896 BROKER/(6494:7033): Se conectó un proceso TEAM.
+[INFO] 15:58:56:896 BROKER/(6494:7033): Me llegó el ACK del proceso de id 103 (Mensaje 45).
+[INFO] 15:58:56:902 BROKER/(6494:7039): Se conectó un proceso TEAM.
+[INFO] 15:58:56:902 BROKER/(6494:7037): Se conectó un proceso TEAM.
+[INFO] 15:58:56:903 BROKER/(6494:7039): Me llegó el ACK del proceso de id 103 (Mensaje 46).
+[INFO] 15:58:56:903 BROKER/(6494:7037): Me llegó el ACK del proceso de id 105 (Mensaje 46).
+[INFO] 15:59:31:876 BROKER/(6494:7069): Se conectó un proceso TEAM.
+[INFO] 15:59:31:876 BROKER/(6494:7069): Elimino particion que comienza en: 0
+[INFO] 15:59:31:876 BROKER/(6494:7069): Almaceno mensaje en partición que comienza en: 0
+[INFO] 15:59:31:876 BROKER/(6494:6509): Llegó un nuevo mensaje a la cola CATCH_POKEMON.
+[INFO] 15:59:31:876 BROKER/(6494:6509): Envié mensaje al suscriptor de id: 201.
+[INFO] 15:59:31:883 BROKER/(6494:7075): Se conectó un proceso GAMECARD.
+[INFO] 15:59:31:883 BROKER/(6494:7075): Me llegó el ACK del proceso de id 201 (Mensaje 47).
+[INFO] 15:59:32:895 BROKER/(6494:7077): Se conectó un proceso GAMECARD.
+[INFO] 15:59:32:895 BROKER/(6494:7077): Almaceno mensaje en partición que comienza en: 16
+[INFO] 15:59:32:895 BROKER/(6494:6508): Llegó un nuevo mensaje a la cola CAUGHT_POKEMON.
+[INFO] 15:59:32:895 BROKER/(6494:6508): Envié mensaje al suscriptor de id: 103.
+[INFO] 15:59:32:895 BROKER/(6494:6508): Envié mensaje al suscriptor de id: 105.
+[INFO] 15:59:32:895 BROKER/(6494:7078): Se conectó un proceso TEAM.
+[INFO] 15:59:32:895 BROKER/(6494:7078): Me llegó el ACK del proceso de id 103 (Mensaje 48).
+[INFO] 15:59:32:903 BROKER/(6494:7080): Se conectó un proceso TEAM.
+[INFO] 15:59:32:903 BROKER/(6494:7080): Me llegó el ACK del proceso de id 105 (Mensaje 48).
+[INFO] 15:59:51:888 BROKER/(6494:7087): Se conectó un proceso TEAM.
+[INFO] 15:59:51:891 BROKER/(6494:7087): Elimino particion que comienza en: 40
+[INFO] 15:59:51:891 BROKER/(6494:7087): Se consolidan las particiones que comienzan en: 40 y 60
+[INFO] 15:59:51:891 BROKER/(6494:7087): Almaceno mensaje en partición que comienza en: 40
+[INFO] 15:59:51:891 BROKER/(6494:6509): Llegó un nuevo mensaje a la cola CATCH_POKEMON.
+[INFO] 15:59:51:891 BROKER/(6494:6509): Envié mensaje al suscriptor de id: 201.
+[INFO] 15:59:51:897 BROKER/(6494:7105): Se conectó un proceso GAMECARD.
+[INFO] 15:59:51:900 BROKER/(6494:7105): Me llegó el ACK del proceso de id 201 (Mensaje 49).
+[INFO] 15:59:52:907 BROKER/(6494:7106): Se conectó un proceso GAMECARD.
+[INFO] 15:59:52:908 BROKER/(6494:7106): Almaceno mensaje en partición que comienza en: 58
+[INFO] 15:59:52:908 BROKER/(6494:6508): Llegó un nuevo mensaje a la cola CAUGHT_POKEMON.
+[INFO] 15:59:52:908 BROKER/(6494:6508): Envié mensaje al suscriptor de id: 103.
+[INFO] 15:59:52:908 BROKER/(6494:6508): Envié mensaje al suscriptor de id: 105.
+[INFO] 15:59:52:914 BROKER/(6494:7109): Se conectó un proceso TEAM.
+[INFO] 15:59:52:914 BROKER/(6494:7107): Se conectó un proceso TEAM.
+[INFO] 15:59:52:914 BROKER/(6494:7109): Me llegó el ACK del proceso de id 105 (Mensaje 50).
+[INFO] 15:59:52:915 BROKER/(6494:7107): Me llegó el ACK del proceso de id 103 (Mensaje 50).
+[INFO] 15:59:56:892 BROKER/(6494:7092): Se conectó un proceso TEAM.
+[INFO] 15:59:56:892 BROKER/(6494:7092): Elimino particion que comienza en: 20
+[INFO] 15:59:56:892 BROKER/(6494:7092): Almaceno mensaje en partición que comienza en: 20
+[INFO] 15:59:56:892 BROKER/(6494:6509): Llegó un nuevo mensaje a la cola CATCH_POKEMON.
+[INFO] 15:59:56:893 BROKER/(6494:6509): Envié mensaje al suscriptor de id: 201.
+[INFO] 15:59:56:897 BROKER/(6494:7116): Se conectó un proceso GAMECARD.
+[INFO] 15:59:56:898 BROKER/(6494:7116): Me llegó el ACK del proceso de id 201 (Mensaje 51).
+[INFO] 15:59:57:909 BROKER/(6494:7118): Se conectó un proceso GAMECARD.
+[INFO] 15:59:57:911 BROKER/(6494:7118): Elimino particion que comienza en: 0
+[INFO] 15:59:57:911 BROKER/(6494:7118): Almaceno mensaje en partición que comienza en: 0
+[INFO] 15:59:57:911 BROKER/(6494:6508): Llegó un nuevo mensaje a la cola CAUGHT_POKEMON.
+[INFO] 15:59:57:912 BROKER/(6494:6508): Envié mensaje al suscriptor de id: 103.
+[INFO] 15:59:57:912 BROKER/(6494:6508): Envié mensaje al suscriptor de id: 105.
+[INFO] 15:59:57:912 BROKER/(6494:7119): Se conectó un proceso TEAM.
+[INFO] 15:59:57:914 BROKER/(6494:7119): Me llegó el ACK del proceso de id 103 (Mensaje 52).
+[INFO] 15:59:57:919 BROKER/(6494:7121): Se conectó un proceso TEAM.
+[INFO] 15:59:57:921 BROKER/(6494:7121): Me llegó el ACK del proceso de id 105 (Mensaje 52).
+[INFO] 16:00:01:882 BROKER/(6494:7115): Se conectó un proceso TEAM.
+[INFO] 16:00:01:882 BROKER/(6494:7115): Se realiza la compactacion
+[INFO] 16:00:01:882 BROKER/(6494:7115): Elimino particion que comienza en: 4
+[INFO] 16:00:01:882 BROKER/(6494:7115): Se realiza la compactacion
+[INFO] 16:00:01:882 BROKER/(6494:7115): Almaceno mensaje en partición que comienza en: 46
+[INFO] 16:00:01:882 BROKER/(6494:6509): Llegó un nuevo mensaje a la cola CATCH_POKEMON.
+[INFO] 16:00:01:883 BROKER/(6494:6509): Envié mensaje al suscriptor de id: 201.
+[INFO] 16:00:01:894 BROKER/(6494:7097): Se conectó un proceso TEAM.
+[INFO] 16:00:01:894 BROKER/(6494:7129): Se conectó un proceso GAMECARD.
+[INFO] 16:00:01:896 BROKER/(6494:7097): Elimino particion que comienza en: 24
+[INFO] 16:00:01:896 BROKER/(6494:7097): Elimino particion que comienza en: 42
+[INFO] 16:00:01:896 BROKER/(6494:7097): Se consolidan las particiones que comienzan en: 24 y 42
+[INFO] 16:00:01:896 BROKER/(6494:7097): Almaceno mensaje en partición que comienza en: 24
+[INFO] 16:00:01:896 BROKER/(6494:6509): Llegó un nuevo mensaje a la cola CATCH_POKEMON.
+[INFO] 16:00:01:896 BROKER/(6494:6509): Envié mensaje al suscriptor de id: 201.
+[INFO] 16:00:01:897 BROKER/(6494:7129): Me llegó el ACK del proceso de id 201 (Mensaje 53).
+[INFO] 16:00:01:904 BROKER/(6494:7132): Se conectó un proceso GAMECARD.
+[INFO] 16:00:01:904 BROKER/(6494:7132): Me llegó el ACK del proceso de id 201 (Mensaje 54).
+[INFO] 16:00:02:903 BROKER/(6494:7133): Se conectó un proceso GAMECARD.
+[INFO] 16:00:02:903 BROKER/(6494:7133): Elimino particion que comienza en: 4
+[INFO] 16:00:02:903 BROKER/(6494:7133): Almaceno mensaje en partición que comienza en: 4
+[INFO] 16:00:02:904 BROKER/(6494:6508): Llegó un nuevo mensaje a la cola CAUGHT_POKEMON.
+[INFO] 16:00:02:905 BROKER/(6494:6508): Envié mensaje al suscriptor de id: 103.
+[INFO] 16:00:02:905 BROKER/(6494:6508): Envié mensaje al suscriptor de id: 105.
+[INFO] 16:00:02:909 BROKER/(6494:7134): Se conectó un proceso TEAM.
+[INFO] 16:00:02:909 BROKER/(6494:7134): Me llegó el ACK del proceso de id 103 (Mensaje 55).
+[INFO] 16:00:02:909 BROKER/(6494:7136): Se conectó un proceso TEAM.
+[INFO] 16:00:02:909 BROKER/(6494:7136): Me llegó el ACK del proceso de id 105 (Mensaje 55).
+[INFO] 16:00:02:919 BROKER/(6494:7138): Se conectó un proceso GAMECARD.
+[INFO] 16:00:02:919 BROKER/(6494:7138): Almaceno mensaje en partición que comienza en: 8
+[INFO] 16:00:02:920 BROKER/(6494:6508): Llegó un nuevo mensaje a la cola CAUGHT_POKEMON.
+[INFO] 16:00:02:920 BROKER/(6494:6508): Envié mensaje al suscriptor de id: 103.
+[INFO] 16:00:02:920 BROKER/(6494:6508): Envié mensaje al suscriptor de id: 105.
+[INFO] 16:00:02:929 BROKER/(6494:7139): Se conectó un proceso TEAM.
+[INFO] 16:00:02:929 BROKER/(6494:7139): Me llegó el ACK del proceso de id 103 (Mensaje 56).
+[INFO] 16:00:02:929 BROKER/(6494:7140): Se conectó un proceso TEAM.
+[INFO] 16:00:02:929 BROKER/(6494:7140): Me llegó el ACK del proceso de id 105 (Mensaje 56).
+[INFO] 16:00:46:897 BROKER/(6494:7175): Se conectó un proceso TEAM.
+[INFO] 16:00:46:897 BROKER/(6494:7175): Se realiza la compactacion
+[INFO] 16:00:46:897 BROKER/(6494:7175): Elimino particion que comienza en: 0
+[INFO] 16:00:46:897 BROKER/(6494:7175): Se realiza la compactacion
+[INFO] 16:00:46:897 BROKER/(6494:7175): Elimino particion que comienza en: 27
+[INFO] 16:00:46:897 BROKER/(6494:7175): Se consolidan las particiones que comienzan en: 27 y 45
+[INFO] 16:00:46:897 BROKER/(6494:7175): Almaceno mensaje en partición que comienza en: 27
+[INFO] 16:00:46:897 BROKER/(6494:6509): Llegó un nuevo mensaje a la cola CATCH_POKEMON.
+[INFO] 16:00:46:897 BROKER/(6494:6509): Envié mensaje al suscriptor de id: 201.
+[INFO] 16:00:46:898 BROKER/(6494:7184): Se conectó un proceso GAMECARD.
+[INFO] 16:00:46:898 BROKER/(6494:7184): Me llegó el ACK del proceso de id 201 (Mensaje 57).
+[INFO] 16:00:47:914 BROKER/(6494:7194): Se conectó un proceso GAMECARD.
+[INFO] 16:00:47:914 BROKER/(6494:7194): Almaceno mensaje en partición que comienza en: 47
+[INFO] 16:00:47:914 BROKER/(6494:6508): Llegó un nuevo mensaje a la cola CAUGHT_POKEMON.
+[INFO] 16:00:47:914 BROKER/(6494:6508): Envié mensaje al suscriptor de id: 103.
+[INFO] 16:00:47:914 BROKER/(6494:6508): Envié mensaje al suscriptor de id: 105.
+[INFO] 16:00:47:915 BROKER/(6494:7195): Se conectó un proceso TEAM.
+[INFO] 16:00:47:915 BROKER/(6494:7195): Me llegó el ACK del proceso de id 103 (Mensaje 58).
+[INFO] 16:00:47:918 BROKER/(6494:7196): Se conectó un proceso TEAM.
+[INFO] 16:00:47:918 BROKER/(6494:7196): Me llegó el ACK del proceso de id 105 (Mensaje 58).
+[INFO] 16:07:45:312 BROKER/(6494:6494): Se solicitó dump de cache.
+[INFO] 16:12:30:500 BROKER/(8001:8001): ___________________________________________________________________________________________________________
+[INFO] 16:12:30:500 BROKER/(8001:8001): Inició el BROKER
+[INFO] 16:12:34:198 BROKER/(8001:8043): Se conectó un proceso GAMECARD.
+[INFO] 16:12:34:198 BROKER/(8001:8043): Un proceso GAMECARD se sucribió a la cola GET_POKEMON.
+[INFO] 16:12:34:198 BROKER/(8001:8044): Se conectó un proceso GAMECARD.
+[INFO] 16:12:34:198 BROKER/(8001:8044): Un proceso GAMECARD se sucribió a la cola CATCH_POKEMON.
+[INFO] 16:12:34:199 BROKER/(8001:8045): Se conectó un proceso GAMECARD.
+[INFO] 16:12:34:199 BROKER/(8001:8045): Un proceso GAMECARD se sucribió a la cola NEW_POKEMON.
+[INFO] 16:12:44:941 BROKER/(8001:8058): Se conectó un proceso GAMEBOY.
+[INFO] 16:12:44:941 BROKER/(8001:8058): Almaceno mensaje en partición que comienza en: 0
+[INFO] 16:12:44:941 BROKER/(8001:8014): Llegó un nuevo mensaje a la cola NEW_POKEMON.
+[INFO] 16:12:44:941 BROKER/(8001:8014): Envié mensaje al suscriptor de id: 201.
+[INFO] 16:12:44:942 BROKER/(8001:8061): Se conectó un proceso GAMECARD.
+[INFO] 16:12:44:942 BROKER/(8001:8061): Me llegó el ACK del proceso de id 201 (Mensaje 1).
+[INFO] 16:12:44:943 BROKER/(8001:8065): Se conectó un proceso GAMEBOY.
+[INFO] 16:12:44:943 BROKER/(8001:8065): Almaceno mensaje en partición que comienza en: 23
+[INFO] 16:12:44:943 BROKER/(8001:8014): Llegó un nuevo mensaje a la cola NEW_POKEMON.
+[INFO] 16:12:44:943 BROKER/(8001:8014): Envié mensaje al suscriptor de id: 201.
+[INFO] 16:12:44:944 BROKER/(8001:8067): Se conectó un proceso GAMECARD.
+[INFO] 16:12:44:944 BROKER/(8001:8067): Me llegó el ACK del proceso de id 201 (Mensaje 2).
+[INFO] 16:12:44:946 BROKER/(8001:8070): Se conectó un proceso GAMEBOY.
+[INFO] 16:12:44:946 BROKER/(8001:8070): Elimino particion que comienza en: 0
+[INFO] 16:12:44:946 BROKER/(8001:8070): Almaceno mensaje en partición que comienza en: 0
+[INFO] 16:12:44:947 BROKER/(8001:8014): Llegó un nuevo mensaje a la cola NEW_POKEMON.
+[INFO] 16:12:44:947 BROKER/(8001:8014): Envié mensaje al suscriptor de id: 201.
+[INFO] 16:12:44:947 BROKER/(8001:8072): Se conectó un proceso GAMECARD.
+[INFO] 16:12:44:948 BROKER/(8001:8072): Me llegó el ACK del proceso de id 201 (Mensaje 3).
+[INFO] 16:12:44:948 BROKER/(8001:8075): Se conectó un proceso GAMEBOY.
+[INFO] 16:12:44:949 BROKER/(8001:8075): Elimino particion que comienza en: 23
+[INFO] 16:12:44:949 BROKER/(8001:8075): Se consolidan las particiones que comienzan en: 23 y 47
+[INFO] 16:12:44:949 BROKER/(8001:8075): Almaceno mensaje en partición que comienza en: 23
+[INFO] 16:12:44:950 BROKER/(8001:8014): Llegó un nuevo mensaje a la cola NEW_POKEMON.
+[INFO] 16:12:44:950 BROKER/(8001:8014): Envié mensaje al suscriptor de id: 201.
+[INFO] 16:12:44:955 BROKER/(8001:8076): Se conectó un proceso GAMECARD.
+[INFO] 16:12:44:955 BROKER/(8001:8076): Me llegó el ACK del proceso de id 201 (Mensaje 4).
+[INFO] 16:12:45:946 BROKER/(8001:8082): Se conectó un proceso GAMECARD.
+[INFO] 16:12:45:946 BROKER/(8001:8082): Elimino particion que comienza en: 0
+[INFO] 16:12:45:946 BROKER/(8001:8082): Almaceno mensaje en partición que comienza en: 0
+[INFO] 16:12:45:946 BROKER/(8001:8013): Llegó un nuevo mensaje a la cola APPEARED_POKEMON.
+[INFO] 16:12:45:954 BROKER/(8001:8083): Se conectó un proceso GAMECARD.
+[INFO] 16:12:45:954 BROKER/(8001:8083): Se realiza la compactacion
+[INFO] 16:12:45:954 BROKER/(8001:8083): Almaceno mensaje en partición que comienza en: 43
+[INFO] 16:12:45:954 BROKER/(8001:8013): Llegó un nuevo mensaje a la cola APPEARED_POKEMON.
+[INFO] 16:12:45:954 BROKER/(8001:8084): Se conectó un proceso GAMECARD.
+[INFO] 16:12:45:954 BROKER/(8001:8084): Elimino particion que comienza en: 20
+[INFO] 16:12:45:954 BROKER/(8001:8084): Almaceno mensaje en partición que comienza en: 20
+[INFO] 16:12:45:954 BROKER/(8001:8013): Llegó un nuevo mensaje a la cola APPEARED_POKEMON.
+[INFO] 16:12:45:962 BROKER/(8001:8085): Se conectó un proceso GAMECARD.
+[INFO] 16:12:45:962 BROKER/(8001:8085): Se realiza la compactacion
+[INFO] 16:12:45:962 BROKER/(8001:8085): Elimino particion que comienza en: 0
+[INFO] 16:12:45:962 BROKER/(8001:8085): Almaceno mensaje en partición que comienza en: 0
+[INFO] 16:12:45:962 BROKER/(8001:8013): Llegó un nuevo mensaje a la cola APPEARED_POKEMON.
+[INFO] 16:13:34:870 BROKER/(8159:8159): ___________________________________________________________________________________________________________
+[INFO] 16:13:34:870 BROKER/(8159:8159): Inició el BROKER
+[INFO] 16:13:37:289 BROKER/(8159:8202): Se conectó un proceso GAMECARD.
+[INFO] 16:13:37:289 BROKER/(8159:8202): Un proceso GAMECARD se sucribió a la cola NEW_POKEMON.
+[INFO] 16:13:37:290 BROKER/(8159:8204): Se conectó un proceso GAMECARD.
+[INFO] 16:13:37:290 BROKER/(8159:8204): Un proceso GAMECARD se sucribió a la cola GET_POKEMON.
+[INFO] 16:13:37:291 BROKER/(8159:8205): Se conectó un proceso GAMECARD.
+[INFO] 16:13:37:291 BROKER/(8159:8205): Un proceso GAMECARD se sucribió a la cola CATCH_POKEMON.
+[INFO] 16:13:40:381 BROKER/(8159:8211): Se conectó un proceso GAMEBOY.
+[INFO] 16:13:40:382 BROKER/(8159:8211): Almaceno mensaje en partición que comienza en: 0
+[INFO] 16:13:40:382 BROKER/(8159:8172): Llegó un nuevo mensaje a la cola NEW_POKEMON.
+[INFO] 16:13:40:382 BROKER/(8159:8172): Envié mensaje al suscriptor de id: 201.
+[INFO] 16:13:40:383 BROKER/(8159:8214): Se conectó un proceso GAMECARD.
+[INFO] 16:13:40:383 BROKER/(8159:8214): Me llegó el ACK del proceso de id 201 (Mensaje 1).
+[INFO] 16:13:40:386 BROKER/(8159:8217): Se conectó un proceso GAMEBOY.
+[INFO] 16:13:40:386 BROKER/(8159:8217): Almaceno mensaje en partición que comienza en: 23
+[INFO] 16:13:40:386 BROKER/(8159:8172): Llegó un nuevo mensaje a la cola NEW_POKEMON.
+[INFO] 16:13:40:387 BROKER/(8159:8172): Envié mensaje al suscriptor de id: 201.
+[INFO] 16:13:40:387 BROKER/(8159:8219): Se conectó un proceso GAMECARD.
+[INFO] 16:13:40:387 BROKER/(8159:8219): Me llegó el ACK del proceso de id 201 (Mensaje 2).
+[INFO] 16:13:40:388 BROKER/(8159:8223): Se conectó un proceso GAMEBOY.
+[INFO] 16:13:40:388 BROKER/(8159:8223): Elimino particion que comienza en: 0
+[INFO] 16:13:40:388 BROKER/(8159:8223): Almaceno mensaje en partición que comienza en: 0
+[INFO] 16:13:40:388 BROKER/(8159:8172): Llegó un nuevo mensaje a la cola NEW_POKEMON.
+[INFO] 16:13:40:388 BROKER/(8159:8172): Envié mensaje al suscriptor de id: 201.
+[INFO] 16:13:40:389 BROKER/(8159:8225): Se conectó un proceso GAMECARD.
+[INFO] 16:13:40:389 BROKER/(8159:8225): Me llegó el ACK del proceso de id 201 (Mensaje 3).
+[INFO] 16:13:40:389 BROKER/(8159:8228): Se conectó un proceso GAMEBOY.
+[INFO] 16:13:40:390 BROKER/(8159:8228): Elimino particion que comienza en: 23
+[INFO] 16:13:40:390 BROKER/(8159:8228): Se consolidan las particiones que comienzan en: 23 y 47
+[INFO] 16:13:40:390 BROKER/(8159:8228): Almaceno mensaje en partición que comienza en: 23
+[INFO] 16:13:40:390 BROKER/(8159:8172): Llegó un nuevo mensaje a la cola NEW_POKEMON.
+[INFO] 16:13:40:390 BROKER/(8159:8172): Envié mensaje al suscriptor de id: 201.
+[INFO] 16:13:40:390 BROKER/(8159:8229): Se conectó un proceso GAMECARD.
+[INFO] 16:13:40:390 BROKER/(8159:8229): Me llegó el ACK del proceso de id 201 (Mensaje 4).
+[INFO] 16:13:45:388 BROKER/(8159:8240): Se conectó un proceso GAMECARD.
+[INFO] 16:13:45:388 BROKER/(8159:8240): Elimino particion que comienza en: 0
+[INFO] 16:13:45:388 BROKER/(8159:8240): Almaceno mensaje en partición que comienza en: 0
+[INFO] 16:13:45:389 BROKER/(8159:8171): Llegó un nuevo mensaje a la cola APPEARED_POKEMON.
+[INFO] 16:13:45:390 BROKER/(8159:8241): Se conectó un proceso GAMECARD.
+[INFO] 16:13:45:391 BROKER/(8159:8241): Se realiza la compactacion
+[INFO] 16:13:45:391 BROKER/(8159:8241): Almaceno mensaje en partición que comienza en: 43
+[INFO] 16:13:45:391 BROKER/(8159:8171): Llegó un nuevo mensaje a la cola APPEARED_POKEMON.
+[INFO] 16:13:45:392 BROKER/(8159:8242): Se conectó un proceso GAMECARD.
+[INFO] 16:13:45:394 BROKER/(8159:8242): Elimino particion que comienza en: 20
+[INFO] 16:13:45:394 BROKER/(8159:8242): Almaceno mensaje en partición que comienza en: 20
+[INFO] 16:13:45:394 BROKER/(8159:8171): Llegó un nuevo mensaje a la cola APPEARED_POKEMON.
+[INFO] 16:13:45:404 BROKER/(8159:8243): Se conectó un proceso GAMECARD.
+[INFO] 16:13:45:406 BROKER/(8159:8243): Se realiza la compactacion
+[INFO] 16:13:45:406 BROKER/(8159:8243): Elimino particion que comienza en: 0
+[INFO] 16:13:45:406 BROKER/(8159:8243): Almaceno mensaje en partición que comienza en: 0
+[INFO] 16:13:45:407 BROKER/(8159:8171): Llegó un nuevo mensaje a la cola APPEARED_POKEMON.
+[INFO] 16:14:33:651 BROKER/(8159:8314): Se conectó un proceso TEAM.
+[INFO] 16:14:33:652 BROKER/(8159:8315): Se conectó un proceso TEAM.
+[INFO] 16:14:33:652 BROKER/(8159:8316): Se conectó un proceso TEAM.
+[INFO] 16:14:33:652 BROKER/(8159:8317): Se conectó un proceso TEAM.
+[INFO] 16:14:33:652 BROKER/(8159:8318): Se conectó un proceso TEAM.
+[INFO] 16:14:33:652 BROKER/(8159:8319): Se conectó un proceso TEAM.
+[INFO] 16:14:33:652 BROKER/(8159:8320): Se conectó un proceso TEAM.
+[INFO] 16:14:33:652 BROKER/(8159:8321): Se conectó un proceso TEAM.
+[INFO] 16:14:33:652 BROKER/(8159:8314): Elimino particion que comienza en: 40
+[INFO] 16:14:33:652 BROKER/(8159:8314): Se consolidan las particiones que comienzan en: 40 y 60
+[INFO] 16:14:33:652 BROKER/(8159:8314): Almaceno mensaje en partición que comienza en: 40
+[INFO] 16:14:33:653 BROKER/(8159:8175): Llegó un nuevo mensaje a la cola GET_POKEMON.
+[INFO] 16:14:33:653 BROKER/(8159:8175): Envié mensaje al suscriptor de id: 201.
+[INFO] 16:14:33:655 BROKER/(8159:8321): Un proceso TEAM se sucribió a la cola APPEARED_POKEMON.
+[INFO] 16:14:33:660 BROKER/(8159:8318): Almaceno mensaje en partición que comienza en: 50
+[INFO] 16:14:33:660 BROKER/(8159:8175): Llegó un nuevo mensaje a la cola GET_POKEMON.
+[INFO] 16:14:33:661 BROKER/(8159:8175): Envié mensaje al suscriptor de id: 201.
+[INFO] 16:14:33:661 BROKER/(8159:8316): Elimino particion que comienza en: 40
+[INFO] 16:14:33:661 BROKER/(8159:8316): Se realiza la compactacion
+[INFO] 16:14:33:661 BROKER/(8159:8316): Almaceno mensaje en partición que comienza en: 51
+[INFO] 16:14:33:661 BROKER/(8159:8317): Elimino particion que comienza en: 20
+[INFO] 16:14:33:661 BROKER/(8159:8327): Se conectó un proceso TEAM.
+[INFO] 16:14:33:662 BROKER/(8159:8322): Se conectó un proceso GAMECARD.
+[INFO] 16:14:33:663 BROKER/(8159:8175): Llegó un nuevo mensaje a la cola GET_POKEMON.
+[INFO] 16:14:33:663 BROKER/(8159:8175): Envié mensaje al suscriptor de id: 201.
+[INFO] 16:14:33:663 BROKER/(8159:8320): Un proceso TEAM se sucribió a la cola CAUGHT_POKEMON.
+[INFO] 16:14:33:665 BROKER/(8159:8325): Se conectó un proceso TEAM.
+[INFO] 16:14:33:665 BROKER/(8159:8317): Almaceno mensaje en partición que comienza en: 20
+[INFO] 16:14:33:665 BROKER/(8159:8322): Me llegó el ACK del proceso de id 201 (Mensaje 9).
+[INFO] 16:14:33:665 BROKER/(8159:8325): Me llegó el ACK del proceso de id 103 (Mensaje 7).
+[INFO] 16:14:33:665 BROKER/(8159:8319): Un proceso TEAM se sucribió a la cola LOCALIZED_POKEMON.
+[INFO] 16:14:33:666 BROKER/(8159:8315): Se realiza la compactacion
+[INFO] 16:14:33:666 BROKER/(8159:8315): Elimino particion que comienza en: 0
+[INFO] 16:14:33:666 BROKER/(8159:8315): Almaceno mensaje en partición que comienza en: 0
+[INFO] 16:14:33:666 BROKER/(8159:8175): Llegó un nuevo mensaje a la cola GET_POKEMON.
+[INFO] 16:14:33:666 BROKER/(8159:8175): Envié mensaje al suscriptor de id: 201.
+[INFO] 16:14:33:666 BROKER/(8159:8327): Me llegó el ACK del proceso de id 103 (Mensaje 8).
+[INFO] 16:14:33:666 BROKER/(8159:8175): Llegó un nuevo mensaje a la cola GET_POKEMON.
+[INFO] 16:14:33:666 BROKER/(8159:8175): Envié mensaje al suscriptor de id: 201.
+[INFO] 16:14:33:670 BROKER/(8159:8330): Se conectó un proceso GAMECARD.
+[INFO] 16:14:33:671 BROKER/(8159:8331): Se conectó un proceso GAMECARD.
+[INFO] 16:14:33:671 BROKER/(8159:8335): Se conectó un proceso GAMECARD.
+[INFO] 16:14:33:671 BROKER/(8159:8333): Se conectó un proceso GAMECARD.
+[INFO] 16:14:33:672 BROKER/(8159:8330): Se realiza la compactacion
+[INFO] 16:14:33:672 BROKER/(8159:8330): Almaceno mensaje en partición que comienza en: 45
+[INFO] 16:14:33:672 BROKER/(8159:8335): Me llegó el ACK del proceso de id 201 (Mensaje 12).
+[INFO] 16:14:33:672 BROKER/(8159:8333): Me llegó el ACK del proceso de id 201 (Mensaje 13).
+[INFO] 16:14:33:672 BROKER/(8159:8331): Me llegó el ACK del proceso de id 201 (Mensaje 11).
+[INFO] 16:14:33:672 BROKER/(8159:8176): Llegó un nuevo mensaje a la cola LOCALIZED_POKEMON.
+[INFO] 16:14:33:673 BROKER/(8159:8176): Envié mensaje al suscriptor de id: 103.
+[INFO] 16:14:33:673 BROKER/(8159:8328): Se conectó un proceso GAMECARD.
+[INFO] 16:14:33:673 BROKER/(8159:8328): Me llegó el ACK del proceso de id 201 (Mensaje 10).
+[INFO] 16:14:33:673 BROKER/(8159:8337): Se conectó un proceso GAMECARD.
+[INFO] 16:14:33:674 BROKER/(8159:8337): Elimino particion que comienza en: 22
+[INFO] 16:14:33:674 BROKER/(8159:8337): Se realiza la compactacion
+[INFO] 16:14:33:674 BROKER/(8159:8337): Almaceno mensaje en partición que comienza en: 48
+[INFO] 16:14:33:674 BROKER/(8159:8176): Llegó un nuevo mensaje a la cola LOCALIZED_POKEMON.
+[INFO] 16:14:33:674 BROKER/(8159:8176): Envié mensaje al suscriptor de id: 103.
+[INFO] 16:14:33:678 BROKER/(8159:8339): Se conectó un proceso TEAM.
+[INFO] 16:14:33:678 BROKER/(8159:8339): Me llegó el ACK del proceso de id 103 (Mensaje 14).
+[INFO] 16:14:33:678 BROKER/(8159:8341): Se conectó un proceso TEAM.
+[INFO] 16:14:33:678 BROKER/(8159:8341): Me llegó el ACK del proceso de id 103 (Mensaje 15).
+[INFO] 16:14:33:678 BROKER/(8159:8338): Se conectó un proceso GAMECARD.
+[INFO] 16:14:33:678 BROKER/(8159:8338): Elimino particion que comienza en: 22
+[INFO] 16:14:33:678 BROKER/(8159:8338): Se realiza la compactacion
+[INFO] 16:14:33:678 BROKER/(8159:8338): Elimino particion que comienza en: 11
+[INFO] 16:14:33:678 BROKER/(8159:8338): Se realiza la compactacion
+[INFO] 16:14:33:678 BROKER/(8159:8338): Almaceno mensaje en partición que comienza en: 40
+[INFO] 16:14:33:679 BROKER/(8159:8176): Llegó un nuevo mensaje a la cola LOCALIZED_POKEMON.
+[INFO] 16:14:33:679 BROKER/(8159:8176): Envié mensaje al suscriptor de id: 103.
+[INFO] 16:14:33:686 BROKER/(8159:8343): Se conectó un proceso TEAM.
+[INFO] 16:14:33:686 BROKER/(8159:8343): Me llegó el ACK del proceso de id 103 (Mensaje 16).
+[INFO] 16:14:38:682 BROKER/(8159:8351): Se conectó un proceso GAMECARD.
+[INFO] 16:14:38:682 BROKER/(8159:8351): Elimino particion que comienza en: 0
+[INFO] 16:14:38:682 BROKER/(8159:8351): Se realiza la compactacion
+[INFO] 16:14:38:682 BROKER/(8159:8351): Elimino particion que comienza en: 0
+[INFO] 16:14:38:682 BROKER/(8159:8351): Se realiza la compactacion
+[INFO] 16:14:38:682 BROKER/(8159:8351): Almaceno mensaje en partición que comienza en: 31
+[INFO] 16:14:38:682 BROKER/(8159:8176): Llegó un nuevo mensaje a la cola LOCALIZED_POKEMON.
+[INFO] 16:14:38:682 BROKER/(8159:8352): Se conectó un proceso GAMECARD.
+[INFO] 16:14:38:682 BROKER/(8159:8352): Elimino particion que comienza en: 0
+[INFO] 16:14:38:682 BROKER/(8159:8352): Se realiza la compactacion
+[INFO] 16:14:38:682 BROKER/(8159:8352): Almaceno mensaje en partición que comienza en: 39
+[INFO] 16:14:38:682 BROKER/(8159:8176): Envié mensaje al suscriptor de id: 103.
+[INFO] 16:14:38:682 BROKER/(8159:8176): Llegó un nuevo mensaje a la cola LOCALIZED_POKEMON.
+[INFO] 16:14:38:682 BROKER/(8159:8176): Envié mensaje al suscriptor de id: 103.
+[INFO] 16:14:38:686 BROKER/(8159:8355): Se conectó un proceso TEAM.
+[INFO] 16:14:38:687 BROKER/(8159:8356): Se conectó un proceso TEAM.
+[INFO] 16:14:38:687 BROKER/(8159:8355): Me llegó el ACK del proceso de id 103 (Mensaje 17).
+[INFO] 16:14:38:687 BROKER/(8159:8356): Me llegó el ACK del proceso de id 103 (Mensaje 18).
+[INFO] 16:14:43:663 BROKER/(8159:8350): Se conectó un proceso TEAM.
+[INFO] 16:14:43:663 BROKER/(8159:8350): Elimino particion que comienza en: 0
+[INFO] 16:14:43:663 BROKER/(8159:8350): Se realiza la compactacion
+[INFO] 16:14:43:663 BROKER/(8159:8350): Elimino particion que comienza en: 23
+[INFO] 16:14:43:663 BROKER/(8159:8350): Se consolidan las particiones que comienzan en: 23 y 46
+[INFO] 16:14:43:664 BROKER/(8159:8350): Almaceno mensaje en partición que comienza en: 23
+[INFO] 16:14:43:664 BROKER/(8159:8174): Llegó un nuevo mensaje a la cola CATCH_POKEMON.
+[INFO] 16:14:43:664 BROKER/(8159:8174): Envié mensaje al suscriptor de id: 201.
+[INFO] 16:14:43:674 BROKER/(8159:8362): Se conectó un proceso GAMECARD.
+[INFO] 16:14:43:674 BROKER/(8159:8362): Me llegó el ACK del proceso de id 201 (Mensaje 19).
+[INFO] 16:14:48:687 BROKER/(8159:8366): Se conectó un proceso GAMECARD.
+[INFO] 16:14:48:687 BROKER/(8159:8366): Almaceno mensaje en partición que comienza en: 42
+[INFO] 16:14:48:687 BROKER/(8159:8173): Llegó un nuevo mensaje a la cola CAUGHT_POKEMON.
+[INFO] 16:14:48:687 BROKER/(8159:8173): Envié mensaje al suscriptor de id: 103.
+[INFO] 16:14:48:696 BROKER/(8159:8367): Se conectó un proceso TEAM.
+[INFO] 16:14:48:696 BROKER/(8159:8367): Me llegó el ACK del proceso de id 103 (Mensaje 20).
+[INFO] 16:14:54:938 BROKER/(8159:8396): Se conectó un proceso TEAM.
+[INFO] 16:14:54:938 BROKER/(8159:8396): Un proceso TEAM se sucribió a la cola APPEARED_POKEMON.
+[INFO] 16:14:54:938 BROKER/(8159:8397): Se conectó un proceso TEAM.
+[INFO] 16:14:54:938 BROKER/(8159:8397): Un proceso TEAM se sucribió a la cola CAUGHT_POKEMON.
+[INFO] 16:14:54:939 BROKER/(8159:8398): Se conectó un proceso TEAM.
+[INFO] 16:14:54:939 BROKER/(8159:8398): Almaceno mensaje en partición que comienza en: 46
+[INFO] 16:14:54:939 BROKER/(8159:8175): Llegó un nuevo mensaje a la cola GET_POKEMON.
+[INFO] 16:14:54:939 BROKER/(8159:8175): Envié mensaje al suscriptor de id: 201.
+[INFO] 16:14:54:939 BROKER/(8159:8395): Se conectó un proceso TEAM.
+[INFO] 16:14:54:939 BROKER/(8159:8395): Un proceso TEAM se sucribió a la cola LOCALIZED_POKEMON.
+[INFO] 16:14:54:939 BROKER/(8159:8399): Se conectó un proceso TEAM.
+[INFO] 16:14:54:939 BROKER/(8159:8400): Se conectó un proceso TEAM.
+[INFO] 16:14:54:939 BROKER/(8159:8402): Se conectó un proceso TEAM.
+[INFO] 16:14:54:939 BROKER/(8159:8403): Se conectó un proceso TEAM.
+[INFO] 16:14:54:939 BROKER/(8159:8399): Elimino particion que comienza en: 23
+[INFO] 16:14:54:939 BROKER/(8159:8399): Almaceno mensaje en partición que comienza en: 23
+[INFO] 16:14:54:939 BROKER/(8159:8405): Se conectó un proceso GAMECARD.
+[INFO] 16:14:54:940 BROKER/(8159:8175): Llegó un nuevo mensaje a la cola GET_POKEMON.
+[INFO] 16:14:54:940 BROKER/(8159:8175): Envié mensaje al suscriptor de id: 201.
+[INFO] 16:14:54:940 BROKER/(8159:8402): Almaceno mensaje en partición que comienza en: 34
+[INFO] 16:14:54:940 BROKER/(8159:8175): Llegó un nuevo mensaje a la cola GET_POKEMON.
+[INFO] 16:14:54:940 BROKER/(8159:8175): Envié mensaje al suscriptor de id: 201.
+[INFO] 16:14:54:940 BROKER/(8159:8405): Me llegó el ACK del proceso de id 201 (Mensaje 21).
+[INFO] 16:14:54:940 BROKER/(8159:8403): Me llegó el ACK del proceso de id 105 (Mensaje 20).
+[INFO] 16:14:54:940 BROKER/(8159:8400): Elimino particion que comienza en: 42
+[INFO] 16:14:54:940 BROKER/(8159:8400): Se realiza la compactacion
+[INFO] 16:14:54:940 BROKER/(8159:8400): Almaceno mensaje en partición que comienza en: 54
+[INFO] 16:14:54:940 BROKER/(8159:8175): Llegó un nuevo mensaje a la cola GET_POKEMON.
+[INFO] 16:14:54:940 BROKER/(8159:8175): Envié mensaje al suscriptor de id: 201.
+[INFO] 16:14:54:941 BROKER/(8159:8406): Se conectó un proceso GAMECARD.
+[INFO] 16:14:54:941 BROKER/(8159:8408): Se conectó un proceso GAMECARD.
+[INFO] 16:14:54:941 BROKER/(8159:8406): Me llegó el ACK del proceso de id 201 (Mensaje 22).
+[INFO] 16:14:54:941 BROKER/(8159:8410): Se conectó un proceso GAMECARD.
+[INFO] 16:14:54:941 BROKER/(8159:8410): Me llegó el ACK del proceso de id 201 (Mensaje 24).
+[INFO] 16:14:54:942 BROKER/(8159:8408): Me llegó el ACK del proceso de id 201 (Mensaje 23).
+[INFO] 16:14:54:947 BROKER/(8159:8412): Se conectó un proceso GAMECARD.
+[INFO] 16:14:54:947 BROKER/(8159:8412): Elimino particion que comienza en: 42
+[INFO] 16:14:54:947 BROKER/(8159:8414): Se conectó un proceso TEAM.
+[INFO] 16:14:54:947 BROKER/(8159:8412): Almaceno mensaje en partición que comienza en: 42
+[INFO] 16:14:54:947 BROKER/(8159:8176): Llegó un nuevo mensaje a la cola LOCALIZED_POKEMON.
+[INFO] 16:14:54:947 BROKER/(8159:8176): Envié mensaje al suscriptor de id: 103.
+[INFO] 16:14:54:947 BROKER/(8159:8176): Envié mensaje al suscriptor de id: 105.
+[INFO] 16:14:54:947 BROKER/(8159:8414): Me llegó el ACK del proceso de id 105 (Mensaje 17).
+[INFO] 16:14:54:947 BROKER/(8159:8415): Se conectó un proceso GAMECARD.
+[INFO] 16:14:54:947 BROKER/(8159:8415): Elimino particion que comienza en: 0
+[INFO] 16:14:54:947 BROKER/(8159:8415): Almaceno mensaje en partición que comienza en: 0
+[INFO] 16:14:54:947 BROKER/(8159:8176): Llegó un nuevo mensaje a la cola LOCALIZED_POKEMON.
+[INFO] 16:14:54:948 BROKER/(8159:8176): Envié mensaje al suscriptor de id: 103.
+[INFO] 16:14:54:948 BROKER/(8159:8176): Envié mensaje al suscriptor de id: 105.
+[INFO] 16:14:54:948 BROKER/(8159:8416): Se conectó un proceso TEAM.
+[INFO] 16:14:54:948 BROKER/(8159:8418): Se conectó un proceso TEAM.
+[INFO] 16:14:54:948 BROKER/(8159:8416): Me llegó el ACK del proceso de id 103 (Mensaje 25).
+[INFO] 16:14:54:948 BROKER/(8159:8418): Me llegó el ACK del proceso de id 105 (Mensaje 25).
+[INFO] 16:14:54:948 BROKER/(8159:8420): Se conectó un proceso TEAM.
+[INFO] 16:14:54:948 BROKER/(8159:8422): Se conectó un proceso TEAM.
+[INFO] 16:14:54:948 BROKER/(8159:8420): Me llegó el ACK del proceso de id 103 (Mensaje 26).
+[INFO] 16:14:54:948 BROKER/(8159:8422): Me llegó el ACK del proceso de id 105 (Mensaje 26).
+[INFO] 16:14:59:950 BROKER/(8159:8433): Se conectó un proceso GAMECARD.
+[INFO] 16:14:59:950 BROKER/(8159:8433): Elimino particion que comienza en: 23
+[INFO] 16:14:59:950 BROKER/(8159:8433): Se consolidan las particiones que comienzan en: 14 y 23
+[INFO] 16:14:59:950 BROKER/(8159:8433): Elimino particion que comienza en: 34
+[INFO] 16:14:59:950 BROKER/(8159:8433): Se consolidan las particiones que comienzan en: 14 y 34
+[INFO] 16:14:59:950 BROKER/(8159:8433): Almaceno mensaje en partición que comienza en: 14
+[INFO] 16:14:59:950 BROKER/(8159:8176): Llegó un nuevo mensaje a la cola LOCALIZED_POKEMON.
+[INFO] 16:14:59:950 BROKER/(8159:8432): Se conectó un proceso GAMECARD.
+[INFO] 16:14:59:950 BROKER/(8159:8176): Envié mensaje al suscriptor de id: 103.
+[INFO] 16:14:59:950 BROKER/(8159:8176): Envié mensaje al suscriptor de id: 105.
+[INFO] 16:14:59:954 BROKER/(8159:8432): Elimino particion que comienza en: 54
+[INFO] 16:14:59:954 BROKER/(8159:8432): Se realiza la compactacion
+[INFO] 16:14:59:954 BROKER/(8159:8432): Elimino particion que comienza en: 37
+[INFO] 16:14:59:954 BROKER/(8159:8432): Se consolidan las particiones que comienzan en: 37 y 49
+[INFO] 16:14:59:954 BROKER/(8159:8432): Almaceno mensaje en partición que comienza en: 37
+[INFO] 16:14:59:954 BROKER/(8159:8176): Llegó un nuevo mensaje a la cola LOCALIZED_POKEMON.
+[INFO] 16:14:59:954 BROKER/(8159:8176): Envié mensaje al suscriptor de id: 103.
+[INFO] 16:14:59:954 BROKER/(8159:8176): Envié mensaje al suscriptor de id: 105.
+[INFO] 16:14:59:954 BROKER/(8159:8439): Se conectó un proceso TEAM.
+[INFO] 16:14:59:954 BROKER/(8159:8440): Se conectó un proceso TEAM.
+[INFO] 16:14:59:954 BROKER/(8159:8439): Me llegó el ACK del proceso de id 103 (Mensaje 28).
+[INFO] 16:14:59:955 BROKER/(8159:8440): Me llegó el ACK del proceso de id 105 (Mensaje 28).
+[INFO] 16:14:59:955 BROKER/(8159:8437): Se conectó un proceso TEAM.
+[INFO] 16:14:59:955 BROKER/(8159:8437): Me llegó el ACK del proceso de id 105 (Mensaje 27).
+[INFO] 16:14:59:955 BROKER/(8159:8434): Se conectó un proceso TEAM.
+[INFO] 16:14:59:955 BROKER/(8159:8434): Me llegó el ACK del proceso de id 103 (Mensaje 27).
+[INFO] 16:15:03:672 BROKER/(8159:8426): Se conectó un proceso TEAM.
+[INFO] 16:15:03:672 BROKER/(8159:8426): Elimino particion que comienza en: 0
+[INFO] 16:15:03:672 BROKER/(8159:8426): Se realiza la compactacion
+[INFO] 16:15:03:672 BROKER/(8159:8426): Elimino particion que comienza en: 0
+[INFO] 16:15:03:672 BROKER/(8159:8426): Almaceno mensaje en partición que comienza en: 0
+[INFO] 16:15:03:672 BROKER/(8159:8174): Llegó un nuevo mensaje a la cola CATCH_POKEMON.
+[INFO] 16:15:03:672 BROKER/(8159:8174): Envié mensaje al suscriptor de id: 201.
+[INFO] 16:15:03:675 BROKER/(8159:8445): Se conectó un proceso GAMECARD.
+[INFO] 16:15:03:676 BROKER/(8159:8445): Me llegó el ACK del proceso de id 201 (Mensaje 29).
+[INFO] 16:15:08:683 BROKER/(8159:8453): Se conectó un proceso GAMECARD.
+[INFO] 16:15:08:684 BROKER/(8159:8453): Almaceno mensaje en partición que comienza en: 19
+[INFO] 16:15:08:684 BROKER/(8159:8173): Llegó un nuevo mensaje a la cola CAUGHT_POKEMON.
+[INFO] 16:15:08:684 BROKER/(8159:8173): Envié mensaje al suscriptor de id: 103.
+[INFO] 16:15:08:684 BROKER/(8159:8173): Envié mensaje al suscriptor de id: 105.
+[INFO] 16:15:08:686 BROKER/(8159:8455): Se conectó un proceso TEAM.
+[INFO] 16:15:08:686 BROKER/(8159:8455): Me llegó el ACK del proceso de id 105 (Mensaje 30).
+[INFO] 16:15:08:686 BROKER/(8159:8454): Se conectó un proceso TEAM.
+[INFO] 16:15:08:690 BROKER/(8159:8454): Me llegó el ACK del proceso de id 103 (Mensaje 30).
+[INFO] 16:16:09:971 BROKER/(8159:8552): Se conectó un proceso TEAM.
+[INFO] 16:16:09:972 BROKER/(8159:8552): Elimino particion que comienza en: 23
+[INFO] 16:16:09:972 BROKER/(8159:8552): Se consolidan las particiones que comienzan en: 23 y 47
+[INFO] 16:16:09:972 BROKER/(8159:8552): Almaceno mensaje en partición que comienza en: 23
+[INFO] 16:16:09:972 BROKER/(8159:8174): Llegó un nuevo mensaje a la cola CATCH_POKEMON.
+[INFO] 16:16:09:973 BROKER/(8159:8174): Envié mensaje al suscriptor de id: 201.
+[INFO] 16:16:09:978 BROKER/(8159:8559): Se conectó un proceso GAMECARD.
+[INFO] 16:16:09:978 BROKER/(8159:8559): Me llegó el ACK del proceso de id 201 (Mensaje 31).
+[INFO] 16:16:14:994 BROKER/(8159:8566): Se conectó un proceso GAMECARD.
+[INFO] 16:16:14:994 BROKER/(8159:8566): Almaceno mensaje en partición que comienza en: 42
+[INFO] 16:16:14:994 BROKER/(8159:8173): Llegó un nuevo mensaje a la cola CAUGHT_POKEMON.
+[INFO] 16:16:14:994 BROKER/(8159:8173): Envié mensaje al suscriptor de id: 103.
+[INFO] 16:16:14:994 BROKER/(8159:8173): Envié mensaje al suscriptor de id: 105.
+[INFO] 16:16:14:0 BROKER/(8159:8567): Se conectó un proceso TEAM.
+[INFO] 16:16:14:0 BROKER/(8159:8567): Me llegó el ACK del proceso de id 105 (Mensaje 32).
+[INFO] 16:16:14:0 BROKER/(8159:8568): Se conectó un proceso TEAM.
+[INFO] 16:16:14:0 BROKER/(8159:8568): Me llegó el ACK del proceso de id 103 (Mensaje 32).
+[INFO] 16:16:29:978 BROKER/(8159:8584): Se conectó un proceso TEAM.
+[INFO] 16:16:29:979 BROKER/(8159:8584): Elimino particion que comienza en: 0
+[INFO] 16:16:29:979 BROKER/(8159:8584): Se realiza la compactacion
+[INFO] 16:16:29:979 BROKER/(8159:8584): Almaceno mensaje en partición que comienza en: 27
+[INFO] 16:16:29:979 BROKER/(8159:8174): Llegó un nuevo mensaje a la cola CATCH_POKEMON.
+[INFO] 16:16:29:980 BROKER/(8159:8174): Envié mensaje al suscriptor de id: 201.
+[INFO] 16:16:29:982 BROKER/(8159:8591): Se conectó un proceso GAMECARD.
+[INFO] 16:16:29:982 BROKER/(8159:8591): Me llegó el ACK del proceso de id 201 (Mensaje 33).
+[INFO] 16:16:35:68 BROKER/(8159:8600): Se conectó un proceso GAMECARD.
+[INFO] 16:16:35:68 BROKER/(8159:8600): Almaceno mensaje en partición que comienza en: 47
+[INFO] 16:16:35:68 BROKER/(8159:8173): Llegó un nuevo mensaje a la cola CAUGHT_POKEMON.
+[INFO] 16:16:35:69 BROKER/(8159:8173): Envié mensaje al suscriptor de id: 103.
+[INFO] 16:16:35:69 BROKER/(8159:8173): Envié mensaje al suscriptor de id: 105.
+[INFO] 16:16:35:69 BROKER/(8159:8601): Se conectó un proceso TEAM.
+[INFO] 16:16:35:69 BROKER/(8159:8601): Me llegó el ACK del proceso de id 103 (Mensaje 34).
+[INFO] 16:16:35:75 BROKER/(8159:8603): Se conectó un proceso TEAM.
+[INFO] 16:16:35:77 BROKER/(8159:8603): Me llegó el ACK del proceso de id 105 (Mensaje 34).
+[INFO] 16:17:35:611 BROKER/(8159:8679): Se conectó un proceso GAMEBOY.
+[INFO] 16:17:35:612 BROKER/(8159:8679): Elimino particion que comienza en: 0
+[INFO] 16:17:35:612 BROKER/(8159:8679): Se realiza la compactacion
+[INFO] 16:17:35:612 BROKER/(8159:8679): Elimino particion que comienza en: 0
+[INFO] 16:17:35:612 BROKER/(8159:8679): Se realiza la compactacion
+[INFO] 16:17:35:612 BROKER/(8159:8679): Almaceno mensaje en partición que comienza en: 28
+[INFO] 16:17:35:614 BROKER/(8159:8172): Llegó un nuevo mensaje a la cola NEW_POKEMON.
+[INFO] 16:17:35:614 BROKER/(8159:8172): Envié mensaje al suscriptor de id: 201.
+[INFO] 16:17:35:622 BROKER/(8159:8685): Se conectó un proceso GAMEBOY.
+[INFO] 16:17:35:622 BROKER/(8159:8685): Elimino particion que comienza en: 0
+[INFO] 16:17:35:622 BROKER/(8159:8685): Se realiza la compactacion
+[INFO] 16:17:35:622 BROKER/(8159:8685): Elimino particion que comienza en: 0
+[INFO] 16:17:35:622 BROKER/(8159:8685): Se realiza la compactacion
+[INFO] 16:17:35:622 BROKER/(8159:8685): Almaceno mensaje en partición que comienza en: 24
+[INFO] 16:17:35:623 BROKER/(8159:8172): Llegó un nuevo mensaje a la cola NEW_POKEMON.
+[INFO] 16:17:35:623 BROKER/(8159:8172): Envié mensaje al suscriptor de id: 201.
+[INFO] 16:17:35:625 BROKER/(8159:8687): Se conectó un proceso GAMECARD.
+[INFO] 16:17:35:625 BROKER/(8159:8687): Me llegó el ACK del proceso de id 201 (Mensaje 36).
+[INFO] 16:17:35:633 BROKER/(8159:8690): Se conectó un proceso GAMEBOY.
+[INFO] 16:17:35:633 BROKER/(8159:8690): Elimino particion que comienza en: 0
+[INFO] 16:17:35:633 BROKER/(8159:8690): Se realiza la compactacion
+[INFO] 16:17:35:633 BROKER/(8159:8690): Elimino particion que comienza en: 0
+[INFO] 16:17:35:633 BROKER/(8159:8690): Se realiza la compactacion
+[INFO] 16:17:35:633 BROKER/(8159:8690): Almaceno mensaje en partición que comienza en: 22
+[INFO] 16:17:35:633 BROKER/(8159:8172): Llegó un nuevo mensaje a la cola NEW_POKEMON.
+[INFO] 16:17:35:633 BROKER/(8159:8172): Envié mensaje al suscriptor de id: 201.
+[INFO] 16:17:35:637 BROKER/(8159:8691): Se conectó un proceso GAMECARD.
+[INFO] 16:17:35:637 BROKER/(8159:8691): Me llegó el ACK del proceso de id 201 (Mensaje 37).
+[INFO] 16:17:35:638 BROKER/(8159:8683): Se conectó un proceso GAMECARD.
+[INFO] 16:17:35:638 BROKER/(8159:8683): Me llegó el ACK del proceso de id 201 (Mensaje 35).
+[INFO] 16:17:35:642 BROKER/(8159:8694): Se conectó un proceso GAMEBOY.
+[INFO] 16:17:35:642 BROKER/(8159:8694): Elimino particion que comienza en: 0
+[INFO] 16:17:35:642 BROKER/(8159:8694): Se realiza la compactacion
+[INFO] 16:17:35:642 BROKER/(8159:8694): Almaceno mensaje en partición que comienza en: 24
+[INFO] 16:17:35:642 BROKER/(8159:8172): Llegó un nuevo mensaje a la cola NEW_POKEMON.
+[INFO] 16:17:35:642 BROKER/(8159:8172): Envié mensaje al suscriptor de id: 201.
+[INFO] 16:17:35:645 BROKER/(8159:8696): Se conectó un proceso GAMECARD.
+[INFO] 16:17:35:645 BROKER/(8159:8696): Me llegó el ACK del proceso de id 201 (Mensaje 38).
+[INFO] 16:17:35:649 BROKER/(8159:8699): Se conectó un proceso GAMEBOY.
+[INFO] 16:17:35:650 BROKER/(8159:8699): Elimino particion que comienza en: 0
+[INFO] 16:17:35:650 BROKER/(8159:8699): Almaceno mensaje en partición que comienza en: 0
+[INFO] 16:17:35:650 BROKER/(8159:8172): Llegó un nuevo mensaje a la cola NEW_POKEMON.
+[INFO] 16:17:35:650 BROKER/(8159:8172): Envié mensaje al suscriptor de id: 201.
+[INFO] 16:17:35:657 BROKER/(8159:8701): Se conectó un proceso GAMECARD.
+[INFO] 16:17:35:658 BROKER/(8159:8701): Me llegó el ACK del proceso de id 201 (Mensaje 39).
+[INFO] 16:17:35:662 BROKER/(8159:8705): Se conectó un proceso GAMEBOY.
+[INFO] 16:17:35:662 BROKER/(8159:8705): Se realiza la compactacion
+[INFO] 16:17:35:662 BROKER/(8159:8705): Elimino particion que comienza en: 22
+[INFO] 16:17:35:662 BROKER/(8159:8705): Se consolidan las particiones que comienzan en: 22 y 45
+[INFO] 16:17:35:662 BROKER/(8159:8705): Almaceno mensaje en partición que comienza en: 22
+[INFO] 16:17:35:663 BROKER/(8159:8172): Llegó un nuevo mensaje a la cola NEW_POKEMON.
+[INFO] 16:17:35:663 BROKER/(8159:8172): Envié mensaje al suscriptor de id: 201.
+[INFO] 16:17:35:663 BROKER/(8159:8706): Se conectó un proceso GAMECARD.
+[INFO] 16:17:35:663 BROKER/(8159:8706): Me llegó el ACK del proceso de id 201 (Mensaje 40).
+[INFO] 16:17:40:638 BROKER/(8159:8712): Se conectó un proceso GAMECARD.
+[INFO] 16:17:40:638 BROKER/(8159:8712): Elimino particion que comienza en: 0
+[INFO] 16:17:40:638 BROKER/(8159:8712): Almaceno mensaje en partición que comienza en: 0
+[INFO] 16:17:40:638 BROKER/(8159:8171): Llegó un nuevo mensaje a la cola APPEARED_POKEMON.
+[INFO] 16:17:40:639 BROKER/(8159:8171): Envié mensaje al suscriptor de id: 103.
+[INFO] 16:17:40:639 BROKER/(8159:8171): Envié mensaje al suscriptor de id: 105.
+[INFO] 16:17:40:640 BROKER/(8159:8716): Se conectó un proceso TEAM.
+[INFO] 16:17:40:646 BROKER/(8159:8716): Me llegó el ACK del proceso de id 105 (Mensaje 41).
+[INFO] 16:17:40:647 BROKER/(8159:8718): Se conectó un proceso GAMECARD.
+[INFO] 16:17:40:647 BROKER/(8159:8717): Se conectó un proceso GAMECARD.
+[INFO] 16:17:40:648 BROKER/(8159:8713): Se conectó un proceso TEAM.
+[INFO] 16:17:40:649 BROKER/(8159:8713): Me llegó el ACK del proceso de id 103 (Mensaje 41).
+[INFO] 16:17:40:655 BROKER/(8159:8717): Se realiza la compactacion
+[INFO] 16:17:40:655 BROKER/(8159:8717): Almaceno mensaje en partición que comienza en: 44
+[INFO] 16:17:40:656 BROKER/(8159:8171): Llegó un nuevo mensaje a la cola APPEARED_POKEMON.
+[INFO] 16:17:40:656 BROKER/(8159:8171): Envié mensaje al suscriptor de id: 103.
+[INFO] 16:17:40:656 BROKER/(8159:8171): Envié mensaje al suscriptor de id: 105.
+[INFO] 16:17:40:656 BROKER/(8159:8718): Elimino particion que comienza en: 20
+[INFO] 16:17:40:656 BROKER/(8159:8718): Almaceno mensaje en partición que comienza en: 20
+[INFO] 16:17:40:656 BROKER/(8159:8171): Llegó un nuevo mensaje a la cola APPEARED_POKEMON.
+[INFO] 16:17:40:656 BROKER/(8159:8171): Envié mensaje al suscriptor de id: 103.
+[INFO] 16:17:40:657 BROKER/(8159:8171): Envié mensaje al suscriptor de id: 105.
+[INFO] 16:17:40:658 BROKER/(8159:8720): Se conectó un proceso GAMECARD.
+[INFO] 16:17:40:658 BROKER/(8159:8720): Elimino particion que comienza en: 0
+[INFO] 16:17:40:658 BROKER/(8159:8720): Almaceno mensaje en partición que comienza en: 0
+[INFO] 16:17:40:658 BROKER/(8159:8721): Se conectó un proceso TEAM.
+[INFO] 16:17:40:658 BROKER/(8159:8725): Se conectó un proceso TEAM.
+[INFO] 16:17:40:658 BROKER/(8159:8721): Me llegó el ACK del proceso de id 103 (Mensaje 42).
+[INFO] 16:17:40:659 BROKER/(8159:8725): Me llegó el ACK del proceso de id 103 (Mensaje 43).
+[INFO] 16:17:40:659 BROKER/(8159:8171): Llegó un nuevo mensaje a la cola APPEARED_POKEMON.
+[INFO] 16:17:40:659 BROKER/(8159:8171): Envié mensaje al suscriptor de id: 103.
+[INFO] 16:17:40:659 BROKER/(8159:8171): Envié mensaje al suscriptor de id: 105.
+[INFO] 16:17:40:662 BROKER/(8159:8723): Se conectó un proceso TEAM.
+[INFO] 16:17:40:662 BROKER/(8159:8723): Me llegó el ACK del proceso de id 105 (Mensaje 42).
+[INFO] 16:17:40:662 BROKER/(8159:8728): Se conectó un proceso TEAM.
+[INFO] 16:17:40:662 BROKER/(8159:8728): Me llegó el ACK del proceso de id 105 (Mensaje 43).
+[INFO] 16:17:40:663 BROKER/(8159:8729): Se conectó un proceso TEAM.
+[INFO] 16:17:40:663 BROKER/(8159:8731): Se conectó un proceso TEAM.
+[INFO] 16:17:40:663 BROKER/(8159:8729): Me llegó el ACK del proceso de id 103 (Mensaje 44).
+[INFO] 16:17:40:663 BROKER/(8159:8731): Me llegó el ACK del proceso de id 105 (Mensaje 44).
+[INFO] 16:17:40:671 BROKER/(8159:8734): Se conectó un proceso GAMECARD.
+[INFO] 16:17:40:671 BROKER/(8159:8734): Elimino particion que comienza en: 44
+[INFO] 16:17:40:671 BROKER/(8159:8734): Se consolidan las particiones que comienzan en: 40 y 44
+[INFO] 16:17:40:671 BROKER/(8159:8734): Almaceno mensaje en partición que comienza en: 40
+[INFO] 16:17:40:671 BROKER/(8159:8171): Llegó un nuevo mensaje a la cola APPEARED_POKEMON.
+[INFO] 16:17:40:671 BROKER/(8159:8171): Envié mensaje al suscriptor de id: 103.
+[INFO] 16:17:40:671 BROKER/(8159:8171): Envié mensaje al suscriptor de id: 105.
+[INFO] 16:17:40:671 BROKER/(8159:8733): Se conectó un proceso GAMECARD.
+[INFO] 16:17:40:671 BROKER/(8159:8733): Elimino particion que comienza en: 20
+[INFO] 16:17:40:671 BROKER/(8159:8733): Almaceno mensaje en partición que comienza en: 20
+[INFO] 16:17:40:671 BROKER/(8159:8171): Llegó un nuevo mensaje a la cola APPEARED_POKEMON.
+[INFO] 16:17:40:672 BROKER/(8159:8171): Envié mensaje al suscriptor de id: 103.
+[INFO] 16:17:40:672 BROKER/(8159:8171): Envié mensaje al suscriptor de id: 105.
+[INFO] 16:17:40:675 BROKER/(8159:8735): Se conectó un proceso TEAM.
+[INFO] 16:17:40:677 BROKER/(8159:8735): Me llegó el ACK del proceso de id 103 (Mensaje 45).
+[INFO] 16:17:40:679 BROKER/(8159:8737): Se conectó un proceso TEAM.
+[INFO] 16:17:40:680 BROKER/(8159:8739): Se conectó un proceso TEAM.
+[INFO] 16:17:40:680 BROKER/(8159:8741): Se conectó un proceso TEAM.
+[INFO] 16:17:40:683 BROKER/(8159:8737): Me llegó el ACK del proceso de id 103 (Mensaje 46).
+[INFO] 16:17:40:683 BROKER/(8159:8741): Me llegó el ACK del proceso de id 105 (Mensaje 46).
+[INFO] 16:17:40:684 BROKER/(8159:8739): Me llegó el ACK del proceso de id 105 (Mensaje 45).
+[INFO] 16:18:05:671 BROKER/(8159:8765): Se conectó un proceso TEAM.
+[INFO] 16:18:05:671 BROKER/(8159:8765): Elimino particion que comienza en: 0
+[INFO] 16:18:05:672 BROKER/(8159:8765): Almaceno mensaje en partición que comienza en: 0
+[INFO] 16:18:05:672 BROKER/(8159:8174): Llegó un nuevo mensaje a la cola CATCH_POKEMON.
+[INFO] 16:18:05:672 BROKER/(8159:8174): Envié mensaje al suscriptor de id: 201.
+[INFO] 16:18:05:682 BROKER/(8159:8775): Se conectó un proceso GAMECARD.
+[INFO] 16:18:05:682 BROKER/(8159:8775): Me llegó el ACK del proceso de id 201 (Mensaje 47).
+[INFO] 16:18:10:651 BROKER/(8159:8773): Se conectó un proceso TEAM.
+[INFO] 16:18:10:652 BROKER/(8159:8773): Se realiza la compactacion
+[INFO] 16:18:10:652 BROKER/(8159:8773): Elimino particion que comienza en: 39
+[INFO] 16:18:10:652 BROKER/(8159:8773): Se consolidan las particiones que comienzan en: 39 y 59
+[INFO] 16:18:10:652 BROKER/(8159:8773): Almaceno mensaje en partición que comienza en: 39
+[INFO] 16:18:10:652 BROKER/(8159:8174): Llegó un nuevo mensaje a la cola CATCH_POKEMON.
+[INFO] 16:18:10:652 BROKER/(8159:8174): Envié mensaje al suscriptor de id: 201.
+[INFO] 16:18:10:658 BROKER/(8159:8781): Se conectó un proceso GAMECARD.
+[INFO] 16:18:10:659 BROKER/(8159:8781): Me llegó el ACK del proceso de id 201 (Mensaje 48).
+[INFO] 16:18:10:688 BROKER/(8159:8784): Se conectó un proceso GAMECARD.
+[INFO] 16:18:10:695 BROKER/(8159:8784): Almaceno mensaje en partición que comienza en: 57
+[INFO] 16:18:10:697 BROKER/(8159:8173): Llegó un nuevo mensaje a la cola CAUGHT_POKEMON.
+[INFO] 16:18:10:697 BROKER/(8159:8173): Envié mensaje al suscriptor de id: 103.
+[INFO] 16:18:10:697 BROKER/(8159:8173): Envié mensaje al suscriptor de id: 105.
+[INFO] 16:18:10:698 BROKER/(8159:8785): Se conectó un proceso TEAM.
+[INFO] 16:18:10:699 BROKER/(8159:8785): Me llegó el ACK del proceso de id 103 (Mensaje 49).
+[INFO] 16:18:10:702 BROKER/(8159:8787): Se conectó un proceso TEAM.
+[INFO] 16:18:10:702 BROKER/(8159:8787): Me llegó el ACK del proceso de id 105 (Mensaje 49).
+[INFO] 16:18:15:666 BROKER/(8159:8794): Se conectó un proceso GAMECARD.
+[INFO] 16:18:15:667 BROKER/(8159:8794): Elimino particion que comienza en: 19
+[INFO] 16:18:15:667 BROKER/(8159:8794): Almaceno mensaje en partición que comienza en: 19
+[INFO] 16:18:15:667 BROKER/(8159:8173): Llegó un nuevo mensaje a la cola CAUGHT_POKEMON.
+[INFO] 16:18:15:667 BROKER/(8159:8173): Envié mensaje al suscriptor de id: 103.
+[INFO] 16:18:15:667 BROKER/(8159:8173): Envié mensaje al suscriptor de id: 105.
+[INFO] 16:18:15:670 BROKER/(8159:8796): Se conectó un proceso TEAM.
+[INFO] 16:18:15:670 BROKER/(8159:8796): Me llegó el ACK del proceso de id 103 (Mensaje 50).
+[INFO] 16:18:15:670 BROKER/(8159:8797): Se conectó un proceso TEAM.
+[INFO] 16:18:15:670 BROKER/(8159:8797): Me llegó el ACK del proceso de id 105 (Mensaje 50).
+[INFO] 16:18:25:678 BROKER/(8159:8810): Se conectó un proceso TEAM.
+[INFO] 16:18:25:679 BROKER/(8159:8810): Se realiza la compactacion
+[INFO] 16:18:25:679 BROKER/(8159:8810): Elimino particion que comienza en: 0
+[INFO] 16:18:25:679 BROKER/(8159:8810): Se realiza la compactacion
+[INFO] 16:18:25:679 BROKER/(8159:8810): Almaceno mensaje en partición que comienza en: 26
+[INFO] 16:18:25:679 BROKER/(8159:8174): Llegó un nuevo mensaje a la cola CATCH_POKEMON.
+[INFO] 16:18:25:679 BROKER/(8159:8174): Envié mensaje al suscriptor de id: 201.
+[INFO] 16:18:25:687 BROKER/(8159:8817): Se conectó un proceso GAMECARD.
+[INFO] 16:18:25:687 BROKER/(8159:8817): Me llegó el ACK del proceso de id 201 (Mensaje 51).
+[INFO] 16:18:30:693 BROKER/(8159:8827): Se conectó un proceso GAMECARD.
+[INFO] 16:18:30:693 BROKER/(8159:8827): Almaceno mensaje en partición que comienza en: 46
+[INFO] 16:18:30:693 BROKER/(8159:8173): Llegó un nuevo mensaje a la cola CAUGHT_POKEMON.
+[INFO] 16:18:30:693 BROKER/(8159:8173): Envié mensaje al suscriptor de id: 103.
+[INFO] 16:18:30:693 BROKER/(8159:8173): Envié mensaje al suscriptor de id: 105.
+[INFO] 16:18:30:701 BROKER/(8159:8831): Se conectó un proceso TEAM.
+[INFO] 16:18:30:701 BROKER/(8159:8831): Me llegó el ACK del proceso de id 105 (Mensaje 52).
+[INFO] 16:18:30:701 BROKER/(8159:8830): Se conectó un proceso TEAM.
+[INFO] 16:18:30:701 BROKER/(8159:8830): Me llegó el ACK del proceso de id 103 (Mensaje 52).
+[INFO] 16:18:45:661 BROKER/(8159:8842): Se conectó un proceso TEAM.
+[INFO] 16:18:45:662 BROKER/(8159:8842): Elimino particion que comienza en: 4
+[INFO] 16:18:45:662 BROKER/(8159:8842): Almaceno mensaje en partición que comienza en: 4
+[INFO] 16:18:45:662 BROKER/(8159:8174): Llegó un nuevo mensaje a la cola CATCH_POKEMON.
+[INFO] 16:18:45:662 BROKER/(8159:8174): Envié mensaje al suscriptor de id: 201.
+[INFO] 16:18:45:665 BROKER/(8159:8849): Se conectó un proceso GAMECARD.
+[INFO] 16:18:45:665 BROKER/(8159:8849): Me llegó el ACK del proceso de id 201 (Mensaje 53).
+[INFO] 16:18:45:685 BROKER/(8159:8844): Se conectó un proceso TEAM.
+[INFO] 16:18:45:686 BROKER/(8159:8844): Se realiza la compactacion
+[INFO] 16:18:45:686 BROKER/(8159:8844): Elimino particion que comienza en: 20
+[INFO] 16:18:45:686 BROKER/(8159:8844): Se realiza la compactacion
+[INFO] 16:18:45:686 BROKER/(8159:8844): Almaceno mensaje en partición que comienza en: 44
+[INFO] 16:18:45:686 BROKER/(8159:8174): Llegó un nuevo mensaje a la cola CATCH_POKEMON.
+[INFO] 16:18:45:686 BROKER/(8159:8174): Envié mensaje al suscriptor de id: 201.
+[INFO] 16:18:45:699 BROKER/(8159:8851): Se conectó un proceso GAMECARD.
+[INFO] 16:18:45:700 BROKER/(8159:8851): Me llegó el ACK del proceso de id 201 (Mensaje 54).
+[INFO] 16:18:50:683 BROKER/(8159:8858): Se conectó un proceso GAMECARD.
+[INFO] 16:18:50:684 BROKER/(8159:8858): Elimino particion que comienza en: 0
+[INFO] 16:18:50:684 BROKER/(8159:8858): Almaceno mensaje en partición que comienza en: 0
+[INFO] 16:18:50:684 BROKER/(8159:8173): Llegó un nuevo mensaje a la cola CAUGHT_POKEMON.
+[INFO] 16:18:50:684 BROKER/(8159:8173): Envié mensaje al suscriptor de id: 103.
+[INFO] 16:18:50:684 BROKER/(8159:8173): Envié mensaje al suscriptor de id: 105.
+[INFO] 16:18:50:686 BROKER/(8159:8860): Se conectó un proceso TEAM.
+[INFO] 16:18:50:687 BROKER/(8159:8860): Me llegó el ACK del proceso de id 105 (Mensaje 55).
+[INFO] 16:18:50:693 BROKER/(8159:8859): Se conectó un proceso TEAM.
+[INFO] 16:18:50:699 BROKER/(8159:8859): Me llegó el ACK del proceso de id 103 (Mensaje 55).
+[INFO] 16:18:50:715 BROKER/(8159:8864): Se conectó un proceso GAMECARD.
+[INFO] 16:18:50:715 BROKER/(8159:8864): Elimino particion que comienza en: 20
+[INFO] 16:18:50:715 BROKER/(8159:8864): Almaceno mensaje en partición que comienza en: 20
+[INFO] 16:18:50:716 BROKER/(8159:8173): Llegó un nuevo mensaje a la cola CAUGHT_POKEMON.
+[INFO] 16:18:50:716 BROKER/(8159:8173): Envié mensaje al suscriptor de id: 103.
+[INFO] 16:18:50:716 BROKER/(8159:8173): Envié mensaje al suscriptor de id: 105.
+[INFO] 16:18:50:718 BROKER/(8159:8865): Se conectó un proceso TEAM.
+[INFO] 16:18:50:718 BROKER/(8159:8865): Me llegó el ACK del proceso de id 103 (Mensaje 56).
+[INFO] 16:18:50:722 BROKER/(8159:8866): Se conectó un proceso TEAM.
+[INFO] 16:18:50:722 BROKER/(8159:8866): Me llegó el ACK del proceso de id 105 (Mensaje 56).
+[INFO] 16:19:30:673 BROKER/(8159:8904): Se conectó un proceso TEAM.
+[INFO] 16:19:30:674 BROKER/(8159:8904): Se realiza la compactacion
+[INFO] 16:19:30:674 BROKER/(8159:8904): Elimino particion que comienza en: 24
+[INFO] 16:19:30:674 BROKER/(8159:8904): Se realiza la compactacion
+[INFO] 16:19:30:674 BROKER/(8159:8904): Almaceno mensaje en partición que comienza en: 42
+[INFO] 16:19:30:674 BROKER/(8159:8174): Llegó un nuevo mensaje a la cola CATCH_POKEMON.
+[INFO] 16:19:30:674 BROKER/(8159:8174): Envié mensaje al suscriptor de id: 201.
+[INFO] 16:19:30:679 BROKER/(8159:8911): Se conectó un proceso GAMECARD.
+[INFO] 16:19:30:680 BROKER/(8159:8911): Me llegó el ACK del proceso de id 201 (Mensaje 57).
+[INFO] 16:19:35:724 BROKER/(8159:8918): Se conectó un proceso GAMECARD.
+[INFO] 16:19:35:725 BROKER/(8159:8918): Elimino particion que comienza en: 4
+[INFO] 16:19:35:725 BROKER/(8159:8918): Almaceno mensaje en partición que comienza en: 4
+[INFO] 16:19:35:725 BROKER/(8159:8173): Llegó un nuevo mensaje a la cola CAUGHT_POKEMON.
+[INFO] 16:19:35:726 BROKER/(8159:8173): Envié mensaje al suscriptor de id: 103.
+[INFO] 16:19:35:726 BROKER/(8159:8173): Envié mensaje al suscriptor de id: 105.
+[INFO] 16:19:35:731 BROKER/(8159:8919): Se conectó un proceso TEAM.
+[INFO] 16:19:35:731 BROKER/(8159:8920): Se conectó un proceso TEAM.
+[INFO] 16:19:35:733 BROKER/(8159:8919): Me llegó el ACK del proceso de id 103 (Mensaje 58).
+[INFO] 16:19:35:736 BROKER/(8159:8920): Me llegó el ACK del proceso de id 105 (Mensaje 58).
+[INFO] 16:24:01:566 BROKER/(8159:8159): Se solicitó dump de cache.

@@ -1,6 +1,8 @@
-Dump: 14:29:27:251
-Particion 0: 0x0-0x4.  [X]   Size: 4b   LRU: 14:29:16:792   Cola: CAUGHT_POKEMON   ID: 1
-Particion 1: 0x4-0x8.  [X]   Size: 4b   LRU: 14:29:16:792   Cola: CAUGHT_POKEMON   ID: 2
-Particion 2: 0x8-0x1c.  [X]   Size: 20b   LRU: 14:29:16:790   Cola: CATCH_POKEMON   ID: 4
-Particion 3: 0x1c-0x2c.  [X]   Size: 16b   LRU: 14:29:16:791   Cola: CATCH_POKEMON   ID: 5
-Particion 4: 0x2c-0x40.  [X]   Size: 20b   LRU: 14:29:26:799   Cola: CATCH_POKEMON   ID: 6
+Dump: 16:24:01:567
+Particion 0: 0x0-0x4.  [X]   Size: 4b   LRU: 16:18:50:684   Cola: CAUGHT_POKEMON   ID: 55
+Particion 1: 0x4-0x8.  [X]   Size: 4b   LRU: 16:19:35:725   Cola: CAUGHT_POKEMON   ID: 58
+Particion 2: 0x8-0x14.  [L]   Size: 12b
+Particion 3: 0x14-0x18.  [X]   Size: 4b   LRU: 16:18:50:715   Cola: CAUGHT_POKEMON   ID: 56
+Particion 4: 0x18-0x2a.  [X]   Size: 18b   LRU: 16:18:45:686   Cola: CATCH_POKEMON   ID: 54
+Particion 5: 0x2a-0x3e.  [X]   Size: 20b   LRU: 16:19:30:674   Cola: CATCH_POKEMON   ID: 57
+Particion 6: 0x3e-0x40.  [L]   Size: 2b
