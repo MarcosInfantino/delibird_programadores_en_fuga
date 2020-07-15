@@ -1,0 +1,7 @@
+Dump: 18:11:52:102
+Particion 0: (nil)-0x4.  [X]   Size: 4   LRU: 18:11:42:181   Cola: CAUGHT_POKEMON   ID: 1
+Particion 1: 0x4-0x8.  [X]   Size: 4   LRU: 18:11:42:181   Cola: CAUGHT_POKEMON   ID: 2
+Particion 2: 0x8-0x1e.  [X]   Size: 22   LRU: 18:11:46:184   Cola: CATCH_POKEMON   ID: 6
+Particion 3: 0x1e-0x2f.  [L]   Size: 17
+Particion 4: 0x2f-0x3f.  [X]   Size: 16   LRU: 18:11:42:180   Cola: CATCH_POKEMON   ID: 5
+Particion 5: 0x3f-0x40.  [L]   Size: 1

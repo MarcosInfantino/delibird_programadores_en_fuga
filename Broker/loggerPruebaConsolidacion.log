@@ -126,3 +126,679 @@
 [INFO] 16:19:10:625 BROKER/(17827:17872): Se consolidan las particiones que comienzan en: 27 y 8
 
 [INFO] 16:19:10:625 BROKER/(17827:17872): Almaceno mensaje en partición que comienza en: 8
+[INFO] 17:31:34:904 BROKER/(6331:6331): Inició el Broker.
+[INFO] 17:31:43:636 BROKER/(6331:6364): Almaceno mensaje en partición que comienza en: 0
+[INFO] 17:31:43:637 BROKER/(6331:6368): Almaceno mensaje en partición que comienza en: 4
+[INFO] 17:31:43:638 BROKER/(6331:6370): Almaceno mensaje en partición que comienza en: 8
+[INFO] 17:31:43:640 BROKER/(6331:6374): Almaceno mensaje en partición que comienza en: 27
+[INFO] 17:31:43:641 BROKER/(6331:6377): Almaceno mensaje en partición que comienza en: 47
+[INFO] 17:31:47:649 BROKER/(6331:6393): Elimino particion que comienza en: 8
+[INFO] 17:31:47:649 BROKER/(6331:6393): Elimino particion que comienza en: 27
+[INFO] 17:31:47:649 BROKER/(6331:6393): Se consolidan las particiones que comienzan en: 8 y 27
+
+[INFO] 17:31:47:649 BROKER/(6331:6393): Almaceno mensaje en partición que comienza en: 8
+[INFO] 17:34:15:392 BROKER/(6699:6699): Inició el Broker.
+[INFO] 17:34:19:856 BROKER/(6699:6737): Almaceno mensaje en partición que comienza en: 0
+[INFO] 17:34:19:867 BROKER/(6699:6741): Almaceno mensaje en partición que comienza en: 4
+[INFO] 17:34:19:869 BROKER/(6699:6744): Almaceno mensaje en partición que comienza en: 8
+[INFO] 17:34:19:872 BROKER/(6699:6747): Almaceno mensaje en partición que comienza en: 27
+[INFO] 17:34:19:875 BROKER/(6699:6750): Almaceno mensaje en partición que comienza en: 47
+[INFO] 17:34:23:887 BROKER/(6699:6765): Elimino particion que comienza en: 8
+[INFO] 17:34:23:887 BROKER/(6699:6765): Elimino particion que comienza en: 27
+[INFO] 17:34:23:887 BROKER/(6699:6765): Se consolidan las particiones que comienzan en: 8 y 27
+
+[INFO] 17:34:23:887 BROKER/(6699:6765): Almaceno mensaje en partición que comienza en: 8
+[INFO] 17:36:00:444 BROKER/(7296:7296): Inició el Broker.
+[INFO] 17:36:07:288 BROKER/(7296:7332): Almaceno mensaje en partición que comienza en: 0
+[INFO] 17:36:07:293 BROKER/(7296:7335): Almaceno mensaje en partición que comienza en: 4
+[INFO] 17:36:07:294 BROKER/(7296:7339): Almaceno mensaje en partición que comienza en: 8
+[INFO] 17:36:07:295 BROKER/(7296:7342): Almaceno mensaje en partición que comienza en: 27
+[INFO] 17:36:07:298 BROKER/(7296:7345): Almaceno mensaje en partición que comienza en: 47
+[INFO] 17:36:11:302 BROKER/(7296:7361): Elimino particion que comienza en: 8
+[INFO] 17:36:11:302 BROKER/(7296:7361): Elimino particion que comienza en: 27
+[INFO] 17:36:11:302 BROKER/(7296:7361): Se consolidan las particiones que comienzan en: 8 y 27
+
+[INFO] 17:36:11:302 BROKER/(7296:7361): Almaceno mensaje en partición que comienza en: 8
+[INFO] 17:36:19:534 BROKER/(7296:7296): Se solicitó dump de cache.
+[INFO] 17:41:31:814 BROKER/(8200:8200): Inició el Broker.
+[INFO] 17:41:37:130 BROKER/(8235:8235): Inició el Broker.
+[INFO] 17:41:41:636 BROKER/(8235:8266): Almaceno mensaje en partición que comienza en: 0
+[INFO] 17:41:41:637 BROKER/(8235:8269): Almaceno mensaje en partición que comienza en: 4
+[INFO] 17:41:41:639 BROKER/(8235:8273): Almaceno mensaje en partición que comienza en: 8
+[INFO] 17:41:41:647 BROKER/(8235:8275): Almaceno mensaje en partición que comienza en: 27
+[INFO] 17:41:41:651 BROKER/(8235:8279): Almaceno mensaje en partición que comienza en: 47
+[INFO] 17:41:45:655 BROKER/(8235:8295): Elimino particion que comienza en: 8
+[INFO] 17:41:45:655 BROKER/(8235:8295): Elimino particion que comienza en: 27
+[INFO] 17:41:45:655 BROKER/(8235:8295): Se consolidan las particiones que comienzan en: 8 y 27
+
+[INFO] 17:41:45:655 BROKER/(8235:8295): Almaceno mensaje en partición que comienza en: 8
+[INFO] 17:41:49:884 BROKER/(8235:8235): Se solicitó dump de cache.
+[INFO] 17:43:56:439 BROKER/(8592:8592): Inició el Broker.
+[INFO] 17:44:46:414 BROKER/(8790:8790): Inició el Broker.
+[INFO] 17:44:50:498 BROKER/(8825:8825): Inició el Broker.
+[INFO] 17:44:56:601 BROKER/(8825:8857): Almaceno mensaje en partición que comienza en: 0
+[INFO] 17:44:56:603 BROKER/(8825:8860): Almaceno mensaje en partición que comienza en: 4
+[INFO] 17:44:56:604 BROKER/(8825:8863): Almaceno mensaje en partición que comienza en: 8
+[INFO] 17:44:56:606 BROKER/(8825:8866): Almaceno mensaje en partición que comienza en: 27
+[INFO] 17:44:56:610 BROKER/(8825:8868): Almaceno mensaje en partición que comienza en: 47
+[INFO] 17:45:00:622 BROKER/(8825:8885): Elimino particion que comienza en: 8
+[INFO] 17:45:00:622 BROKER/(8825:8885): Elimino particion que comienza en: 27
+[INFO] 17:45:00:622 BROKER/(8825:8885): Se consolidan las particiones que comienzan en: 8 y 27
+
+[INFO] 17:45:00:622 BROKER/(8825:8885): Almaceno mensaje en partición que comienza en: 8
+[INFO] 17:45:08:10 BROKER/(8825:8825): Se solicitó dump de cache.
+[INFO] 17:46:07:809 BROKER/(9114:9114): Inició el Broker.
+[INFO] 17:46:26:359 BROKER/(9114:9170): Almaceno mensaje en partición que comienza en: 0
+[INFO] 17:46:26:362 BROKER/(9114:9173): Almaceno mensaje en partición que comienza en: 4
+[INFO] 17:46:26:363 BROKER/(9114:9176): Almaceno mensaje en partición que comienza en: 8
+[INFO] 17:46:26:365 BROKER/(9114:9178): Almaceno mensaje en partición que comienza en: 27
+[INFO] 17:46:26:366 BROKER/(9114:9181): Almaceno mensaje en partición que comienza en: 47
+[INFO] 17:46:30:370 BROKER/(9114:9198): Elimino particion que comienza en: 8
+[INFO] 17:46:30:370 BROKER/(9114:9198): Elimino particion que comienza en: 27
+[INFO] 17:46:30:370 BROKER/(9114:9198): Se consolidan las particiones que comienzan en: 8 y 27
+
+[INFO] 17:46:30:370 BROKER/(9114:9198): Almaceno mensaje en partición que comienza en: 8
+[INFO] 17:46:46:757 BROKER/(9114:9114): Se solicitó dump de cache.
+[INFO] 17:50:56:176 BROKER/(9747:9747): Inició el Broker.
+[INFO] 17:50:57:478 BROKER/(9747:9775): Almaceno mensaje en partición que comienza en: 0
+[INFO] 17:50:57:480 BROKER/(9747:9778): Almaceno mensaje en partición que comienza en: 4
+[INFO] 17:50:57:483 BROKER/(9747:9781): Almaceno mensaje en partición que comienza en: 8
+[INFO] 17:50:57:487 BROKER/(9747:9783): Almaceno mensaje en partición que comienza en: 27
+[INFO] 17:50:57:489 BROKER/(9747:9787): Almaceno mensaje en partición que comienza en: 47
+[INFO] 17:51:01:494 BROKER/(9747:9802): Elimino particion que comienza en: 8
+[INFO] 17:51:01:494 BROKER/(9747:9802): Elimino particion que comienza en: 27
+[INFO] 17:51:01:494 BROKER/(9747:9802): Se consolidan las particiones que comienzan en: 8 y 27
+
+[INFO] 17:51:01:494 BROKER/(9747:9802): Almaceno mensaje en partición que comienza en: 8
+[INFO] 17:51:10:111 BROKER/(9747:9747): Se solicitó dump de cache.
+[INFO] 17:54:27:91 BROKER/(10252:10252): Inició el Broker.
+[INFO] 17:54:29:124 BROKER/(10252:10279): Almaceno mensaje en partición que comienza en: 0
+[INFO] 17:54:29:126 BROKER/(10252:10282): Almaceno mensaje en partición que comienza en: 4
+[INFO] 17:54:29:127 BROKER/(10252:10285): Almaceno mensaje en partición que comienza en: 8
+[INFO] 17:54:29:128 BROKER/(10252:10288): Almaceno mensaje en partición que comienza en: 27
+[INFO] 17:54:29:138 BROKER/(10252:10291): Almaceno mensaje en partición que comienza en: 47
+[INFO] 17:54:33:141 BROKER/(10252:10307): Elimino particion que comienza en: 8
+[INFO] 17:54:33:141 BROKER/(10252:10307): Elimino particion que comienza en: 27
+[INFO] 17:54:33:141 BROKER/(10252:10307): Se consolidan las particiones que comienzan en: 8 y 27
+
+[INFO] 17:54:33:141 BROKER/(10252:10307): Almaceno mensaje en partición que comienza en: 8
+[INFO] 17:54:44:391 BROKER/(10252:10252): Se solicitó dump de cache.
+[INFO] 17:55:40:569 BROKER/(10467:10467): Inició el Broker.
+[INFO] 17:55:45:535 BROKER/(10467:10498): Almaceno mensaje en partición que comienza en: 0
+[INFO] 17:55:45:537 BROKER/(10467:10501): Almaceno mensaje en partición que comienza en: 4
+[INFO] 17:55:45:538 BROKER/(10467:10505): Almaceno mensaje en partición que comienza en: 8
+[INFO] 17:55:45:540 BROKER/(10467:10508): Almaceno mensaje en partición que comienza en: 27
+[INFO] 17:55:45:541 BROKER/(10467:10510): Almaceno mensaje en partición que comienza en: 47
+[INFO] 17:55:49:547 BROKER/(10467:10527): Elimino particion que comienza en: 8
+[INFO] 17:55:49:547 BROKER/(10467:10527): Elimino particion que comienza en: 27
+[INFO] 17:55:49:547 BROKER/(10467:10527): Se consolidan las particiones que comienzan en: 8 y 27
+
+[INFO] 17:55:49:547 BROKER/(10467:10527): Almaceno mensaje en partición que comienza en: 8
+[INFO] 17:55:53:168 BROKER/(10467:10467): Se solicitó dump de cache.
+[INFO] 17:56:27:974 BROKER/(10610:10610): Inició el Broker.
+[INFO] 17:56:30:208 BROKER/(10610:10674): Almaceno mensaje en partición que comienza en: 0
+[INFO] 17:56:30:212 BROKER/(10610:10677): Almaceno mensaje en partición que comienza en: 4
+[INFO] 17:56:30:216 BROKER/(10610:10680): Almaceno mensaje en partición que comienza en: 8
+[INFO] 17:56:30:219 BROKER/(10610:10683): Almaceno mensaje en partición que comienza en: 27
+[INFO] 17:56:30:227 BROKER/(10610:10687): Almaceno mensaje en partición que comienza en: 47
+[INFO] 17:56:34:244 BROKER/(10610:10704): Elimino particion que comienza en: 8
+[INFO] 17:56:34:244 BROKER/(10610:10704): Elimino particion que comienza en: 27
+[INFO] 17:56:34:244 BROKER/(10610:10704): Se consolidan las particiones que comienzan en: 8 y 27
+
+[INFO] 17:56:34:244 BROKER/(10610:10704): Almaceno mensaje en partición que comienza en: 8
+[INFO] 17:56:51:642 BROKER/(10610:10610): Se solicitó dump de cache.
+[INFO] 17:59:11:856 BROKER/(11091:11091): Inició el Broker.
+[INFO] 17:59:25:764 BROKER/(11187:11187): Inició el Broker.
+[INFO] 17:59:28:314 BROKER/(11187:11220): Almaceno mensaje en partición que comienza en: 0
+[INFO] 17:59:28:322 BROKER/(11187:11224): Almaceno mensaje en partición que comienza en: 4
+[INFO] 17:59:28:325 BROKER/(11187:11228): Almaceno mensaje en partición que comienza en: 8
+[INFO] 17:59:28:328 BROKER/(11187:11230): Almaceno mensaje en partición que comienza en: 27
+[INFO] 17:59:28:331 BROKER/(11187:11234): Almaceno mensaje en partición que comienza en: 47
+[INFO] 17:59:32:340 BROKER/(11187:11249): Elimino particion que comienza en: 8
+[INFO] 17:59:32:340 BROKER/(11187:11249): Elimino particion que comienza en: 27
+[INFO] 17:59:32:340 BROKER/(11187:11249): Se consolidan las particiones que comienzan en: 8 y 27
+
+[INFO] 17:59:32:340 BROKER/(11187:11249): Almaceno mensaje en partición que comienza en: 8
+[INFO] 17:59:51:20 BROKER/(11187:11187): Se solicitó dump de cache.
+[INFO] 18:02:20:38 BROKER/(11656:11656): Inició el Broker.
+[INFO] 18:02:25:650 BROKER/(11656:11689): Almaceno mensaje en partición que comienza en: 0
+[INFO] 18:02:25:651 BROKER/(11656:11693): Almaceno mensaje en partición que comienza en: 4
+[INFO] 18:02:25:653 BROKER/(11656:11696): Almaceno mensaje en partición que comienza en: 8
+[INFO] 18:02:25:659 BROKER/(11656:11699): Almaceno mensaje en partición que comienza en: 27
+[INFO] 18:02:25:660 BROKER/(11656:11702): Almaceno mensaje en partición que comienza en: 47
+[INFO] 18:02:29:662 BROKER/(11656:11718): Elimino particion que comienza en: 8
+[INFO] 18:02:29:662 BROKER/(11656:11718): Elimino particion que comienza en: 27
+[INFO] 18:02:29:662 BROKER/(11656:11718): Se consolidan las particiones que comienzan en: 8 y 27
+
+[INFO] 18:02:29:662 BROKER/(11656:11718): Almaceno mensaje en partición que comienza en: 8
+[INFO] 18:02:32:506 BROKER/(11656:11656): Se solicitó dump de cache.
+[INFO] 18:03:56:335 BROKER/(11921:11921): Inició el Broker.
+[INFO] 18:03:59:458 BROKER/(11921:11948): Almaceno mensaje en partición que comienza en: 0
+[INFO] 18:03:59:460 BROKER/(11921:11951): Almaceno mensaje en partición que comienza en: 4
+[INFO] 18:03:59:462 BROKER/(11921:11953): Almaceno mensaje en partición que comienza en: 8
+[INFO] 18:03:59:464 BROKER/(11921:11956): Almaceno mensaje en partición que comienza en: 27
+[INFO] 18:03:59:471 BROKER/(11921:11960): Almaceno mensaje en partición que comienza en: 47
+[INFO] 18:04:03:476 BROKER/(11921:11976): Elimino particion que comienza en: 8
+[INFO] 18:04:03:476 BROKER/(11921:11976): Elimino particion que comienza en: 27
+[INFO] 18:04:03:476 BROKER/(11921:11976): Se consolidan las particiones que comienzan en: 8 y 27
+
+[INFO] 18:04:03:476 BROKER/(11921:11976): Almaceno mensaje en partición que comienza en: 8
+[INFO] 18:04:12:117 BROKER/(11921:11921): Se solicitó dump de cache.
+[INFO] 18:06:32:673 BROKER/(12355:12355): Inició el Broker.
+[INFO] 18:06:38:831 BROKER/(12355:12409): Almaceno mensaje en partición que comienza en: 0
+[INFO] 18:06:38:838 BROKER/(12355:12413): Almaceno mensaje en partición que comienza en: 4
+[INFO] 18:06:38:845 BROKER/(12355:12417): Almaceno mensaje en partición que comienza en: 8
+[INFO] 18:06:38:846 BROKER/(12355:12420): Almaceno mensaje en partición que comienza en: 27
+[INFO] 18:06:38:852 BROKER/(12355:12422): Almaceno mensaje en partición que comienza en: 47
+[INFO] 18:06:42:855 BROKER/(12355:12434): Elimino particion que comienza en: 8
+[INFO] 18:06:42:855 BROKER/(12355:12434): Elimino particion que comienza en: 27
+[INFO] 18:06:42:855 BROKER/(12355:12434): Se consolidan las particiones que comienzan en: 8 y 27
+
+[INFO] 18:06:42:855 BROKER/(12355:12434): Almaceno mensaje en partición que comienza en: 8
+[INFO] 18:06:47:576 BROKER/(12355:12355): Se solicitó dump de cache.
+[INFO] 18:09:07:72 BROKER/(12795:12795): Inició el Broker.
+[INFO] 18:09:14:152 BROKER/(12844:12844): Inició el Broker.
+[INFO] 18:09:19:796 BROKER/(12895:12895): Inició el Broker.
+[INFO] 18:09:51:466 BROKER/(13004:13004): Inició el Broker.
+[INFO] 18:09:54:179 BROKER/(13004:13037): Almaceno mensaje en partición que comienza en: 0
+[INFO] 18:09:54:181 BROKER/(13004:13041): Almaceno mensaje en partición que comienza en: 4
+[INFO] 18:09:54:195 BROKER/(13004:13044): Almaceno mensaje en partición que comienza en: 8
+[INFO] 18:09:54:199 BROKER/(13004:13048): Almaceno mensaje en partición que comienza en: 27
+[INFO] 18:09:54:203 BROKER/(13004:13051): Almaceno mensaje en partición que comienza en: 47
+[INFO] 18:09:58:219 BROKER/(13004:13067): Elimino particion que comienza en: 8
+[INFO] 18:09:58:219 BROKER/(13004:13067): Elimino particion que comienza en: 27
+[INFO] 18:09:58:219 BROKER/(13004:13067): Se consolidan las particiones que comienzan en: 8 y 27
+
+[INFO] 18:09:58:219 BROKER/(13004:13067): Almaceno mensaje en partición que comienza en: 8
+[INFO] 18:10:11:988 BROKER/(13004:13004): Se solicitó dump de cache.
+[INFO] 18:11:38:526 BROKER/(13343:13343): Inició el Broker.
+[INFO] 18:11:42:169 BROKER/(13343:13369): Almaceno mensaje en partición que comienza en: 0
+[INFO] 18:11:42:171 BROKER/(13343:13373): Almaceno mensaje en partición que comienza en: 4
+[INFO] 18:11:42:173 BROKER/(13343:13376): Almaceno mensaje en partición que comienza en: 8
+[INFO] 18:11:42:177 BROKER/(13343:13379): Almaceno mensaje en partición que comienza en: 27
+[INFO] 18:11:42:180 BROKER/(13343:13382): Almaceno mensaje en partición que comienza en: 47
+[INFO] 18:11:46:184 BROKER/(13343:13397): Elimino particion que comienza en: 8
+[INFO] 18:11:46:184 BROKER/(13343:13397): Elimino particion que comienza en: 27
+[INFO] 18:11:46:184 BROKER/(13343:13397): Se consolidan las particiones que comienzan en: 8 y 27
+
+[INFO] 18:11:46:184 BROKER/(13343:13397): Almaceno mensaje en partición que comienza en: 8
+[INFO] 18:11:52:102 BROKER/(13343:13343): Se solicitó dump de cache.
+[INFO] 19:16:10:993 BROKER/(21760:21760): Inició el Broker.
+[INFO] 19:16:24:791 BROKER/(21760:21806): Almaceno mensaje en partición que comienza en: 0
+[INFO] 19:16:54:851 BROKER/(21760:21868): Almaceno mensaje en partición que comienza en: 19
+[INFO] 19:18:03:652 BROKER/(21760:22001): Almaceno mensaje en partición que comienza en: 30
+[INFO] 19:18:35:499 BROKER/(21760:22075): Almaceno mensaje en partición que comienza en: 34
+[INFO] 19:19:32:815 BROKER/(21760:22200): Almaceno mensaje en partición que comienza en: 53
+[INFO] 19:19:33:763 BROKER/(21760:22208): Almaceno mensaje en partición que comienza en: 57
+[INFO] 19:19:34:340 BROKER/(21760:22212): Elimino particion que comienza en: 0
+[INFO] 19:19:34:340 BROKER/(21760:22212): Almaceno mensaje en partición que comienza en: 0
+[INFO] 19:19:34:839 BROKER/(21760:22216): Almaceno mensaje en partición que comienza en: 4
+[INFO] 19:19:35:431 BROKER/(21760:22219): Almaceno mensaje en partición que comienza en: 8
+[INFO] 19:19:35:920 BROKER/(21760:22223): Almaceno mensaje en partición que comienza en: 12
+[INFO] 19:19:36:463 BROKER/(21760:22229): Elimino particion que comienza en: 19
+[INFO] 19:19:36:463 BROKER/(21760:22229): Se consolidan las particiones que comienzan en: 16 y 19
+
+[INFO] 19:19:36:463 BROKER/(21760:22229): Almaceno mensaje en partición que comienza en: 16
+[INFO] 19:19:36:959 BROKER/(21760:22233): Almaceno mensaje en partición que comienza en: 20
+[INFO] 19:19:37:490 BROKER/(21760:22236): Almaceno mensaje en partición que comienza en: 24
+[INFO] 19:19:38:488 BROKER/(21760:22238): Elimino particion que comienza en: 34
+[INFO] 19:19:38:488 BROKER/(21760:22238): Almaceno mensaje en partición que comienza en: 28
+[INFO] 19:19:38:888 BROKER/(21760:22247): Almaceno mensaje en partición que comienza en: 34
+[INFO] 19:19:39:259 BROKER/(21760:22250): Almaceno mensaje en partición que comienza en: 38
+[INFO] 19:19:39:631 BROKER/(21760:22253): Almaceno mensaje en partición que comienza en: 42
+[INFO] 19:19:39:995 BROKER/(21760:22256): Almaceno mensaje en partición que comienza en: 46
+[INFO] 19:19:40:349 BROKER/(21760:22259): Elimino particion que comienza en: 30
+[INFO] 19:19:40:349 BROKER/(21760:22259): Almaceno mensaje en partición que comienza en: 30
+[INFO] 19:19:40:726 BROKER/(21760:22262): Elimino particion que comienza en: 53
+[INFO] 19:19:40:726 BROKER/(21760:22262): Se consolidan las particiones que comienzan en: 50 y 53
+
+[INFO] 19:19:40:726 BROKER/(21760:22262): Almaceno mensaje en partición que comienza en: 50
+[INFO] 19:19:41:112 BROKER/(21760:22269): Elimino particion que comienza en: 57
+[INFO] 19:19:41:112 BROKER/(21760:22269): Se consolidan las particiones que comienzan en: 57 y 61
+
+[INFO] 19:19:41:112 BROKER/(21760:22269): Almaceno mensaje en partición que comienza en: 54
+[INFO] 19:19:41:461 BROKER/(21760:22272): Almaceno mensaje en partición que comienza en: 57
+[INFO] 19:19:41:844 BROKER/(21760:22275): Elimino particion que comienza en: 0
+[INFO] 19:19:41:844 BROKER/(21760:22275): Almaceno mensaje en partición que comienza en: 0
+[INFO] 19:19:42:203 BROKER/(21760:22278): Elimino particion que comienza en: 4
+[INFO] 19:19:42:203 BROKER/(21760:22278): Almaceno mensaje en partición que comienza en: 4
+[INFO] 19:19:42:585 BROKER/(21760:22281): Elimino particion que comienza en: 8
+[INFO] 19:19:42:585 BROKER/(21760:22281): Almaceno mensaje en partición que comienza en: 8
+[INFO] 19:19:42:956 BROKER/(21760:22284): Elimino particion que comienza en: 12
+[INFO] 19:19:42:956 BROKER/(21760:22284): Almaceno mensaje en partición que comienza en: 12
+[INFO] 19:19:43:344 BROKER/(21760:22287): Elimino particion que comienza en: 16
+[INFO] 19:19:43:344 BROKER/(21760:22287): Almaceno mensaje en partición que comienza en: 16
+[INFO] 19:19:43:720 BROKER/(21760:22294): Elimino particion que comienza en: 20
+[INFO] 19:19:43:720 BROKER/(21760:22294): Almaceno mensaje en partición que comienza en: 20
+[INFO] 19:19:44:85 BROKER/(21760:22297): Elimino particion que comienza en: 24
+[INFO] 19:19:44:85 BROKER/(21760:22297): Almaceno mensaje en partición que comienza en: 24
+[INFO] 19:19:44:474 BROKER/(21760:22300): Elimino particion que comienza en: 28
+[INFO] 19:19:44:474 BROKER/(21760:22300): Almaceno mensaje en partición que comienza en: 28
+[INFO] 19:19:44:852 BROKER/(21760:22303): Elimino particion que comienza en: 34
+[INFO] 19:19:44:852 BROKER/(21760:22303): Almaceno mensaje en partición que comienza en: 34
+[INFO] 19:19:45:261 BROKER/(21760:22306): Elimino particion que comienza en: 38
+[INFO] 19:19:45:261 BROKER/(21760:22306): Almaceno mensaje en partición que comienza en: 38
+[INFO] 19:19:45:615 BROKER/(21760:22309): Elimino particion que comienza en: 42
+[INFO] 19:19:45:615 BROKER/(21760:22309): Almaceno mensaje en partición que comienza en: 42
+[INFO] 19:19:45:975 BROKER/(21760:22312): Elimino particion que comienza en: 46
+[INFO] 19:19:45:975 BROKER/(21760:22312): Almaceno mensaje en partición que comienza en: 46
+[INFO] 19:19:46:323 BROKER/(21760:22319): Elimino particion que comienza en: 30
+[INFO] 19:19:46:323 BROKER/(21760:22319): Almaceno mensaje en partición que comienza en: 30
+[INFO] 19:19:46:688 BROKER/(21760:22322): Elimino particion que comienza en: 50
+[INFO] 19:19:46:688 BROKER/(21760:22322): Almaceno mensaje en partición que comienza en: 50
+[INFO] 19:19:47:47 BROKER/(21760:22325): Elimino particion que comienza en: 54
+[INFO] 19:19:47:47 BROKER/(21760:22325): Almaceno mensaje en partición que comienza en: 54
+[INFO] 19:19:47:413 BROKER/(21760:22328): Elimino particion que comienza en: 57
+[INFO] 19:19:47:413 BROKER/(21760:22328): Se consolidan las particiones que comienzan en: 57 y 61
+
+[INFO] 19:19:47:414 BROKER/(21760:22328): Almaceno mensaje en partición que comienza en: 57
+[INFO] 19:19:47:783 BROKER/(21760:22331): Elimino particion que comienza en: 0
+[INFO] 19:19:47:783 BROKER/(21760:22331): Almaceno mensaje en partición que comienza en: 0
+[INFO] 19:19:48:149 BROKER/(21760:22334): Elimino particion que comienza en: 4
+[INFO] 19:19:48:149 BROKER/(21760:22334): Almaceno mensaje en partición que comienza en: 4
+[INFO] 19:19:48:508 BROKER/(21760:22337): Elimino particion que comienza en: 8
+[INFO] 19:19:48:508 BROKER/(21760:22337): Almaceno mensaje en partición que comienza en: 8
+[INFO] 19:19:48:854 BROKER/(21760:22344): Elimino particion que comienza en: 12
+[INFO] 19:19:48:854 BROKER/(21760:22344): Almaceno mensaje en partición que comienza en: 12
+[INFO] 19:19:49:209 BROKER/(21760:22347): Elimino particion que comienza en: 16
+[INFO] 19:19:49:209 BROKER/(21760:22347): Almaceno mensaje en partición que comienza en: 16
+[INFO] 19:19:49:549 BROKER/(21760:22350): Elimino particion que comienza en: 20
+[INFO] 19:19:49:549 BROKER/(21760:22350): Almaceno mensaje en partición que comienza en: 20
+[INFO] 19:19:49:873 BROKER/(21760:22352): Elimino particion que comienza en: 24
+[INFO] 19:19:49:873 BROKER/(21760:22352): Almaceno mensaje en partición que comienza en: 24
+[INFO] 19:19:50:174 BROKER/(21760:22355): Elimino particion que comienza en: 28
+[INFO] 19:19:50:174 BROKER/(21760:22355): Almaceno mensaje en partición que comienza en: 28
+[INFO] 19:19:50:465 BROKER/(21760:22359): Elimino particion que comienza en: 34
+[INFO] 19:19:50:465 BROKER/(21760:22359): Almaceno mensaje en partición que comienza en: 34
+[INFO] 19:19:50:768 BROKER/(21760:22362): Elimino particion que comienza en: 38
+[INFO] 19:19:50:768 BROKER/(21760:22362): Almaceno mensaje en partición que comienza en: 38
+[INFO] 19:19:51:77 BROKER/(21760:22365): Elimino particion que comienza en: 42
+[INFO] 19:19:51:77 BROKER/(21760:22365): Almaceno mensaje en partición que comienza en: 42
+[INFO] 19:19:51:373 BROKER/(21760:22371): Elimino particion que comienza en: 46
+[INFO] 19:19:51:373 BROKER/(21760:22371): Almaceno mensaje en partición que comienza en: 46
+[INFO] 19:19:51:652 BROKER/(21760:22375): Elimino particion que comienza en: 30
+[INFO] 19:19:51:653 BROKER/(21760:22375): Almaceno mensaje en partición que comienza en: 30
+[INFO] 19:19:51:945 BROKER/(21760:22378): Elimino particion que comienza en: 50
+[INFO] 19:19:51:945 BROKER/(21760:22378): Almaceno mensaje en partición que comienza en: 50
+[INFO] 19:19:52:239 BROKER/(21760:22381): Elimino particion que comienza en: 54
+[INFO] 19:19:52:239 BROKER/(21760:22381): Almaceno mensaje en partición que comienza en: 54
+[INFO] 19:19:52:515 BROKER/(21760:22384): Elimino particion que comienza en: 57
+[INFO] 19:19:52:515 BROKER/(21760:22384): Se consolidan las particiones que comienzan en: 57 y 61
+
+[INFO] 19:19:52:515 BROKER/(21760:22384): Almaceno mensaje en partición que comienza en: 57
+[INFO] 19:19:52:794 BROKER/(21760:22387): Elimino particion que comienza en: 0
+[INFO] 19:19:52:794 BROKER/(21760:22387): Almaceno mensaje en partición que comienza en: 0
+[INFO] 19:19:53:85 BROKER/(21760:22390): Elimino particion que comienza en: 4
+[INFO] 19:19:53:85 BROKER/(21760:22390): Almaceno mensaje en partición que comienza en: 4
+[INFO] 19:19:53:405 BROKER/(21760:22393): Elimino particion que comienza en: 8
+[INFO] 19:19:53:405 BROKER/(21760:22393): Almaceno mensaje en partición que comienza en: 8
+[INFO] 19:19:53:707 BROKER/(21760:22396): Elimino particion que comienza en: 12
+[INFO] 19:19:53:707 BROKER/(21760:22396): Almaceno mensaje en partición que comienza en: 12
+[INFO] 19:19:53:973 BROKER/(21760:22403): Elimino particion que comienza en: 16
+[INFO] 19:19:53:973 BROKER/(21760:22403): Almaceno mensaje en partición que comienza en: 16
+[INFO] 19:19:54:272 BROKER/(21760:22405): Elimino particion que comienza en: 20
+[INFO] 19:19:54:272 BROKER/(21760:22405): Almaceno mensaje en partición que comienza en: 20
+[INFO] 19:19:54:571 BROKER/(21760:22409): Elimino particion que comienza en: 24
+[INFO] 19:19:54:572 BROKER/(21760:22409): Almaceno mensaje en partición que comienza en: 24
+[INFO] 19:19:54:847 BROKER/(21760:22412): Elimino particion que comienza en: 28
+[INFO] 19:19:54:847 BROKER/(21760:22412): Almaceno mensaje en partición que comienza en: 28
+[INFO] 19:19:55:147 BROKER/(21760:22415): Elimino particion que comienza en: 34
+[INFO] 19:19:55:147 BROKER/(21760:22415): Almaceno mensaje en partición que comienza en: 34
+[INFO] 19:19:55:447 BROKER/(21760:22418): Elimino particion que comienza en: 38
+[INFO] 19:19:55:447 BROKER/(21760:22418): Almaceno mensaje en partición que comienza en: 38
+[INFO] 19:19:55:733 BROKER/(21760:22421): Elimino particion que comienza en: 42
+[INFO] 19:19:55:733 BROKER/(21760:22421): Almaceno mensaje en partición que comienza en: 42
+[INFO] 19:19:56:24 BROKER/(21760:22424): Elimino particion que comienza en: 46
+[INFO] 19:19:56:24 BROKER/(21760:22424): Almaceno mensaje en partición que comienza en: 46
+[INFO] 19:19:56:320 BROKER/(21760:22426): Elimino particion que comienza en: 30
+[INFO] 19:19:56:320 BROKER/(21760:22426): Almaceno mensaje en partición que comienza en: 30
+[INFO] 19:19:56:628 BROKER/(21760:22434): Elimino particion que comienza en: 50
+[INFO] 19:19:56:628 BROKER/(21760:22434): Almaceno mensaje en partición que comienza en: 50
+[INFO] 19:19:56:931 BROKER/(21760:22437): Elimino particion que comienza en: 54
+[INFO] 19:19:56:931 BROKER/(21760:22437): Almaceno mensaje en partición que comienza en: 54
+[INFO] 19:19:57:233 BROKER/(21760:22440): Elimino particion que comienza en: 57
+[INFO] 19:19:57:233 BROKER/(21760:22440): Se consolidan las particiones que comienzan en: 57 y 61
+
+[INFO] 19:19:57:233 BROKER/(21760:22440): Almaceno mensaje en partición que comienza en: 57
+[INFO] 19:19:57:524 BROKER/(21760:22443): Elimino particion que comienza en: 0
+[INFO] 19:19:57:524 BROKER/(21760:22443): Almaceno mensaje en partición que comienza en: 0
+[INFO] 19:19:57:850 BROKER/(21760:22448): Elimino particion que comienza en: 4
+[INFO] 19:19:57:850 BROKER/(21760:22448): Almaceno mensaje en partición que comienza en: 4
+[INFO] 19:19:58:135 BROKER/(21760:22452): Elimino particion que comienza en: 8
+[INFO] 19:19:58:135 BROKER/(21760:22452): Almaceno mensaje en partición que comienza en: 8
+[INFO] 19:19:58:454 BROKER/(21760:22455): Elimino particion que comienza en: 12
+[INFO] 19:19:58:454 BROKER/(21760:22455): Almaceno mensaje en partición que comienza en: 12
+[INFO] 19:19:58:768 BROKER/(21760:22458): Elimino particion que comienza en: 16
+[INFO] 19:19:58:768 BROKER/(21760:22458): Almaceno mensaje en partición que comienza en: 16
+[INFO] 19:19:59:70 BROKER/(21760:22465): Elimino particion que comienza en: 20
+[INFO] 19:19:59:70 BROKER/(21760:22465): Almaceno mensaje en partición que comienza en: 20
+[INFO] 19:19:59:379 BROKER/(21760:22468): Elimino particion que comienza en: 24
+[INFO] 19:19:59:379 BROKER/(21760:22468): Almaceno mensaje en partición que comienza en: 24
+[INFO] 19:19:59:710 BROKER/(21760:22471): Elimino particion que comienza en: 28
+[INFO] 19:19:59:710 BROKER/(21760:22471): Almaceno mensaje en partición que comienza en: 28
+[INFO] 19:20:00:18 BROKER/(21760:22474): Elimino particion que comienza en: 34
+[INFO] 19:20:00:18 BROKER/(21760:22474): Almaceno mensaje en partición que comienza en: 34
+[INFO] 19:20:00:372 BROKER/(21760:22477): Elimino particion que comienza en: 38
+[INFO] 19:20:00:372 BROKER/(21760:22477): Almaceno mensaje en partición que comienza en: 38
+[INFO] 19:20:00:687 BROKER/(21760:22480): Elimino particion que comienza en: 42
+[INFO] 19:20:00:687 BROKER/(21760:22480): Almaceno mensaje en partición que comienza en: 42
+[INFO] 19:20:00:976 BROKER/(21760:22483): Elimino particion que comienza en: 46
+[INFO] 19:20:00:976 BROKER/(21760:22483): Almaceno mensaje en partición que comienza en: 46
+[INFO] 19:20:01:303 BROKER/(21760:22486): Elimino particion que comienza en: 30
+[INFO] 19:20:01:303 BROKER/(21760:22486): Almaceno mensaje en partición que comienza en: 30
+[INFO] 19:20:01:627 BROKER/(21760:22493): Elimino particion que comienza en: 50
+[INFO] 19:20:01:627 BROKER/(21760:22493): Almaceno mensaje en partición que comienza en: 50
+[INFO] 19:20:01:924 BROKER/(21760:22496): Elimino particion que comienza en: 54
+[INFO] 19:20:01:924 BROKER/(21760:22496): Almaceno mensaje en partición que comienza en: 54
+[INFO] 19:20:02:226 BROKER/(21760:22499): Elimino particion que comienza en: 57
+[INFO] 19:20:02:226 BROKER/(21760:22499): Se consolidan las particiones que comienzan en: 57 y 61
+
+[INFO] 19:20:02:227 BROKER/(21760:22499): Almaceno mensaje en partición que comienza en: 57
+[INFO] 19:20:02:546 BROKER/(21760:22502): Elimino particion que comienza en: 0
+[INFO] 19:20:02:546 BROKER/(21760:22502): Almaceno mensaje en partición que comienza en: 0
+[INFO] 19:20:02:842 BROKER/(21760:22505): Elimino particion que comienza en: 4
+[INFO] 19:20:02:843 BROKER/(21760:22505): Almaceno mensaje en partición que comienza en: 4
+[INFO] 19:20:03:156 BROKER/(21760:22508): Elimino particion que comienza en: 8
+[INFO] 19:20:03:156 BROKER/(21760:22508): Almaceno mensaje en partición que comienza en: 8
+[INFO] 19:20:03:458 BROKER/(21760:22511): Elimino particion que comienza en: 12
+[INFO] 19:20:03:458 BROKER/(21760:22511): Almaceno mensaje en partición que comienza en: 12
+[INFO] 19:20:03:732 BROKER/(21760:22514): Elimino particion que comienza en: 16
+[INFO] 19:20:03:732 BROKER/(21760:22514): Almaceno mensaje en partición que comienza en: 16
+[INFO] 19:20:04:19 BROKER/(21760:22516): Elimino particion que comienza en: 20
+[INFO] 19:20:04:19 BROKER/(21760:22516): Almaceno mensaje en partición que comienza en: 20
+[INFO] 19:20:04:297 BROKER/(21760:22524): Elimino particion que comienza en: 24
+[INFO] 19:20:04:297 BROKER/(21760:22524): Almaceno mensaje en partición que comienza en: 24
+[INFO] 19:20:04:560 BROKER/(21760:22527): Elimino particion que comienza en: 28
+[INFO] 19:20:04:560 BROKER/(21760:22527): Almaceno mensaje en partición que comienza en: 28
+[INFO] 19:20:04:800 BROKER/(21760:22530): Elimino particion que comienza en: 34
+[INFO] 19:20:04:800 BROKER/(21760:22530): Almaceno mensaje en partición que comienza en: 34
+[INFO] 19:20:05:74 BROKER/(21760:22533): Elimino particion que comienza en: 38
+[INFO] 19:20:05:74 BROKER/(21760:22533): Almaceno mensaje en partición que comienza en: 38
+[INFO] 19:20:05:348 BROKER/(21760:22535): Elimino particion que comienza en: 42
+[INFO] 19:20:05:348 BROKER/(21760:22535): Almaceno mensaje en partición que comienza en: 42
+[INFO] 19:20:05:659 BROKER/(21760:22539): Elimino particion que comienza en: 46
+[INFO] 19:20:05:659 BROKER/(21760:22539): Almaceno mensaje en partición que comienza en: 46
+[INFO] 19:20:05:930 BROKER/(21760:22542): Elimino particion que comienza en: 30
+[INFO] 19:20:05:930 BROKER/(21760:22542): Almaceno mensaje en partición que comienza en: 30
+[INFO] 19:20:06:180 BROKER/(21760:22545): Elimino particion que comienza en: 50
+[INFO] 19:20:06:180 BROKER/(21760:22545): Almaceno mensaje en partición que comienza en: 50
+[INFO] 19:20:06:471 BROKER/(21760:22548): Elimino particion que comienza en: 54
+[INFO] 19:20:06:471 BROKER/(21760:22548): Almaceno mensaje en partición que comienza en: 54
+[INFO] 19:20:06:757 BROKER/(21760:22555): Elimino particion que comienza en: 57
+[INFO] 19:20:06:757 BROKER/(21760:22555): Se consolidan las particiones que comienzan en: 57 y 61
+
+[INFO] 19:20:06:757 BROKER/(21760:22555): Almaceno mensaje en partición que comienza en: 57
+[INFO] 19:20:07:47 BROKER/(21760:22558): Elimino particion que comienza en: 0
+[INFO] 19:20:07:47 BROKER/(21760:22558): Almaceno mensaje en partición que comienza en: 0
+[INFO] 19:20:07:311 BROKER/(21760:22561): Elimino particion que comienza en: 4
+[INFO] 19:20:07:311 BROKER/(21760:22561): Almaceno mensaje en partición que comienza en: 4
+[INFO] 19:20:07:596 BROKER/(21760:22564): Elimino particion que comienza en: 8
+[INFO] 19:20:07:596 BROKER/(21760:22564): Almaceno mensaje en partición que comienza en: 8
+[INFO] 19:20:07:883 BROKER/(21760:22566): Elimino particion que comienza en: 12
+[INFO] 19:20:07:883 BROKER/(21760:22566): Almaceno mensaje en partición que comienza en: 12
+[INFO] 19:20:08:133 BROKER/(21760:22570): Elimino particion que comienza en: 16
+[INFO] 19:20:08:133 BROKER/(21760:22570): Almaceno mensaje en partición que comienza en: 16
+[INFO] 19:20:08:389 BROKER/(21760:22573): Elimino particion que comienza en: 20
+[INFO] 19:20:08:389 BROKER/(21760:22573): Almaceno mensaje en partición que comienza en: 20
+[INFO] 19:20:08:645 BROKER/(21760:22576): Elimino particion que comienza en: 24
+[INFO] 19:20:08:646 BROKER/(21760:22576): Almaceno mensaje en partición que comienza en: 24
+[INFO] 19:20:08:891 BROKER/(21760:22579): Elimino particion que comienza en: 28
+[INFO] 19:20:08:891 BROKER/(21760:22579): Almaceno mensaje en partición que comienza en: 28
+[INFO] 19:20:09:148 BROKER/(21760:22582): Elimino particion que comienza en: 34
+[INFO] 19:20:09:148 BROKER/(21760:22582): Almaceno mensaje en partición que comienza en: 34
+[INFO] 19:20:09:936 BROKER/(21760:22589): Elimino particion que comienza en: 38
+[INFO] 19:20:09:936 BROKER/(21760:22589): Almaceno mensaje en partición que comienza en: 38
+[INFO] 19:20:10:723 BROKER/(21760:22592): Elimino particion que comienza en: 42
+[INFO] 19:20:10:723 BROKER/(21760:22592): Almaceno mensaje en partición que comienza en: 42
+[INFO] 19:20:10:968 BROKER/(21760:22597): Elimino particion que comienza en: 46
+[INFO] 19:20:10:968 BROKER/(21760:22597): Almaceno mensaje en partición que comienza en: 46
+[INFO] 19:20:11:225 BROKER/(21760:22599): Elimino particion que comienza en: 30
+[INFO] 19:20:11:225 BROKER/(21760:22599): Almaceno mensaje en partición que comienza en: 30
+[INFO] 19:20:11:488 BROKER/(21760:22603): Elimino particion que comienza en: 50
+[INFO] 19:20:11:488 BROKER/(21760:22603): Almaceno mensaje en partición que comienza en: 50
+[INFO] 19:20:11:744 BROKER/(21760:22610): Elimino particion que comienza en: 54
+[INFO] 19:20:11:744 BROKER/(21760:22610): Almaceno mensaje en partición que comienza en: 54
+[INFO] 19:20:11:987 BROKER/(21760:22613): Elimino particion que comienza en: 57
+[INFO] 19:20:11:987 BROKER/(21760:22613): Se consolidan las particiones que comienzan en: 57 y 61
+
+[INFO] 19:20:11:987 BROKER/(21760:22613): Almaceno mensaje en partición que comienza en: 57
+[INFO] 19:20:12:243 BROKER/(21760:22616): Elimino particion que comienza en: 0
+[INFO] 19:20:12:243 BROKER/(21760:22616): Almaceno mensaje en partición que comienza en: 0
+[INFO] 19:20:12:514 BROKER/(21760:22619): Elimino particion que comienza en: 4
+[INFO] 19:20:12:514 BROKER/(21760:22619): Almaceno mensaje en partición que comienza en: 4
+[INFO] 19:20:12:760 BROKER/(21760:22622): Elimino particion que comienza en: 8
+[INFO] 19:20:12:760 BROKER/(21760:22622): Almaceno mensaje en partición que comienza en: 8
+[INFO] 19:20:13:51 BROKER/(21760:22624): Elimino particion que comienza en: 12
+[INFO] 19:20:13:51 BROKER/(21760:22624): Almaceno mensaje en partición que comienza en: 12
+[INFO] 19:20:13:314 BROKER/(21760:22628): Elimino particion que comienza en: 16
+[INFO] 19:20:13:314 BROKER/(21760:22628): Almaceno mensaje en partición que comienza en: 16
+[INFO] 19:20:13:587 BROKER/(21760:22631): Elimino particion que comienza en: 20
+[INFO] 19:20:13:587 BROKER/(21760:22631): Almaceno mensaje en partición que comienza en: 20
+[INFO] 19:20:13:860 BROKER/(21760:22634): Elimino particion que comienza en: 24
+[INFO] 19:20:13:860 BROKER/(21760:22634): Almaceno mensaje en partición que comienza en: 24
+[INFO] 19:20:14:136 BROKER/(21760:22637): Elimino particion que comienza en: 28
+[INFO] 19:20:14:136 BROKER/(21760:22637): Almaceno mensaje en partición que comienza en: 28
+[INFO] 19:20:14:398 BROKER/(21760:22643): Elimino particion que comienza en: 34
+[INFO] 19:20:14:398 BROKER/(21760:22643): Almaceno mensaje en partición que comienza en: 34
+[INFO] 19:20:14:660 BROKER/(21760:22647): Elimino particion que comienza en: 38
+[INFO] 19:20:14:660 BROKER/(21760:22647): Almaceno mensaje en partición que comienza en: 38
+[INFO] 19:20:14:923 BROKER/(21760:22650): Elimino particion que comienza en: 42
+[INFO] 19:20:14:923 BROKER/(21760:22650): Almaceno mensaje en partición que comienza en: 42
+[INFO] 19:20:15:199 BROKER/(21760:22653): Elimino particion que comienza en: 46
+[INFO] 19:20:15:199 BROKER/(21760:22653): Almaceno mensaje en partición que comienza en: 46
+[INFO] 19:20:15:465 BROKER/(21760:22656): Elimino particion que comienza en: 30
+[INFO] 19:20:15:465 BROKER/(21760:22656): Almaceno mensaje en partición que comienza en: 30
+[INFO] 19:20:15:721 BROKER/(21760:22659): Elimino particion que comienza en: 50
+[INFO] 19:20:15:721 BROKER/(21760:22659): Almaceno mensaje en partición que comienza en: 50
+[INFO] 19:20:16:18 BROKER/(21760:22662): Elimino particion que comienza en: 54
+[INFO] 19:20:16:18 BROKER/(21760:22662): Almaceno mensaje en partición que comienza en: 54
+[INFO] 19:20:16:286 BROKER/(21760:22665): Elimino particion que comienza en: 57
+[INFO] 19:20:16:286 BROKER/(21760:22665): Se consolidan las particiones que comienzan en: 57 y 61
+
+[INFO] 19:20:16:286 BROKER/(21760:22665): Almaceno mensaje en partición que comienza en: 57
+[INFO] 19:20:16:559 BROKER/(21760:22668): Elimino particion que comienza en: 0
+[INFO] 19:20:16:559 BROKER/(21760:22668): Almaceno mensaje en partición que comienza en: 0
+[INFO] 19:20:16:814 BROKER/(21760:22674): Elimino particion que comienza en: 4
+[INFO] 19:20:16:814 BROKER/(21760:22674): Almaceno mensaje en partición que comienza en: 4
+[INFO] 19:20:17:62 BROKER/(21760:22678): Elimino particion que comienza en: 8
+[INFO] 19:20:17:62 BROKER/(21760:22678): Almaceno mensaje en partición que comienza en: 8
+[INFO] 19:20:17:319 BROKER/(21760:22681): Elimino particion que comienza en: 12
+[INFO] 19:20:17:319 BROKER/(21760:22681): Almaceno mensaje en partición que comienza en: 12
+[INFO] 19:20:17:582 BROKER/(21760:22684): Elimino particion que comienza en: 16
+[INFO] 19:20:17:582 BROKER/(21760:22684): Almaceno mensaje en partición que comienza en: 16
+[INFO] 19:20:17:861 BROKER/(21760:22687): Elimino particion que comienza en: 20
+[INFO] 19:20:17:861 BROKER/(21760:22687): Almaceno mensaje en partición que comienza en: 20
+[INFO] 19:20:18:101 BROKER/(21760:22690): Elimino particion que comienza en: 24
+[INFO] 19:20:18:101 BROKER/(21760:22690): Almaceno mensaje en partición que comienza en: 24
+[INFO] 19:20:18:364 BROKER/(21760:22693): Elimino particion que comienza en: 28
+[INFO] 19:20:18:364 BROKER/(21760:22693): Almaceno mensaje en partición que comienza en: 28
+[INFO] 19:20:18:649 BROKER/(21760:22696): Elimino particion que comienza en: 34
+[INFO] 19:20:18:649 BROKER/(21760:22696): Almaceno mensaje en partición que comienza en: 34
+[INFO] 19:20:18:923 BROKER/(21760:22699): Elimino particion que comienza en: 38
+[INFO] 19:20:18:923 BROKER/(21760:22699): Almaceno mensaje en partición que comienza en: 38
+[INFO] 19:20:19:219 BROKER/(21760:22702): Elimino particion que comienza en: 42
+[INFO] 19:20:19:219 BROKER/(21760:22702): Almaceno mensaje en partición que comienza en: 42
+[INFO] 19:20:19:481 BROKER/(21760:22709): Elimino particion que comienza en: 46
+[INFO] 19:20:19:481 BROKER/(21760:22709): Almaceno mensaje en partición que comienza en: 46
+[INFO] 19:20:19:739 BROKER/(21760:22712): Elimino particion que comienza en: 30
+[INFO] 19:20:19:739 BROKER/(21760:22712): Almaceno mensaje en partición que comienza en: 30
+[INFO] 19:20:20:19 BROKER/(21760:22715): Elimino particion que comienza en: 50
+[INFO] 19:20:20:19 BROKER/(21760:22715): Almaceno mensaje en partición que comienza en: 50
+[INFO] 19:20:20:264 BROKER/(21760:22718): Elimino particion que comienza en: 54
+[INFO] 19:20:20:264 BROKER/(21760:22718): Almaceno mensaje en partición que comienza en: 54
+[INFO] 19:20:20:561 BROKER/(21760:22721): Elimino particion que comienza en: 57
+[INFO] 19:20:20:561 BROKER/(21760:22721): Se consolidan las particiones que comienzan en: 57 y 61
+
+[INFO] 19:20:20:561 BROKER/(21760:22721): Almaceno mensaje en partición que comienza en: 57
+[INFO] 19:20:20:806 BROKER/(21760:22724): Elimino particion que comienza en: 0
+[INFO] 19:20:20:806 BROKER/(21760:22724): Almaceno mensaje en partición que comienza en: 0
+[INFO] 19:20:21:57 BROKER/(21760:22727): Elimino particion que comienza en: 4
+[INFO] 19:20:21:57 BROKER/(21760:22727): Almaceno mensaje en partición que comienza en: 4
+[INFO] 19:20:21:308 BROKER/(21760:22730): Elimino particion que comienza en: 8
+[INFO] 19:20:21:308 BROKER/(21760:22730): Almaceno mensaje en partición que comienza en: 8
+[INFO] 19:20:21:588 BROKER/(21760:22733): Elimino particion que comienza en: 12
+[INFO] 19:20:21:588 BROKER/(21760:22733): Almaceno mensaje en partición que comienza en: 12
+[INFO] 19:20:21:874 BROKER/(21760:22736): Elimino particion que comienza en: 16
+[INFO] 19:20:21:874 BROKER/(21760:22736): Almaceno mensaje en partición que comienza en: 16
+[INFO] 19:20:22:158 BROKER/(21760:22743): Elimino particion que comienza en: 20
+[INFO] 19:20:22:158 BROKER/(21760:22743): Almaceno mensaje en partición que comienza en: 20
+[INFO] 19:20:22:410 BROKER/(21760:22746): Elimino particion que comienza en: 24
+[INFO] 19:20:22:410 BROKER/(21760:22746): Almaceno mensaje en partición que comienza en: 24
+[INFO] 19:20:22:673 BROKER/(21760:22750): Elimino particion que comienza en: 28
+[INFO] 19:20:22:673 BROKER/(21760:22750): Almaceno mensaje en partición que comienza en: 28
+[INFO] 19:20:22:917 BROKER/(21760:22753): Elimino particion que comienza en: 34
+[INFO] 19:20:22:917 BROKER/(21760:22753): Almaceno mensaje en partición que comienza en: 34
+[INFO] 19:20:23:185 BROKER/(21760:22756): Elimino particion que comienza en: 38
+[INFO] 19:20:23:185 BROKER/(21760:22756): Almaceno mensaje en partición que comienza en: 38
+[INFO] 19:20:23:448 BROKER/(21760:22759): Elimino particion que comienza en: 42
+[INFO] 19:20:23:448 BROKER/(21760:22759): Almaceno mensaje en partición que comienza en: 42
+[INFO] 19:20:23:710 BROKER/(21760:22762): Elimino particion que comienza en: 46
+[INFO] 19:20:23:710 BROKER/(21760:22762): Almaceno mensaje en partición que comienza en: 46
+[INFO] 19:20:23:961 BROKER/(21760:22765): Elimino particion que comienza en: 30
+[INFO] 19:20:23:961 BROKER/(21760:22765): Almaceno mensaje en partición que comienza en: 30
+[INFO] 19:20:24:213 BROKER/(21760:22768): Elimino particion que comienza en: 50
+[INFO] 19:20:24:213 BROKER/(21760:22768): Almaceno mensaje en partición que comienza en: 50
+[INFO] 19:20:24:481 BROKER/(21760:22771): Elimino particion que comienza en: 54
+[INFO] 19:20:24:481 BROKER/(21760:22771): Almaceno mensaje en partición que comienza en: 54
+[INFO] 19:20:24:732 BROKER/(21760:22778): Elimino particion que comienza en: 57
+[INFO] 19:20:24:732 BROKER/(21760:22778): Se consolidan las particiones que comienzan en: 57 y 61
+
+[INFO] 19:20:24:732 BROKER/(21760:22778): Almaceno mensaje en partición que comienza en: 57
+[INFO] 19:20:24:988 BROKER/(21760:22781): Elimino particion que comienza en: 0
+[INFO] 19:20:24:988 BROKER/(21760:22781): Almaceno mensaje en partición que comienza en: 0
+[INFO] 19:20:25:230 BROKER/(21760:22784): Elimino particion que comienza en: 4
+[INFO] 19:20:25:230 BROKER/(21760:22784): Almaceno mensaje en partición que comienza en: 4
+[INFO] 19:20:25:509 BROKER/(21760:22787): Elimino particion que comienza en: 8
+[INFO] 19:20:25:509 BROKER/(21760:22787): Almaceno mensaje en partición que comienza en: 8
+[INFO] 19:20:25:770 BROKER/(21760:22789): Elimino particion que comienza en: 12
+[INFO] 19:20:25:770 BROKER/(21760:22789): Almaceno mensaje en partición que comienza en: 12
+[INFO] 19:20:26:22 BROKER/(21760:22793): Elimino particion que comienza en: 16
+[INFO] 19:20:26:22 BROKER/(21760:22793): Almaceno mensaje en partición que comienza en: 16
+[INFO] 19:20:26:290 BROKER/(21760:22796): Elimino particion que comienza en: 20
+[INFO] 19:20:26:290 BROKER/(21760:22796): Almaceno mensaje en partición que comienza en: 20
+[INFO] 19:20:26:564 BROKER/(21760:22799): Elimino particion que comienza en: 24
+[INFO] 19:20:26:564 BROKER/(21760:22799): Almaceno mensaje en partición que comienza en: 24
+[INFO] 19:20:26:827 BROKER/(21760:22802): Elimino particion que comienza en: 28
+[INFO] 19:20:26:827 BROKER/(21760:22802): Almaceno mensaje en partición que comienza en: 28
+[INFO] 19:20:27:118 BROKER/(21760:22808): Elimino particion que comienza en: 34
+[INFO] 19:20:27:118 BROKER/(21760:22808): Almaceno mensaje en partición que comienza en: 34
+[INFO] 19:20:27:373 BROKER/(21760:22812): Elimino particion que comienza en: 38
+[INFO] 19:20:27:373 BROKER/(21760:22812): Almaceno mensaje en partición que comienza en: 38
+[INFO] 19:20:27:631 BROKER/(21760:22815): Elimino particion que comienza en: 42
+[INFO] 19:20:27:631 BROKER/(21760:22815): Almaceno mensaje en partición que comienza en: 42
+[INFO] 19:20:27:848 BROKER/(21760:22818): Elimino particion que comienza en: 46
+[INFO] 19:20:27:848 BROKER/(21760:22818): Almaceno mensaje en partición que comienza en: 46
+[INFO] 19:20:28:105 BROKER/(21760:22821): Elimino particion que comienza en: 30
+[INFO] 19:20:28:105 BROKER/(21760:22821): Almaceno mensaje en partición que comienza en: 30
+[INFO] 19:20:28:344 BROKER/(21760:22823): Elimino particion que comienza en: 50
+[INFO] 19:20:28:344 BROKER/(21760:22823): Almaceno mensaje en partición que comienza en: 50
+[INFO] 19:20:28:607 BROKER/(21760:22827): Elimino particion que comienza en: 54
+[INFO] 19:20:28:607 BROKER/(21760:22827): Almaceno mensaje en partición que comienza en: 54
+[INFO] 19:20:28:848 BROKER/(21760:22830): Elimino particion que comienza en: 57
+[INFO] 19:20:28:848 BROKER/(21760:22830): Se consolidan las particiones que comienzan en: 57 y 61
+
+[INFO] 19:20:28:848 BROKER/(21760:22830): Almaceno mensaje en partición que comienza en: 57
+[INFO] 19:20:29:99 BROKER/(21760:22833): Elimino particion que comienza en: 0
+[INFO] 19:20:29:99 BROKER/(21760:22833): Almaceno mensaje en partición que comienza en: 0
+[INFO] 19:20:29:326 BROKER/(21760:22836): Elimino particion que comienza en: 4
+[INFO] 19:20:29:326 BROKER/(21760:22836): Almaceno mensaje en partición que comienza en: 4
+[INFO] 19:20:29:571 BROKER/(21760:22839): Elimino particion que comienza en: 8
+[INFO] 19:20:29:571 BROKER/(21760:22839): Almaceno mensaje en partición que comienza en: 8
+[INFO] 19:20:29:823 BROKER/(21760:22847): Elimino particion que comienza en: 12
+[INFO] 19:20:29:823 BROKER/(21760:22847): Almaceno mensaje en partición que comienza en: 12
+[INFO] 19:20:30:79 BROKER/(21760:22852): Elimino particion que comienza en: 16
+[INFO] 19:20:30:79 BROKER/(21760:22852): Almaceno mensaje en partición que comienza en: 16
+[INFO] 19:20:30:331 BROKER/(21760:22855): Elimino particion que comienza en: 20
+[INFO] 19:20:30:331 BROKER/(21760:22855): Almaceno mensaje en partición que comienza en: 20
+[INFO] 19:20:30:593 BROKER/(21760:22858): Elimino particion que comienza en: 24
+[INFO] 19:20:30:593 BROKER/(21760:22858): Almaceno mensaje en partición que comienza en: 24
+[INFO] 19:20:30:850 BROKER/(21760:22861): Elimino particion que comienza en: 28
+[INFO] 19:20:30:850 BROKER/(21760:22861): Almaceno mensaje en partición que comienza en: 28
+[INFO] 19:20:31:152 BROKER/(21760:22864): Elimino particion que comienza en: 34
+[INFO] 19:20:31:152 BROKER/(21760:22864): Almaceno mensaje en partición que comienza en: 34
+[INFO] 19:20:31:448 BROKER/(21760:22867): Elimino particion que comienza en: 38
+[INFO] 19:20:31:448 BROKER/(21760:22867): Almaceno mensaje en partición que comienza en: 38
+[INFO] 19:20:31:694 BROKER/(21760:22871): Elimino particion que comienza en: 42
+[INFO] 19:20:31:694 BROKER/(21760:22871): Almaceno mensaje en partición que comienza en: 42
+[INFO] 19:20:31:969 BROKER/(21760:22874): Elimino particion que comienza en: 46
+[INFO] 19:20:31:969 BROKER/(21760:22874): Almaceno mensaje en partición que comienza en: 46
+[INFO] 19:20:32:214 BROKER/(21760:22881): Elimino particion que comienza en: 30
+[INFO] 19:20:32:214 BROKER/(21760:22881): Almaceno mensaje en partición que comienza en: 30
+[INFO] 19:20:32:459 BROKER/(21760:22884): Elimino particion que comienza en: 50
+[INFO] 19:20:32:459 BROKER/(21760:22884): Almaceno mensaje en partición que comienza en: 50
+[INFO] 19:20:32:759 BROKER/(21760:22887): Elimino particion que comienza en: 54
+[INFO] 19:20:32:759 BROKER/(21760:22887): Almaceno mensaje en partición que comienza en: 54
+[INFO] 19:20:33:25 BROKER/(21760:22890): Elimino particion que comienza en: 57
+[INFO] 19:20:33:25 BROKER/(21760:22890): Se consolidan las particiones que comienzan en: 57 y 61
+
+[INFO] 19:20:33:25 BROKER/(21760:22890): Almaceno mensaje en partición que comienza en: 57
+[INFO] 19:20:33:320 BROKER/(21760:22893): Elimino particion que comienza en: 0
+[INFO] 19:20:33:320 BROKER/(21760:22893): Almaceno mensaje en partición que comienza en: 0
+[INFO] 19:20:33:594 BROKER/(21760:22896): Elimino particion que comienza en: 4
+[INFO] 19:20:33:594 BROKER/(21760:22896): Almaceno mensaje en partición que comienza en: 4
+[INFO] 19:20:33:868 BROKER/(21760:22899): Elimino particion que comienza en: 8
+[INFO] 19:20:33:868 BROKER/(21760:22899): Almaceno mensaje en partición que comienza en: 8
+[INFO] 19:20:34:159 BROKER/(21760:22902): Elimino particion que comienza en: 12
+[INFO] 19:20:34:159 BROKER/(21760:22902): Almaceno mensaje en partición que comienza en: 12
+[INFO] 19:20:34:427 BROKER/(21760:22905): Elimino particion que comienza en: 16
+[INFO] 19:20:34:427 BROKER/(21760:22905): Almaceno mensaje en partición que comienza en: 16
+[INFO] 19:20:34:724 BROKER/(21760:22908): Elimino particion que comienza en: 20
+[INFO] 19:20:34:724 BROKER/(21760:22908): Almaceno mensaje en partición que comienza en: 20
+[INFO] 19:20:35:15 BROKER/(21760:22915): Elimino particion que comienza en: 24
+[INFO] 19:20:35:15 BROKER/(21760:22915): Almaceno mensaje en partición que comienza en: 24
+[INFO] 19:20:35:295 BROKER/(21760:22918): Elimino particion que comienza en: 28
+[INFO] 19:20:35:295 BROKER/(21760:22918): Almaceno mensaje en partición que comienza en: 28
+[INFO] 19:20:35:586 BROKER/(21760:22921): Elimino particion que comienza en: 34
+[INFO] 19:20:35:586 BROKER/(21760:22921): Almaceno mensaje en partición que comienza en: 34
+[INFO] 19:20:35:859 BROKER/(21760:22924): Elimino particion que comienza en: 38
+[INFO] 19:20:35:859 BROKER/(21760:22924): Almaceno mensaje en partición que comienza en: 38
+[INFO] 19:20:36:127 BROKER/(21760:22927): Elimino particion que comienza en: 42
+[INFO] 19:20:36:127 BROKER/(21760:22927): Almaceno mensaje en partición que comienza en: 42
+[INFO] 19:20:36:427 BROKER/(21760:22930): Elimino particion que comienza en: 46
+[INFO] 19:20:36:427 BROKER/(21760:22930): Almaceno mensaje en partición que comienza en: 46
+[INFO] 19:20:36:705 BROKER/(21760:22933): Elimino particion que comienza en: 30
+[INFO] 19:20:36:705 BROKER/(21760:22933): Almaceno mensaje en partición que comienza en: 30
+[INFO] 19:20:36:995 BROKER/(21760:22936): Elimino particion que comienza en: 50
+[INFO] 19:20:36:995 BROKER/(21760:22936): Almaceno mensaje en partición que comienza en: 50
+[INFO] 19:20:37:291 BROKER/(21760:22942): Elimino particion que comienza en: 54
+[INFO] 19:20:37:291 BROKER/(21760:22942): Almaceno mensaje en partición que comienza en: 54
+[INFO] 19:20:37:571 BROKER/(21760:22946): Elimino particion que comienza en: 57
+[INFO] 19:20:37:571 BROKER/(21760:22946): Se consolidan las particiones que comienzan en: 57 y 61
+
+[INFO] 19:20:37:571 BROKER/(21760:22946): Almaceno mensaje en partición que comienza en: 57
+[INFO] 19:20:37:863 BROKER/(21760:22949): Elimino particion que comienza en: 0
+[INFO] 19:20:37:863 BROKER/(21760:22949): Almaceno mensaje en partición que comienza en: 0
+[INFO] 19:20:38:143 BROKER/(21760:22952): Elimino particion que comienza en: 4
+[INFO] 19:20:38:143 BROKER/(21760:22952): Almaceno mensaje en partición que comienza en: 4
+[INFO] 19:20:38:438 BROKER/(21760:22955): Elimino particion que comienza en: 8
+[INFO] 19:20:38:438 BROKER/(21760:22955): Almaceno mensaje en partición que comienza en: 8
+[INFO] 19:20:38:729 BROKER/(21760:22958): Elimino particion que comienza en: 12
+[INFO] 19:20:38:729 BROKER/(21760:22958): Almaceno mensaje en partición que comienza en: 12
+[INFO] 19:20:39:17 BROKER/(21760:22961): Elimino particion que comienza en: 16
+[INFO] 19:20:39:17 BROKER/(21760:22961): Almaceno mensaje en partición que comienza en: 16
+[INFO] 19:20:39:267 BROKER/(21760:22963): Elimino particion que comienza en: 20
+[INFO] 19:20:39:267 BROKER/(21760:22963): Almaceno mensaje en partición que comienza en: 20
+[INFO] 19:20:39:557 BROKER/(21760:22967): Elimino particion que comienza en: 24
+[INFO] 19:20:39:557 BROKER/(21760:22967): Almaceno mensaje en partición que comienza en: 24
+[INFO] 19:20:39:826 BROKER/(21760:22970): Elimino particion que comienza en: 28
+[INFO] 19:20:39:826 BROKER/(21760:22970): Almaceno mensaje en partición que comienza en: 28
+[INFO] 19:20:40:159 BROKER/(21760:22977): Elimino particion que comienza en: 34
+[INFO] 19:20:40:159 BROKER/(21760:22977): Almaceno mensaje en partición que comienza en: 34
+[INFO] 19:20:40:419 BROKER/(21760:22980): Elimino particion que comienza en: 38
+[INFO] 19:20:40:419 BROKER/(21760:22980): Almaceno mensaje en partición que comienza en: 38
+[INFO] 19:20:40:664 BROKER/(21760:22982): Elimino particion que comienza en: 42
+[INFO] 19:20:40:664 BROKER/(21760:22982): Almaceno mensaje en partición que comienza en: 42
+[INFO] 19:20:40:961 BROKER/(21760:22986): Elimino particion que comienza en: 46
+[INFO] 19:20:40:961 BROKER/(21760:22986): Almaceno mensaje en partición que comienza en: 46
+[INFO] 19:20:41:267 BROKER/(21760:22989): Elimino particion que comienza en: 30
+[INFO] 19:20:41:267 BROKER/(21760:22989): Almaceno mensaje en partición que comienza en: 30
+[INFO] 19:20:41:543 BROKER/(21760:22992): Elimino particion que comienza en: 50
+[INFO] 19:20:41:543 BROKER/(21760:22992): Almaceno mensaje en partición que comienza en: 50
+[INFO] 19:20:41:800 BROKER/(21760:22995): Elimino particion que comienza en: 54
+[INFO] 19:20:41:800 BROKER/(21760:22995): Almaceno mensaje en partición que comienza en: 54
+[INFO] 19:20:43:711 BROKER/(21760:23002): Elimino particion que comienza en: 57
+[INFO] 19:20:43:711 BROKER/(21760:23002): Se consolidan las particiones que comienzan en: 57 y 61
+
+[INFO] 19:20:43:711 BROKER/(21760:23002): Almaceno mensaje en partición que comienza en: 57
+[INFO] 19:20:50:461 BROKER/(21760:23019): Elimino particion que comienza en: 0
+[INFO] 19:20:50:461 BROKER/(21760:23019): Almaceno mensaje en partición que comienza en: 0

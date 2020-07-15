@@ -93,6 +93,7 @@ void suscribirSegunCola(paquete paq, uint32_t* socket) {
 }
 
 void suscribir(colaMensajes * cola, paquete paq, uint32_t* socket,uint32_t identificadorCola, uint32_t idProceso) {
+	log_info(loggerBroker,"Un proceso %s se sucribió a la cola %s.", intToModulo(paq.modulo), colaToString(cola));
 
 	log_info(brokerLogger2, "---------------------------- Suscribo a %i", idProceso);
 
@@ -109,6 +110,24 @@ void suscribir(colaMensajes * cola, paquete paq, uint32_t* socket,uint32_t ident
 		free(socket);
 	}
 
+}
+
+char* colaToString(colaMensajes* cola){
+	if(cola==&appearedPokemon){
+		return "APPEARED_POKEMON";
+	}else if(cola==&newPokemon){
+		return "NEW_POKEMON";
+	}else if(cola==&caughtPokemon){
+		return "CAUGHT_POKEMON";
+	}else if(cola==&catchPokemon){
+		return "CATCH_POKEMON";
+	}else if(cola==&getPokemon){
+		return "GET_POKEMON";
+	}else if(cola==&localizedPokemon){
+		return "LOCALIZED_POKEMON";
+	}else{
+		return "";
+	}
 }
 
 void suscribirPorTiempo(void* estructura){
