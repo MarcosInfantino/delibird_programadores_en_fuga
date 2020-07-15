@@ -43,16 +43,21 @@ void registrarParticionesLibresYocupadas(){
 
 		char* buffer = string_new();
 		string_append_with_format(&buffer, "Particion %d: ", j);
-		string_append_with_format(&buffer, "%p-%p.  ",particionAEscribir->offset, particionAEscribir->offset+particionAEscribir->sizeParticion);
+		if(particionAEscribir->offset==0){
+			string_append_with_format(&buffer, "0x0-%p.  ", particionAEscribir->offset+particionAEscribir->sizeParticion);
+		}else{
+			string_append_with_format(&buffer, "%p-%p.  ",particionAEscribir->offset, particionAEscribir->offset+particionAEscribir->sizeParticion);
+		}
+
 
 		if(particionAEscribir->estadoParticion == PARTICION_LIBRE){
 			string_append(&buffer, LIBREP);
 			string_append(&buffer, "   ");
-			string_append_with_format(&buffer, "Size: %i\n", particionAEscribir->sizeParticion);
+			string_append_with_format(&buffer, "Size: %ib\n", particionAEscribir->sizeParticion);
 		}else{
 			string_append(&buffer, OCUPADA);
 			string_append(&buffer, "   ");
-			string_append_with_format(&buffer, "Size: %i   ", particionAEscribir->sizeParticion);
+			string_append_with_format(&buffer, "Size: %ib   ", particionAEscribir->sizeParticion);
 			string_append_with_format(&buffer, "LRU: %s   ", particionAEscribir->lru);
 			string_append(&buffer, "Cola: ");
 			string_append(&buffer, nombreDeCola(particionAEscribir->mensaje->cola));
@@ -89,16 +94,24 @@ void recorrerArbolYgrabarArchivo(){
 	struct nodoMemoria* particionAEscribir = (struct nodoMemoria*) list_get(particiones, j);
 	string_append_with_format(&buffer, "Particion %d: ", j);
 
-	string_append_with_format(&buffer, "%p-%p.  ",particionAEscribir->offset, particionAEscribir->offset+particionAEscribir->header.size);
+
+	if(particionAEscribir->offset==0){
+		string_append_with_format(&buffer, "0x0-%p.  ", particionAEscribir->offset+particionAEscribir->header.size);
+	}else{
+		string_append_with_format(&buffer, "%p-%p.  ",particionAEscribir->offset, particionAEscribir->offset+particionAEscribir->header.size);
+	}
+
+
+	//string_append_with_format(&buffer, "%p-%p.  ",particionAEscribir->offset, particionAEscribir->offset+particionAEscribir->header.size);
 
 	if(particionAEscribir->header.status == LIBRE){
 		string_append(&buffer, LIBREP);
 		string_append(&buffer, "   ");
-		string_append_with_format(&buffer, "Size: %i\n", particionAEscribir->header.size);
+		string_append_with_format(&buffer, "Size: %ib\n", particionAEscribir->header.size);
 	}else{
 		string_append(&buffer, OCUPADA);
 		string_append(&buffer, "   ");
-		string_append_with_format(&buffer, "Size: %i   ", particionAEscribir->header.size);
+		string_append_with_format(&buffer, "Size: %ib   ", particionAEscribir->header.size);
 		string_append_with_format(&buffer, "LRU: %s   ", particionAEscribir->header.ultimoAcceso);
 		string_append(&buffer, "Cola: ");
 		string_append(&buffer, nombreDeCola(particionAEscribir->mensaje->cola));

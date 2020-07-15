@@ -15,6 +15,7 @@ void elegirVictimaDeReemplazoYeliminarBD(){
 	switch(algoritmoReemplazo){
 	case FIFO:
 		victima = buscarVictimaPor(fifoNodos);
+		log_info(brokerLogger2,"VICTIMA: id de mensaje: %i" , victima->mensaje->idMensaje );
 		break;
 	case LRU:
 		victima = buscarVictimaPor(lruNodos);

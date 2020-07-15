@@ -802,3 +802,57 @@
 [INFO] 19:20:43:711 BROKER/(21760:23002): Almaceno mensaje en partición que comienza en: 57
 [INFO] 19:20:50:461 BROKER/(21760:23019): Elimino particion que comienza en: 0
 [INFO] 19:20:50:461 BROKER/(21760:23019): Almaceno mensaje en partición que comienza en: 0
+[INFO] 13:33:32:473 BROKER/(25896:25896): Inició el Broker.
+[INFO] 13:33:57:825 BROKER/(25896:25947): Se conectó un proceso GAMEBOY.
+[INFO] 13:33:57:825 BROKER/(25896:25947): Almaceno mensaje en partición que comienza en: 0
+[INFO] 13:33:57:825 BROKER/(25896:25909): Llegó un nuevo mensaje a la cola CAUGHT_POKEMON.
+[INFO] 13:33:57:827 BROKER/(25896:25950): Se conectó un proceso GAMEBOY.
+[INFO] 13:33:57:827 BROKER/(25896:25950): Almaceno mensaje en partición que comienza en: 4
+[INFO] 13:33:57:828 BROKER/(25896:25953): Se conectó un proceso GAMEBOY.
+[INFO] 13:33:57:830 BROKER/(25896:25953): Almaceno mensaje en partición que comienza en: 8
+[INFO] 13:33:57:830 BROKER/(25896:25910): Llegó un nuevo mensaje a la cola CATCH_POKEMON.
+[INFO] 13:33:57:830 BROKER/(25896:25956): Se conectó un proceso GAMEBOY.
+[INFO] 13:33:57:831 BROKER/(25896:25956): Almaceno mensaje en partición que comienza en: 27
+[INFO] 13:33:57:831 BROKER/(25896:25910): Llegó un nuevo mensaje a la cola CATCH_POKEMON.
+[INFO] 13:33:57:833 BROKER/(25896:25959): Se conectó un proceso GAMEBOY.
+[INFO] 13:33:57:834 BROKER/(25896:25959): Almaceno mensaje en partición que comienza en: 47
+[INFO] 13:33:57:834 BROKER/(25896:25910): Llegó un nuevo mensaje a la cola CATCH_POKEMON.
+[INFO] 13:33:57:834 BROKER/(25896:25961): Se conectó un proceso GAMEBOY.
+[INFO] 13:33:57:834 BROKER/(25896:25961): Un proceso GAMEBOY se sucribió a la cola CAUGHT_POKEMON.
+[INFO] 13:33:57:834 BROKER/(25896:25963): Se conectó un proceso GAMEBOY.
+[INFO] 13:33:57:835 BROKER/(25896:25963): Me llegó el ACK del proceso de id 1 (Mensaje 1).
+[INFO] 13:33:57:835 BROKER/(25896:25964): Se conectó un proceso GAMEBOY.
+[INFO] 13:33:57:835 BROKER/(25896:25964): Me llegó el ACK del proceso de id 1 (Mensaje 2).
+[INFO] 13:34:01:836 BROKER/(25896:25971): Se conectó un proceso GAMEBOY.
+[INFO] 13:34:01:836 BROKER/(25896:25971): Elimino particion que comienza en: 8
+[INFO] 13:34:01:836 BROKER/(25896:25971): Elimino particion que comienza en: 27
+[INFO] 13:34:01:836 BROKER/(25896:25971): Se consolidan las particiones que comienzan en: 8 y 27
+
+[INFO] 13:34:38:29 BROKER/(26023:26023): Inició el Broker.
+[INFO] 13:34:41:374 BROKER/(26023:26048): Se conectó un proceso GAMEBOY.
+[INFO] 13:34:41:374 BROKER/(26023:26048): Almaceno mensaje en partición que comienza en: 0
+[INFO] 13:34:41:374 BROKER/(26023:26036): Llegó un nuevo mensaje a la cola CAUGHT_POKEMON.
+[INFO] 13:34:41:376 BROKER/(26023:26053): Se conectó un proceso GAMEBOY.
+[INFO] 13:34:41:376 BROKER/(26023:26053): Almaceno mensaje en partición que comienza en: 4
+[INFO] 13:34:41:378 BROKER/(26023:26056): Se conectó un proceso GAMEBOY.
+[INFO] 13:34:41:379 BROKER/(26023:26056): Almaceno mensaje en partición que comienza en: 8
+[INFO] 13:34:41:380 BROKER/(26023:26058): Se conectó un proceso GAMEBOY.
+[INFO] 13:34:41:382 BROKER/(26023:26058): Almaceno mensaje en partición que comienza en: 27
+[INFO] 13:34:41:382 BROKER/(26023:26037): Llegó un nuevo mensaje a la cola CATCH_POKEMON.
+[INFO] 13:34:41:383 BROKER/(26023:26037): Llegó un nuevo mensaje a la cola CATCH_POKEMON.
+[INFO] 13:34:41:387 BROKER/(26023:26061): Se conectó un proceso GAMEBOY.
+[INFO] 13:34:41:387 BROKER/(26023:26061): Almaceno mensaje en partición que comienza en: 47
+[INFO] 13:34:41:388 BROKER/(26023:26037): Llegó un nuevo mensaje a la cola CATCH_POKEMON.
+[INFO] 13:34:41:389 BROKER/(26023:26065): Se conectó un proceso GAMEBOY.
+[INFO] 13:34:41:389 BROKER/(26023:26065): Un proceso GAMEBOY se sucribió a la cola CAUGHT_POKEMON.
+[INFO] 13:34:41:390 BROKER/(26023:26066): Se conectó un proceso GAMEBOY.
+[INFO] 13:34:41:390 BROKER/(26023:26066): Me llegó el ACK del proceso de id 1 (Mensaje 1).
+[INFO] 13:34:41:390 BROKER/(26023:26067): Se conectó un proceso GAMEBOY.
+[INFO] 13:34:41:390 BROKER/(26023:26067): Me llegó el ACK del proceso de id 1 (Mensaje 2).
+[INFO] 13:34:45:397 BROKER/(26023:26077): Se conectó un proceso GAMEBOY.
+[INFO] 13:34:45:398 BROKER/(26023:26077): Elimino particion que comienza en: 8
+[INFO] 13:34:45:398 BROKER/(26023:26077): Elimino particion que comienza en: 27
+[INFO] 13:34:45:398 BROKER/(26023:26077): Se consolidan las particiones que comienzan en: 8 y 27
+
+[INFO] 13:34:45:398 BROKER/(26023:26077): Almaceno mensaje en partición que comienza en: 8
+[INFO] 13:34:45:398 BROKER/(26023:26037): Llegó un nuevo mensaje a la cola CATCH_POKEMON.
