@@ -75,62 +75,6 @@ void realizarIntercambio(dataEntrenador* entrenadorQueSeMueve){
 
 }
 
-//void entrarEnEjecucionParaDeadlock(dataEntrenador* infoEntrenador){
-//	log_info(teamLogger, "El entrenador %i se mueve a la posición del entrenador %i.", infoEntrenador->id, entrenadorBloqueadoParaDeadlock->id);
-//
-//	sem_wait((infoEntrenador->semaforo));//espera al planificador //OK4
-//	//infoEntrenador->estado = EXEC;
-//	ponerEnEjecucion(infoEntrenador);
-//	moverEntrenadorAPosicion(infoEntrenador, ((infoEntrenador->pokemonAAtrapar)->posicion));
-//	realizarIntercambio(infoEntrenador);
-//	poneteEnBlocked(infoEntrenador);
-//	//infoEntrenador->estado=BLOCKED;
-//	sem_post(&semaforoEjecucionCpu);
-//}
-
-//void* resolverDeadlock(void* arg){
-//
-//	sem_wait(iniciarResolucionDeadlock);
-//	while(hayEntrenadoresEnDeadlock()){
-//		//log_info(teamLogger2, "Siguen habiendo entrenadores en deadlock.");
-//
-//		entrenadorBloqueadoParaDeadlock=(dataEntrenador*)getListaMutex(entrenadoresDeadlock,0);
-//
-//		while(entrenadorEnDeadlock(entrenadorBloqueadoParaDeadlock)){
-//
-//			t_list* listaPokemonesSobrantes=obtenerPokemonesSobrantesTeam(entrenadoresDeadlock);
-//
-//			pokemonSobrante* pokeSobrante=obtenerPokemonInteresante(entrenadorBloqueadoParaDeadlock,listaPokemonesSobrantes );
-//
-//			dataEntrenador* entrenadorAMover=pokeSobrante->entrenador;
-//
-//			entrenadorAMover->pokemonAAtrapar->posicion=entrenadorBloqueadoParaDeadlock->posicion;
-//			entrenadorAMover->pokemonAAtrapar->pokemon=pokeSobrante->pokemon;//OJO, ACA ESTOY ABUSANDO DE LA VARIABLE PARA GUARDAR EL POKEMON QUE DEBE DARLE AEL ENTRENADOR EN MOVIMIENTO AL QUE ESTA QUIETO
-//
-//			sem_post(entrenadorAMover->semaforo);
-//			log_info (teamLogger, "El entrenador %i, esta en DEADLOCK con el entrenador %i.", entrenadorBloqueadoParaDeadlock->id, entrenadorAMover->id);
-//			log_info (teamLogger2, "El entrenador %i, esta en DEADLOCK con el entrenador %i.", entrenadorBloqueadoParaDeadlock->id, entrenadorAMover->id);
-//			//log_info(teamLogger2, "Entrenador bloqueado: %i. Entrenador a mover: %i.", entrenadorBloqueadoParaDeadlock->id, entrenadorAMover->id);
-//
-//			(team->cantidadDeadlocksEncontrados)++;
-//
-//			sem_wait(&intercambioFinalizado);
-//
-//			(team->cantidadDeadlocksResueltos)++;
-//
-//			list_destroy(listaPokemonesSobrantes);
-//			free(pokeSobrante);
-//		}
-//
-//		actualizarEntrenadoresEnDeadlock();
-//	}
-//
-//	if(objetivoCumplido()){
-//		sem_post(semaforoObjetivoCumplido);
-//	}
-//	return NULL;
-//}
-
 
 void* resolverDeadlock(void* arg){
 
@@ -142,7 +86,7 @@ void* resolverDeadlock(void* arg){
 		t_list* entrenadoresEsperaCircular;
 
 		if(entrenadorBloqueadoParaDeadlock==NULL){
-			//log_info(teamLogger2,"Entre al if.");
+
 			entrenadoresEsperaCircular=list_create();
 			entrenadoresEsperaCircular=encontrarEsperaCircular(entrenadoresDeadlock,entrenadoresEsperaCircular,NULL);
 			loggearEsperaCircular(entrenadoresEsperaCircular);
@@ -151,26 +95,7 @@ void* resolverDeadlock(void* arg){
 		}else{
 			resolverIntercambioMutuo();
 		}
-//		while(entrenadorEnDeadlock(entrenadorBloqueadoParaDeadlock)){
-//
-//			t_list* listaPokemonesSobrantes=obtenerPokemonesSobrantesTeam(entrenadoresDeadlock);
-//
-//			pokemonSobrante* pokeSobrante=obtenerPokemonInteresante(entrenadorBloqueadoParaDeadlock,listaPokemonesSobrantes );
-//
-//			dataEntrenador* entrenadorAMover=pokeSobrante->entrenador;
-//
-//			entrenadorAMover->pokemonAAtrapar->posicion=entrenadorBloqueadoParaDeadlock->posicion;
-//			entrenadorAMover->pokemonAAtrapar->pokemon=pokeSobrante->pokemon;//OJO, ACA ESTOY ABUSANDO DE LA VARIABLE PARA GUARDAR EL POKEMON QUE DEBE DARLE AEL ENTRENADOR EN MOVIMIENTO AL QUE ESTA QUIETO
-//
-//			habilitarHiloEntrenador(entrenadorAMover->id);
-//
-//			sem_wait(&intercambioFinalizado);
-//
-//			list_destroy(listaPokemonesSobrantes);
-//			free(pokeSobrante);
-//
-//
-//		}
+
 
 
 		actualizarEntrenadoresEnDeadlock();
@@ -261,25 +186,13 @@ void resolverEsperaCircular(t_list* entrenadoresEsperaCircular){
 		//free(pokeSobrante);
 
 
-//
-//		log_info(teamLogger2, "---------------------------------------------------------------");
-//		for(uint32_t z=0; z<list_size(entrenadoresEsperaCircular);z++){
-//			dataEntrenador* e=(dataEntrenador*) list_get(entrenadoresEsperaCircular,z);
-//			log_info(teamLogger2, "Entrenador %i: %s", e->id, (char*)list_get(e->pokemones,0));
-//		}
+
 
 	}
 	log_info (teamLogger2, "hice todos los intercambios.");
 }
 
-//bool esperaCircularResuelta(t_list* esperaCircular){
-//	for(uint32_t i=0; i<list_size(esperaCircular);i++){
-//		dataEntrenador* entrenadorActual= (dataEntrenador*) list_get(esperaCircular, i);
-//
-//		if()
-//	}
-//	return true;
-//}
+
 
 bool hayEntrenadoresEnDeadlock(){
 	return sizeListaMutex(entrenadoresDeadlock)>0;

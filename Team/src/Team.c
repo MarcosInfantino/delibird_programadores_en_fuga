@@ -20,14 +20,7 @@
 #include <arpa/inet.h>
 #include <stdlib.h>
 
-//TEAM APPEARED_POKEMON Pikachu 0 0
-//BROKER CAUGHT_POKEMON 4 OK
 
-//./gameboy TEAM APPEARED_POKEMON Pikachu 1 1
-//./gameboy TEAM APPEARED_POKEMON Squirtle 9 7
-//./gameboy TEAM APPEARED_POKEMON Onix 2 2
-//./gameboy TEAM APPEARED_POKEMON Squirtle 3 5
-//./gameboy TEAM APPEARED_POKEMON Gengar 7 5
 
 int main(int argc , char* argv[]){
 
@@ -269,14 +262,11 @@ void* atenderCaught(void* paq){
 		dataEntrenador* entrenadorEncontrado=(dataEntrenador*)getListaMutex(entrenadores, idEncontrado);
 
 		if(msgCaught->resultadoCaught==CORRECTO ){
-//			list_add(entrenadorEncontrado->pokemones,(void*)(entrenadorEncontrado->pokemonAAtrapar->pokemon));
-//			registrarPokemonAtrapado(entrenadorEncontrado->pokemonAAtrapar->pokemon);
-//			replanificarEntrenador(entrenadorEncontrado);
+
 			log_info(teamLogger2,"El caught me interesa.");
 			atraparPokemonYReplanificar (entrenadorEncontrado);
 		}else{
-//			entrenadorEncontrado->estado=BLOCKED;
-//			habilitarHiloEntrenador(idEncontrado);
+
 			agregarObjetivo(entrenadorEncontrado->pokemonAAtrapar->pokemon);//lo vuelve a agregar a los objetivos porque vuelver a ser un objetivo necesario
 			removerPokemonConCatchPendiente(entrenadorEncontrado->pokemonAAtrapar->pokemon);
 			pokemonPosicion* pokeReserva=obtenerPokemonPosicionEnReserva(entrenadorEncontrado->pokemonAAtrapar->pokemon);
@@ -288,13 +278,7 @@ void* atenderCaught(void* paq){
 			destruirPokemonPosicion(entrenadorEncontrado->pokemonAAtrapar);
 				log_info(teamLogger2,"El caught no fue exitoso.");
 
-//			if(hayAppearedParaEsteCaughtFallido(entrenadorEncontrado->pokemonAAtrapar->pokemon)){
-//				pokemonPosicion* poke=malloc(sizeof(pokemonPosicion));
-//				poke->pokemon=malloc(strlen(entrenadorEncontrado->pokemonAAtrapar->pokemon)+1);
-//				strcpy(poke->pokemon,entrenadorEncontrado->pokemonAAtrapar->pokemon);
-//				poke->posicion=entrenadorEncontrado->pokemonAAtrapar->posicion;
-//				pushColaMutex(pokemonesPendientes,(void*)pokePosicion);
-//			}
+
 			replanificarEntrenador(entrenadorEncontrado);
 		}
 	}else{
@@ -392,23 +376,7 @@ void* enviarGets(void* arg){
 	return NULL;
 }
 
-//uint32_t reconectarseAlBroker(uint32_t cliente,void* direccionServidor,socklen_t length){
-//	log_info(teamLogger, "Conexión fallida con el Broker\n");
-//	log_info(teamLogger2, "Conexión fallida con el Broker\n");
-//	log_info(teamLogger, "Reintentando conexión en %i segundos...\n",tiempoReconexion);
-//	sleep(tiempoReconexion);
-//	while(connect(cliente, direccionServidor,length)<0){
-//		log_info(teamLogger,"El reintento de conexión no fue exitoso\n");
-//		log_info(teamLogger2,"El reintento de conexión no fue exitoso\n");
-//		log_info(teamLogger, "Reintentando conexión en %i segundos...\n",tiempoReconexion);
-//		sleep(tiempoReconexion);
-//
-//
-//	}
-//	log_info(teamLogger, "El reintento de conexión fue exitoso\n");
-//	log_info(teamLogger2, "El reintento de conexión fue exitoso\n");
-//	return 0;
-//}
+
 
 uint32_t reconectarseAlBroker(){
 	log_info(teamLogger, "Conexión fallida con el Broker\n");
@@ -549,11 +517,7 @@ void* suscribirseCola(void* msgSuscripcion){
 			default: break; //esto no puede pasar
 			}
 
-//				while(send(cliente,(void*)(&respuesta),sizeof(uint32_t),0)<0){
-//					cliente=reconectarseAlBroker();
-//					cliente=enviarSuscripcion(cliente, msg);
-//
-//				}
+
 			}
 
 
@@ -600,22 +564,19 @@ void enviarCatch(dataEntrenador* infoEntrenador){
 				parDeIds->idMensaje=idMensaje;
 				addListaMutex(listaIdsEntrenadorMensaje,(void*)parDeIds);
 
-			}//else{
-//				atraparPokemonYReplanificar (infoEntrenador);
-//			//se recibio erroneamente
-//			}
+			}
 		}else{
 			log_info(teamLogger, "Fallo de comunicación con el Broker al enviar un catch. Se realizará la operación por default.");
 			atraparPokemonYReplanificar (infoEntrenador);
 			log_info(teamLogger2,"El entrenador % i TERMINÓ DE SIMULAR EL CATCH.", infoEntrenador->id);
-			//atraparPokemonYReplanificar (infoEntrenador);
+
 		}
 		free(paqueteSerializado);
 	}else{
 		atraparPokemonYReplanificar (infoEntrenador);
 		log_info(teamLogger2,"El entrenador % i TERMINÓ DE SIMULAR EL CATCH.", infoEntrenador->id);
 		log_info(teamLogger, "Fallo de comunicación con el Broker al enviar un catch. Se realizará la operación por default.");
-		//atraparPokemonYReplanificar (infoEntrenador);
+
 	}
 
 	close(cliente);
@@ -963,14 +924,6 @@ void loggearPokemonAAtrapar(dataEntrenador* entrenador, t_log* teamLogger){
 
 
 
-//void resetearSemaforo(sem_t* semaforo){
-//	int32_t valor;
-//	sem_getvalue(semaforo,&valor);
-//	while(valor<0){
-//		sem_post(semaforo);
-//		valor++;
-//	}
-//}
 
 
 
