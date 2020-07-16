@@ -14623,3 +14623,118 @@
 [INFO] 23:19:42:648 Broker/(11826:11865): Terminó de registrar el mensaje en memoria.
 [INFO] 23:19:42:648 Broker/(11826:11865): Aviso que hay mensajes en cola.
 [INFO] 23:19:42:649 Broker/(11826:11840): Envio el mensaje a los suscriptores de la cola: CATCH_POKEMON
+[INFO] 16:05:46:443 Broker/(4389:4389): pid del proceso broker: 4389
+[INFO] 16:06:03:530 Broker/(4389:4493): -------------------------TIPO DE PAQUETE RECIBIDO: SUSCRIPCION
+[INFO] 16:06:03:530 Broker/(4389:4494): -------------------------TIPO DE PAQUETE RECIBIDO: SUSCRIPCION
+[INFO] 16:06:03:530 Broker/(4389:4493): ---------------------------- Suscribo a 201
+[INFO] 16:06:03:530 Broker/(4389:4495): -------------------------TIPO DE PAQUETE RECIBIDO: SUSCRIPCION
+[INFO] 16:06:03:531 Broker/(4389:4495): ---------------------------- Suscribo a 201
+[INFO] 16:06:03:531 Broker/(4389:4494): ---------------------------- Suscribo a 201
+[INFO] 16:06:43:764 Broker/(4389:4554): -------------------------TIPO DE PAQUETE RECIBIDO: NEW_POKEMON
+[INFO] 16:06:43:764 Broker/(4389:4554): ITERACION: 0
+[INFO] 16:06:43:764 Broker/(4389:4554): ASIGNE: size de partición: 23. Id mensaje: 1. Size del mensaje: 23.
+[INFO] 16:06:43:764 Broker/(4389:4554): Registré el mensaje en memoria.
+[INFO] 16:06:43:764 Broker/(4389:4554): Terminó de registrar el mensaje en memoria.
+[INFO] 16:06:43:764 Broker/(4389:4554): Aviso que hay mensajes en cola.
+[INFO] 16:06:43:764 Broker/(4389:4402): Envio el mensaje a los suscriptores de la cola: NEW_POKEMON
+[INFO] 16:06:43:764 Broker/(4389:4402): Envié mensaje a suscriptor: 201 -.-
+[INFO] 16:06:43:764 Broker/(4389:4402): encuentro un mensaje
+[INFO] 16:06:43:766 Broker/(4389:4558): -------------------------TIPO DE PAQUETE RECIBIDO: ACK
+[INFO] 16:06:43:766 Broker/(4389:4558): ----------------------Guardo ACK del proceso 201
+[INFO] 16:06:43:766 Broker/(4389:4560): -------------------------TIPO DE PAQUETE RECIBIDO: NEW_POKEMON
+[INFO] 16:06:43:767 Broker/(4389:4560): ITERACION: 1
+[INFO] 16:06:43:767 Broker/(4389:4560): ASIGNE: size de partición: 24. Id mensaje: 2. Size del mensaje: 24.
+[INFO] 16:06:43:767 Broker/(4389:4560): Registré el mensaje en memoria.
+[INFO] 16:06:43:767 Broker/(4389:4560): Terminó de registrar el mensaje en memoria.
+[INFO] 16:06:43:767 Broker/(4389:4560): Aviso que hay mensajes en cola.
+[INFO] 16:06:43:767 Broker/(4389:4402): Envio el mensaje a los suscriptores de la cola: NEW_POKEMON
+[INFO] 16:06:43:767 Broker/(4389:4402): Envié mensaje a suscriptor: 201 -.-
+[INFO] 16:06:43:767 Broker/(4389:4402): encuentro un mensaje
+[INFO] 16:06:43:768 Broker/(4389:4562): -------------------------TIPO DE PAQUETE RECIBIDO: ACK
+[INFO] 16:06:43:768 Broker/(4389:4562): ----------------------Guardo ACK del proceso 201
+[INFO] 16:06:43:769 Broker/(4389:4565): -------------------------TIPO DE PAQUETE RECIBIDO: NEW_POKEMON
+[INFO] 16:06:43:769 Broker/(4389:4565): ITERACION: 2
+[INFO] 16:06:43:769 Broker/(4389:4565): ASIGNE: size de partición: 23. Id mensaje: 3. Size del mensaje: 23.
+[INFO] 16:06:43:769 Broker/(4389:4565): Registré el mensaje en memoria.
+[INFO] 16:06:43:769 Broker/(4389:4565): Terminó de registrar el mensaje en memoria.
+[INFO] 16:06:43:769 Broker/(4389:4565): Aviso que hay mensajes en cola.
+[INFO] 16:06:43:769 Broker/(4389:4402): Envio el mensaje a los suscriptores de la cola: NEW_POKEMON
+[INFO] 16:06:43:769 Broker/(4389:4402): Envié mensaje a suscriptor: 201 -.-
+[INFO] 16:06:43:769 Broker/(4389:4402): encuentro un mensaje
+[INFO] 16:06:43:770 Broker/(4389:4567): -------------------------TIPO DE PAQUETE RECIBIDO: ACK
+[INFO] 16:06:43:770 Broker/(4389:4567): ----------------------Guardo ACK del proceso 201
+[INFO] 16:06:43:774 Broker/(4389:4570): -------------------------TIPO DE PAQUETE RECIBIDO: NEW_POKEMON
+[INFO] 16:06:43:774 Broker/(4389:4570): ITERACION: 3
+[INFO] 16:06:43:775 Broker/(4389:4570): ASIGNE: size de partición: 23. Id mensaje: 4. Size del mensaje: 23.
+[INFO] 16:06:43:776 Broker/(4389:4570): Registré el mensaje en memoria.
+[INFO] 16:06:43:776 Broker/(4389:4570): Terminó de registrar el mensaje en memoria.
+[INFO] 16:06:43:776 Broker/(4389:4570): Aviso que hay mensajes en cola.
+[INFO] 16:06:43:776 Broker/(4389:4402): Envio el mensaje a los suscriptores de la cola: NEW_POKEMON
+[INFO] 16:06:43:776 Broker/(4389:4402): Envié mensaje a suscriptor: 201 -.-
+[INFO] 16:06:43:776 Broker/(4389:4402): encuentro un mensaje
+[INFO] 16:07:24:640 Broker/(4389:4647): -------------------------TIPO DE PAQUETE RECIBIDO: SUSCRIPCION
+[INFO] 16:07:24:640 Broker/(4389:4647): ---------------------------- Suscribo a 201
+[INFO] 16:07:24:640 Broker/(4389:4647): encuentro un mensaje
+[INFO] 16:07:24:640 Broker/(4389:4647): encuentro un mensaje
+[INFO] 16:07:24:663 Broker/(4389:4648): -------------------------TIPO DE PAQUETE RECIBIDO: SUSCRIPCION
+[INFO] 16:07:24:663 Broker/(4389:4649): -------------------------TIPO DE PAQUETE RECIBIDO: SUSCRIPCION
+[INFO] 16:07:24:663 Broker/(4389:4648): ---------------------------- Suscribo a 201
+[INFO] 16:07:24:664 Broker/(4389:4649): ---------------------------- Suscribo a 201
+[INFO] 16:07:24:675 Broker/(4389:4650): -------------------------TIPO DE PAQUETE RECIBIDO: ACK
+[INFO] 16:07:24:675 Broker/(4389:4650): ----------------------Guardo ACK del proceso 201
+[INFO] 16:07:24:695 Broker/(4389:4652): -------------------------TIPO DE PAQUETE RECIBIDO: ACK
+[INFO] 16:07:24:695 Broker/(4389:4652): ----------------------Guardo ACK del proceso 201
+[INFO] 16:07:29:840 Broker/(4389:4661): -------------------------TIPO DE PAQUETE RECIBIDO: APPEARED_POKEMON
+[INFO] 16:07:29:840 Broker/(4389:4661): ITERACION: 4
+[INFO] 16:07:29:840 Broker/(4389:4661): ASIGNE: size de partición: 19. Id mensaje: 5. Size del mensaje: 19.
+[INFO] 16:07:29:840 Broker/(4389:4661): Registré el mensaje en memoria.
+[INFO] 16:07:29:840 Broker/(4389:4661): Terminó de registrar el mensaje en memoria.
+[INFO] 16:07:29:840 Broker/(4389:4661): Aviso que hay mensajes en cola.
+[INFO] 16:07:29:842 Broker/(4389:4401): Envio el mensaje a los suscriptores de la cola: APPEARED_POKEMON
+[INFO] 16:07:29:843 Broker/(4389:4660): -------------------------TIPO DE PAQUETE RECIBIDO: APPEARED_POKEMON
+[INFO] 16:07:29:843 Broker/(4389:4660): ITERACION: 5
+[INFO] 16:07:29:843 Broker/(4389:4660): ASIGNE: size de partición: 19. Id mensaje: 6. Size del mensaje: 19.
+[INFO] 16:07:29:843 Broker/(4389:4660): Registré el mensaje en memoria.
+[INFO] 16:07:29:843 Broker/(4389:4660): Terminó de registrar el mensaje en memoria.
+[INFO] 16:07:29:843 Broker/(4389:4660): Aviso que hay mensajes en cola.
+[INFO] 16:07:29:843 Broker/(4389:4401): Envio el mensaje a los suscriptores de la cola: APPEARED_POKEMON
+[INFO] 16:07:38:986 Broker/(4389:4674): -------------------------TIPO DE PAQUETE RECIBIDO: NEW_POKEMON
+[INFO] 16:07:38:986 Broker/(4389:4674): ITERACION: 6
+[INFO] 16:07:38:986 Broker/(4389:4674): ASIGNE: size de partición: 23. Id mensaje: 7. Size del mensaje: 23.
+[INFO] 16:07:38:986 Broker/(4389:4674): Registré el mensaje en memoria.
+[INFO] 16:07:38:986 Broker/(4389:4674): Terminó de registrar el mensaje en memoria.
+[INFO] 16:07:38:986 Broker/(4389:4674): Aviso que hay mensajes en cola.
+[INFO] 16:07:38:989 Broker/(4389:4402): Envio el mensaje a los suscriptores de la cola: NEW_POKEMON
+[INFO] 16:07:38:989 Broker/(4389:4402): Envié mensaje a suscriptor: 201 -.-
+[INFO] 16:07:38:989 Broker/(4389:4402): encuentro un mensaje
+[INFO] 16:07:38:993 Broker/(4389:4677): -------------------------TIPO DE PAQUETE RECIBIDO: ACK
+[INFO] 16:07:38:993 Broker/(4389:4677): ----------------------Guardo ACK del proceso 201
+[INFO] 16:07:38:999 Broker/(4389:4680): -------------------------TIPO DE PAQUETE RECIBIDO: NEW_POKEMON
+[INFO] 16:07:38:999 Broker/(4389:4680): ITERACION: 7
+[INFO] 16:07:38:0 Broker/(4389:4680): ASIGNE: size de partición: 24. Id mensaje: 8. Size del mensaje: 24.
+[INFO] 16:07:38:0 Broker/(4389:4680): Registré el mensaje en memoria.
+[INFO] 16:07:38:0 Broker/(4389:4680): Terminó de registrar el mensaje en memoria.
+[INFO] 16:07:38:0 Broker/(4389:4680): Aviso que hay mensajes en cola.
+[INFO] 16:07:38:1 Broker/(4389:4402): Envio el mensaje a los suscriptores de la cola: NEW_POKEMON
+[INFO] 16:07:38:1 Broker/(4389:4402): Envié mensaje a suscriptor: 201 -.-
+[INFO] 16:07:38:1 Broker/(4389:4402): encuentro un mensaje
+[INFO] 16:07:38:3 Broker/(4389:4682): -------------------------TIPO DE PAQUETE RECIBIDO: ACK
+[INFO] 16:07:38:3 Broker/(4389:4682): ----------------------Guardo ACK del proceso 201
+[INFO] 16:07:38:8 Broker/(4389:4684): -------------------------TIPO DE PAQUETE RECIBIDO: NEW_POKEMON
+[INFO] 16:07:39:8 Broker/(4389:4684): ITERACION: 8
+[INFO] 16:07:39:8 Broker/(4389:4684): ASIGNE: size de partición: 23. Id mensaje: 9. Size del mensaje: 23.
+[INFO] 16:07:39:8 Broker/(4389:4684): Registré el mensaje en memoria.
+[INFO] 16:07:39:8 Broker/(4389:4684): Terminó de registrar el mensaje en memoria.
+[INFO] 16:07:39:8 Broker/(4389:4684): Aviso que hay mensajes en cola.
+[INFO] 16:07:39:8 Broker/(4389:4402): Envio el mensaje a los suscriptores de la cola: NEW_POKEMON
+[INFO] 16:07:39:8 Broker/(4389:4402): Envié mensaje a suscriptor: 201 -.-
+[INFO] 16:07:39:8 Broker/(4389:4402): encuentro un mensaje
+[INFO] 16:07:39:14 Broker/(4389:4687): -------------------------TIPO DE PAQUETE RECIBIDO: NEW_POKEMON
+[INFO] 16:07:39:14 Broker/(4389:4687): ITERACION: 9
+[INFO] 16:07:39:14 Broker/(4389:4687): ASIGNE: size de partición: 23. Id mensaje: 10. Size del mensaje: 23.
+[INFO] 16:07:39:14 Broker/(4389:4687): Registré el mensaje en memoria.
+[INFO] 16:07:39:14 Broker/(4389:4687): Terminó de registrar el mensaje en memoria.
+[INFO] 16:07:39:14 Broker/(4389:4687): Aviso que hay mensajes en cola.
+[INFO] 16:07:39:14 Broker/(4389:4402): Envio el mensaje a los suscriptores de la cola: NEW_POKEMON
+[INFO] 16:07:39:14 Broker/(4389:4402): Envié mensaje a suscriptor: 201 -.-
+[INFO] 16:07:39:14 Broker/(4389:4402): encuentro un mensaje

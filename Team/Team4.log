@@ -3272,3 +3272,371 @@ O] 14:42:50:868 TEAM/(27238:27274): Habilito el hilo del entrenador 0.
 [INFO] 15:51:57:696 TEAM/(2661:2661): Cantidad de ciclos de CPU realizados por el entrenador 0: 18.
 [INFO] 15:51:57:696 TEAM/(2661:2661): Cantidad de ciclos de CPU realizados por el entrenador 1: 21.
 [INFO] 15:51:57:696 TEAM/(2661:2661): Cantidad de ciclos de CPU realizados por el entrenador 2: 8.
+[INFO] 15:56:06:79 TEAM/(3505:3505): ___________________________________________________________________________________________________________
+[INFO] 15:56:06:79 TEAM/(3505:3505): Inició el TEAM
+[INFO] 15:56:06:80 TEAM/(3505:3518): Conexión fallida con el Broker
+
+[INFO] 15:56:06:80 TEAM/(3505:3518): Reintentando conexión en 30 segundos...
+
+[INFO] 15:56:06:80 TEAM/(3505:3519): Fallo de comunicación con el Broker al enviar un get. Se realizará la operación por default.
+[INFO] 15:56:06:81 TEAM/(3505:3521): Conexión fallida con el Broker
+
+[INFO] 15:56:06:81 TEAM/(3505:3521): Reintentando conexión en 30 segundos...
+
+[INFO] 15:56:06:81 TEAM/(3505:3522): Fallo de comunicación con el Broker al enviar un get. Se realizará la operación por default.
+[INFO] 15:56:06:81 TEAM/(3505:3520): Fallo de comunicación con el Broker al enviar un get. Se realizará la operación por default.
+[INFO] 15:56:06:81 TEAM/(3505:3523): Conexión fallida con el Broker
+
+[INFO] 15:56:06:81 TEAM/(3505:3523): Reintentando conexión en 30 segundos...
+
+[INFO] 15:56:06:81 TEAM/(3505:3524): Fallo de comunicación con el Broker al enviar un get. Se realizará la operación por default.
+[INFO] 15:56:08:526 TEAM/(3505:3535): Recibi mensaje appeared pokemon. El pokemon es: Pikachu. La posicion es: (9,9).
+[INFO] 15:56:08:526 TEAM/(3505:3535): Habilito el hilo del entrenador 1.
+[INFO] 15:56:08:526 TEAM/(3505:3511): El entrenador 1 ahora está en READY.
+[INFO] 15:56:08:526 TEAM/(3505:3517): El entrenador 1 ahora está en EXEC.
+[INFO] 15:56:08:526 TEAM/(3505:3511): El entrenador  1 se mueve a atrapar a Pikachu en posición (9, 9)
+
+[INFO] 15:56:08:526 TEAM/(3505:3511): El entrenador 1 ahora está en EXEC.
+[INFO] 15:56:08:528 TEAM/(3505:3538): Recibi mensaje appeared pokemon. El pokemon es: Squirtle. La posicion es: (5,2).
+[INFO] 15:56:08:528 TEAM/(3505:3538): Habilito el hilo del entrenador 2.
+[INFO] 15:56:08:528 TEAM/(3505:3512): El entrenador 2 ahora está en READY.
+[INFO] 15:56:08:530 TEAM/(3505:3541): Recibi mensaje appeared pokemon. El pokemon es: Onix. La posicion es: (2,8).
+[INFO] 15:56:08:530 TEAM/(3505:3541): Habilito el hilo del entrenador 0.
+[INFO] 15:56:08:530 TEAM/(3505:3510): El entrenador 0 ahora está en READY.
+[INFO] 15:56:08:531 TEAM/(3505:3544): Recibi mensaje appeared pokemon. El pokemon es: Gengar. La posicion es: (6,6).
+[INFO] 15:56:08:533 TEAM/(3505:3546): Recibi mensaje appeared pokemon. El pokemon es: Squirtle. La posicion es: (5,5).
+[INFO] 15:56:36:81 TEAM/(3505:3521): Reintentando conexión en 30 segundos...
+
+[INFO] 15:56:36:81 TEAM/(3505:3518): Reintentando conexión en 30 segundos...
+
+[INFO] 15:56:36:81 TEAM/(3505:3523): Reintentando conexión en 30 segundos...
+
+[INFO] 15:57:06:82 TEAM/(3505:3521): El reintento de conexión no fue exitoso
+
+[INFO] 15:57:06:82 TEAM/(3505:3521): Reintentando conexión en 30 segundos...
+
+[INFO] 15:57:06:82 TEAM/(3505:3523): El reintento de conexión no fue exitoso
+
+[INFO] 15:57:06:82 TEAM/(3505:3523): Reintentando conexión en 30 segundos...
+
+[INFO] 15:57:06:82 TEAM/(3505:3518): El reintento de conexión no fue exitoso
+
+[INFO] 15:57:06:82 TEAM/(3505:3518): Reintentando conexión en 30 segundos...
+
+[INFO] 15:57:13:604 TEAM/(3505:3511): El entrenador 1 se movió a la posición (9, 9).
+[INFO] 15:57:18:605 TEAM/(3505:3511): El entrenador 1 atrapó al pokemon Pikachu en la posición (9,9).
+[INFO] 15:57:18:605 TEAM/(3505:3511): Habilito el hilo del entrenador 1.
+[INFO] 15:57:18:605 TEAM/(3505:3511): Habilito el hilo del entrenador 1.
+[INFO] 15:57:18:605 TEAM/(3505:3511): Fallo de comunicación con el Broker al enviar un catch. Se realizará la operación por default.
+[INFO] 15:57:18:605 TEAM/(3505:3511): El entrenador 1 ahora está en BLOCKED.
+[INFO] 15:57:18:606 TEAM/(3505:3511): El entrenador 1 ahora está en READY.
+[INFO] 15:57:18:606 TEAM/(3505:3517): El entrenador 2 ahora está en EXEC.
+[INFO] 15:57:18:606 TEAM/(3505:3512): El entrenador  2 se mueve a atrapar a Squirtle en posición (5, 2)
+
+[INFO] 15:57:18:606 TEAM/(3505:3512): El entrenador 2 ahora está en EXEC.
+[INFO] 15:57:33:611 TEAM/(3505:3512): El entrenador 2 se movió a la posición (5, 2).
+[INFO] 15:57:36:84 TEAM/(3505:3521): El reintento de conexión no fue exitoso
+
+[INFO] 15:57:36:84 TEAM/(3505:3521): Reintentando conexión en 30 segundos...
+
+[INFO] 15:57:36:85 TEAM/(3505:3523): El reintento de conexión no fue exitoso
+
+[INFO] 15:57:36:85 TEAM/(3505:3523): Reintentando conexión en 30 segundos...
+
+[INFO] 15:57:36:85 TEAM/(3505:3518): El reintento de conexión no fue exitoso
+
+[INFO] 15:57:36:85 TEAM/(3505:3518): Reintentando conexión en 30 segundos...
+
+[INFO] 15:57:38:612 TEAM/(3505:3512): El entrenador 2 atrapó al pokemon Squirtle en la posición (5,2).
+[INFO] 15:57:38:612 TEAM/(3505:3512): Habilito el hilo del entrenador 2.
+[INFO] 15:57:38:612 TEAM/(3505:3512): Habilito el hilo del entrenador 2.
+[INFO] 15:57:38:612 TEAM/(3505:3512): Fallo de comunicación con el Broker al enviar un catch. Se realizará la operación por default.
+[INFO] 15:57:38:612 TEAM/(3505:3512): El entrenador 2 ahora está en BLOCKED.
+[INFO] 15:57:38:612 TEAM/(3505:3512): El entrenador 2 ahora está en READY.
+[INFO] 15:57:38:612 TEAM/(3505:3517): El entrenador 2 ahora está en EXEC.
+[INFO] 15:57:38:612 TEAM/(3505:3512): El entrenador  2 se mueve a atrapar a Squirtle en posición (5, 5)
+
+[INFO] 15:57:38:612 TEAM/(3505:3512): El entrenador 2 ahora está en EXEC.
+[INFO] 15:57:53:617 TEAM/(3505:3512): El entrenador 2 se movió a la posición (5, 5).
+[INFO] 15:57:58:652 TEAM/(3505:3512): El entrenador 2 atrapó al pokemon Squirtle en la posición (5,5).
+[INFO] 15:57:58:652 TEAM/(3505:3512): Inicio del algoritmo de detección de deadlock.
+[INFO] 15:57:58:652 TEAM/(3505:3512): Habilito el hilo del entrenador 2.
+[INFO] 15:57:58:652 TEAM/(3505:3512): No se encontró deadlock.
+[INFO] 15:57:58:652 TEAM/(3505:3512): Fallo de comunicación con el Broker al enviar un catch. Se realizará la operación por default.
+[INFO] 15:57:58:652 TEAM/(3505:3512): El entrenador 2 ahora está en BLOCKED.
+[INFO] 15:57:58:652 TEAM/(3505:3517): El entrenador 0 ahora está en EXEC.
+[INFO] 15:57:58:652 TEAM/(3505:3510): El entrenador  0 se mueve a atrapar a Onix en posición (2, 8)
+
+[INFO] 15:57:58:652 TEAM/(3505:3510): El entrenador 0 ahora está en EXEC.
+[INFO] 15:58:06:86 TEAM/(3505:3518): El reintento de conexión no fue exitoso
+
+[INFO] 15:58:06:86 TEAM/(3505:3521): El reintento de conexión no fue exitoso
+
+[INFO] 15:58:06:86 TEAM/(3505:3518): Reintentando conexión en 30 segundos...
+
+[INFO] 15:58:06:86 TEAM/(3505:3521): Reintentando conexión en 30 segundos...
+
+[INFO] 15:58:06:88 TEAM/(3505:3523): El reintento de conexión no fue exitoso
+
+[INFO] 15:58:06:88 TEAM/(3505:3523): Reintentando conexión en 30 segundos...
+
+[INFO] 15:58:28:731 TEAM/(3505:3510): El entrenador 0 se movió a la posición (2, 8).
+[INFO] 15:58:33:741 TEAM/(3505:3510): El entrenador 0 atrapó al pokemon Onix en la posición (2,8).
+[INFO] 15:58:33:741 TEAM/(3505:3510): Inicio del algoritmo de detección de deadlock.
+[INFO] 15:58:33:741 TEAM/(3505:3510): Habilito el hilo del entrenador 0.
+[INFO] 15:58:33:741 TEAM/(3505:3510): No se encontró deadlock.
+[INFO] 15:58:33:741 TEAM/(3505:3510): Fallo de comunicación con el Broker al enviar un catch. Se realizará la operación por default.
+[INFO] 15:58:33:741 TEAM/(3505:3510): El entrenador 0 ahora está en BLOCKED.
+[INFO] 15:58:33:741 TEAM/(3505:3517): El entrenador 1 ahora está en EXEC.
+[INFO] 15:58:33:741 TEAM/(3505:3511): El entrenador  1 se mueve a atrapar a Gengar en posición (6, 6)
+
+[INFO] 15:58:33:741 TEAM/(3505:3511): El entrenador 1 ahora está en EXEC.
+[INFO] 15:58:36:88 TEAM/(3505:3518): El reintento de conexión no fue exitoso
+
+[INFO] 15:58:36:88 TEAM/(3505:3521): El reintento de conexión no fue exitoso
+
+[INFO] 15:58:36:88 TEAM/(3505:3518): Reintentando conexión en 30 segundos...
+
+[INFO] 15:58:36:88 TEAM/(3505:3521): Reintentando conexión en 30 segundos...
+
+[INFO] 15:58:36:88 TEAM/(3505:3523): El reintento de conexión no fue exitoso
+
+[INFO] 15:58:36:88 TEAM/(3505:3523): Reintentando conexión en 30 segundos...
+
+[INFO] 15:59:03:771 TEAM/(3505:3511): El entrenador 1 se movió a la posición (6, 6).
+[INFO] 15:59:06:89 TEAM/(3505:3523): El reintento de conexión no fue exitoso
+
+[INFO] 15:59:06:89 TEAM/(3505:3521): El reintento de conexión no fue exitoso
+
+[INFO] 15:59:06:89 TEAM/(3505:3523): Reintentando conexión en 30 segundos...
+
+[INFO] 15:59:06:89 TEAM/(3505:3521): Reintentando conexión en 30 segundos...
+
+[INFO] 15:59:06:89 TEAM/(3505:3518): El reintento de conexión no fue exitoso
+
+[INFO] 15:59:06:89 TEAM/(3505:3518): Reintentando conexión en 30 segundos...
+
+[INFO] 15:59:08:773 TEAM/(3505:3511): El entrenador 1 atrapó al pokemon Gengar en la posición (6,6).
+[INFO] 15:59:08:773 TEAM/(3505:3511): El entrenador 1 ahora está en EXIT.
+[INFO] 15:59:08:773 TEAM/(3505:3511): Inicio del algoritmo de detección de deadlock.
+[INFO] 15:59:08:773 TEAM/(3505:3511): Se encontró deadlock.
+[INFO] 15:59:08:773 TEAM/(3505:3511): Fallo de comunicación con el Broker al enviar un catch. Se realizará la operación por default.
+[INFO] 15:59:08:773 TEAM/(3505:3511): El entrenador 1 ahora está en BLOCKED.
+[INFO] 15:59:08:773 TEAM/(3505:3514): El entrenador 2, esta en DEADLOCK con el entrenador 0.
+[INFO] 15:59:08:773 TEAM/(3505:3510): El entrenador 0 ahora está en READY.
+[INFO] 15:59:08:773 TEAM/(3505:3517): El entrenador 0 ahora está en EXEC.
+[INFO] 15:59:08:773 TEAM/(3505:3510): El entrenador 0 ahora está en EXEC.
+[INFO] 15:59:36:89 TEAM/(3505:3518): El reintento de conexión no fue exitoso
+
+[INFO] 15:59:36:89 TEAM/(3505:3518): Reintentando conexión en 30 segundos...
+
+[INFO] 15:59:36:89 TEAM/(3505:3521): El reintento de conexión no fue exitoso
+
+[INFO] 15:59:36:89 TEAM/(3505:3521): Reintentando conexión en 30 segundos...
+
+[INFO] 15:59:36:89 TEAM/(3505:3523): El reintento de conexión no fue exitoso
+
+[INFO] 15:59:36:89 TEAM/(3505:3523): Reintentando conexión en 30 segundos...
+
+[INFO] 15:59:38:836 TEAM/(3505:3510): El entrenador 0 se movió a la posición (5, 5).
+[INFO] 16:00:03:883 TEAM/(3505:3510): El entrenador 0 le da el pokemon Onix al entrenador 2
+[INFO] 16:00:03:883 TEAM/(3505:3510): El entrenador 2 le da el pokemon Squirtle al entrenador 0
+[INFO] 16:00:03:883 TEAM/(3505:3510): Operación de intercambio realizada entre entrenadores 0 y 2
+[INFO] 16:00:03:883 TEAM/(3505:3510): El entrenador 0 ahora está en BLOCKED.
+[INFO] 16:00:03:883 TEAM/(3505:3514): El entrenador 2 ahora está en EXIT.
+[INFO] 16:00:03:883 TEAM/(3505:3514): El entrenador 0 ahora está en EXIT.
+[INFO] 16:00:03:883 TEAM/(3505:3505): ------------------------------------------------
+[INFO] 16:00:03:883 TEAM/(3505:3505): Programa terminado: objetivo global cumplido.
+[INFO] 16:00:03:883 TEAM/(3505:3505): Cantidad de ciclos de CPU totales: 47.
+[INFO] 16:00:03:883 TEAM/(3505:3505): Cantidad de cambios de contexto realizados: 6.
+[INFO] 16:00:03:883 TEAM/(3505:3505): ------------------------------------------------
+[INFO] 16:00:03:883 TEAM/(3505:3505): Información de los entrenadores: 
+[INFO] 16:00:03:883 TEAM/(3505:3505): Deadlocks producidos: 1.
+[INFO] 16:00:03:883 TEAM/(3505:3505): Deadlocks resueltos: 1.
+[INFO] 16:00:03:883 TEAM/(3505:3505): Cantidad de ciclos de CPU realizados por el entrenador 0: 18.
+[INFO] 16:00:03:883 TEAM/(3505:3505): Cantidad de ciclos de CPU realizados por el entrenador 1: 21.
+[INFO] 16:00:03:883 TEAM/(3505:3505): Cantidad de ciclos de CPU realizados por el entrenador 2: 8.
+[INFO] 16:00:36:92 TEAM/(3880:3880): ___________________________________________________________________________________________________________
+[INFO] 16:00:36:92 TEAM/(3880:3880): Inició el TEAM
+[INFO] 16:00:36:94 TEAM/(3880:3895): Conexión fallida con el Broker
+
+[INFO] 16:00:36:94 TEAM/(3880:3895): Reintentando conexión en 30 segundos...
+
+[INFO] 16:00:36:95 TEAM/(3880:3892): Fallo de comunicación con el Broker al enviar un get. Se realizará la operación por default.
+[INFO] 16:00:36:95 TEAM/(3880:3897): Fallo de comunicación con el Broker al enviar un get. Se realizará la operación por default.
+[INFO] 16:00:36:95 TEAM/(3880:3899): Conexión fallida con el Broker
+
+[INFO] 16:00:36:96 TEAM/(3880:3899): Reintentando conexión en 30 segundos...
+
+[INFO] 16:00:36:101 TEAM/(3880:3896): Fallo de comunicación con el Broker al enviar un get. Se realizará la operación por default.
+[INFO] 16:00:36:101 TEAM/(3880:3900): Fallo de comunicación con el Broker al enviar un get. Se realizará la operación por default.
+[INFO] 16:00:36:102 TEAM/(3880:3898): Conexión fallida con el Broker
+
+[INFO] 16:00:36:102 TEAM/(3880:3898): Reintentando conexión en 30 segundos...
+
+[INFO] 16:00:38:482 TEAM/(3880:3904): Recibi mensaje appeared pokemon. El pokemon es: Pikachu. La posicion es: (9,9).
+[INFO] 16:00:38:483 TEAM/(3880:3904): Habilito el hilo del entrenador 1.
+[INFO] 16:00:38:483 TEAM/(3880:3887): El entrenador 1 ahora está en READY.
+[INFO] 16:00:38:483 TEAM/(3880:3894): El entrenador 1 ahora está en EXEC.
+[INFO] 16:00:38:483 TEAM/(3880:3887): El entrenador  1 se mueve a atrapar a Pikachu en posición (9, 9)
+
+[INFO] 16:00:38:483 TEAM/(3880:3887): El entrenador 1 ahora está en EXEC.
+[INFO] 16:00:38:494 TEAM/(3880:3908): Recibi mensaje appeared pokemon. El pokemon es: Squirtle. La posicion es: (5,2).
+[INFO] 16:00:38:494 TEAM/(3880:3908): Habilito el hilo del entrenador 2.
+[INFO] 16:00:38:494 TEAM/(3880:3888): El entrenador 2 ahora está en READY.
+[INFO] 16:00:38:497 TEAM/(3880:3911): Recibi mensaje appeared pokemon. El pokemon es: Onix. La posicion es: (2,8).
+[INFO] 16:00:38:497 TEAM/(3880:3911): Habilito el hilo del entrenador 0.
+[INFO] 16:00:38:498 TEAM/(3880:3886): El entrenador 0 ahora está en READY.
+[INFO] 16:00:38:498 TEAM/(3880:3914): Recibi mensaje appeared pokemon. El pokemon es: Gengar. La posicion es: (6,6).
+[INFO] 16:00:38:499 TEAM/(3880:3917): Recibi mensaje appeared pokemon. El pokemon es: Squirtle. La posicion es: (5,5).
+[INFO] 16:01:06:95 TEAM/(3880:3895): Reintentando conexión en 30 segundos...
+
+[INFO] 16:01:06:97 TEAM/(3880:3899): Reintentando conexión en 30 segundos...
+
+[INFO] 16:01:06:102 TEAM/(3880:3898): Reintentando conexión en 30 segundos...
+
+[INFO] 16:01:36:96 TEAM/(3880:3895): El reintento de conexión no fue exitoso
+
+[INFO] 16:01:36:96 TEAM/(3880:3895): Reintentando conexión en 30 segundos...
+
+[INFO] 16:01:36:98 TEAM/(3880:3899): El reintento de conexión no fue exitoso
+
+[INFO] 16:01:36:98 TEAM/(3880:3899): Reintentando conexión en 30 segundos...
+
+[INFO] 16:01:36:103 TEAM/(3880:3898): El reintento de conexión no fue exitoso
+
+[INFO] 16:01:36:103 TEAM/(3880:3898): Reintentando conexión en 30 segundos...
+
+[INFO] 16:01:43:500 TEAM/(3880:3887): El entrenador 1 se movió a la posición (9, 9).
+[INFO] 16:01:48:501 TEAM/(3880:3887): El entrenador 1 atrapó al pokemon Pikachu en la posición (9,9).
+[INFO] 16:01:48:501 TEAM/(3880:3887): Habilito el hilo del entrenador 1.
+[INFO] 16:01:48:501 TEAM/(3880:3887): Habilito el hilo del entrenador 1.
+[INFO] 16:01:48:501 TEAM/(3880:3887): Fallo de comunicación con el Broker al enviar un catch. Se realizará la operación por default.
+[INFO] 16:01:48:501 TEAM/(3880:3887): El entrenador 1 ahora está en BLOCKED.
+[INFO] 16:01:48:501 TEAM/(3880:3887): El entrenador 1 ahora está en READY.
+[INFO] 16:01:48:501 TEAM/(3880:3894): El entrenador 2 ahora está en EXEC.
+[INFO] 16:01:48:501 TEAM/(3880:3888): El entrenador  2 se mueve a atrapar a Squirtle en posición (5, 2)
+
+[INFO] 16:01:48:501 TEAM/(3880:3888): El entrenador 2 ahora está en EXEC.
+[INFO] 16:02:03:536 TEAM/(3880:3888): El entrenador 2 se movió a la posición (5, 2).
+[INFO] 16:02:06:97 TEAM/(3880:3895): El reintento de conexión no fue exitoso
+
+[INFO] 16:02:06:97 TEAM/(3880:3895): Reintentando conexión en 30 segundos...
+
+[INFO] 16:02:06:99 TEAM/(3880:3899): El reintento de conexión no fue exitoso
+
+[INFO] 16:02:06:99 TEAM/(3880:3899): Reintentando conexión en 30 segundos...
+
+[INFO] 16:02:06:105 TEAM/(3880:3898): El reintento de conexión no fue exitoso
+
+[INFO] 16:02:06:105 TEAM/(3880:3898): Reintentando conexión en 30 segundos...
+
+[INFO] 16:02:08:538 TEAM/(3880:3888): El entrenador 2 atrapó al pokemon Squirtle en la posición (5,2).
+[INFO] 16:02:08:538 TEAM/(3880:3888): Habilito el hilo del entrenador 2.
+[INFO] 16:02:08:538 TEAM/(3880:3888): Habilito el hilo del entrenador 2.
+[INFO] 16:02:08:538 TEAM/(3880:3888): Fallo de comunicación con el Broker al enviar un catch. Se realizará la operación por default.
+[INFO] 16:02:08:538 TEAM/(3880:3888): El entrenador 2 ahora está en BLOCKED.
+[INFO] 16:02:08:538 TEAM/(3880:3888): El entrenador 2 ahora está en READY.
+[INFO] 16:02:08:538 TEAM/(3880:3894): El entrenador 0 ahora está en EXEC.
+[INFO] 16:02:08:538 TEAM/(3880:3886): El entrenador  0 se mueve a atrapar a Onix en posición (2, 8)
+
+[INFO] 16:02:08:538 TEAM/(3880:3886): El entrenador 0 ahora está en EXEC.
+[INFO] 16:02:36:98 TEAM/(3880:3895): El reintento de conexión no fue exitoso
+
+[INFO] 16:02:36:98 TEAM/(3880:3895): Reintentando conexión en 30 segundos...
+
+[INFO] 16:02:36:99 TEAM/(3880:3899): El reintento de conexión no fue exitoso
+
+[INFO] 16:02:36:99 TEAM/(3880:3899): Reintentando conexión en 30 segundos...
+
+[INFO] 16:02:36:105 TEAM/(3880:3898): El reintento de conexión no fue exitoso
+
+[INFO] 16:02:36:105 TEAM/(3880:3898): Reintentando conexión en 30 segundos...
+
+[INFO] 16:02:38:573 TEAM/(3880:3886): El entrenador 0 se movió a la posición (2, 8).
+[INFO] 16:02:43:574 TEAM/(3880:3886): El entrenador 0 atrapó al pokemon Onix en la posición (2,8).
+[INFO] 16:02:43:574 TEAM/(3880:3886): Inicio del algoritmo de detección de deadlock.
+[INFO] 16:02:43:574 TEAM/(3880:3886): Habilito el hilo del entrenador 0.
+[INFO] 16:02:43:574 TEAM/(3880:3886): No se encontró deadlock.
+[INFO] 16:02:43:574 TEAM/(3880:3886): Fallo de comunicación con el Broker al enviar un catch. Se realizará la operación por default.
+[INFO] 16:02:43:574 TEAM/(3880:3886): El entrenador 0 ahora está en BLOCKED.
+[INFO] 16:02:43:574 TEAM/(3880:3894): El entrenador 1 ahora está en EXEC.
+[INFO] 16:02:43:574 TEAM/(3880:3887): El entrenador  1 se mueve a atrapar a Gengar en posición (6, 6)
+
+[INFO] 16:02:43:574 TEAM/(3880:3887): El entrenador 1 ahora está en EXEC.
+[INFO] 16:03:06:101 TEAM/(3880:3899): El reintento de conexión no fue exitoso
+
+[INFO] 16:03:06:101 TEAM/(3880:3899): Reintentando conexión en 30 segundos...
+
+[INFO] 16:03:06:101 TEAM/(3880:3895): El reintento de conexión no fue exitoso
+
+[INFO] 16:03:06:101 TEAM/(3880:3895): Reintentando conexión en 30 segundos...
+
+[INFO] 16:03:06:107 TEAM/(3880:3898): El reintento de conexión no fue exitoso
+
+[INFO] 16:03:06:107 TEAM/(3880:3898): Reintentando conexión en 30 segundos...
+
+[INFO] 16:03:13:649 TEAM/(3880:3887): El entrenador 1 se movió a la posición (6, 6).
+[INFO] 16:03:18:654 TEAM/(3880:3887): El entrenador 1 atrapó al pokemon Gengar en la posición (6,6).
+[INFO] 16:03:18:654 TEAM/(3880:3887): El entrenador 1 ahora está en EXIT.
+[INFO] 16:03:18:654 TEAM/(3880:3887): Inicio del algoritmo de detección de deadlock.
+[INFO] 16:03:18:654 TEAM/(3880:3887): No se encontró deadlock.
+[INFO] 16:03:18:654 TEAM/(3880:3887): Fallo de comunicación con el Broker al enviar un catch. Se realizará la operación por default.
+[INFO] 16:03:18:654 TEAM/(3880:3887): El entrenador 1 ahora está en BLOCKED.
+[INFO] 16:03:18:654 TEAM/(3880:3894): El entrenador 2 ahora está en EXEC.
+[INFO] 16:03:18:654 TEAM/(3880:3888): El entrenador  2 se mueve a atrapar a Squirtle en posición (5, 5)
+
+[INFO] 16:03:18:654 TEAM/(3880:3888): El entrenador 2 ahora está en EXEC.
+[INFO] 16:03:33:656 TEAM/(3880:3888): El entrenador 2 se movió a la posición (5, 5).
+[INFO] 16:03:36:102 TEAM/(3880:3899): El reintento de conexión no fue exitoso
+
+[INFO] 16:03:36:102 TEAM/(3880:3895): El reintento de conexión no fue exitoso
+
+[INFO] 16:03:36:102 TEAM/(3880:3895): Reintentando conexión en 30 segundos...
+
+[INFO] 16:03:36:102 TEAM/(3880:3899): Reintentando conexión en 30 segundos...
+
+[INFO] 16:03:36:108 TEAM/(3880:3898): El reintento de conexión no fue exitoso
+
+[INFO] 16:03:36:108 TEAM/(3880:3898): Reintentando conexión en 30 segundos...
+
+[INFO] 16:03:38:657 TEAM/(3880:3888): El entrenador 2 atrapó al pokemon Squirtle en la posición (5,5).
+[INFO] 16:03:38:657 TEAM/(3880:3888): Inicio del algoritmo de detección de deadlock.
+[INFO] 16:03:38:657 TEAM/(3880:3888): Habilito el hilo del entrenador 2.
+[INFO] 16:03:38:657 TEAM/(3880:3888): Se encontró deadlock.
+[INFO] 16:03:38:657 TEAM/(3880:3888): Fallo de comunicación con el Broker al enviar un catch. Se realizará la operación por default.
+[INFO] 16:03:38:657 TEAM/(3880:3888): El entrenador 2 ahora está en BLOCKED.
+[INFO] 16:03:38:657 TEAM/(3880:3890): El entrenador 0, esta en DEADLOCK con el entrenador 2.
+[INFO] 16:03:38:657 TEAM/(3880:3888): El entrenador 2 ahora está en READY.
+[INFO] 16:03:38:657 TEAM/(3880:3894): El entrenador 2 ahora está en EXEC.
+[INFO] 16:03:38:658 TEAM/(3880:3888): El entrenador 2 ahora está en EXEC.
+[INFO] 16:04:06:103 TEAM/(3880:3895): El reintento de conexión no fue exitoso
+
+[INFO] 16:04:06:103 TEAM/(3880:3899): El reintento de conexión no fue exitoso
+
+[INFO] 16:04:06:103 TEAM/(3880:3895): Reintentando conexión en 30 segundos...
+
+[INFO] 16:04:06:103 TEAM/(3880:3899): Reintentando conexión en 30 segundos...
+
+[INFO] 16:04:06:111 TEAM/(3880:3898): El reintento de conexión no fue exitoso
+
+[INFO] 16:04:06:111 TEAM/(3880:3898): Reintentando conexión en 30 segundos...
+
+[INFO] 16:04:08:724 TEAM/(3880:3888): El entrenador 2 se movió a la posición (2, 8).
+[INFO] 16:04:33:798 TEAM/(3880:3888): El entrenador 2 le da el pokemon Squirtle al entrenador 0
+[INFO] 16:04:33:798 TEAM/(3880:3888): El entrenador 0 le da el pokemon Onix al entrenador 2
+[INFO] 16:04:33:798 TEAM/(3880:3888): Operación de intercambio realizada entre entrenadores 2 y 0
+[INFO] 16:04:33:798 TEAM/(3880:3888): El entrenador 2 ahora está en BLOCKED.
+[INFO] 16:04:33:798 TEAM/(3880:3890): El entrenador 0 ahora está en EXIT.
+[INFO] 16:04:33:798 TEAM/(3880:3890): El entrenador 2 ahora está en EXIT.
+[INFO] 16:04:33:798 TEAM/(3880:3880): ------------------------------------------------
+[INFO] 16:04:33:798 TEAM/(3880:3880): Programa terminado: objetivo global cumplido.
+[INFO] 16:04:33:798 TEAM/(3880:3880): Cantidad de ciclos de CPU totales: 47.
+[INFO] 16:04:33:798 TEAM/(3880:3880): Cantidad de cambios de contexto realizados: 6.
+[INFO] 16:04:33:798 TEAM/(3880:3880): ------------------------------------------------
+[INFO] 16:04:33:798 TEAM/(3880:3880): Información de los entrenadores: 
+[INFO] 16:04:33:798 TEAM/(3880:3880): Deadlocks producidos: 1.
+[INFO] 16:04:33:798 TEAM/(3880:3880): Deadlocks resueltos: 1.
+[INFO] 16:04:33:798 TEAM/(3880:3880): Cantidad de ciclos de CPU realizados por el entrenador 0: 7.
+[INFO] 16:04:33:798 TEAM/(3880:3880): Cantidad de ciclos de CPU realizados por el entrenador 1: 21.
+[INFO] 16:04:33:798 TEAM/(3880:3880): Cantidad de ciclos de CPU realizados por el entrenador 2: 19.
