@@ -167,10 +167,6 @@ msgMemoriaBroker* buscarMensajeEnMemoriaBuddy(uint32_t id){
 	for (uint32_t i = 0; i < sizeListaMutex(nodosOcupados); i++){
 		nodoActual = (struct nodoMemoria*) getListaMutex(nodosOcupados, i);
 
-		if(estaLibre(nodoActual)) {
-			return NULL;
-		}
-
 		if (nodoActual->mensaje->idMensaje == id){
 	     return nodoActual->mensaje;
 		}
