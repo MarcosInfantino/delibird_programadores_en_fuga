@@ -61,20 +61,20 @@ void liberarMemoria(){
 	sem_destroy(iniciarResolucionDeadlock);
 	sem_destroy(semaforoObjetivoCumplido);
 	sem_destroy(finalizacionCicloCpu);
-	pthread_cancel(threadSuscripcionAppeared);
-	pthread_cancel(threadSuscripcionCaught);
-	pthread_cancel(threadSuscripcionLocalized);
-	pthread_cancel(hiloConexionInicialBroker);
-	pthread_cancel(hiloServidorGameboy);
-	pthread_cancel(hiloPlanificador);
+//	pthread_cancel(threadSuscripcionAppeared);
+//	pthread_cancel(threadSuscripcionCaught);
+//	pthread_cancel(threadSuscripcionLocalized);
+//	pthread_cancel(hiloConexionInicialBroker);
+//	pthread_cancel(hiloServidorGameboy);
+//	pthread_cancel(hiloPlanificador);
 
 	destruirHilosEntrenadores();
 
 }
 
 void destruirHilosEntrenadores(){
-	for(uint32_t i=0; i<cantEntrenadores;i++){
-		pthread_cancel(arrayIdHilosEntrenadores[i]);
-	}
+//	for(uint32_t i=0; i<cantEntrenadores;i++){
+//		pthread_cancel(arrayIdHilosEntrenadores[i]);
+//	}
 	free(arrayIdHilosEntrenadores);
 }

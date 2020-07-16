@@ -41,14 +41,14 @@ int main(int argc , char* argv[]){
 
 	inicializarSemaforos();
 	inicializarColasYListas();
-
+	team     = inicializarTeam(config);
 	log_info(teamLogger2,"--------------------------------------------------------------------------");
 	log_info(teamLogger2,"NUEVA EJECUCION");
 	log_info(teamLogger2,"--------------------------------------------------------------------------");
 
 	obtenerAlgoritmoPlanificacion(config);
 
-	team     = inicializarTeam(config);
+	//team     = inicializarTeam(config);
 
 	entrenadores->lista       = team->entrenadores;
 
@@ -588,11 +588,11 @@ void enviarCatch(dataEntrenador* infoEntrenador){
 
 			uint32_t idMensaje=0;
 
-			if(recv(cliente, &idMensaje, sizeof(uint32_t),0)==-1){
+			if(recv(cliente, &idMensaje, sizeof(uint32_t),0)<=0){
 				log_info(teamLogger2,"Ocurrio un error al recibir la respuesta de un catch\n");
-			}
-
-			if(idMensaje>0){
+				log_info(teamLogger, "Fallo de comunicación con el Broker al enviar un catch. Se realizará la operación por default.");
+				atraparPokemonYReplanificar (infoEntrenador);
+			}else if(idMensaje>0){
 
 				log_info(teamLogger2,"El entrenador % i recibió el id del catch: %i.", infoEntrenador->id, idMensaje);
 				idsEntrenadorMensaje* parDeIds=malloc(sizeof(idsEntrenadorMensaje));
@@ -600,10 +600,10 @@ void enviarCatch(dataEntrenador* infoEntrenador){
 				parDeIds->idMensaje=idMensaje;
 				addListaMutex(listaIdsEntrenadorMensaje,(void*)parDeIds);
 
-			}else{
-				atraparPokemonYReplanificar (infoEntrenador);
-			//se recibio erroneamente
-			}
+			}//else{
+//				atraparPokemonYReplanificar (infoEntrenador);
+//			//se recibio erroneamente
+//			}
 		}else{
 			log_info(teamLogger, "Fallo de comunicación con el Broker al enviar un catch. Se realizará la operación por default.");
 			atraparPokemonYReplanificar (infoEntrenador);
@@ -661,10 +661,10 @@ void* enviarGet(void* arg){
 			uint32_t* idMensaje=malloc(sizeof(uint32_t));
 			*idMensaje=0;
 
-			if(recv(cliente, idMensaje, sizeof(uint32_t),0)==-1){
-				printf("Ocurrio un error al recibir la respuesta de un get\n");
-			}
-			if(*idMensaje>0){
+			if(recv(cliente, idMensaje, sizeof(uint32_t),0)<=0){
+				//printf("Ocurrio un error al recibir la respuesta de un get\n");
+				log_info(teamLogger, "Fallo de comunicación con el Broker al enviar un get. Se realizará la operación por default.");
+			}else if(*idMensaje>0){
 				addListaMutex(listaIdsRespuestasGet,(void*)(idMensaje));
 
 			}else{
@@ -730,7 +730,7 @@ dataTeam* inicializarTeam(t_config* config){
 	t_list* objetivosEntrenadores  = obtenerListaDeListas(arrayObjetivosEntrenadores);
 	uint32_t cantEntrenadores      = list_size(posicionesEntrenadores);
 
-	uint32_t id;
+	uint32_t id=0;
 
 	for(id=0;id<cantEntrenadores;id++){
 		dataEntrenador* infoEntrenador=malloc(sizeof(dataEntrenador));
@@ -765,7 +765,12 @@ dataTeam* inicializarTeam(t_config* config){
 				}
 		infoEntrenador->ejecucionEnPausa=false;
 		infoEntrenador->estado			= NEW;
-		infoEntrenador->id				= id;
+
+		uint32_t* idDefinitivo=malloc(sizeof(uint32_t));
+		*idDefinitivo=id;
+		infoEntrenador->id				= *idDefinitivo;
+		free(idDefinitivo);
+
 		infoEntrenador->pokemonAAtrapar = NULL;
 		infoEntrenador->cantidadCiclosCpu = 0;
 		infoEntrenador->semaforo=malloc(sizeof(sem_t));
@@ -815,9 +820,10 @@ dataTeam* inicializarTeam(t_config* config){
 	list_destroy(objetivosEntrenadores);
 
 	//---------------------------------------------------
-	free(arrayPosicionesEntrenadores);
-	free(arrayPokemonesEntrenadores);
-	free(arrayObjetivosEntrenadores);
+	liberarArrayBidimensionalChar(arrayPosicionesEntrenadores);
+	liberarArrayBidimensionalChar(arrayPokemonesEntrenadores);
+	liberarArrayBidimensionalChar(arrayObjetivosEntrenadores);
+
 	return infoTeam;
 
 }

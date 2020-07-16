@@ -116,6 +116,7 @@ uint32_t evaluarTamanioParticionYasignar(struct nodoMemoria* partActual, msgMemo
 		removerDeListaBuddy(nodosLibres, partActual);
 //		char* auxFree1=partActual->header.tiempoDeCarga;
 //		char* auxFree2=partActual->header.ultimoAcceso;
+		
 		partActual->header.tiempoDeCarga=temporal_get_string_time();
 		partActual->header.ultimoAcceso=temporal_get_string_time();
 

@@ -320,7 +320,8 @@ uint32_t obtenerIdEntrenadorMasCercano(posicion pos){ //el id es el index del en
 
 }
     pthread_mutex_unlock(entrenadoresLibres->mutex);
-    return idEntrenadorEnLista(entrenadorMasCercano);
+    //return idEntrenadorEnLista(entrenadorMasCercano);//TODO PROBAR
+    return entrenadorMasCercano->id;
 }
 
 void asignarPokemonAEntrenador(dataEntrenador* entrenador, pokemonPosicion* pokePosicion){
@@ -413,17 +414,17 @@ dataEntrenador* obtenerEntrenadorPorId(uint32_t id){
 	return (dataEntrenador*)getListaMutex(entrenadores,id);
 }
 
-uint32_t idEntrenadorEnLista(dataEntrenador* entrenadorMasCercano){
-    pthread_mutex_lock(entrenadoresLibres->mutex);
-	for(uint32_t j=0;j<sizeListaMutex(entrenadores);j++){
-        if((dataEntrenador*) getListaMutex(entrenadores,j) == entrenadorMasCercano){
-            pthread_mutex_unlock(entrenadoresLibres->mutex);
-        	return j;
-        }
-    }
-	pthread_mutex_unlock(entrenadoresLibres->mutex);
-    return -1;
-}
+//uint32_t idEntrenadorEnLista(dataEntrenador* entrenadorMasCercano){
+//    pthread_mutex_lock(entrenadoresLibres->mutex);
+//	for(uint32_t j=0;j<sizeListaMutex(entrenadores);j++){
+//        if((dataEntrenador*) getListaMutex(entrenadores,j) == entrenadorMasCercano){
+//            pthread_mutex_unlock(entrenadoresLibres->mutex);
+//        	return j;
+//        }
+//    }
+//	pthread_mutex_unlock(entrenadoresLibres->mutex);
+//    return -1;
+//}
 
 bool leFaltaCantidadDePokemones(dataEntrenador* entrenador){
 	//log_info(teamLogger2, "Pregunto si al entrenador %i le faltan pokemones.",entrenador->id);

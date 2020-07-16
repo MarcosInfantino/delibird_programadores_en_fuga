@@ -252,7 +252,7 @@ uint32_t distanciaEntrenadorPosicion(dataEntrenador* entrenador, posicion posici
 
 uint32_t obtenerIdEntrenadorMasCercano(posicion pos);
 
-uint32_t idEntrenadorEnLista(dataEntrenador* entrenadorMasCercano);
+//uint32_t idEntrenadorEnLista(dataEntrenador* entrenadorMasCercano);
 
 t_list* inicializarMutexEntrenadores();
 
