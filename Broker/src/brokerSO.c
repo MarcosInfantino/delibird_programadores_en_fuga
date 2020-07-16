@@ -206,6 +206,7 @@ void manejarTipoDeMensaje(paquete* paq, uint32_t* socket) {
 			 destruirSuscripcionTiempo(datosSuscribir);//PROBAR
 			 break;
 		 case ACK:
+			 guardarMensajeACK(paq);
 			 break;
 		 default:
 			 pthread_exit(NULL);
