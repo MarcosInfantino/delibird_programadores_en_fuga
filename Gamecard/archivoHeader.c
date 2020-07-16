@@ -243,7 +243,7 @@ char* leerBloque(blockHeader* bloque){
 //		log_info(gamecardLogger2, "Encontre el  barra n.");
 	*(resultado+pos)='\0';
 	fclose(archivoBloque);
-
+	free(path);
 //	char* resultado=string_new();
 //	string_append(&resultado,buffer);
 //	string_append(&resultado,"\0");
@@ -507,19 +507,23 @@ void actualizarPosicionesArchivo(archivoHeader* archivo, t_list* listaPosicionCa
 }
 
 void reiniciarArchivoBloque(uint32_t idBloque){
-	remove(pathBloque(idBloque));
+	char* path=pathBloque(idBloque);
 
-	FILE* archivoBloque = fopen(pathBloque(idBloque),"w+");
+	remove(path);
+
+	FILE* archivoBloque = fopen(path,"w+");
 	fclose(archivoBloque);
 
-	uint32_t blockfd = open(pathBloque(idBloque),O_RDWR| S_IRUSR | S_IWUSR,0777);
+	uint32_t blockfd = open(path,O_RDWR| S_IRUSR | S_IWUSR,0777);
 			ftruncate(blockfd,tallGrass.block_size);
 			close(blockfd);
+
+	free(path);
 }
 
 void reiniciarBloquesDeArchivo(archivoHeader* headerPoke){
 
-	for(uint32_t i;i<list_size(headerPoke->bloquesUsados);i++){
+	for(uint32_t i=0;i<list_size(headerPoke->bloquesUsados);i++){
 		blockHeader* bloque = list_get(headerPoke->bloquesUsados,i);
 		reiniciarArchivoBloque(bloque->id);
 	}

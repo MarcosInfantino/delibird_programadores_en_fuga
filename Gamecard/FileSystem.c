@@ -150,10 +150,11 @@ int32_t crearArchivoBloque(blockHeader* bloque) {
 	//FILE* archivoBloque = fopen(string_from_format("%s/Blocks/%d.bin", puntoMontaje, bloque->id), "w");
 	char* pathArchivoBloque=string_from_format("%s/Blocks/%d.bin", puntoMontaje, bloque->id);
 	if(!archivoExiste(pathArchivoBloque)){
-		uint32_t fd = open(string_from_format("%s/Blocks/%d.bin", puntoMontaje, bloque->id),O_RDWR|O_CREAT,0777);
+		uint32_t fd = open(pathArchivoBloque,O_RDWR|O_CREAT,0777);
 		ftruncate(fd,tallGrass.block_size);
 		close(fd);
 	}
+	free(pathArchivoBloque);
 
 		//ocuparBloque(bloque->id);
 	return 0;
@@ -254,6 +255,7 @@ archivoHeader* crearMetadata(char* nombre, uint32_t tipo, char* direccion){
 		addListaMutex(listaArchivos, (void*)metadataFile);
 	}
 	}else if(archivoExiste(nuevaDirec) && archivoHeaderYaRegistrado(nombre)){
+		free(nuevaDirec);
 		metadataFile=buscarArchivoHeaderPokemon(nombre);
 	}else{
 
@@ -418,8 +420,8 @@ int32_t escribirBloque(int32_t bloque, int32_t offset, int32_t longitud, char* b
 	//const char* bufferin = buffer;
 	//FILE* block = fopen(string_from_format("%s%d.bin", pathBlocks, bloque), "w+b");
 	//FILE* block = fopen(string_from_format("%s1.bin", pathBlocks), "r+");
-
-	FILE* block = fopen(pathBloque(bloque),"r+");
+	char* path=pathBloque(bloque);
+	FILE* block = fopen(path,"r+");
 	fseek(block, offset, SEEK_SET);
 	//fwrite(buffer, strlen(buffer)+1, 1, block);
 	//fwrite(buffer, strlen(buffer), 1, block);
@@ -429,6 +431,7 @@ int32_t escribirBloque(int32_t bloque, int32_t offset, int32_t longitud, char* b
 	//fputs(buffer,block);
 	headerBloque->pos=ftell(block);
 	fclose(block);
+	free(path);
 	return 0;
 	}else{
 		return -1;
