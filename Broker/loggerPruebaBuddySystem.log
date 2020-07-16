@@ -895,3 +895,30 @@
 [INFO] 23:10:35:687 BROKER/(11428:11467): Elimino particion que comienza en: 0x8ba2cf0
 [INFO] 23:10:35:687 BROKER/(11428:11467): Se almacena mensaje en memoria en posición: 32
 [INFO] 23:10:35:688 BROKER/(11428:11442): Llegó un nuevo mensaje a la cola CATCH_POKEMON.
+[INFO] 23:18:50:310 BROKER/(11766:11766): ___________________________________________________________________________________________________________
+[INFO] 23:18:50:311 BROKER/(11766:11766): Inició el BROKER
+[INFO] 23:19:28:738 BROKER/(11826:11826): ___________________________________________________________________________________________________________
+[INFO] 23:19:28:738 BROKER/(11826:11826): Inició el BROKER
+[INFO] 23:19:32:561 BROKER/(11826:11847): Se conectó un proceso GAMEBOY.
+[INFO] 23:19:32:563 BROKER/(11826:11847): Se almacena mensaje en memoria en posición: 0
+[INFO] 23:19:32:566 BROKER/(11826:11839): Llegó un nuevo mensaje a la cola CAUGHT_POKEMON.
+[INFO] 23:19:32:582 BROKER/(11826:11850): Se conectó un proceso GAMEBOY.
+[INFO] 23:19:32:583 BROKER/(11826:11850): Se almacena mensaje en memoria en posición: 4
+[INFO] 23:19:32:596 BROKER/(11826:11853): Se conectó un proceso GAMEBOY.
+[INFO] 23:19:32:597 BROKER/(11826:11853): Se almacena mensaje en memoria en posición: 32
+[INFO] 23:19:32:599 BROKER/(11826:11838): Llegó un nuevo mensaje a la cola NEW_POKEMON.
+[INFO] 23:19:32:613 BROKER/(11826:11856): Se conectó un proceso GAMEBOY.
+[INFO] 23:19:32:613 BROKER/(11826:11856): Se almacena mensaje en memoria en posición: 16
+[INFO] 23:19:32:614 BROKER/(11826:11840): Llegó un nuevo mensaje a la cola CATCH_POKEMON.
+[INFO] 23:19:32:628 BROKER/(11826:11859): Se conectó un proceso GAMEBOY.
+[INFO] 23:19:32:630 BROKER/(11826:11859): Un proceso GAMEBOY se sucribió a la cola NEW_POKEMON.
+[INFO] 23:19:32:634 BROKER/(11826:11861): Se conectó un proceso GAMEBOY.
+[INFO] 23:19:42:635 BROKER/(11826:11865): Se conectó un proceso GAMEBOY.
+[INFO] 23:19:42:640 BROKER/(11826:11865): Elimino particion que comienza en: 0
+[INFO] 23:19:42:646 BROKER/(11826:11865): Elimino particion que comienza en: 4
+[INFO] 23:19:42:646 BROKER/(11826:11865): Se consolida partición con inicio en: 4 con su buddy con inicio en: 0
+[INFO] 23:19:42:646 BROKER/(11826:11865): Se consolida partición con inicio en: 0 con su buddy con inicio en: 8
+[INFO] 23:19:42:647 BROKER/(11826:11865): Elimino particion que comienza en: 16
+[INFO] 23:19:42:647 BROKER/(11826:11865): Se consolida partición con inicio en: 16 con su buddy con inicio en: 0
+[INFO] 23:19:42:648 BROKER/(11826:11865): Se almacena mensaje en memoria en posición: 0
+[INFO] 23:19:42:649 BROKER/(11826:11840): Llegó un nuevo mensaje a la cola CATCH_POKEMON.
