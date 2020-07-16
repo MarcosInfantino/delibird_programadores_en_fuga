@@ -54,7 +54,7 @@ int suscribirACola(uint32_t* socket, uint32_t idProceso, colaMensajes * cola){
 }
 
 void suscribirSegunCola(paquete paq, uint32_t* socket) {
-		mensajeSuscripcion* msgSuscripcion=deserializarSuscripcion(paq.stream);
+		mensajeSuscripcion* msgSuscripcion = deserializarSuscripcion(paq.stream);
 	switch (msgSuscripcion->cola) {
 		case APPEARED_POKEMON:
 			suscribir(&appearedPokemon, paq, socket,APPEARED_POKEMON, msgSuscripcion->idProceso);

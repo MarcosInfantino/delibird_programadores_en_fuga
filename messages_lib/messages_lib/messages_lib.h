@@ -234,5 +234,6 @@ char* armarStringMsgNuevoLog(uint32_t cola);
 char* armarConexionNuevoProcesoLog(uint32_t modulo);
 char* armarStringACK(uint32_t cola, uint32_t idMensaje, uint32_t socket);
 void liberarArrayBidimensionalChar(char** array);
+char* nombreTipoDePaquete(uint32_t tipoMensaje);
 
 #endif /* MESSAGES_LIB_H_ */

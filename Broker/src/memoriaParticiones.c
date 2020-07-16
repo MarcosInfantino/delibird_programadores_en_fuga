@@ -73,7 +73,7 @@ void eliminarParticion (particion* part){
 	partiNueva->sizeParticion = part->sizeParticion;
 	partiNueva->estadoParticion = PARTICION_LIBRE;
 	addListaMutex(particionesLibres, (void*)partiNueva);
-	log_info(loggerBroker, "Elimino particion que comienza en: %i", part->offset);
+	log_info(loggerBroker, "Elimino particion que comienza en: %p", memoria + partiNueva->offset );
 	removeAndDestroyElementListaMutex(particionesOcupadas, 0, destroyParticionOcupada);
 	consolidarSiSePuede(partiNueva);
 }
@@ -126,7 +126,7 @@ void compactar(){
 		elemento->offset = base;
 		base += elemento->sizeParticion;
 	}
-	log_info(loggerBroker, "Se realiza la compactacion");
+	log_info(loggerBroker, "Se compacta la memoria - particiones dinámicas.");
 	generarParticionLibre(base);
 	cantidadBusquedasFallidas = 0;
 }

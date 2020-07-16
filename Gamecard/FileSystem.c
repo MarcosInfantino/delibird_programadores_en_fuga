@@ -345,7 +345,7 @@ bool poseeArchivo(blockHeader* bloque){
 //	bitarray_clean_bit(bitmap,idBloque-1);
 //}
 
-bool estaLibre(uint32_t idBloque){
+bool estaLibreElBloque(uint32_t idBloque){
 	return *(mmapBitmap + idBloque-1)=='0';
 }
 
@@ -364,7 +364,7 @@ blockHeader* obtenerBloquePorId(uint32_t id){
 blockHeader* encontrarBloqueLibre(){// devuelve el bloque ya ocupado
 	for(uint32_t i=0; i<list_size(listaBloques);i++){
 		blockHeader* bloqueActual= list_get(listaBloques,i);
-		if(estaLibre(bloqueActual->id)){
+		if(estaLibreElBloque(bloqueActual->id)){
 			ocuparBloque(bloqueActual->id);
 			return bloqueActual;
 		}

@@ -45,6 +45,9 @@ void modificarNodoAlibre(struct nodoMemoria* victima){
 	removerDeListaBuddy(nodosOcupados,victima);
 	addListaMutex(nodosLibres, victima);
 
+	log_info(loggerBroker, "Elimino particion que comienza en: %i", victima->offset);
+
+
 	evaluarConsolidacion(victima);
 }
 
@@ -65,6 +68,7 @@ void evaluarConsolidacion(struct nodoMemoria* nodo){
 
 		struct nodoMemoria* partActual = nodo->padre;
 		log_info(brokerLogger2,"CONSOLIDO buddy con offset: %i con su buddy con offset %i", nodo->offset, buddie->offset);
+		log_info(loggerBroker,"Se consolida partición con inicio en: %i con su buddy con inicio en: %i", nodo->offset, buddie->offset);
 		liberarNodo(nodo);
 		liberarNodo(buddie);
 
@@ -158,14 +162,32 @@ void particionarMemoriaBUDDY(struct nodoMemoria* particionActual){
 }
 
 msgMemoriaBroker* buscarMensajeEnMemoriaBuddy(uint32_t id){
-	pthread_mutex_lock(mutexMemoria);
+	struct nodoMemoria* nodoActual;
+
+	for (uint32_t i = 0; i < sizeListaMutex(nodosOcupados); i++){
+		nodoActual = (struct nodoMemoria*) getListaMutex(nodosOcupados, i);
+
+		if(estaLibre(nodoActual)) {
+			return NULL;
+		}
+
+		if (nodoActual->mensaje->idMensaje == id){
+	     return nodoActual->mensaje;
+		}
+	 }
+
+	return NULL;
+	/*pthread_mutex_lock(mutexMemoria);
 	struct nodoMemoria* nodoActual = nodoRaizMemoria;
 
 	if(estaLibre(nodoActual)) {
 		pthread_mutex_unlock(mutexMemoria);
-		return NULL;}
+		return NULL;
+	}
 
-	if(nodoActual->mensaje->idMensaje != id){
+	if( nodoActual->mensaje->idMensaje != id){
+		log_info(brokerLogger2,"no encuentro el mensaje, sigo buscando");
+
 		msgMemoriaBroker* mensajeEnRamaIzq = buscarPorRama(id, nodoActual->hijoIzq);
 		msgMemoriaBroker* mensajeEnRamaDer;
 
@@ -175,12 +197,14 @@ msgMemoriaBroker* buscarMensajeEnMemoriaBuddy(uint32_t id){
 			return mensajeEnRamaDer;
 		}
 		pthread_mutex_unlock(mutexMemoria);
+		log_info(brokerLogger2,"encontré mensaje");
+
 		return mensajeEnRamaIzq;
 	}
 	pthread_mutex_unlock(mutexMemoria);
+	log_info(brokerLogger2,"esta en la raiz el mensaje");
 
-
-	return nodoActual->mensaje;
+	return nodoActual->mensaje;*/
 }
 
 bool existeMensajeEnMemoriaBuddy(mensajeGet* msgGet, mensajeCatch*  msgCatch){
@@ -364,7 +388,7 @@ void enviarMsjsASuscriptorNuevoBuddySystem(uint32_t colaParametro, uint32_t sock
 				log_info(brokerLogger2, "Actualizo el ultimo acceso del MENSAJE %i : %s ",nodoEvaluado->mensaje->idMensaje ,(nodoEvaluado->header).ultimoAcceso);
 				send(socket, paqStream, sizePaquete(paqueteAEnviar), 0);
 				free(paqStream);
-				log_info(brokerLogger2, "GUARDO ENVIADO POR ENVIAR MENSAJES, id: %i, id cor: %i", paqueteAEnviar->id, paqueteAEnviar->idCorrelativo);
+				log_info(brokerLogger2, "Agrego suscriptor a lista de subs del mensaje ya enviados, id: %i, id correlativo: %i", paqueteAEnviar->id, paqueteAEnviar->idCorrelativo);
 				guardarYaEnviados(paqueteAEnviar, idProceso);
  				//TODO memory leak para el paquete
 			}

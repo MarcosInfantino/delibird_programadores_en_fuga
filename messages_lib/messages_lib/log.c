@@ -158,3 +158,41 @@ void terminar_programa(t_log* logger, t_config* config)
 	log_destroy(logger);
 	config_destroy(config);
 }
+
+char* nombreTipoDePaquete(uint32_t tipoMensaje){
+
+	switch(tipoMensaje){
+	case APPEARED_POKEMON:
+		return "APPEARED_POKEMON";
+		break;
+	case NEW_POKEMON:
+		return "NEW_POKEMON";
+		break;
+	case CAUGHT_POKEMON:
+		return "CAUGHT_POKEMON";
+		break;
+	case CATCH_POKEMON:
+		return "CATCH_POKEMON";
+		break;
+	case GET_POKEMON:
+		return "GET_POKEMON";
+		break;
+	case LOCALIZED_POKEMON:
+		return "LOCALIZED_POKEMON";
+		break;
+	case SUSCRIPCION:
+		return "SUSCRIPCION";
+		break;
+		case SUSCRIPCION_TIEMPO:
+		return "SUSCRIPCION POR TIEMPO";
+		break;
+	case ACK:
+		return "ACK";
+		break;
+	case -1:
+		return "ERROR";
+		break;
+	}
+
+	return "0";
+}

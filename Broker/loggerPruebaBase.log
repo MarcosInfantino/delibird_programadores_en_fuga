@@ -57,3 +57,37 @@
 [INFO] 02:19:04:318 BROKER/(23306:23430): Almaceno mensaje en partición que comienza en: 124
 [INFO] 02:19:04:319 BROKER/(23306:23321): Llegó un nuevo mensaje a la cola GET_POKEMON.
 [INFO] 02:19:19:274 BROKER/(23306:23306): Se solicitó dump de cache.
+[INFO] 20:28:23:34 BROKER/(5208:5208): ___________________________________________________________________________________________________________
+[INFO] 20:28:23:34 BROKER/(5208:5208): Inició el BROKER
+[INFO] 21:04:21:432 BROKER/(6573:6573): ___________________________________________________________________________________________________________
+[INFO] 21:04:21:432 BROKER/(6573:6573): Inició el BROKER
+[INFO] 21:04:25:857 BROKER/(6573:6594): Se conectó un proceso GAMEBOY.
+[INFO] 21:04:25:858 BROKER/(6573:6594): Almaceno mensaje en partición que comienza en: 0
+[INFO] 21:04:25:863 BROKER/(6573:6588): Llegó un nuevo mensaje a la cola GET_POKEMON.
+[INFO] 21:04:25:882 BROKER/(6573:6598): Se conectó un proceso GAMEBOY.
+[INFO] 21:04:25:891 BROKER/(6573:6598): Almaceno mensaje en partición que comienza en: 11
+[INFO] 21:04:25:891 BROKER/(6573:6588): Llegó un nuevo mensaje a la cola GET_POKEMON.
+[INFO] 21:05:13:810 BROKER/(6573:6611): Se conectó un proceso GAMEBOY.
+[INFO] 21:05:13:811 BROKER/(6573:6611): Almaceno mensaje en partición que comienza en: 25
+[INFO] 21:05:13:811 BROKER/(6573:6587): Llegó un nuevo mensaje a la cola CATCH_POKEMON.
+[INFO] 21:05:13:822 BROKER/(6573:6615): Se conectó un proceso GAMEBOY.
+[INFO] 21:05:13:823 BROKER/(6573:6615): Almaceno mensaje en partición que comienza en: 44
+[INFO] 21:05:13:824 BROKER/(6573:6587): Llegó un nuevo mensaje a la cola CATCH_POKEMON.
+[INFO] 21:05:13:830 BROKER/(6573:6618): Se conectó un proceso GAMEBOY.
+[INFO] 21:05:13:831 BROKER/(6573:6618): Almaceno mensaje en partición que comienza en: 64
+[INFO] 21:05:13:831 BROKER/(6573:6586): Llegó un nuevo mensaje a la cola CAUGHT_POKEMON.
+[INFO] 21:05:13:833 BROKER/(6573:6621): Se conectó un proceso GAMEBOY.
+[INFO] 21:05:13:835 BROKER/(6573:6621): Almaceno mensaje en partición que comienza en: 68
+[INFO] 21:05:13:839 BROKER/(6573:6586): Llegó un nuevo mensaje a la cola CAUGHT_POKEMON.
+[INFO] 21:05:13:841 BROKER/(6573:6624): Se conectó un proceso GAMEBOY.
+[INFO] 21:05:13:842 BROKER/(6573:6624): Almaceno mensaje en partición que comienza en: 72
+[INFO] 21:05:13:842 BROKER/(6573:6587): Llegó un nuevo mensaje a la cola CATCH_POKEMON.
+[INFO] 21:05:13:846 BROKER/(6573:6627): Se conectó un proceso GAMEBOY.
+[INFO] 21:05:13:847 BROKER/(6573:6627): Almaceno mensaje en partición que comienza en: 93
+[INFO] 21:05:13:848 BROKER/(6573:6587): Llegó un nuevo mensaje a la cola CATCH_POKEMON.
+[INFO] 21:05:13:851 BROKER/(6573:6630): Se conectó un proceso GAMEBOY.
+[INFO] 21:05:13:852 BROKER/(6573:6630): Almaceno mensaje en partición que comienza en: 115
+[INFO] 21:05:13:852 BROKER/(6573:6588): Llegó un nuevo mensaje a la cola GET_POKEMON.
+[INFO] 21:05:13:853 BROKER/(6573:6633): Se conectó un proceso GAMEBOY.
+[INFO] 21:05:13:858 BROKER/(6573:6633): Almaceno mensaje en partición que comienza en: 124
+[INFO] 21:05:13:858 BROKER/(6573:6588): Llegó un nuevo mensaje a la cola GET_POKEMON.

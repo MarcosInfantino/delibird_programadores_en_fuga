@@ -13236,3 +13236,1332 @@
 [INFO] 18:10:28:255 Broker/(20409:20593): Terminó de registrar el mensaje en memoria.
 [INFO] 18:10:28:255 Broker/(20409:20593): Aviso que hay mensajes en cola.
 [INFO] 18:10:28:256 Broker/(20409:20422): Envio el mensaje a los suscriptores de la cola: NEW_POKEMON
+[INFO] 20:28:23:31 Broker/(5208:5208): pid del proceso broker: 5208
+[INFO] 20:32:04:58 Broker/(5693:5693): pid del proceso broker: 5693
+[INFO] 20:35:53:963 Broker/(5693:5793): -------------------------TIPO DE PAQUETE RECIBIDO: 2
+[INFO] 20:35:53:963 Broker/(5693:5793): PARTICIONO: para msg 1 y la cola CAUGHT_POKEMON
+[INFO] 20:35:53:963 Broker/(5693:5793): NODO A PARTICIONAR: su offset 0, su tamaño: 64
+[INFO] 20:35:53:963 Broker/(5693:5793): PARTICIONO: para msg 1 y la cola CAUGHT_POKEMON
+[INFO] 20:35:53:963 Broker/(5693:5793): NODO A PARTICIONAR: su offset 0, su tamaño: 32
+[INFO] 20:35:53:963 Broker/(5693:5793): PARTICIONO: para msg 1 y la cola CAUGHT_POKEMON
+[INFO] 20:35:53:964 Broker/(5693:5793): NODO A PARTICIONAR: su offset 0, su tamaño: 16
+[INFO] 20:35:53:964 Broker/(5693:5793): PARTICIONO: para msg 1 y la cola CAUGHT_POKEMON
+[INFO] 20:35:53:982 Broker/(5693:5793): NODO A PARTICIONAR: su offset 0, su tamaño: 8
+[INFO] 20:35:53:983 Broker/(5693:5793): ALMACENO mensaje en posición: 0tim (de memoria)
+[INFO] 20:35:53:983 Broker/(5693:5793): ASIGNE: Size de buddy: 4. Id mensaje: 1. Size del mensaje: 4.
+[INFO] 20:35:53:983 Broker/(5693:5793): Registré el mensaje en memoria.
+[INFO] 20:35:53:983 Broker/(5693:5793): Terminó de registrar el mensaje en memoria.
+[INFO] 20:35:53:983 Broker/(5693:5793): Aviso que hay mensajes en cola.
+[INFO] 20:35:53:983 Broker/(5693:5707): Envio el mensaje a los suscriptores de la cola: CAUGHT_POKEMON
+[INFO] 20:35:53:990 Broker/(5693:5796): -------------------------TIPO DE PAQUETE RECIBIDO: 2
+[INFO] 20:35:53:991 Broker/(5693:5796): ALMACENO mensaje en posición: 4tim (de memoria)
+[INFO] 20:35:53:994 Broker/(5693:5796): ASIGNE: Size de buddy: 4. Id mensaje: 2. Size del mensaje: 4.
+[INFO] 20:35:53:994 Broker/(5693:5796): Registré el mensaje en memoria.
+[INFO] 20:35:53:995 Broker/(5693:5796): Terminó de registrar el mensaje en memoria.
+[INFO] 20:35:53:997 Broker/(5693:5799): -------------------------TIPO DE PAQUETE RECIBIDO: 1
+[INFO] 20:35:53:997 Broker/(5693:5799): ALMACENO mensaje en posición: 32tim (de memoria)
+[INFO] 20:35:53:998 Broker/(5693:5799): ASIGNE: Size de buddy: 32. Id mensaje: 3. Size del mensaje: 23.
+[INFO] 20:35:53:998 Broker/(5693:5799): Registré el mensaje en memoria.
+[INFO] 20:35:54:12 Broker/(5693:5799): Terminó de registrar el mensaje en memoria.
+[INFO] 20:35:54:13 Broker/(5693:5799): Aviso que hay mensajes en cola.
+[INFO] 20:35:54:13 Broker/(5693:5706): Envio el mensaje a los suscriptores de la cola: NEW_POKEMON
+[INFO] 20:35:54:20 Broker/(5693:5802): -------------------------TIPO DE PAQUETE RECIBIDO: 3
+[INFO] 20:35:54:23 Broker/(5693:5802): Valido si ya existe el mensaje Catch en memoria buddy.
+[INFO] 20:35:54:23 Broker/(5693:5802): ALMACENO mensaje en posición: 16tim (de memoria)
+[INFO] 20:35:54:23 Broker/(5693:5802): ASIGNE: Size de buddy: 16. Id mensaje: 4. Size del mensaje: 16.
+[INFO] 20:35:54:28 Broker/(5693:5802): Registré el mensaje en memoria.
+[INFO] 20:35:54:28 Broker/(5693:5802): Terminó de registrar el mensaje en memoria.
+[INFO] 20:35:54:28 Broker/(5693:5802): Aviso que hay mensajes en cola.
+[INFO] 20:35:54:28 Broker/(5693:5708): Envio el mensaje a los suscriptores de la cola: CATCH_POKEMON
+[INFO] 20:35:54:35 Broker/(5693:5805): -------------------------TIPO DE PAQUETE RECIBIDO: 7
+[INFO] 20:35:54:36 Broker/(5693:5805): ---------------------Suscribo por tiempo al proceso 1
+[INFO] 20:35:54:36 Broker/(5693:5805): ---------------------------- Suscribo a 1
+[INFO] 20:35:54:36 Broker/(5693:5805): Actualizo el ultimo acceso del MENSAJE 3 : 20:35:54:36 
+[INFO] 20:35:54:36 Broker/(5693:5805): GUARDO ENVIADO POR ENVIAR MENSAJES, id: 3, id cor: 0
+[INFO] 20:40:26:916 Broker/(5907:5907): pid del proceso broker: 5907
+[INFO] 20:40:35:306 Broker/(5907:5928): -------------------------TIPO DE PAQUETE RECIBIDO: 2
+[INFO] 20:40:35:307 Broker/(5907:5928): PARTICIONO: para msg 1 y la cola CAUGHT_POKEMON
+[INFO] 20:40:35:307 Broker/(5907:5928): NODO A PARTICIONAR: su offset 0, su tamaño: 64
+[INFO] 20:40:35:307 Broker/(5907:5928): PARTICIONO: para msg 1 y la cola CAUGHT_POKEMON
+[INFO] 20:40:35:308 Broker/(5907:5928): NODO A PARTICIONAR: su offset 0, su tamaño: 32
+[INFO] 20:40:35:308 Broker/(5907:5928): PARTICIONO: para msg 1 y la cola CAUGHT_POKEMON
+[INFO] 20:40:35:308 Broker/(5907:5928): NODO A PARTICIONAR: su offset 0, su tamaño: 16
+[INFO] 20:40:35:308 Broker/(5907:5928): PARTICIONO: para msg 1 y la cola CAUGHT_POKEMON
+[INFO] 20:40:35:318 Broker/(5907:5928): NODO A PARTICIONAR: su offset 0, su tamaño: 8
+[INFO] 20:40:35:322 Broker/(5907:5928): ALMACENO mensaje en posición: 0tim (de memoria)
+[INFO] 20:40:35:322 Broker/(5907:5928): ASIGNE: Size de buddy: 4. Id mensaje: 1. Size del mensaje: 4.
+[INFO] 20:40:35:322 Broker/(5907:5928): Registré el mensaje en memoria.
+[INFO] 20:40:35:323 Broker/(5907:5928): Terminó de registrar el mensaje en memoria.
+[INFO] 20:40:35:323 Broker/(5907:5928): Aviso que hay mensajes en cola.
+[INFO] 20:40:35:323 Broker/(5907:5920): Envio el mensaje a los suscriptores de la cola: CAUGHT_POKEMON
+[INFO] 20:40:35:349 Broker/(5907:5932): -------------------------TIPO DE PAQUETE RECIBIDO: 2
+[INFO] 20:40:35:351 Broker/(5907:5932): ALMACENO mensaje en posición: 4tim (de memoria)
+[INFO] 20:40:35:351 Broker/(5907:5932): ASIGNE: Size de buddy: 4. Id mensaje: 2. Size del mensaje: 4.
+[INFO] 20:40:35:351 Broker/(5907:5932): Registré el mensaje en memoria.
+[INFO] 20:40:35:352 Broker/(5907:5932): Terminó de registrar el mensaje en memoria.
+[INFO] 20:40:35:362 Broker/(5907:5935): -------------------------TIPO DE PAQUETE RECIBIDO: 1
+[INFO] 20:40:35:362 Broker/(5907:5935): ALMACENO mensaje en posición: 32tim (de memoria)
+[INFO] 20:40:35:363 Broker/(5907:5935): ASIGNE: Size de buddy: 32. Id mensaje: 3. Size del mensaje: 23.
+[INFO] 20:40:35:363 Broker/(5907:5935): Registré el mensaje en memoria.
+[INFO] 20:40:35:363 Broker/(5907:5935): Terminó de registrar el mensaje en memoria.
+[INFO] 20:40:35:364 Broker/(5907:5935): Aviso que hay mensajes en cola.
+[INFO] 20:40:35:364 Broker/(5907:5919): Envio el mensaje a los suscriptores de la cola: NEW_POKEMON
+[INFO] 20:40:35:374 Broker/(5907:5938): -------------------------TIPO DE PAQUETE RECIBIDO: 3
+[INFO] 20:40:35:375 Broker/(5907:5938): Valido si ya existe el mensaje Catch en memoria buddy.
+[INFO] 20:40:35:375 Broker/(5907:5938): ALMACENO mensaje en posición: 16tim (de memoria)
+[INFO] 20:40:35:375 Broker/(5907:5938): ASIGNE: Size de buddy: 16. Id mensaje: 4. Size del mensaje: 16.
+[INFO] 20:40:35:376 Broker/(5907:5938): Registré el mensaje en memoria.
+[INFO] 20:40:35:376 Broker/(5907:5938): Terminó de registrar el mensaje en memoria.
+[INFO] 20:40:35:376 Broker/(5907:5938): Aviso que hay mensajes en cola.
+[INFO] 20:40:35:376 Broker/(5907:5921): Envio el mensaje a los suscriptores de la cola: CATCH_POKEMON
+[INFO] 20:40:35:380 Broker/(5907:5941): -------------------------TIPO DE PAQUETE RECIBIDO: 7
+[INFO] 20:40:35:381 Broker/(5907:5941): ---------------------Suscribo por tiempo al proceso 1
+[INFO] 20:40:35:381 Broker/(5907:5941): ---------------------------- Suscribo a 1
+[INFO] 20:40:35:381 Broker/(5907:5941): Actualizo el ultimo acceso del MENSAJE 3 : 20:40:35:381 
+[INFO] 20:40:35:381 Broker/(5907:5941): GUARDO ENVIADO POR ENVIAR MENSAJES, id: 3, id cor: 0
+[INFO] 20:49:41:261 Broker/(6058:6058): pid del proceso broker: 6058
+[INFO] 20:50:01:268 Broker/(6058:6080): -------------------------TIPO DE PAQUETE RECIBIDO: 2
+[INFO] 20:50:01:269 Broker/(6058:6080): ITERACION: 0
+[INFO] 20:50:01:275 Broker/(6058:6080): ASIGNE: size de partición: 4. Id mensaje: 1. Size del mensaje: 4.
+[INFO] 20:50:01:275 Broker/(6058:6080): Registré el mensaje en memoria.
+[INFO] 20:50:01:276 Broker/(6058:6080): Terminó de registrar el mensaje en memoria.
+[INFO] 20:50:01:282 Broker/(6058:6080): Aviso que hay mensajes en cola.
+[INFO] 20:50:01:283 Broker/(6058:6071): Envio el mensaje a los suscriptores de la cola: CAUGHT_POKEMON
+[INFO] 20:50:01:294 Broker/(6058:6084): -------------------------TIPO DE PAQUETE RECIBIDO: 2
+[INFO] 20:50:01:294 Broker/(6058:6084): ITERACION: 1
+[INFO] 20:50:01:295 Broker/(6058:6084): ASIGNE: size de partición: 4. Id mensaje: 2. Size del mensaje: 4.
+[INFO] 20:50:01:298 Broker/(6058:6084): Registré el mensaje en memoria.
+[INFO] 20:50:01:299 Broker/(6058:6084): Terminó de registrar el mensaje en memoria.
+[INFO] 20:50:01:300 Broker/(6058:6087): -------------------------TIPO DE PAQUETE RECIBIDO: 3
+[INFO] 20:50:01:310 Broker/(6058:6087): Veo si existe mensaje en particiones.
+[INFO] 20:50:01:311 Broker/(6058:6087): ITERACION: 2
+[INFO] 20:50:01:311 Broker/(6058:6087): ASIGNE: size de partición: 19. Id mensaje: 3. Size del mensaje: 19.
+[INFO] 20:50:01:314 Broker/(6058:6087): Registré el mensaje en memoria.
+[INFO] 20:50:01:327 Broker/(6058:6087): Terminó de registrar el mensaje en memoria.
+[INFO] 20:50:01:327 Broker/(6058:6087): Aviso que hay mensajes en cola.
+[INFO] 20:50:01:327 Broker/(6058:6072): Envio el mensaje a los suscriptores de la cola: CATCH_POKEMON
+[INFO] 20:50:01:338 Broker/(6058:6090): -------------------------TIPO DE PAQUETE RECIBIDO: 3
+[INFO] 20:50:01:338 Broker/(6058:6090): Veo si existe mensaje en particiones.
+[INFO] 20:50:01:338 Broker/(6058:6090): ITERACION: 3
+[INFO] 20:50:01:339 Broker/(6058:6090): ASIGNE: size de partición: 20. Id mensaje: 4. Size del mensaje: 20.
+[INFO] 20:50:01:339 Broker/(6058:6090): Registré el mensaje en memoria.
+[INFO] 20:50:01:340 Broker/(6058:6090): Terminó de registrar el mensaje en memoria.
+[INFO] 20:50:01:340 Broker/(6058:6090): Aviso que hay mensajes en cola.
+[INFO] 20:50:01:340 Broker/(6058:6072): Envio el mensaje a los suscriptores de la cola: CATCH_POKEMON
+[INFO] 20:50:01:351 Broker/(6058:6093): -------------------------TIPO DE PAQUETE RECIBIDO: 3
+[INFO] 20:50:01:351 Broker/(6058:6093): Veo si existe mensaje en particiones.
+[INFO] 20:50:01:352 Broker/(6058:6093): ITERACION: 4
+[INFO] 20:50:01:355 Broker/(6058:6093): ASIGNE: size de partición: 16. Id mensaje: 5. Size del mensaje: 16.
+[INFO] 20:50:01:355 Broker/(6058:6093): Registré el mensaje en memoria.
+[INFO] 20:50:01:355 Broker/(6058:6093): Terminó de registrar el mensaje en memoria.
+[INFO] 20:50:01:355 Broker/(6058:6093): Aviso que hay mensajes en cola.
+[INFO] 20:50:01:355 Broker/(6058:6072): Envio el mensaje a los suscriptores de la cola: CATCH_POKEMON
+[INFO] 20:50:01:357 Broker/(6058:6096): -------------------------TIPO DE PAQUETE RECIBIDO: 7
+[INFO] 20:50:01:358 Broker/(6058:6096): ---------------------Suscribo por tiempo al proceso 1
+[INFO] 20:50:01:358 Broker/(6058:6096): ---------------------------- Suscribo a 1
+[INFO] 20:50:01:359 Broker/(6058:6099): -------------------------TIPO DE PAQUETE RECIBIDO: 8
+[INFO] 20:50:01:359 Broker/(6058:6098): -------------------------TIPO DE PAQUETE RECIBIDO: 8
+[INFO] 20:50:05:378 Broker/(6058:6103): -------------------------TIPO DE PAQUETE RECIBIDO: 3
+[INFO] 20:50:05:378 Broker/(6058:6103): Veo si existe mensaje en particiones.
+[INFO] 20:50:05:378 Broker/(6058:6103): ITERACION: 5
+[INFO] 20:50:05:379 Broker/(6058:6103): ASIGNE: size de partición: 22. Id mensaje: 6. Size del mensaje: 22.
+[INFO] 20:50:05:383 Broker/(6058:6103): Registré el mensaje en memoria.
+[INFO] 20:50:05:383 Broker/(6058:6103): Terminó de registrar el mensaje en memoria.
+[INFO] 20:50:05:383 Broker/(6058:6103): Aviso que hay mensajes en cola.
+[INFO] 20:50:05:383 Broker/(6058:6072): Envio el mensaje a los suscriptores de la cola: CATCH_POKEMON
+[INFO] 20:51:18:239 Broker/(6124:6124): pid del proceso broker: 6124
+[INFO] 20:51:24:243 Broker/(6124:6145): -------------------------TIPO DE PAQUETE RECIBIDO: 2
+[INFO] 20:51:24:245 Broker/(6124:6145): ITERACION: 0
+[INFO] 20:51:24:245 Broker/(6124:6145): ASIGNE: size de partición: 4. Id mensaje: 1. Size del mensaje: 4.
+[INFO] 20:51:24:250 Broker/(6124:6145): Registré el mensaje en memoria.
+[INFO] 20:51:24:250 Broker/(6124:6145): Terminó de registrar el mensaje en memoria.
+[INFO] 20:51:24:251 Broker/(6124:6145): Aviso que hay mensajes en cola.
+[INFO] 20:51:24:251 Broker/(6124:6137): Envio el mensaje a los suscriptores de la cola: CAUGHT_POKEMON
+[INFO] 20:51:24:273 Broker/(6124:6149): -------------------------TIPO DE PAQUETE RECIBIDO: 2
+[INFO] 20:51:24:273 Broker/(6124:6149): ITERACION: 1
+[INFO] 20:51:24:274 Broker/(6124:6149): ASIGNE: size de partición: 4. Id mensaje: 2. Size del mensaje: 4.
+[INFO] 20:51:24:274 Broker/(6124:6149): Registré el mensaje en memoria.
+[INFO] 20:51:24:275 Broker/(6124:6149): Terminó de registrar el mensaje en memoria.
+[INFO] 20:51:24:282 Broker/(6124:6152): -------------------------TIPO DE PAQUETE RECIBIDO: 3
+[INFO] 20:51:24:283 Broker/(6124:6152): Veo si existe mensaje en particiones.
+[INFO] 20:51:24:283 Broker/(6124:6152): ITERACION: 2
+[INFO] 20:51:24:283 Broker/(6124:6152): ASIGNE: size de partición: 19. Id mensaje: 3. Size del mensaje: 19.
+[INFO] 20:51:24:288 Broker/(6124:6152): Registré el mensaje en memoria.
+[INFO] 20:51:24:294 Broker/(6124:6152): Terminó de registrar el mensaje en memoria.
+[INFO] 20:51:24:294 Broker/(6124:6152): Aviso que hay mensajes en cola.
+[INFO] 20:51:24:294 Broker/(6124:6138): Envio el mensaje a los suscriptores de la cola: CATCH_POKEMON
+[INFO] 20:51:24:312 Broker/(6124:6155): -------------------------TIPO DE PAQUETE RECIBIDO: 3
+[INFO] 20:51:24:312 Broker/(6124:6155): Veo si existe mensaje en particiones.
+[INFO] 20:51:24:313 Broker/(6124:6155): ITERACION: 3
+[INFO] 20:51:24:313 Broker/(6124:6155): ASIGNE: size de partición: 20. Id mensaje: 4. Size del mensaje: 20.
+[INFO] 20:51:24:313 Broker/(6124:6155): Registré el mensaje en memoria.
+[INFO] 20:51:24:313 Broker/(6124:6155): Terminó de registrar el mensaje en memoria.
+[INFO] 20:51:24:313 Broker/(6124:6155): Aviso que hay mensajes en cola.
+[INFO] 20:51:24:314 Broker/(6124:6138): Envio el mensaje a los suscriptores de la cola: CATCH_POKEMON
+[INFO] 20:51:24:329 Broker/(6124:6158): -------------------------TIPO DE PAQUETE RECIBIDO: 3
+[INFO] 20:51:24:330 Broker/(6124:6158): Veo si existe mensaje en particiones.
+[INFO] 20:51:24:330 Broker/(6124:6158): ITERACION: 4
+[INFO] 20:51:24:330 Broker/(6124:6158): ASIGNE: size de partición: 16. Id mensaje: 5. Size del mensaje: 16.
+[INFO] 20:51:24:330 Broker/(6124:6158): Registré el mensaje en memoria.
+[INFO] 20:51:24:330 Broker/(6124:6158): Terminó de registrar el mensaje en memoria.
+[INFO] 20:51:24:330 Broker/(6124:6158): Aviso que hay mensajes en cola.
+[INFO] 20:51:24:330 Broker/(6124:6138): Envio el mensaje a los suscriptores de la cola: CATCH_POKEMON
+[INFO] 20:51:24:352 Broker/(6124:6161): -------------------------TIPO DE PAQUETE RECIBIDO: 7
+[INFO] 20:51:24:352 Broker/(6124:6161): ---------------------Suscribo por tiempo al proceso 1
+[INFO] 20:51:24:352 Broker/(6124:6161): ---------------------------- Suscribo a 1
+[INFO] 20:51:24:354 Broker/(6124:6164): -------------------------TIPO DE PAQUETE RECIBIDO: 8
+[INFO] 20:51:24:355 Broker/(6124:6163): -------------------------TIPO DE PAQUETE RECIBIDO: 8
+[INFO] 20:51:28:370 Broker/(6124:6167): -------------------------TIPO DE PAQUETE RECIBIDO: 3
+[INFO] 20:51:28:370 Broker/(6124:6167): Veo si existe mensaje en particiones.
+[INFO] 20:51:28:370 Broker/(6124:6167): ITERACION: 5
+[INFO] 20:51:28:374 Broker/(6124:6167): ASIGNE: size de partición: 22. Id mensaje: 6. Size del mensaje: 22.
+[INFO] 20:51:28:379 Broker/(6124:6167): Registré el mensaje en memoria.
+[INFO] 20:51:28:379 Broker/(6124:6167): Terminó de registrar el mensaje en memoria.
+[INFO] 20:51:28:379 Broker/(6124:6167): Aviso que hay mensajes en cola.
+[INFO] 20:51:28:379 Broker/(6124:6138): Envio el mensaje a los suscriptores de la cola: CATCH_POKEMON
+[INFO] 20:57:22:889 Broker/(6406:6406): pid del proceso broker: 6406
+[INFO] 20:57:34:373 Broker/(6438:6438): pid del proceso broker: 6438
+[INFO] 20:58:32:920 Broker/(6438:6467): -------------------------TIPO DE PAQUETE RECIBIDO: 2
+[INFO] 20:58:32:920 Broker/(6438:6467): ITERACION: 0
+[INFO] 20:58:32:921 Broker/(6438:6467): ASIGNE: size de partición: 4. Id mensaje: 1. Size del mensaje: 4.
+[INFO] 20:58:32:921 Broker/(6438:6467): Registré el mensaje en memoria.
+[INFO] 20:58:32:921 Broker/(6438:6467): Terminó de registrar el mensaje en memoria.
+[INFO] 20:58:32:922 Broker/(6438:6467): Aviso que hay mensajes en cola.
+[INFO] 20:58:32:931 Broker/(6438:6451): Envio el mensaje a los suscriptores de la cola: CAUGHT_POKEMON
+[INFO] 20:58:32:939 Broker/(6438:6471): -------------------------TIPO DE PAQUETE RECIBIDO: 2
+[INFO] 20:58:32:947 Broker/(6438:6471): ITERACION: 1
+[INFO] 20:58:32:954 Broker/(6438:6471): ASIGNE: size de partición: 4. Id mensaje: 2. Size del mensaje: 4.
+[INFO] 20:58:32:954 Broker/(6438:6471): Registré el mensaje en memoria.
+[INFO] 20:58:32:954 Broker/(6438:6471): Terminó de registrar el mensaje en memoria.
+[INFO] 20:58:32:958 Broker/(6438:6474): -------------------------TIPO DE PAQUETE RECIBIDO: 3
+[INFO] 20:58:32:961 Broker/(6438:6474): Veo si existe mensaje en particiones.
+[INFO] 20:58:32:972 Broker/(6438:6474): ITERACION: 2
+[INFO] 20:58:32:972 Broker/(6438:6474): ASIGNE: size de partición: 19. Id mensaje: 3. Size del mensaje: 19.
+[INFO] 20:58:32:972 Broker/(6438:6474): Registré el mensaje en memoria.
+[INFO] 20:58:32:972 Broker/(6438:6474): Terminó de registrar el mensaje en memoria.
+[INFO] 20:58:32:972 Broker/(6438:6474): Aviso que hay mensajes en cola.
+[INFO] 20:58:32:972 Broker/(6438:6452): Envio el mensaje a los suscriptores de la cola: CATCH_POKEMON
+[INFO] 20:58:32:980 Broker/(6438:6477): -------------------------TIPO DE PAQUETE RECIBIDO: 3
+[INFO] 20:58:32:982 Broker/(6438:6477): Veo si existe mensaje en particiones.
+[INFO] 20:58:32:989 Broker/(6438:6477): ITERACION: 3
+[INFO] 20:58:32:989 Broker/(6438:6477): ASIGNE: size de partición: 20. Id mensaje: 4. Size del mensaje: 20.
+[INFO] 20:58:32:989 Broker/(6438:6477): Registré el mensaje en memoria.
+[INFO] 20:58:32:989 Broker/(6438:6477): Terminó de registrar el mensaje en memoria.
+[INFO] 20:58:32:989 Broker/(6438:6477): Aviso que hay mensajes en cola.
+[INFO] 20:58:32:990 Broker/(6438:6452): Envio el mensaje a los suscriptores de la cola: CATCH_POKEMON
+[INFO] 20:58:33:2 Broker/(6438:6480): -------------------------TIPO DE PAQUETE RECIBIDO: 3
+[INFO] 20:58:33:2 Broker/(6438:6480): Veo si existe mensaje en particiones.
+[INFO] 20:58:33:2 Broker/(6438:6480): ITERACION: 4
+[INFO] 20:58:33:3 Broker/(6438:6480): ASIGNE: size de partición: 16. Id mensaje: 5. Size del mensaje: 16.
+[INFO] 20:58:33:3 Broker/(6438:6480): Registré el mensaje en memoria.
+[INFO] 20:58:33:3 Broker/(6438:6480): Terminó de registrar el mensaje en memoria.
+[INFO] 20:58:33:3 Broker/(6438:6480): Aviso que hay mensajes en cola.
+[INFO] 20:58:33:4 Broker/(6438:6452): Envio el mensaje a los suscriptores de la cola: CATCH_POKEMON
+[INFO] 20:58:33:13 Broker/(6438:6483): -------------------------TIPO DE PAQUETE RECIBIDO: 7
+[INFO] 20:58:33:15 Broker/(6438:6483): ---------------------Suscribo por tiempo al proceso 1
+[INFO] 20:58:33:15 Broker/(6438:6483): ---------------------------- Suscribo a 1
+[INFO] 20:58:33:15 Broker/(6438:6486): -------------------------TIPO DE PAQUETE RECIBIDO: 8
+[INFO] 20:58:33:17 Broker/(6438:6485): -------------------------TIPO DE PAQUETE RECIBIDO: 8
+[INFO] 20:58:37:38 Broker/(6438:6490): -------------------------TIPO DE PAQUETE RECIBIDO: 3
+[INFO] 20:58:37:38 Broker/(6438:6490): Veo si existe mensaje en particiones.
+[INFO] 20:58:37:38 Broker/(6438:6490): ITERACION: 5
+[INFO] 20:58:37:39 Broker/(6438:6490): ASIGNE: size de partición: 22. Id mensaje: 6. Size del mensaje: 22.
+[INFO] 20:58:37:44 Broker/(6438:6490): Registré el mensaje en memoria.
+[INFO] 20:58:37:46 Broker/(6438:6490): Terminó de registrar el mensaje en memoria.
+[INFO] 20:58:37:46 Broker/(6438:6490): Aviso que hay mensajes en cola.
+[INFO] 20:58:37:46 Broker/(6438:6452): Envio el mensaje a los suscriptores de la cola: CATCH_POKEMON
+[INFO] 21:04:21:432 Broker/(6573:6573): pid del proceso broker: 6573
+[INFO] 21:04:25:857 Broker/(6573:6594): -------------------------TIPO DE PAQUETE RECIBIDO: 4
+[INFO] 21:04:25:857 Broker/(6573:6594): Veo si existe mensaje en particiones.
+[INFO] 21:04:25:857 Broker/(6573:6594): ITERACION: 0
+[INFO] 21:04:25:858 Broker/(6573:6594): ASIGNE: size de partición: 11. Id mensaje: 1. Size del mensaje: 11.
+[INFO] 21:04:25:858 Broker/(6573:6594): Registré el mensaje en memoria.
+[INFO] 21:04:25:858 Broker/(6573:6594): Terminó de registrar el mensaje en memoria.
+[INFO] 21:04:25:863 Broker/(6573:6594): Aviso que hay mensajes en cola.
+[INFO] 21:04:25:863 Broker/(6573:6588): Envio el mensaje a los suscriptores de la cola: GET_POKEMON
+[INFO] 21:04:25:882 Broker/(6573:6598): -------------------------TIPO DE PAQUETE RECIBIDO: 4
+[INFO] 21:04:25:883 Broker/(6573:6598): Veo si existe mensaje en particiones.
+[INFO] 21:04:25:883 Broker/(6573:6598): ITERACION: 1
+[INFO] 21:04:25:891 Broker/(6573:6598): ASIGNE: size de partición: 14. Id mensaje: 2. Size del mensaje: 14.
+[INFO] 21:04:25:891 Broker/(6573:6598): Registré el mensaje en memoria.
+[INFO] 21:04:25:891 Broker/(6573:6598): Terminó de registrar el mensaje en memoria.
+[INFO] 21:04:25:891 Broker/(6573:6598): Aviso que hay mensajes en cola.
+[INFO] 21:04:25:891 Broker/(6573:6588): Envio el mensaje a los suscriptores de la cola: GET_POKEMON
+[INFO] 21:05:13:810 Broker/(6573:6611): -------------------------TIPO DE PAQUETE RECIBIDO: 3
+[INFO] 21:05:13:810 Broker/(6573:6611): Veo si existe mensaje en particiones.
+[INFO] 21:05:13:810 Broker/(6573:6611): ITERACION: 2
+[INFO] 21:05:13:811 Broker/(6573:6611): ASIGNE: size de partición: 19. Id mensaje: 3. Size del mensaje: 19.
+[INFO] 21:05:13:811 Broker/(6573:6611): Registré el mensaje en memoria.
+[INFO] 21:05:13:811 Broker/(6573:6611): Terminó de registrar el mensaje en memoria.
+[INFO] 21:05:13:811 Broker/(6573:6611): Aviso que hay mensajes en cola.
+[INFO] 21:05:13:811 Broker/(6573:6587): Envio el mensaje a los suscriptores de la cola: CATCH_POKEMON
+[INFO] 21:05:13:822 Broker/(6573:6615): -------------------------TIPO DE PAQUETE RECIBIDO: 3
+[INFO] 21:05:13:823 Broker/(6573:6615): Veo si existe mensaje en particiones.
+[INFO] 21:05:13:823 Broker/(6573:6615): ITERACION: 3
+[INFO] 21:05:13:823 Broker/(6573:6615): ASIGNE: size de partición: 20. Id mensaje: 4. Size del mensaje: 20.
+[INFO] 21:05:13:823 Broker/(6573:6615): Registré el mensaje en memoria.
+[INFO] 21:05:13:824 Broker/(6573:6615): Terminó de registrar el mensaje en memoria.
+[INFO] 21:05:13:824 Broker/(6573:6615): Aviso que hay mensajes en cola.
+[INFO] 21:05:13:824 Broker/(6573:6587): Envio el mensaje a los suscriptores de la cola: CATCH_POKEMON
+[INFO] 21:05:13:830 Broker/(6573:6618): -------------------------TIPO DE PAQUETE RECIBIDO: 2
+[INFO] 21:05:13:830 Broker/(6573:6618): ITERACION: 4
+[INFO] 21:05:13:831 Broker/(6573:6618): ASIGNE: size de partición: 4. Id mensaje: 5. Size del mensaje: 4.
+[INFO] 21:05:13:831 Broker/(6573:6618): Registré el mensaje en memoria.
+[INFO] 21:05:13:831 Broker/(6573:6618): Terminó de registrar el mensaje en memoria.
+[INFO] 21:05:13:831 Broker/(6573:6618): Aviso que hay mensajes en cola.
+[INFO] 21:05:13:831 Broker/(6573:6586): Envio el mensaje a los suscriptores de la cola: CAUGHT_POKEMON
+[INFO] 21:05:13:833 Broker/(6573:6621): -------------------------TIPO DE PAQUETE RECIBIDO: 2
+[INFO] 21:05:13:834 Broker/(6573:6621): ITERACION: 5
+[INFO] 21:05:13:835 Broker/(6573:6621): ASIGNE: size de partición: 4. Id mensaje: 6. Size del mensaje: 4.
+[INFO] 21:05:13:835 Broker/(6573:6621): Registré el mensaje en memoria.
+[INFO] 21:05:13:839 Broker/(6573:6621): Terminó de registrar el mensaje en memoria.
+[INFO] 21:05:13:839 Broker/(6573:6621): Aviso que hay mensajes en cola.
+[INFO] 21:05:13:839 Broker/(6573:6586): Envio el mensaje a los suscriptores de la cola: CAUGHT_POKEMON
+[INFO] 21:05:13:841 Broker/(6573:6624): -------------------------TIPO DE PAQUETE RECIBIDO: 3
+[INFO] 21:05:13:841 Broker/(6573:6624): Veo si existe mensaje en particiones.
+[INFO] 21:05:13:841 Broker/(6573:6624): ITERACION: 6
+[INFO] 21:05:13:842 Broker/(6573:6624): ASIGNE: size de partición: 21. Id mensaje: 7. Size del mensaje: 21.
+[INFO] 21:05:13:842 Broker/(6573:6624): Registré el mensaje en memoria.
+[INFO] 21:05:13:842 Broker/(6573:6624): Terminó de registrar el mensaje en memoria.
+[INFO] 21:05:13:842 Broker/(6573:6624): Aviso que hay mensajes en cola.
+[INFO] 21:05:13:842 Broker/(6573:6587): Envio el mensaje a los suscriptores de la cola: CATCH_POKEMON
+[INFO] 21:05:13:846 Broker/(6573:6627): -------------------------TIPO DE PAQUETE RECIBIDO: 3
+[INFO] 21:05:13:846 Broker/(6573:6627): Veo si existe mensaje en particiones.
+[INFO] 21:05:13:847 Broker/(6573:6627): ITERACION: 7
+[INFO] 21:05:13:847 Broker/(6573:6627): ASIGNE: size de partición: 22. Id mensaje: 8. Size del mensaje: 22.
+[INFO] 21:05:13:847 Broker/(6573:6627): Registré el mensaje en memoria.
+[INFO] 21:05:13:847 Broker/(6573:6627): Terminó de registrar el mensaje en memoria.
+[INFO] 21:05:13:847 Broker/(6573:6627): Aviso que hay mensajes en cola.
+[INFO] 21:05:13:848 Broker/(6573:6587): Envio el mensaje a los suscriptores de la cola: CATCH_POKEMON
+[INFO] 21:05:13:851 Broker/(6573:6630): -------------------------TIPO DE PAQUETE RECIBIDO: 4
+[INFO] 21:05:13:851 Broker/(6573:6630): Veo si existe mensaje en particiones.
+[INFO] 21:05:13:852 Broker/(6573:6630): ITERACION: 8
+[INFO] 21:05:13:852 Broker/(6573:6630): ASIGNE: size de partición: 9. Id mensaje: 9. Size del mensaje: 9.
+[INFO] 21:05:13:852 Broker/(6573:6630): Registré el mensaje en memoria.
+[INFO] 21:05:13:852 Broker/(6573:6630): Terminó de registrar el mensaje en memoria.
+[INFO] 21:05:13:852 Broker/(6573:6630): Aviso que hay mensajes en cola.
+[INFO] 21:05:13:852 Broker/(6573:6588): Envio el mensaje a los suscriptores de la cola: GET_POKEMON
+[INFO] 21:05:13:853 Broker/(6573:6633): -------------------------TIPO DE PAQUETE RECIBIDO: 4
+[INFO] 21:05:13:854 Broker/(6573:6633): Veo si existe mensaje en particiones.
+[INFO] 21:05:13:854 Broker/(6573:6633): ITERACION: 9
+[INFO] 21:05:13:858 Broker/(6573:6633): ASIGNE: size de partición: 10. Id mensaje: 10. Size del mensaje: 10.
+[INFO] 21:05:13:858 Broker/(6573:6633): Registré el mensaje en memoria.
+[INFO] 21:05:13:858 Broker/(6573:6633): Terminó de registrar el mensaje en memoria.
+[INFO] 21:05:13:858 Broker/(6573:6633): Aviso que hay mensajes en cola.
+[INFO] 21:05:13:858 Broker/(6573:6588): Envio el mensaje a los suscriptores de la cola: GET_POKEMON
+[INFO] 21:06:07:334 Broker/(6656:6656): pid del proceso broker: 6656
+[INFO] 21:06:31:776 Broker/(6656:6677): -------------------------TIPO DE PAQUETE RECIBIDO: 2
+[INFO] 21:06:31:776 Broker/(6656:6677): PARTICIONO: para msg 1 y la cola CAUGHT_POKEMON
+[INFO] 21:06:31:777 Broker/(6656:6677): NODO A PARTICIONAR: su offset 0, su tamaño: 64
+[INFO] 21:06:31:777 Broker/(6656:6677): PARTICIONO: para msg 1 y la cola CAUGHT_POKEMON
+[INFO] 21:06:31:777 Broker/(6656:6677): NODO A PARTICIONAR: su offset 0, su tamaño: 32
+[INFO] 21:06:31:777 Broker/(6656:6677): PARTICIONO: para msg 1 y la cola CAUGHT_POKEMON
+[INFO] 21:06:31:777 Broker/(6656:6677): NODO A PARTICIONAR: su offset 0, su tamaño: 16
+[INFO] 21:06:31:777 Broker/(6656:6677): PARTICIONO: para msg 1 y la cola CAUGHT_POKEMON
+[INFO] 21:06:31:777 Broker/(6656:6677): NODO A PARTICIONAR: su offset 0, su tamaño: 8
+[INFO] 21:06:31:777 Broker/(6656:6677): ALMACENO mensaje en posición: 0tim (de memoria)
+[INFO] 21:06:31:790 Broker/(6656:6677): ASIGNE: Size de buddy: 4. Id mensaje: 1. Size del mensaje: 4.
+[INFO] 21:06:31:790 Broker/(6656:6677): Registré el mensaje en memoria.
+[INFO] 21:06:31:790 Broker/(6656:6677): Terminó de registrar el mensaje en memoria.
+[INFO] 21:06:31:790 Broker/(6656:6677): Aviso que hay mensajes en cola.
+[INFO] 21:06:31:790 Broker/(6656:6669): Envio el mensaje a los suscriptores de la cola: CAUGHT_POKEMON
+[INFO] 21:06:31:803 Broker/(6656:6681): -------------------------TIPO DE PAQUETE RECIBIDO: 2
+[INFO] 21:06:31:803 Broker/(6656:6681): ALMACENO mensaje en posición: 4tim (de memoria)
+[INFO] 21:06:31:814 Broker/(6656:6681): ASIGNE: Size de buddy: 4. Id mensaje: 2. Size del mensaje: 4.
+[INFO] 21:06:31:814 Broker/(6656:6681): Registré el mensaje en memoria.
+[INFO] 21:06:31:814 Broker/(6656:6681): Terminó de registrar el mensaje en memoria.
+[INFO] 21:06:31:818 Broker/(6656:6684): -------------------------TIPO DE PAQUETE RECIBIDO: 1
+[INFO] 21:06:31:818 Broker/(6656:6684): ALMACENO mensaje en posición: 32tim (de memoria)
+[INFO] 21:06:31:819 Broker/(6656:6684): ASIGNE: Size de buddy: 32. Id mensaje: 3. Size del mensaje: 23.
+[INFO] 21:06:31:826 Broker/(6656:6684): Registré el mensaje en memoria.
+[INFO] 21:06:31:827 Broker/(6656:6684): Terminó de registrar el mensaje en memoria.
+[INFO] 21:06:31:827 Broker/(6656:6684): Aviso que hay mensajes en cola.
+[INFO] 21:06:31:827 Broker/(6656:6668): Envio el mensaje a los suscriptores de la cola: NEW_POKEMON
+[INFO] 21:06:31:834 Broker/(6656:6687): -------------------------TIPO DE PAQUETE RECIBIDO: 3
+[INFO] 21:06:31:834 Broker/(6656:6687): Valido si ya existe el mensaje Catch en memoria buddy.
+[INFO] 21:06:31:835 Broker/(6656:6687): ALMACENO mensaje en posición: 16tim (de memoria)
+[INFO] 21:06:31:835 Broker/(6656:6687): ASIGNE: Size de buddy: 16. Id mensaje: 4. Size del mensaje: 16.
+[INFO] 21:06:31:835 Broker/(6656:6687): Registré el mensaje en memoria.
+[INFO] 21:06:31:835 Broker/(6656:6687): Terminó de registrar el mensaje en memoria.
+[INFO] 21:06:31:835 Broker/(6656:6687): Aviso que hay mensajes en cola.
+[INFO] 21:06:31:835 Broker/(6656:6670): Envio el mensaje a los suscriptores de la cola: CATCH_POKEMON
+[INFO] 21:06:31:847 Broker/(6656:6690): -------------------------TIPO DE PAQUETE RECIBIDO: 7
+[INFO] 21:06:31:847 Broker/(6656:6690): ---------------------Suscribo por tiempo al proceso 1
+[INFO] 21:06:31:847 Broker/(6656:6690): ---------------------------- Suscribo a 1
+[INFO] 21:06:31:847 Broker/(6656:6690): Actualizo el ultimo acceso del MENSAJE 3 : 21:06:31:847 
+[INFO] 21:06:31:847 Broker/(6656:6690): GUARDO ENVIADO POR ENVIAR MENSAJES, id: 3, id cor: 0
+[INFO] 21:09:49:494 Broker/(6793:6793): pid del proceso broker: 6793
+[INFO] 21:09:53:877 Broker/(6793:6813): -------------------------TIPO DE PAQUETE RECIBIDO: 2
+[INFO] 21:09:53:877 Broker/(6793:6813): ITERACION: 0
+[INFO] 21:09:53:877 Broker/(6793:6813): ASIGNE: size de partición: 4. Id mensaje: 1. Size del mensaje: 4.
+[INFO] 21:09:53:878 Broker/(6793:6813): Registré el mensaje en memoria.
+[INFO] 21:09:53:879 Broker/(6793:6813): Terminó de registrar el mensaje en memoria.
+[INFO] 21:09:53:879 Broker/(6793:6813): Aviso que hay mensajes en cola.
+[INFO] 21:09:53:879 Broker/(6793:6806): Envio el mensaje a los suscriptores de la cola: CAUGHT_POKEMON
+[INFO] 21:09:53:905 Broker/(6793:6817): -------------------------TIPO DE PAQUETE RECIBIDO: 2
+[INFO] 21:09:53:905 Broker/(6793:6817): ITERACION: 1
+[INFO] 21:09:53:906 Broker/(6793:6817): ASIGNE: size de partición: 4. Id mensaje: 2. Size del mensaje: 4.
+[INFO] 21:09:53:906 Broker/(6793:6817): Registré el mensaje en memoria.
+[INFO] 21:09:53:906 Broker/(6793:6817): Terminó de registrar el mensaje en memoria.
+[INFO] 21:09:53:908 Broker/(6793:6820): -------------------------TIPO DE PAQUETE RECIBIDO: 3
+[INFO] 21:09:53:908 Broker/(6793:6820): Veo si existe mensaje en particiones.
+[INFO] 21:09:53:910 Broker/(6793:6820): ITERACION: 2
+[INFO] 21:09:53:910 Broker/(6793:6820): ASIGNE: size de partición: 19. Id mensaje: 3. Size del mensaje: 19.
+[INFO] 21:09:53:911 Broker/(6793:6820): Registré el mensaje en memoria.
+[INFO] 21:09:53:911 Broker/(6793:6820): Terminó de registrar el mensaje en memoria.
+[INFO] 21:09:53:915 Broker/(6793:6820): Aviso que hay mensajes en cola.
+[INFO] 21:09:53:915 Broker/(6793:6807): Envio el mensaje a los suscriptores de la cola: CATCH_POKEMON
+[INFO] 21:09:53:916 Broker/(6793:6823): -------------------------TIPO DE PAQUETE RECIBIDO: 3
+[INFO] 21:09:53:917 Broker/(6793:6823): Veo si existe mensaje en particiones.
+[INFO] 21:09:53:917 Broker/(6793:6823): ITERACION: 3
+[INFO] 21:09:53:917 Broker/(6793:6823): ASIGNE: size de partición: 20. Id mensaje: 4. Size del mensaje: 20.
+[INFO] 21:09:53:917 Broker/(6793:6823): Registré el mensaje en memoria.
+[INFO] 21:09:53:917 Broker/(6793:6823): Terminó de registrar el mensaje en memoria.
+[INFO] 21:09:53:918 Broker/(6793:6823): Aviso que hay mensajes en cola.
+[INFO] 21:09:53:918 Broker/(6793:6807): Envio el mensaje a los suscriptores de la cola: CATCH_POKEMON
+[INFO] 21:09:53:919 Broker/(6793:6826): -------------------------TIPO DE PAQUETE RECIBIDO: 3
+[INFO] 21:09:53:927 Broker/(6793:6826): Veo si existe mensaje en particiones.
+[INFO] 21:09:53:927 Broker/(6793:6826): ITERACION: 4
+[INFO] 21:09:53:928 Broker/(6793:6826): ASIGNE: size de partición: 16. Id mensaje: 5. Size del mensaje: 16.
+[INFO] 21:09:53:928 Broker/(6793:6826): Registré el mensaje en memoria.
+[INFO] 21:09:53:928 Broker/(6793:6826): Terminó de registrar el mensaje en memoria.
+[INFO] 21:09:53:929 Broker/(6793:6826): Aviso que hay mensajes en cola.
+[INFO] 21:09:53:929 Broker/(6793:6807): Envio el mensaje a los suscriptores de la cola: CATCH_POKEMON
+[INFO] 21:09:53:935 Broker/(6793:6829): -------------------------TIPO DE PAQUETE RECIBIDO: 7
+[INFO] 21:09:53:936 Broker/(6793:6829): ---------------------Suscribo por tiempo al proceso 1
+[INFO] 21:09:53:936 Broker/(6793:6829): ---------------------------- Suscribo a 1
+[INFO] 21:09:53:936 Broker/(6793:6832): -------------------------TIPO DE PAQUETE RECIBIDO: 8
+[INFO] 21:09:53:936 Broker/(6793:6831): -------------------------TIPO DE PAQUETE RECIBIDO: 8
+[INFO] 21:10:03:947 Broker/(6793:6836): -------------------------TIPO DE PAQUETE RECIBIDO: 3
+[INFO] 21:10:03:948 Broker/(6793:6836): Veo si existe mensaje en particiones.
+[INFO] 21:10:03:948 Broker/(6793:6836): ITERACION: 5
+[INFO] 21:10:03:955 Broker/(6793:6836): ASIGNE: size de partición: 20. Id mensaje: 6. Size del mensaje: 20.
+[INFO] 21:10:03:958 Broker/(6793:6836): Registré el mensaje en memoria.
+[INFO] 21:10:03:959 Broker/(6793:6836): Terminó de registrar el mensaje en memoria.
+[INFO] 21:10:03:959 Broker/(6793:6836): Aviso que hay mensajes en cola.
+[INFO] 21:10:03:959 Broker/(6793:6807): Envio el mensaje a los suscriptores de la cola: CATCH_POKEMON
+[INFO] 21:31:36:889 Broker/(7425:7425): pid del proceso broker: 7425
+[INFO] 21:31:46:798 Broker/(7425:7447): -------------------------TIPO DE PAQUETE RECIBIDO: CAUGHT_POKEMON
+[INFO] 21:31:46:798 Broker/(7425:7447): ITERACION: 0
+[INFO] 21:31:46:798 Broker/(7425:7447): ASIGNE: size de partición: 4. Id mensaje: 1. Size del mensaje: 4.
+[INFO] 21:31:46:798 Broker/(7425:7447): Registré el mensaje en memoria.
+[INFO] 21:31:46:798 Broker/(7425:7447): Terminó de registrar el mensaje en memoria.
+[INFO] 21:31:46:799 Broker/(7425:7447): Aviso que hay mensajes en cola.
+[INFO] 21:31:46:799 Broker/(7425:7438): Envio el mensaje a los suscriptores de la cola: CAUGHT_POKEMON
+[INFO] 21:31:46:810 Broker/(7425:7450): -------------------------TIPO DE PAQUETE RECIBIDO: CAUGHT_POKEMON
+[INFO] 21:31:46:810 Broker/(7425:7450): ITERACION: 1
+[INFO] 21:31:46:811 Broker/(7425:7450): ASIGNE: size de partición: 4. Id mensaje: 2. Size del mensaje: 4.
+[INFO] 21:31:46:811 Broker/(7425:7450): Registré el mensaje en memoria.
+[INFO] 21:31:46:811 Broker/(7425:7450): Terminó de registrar el mensaje en memoria.
+[INFO] 21:31:46:820 Broker/(7425:7453): -------------------------TIPO DE PAQUETE RECIBIDO: CATCH_POKEMON
+[INFO] 21:31:46:821 Broker/(7425:7453): Veo si existe mensaje en particiones.
+[INFO] 21:31:46:821 Broker/(7425:7453): ITERACION: 2
+[INFO] 21:31:46:821 Broker/(7425:7453): ASIGNE: size de partición: 19. Id mensaje: 3. Size del mensaje: 19.
+[INFO] 21:31:46:821 Broker/(7425:7453): Registré el mensaje en memoria.
+[INFO] 21:31:46:823 Broker/(7425:7453): Terminó de registrar el mensaje en memoria.
+[INFO] 21:31:46:823 Broker/(7425:7453): Aviso que hay mensajes en cola.
+[INFO] 21:31:46:823 Broker/(7425:7439): Envio el mensaje a los suscriptores de la cola: CATCH_POKEMON
+[INFO] 21:31:46:834 Broker/(7425:7457): -------------------------TIPO DE PAQUETE RECIBIDO: CATCH_POKEMON
+[INFO] 21:31:46:834 Broker/(7425:7457): Veo si existe mensaje en particiones.
+[INFO] 21:31:46:834 Broker/(7425:7457): ITERACION: 3
+[INFO] 21:31:46:835 Broker/(7425:7457): ASIGNE: size de partición: 20. Id mensaje: 4. Size del mensaje: 20.
+[INFO] 21:31:46:835 Broker/(7425:7457): Registré el mensaje en memoria.
+[INFO] 21:31:46:835 Broker/(7425:7457): Terminó de registrar el mensaje en memoria.
+[INFO] 21:31:46:835 Broker/(7425:7457): Aviso que hay mensajes en cola.
+[INFO] 21:31:46:835 Broker/(7425:7439): Envio el mensaje a los suscriptores de la cola: CATCH_POKEMON
+[INFO] 21:31:46:848 Broker/(7425:7460): -------------------------TIPO DE PAQUETE RECIBIDO: CATCH_POKEMON
+[INFO] 21:31:46:848 Broker/(7425:7460): Veo si existe mensaje en particiones.
+[INFO] 21:31:46:848 Broker/(7425:7460): ITERACION: 4
+[INFO] 21:31:46:849 Broker/(7425:7460): ASIGNE: size de partición: 16. Id mensaje: 5. Size del mensaje: 16.
+[INFO] 21:31:46:849 Broker/(7425:7460): Registré el mensaje en memoria.
+[INFO] 21:31:46:849 Broker/(7425:7460): Terminó de registrar el mensaje en memoria.
+[INFO] 21:31:46:849 Broker/(7425:7460): Aviso que hay mensajes en cola.
+[INFO] 21:31:46:849 Broker/(7425:7439): Envio el mensaje a los suscriptores de la cola: CATCH_POKEMON
+[INFO] 21:31:46:873 Broker/(7425:7463): -------------------------TIPO DE PAQUETE RECIBIDO: SUSCRIPCION POR TIEMPO
+[INFO] 21:31:46:874 Broker/(7425:7463): ---------------------Suscribo por tiempo al proceso 1
+[INFO] 21:31:46:874 Broker/(7425:7463): ---------------------------- Suscribo a 1
+[INFO] 21:31:46:878 Broker/(7425:7466): -------------------------TIPO DE PAQUETE RECIBIDO: ACK
+[INFO] 21:31:46:878 Broker/(7425:7465): -------------------------TIPO DE PAQUETE RECIBIDO: ACK
+[INFO] 21:31:56:877 Broker/(7425:7468): -------------------------TIPO DE PAQUETE RECIBIDO: CATCH_POKEMON
+[INFO] 21:31:56:877 Broker/(7425:7468): Veo si existe mensaje en particiones.
+[INFO] 21:31:56:886 Broker/(7425:7468): ITERACION: 5
+[INFO] 21:31:56:886 Broker/(7425:7468): ASIGNE: size de partición: 20. Id mensaje: 6. Size del mensaje: 20.
+[INFO] 21:31:56:887 Broker/(7425:7468): Registré el mensaje en memoria.
+[INFO] 21:31:56:887 Broker/(7425:7468): Terminó de registrar el mensaje en memoria.
+[INFO] 21:31:56:887 Broker/(7425:7468): Aviso que hay mensajes en cola.
+[INFO] 21:31:56:887 Broker/(7425:7439): Envio el mensaje a los suscriptores de la cola: CATCH_POKEMON
+[INFO] 21:32:54:649 Broker/(7490:7490): pid del proceso broker: 7490
+[INFO] 21:34:00:891 Broker/(7490:7516): -------------------------TIPO DE PAQUETE RECIBIDO: CAUGHT_POKEMON
+[INFO] 21:34:00:891 Broker/(7490:7516): PARTICIONO: para msg 1 y la cola CAUGHT_POKEMON
+[INFO] 21:34:00:892 Broker/(7490:7516): NODO A PARTICIONAR: su offset 0, su tamaño: 64
+[INFO] 21:34:00:892 Broker/(7490:7516): PARTICIONO: para msg 1 y la cola CAUGHT_POKEMON
+[INFO] 21:34:00:892 Broker/(7490:7516): NODO A PARTICIONAR: su offset 0, su tamaño: 32
+[INFO] 21:34:00:892 Broker/(7490:7516): PARTICIONO: para msg 1 y la cola CAUGHT_POKEMON
+[INFO] 21:34:00:892 Broker/(7490:7516): NODO A PARTICIONAR: su offset 0, su tamaño: 16
+[INFO] 21:34:00:892 Broker/(7490:7516): PARTICIONO: para msg 1 y la cola CAUGHT_POKEMON
+[INFO] 21:34:00:892 Broker/(7490:7516): NODO A PARTICIONAR: su offset 0, su tamaño: 8
+[INFO] 21:34:00:892 Broker/(7490:7516): ALMACENO mensaje en posición: 0tim (de memoria)
+[INFO] 21:34:00:892 Broker/(7490:7516): ASIGNE: Size de buddy: 4. Id mensaje: 1. Size del mensaje: 4.
+[INFO] 21:34:00:893 Broker/(7490:7516): Registré el mensaje en memoria.
+[INFO] 21:34:00:893 Broker/(7490:7516): Terminó de registrar el mensaje en memoria.
+[INFO] 21:34:00:893 Broker/(7490:7516): Aviso que hay mensajes en cola.
+[INFO] 21:34:00:893 Broker/(7490:7503): Envio el mensaje a los suscriptores de la cola: CAUGHT_POKEMON
+[INFO] 21:34:00:901 Broker/(7490:7519): -------------------------TIPO DE PAQUETE RECIBIDO: CAUGHT_POKEMON
+[INFO] 21:34:00:901 Broker/(7490:7519): ALMACENO mensaje en posición: 4tim (de memoria)
+[INFO] 21:34:00:901 Broker/(7490:7519): ASIGNE: Size de buddy: 4. Id mensaje: 2. Size del mensaje: 4.
+[INFO] 21:34:00:902 Broker/(7490:7519): Registré el mensaje en memoria.
+[INFO] 21:34:00:902 Broker/(7490:7519): Terminó de registrar el mensaje en memoria.
+[INFO] 21:34:00:904 Broker/(7490:7522): -------------------------TIPO DE PAQUETE RECIBIDO: NEW_POKEMON
+[INFO] 21:34:00:904 Broker/(7490:7522): ALMACENO mensaje en posición: 32tim (de memoria)
+[INFO] 21:34:00:905 Broker/(7490:7522): ASIGNE: Size de buddy: 32. Id mensaje: 3. Size del mensaje: 23.
+[INFO] 21:34:00:905 Broker/(7490:7522): Registré el mensaje en memoria.
+[INFO] 21:34:00:906 Broker/(7490:7522): Terminó de registrar el mensaje en memoria.
+[INFO] 21:34:00:906 Broker/(7490:7522): Aviso que hay mensajes en cola.
+[INFO] 21:34:00:906 Broker/(7490:7502): Envio el mensaje a los suscriptores de la cola: NEW_POKEMON
+[INFO] 21:34:00:908 Broker/(7490:7525): -------------------------TIPO DE PAQUETE RECIBIDO: CATCH_POKEMON
+[INFO] 21:34:00:908 Broker/(7490:7525): Valido si ya existe el mensaje Catch en memoria buddy.
+[INFO] 21:34:00:909 Broker/(7490:7525): ALMACENO mensaje en posición: 16tim (de memoria)
+[INFO] 21:34:00:910 Broker/(7490:7525): ASIGNE: Size de buddy: 16. Id mensaje: 4. Size del mensaje: 16.
+[INFO] 21:34:00:910 Broker/(7490:7525): Registré el mensaje en memoria.
+[INFO] 21:34:00:910 Broker/(7490:7525): Terminó de registrar el mensaje en memoria.
+[INFO] 21:34:00:918 Broker/(7490:7525): Aviso que hay mensajes en cola.
+[INFO] 21:34:00:919 Broker/(7490:7504): Envio el mensaje a los suscriptores de la cola: CATCH_POKEMON
+[INFO] 21:34:00:921 Broker/(7490:7528): -------------------------TIPO DE PAQUETE RECIBIDO: SUSCRIPCION POR TIEMPO
+[INFO] 21:34:00:921 Broker/(7490:7528): ---------------------Suscribo por tiempo al proceso 1
+[INFO] 21:34:00:921 Broker/(7490:7528): ---------------------------- Suscribo a 1
+[INFO] 21:34:00:921 Broker/(7490:7528): Actualizo el ultimo acceso del MENSAJE 3 : 21:34:00:921 
+[INFO] 21:34:00:921 Broker/(7490:7528): GUARDO ENVIADO POR ENVIAR MENSAJES, id: 3, id cor: 0
+[INFO] 21:39:01:942 Broker/(7632:7632): pid del proceso broker: 7632
+[INFO] 21:39:07:888 Broker/(7632:7652): -------------------------TIPO DE PAQUETE RECIBIDO: CAUGHT_POKEMON
+[INFO] 21:39:07:889 Broker/(7632:7652): PARTICIONO: para msg 1 y la cola CAUGHT_POKEMON
+[INFO] 21:39:07:889 Broker/(7632:7652): NODO A PARTICIONAR: su offset 0, su tamaño: 64
+[INFO] 21:39:07:889 Broker/(7632:7652): PARTICIONO: para msg 1 y la cola CAUGHT_POKEMON
+[INFO] 21:39:07:889 Broker/(7632:7652): NODO A PARTICIONAR: su offset 0, su tamaño: 32
+[INFO] 21:39:07:889 Broker/(7632:7652): PARTICIONO: para msg 1 y la cola CAUGHT_POKEMON
+[INFO] 21:39:07:889 Broker/(7632:7652): NODO A PARTICIONAR: su offset 0, su tamaño: 16
+[INFO] 21:39:07:889 Broker/(7632:7652): PARTICIONO: para msg 1 y la cola CAUGHT_POKEMON
+[INFO] 21:39:07:889 Broker/(7632:7652): NODO A PARTICIONAR: su offset 0, su tamaño: 8
+[INFO] 21:39:07:889 Broker/(7632:7652): ALMACENO mensaje en posición: 0tim (de memoria)
+[INFO] 21:39:07:889 Broker/(7632:7652): ASIGNE: Size de buddy: 4. Id mensaje: 1. Size del mensaje: 4.
+[INFO] 21:39:07:902 Broker/(7632:7652): Registré el mensaje en memoria.
+[INFO] 21:39:07:902 Broker/(7632:7652): Terminó de registrar el mensaje en memoria.
+[INFO] 21:39:07:902 Broker/(7632:7652): Aviso que hay mensajes en cola.
+[INFO] 21:39:07:906 Broker/(7632:7645): Envio el mensaje a los suscriptores de la cola: CAUGHT_POKEMON
+[INFO] 21:39:07:908 Broker/(7632:7655): -------------------------TIPO DE PAQUETE RECIBIDO: CAUGHT_POKEMON
+[INFO] 21:39:07:908 Broker/(7632:7655): ALMACENO mensaje en posición: 4tim (de memoria)
+[INFO] 21:39:07:909 Broker/(7632:7655): ASIGNE: Size de buddy: 4. Id mensaje: 2. Size del mensaje: 4.
+[INFO] 21:39:07:909 Broker/(7632:7655): Registré el mensaje en memoria.
+[INFO] 21:39:07:909 Broker/(7632:7655): Terminó de registrar el mensaje en memoria.
+[INFO] 21:39:07:915 Broker/(7632:7658): -------------------------TIPO DE PAQUETE RECIBIDO: NEW_POKEMON
+[INFO] 21:39:07:915 Broker/(7632:7658): ALMACENO mensaje en posición: 32tim (de memoria)
+[INFO] 21:39:07:915 Broker/(7632:7658): ASIGNE: Size de buddy: 32. Id mensaje: 3. Size del mensaje: 23.
+[INFO] 21:39:07:915 Broker/(7632:7658): Registré el mensaje en memoria.
+[INFO] 21:39:07:916 Broker/(7632:7658): Terminó de registrar el mensaje en memoria.
+[INFO] 21:39:07:916 Broker/(7632:7658): Aviso que hay mensajes en cola.
+[INFO] 21:39:07:916 Broker/(7632:7644): Envio el mensaje a los suscriptores de la cola: NEW_POKEMON
+[INFO] 21:39:07:917 Broker/(7632:7661): -------------------------TIPO DE PAQUETE RECIBIDO: CATCH_POKEMON
+[INFO] 21:39:07:922 Broker/(7632:7661): Valido si ya existe el mensaje Catch en memoria buddy.
+[INFO] 21:39:07:922 Broker/(7632:7661): ALMACENO mensaje en posición: 16tim (de memoria)
+[INFO] 21:39:07:925 Broker/(7632:7661): ASIGNE: Size de buddy: 16. Id mensaje: 4. Size del mensaje: 16.
+[INFO] 21:39:07:925 Broker/(7632:7661): Registré el mensaje en memoria.
+[INFO] 21:39:07:925 Broker/(7632:7661): Terminó de registrar el mensaje en memoria.
+[INFO] 21:39:07:925 Broker/(7632:7661): Aviso que hay mensajes en cola.
+[INFO] 21:39:07:925 Broker/(7632:7646): Envio el mensaje a los suscriptores de la cola: CATCH_POKEMON
+[INFO] 21:39:07:936 Broker/(7632:7664): -------------------------TIPO DE PAQUETE RECIBIDO: SUSCRIPCION POR TIEMPO
+[INFO] 21:39:07:936 Broker/(7632:7664): ---------------------Suscribo por tiempo al proceso 1
+[INFO] 21:39:07:936 Broker/(7632:7664): ---------------------------- Suscribo a 1
+[INFO] 21:39:07:937 Broker/(7632:7664): Actualizo el ultimo acceso del MENSAJE 3 : 21:39:07:937 
+[INFO] 21:39:07:937 Broker/(7632:7664): GUARDO ENVIADO POR ENVIAR MENSAJES, id: 3, id cor: 0
+[INFO] 21:49:09:764 Broker/(7912:7912): pid del proceso broker: 7912
+[INFO] 21:49:24:627 Broker/(7912:7937): -------------------------TIPO DE PAQUETE RECIBIDO: CAUGHT_POKEMON
+[INFO] 21:49:24:634 Broker/(7912:7937): PARTICIONO: para msg 1 y la cola CAUGHT_POKEMON
+[INFO] 21:49:24:635 Broker/(7912:7937): NODO A PARTICIONAR: su offset 0, su tamaño: 64
+[INFO] 21:49:24:635 Broker/(7912:7937): PARTICIONO: para msg 1 y la cola CAUGHT_POKEMON
+[INFO] 21:49:24:635 Broker/(7912:7937): NODO A PARTICIONAR: su offset 0, su tamaño: 32
+[INFO] 21:49:24:636 Broker/(7912:7937): PARTICIONO: para msg 1 y la cola CAUGHT_POKEMON
+[INFO] 21:49:24:636 Broker/(7912:7937): NODO A PARTICIONAR: su offset 0, su tamaño: 16
+[INFO] 21:49:24:636 Broker/(7912:7937): PARTICIONO: para msg 1 y la cola CAUGHT_POKEMON
+[INFO] 21:49:24:636 Broker/(7912:7937): NODO A PARTICIONAR: su offset 0, su tamaño: 8
+[INFO] 21:49:24:636 Broker/(7912:7937): ALMACENO mensaje en posición: 0tim (de memoria)
+[INFO] 21:49:24:636 Broker/(7912:7937): ASIGNE: Size de buddy: 4. Id mensaje: 1. Size del mensaje: 4.
+[INFO] 21:49:24:636 Broker/(7912:7937): Registré el mensaje en memoria.
+[INFO] 21:49:24:636 Broker/(7912:7937): Terminó de registrar el mensaje en memoria.
+[INFO] 21:49:24:637 Broker/(7912:7937): Aviso que hay mensajes en cola.
+[INFO] 21:49:24:637 Broker/(7912:7925): Envio el mensaje a los suscriptores de la cola: CAUGHT_POKEMON
+[INFO] 21:49:24:642 Broker/(7912:7940): -------------------------TIPO DE PAQUETE RECIBIDO: CAUGHT_POKEMON
+[INFO] 21:49:24:642 Broker/(7912:7940): ALMACENO mensaje en posición: 4tim (de memoria)
+[INFO] 21:49:24:643 Broker/(7912:7940): ASIGNE: Size de buddy: 4. Id mensaje: 2. Size del mensaje: 4.
+[INFO] 21:49:24:643 Broker/(7912:7940): Registré el mensaje en memoria.
+[INFO] 21:49:24:643 Broker/(7912:7940): Terminó de registrar el mensaje en memoria.
+[INFO] 21:49:24:645 Broker/(7912:7943): -------------------------TIPO DE PAQUETE RECIBIDO: NEW_POKEMON
+[INFO] 21:49:24:650 Broker/(7912:7943): ALMACENO mensaje en posición: 32tim (de memoria)
+[INFO] 21:49:24:651 Broker/(7912:7943): ASIGNE: Size de buddy: 32. Id mensaje: 3. Size del mensaje: 23.
+[INFO] 21:49:24:651 Broker/(7912:7943): Registré el mensaje en memoria.
+[INFO] 21:49:24:651 Broker/(7912:7943): Terminó de registrar el mensaje en memoria.
+[INFO] 21:49:24:651 Broker/(7912:7943): Aviso que hay mensajes en cola.
+[INFO] 21:49:24:651 Broker/(7912:7924): Envio el mensaje a los suscriptores de la cola: NEW_POKEMON
+[INFO] 21:49:24:653 Broker/(7912:7946): -------------------------TIPO DE PAQUETE RECIBIDO: CATCH_POKEMON
+[INFO] 21:49:24:653 Broker/(7912:7946): Valido si ya existe el mensaje Catch en memoria buddy.
+[INFO] 21:49:24:653 Broker/(7912:7946): ALMACENO mensaje en posición: 16tim (de memoria)
+[INFO] 21:49:24:654 Broker/(7912:7946): ASIGNE: Size de buddy: 16. Id mensaje: 4. Size del mensaje: 16.
+[INFO] 21:49:24:654 Broker/(7912:7946): Registré el mensaje en memoria.
+[INFO] 21:49:24:654 Broker/(7912:7946): Terminó de registrar el mensaje en memoria.
+[INFO] 21:49:24:654 Broker/(7912:7946): Aviso que hay mensajes en cola.
+[INFO] 21:49:24:654 Broker/(7912:7926): Envio el mensaje a los suscriptores de la cola: CATCH_POKEMON
+[INFO] 21:49:24:664 Broker/(7912:7949): -------------------------TIPO DE PAQUETE RECIBIDO: SUSCRIPCION POR TIEMPO
+[INFO] 21:49:24:665 Broker/(7912:7949): ---------------------Suscribo por tiempo al proceso 1
+[INFO] 21:49:24:665 Broker/(7912:7949): ---------------------------- Suscribo a 1
+[INFO] 21:49:24:665 Broker/(7912:7949): Actualizo el ultimo acceso del MENSAJE 3 : 21:49:24:665 
+[INFO] 21:49:24:666 Broker/(7912:7949): Agrego suscriptor a lista de subs del mensaje ya enviados, id: 3, id correlativo: 0
+[INFO] 21:49:24:667 Broker/(7912:7949): entro a guardar ya enviados
+[INFO] 21:50:57:745 Broker/(8040:8040): pid del proceso broker: 8040
+[INFO] 21:51:02:344 Broker/(8040:8061): -------------------------TIPO DE PAQUETE RECIBIDO: CAUGHT_POKEMON
+[INFO] 21:51:02:345 Broker/(8040:8061): PARTICIONO: para msg 1 y la cola CAUGHT_POKEMON
+[INFO] 21:51:02:345 Broker/(8040:8061): NODO A PARTICIONAR: su offset 0, su tamaño: 64
+[INFO] 21:51:02:346 Broker/(8040:8061): PARTICIONO: para msg 1 y la cola CAUGHT_POKEMON
+[INFO] 21:51:02:346 Broker/(8040:8061): NODO A PARTICIONAR: su offset 0, su tamaño: 32
+[INFO] 21:51:02:346 Broker/(8040:8061): PARTICIONO: para msg 1 y la cola CAUGHT_POKEMON
+[INFO] 21:51:02:346 Broker/(8040:8061): NODO A PARTICIONAR: su offset 0, su tamaño: 16
+[INFO] 21:51:02:346 Broker/(8040:8061): PARTICIONO: para msg 1 y la cola CAUGHT_POKEMON
+[INFO] 21:51:02:346 Broker/(8040:8061): NODO A PARTICIONAR: su offset 0, su tamaño: 8
+[INFO] 21:51:02:346 Broker/(8040:8061): ALMACENO mensaje en posición: 0tim (de memoria)
+[INFO] 21:51:02:347 Broker/(8040:8061): ASIGNE: Size de buddy: 4. Id mensaje: 1. Size del mensaje: 4.
+[INFO] 21:51:02:347 Broker/(8040:8061): Registré el mensaje en memoria.
+[INFO] 21:51:02:347 Broker/(8040:8061): Terminó de registrar el mensaje en memoria.
+[INFO] 21:51:02:347 Broker/(8040:8061): Aviso que hay mensajes en cola.
+[INFO] 21:51:02:347 Broker/(8040:8053): Envio el mensaje a los suscriptores de la cola: CAUGHT_POKEMON
+[INFO] 21:51:02:354 Broker/(8040:8064): -------------------------TIPO DE PAQUETE RECIBIDO: CAUGHT_POKEMON
+[INFO] 21:51:02:354 Broker/(8040:8064): ALMACENO mensaje en posición: 4tim (de memoria)
+[INFO] 21:51:02:360 Broker/(8040:8064): ASIGNE: Size de buddy: 4. Id mensaje: 2. Size del mensaje: 4.
+[INFO] 21:51:02:360 Broker/(8040:8064): Registré el mensaje en memoria.
+[INFO] 21:51:02:360 Broker/(8040:8064): Terminó de registrar el mensaje en memoria.
+[INFO] 21:51:02:377 Broker/(8040:8067): -------------------------TIPO DE PAQUETE RECIBIDO: NEW_POKEMON
+[INFO] 21:51:02:377 Broker/(8040:8067): ALMACENO mensaje en posición: 32tim (de memoria)
+[INFO] 21:51:02:378 Broker/(8040:8067): ASIGNE: Size de buddy: 32. Id mensaje: 3. Size del mensaje: 23.
+[INFO] 21:51:02:378 Broker/(8040:8067): Registré el mensaje en memoria.
+[INFO] 21:51:02:378 Broker/(8040:8067): Terminó de registrar el mensaje en memoria.
+[INFO] 21:51:02:378 Broker/(8040:8067): Aviso que hay mensajes en cola.
+[INFO] 21:51:02:378 Broker/(8040:8052): Envio el mensaje a los suscriptores de la cola: NEW_POKEMON
+[INFO] 21:51:02:391 Broker/(8040:8070): -------------------------TIPO DE PAQUETE RECIBIDO: CATCH_POKEMON
+[INFO] 21:51:02:391 Broker/(8040:8070): Valido si ya existe el mensaje Catch en memoria buddy.
+[INFO] 21:51:02:391 Broker/(8040:8070): ALMACENO mensaje en posición: 16tim (de memoria)
+[INFO] 21:51:02:392 Broker/(8040:8070): ASIGNE: Size de buddy: 16. Id mensaje: 4. Size del mensaje: 16.
+[INFO] 21:51:02:392 Broker/(8040:8070): Registré el mensaje en memoria.
+[INFO] 21:51:02:392 Broker/(8040:8070): Terminó de registrar el mensaje en memoria.
+[INFO] 21:51:02:392 Broker/(8040:8070): Aviso que hay mensajes en cola.
+[INFO] 21:51:02:392 Broker/(8040:8054): Envio el mensaje a los suscriptores de la cola: CATCH_POKEMON
+[INFO] 21:51:02:402 Broker/(8040:8073): -------------------------TIPO DE PAQUETE RECIBIDO: SUSCRIPCION POR TIEMPO
+[INFO] 21:51:02:402 Broker/(8040:8073): ---------------------Suscribo por tiempo al proceso 1
+[INFO] 21:51:02:403 Broker/(8040:8073): ---------------------------- Suscribo a 1
+[INFO] 21:51:02:403 Broker/(8040:8073): Actualizo el ultimo acceso del MENSAJE 3 : 21:51:02:403 
+[INFO] 21:51:02:403 Broker/(8040:8073): Agrego suscriptor a lista de subs del mensaje ya enviados, id: 3, id correlativo: 0
+[INFO] 21:51:02:403 Broker/(8040:8073): entro a buscarmensaje
+[INFO] 21:51:02:403 Broker/(8040:8073): entro a buscar mensaje buddy
+[INFO] 21:54:07:508 Broker/(8204:8204): pid del proceso broker: 8204
+[INFO] 21:54:10:177 Broker/(8204:8223): -------------------------TIPO DE PAQUETE RECIBIDO: CAUGHT_POKEMON
+[INFO] 21:54:10:177 Broker/(8204:8223): PARTICIONO: para msg 1 y la cola CAUGHT_POKEMON
+[INFO] 21:54:10:178 Broker/(8204:8223): NODO A PARTICIONAR: su offset 0, su tamaño: 64
+[INFO] 21:54:10:178 Broker/(8204:8223): PARTICIONO: para msg 1 y la cola CAUGHT_POKEMON
+[INFO] 21:54:10:178 Broker/(8204:8223): NODO A PARTICIONAR: su offset 0, su tamaño: 32
+[INFO] 21:54:10:178 Broker/(8204:8223): PARTICIONO: para msg 1 y la cola CAUGHT_POKEMON
+[INFO] 21:54:10:178 Broker/(8204:8223): NODO A PARTICIONAR: su offset 0, su tamaño: 16
+[INFO] 21:54:10:179 Broker/(8204:8223): PARTICIONO: para msg 1 y la cola CAUGHT_POKEMON
+[INFO] 21:54:10:179 Broker/(8204:8223): NODO A PARTICIONAR: su offset 0, su tamaño: 8
+[INFO] 21:54:10:179 Broker/(8204:8223): ALMACENO mensaje en posición: 0tim (de memoria)
+[INFO] 21:54:10:179 Broker/(8204:8223): ASIGNE: Size de buddy: 4. Id mensaje: 1. Size del mensaje: 4.
+[INFO] 21:54:10:179 Broker/(8204:8223): Registré el mensaje en memoria.
+[INFO] 21:54:10:179 Broker/(8204:8223): Terminó de registrar el mensaje en memoria.
+[INFO] 21:54:10:180 Broker/(8204:8223): Aviso que hay mensajes en cola.
+[INFO] 21:54:10:180 Broker/(8204:8217): Envio el mensaje a los suscriptores de la cola: CAUGHT_POKEMON
+[INFO] 21:54:10:182 Broker/(8204:8226): -------------------------TIPO DE PAQUETE RECIBIDO: CAUGHT_POKEMON
+[INFO] 21:54:10:182 Broker/(8204:8226): ALMACENO mensaje en posición: 4tim (de memoria)
+[INFO] 21:54:10:183 Broker/(8204:8226): ASIGNE: Size de buddy: 4. Id mensaje: 2. Size del mensaje: 4.
+[INFO] 21:54:10:183 Broker/(8204:8226): Registré el mensaje en memoria.
+[INFO] 21:54:10:183 Broker/(8204:8226): Terminó de registrar el mensaje en memoria.
+[INFO] 21:54:10:185 Broker/(8204:8229): -------------------------TIPO DE PAQUETE RECIBIDO: NEW_POKEMON
+[INFO] 21:54:10:190 Broker/(8204:8229): ALMACENO mensaje en posición: 32tim (de memoria)
+[INFO] 21:54:10:194 Broker/(8204:8229): ASIGNE: Size de buddy: 32. Id mensaje: 3. Size del mensaje: 23.
+[INFO] 21:54:10:195 Broker/(8204:8229): Registré el mensaje en memoria.
+[INFO] 21:54:10:195 Broker/(8204:8229): Terminó de registrar el mensaje en memoria.
+[INFO] 21:54:10:195 Broker/(8204:8229): Aviso que hay mensajes en cola.
+[INFO] 21:54:10:195 Broker/(8204:8216): Envio el mensaje a los suscriptores de la cola: NEW_POKEMON
+[INFO] 21:54:10:197 Broker/(8204:8232): -------------------------TIPO DE PAQUETE RECIBIDO: CATCH_POKEMON
+[INFO] 21:54:10:197 Broker/(8204:8232): Valido si ya existe el mensaje Catch en memoria buddy.
+[INFO] 21:54:10:198 Broker/(8204:8232): ALMACENO mensaje en posición: 16tim (de memoria)
+[INFO] 21:54:10:198 Broker/(8204:8232): ASIGNE: Size de buddy: 16. Id mensaje: 4. Size del mensaje: 16.
+[INFO] 21:54:10:198 Broker/(8204:8232): Registré el mensaje en memoria.
+[INFO] 21:54:10:200 Broker/(8204:8232): Terminó de registrar el mensaje en memoria.
+[INFO] 21:54:10:200 Broker/(8204:8232): Aviso que hay mensajes en cola.
+[INFO] 21:54:10:200 Broker/(8204:8218): Envio el mensaje a los suscriptores de la cola: CATCH_POKEMON
+[INFO] 21:54:10:201 Broker/(8204:8235): -------------------------TIPO DE PAQUETE RECIBIDO: SUSCRIPCION POR TIEMPO
+[INFO] 21:54:10:202 Broker/(8204:8235): ---------------------Suscribo por tiempo al proceso 1
+[INFO] 21:54:10:206 Broker/(8204:8235): ---------------------------- Suscribo a 1
+[INFO] 21:54:10:206 Broker/(8204:8235): Actualizo el ultimo acceso del MENSAJE 3 : 21:54:10:206 
+[INFO] 21:54:10:207 Broker/(8204:8235): Agrego suscriptor a lista de subs del mensaje ya enviados, id: 3, id correlativo: 0
+[INFO] 21:54:10:207 Broker/(8204:8235): entro a buscar mensaje buddy
+[INFO] 21:54:10:207 Broker/(8204:8235): paso nodo raiz
+[INFO] 22:05:44:543 Broker/(8401:8401): pid del proceso broker: 8401
+[INFO] 22:05:50:974 Broker/(8401:8427): -------------------------TIPO DE PAQUETE RECIBIDO: CAUGHT_POKEMON
+[INFO] 22:05:50:974 Broker/(8401:8427): PARTICIONO: para msg 1 y la cola CAUGHT_POKEMON
+[INFO] 22:05:50:978 Broker/(8401:8427): NODO A PARTICIONAR: su offset 0, su tamaño: 64
+[INFO] 22:05:50:979 Broker/(8401:8427): PARTICIONO: para msg 1 y la cola CAUGHT_POKEMON
+[INFO] 22:05:50:979 Broker/(8401:8427): NODO A PARTICIONAR: su offset 0, su tamaño: 32
+[INFO] 22:05:50:979 Broker/(8401:8427): PARTICIONO: para msg 1 y la cola CAUGHT_POKEMON
+[INFO] 22:05:50:979 Broker/(8401:8427): NODO A PARTICIONAR: su offset 0, su tamaño: 16
+[INFO] 22:05:50:980 Broker/(8401:8427): PARTICIONO: para msg 1 y la cola CAUGHT_POKEMON
+[INFO] 22:05:50:980 Broker/(8401:8427): NODO A PARTICIONAR: su offset 0, su tamaño: 8
+[INFO] 22:05:50:980 Broker/(8401:8427): ALMACENO mensaje en posición: 0tim (de memoria)
+[INFO] 22:05:50:980 Broker/(8401:8427): ASIGNE: Size de buddy: 4. Id mensaje: 1. Size del mensaje: 4.
+[INFO] 22:05:50:980 Broker/(8401:8427): Registré el mensaje en memoria.
+[INFO] 22:05:50:980 Broker/(8401:8427): Terminó de registrar el mensaje en memoria.
+[INFO] 22:05:50:980 Broker/(8401:8427): Aviso que hay mensajes en cola.
+[INFO] 22:05:50:980 Broker/(8401:8419): Envio el mensaje a los suscriptores de la cola: CAUGHT_POKEMON
+[INFO] 22:05:50:983 Broker/(8401:8430): -------------------------TIPO DE PAQUETE RECIBIDO: CAUGHT_POKEMON
+[INFO] 22:05:50:983 Broker/(8401:8430): ALMACENO mensaje en posición: 4tim (de memoria)
+[INFO] 22:05:50:984 Broker/(8401:8430): ASIGNE: Size de buddy: 4. Id mensaje: 2. Size del mensaje: 4.
+[INFO] 22:05:50:984 Broker/(8401:8430): Registré el mensaje en memoria.
+[INFO] 22:05:50:984 Broker/(8401:8430): Terminó de registrar el mensaje en memoria.
+[INFO] 22:05:50:985 Broker/(8401:8433): -------------------------TIPO DE PAQUETE RECIBIDO: NEW_POKEMON
+[INFO] 22:05:50:985 Broker/(8401:8433): ALMACENO mensaje en posición: 32tim (de memoria)
+[INFO] 22:05:50:986 Broker/(8401:8433): ASIGNE: Size de buddy: 32. Id mensaje: 3. Size del mensaje: 23.
+[INFO] 22:05:50:986 Broker/(8401:8433): Registré el mensaje en memoria.
+[INFO] 22:05:50:986 Broker/(8401:8433): Terminó de registrar el mensaje en memoria.
+[INFO] 22:05:50:986 Broker/(8401:8433): Aviso que hay mensajes en cola.
+[INFO] 22:05:50:987 Broker/(8401:8418): Envio el mensaje a los suscriptores de la cola: NEW_POKEMON
+[INFO] 22:05:50:988 Broker/(8401:8436): -------------------------TIPO DE PAQUETE RECIBIDO: CATCH_POKEMON
+[INFO] 22:05:50:989 Broker/(8401:8436): Valido si ya existe el mensaje Catch en memoria buddy.
+[INFO] 22:05:50:989 Broker/(8401:8436): ALMACENO mensaje en posición: 16tim (de memoria)
+[INFO] 22:05:50:989 Broker/(8401:8436): ASIGNE: Size de buddy: 16. Id mensaje: 4. Size del mensaje: 16.
+[INFO] 22:05:50:989 Broker/(8401:8436): Registré el mensaje en memoria.
+[INFO] 22:05:50:990 Broker/(8401:8436): Terminó de registrar el mensaje en memoria.
+[INFO] 22:05:50:990 Broker/(8401:8436): Aviso que hay mensajes en cola.
+[INFO] 22:05:50:990 Broker/(8401:8420): Envio el mensaje a los suscriptores de la cola: CATCH_POKEMON
+[INFO] 22:05:50:999 Broker/(8401:8439): -------------------------TIPO DE PAQUETE RECIBIDO: SUSCRIPCION POR TIEMPO
+[INFO] 22:05:50:999 Broker/(8401:8439): ---------------------Suscribo por tiempo al proceso 1
+[INFO] 22:05:50:999 Broker/(8401:8439): ---------------------------- Suscribo a 1
+[INFO] 22:05:50:999 Broker/(8401:8439): Actualizo el ultimo acceso del MENSAJE 3 : 22:05:50:999 
+[INFO] 22:05:50:999 Broker/(8401:8439): Agrego suscriptor a lista de subs del mensaje ya enviados, id: 3, id correlativo: 0
+[INFO] 22:05:50:0 Broker/(8401:8439): paso nodo raiz
+[INFO] 22:08:12:659 Broker/(8523:8523): pid del proceso broker: 8523
+[INFO] 22:08:48:86 Broker/(8523:8546): -------------------------TIPO DE PAQUETE RECIBIDO: CAUGHT_POKEMON
+[INFO] 22:08:48:86 Broker/(8523:8546): PARTICIONO: para msg 1 y la cola CAUGHT_POKEMON
+[INFO] 22:08:48:87 Broker/(8523:8546): NODO A PARTICIONAR: su offset 0, su tamaño: 64
+[INFO] 22:08:48:87 Broker/(8523:8546): PARTICIONO: para msg 1 y la cola CAUGHT_POKEMON
+[INFO] 22:08:48:87 Broker/(8523:8546): NODO A PARTICIONAR: su offset 0, su tamaño: 32
+[INFO] 22:08:48:87 Broker/(8523:8546): PARTICIONO: para msg 1 y la cola CAUGHT_POKEMON
+[INFO] 22:08:48:87 Broker/(8523:8546): NODO A PARTICIONAR: su offset 0, su tamaño: 16
+[INFO] 22:08:48:87 Broker/(8523:8546): PARTICIONO: para msg 1 y la cola CAUGHT_POKEMON
+[INFO] 22:08:48:87 Broker/(8523:8546): NODO A PARTICIONAR: su offset 0, su tamaño: 8
+[INFO] 22:08:48:87 Broker/(8523:8546): ALMACENO mensaje en posición: 0tim (de memoria)
+[INFO] 22:08:48:87 Broker/(8523:8546): ASIGNE: Size de buddy: 4. Id mensaje: 1. Size del mensaje: 4.
+[INFO] 22:08:48:87 Broker/(8523:8546): Registré el mensaje en memoria.
+[INFO] 22:08:48:88 Broker/(8523:8546): Terminó de registrar el mensaje en memoria.
+[INFO] 22:08:48:88 Broker/(8523:8546): Aviso que hay mensajes en cola.
+[INFO] 22:08:48:88 Broker/(8523:8536): Envio el mensaje a los suscriptores de la cola: CAUGHT_POKEMON
+[INFO] 22:08:48:90 Broker/(8523:8549): -------------------------TIPO DE PAQUETE RECIBIDO: CAUGHT_POKEMON
+[INFO] 22:08:48:90 Broker/(8523:8549): ALMACENO mensaje en posición: 4tim (de memoria)
+[INFO] 22:08:48:90 Broker/(8523:8549): ASIGNE: Size de buddy: 4. Id mensaje: 2. Size del mensaje: 4.
+[INFO] 22:08:48:91 Broker/(8523:8549): Registré el mensaje en memoria.
+[INFO] 22:08:48:91 Broker/(8523:8549): Terminó de registrar el mensaje en memoria.
+[INFO] 22:08:48:97 Broker/(8523:8552): -------------------------TIPO DE PAQUETE RECIBIDO: NEW_POKEMON
+[INFO] 22:08:48:97 Broker/(8523:8552): ALMACENO mensaje en posición: 32tim (de memoria)
+[INFO] 22:08:48:98 Broker/(8523:8552): ASIGNE: Size de buddy: 32. Id mensaje: 3. Size del mensaje: 23.
+[INFO] 22:08:48:98 Broker/(8523:8552): Registré el mensaje en memoria.
+[INFO] 22:08:48:98 Broker/(8523:8552): Terminó de registrar el mensaje en memoria.
+[INFO] 22:08:48:98 Broker/(8523:8552): Aviso que hay mensajes en cola.
+[INFO] 22:08:48:98 Broker/(8523:8535): Envio el mensaje a los suscriptores de la cola: NEW_POKEMON
+[INFO] 22:08:48:100 Broker/(8523:8555): -------------------------TIPO DE PAQUETE RECIBIDO: CATCH_POKEMON
+[INFO] 22:08:48:100 Broker/(8523:8555): Valido si ya existe el mensaje Catch en memoria buddy.
+[INFO] 22:08:48:101 Broker/(8523:8555): ALMACENO mensaje en posición: 16tim (de memoria)
+[INFO] 22:08:48:101 Broker/(8523:8555): ASIGNE: Size de buddy: 16. Id mensaje: 4. Size del mensaje: 16.
+[INFO] 22:08:48:102 Broker/(8523:8555): Registré el mensaje en memoria.
+[INFO] 22:08:48:102 Broker/(8523:8555): Terminó de registrar el mensaje en memoria.
+[INFO] 22:08:48:102 Broker/(8523:8555): Aviso que hay mensajes en cola.
+[INFO] 22:08:48:102 Broker/(8523:8537): Envio el mensaje a los suscriptores de la cola: CATCH_POKEMON
+[INFO] 22:08:48:104 Broker/(8523:8558): -------------------------TIPO DE PAQUETE RECIBIDO: SUSCRIPCION POR TIEMPO
+[INFO] 22:08:48:104 Broker/(8523:8558): ---------------------Suscribo por tiempo al proceso 1
+[INFO] 22:08:48:104 Broker/(8523:8558): ---------------------------- Suscribo a 1
+[INFO] 22:08:48:105 Broker/(8523:8558): Actualizo el ultimo acceso del MENSAJE 3 : 22:08:48:105 
+[INFO] 22:08:48:105 Broker/(8523:8558): Agrego suscriptor a lista de subs del mensaje ya enviados, id: 3, id correlativo: 0
+[INFO] 22:08:48:105 Broker/(8523:8558): paso nodo raiz
+[INFO] 22:23:48:906 Broker/(8853:8853): pid del proceso broker: 8853
+[INFO] 22:23:55:449 Broker/(8853:8878): -------------------------TIPO DE PAQUETE RECIBIDO: CAUGHT_POKEMON
+[INFO] 22:23:55:450 Broker/(8853:8878): PARTICIONO: para msg 1 y la cola CAUGHT_POKEMON
+[INFO] 22:23:55:450 Broker/(8853:8878): NODO A PARTICIONAR: su offset 0, su tamaño: 64
+[INFO] 22:23:55:450 Broker/(8853:8878): PARTICIONO: para msg 1 y la cola CAUGHT_POKEMON
+[INFO] 22:23:55:450 Broker/(8853:8878): NODO A PARTICIONAR: su offset 0, su tamaño: 32
+[INFO] 22:23:55:451 Broker/(8853:8878): PARTICIONO: para msg 1 y la cola CAUGHT_POKEMON
+[INFO] 22:23:55:451 Broker/(8853:8878): NODO A PARTICIONAR: su offset 0, su tamaño: 16
+[INFO] 22:23:55:451 Broker/(8853:8878): PARTICIONO: para msg 1 y la cola CAUGHT_POKEMON
+[INFO] 22:23:55:451 Broker/(8853:8878): NODO A PARTICIONAR: su offset 0, su tamaño: 8
+[INFO] 22:23:55:451 Broker/(8853:8878): ALMACENO mensaje en posición: 0tim (de memoria)
+[INFO] 22:23:55:451 Broker/(8853:8878): ASIGNE: Size de buddy: 4. Id mensaje: 1. Size del mensaje: 4.
+[INFO] 22:23:55:452 Broker/(8853:8878): Registré el mensaje en memoria.
+[INFO] 22:23:55:452 Broker/(8853:8878): Terminó de registrar el mensaje en memoria.
+[INFO] 22:23:55:452 Broker/(8853:8878): Aviso que hay mensajes en cola.
+[INFO] 22:23:55:452 Broker/(8853:8871): Envio el mensaje a los suscriptores de la cola: CAUGHT_POKEMON
+[INFO] 22:23:55:459 Broker/(8853:8881): -------------------------TIPO DE PAQUETE RECIBIDO: CAUGHT_POKEMON
+[INFO] 22:23:55:459 Broker/(8853:8881): ALMACENO mensaje en posición: 4tim (de memoria)
+[INFO] 22:23:55:460 Broker/(8853:8881): ASIGNE: Size de buddy: 4. Id mensaje: 2. Size del mensaje: 4.
+[INFO] 22:23:55:460 Broker/(8853:8881): Registré el mensaje en memoria.
+[INFO] 22:23:55:460 Broker/(8853:8881): Terminó de registrar el mensaje en memoria.
+[INFO] 22:23:55:461 Broker/(8853:8884): -------------------------TIPO DE PAQUETE RECIBIDO: NEW_POKEMON
+[INFO] 22:23:55:461 Broker/(8853:8884): ALMACENO mensaje en posición: 32tim (de memoria)
+[INFO] 22:23:55:462 Broker/(8853:8884): ASIGNE: Size de buddy: 32. Id mensaje: 3. Size del mensaje: 23.
+[INFO] 22:23:55:462 Broker/(8853:8884): Registré el mensaje en memoria.
+[INFO] 22:23:55:462 Broker/(8853:8884): Terminó de registrar el mensaje en memoria.
+[INFO] 22:23:55:462 Broker/(8853:8884): Aviso que hay mensajes en cola.
+[INFO] 22:23:55:463 Broker/(8853:8870): Envio el mensaje a los suscriptores de la cola: NEW_POKEMON
+[INFO] 22:23:55:464 Broker/(8853:8887): -------------------------TIPO DE PAQUETE RECIBIDO: CATCH_POKEMON
+[INFO] 22:23:55:464 Broker/(8853:8887): Valido si ya existe el mensaje Catch en memoria buddy.
+[INFO] 22:23:55:465 Broker/(8853:8887): ALMACENO mensaje en posición: 16tim (de memoria)
+[INFO] 22:23:55:465 Broker/(8853:8887): ASIGNE: Size de buddy: 16. Id mensaje: 4. Size del mensaje: 16.
+[INFO] 22:23:55:465 Broker/(8853:8887): Registré el mensaje en memoria.
+[INFO] 22:23:55:465 Broker/(8853:8887): Terminó de registrar el mensaje en memoria.
+[INFO] 22:23:55:465 Broker/(8853:8887): Aviso que hay mensajes en cola.
+[INFO] 22:23:55:465 Broker/(8853:8872): Envio el mensaje a los suscriptores de la cola: CATCH_POKEMON
+[INFO] 22:23:55:467 Broker/(8853:8890): -------------------------TIPO DE PAQUETE RECIBIDO: SUSCRIPCION POR TIEMPO
+[INFO] 22:23:55:467 Broker/(8853:8890): ---------------------Suscribo por tiempo al proceso 1
+[INFO] 22:23:55:467 Broker/(8853:8890): ---------------------------- Suscribo a 1
+[INFO] 22:23:55:467 Broker/(8853:8890): Actualizo el ultimo acceso del MENSAJE 3 : 22:23:55:467 
+[INFO] 22:23:55:467 Broker/(8853:8890): Agrego suscriptor a lista de subs del mensaje ya enviados, id: 3, id correlativo: 0
+[INFO] 22:23:55:468 Broker/(8853:8890): offset de nodo raiz memoria 0
+[INFO] 22:25:09:763 Broker/(8938:8938): pid del proceso broker: 8938
+[INFO] 22:25:14:620 Broker/(8938:8958): -------------------------TIPO DE PAQUETE RECIBIDO: CAUGHT_POKEMON
+[INFO] 22:25:14:620 Broker/(8938:8958): PARTICIONO: para msg 1 y la cola CAUGHT_POKEMON
+[INFO] 22:25:14:620 Broker/(8938:8958): NODO A PARTICIONAR: su offset 0, su tamaño: 64
+[INFO] 22:25:14:620 Broker/(8938:8958): PARTICIONO: para msg 1 y la cola CAUGHT_POKEMON
+[INFO] 22:25:14:620 Broker/(8938:8958): NODO A PARTICIONAR: su offset 0, su tamaño: 32
+[INFO] 22:25:14:620 Broker/(8938:8958): PARTICIONO: para msg 1 y la cola CAUGHT_POKEMON
+[INFO] 22:25:14:620 Broker/(8938:8958): NODO A PARTICIONAR: su offset 0, su tamaño: 16
+[INFO] 22:25:14:620 Broker/(8938:8958): PARTICIONO: para msg 1 y la cola CAUGHT_POKEMON
+[INFO] 22:25:14:620 Broker/(8938:8958): NODO A PARTICIONAR: su offset 0, su tamaño: 8
+[INFO] 22:25:14:620 Broker/(8938:8958): ALMACENO mensaje en posición: 0tim (de memoria)
+[INFO] 22:25:14:620 Broker/(8938:8958): ASIGNE: Size de buddy: 4. Id mensaje: 1. Size del mensaje: 4.
+[INFO] 22:25:14:620 Broker/(8938:8958): Registré el mensaje en memoria.
+[INFO] 22:25:14:620 Broker/(8938:8958): Terminó de registrar el mensaje en memoria.
+[INFO] 22:25:14:620 Broker/(8938:8958): Aviso que hay mensajes en cola.
+[INFO] 22:25:14:621 Broker/(8938:8951): Envio el mensaje a los suscriptores de la cola: CAUGHT_POKEMON
+[INFO] 22:25:14:635 Broker/(8938:8961): -------------------------TIPO DE PAQUETE RECIBIDO: CAUGHT_POKEMON
+[INFO] 22:25:14:635 Broker/(8938:8961): ALMACENO mensaje en posición: 4tim (de memoria)
+[INFO] 22:25:14:635 Broker/(8938:8961): ASIGNE: Size de buddy: 4. Id mensaje: 2. Size del mensaje: 4.
+[INFO] 22:25:14:635 Broker/(8938:8961): Registré el mensaje en memoria.
+[INFO] 22:25:14:635 Broker/(8938:8961): Terminó de registrar el mensaje en memoria.
+[INFO] 22:25:14:650 Broker/(8938:8964): -------------------------TIPO DE PAQUETE RECIBIDO: NEW_POKEMON
+[INFO] 22:25:14:650 Broker/(8938:8964): ALMACENO mensaje en posición: 32tim (de memoria)
+[INFO] 22:25:14:650 Broker/(8938:8964): ASIGNE: Size de buddy: 32. Id mensaje: 3. Size del mensaje: 23.
+[INFO] 22:25:14:651 Broker/(8938:8964): Registré el mensaje en memoria.
+[INFO] 22:25:14:651 Broker/(8938:8964): Terminó de registrar el mensaje en memoria.
+[INFO] 22:25:14:652 Broker/(8938:8964): Aviso que hay mensajes en cola.
+[INFO] 22:25:14:652 Broker/(8938:8950): Envio el mensaje a los suscriptores de la cola: NEW_POKEMON
+[INFO] 22:25:14:673 Broker/(8938:8967): -------------------------TIPO DE PAQUETE RECIBIDO: CATCH_POKEMON
+[INFO] 22:25:14:673 Broker/(8938:8967): Valido si ya existe el mensaje Catch en memoria buddy.
+[INFO] 22:25:14:673 Broker/(8938:8967): ALMACENO mensaje en posición: 16tim (de memoria)
+[INFO] 22:25:14:674 Broker/(8938:8967): ASIGNE: Size de buddy: 16. Id mensaje: 4. Size del mensaje: 16.
+[INFO] 22:25:14:674 Broker/(8938:8967): Registré el mensaje en memoria.
+[INFO] 22:25:14:674 Broker/(8938:8967): Terminó de registrar el mensaje en memoria.
+[INFO] 22:25:14:674 Broker/(8938:8967): Aviso que hay mensajes en cola.
+[INFO] 22:25:14:674 Broker/(8938:8952): Envio el mensaje a los suscriptores de la cola: CATCH_POKEMON
+[INFO] 22:25:14:689 Broker/(8938:8970): -------------------------TIPO DE PAQUETE RECIBIDO: SUSCRIPCION POR TIEMPO
+[INFO] 22:25:14:689 Broker/(8938:8970): ---------------------Suscribo por tiempo al proceso 1
+[INFO] 22:25:14:689 Broker/(8938:8970): ---------------------------- Suscribo a 1
+[INFO] 22:25:14:689 Broker/(8938:8970): Actualizo el ultimo acceso del MENSAJE 3 : 22:25:14:689 
+[INFO] 22:25:14:689 Broker/(8938:8970): Agrego suscriptor a lista de subs del mensaje ya enviados, id: 3, id correlativo: 0
+[INFO] 22:25:14:689 Broker/(8938:8970): offset de nodo raiz memoria 0
+[INFO] 22:29:48:796 Broker/(9077:9077): pid del proceso broker: 9077
+[INFO] 22:29:56:579 Broker/(9077:9098): -------------------------TIPO DE PAQUETE RECIBIDO: CAUGHT_POKEMON
+[INFO] 22:29:56:579 Broker/(9077:9098): PARTICIONO: para msg 1 y la cola CAUGHT_POKEMON
+[INFO] 22:29:56:580 Broker/(9077:9098): NODO A PARTICIONAR: su offset 0, su tamaño: 64
+[INFO] 22:29:56:580 Broker/(9077:9098): PARTICIONO: para msg 1 y la cola CAUGHT_POKEMON
+[INFO] 22:29:56:580 Broker/(9077:9098): NODO A PARTICIONAR: su offset 0, su tamaño: 32
+[INFO] 22:29:56:580 Broker/(9077:9098): PARTICIONO: para msg 1 y la cola CAUGHT_POKEMON
+[INFO] 22:29:56:580 Broker/(9077:9098): NODO A PARTICIONAR: su offset 0, su tamaño: 16
+[INFO] 22:29:56:580 Broker/(9077:9098): PARTICIONO: para msg 1 y la cola CAUGHT_POKEMON
+[INFO] 22:29:56:580 Broker/(9077:9098): NODO A PARTICIONAR: su offset 0, su tamaño: 8
+[INFO] 22:29:56:580 Broker/(9077:9098): ALMACENO mensaje en posición: 0tim (de memoria)
+[INFO] 22:29:56:580 Broker/(9077:9098): ASIGNE: Size de buddy: 4. Id mensaje: 1. Size del mensaje: 4.
+[INFO] 22:29:56:580 Broker/(9077:9098): Registré el mensaje en memoria.
+[INFO] 22:29:56:581 Broker/(9077:9098): Terminó de registrar el mensaje en memoria.
+[INFO] 22:29:56:581 Broker/(9077:9098): Aviso que hay mensajes en cola.
+[INFO] 22:29:56:581 Broker/(9077:9090): Envio el mensaje a los suscriptores de la cola: CAUGHT_POKEMON
+[INFO] 22:29:56:582 Broker/(9077:9101): -------------------------TIPO DE PAQUETE RECIBIDO: CAUGHT_POKEMON
+[INFO] 22:29:56:583 Broker/(9077:9101): ALMACENO mensaje en posición: 4tim (de memoria)
+[INFO] 22:29:56:583 Broker/(9077:9101): ASIGNE: Size de buddy: 4. Id mensaje: 2. Size del mensaje: 4.
+[INFO] 22:29:56:583 Broker/(9077:9101): Registré el mensaje en memoria.
+[INFO] 22:29:56:583 Broker/(9077:9101): Terminó de registrar el mensaje en memoria.
+[INFO] 22:29:56:589 Broker/(9077:9104): -------------------------TIPO DE PAQUETE RECIBIDO: NEW_POKEMON
+[INFO] 22:29:56:589 Broker/(9077:9104): ALMACENO mensaje en posición: 32tim (de memoria)
+[INFO] 22:29:56:590 Broker/(9077:9104): ASIGNE: Size de buddy: 32. Id mensaje: 3. Size del mensaje: 23.
+[INFO] 22:29:56:590 Broker/(9077:9104): Registré el mensaje en memoria.
+[INFO] 22:29:56:590 Broker/(9077:9104): Terminó de registrar el mensaje en memoria.
+[INFO] 22:29:56:590 Broker/(9077:9104): Aviso que hay mensajes en cola.
+[INFO] 22:29:56:590 Broker/(9077:9089): Envio el mensaje a los suscriptores de la cola: NEW_POKEMON
+[INFO] 22:29:56:592 Broker/(9077:9107): -------------------------TIPO DE PAQUETE RECIBIDO: CATCH_POKEMON
+[INFO] 22:29:56:592 Broker/(9077:9107): Valido si ya existe el mensaje Catch en memoria buddy.
+[INFO] 22:29:56:592 Broker/(9077:9107): ALMACENO mensaje en posición: 16tim (de memoria)
+[INFO] 22:29:56:593 Broker/(9077:9107): ASIGNE: Size de buddy: 16. Id mensaje: 4. Size del mensaje: 16.
+[INFO] 22:29:56:593 Broker/(9077:9107): Registré el mensaje en memoria.
+[INFO] 22:29:56:593 Broker/(9077:9107): Terminó de registrar el mensaje en memoria.
+[INFO] 22:29:56:593 Broker/(9077:9107): Aviso que hay mensajes en cola.
+[INFO] 22:29:56:593 Broker/(9077:9091): Envio el mensaje a los suscriptores de la cola: CATCH_POKEMON
+[INFO] 22:29:56:595 Broker/(9077:9110): -------------------------TIPO DE PAQUETE RECIBIDO: SUSCRIPCION POR TIEMPO
+[INFO] 22:29:56:595 Broker/(9077:9110): ---------------------Suscribo por tiempo al proceso 1
+[INFO] 22:29:56:595 Broker/(9077:9110): ---------------------------- Suscribo a 1
+[INFO] 22:29:56:595 Broker/(9077:9110): Actualizo el ultimo acceso del MENSAJE 3 : 22:29:56:595 
+[INFO] 22:29:56:595 Broker/(9077:9110): Agrego suscriptor a lista de subs del mensaje ya enviados, id: 3, id correlativo: 0
+[INFO] 22:29:56:596 Broker/(9077:9110): offset de nodo raiz memoria 0
+[INFO] 22:41:32:179 Broker/(9893:9893): pid del proceso broker: 9893
+[INFO] 22:41:42:798 Broker/(9893:9916): -------------------------TIPO DE PAQUETE RECIBIDO: CAUGHT_POKEMON
+[INFO] 22:41:42:807 Broker/(9893:9916): PARTICIONO: para msg 1 y la cola CAUGHT_POKEMON
+[INFO] 22:41:42:807 Broker/(9893:9916): NODO A PARTICIONAR: su offset 0, su tamaño: 64
+[INFO] 22:41:42:807 Broker/(9893:9916): PARTICIONO: para msg 1 y la cola CAUGHT_POKEMON
+[INFO] 22:41:42:808 Broker/(9893:9916): NODO A PARTICIONAR: su offset 0, su tamaño: 32
+[INFO] 22:41:42:809 Broker/(9893:9916): PARTICIONO: para msg 1 y la cola CAUGHT_POKEMON
+[INFO] 22:41:42:809 Broker/(9893:9916): NODO A PARTICIONAR: su offset 0, su tamaño: 16
+[INFO] 22:41:42:809 Broker/(9893:9916): PARTICIONO: para msg 1 y la cola CAUGHT_POKEMON
+[INFO] 22:41:42:809 Broker/(9893:9916): NODO A PARTICIONAR: su offset 0, su tamaño: 8
+[INFO] 22:41:42:809 Broker/(9893:9916): ALMACENO mensaje en posición: 0tim (de memoria)
+[INFO] 22:41:42:810 Broker/(9893:9916): ASIGNE: Size de buddy: 4. Id mensaje: 1. Size del mensaje: 4.
+[INFO] 22:41:42:810 Broker/(9893:9916): Registré el mensaje en memoria.
+[INFO] 22:41:42:810 Broker/(9893:9916): Terminó de registrar el mensaje en memoria.
+[INFO] 22:41:42:810 Broker/(9893:9916): Aviso que hay mensajes en cola.
+[INFO] 22:41:42:810 Broker/(9893:9906): Envio el mensaje a los suscriptores de la cola: CAUGHT_POKEMON
+[INFO] 22:41:42:835 Broker/(9893:9919): -------------------------TIPO DE PAQUETE RECIBIDO: CAUGHT_POKEMON
+[INFO] 22:41:42:835 Broker/(9893:9919): ALMACENO mensaje en posición: 4tim (de memoria)
+[INFO] 22:41:42:835 Broker/(9893:9919): ASIGNE: Size de buddy: 4. Id mensaje: 2. Size del mensaje: 4.
+[INFO] 22:41:42:836 Broker/(9893:9919): Registré el mensaje en memoria.
+[INFO] 22:41:42:836 Broker/(9893:9919): Terminó de registrar el mensaje en memoria.
+[INFO] 22:41:42:854 Broker/(9893:9922): -------------------------TIPO DE PAQUETE RECIBIDO: NEW_POKEMON
+[INFO] 22:41:42:854 Broker/(9893:9922): ALMACENO mensaje en posición: 32tim (de memoria)
+[INFO] 22:41:42:855 Broker/(9893:9922): ASIGNE: Size de buddy: 32. Id mensaje: 3. Size del mensaje: 23.
+[INFO] 22:41:42:855 Broker/(9893:9922): Registré el mensaje en memoria.
+[INFO] 22:41:42:856 Broker/(9893:9922): Terminó de registrar el mensaje en memoria.
+[INFO] 22:41:42:861 Broker/(9893:9922): Aviso que hay mensajes en cola.
+[INFO] 22:41:42:861 Broker/(9893:9905): Envio el mensaje a los suscriptores de la cola: NEW_POKEMON
+[INFO] 22:41:42:875 Broker/(9893:9925): -------------------------TIPO DE PAQUETE RECIBIDO: CATCH_POKEMON
+[INFO] 22:41:42:876 Broker/(9893:9925): Valido si ya existe el mensaje Catch en memoria buddy.
+[INFO] 22:41:42:876 Broker/(9893:9925): ALMACENO mensaje en posición: 16tim (de memoria)
+[INFO] 22:41:42:876 Broker/(9893:9925): ASIGNE: Size de buddy: 16. Id mensaje: 4. Size del mensaje: 16.
+[INFO] 22:41:42:876 Broker/(9893:9925): Registré el mensaje en memoria.
+[INFO] 22:41:42:878 Broker/(9893:9925): Terminó de registrar el mensaje en memoria.
+[INFO] 22:41:42:878 Broker/(9893:9925): Aviso que hay mensajes en cola.
+[INFO] 22:41:42:878 Broker/(9893:9907): Envio el mensaje a los suscriptores de la cola: CATCH_POKEMON
+[INFO] 22:41:42:896 Broker/(9893:9928): -------------------------TIPO DE PAQUETE RECIBIDO: SUSCRIPCION POR TIEMPO
+[INFO] 22:41:42:896 Broker/(9893:9928): ---------------------Suscribo por tiempo al proceso 1
+[INFO] 22:41:42:897 Broker/(9893:9928): ---------------------------- Suscribo a 1
+[INFO] 22:41:42:897 Broker/(9893:9928): Actualizo el ultimo acceso del MENSAJE 3 : 22:41:42:897 
+[INFO] 22:41:42:897 Broker/(9893:9928): Agrego suscriptor a lista de subs del mensaje ya enviados, id: 3, id correlativo: 0
+[INFO] 22:41:42:897 Broker/(9893:9928): offset de nodo raiz memoria 0
+[INFO] 22:43:51:918 Broker/(10012:10012): pid del proceso broker: 10012
+[INFO] 22:43:56:854 Broker/(10012:10032): -------------------------TIPO DE PAQUETE RECIBIDO: CAUGHT_POKEMON
+[INFO] 22:43:56:855 Broker/(10012:10032): PARTICIONO: para msg 1 y la cola CAUGHT_POKEMON
+[INFO] 22:43:56:855 Broker/(10012:10032): NODO A PARTICIONAR: su offset 0, su tamaño: 64
+[INFO] 22:43:56:855 Broker/(10012:10032): PARTICIONO: para msg 1 y la cola CAUGHT_POKEMON
+[INFO] 22:43:56:856 Broker/(10012:10032): NODO A PARTICIONAR: su offset 0, su tamaño: 32
+[INFO] 22:43:56:856 Broker/(10012:10032): PARTICIONO: para msg 1 y la cola CAUGHT_POKEMON
+[INFO] 22:43:56:856 Broker/(10012:10032): NODO A PARTICIONAR: su offset 0, su tamaño: 16
+[INFO] 22:43:56:856 Broker/(10012:10032): PARTICIONO: para msg 1 y la cola CAUGHT_POKEMON
+[INFO] 22:43:56:856 Broker/(10012:10032): NODO A PARTICIONAR: su offset 0, su tamaño: 8
+[INFO] 22:43:56:856 Broker/(10012:10032): ALMACENO mensaje en posición: 0tim (de memoria)
+[INFO] 22:43:56:857 Broker/(10012:10032): ASIGNE: Size de buddy: 4. Id mensaje: 1. Size del mensaje: 4.
+[INFO] 22:43:56:858 Broker/(10012:10032): Registré el mensaje en memoria.
+[INFO] 22:43:56:858 Broker/(10012:10032): Terminó de registrar el mensaje en memoria.
+[INFO] 22:43:56:858 Broker/(10012:10032): Aviso que hay mensajes en cola.
+[INFO] 22:43:56:858 Broker/(10012:10025): Envio el mensaje a los suscriptores de la cola: CAUGHT_POKEMON
+[INFO] 22:43:56:865 Broker/(10012:10035): -------------------------TIPO DE PAQUETE RECIBIDO: CAUGHT_POKEMON
+[INFO] 22:43:56:865 Broker/(10012:10035): ALMACENO mensaje en posición: 4tim (de memoria)
+[INFO] 22:43:56:866 Broker/(10012:10035): ASIGNE: Size de buddy: 4. Id mensaje: 2. Size del mensaje: 4.
+[INFO] 22:43:56:867 Broker/(10012:10035): Registré el mensaje en memoria.
+[INFO] 22:43:56:867 Broker/(10012:10035): Terminó de registrar el mensaje en memoria.
+[INFO] 22:43:56:869 Broker/(10012:10038): -------------------------TIPO DE PAQUETE RECIBIDO: NEW_POKEMON
+[INFO] 22:43:56:869 Broker/(10012:10038): ALMACENO mensaje en posición: 32tim (de memoria)
+[INFO] 22:43:56:870 Broker/(10012:10038): ASIGNE: Size de buddy: 32. Id mensaje: 3. Size del mensaje: 23.
+[INFO] 22:43:56:870 Broker/(10012:10038): Registré el mensaje en memoria.
+[INFO] 22:43:56:871 Broker/(10012:10038): Terminó de registrar el mensaje en memoria.
+[INFO] 22:43:56:871 Broker/(10012:10038): Aviso que hay mensajes en cola.
+[INFO] 22:43:56:871 Broker/(10012:10024): Envio el mensaje a los suscriptores de la cola: NEW_POKEMON
+[INFO] 22:43:56:873 Broker/(10012:10041): -------------------------TIPO DE PAQUETE RECIBIDO: CATCH_POKEMON
+[INFO] 22:43:56:873 Broker/(10012:10041): Valido si ya existe el mensaje Catch en memoria buddy.
+[INFO] 22:43:56:874 Broker/(10012:10041): ALMACENO mensaje en posición: 16tim (de memoria)
+[INFO] 22:43:56:874 Broker/(10012:10041): ASIGNE: Size de buddy: 16. Id mensaje: 4. Size del mensaje: 16.
+[INFO] 22:43:56:874 Broker/(10012:10041): Registré el mensaje en memoria.
+[INFO] 22:43:56:875 Broker/(10012:10041): Terminó de registrar el mensaje en memoria.
+[INFO] 22:43:56:875 Broker/(10012:10041): Aviso que hay mensajes en cola.
+[INFO] 22:43:56:882 Broker/(10012:10026): Envio el mensaje a los suscriptores de la cola: CATCH_POKEMON
+[INFO] 22:43:56:884 Broker/(10012:10044): -------------------------TIPO DE PAQUETE RECIBIDO: SUSCRIPCION POR TIEMPO
+[INFO] 22:43:56:884 Broker/(10012:10044): ---------------------Suscribo por tiempo al proceso 1
+[INFO] 22:43:56:884 Broker/(10012:10044): ---------------------------- Suscribo a 1
+[INFO] 22:43:56:884 Broker/(10012:10044): Actualizo el ultimo acceso del MENSAJE 3 : 22:43:56:884 
+[INFO] 22:43:56:885 Broker/(10012:10044): Agrego suscriptor a lista de subs del mensaje ya enviados, id: 3, id correlativo: 0
+[INFO] 22:43:56:899 Broker/(10012:10044): offset de nodo raiz memoria 0
+[INFO] 22:44:58:84 Broker/(10085:10085): pid del proceso broker: 10085
+[INFO] 22:45:13:868 Broker/(10085:10107): -------------------------TIPO DE PAQUETE RECIBIDO: CAUGHT_POKEMON
+[INFO] 22:45:13:869 Broker/(10085:10107): PARTICIONO: para msg 1 y la cola CAUGHT_POKEMON
+[INFO] 22:45:13:869 Broker/(10085:10107): NODO A PARTICIONAR: su offset 0, su tamaño: 64
+[INFO] 22:45:13:869 Broker/(10085:10107): PARTICIONO: para msg 1 y la cola CAUGHT_POKEMON
+[INFO] 22:45:13:869 Broker/(10085:10107): NODO A PARTICIONAR: su offset 0, su tamaño: 32
+[INFO] 22:45:13:869 Broker/(10085:10107): PARTICIONO: para msg 1 y la cola CAUGHT_POKEMON
+[INFO] 22:45:13:869 Broker/(10085:10107): NODO A PARTICIONAR: su offset 0, su tamaño: 16
+[INFO] 22:45:13:870 Broker/(10085:10107): PARTICIONO: para msg 1 y la cola CAUGHT_POKEMON
+[INFO] 22:45:13:870 Broker/(10085:10107): NODO A PARTICIONAR: su offset 0, su tamaño: 8
+[INFO] 22:45:13:870 Broker/(10085:10107): ALMACENO mensaje en posición: 0tim (de memoria)
+[INFO] 22:45:13:870 Broker/(10085:10107): ASIGNE: Size de buddy: 4. Id mensaje: 1. Size del mensaje: 4.
+[INFO] 22:45:13:870 Broker/(10085:10107): Registré el mensaje en memoria.
+[INFO] 22:45:13:870 Broker/(10085:10107): Terminó de registrar el mensaje en memoria.
+[INFO] 22:45:13:870 Broker/(10085:10107): Aviso que hay mensajes en cola.
+[INFO] 22:45:13:870 Broker/(10085:10098): Envio el mensaje a los suscriptores de la cola: CAUGHT_POKEMON
+[INFO] 22:45:13:872 Broker/(10085:10110): -------------------------TIPO DE PAQUETE RECIBIDO: CAUGHT_POKEMON
+[INFO] 22:45:13:872 Broker/(10085:10110): ALMACENO mensaje en posición: 4tim (de memoria)
+[INFO] 22:45:13:873 Broker/(10085:10110): ASIGNE: Size de buddy: 4. Id mensaje: 2. Size del mensaje: 4.
+[INFO] 22:45:13:873 Broker/(10085:10110): Registré el mensaje en memoria.
+[INFO] 22:45:13:873 Broker/(10085:10110): Terminó de registrar el mensaje en memoria.
+[INFO] 22:45:13:879 Broker/(10085:10113): -------------------------TIPO DE PAQUETE RECIBIDO: NEW_POKEMON
+[INFO] 22:45:13:880 Broker/(10085:10113): ALMACENO mensaje en posición: 32tim (de memoria)
+[INFO] 22:45:13:880 Broker/(10085:10113): ASIGNE: Size de buddy: 32. Id mensaje: 3. Size del mensaje: 23.
+[INFO] 22:45:13:880 Broker/(10085:10113): Registré el mensaje en memoria.
+[INFO] 22:45:13:881 Broker/(10085:10113): Terminó de registrar el mensaje en memoria.
+[INFO] 22:45:13:881 Broker/(10085:10113): Aviso que hay mensajes en cola.
+[INFO] 22:45:13:885 Broker/(10085:10097): Envio el mensaje a los suscriptores de la cola: NEW_POKEMON
+[INFO] 22:45:13:898 Broker/(10085:10116): -------------------------TIPO DE PAQUETE RECIBIDO: CATCH_POKEMON
+[INFO] 22:45:13:900 Broker/(10085:10116): Valido si ya existe el mensaje Catch en memoria buddy.
+[INFO] 22:45:13:901 Broker/(10085:10116): ALMACENO mensaje en posición: 16tim (de memoria)
+[INFO] 22:45:13:903 Broker/(10085:10116): ASIGNE: Size de buddy: 16. Id mensaje: 4. Size del mensaje: 16.
+[INFO] 22:45:13:903 Broker/(10085:10116): Registré el mensaje en memoria.
+[INFO] 22:45:13:903 Broker/(10085:10116): Terminó de registrar el mensaje en memoria.
+[INFO] 22:45:13:903 Broker/(10085:10116): Aviso que hay mensajes en cola.
+[INFO] 22:45:13:903 Broker/(10085:10099): Envio el mensaje a los suscriptores de la cola: CATCH_POKEMON
+[INFO] 22:45:13:910 Broker/(10085:10119): -------------------------TIPO DE PAQUETE RECIBIDO: SUSCRIPCION POR TIEMPO
+[INFO] 22:45:13:911 Broker/(10085:10119): ---------------------Suscribo por tiempo al proceso 1
+[INFO] 22:45:13:911 Broker/(10085:10119): ---------------------------- Suscribo a 1
+[INFO] 22:45:13:911 Broker/(10085:10119): Actualizo el ultimo acceso del MENSAJE 3 : 22:45:13:911 
+[INFO] 22:45:13:911 Broker/(10085:10119): Agrego suscriptor a lista de subs del mensaje ya enviados, id: 3, id correlativo: 0
+[INFO] 22:45:13:911 Broker/(10085:10119): offset de nodo raiz memoria 0
+[INFO] 22:47:32:658 Broker/(10197:10197): pid del proceso broker: 10197
+[INFO] 22:47:38:159 Broker/(10197:10219): -------------------------TIPO DE PAQUETE RECIBIDO: CAUGHT_POKEMON
+[INFO] 22:47:38:160 Broker/(10197:10219): PARTICIONO: para msg 1 y la cola CAUGHT_POKEMON
+[INFO] 22:47:38:160 Broker/(10197:10219): NODO A PARTICIONAR: su offset 0, su tamaño: 64
+[INFO] 22:47:38:160 Broker/(10197:10219): PARTICIONO: para msg 1 y la cola CAUGHT_POKEMON
+[INFO] 22:47:38:160 Broker/(10197:10219): NODO A PARTICIONAR: su offset 0, su tamaño: 32
+[INFO] 22:47:38:161 Broker/(10197:10219): PARTICIONO: para msg 1 y la cola CAUGHT_POKEMON
+[INFO] 22:47:38:161 Broker/(10197:10219): NODO A PARTICIONAR: su offset 0, su tamaño: 16
+[INFO] 22:47:38:161 Broker/(10197:10219): PARTICIONO: para msg 1 y la cola CAUGHT_POKEMON
+[INFO] 22:47:38:161 Broker/(10197:10219): NODO A PARTICIONAR: su offset 0, su tamaño: 8
+[INFO] 22:47:38:162 Broker/(10197:10219): ALMACENO mensaje en posición: 0tim (de memoria)
+[INFO] 22:47:38:162 Broker/(10197:10219): ASIGNE: Size de buddy: 4. Id mensaje: 1. Size del mensaje: 4.
+[INFO] 22:47:38:167 Broker/(10197:10219): Registré el mensaje en memoria.
+[INFO] 22:47:38:167 Broker/(10197:10219): Terminó de registrar el mensaje en memoria.
+[INFO] 22:47:38:167 Broker/(10197:10219): Aviso que hay mensajes en cola.
+[INFO] 22:47:38:167 Broker/(10197:10210): Envio el mensaje a los suscriptores de la cola: CAUGHT_POKEMON
+[INFO] 22:47:38:169 Broker/(10197:10222): -------------------------TIPO DE PAQUETE RECIBIDO: CAUGHT_POKEMON
+[INFO] 22:47:38:170 Broker/(10197:10222): ALMACENO mensaje en posición: 4tim (de memoria)
+[INFO] 22:47:38:170 Broker/(10197:10222): ASIGNE: Size de buddy: 4. Id mensaje: 2. Size del mensaje: 4.
+[INFO] 22:47:38:171 Broker/(10197:10222): Registré el mensaje en memoria.
+[INFO] 22:47:38:171 Broker/(10197:10222): Terminó de registrar el mensaje en memoria.
+[INFO] 22:47:38:173 Broker/(10197:10225): -------------------------TIPO DE PAQUETE RECIBIDO: NEW_POKEMON
+[INFO] 22:47:38:173 Broker/(10197:10225): ALMACENO mensaje en posición: 32tim (de memoria)
+[INFO] 22:47:38:174 Broker/(10197:10225): ASIGNE: Size de buddy: 32. Id mensaje: 3. Size del mensaje: 23.
+[INFO] 22:47:38:174 Broker/(10197:10225): Registré el mensaje en memoria.
+[INFO] 22:47:38:174 Broker/(10197:10225): Terminó de registrar el mensaje en memoria.
+[INFO] 22:47:38:174 Broker/(10197:10225): Aviso que hay mensajes en cola.
+[INFO] 22:47:38:174 Broker/(10197:10209): Envio el mensaje a los suscriptores de la cola: NEW_POKEMON
+[INFO] 22:47:38:176 Broker/(10197:10228): -------------------------TIPO DE PAQUETE RECIBIDO: CATCH_POKEMON
+[INFO] 22:47:38:176 Broker/(10197:10228): entro a ver si está libre
+[INFO] 22:47:38:177 Broker/(10197:10228): Valido si ya existe el mensaje Catch en memoria buddy.
+[INFO] 22:47:38:177 Broker/(10197:10228): ALMACENO mensaje en posición: 16tim (de memoria)
+[INFO] 22:47:38:178 Broker/(10197:10228): ASIGNE: Size de buddy: 16. Id mensaje: 4. Size del mensaje: 16.
+[INFO] 22:47:38:185 Broker/(10197:10228): Registré el mensaje en memoria.
+[INFO] 22:47:38:194 Broker/(10197:10228): Terminó de registrar el mensaje en memoria.
+[INFO] 22:47:38:198 Broker/(10197:10228): Aviso que hay mensajes en cola.
+[INFO] 22:47:38:199 Broker/(10197:10211): Envio el mensaje a los suscriptores de la cola: CATCH_POKEMON
+[INFO] 22:47:38:210 Broker/(10197:10231): -------------------------TIPO DE PAQUETE RECIBIDO: SUSCRIPCION POR TIEMPO
+[INFO] 22:47:38:212 Broker/(10197:10231): ---------------------Suscribo por tiempo al proceso 1
+[INFO] 22:47:38:212 Broker/(10197:10231): ---------------------------- Suscribo a 1
+[INFO] 22:47:38:212 Broker/(10197:10231): Actualizo el ultimo acceso del MENSAJE 3 : 22:47:38:212 
+[INFO] 22:47:38:212 Broker/(10197:10231): Agrego suscriptor a lista de subs del mensaje ya enviados, id: 3, id correlativo: 0
+[INFO] 22:47:38:213 Broker/(10197:10231): offset de nodo raiz memoria 0
+[INFO] 22:47:38:213 Broker/(10197:10231): entro a ver si está libre
+[INFO] 22:50:02:674 Broker/(10342:10342): pid del proceso broker: 10342
+[INFO] 22:50:06:370 Broker/(10342:10362): -------------------------TIPO DE PAQUETE RECIBIDO: CAUGHT_POKEMON
+[INFO] 22:50:06:371 Broker/(10342:10362): PARTICIONO: para msg 1 y la cola CAUGHT_POKEMON
+[INFO] 22:50:06:372 Broker/(10342:10362): NODO A PARTICIONAR: su offset 0, su tamaño: 64
+[INFO] 22:50:06:372 Broker/(10342:10362): PARTICIONO: para msg 1 y la cola CAUGHT_POKEMON
+[INFO] 22:50:06:372 Broker/(10342:10362): NODO A PARTICIONAR: su offset 0, su tamaño: 32
+[INFO] 22:50:06:372 Broker/(10342:10362): PARTICIONO: para msg 1 y la cola CAUGHT_POKEMON
+[INFO] 22:50:06:372 Broker/(10342:10362): NODO A PARTICIONAR: su offset 0, su tamaño: 16
+[INFO] 22:50:06:372 Broker/(10342:10362): PARTICIONO: para msg 1 y la cola CAUGHT_POKEMON
+[INFO] 22:50:06:372 Broker/(10342:10362): NODO A PARTICIONAR: su offset 0, su tamaño: 8
+[INFO] 22:50:06:373 Broker/(10342:10362): ALMACENO mensaje en posición: 0tim (de memoria)
+[INFO] 22:50:06:373 Broker/(10342:10362): ASIGNE: Size de buddy: 4. Id mensaje: 1. Size del mensaje: 4.
+[INFO] 22:50:06:373 Broker/(10342:10362): Registré el mensaje en memoria.
+[INFO] 22:50:06:373 Broker/(10342:10362): Terminó de registrar el mensaje en memoria.
+[INFO] 22:50:06:373 Broker/(10342:10362): Aviso que hay mensajes en cola.
+[INFO] 22:50:06:374 Broker/(10342:10355): Envio el mensaje a los suscriptores de la cola: CAUGHT_POKEMON
+[INFO] 22:50:06:380 Broker/(10342:10365): -------------------------TIPO DE PAQUETE RECIBIDO: CAUGHT_POKEMON
+[INFO] 22:50:06:381 Broker/(10342:10365): ALMACENO mensaje en posición: 4tim (de memoria)
+[INFO] 22:50:06:382 Broker/(10342:10365): ASIGNE: Size de buddy: 4. Id mensaje: 2. Size del mensaje: 4.
+[INFO] 22:50:06:382 Broker/(10342:10365): Registré el mensaje en memoria.
+[INFO] 22:50:06:382 Broker/(10342:10365): Terminó de registrar el mensaje en memoria.
+[INFO] 22:50:06:385 Broker/(10342:10368): -------------------------TIPO DE PAQUETE RECIBIDO: NEW_POKEMON
+[INFO] 22:50:06:386 Broker/(10342:10368): ALMACENO mensaje en posición: 32tim (de memoria)
+[INFO] 22:50:06:386 Broker/(10342:10368): ASIGNE: Size de buddy: 32. Id mensaje: 3. Size del mensaje: 23.
+[INFO] 22:50:06:387 Broker/(10342:10368): Registré el mensaje en memoria.
+[INFO] 22:50:06:387 Broker/(10342:10368): Terminó de registrar el mensaje en memoria.
+[INFO] 22:50:06:387 Broker/(10342:10368): Aviso que hay mensajes en cola.
+[INFO] 22:50:06:387 Broker/(10342:10354): Envio el mensaje a los suscriptores de la cola: NEW_POKEMON
+[INFO] 22:50:06:398 Broker/(10342:10371): -------------------------TIPO DE PAQUETE RECIBIDO: CATCH_POKEMON
+[INFO] 22:50:06:399 Broker/(10342:10371): estado de particion 2
+[INFO] 22:50:06:399 Broker/(10342:10371): Valido si ya existe el mensaje Catch en memoria buddy.
+[INFO] 22:50:06:399 Broker/(10342:10371): ALMACENO mensaje en posición: 16tim (de memoria)
+[INFO] 22:50:06:400 Broker/(10342:10371): ASIGNE: Size de buddy: 16. Id mensaje: 4. Size del mensaje: 16.
+[INFO] 22:50:06:400 Broker/(10342:10371): Registré el mensaje en memoria.
+[INFO] 22:50:06:400 Broker/(10342:10371): Terminó de registrar el mensaje en memoria.
+[INFO] 22:50:06:400 Broker/(10342:10371): Aviso que hay mensajes en cola.
+[INFO] 22:50:06:400 Broker/(10342:10356): Envio el mensaje a los suscriptores de la cola: CATCH_POKEMON
+[INFO] 22:50:06:406 Broker/(10342:10374): -------------------------TIPO DE PAQUETE RECIBIDO: SUSCRIPCION POR TIEMPO
+[INFO] 22:50:06:407 Broker/(10342:10374): ---------------------Suscribo por tiempo al proceso 1
+[INFO] 22:50:06:407 Broker/(10342:10374): ---------------------------- Suscribo a 1
+[INFO] 22:50:06:419 Broker/(10342:10374): Actualizo el ultimo acceso del MENSAJE 3 : 22:50:06:419 
+[INFO] 22:50:06:419 Broker/(10342:10374): Agrego suscriptor a lista de subs del mensaje ya enviados, id: 3, id correlativo: 0
+[INFO] 22:50:06:420 Broker/(10342:10374): offset de nodo raiz memoria 0
+[INFO] 22:50:06:420 Broker/(10342:10374): estado de particion 2
+[INFO] 22:52:51:21 Broker/(10511:10511): pid del proceso broker: 10511
+[INFO] 22:52:58:687 Broker/(10511:10530): -------------------------TIPO DE PAQUETE RECIBIDO: CAUGHT_POKEMON
+[INFO] 22:52:58:687 Broker/(10511:10530): PARTICIONO: para msg 1 y la cola CAUGHT_POKEMON
+[INFO] 22:52:58:687 Broker/(10511:10530): NODO A PARTICIONAR: su offset 0, su tamaño: 64
+[INFO] 22:52:58:688 Broker/(10511:10530): PARTICIONO: para msg 1 y la cola CAUGHT_POKEMON
+[INFO] 22:52:58:688 Broker/(10511:10530): NODO A PARTICIONAR: su offset 0, su tamaño: 32
+[INFO] 22:52:58:688 Broker/(10511:10530): PARTICIONO: para msg 1 y la cola CAUGHT_POKEMON
+[INFO] 22:52:58:688 Broker/(10511:10530): NODO A PARTICIONAR: su offset 0, su tamaño: 16
+[INFO] 22:52:58:688 Broker/(10511:10530): PARTICIONO: para msg 1 y la cola CAUGHT_POKEMON
+[INFO] 22:52:58:688 Broker/(10511:10530): NODO A PARTICIONAR: su offset 0, su tamaño: 8
+[INFO] 22:52:58:688 Broker/(10511:10530): ALMACENO mensaje en posición: 0tim (de memoria)
+[INFO] 22:52:58:688 Broker/(10511:10530): ASIGNE: Size de buddy: 4. Id mensaje: 1. Size del mensaje: 4.
+[INFO] 22:52:58:688 Broker/(10511:10530): Registré el mensaje en memoria.
+[INFO] 22:52:58:688 Broker/(10511:10530): Terminó de registrar el mensaje en memoria.
+[INFO] 22:52:58:688 Broker/(10511:10530): Aviso que hay mensajes en cola.
+[INFO] 22:52:58:688 Broker/(10511:10524): Envio el mensaje a los suscriptores de la cola: CAUGHT_POKEMON
+[INFO] 22:52:58:690 Broker/(10511:10533): -------------------------TIPO DE PAQUETE RECIBIDO: CAUGHT_POKEMON
+[INFO] 22:52:58:690 Broker/(10511:10533): ALMACENO mensaje en posición: 4tim (de memoria)
+[INFO] 22:52:58:691 Broker/(10511:10533): ASIGNE: Size de buddy: 4. Id mensaje: 2. Size del mensaje: 4.
+[INFO] 22:52:58:691 Broker/(10511:10533): Registré el mensaje en memoria.
+[INFO] 22:52:58:691 Broker/(10511:10533): Terminó de registrar el mensaje en memoria.
+[INFO] 22:52:58:696 Broker/(10511:10536): -------------------------TIPO DE PAQUETE RECIBIDO: NEW_POKEMON
+[INFO] 22:52:58:696 Broker/(10511:10536): ALMACENO mensaje en posición: 32tim (de memoria)
+[INFO] 22:52:58:697 Broker/(10511:10536): ASIGNE: Size de buddy: 32. Id mensaje: 3. Size del mensaje: 23.
+[INFO] 22:52:58:697 Broker/(10511:10536): Registré el mensaje en memoria.
+[INFO] 22:52:58:697 Broker/(10511:10536): Terminó de registrar el mensaje en memoria.
+[INFO] 22:52:58:697 Broker/(10511:10536): Aviso que hay mensajes en cola.
+[INFO] 22:52:58:697 Broker/(10511:10523): Envio el mensaje a los suscriptores de la cola: NEW_POKEMON
+[INFO] 22:52:58:699 Broker/(10511:10539): -------------------------TIPO DE PAQUETE RECIBIDO: CATCH_POKEMON
+[INFO] 22:52:58:699 Broker/(10511:10539): Valido si ya existe el mensaje Catch en memoria buddy.
+[INFO] 22:52:58:700 Broker/(10511:10539): ALMACENO mensaje en posición: 16tim (de memoria)
+[INFO] 22:52:58:700 Broker/(10511:10539): ASIGNE: Size de buddy: 16. Id mensaje: 4. Size del mensaje: 16.
+[INFO] 22:52:58:700 Broker/(10511:10539): Registré el mensaje en memoria.
+[INFO] 22:52:58:700 Broker/(10511:10539): Terminó de registrar el mensaje en memoria.
+[INFO] 22:52:58:700 Broker/(10511:10539): Aviso que hay mensajes en cola.
+[INFO] 22:52:58:707 Broker/(10511:10525): Envio el mensaje a los suscriptores de la cola: CATCH_POKEMON
+[INFO] 22:52:58:719 Broker/(10511:10542): -------------------------TIPO DE PAQUETE RECIBIDO: SUSCRIPCION POR TIEMPO
+[INFO] 22:52:58:723 Broker/(10511:10542): ---------------------Suscribo por tiempo al proceso 1
+[INFO] 22:52:58:723 Broker/(10511:10542): ---------------------------- Suscribo a 1
+[INFO] 22:52:58:723 Broker/(10511:10542): Actualizo el ultimo acceso del MENSAJE 3 : 22:52:58:723 
+[INFO] 22:52:58:723 Broker/(10511:10542): Agrego suscriptor a lista de subs del mensaje ya enviados, id: 3, id correlativo: 0
+[INFO] 22:52:58:723 Broker/(10511:10542): no esta libre
+[INFO] 22:56:08:817 Broker/(10661:10661): pid del proceso broker: 10661
+[INFO] 22:56:13:103 Broker/(10661:10680): -------------------------TIPO DE PAQUETE RECIBIDO: CAUGHT_POKEMON
+[INFO] 22:56:13:103 Broker/(10661:10680): PARTICIONO: para msg 1 y la cola CAUGHT_POKEMON
+[INFO] 22:56:13:104 Broker/(10661:10680): NODO A PARTICIONAR: su offset 0, su tamaño: 64
+[INFO] 22:56:13:105 Broker/(10661:10680): PARTICIONO: para msg 1 y la cola CAUGHT_POKEMON
+[INFO] 22:56:13:105 Broker/(10661:10680): NODO A PARTICIONAR: su offset 0, su tamaño: 32
+[INFO] 22:56:13:105 Broker/(10661:10680): PARTICIONO: para msg 1 y la cola CAUGHT_POKEMON
+[INFO] 22:56:13:106 Broker/(10661:10680): NODO A PARTICIONAR: su offset 0, su tamaño: 16
+[INFO] 22:56:13:106 Broker/(10661:10680): PARTICIONO: para msg 1 y la cola CAUGHT_POKEMON
+[INFO] 22:56:13:106 Broker/(10661:10680): NODO A PARTICIONAR: su offset 0, su tamaño: 8
+[INFO] 22:56:13:106 Broker/(10661:10680): ALMACENO mensaje en posición: 0tim (de memoria)
+[INFO] 22:56:13:107 Broker/(10661:10680): ASIGNE: Size de buddy: 4. Id mensaje: 1. Size del mensaje: 4.
+[INFO] 22:56:13:107 Broker/(10661:10680): Registré el mensaje en memoria.
+[INFO] 22:56:13:107 Broker/(10661:10680): Terminó de registrar el mensaje en memoria.
+[INFO] 22:56:13:107 Broker/(10661:10680): Aviso que hay mensajes en cola.
+[INFO] 22:56:13:107 Broker/(10661:10674): Envio el mensaje a los suscriptores de la cola: CAUGHT_POKEMON
+[INFO] 22:56:13:114 Broker/(10661:10683): -------------------------TIPO DE PAQUETE RECIBIDO: CAUGHT_POKEMON
+[INFO] 22:56:13:114 Broker/(10661:10683): ALMACENO mensaje en posición: 4tim (de memoria)
+[INFO] 22:56:13:115 Broker/(10661:10683): ASIGNE: Size de buddy: 4. Id mensaje: 2. Size del mensaje: 4.
+[INFO] 22:56:13:115 Broker/(10661:10683): Registré el mensaje en memoria.
+[INFO] 22:56:13:115 Broker/(10661:10683): Terminó de registrar el mensaje en memoria.
+[INFO] 22:56:13:116 Broker/(10661:10686): -------------------------TIPO DE PAQUETE RECIBIDO: NEW_POKEMON
+[INFO] 22:56:13:116 Broker/(10661:10686): ALMACENO mensaje en posición: 32tim (de memoria)
+[INFO] 22:56:13:117 Broker/(10661:10686): ASIGNE: Size de buddy: 32. Id mensaje: 3. Size del mensaje: 23.
+[INFO] 22:56:13:117 Broker/(10661:10686): Registré el mensaje en memoria.
+[INFO] 22:56:13:117 Broker/(10661:10686): Terminó de registrar el mensaje en memoria.
+[INFO] 22:56:13:117 Broker/(10661:10686): Aviso que hay mensajes en cola.
+[INFO] 22:56:13:118 Broker/(10661:10673): Envio el mensaje a los suscriptores de la cola: NEW_POKEMON
+[INFO] 22:56:13:119 Broker/(10661:10689): -------------------------TIPO DE PAQUETE RECIBIDO: CATCH_POKEMON
+[INFO] 22:56:13:119 Broker/(10661:10689): Valido si ya existe el mensaje Catch en memoria buddy.
+[INFO] 22:56:13:119 Broker/(10661:10689): ALMACENO mensaje en posición: 16tim (de memoria)
+[INFO] 22:56:13:120 Broker/(10661:10689): ASIGNE: Size de buddy: 16. Id mensaje: 4. Size del mensaje: 16.
+[INFO] 22:56:13:120 Broker/(10661:10689): Registré el mensaje en memoria.
+[INFO] 22:56:13:120 Broker/(10661:10689): Terminó de registrar el mensaje en memoria.
+[INFO] 22:56:13:120 Broker/(10661:10689): Aviso que hay mensajes en cola.
+[INFO] 22:56:13:120 Broker/(10661:10675): Envio el mensaje a los suscriptores de la cola: CATCH_POKEMON
+[INFO] 22:56:13:122 Broker/(10661:10692): -------------------------TIPO DE PAQUETE RECIBIDO: SUSCRIPCION POR TIEMPO
+[INFO] 22:56:13:123 Broker/(10661:10692): ---------------------Suscribo por tiempo al proceso 1
+[INFO] 22:56:13:123 Broker/(10661:10692): ---------------------------- Suscribo a 1
+[INFO] 22:56:13:123 Broker/(10661:10692): Actualizo el ultimo acceso del MENSAJE 3 : 22:56:13:123 
+[INFO] 22:56:13:123 Broker/(10661:10692): Agrego suscriptor a lista de subs del mensaje ya enviados, id: 3, id correlativo: 0
+[INFO] 22:59:27:205 Broker/(10796:10796): pid del proceso broker: 10796
+[INFO] 22:59:33:869 Broker/(10796:10818): -------------------------TIPO DE PAQUETE RECIBIDO: CAUGHT_POKEMON
+[INFO] 22:59:33:870 Broker/(10796:10818): PARTICIONO: para msg 1 y la cola CAUGHT_POKEMON
+[INFO] 22:59:33:870 Broker/(10796:10818): NODO A PARTICIONAR: su offset 0, su tamaño: 64
+[INFO] 22:59:33:870 Broker/(10796:10818): PARTICIONO: para msg 1 y la cola CAUGHT_POKEMON
+[INFO] 22:59:33:870 Broker/(10796:10818): NODO A PARTICIONAR: su offset 0, su tamaño: 32
+[INFO] 22:59:33:870 Broker/(10796:10818): PARTICIONO: para msg 1 y la cola CAUGHT_POKEMON
+[INFO] 22:59:33:870 Broker/(10796:10818): NODO A PARTICIONAR: su offset 0, su tamaño: 16
+[INFO] 22:59:33:870 Broker/(10796:10818): PARTICIONO: para msg 1 y la cola CAUGHT_POKEMON
+[INFO] 22:59:33:870 Broker/(10796:10818): NODO A PARTICIONAR: su offset 0, su tamaño: 8
+[INFO] 22:59:33:870 Broker/(10796:10818): ALMACENO mensaje en posición: 0tim (de memoria)
+[INFO] 22:59:33:870 Broker/(10796:10818): ASIGNE: Size de buddy: 4. Id mensaje: 1. Size del mensaje: 4.
+[INFO] 22:59:33:870 Broker/(10796:10818): Registré el mensaje en memoria.
+[INFO] 22:59:33:870 Broker/(10796:10818): Terminó de registrar el mensaje en memoria.
+[INFO] 22:59:33:871 Broker/(10796:10818): Aviso que hay mensajes en cola.
+[INFO] 22:59:33:871 Broker/(10796:10809): Envio el mensaje a los suscriptores de la cola: CAUGHT_POKEMON
+[INFO] 22:59:33:877 Broker/(10796:10821): -------------------------TIPO DE PAQUETE RECIBIDO: CAUGHT_POKEMON
+[INFO] 22:59:33:878 Broker/(10796:10821): ALMACENO mensaje en posición: 4tim (de memoria)
+[INFO] 22:59:33:878 Broker/(10796:10821): ASIGNE: Size de buddy: 4. Id mensaje: 2. Size del mensaje: 4.
+[INFO] 22:59:33:879 Broker/(10796:10821): Registré el mensaje en memoria.
+[INFO] 22:59:33:879 Broker/(10796:10821): Terminó de registrar el mensaje en memoria.
+[INFO] 22:59:33:880 Broker/(10796:10824): -------------------------TIPO DE PAQUETE RECIBIDO: NEW_POKEMON
+[INFO] 22:59:33:880 Broker/(10796:10824): ALMACENO mensaje en posición: 32tim (de memoria)
+[INFO] 22:59:33:881 Broker/(10796:10824): ASIGNE: Size de buddy: 32. Id mensaje: 3. Size del mensaje: 23.
+[INFO] 22:59:33:881 Broker/(10796:10824): Registré el mensaje en memoria.
+[INFO] 22:59:33:881 Broker/(10796:10824): Terminó de registrar el mensaje en memoria.
+[INFO] 22:59:33:881 Broker/(10796:10824): Aviso que hay mensajes en cola.
+[INFO] 22:59:33:881 Broker/(10796:10808): Envio el mensaje a los suscriptores de la cola: NEW_POKEMON
+[INFO] 22:59:33:883 Broker/(10796:10827): -------------------------TIPO DE PAQUETE RECIBIDO: CATCH_POKEMON
+[INFO] 22:59:33:884 Broker/(10796:10827): Valido si ya existe el mensaje Catch en memoria buddy.
+[INFO] 22:59:33:884 Broker/(10796:10827): ALMACENO mensaje en posición: 16tim (de memoria)
+[INFO] 22:59:33:884 Broker/(10796:10827): ASIGNE: Size de buddy: 16. Id mensaje: 4. Size del mensaje: 16.
+[INFO] 22:59:33:885 Broker/(10796:10827): Registré el mensaje en memoria.
+[INFO] 22:59:33:885 Broker/(10796:10827): Terminó de registrar el mensaje en memoria.
+[INFO] 22:59:33:885 Broker/(10796:10827): Aviso que hay mensajes en cola.
+[INFO] 22:59:33:885 Broker/(10796:10810): Envio el mensaje a los suscriptores de la cola: CATCH_POKEMON
+[INFO] 22:59:33:887 Broker/(10796:10830): -------------------------TIPO DE PAQUETE RECIBIDO: SUSCRIPCION POR TIEMPO
+[INFO] 22:59:33:888 Broker/(10796:10830): ---------------------Suscribo por tiempo al proceso 1
+[INFO] 22:59:33:888 Broker/(10796:10830): ---------------------------- Suscribo a 1
+[INFO] 22:59:33:888 Broker/(10796:10830): Actualizo el ultimo acceso del MENSAJE 3 : 22:59:33:888 
+[INFO] 22:59:33:888 Broker/(10796:10830): Agrego suscriptor a lista de subs del mensaje ya enviados, id: 3, id correlativo: 0
+[INFO] 22:59:33:894 Broker/(10796:10830): esta en la raiz el mensaje
+[INFO] 22:59:33:894 Broker/(10796:10830): encuentro un mensaje
+[INFO] 23:06:33:331 Broker/(11180:11180): pid del proceso broker: 11180
+[INFO] 23:07:47:396 Broker/(11259:11259): pid del proceso broker: 11259
+[INFO] 23:08:01:247 Broker/(11288:11288): pid del proceso broker: 11288
+[INFO] 23:08:04:590 Broker/(11288:11312): -------------------------TIPO DE PAQUETE RECIBIDO: CAUGHT_POKEMON
+[INFO] 23:08:04:591 Broker/(11288:11312): PARTICIONO: para msg 1 y la cola CAUGHT_POKEMON
+[INFO] 23:08:04:591 Broker/(11288:11312): NODO A PARTICIONAR: su offset 0, su tamaño: 64
+[INFO] 23:08:04:591 Broker/(11288:11312): PARTICIONO: para msg 1 y la cola CAUGHT_POKEMON
+[INFO] 23:08:04:592 Broker/(11288:11312): NODO A PARTICIONAR: su offset 0, su tamaño: 32
+[INFO] 23:08:04:592 Broker/(11288:11312): PARTICIONO: para msg 1 y la cola CAUGHT_POKEMON
+[INFO] 23:08:04:592 Broker/(11288:11312): NODO A PARTICIONAR: su offset 0, su tamaño: 16
+[INFO] 23:08:04:592 Broker/(11288:11312): PARTICIONO: para msg 1 y la cola CAUGHT_POKEMON
+[INFO] 23:08:04:592 Broker/(11288:11312): NODO A PARTICIONAR: su offset 0, su tamaño: 8
+[INFO] 23:08:04:592 Broker/(11288:11312): ALMACENO mensaje en posición: 0tim (de memoria)
+[INFO] 23:08:04:592 Broker/(11288:11312): ASIGNE: Size de buddy: 4. Id mensaje: 1. Size del mensaje: 4.
+[INFO] 23:08:04:592 Broker/(11288:11312): Registré el mensaje en memoria.
+[INFO] 23:08:04:593 Broker/(11288:11312): Terminó de registrar el mensaje en memoria.
+[INFO] 23:08:04:593 Broker/(11288:11312): Aviso que hay mensajes en cola.
+[INFO] 23:08:04:593 Broker/(11288:11301): Envio el mensaje a los suscriptores de la cola: CAUGHT_POKEMON
+[INFO] 23:08:04:598 Broker/(11288:11315): -------------------------TIPO DE PAQUETE RECIBIDO: CAUGHT_POKEMON
+[INFO] 23:08:04:598 Broker/(11288:11315): ALMACENO mensaje en posición: 4tim (de memoria)
+[INFO] 23:08:04:599 Broker/(11288:11315): ASIGNE: Size de buddy: 4. Id mensaje: 2. Size del mensaje: 4.
+[INFO] 23:08:04:599 Broker/(11288:11315): Registré el mensaje en memoria.
+[INFO] 23:08:04:599 Broker/(11288:11315): Terminó de registrar el mensaje en memoria.
+[INFO] 23:08:04:601 Broker/(11288:11318): -------------------------TIPO DE PAQUETE RECIBIDO: NEW_POKEMON
+[INFO] 23:08:04:601 Broker/(11288:11318): ALMACENO mensaje en posición: 32tim (de memoria)
+[INFO] 23:08:04:602 Broker/(11288:11318): ASIGNE: Size de buddy: 32. Id mensaje: 3. Size del mensaje: 23.
+[INFO] 23:08:04:602 Broker/(11288:11318): Registré el mensaje en memoria.
+[INFO] 23:08:04:602 Broker/(11288:11318): Terminó de registrar el mensaje en memoria.
+[INFO] 23:08:04:602 Broker/(11288:11318): Aviso que hay mensajes en cola.
+[INFO] 23:08:04:603 Broker/(11288:11300): Envio el mensaje a los suscriptores de la cola: NEW_POKEMON
+[INFO] 23:08:04:605 Broker/(11288:11321): -------------------------TIPO DE PAQUETE RECIBIDO: CATCH_POKEMON
+[INFO] 23:08:04:605 Broker/(11288:11321): Valido si ya existe el mensaje Catch en memoria buddy.
+[INFO] 23:08:04:605 Broker/(11288:11321): ALMACENO mensaje en posición: 16tim (de memoria)
+[INFO] 23:08:04:605 Broker/(11288:11321): ASIGNE: Size de buddy: 16. Id mensaje: 4. Size del mensaje: 16.
+[INFO] 23:08:04:606 Broker/(11288:11321): Registré el mensaje en memoria.
+[INFO] 23:08:04:606 Broker/(11288:11321): Terminó de registrar el mensaje en memoria.
+[INFO] 23:08:04:606 Broker/(11288:11321): Aviso que hay mensajes en cola.
+[INFO] 23:08:04:606 Broker/(11288:11302): Envio el mensaje a los suscriptores de la cola: CATCH_POKEMON
+[INFO] 23:08:04:607 Broker/(11288:11324): -------------------------TIPO DE PAQUETE RECIBIDO: SUSCRIPCION POR TIEMPO
+[INFO] 23:08:04:608 Broker/(11288:11324): ---------------------Suscribo por tiempo al proceso 1
+[INFO] 23:08:04:608 Broker/(11288:11324): ---------------------------- Suscribo a 1
+[INFO] 23:08:04:608 Broker/(11288:11324): Actualizo el ultimo acceso del MENSAJE 3 : 23:08:04:608 
+[INFO] 23:08:04:608 Broker/(11288:11324): Agrego suscriptor a lista de subs del mensaje ya enviados, id: 3, id correlativo: 0
+[INFO] 23:08:04:608 Broker/(11288:11324): encuentro un mensaje
+[INFO] 23:08:04:608 Broker/(11288:11326): -------------------------TIPO DE PAQUETE RECIBIDO: ACK
+[INFO] 23:08:14:611 Broker/(11288:11333): -------------------------TIPO DE PAQUETE RECIBIDO: CATCH_POKEMON
+[INFO] 23:08:14:611 Broker/(11288:11333): Valido si ya existe el mensaje Catch en memoria buddy.
+[INFO] 23:08:14:611 Broker/(11288:11333): VICTIMA: id de mensaje: 1
+[INFO] 23:08:14:615 Broker/(11288:11333): VICTIMA: id de mensaje: 2
+[INFO] 23:08:14:615 Broker/(11288:11333): CONSOLIDO buddy con offset: 4 con su buddy con offset 0
+[INFO] 23:08:14:615 Broker/(11288:11333): CONSOLIDO buddy con offset: 0 con su buddy con offset 8
+[INFO] 23:08:14:615 Broker/(11288:11333): VICTIMA: id de mensaje: 3
+[INFO] 23:08:14:616 Broker/(11288:11333): ALMACENO mensaje en posición: 32tim (de memoria)
+[INFO] 23:08:14:616 Broker/(11288:11333): ASIGNE: Size de buddy: 32. Id mensaje: 5. Size del mensaje: 22.
+[INFO] 23:08:14:616 Broker/(11288:11333): Registré el mensaje en memoria.
+[INFO] 23:08:14:616 Broker/(11288:11333): Terminó de registrar el mensaje en memoria.
+[INFO] 23:08:14:616 Broker/(11288:11333): Aviso que hay mensajes en cola.
+[INFO] 23:08:14:616 Broker/(11288:11302): Envio el mensaje a los suscriptores de la cola: CATCH_POKEMON
+[INFO] 23:10:03:923 Broker/(11401:11401): pid del proceso broker: 11401
+[INFO] 23:10:19:744 Broker/(11428:11428): pid del proceso broker: 11428
+[INFO] 23:10:25:632 Broker/(11428:11450): -------------------------TIPO DE PAQUETE RECIBIDO: CAUGHT_POKEMON
+[INFO] 23:10:25:633 Broker/(11428:11450): PARTICIONO: para msg 1 y la cola CAUGHT_POKEMON
+[INFO] 23:10:25:633 Broker/(11428:11450): NODO A PARTICIONAR: su offset 0, su tamaño: 64
+[INFO] 23:10:25:633 Broker/(11428:11450): PARTICIONO: para msg 1 y la cola CAUGHT_POKEMON
+[INFO] 23:10:25:633 Broker/(11428:11450): NODO A PARTICIONAR: su offset 0, su tamaño: 32
+[INFO] 23:10:25:633 Broker/(11428:11450): PARTICIONO: para msg 1 y la cola CAUGHT_POKEMON
+[INFO] 23:10:25:633 Broker/(11428:11450): NODO A PARTICIONAR: su offset 0, su tamaño: 16
+[INFO] 23:10:25:634 Broker/(11428:11450): PARTICIONO: para msg 1 y la cola CAUGHT_POKEMON
+[INFO] 23:10:25:634 Broker/(11428:11450): NODO A PARTICIONAR: su offset 0, su tamaño: 8
+[INFO] 23:10:25:634 Broker/(11428:11450): ALMACENO mensaje en posición: 0tim (de memoria)
+[INFO] 23:10:25:634 Broker/(11428:11450): ASIGNE: Size de buddy: 4. Id mensaje: 1. Size del mensaje: 4.
+[INFO] 23:10:25:634 Broker/(11428:11450): Registré el mensaje en memoria.
+[INFO] 23:10:25:634 Broker/(11428:11450): Terminó de registrar el mensaje en memoria.
+[INFO] 23:10:25:635 Broker/(11428:11450): Aviso que hay mensajes en cola.
+[INFO] 23:10:25:635 Broker/(11428:11441): Envio el mensaje a los suscriptores de la cola: CAUGHT_POKEMON
+[INFO] 23:10:25:641 Broker/(11428:11453): -------------------------TIPO DE PAQUETE RECIBIDO: CAUGHT_POKEMON
+[INFO] 23:10:25:641 Broker/(11428:11453): ALMACENO mensaje en posición: 4tim (de memoria)
+[INFO] 23:10:25:642 Broker/(11428:11453): ASIGNE: Size de buddy: 4. Id mensaje: 2. Size del mensaje: 4.
+[INFO] 23:10:25:642 Broker/(11428:11453): Registré el mensaje en memoria.
+[INFO] 23:10:25:643 Broker/(11428:11453): Terminó de registrar el mensaje en memoria.
+[INFO] 23:10:25:645 Broker/(11428:11456): -------------------------TIPO DE PAQUETE RECIBIDO: NEW_POKEMON
+[INFO] 23:10:25:645 Broker/(11428:11456): ALMACENO mensaje en posición: 32tim (de memoria)
+[INFO] 23:10:25:646 Broker/(11428:11456): ASIGNE: Size de buddy: 32. Id mensaje: 3. Size del mensaje: 23.
+[INFO] 23:10:25:646 Broker/(11428:11456): Registré el mensaje en memoria.
+[INFO] 23:10:25:646 Broker/(11428:11456): Terminó de registrar el mensaje en memoria.
+[INFO] 23:10:25:646 Broker/(11428:11456): Aviso que hay mensajes en cola.
+[INFO] 23:10:25:647 Broker/(11428:11440): Envio el mensaje a los suscriptores de la cola: NEW_POKEMON
+[INFO] 23:10:25:649 Broker/(11428:11459): -------------------------TIPO DE PAQUETE RECIBIDO: CATCH_POKEMON
+[INFO] 23:10:25:649 Broker/(11428:11459): Valido si ya existe el mensaje Catch en memoria buddy.
+[INFO] 23:10:25:650 Broker/(11428:11459): ALMACENO mensaje en posición: 16tim (de memoria)
+[INFO] 23:10:25:650 Broker/(11428:11459): ASIGNE: Size de buddy: 16. Id mensaje: 4. Size del mensaje: 16.
+[INFO] 23:10:25:651 Broker/(11428:11459): Registré el mensaje en memoria.
+[INFO] 23:10:25:651 Broker/(11428:11459): Terminó de registrar el mensaje en memoria.
+[INFO] 23:10:25:651 Broker/(11428:11459): Aviso que hay mensajes en cola.
+[INFO] 23:10:25:651 Broker/(11428:11442): Envio el mensaje a los suscriptores de la cola: CATCH_POKEMON
+[INFO] 23:10:25:659 Broker/(11428:11462): -------------------------TIPO DE PAQUETE RECIBIDO: SUSCRIPCION POR TIEMPO
+[INFO] 23:10:25:659 Broker/(11428:11462): ---------------------Suscribo por tiempo al proceso 1
+[INFO] 23:10:25:662 Broker/(11428:11462): ---------------------------- Suscribo a 1
+[INFO] 23:10:25:662 Broker/(11428:11462): Actualizo el ultimo acceso del MENSAJE 3 : 23:10:25:662 
+[INFO] 23:10:25:662 Broker/(11428:11462): Agrego suscriptor a lista de subs del mensaje ya enviados, id: 3, id correlativo: 0
+[INFO] 23:10:25:663 Broker/(11428:11462): encuentro un mensaje
+[INFO] 23:10:25:663 Broker/(11428:11464): -------------------------TIPO DE PAQUETE RECIBIDO: ACK
+[INFO] 23:10:35:672 Broker/(11428:11467): -------------------------TIPO DE PAQUETE RECIBIDO: CATCH_POKEMON
+[INFO] 23:10:35:677 Broker/(11428:11467): Valido si ya existe el mensaje Catch en memoria buddy.
+[INFO] 23:10:35:682 Broker/(11428:11467): VICTIMA: id de mensaje: 1
+[INFO] 23:10:35:686 Broker/(11428:11467): VICTIMA: id de mensaje: 2
+[INFO] 23:10:35:686 Broker/(11428:11467): CONSOLIDO buddy con offset: 4 con su buddy con offset 0
+[INFO] 23:10:35:687 Broker/(11428:11467): CONSOLIDO buddy con offset: 0 con su buddy con offset 8
+[INFO] 23:10:35:687 Broker/(11428:11467): VICTIMA: id de mensaje: 3
+[INFO] 23:10:35:687 Broker/(11428:11467): ALMACENO mensaje en posición: 32tim (de memoria)
+[INFO] 23:10:35:688 Broker/(11428:11467): ASIGNE: Size de buddy: 32. Id mensaje: 5. Size del mensaje: 22.
+[INFO] 23:10:35:688 Broker/(11428:11467): Registré el mensaje en memoria.
+[INFO] 23:10:35:688 Broker/(11428:11467): Terminó de registrar el mensaje en memoria.
+[INFO] 23:10:35:688 Broker/(11428:11467): Aviso que hay mensajes en cola.
+[INFO] 23:10:35:688 Broker/(11428:11442): Envio el mensaje a los suscriptores de la cola: CATCH_POKEMON

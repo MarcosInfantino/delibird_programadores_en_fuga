@@ -15,7 +15,7 @@
 
 
 int main(int argc, char* argv[]) {
-	idsMensajesYaRespondidos=inicializarListaMutex();
+	idsMensajesYaRespondidos = inicializarListaMutex();
 	iteraciones = 0;
 	TiempoCarga = 0;
 
@@ -173,7 +173,7 @@ void manejarTipoDeMensaje(paquete* paq, uint32_t* socket) {
 
 	suscripcionTiempo structTiempo;
 	mensajeSuscripcionTiempo* datosSuscribir;
-	log_info(brokerLogger2,"-------------------------TIPO DE PAQUETE RECIBIDO: %i", paq->tipoMensaje);
+	log_info(brokerLogger2,"-------------------------TIPO DE PAQUETE RECIBIDO: %s", nombreTipoDePaquete(paq->tipoMensaje));
 	switch(paq->tipoMensaje){
 		 case APPEARED_POKEMON:
 			 meterEnCola(&appearedPokemon, paq, *socket );
@@ -206,7 +206,6 @@ void manejarTipoDeMensaje(paquete* paq, uint32_t* socket) {
 			 destruirSuscripcionTiempo(datosSuscribir);//PROBAR
 			 break;
 		 case ACK:
-			 guardarMensajeACK(paq);
 			 break;
 		 default:
 			 pthread_exit(NULL);
@@ -216,10 +215,12 @@ void manejarTipoDeMensaje(paquete* paq, uint32_t* socket) {
 void meterEnCola( colaMensajes* structCola, paquete * paq, uint32_t  socket){
 
 	incrementarContador();
+
 	pthread_mutex_lock(contador.mutexContador);
 	insertarIdPaquete(paq,contador.contador);
 	send(socket,(void*)(&contador.contador),sizeof(uint32_t),0);
 	pthread_mutex_unlock(contador.mutexContador);
+
 	registrarMensajeEnMemoria(paq, algoritmoMemoria);
 	log_info(brokerLogger2,"Terminó de registrar el mensaje en memoria.");
 
@@ -263,8 +264,6 @@ void * chequearMensajesEnCola(void * colaVoid){
 			socketIdProceso * actual = (socketIdProceso *) getListaMutex(cola->suscriptores, i);
 
 			send(actual->socket, paqSerializado , sizePaquete(paq), 0);
-
-
 
 			log_info(brokerLogger2, "Envié mensaje a suscriptor: %d -.-", actual->idProceso);
 			log_info(loggerBroker, "Envié mensaje al suscriptor de id: %d.", actual->idProceso);

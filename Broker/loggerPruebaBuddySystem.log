@@ -526,3 +526,372 @@
 [INFO] 13:32:08:654 BROKER/(25727:25804): Se almacena mensaje en memoria en posición: 32
 [INFO] 13:32:08:654 BROKER/(25727:25742): Llegó un nuevo mensaje a la cola CATCH_POKEMON.
 [INFO] 13:32:21:72 BROKER/(25727:25727): Se solicitó dump de cache.
+[INFO] 20:32:04:70 BROKER/(5693:5693): ___________________________________________________________________________________________________________
+[INFO] 20:32:04:70 BROKER/(5693:5693): Inició el BROKER
+[INFO] 20:35:53:963 BROKER/(5693:5793): Se conectó un proceso GAMEBOY.
+[INFO] 20:35:53:983 BROKER/(5693:5793): Se almacena mensaje en memoria en posición: 0
+[INFO] 20:35:53:983 BROKER/(5693:5707): Llegó un nuevo mensaje a la cola CAUGHT_POKEMON.
+[INFO] 20:35:53:990 BROKER/(5693:5796): Se conectó un proceso GAMEBOY.
+[INFO] 20:35:53:994 BROKER/(5693:5796): Se almacena mensaje en memoria en posición: 4
+[INFO] 20:35:53:997 BROKER/(5693:5799): Se conectó un proceso GAMEBOY.
+[INFO] 20:35:53:998 BROKER/(5693:5799): Se almacena mensaje en memoria en posición: 32
+[INFO] 20:35:54:13 BROKER/(5693:5706): Llegó un nuevo mensaje a la cola NEW_POKEMON.
+[INFO] 20:35:54:20 BROKER/(5693:5802): Se conectó un proceso GAMEBOY.
+[INFO] 20:35:54:23 BROKER/(5693:5802): Se almacena mensaje en memoria en posición: 16
+[INFO] 20:35:54:28 BROKER/(5693:5708): Llegó un nuevo mensaje a la cola CATCH_POKEMON.
+[INFO] 20:35:54:35 BROKER/(5693:5805): Se conectó un proceso GAMEBOY.
+[INFO] 20:35:54:36 BROKER/(5693:5805): Un proceso GAMEBOY se sucribió a la cola NEW_POKEMON.
+[INFO] 20:40:26:918 BROKER/(5907:5907): ___________________________________________________________________________________________________________
+[INFO] 20:40:26:918 BROKER/(5907:5907): Inició el BROKER
+[INFO] 20:40:35:306 BROKER/(5907:5928): Se conectó un proceso GAMEBOY.
+[INFO] 20:40:35:322 BROKER/(5907:5928): Se almacena mensaje en memoria en posición: 0
+[INFO] 20:40:35:323 BROKER/(5907:5920): Llegó un nuevo mensaje a la cola CAUGHT_POKEMON.
+[INFO] 20:40:35:349 BROKER/(5907:5932): Se conectó un proceso GAMEBOY.
+[INFO] 20:40:35:351 BROKER/(5907:5932): Se almacena mensaje en memoria en posición: 4
+[INFO] 20:40:35:362 BROKER/(5907:5935): Se conectó un proceso GAMEBOY.
+[INFO] 20:40:35:363 BROKER/(5907:5935): Se almacena mensaje en memoria en posición: 32
+[INFO] 20:40:35:364 BROKER/(5907:5919): Llegó un nuevo mensaje a la cola NEW_POKEMON.
+[INFO] 20:40:35:374 BROKER/(5907:5938): Se conectó un proceso GAMEBOY.
+[INFO] 20:40:35:375 BROKER/(5907:5938): Se almacena mensaje en memoria en posición: 16
+[INFO] 20:40:35:376 BROKER/(5907:5921): Llegó un nuevo mensaje a la cola CATCH_POKEMON.
+[INFO] 20:40:35:380 BROKER/(5907:5941): Se conectó un proceso GAMEBOY.
+[INFO] 20:40:35:381 BROKER/(5907:5941): Un proceso GAMEBOY se sucribió a la cola NEW_POKEMON.
+[INFO] 21:06:07:335 BROKER/(6656:6656): ___________________________________________________________________________________________________________
+[INFO] 21:06:07:335 BROKER/(6656:6656): Inició el BROKER
+[INFO] 21:06:31:776 BROKER/(6656:6677): Se conectó un proceso GAMEBOY.
+[INFO] 21:06:31:790 BROKER/(6656:6677): Se almacena mensaje en memoria en posición: 0
+[INFO] 21:06:31:790 BROKER/(6656:6669): Llegó un nuevo mensaje a la cola CAUGHT_POKEMON.
+[INFO] 21:06:31:802 BROKER/(6656:6681): Se conectó un proceso GAMEBOY.
+[INFO] 21:06:31:814 BROKER/(6656:6681): Se almacena mensaje en memoria en posición: 4
+[INFO] 21:06:31:818 BROKER/(6656:6684): Se conectó un proceso GAMEBOY.
+[INFO] 21:06:31:819 BROKER/(6656:6684): Se almacena mensaje en memoria en posición: 32
+[INFO] 21:06:31:827 BROKER/(6656:6668): Llegó un nuevo mensaje a la cola NEW_POKEMON.
+[INFO] 21:06:31:834 BROKER/(6656:6687): Se conectó un proceso GAMEBOY.
+[INFO] 21:06:31:835 BROKER/(6656:6687): Se almacena mensaje en memoria en posición: 16
+[INFO] 21:06:31:835 BROKER/(6656:6670): Llegó un nuevo mensaje a la cola CATCH_POKEMON.
+[INFO] 21:06:31:847 BROKER/(6656:6690): Se conectó un proceso GAMEBOY.
+[INFO] 21:06:31:847 BROKER/(6656:6690): Un proceso GAMEBOY se sucribió a la cola NEW_POKEMON.
+[INFO] 21:32:54:654 BROKER/(7490:7490): ___________________________________________________________________________________________________________
+[INFO] 21:32:54:654 BROKER/(7490:7490): Inició el BROKER
+[INFO] 21:34:00:891 BROKER/(7490:7516): Se conectó un proceso GAMEBOY.
+[INFO] 21:34:00:892 BROKER/(7490:7516): Se almacena mensaje en memoria en posición: 0
+[INFO] 21:34:00:893 BROKER/(7490:7503): Llegó un nuevo mensaje a la cola CAUGHT_POKEMON.
+[INFO] 21:34:00:901 BROKER/(7490:7519): Se conectó un proceso GAMEBOY.
+[INFO] 21:34:00:901 BROKER/(7490:7519): Se almacena mensaje en memoria en posición: 4
+[INFO] 21:34:00:904 BROKER/(7490:7522): Se conectó un proceso GAMEBOY.
+[INFO] 21:34:00:905 BROKER/(7490:7522): Se almacena mensaje en memoria en posición: 32
+[INFO] 21:34:00:906 BROKER/(7490:7502): Llegó un nuevo mensaje a la cola NEW_POKEMON.
+[INFO] 21:34:00:908 BROKER/(7490:7525): Se conectó un proceso GAMEBOY.
+[INFO] 21:34:00:910 BROKER/(7490:7525): Se almacena mensaje en memoria en posición: 16
+[INFO] 21:34:00:919 BROKER/(7490:7504): Llegó un nuevo mensaje a la cola CATCH_POKEMON.
+[INFO] 21:34:00:921 BROKER/(7490:7528): Se conectó un proceso GAMEBOY.
+[INFO] 21:34:00:921 BROKER/(7490:7528): Un proceso GAMEBOY se sucribió a la cola NEW_POKEMON.
+[INFO] 21:39:01:948 BROKER/(7632:7632): ___________________________________________________________________________________________________________
+[INFO] 21:39:01:948 BROKER/(7632:7632): Inició el BROKER
+[INFO] 21:39:07:888 BROKER/(7632:7652): Se conectó un proceso GAMEBOY.
+[INFO] 21:39:07:889 BROKER/(7632:7652): Se almacena mensaje en memoria en posición: 0
+[INFO] 21:39:07:906 BROKER/(7632:7645): Llegó un nuevo mensaje a la cola CAUGHT_POKEMON.
+[INFO] 21:39:07:908 BROKER/(7632:7655): Se conectó un proceso GAMEBOY.
+[INFO] 21:39:07:909 BROKER/(7632:7655): Se almacena mensaje en memoria en posición: 4
+[INFO] 21:39:07:915 BROKER/(7632:7658): Se conectó un proceso GAMEBOY.
+[INFO] 21:39:07:915 BROKER/(7632:7658): Se almacena mensaje en memoria en posición: 32
+[INFO] 21:39:07:916 BROKER/(7632:7644): Llegó un nuevo mensaje a la cola NEW_POKEMON.
+[INFO] 21:39:07:917 BROKER/(7632:7661): Se conectó un proceso GAMEBOY.
+[INFO] 21:39:07:925 BROKER/(7632:7661): Se almacena mensaje en memoria en posición: 16
+[INFO] 21:39:07:925 BROKER/(7632:7646): Llegó un nuevo mensaje a la cola CATCH_POKEMON.
+[INFO] 21:39:07:936 BROKER/(7632:7664): Se conectó un proceso GAMEBOY.
+[INFO] 21:39:07:936 BROKER/(7632:7664): Un proceso GAMEBOY se sucribió a la cola NEW_POKEMON.
+[INFO] 21:49:09:779 BROKER/(7912:7912): ___________________________________________________________________________________________________________
+[INFO] 21:49:09:779 BROKER/(7912:7912): Inició el BROKER
+[INFO] 21:49:24:627 BROKER/(7912:7937): Se conectó un proceso GAMEBOY.
+[INFO] 21:49:24:636 BROKER/(7912:7937): Se almacena mensaje en memoria en posición: 0
+[INFO] 21:49:24:637 BROKER/(7912:7925): Llegó un nuevo mensaje a la cola CAUGHT_POKEMON.
+[INFO] 21:49:24:642 BROKER/(7912:7940): Se conectó un proceso GAMEBOY.
+[INFO] 21:49:24:643 BROKER/(7912:7940): Se almacena mensaje en memoria en posición: 4
+[INFO] 21:49:24:645 BROKER/(7912:7943): Se conectó un proceso GAMEBOY.
+[INFO] 21:49:24:651 BROKER/(7912:7943): Se almacena mensaje en memoria en posición: 32
+[INFO] 21:49:24:651 BROKER/(7912:7924): Llegó un nuevo mensaje a la cola NEW_POKEMON.
+[INFO] 21:49:24:653 BROKER/(7912:7946): Se conectó un proceso GAMEBOY.
+[INFO] 21:49:24:654 BROKER/(7912:7946): Se almacena mensaje en memoria en posición: 16
+[INFO] 21:49:24:654 BROKER/(7912:7926): Llegó un nuevo mensaje a la cola CATCH_POKEMON.
+[INFO] 21:49:24:664 BROKER/(7912:7949): Se conectó un proceso GAMEBOY.
+[INFO] 21:49:24:665 BROKER/(7912:7949): Un proceso GAMEBOY se sucribió a la cola NEW_POKEMON.
+[INFO] 21:50:57:751 BROKER/(8040:8040): ___________________________________________________________________________________________________________
+[INFO] 21:50:57:751 BROKER/(8040:8040): Inició el BROKER
+[INFO] 21:51:02:344 BROKER/(8040:8061): Se conectó un proceso GAMEBOY.
+[INFO] 21:51:02:347 BROKER/(8040:8061): Se almacena mensaje en memoria en posición: 0
+[INFO] 21:51:02:347 BROKER/(8040:8053): Llegó un nuevo mensaje a la cola CAUGHT_POKEMON.
+[INFO] 21:51:02:354 BROKER/(8040:8064): Se conectó un proceso GAMEBOY.
+[INFO] 21:51:02:360 BROKER/(8040:8064): Se almacena mensaje en memoria en posición: 4
+[INFO] 21:51:02:377 BROKER/(8040:8067): Se conectó un proceso GAMEBOY.
+[INFO] 21:51:02:378 BROKER/(8040:8067): Se almacena mensaje en memoria en posición: 32
+[INFO] 21:51:02:378 BROKER/(8040:8052): Llegó un nuevo mensaje a la cola NEW_POKEMON.
+[INFO] 21:51:02:391 BROKER/(8040:8070): Se conectó un proceso GAMEBOY.
+[INFO] 21:51:02:392 BROKER/(8040:8070): Se almacena mensaje en memoria en posición: 16
+[INFO] 21:51:02:392 BROKER/(8040:8054): Llegó un nuevo mensaje a la cola CATCH_POKEMON.
+[INFO] 21:51:02:402 BROKER/(8040:8073): Se conectó un proceso GAMEBOY.
+[INFO] 21:51:02:403 BROKER/(8040:8073): Un proceso GAMEBOY se sucribió a la cola NEW_POKEMON.
+[INFO] 21:54:07:509 BROKER/(8204:8204): ___________________________________________________________________________________________________________
+[INFO] 21:54:07:509 BROKER/(8204:8204): Inició el BROKER
+[INFO] 21:54:10:177 BROKER/(8204:8223): Se conectó un proceso GAMEBOY.
+[INFO] 21:54:10:179 BROKER/(8204:8223): Se almacena mensaje en memoria en posición: 0
+[INFO] 21:54:10:180 BROKER/(8204:8217): Llegó un nuevo mensaje a la cola CAUGHT_POKEMON.
+[INFO] 21:54:10:182 BROKER/(8204:8226): Se conectó un proceso GAMEBOY.
+[INFO] 21:54:10:183 BROKER/(8204:8226): Se almacena mensaje en memoria en posición: 4
+[INFO] 21:54:10:185 BROKER/(8204:8229): Se conectó un proceso GAMEBOY.
+[INFO] 21:54:10:194 BROKER/(8204:8229): Se almacena mensaje en memoria en posición: 32
+[INFO] 21:54:10:195 BROKER/(8204:8216): Llegó un nuevo mensaje a la cola NEW_POKEMON.
+[INFO] 21:54:10:197 BROKER/(8204:8232): Se conectó un proceso GAMEBOY.
+[INFO] 21:54:10:198 BROKER/(8204:8232): Se almacena mensaje en memoria en posición: 16
+[INFO] 21:54:10:200 BROKER/(8204:8218): Llegó un nuevo mensaje a la cola CATCH_POKEMON.
+[INFO] 21:54:10:201 BROKER/(8204:8235): Se conectó un proceso GAMEBOY.
+[INFO] 21:54:10:206 BROKER/(8204:8235): Un proceso GAMEBOY se sucribió a la cola NEW_POKEMON.
+[INFO] 22:05:44:546 BROKER/(8401:8401): ___________________________________________________________________________________________________________
+[INFO] 22:05:44:546 BROKER/(8401:8401): Inició el BROKER
+[INFO] 22:05:50:974 BROKER/(8401:8427): Se conectó un proceso GAMEBOY.
+[INFO] 22:05:50:980 BROKER/(8401:8427): Se almacena mensaje en memoria en posición: 0
+[INFO] 22:05:50:980 BROKER/(8401:8419): Llegó un nuevo mensaje a la cola CAUGHT_POKEMON.
+[INFO] 22:05:50:983 BROKER/(8401:8430): Se conectó un proceso GAMEBOY.
+[INFO] 22:05:50:984 BROKER/(8401:8430): Se almacena mensaje en memoria en posición: 4
+[INFO] 22:05:50:985 BROKER/(8401:8433): Se conectó un proceso GAMEBOY.
+[INFO] 22:05:50:986 BROKER/(8401:8433): Se almacena mensaje en memoria en posición: 32
+[INFO] 22:05:50:987 BROKER/(8401:8418): Llegó un nuevo mensaje a la cola NEW_POKEMON.
+[INFO] 22:05:50:988 BROKER/(8401:8436): Se conectó un proceso GAMEBOY.
+[INFO] 22:05:50:989 BROKER/(8401:8436): Se almacena mensaje en memoria en posición: 16
+[INFO] 22:05:50:990 BROKER/(8401:8420): Llegó un nuevo mensaje a la cola CATCH_POKEMON.
+[INFO] 22:05:50:999 BROKER/(8401:8439): Se conectó un proceso GAMEBOY.
+[INFO] 22:05:50:999 BROKER/(8401:8439): Un proceso GAMEBOY se sucribió a la cola NEW_POKEMON.
+[INFO] 22:08:12:660 BROKER/(8523:8523): ___________________________________________________________________________________________________________
+[INFO] 22:08:12:660 BROKER/(8523:8523): Inició el BROKER
+[INFO] 22:08:48:86 BROKER/(8523:8546): Se conectó un proceso GAMEBOY.
+[INFO] 22:08:48:87 BROKER/(8523:8546): Se almacena mensaje en memoria en posición: 0
+[INFO] 22:08:48:88 BROKER/(8523:8536): Llegó un nuevo mensaje a la cola CAUGHT_POKEMON.
+[INFO] 22:08:48:90 BROKER/(8523:8549): Se conectó un proceso GAMEBOY.
+[INFO] 22:08:48:90 BROKER/(8523:8549): Se almacena mensaje en memoria en posición: 4
+[INFO] 22:08:48:97 BROKER/(8523:8552): Se conectó un proceso GAMEBOY.
+[INFO] 22:08:48:98 BROKER/(8523:8552): Se almacena mensaje en memoria en posición: 32
+[INFO] 22:08:48:98 BROKER/(8523:8535): Llegó un nuevo mensaje a la cola NEW_POKEMON.
+[INFO] 22:08:48:100 BROKER/(8523:8555): Se conectó un proceso GAMEBOY.
+[INFO] 22:08:48:101 BROKER/(8523:8555): Se almacena mensaje en memoria en posición: 16
+[INFO] 22:08:48:102 BROKER/(8523:8537): Llegó un nuevo mensaje a la cola CATCH_POKEMON.
+[INFO] 22:08:48:104 BROKER/(8523:8558): Se conectó un proceso GAMEBOY.
+[INFO] 22:08:48:104 BROKER/(8523:8558): Un proceso GAMEBOY se sucribió a la cola NEW_POKEMON.
+[INFO] 22:23:48:910 BROKER/(8853:8853): ___________________________________________________________________________________________________________
+[INFO] 22:23:48:910 BROKER/(8853:8853): Inició el BROKER
+[INFO] 22:23:55:449 BROKER/(8853:8878): Se conectó un proceso GAMEBOY.
+[INFO] 22:23:55:451 BROKER/(8853:8878): Se almacena mensaje en memoria en posición: 0
+[INFO] 22:23:55:452 BROKER/(8853:8871): Llegó un nuevo mensaje a la cola CAUGHT_POKEMON.
+[INFO] 22:23:55:459 BROKER/(8853:8881): Se conectó un proceso GAMEBOY.
+[INFO] 22:23:55:460 BROKER/(8853:8881): Se almacena mensaje en memoria en posición: 4
+[INFO] 22:23:55:461 BROKER/(8853:8884): Se conectó un proceso GAMEBOY.
+[INFO] 22:23:55:462 BROKER/(8853:8884): Se almacena mensaje en memoria en posición: 32
+[INFO] 22:23:55:463 BROKER/(8853:8870): Llegó un nuevo mensaje a la cola NEW_POKEMON.
+[INFO] 22:23:55:464 BROKER/(8853:8887): Se conectó un proceso GAMEBOY.
+[INFO] 22:23:55:465 BROKER/(8853:8887): Se almacena mensaje en memoria en posición: 16
+[INFO] 22:23:55:465 BROKER/(8853:8872): Llegó un nuevo mensaje a la cola CATCH_POKEMON.
+[INFO] 22:23:55:467 BROKER/(8853:8890): Se conectó un proceso GAMEBOY.
+[INFO] 22:23:55:467 BROKER/(8853:8890): Un proceso GAMEBOY se sucribió a la cola NEW_POKEMON.
+[INFO] 22:25:09:763 BROKER/(8938:8938): ___________________________________________________________________________________________________________
+[INFO] 22:25:09:763 BROKER/(8938:8938): Inició el BROKER
+[INFO] 22:25:14:620 BROKER/(8938:8958): Se conectó un proceso GAMEBOY.
+[INFO] 22:25:14:620 BROKER/(8938:8958): Se almacena mensaje en memoria en posición: 0
+[INFO] 22:25:14:621 BROKER/(8938:8951): Llegó un nuevo mensaje a la cola CAUGHT_POKEMON.
+[INFO] 22:25:14:635 BROKER/(8938:8961): Se conectó un proceso GAMEBOY.
+[INFO] 22:25:14:635 BROKER/(8938:8961): Se almacena mensaje en memoria en posición: 4
+[INFO] 22:25:14:650 BROKER/(8938:8964): Se conectó un proceso GAMEBOY.
+[INFO] 22:25:14:650 BROKER/(8938:8964): Se almacena mensaje en memoria en posición: 32
+[INFO] 22:25:14:652 BROKER/(8938:8950): Llegó un nuevo mensaje a la cola NEW_POKEMON.
+[INFO] 22:25:14:673 BROKER/(8938:8967): Se conectó un proceso GAMEBOY.
+[INFO] 22:25:14:674 BROKER/(8938:8967): Se almacena mensaje en memoria en posición: 16
+[INFO] 22:25:14:674 BROKER/(8938:8952): Llegó un nuevo mensaje a la cola CATCH_POKEMON.
+[INFO] 22:25:14:689 BROKER/(8938:8970): Se conectó un proceso GAMEBOY.
+[INFO] 22:25:14:689 BROKER/(8938:8970): Un proceso GAMEBOY se sucribió a la cola NEW_POKEMON.
+[INFO] 22:29:48:801 BROKER/(9077:9077): ___________________________________________________________________________________________________________
+[INFO] 22:29:48:801 BROKER/(9077:9077): Inició el BROKER
+[INFO] 22:29:56:579 BROKER/(9077:9098): Se conectó un proceso GAMEBOY.
+[INFO] 22:29:56:580 BROKER/(9077:9098): Se almacena mensaje en memoria en posición: 0
+[INFO] 22:29:56:581 BROKER/(9077:9090): Llegó un nuevo mensaje a la cola CAUGHT_POKEMON.
+[INFO] 22:29:56:582 BROKER/(9077:9101): Se conectó un proceso GAMEBOY.
+[INFO] 22:29:56:583 BROKER/(9077:9101): Se almacena mensaje en memoria en posición: 4
+[INFO] 22:29:56:589 BROKER/(9077:9104): Se conectó un proceso GAMEBOY.
+[INFO] 22:29:56:590 BROKER/(9077:9104): Se almacena mensaje en memoria en posición: 32
+[INFO] 22:29:56:590 BROKER/(9077:9089): Llegó un nuevo mensaje a la cola NEW_POKEMON.
+[INFO] 22:29:56:592 BROKER/(9077:9107): Se conectó un proceso GAMEBOY.
+[INFO] 22:29:56:593 BROKER/(9077:9107): Se almacena mensaje en memoria en posición: 16
+[INFO] 22:29:56:593 BROKER/(9077:9091): Llegó un nuevo mensaje a la cola CATCH_POKEMON.
+[INFO] 22:29:56:595 BROKER/(9077:9110): Se conectó un proceso GAMEBOY.
+[INFO] 22:29:56:595 BROKER/(9077:9110): Un proceso GAMEBOY se sucribió a la cola NEW_POKEMON.
+[INFO] 22:41:32:179 BROKER/(9893:9893): ___________________________________________________________________________________________________________
+[INFO] 22:41:32:179 BROKER/(9893:9893): Inició el BROKER
+[INFO] 22:41:42:798 BROKER/(9893:9916): Se conectó un proceso GAMEBOY.
+[INFO] 22:41:42:810 BROKER/(9893:9916): Se almacena mensaje en memoria en posición: 0
+[INFO] 22:41:42:810 BROKER/(9893:9906): Llegó un nuevo mensaje a la cola CAUGHT_POKEMON.
+[INFO] 22:41:42:835 BROKER/(9893:9919): Se conectó un proceso GAMEBOY.
+[INFO] 22:41:42:835 BROKER/(9893:9919): Se almacena mensaje en memoria en posición: 4
+[INFO] 22:41:42:854 BROKER/(9893:9922): Se conectó un proceso GAMEBOY.
+[INFO] 22:41:42:855 BROKER/(9893:9922): Se almacena mensaje en memoria en posición: 32
+[INFO] 22:41:42:861 BROKER/(9893:9905): Llegó un nuevo mensaje a la cola NEW_POKEMON.
+[INFO] 22:41:42:875 BROKER/(9893:9925): Se conectó un proceso GAMEBOY.
+[INFO] 22:41:42:876 BROKER/(9893:9925): Se almacena mensaje en memoria en posición: 16
+[INFO] 22:41:42:878 BROKER/(9893:9907): Llegó un nuevo mensaje a la cola CATCH_POKEMON.
+[INFO] 22:41:42:896 BROKER/(9893:9928): Se conectó un proceso GAMEBOY.
+[INFO] 22:41:42:897 BROKER/(9893:9928): Un proceso GAMEBOY se sucribió a la cola NEW_POKEMON.
+[INFO] 22:43:51:922 BROKER/(10012:10012): ___________________________________________________________________________________________________________
+[INFO] 22:43:51:922 BROKER/(10012:10012): Inició el BROKER
+[INFO] 22:43:56:854 BROKER/(10012:10032): Se conectó un proceso GAMEBOY.
+[INFO] 22:43:56:857 BROKER/(10012:10032): Se almacena mensaje en memoria en posición: 0
+[INFO] 22:43:56:858 BROKER/(10012:10025): Llegó un nuevo mensaje a la cola CAUGHT_POKEMON.
+[INFO] 22:43:56:865 BROKER/(10012:10035): Se conectó un proceso GAMEBOY.
+[INFO] 22:43:56:866 BROKER/(10012:10035): Se almacena mensaje en memoria en posición: 4
+[INFO] 22:43:56:869 BROKER/(10012:10038): Se conectó un proceso GAMEBOY.
+[INFO] 22:43:56:870 BROKER/(10012:10038): Se almacena mensaje en memoria en posición: 32
+[INFO] 22:43:56:871 BROKER/(10012:10024): Llegó un nuevo mensaje a la cola NEW_POKEMON.
+[INFO] 22:43:56:873 BROKER/(10012:10041): Se conectó un proceso GAMEBOY.
+[INFO] 22:43:56:874 BROKER/(10012:10041): Se almacena mensaje en memoria en posición: 16
+[INFO] 22:43:56:882 BROKER/(10012:10026): Llegó un nuevo mensaje a la cola CATCH_POKEMON.
+[INFO] 22:43:56:884 BROKER/(10012:10044): Se conectó un proceso GAMEBOY.
+[INFO] 22:43:56:884 BROKER/(10012:10044): Un proceso GAMEBOY se sucribió a la cola NEW_POKEMON.
+[INFO] 22:44:58:89 BROKER/(10085:10085): ___________________________________________________________________________________________________________
+[INFO] 22:44:58:89 BROKER/(10085:10085): Inició el BROKER
+[INFO] 22:45:13:868 BROKER/(10085:10107): Se conectó un proceso GAMEBOY.
+[INFO] 22:45:13:870 BROKER/(10085:10107): Se almacena mensaje en memoria en posición: 0
+[INFO] 22:45:13:870 BROKER/(10085:10098): Llegó un nuevo mensaje a la cola CAUGHT_POKEMON.
+[INFO] 22:45:13:872 BROKER/(10085:10110): Se conectó un proceso GAMEBOY.
+[INFO] 22:45:13:873 BROKER/(10085:10110): Se almacena mensaje en memoria en posición: 4
+[INFO] 22:45:13:879 BROKER/(10085:10113): Se conectó un proceso GAMEBOY.
+[INFO] 22:45:13:880 BROKER/(10085:10113): Se almacena mensaje en memoria en posición: 32
+[INFO] 22:45:13:885 BROKER/(10085:10097): Llegó un nuevo mensaje a la cola NEW_POKEMON.
+[INFO] 22:45:13:898 BROKER/(10085:10116): Se conectó un proceso GAMEBOY.
+[INFO] 22:45:13:903 BROKER/(10085:10116): Se almacena mensaje en memoria en posición: 16
+[INFO] 22:45:13:903 BROKER/(10085:10099): Llegó un nuevo mensaje a la cola CATCH_POKEMON.
+[INFO] 22:45:13:910 BROKER/(10085:10119): Se conectó un proceso GAMEBOY.
+[INFO] 22:45:13:911 BROKER/(10085:10119): Un proceso GAMEBOY se sucribió a la cola NEW_POKEMON.
+[INFO] 22:47:32:666 BROKER/(10197:10197): ___________________________________________________________________________________________________________
+[INFO] 22:47:32:666 BROKER/(10197:10197): Inició el BROKER
+[INFO] 22:47:38:159 BROKER/(10197:10219): Se conectó un proceso GAMEBOY.
+[INFO] 22:47:38:162 BROKER/(10197:10219): Se almacena mensaje en memoria en posición: 0
+[INFO] 22:47:38:167 BROKER/(10197:10210): Llegó un nuevo mensaje a la cola CAUGHT_POKEMON.
+[INFO] 22:47:38:169 BROKER/(10197:10222): Se conectó un proceso GAMEBOY.
+[INFO] 22:47:38:170 BROKER/(10197:10222): Se almacena mensaje en memoria en posición: 4
+[INFO] 22:47:38:173 BROKER/(10197:10225): Se conectó un proceso GAMEBOY.
+[INFO] 22:47:38:174 BROKER/(10197:10225): Se almacena mensaje en memoria en posición: 32
+[INFO] 22:47:38:174 BROKER/(10197:10209): Llegó un nuevo mensaje a la cola NEW_POKEMON.
+[INFO] 22:47:38:176 BROKER/(10197:10228): Se conectó un proceso GAMEBOY.
+[INFO] 22:47:38:178 BROKER/(10197:10228): Se almacena mensaje en memoria en posición: 16
+[INFO] 22:47:38:199 BROKER/(10197:10211): Llegó un nuevo mensaje a la cola CATCH_POKEMON.
+[INFO] 22:47:38:210 BROKER/(10197:10231): Se conectó un proceso GAMEBOY.
+[INFO] 22:47:38:212 BROKER/(10197:10231): Un proceso GAMEBOY se sucribió a la cola NEW_POKEMON.
+[INFO] 22:50:02:691 BROKER/(10342:10342): ___________________________________________________________________________________________________________
+[INFO] 22:50:02:691 BROKER/(10342:10342): Inició el BROKER
+[INFO] 22:50:06:370 BROKER/(10342:10362): Se conectó un proceso GAMEBOY.
+[INFO] 22:50:06:373 BROKER/(10342:10362): Se almacena mensaje en memoria en posición: 0
+[INFO] 22:50:06:374 BROKER/(10342:10355): Llegó un nuevo mensaje a la cola CAUGHT_POKEMON.
+[INFO] 22:50:06:380 BROKER/(10342:10365): Se conectó un proceso GAMEBOY.
+[INFO] 22:50:06:382 BROKER/(10342:10365): Se almacena mensaje en memoria en posición: 4
+[INFO] 22:50:06:385 BROKER/(10342:10368): Se conectó un proceso GAMEBOY.
+[INFO] 22:50:06:386 BROKER/(10342:10368): Se almacena mensaje en memoria en posición: 32
+[INFO] 22:50:06:387 BROKER/(10342:10354): Llegó un nuevo mensaje a la cola NEW_POKEMON.
+[INFO] 22:50:06:398 BROKER/(10342:10371): Se conectó un proceso GAMEBOY.
+[INFO] 22:50:06:400 BROKER/(10342:10371): Se almacena mensaje en memoria en posición: 16
+[INFO] 22:50:06:400 BROKER/(10342:10356): Llegó un nuevo mensaje a la cola CATCH_POKEMON.
+[INFO] 22:50:06:406 BROKER/(10342:10374): Se conectó un proceso GAMEBOY.
+[INFO] 22:50:06:407 BROKER/(10342:10374): Un proceso GAMEBOY se sucribió a la cola NEW_POKEMON.
+[INFO] 22:52:51:23 BROKER/(10511:10511): ___________________________________________________________________________________________________________
+[INFO] 22:52:51:23 BROKER/(10511:10511): Inició el BROKER
+[INFO] 22:52:58:687 BROKER/(10511:10530): Se conectó un proceso GAMEBOY.
+[INFO] 22:52:58:688 BROKER/(10511:10530): Se almacena mensaje en memoria en posición: 0
+[INFO] 22:52:58:688 BROKER/(10511:10524): Llegó un nuevo mensaje a la cola CAUGHT_POKEMON.
+[INFO] 22:52:58:690 BROKER/(10511:10533): Se conectó un proceso GAMEBOY.
+[INFO] 22:52:58:691 BROKER/(10511:10533): Se almacena mensaje en memoria en posición: 4
+[INFO] 22:52:58:696 BROKER/(10511:10536): Se conectó un proceso GAMEBOY.
+[INFO] 22:52:58:697 BROKER/(10511:10536): Se almacena mensaje en memoria en posición: 32
+[INFO] 22:52:58:697 BROKER/(10511:10523): Llegó un nuevo mensaje a la cola NEW_POKEMON.
+[INFO] 22:52:58:699 BROKER/(10511:10539): Se conectó un proceso GAMEBOY.
+[INFO] 22:52:58:700 BROKER/(10511:10539): Se almacena mensaje en memoria en posición: 16
+[INFO] 22:52:58:706 BROKER/(10511:10525): Llegó un nuevo mensaje a la cola CATCH_POKEMON.
+[INFO] 22:52:58:719 BROKER/(10511:10542): Se conectó un proceso GAMEBOY.
+[INFO] 22:52:58:723 BROKER/(10511:10542): Un proceso GAMEBOY se sucribió a la cola NEW_POKEMON.
+[INFO] 22:56:08:823 BROKER/(10661:10661): ___________________________________________________________________________________________________________
+[INFO] 22:56:08:823 BROKER/(10661:10661): Inició el BROKER
+[INFO] 22:56:13:103 BROKER/(10661:10680): Se conectó un proceso GAMEBOY.
+[INFO] 22:56:13:107 BROKER/(10661:10680): Se almacena mensaje en memoria en posición: 0
+[INFO] 22:56:13:107 BROKER/(10661:10674): Llegó un nuevo mensaje a la cola CAUGHT_POKEMON.
+[INFO] 22:56:13:114 BROKER/(10661:10683): Se conectó un proceso GAMEBOY.
+[INFO] 22:56:13:115 BROKER/(10661:10683): Se almacena mensaje en memoria en posición: 4
+[INFO] 22:56:13:116 BROKER/(10661:10686): Se conectó un proceso GAMEBOY.
+[INFO] 22:56:13:117 BROKER/(10661:10686): Se almacena mensaje en memoria en posición: 32
+[INFO] 22:56:13:117 BROKER/(10661:10673): Llegó un nuevo mensaje a la cola NEW_POKEMON.
+[INFO] 22:56:13:119 BROKER/(10661:10689): Se conectó un proceso GAMEBOY.
+[INFO] 22:56:13:120 BROKER/(10661:10689): Se almacena mensaje en memoria en posición: 16
+[INFO] 22:56:13:120 BROKER/(10661:10675): Llegó un nuevo mensaje a la cola CATCH_POKEMON.
+[INFO] 22:56:13:122 BROKER/(10661:10692): Se conectó un proceso GAMEBOY.
+[INFO] 22:56:13:123 BROKER/(10661:10692): Un proceso GAMEBOY se sucribió a la cola NEW_POKEMON.
+[INFO] 22:59:27:214 BROKER/(10796:10796): ___________________________________________________________________________________________________________
+[INFO] 22:59:27:214 BROKER/(10796:10796): Inició el BROKER
+[INFO] 22:59:33:869 BROKER/(10796:10818): Se conectó un proceso GAMEBOY.
+[INFO] 22:59:33:870 BROKER/(10796:10818): Se almacena mensaje en memoria en posición: 0
+[INFO] 22:59:33:871 BROKER/(10796:10809): Llegó un nuevo mensaje a la cola CAUGHT_POKEMON.
+[INFO] 22:59:33:877 BROKER/(10796:10821): Se conectó un proceso GAMEBOY.
+[INFO] 22:59:33:878 BROKER/(10796:10821): Se almacena mensaje en memoria en posición: 4
+[INFO] 22:59:33:880 BROKER/(10796:10824): Se conectó un proceso GAMEBOY.
+[INFO] 22:59:33:881 BROKER/(10796:10824): Se almacena mensaje en memoria en posición: 32
+[INFO] 22:59:33:881 BROKER/(10796:10808): Llegó un nuevo mensaje a la cola NEW_POKEMON.
+[INFO] 22:59:33:883 BROKER/(10796:10827): Se conectó un proceso GAMEBOY.
+[INFO] 22:59:33:884 BROKER/(10796:10827): Se almacena mensaje en memoria en posición: 16
+[INFO] 22:59:33:885 BROKER/(10796:10810): Llegó un nuevo mensaje a la cola CATCH_POKEMON.
+[INFO] 22:59:33:887 BROKER/(10796:10830): Se conectó un proceso GAMEBOY.
+[INFO] 22:59:33:888 BROKER/(10796:10830): Un proceso GAMEBOY se sucribió a la cola NEW_POKEMON.
+[INFO] 23:06:33:335 BROKER/(11180:11180): ___________________________________________________________________________________________________________
+[INFO] 23:06:33:335 BROKER/(11180:11180): Inició el BROKER
+[INFO] 23:07:47:398 BROKER/(11259:11259): ___________________________________________________________________________________________________________
+[INFO] 23:07:47:398 BROKER/(11259:11259): Inició el BROKER
+[INFO] 23:08:01:249 BROKER/(11288:11288): ___________________________________________________________________________________________________________
+[INFO] 23:08:01:249 BROKER/(11288:11288): Inició el BROKER
+[INFO] 23:08:04:590 BROKER/(11288:11312): Se conectó un proceso GAMEBOY.
+[INFO] 23:08:04:592 BROKER/(11288:11312): Se almacena mensaje en memoria en posición: 0
+[INFO] 23:08:04:593 BROKER/(11288:11301): Llegó un nuevo mensaje a la cola CAUGHT_POKEMON.
+[INFO] 23:08:04:598 BROKER/(11288:11315): Se conectó un proceso GAMEBOY.
+[INFO] 23:08:04:599 BROKER/(11288:11315): Se almacena mensaje en memoria en posición: 4
+[INFO] 23:08:04:601 BROKER/(11288:11318): Se conectó un proceso GAMEBOY.
+[INFO] 23:08:04:602 BROKER/(11288:11318): Se almacena mensaje en memoria en posición: 32
+[INFO] 23:08:04:603 BROKER/(11288:11300): Llegó un nuevo mensaje a la cola NEW_POKEMON.
+[INFO] 23:08:04:605 BROKER/(11288:11321): Se conectó un proceso GAMEBOY.
+[INFO] 23:08:04:605 BROKER/(11288:11321): Se almacena mensaje en memoria en posición: 16
+[INFO] 23:08:04:606 BROKER/(11288:11302): Llegó un nuevo mensaje a la cola CATCH_POKEMON.
+[INFO] 23:08:04:607 BROKER/(11288:11324): Se conectó un proceso GAMEBOY.
+[INFO] 23:08:04:608 BROKER/(11288:11324): Un proceso GAMEBOY se sucribió a la cola NEW_POKEMON.
+[INFO] 23:08:04:608 BROKER/(11288:11326): Se conectó un proceso GAMEBOY.
+[INFO] 23:08:14:611 BROKER/(11288:11333): Se conectó un proceso GAMEBOY.
+[INFO] 23:08:14:615 BROKER/(11288:11333): Elimino particion que comienza en: 0x8749cd0
+[INFO] 23:08:14:615 BROKER/(11288:11333): Elimino particion que comienza en: 0x8749cd4
+[INFO] 23:08:14:615 BROKER/(11288:11333): Se consolida partición con inicio en: 0x8749cd4 con su buddy con inicio en: (nil)
+[INFO] 23:08:14:615 BROKER/(11288:11333): Se consolida partición con inicio en: 0x8749cd0 con su buddy con inicio en: 0x8
+[INFO] 23:08:14:615 BROKER/(11288:11333): Elimino particion que comienza en: 0x8749cf0
+[INFO] 23:08:14:616 BROKER/(11288:11333): Se almacena mensaje en memoria en posición: 32
+[INFO] 23:08:14:616 BROKER/(11288:11302): Llegó un nuevo mensaje a la cola CATCH_POKEMON.
+[INFO] 23:10:03:926 BROKER/(11401:11401): ___________________________________________________________________________________________________________
+[INFO] 23:10:03:926 BROKER/(11401:11401): Inició el BROKER
+[INFO] 23:10:19:751 BROKER/(11428:11428): ___________________________________________________________________________________________________________
+[INFO] 23:10:19:751 BROKER/(11428:11428): Inició el BROKER
+[INFO] 23:10:25:632 BROKER/(11428:11450): Se conectó un proceso GAMEBOY.
+[INFO] 23:10:25:634 BROKER/(11428:11450): Se almacena mensaje en memoria en posición: 0
+[INFO] 23:10:25:635 BROKER/(11428:11441): Llegó un nuevo mensaje a la cola CAUGHT_POKEMON.
+[INFO] 23:10:25:641 BROKER/(11428:11453): Se conectó un proceso GAMEBOY.
+[INFO] 23:10:25:642 BROKER/(11428:11453): Se almacena mensaje en memoria en posición: 4
+[INFO] 23:10:25:645 BROKER/(11428:11456): Se conectó un proceso GAMEBOY.
+[INFO] 23:10:25:646 BROKER/(11428:11456): Se almacena mensaje en memoria en posición: 32
+[INFO] 23:10:25:647 BROKER/(11428:11440): Llegó un nuevo mensaje a la cola NEW_POKEMON.
+[INFO] 23:10:25:649 BROKER/(11428:11459): Se conectó un proceso GAMEBOY.
+[INFO] 23:10:25:650 BROKER/(11428:11459): Se almacena mensaje en memoria en posición: 16
+[INFO] 23:10:25:651 BROKER/(11428:11442): Llegó un nuevo mensaje a la cola CATCH_POKEMON.
+[INFO] 23:10:25:659 BROKER/(11428:11462): Se conectó un proceso GAMEBOY.
+[INFO] 23:10:25:662 BROKER/(11428:11462): Un proceso GAMEBOY se sucribió a la cola NEW_POKEMON.
+[INFO] 23:10:25:663 BROKER/(11428:11464): Se conectó un proceso GAMEBOY.
+[INFO] 23:10:35:672 BROKER/(11428:11467): Se conectó un proceso GAMEBOY.
+[INFO] 23:10:35:686 BROKER/(11428:11467): Elimino particion que comienza en: 0x8ba2cd0
+[INFO] 23:10:35:686 BROKER/(11428:11467): Elimino particion que comienza en: 0x8ba2cd4
+[INFO] 23:10:35:687 BROKER/(11428:11467): Se consolida partición con inicio en: 4 con su buddy con inicio en: 0
+[INFO] 23:10:35:687 BROKER/(11428:11467): Se consolida partición con inicio en: 0 con su buddy con inicio en: 8
+[INFO] 23:10:35:687 BROKER/(11428:11467): Elimino particion que comienza en: 0x8ba2cf0
+[INFO] 23:10:35:687 BROKER/(11428:11467): Se almacena mensaje en memoria en posición: 32
+[INFO] 23:10:35:688 BROKER/(11428:11442): Llegó un nuevo mensaje a la cola CATCH_POKEMON.

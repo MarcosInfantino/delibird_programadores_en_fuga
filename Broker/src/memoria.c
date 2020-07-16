@@ -20,7 +20,6 @@ void definirComienzoDeMemoria(){
 		nodosLibres   = inicializarListaMutex();
 
 		addListaMutex(nodosLibres, nodoRaizMemoria);
-		log_info(brokerLogger2,"agrego a la lista de libres a la raiz: status %i",nodoRaizMemoria->header.status);
 		break;
 
 	case PARTICIONES_DINAMICAS:
@@ -93,7 +92,7 @@ void guardarMensajeACK (paquete* paq){
 	uint32_t* idProceso = malloc(sizeof(uint32_t));
 	*idProceso = obtenerIdProcesoDeAck(paq->stream);
 
-	log_info(loggerBroker, "Me llegó el ACK del proceso de id %i (Mensaje %i).",obtenerIdProcesoDeAck(paq->stream), paq->idCorrelativo);
+	log_info(loggerBroker, "Llegó el ACK del proceso de id %i (sobre mensaje %i).",obtenerIdProcesoDeAck(paq->stream), paq->idCorrelativo);
 
 	log_info(brokerLogger2, "----------------------Guardo ACK del proceso %i",obtenerIdProcesoDeAck(paq->stream) );
 	msgMemoriaBroker* mensaje = buscarMensajeEnMemoria(paq->idCorrelativo);
@@ -108,6 +107,7 @@ void guardarMensajeACK (paquete* paq){
 
 void guardarYaEnviados (paquete* paq, uint32_t idProceso){
 	msgMemoriaBroker* mensaje = buscarMensajeEnMemoria(paq->id);
+	log_info(brokerLogger2,"encuentro un mensaje");
 	if(mensaje == NULL){
 		printf("No se encontró el mensaje en memoria, ERROR");
 	}

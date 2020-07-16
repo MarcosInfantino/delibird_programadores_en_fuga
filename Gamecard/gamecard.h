@@ -164,7 +164,7 @@ void actualizarArchivoBitmap();
 int32_t crearArchivoBloque(blockHeader* bloque);
 bool poseeArchivo(blockHeader* bloque);
 void inicializarListaBloques();
-bool estaLibre(uint32_t idBloque);
+bool estaLibreElBloque(uint32_t idBloque);
 void ocuparBloque(uint32_t idBloque);
 void liberarBloque(uint32_t idBloque);
 blockHeader* obtenerBloquePorId(uint32_t id);
