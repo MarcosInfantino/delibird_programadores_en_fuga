@@ -227,9 +227,9 @@ void* ejecucionHiloEntrenador(void* arg);
 
 int inicializarEntrenadores(t_list* entrenadores);
 
-int crearHiloConexionColasBroker(void* config, pthread_t* hilo);
+void crearHiloConexionColasBroker(void* config, pthread_t* hilo);
 
-void* suscribirseColasBroker(void* conf);
+void* suscribirseColasBroker(void*);
 
 int crearHiloServidorGameboy(pthread_t* hilo);
 

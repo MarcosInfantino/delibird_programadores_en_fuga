@@ -542,9 +542,9 @@ posicion* conseguirPosicionesCantidad(t_list* lista){
 		posicionCantidad* auxPosCan = (posicionCantidad*) list_get(lista,i);
 		posicion auxPos = auxPosCan->posicion;
 
-		memcpy(arrayPosicion+offset,&auxPos,2*sizeof(uint32_t));
+		//memcpy(arrayPosicion+offset,&auxPos,2*sizeof(uint32_t));
 
-		//*(arrayPosicion+i) = auxPos;
+		*(arrayPosicion+i) = auxPos;
 		log_info(gamecardLogger2, "Localized. Pos x: %i. Pos y: %i.", (arrayPosicion+i)->x, (arrayPosicion+i)->y);
 	}
 	return arrayPosicion;

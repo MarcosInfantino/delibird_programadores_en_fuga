@@ -206,7 +206,9 @@ void manejarTipoDeMensaje(paquete* paq, uint32_t* socket) {
 			 destruirSuscripcionTiempo(datosSuscribir);//PROBAR
 			 break;
 		 case ACK:
+			 pthread_mutex_lock(mutexMemoria);
 			 guardarMensajeACK(paq);
+			 pthread_mutex_unlock(mutexMemoria);
 			 break;
 		 default:
 			 pthread_exit(NULL);
@@ -222,7 +224,10 @@ void meterEnCola( colaMensajes* structCola, paquete * paq, uint32_t  socket){
 	send(socket,(void*)(&contador.contador),sizeof(uint32_t),0);
 	pthread_mutex_unlock(contador.mutexContador);
 
+	pthread_mutex_lock(mutexMemoria);
 	registrarMensajeEnMemoria(paq, algoritmoMemoria);
+	pthread_mutex_unlock(mutexMemoria);
+
 	log_info(brokerLogger2,"Terminó de registrar el mensaje en memoria.");
 
 	if((paq->idCorrelativo == 0) || (!yaSeEnvioEstaRespuesta(paq))){
@@ -230,6 +235,8 @@ void meterEnCola( colaMensajes* structCola, paquete * paq, uint32_t  socket){
 		log_info(brokerLogger2,"Aviso que hay mensajes en cola.");
 		sem_post(structCola->mensajesEnCola);
 	}
+//	pushColaMutex(structCola->cola, (void *) paq);
+//	sem_post(structCola->mensajesEnCola);
 }
 
 void abrirHiloParaEnviarMensajes(){
@@ -269,7 +276,9 @@ void * chequearMensajesEnCola(void * colaVoid){
 			log_info(brokerLogger2, "Envié mensaje a suscriptor: %d -.-", actual->idProceso);
 			log_info(loggerBroker, "Envié mensaje al suscriptor de id: %d.", actual->idProceso);
 
+			pthread_mutex_lock(mutexMemoria);
 			guardarYaEnviados(paq, actual->idProceso);
+			pthread_mutex_unlock(mutexMemoria);
 		}
 
 		free(paqSerializado);

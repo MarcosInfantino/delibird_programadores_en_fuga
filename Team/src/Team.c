@@ -51,23 +51,9 @@ int main(int argc , char* argv[]){
 	arrayIdHilosEntrenadores  = malloc(cantEntrenadores*sizeof(pthread_t));
 	inicializarEntrenadores(team->entrenadores);
 
-	//----------------------------------------------------------------------------
-//	mensajeSuscripcion* mensajeSuscripcionAppeared=llenarSuscripcion(APPEARED_POKEMON, idProcesoTeam);
-//	mensajeSuscripcion * mensajeSuscripcionCaught=llenarSuscripcion(CAUGHT_POKEMON, idProcesoTeam);
-//	mensajeSuscripcion* mensajeSuscripcionLocalized=llenarSuscripcion(LOCALIZED_POKEMON, idProcesoTeam);
-//
-//
-//	pthread_create(&threadSuscripcionAppeared, NULL, suscribirseCola, (void*)(mensajeSuscripcionAppeared));
-//	pthread_detach(threadSuscripcionAppeared);
-//
-//	pthread_create(&threadSuscripcionLocalized, NULL, suscribirseCola,(void*) (mensajeSuscripcionLocalized));
-//	pthread_detach(threadSuscripcionLocalized);
-//
-//	pthread_create(&threadSuscripcionCaught, NULL, suscribirseCola, (void*)(mensajeSuscripcionCaught));
-//	pthread_detach(threadSuscripcionCaught);
 
-	//--------------------------------------------------------------------------------------------------
 	crearHilos(config);
+
 
 	sem_wait(semaforoObjetivoCumplido);
 	//sem_post(semaforoCerrarConexionBroker);
@@ -102,7 +88,22 @@ void inicializarSemaforos(){
 void crearHilos(t_config* config){
 	crearHiloParaEnviarGets(&hiloEnviarGets);
 	crearHiloResolucionDeadlock(&resolucionDeadlock);
-	crearHiloConexionColasBroker((void*)config,&hiloConexionInicialBroker);
+
+
+	mensajeSuscripcion* mensajeSuscripcionAppeared=llenarSuscripcion(APPEARED_POKEMON, idProcesoTeam);
+	mensajeSuscripcion * mensajeSuscripcionCaught=llenarSuscripcion(CAUGHT_POKEMON, idProcesoTeam);
+	mensajeSuscripcion* mensajeSuscripcionLocalized=llenarSuscripcion(LOCALIZED_POKEMON, idProcesoTeam);
+
+	pthread_create(&threadSuscripcionAppeared, NULL, suscribirseCola, (void*)(mensajeSuscripcionAppeared));
+	pthread_detach(threadSuscripcionAppeared);
+
+	pthread_create(&threadSuscripcionLocalized, NULL, suscribirseCola,(void*) (mensajeSuscripcionLocalized));
+	pthread_detach(threadSuscripcionLocalized);
+
+	pthread_create(&threadSuscripcionCaught, NULL, suscribirseCola, (void*)(mensajeSuscripcionCaught));
+	pthread_detach(threadSuscripcionCaught);
+	//crearHiloConexionColasBroker((void*) config, &hiloConexionInicialBroker);
+
 	crearHiloServidorGameboy(&hiloServidorGameboy);
 	crearHiloPlanificador(&hiloPlanificador);
 }
@@ -357,15 +358,12 @@ int32_t crearHiloResolucionDeadlock(pthread_t* hilo){
 		return 0;
 }
 
-int crearHiloConexionColasBroker(void* config, pthread_t* hilo){
-	uint32_t err=pthread_create(hilo,NULL,suscribirseColasBroker,(void*)config);
-				if(err!=0){
-					printf("Hubo un problema en la creación del hilo para conectarse al broker \n");
-					return err;
-				}
+void crearHiloConexionColasBroker(void* config, pthread_t* hilo){
+	pthread_create(hilo,NULL,suscribirseColasBroker,(void*)config);
+
 
 	pthread_detach(*hilo);
-	return 0;
+
 }
 
 uint32_t crearHiloParaEnviarGets(pthread_t* hilo){
@@ -430,7 +428,7 @@ uint32_t reconectarseAlBroker(){
 	return cliente;
 }
 
-void* suscribirseColasBroker(void* conf){
+void* suscribirseColasBroker(void *arg){
 
 	mensajeSuscripcion* mensajeSuscripcionAppeared=llenarSuscripcion(APPEARED_POKEMON, idProcesoTeam);
 	mensajeSuscripcion * mensajeSuscripcionCaught=llenarSuscripcion(CAUGHT_POKEMON, idProcesoTeam);
@@ -448,8 +446,9 @@ void* suscribirseColasBroker(void* conf){
 
 	while(1);
 
-
 	return NULL;
+
+
 }
 
 uint32_t enviarSuscripcion(uint32_t socket, mensajeSuscripcion* msg){

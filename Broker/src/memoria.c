@@ -31,12 +31,15 @@ void definirComienzoDeMemoria(){
 }
 
 void registrarMensajeEnMemoria(paquete* paq, algoritmoMem metodo){
+	//pthread_mutex_lock(mutexMemoria);
 	if(paq->tipoMensaje == CATCH_POKEMON || paq->tipoMensaje == GET_POKEMON){
 		if(yaEstaEnMemoria(paq)){
 			log_info(brokerLogger2, "El mensaje ya se encontraba en memoria, no se registra.");
 			return;
 		}
 	}
+	//pthread_mutex_unlock(mutexMemoria);
+
 	msgMemoriaBroker* msgNuevo = malloc(sizeof(msgMemoriaBroker));
 	msgNuevo->cola          = paq->tipoMensaje;
 	msgNuevo->idMensaje     = paq->id;
@@ -55,12 +58,12 @@ void registrarMensajeEnMemoria(paquete* paq, algoritmoMem metodo){
 	case PARTICIONES_DINAMICAS:
 		log_info(brokerLogger2, "ITERACION: %i", iteraciones);
 		iteraciones = iteraciones + 1;
-		pthread_mutex_lock(mutexMemoria);
+		//pthread_mutex_lock(mutexMemoria);
 		registrarEnParticiones(msgNuevo);
-		pthread_mutex_unlock(mutexMemoria);
+		//pthread_mutex_unlock(mutexMemoria);
 		break;
 	case BUDDY_SYSTEM:
-		pthread_mutex_lock(mutexMemoria);
+		//pthread_mutex_lock(mutexMemoria);
 		sizePrevio = sizeListaMutex(nodosOcupados);
 		registrarEnMemoriaBUDDYSYSTEM(msgNuevo, nodoRaizMemoria);
 		while (sizeListaMutex(nodosOcupados) == sizePrevio){
@@ -68,7 +71,7 @@ void registrarMensajeEnMemoria(paquete* paq, algoritmoMem metodo){
 			sizePrevio = sizeListaMutex(nodosOcupados);
 			registrarEnMemoriaBUDDYSYSTEM(msgNuevo, nodoRaizMemoria);
 		}
-		pthread_mutex_unlock(mutexMemoria);
+		//pthread_mutex_unlock(mutexMemoria);
 		break;
 	default:
 		printf("error al guardar mensaje");
@@ -89,6 +92,7 @@ bool estaEnListaACK(uint32_t idProceso, msgMemoriaBroker* mensaje){
 }
 
 void guardarMensajeACK (paquete* paq){
+
 	uint32_t* idProceso = malloc(sizeof(uint32_t));
 	*idProceso = obtenerIdProcesoDeAck(paq->stream);
 
@@ -96,26 +100,28 @@ void guardarMensajeACK (paquete* paq){
 
 	log_info(brokerLogger2, "----------------------Guardo ACK del proceso %i",obtenerIdProcesoDeAck(paq->stream) );
 	msgMemoriaBroker* mensaje = buscarMensajeEnMemoria(paq->idCorrelativo);
-	if(mensaje == NULL){
-		printf("No se encontró el mensaje en memoria, ERROR");
-		return;
+	if(mensaje != NULL){
+
+		addListaMutex(mensaje->subsACK, (void*) idProceso);
+
 	}
-	pthread_mutex_lock(mutexMemoria);
-	addListaMutex(mensaje->subsACK, (void*) idProceso);
-	pthread_mutex_unlock(mutexMemoria);
+
+
 }
 
 void guardarYaEnviados (paquete* paq, uint32_t idProceso){
+
+
 	msgMemoriaBroker* mensaje = buscarMensajeEnMemoria(paq->id);
-	log_info(brokerLogger2,"encuentro un mensaje");
-	if(mensaje == NULL){
-		printf("No se encontró el mensaje en memoria, ERROR");
-	}
-	else{
+	log_info(brokerLogger2,"Guardo el ya enviado para el proceso %i.",idProceso);
+	if(mensaje != NULL){
+		log_info(brokerLogger2,"encuentro un mensaje");
 		uint32_t* idProcesoAgregar = malloc(sizeof(uint32_t));
 		*idProcesoAgregar = idProceso;
 		addListaMutex(mensaje->subsYaEnviado, (void*) idProcesoAgregar);
 	}
+
+
 }
 
 

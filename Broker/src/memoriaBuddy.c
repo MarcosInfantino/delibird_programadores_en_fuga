@@ -205,11 +205,11 @@ msgMemoriaBroker* buscarMensajeEnMemoriaBuddy(uint32_t id){
 }
 
 bool existeMensajeEnMemoriaBuddy(mensajeGet* msgGet, mensajeCatch*  msgCatch){
-	pthread_mutex_lock(mutexMemoria);
+	//pthread_mutex_lock(mutexMemoria);
 	struct nodoMemoria* nodoActual = nodoRaizMemoria;
 	struct nodoMemoria* aux;
 	if(estaLibre(nodoActual)) {
-		pthread_mutex_unlock(mutexMemoria);
+		//pthread_mutex_unlock(mutexMemoria);
 		return false;
 	}
 	if(msgGet != NULL){
@@ -220,14 +220,14 @@ bool existeMensajeEnMemoriaBuddy(mensajeGet* msgGet, mensajeCatch*  msgCatch){
 				mensajeGet* mensaje=deserializarGet(aux->mensaje->stream);
 
 				if (compararGet(mensaje,msgGet)){
-					pthread_mutex_unlock(mutexMemoria);
+					//pthread_mutex_unlock(mutexMemoria);
 					return true;
 				}
 				destruirGet(mensaje);//PROBAR
 
 			}
 		}
-		pthread_mutex_unlock(mutexMemoria);
+		//pthread_mutex_unlock(mutexMemoria);
 		return false;
 	}else if(msgCatch != NULL){
 		log_info(brokerLogger2, "Valido si ya existe el mensaje Catch en memoria buddy.");
@@ -237,16 +237,16 @@ bool existeMensajeEnMemoriaBuddy(mensajeGet* msgGet, mensajeCatch*  msgCatch){
 					if (aux->mensaje->cola == CATCH_POKEMON){
 						mensajeCatch* mensaje=deserializarCatch(aux->mensaje->stream);
 						if (compararCatch(mensaje,msgCatch)){
-							pthread_mutex_unlock(mutexMemoria);
+							//pthread_mutex_unlock(mutexMemoria);
 							return true;
 						}
 						destruirCatch(mensaje);//PROBAR
 					}
 				}
-		pthread_mutex_unlock(mutexMemoria);
+		//pthread_mutex_unlock(mutexMemoria);
 		return false;
 	}
-	pthread_mutex_unlock(mutexMemoria);
+	//pthread_mutex_unlock(mutexMemoria);
 	return true;
 }
 

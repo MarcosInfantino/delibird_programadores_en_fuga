@@ -86,7 +86,9 @@ void suscribir(colaMensajes * cola, paquete paq, uint32_t* socket,uint32_t ident
 		suscribirACola(socket, idProceso,cola);
 		responderMensaje(*socket, CORRECTO);
 
+		pthread_mutex_lock(mutexMemoria);
 		enviarMensajesPreviosEnMemoria(*socket, idProceso, identificadorCola);
+		pthread_mutex_unlock(mutexMemoria);
 
 	} else {
 		responderMensaje(*socket, INCORRECTO);

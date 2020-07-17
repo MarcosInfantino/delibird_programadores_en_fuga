@@ -131,7 +131,7 @@ pthread_t hiloServidorDeEscucha;
 pthread_t hiloConexionBroker;
 pthread_mutex_t* mutexPrueba;
 
-
+char* pathConfigGC;
 listaMutex* listaArchivos;//lista de archivoHeader
 t_bitarray* bitmap;
 char* mmapBitmap;
@@ -144,8 +144,8 @@ t_log* gamecardLogger2;
 void* suscribirseColaGC(void* msgSuscripcion);
 uint32_t enviarSuscripcion(uint32_t socket, mensajeSuscripcion* msg);
 void suscribirseColasBrokerGC();
-void* iniciarServidorGameboy(void* arg);
-void crearHiloServidorGameboy(pthread_t* hilo);
+void* iniciarServidorGameboyGC(void* arg);
+void crearHiloServidorGameboyGC(pthread_t* hilo);
 void esperar_cliente(uint32_t servidor);
 void* atenderCliente(void* sock);
 void* atenderNew(void* paquete);

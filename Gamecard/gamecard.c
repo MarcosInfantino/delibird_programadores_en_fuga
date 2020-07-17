@@ -11,7 +11,8 @@
 
 
 
-int main(void) {
+int main(int argc , char* argv[]) {
+	pathConfigGC=argv[1];
 	sem_t * semaforoFinalizacionGC=malloc(sizeof(sem_t));
 	sem_init(semaforoFinalizacionGC,0,0);
 
@@ -34,11 +35,13 @@ int main(void) {
 	iniciarBitmap();
 	inicializarListaBloques();
 
-	//crearHiloConexionBroker(configGamecard,&hiloConexionBroker);
+
 	suscribirseColasBrokerGC();
-	//suscribirseColasBroker(configGamecard);
-	crearHiloServidorGameboy(&hiloServidorDeEscucha);
+
+	crearHiloServidorGameboyGC(&hiloServidorDeEscucha);
+
 	sem_wait(semaforoFinalizacionGC);
+
 	liberarPrograma(configGamecard,gamecardLogger);
 
 
@@ -47,7 +50,7 @@ int main(void) {
 
 
 t_config* crearYleerConfig(){
-	t_config * configGamecard = config_create("Gamecard.config");
+	t_config * configGamecard = config_create(pathConfigGC);
 	puertoBrokerGC = config_get_int_value(configGamecard, "PUERTO_BROKER");//5002;
 	ipBrokerGC = config_get_string_value(configGamecard, "IP_BROKER");//"127.0.0.1"; //
 	tiempoRetardoGC = config_get_int_value(configGamecard, "TIEMPO_DE_RETARDO_OPERACION"); //
@@ -242,15 +245,15 @@ uint32_t reconectarseAlBrokerGC(){
 
 
 
-void crearHiloServidorGameboy(pthread_t* hilo) {
-	pthread_create(hilo, NULL, iniciarServidorGameboy, NULL);
+void crearHiloServidorGameboyGC(pthread_t* hilo) {
+	pthread_create(hilo, NULL, iniciarServidorGameboyGC, NULL);
 
 	pthread_detach(*hilo);
 
 
 }
 
-void* iniciarServidorGameboy(void* arg) {
+void* iniciarServidorGameboyGC(void* arg) {
 	struct sockaddr_in direccionServidor;
 	direccionServidor.sin_family = AF_INET;
 	direccionServidor.sin_addr.s_addr = INADDR_ANY;
@@ -279,9 +282,9 @@ void esperar_cliente(uint32_t servidor) {
 	uint32_t* socket_cliente = malloc(sizeof(uint32_t));
 	*socket_cliente = accept(servidor, (void*) &dir_cliente, &tam_direccion);
 	log_info(gamecardLogger,"Gestiono un nuevo cliente");
-	pthread_t threadAtencionGameboy;
-	pthread_create(&threadAtencionGameboy, NULL, atenderCliente,(void*) (socket_cliente));
-	pthread_detach(threadAtencionGameboy);
+	pthread_t threadAtencionGameboyGC;
+	pthread_create(&threadAtencionGameboyGC, NULL, atenderCliente,(void*) (socket_cliente));
+	pthread_detach(threadAtencionGameboyGC);
 }
 
 void* atenderCliente(void* sock) {
@@ -391,7 +394,7 @@ void enviarAppeared(pokemonEnPosicion* pokeEnPosicion) {
 	paquete* paq = llenarPaquete(GAMECARD, APPEARED_POKEMON,sizeArgumentos(APPEARED_POKEMON, msgAppeared->pokemon, 0),streamMsg);
 	insertarIdCorrelativoPaquete(paq, (pokeEnPosicion->id));
 	void* paqueteSerializado = serializarPaquete(paq);
-	free(msgAppeared);
+	destruirAppeared(msgAppeared);
 	//destruirPaquete(paq);
 
 	send(cliente, paqueteSerializado, sizePaquete(paq), 0);
@@ -551,9 +554,8 @@ void* atenderCatch(void* paq) {
 void enviarCaught(pokemonAAtrapar* pokeAAtrapar) {
 	log_info(gamecardLogger,"Inicia proceso envio Caught");
 	uint32_t cliente = crearSocketCliente(ipBrokerGC, puertoBrokerGC);
-	mensajeCaught* msgCaught = malloc(sizeof(mensajeCaught));
-	llenarCaught(pokeAAtrapar->resultado);
-	msgCaught->resultadoCaught = pokeAAtrapar->resultado;
+	mensajeCaught* msgCaught = llenarCaught(pokeAAtrapar->resultado);
+
 	void* streamMsg = serializarCaught(msgCaught);
 	paquete* paq = llenarPaquete(GAMECARD, CAUGHT_POKEMON,
 	sizeArgumentos(CAUGHT_POKEMON, NULL, BROKER), streamMsg);
