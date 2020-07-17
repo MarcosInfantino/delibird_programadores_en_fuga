@@ -69,8 +69,8 @@
 //
 
 int main(int argc , char* argv[]) {
-	sem_t* semaforo=malloc(sizeof(sem_t));
-	sem_init(semaforo, 0, NULL);
+//	sem_t* semaforo=malloc(sizeof(sem_t));
+//	sem_init(semaforo, 0, NULL);
 
 	char* pathConfigGC = argv[1];
 	t_config* configGamecard = crearYleerConfig(pathConfigGC);
@@ -91,9 +91,9 @@ int main(int argc , char* argv[]) {
 	iniciarBitmap();
 	inicializarListaBloques();
 
-	//crearHiloConexionBroker(configGamecard,&hiloConexionBroker);
+	crearHiloConexionBroker(configGamecard,&hiloConexionBroker);
 
-	sem_wait(semaforo);
+	//sem_wait(semaforo);
 	crearHiloServidorGameboyGC(&hiloServidorDeEscucha);
 	//iniciarServidorGameboy(NULL);
 	liberarPrograma(configGamecard,gamecardLogger);
@@ -348,8 +348,8 @@ uint32_t enviarSuscripcion(uint32_t socket, mensajeSuscripcion* msg){
 	}
 
 	uint32_t respuesta = -1;
-
-	recv(cliente,&respuesta,sizeof(uint32_t),0);
+	//recv(cliente,&respuesta,sizeof(uint32_t),MSG_WAITALL);
+	recv(cliente,&respuesta,sizeof(uint32_t),MSG_WAITALL);//PROBAR
 	printf("Socket: %i, cola: %i\n", cliente, msg->cola);
 
 	if(respuesta!=CORRECTO){

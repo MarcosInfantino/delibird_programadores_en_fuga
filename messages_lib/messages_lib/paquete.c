@@ -86,28 +86,28 @@ paquete* recibirPaquete(uint32_t socket){
 	paquete* paq = malloc(sizeof(paquete));
 	//|| recv(socket,&(paq->modulo),sizeof(uint32_t),0)==0
 
-	int32_t recv1=recv(socket,&(paq->modulo),sizeof(uint32_t),0);
+	int32_t recv1=recv(socket,&(paq->modulo),sizeof(uint32_t),MSG_WAITALL);
 	if(recv1<=0){
 		return NULL;
 	}
 
 
-	int32_t recv2=recv(socket,&(paq->tipoMensaje),sizeof(uint32_t),0);
+	int32_t recv2=recv(socket,&(paq->tipoMensaje),sizeof(uint32_t),MSG_WAITALL);
 	if(recv2<=0){
 		return NULL;
 	}
 
-	int32_t recv3=recv(socket,&(paq->id),sizeof(uint32_t),0);
+	int32_t recv3=recv(socket,&(paq->id),sizeof(uint32_t),MSG_WAITALL);
 	if(recv3<=0){
 		return NULL;
 	}
 
-	int32_t recv4=recv(socket,&(paq->idCorrelativo),sizeof(uint32_t),0);
+	int32_t recv4=recv(socket,&(paq->idCorrelativo),sizeof(uint32_t),MSG_WAITALL);
 	if(recv4<=0){
 		return NULL;
 	}
 
-	int32_t recv5=recv(socket,&(paq->sizeStream),sizeof(uint32_t),0);
+	int32_t recv5=recv(socket,&(paq->sizeStream),sizeof(uint32_t),MSG_WAITALL);
 	if(recv5<=0){
 		return NULL;
 	}
@@ -115,7 +115,7 @@ paquete* recibirPaquete(uint32_t socket){
 	if(paq->sizeStream>0){
 	paq->stream = malloc(paq->sizeStream);
 
-	int32_t recv6=recv(socket,paq->stream,(paq->sizeStream),0);
+	int32_t recv6=recv(socket,paq->stream,(paq->sizeStream),MSG_WAITALL);
 
 	if(recv6<=0){
 		return NULL;
