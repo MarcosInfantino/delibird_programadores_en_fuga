@@ -24,18 +24,17 @@
 //\n
 
 int main(int argc, char* argv[]) {
-	//char* nombreLog = "gameboy.log";
+//	char* logGameboy = "gameboy.log";
 //	char* nombreProg = "GAMEBOY";
 //	gameboyLogger = iniciar_logger(nombreLog, nombreProg);
-
-	log_info(gameboyLogger, "Arranco\n");
 //	t_config * config = config_create("gameBoy1.config");
+
 	t_config * config = config_create("gameboy.config");
 	idProcesoGameboy=config_get_int_value(config, "ID_PROCESO");
-
-	char* logGameboy = config_get_string_value(config, "LOG_FILE");
+	char* pathLogger = config_get_string_value(config, "LOG_FILE");
 	char* nombreProg = "GAMEBOY";
-	gameboyLogger = iniciar_logger(logGameboy, nombreProg);
+	gameboyLogger = iniciar_logger(pathLogger, nombreProg);
+	log_info(gameboyLogger, "Arranco\n");
 
 	void* stream;
 	paquete* paquete;
