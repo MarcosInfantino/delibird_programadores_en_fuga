@@ -380,7 +380,9 @@ void* atenderNew(void* paq) {
 	log_info(gamecardLogger2,"Cierro el archivo del pokemon: %s. Posicion: (%i, %i).", msgNew->pokemon, msgNew->posX, msgNew->posY);
 	log_info(gamecardLogger,"Cierro el archivo del pokemon: %s. Posicion: (%i, %i).", msgNew->pokemon, msgNew->posX, msgNew->posY);
 	enviarAppeared(pokeEnPosicion);
-
+	free(pokeEnPosicion->pokemon);
+	free(pokeEnPosicion);
+	destruirNew(msgNew);
 	destruirPaquete(paq);
 	return NULL;
 
@@ -418,15 +420,6 @@ void* atenderGet(void* paq) {
 	pokeADevolver->id = idGet;
 	log_info(gamecardLogger2,"Atiendo Get del pokemon: %s", msgGet->pokemon);
 
-//	int32_t resultloco = existe(string_from_format(pathFiles,pokeADevolver->pokemon));
-//
-//	log_info(gamecardLogger2,"%s",string_from_format("%s%s",pathFiles,pokeADevolver->pokemon));
-//	if(resultloco == 0){
-//		log_info(gamecardLogger2,"EXISTE");
-//	}else{
-//		log_info(gamecardLogger2,"NO EXISTE");
-//	}
-
 	char* pathArchivoExiste=string_from_format("%s%s",pathFiles,pokeADevolver->pokemon);
 	if(archivoExiste(pathArchivoExiste)){
 		log_info(gamecardLogger2,"EXISTE");
@@ -449,15 +442,6 @@ void* atenderGet(void* paq) {
 		pokeADevolver->cantPosiciones=0;
 	}
 
-	//Verificar que el pokemon este en nuestro FileSystem (si no encuentra mando posiciones vacias)
-	//Una vez encontrado verificar si puedo abrirlo
-	//Verificar si las posiciones existen en el archivo
-	//Conseguir Posiciones
-	//pokeADevolver->cantPosiciones = DEL FILESYSTEM
-	//pokeADevolver->posicion= DEL FILESYSTEM
-	//free(msg);
-	//IF SUCCESS
-
 	log_info(gamecardLogger2,"Pokemon:%s",pokeADevolver->pokemon);
 	log_info(gamecardLogger2,"Cantidad de Posiciones:%i",pokeADevolver->cantPosiciones);
 
@@ -467,7 +451,10 @@ void* atenderGet(void* paq) {
 	}
 
 	enviarLocalized(pokeADevolver);
+	destruirGet(msgGet);
 	free(pathArchivoExiste);
+	free(pokeADevolver->pokemon);
+	free(pokeADevolver);
 	//destruirPaquete(paq);
 	return NULL;
 }
@@ -475,9 +462,8 @@ void* atenderGet(void* paq) {
 void enviarLocalized(pokemonADevolver* pokeADevolver) {
 	log_info(gamecardLogger,"Inicia proceso envio Localized");
 	uint32_t cliente = crearSocketCliente(ipBrokerGC, puertoBrokerGC);
-	mensajeLocalized* msgLocalized = malloc(sizeof(mensajeLocalized));
-
-	msgLocalized = llenarLocalized(pokeADevolver->pokemon,pokeADevolver->cantPosiciones,pokeADevolver->posiciones);
+	//mensajeLocalized* msgLocalized = malloc(sizeof(mensajeLocalized));
+	mensajeLocalized* msgLocalized = llenarLocalized(pokeADevolver->pokemon,pokeADevolver->cantPosiciones,pokeADevolver->posiciones);
 
 
 
@@ -496,7 +482,7 @@ void enviarLocalized(pokemonADevolver* pokeADevolver) {
 	paquete* paq = llenarPaquete(GAMECARD, LOCALIZED_POKEMON,sizeArgumentos(LOCALIZED_POKEMON, msgLocalized->pokemon, msgLocalized->cantidad),streamMsg);
 	insertarIdCorrelativoPaquete(paq, (pokeADevolver->id));
 	void* paqueteSerializado = serializarPaquete(paq);
-	//free(msgLocalized);
+	destruirLocalized(msgLocalized);
 	//destruirPaquete(paq);
 	loggearMensaje(paq, gamecardLogger2);
 	send(cliente, paqueteSerializado, sizePaquete(paq), 0);
@@ -546,7 +532,9 @@ void* atenderCatch(void* paq) {
 	log_info(gamecardLogger,"Cierro el archivo del pokemon: %s. Posicion: (%i, %i).", msgCatch->pokemon, msgCatch->posX, msgCatch->posY);
 
 	enviarCaught(pokeAAtrapar); //Momentaneo hasta saber bien que hacer con fileSystem
-
+	//free(pokeAAtrapar->pokemon);
+	//free(pokeAAtrapar);
+	//destruirCatch(msgCatch);
 	destruirPaquete(paq);
 	return NULL;
 }

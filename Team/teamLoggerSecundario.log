@@ -173,3 +173,130 @@
 [INFO] 17:09:33:796 team/(23479:23486): La nueva estimación del entrenador 0 es: 6.000000
 [INFO] 17:09:33:796 team/(23479:23486): El entrenador 0 pide un ciclo. Valor del semaforo: 8. 
 [INFO] 17:09:33:797 team/(23479:23486): El entrenador 0 libera la CPU por su cuenta.
+[INFO] 17:38:12:126 team/(20112:20112): --------------------------------------------------------------------------
+[INFO] 17:38:12:136 team/(20112:20112): NUEVA EJECUCION
+[INFO] 17:38:12:136 team/(20112:20112): --------------------------------------------------------------------------
+[INFO] 17:38:12:136 team/(20112:20112): Algortimo de planificación: RR con Q=1.
+[INFO] 17:38:12:136 team/(20112:20112): --------------------------------------------------------------
+[INFO] 17:38:12:136 team/(20112:20112): OBJETIVO DEL TEAM
+[INFO] 17:38:12:136 team/(20112:20112): Objetivo 0. Pokemon: Vaporeon. Cantidad: 1.
+[INFO] 17:38:12:136 team/(20112:20112): Objetivo 1. Pokemon: Jolteon. Cantidad: 1.
+[INFO] 17:38:12:136 team/(20112:20112): Objetivo 2. Pokemon: Flareon. Cantidad: 1.
+[INFO] 17:38:12:136 team/(20112:20112): Objetivo 3. Pokemon: Umbreon. Cantidad: 1.
+[INFO] 17:38:12:136 team/(20112:20112): Objetivo 4. Pokemon: Espeon. Cantidad: 1.
+[INFO] 17:38:12:136 team/(20112:20112): --------------------------------------------------
+[INFO] 17:38:12:137 team/(20112:20128): Se inicia el planificador
+[INFO] 17:38:12:139 team/(20112:20124): Suscripción realizada correctamente
+
+[INFO] 17:38:12:140 team/(20112:20126): Suscripción realizada correctamente
+
+[INFO] 17:38:12:140 team/(20112:20125): Suscripción realizada correctamente
+
+[INFO] 17:38:12:141 team/(20112:20143): Atiendo appeared. Pokemon: Squirtle.
+[INFO] 17:38:12:141 team/(20112:20143): El pokemon no es objetivo
+[INFO] 17:38:12:149 team/(20112:20145): Atiendo appeared. Pokemon: Flareon.
+[INFO] 17:38:12:149 team/(20112:20145): El pokemon es objetivo
+[INFO] 17:38:12:149 team/(20112:20145): Hay entrenadores disponibles para atrapar a Flareon.
+[INFO] 17:38:12:149 team/(20112:20145): Se le asigno el pokemon Flareon al entrenador 1.
+[INFO] 17:38:12:149 team/(20112:20118): El entrenador 1 se pone en READY.
+[INFO] 17:38:12:149 team/(20112:20128): Elijo al entrenador 1 para ejecutar.
+[INFO] 17:38:12:149 team/(20112:20118): El entrenador 1 entro en ejecución.
+[INFO] 17:38:12:149 team/(20112:20118): El entrenador 1, que estaba en (6,5), comenzará a moverse a (4,6).
+[INFO] 17:38:12:150 team/(20112:20118): El entrenador 1 pide un ciclo. Valor del semaforo: 0. 
+[INFO] 17:38:12:150 team/(20112:20128): INTERRUMPO A 1
+[INFO] 17:38:12:150 team/(20112:20118): -----------------EL ENTRENADOR 1 EJECUTA UN CICLO
+[INFO] 17:38:12:150 team/(20112:20145): Se selecciono el entrenador 1 para atrapar al pokemon Flareon
+[INFO] 17:38:17:150 team/(20112:20118): El entrenador 1 se mueve a : (5,5).
+[INFO] 17:38:17:150 team/(20112:20118): El entrenador 1 pide un ciclo. Valor del semaforo: 1. 
+[INFO] 17:38:17:150 team/(20112:20128): El entrenador 1 se pone en READY.
+[INFO] 17:38:17:150 team/(20112:20128): le devolvieron la ejecucion al plani
+[INFO] 17:38:17:150 team/(20112:20128): Elijo al entrenador 1 para ejecutar.
+[INFO] 17:38:17:150 team/(20112:20128): Retomo la ejecución del entrenador 1.
+[INFO] 17:38:17:150 team/(20112:20128): INTERRUMPO A 1
+[INFO] 17:38:17:150 team/(20112:20118): -----------------EL ENTRENADOR 1 EJECUTA UN CICLO
+[INFO] 17:38:17:244 team/(20112:20171): Atiendo appeared. Pokemon: Vaporeon.
+[INFO] 17:38:17:245 team/(20112:20167): Atiendo appeared. Pokemon: Espeon.
+[INFO] 17:38:17:245 team/(20112:20169): Atiendo appeared. Pokemon: Jolteon.
+[INFO] 17:38:17:245 team/(20112:20171): El pokemon es objetivo
+[INFO] 17:38:17:245 team/(20112:20171): Hay entrenadores disponibles para atrapar a Vaporeon.
+[INFO] 17:38:17:245 team/(20112:20171): Se le asigno el pokemon Vaporeon al entrenador 4.
+[INFO] 17:38:17:245 team/(20112:20121): El entrenador 4 se pone en READY.
+[INFO] 17:38:17:245 team/(20112:20169): El pokemon es objetivo
+[INFO] 17:38:17:246 team/(20112:20169): Hay entrenadores disponibles para atrapar a Jolteon.
+[INFO] 17:38:17:246 team/(20112:20169): Se le asigno el pokemon Jolteon al entrenador 0.
+[INFO] 17:38:17:246 team/(20112:20117): El entrenador 0 se pone en READY.
+[INFO] 17:38:17:246 team/(20112:20169): Se selecciono el entrenador 0 para atrapar al pokemon Jolteon
+[INFO] 17:38:17:246 team/(20112:20171): Se selecciono el entrenador 4 para atrapar al pokemon Vaporeon
+[INFO] 17:38:17:246 team/(20112:20167): El pokemon es objetivo
+[INFO] 17:38:17:246 team/(20112:20167): Hay entrenadores disponibles para atrapar a Espeon.
+[INFO] 17:38:17:246 team/(20112:20167): Se le asigno el pokemon Espeon al entrenador 3.
+[INFO] 17:38:17:246 team/(20112:20120): El entrenador 3 se pone en READY.
+[INFO] 17:38:17:246 team/(20112:20167): Se selecciono el entrenador 3 para atrapar al pokemon Espeon
+[INFO] 17:38:17:246 team/(20112:20173): Atiendo appeared. Pokemon: Umbreon.
+[INFO] 17:38:17:246 team/(20112:20173): El pokemon es objetivo
+[INFO] 17:38:17:246 team/(20112:20173): Hay entrenadores disponibles para atrapar a Umbreon.
+[INFO] 17:38:17:246 team/(20112:20173): Se le asigno el pokemon Umbreon al entrenador 2.
+[INFO] 17:38:17:247 team/(20112:20119): El entrenador 2 se pone en READY.
+[INFO] 17:38:17:247 team/(20112:20173): Se selecciono el entrenador 2 para atrapar al pokemon Umbreon
+[INFO] 17:38:22:150 team/(20112:20118): El entrenador 1 se mueve a : (4,5).
+[INFO] 17:38:22:151 team/(20112:20118): El entrenador 1 pide un ciclo. Valor del semaforo: 0. 
+[INFO] 17:38:22:151 team/(20112:20128): El entrenador 1 se pone en READY.
+[INFO] 17:38:22:151 team/(20112:20128): le devolvieron la ejecucion al plani
+[INFO] 17:38:22:151 team/(20112:20128): Elijo al entrenador 4 para ejecutar.
+[INFO] 17:38:22:151 team/(20112:20121): El entrenador 4 entro en ejecución.
+[INFO] 17:38:22:151 team/(20112:20121): El entrenador 4, que estaba en (2,9), comenzará a moverse a (4,10).
+[INFO] 17:38:22:151 team/(20112:20121): El entrenador 4 pide un ciclo. Valor del semaforo: 1. 
+[INFO] 17:38:22:151 team/(20112:20128): INTERRUMPO A 4
+[INFO] 17:38:22:151 team/(20112:20121): -----------------EL ENTRENADOR 4 EJECUTA UN CICLO
+[INFO] 17:38:27:151 team/(20112:20121): El entrenador 4 se mueve a : (3,9).
+[INFO] 17:38:27:151 team/(20112:20121): El entrenador 4 pide un ciclo. Valor del semaforo: 1. 
+[INFO] 17:38:27:152 team/(20112:20128): El entrenador 4 se pone en READY.
+[INFO] 17:38:27:152 team/(20112:20128): le devolvieron la ejecucion al plani
+[INFO] 17:38:27:152 team/(20112:20128): Elijo al entrenador 0 para ejecutar.
+[INFO] 17:38:27:152 team/(20112:20117): El entrenador 0 entro en ejecución.
+[INFO] 17:38:27:152 team/(20112:20117): El entrenador 0, que estaba en (2,3), comenzará a moverse a (2,2).
+[INFO] 17:38:27:152 team/(20112:20117): El entrenador 0 pide un ciclo. Valor del semaforo: 1. 
+[INFO] 17:38:27:152 team/(20112:20128): INTERRUMPO A 0
+[INFO] 17:38:27:152 team/(20112:20117): -----------------EL ENTRENADOR 0 EJECUTA UN CICLO
+[INFO] 17:38:32:152 team/(20112:20117): El entrenador 0 se mueve a : (2,2).
+[INFO] 17:38:32:152 team/(20112:20117): El entrenador 0 se movió a la posición (2, 2).
+[INFO] 17:38:32:153 team/(20112:20117): El entrenador 0 envia el catch para el pokemon Jolteon.
+[INFO] 17:38:32:153 team/(20112:20117): El entrenador 0 pide un ciclo. Valor del semaforo: 0. 
+[INFO] 17:38:32:153 team/(20112:20128): El entrenador 0 se pone en READY.
+[INFO] 17:38:32:153 team/(20112:20128): le devolvieron la ejecucion al plani
+[INFO] 17:38:32:153 team/(20112:20128): Elijo al entrenador 3 para ejecutar.
+[INFO] 17:38:32:153 team/(20112:20120): El entrenador 3 entro en ejecución.
+[INFO] 17:38:32:153 team/(20112:20120): El entrenador 3, que estaba en (9,2), comenzará a moverse a (7,1).
+[INFO] 17:38:32:153 team/(20112:20120): El entrenador 3 pide un ciclo. Valor del semaforo: 1. 
+[INFO] 17:38:32:153 team/(20112:20128): INTERRUMPO A 3
+[INFO] 17:38:32:153 team/(20112:20120): -----------------EL ENTRENADOR 3 EJECUTA UN CICLO
+[INFO] 17:38:37:154 team/(20112:20120): El entrenador 3 se mueve a : (8,2).
+[INFO] 17:38:37:154 team/(20112:20120): El entrenador 3 pide un ciclo. Valor del semaforo: 0. 
+[INFO] 17:38:37:154 team/(20112:20128): El entrenador 3 se pone en READY.
+[INFO] 17:38:37:154 team/(20112:20128): le devolvieron la ejecucion al plani
+[INFO] 17:38:37:154 team/(20112:20128): Elijo al entrenador 2 para ejecutar.
+[INFO] 17:38:37:154 team/(20112:20119): El entrenador 2 entro en ejecución.
+[INFO] 17:38:37:154 team/(20112:20119): El entrenador 2, que estaba en (9,9), comenzará a moverse a (10,6).
+[INFO] 17:38:37:154 team/(20112:20119): El entrenador 2 pide un ciclo. Valor del semaforo: 1. 
+[INFO] 17:38:37:154 team/(20112:20128): INTERRUMPO A 2
+[INFO] 17:38:37:154 team/(20112:20119): -----------------EL ENTRENADOR 2 EJECUTA UN CICLO
+[INFO] 17:38:38:326 team/(20112:20212): Atiendo appeared. Pokemon: Onix.
+[INFO] 17:38:38:326 team/(20112:20212): El pokemon no es objetivo
+[INFO] 17:38:38:339 team/(20112:20215): Atiendo appeared. Pokemon: Gengar.
+[INFO] 17:38:38:339 team/(20112:20215): El pokemon no es objetivo
+[INFO] 17:38:38:349 team/(20112:20218): Atiendo appeared. Pokemon: Squirtle.
+[INFO] 17:38:38:350 team/(20112:20218): El pokemon no es objetivo
+[INFO] 17:38:38:359 team/(20112:20221): Atiendo appeared. Pokemon: Umbreon.
+[INFO] 17:38:38:359 team/(20112:20221): se esta gestionando el catch.
+[INFO] 17:38:38:377 team/(20112:20224): Atiendo appeared. Pokemon: Espeon.
+[INFO] 17:38:38:377 team/(20112:20224): se esta gestionando el catch.
+[INFO] 17:38:38:380 team/(20112:20227): Atiendo appeared. Pokemon: Vaporeon.
+[INFO] 17:38:38:380 team/(20112:20227): se esta gestionando el catch.
+[INFO] 17:38:42:154 team/(20112:20119): El entrenador 2 se mueve a : (10,9).
+[INFO] 17:38:42:154 team/(20112:20119): El entrenador 2 pide un ciclo. Valor del semaforo: 0. 
+[INFO] 17:38:42:154 team/(20112:20128): El entrenador 2 se pone en READY.
+[INFO] 17:38:42:154 team/(20112:20128): le devolvieron la ejecucion al plani
+[INFO] 17:38:42:154 team/(20112:20128): Elijo al entrenador 1 para ejecutar.
+[INFO] 17:38:42:154 team/(20112:20128): Retomo la ejecución del entrenador 1.
+[INFO] 17:38:42:155 team/(20112:20128): INTERRUMPO A 1
+[INFO] 17:38:42:155 team/(20112:20118): -----------------EL ENTRENADOR 1 EJECUTA UN CICLO

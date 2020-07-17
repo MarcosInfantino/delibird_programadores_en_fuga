@@ -1,0 +1,64 @@
+[INFO] 17:38:12:126 TEAM/(20112:20112): ___________________________________________________________________________________________________________
+[INFO] 17:38:12:126 TEAM/(20112:20112): Inició el TEAM
+[INFO] 17:38:12:139 TEAM/(20112:20124): Recibi mensaje appeared pokemon. El pokemon es: Squirtle. La posicion es: (5,2).
+[INFO] 17:38:12:139 TEAM/(20112:20124): Recibi mensaje appeared pokemon. El pokemon es: Flareon. La posicion es: (4,6).
+[INFO] 17:38:12:149 TEAM/(20112:20145): Habilito el hilo del entrenador 1.
+[INFO] 17:38:12:149 TEAM/(20112:20118): El entrenador 1 ahora está en READY.
+[INFO] 17:38:12:149 TEAM/(20112:20128): El entrenador 1 ahora está en EXEC.
+[INFO] 17:38:12:149 TEAM/(20112:20118): El entrenador  1 se mueve a atrapar a Flareon en posición (4, 6)
+
+[INFO] 17:38:12:149 TEAM/(20112:20118): El entrenador 1 ahora está en EXEC.
+[INFO] 17:38:17:150 TEAM/(20112:20128): El entrenador 1 ahora está en READY.
+[INFO] 17:38:17:150 TEAM/(20112:20128): El entrenador 1 ahora está en EXEC.
+[INFO] 17:38:17:232 TEAM/(20112:20125): Recibi mensaje localized. El pokemon es: Flareon. La cantidad es: 1.
+[INFO] 17:38:17:232 TEAM/(20112:20125): Las posiciones son: 
+[INFO] 17:38:17:232 TEAM/(20112:20125): (4,6)
+[INFO] 17:38:17:236 TEAM/(20112:20125): Recibi mensaje localized. El pokemon es: Espeon. La cantidad es: 1.
+[INFO] 17:38:17:236 TEAM/(20112:20125): Las posiciones son: 
+[INFO] 17:38:17:236 TEAM/(20112:20125): (7,1)
+[INFO] 17:38:17:237 TEAM/(20112:20125): Recibi mensaje localized. El pokemon es: Jolteon. La cantidad es: 1.
+[INFO] 17:38:17:237 TEAM/(20112:20125): Las posiciones son: 
+[INFO] 17:38:17:237 TEAM/(20112:20125): (2,2)
+[INFO] 17:38:17:238 TEAM/(20112:20125): Recibi mensaje localized. El pokemon es: Vaporeon. La cantidad es: 1.
+[INFO] 17:38:17:238 TEAM/(20112:20125): Las posiciones son: 
+[INFO] 17:38:17:238 TEAM/(20112:20125): (4,10)
+[INFO] 17:38:17:241 TEAM/(20112:20125): Recibi mensaje localized. El pokemon es: Umbreon. La cantidad es: 1.
+[INFO] 17:38:17:241 TEAM/(20112:20125): Las posiciones son: 
+[INFO] 17:38:17:241 TEAM/(20112:20125): (10,6)
+[INFO] 17:38:17:245 TEAM/(20112:20171): Habilito el hilo del entrenador 4.
+[INFO] 17:38:17:245 TEAM/(20112:20121): El entrenador 4 ahora está en READY.
+[INFO] 17:38:17:246 TEAM/(20112:20169): Habilito el hilo del entrenador 0.
+[INFO] 17:38:17:246 TEAM/(20112:20117): El entrenador 0 ahora está en READY.
+[INFO] 17:38:17:246 TEAM/(20112:20167): Habilito el hilo del entrenador 3.
+[INFO] 17:38:17:246 TEAM/(20112:20120): El entrenador 3 ahora está en READY.
+[INFO] 17:38:17:247 TEAM/(20112:20173): Habilito el hilo del entrenador 2.
+[INFO] 17:38:17:247 TEAM/(20112:20119): El entrenador 2 ahora está en READY.
+[INFO] 17:38:22:151 TEAM/(20112:20128): El entrenador 1 ahora está en READY.
+[INFO] 17:38:22:151 TEAM/(20112:20128): El entrenador 4 ahora está en EXEC.
+[INFO] 17:38:22:151 TEAM/(20112:20121): El entrenador  4 se mueve a atrapar a Vaporeon en posición (4, 10)
+
+[INFO] 17:38:22:151 TEAM/(20112:20121): El entrenador 4 ahora está en EXEC.
+[INFO] 17:38:27:152 TEAM/(20112:20128): El entrenador 4 ahora está en READY.
+[INFO] 17:38:27:152 TEAM/(20112:20128): El entrenador 0 ahora está en EXEC.
+[INFO] 17:38:27:152 TEAM/(20112:20117): El entrenador  0 se mueve a atrapar a Jolteon en posición (2, 2)
+
+[INFO] 17:38:27:152 TEAM/(20112:20117): El entrenador 0 ahora está en EXEC.
+[INFO] 17:38:32:152 TEAM/(20112:20117): El entrenador 0 se movió a la posición (2, 2).
+[INFO] 17:38:32:153 TEAM/(20112:20128): El entrenador 0 ahora está en READY.
+[INFO] 17:38:32:153 TEAM/(20112:20128): El entrenador 3 ahora está en EXEC.
+[INFO] 17:38:32:153 TEAM/(20112:20120): El entrenador  3 se mueve a atrapar a Espeon en posición (7, 1)
+
+[INFO] 17:38:32:153 TEAM/(20112:20120): El entrenador 3 ahora está en EXEC.
+[INFO] 17:38:37:154 TEAM/(20112:20128): El entrenador 3 ahora está en READY.
+[INFO] 17:38:37:154 TEAM/(20112:20128): El entrenador 2 ahora está en EXEC.
+[INFO] 17:38:37:154 TEAM/(20112:20119): El entrenador  2 se mueve a atrapar a Umbreon en posición (10, 6)
+
+[INFO] 17:38:37:154 TEAM/(20112:20119): El entrenador 2 ahora está en EXEC.
+[INFO] 17:38:38:325 TEAM/(20112:20124): Recibi mensaje appeared pokemon. El pokemon es: Onix. La posicion es: (2,8).
+[INFO] 17:38:38:339 TEAM/(20112:20124): Recibi mensaje appeared pokemon. El pokemon es: Gengar. La posicion es: (6,6).
+[INFO] 17:38:38:349 TEAM/(20112:20124): Recibi mensaje appeared pokemon. El pokemon es: Squirtle. La posicion es: (5,5).
+[INFO] 17:38:38:358 TEAM/(20112:20124): Recibi mensaje appeared pokemon. El pokemon es: Umbreon. La posicion es: (10,6).
+[INFO] 17:38:38:377 TEAM/(20112:20124): Recibi mensaje appeared pokemon. El pokemon es: Espeon. La posicion es: (7,1).
+[INFO] 17:38:38:379 TEAM/(20112:20124): Recibi mensaje appeared pokemon. El pokemon es: Vaporeon. La posicion es: (4,10).
+[INFO] 17:38:42:154 TEAM/(20112:20128): El entrenador 2 ahora está en READY.
+[INFO] 17:38:42:154 TEAM/(20112:20128): El entrenador 1 ahora está en EXEC.

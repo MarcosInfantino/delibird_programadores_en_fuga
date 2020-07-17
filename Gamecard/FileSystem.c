@@ -301,9 +301,11 @@ archivoHeader* cargarMetadata(char* path, uint32_t tipo, char* nombre){
 			archivo->mutex=malloc(sizeof(pthread_mutex_t));
 			pthread_mutex_init(archivo->mutex,NULL);
 			archivo->tipo=ARCHIVO;
+			liberarArrayBidimensionalChar(listaBloques);
 			break;
 
 		}
+
 		config_destroy(configLoco);
 		return archivo;
 }

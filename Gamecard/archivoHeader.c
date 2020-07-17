@@ -355,11 +355,12 @@ void setearSize(archivoHeader* archivo,uint32_t size){
 
 	pthread_mutex_lock(archivo->mutex);
 
+	char* sizeArchivo = string_itoa(size);
 	t_config* config=config_create(archivo->pathArchivo);
-	config_set_value(config,"SIZE",string_itoa(size));
+	config_set_value(config,"SIZE",sizeArchivo);
 	config_save(config);
 	config_destroy(config);
-
+	free(sizeArchivo);
 	pthread_mutex_unlock(archivo->mutex);
 }
 
@@ -538,7 +539,7 @@ posicion* conseguirPosicionesCantidad(t_list* lista){
 	posicion* arrayPosicion = malloc(cantPosiciones*sizeof(uint32_t)*2);
 
 	for(uint32_t i=0;i<cantPosiciones;i++){
-		uint32_t offset=2*sizeof(uint32_t)*i;
+		//uint32_t offset=2*sizeof(uint32_t)*i;
 		posicionCantidad* auxPosCan = (posicionCantidad*) list_get(lista,i);
 		posicion auxPos = auxPosCan->posicion;
 
