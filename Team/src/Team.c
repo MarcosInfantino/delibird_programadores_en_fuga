@@ -51,9 +51,26 @@ int main(int argc , char* argv[]){
 	arrayIdHilosEntrenadores  = malloc(cantEntrenadores*sizeof(pthread_t));
 	inicializarEntrenadores(team->entrenadores);
 
+	//----------------------------------------------------------------------------
+//	mensajeSuscripcion* mensajeSuscripcionAppeared=llenarSuscripcion(APPEARED_POKEMON, idProcesoTeam);
+//	mensajeSuscripcion * mensajeSuscripcionCaught=llenarSuscripcion(CAUGHT_POKEMON, idProcesoTeam);
+//	mensajeSuscripcion* mensajeSuscripcionLocalized=llenarSuscripcion(LOCALIZED_POKEMON, idProcesoTeam);
+//
+//
+//	pthread_create(&threadSuscripcionAppeared, NULL, suscribirseCola, (void*)(mensajeSuscripcionAppeared));
+//	pthread_detach(threadSuscripcionAppeared);
+//
+//	pthread_create(&threadSuscripcionLocalized, NULL, suscribirseCola,(void*) (mensajeSuscripcionLocalized));
+//	pthread_detach(threadSuscripcionLocalized);
+//
+//	pthread_create(&threadSuscripcionCaught, NULL, suscribirseCola, (void*)(mensajeSuscripcionCaught));
+//	pthread_detach(threadSuscripcionCaught);
+
+	//--------------------------------------------------------------------------------------------------
 	crearHilos(config);
 
 	sem_wait(semaforoObjetivoCumplido);
+	//sem_post(semaforoCerrarConexionBroker);
 	loggearResultado();
 
 
@@ -77,6 +94,9 @@ void inicializarSemaforos(){
 
 	mutexPlanificador = malloc(sizeof(pthread_mutex_t));
 	pthread_mutex_init(mutexPlanificador, NULL);
+
+	semaforoCerrarConexionBroker=malloc(sizeof(sem_t));
+	sem_init(semaforoCerrarConexionBroker,0,0);
 }
 
 void crearHilos(t_config* config){

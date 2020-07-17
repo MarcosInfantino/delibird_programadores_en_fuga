@@ -282,7 +282,6 @@ t_list* obtenerListaPosicionesString(char* posiciones){
 			//free(cadena);
 		}
 	}
-	free(posiciones);//P
 	return lista;
 }
 
@@ -304,7 +303,7 @@ posicionCantidad* obtenerPosicionCantidadDeString(char* stringPos){
 					char cadena [2]=" \0";
 					cadena[0]=caracterActual;
 					string_append(&bufferPosX, cadena);
-
+					//free(cadena);
 				}
 			}else if(posY){
 				if(caracterActual=='='){
@@ -314,13 +313,13 @@ posicionCantidad* obtenerPosicionCantidadDeString(char* stringPos){
 					char cadena [2]=" \0";
 					cadena[0]=caracterActual;
 					string_append(&bufferPosY, cadena);
-
+					//free(cadena);
 				}
 			}else if(cantidad){
 				char cadena [2]=" \0";
 				cadena[0]=caracterActual;
 				string_append(&bufferCantidad, cadena);
-
+				//free(cadena);
 			}
 
 		}
@@ -330,24 +329,20 @@ posicionCantidad* obtenerPosicionCantidadDeString(char* stringPos){
 	(pos->posicion).y=atoi(bufferPosY);
 	pos->cantidad=atoi(bufferCantidad);
 
-	free(bufferPosX);//PRUEBA
-	free(bufferPosY);//PRUEBA
-	free(bufferCantidad);//PRUEBA
-
 	return pos;
 
 }
 
 t_list * obtenerListaPosicionCantidad(t_list* listaString){
-	t_list* listaPosicionCantidad= list_create();
+	t_list* lista= list_create();
 	for(uint32_t i=0; i<list_size(listaString);i++){
 		char* stringActual= (char*) list_get(listaString,i);
 		posicionCantidad* posActual=obtenerPosicionCantidadDeString(stringActual);
 		log_info(gamecardLogger2, "I DE LA FUNCION DE LISTAS: %i", i);
-		list_add(listaPosicionCantidad, (void*) posActual);
+		list_add(lista, (void*) posActual);
 	}
 	list_destroy_and_destroy_elements(listaString, free);
-	return listaPosicionCantidad;
+	return lista;
 }
 
 t_list* obtenerListaPosicionCantidadDeString(char* string){
@@ -361,11 +356,10 @@ void setearSize(archivoHeader* archivo,uint32_t size){
 	pthread_mutex_lock(archivo->mutex);
 
 	t_config* config=config_create(archivo->pathArchivo);
-	char* sizeConfig = string_itoa(size);
-	config_set_value(config,"SIZE",sizeConfig);
+	config_set_value(config,"SIZE",string_itoa(size));
 	config_save(config);
 	config_destroy(config);
-	free(sizeConfig);
+
 	pthread_mutex_unlock(archivo->mutex);
 }
 
@@ -413,7 +407,7 @@ void reescribirArchivo(char* pokemon, char* stringAEscribir){
 
 	}
 	obtenerListaBloquesConfig(headerPoke, "FINAL");
-	free(stringAEscribir); //PRUEBA
+
 
 }
 
@@ -427,6 +421,7 @@ uint32_t capacidadTotalArchivo(archivoHeader* archivo){
 
 char* leerArchivo(char* pokemon){
 	archivoHeader* headerPoke= buscarArchivoHeaderPokemon(pokemon);
+
 
 	char* buffer=string_new();
 
@@ -548,16 +543,11 @@ posicion* conseguirPosicionesCantidad(t_list* lista){
 		posicion auxPos = auxPosCan->posicion;
 
 		memcpy(arrayPosicion+offset,&auxPos,2*sizeof(uint32_t));
+
 		//*(arrayPosicion+i) = auxPos;
 		log_info(gamecardLogger2, "Localized. Pos x: %i. Pos y: %i.", (arrayPosicion+i)->x, (arrayPosicion+i)->y);
 	}
-	list_destroy_and_destroy_elements(lista,free); //PRUEBA
 	return arrayPosicion;
 }
 
-void liberarArrayPosiciones(posicion* arrayPosiciones,uint32_t cantPosiciones){
-	for(uint32_t i =0;i<cantPosiciones;i++){
-		free(arrayPosiciones + i);
-	}
-}
 

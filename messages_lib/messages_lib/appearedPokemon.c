@@ -11,7 +11,7 @@ mensajeAppeared* llenarAppeared(char* pokemon, uint32_t posX, uint32_t posY){
 	mensajeAppeared* msg = malloc(sizeof(mensajeAppeared));
 	msg->sizePokemon=strlen(pokemon);
 	msg->pokemon=malloc(msg->sizePokemon + 1);
-	memcpy(msg->pokemon,pokemon,msg->sizePokemon);
+	strcpy(msg->pokemon,pokemon);
 	msg->posX=posX;
 	msg->posY=posY;
 

@@ -105,6 +105,7 @@ typedef struct{
 
 
 //------------Variables globales del config
+
 uint32_t tiempoRetardoGC;
 uint32_t tiempoReintentoOperacion;
 uint32_t tiempoReconexionGC;
@@ -140,11 +141,11 @@ t_log* gamecardLogger2;
 
 
 
-void* suscribirseCola(void* msgSuscripcion);
+void* suscribirseColaGC(void* msgSuscripcion);
 uint32_t enviarSuscripcion(uint32_t socket, mensajeSuscripcion* msg);
-void* suscribirseColasBroker(void* config);
+void suscribirseColasBrokerGC();
 void* iniciarServidorGameboy(void* arg);
-int crearHiloServidorGameboyGC(pthread_t* hilo);
+void crearHiloServidorGameboy(pthread_t* hilo);
 void esperar_cliente(uint32_t servidor);
 void* atenderCliente(void* sock);
 void* atenderNew(void* paquete);
@@ -219,10 +220,9 @@ void setearSize(archivoHeader* archivo,uint32_t size);
 void obtenerListaBloquesConfig(archivoHeader* archivo, char* estado);
 posicion* conseguirPosicionesCantidad(t_list* lista);
 int32_t existe(char *path);
-uint32_t reconectarseAlBroker();
+uint32_t reconectarseAlBrokerGC();
 //uint32_t reconectarseAlBroker(uint32_t cliente,void* direccionServidor,socklen_t length);
 int crearHiloConexionBroker(void* config, pthread_t* hilo);
 void liberarPrograma(t_config* configGamecard,t_log* gamecardLogger);
-t_config* crearYleerConfig(char* path);
-void liberarArrayPosiciones(posicion* arrayPosiciones,uint32_t cantPosiciones);
+t_config* crearYleerConfig();
 #endif /* GAMECARD_H_ */

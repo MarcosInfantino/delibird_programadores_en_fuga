@@ -59,6 +59,7 @@ sem_t* entrenadorEnCola;
 sem_t intercambioFinalizado;
 sem_t* iniciarResolucionDeadlock;
 sem_t* semaforoObjetivoCumplido;
+sem_t* semaforoCerrarConexionBroker;
 
 pthread_mutex_t* mutexPlanificador;
 
