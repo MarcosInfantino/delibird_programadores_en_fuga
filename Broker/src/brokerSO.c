@@ -174,24 +174,32 @@ void manejarTipoDeMensaje(paquete* paq, uint32_t* socket) {
 	suscripcionTiempo structTiempo;
 	mensajeSuscripcionTiempo* datosSuscribir;
 	log_info(brokerLogger2,"-------------------------TIPO DE PAQUETE RECIBIDO: %s", nombreTipoDePaquete(paq->tipoMensaje));
+	uint32_t copiaSocket=*socket;
+
 	switch(paq->tipoMensaje){
 		 case APPEARED_POKEMON:
-			 meterEnCola(&appearedPokemon, paq, *socket );
+			 meterEnCola(&appearedPokemon, paq, copiaSocket);
+			 free(socket);
 			 break;
 		 case NEW_POKEMON:
-			 meterEnCola( &newPokemon, paq, *socket);
+			 meterEnCola( &newPokemon, paq, copiaSocket);
+			 free(socket);
 			 break;
 		 case CAUGHT_POKEMON:;
-			 meterEnCola( &caughtPokemon, paq, *socket);
+			 meterEnCola( &caughtPokemon, paq, copiaSocket);
+			 free(socket);
 			 break;
 		 case CATCH_POKEMON:
-			 meterEnCola( &catchPokemon, paq, *socket);
+			 meterEnCola( &catchPokemon, paq, copiaSocket);
+			 free(socket);
 			 break;
 		 case GET_POKEMON:
-			 meterEnCola( &getPokemon, paq, *socket);
+			 meterEnCola( &getPokemon, paq, copiaSocket);
+			 free(socket);
 			 break;
 		 case LOCALIZED_POKEMON:
-			 meterEnCola( &localizedPokemon, paq, *socket);
+			 meterEnCola( &localizedPokemon, paq, copiaSocket);
+			 free(socket);
 			 break;
 		 case SUSCRIPCION:
 			 suscribirSegunCola(*paq, socket);
@@ -217,12 +225,12 @@ void manejarTipoDeMensaje(paquete* paq, uint32_t* socket) {
 
 void meterEnCola( colaMensajes* structCola, paquete * paq, uint32_t  socket){
 
-	incrementarContador();
 
-	pthread_mutex_lock(contador.mutexContador);
-	insertarIdPaquete(paq,contador.contador);
-	send(socket,(void*)(&contador.contador),sizeof(uint32_t),0);
-	pthread_mutex_unlock(contador.mutexContador);
+	uint32_t numeroContador=incrementarContador();
+
+	insertarIdPaquete(paq,numeroContador);
+	send(socket,(void*)(&numeroContador),sizeof(uint32_t),0);
+
 
 	pthread_mutex_lock(mutexMemoria);
 	registrarMensajeEnMemoria(paq, algoritmoMemoria);
@@ -234,9 +242,10 @@ void meterEnCola( colaMensajes* structCola, paquete * paq, uint32_t  socket){
 		pushColaMutex(structCola->cola, (void *) paq);
 		log_info(brokerLogger2,"Aviso que hay mensajes en cola.");
 		sem_post(structCola->mensajesEnCola);
+	}else{
+		destruirPaquete(paq);
 	}
-//	pushColaMutex(structCola->cola, (void *) paq);
-//	sem_post(structCola->mensajesEnCola);
+
 }
 
 void abrirHiloParaEnviarMensajes(){
@@ -265,7 +274,9 @@ void * chequearMensajesEnCola(void * colaVoid){
 
 		paquete* paq = (paquete*) popColaMutex(cola->cola);
 		log_info(brokerLogger2,"Envio el mensaje a los suscriptores de la cola: %s", nombreDeCola(paq->tipoMensaje));
+
 		agregarRespuestaARespuestasEnviadas(paq);
+
 		void * paqSerializado = serializarPaquete(paq);
 
 		for(i = 0; i < sizeListaMutex(cola->suscriptores) ;i ++){
@@ -307,7 +318,8 @@ colaMensajes* obtenerCola(uint32_t colaInt){
 }
 
 void asignarID(paquete * paq){
-	paq->id = contador.contador;
+
+	paq->id = contador->contador;
 }
 
 void responderMensaje(uint32_t socketCliente, uint32_t respuesta) {
@@ -315,21 +327,25 @@ void responderMensaje(uint32_t socketCliente, uint32_t respuesta) {
 }
 
 void inicializarContador(){
-	contador.contador = 0;
-	contador.mutexContador = malloc(sizeof(pthread_mutex_t));
-	pthread_mutex_init(contador.mutexContador,NULL);
+	contador=malloc(sizeof(contadorMensajes));
+	contador->contador = 0;
+	contador->mutexContador = malloc(sizeof(pthread_mutex_t));
+	pthread_mutex_init(contador->mutexContador,NULL);
 }
 
-void incrementarContador(){
-	pthread_mutex_lock(contador.mutexContador);
-	contador.contador = contador.contador + 1;
-	pthread_mutex_unlock(contador.mutexContador);
+uint32_t incrementarContador(){
+	uint32_t i;
+	pthread_mutex_lock(contador->mutexContador);
+	contador->contador = contador->contador + 1;
+	i=contador->contador;
+	pthread_mutex_unlock(contador->mutexContador);
+	return i;
 }
 
 uint32_t obtenerContador(){
-	pthread_mutex_lock(contador.mutexContador);
-	uint32_t i = contador.contador;
-	pthread_mutex_unlock(contador.mutexContador);
+	pthread_mutex_lock(contador->mutexContador);
+	uint32_t i = contador->contador;
+	pthread_mutex_unlock(contador->mutexContador);
 	return i;
 }
 

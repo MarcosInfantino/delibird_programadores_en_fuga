@@ -69,7 +69,7 @@ pthread_mutex_t mutex;
 
 archivoMutex* archivoSem;
 
-contadorMensajes contador;
+contadorMensajes* contador;
 
 colaMensajes appearedPokemon, newPokemon, caughtPokemon, catchPokemon,
 		getPokemon, localizedPokemon;
@@ -126,7 +126,7 @@ int suscribirACola(uint32_t* socket, uint32_t idProceso, colaMensajes * cola);
 void inicializarContador();
 void abrirHiloParaEnviarMensajes();
 void* chequearMensajesEnCola(void * par);
-void incrementarContador();
+uint32_t incrementarContador();
 uint32_t obtenerContador();
 
 t_config* leer_config(void);

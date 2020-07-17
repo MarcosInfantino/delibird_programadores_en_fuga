@@ -382,14 +382,15 @@ void* enviarGets(void* arg){
 	uint32_t i=0;
 	for(i=0;i<sizeListaMutex(objetivoGlobal);i++){
 		objetivo* objetivoActual=(objetivo*)getListaMutex(objetivoGlobal,i);
-		pthread_t hilo;
-		uint32_t err=pthread_create(&hilo,NULL,enviarGet,(void*)(objetivoActual->pokemon));
-							if(err!=0){
-								printf("Hubo un problema en la creación del hilo para conectarse al broker \n");
+		//pthread_t hilo;
+		//uint32_t err=pthread_create(&hilo,NULL,enviarGet,(void*)(objetivoActual->pokemon));
+//							if(err!=0){
+//								printf("Hubo un problema en la creación del hilo para conectarse al broker \n");
+//
+//							}
 
-							}
-
-		pthread_detach(hilo);
+		//pthread_detach(hilo);
+		enviarGet((void*) (objetivoActual->pokemon));
 	}
 	return NULL;
 }
@@ -631,13 +632,17 @@ void* enviarGet(void* arg){
 	char* pokemon=(char*) arg;
 	uint32_t cliente=crearSocketCliente(ipBroker,puertoBroker);
 	if(cliente!=-1){//se pudo conectar
+		log_info(teamLogger2, "ENVIO GET DEL POKEMON: %s", pokemon);
+
 		mensajeGet* msg=llenarGet(pokemon);
 		void* stream=serializarGet(msg);
 		paquete* paq=llenarPaquete(TEAM, GET_POKEMON,sizeArgumentos(GET_POKEMON,msg->pokemon,1),stream);
 		void* paqueteSerializado=serializarPaquete(paq);
 		// hacer destroy para el msg
 		if(send(cliente,paqueteSerializado, sizePaquete(paq), 0)!=-1){
+
 			free(paqueteSerializado);
+
 			uint32_t* idMensaje=malloc(sizeof(uint32_t));
 			*idMensaje=0;
 

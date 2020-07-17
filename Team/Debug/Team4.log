@@ -3994,631 +3994,924 @@
 [INFO] 17:25:28:749 TEAM/(26372:26373): El entrenador  0 se mueve a atrapar a Squirtle en posición (5, 5)
 
 [INFO] 17:25:28:749 TEAM/(26372:26373): El entrenador 0 ahora está en EXEC.
-[INFO] 17:42:40:858 TEAM/(20483:20483): ___________________________________________________________________________________________________________
-[INFO] 17:42:40:863 TEAM/(20483:20483): Inició el TEAM
-[INFO] 17:42:40:871 TEAM/(20483:20492): Recibi mensaje caught pokemon. El pokemon fue atrapado.
-[INFO] 17:42:40:872 TEAM/(20483:20492): Recibi mensaje caught pokemon. El pokemon fue atrapado.
-[INFO] 17:42:40:903 TEAM/(20483:20491): Recibi mensaje localized. El pokemon es: Gengar. La cantidad es: 0.
-[INFO] 17:42:40:903 TEAM/(20483:20491): Las posiciones son: 
-[INFO] 17:42:40:908 TEAM/(20483:20491): Recibi mensaje localized. El pokemon es: Onix. La cantidad es: 0.
-[INFO] 17:42:40:908 TEAM/(20483:20491): Las posiciones son: 
-[INFO] 17:42:45:915 TEAM/(20483:20491): Recibi mensaje localized. El pokemon es: Pikachu. La cantidad es: 1.
-[INFO] 17:42:45:915 TEAM/(20483:20491): Las posiciones son: 
-[INFO] 17:42:45:915 TEAM/(20483:20491): (9,9)
-[INFO] 17:42:45:916 TEAM/(20483:20491): Recibi mensaje localized. El pokemon es: Squirtle. La cantidad es: 1.
-[INFO] 17:42:45:916 TEAM/(20483:20491): Las posiciones son: 
-[INFO] 17:42:45:916 TEAM/(20483:20491): (5,2)
-[INFO] 17:42:45:917 TEAM/(20483:20533): Habilito el hilo del entrenador 1.
-[INFO] 17:42:45:917 TEAM/(20483:20486): El entrenador 1 ahora está en READY.
-[INFO] 17:42:45:917 TEAM/(20483:20494): El entrenador 1 ahora está en EXEC.
-[INFO] 17:42:45:917 TEAM/(20483:20486): El entrenador  1 se mueve a atrapar a Pikachu en posición (9, 9)
-
-[INFO] 17:42:45:917 TEAM/(20483:20486): El entrenador 1 ahora está en EXEC.
-[INFO] 17:42:45:918 TEAM/(20483:20538): Habilito el hilo del entrenador 2.
-[INFO] 17:42:45:918 TEAM/(20483:20487): El entrenador 2 ahora está en READY.
-[INFO] 17:42:55:754 TEAM/(20483:20490): Recibi mensaje appeared pokemon. El pokemon es: Onix. La posicion es: (2,8).
-[INFO] 17:42:55:773 TEAM/(20483:20576): Habilito el hilo del entrenador 0.
-[INFO] 17:42:55:773 TEAM/(20483:20485): El entrenador 0 ahora está en READY.
-[INFO] 17:42:55:774 TEAM/(20483:20490): Recibi mensaje appeared pokemon. El pokemon es: Squirtle. La posicion es: (5,5).
-[INFO] 17:42:55:775 TEAM/(20483:20490): Recibi mensaje appeared pokemon. El pokemon es: Gengar. La posicion es: (6,6).
-[INFO] 17:42:55:797 TEAM/(20483:20490): Recibi mensaje appeared pokemon. El pokemon es: Umbreon. La posicion es: (10,6).
-[INFO] 17:42:55:803 TEAM/(20483:20490): Recibi mensaje appeared pokemon. El pokemon es: Vaporeon. La posicion es: (4,10).
-[INFO] 17:42:55:804 TEAM/(20483:20490): Recibi mensaje appeared pokemon. El pokemon es: Espeon. La posicion es: (7,1).
-[INFO] 17:43:29:127 TEAM/(20483:20492): Conexión fallida con el Broker
-
-[INFO] 17:43:29:127 TEAM/(20483:20491): Conexión fallida con el Broker
-
-[INFO] 17:43:29:127 TEAM/(20483:20490): Conexión fallida con el Broker
-
-[INFO] 17:43:29:129 TEAM/(20483:20492): Reintentando conexión en 30 segundos...
-
-[INFO] 17:43:29:129 TEAM/(20483:20490): Reintentando conexión en 30 segundos...
-
-[INFO] 17:43:29:129 TEAM/(20483:20491): Reintentando conexión en 30 segundos...
-
-[INFO] 17:45:24:804 TEAM/(20693:20693): ___________________________________________________________________________________________________________
-[INFO] 17:45:24:804 TEAM/(20693:20693): Inició el TEAM
-[INFO] 17:45:24:873 TEAM/(20693:20702): Recibi mensaje localized. El pokemon es: Gengar. La cantidad es: 0.
-[INFO] 17:45:24:873 TEAM/(20693:20702): Las posiciones son: 
-[INFO] 17:45:24:874 TEAM/(20693:20702): Recibi mensaje localized. El pokemon es: Onix. La cantidad es: 0.
-[INFO] 17:45:24:874 TEAM/(20693:20702): Las posiciones son: 
-[INFO] 17:45:25:748 TEAM/(20693:20701): Recibi mensaje appeared pokemon. El pokemon es: Flareon. La posicion es: (4,6).
-[INFO] 17:45:25:749 TEAM/(20693:20701): Recibi mensaje appeared pokemon. El pokemon es: Jolteon. La posicion es: (2,2).
-[INFO] 17:45:25:749 TEAM/(20693:20701): Recibi mensaje appeared pokemon. El pokemon es: Pikachu. La posicion es: (9,9).
-[INFO] 17:45:25:750 TEAM/(20693:20701): Recibi mensaje appeared pokemon. El pokemon es: Squirtle. La posicion es: (5,2).
-[INFO] 17:45:25:751 TEAM/(20693:20743): Habilito el hilo del entrenador 2.
-[INFO] 17:45:25:751 TEAM/(20693:20698): El entrenador 2 ahora está en READY.
-[INFO] 17:45:25:751 TEAM/(20693:20705): El entrenador 2 ahora está en EXEC.
-[INFO] 17:45:25:751 TEAM/(20693:20698): El entrenador  2 se mueve a atrapar a Squirtle en posición (5, 2)
-
-[INFO] 17:45:25:751 TEAM/(20693:20698): El entrenador 2 ahora está en EXEC.
-[INFO] 17:45:25:751 TEAM/(20693:20741): Habilito el hilo del entrenador 1.
-[INFO] 17:45:25:751 TEAM/(20693:20697): El entrenador 1 ahora está en READY.
-[INFO] 17:45:26:750 TEAM/(20693:20702): Recibi mensaje localized. El pokemon es: Umbreon. La cantidad es: 0.
-[INFO] 17:45:26:750 TEAM/(20693:20702): Las posiciones son: 
-[INFO] 17:45:26:751 TEAM/(20693:20702): Recibi mensaje localized. El pokemon es: Espeon. La cantidad es: 0.
-[INFO] 17:45:26:751 TEAM/(20693:20702): Las posiciones son: 
-[INFO] 17:45:26:752 TEAM/(20693:20702): Recibi mensaje localized. El pokemon es: Vaporeon. La cantidad es: 0.
-[INFO] 17:45:26:752 TEAM/(20693:20702): Las posiciones son: 
-[INFO] 17:45:31:779 TEAM/(20693:20702): Recibi mensaje localized. El pokemon es: Jolteon. La cantidad es: 1.
-[INFO] 17:45:31:779 TEAM/(20693:20702): Las posiciones son: 
-[INFO] 17:45:31:779 TEAM/(20693:20702): (2,2)
-[INFO] 17:45:31:784 TEAM/(20693:20702): Recibi mensaje localized. El pokemon es: Flareon. La cantidad es: 1.
-[INFO] 17:45:31:784 TEAM/(20693:20702): Las posiciones son: 
-[INFO] 17:45:31:784 TEAM/(20693:20702): (4,6)
-[INFO] 17:45:34:875 TEAM/(20693:20702): Recibi mensaje localized. El pokemon es: Pikachu. La cantidad es: 1.
-[INFO] 17:45:34:875 TEAM/(20693:20702): Las posiciones son: 
-[INFO] 17:45:34:875 TEAM/(20693:20702): (9,9)
-[INFO] 17:45:34:876 TEAM/(20693:20702): Recibi mensaje localized. El pokemon es: Squirtle. La cantidad es: 1.
-[INFO] 17:45:34:876 TEAM/(20693:20702): Las posiciones son: 
-[INFO] 17:45:34:876 TEAM/(20693:20702): (5,2)
-[INFO] 17:45:40:753 TEAM/(20693:20698): El entrenador 2 se movió a la posición (5, 2).
-[INFO] 17:45:45:756 TEAM/(20693:20698): El entrenador 2 ahora está en BLOCKED.
-[INFO] 17:45:45:756 TEAM/(20693:20705): El entrenador 1 ahora está en EXEC.
-[INFO] 17:45:45:756 TEAM/(20693:20697): El entrenador  1 se mueve a atrapar a Pikachu en posición (9, 9)
-
-[INFO] 17:45:45:756 TEAM/(20693:20697): El entrenador 1 ahora está en EXEC.
-[INFO] 17:45:50:799 TEAM/(20693:20703): Recibi mensaje caught pokemon. El pokemon fue atrapado.
-[INFO] 17:45:50:800 TEAM/(20693:20839): El entrenador 2 atrapó al pokemon Squirtle en la posición (5,2).
-[INFO] 17:45:50:800 TEAM/(20693:20839): El entrenador 2 ahora está en BLOCKED.
-[INFO] 17:45:50:800 TEAM/(20693:20839): Habilito el hilo del entrenador 2.
-[INFO] 17:45:51:798 TEAM/(20693:20703): Recibi mensaje caught pokemon. El pokemon fue atrapado.
-[INFO] 17:46:06:811 TEAM/(20693:20703): Recibi mensaje caught pokemon. El pokemon fue atrapado.
-[INFO] 17:46:26:154 TEAM/(20693:20701): Recibi mensaje appeared pokemon. El pokemon es: Onix. La posicion es: (2,8).
-[INFO] 17:46:26:162 TEAM/(20693:20901): Habilito el hilo del entrenador 0.
-[INFO] 17:46:26:162 TEAM/(20693:20696): El entrenador 0 ahora está en READY.
-[INFO] 17:46:26:169 TEAM/(20693:20701): Recibi mensaje appeared pokemon. El pokemon es: Gengar. La posicion es: (6,6).
-[INFO] 17:46:26:172 TEAM/(20693:20907): Habilito el hilo del entrenador 2.
-[INFO] 17:46:26:172 TEAM/(20693:20698): El entrenador 2 ahora está en READY.
-[INFO] 17:46:26:172 TEAM/(20693:20701): Recibi mensaje appeared pokemon. El pokemon es: Squirtle. La posicion es: (5,5).
-[INFO] 17:46:26:191 TEAM/(20693:20701): Recibi mensaje appeared pokemon. El pokemon es: Umbreon. La posicion es: (10,6).
-[INFO] 17:46:26:193 TEAM/(20693:20701): Recibi mensaje appeared pokemon. El pokemon es: Espeon. La posicion es: (7,1).
-[INFO] 17:46:26:209 TEAM/(20693:20701): Recibi mensaje appeared pokemon. El pokemon es: Vaporeon. La posicion es: (4,10).
-[INFO] 17:46:50:767 TEAM/(20693:20697): El entrenador 1 se movió a la posición (9, 9).
-[INFO] 17:46:55:768 TEAM/(20693:20697): El entrenador 1 ahora está en BLOCKED.
-[INFO] 17:46:55:768 TEAM/(20693:20705): El entrenador 0 ahora está en EXEC.
-[INFO] 17:46:55:768 TEAM/(20693:20696): El entrenador  0 se mueve a atrapar a Onix en posición (2, 8)
-
-[INFO] 17:46:55:769 TEAM/(20693:20696): El entrenador 0 ahora está en EXEC.
-[INFO] 17:47:00:788 TEAM/(20693:20703): Recibi mensaje caught pokemon. El pokemon fue atrapado.
-[INFO] 17:47:00:789 TEAM/(20693:20948): El entrenador 1 atrapó al pokemon Pikachu en la posición (9,9).
-[INFO] 17:47:00:789 TEAM/(20693:20948): Habilito el hilo del entrenador 1.
-[INFO] 17:47:00:789 TEAM/(20693:20948): Habilito el hilo del entrenador 1.
-[INFO] 17:47:00:789 TEAM/(20693:20697): El entrenador 1 ahora está en READY.
-[INFO] 17:47:25:773 TEAM/(20693:20696): El entrenador 0 se movió a la posición (2, 8).
-[INFO] 17:47:26:212 TEAM/(20693:20703): Recibi mensaje caught pokemon. El pokemon fue atrapado.
-[INFO] 17:47:30:776 TEAM/(20693:20696): El entrenador 0 ahora está en BLOCKED.
-[INFO] 17:47:30:776 TEAM/(20693:20705): El entrenador 2 ahora está en EXEC.
-[INFO] 17:47:30:776 TEAM/(20693:20698): El entrenador  2 se mueve a atrapar a Gengar en posición (6, 6)
-
-[INFO] 17:47:30:776 TEAM/(20693:20698): El entrenador 2 ahora está en EXEC.
-[INFO] 17:47:31:218 TEAM/(20693:20703): Recibi mensaje caught pokemon. El pokemon fue atrapado.
-[INFO] 17:47:35:792 TEAM/(20693:20703): Recibi mensaje caught pokemon. El pokemon fue atrapado.
-[INFO] 17:47:35:793 TEAM/(20693:20992): El entrenador 0 atrapó al pokemon Onix en la posición (2,8).
-[INFO] 17:47:35:793 TEAM/(20693:20992): Inicio del algoritmo de detección de deadlock.
-[INFO] 17:47:35:793 TEAM/(20693:20992): Habilito el hilo del entrenador 0.
-[INFO] 17:47:35:793 TEAM/(20693:20992): No se encontró deadlock.
-[INFO] 17:47:36:221 TEAM/(20693:20703): Recibi mensaje caught pokemon. El pokemon fue atrapado.
-[INFO] 17:47:53:401 TEAM/(20693:20703): Conexión fallida con el Broker
-
-[INFO] 17:47:53:401 TEAM/(20693:20702): Conexión fallida con el Broker
-
-[INFO] 17:47:53:401 TEAM/(20693:20701): Conexión fallida con el Broker
-
-[INFO] 17:47:53:403 TEAM/(20693:20703): Reintentando conexión en 30 segundos...
-
-[INFO] 17:47:53:403 TEAM/(20693:20701): Reintentando conexión en 30 segundos...
-
-[INFO] 17:47:53:403 TEAM/(20693:20702): Reintentando conexión en 30 segundos...
-
-[INFO] 17:51:41:516 TEAM/(21168:21168): ___________________________________________________________________________________________________________
-[INFO] 17:51:41:518 TEAM/(21168:21168): Inició el TEAM
-[INFO] 17:51:42:964 TEAM/(21168:21176): Recibi mensaje appeared pokemon. El pokemon es: Squirtle. La posicion es: (5,2).
-[INFO] 17:51:42:974 TEAM/(21168:21176): Recibi mensaje appeared pokemon. El pokemon es: Jolteon. La posicion es: (2,2).
-[INFO] 17:51:42:975 TEAM/(21168:21176): Recibi mensaje appeared pokemon. El pokemon es: Pikachu. La posicion es: (9,9).
-[INFO] 17:51:42:976 TEAM/(21168:21176): Recibi mensaje appeared pokemon. El pokemon es: Flareon. La posicion es: (4,6).
-[INFO] 17:51:42:982 TEAM/(21168:21250): Habilito el hilo del entrenador 1.
-[INFO] 17:51:42:982 TEAM/(21168:21172): El entrenador 1 ahora está en READY.
-[INFO] 17:51:42:982 TEAM/(21168:21180): El entrenador 1 ahora está en EXEC.
-[INFO] 17:51:42:982 TEAM/(21168:21172): El entrenador  1 se mueve a atrapar a Pikachu en posición (9, 9)
-
-[INFO] 17:51:42:982 TEAM/(21168:21172): El entrenador 1 ahora está en EXEC.
-[INFO] 17:51:42:982 TEAM/(21168:21243): Habilito el hilo del entrenador 2.
-[INFO] 17:51:42:983 TEAM/(21168:21173): El entrenador 2 ahora está en READY.
-[INFO] 17:51:46:604 TEAM/(21168:21177): Recibi mensaje localized. El pokemon es: Gengar. La cantidad es: 1.
-[INFO] 17:51:46:604 TEAM/(21168:21177): Las posiciones son: 
-[INFO] 17:51:46:604 TEAM/(21168:21177): (6,6)
-[INFO] 17:51:46:606 TEAM/(21168:21177): Recibi mensaje localized. El pokemon es: Onix. La cantidad es: 1.
-[INFO] 17:51:46:606 TEAM/(21168:21177): Las posiciones son: 
-[INFO] 17:51:46:606 TEAM/(21168:21177): (2,8)
-[INFO] 17:51:46:607 TEAM/(21168:21263): Habilito el hilo del entrenador 0.
-[INFO] 17:51:46:607 TEAM/(21168:21171): El entrenador 0 ahora está en READY.
-[INFO] 17:51:47:987 TEAM/(21168:21177): Recibi mensaje localized. El pokemon es: Umbreon. La cantidad es: 1.
-[INFO] 17:51:47:987 TEAM/(21168:21177): Las posiciones son: 
-[INFO] 17:51:47:987 TEAM/(21168:21177): (10,6)
-[INFO] 17:51:47:991 TEAM/(21168:21177): Recibi mensaje localized. El pokemon es: Espeon. La cantidad es: 1.
-[INFO] 17:51:47:991 TEAM/(21168:21177): Las posiciones son: 
-[INFO] 17:51:47:991 TEAM/(21168:21177): (7,1)
-[INFO] 17:51:47:3 TEAM/(21168:21177): Recibi mensaje localized. El pokemon es: Vaporeon. La cantidad es: 1.
-[INFO] 17:51:47:3 TEAM/(21168:21177): Las posiciones son: 
-[INFO] 17:51:47:3 TEAM/(21168:21177): (4,10)
-[INFO] 17:51:48:24 TEAM/(21168:21177): Recibi mensaje localized. El pokemon es: Jolteon. La cantidad es: 1.
-[INFO] 17:51:48:24 TEAM/(21168:21177): Las posiciones son: 
-[INFO] 17:51:48:24 TEAM/(21168:21177): (2,2)
-[INFO] 17:51:51:585 TEAM/(21168:21177): Recibi mensaje localized. El pokemon es: Pikachu. La cantidad es: 1.
-[INFO] 17:51:51:585 TEAM/(21168:21177): Las posiciones son: 
-[INFO] 17:51:51:585 TEAM/(21168:21177): (9,9)
-[INFO] 17:51:51:587 TEAM/(21168:21177): Recibi mensaje localized. El pokemon es: Squirtle. La cantidad es: 2.
-[INFO] 17:51:51:587 TEAM/(21168:21177): Las posiciones son: 
-[INFO] 17:51:51:587 TEAM/(21168:21177): (5,2)
-[INFO] 17:51:51:587 TEAM/(21168:21177): (5,5)
-[INFO] 17:51:52:934 TEAM/(21168:21177): Recibi mensaje localized. El pokemon es: Flareon. La cantidad es: 1.
-[INFO] 17:51:52:934 TEAM/(21168:21177): Las posiciones son: 
-[INFO] 17:51:52:934 TEAM/(21168:21177): (4,6)
-[INFO] 17:52:03:21 TEAM/(21168:21178): Recibi mensaje caught pokemon. El pokemon fue atrapado.
-[INFO] 17:52:18:460 TEAM/(21168:21176): Recibi mensaje appeared pokemon. El pokemon es: Onix. La posicion es: (2,8).
-[INFO] 17:52:18:474 TEAM/(21168:21176): Recibi mensaje appeared pokemon. El pokemon es: Gengar. La posicion es: (6,6).
-[INFO] 17:52:18:486 TEAM/(21168:21176): Recibi mensaje appeared pokemon. El pokemon es: Squirtle. La posicion es: (5,5).
-[INFO] 17:52:18:516 TEAM/(21168:21176): Recibi mensaje appeared pokemon. El pokemon es: Umbreon. La posicion es: (10,6).
-[INFO] 17:52:18:519 TEAM/(21168:21176): Recibi mensaje appeared pokemon. El pokemon es: Vaporeon. La posicion es: (4,10).
-[INFO] 17:52:18:525 TEAM/(21168:21176): Recibi mensaje appeared pokemon. El pokemon es: Espeon. La posicion es: (7,1).
-[INFO] 17:52:47:992 TEAM/(21168:21172): El entrenador 1 se movió a la posición (9, 9).
-[INFO] 17:52:52:995 TEAM/(21168:21172): El entrenador 1 ahora está en BLOCKED.
-[INFO] 17:52:52:995 TEAM/(21168:21180): El entrenador 2 ahora está en EXEC.
-[INFO] 17:52:52:995 TEAM/(21168:21173): El entrenador  2 se mueve a atrapar a Squirtle en posición (5, 2)
-
-[INFO] 17:52:52:996 TEAM/(21168:21173): El entrenador 2 ahora está en EXEC.
-[INFO] 17:52:58:32 TEAM/(21168:21178): Recibi mensaje caught pokemon. El pokemon fue atrapado.
-[INFO] 17:52:58:34 TEAM/(21168:21420): El entrenador 1 atrapó al pokemon Pikachu en la posición (9,9).
-[INFO] 17:52:58:35 TEAM/(21168:21420): Habilito el hilo del entrenador 1.
-[INFO] 17:52:58:35 TEAM/(21168:21420): Habilito el hilo del entrenador 1.
-[INFO] 17:52:58:35 TEAM/(21168:21172): El entrenador 1 ahora está en READY.
-[INFO] 17:53:03:12 TEAM/(21168:21178): Recibi mensaje caught pokemon. El pokemon fue atrapado.
-[INFO] 17:53:07:998 TEAM/(21168:21173): El entrenador 2 se movió a la posición (5, 2).
-[INFO] 17:53:12:999 TEAM/(21168:21173): El entrenador 2 ahora está en BLOCKED.
-[INFO] 17:53:12:999 TEAM/(21168:21180): El entrenador 0 ahora está en EXEC.
-[INFO] 17:53:12:999 TEAM/(21168:21171): El entrenador  0 se mueve a atrapar a Gengar en posición (6, 6)
-
-[INFO] 17:53:12:999 TEAM/(21168:21171): El entrenador 0 ahora está en EXEC.
-[INFO] 17:53:13:15 TEAM/(21168:21178): Recibi mensaje caught pokemon. El pokemon fue atrapado.
-[INFO] 17:53:17:769 TEAM/(21168:21178): Conexión fallida con el Broker
-
-[INFO] 17:53:17:769 TEAM/(21168:21177): Conexión fallida con el Broker
-
-[INFO] 17:53:17:769 TEAM/(21168:21176): Conexión fallida con el Broker
-
-[INFO] 17:53:17:770 TEAM/(21168:21178): Reintentando conexión en 30 segundos...
-
-[INFO] 17:53:17:770 TEAM/(21168:21176): Reintentando conexión en 30 segundos...
-
-[INFO] 17:53:17:770 TEAM/(21168:21177): Reintentando conexión en 30 segundos...
-
-[INFO] 17:55:56:515 TEAM/(21610:21610): ___________________________________________________________________________________________________________
-[INFO] 17:55:56:515 TEAM/(21610:21610): Inició el TEAM
-[INFO] 17:55:56:524 TEAM/(21610:21618): Recibi mensaje appeared pokemon. El pokemon es: Pikachu. La posicion es: (9,9).
-[INFO] 17:55:56:528 TEAM/(21610:21618): Recibi mensaje appeared pokemon. El pokemon es: Jolteon. La posicion es: (2,2).
-[INFO] 17:55:56:531 TEAM/(21610:21632): Habilito el hilo del entrenador 1.
-[INFO] 17:55:56:531 TEAM/(21610:21614): El entrenador 1 ahora está en READY.
-[INFO] 17:55:56:531 TEAM/(21610:21622): El entrenador 1 ahora está en EXEC.
-[INFO] 17:55:56:531 TEAM/(21610:21614): El entrenador  1 se mueve a atrapar a Pikachu en posición (9, 9)
-
-[INFO] 17:55:56:531 TEAM/(21610:21614): El entrenador 1 ahora está en EXEC.
-[INFO] 17:56:01:609 TEAM/(21610:21619): Recibi mensaje localized. El pokemon es: Pikachu. La cantidad es: 1.
-[INFO] 17:56:01:609 TEAM/(21610:21619): Las posiciones son: 
-[INFO] 17:56:01:609 TEAM/(21610:21619): (9,9)
-[INFO] 17:56:01:610 TEAM/(21610:21619): Recibi mensaje localized. El pokemon es: Squirtle. La cantidad es: 2.
-[INFO] 17:56:01:611 TEAM/(21610:21619): Las posiciones son: 
-[INFO] 17:56:01:611 TEAM/(21610:21619): (5,2)
-[INFO] 17:56:01:611 TEAM/(21610:21619): (5,5)
-[INFO] 17:56:01:612 TEAM/(21610:21619): Recibi mensaje localized. El pokemon es: Onix. La cantidad es: 1.
-[INFO] 17:56:01:612 TEAM/(21610:21619): Las posiciones son: 
-[INFO] 17:56:01:612 TEAM/(21610:21619): (2,8)
-[INFO] 17:56:01:617 TEAM/(21610:21619): Recibi mensaje localized. El pokemon es: Gengar. La cantidad es: 1.
-[INFO] 17:56:01:617 TEAM/(21610:21619): Las posiciones son: 
-[INFO] 17:56:01:617 TEAM/(21610:21619): (6,6)
-[INFO] 17:56:01:621 TEAM/(21610:21697): Habilito el hilo del entrenador 0.
-[INFO] 17:56:01:621 TEAM/(21610:21613): El entrenador 0 ahora está en READY.
-[INFO] 17:56:01:621 TEAM/(21610:21694): Habilito el hilo del entrenador 2.
-[INFO] 17:56:01:621 TEAM/(21610:21615): El entrenador 2 ahora está en READY.
-[INFO] 17:56:04:750 TEAM/(21610:21619): Recibi mensaje localized. El pokemon es: Flareon. La cantidad es: 1.
-[INFO] 17:56:04:750 TEAM/(21610:21619): Las posiciones son: 
-[INFO] 17:56:04:750 TEAM/(21610:21619): (4,6)
-[INFO] 17:56:04:752 TEAM/(21610:21619): Recibi mensaje localized. El pokemon es: Espeon. La cantidad es: 1.
-[INFO] 17:56:04:752 TEAM/(21610:21619): Las posiciones son: 
-[INFO] 17:56:04:752 TEAM/(21610:21619): (7,1)
-[INFO] 17:56:04:753 TEAM/(21610:21619): Recibi mensaje localized. El pokemon es: Jolteon. La cantidad es: 1.
-[INFO] 17:56:04:753 TEAM/(21610:21619): Las posiciones son: 
-[INFO] 17:56:04:753 TEAM/(21610:21619): (2,2)
-[INFO] 17:56:04:754 TEAM/(21610:21619): Recibi mensaje localized. El pokemon es: Umbreon. La cantidad es: 1.
-[INFO] 17:56:04:754 TEAM/(21610:21619): Las posiciones son: 
-[INFO] 17:56:04:754 TEAM/(21610:21619): (10,6)
-[INFO] 17:56:04:755 TEAM/(21610:21619): Recibi mensaje localized. El pokemon es: Vaporeon. La cantidad es: 1.
-[INFO] 17:56:04:755 TEAM/(21610:21619): Las posiciones son: 
-[INFO] 17:56:04:755 TEAM/(21610:21619): (4,10)
-[INFO] 17:56:16:496 TEAM/(21610:21618): Recibi mensaje appeared pokemon. El pokemon es: Onix. La posicion es: (2,8).
-[INFO] 17:56:16:504 TEAM/(21610:21618): Recibi mensaje appeared pokemon. El pokemon es: Gengar. La posicion es: (6,6).
-[INFO] 17:56:16:534 TEAM/(21610:21618): Recibi mensaje appeared pokemon. El pokemon es: Squirtle. La posicion es: (5,5).
-[INFO] 17:56:16:538 TEAM/(21610:21618): Recibi mensaje appeared pokemon. El pokemon es: Umbreon. La posicion es: (10,6).
-[INFO] 17:56:16:576 TEAM/(21610:21618): Recibi mensaje appeared pokemon. El pokemon es: Vaporeon. La posicion es: (4,10).
-[INFO] 17:56:16:576 TEAM/(21610:21618): Recibi mensaje appeared pokemon. El pokemon es: Espeon. La posicion es: (7,1).
-[INFO] 17:56:49:807 TEAM/(21610:21620): Recibi mensaje caught pokemon. El pokemon fue atrapado.
-[INFO] 17:57:00:271 TEAM/(21610:21620): Conexión fallida con el Broker
-
-[INFO] 17:57:00:272 TEAM/(21610:21619): Conexión fallida con el Broker
-
-[INFO] 17:57:00:272 TEAM/(21610:21618): Conexión fallida con el Broker
-
-[INFO] 17:57:00:274 TEAM/(21610:21620): Reintentando conexión en 30 segundos...
-
-[INFO] 17:57:00:274 TEAM/(21610:21618): Reintentando conexión en 30 segundos...
-
-[INFO] 17:57:00:274 TEAM/(21610:21619): Reintentando conexión en 30 segundos...
-
-[INFO] 18:01:40:403 TEAM/(22017:22017): ___________________________________________________________________________________________________________
-[INFO] 18:01:40:403 TEAM/(22017:22017): Inició el TEAM
-[INFO] 18:01:40:416 TEAM/(22017:22025): Recibi mensaje appeared pokemon. El pokemon es: Pikachu. La posicion es: (9,9).
-[INFO] 18:01:40:417 TEAM/(22017:22025): Recibi mensaje appeared pokemon. El pokemon es: Jolteon. La posicion es: (2,2).
-[INFO] 18:01:40:419 TEAM/(22017:22039): Habilito el hilo del entrenador 1.
-[INFO] 18:01:40:419 TEAM/(22017:22021): El entrenador 1 ahora está en READY.
-[INFO] 18:01:40:419 TEAM/(22017:22029): El entrenador 1 ahora está en EXEC.
-[INFO] 18:01:40:419 TEAM/(22017:22021): El entrenador  1 se mueve a atrapar a Pikachu en posición (9, 9)
-
-[INFO] 18:01:40:419 TEAM/(22017:22021): El entrenador 1 ahora está en EXEC.
-[INFO] 18:01:45:497 TEAM/(22017:22026): Recibi mensaje localized. El pokemon es: Squirtle. La cantidad es: 2.
-[INFO] 18:01:45:497 TEAM/(22017:22026): Las posiciones son: 
-[INFO] 18:01:45:497 TEAM/(22017:22026): (5,2)
-[INFO] 18:01:45:497 TEAM/(22017:22026): (5,5)
-[INFO] 18:01:45:499 TEAM/(22017:22026): Recibi mensaje localized. El pokemon es: Gengar. La cantidad es: 1.
-[INFO] 18:01:45:499 TEAM/(22017:22026): Las posiciones son: 
-[INFO] 18:01:45:499 TEAM/(22017:22026): (6,6)
-[INFO] 18:01:45:501 TEAM/(22017:22026): Recibi mensaje localized. El pokemon es: Pikachu. La cantidad es: 1.
-[INFO] 18:01:45:501 TEAM/(22017:22026): Las posiciones son: 
-[INFO] 18:01:45:501 TEAM/(22017:22026): (9,9)
-[INFO] 18:01:45:502 TEAM/(22017:22099): Habilito el hilo del entrenador 2.
-[INFO] 18:01:45:502 TEAM/(22017:22022): El entrenador 2 ahora está en READY.
-[INFO] 18:01:45:503 TEAM/(22017:22099): Habilito el hilo del entrenador 0.
-[INFO] 18:01:45:503 TEAM/(22017:22020): El entrenador 0 ahora está en READY.
-[INFO] 18:01:45:504 TEAM/(22017:22026): Recibi mensaje localized. El pokemon es: Onix. La cantidad es: 1.
-[INFO] 18:01:45:504 TEAM/(22017:22026): Las posiciones son: 
-[INFO] 18:01:45:504 TEAM/(22017:22026): (2,8)
-[INFO] 18:01:48:995 TEAM/(22017:22026): Recibi mensaje localized. El pokemon es: Flareon. La cantidad es: 1.
-[INFO] 18:01:48:995 TEAM/(22017:22026): Las posiciones son: 
-[INFO] 18:01:48:995 TEAM/(22017:22026): (4,6)
-[INFO] 18:01:49:13 TEAM/(22017:22026): Recibi mensaje localized. El pokemon es: Umbreon. La cantidad es: 1.
-[INFO] 18:01:49:13 TEAM/(22017:22026): Las posiciones son: 
-[INFO] 18:01:49:13 TEAM/(22017:22026): (10,6)
-[INFO] 18:01:49:18 TEAM/(22017:22026): Recibi mensaje localized. El pokemon es: Jolteon. La cantidad es: 1.
-[INFO] 18:01:49:18 TEAM/(22017:22026): Las posiciones son: 
-[INFO] 18:01:49:18 TEAM/(22017:22026): (2,2)
-[INFO] 18:01:49:19 TEAM/(22017:22026): Recibi mensaje localized. El pokemon es: Espeon. La cantidad es: 1.
-[INFO] 18:01:49:19 TEAM/(22017:22026): Las posiciones son: 
-[INFO] 18:01:49:19 TEAM/(22017:22026): (7,1)
-[INFO] 18:01:49:20 TEAM/(22017:22026): Recibi mensaje localized. El pokemon es: Vaporeon. La cantidad es: 1.
-[INFO] 18:01:49:20 TEAM/(22017:22026): Las posiciones son: 
-[INFO] 18:01:49:20 TEAM/(22017:22026): (4,10)
-[INFO] 18:02:34:27 TEAM/(22017:22027): Recibi mensaje caught pokemon. El pokemon fue atrapado.
-[INFO] 18:02:35:198 TEAM/(22017:22025): Recibi mensaje appeared pokemon. El pokemon es: Onix. La posicion es: (2,8).
-[INFO] 18:02:35:204 TEAM/(22017:22025): Recibi mensaje appeared pokemon. El pokemon es: Gengar. La posicion es: (6,6).
-[INFO] 18:02:35:233 TEAM/(22017:22025): Recibi mensaje appeared pokemon. El pokemon es: Squirtle. La posicion es: (5,5).
-[INFO] 18:02:35:242 TEAM/(22017:22025): Recibi mensaje appeared pokemon. El pokemon es: Umbreon. La posicion es: (10,6).
-[INFO] 18:02:35:262 TEAM/(22017:22025): Recibi mensaje appeared pokemon. El pokemon es: Espeon. La posicion es: (7,1).
-[INFO] 18:02:35:274 TEAM/(22017:22025): Recibi mensaje appeared pokemon. El pokemon es: Vaporeon. La posicion es: (4,10).
-[INFO] 18:02:45:431 TEAM/(22017:22021): El entrenador 1 se movió a la posición (9, 9).
-[INFO] 18:02:50:434 TEAM/(22017:22021): El entrenador 1 ahora está en BLOCKED.
-[INFO] 18:02:50:434 TEAM/(22017:22029): El entrenador 2 ahora está en EXEC.
-[INFO] 18:02:50:434 TEAM/(22017:22022): El entrenador  2 se mueve a atrapar a Squirtle en posición (5, 2)
-
-[INFO] 18:02:50:434 TEAM/(22017:22022): El entrenador 2 ahora está en EXEC.
-[INFO] 18:02:55:452 TEAM/(22017:22027): Recibi mensaje caught pokemon. El pokemon fue atrapado.
-[INFO] 18:02:55:456 TEAM/(22017:22243): El entrenador 1 atrapó al pokemon Pikachu en la posición (9,9).
-[INFO] 18:02:55:457 TEAM/(22017:22243): Habilito el hilo del entrenador 1.
-[INFO] 18:02:55:457 TEAM/(22017:22243): Habilito el hilo del entrenador 1.
-[INFO] 18:02:55:457 TEAM/(22017:22021): El entrenador 1 ahora está en READY.
-[INFO] 18:03:05:439 TEAM/(22017:22022): El entrenador 2 se movió a la posición (5, 2).
-[INFO] 18:03:09:25 TEAM/(22017:22027): Recibi mensaje caught pokemon. El pokemon fue atrapado.
-[INFO] 18:03:10:441 TEAM/(22017:22022): El entrenador 2 ahora está en BLOCKED.
-[INFO] 18:03:10:441 TEAM/(22017:22029): El entrenador 0 ahora está en EXEC.
-[INFO] 18:03:10:441 TEAM/(22017:22020): El entrenador  0 se mueve a atrapar a Squirtle en posición (5, 5)
-
-[INFO] 18:03:10:442 TEAM/(22017:22020): El entrenador 0 ahora está en EXEC.
-[INFO] 18:03:15:455 TEAM/(22017:22027): Recibi mensaje caught pokemon. El pokemon fue atrapado.
-[INFO] 18:03:15:457 TEAM/(22017:22271): El entrenador 2 atrapó al pokemon Squirtle en la posición (5,2).
-[INFO] 18:03:15:457 TEAM/(22017:22271): Habilito el hilo del entrenador 2.
-[INFO] 18:03:15:457 TEAM/(22017:22271): Habilito el hilo del entrenador 2.
-[INFO] 18:03:15:457 TEAM/(22017:22022): El entrenador 2 ahora está en READY.
-[INFO] 18:03:18:123 TEAM/(22017:22027): Conexión fallida con el Broker
-
-[INFO] 18:03:18:123 TEAM/(22017:22026): Conexión fallida con el Broker
-
-[INFO] 18:03:18:123 TEAM/(22017:22025): Conexión fallida con el Broker
-
-[INFO] 18:03:18:124 TEAM/(22017:22027): Reintentando conexión en 30 segundos...
-
-[INFO] 18:03:18:124 TEAM/(22017:22025): Reintentando conexión en 30 segundos...
-
-[INFO] 18:03:18:124 TEAM/(22017:22026): Reintentando conexión en 30 segundos...
-
-[INFO] 18:06:10:502 TEAM/(22436:22436): ___________________________________________________________________________________________________________
-[INFO] 18:06:10:502 TEAM/(22436:22436): Inició el TEAM
-[INFO] 18:06:10:516 TEAM/(22436:22444): Recibi mensaje appeared pokemon. El pokemon es: Pikachu. La posicion es: (9,9).
-[INFO] 18:06:10:519 TEAM/(22436:22444): Recibi mensaje appeared pokemon. El pokemon es: Squirtle. La posicion es: (5,2).
-[INFO] 18:06:10:522 TEAM/(22436:22462): Habilito el hilo del entrenador 1.
-[INFO] 18:06:10:522 TEAM/(22436:22440): El entrenador 1 ahora está en READY.
-[INFO] 18:06:10:522 TEAM/(22436:22448): El entrenador 1 ahora está en EXEC.
-[INFO] 18:06:10:522 TEAM/(22436:22440): El entrenador  1 se mueve a atrapar a Pikachu en posición (9, 9)
-
-[INFO] 18:06:10:522 TEAM/(22436:22440): El entrenador 1 ahora está en EXEC.
-[INFO] 18:06:10:531 TEAM/(22436:22464): Habilito el hilo del entrenador 2.
-[INFO] 18:06:10:531 TEAM/(22436:22441): El entrenador 2 ahora está en READY.
-[INFO] 18:06:15:609 TEAM/(22436:22445): Recibi mensaje localized. El pokemon es: Onix. La cantidad es: 1.
-[INFO] 18:06:15:609 TEAM/(22436:22445): Las posiciones son: 
-[INFO] 18:06:15:609 TEAM/(22436:22445): (2,8)
-[INFO] 18:06:15:612 TEAM/(22436:22445): Recibi mensaje localized. El pokemon es: Pikachu. La cantidad es: 1.
-[INFO] 18:06:15:612 TEAM/(22436:22445): Las posiciones son: 
-[INFO] 18:06:15:612 TEAM/(22436:22445): (9,9)
-[INFO] 18:06:15:614 TEAM/(22436:22445): Recibi mensaje localized. El pokemon es: Gengar. La cantidad es: 1.
-[INFO] 18:06:15:614 TEAM/(22436:22445): Las posiciones son: 
-[INFO] 18:06:15:614 TEAM/(22436:22445): (6,6)
-[INFO] 18:06:15:615 TEAM/(22436:22518): Habilito el hilo del entrenador 0.
-[INFO] 18:06:15:615 TEAM/(22436:22439): El entrenador 0 ahora está en READY.
-[INFO] 18:06:15:615 TEAM/(22436:22445): Recibi mensaje localized. El pokemon es: Squirtle. La cantidad es: 2.
-[INFO] 18:06:15:615 TEAM/(22436:22445): Las posiciones son: 
-[INFO] 18:06:15:615 TEAM/(22436:22445): (5,2)
-[INFO] 18:06:15:615 TEAM/(22436:22445): (5,5)
-[INFO] 18:06:17:986 TEAM/(22436:22445): Recibi mensaje localized. El pokemon es: Vaporeon. La cantidad es: 1.
-[INFO] 18:06:17:986 TEAM/(22436:22445): Las posiciones son: 
-[INFO] 18:06:17:986 TEAM/(22436:22445): (4,10)
-[INFO] 18:06:17:987 TEAM/(22436:22445): Recibi mensaje localized. El pokemon es: Espeon. La cantidad es: 1.
-[INFO] 18:06:17:987 TEAM/(22436:22445): Las posiciones son: 
-[INFO] 18:06:17:987 TEAM/(22436:22445): (7,1)
-[INFO] 18:06:17:988 TEAM/(22436:22445): Recibi mensaje localized. El pokemon es: Umbreon. La cantidad es: 1.
-[INFO] 18:06:17:988 TEAM/(22436:22445): Las posiciones son: 
-[INFO] 18:06:17:988 TEAM/(22436:22445): (10,6)
-[INFO] 18:06:17:988 TEAM/(22436:22445): Recibi mensaje localized. El pokemon es: Jolteon. La cantidad es: 1.
-[INFO] 18:06:17:988 TEAM/(22436:22445): Las posiciones son: 
-[INFO] 18:06:17:988 TEAM/(22436:22445): (2,2)
-[INFO] 18:06:17:989 TEAM/(22436:22445): Recibi mensaje localized. El pokemon es: Flareon. La cantidad es: 1.
-[INFO] 18:06:17:989 TEAM/(22436:22445): Las posiciones son: 
-[INFO] 18:06:17:989 TEAM/(22436:22445): (4,6)
-[INFO] 18:06:28:865 TEAM/(22436:22444): Recibi mensaje appeared pokemon. El pokemon es: Onix. La posicion es: (2,8).
-[INFO] 18:06:28:930 TEAM/(22436:22444): Recibi mensaje appeared pokemon. El pokemon es: Gengar. La posicion es: (6,6).
-[INFO] 18:06:28:943 TEAM/(22436:22444): Recibi mensaje appeared pokemon. El pokemon es: Squirtle. La posicion es: (5,5).
-[INFO] 18:06:28:944 TEAM/(22436:22444): Recibi mensaje appeared pokemon. El pokemon es: Espeon. La posicion es: (7,1).
-[INFO] 18:06:28:945 TEAM/(22436:22444): Recibi mensaje appeared pokemon. El pokemon es: Umbreon. La posicion es: (10,6).
-[INFO] 18:06:28:959 TEAM/(22436:22444): Recibi mensaje appeared pokemon. El pokemon es: Vaporeon. La posicion es: (4,10).
-[INFO] 18:07:07:464 TEAM/(22436:22446): Conexión fallida con el Broker
-
-[INFO] 18:07:07:464 TEAM/(22436:22445): Conexión fallida con el Broker
-
-[INFO] 18:07:07:464 TEAM/(22436:22444): Conexión fallida con el Broker
-
-[INFO] 18:07:07:466 TEAM/(22436:22446): Reintentando conexión en 30 segundos...
-
-[INFO] 18:07:07:466 TEAM/(22436:22444): Reintentando conexión en 30 segundos...
-
-[INFO] 18:07:07:466 TEAM/(22436:22445): Reintentando conexión en 30 segundos...
-
-[INFO] 18:08:23:247 TEAM/(22771:22771): ___________________________________________________________________________________________________________
-[INFO] 18:08:23:247 TEAM/(22771:22771): Inició el TEAM
-[INFO] 18:08:23:279 TEAM/(22771:22779): Recibi mensaje appeared pokemon. El pokemon es: Squirtle. La posicion es: (5,2).
-[INFO] 18:08:23:290 TEAM/(22771:22798): Habilito el hilo del entrenador 2.
-[INFO] 18:08:23:290 TEAM/(22771:22776): El entrenador 2 ahora está en READY.
-[INFO] 18:08:23:290 TEAM/(22771:22783): El entrenador 2 ahora está en EXEC.
-[INFO] 18:08:23:290 TEAM/(22771:22776): El entrenador  2 se mueve a atrapar a Squirtle en posición (5, 2)
-
-[INFO] 18:08:23:290 TEAM/(22771:22776): El entrenador 2 ahora está en EXEC.
-[INFO] 18:08:28:367 TEAM/(22771:22780): Recibi mensaje localized. El pokemon es: Gengar. La cantidad es: 1.
-[INFO] 18:08:28:367 TEAM/(22771:22780): Las posiciones son: 
-[INFO] 18:08:28:367 TEAM/(22771:22780): (6,6)
-[INFO] 18:08:28:370 TEAM/(22771:22780): Recibi mensaje localized. El pokemon es: Pikachu. La cantidad es: 1.
-[INFO] 18:08:28:370 TEAM/(22771:22780): Las posiciones son: 
-[INFO] 18:08:28:370 TEAM/(22771:22780): (9,9)
-[INFO] 18:08:28:371 TEAM/(22771:22849): Habilito el hilo del entrenador 1.
-[INFO] 18:08:28:371 TEAM/(22771:22775): El entrenador 1 ahora está en READY.
-[INFO] 18:08:28:372 TEAM/(22771:22780): Recibi mensaje localized. El pokemon es: Squirtle. La cantidad es: 2.
-[INFO] 18:08:28:372 TEAM/(22771:22780): Las posiciones son: 
-[INFO] 18:08:28:372 TEAM/(22771:22780): (5,2)
-[INFO] 18:08:28:372 TEAM/(22771:22780): (5,5)
-[INFO] 18:08:28:373 TEAM/(22771:22780): Recibi mensaje localized. El pokemon es: Onix. La cantidad es: 1.
-[INFO] 18:08:28:373 TEAM/(22771:22780): Las posiciones son: 
-[INFO] 18:08:28:373 TEAM/(22771:22780): (2,8)
-[INFO] 18:08:28:374 TEAM/(22771:22855): Habilito el hilo del entrenador 0.
-[INFO] 18:08:28:374 TEAM/(22771:22774): El entrenador 0 ahora está en READY.
-[INFO] 18:08:29:917 TEAM/(22771:22780): Recibi mensaje localized. El pokemon es: Vaporeon. La cantidad es: 1.
-[INFO] 18:08:29:917 TEAM/(22771:22780): Las posiciones son: 
-[INFO] 18:08:29:917 TEAM/(22771:22780): (4,10)
-[INFO] 18:08:29:928 TEAM/(22771:22780): Recibi mensaje localized. El pokemon es: Flareon. La cantidad es: 1.
-[INFO] 18:08:29:928 TEAM/(22771:22780): Las posiciones son: 
-[INFO] 18:08:29:928 TEAM/(22771:22780): (4,6)
-[INFO] 18:08:29:932 TEAM/(22771:22780): Recibi mensaje localized. El pokemon es: Jolteon. La cantidad es: 1.
-[INFO] 18:08:29:932 TEAM/(22771:22780): Las posiciones son: 
-[INFO] 18:08:29:932 TEAM/(22771:22780): (2,2)
-[INFO] 18:08:29:939 TEAM/(22771:22780): Recibi mensaje localized. El pokemon es: Umbreon. La cantidad es: 1.
-[INFO] 18:08:29:939 TEAM/(22771:22780): Las posiciones son: 
-[INFO] 18:08:29:939 TEAM/(22771:22780): (10,6)
-[INFO] 18:08:29:940 TEAM/(22771:22780): Recibi mensaje localized. El pokemon es: Espeon. La cantidad es: 1.
-[INFO] 18:08:29:940 TEAM/(22771:22780): Las posiciones son: 
-[INFO] 18:08:29:940 TEAM/(22771:22780): (7,1)
-[INFO] 18:08:38:292 TEAM/(22771:22776): El entrenador 2 se movió a la posición (5, 2).
-[INFO] 18:08:41:101 TEAM/(22771:22779): Recibi mensaje appeared pokemon. El pokemon es: Onix. La posicion es: (2,8).
-[INFO] 18:08:41:117 TEAM/(22771:22779): Recibi mensaje appeared pokemon. El pokemon es: Gengar. La posicion es: (6,6).
-[INFO] 18:08:41:143 TEAM/(22771:22779): Recibi mensaje appeared pokemon. El pokemon es: Squirtle. La posicion es: (5,5).
-[INFO] 18:08:41:161 TEAM/(22771:22779): Recibi mensaje appeared pokemon. El pokemon es: Umbreon. La posicion es: (10,6).
-[INFO] 18:08:41:179 TEAM/(22771:22779): Recibi mensaje appeared pokemon. El pokemon es: Espeon. La posicion es: (7,1).
-[INFO] 18:08:41:189 TEAM/(22771:22779): Recibi mensaje appeared pokemon. El pokemon es: Vaporeon. La posicion es: (4,10).
-[INFO] 18:08:43:294 TEAM/(22771:22776): El entrenador 2 ahora está en BLOCKED.
-[INFO] 18:08:43:295 TEAM/(22771:22783): El entrenador 1 ahora está en EXEC.
-[INFO] 18:08:43:295 TEAM/(22771:22775): El entrenador  1 se mueve a atrapar a Gengar en posición (6, 6)
-
-[INFO] 18:08:43:295 TEAM/(22771:22775): El entrenador 1 ahora está en EXEC.
-[INFO] 18:08:48:348 TEAM/(22771:22781): Recibi mensaje caught pokemon. El pokemon fue atrapado.
-[INFO] 18:08:48:350 TEAM/(22771:22966): El entrenador 2 atrapó al pokemon Squirtle en la posición (5,2).
-[INFO] 18:08:48:350 TEAM/(22771:22966): Habilito el hilo del entrenador 2.
-[INFO] 18:08:48:350 TEAM/(22771:22966): Habilito el hilo del entrenador 2.
-[INFO] 18:08:48:350 TEAM/(22771:22776): El entrenador 2 ahora está en READY.
-[INFO] 18:09:12:159 TEAM/(22771:22781): Conexión fallida con el Broker
-
-[INFO] 18:09:12:159 TEAM/(22771:22780): Conexión fallida con el Broker
-
-[INFO] 18:09:12:159 TEAM/(22771:22779): Conexión fallida con el Broker
-
-[INFO] 18:09:12:161 TEAM/(22771:22781): Reintentando conexión en 30 segundos...
-
-[INFO] 18:09:12:161 TEAM/(22771:22779): Reintentando conexión en 30 segundos...
-
-[INFO] 18:09:12:161 TEAM/(22771:22780): Reintentando conexión en 30 segundos...
-
-[INFO] 18:12:42:353 TEAM/(23167:23167): ___________________________________________________________________________________________________________
-[INFO] 18:12:42:353 TEAM/(23167:23167): Inició el TEAM
-[INFO] 18:12:42:372 TEAM/(23167:23175): Recibi mensaje appeared pokemon. El pokemon es: Flareon. La posicion es: (4,6).
-[INFO] 18:12:42:373 TEAM/(23167:23175): Recibi mensaje appeared pokemon. El pokemon es: Squirtle. La posicion es: (5,2).
-[INFO] 18:12:42:385 TEAM/(23167:23195): Habilito el hilo del entrenador 2.
-[INFO] 18:12:42:385 TEAM/(23167:23172): El entrenador 2 ahora está en READY.
-[INFO] 18:12:42:385 TEAM/(23167:23179): El entrenador 2 ahora está en EXEC.
-[INFO] 18:12:42:385 TEAM/(23167:23172): El entrenador  2 se mueve a atrapar a Squirtle en posición (5, 2)
-
-[INFO] 18:12:42:385 TEAM/(23167:23172): El entrenador 2 ahora está en EXEC.
-[INFO] 18:12:47:485 TEAM/(23167:23176): Recibi mensaje localized. El pokemon es: Pikachu. La cantidad es: 1.
-[INFO] 18:12:47:485 TEAM/(23167:23176): Las posiciones son: 
-[INFO] 18:12:47:485 TEAM/(23167:23176): (9,9)
-[INFO] 18:12:47:494 TEAM/(23167:23176): Recibi mensaje localized. El pokemon es: Gengar. La cantidad es: 1.
-[INFO] 18:12:47:494 TEAM/(23167:23176): Las posiciones son: 
-[INFO] 18:12:47:494 TEAM/(23167:23176): (6,6)
-[INFO] 18:12:47:497 TEAM/(23167:23249): Habilito el hilo del entrenador 1.
-[INFO] 18:12:47:498 TEAM/(23167:23171): El entrenador 1 ahora está en READY.
-[INFO] 18:12:47:498 TEAM/(23167:23176): Recibi mensaje localized. El pokemon es: Onix. La cantidad es: 1.
-[INFO] 18:12:47:498 TEAM/(23167:23176): Las posiciones son: 
-[INFO] 18:12:47:498 TEAM/(23167:23176): (2,8)
-[INFO] 18:12:47:499 TEAM/(23167:23176): Recibi mensaje localized. El pokemon es: Squirtle. La cantidad es: 2.
-[INFO] 18:12:47:499 TEAM/(23167:23176): Las posiciones son: 
-[INFO] 18:12:47:499 TEAM/(23167:23176): (5,2)
-[INFO] 18:12:47:499 TEAM/(23167:23176): (5,5)
-[INFO] 18:12:47:500 TEAM/(23167:23253): Habilito el hilo del entrenador 0.
-[INFO] 18:12:47:500 TEAM/(23167:23170): El entrenador 0 ahora está en READY.
-[INFO] 18:12:48:819 TEAM/(23167:23176): Recibi mensaje localized. El pokemon es: Flareon. La cantidad es: 1.
-[INFO] 18:12:48:819 TEAM/(23167:23176): Las posiciones son: 
-[INFO] 18:12:48:819 TEAM/(23167:23176): (4,6)
-[INFO] 18:12:48:838 TEAM/(23167:23176): Recibi mensaje localized. El pokemon es: Jolteon. La cantidad es: 1.
-[INFO] 18:12:48:838 TEAM/(23167:23176): Las posiciones son: 
-[INFO] 18:12:48:838 TEAM/(23167:23176): (2,2)
-[INFO] 18:12:48:839 TEAM/(23167:23176): Recibi mensaje localized. El pokemon es: Vaporeon. La cantidad es: 1.
-[INFO] 18:12:48:839 TEAM/(23167:23176): Las posiciones son: 
-[INFO] 18:12:48:839 TEAM/(23167:23176): (4,10)
-[INFO] 18:12:48:840 TEAM/(23167:23176): Recibi mensaje localized. El pokemon es: Umbreon. La cantidad es: 1.
-[INFO] 18:12:48:840 TEAM/(23167:23176): Las posiciones son: 
-[INFO] 18:12:48:840 TEAM/(23167:23176): (10,6)
-[INFO] 18:12:48:842 TEAM/(23167:23176): Recibi mensaje localized. El pokemon es: Espeon. La cantidad es: 1.
-[INFO] 18:12:48:842 TEAM/(23167:23176): Las posiciones son: 
-[INFO] 18:12:48:842 TEAM/(23167:23176): (7,1)
-[INFO] 18:12:57:387 TEAM/(23167:23172): El entrenador 2 se movió a la posición (5, 2).
-[INFO] 18:13:02:389 TEAM/(23167:23172): El entrenador 2 ahora está en BLOCKED.
-[INFO] 18:13:02:390 TEAM/(23167:23179): El entrenador 1 ahora está en EXEC.
-[INFO] 18:13:02:390 TEAM/(23167:23171): El entrenador  1 se mueve a atrapar a Pikachu en posición (9, 9)
-
-[INFO] 18:13:02:391 TEAM/(23167:23171): El entrenador 1 ahora está en EXEC.
-[INFO] 18:13:04:524 TEAM/(23167:23175): Recibi mensaje appeared pokemon. El pokemon es: Onix. La posicion es: (2,8).
-[INFO] 18:13:04:540 TEAM/(23167:23175): Recibi mensaje appeared pokemon. El pokemon es: Gengar. La posicion es: (6,6).
-[INFO] 18:13:04:564 TEAM/(23167:23175): Recibi mensaje appeared pokemon. El pokemon es: Umbreon. La posicion es: (10,6).
-[INFO] 18:13:04:567 TEAM/(23167:23175): Recibi mensaje appeared pokemon. El pokemon es: Squirtle. La posicion es: (5,5).
-[INFO] 18:13:04:572 TEAM/(23167:23175): Recibi mensaje appeared pokemon. El pokemon es: Espeon. La posicion es: (7,1).
-[INFO] 18:13:04:576 TEAM/(23167:23175): Recibi mensaje appeared pokemon. El pokemon es: Vaporeon. La posicion es: (4,10).
-[INFO] 18:13:12:435 TEAM/(23167:23177): Recibi mensaje caught pokemon. El pokemon fue atrapado.
-[INFO] 18:13:12:436 TEAM/(23167:23387): El entrenador 2 atrapó al pokemon Squirtle en la posición (5,2).
-[INFO] 18:13:12:436 TEAM/(23167:23387): Habilito el hilo del entrenador 2.
-[INFO] 18:13:12:436 TEAM/(23167:23387): Habilito el hilo del entrenador 2.
-[INFO] 18:13:12:436 TEAM/(23167:23172): El entrenador 2 ahora está en READY.
-[INFO] 18:13:33:836 TEAM/(23167:23177): Recibi mensaje caught pokemon. El pokemon fue atrapado.
-[INFO] 18:13:44:399 TEAM/(23167:23177): Conexión fallida con el Broker
-
-[INFO] 18:13:44:399 TEAM/(23167:23176): Conexión fallida con el Broker
-
-[INFO] 18:13:44:399 TEAM/(23167:23175): Conexión fallida con el Broker
-
-[INFO] 18:13:44:400 TEAM/(23167:23177): Reintentando conexión en 30 segundos...
-
-[INFO] 18:13:44:400 TEAM/(23167:23175): Reintentando conexión en 30 segundos...
-
-[INFO] 18:13:44:400 TEAM/(23167:23176): Reintentando conexión en 30 segundos...
-
-[INFO] 18:28:36:230 TEAM/(23735:23735): ___________________________________________________________________________________________________________
-[INFO] 18:28:36:230 TEAM/(23735:23735): Inició el TEAM
-[INFO] 18:28:36:253 TEAM/(23735:23743): Recibi mensaje appeared pokemon. El pokemon es: Pikachu. La posicion es: (9,9).
-[INFO] 18:28:36:253 TEAM/(23735:23743): Recibi mensaje appeared pokemon. El pokemon es: Flareon. La posicion es: (4,6).
-[INFO] 18:28:36:264 TEAM/(23735:23761): Habilito el hilo del entrenador 1.
-[INFO] 18:28:36:264 TEAM/(23735:23739): El entrenador 1 ahora está en READY.
-[INFO] 18:28:36:265 TEAM/(23735:23747): El entrenador 1 ahora está en EXEC.
-[INFO] 18:28:36:265 TEAM/(23735:23739): El entrenador  1 se mueve a atrapar a Pikachu en posición (9, 9)
-
-[INFO] 18:28:36:265 TEAM/(23735:23739): El entrenador 1 ahora está en EXEC.
-[INFO] 18:28:41:352 TEAM/(23735:23744): Recibi mensaje localized. El pokemon es: Gengar. La cantidad es: 1.
-[INFO] 18:28:41:352 TEAM/(23735:23744): Las posiciones son: 
-[INFO] 18:28:41:352 TEAM/(23735:23744): (6,6)
-[INFO] 18:28:41:356 TEAM/(23735:23744): Recibi mensaje localized. El pokemon es: Pikachu. La cantidad es: 1.
-[INFO] 18:28:41:356 TEAM/(23735:23744): Las posiciones son: 
-[INFO] 18:28:41:356 TEAM/(23735:23744): (9,9)
-[INFO] 18:28:41:357 TEAM/(23735:23817): Habilito el hilo del entrenador 0.
-[INFO] 18:28:41:357 TEAM/(23735:23738): El entrenador 0 ahora está en READY.
-[INFO] 18:28:41:358 TEAM/(23735:23744): Recibi mensaje localized. El pokemon es: Onix. La cantidad es: 1.
-[INFO] 18:28:41:358 TEAM/(23735:23744): Las posiciones son: 
-[INFO] 18:28:41:358 TEAM/(23735:23744): (2,8)
-[INFO] 18:28:41:359 TEAM/(23735:23744): Recibi mensaje localized. El pokemon es: Squirtle. La cantidad es: 2.
-[INFO] 18:28:41:359 TEAM/(23735:23744): Las posiciones son: 
-[INFO] 18:28:41:359 TEAM/(23735:23744): (5,2)
-[INFO] 18:28:41:359 TEAM/(23735:23744): (5,5)
-[INFO] 18:28:41:360 TEAM/(23735:23825): Habilito el hilo del entrenador 2.
-[INFO] 18:28:41:360 TEAM/(23735:23740): El entrenador 2 ahora está en READY.
-[INFO] 18:28:44:71 TEAM/(23735:23744): Recibi mensaje localized. El pokemon es: Umbreon. La cantidad es: 1.
-[INFO] 18:28:44:71 TEAM/(23735:23744): Las posiciones son: 
-[INFO] 18:28:44:71 TEAM/(23735:23744): (10,6)
-[INFO] 18:28:44:72 TEAM/(23735:23744): Recibi mensaje localized. El pokemon es: Vaporeon. La cantidad es: 1.
-[INFO] 18:28:44:72 TEAM/(23735:23744): Las posiciones son: 
-[INFO] 18:28:44:72 TEAM/(23735:23744): (4,10)
-[INFO] 18:28:44:73 TEAM/(23735:23744): Recibi mensaje localized. El pokemon es: Espeon. La cantidad es: 1.
-[INFO] 18:28:44:73 TEAM/(23735:23744): Las posiciones son: 
-[INFO] 18:28:44:73 TEAM/(23735:23744): (7,1)
-[INFO] 18:28:44:74 TEAM/(23735:23744): Recibi mensaje localized. El pokemon es: Flareon. La cantidad es: 1.
-[INFO] 18:28:44:74 TEAM/(23735:23744): Las posiciones son: 
-[INFO] 18:28:44:74 TEAM/(23735:23744): (4,6)
-[INFO] 18:28:44:74 TEAM/(23735:23744): Recibi mensaje localized. El pokemon es: Jolteon. La cantidad es: 1.
-[INFO] 18:28:44:74 TEAM/(23735:23744): Las posiciones son: 
-[INFO] 18:28:44:74 TEAM/(23735:23744): (2,2)
-[INFO] 18:29:10:567 TEAM/(23735:23743): Recibi mensaje appeared pokemon. El pokemon es: Onix. La posicion es: (2,8).
-[INFO] 18:29:10:575 TEAM/(23735:23743): Recibi mensaje appeared pokemon. El pokemon es: Gengar. La posicion es: (6,6).
-[INFO] 18:29:10:605 TEAM/(23735:23743): Recibi mensaje appeared pokemon. El pokemon es: Squirtle. La posicion es: (5,5).
-[INFO] 18:29:10:606 TEAM/(23735:23743): Recibi mensaje appeared pokemon. El pokemon es: Umbreon. La posicion es: (10,6).
-[INFO] 18:29:10:612 TEAM/(23735:23743): Recibi mensaje appeared pokemon. El pokemon es: Espeon. La posicion es: (7,1).
-[INFO] 18:29:10:620 TEAM/(23735:23743): Recibi mensaje appeared pokemon. El pokemon es: Vaporeon. La posicion es: (4,10).
-[INFO] 18:29:39:107 TEAM/(23735:23745): Recibi mensaje caught pokemon. El pokemon fue atrapado.
-[INFO] 18:29:41:274 TEAM/(23735:23739): El entrenador 1 se movió a la posición (9, 9).
-[INFO] 18:29:42:705 TEAM/(23735:23745): Conexión fallida con el Broker
-
-[INFO] 18:29:42:705 TEAM/(23735:23744): Conexión fallida con el Broker
-
-[INFO] 18:29:42:705 TEAM/(23735:23743): Conexión fallida con el Broker
-
-[INFO] 18:29:42:707 TEAM/(23735:23745): Reintentando conexión en 30 segundos...
-
-[INFO] 18:29:42:707 TEAM/(23735:23743): Reintentando conexión en 30 segundos...
-
-[INFO] 18:29:42:707 TEAM/(23735:23744): Reintentando conexión en 30 segundos...
-
+[INFO] 17:43:06:515 TEAM/(28731:28731): ___________________________________________________________________________________________________________
+[INFO] 17:43:06:515 TEAM/(28731:28731): Inició el TEAM
+[INFO] 17:43:06:516 TEAM/(28731:28739): Fallo de comunicación con el Broker al enviar un get. Se realizará la operación por default.
+[INFO] 17:43:06:516 TEAM/(28731:28738): Conexión fallida con el Broker
+
+[INFO] 17:43:06:516 TEAM/(28731:28740): Conexión fallida con el Broker
+
+[INFO] 17:43:06:516 TEAM/(28731:28738): Reintentando conexión en 30 segundos...
+
+[INFO] 17:43:06:516 TEAM/(28731:28741): Fallo de comunicación con el Broker al enviar un get. Se realizará la operación por default.
+[INFO] 17:43:06:516 TEAM/(28731:28740): Reintentando conexión en 30 segundos...
+
+[INFO] 17:43:06:517 TEAM/(28731:28737): Conexión fallida con el Broker
+
+[INFO] 17:43:06:517 TEAM/(28731:28743): Fallo de comunicación con el Broker al enviar un get. Se realizará la operación por default.
+[INFO] 17:43:06:517 TEAM/(28731:28737): Reintentando conexión en 30 segundos...
+
+[INFO] 17:43:06:517 TEAM/(28731:28744): Fallo de comunicación con el Broker al enviar un get. Se realizará la operación por default.
+[INFO] 17:43:36:517 TEAM/(28731:28738): Reintentando conexión en 30 segundos...
+
+[INFO] 17:43:36:517 TEAM/(28731:28740): Reintentando conexión en 30 segundos...
+
+[INFO] 17:43:36:517 TEAM/(28731:28737): Reintentando conexión en 30 segundos...
+
+[INFO] 17:44:31:777 TEAM/(29008:29008): ___________________________________________________________________________________________________________
+[INFO] 17:44:31:777 TEAM/(29008:29008): Inició el TEAM
+[INFO] 17:44:32:150 TEAM/(29008:29015): Recibi mensaje appeared pokemon. El pokemon es: Onix. La posicion es: (2,8).
+[INFO] 17:44:32:150 TEAM/(29008:29041): Habilito el hilo del entrenador 1.
+[INFO] 17:44:32:150 TEAM/(29008:29010): El entrenador 1 ahora está en READY.
+[INFO] 17:44:32:150 TEAM/(29008:29027): El entrenador 1 ahora está en EXEC.
+[INFO] 17:44:32:150 TEAM/(29008:29010): El entrenador  1 se mueve a atrapar a Onix en posición (2, 8)
+
+[INFO] 17:44:32:150 TEAM/(29008:29010): El entrenador 1 ahora está en EXEC.
+[INFO] 17:44:32:182 TEAM/(29008:29015): Recibi mensaje appeared pokemon. El pokemon es: Gengar. La posicion es: (6,6).
+[INFO] 17:44:32:183 TEAM/(29008:29050): Habilito el hilo del entrenador 0.
+[INFO] 17:44:32:183 TEAM/(29008:29009): El entrenador 0 ahora está en READY.
+[INFO] 17:44:32:189 TEAM/(29008:29015): Recibi mensaje appeared pokemon. El pokemon es: Squirtle. La posicion es: (5,5).
+[INFO] 17:44:32:189 TEAM/(29008:29054): Habilito el hilo del entrenador 2.
+[INFO] 17:44:32:189 TEAM/(29008:29011): El entrenador 2 ahora está en READY.
+[INFO] 17:44:32:196 TEAM/(29008:29015): Recibi mensaje appeared pokemon. El pokemon es: Umbreon. La posicion es: (10,6).
+[INFO] 17:44:32:201 TEAM/(29008:29015): Recibi mensaje appeared pokemon. El pokemon es: Espeon. La posicion es: (7,1).
+[INFO] 17:44:32:204 TEAM/(29008:29015): Recibi mensaje appeared pokemon. El pokemon es: Vaporeon. La posicion es: (4,10).
+[INFO] 17:44:33:405 TEAM/(29008:29015): Recibi mensaje appeared pokemon. El pokemon es: Pikachu. La posicion es: (9,9).
+[INFO] 17:44:33:420 TEAM/(29008:29015): Recibi mensaje appeared pokemon. El pokemon es: Jolteon. La posicion es: (2,2).
+[INFO] 17:44:33:428 TEAM/(29008:29015): Recibi mensaje appeared pokemon. El pokemon es: Flareon. La posicion es: (4,6).
+[INFO] 17:44:38:413 TEAM/(29008:29015): Recibi mensaje appeared pokemon. El pokemon es: Squirtle. La posicion es: (5,2).
+[INFO] 17:44:39:941 TEAM/(29008:29016): Recibi mensaje localized. El pokemon es: Jolteon. La cantidad es: 1.
+[INFO] 17:44:39:941 TEAM/(29008:29016): Las posiciones son: 
+[INFO] 17:44:39:941 TEAM/(29008:29016): (2,2)
+[INFO] 17:44:39:955 TEAM/(29008:29016): Recibi mensaje localized. El pokemon es: Vaporeon. La cantidad es: 1.
+[INFO] 17:44:39:955 TEAM/(29008:29016): Las posiciones son: 
+[INFO] 17:44:39:955 TEAM/(29008:29016): (4,10)
+[INFO] 17:44:39:962 TEAM/(29008:29016): Recibi mensaje localized. El pokemon es: Espeon. La cantidad es: 1.
+[INFO] 17:44:39:962 TEAM/(29008:29016): Las posiciones son: 
+[INFO] 17:44:39:962 TEAM/(29008:29016): (7,1)
+[INFO] 17:44:39:966 TEAM/(29008:29016): Recibi mensaje localized. El pokemon es: Flareon. La cantidad es: 1.
+[INFO] 17:44:39:966 TEAM/(29008:29016): Las posiciones son: 
+[INFO] 17:44:39:966 TEAM/(29008:29016): (4,6)
+[INFO] 17:44:39:972 TEAM/(29008:29016): Recibi mensaje localized. El pokemon es: Umbreon. La cantidad es: 1.
+[INFO] 17:44:39:972 TEAM/(29008:29016): Las posiciones son: 
+[INFO] 17:44:39:972 TEAM/(29008:29016): (10,6)
+[INFO] 17:44:41:799 TEAM/(29008:29016): Recibi mensaje localized. El pokemon es: Gengar. La cantidad es: 1.
+[INFO] 17:44:41:799 TEAM/(29008:29016): Las posiciones son: 
+[INFO] 17:44:41:799 TEAM/(29008:29016): (6,6)
+[INFO] 17:44:41:815 TEAM/(29008:29016): Recibi mensaje localized. El pokemon es: Pikachu. La cantidad es: 1.
+[INFO] 17:44:41:815 TEAM/(29008:29016): Las posiciones son: 
+[INFO] 17:44:41:815 TEAM/(29008:29016): (9,9)
+[INFO] 17:44:41:819 TEAM/(29008:29016): Recibi mensaje localized. El pokemon es: Onix. La cantidad es: 1.
+[INFO] 17:44:41:819 TEAM/(29008:29016): Las posiciones son: 
+[INFO] 17:44:41:819 TEAM/(29008:29016): (2,8)
+[INFO] 17:44:46:800 TEAM/(29008:29016): Recibi mensaje localized. El pokemon es: Squirtle. La cantidad es: 2.
+[INFO] 17:44:46:800 TEAM/(29008:29016): Las posiciones son: 
+[INFO] 17:44:46:800 TEAM/(29008:29016): (5,2)
+[INFO] 17:44:46:800 TEAM/(29008:29016): (5,5)
+[INFO] 17:44:57:167 TEAM/(29008:29010): El entrenador 1 se movió a la posición (2, 8).
+[INFO] 17:45:02:169 TEAM/(29008:29010): El entrenador 1 ahora está en BLOCKED.
+[INFO] 17:45:02:172 TEAM/(29008:29027): El entrenador 0 ahora está en EXEC.
+[INFO] 17:45:02:172 TEAM/(29008:29009): El entrenador  0 se mueve a atrapar a Gengar en posición (6, 6)
+
+[INFO] 17:45:02:172 TEAM/(29008:29009): El entrenador 0 ahora está en EXEC.
+[INFO] 17:45:07:190 TEAM/(29008:29020): Recibi mensaje caught pokemon. El pokemon fue atrapado.
+[INFO] 17:45:07:191 TEAM/(29008:29198): El entrenador 1 atrapó al pokemon Onix en la posición (2,8).
+[INFO] 17:45:07:192 TEAM/(29008:29198): Habilito el hilo del entrenador 1.
+[INFO] 17:45:07:192 TEAM/(29008:29198): Habilito el hilo del entrenador 1.
+[INFO] 17:45:07:192 TEAM/(29008:29010): El entrenador 1 ahora está en READY.
+[INFO] 17:45:22:230 TEAM/(29008:29020): Recibi mensaje caught pokemon. El pokemon fue atrapado.
+[INFO] 17:45:42:228 TEAM/(29008:29009): El entrenador 0 se movió a la posición (6, 6).
+[INFO] 17:45:45:987 TEAM/(29008:29016): Conexión fallida con el Broker
+
+[INFO] 17:45:45:987 TEAM/(29008:29016): Reintentando conexión en 30 segundos...
+
+[INFO] 17:45:45:987 TEAM/(29008:29015): Conexión fallida con el Broker
+
+[INFO] 17:45:45:987 TEAM/(29008:29020): Conexión fallida con el Broker
+
+[INFO] 17:45:45:987 TEAM/(29008:29015): Reintentando conexión en 30 segundos...
+
+[INFO] 17:45:45:987 TEAM/(29008:29020): Reintentando conexión en 30 segundos...
+
+[INFO] 17:45:47:230 TEAM/(29008:29009): Fallo de comunicación con el Broker al enviar un catch. Se realizará la operación por default.
+[INFO] 17:45:47:230 TEAM/(29008:29009): El entrenador 0 atrapó al pokemon Gengar en la posición (6,6).
+[INFO] 17:45:47:230 TEAM/(29008:29009): Inicio del algoritmo de detección de deadlock.
+[INFO] 17:45:47:230 TEAM/(29008:29009): Habilito el hilo del entrenador 0.
+[INFO] 17:45:47:230 TEAM/(29008:29009): No se encontró deadlock.
+[INFO] 17:45:47:230 TEAM/(29008:29009): El entrenador 0 ahora está en BLOCKED.
+[INFO] 17:45:47:230 TEAM/(29008:29027): El entrenador 2 ahora está en EXEC.
+[INFO] 17:45:47:230 TEAM/(29008:29011): El entrenador  2 se mueve a atrapar a Squirtle en posición (5, 5)
+
+[INFO] 17:45:47:230 TEAM/(29008:29011): El entrenador 2 ahora está en EXEC.
+[INFO] 17:46:15:987 TEAM/(29008:29016): Reintentando conexión en 30 segundos...
+
+[INFO] 17:46:15:987 TEAM/(29008:29015): Reintentando conexión en 30 segundos...
+
+[INFO] 17:46:15:987 TEAM/(29008:29020): Reintentando conexión en 30 segundos...
+
+[INFO] 17:46:17:244 TEAM/(29008:29011): El entrenador 2 se movió a la posición (5, 5).
+[INFO] 17:46:22:245 TEAM/(29008:29011): El entrenador 2 atrapó al pokemon Squirtle en la posición (5,5).
+[INFO] 17:46:22:245 TEAM/(29008:29011): Habilito el hilo del entrenador 2.
+[INFO] 17:46:22:246 TEAM/(29008:29011): Habilito el hilo del entrenador 2.
+[INFO] 17:46:22:246 TEAM/(29008:29011): Fallo de comunicación con el Broker al enviar un catch. Se realizará la operación por default.
+[INFO] 17:46:22:246 TEAM/(29008:29011): El entrenador 2 ahora está en BLOCKED.
+[INFO] 17:46:22:246 TEAM/(29008:29027): El entrenador 1 ahora está en EXEC.
+[INFO] 17:46:22:246 TEAM/(29008:29011): El entrenador 2 ahora está en READY.
+[INFO] 17:46:22:246 TEAM/(29008:29010): El entrenador  1 se mueve a atrapar a Pikachu en posición (9, 9)
+
+[INFO] 17:46:22:246 TEAM/(29008:29010): El entrenador 1 ahora está en EXEC.
+[INFO] 17:46:53:899 TEAM/(29574:29574): ___________________________________________________________________________________________________________
+[INFO] 17:46:53:899 TEAM/(29574:29574): Inició el TEAM
+[INFO] 17:46:58:529 TEAM/(29574:29580): Recibi mensaje appeared pokemon. El pokemon es: Squirtle. La posicion es: (5,5).
+[INFO] 17:46:58:529 TEAM/(29574:29617): Habilito el hilo del entrenador 1.
+[INFO] 17:46:58:529 TEAM/(29574:29576): El entrenador 1 ahora está en READY.
+[INFO] 17:46:58:529 TEAM/(29574:29586): El entrenador 1 ahora está en EXEC.
+[INFO] 17:46:58:530 TEAM/(29574:29576): El entrenador  1 se mueve a atrapar a Squirtle en posición (5, 5)
+
+[INFO] 17:46:58:530 TEAM/(29574:29576): El entrenador 1 ahora está en EXEC.
+[INFO] 17:46:58:936 TEAM/(29574:29581): Recibi mensaje localized. El pokemon es: Pikachu. La cantidad es: 1.
+[INFO] 17:46:58:936 TEAM/(29574:29581): Las posiciones son: 
+[INFO] 17:46:58:936 TEAM/(29574:29581): (9,9)
+[INFO] 17:46:58:937 TEAM/(29574:29625): Habilito el hilo del entrenador 0.
+[INFO] 17:46:58:937 TEAM/(29574:29575): El entrenador 0 ahora está en READY.
+[INFO] 17:46:58:940 TEAM/(29574:29581): Recibi mensaje localized. El pokemon es: Onix. La cantidad es: 1.
+[INFO] 17:46:58:940 TEAM/(29574:29581): Las posiciones son: 
+[INFO] 17:46:58:940 TEAM/(29574:29581): (2,8)
+[INFO] 17:46:58:942 TEAM/(29574:29581): Recibi mensaje localized. El pokemon es: Gengar. La cantidad es: 1.
+[INFO] 17:46:58:942 TEAM/(29574:29581): Las posiciones son: 
+[INFO] 17:46:58:942 TEAM/(29574:29581): (6,6)
+[INFO] 17:46:58:945 TEAM/(29574:29631): Habilito el hilo del entrenador 2.
+[INFO] 17:46:58:945 TEAM/(29574:29577): El entrenador 2 ahora está en READY.
+[INFO] 17:46:59:817 TEAM/(29574:29580): Recibi mensaje appeared pokemon. El pokemon es: Jolteon. La posicion es: (2,2).
+[INFO] 17:46:59:824 TEAM/(29574:29580): Recibi mensaje appeared pokemon. El pokemon es: Flareon. La posicion es: (4,6).
+[INFO] 17:47:02:101 TEAM/(29574:29581): Recibi mensaje localized. El pokemon es: Umbreon. La cantidad es: 1.
+[INFO] 17:47:02:101 TEAM/(29574:29581): Las posiciones son: 
+[INFO] 17:47:02:101 TEAM/(29574:29581): (10,6)
+[INFO] 17:47:02:105 TEAM/(29574:29581): Recibi mensaje localized. El pokemon es: Vaporeon. La cantidad es: 1.
+[INFO] 17:47:02:105 TEAM/(29574:29581): Las posiciones son: 
+[INFO] 17:47:02:105 TEAM/(29574:29581): (4,10)
+[INFO] 17:47:02:111 TEAM/(29574:29581): Recibi mensaje localized. El pokemon es: Espeon. La cantidad es: 1.
+[INFO] 17:47:02:111 TEAM/(29574:29581): Las posiciones son: 
+[INFO] 17:47:02:111 TEAM/(29574:29581): (7,1)
+[INFO] 17:47:03:918 TEAM/(29574:29581): Recibi mensaje localized. El pokemon es: Squirtle. La cantidad es: 2.
+[INFO] 17:47:03:918 TEAM/(29574:29581): Las posiciones son: 
+[INFO] 17:47:03:918 TEAM/(29574:29581): (5,2)
+[INFO] 17:47:03:919 TEAM/(29574:29581): (5,5)
+[INFO] 17:47:04:805 TEAM/(29574:29580): Recibi mensaje appeared pokemon. El pokemon es: Pikachu. La posicion es: (9,9).
+[INFO] 17:47:07:89 TEAM/(29574:29581): Recibi mensaje localized. El pokemon es: Jolteon. La cantidad es: 1.
+[INFO] 17:47:07:89 TEAM/(29574:29581): Las posiciones son: 
+[INFO] 17:47:07:89 TEAM/(29574:29581): (2,2)
+[INFO] 17:47:07:94 TEAM/(29574:29581): Recibi mensaje localized. El pokemon es: Flareon. La cantidad es: 1.
+[INFO] 17:47:07:94 TEAM/(29574:29581): Las posiciones son: 
+[INFO] 17:47:07:94 TEAM/(29574:29581): (4,6)
+[INFO] 17:47:09:810 TEAM/(29574:29580): Recibi mensaje appeared pokemon. El pokemon es: Squirtle. La posicion es: (5,2).
+[INFO] 17:47:23:535 TEAM/(29574:29576): El entrenador 1 se movió a la posición (5, 5).
+[INFO] 17:47:27:563 TEAM/(29574:29582): Recibi mensaje caught pokemon. El pokemon fue atrapado.
+[INFO] 17:47:28:538 TEAM/(29574:29576): El entrenador 1 ahora está en BLOCKED.
+[INFO] 17:47:28:538 TEAM/(29574:29586): El entrenador 0 ahora está en EXEC.
+[INFO] 17:47:28:538 TEAM/(29574:29575): El entrenador  0 se mueve a atrapar a Pikachu en posición (9, 9)
+
+[INFO] 17:47:28:538 TEAM/(29574:29575): El entrenador 0 ahora está en EXEC.
+[INFO] 17:47:33:546 TEAM/(29574:29582): Recibi mensaje caught pokemon. El pokemon fue atrapado.
+[INFO] 17:47:33:547 TEAM/(29574:29758): El entrenador 1 atrapó al pokemon Squirtle en la posición (5,5).
+[INFO] 17:47:33:547 TEAM/(29574:29758): Habilito el hilo del entrenador 1.
+[INFO] 17:47:33:547 TEAM/(29574:29758): Habilito el hilo del entrenador 1.
+[INFO] 17:47:33:547 TEAM/(29574:29576): El entrenador 1 ahora está en READY.
+[INFO] 17:48:07:630 TEAM/(29574:29580): Conexión fallida con el Broker
+
+[INFO] 17:48:07:630 TEAM/(29574:29580): Reintentando conexión en 30 segundos...
+
+[INFO] 17:48:07:630 TEAM/(29574:29581): Conexión fallida con el Broker
+
+[INFO] 17:48:07:630 TEAM/(29574:29581): Reintentando conexión en 30 segundos...
+
+[INFO] 17:48:07:630 TEAM/(29574:29582): Conexión fallida con el Broker
+
+[INFO] 17:48:07:630 TEAM/(29574:29582): Reintentando conexión en 30 segundos...
+
+[INFO] 17:51:43:580 TEAM/(30462:30462): ___________________________________________________________________________________________________________
+[INFO] 17:51:43:580 TEAM/(30462:30462): Inició el TEAM
+[INFO] 17:51:43:580 TEAM/(30462:30468): Conexión fallida con el Broker
+
+[INFO] 17:51:43:580 TEAM/(30462:30468): Reintentando conexión en 30 segundos...
+
+[INFO] 17:51:43:581 TEAM/(30462:30469): Conexión fallida con el Broker
+
+[INFO] 17:51:43:581 TEAM/(30462:30469): Reintentando conexión en 30 segundos...
+
+[INFO] 17:51:43:581 TEAM/(30462:30470): Conexión fallida con el Broker
+
+[INFO] 17:51:43:581 TEAM/(30462:30470): Reintentando conexión en 30 segundos...
+
+[INFO] 17:51:43:581 TEAM/(30462:30473): Fallo de comunicación con el Broker al enviar un get. Se realizará la operación por default.
+[INFO] 17:51:43:581 TEAM/(30462:30474): Fallo de comunicación con el Broker al enviar un get. Se realizará la operación por default.
+[INFO] 17:51:43:582 TEAM/(30462:30476): Fallo de comunicación con el Broker al enviar un get. Se realizará la operación por default.
+[INFO] 17:51:43:582 TEAM/(30462:30475): Fallo de comunicación con el Broker al enviar un get. Se realizará la operación por default.
+[INFO] 17:52:13:581 TEAM/(30462:30469): Reintentando conexión en 30 segundos...
+
+[INFO] 17:52:13:581 TEAM/(30462:30468): Reintentando conexión en 30 segundos...
+
+[INFO] 17:52:13:581 TEAM/(30462:30470): Reintentando conexión en 30 segundos...
+
+[INFO] 17:59:07:948 TEAM/(31575:31575): ___________________________________________________________________________________________________________
+[INFO] 17:59:07:949 TEAM/(31575:31575): Inició el TEAM
+[INFO] 17:59:07:950 TEAM/(31575:31584): Recibi mensaje appeared pokemon. El pokemon es: Espeon. La posicion es: (7,1).
+[INFO] 17:59:07:950 TEAM/(31575:31584): Recibi mensaje appeared pokemon. El pokemon es: Vaporeon. La posicion es: (4,10).
+[INFO] 17:59:10:658 TEAM/(31575:31585): Recibi mensaje localized. El pokemon es: Jolteon. La cantidad es: 1.
+[INFO] 17:59:10:658 TEAM/(31575:31585): Las posiciones son: 
+[INFO] 17:59:10:658 TEAM/(31575:31585): (2,2)
+[INFO] 17:59:10:658 TEAM/(31575:31585): Recibi mensaje localized. El pokemon es: Flareon. La cantidad es: 1.
+[INFO] 17:59:10:658 TEAM/(31575:31585): Las posiciones son: 
+[INFO] 17:59:10:658 TEAM/(31575:31585): (4,6)
+[INFO] 17:59:10:930 TEAM/(31575:31584): Recibi mensaje appeared pokemon. El pokemon es: Squirtle. La posicion es: (5,5).
+[INFO] 17:59:10:930 TEAM/(31575:31622): Habilito el hilo del entrenador 1.
+[INFO] 17:59:10:930 TEAM/(31575:31579): El entrenador 1 ahora está en READY.
+[INFO] 17:59:10:931 TEAM/(31575:31588): El entrenador 1 ahora está en EXEC.
+[INFO] 17:59:10:931 TEAM/(31575:31579): El entrenador  1 se mueve a atrapar a Squirtle en posición (5, 5)
+
+[INFO] 17:59:10:945 TEAM/(31575:31579): El entrenador 1 ahora está en EXEC.
+[INFO] 17:59:12:570 TEAM/(31575:31584): Recibi mensaje appeared pokemon. El pokemon es: Pikachu. La posicion es: (9,9).
+[INFO] 17:59:12:571 TEAM/(31575:31631): Habilito el hilo del entrenador 0.
+[INFO] 17:59:12:571 TEAM/(31575:31578): El entrenador 0 ahora está en READY.
+[INFO] 17:59:12:954 TEAM/(31575:31585): Recibi mensaje localized. El pokemon es: Onix. La cantidad es: 1.
+[INFO] 17:59:12:954 TEAM/(31575:31585): Las posiciones son: 
+[INFO] 17:59:12:954 TEAM/(31575:31585): (2,8)
+[INFO] 17:59:12:954 TEAM/(31575:31585): Recibi mensaje localized. El pokemon es: Gengar. La cantidad es: 1.
+[INFO] 17:59:12:954 TEAM/(31575:31585): Las posiciones son: 
+[INFO] 17:59:12:954 TEAM/(31575:31585): (6,6)
+[INFO] 17:59:12:954 TEAM/(31575:31644): Habilito el hilo del entrenador 2.
+[INFO] 17:59:12:955 TEAM/(31575:31580): El entrenador 2 ahora está en READY.
+[INFO] 17:59:15:658 TEAM/(31575:31585): Recibi mensaje localized. El pokemon es: Umbreon. La cantidad es: 1.
+[INFO] 17:59:15:658 TEAM/(31575:31585): Las posiciones son: 
+[INFO] 17:59:15:658 TEAM/(31575:31585): (10,6)
+[INFO] 17:59:15:659 TEAM/(31575:31585): Recibi mensaje localized. El pokemon es: Espeon. La cantidad es: 1.
+[INFO] 17:59:15:659 TEAM/(31575:31585): Las posiciones son: 
+[INFO] 17:59:15:659 TEAM/(31575:31585): (7,1)
+[INFO] 17:59:15:660 TEAM/(31575:31585): Recibi mensaje localized. El pokemon es: Vaporeon. La cantidad es: 1.
+[INFO] 17:59:15:660 TEAM/(31575:31585): Las posiciones son: 
+[INFO] 17:59:15:660 TEAM/(31575:31585): (4,10)
+[INFO] 17:59:17:581 TEAM/(31575:31584): Recibi mensaje appeared pokemon. El pokemon es: Squirtle. La posicion es: (5,2).
+[INFO] 17:59:17:581 TEAM/(31575:31584): Recibi mensaje appeared pokemon. El pokemon es: Jolteon. La posicion es: (2,2).
+[INFO] 17:59:17:582 TEAM/(31575:31584): Recibi mensaje appeared pokemon. El pokemon es: Flareon. La posicion es: (4,6).
+[INFO] 17:59:17:955 TEAM/(31575:31585): Recibi mensaje localized. El pokemon es: Pikachu. La cantidad es: 1.
+[INFO] 17:59:17:955 TEAM/(31575:31585): Las posiciones son: 
+[INFO] 17:59:17:955 TEAM/(31575:31585): (9,9)
+[INFO] 17:59:22:955 TEAM/(31575:31585): Recibi mensaje localized. El pokemon es: Squirtle. La cantidad es: 2.
+[INFO] 17:59:22:955 TEAM/(31575:31585): Las posiciones son: 
+[INFO] 17:59:22:955 TEAM/(31575:31585): (5,2)
+[INFO] 17:59:22:955 TEAM/(31575:31585): (5,5)
+[INFO] 17:59:32:903 TEAM/(31575:31585): Conexión fallida con el Broker
+
+[INFO] 17:59:32:903 TEAM/(31575:31584): Conexión fallida con el Broker
+
+[INFO] 17:59:32:903 TEAM/(31575:31586): Conexión fallida con el Broker
+
+[INFO] 17:59:32:903 TEAM/(31575:31585): Reintentando conexión en 30 segundos...
+
+[INFO] 17:59:32:903 TEAM/(31575:31586): Reintentando conexión en 30 segundos...
+
+[INFO] 17:59:32:903 TEAM/(31575:31584): Reintentando conexión en 30 segundos...
+
+[INFO] 17:59:35:953 TEAM/(31575:31579): El entrenador 1 se movió a la posición (5, 5).
+[INFO] 17:59:51:955 TEAM/(31863:31863): ___________________________________________________________________________________________________________
+[INFO] 17:59:51:955 TEAM/(31863:31863): Inició el TEAM
+[INFO] 17:59:51:957 TEAM/(31863:31869): Recibi mensaje appeared pokemon. El pokemon es: Flareon. La posicion es: (4,6).
+[INFO] 17:59:52:819 TEAM/(31863:31869): Recibi mensaje appeared pokemon. El pokemon es: Onix. La posicion es: (2,8).
+[INFO] 17:59:52:819 TEAM/(31863:31894): Habilito el hilo del entrenador 1.
+[INFO] 17:59:52:819 TEAM/(31863:31865): El entrenador 1 ahora está en READY.
+[INFO] 17:59:52:819 TEAM/(31863:31873): El entrenador 1 ahora está en EXEC.
+[INFO] 17:59:52:819 TEAM/(31863:31865): El entrenador  1 se mueve a atrapar a Onix en posición (2, 8)
+
+[INFO] 17:59:52:820 TEAM/(31863:31865): El entrenador 1 ahora está en EXEC.
+[INFO] 17:59:52:820 TEAM/(31863:31869): Recibi mensaje appeared pokemon. El pokemon es: Gengar. La posicion es: (6,6).
+[INFO] 17:59:52:821 TEAM/(31863:31897): Habilito el hilo del entrenador 0.
+[INFO] 17:59:52:821 TEAM/(31863:31864): El entrenador 0 ahora está en READY.
+[INFO] 17:59:52:823 TEAM/(31863:31869): Recibi mensaje appeared pokemon. El pokemon es: Umbreon. La posicion es: (10,6).
+[INFO] 17:59:52:825 TEAM/(31863:31869): Recibi mensaje appeared pokemon. El pokemon es: Vaporeon. La posicion es: (4,10).
+[INFO] 17:59:52:825 TEAM/(31863:31869): Recibi mensaje appeared pokemon. El pokemon es: Espeon. La posicion es: (7,1).
+[INFO] 17:59:56:960 TEAM/(31863:31870): Recibi mensaje localized. El pokemon es: Pikachu. La cantidad es: 1.
+[INFO] 17:59:56:960 TEAM/(31863:31870): Las posiciones son: 
+[INFO] 17:59:56:960 TEAM/(31863:31870): (9,9)
+[INFO] 17:59:56:960 TEAM/(31863:31928): Habilito el hilo del entrenador 2.
+[INFO] 17:59:56:960 TEAM/(31863:31866): El entrenador 2 ahora está en READY.
+[INFO] 17:59:56:961 TEAM/(31863:31870): Recibi mensaje localized. El pokemon es: Squirtle. La cantidad es: 2.
+[INFO] 17:59:56:961 TEAM/(31863:31870): Las posiciones son: 
+[INFO] 17:59:56:961 TEAM/(31863:31870): (5,2)
+[INFO] 17:59:56:961 TEAM/(31863:31870): (5,5)
+[INFO] 18:00:00:245 TEAM/(31863:31870): Recibi mensaje localized. El pokemon es: Vaporeon. La cantidad es: 1.
+[INFO] 18:00:00:245 TEAM/(31863:31870): Las posiciones son: 
+[INFO] 18:00:00:245 TEAM/(31863:31870): (4,10)
+[INFO] 18:00:00:246 TEAM/(31863:31870): Recibi mensaje localized. El pokemon es: Jolteon. La cantidad es: 1.
+[INFO] 18:00:00:246 TEAM/(31863:31870): Las posiciones son: 
+[INFO] 18:00:00:246 TEAM/(31863:31870): (2,2)
+[INFO] 18:00:00:246 TEAM/(31863:31870): Recibi mensaje localized. El pokemon es: Umbreon. La cantidad es: 1.
+[INFO] 18:00:00:246 TEAM/(31863:31870): Las posiciones son: 
+[INFO] 18:00:00:246 TEAM/(31863:31870): (10,6)
+[INFO] 18:00:00:247 TEAM/(31863:31870): Recibi mensaje localized. El pokemon es: Espeon. La cantidad es: 1.
+[INFO] 18:00:00:247 TEAM/(31863:31870): Las posiciones son: 
+[INFO] 18:00:00:247 TEAM/(31863:31870): (7,1)
+[INFO] 18:00:00:248 TEAM/(31863:31870): Recibi mensaje localized. El pokemon es: Flareon. La cantidad es: 1.
+[INFO] 18:00:00:248 TEAM/(31863:31870): Las posiciones son: 
+[INFO] 18:00:00:248 TEAM/(31863:31870): (4,6)
+[INFO] 18:00:01:961 TEAM/(31863:31870): Recibi mensaje localized. El pokemon es: Gengar. La cantidad es: 1.
+[INFO] 18:00:01:961 TEAM/(31863:31870): Las posiciones son: 
+[INFO] 18:00:01:961 TEAM/(31863:31870): (6,6)
+[INFO] 18:00:01:962 TEAM/(31863:31870): Recibi mensaje localized. El pokemon es: Onix. La cantidad es: 1.
+[INFO] 18:00:01:962 TEAM/(31863:31870): Las posiciones son: 
+[INFO] 18:00:01:962 TEAM/(31863:31870): (2,8)
+[INFO] 18:00:02:821 TEAM/(31863:31869): Recibi mensaje appeared pokemon. El pokemon es: Squirtle. La posicion es: (5,5).
+[INFO] 18:00:12:218 TEAM/(31863:31871): Conexión fallida con el Broker
+
+[INFO] 18:00:12:218 TEAM/(31863:31871): Reintentando conexión en 30 segundos...
+
+[INFO] 18:00:12:218 TEAM/(31863:31869): Conexión fallida con el Broker
+
+[INFO] 18:00:12:218 TEAM/(31863:31870): Conexión fallida con el Broker
+
+[INFO] 18:00:12:218 TEAM/(31863:31869): Reintentando conexión en 30 segundos...
+
+[INFO] 18:00:12:219 TEAM/(31863:31870): Reintentando conexión en 30 segundos...
+
+[INFO] 18:00:17:824 TEAM/(31863:31865): El entrenador 1 se movió a la posición (2, 8).
+[INFO] 18:01:30:221 TEAM/(32194:32194): ___________________________________________________________________________________________________________
+[INFO] 18:01:30:221 TEAM/(32194:32194): Inició el TEAM
+[INFO] 18:01:32:219 TEAM/(32194:32200): Recibi mensaje appeared pokemon. El pokemon es: Onix. La posicion es: (2,8).
+[INFO] 18:01:32:220 TEAM/(32194:32200): Recibi mensaje appeared pokemon. El pokemon es: Gengar. La posicion es: (6,6).
+[INFO] 18:01:32:220 TEAM/(32194:32230): Habilito el hilo del entrenador 1.
+[INFO] 18:01:32:220 TEAM/(32194:32196): El entrenador 1 ahora está en READY.
+[INFO] 18:01:32:220 TEAM/(32194:32207): El entrenador 1 ahora está en EXEC.
+[INFO] 18:01:32:220 TEAM/(32194:32196): El entrenador  1 se mueve a atrapar a Onix en posición (2, 8)
+
+[INFO] 18:01:32:220 TEAM/(32194:32196): El entrenador 1 ahora está en EXEC.
+[INFO] 18:01:32:221 TEAM/(32194:32235): Habilito el hilo del entrenador 0.
+[INFO] 18:01:32:221 TEAM/(32194:32195): El entrenador 0 ahora está en READY.
+[INFO] 18:01:32:221 TEAM/(32194:32200): Recibi mensaje appeared pokemon. El pokemon es: Squirtle. La posicion es: (5,5).
+[INFO] 18:01:32:221 TEAM/(32194:32239): Habilito el hilo del entrenador 2.
+[INFO] 18:01:32:221 TEAM/(32194:32197): El entrenador 2 ahora está en READY.
+[INFO] 18:01:32:222 TEAM/(32194:32200): Recibi mensaje appeared pokemon. El pokemon es: Umbreon. La posicion es: (10,6).
+[INFO] 18:01:32:224 TEAM/(32194:32200): Recibi mensaje appeared pokemon. El pokemon es: Espeon. La posicion es: (7,1).
+[INFO] 18:01:32:225 TEAM/(32194:32200): Recibi mensaje appeared pokemon. El pokemon es: Vaporeon. La posicion es: (4,10).
+[INFO] 18:01:33:716 TEAM/(32194:32203): Recibi mensaje localized. El pokemon es: Jolteon. La cantidad es: 1.
+[INFO] 18:01:33:716 TEAM/(32194:32203): Las posiciones son: 
+[INFO] 18:01:33:716 TEAM/(32194:32203): (2,2)
+[INFO] 18:01:33:717 TEAM/(32194:32203): Recibi mensaje localized. El pokemon es: Flareon. La cantidad es: 1.
+[INFO] 18:01:33:717 TEAM/(32194:32203): Las posiciones son: 
+[INFO] 18:01:33:717 TEAM/(32194:32203): (4,6)
+[INFO] 18:01:35:224 TEAM/(32194:32203): Recibi mensaje localized. El pokemon es: Pikachu. La cantidad es: 1.
+[INFO] 18:01:35:224 TEAM/(32194:32203): Las posiciones son: 
+[INFO] 18:01:35:224 TEAM/(32194:32203): (9,9)
+[INFO] 18:01:38:714 TEAM/(32194:32203): Recibi mensaje localized. El pokemon es: Vaporeon. La cantidad es: 1.
+[INFO] 18:01:38:714 TEAM/(32194:32203): Las posiciones son: 
+[INFO] 18:01:38:714 TEAM/(32194:32203): (4,10)
+[INFO] 18:01:38:717 TEAM/(32194:32203): Recibi mensaje localized. El pokemon es: Umbreon. La cantidad es: 1.
+[INFO] 18:01:38:717 TEAM/(32194:32203): Las posiciones son: 
+[INFO] 18:01:38:717 TEAM/(32194:32203): (10,6)
+[INFO] 18:01:38:718 TEAM/(32194:32203): Recibi mensaje localized. El pokemon es: Espeon. La cantidad es: 1.
+[INFO] 18:01:38:718 TEAM/(32194:32203): Las posiciones son: 
+[INFO] 18:01:38:718 TEAM/(32194:32203): (7,1)
+[INFO] 18:01:40:224 TEAM/(32194:32203): Recibi mensaje localized. El pokemon es: Squirtle. La cantidad es: 2.
+[INFO] 18:01:40:224 TEAM/(32194:32203): Las posiciones son: 
+[INFO] 18:01:40:224 TEAM/(32194:32203): (5,2)
+[INFO] 18:01:40:224 TEAM/(32194:32203): (5,5)
+[INFO] 18:01:40:226 TEAM/(32194:32203): Recibi mensaje localized. El pokemon es: Onix. La cantidad es: 1.
+[INFO] 18:01:40:226 TEAM/(32194:32203): Las posiciones son: 
+[INFO] 18:01:40:226 TEAM/(32194:32203): (2,8)
+[INFO] 18:01:40:226 TEAM/(32194:32203): Recibi mensaje localized. El pokemon es: Gengar. La cantidad es: 1.
+[INFO] 18:01:40:226 TEAM/(32194:32203): Las posiciones son: 
+[INFO] 18:01:40:226 TEAM/(32194:32203): (6,6)
+[INFO] 18:01:54:714 TEAM/(32194:32205): Conexión fallida con el Broker
+
+[INFO] 18:01:54:714 TEAM/(32194:32203): Conexión fallida con el Broker
+
+[INFO] 18:01:54:714 TEAM/(32194:32205): Reintentando conexión en 30 segundos...
+
+[INFO] 18:01:54:714 TEAM/(32194:32203): Reintentando conexión en 30 segundos...
+
+[INFO] 18:01:54:714 TEAM/(32194:32200): Conexión fallida con el Broker
+
+[INFO] 18:01:54:714 TEAM/(32194:32200): Reintentando conexión en 30 segundos...
+
+[INFO] 18:02:18:900 TEAM/(32524:32524): ___________________________________________________________________________________________________________
+[INFO] 18:02:18:900 TEAM/(32524:32524): Inició el TEAM
+[INFO] 18:02:18:901 TEAM/(32524:32530): Recibi mensaje appeared pokemon. El pokemon es: Flareon. La posicion es: (4,6).
+[INFO] 18:02:23:868 TEAM/(32524:32530): Recibi mensaje appeared pokemon. El pokemon es: Squirtle. La posicion es: (5,2).
+[INFO] 18:02:23:868 TEAM/(32524:32563): Habilito el hilo del entrenador 2.
+[INFO] 18:02:23:869 TEAM/(32524:32527): El entrenador 2 ahora está en READY.
+[INFO] 18:02:23:869 TEAM/(32524:32534): El entrenador 2 ahora está en EXEC.
+[INFO] 18:02:23:869 TEAM/(32524:32527): El entrenador  2 se mueve a atrapar a Squirtle en posición (5, 2)
+
+[INFO] 18:02:23:869 TEAM/(32524:32527): El entrenador 2 ahora está en EXEC.
+[INFO] 18:02:23:906 TEAM/(32524:32531): Recibi mensaje localized. El pokemon es: Pikachu. La cantidad es: 1.
+[INFO] 18:02:23:906 TEAM/(32524:32531): Las posiciones son: 
+[INFO] 18:02:23:906 TEAM/(32524:32531): (9,9)
+[INFO] 18:02:23:907 TEAM/(32524:32573): Habilito el hilo del entrenador 1.
+[INFO] 18:02:23:907 TEAM/(32524:32531): Recibi mensaje localized. El pokemon es: Gengar. La cantidad es: 1.
+[INFO] 18:02:23:907 TEAM/(32524:32531): Las posiciones son: 
+[INFO] 18:02:23:907 TEAM/(32524:32531): (6,6)
+[INFO] 18:02:23:907 TEAM/(32524:32526): El entrenador 1 ahora está en READY.
+[INFO] 18:02:23:907 TEAM/(32524:32531): Recibi mensaje localized. El pokemon es: Onix. La cantidad es: 1.
+[INFO] 18:02:23:907 TEAM/(32524:32531): Las posiciones son: 
+[INFO] 18:02:23:907 TEAM/(32524:32531): (2,8)
+[INFO] 18:02:23:907 TEAM/(32524:32576): Habilito el hilo del entrenador 0.
+[INFO] 18:02:23:907 TEAM/(32524:32525): El entrenador 0 ahora está en READY.
+[INFO] 18:02:24:897 TEAM/(32524:32530): Recibi mensaje appeared pokemon. El pokemon es: Jolteon. La posicion es: (2,2).
+[INFO] 18:02:24:898 TEAM/(32524:32530): Recibi mensaje appeared pokemon. El pokemon es: Flareon. La posicion es: (4,6).
+[INFO] 18:02:27:94 TEAM/(32524:32531): Recibi mensaje localized. El pokemon es: Vaporeon. La cantidad es: 1.
+[INFO] 18:02:27:94 TEAM/(32524:32531): Las posiciones son: 
+[INFO] 18:02:27:94 TEAM/(32524:32531): (4,10)
+[INFO] 18:02:27:95 TEAM/(32524:32531): Recibi mensaje localized. El pokemon es: Espeon. La cantidad es: 1.
+[INFO] 18:02:27:95 TEAM/(32524:32531): Las posiciones son: 
+[INFO] 18:02:27:95 TEAM/(32524:32531): (7,1)
+[INFO] 18:02:27:95 TEAM/(32524:32531): Recibi mensaje localized. El pokemon es: Umbreon. La cantidad es: 1.
+[INFO] 18:02:27:95 TEAM/(32524:32531): Las posiciones son: 
+[INFO] 18:02:27:95 TEAM/(32524:32531): (10,6)
+[INFO] 18:02:28:903 TEAM/(32524:32531): Recibi mensaje localized. El pokemon es: Squirtle. La cantidad es: 2.
+[INFO] 18:02:28:903 TEAM/(32524:32531): Las posiciones son: 
+[INFO] 18:02:28:903 TEAM/(32524:32531): (5,2)
+[INFO] 18:02:28:904 TEAM/(32524:32531): (5,5)
+[INFO] 18:02:29:896 TEAM/(32524:32530): Recibi mensaje appeared pokemon. El pokemon es: Pikachu. La posicion es: (9,9).
+[INFO] 18:02:32:113 TEAM/(32524:32531): Recibi mensaje localized. El pokemon es: Jolteon. La cantidad es: 1.
+[INFO] 18:02:32:113 TEAM/(32524:32531): Las posiciones son: 
+[INFO] 18:02:32:113 TEAM/(32524:32531): (2,2)
+[INFO] 18:02:32:114 TEAM/(32524:32531): Recibi mensaje localized. El pokemon es: Flareon. La cantidad es: 1.
+[INFO] 18:02:32:114 TEAM/(32524:32531): Las posiciones son: 
+[INFO] 18:02:32:114 TEAM/(32524:32531): (4,6)
+[INFO] 18:02:34:903 TEAM/(32524:32530): Recibi mensaje appeared pokemon. El pokemon es: Squirtle. La posicion es: (5,2).
+[INFO] 18:02:38:871 TEAM/(32524:32527): El entrenador 2 se movió a la posición (5, 2).
+[INFO] 18:02:43:879 TEAM/(32524:32527): El entrenador 2 ahora está en BLOCKED.
+[INFO] 18:02:43:879 TEAM/(32524:32534): El entrenador 1 ahora está en EXEC.
+[INFO] 18:02:43:879 TEAM/(32524:32526): El entrenador  1 se mueve a atrapar a Pikachu en posición (9, 9)
+
+[INFO] 18:02:43:879 TEAM/(32524:32526): El entrenador 1 ahora está en EXEC.
+[INFO] 18:02:48:885 TEAM/(32524:32532): Recibi mensaje caught pokemon. El pokemon fue atrapado.
+[INFO] 18:02:48:886 TEAM/(32524:32674): El entrenador 2 atrapó al pokemon Squirtle en la posición (5,2).
+[INFO] 18:02:48:886 TEAM/(32524:32674): Habilito el hilo del entrenador 2.
+[INFO] 18:02:48:886 TEAM/(32524:32674): Habilito el hilo del entrenador 2.
+[INFO] 18:02:48:886 TEAM/(32524:32527): El entrenador 2 ahora está en READY.
+[INFO] 18:03:30:395 TEAM/(521:521): ___________________________________________________________________________________________________________
+[INFO] 18:03:30:395 TEAM/(521:521): Inició el TEAM
+[INFO] 18:03:30:397 TEAM/(521:527): Recibi mensaje appeared pokemon. El pokemon es: Vaporeon. La posicion es: (4,10).
+[INFO] 18:03:33:646 TEAM/(521:527): Recibi mensaje appeared pokemon. El pokemon es: Squirtle. La posicion es: (5,2).
+[INFO] 18:03:33:646 TEAM/(521:527): Recibi mensaje appeared pokemon. El pokemon es: Jolteon. La posicion es: (2,2).
+[INFO] 18:03:33:646 TEAM/(521:527): Recibi mensaje appeared pokemon. El pokemon es: Flareon. La posicion es: (4,6).
+[INFO] 18:03:33:647 TEAM/(521:561): Habilito el hilo del entrenador 2.
+[INFO] 18:03:33:647 TEAM/(521:524): El entrenador 2 ahora está en READY.
+[INFO] 18:03:33:647 TEAM/(521:531): El entrenador 2 ahora está en EXEC.
+[INFO] 18:03:33:647 TEAM/(521:524): El entrenador  2 se mueve a atrapar a Squirtle en posición (5, 2)
+
+[INFO] 18:03:33:647 TEAM/(521:524): El entrenador 2 ahora está en EXEC.
+[INFO] 18:03:33:648 TEAM/(521:527): Recibi mensaje appeared pokemon. El pokemon es: Pikachu. La posicion es: (9,9).
+[INFO] 18:03:33:648 TEAM/(521:569): Habilito el hilo del entrenador 1.
+[INFO] 18:03:33:648 TEAM/(521:523): El entrenador 1 ahora está en READY.
+[INFO] 18:03:35:402 TEAM/(521:528): Recibi mensaje localized. El pokemon es: Gengar. La cantidad es: 1.
+[INFO] 18:03:35:402 TEAM/(521:528): Las posiciones son: 
+[INFO] 18:03:35:402 TEAM/(521:528): (6,6)
+[INFO] 18:03:35:402 TEAM/(521:580): Habilito el hilo del entrenador 0.
+[INFO] 18:03:35:402 TEAM/(521:522): El entrenador 0 ahora está en READY.
+[INFO] 18:03:35:402 TEAM/(521:528): Recibi mensaje localized. El pokemon es: Onix. La cantidad es: 1.
+[INFO] 18:03:35:402 TEAM/(521:528): Las posiciones son: 
+[INFO] 18:03:35:402 TEAM/(521:528): (2,8)
+[INFO] 18:03:35:852 TEAM/(521:527): Recibi mensaje appeared pokemon. El pokemon es: Umbreon. La posicion es: (10,6).
+[INFO] 18:03:35:853 TEAM/(521:527): Recibi mensaje appeared pokemon. El pokemon es: Espeon. La posicion es: (7,1).
+[INFO] 18:03:35:858 TEAM/(521:527): Recibi mensaje appeared pokemon. El pokemon es: Vaporeon. La posicion es: (4,10).
+[INFO] 18:03:38:688 TEAM/(521:528): Recibi mensaje localized. El pokemon es: Jolteon. La cantidad es: 1.
+[INFO] 18:03:38:688 TEAM/(521:528): Las posiciones son: 
+[INFO] 18:03:38:688 TEAM/(521:528): (2,2)
+[INFO] 18:03:38:688 TEAM/(521:528): Recibi mensaje localized. El pokemon es: Flareon. La cantidad es: 1.
+[INFO] 18:03:38:688 TEAM/(521:528): Las posiciones son: 
+[INFO] 18:03:38:688 TEAM/(521:528): (4,6)
+[INFO] 18:03:39:249 TEAM/(521:527): Recibi mensaje appeared pokemon. El pokemon es: Pikachu. La posicion es: (9,9).
+[INFO] 18:03:39:250 TEAM/(521:527): Recibi mensaje appeared pokemon. El pokemon es: Squirtle. La posicion es: (5,2).
+[INFO] 18:03:40:853 TEAM/(521:527): Recibi mensaje appeared pokemon. El pokemon es: Gengar. La posicion es: (6,6).
+[INFO] 18:03:40:854 TEAM/(521:527): Recibi mensaje appeared pokemon. El pokemon es: Onix. La posicion es: (2,8).
+[INFO] 18:03:41:848 TEAM/(521:527): Recibi mensaje appeared pokemon. El pokemon es: Espeon. La posicion es: (7,1).
+[INFO] 18:03:41:865 TEAM/(521:527): Recibi mensaje appeared pokemon. El pokemon es: Vaporeon. La posicion es: (4,10).
+[INFO] 18:03:41:865 TEAM/(521:527): Recibi mensaje appeared pokemon. El pokemon es: Umbreon. La posicion es: (10,6).
+[INFO] 18:03:44:249 TEAM/(521:527): Recibi mensaje appeared pokemon. El pokemon es: Jolteon. La posicion es: (2,2).
+[INFO] 18:03:44:250 TEAM/(521:527): Recibi mensaje appeared pokemon. El pokemon es: Flareon. La posicion es: (4,6).
+[INFO] 18:03:45:185 TEAM/(521:527): Recibi mensaje appeared pokemon. El pokemon es: Squirtle. La posicion es: (5,5).
+[INFO] 18:03:45:404 TEAM/(521:528): Recibi mensaje localized. El pokemon es: Pikachu. La cantidad es: 1.
+[INFO] 18:03:45:404 TEAM/(521:528): Las posiciones son: 
+[INFO] 18:03:45:404 TEAM/(521:528): (9,9)
+[INFO] 18:03:46:860 TEAM/(521:527): Recibi mensaje appeared pokemon. El pokemon es: Onix. La posicion es: (2,8).
+[INFO] 18:03:46:860 TEAM/(521:527): Recibi mensaje appeared pokemon. El pokemon es: Gengar. La posicion es: (6,6).
+[INFO] 18:03:48:667 TEAM/(521:524): El entrenador 2 se movió a la posición (5, 2).
+[INFO] 18:03:48:690 TEAM/(521:528): Recibi mensaje localized. El pokemon es: Espeon. La cantidad es: 1.
+[INFO] 18:03:48:690 TEAM/(521:528): Las posiciones son: 
+[INFO] 18:03:48:690 TEAM/(521:528): (7,1)
+[INFO] 18:03:48:690 TEAM/(521:528): Recibi mensaje localized. El pokemon es: Vaporeon. La cantidad es: 1.
+[INFO] 18:03:48:690 TEAM/(521:528): Las posiciones son: 
+[INFO] 18:03:48:690 TEAM/(521:528): (4,10)
+[INFO] 18:03:48:691 TEAM/(521:528): Recibi mensaje localized. El pokemon es: Umbreon. La cantidad es: 1.
+[INFO] 18:03:48:691 TEAM/(521:528): Las posiciones son: 
+[INFO] 18:03:48:691 TEAM/(521:528): (10,6)
+[INFO] 18:03:50:407 TEAM/(521:528): Recibi mensaje localized. El pokemon es: Squirtle. La cantidad es: 2.
+[INFO] 18:03:50:407 TEAM/(521:528): Las posiciones son: 
+[INFO] 18:03:50:407 TEAM/(521:528): (5,2)
+[INFO] 18:03:50:407 TEAM/(521:528): (5,5)
+[INFO] 18:03:53:689 TEAM/(521:524): El entrenador 2 ahora está en BLOCKED.
+[INFO] 18:03:53:689 TEAM/(521:531): El entrenador 1 ahora está en EXEC.
+[INFO] 18:03:53:689 TEAM/(521:523): El entrenador  1 se mueve a atrapar a Pikachu en posición (9, 9)
+
+[INFO] 18:03:53:689 TEAM/(521:523): El entrenador 1 ahora está en EXEC.
+[INFO] 18:03:55:856 TEAM/(521:527): Recibi mensaje appeared pokemon. El pokemon es: Squirtle. La posicion es: (5,5).
+[INFO] 18:04:01:868 TEAM/(521:527): Recibi mensaje appeared pokemon. El pokemon es: Squirtle. La posicion es: (5,5).
+[INFO] 18:04:08:696 TEAM/(521:529): Recibi mensaje caught pokemon. El pokemon fue atrapado.
+[INFO] 18:04:08:696 TEAM/(521:768): El entrenador 2 atrapó al pokemon Squirtle en la posición (5,2).
+[INFO] 18:04:08:696 TEAM/(521:768): Habilito el hilo del entrenador 2.
+[INFO] 18:04:08:696 TEAM/(521:768): Habilito el hilo del entrenador 2.
+[INFO] 18:04:08:696 TEAM/(521:524): El entrenador 2 ahora está en READY.
+[INFO] 18:04:23:890 TEAM/(521:529): Recibi mensaje caught pokemon. El pokemon fue atrapado.
+[INFO] 18:04:48:703 TEAM/(521:529): Recibi mensaje caught pokemon. El pokemon fue atrapado.
+[INFO] 18:04:53:717 TEAM/(521:529): Recibi mensaje caught pokemon. El pokemon fue atrapado.
+[INFO] 18:04:58:704 TEAM/(521:523): El entrenador 1 se movió a la posición (9, 9).
+[INFO] 18:05:03:705 TEAM/(521:523): El entrenador 1 ahora está en BLOCKED.
+[INFO] 18:05:03:706 TEAM/(521:531): El entrenador 0 ahora está en EXEC.
+[INFO] 18:05:03:706 TEAM/(521:522): El entrenador  0 se mueve a atrapar a Gengar en posición (6, 6)
+
+[INFO] 18:05:03:706 TEAM/(521:522): El entrenador 0 ahora está en EXEC.
+[INFO] 18:05:03:751 TEAM/(521:529): Recibi mensaje caught pokemon. El pokemon fue atrapado.
+[INFO] 18:05:08:733 TEAM/(521:529): Recibi mensaje caught pokemon. El pokemon fue atrapado.
+[INFO] 18:05:08:733 TEAM/(521:904): El entrenador 1 atrapó al pokemon Pikachu en la posición (9,9).
+[INFO] 18:05:08:734 TEAM/(521:529): Recibi mensaje caught pokemon. El pokemon fue atrapado.
+[INFO] 18:05:08:734 TEAM/(521:904): Habilito el hilo del entrenador 1.
+[INFO] 18:05:08:734 TEAM/(521:904): Habilito el hilo del entrenador 1.
+[INFO] 18:05:08:734 TEAM/(521:523): El entrenador 1 ahora está en READY.
+[INFO] 18:05:43:734 TEAM/(521:522): El entrenador 0 se movió a la posición (6, 6).
+[INFO] 18:05:48:740 TEAM/(521:522): El entrenador 0 ahora está en BLOCKED.
+[INFO] 18:05:48:740 TEAM/(521:531): El entrenador 2 ahora está en EXEC.
+[INFO] 18:05:48:740 TEAM/(521:524): El entrenador  2 se mueve a atrapar a Onix en posición (2, 8)
+
+[INFO] 18:05:48:740 TEAM/(521:524): El entrenador 2 ahora está en EXEC.
+[INFO] 18:05:53:745 TEAM/(521:529): Recibi mensaje caught pokemon. El pokemon fue atrapado.
+[INFO] 18:05:53:746 TEAM/(521:988): El entrenador 0 atrapó al pokemon Gengar en la posición (6,6).
+[INFO] 18:05:53:746 TEAM/(521:988): Inicio del algoritmo de detección de deadlock.
+[INFO] 18:05:53:746 TEAM/(521:988): Habilito el hilo del entrenador 0.
+[INFO] 18:05:53:746 TEAM/(521:988): No se encontró deadlock.
+[INFO] 18:06:33:770 TEAM/(521:524): El entrenador 2 se movió a la posición (2, 8).
+[INFO] 18:06:38:771 TEAM/(521:524): El entrenador 2 ahora está en BLOCKED.
+[INFO] 18:06:38:771 TEAM/(521:531): El entrenador 1 ahora está en EXEC.
+[INFO] 18:06:38:771 TEAM/(521:523): El entrenador  1 se mueve a atrapar a Squirtle en posición (5, 2)
+
+[INFO] 18:06:38:771 TEAM/(521:523): El entrenador 1 ahora está en EXEC.
+[INFO] 18:06:43:776 TEAM/(521:529): Recibi mensaje caught pokemon. El pokemon fue atrapado.
+[INFO] 18:06:43:777 TEAM/(521:1073): El entrenador 2 atrapó al pokemon Onix en la posición (2,8).
+[INFO] 18:06:43:777 TEAM/(521:1073): El entrenador 2 ahora está en EXIT.
+[INFO] 18:06:43:777 TEAM/(521:1073): Inicio del algoritmo de detección de deadlock.
+[INFO] 18:06:43:777 TEAM/(521:1073): No se encontró deadlock.
+[INFO] 18:07:33:794 TEAM/(521:523): El entrenador 1 se movió a la posición (5, 2).
+[INFO] 18:07:38:795 TEAM/(521:523): El entrenador 1 ahora está en BLOCKED.
+[INFO] 18:07:43:901 TEAM/(521:529): Recibi mensaje caught pokemon. El pokemon fue atrapado.
+[INFO] 18:07:43:901 TEAM/(521:1164): El entrenador 1 atrapó al pokemon Squirtle en la posición (5,2).
+[INFO] 18:07:43:901 TEAM/(521:1164): Inicio del algoritmo de detección de deadlock.
+[INFO] 18:07:43:901 TEAM/(521:1164): Habilito el hilo del entrenador 1.
+[INFO] 18:07:43:901 TEAM/(521:1164): Se encontró deadlock.
+[INFO] 18:07:43:901 TEAM/(521:526): El entrenador 0, esta en DEADLOCK con el entrenador 1.
+[INFO] 18:07:43:901 TEAM/(521:523): El entrenador 1 ahora está en READY.
+[INFO] 18:07:43:901 TEAM/(521:531): El entrenador 1 ahora está en EXEC.
+[INFO] 18:07:43:901 TEAM/(521:523): El entrenador 1 ahora está en EXEC.
+[INFO] 18:08:08:915 TEAM/(521:523): El entrenador 1 se movió a la posición (6, 6).
+[INFO] 18:08:33:921 TEAM/(521:523): El entrenador 1 le da el pokemon Squirtle al entrenador 0
+[INFO] 18:08:33:921 TEAM/(521:523): El entrenador 0 le da el pokemon Gengar al entrenador 1
+[INFO] 18:08:33:921 TEAM/(521:523): Operación de intercambio realizada entre entrenadores 1 y 0
+[INFO] 18:08:33:921 TEAM/(521:523): El entrenador 1 ahora está en BLOCKED.
+[INFO] 18:08:33:921 TEAM/(521:526): El entrenador 0 ahora está en EXIT.
+[INFO] 18:08:33:922 TEAM/(521:526): El entrenador 1 ahora está en EXIT.
+[INFO] 18:08:33:922 TEAM/(521:521): ------------------------------------------------
+[INFO] 18:08:33:922 TEAM/(521:521): Programa terminado: objetivo global cumplido.
+[INFO] 18:08:33:922 TEAM/(521:521): Cantidad de ciclos de CPU totales: 59.
+[INFO] 18:08:33:922 TEAM/(521:521): Cantidad de cambios de contexto realizados: 6.
+[INFO] 18:08:33:922 TEAM/(521:521): ------------------------------------------------
+[INFO] 18:08:33:922 TEAM/(521:521): Información de los entrenadores: 
+[INFO] 18:08:33:922 TEAM/(521:521): Deadlocks producidos: 1.
+[INFO] 18:08:33:922 TEAM/(521:521): Deadlocks resueltos: 1.
+[INFO] 18:08:33:922 TEAM/(521:521): Cantidad de ciclos de CPU realizados por el entrenador 0: 9.
+[INFO] 18:08:33:922 TEAM/(521:521): Cantidad de ciclos de CPU realizados por el entrenador 1: 36.
+[INFO] 18:08:33:922 TEAM/(521:521): Cantidad de ciclos de CPU realizados por el entrenador 2: 14.
+[INFO] 18:14:18:303 TEAM/(1864:1864): ___________________________________________________________________________________________________________
+[INFO] 18:14:18:303 TEAM/(1864:1864): Inició el TEAM
+[INFO] 18:14:18:303 TEAM/(1864:1868): Fallo de comunicación con el Broker al enviar un get. Se realizará la operación por default.
+[INFO] 18:14:18:303 TEAM/(1864:1868): Fallo de comunicación con el Broker al enviar un get. Se realizará la operación por default.
+[INFO] 18:14:18:303 TEAM/(1864:1868): Fallo de comunicación con el Broker al enviar un get. Se realizará la operación por default.
+[INFO] 18:14:18:303 TEAM/(1864:1868): Fallo de comunicación con el Broker al enviar un get. Se realizará la operación por default.
+[INFO] 18:14:18:304 TEAM/(1864:1872): Conexión fallida con el Broker
+
+[INFO] 18:14:18:304 TEAM/(1864:1872): Reintentando conexión en 30 segundos...
+
+[INFO] 18:14:18:304 TEAM/(1864:1871): Conexión fallida con el Broker
+
+[INFO] 18:14:18:304 TEAM/(1864:1871): Reintentando conexión en 30 segundos...
+
+[INFO] 18:14:18:304 TEAM/(1864:1870): Conexión fallida con el Broker
+
+[INFO] 18:14:18:304 TEAM/(1864:1870): Reintentando conexión en 30 segundos...
+
+[INFO] 18:14:52:275 TEAM/(2146:2146): ___________________________________________________________________________________________________________
+[INFO] 18:14:52:275 TEAM/(2146:2146): Inició el TEAM
+[INFO] 18:14:55:262 TEAM/(2146:2152): Recibi mensaje appeared pokemon. El pokemon es: Squirtle. La posicion es: (5,2).
+[INFO] 18:14:55:262 TEAM/(2146:2180): Habilito el hilo del entrenador 2.
+[INFO] 18:14:55:262 TEAM/(2146:2149): El entrenador 2 ahora está en READY.
+[INFO] 18:14:55:262 TEAM/(2146:2156): El entrenador 2 ahora está en EXEC.
+[INFO] 18:14:55:262 TEAM/(2146:2149): El entrenador  2 se mueve a atrapar a Squirtle en posición (5, 2)
+
+[INFO] 18:14:55:262 TEAM/(2146:2149): El entrenador 2 ahora está en EXEC.
+[INFO] 18:14:55:330 TEAM/(2146:2153): Recibi mensaje localized. El pokemon es: Vaporeon. La cantidad es: 1.
+[INFO] 18:14:55:330 TEAM/(2146:2153): Las posiciones son: 
+[INFO] 18:14:55:330 TEAM/(2146:2153): (4,10)
+[INFO] 18:14:55:331 TEAM/(2146:2153): Recibi mensaje localized. El pokemon es: Jolteon. La cantidad es: 1.
+[INFO] 18:14:55:331 TEAM/(2146:2153): Las posiciones son: 
+[INFO] 18:14:55:331 TEAM/(2146:2153): (2,2)
+[INFO] 18:14:55:331 TEAM/(2146:2153): Recibi mensaje localized. El pokemon es: Umbreon. La cantidad es: 1.
+[INFO] 18:14:55:331 TEAM/(2146:2153): Las posiciones son: 
+[INFO] 18:14:55:331 TEAM/(2146:2153): (10,6)
+[INFO] 18:14:55:332 TEAM/(2146:2153): Recibi mensaje localized. El pokemon es: Flareon. La cantidad es: 1.
+[INFO] 18:14:55:332 TEAM/(2146:2153): Las posiciones son: 
+[INFO] 18:14:55:332 TEAM/(2146:2153): (4,6)
+[INFO] 18:14:55:968 TEAM/(2146:2152): Recibi mensaje appeared pokemon. El pokemon es: Pikachu. La posicion es: (9,9).
+[INFO] 18:14:55:969 TEAM/(2146:2207): Habilito el hilo del entrenador 1.
+[INFO] 18:14:55:969 TEAM/(2146:2148): El entrenador 1 ahora está en READY.
+[INFO] 18:14:57:62 TEAM/(2146:2152): Recibi mensaje appeared pokemon. El pokemon es: Gengar. La posicion es: (6,6).
+[INFO] 18:14:57:63 TEAM/(2146:2221): Habilito el hilo del entrenador 0.
+[INFO] 18:14:57:63 TEAM/(2146:2152): Recibi mensaje appeared pokemon. El pokemon es: Onix. La posicion es: (2,8).
+[INFO] 18:14:57:63 TEAM/(2146:2147): El entrenador 0 ahora está en READY.
+[INFO] 18:14:57:64 TEAM/(2146:2152): Recibi mensaje appeared pokemon. El pokemon es: Espeon. La posicion es: (7,1).
+[INFO] 18:15:00:971 TEAM/(2146:2152): Recibi mensaje appeared pokemon. El pokemon es: Squirtle. La posicion es: (5,2).
+[INFO] 18:15:00:971 TEAM/(2146:2152): Recibi mensaje appeared pokemon. El pokemon es: Jolteon. La posicion es: (2,2).
+[INFO] 18:15:00:971 TEAM/(2146:2152): Recibi mensaje appeared pokemon. El pokemon es: Flareon. La posicion es: (4,6).
+[INFO] 18:15:02:63 TEAM/(2146:2152): Recibi mensaje appeared pokemon. El pokemon es: Umbreon. La posicion es: (10,6).
+[INFO] 18:15:02:65 TEAM/(2146:2152): Recibi mensaje appeared pokemon. El pokemon es: Vaporeon. La posicion es: (4,10).
+[INFO] 18:15:02:282 TEAM/(2146:2153): Recibi mensaje localized. El pokemon es: Onix. La cantidad es: 1.
+[INFO] 18:15:02:282 TEAM/(2146:2153): Las posiciones son: 
+[INFO] 18:15:02:282 TEAM/(2146:2153): (2,8)
+[INFO] 18:15:02:283 TEAM/(2146:2153): Recibi mensaje localized. El pokemon es: Pikachu. La cantidad es: 1.
+[INFO] 18:15:02:283 TEAM/(2146:2153): Las posiciones son: 
+[INFO] 18:15:02:283 TEAM/(2146:2153): (9,9)
+[INFO] 18:15:02:283 TEAM/(2146:2153): Recibi mensaje localized. El pokemon es: Gengar. La cantidad es: 1.
+[INFO] 18:15:02:283 TEAM/(2146:2153): Las posiciones son: 
+[INFO] 18:15:02:283 TEAM/(2146:2153): (6,6)
+[INFO] 18:15:02:778 TEAM/(2146:2152): Recibi mensaje appeared pokemon. El pokemon es: Espeon. La posicion es: (7,1).
+[INFO] 18:15:07:64 TEAM/(2146:2152): Recibi mensaje appeared pokemon. El pokemon es: Squirtle. La posicion es: (5,5).
+[INFO] 18:15:07:780 TEAM/(2146:2152): Recibi mensaje appeared pokemon. El pokemon es: Onix. La posicion es: (2,8).
+[INFO] 18:15:07:781 TEAM/(2146:2152): Recibi mensaje appeared pokemon. El pokemon es: Umbreon. La posicion es: (10,6).
+[INFO] 18:15:07:781 TEAM/(2146:2152): Recibi mensaje appeared pokemon. El pokemon es: Vaporeon. La posicion es: (4,10).
+[INFO] 18:15:07:781 TEAM/(2146:2152): Recibi mensaje appeared pokemon. El pokemon es: Gengar. La posicion es: (6,6).
+[INFO] 18:15:10:289 TEAM/(2146:2149): El entrenador 2 se movió a la posición (5, 2).
+[INFO] 18:15:12:284 TEAM/(2146:2153): Recibi mensaje localized. El pokemon es: Squirtle. La cantidad es: 2.
+[INFO] 18:15:12:284 TEAM/(2146:2153): Las posiciones son: 
+[INFO] 18:15:12:284 TEAM/(2146:2153): (5,2)
+[INFO] 18:15:12:284 TEAM/(2146:2153): (5,5)
+[INFO] 18:15:15:290 TEAM/(2146:2149): El entrenador 2 ahora está en BLOCKED.
+[INFO] 18:15:15:290 TEAM/(2146:2156): El entrenador 1 ahora está en EXEC.
+[INFO] 18:15:15:290 TEAM/(2146:2148): El entrenador  1 se mueve a atrapar a Pikachu en posición (9, 9)
+
+[INFO] 18:15:15:290 TEAM/(2146:2148): El entrenador 1 ahora está en EXEC.
+[INFO] 18:15:17:811 TEAM/(2146:2152): Recibi mensaje appeared pokemon. El pokemon es: Squirtle. La posicion es: (5,5).
+[INFO] 18:15:25:294 TEAM/(2146:2154): Recibi mensaje caught pokemon. El pokemon fue atrapado.
+[INFO] 18:15:25:297 TEAM/(2146:2382): El entrenador 2 atrapó al pokemon Squirtle en la posición (5,2).
+[INFO] 18:15:25:297 TEAM/(2146:2382): Habilito el hilo del entrenador 2.
+[INFO] 18:15:25:297 TEAM/(2146:2382): Habilito el hilo del entrenador 2.
+[INFO] 18:15:25:297 TEAM/(2146:2149): El entrenador 2 ahora está en READY.
+[INFO] 18:15:40:403 TEAM/(2146:2154): Recibi mensaje caught pokemon. El pokemon fue atrapado.
+[INFO] 18:15:55:409 TEAM/(2146:2154): Recibi mensaje caught pokemon. El pokemon fue atrapado.
+[INFO] 18:16:15:418 TEAM/(2146:2154): Recibi mensaje caught pokemon. El pokemon fue atrapado.
+[INFO] 18:16:20:339 TEAM/(2146:2148): El entrenador 1 se movió a la posición (9, 9).
+[INFO] 18:16:25:345 TEAM/(2146:2148): El entrenador 1 ahora está en BLOCKED.
+[INFO] 18:16:25:345 TEAM/(2146:2156): El entrenador 0 ahora está en EXEC.
+[INFO] 18:16:25:345 TEAM/(2146:2147): El entrenador  0 se mueve a atrapar a Gengar en posición (6, 6)
+
+[INFO] 18:16:25:345 TEAM/(2146:2147): El entrenador 0 ahora está en EXEC.
+[INFO] 18:16:25:421 TEAM/(2146:2154): Recibi mensaje caught pokemon. El pokemon fue atrapado.
+[INFO] 18:16:30:417 TEAM/(2146:2154): Recibi mensaje caught pokemon. El pokemon fue atrapado.
+[INFO] 18:16:30:418 TEAM/(2146:2515): El entrenador 1 atrapó al pokemon Pikachu en la posición (9,9).
+[INFO] 18:16:30:418 TEAM/(2146:2515): Habilito el hilo del entrenador 1.
+[INFO] 18:16:30:418 TEAM/(2146:2515): Habilito el hilo del entrenador 1.
+[INFO] 18:16:30:418 TEAM/(2146:2148): El entrenador 1 ahora está en READY.
+[INFO] 18:16:30:424 TEAM/(2146:2154): Recibi mensaje caught pokemon. El pokemon fue atrapado.
+[INFO] 18:17:05:374 TEAM/(2146:2147): El entrenador 0 se movió a la posición (6, 6).
+[INFO] 18:17:10:375 TEAM/(2146:2147): El entrenador 0 ahora está en BLOCKED.
+[INFO] 18:17:10:375 TEAM/(2146:2156): El entrenador 2 ahora está en EXEC.
+[INFO] 18:17:10:375 TEAM/(2146:2149): El entrenador  2 se mueve a atrapar a Onix en posición (2, 8)
+
+[INFO] 18:17:10:375 TEAM/(2146:2149): El entrenador 2 ahora está en EXEC.
+[INFO] 18:17:15:449 TEAM/(2146:2154): Recibi mensaje caught pokemon. El pokemon fue atrapado.
+[INFO] 18:17:15:450 TEAM/(2146:2623): El entrenador 0 atrapó al pokemon Gengar en la posición (6,6).
+[INFO] 18:17:15:450 TEAM/(2146:2623): Inicio del algoritmo de detección de deadlock.
+[INFO] 18:17:15:450 TEAM/(2146:2623): Habilito el hilo del entrenador 0.
+[INFO] 18:17:15:450 TEAM/(2146:2623): No se encontró deadlock.
+[INFO] 18:17:51:678 TEAM/(2856:2856): ___________________________________________________________________________________________________________
+[INFO] 18:17:51:678 TEAM/(2856:2856): Inició el TEAM
+[INFO] 18:17:51:679 TEAM/(2856:2862): Recibi mensaje appeared pokemon. El pokemon es: Flareon. La posicion es: (4,6).
+[INFO] 18:17:56:411 TEAM/(2856:2862): Recibi mensaje appeared pokemon. El pokemon es: Squirtle. La posicion es: (5,2).
+[INFO] 18:17:56:411 TEAM/(2856:2910): Habilito el hilo del entrenador 2.
+[INFO] 18:17:56:411 TEAM/(2856:2859): El entrenador 2 ahora está en READY.
+[INFO] 18:17:56:411 TEAM/(2856:2867): El entrenador 2 ahora está en EXEC.
+[INFO] 18:17:56:411 TEAM/(2856:2859): El entrenador  2 se mueve a atrapar a Squirtle en posición (5, 2)
+
+[INFO] 18:17:56:411 TEAM/(2856:2859): El entrenador 2 ahora está en EXEC.
+[INFO] 18:17:56:688 TEAM/(2856:2863): Recibi mensaje localized. El pokemon es: Pikachu. La cantidad es: 1.
+[INFO] 18:17:56:688 TEAM/(2856:2863): Las posiciones son: 
+[INFO] 18:17:56:688 TEAM/(2856:2863): (9,9)
+[INFO] 18:17:56:688 TEAM/(2856:2920): Habilito el hilo del entrenador 1.
+[INFO] 18:17:56:688 TEAM/(2856:2858): El entrenador 1 ahora está en READY.
+[INFO] 18:17:56:688 TEAM/(2856:2863): Recibi mensaje localized. El pokemon es: Gengar. La cantidad es: 1.
+[INFO] 18:17:56:688 TEAM/(2856:2863): Las posiciones son: 
+[INFO] 18:17:56:688 TEAM/(2856:2863): (6,6)
+[INFO] 18:17:56:690 TEAM/(2856:2863): Recibi mensaje localized. El pokemon es: Onix. La cantidad es: 1.
+[INFO] 18:17:56:690 TEAM/(2856:2863): Las posiciones son: 
+[INFO] 18:17:56:690 TEAM/(2856:2863): (2,8)
+[INFO] 18:17:56:690 TEAM/(2856:2925): Habilito el hilo del entrenador 0.
+[INFO] 18:17:56:690 TEAM/(2856:2857): El entrenador 0 ahora está en READY.
+[INFO] 18:17:57:394 TEAM/(2856:2862): Recibi mensaje appeared pokemon. El pokemon es: Flareon. La posicion es: (4,6).
+[INFO] 18:17:57:395 TEAM/(2856:2862): Recibi mensaje appeared pokemon. El pokemon es: Jolteon. La posicion es: (2,2).
+[INFO] 18:17:59:886 TEAM/(2856:2863): Recibi mensaje localized. El pokemon es: Vaporeon. La cantidad es: 1.
+[INFO] 18:17:59:886 TEAM/(2856:2863): Las posiciones son: 
+[INFO] 18:17:59:886 TEAM/(2856:2863): (4,10)
+[INFO] 18:17:59:887 TEAM/(2856:2863): Recibi mensaje localized. El pokemon es: Umbreon. La cantidad es: 1.
+[INFO] 18:17:59:887 TEAM/(2856:2863): Las posiciones son: 
+[INFO] 18:17:59:887 TEAM/(2856:2863): (10,6)
+[INFO] 18:17:59:887 TEAM/(2856:2863): Recibi mensaje localized. El pokemon es: Espeon. La cantidad es: 1.
+[INFO] 18:17:59:887 TEAM/(2856:2863): Las posiciones son: 
+[INFO] 18:17:59:887 TEAM/(2856:2863): (7,1)
+[INFO] 18:18:01:690 TEAM/(2856:2863): Recibi mensaje localized. El pokemon es: Squirtle. La cantidad es: 2.
+[INFO] 18:18:01:690 TEAM/(2856:2863): Las posiciones son: 
+[INFO] 18:18:01:690 TEAM/(2856:2863): (5,2)
+[INFO] 18:18:01:690 TEAM/(2856:2863): (5,5)
+[INFO] 18:18:02:393 TEAM/(2856:2862): Recibi mensaje appeared pokemon. El pokemon es: Pikachu. La posicion es: (9,9).
+[INFO] 18:18:04:889 TEAM/(2856:2863): Recibi mensaje localized. El pokemon es: Flareon. La cantidad es: 1.
+[INFO] 18:18:04:889 TEAM/(2856:2863): Las posiciones son: 
+[INFO] 18:18:04:889 TEAM/(2856:2863): (4,6)
+[INFO] 18:18:04:889 TEAM/(2856:2863): Recibi mensaje localized. El pokemon es: Jolteon. La cantidad es: 1.
+[INFO] 18:18:04:889 TEAM/(2856:2863): Las posiciones son: 
+[INFO] 18:18:04:889 TEAM/(2856:2863): (2,2)
+[INFO] 18:18:07:395 TEAM/(2856:2862): Recibi mensaje appeared pokemon. El pokemon es: Squirtle. La posicion es: (5,2).
+[INFO] 18:18:11:421 TEAM/(2856:2859): El entrenador 2 se movió a la posición (5, 2).
+[INFO] 18:18:16:428 TEAM/(2856:2859): El entrenador 2 ahora está en BLOCKED.
+[INFO] 18:18:16:428 TEAM/(2856:2867): El entrenador 1 ahora está en EXEC.
+[INFO] 18:18:16:428 TEAM/(2856:2858): El entrenador  1 se mueve a atrapar a Pikachu en posición (9, 9)
+
+[INFO] 18:18:16:428 TEAM/(2856:2858): El entrenador 1 ahora está en EXEC.
+[INFO] 18:18:21:431 TEAM/(2856:2864): Recibi mensaje caught pokemon. El pokemon fue atrapado.
+[INFO] 18:18:21:432 TEAM/(2856:3062): El entrenador 2 atrapó al pokemon Squirtle en la posición (5,2).
+[INFO] 18:18:21:432 TEAM/(2856:3062): Habilito el hilo del entrenador 2.
+[INFO] 18:18:21:432 TEAM/(2856:3062): Habilito el hilo del entrenador 2.
+[INFO] 18:18:21:432 TEAM/(2856:2859): El entrenador 2 ahora está en READY.
+[INFO] 18:18:40:232 TEAM/(2856:2864): Recibi mensaje caught pokemon. El pokemon fue atrapado.
+[INFO] 18:18:45:405 TEAM/(2856:2862): Recibi mensaje appeared pokemon. El pokemon es: Pikachu. La posicion es: (9,9).
+[INFO] 18:18:45:406 TEAM/(2856:2862): Recibi mensaje appeared pokemon. El pokemon es: Squirtle. La posicion es: (5,2).
+[INFO] 18:18:45:407 TEAM/(2856:2862): Recibi mensaje appeared pokemon. El pokemon es: Jolteon. La posicion es: (2,2).
+[INFO] 18:18:45:409 TEAM/(2856:2862): Recibi mensaje appeared pokemon. El pokemon es: Flareon. La posicion es: (4,6).
+[INFO] 18:18:46:491 TEAM/(2856:2862): Recibi mensaje appeared pokemon. El pokemon es: Onix. La posicion es: (2,8).
+[INFO] 18:18:46:492 TEAM/(2856:2862): Recibi mensaje appeared pokemon. El pokemon es: Gengar. La posicion es: (6,6).
+[INFO] 18:18:46:493 TEAM/(2856:2862): Recibi mensaje appeared pokemon. El pokemon es: Umbreon. La posicion es: (10,6).
+[INFO] 18:18:46:494 TEAM/(2856:2862): Recibi mensaje appeared pokemon. El pokemon es: Espeon. La posicion es: (7,1).
+[INFO] 18:18:46:497 TEAM/(2856:2862): Recibi mensaje appeared pokemon. El pokemon es: Vaporeon. La posicion es: (4,10).
+[INFO] 18:18:51:499 TEAM/(2856:2862): Recibi mensaje appeared pokemon. El pokemon es: Squirtle. La posicion es: (5,5).
+[INFO] 18:18:52:221 TEAM/(2856:2862): Recibi mensaje appeared pokemon. El pokemon es: Onix. La posicion es: (2,8).
+[INFO] 18:18:52:222 TEAM/(2856:2862): Recibi mensaje appeared pokemon. El pokemon es: Gengar. La posicion es: (6,6).
+[INFO] 18:18:52:226 TEAM/(2856:2862): Recibi mensaje appeared pokemon. El pokemon es: Umbreon. La posicion es: (10,6).
+[INFO] 18:18:52:226 TEAM/(2856:2862): Recibi mensaje appeared pokemon. El pokemon es: Espeon. La posicion es: (7,1).
+[INFO] 18:18:52:226 TEAM/(2856:2862): Recibi mensaje appeared pokemon. El pokemon es: Vaporeon. La posicion es: (4,10).
+[INFO] 18:18:53:899 TEAM/(2856:2862): Recibi mensaje appeared pokemon. El pokemon es: Jolteon. La posicion es: (2,2).
+[INFO] 18:18:53:900 TEAM/(2856:2862): Recibi mensaje appeared pokemon. El pokemon es: Pikachu. La posicion es: (9,9).
+[INFO] 18:18:53:901 TEAM/(2856:2862): Recibi mensaje appeared pokemon. El pokemon es: Flareon. La posicion es: (4,6).
+[INFO] 18:18:57:224 TEAM/(2856:2862): Recibi mensaje appeared pokemon. El pokemon es: Squirtle. La posicion es: (5,5).
+[INFO] 18:18:57:975 TEAM/(2856:2862): Recibi mensaje appeared pokemon. El pokemon es: Espeon. La posicion es: (7,1).
+[INFO] 18:18:57:977 TEAM/(2856:2862): Recibi mensaje appeared pokemon. El pokemon es: Gengar. La posicion es: (6,6).
+[INFO] 18:18:57:977 TEAM/(2856:2862): Recibi mensaje appeared pokemon. El pokemon es: Umbreon. La posicion es: (10,6).
+[INFO] 18:18:57:993 TEAM/(2856:2862): Recibi mensaje appeared pokemon. El pokemon es: Vaporeon. La posicion es: (4,10).
+[INFO] 18:18:57:993 TEAM/(2856:2862): Recibi mensaje appeared pokemon. El pokemon es: Onix. La posicion es: (2,8).
+[INFO] 18:18:59:760 TEAM/(2856:2862): Recibi mensaje appeared pokemon. El pokemon es: Pikachu. La posicion es: (9,9).
+[INFO] 18:18:59:761 TEAM/(2856:2862): Recibi mensaje appeared pokemon. El pokemon es: Jolteon. La posicion es: (2,2).
+[INFO] 18:18:59:761 TEAM/(2856:2862): Recibi mensaje appeared pokemon. El pokemon es: Flareon. La posicion es: (4,6).
+[INFO] 18:19:02:978 TEAM/(2856:2862): Recibi mensaje appeared pokemon. El pokemon es: Squirtle. La posicion es: (5,5).
+[INFO] 18:19:06:345 TEAM/(2856:2862): Recibi mensaje appeared pokemon. El pokemon es: Pikachu. La posicion es: (9,9).
+[INFO] 18:19:06:346 TEAM/(2856:2862): Recibi mensaje appeared pokemon. El pokemon es: Jolteon. La posicion es: (2,2).
+[INFO] 18:19:06:348 TEAM/(2856:2862): Recibi mensaje appeared pokemon. El pokemon es: Flareon. La posicion es: (4,6).
+[INFO] 18:19:07:104 TEAM/(2856:2862): Recibi mensaje appeared pokemon. El pokemon es: Onix. La posicion es: (2,8).
+[INFO] 18:19:07:105 TEAM/(2856:2862): Recibi mensaje appeared pokemon. El pokemon es: Gengar. La posicion es: (6,6).
+[INFO] 18:19:07:107 TEAM/(2856:2862): Recibi mensaje appeared pokemon. El pokemon es: Umbreon. La posicion es: (10,6).
+[INFO] 18:19:07:108 TEAM/(2856:2862): Recibi mensaje appeared pokemon. El pokemon es: Espeon. La posicion es: (7,1).
+[INFO] 18:19:07:109 TEAM/(2856:2862): Recibi mensaje appeared pokemon. El pokemon es: Vaporeon. La posicion es: (4,10).
+[INFO] 18:19:08:412 TEAM/(2856:2862): Recibi mensaje appeared pokemon. El pokemon es: Squirtle. La posicion es: (5,2).
+[INFO] 18:19:11:877 TEAM/(2856:2862): Recibi mensaje appeared pokemon. El pokemon es: Pikachu. La posicion es: (9,9).
+[INFO] 18:19:11:877 TEAM/(2856:2862): Recibi mensaje appeared pokemon. El pokemon es: Jolteon. La posicion es: (2,2).
+[INFO] 18:19:11:878 TEAM/(2856:2862): Recibi mensaje appeared pokemon. El pokemon es: Flareon. La posicion es: (4,6).
+[INFO] 18:19:12:716 TEAM/(2856:2862): Recibi mensaje appeared pokemon. El pokemon es: Gengar. La posicion es: (6,6).
+[INFO] 18:19:12:717 TEAM/(2856:2862): Recibi mensaje appeared pokemon. El pokemon es: Onix. La posicion es: (2,8).
+[INFO] 18:19:12:718 TEAM/(2856:2862): Recibi mensaje appeared pokemon. El pokemon es: Umbreon. La posicion es: (10,6).
+[INFO] 18:19:12:719 TEAM/(2856:2862): Recibi mensaje appeared pokemon. El pokemon es: Vaporeon. La posicion es: (4,10).
+[INFO] 18:19:12:725 TEAM/(2856:2862): Recibi mensaje appeared pokemon. El pokemon es: Espeon. La posicion es: (7,1).
+[INFO] 18:19:13:913 TEAM/(2856:2862): Recibi mensaje appeared pokemon. El pokemon es: Squirtle. La posicion es: (5,2).
+[INFO] 18:19:17:372 TEAM/(2856:2862): Recibi mensaje appeared pokemon. El pokemon es: Jolteon. La posicion es: (2,2).
+[INFO] 18:19:17:373 TEAM/(2856:2862): Recibi mensaje appeared pokemon. El pokemon es: Pikachu. La posicion es: (9,9).
+[INFO] 18:19:17:373 TEAM/(2856:2862): Recibi mensaje appeared pokemon. El pokemon es: Flareon. La posicion es: (4,6).
+[INFO] 18:19:17:875 TEAM/(2856:2862): Recibi mensaje appeared pokemon. El pokemon es: Onix. La posicion es: (2,8).
+[INFO] 18:19:17:876 TEAM/(2856:2862): Recibi mensaje appeared pokemon. El pokemon es: Gengar. La posicion es: (6,6).
+[INFO] 18:19:17:880 TEAM/(2856:2862): Recibi mensaje appeared pokemon. El pokemon es: Umbreon. La posicion es: (10,6).
+[INFO] 18:19:17:881 TEAM/(2856:2862): Recibi mensaje appeared pokemon. El pokemon es: Espeon. La posicion es: (7,1).
+[INFO] 18:19:17:882 TEAM/(2856:2862): Recibi mensaje appeared pokemon. El pokemon es: Vaporeon. La posicion es: (4,10).
+[INFO] 18:19:18:955 TEAM/(2856:2862): Recibi mensaje appeared pokemon. El pokemon es: Squirtle. La posicion es: (5,2).
+[INFO] 18:19:21:448 TEAM/(2856:2858): El entrenador 1 se movió a la posición (9, 9).
+[INFO] 18:19:22:741 TEAM/(2856:2862): Recibi mensaje appeared pokemon. El pokemon es: Jolteon. La posicion es: (2,2).
+[INFO] 18:19:22:741 TEAM/(2856:2862): Recibi mensaje appeared pokemon. El pokemon es: Pikachu. La posicion es: (9,9).
+[INFO] 18:19:22:742 TEAM/(2856:2862): Recibi mensaje appeared pokemon. El pokemon es: Flareon. La posicion es: (4,6).
+[INFO] 18:19:23:324 TEAM/(2856:2862): Recibi mensaje appeared pokemon. El pokemon es: Gengar. La posicion es: (6,6).
+[INFO] 18:19:23:325 TEAM/(2856:2862): Recibi mensaje appeared pokemon. El pokemon es: Onix. La posicion es: (2,8).
+[INFO] 18:19:23:328 TEAM/(2856:2862): Recibi mensaje appeared pokemon. El pokemon es: Umbreon. La posicion es: (10,6).
+[INFO] 18:19:23:328 TEAM/(2856:2862): Recibi mensaje appeared pokemon. El pokemon es: Espeon. La posicion es: (7,1).
+[INFO] 18:19:23:329 TEAM/(2856:2862): Recibi mensaje appeared pokemon. El pokemon es: Vaporeon. La posicion es: (4,10).
+[INFO] 18:19:23:972 TEAM/(2856:2862): Recibi mensaje appeared pokemon. El pokemon es: Squirtle. La posicion es: (5,2).
+[INFO] 18:19:26:449 TEAM/(2856:2858): El entrenador 1 ahora está en BLOCKED.
+[INFO] 18:19:26:449 TEAM/(2856:2867): El entrenador 0 ahora está en EXEC.
+[INFO] 18:19:26:449 TEAM/(2856:2857): El entrenador  0 se mueve a atrapar a Gengar en posición (6, 6)
+
+[INFO] 18:19:26:449 TEAM/(2856:2857): El entrenador 0 ahora está en EXEC.
+[INFO] 18:19:28:367 TEAM/(2856:2862): Recibi mensaje appeared pokemon. El pokemon es: Gengar. La posicion es: (6,6).
+[INFO] 18:19:28:368 TEAM/(2856:2862): Recibi mensaje appeared pokemon. El pokemon es: Onix. La posicion es: (2,8).
+[INFO] 18:19:28:368 TEAM/(2856:2862): Recibi mensaje appeared pokemon. El pokemon es: Umbreon. La posicion es: (10,6).
+[INFO] 18:19:28:369 TEAM/(2856:2862): Recibi mensaje appeared pokemon. El pokemon es: Espeon. La posicion es: (7,1).
+[INFO] 18:19:28:370 TEAM/(2856:2862): Recibi mensaje appeared pokemon. El pokemon es: Vaporeon. La posicion es: (4,10).
+[INFO] 18:19:28:424 TEAM/(2856:2862): Recibi mensaje appeared pokemon. El pokemon es: Jolteon. La posicion es: (2,2).
+[INFO] 18:19:28:425 TEAM/(2856:2862): Recibi mensaje appeared pokemon. El pokemon es: Pikachu. La posicion es: (9,9).
+[INFO] 18:19:28:426 TEAM/(2856:2862): Recibi mensaje appeared pokemon. El pokemon es: Flareon. La posicion es: (4,6).
+[INFO] 18:19:29:447 TEAM/(2856:2862): Recibi mensaje appeared pokemon. El pokemon es: Squirtle. La posicion es: (5,5).
+[INFO] 18:19:33:828 TEAM/(2856:2862): Recibi mensaje appeared pokemon. El pokemon es: Onix. La posicion es: (2,8).
+[INFO] 18:19:33:830 TEAM/(2856:2862): Recibi mensaje appeared pokemon. El pokemon es: Gengar. La posicion es: (6,6).
+[INFO] 18:19:33:833 TEAM/(2856:2862): Recibi mensaje appeared pokemon. El pokemon es: Umbreon. La posicion es: (10,6).
+[INFO] 18:19:33:834 TEAM/(2856:2862): Recibi mensaje appeared pokemon. El pokemon es: Vaporeon. La posicion es: (4,10).
+[INFO] 18:19:33:835 TEAM/(2856:2862): Recibi mensaje appeared pokemon. El pokemon es: Espeon. La posicion es: (7,1).
+[INFO] 18:19:33:972 TEAM/(2856:2862): Recibi mensaje appeared pokemon. El pokemon es: Jolteon. La posicion es: (2,2).
+[INFO] 18:19:33:972 TEAM/(2856:2862): Recibi mensaje appeared pokemon. El pokemon es: Flareon. La posicion es: (4,6).
+[INFO] 18:19:33:972 TEAM/(2856:2862): Recibi mensaje appeared pokemon. El pokemon es: Pikachu. La posicion es: (9,9).
+[INFO] 18:19:34:476 TEAM/(2856:2862): Recibi mensaje appeared pokemon. El pokemon es: Squirtle. La posicion es: (5,2).
+[INFO] 18:19:38:948 TEAM/(2856:2862): Recibi mensaje appeared pokemon. El pokemon es: Onix. La posicion es: (2,8).
+[INFO] 18:19:38:953 TEAM/(2856:2862): Recibi mensaje appeared pokemon. El pokemon es: Gengar. La posicion es: (6,6).
+[INFO] 18:19:38:953 TEAM/(2856:2862): Recibi mensaje appeared pokemon. El pokemon es: Umbreon. La posicion es: (10,6).
+[INFO] 18:19:38:953 TEAM/(2856:2862): Recibi mensaje appeared pokemon. El pokemon es: Espeon. La posicion es: (7,1).
+[INFO] 18:19:38:955 TEAM/(2856:2862): Recibi mensaje appeared pokemon. El pokemon es: Vaporeon. La posicion es: (4,10).
+[INFO] 18:19:38:974 TEAM/(2856:2862): Recibi mensaje appeared pokemon. El pokemon es: Pikachu. La posicion es: (9,9).
+[INFO] 18:19:38:987 TEAM/(2856:2862): Recibi mensaje appeared pokemon. El pokemon es: Jolteon. La posicion es: (2,2).
+[INFO] 18:19:38:988 TEAM/(2856:2862): Recibi mensaje appeared pokemon. El pokemon es: Flareon. La posicion es: (4,6).
+[INFO] 18:19:39:526 TEAM/(2856:2862): Recibi mensaje appeared pokemon. El pokemon es: Squirtle. La posicion es: (5,5).
+[INFO] 18:19:44:453 TEAM/(2856:2862): Recibi mensaje appeared pokemon. El pokemon es: Gengar. La posicion es: (6,6).
+[INFO] 18:19:44:453 TEAM/(2856:2862): Recibi mensaje appeared pokemon. El pokemon es: Onix. La posicion es: (2,8).
+[INFO] 18:19:44:454 TEAM/(2856:2862): Recibi mensaje appeared pokemon. El pokemon es: Vaporeon. La posicion es: (4,10).
+[INFO] 18:19:44:455 TEAM/(2856:2862): Recibi mensaje appeared pokemon. El pokemon es: Umbreon. La posicion es: (10,6).
+[INFO] 18:19:44:455 TEAM/(2856:2862): Recibi mensaje appeared pokemon. El pokemon es: Espeon. La posicion es: (7,1).
+[INFO] 18:19:44:482 TEAM/(2856:2862): Recibi mensaje appeared pokemon. El pokemon es: Pikachu. La posicion es: (9,9).
+[INFO] 18:19:44:482 TEAM/(2856:2862): Recibi mensaje appeared pokemon. El pokemon es: Flareon. La posicion es: (4,6).
+[INFO] 18:19:44:483 TEAM/(2856:2862): Recibi mensaje appeared pokemon. El pokemon es: Jolteon. La posicion es: (2,2).
+[INFO] 18:19:44:576 TEAM/(2856:2862): Recibi mensaje appeared pokemon. El pokemon es: Squirtle. La posicion es: (5,5).
+[INFO] 18:19:49:528 TEAM/(2856:2862): Recibi mensaje appeared pokemon. El pokemon es: Umbreon. La posicion es: (10,6).
+[INFO] 18:19:49:529 TEAM/(2856:2862): Recibi mensaje appeared pokemon. El pokemon es: Gengar. La posicion es: (6,6).
+[INFO] 18:19:49:529 TEAM/(2856:2862): Recibi mensaje appeared pokemon. El pokemon es: Vaporeon. La posicion es: (4,10).
+[INFO] 18:19:49:530 TEAM/(2856:2862): Recibi mensaje appeared pokemon. El pokemon es: Onix. La posicion es: (2,8).
+[INFO] 18:19:49:530 TEAM/(2856:2862): Recibi mensaje appeared pokemon. El pokemon es: Espeon. La posicion es: (7,1).
+[INFO] 18:19:49:592 TEAM/(2856:2862): Recibi mensaje appeared pokemon. El pokemon es: Squirtle. La posicion es: (5,5).
+[INFO] 18:19:50:129 TEAM/(2856:2862): Recibi mensaje appeared pokemon. El pokemon es: Pikachu. La posicion es: (9,9).
+[INFO] 18:19:50:133 TEAM/(2856:2862): Recibi mensaje appeared pokemon. El pokemon es: Jolteon. La posicion es: (2,2).
+[INFO] 18:19:50:133 TEAM/(2856:2862): Recibi mensaje appeared pokemon. El pokemon es: Flareon. La posicion es: (4,6).
+[INFO] 18:19:54:578 TEAM/(2856:2862): Recibi mensaje appeared pokemon. El pokemon es: Vaporeon. La posicion es: (4,10).
+[INFO] 18:19:54:580 TEAM/(2856:2862): Recibi mensaje appeared pokemon. El pokemon es: Umbreon. La posicion es: (10,6).
+[INFO] 18:19:54:581 TEAM/(2856:2862): Recibi mensaje appeared pokemon. El pokemon es: Espeon. La posicion es: (7,1).
+[INFO] 18:19:54:581 TEAM/(2856:2862): Recibi mensaje appeared pokemon. El pokemon es: Gengar. La posicion es: (6,6).
+[INFO] 18:19:54:581 TEAM/(2856:2862): Recibi mensaje appeared pokemon. El pokemon es: Onix. La posicion es: (2,8).
+[INFO] 18:19:54:726 TEAM/(2856:2862): Recibi mensaje appeared pokemon. El pokemon es: Squirtle. La posicion es: (5,2).
+[INFO] 18:19:55:278 TEAM/(2856:2864): Recibi mensaje caught pokemon. El pokemon fue atrapado.
+[INFO] 18:19:56:211 TEAM/(2856:2862): Recibi mensaje appeared pokemon. El pokemon es: Jolteon. La posicion es: (2,2).
+[INFO] 18:19:56:211 TEAM/(2856:2862): Recibi mensaje appeared pokemon. El pokemon es: Pikachu. La posicion es: (9,9).
+[INFO] 18:19:59:601 TEAM/(2856:2862): Recibi mensaje appeared pokemon. El pokemon es: Vaporeon. La posicion es: (4,10).
+[INFO] 18:19:59:601 TEAM/(2856:2862): Recibi mensaje appeared pokemon. El pokemon es: Onix. La posicion es: (2,8).
+[INFO] 18:19:59:601 TEAM/(2856:2862): Recibi mensaje appeared pokemon. El pokemon es: Gengar. La posicion es: (6,6).
+[INFO] 18:19:59:601 TEAM/(2856:2862): Recibi mensaje appeared pokemon. El pokemon es: Umbreon. La posicion es: (10,6).
+[INFO] 18:19:59:602 TEAM/(2856:2862): Recibi mensaje appeared pokemon. El pokemon es: Espeon. La posicion es: (7,1).
+[INFO] 18:19:59:709 TEAM/(2856:2864): Conexión fallida con el Broker
+
+[INFO] 18:19:59:709 TEAM/(2856:2862): Conexión fallida con el Broker
+
+[INFO] 18:19:59:709 TEAM/(2856:2863): Conexión fallida con el Broker
+
+[INFO] 18:19:59:709 TEAM/(2856:2864): Reintentando conexión en 30 segundos...
+
+[INFO] 18:19:59:709 TEAM/(2856:2862): Reintentando conexión en 30 segundos...
+
+[INFO] 18:19:59:709 TEAM/(2856:2863): Reintentando conexión en 30 segundos...
+
+[INFO] 18:20:06:471 TEAM/(2856:2857): El entrenador 0 se movió a la posición (6, 6).
+[INFO] 18:20:11:473 TEAM/(2856:2857): El entrenador 0 atrapó al pokemon Gengar en la posición (6,6).
+[INFO] 18:20:11:473 TEAM/(2856:2857): Inicio del algoritmo de detección de deadlock.
+[INFO] 18:20:11:473 TEAM/(2856:2857): Habilito el hilo del entrenador 0.
+[INFO] 18:20:11:473 TEAM/(2856:2857): No se encontró deadlock.
+[INFO] 18:20:11:473 TEAM/(2856:2857): Fallo de comunicación con el Broker al enviar un catch. Se realizará la operación por default.
+[INFO] 18:20:11:473 TEAM/(2856:2857): El entrenador 0 ahora está en BLOCKED.
+[INFO] 18:20:11:473 TEAM/(2856:2867): El entrenador 2 ahora está en EXEC.
+[INFO] 18:20:11:473 TEAM/(2856:2859): El entrenador  2 se mueve a atrapar a Onix en posición (2, 8)
+
+[INFO] 18:20:11:473 TEAM/(2856:2859): El entrenador 2 ahora está en EXEC.
+[INFO] 18:20:29:710 TEAM/(2856:2864): Reintentando conexión en 30 segundos...
+
+[INFO] 18:20:29:711 TEAM/(2856:2862): Reintentando conexión en 30 segundos...
+
+[INFO] 18:20:29:711 TEAM/(2856:2863): Reintentando conexión en 30 segundos...
+
+[INFO] 18:20:56:522 TEAM/(2856:2859): El entrenador 2 se movió a la posición (2, 8).

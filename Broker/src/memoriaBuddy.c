@@ -324,7 +324,7 @@ void removerDeListaBuddy(listaMutex* lista, struct nodoMemoria* nodo){
 	for(int i=0; i<sizeListaMutex(lista);i++){
 		aux = getListaMutex(lista, i);
 		if(aux == nodo){
-			removeListaMutex(lista,i);
+			removeAndDestroyElementListaMutex(lista,i,destroyMsgMemoriaBroker );
 		}
 	}
 }
@@ -380,7 +380,10 @@ void enviarMsjsASuscriptorNuevoBuddySystem(uint32_t colaParametro, uint32_t sock
 				paqueteAEnviar->idCorrelativo = nodoEvaluado->mensaje->idCorrelativo;
 				void* paqStream = serializarPaquete(paqueteAEnviar);
 
+				char* aux=(nodoEvaluado->header).ultimoAcceso;
 				(nodoEvaluado->header).ultimoAcceso=temporal_get_string_time();
+
+				free(aux);//TODO PRUEBA
 
 				log_info(brokerLogger2, "Actualizo el ultimo acceso del MENSAJE %i : %s ",nodoEvaluado->mensaje->idMensaje ,(nodoEvaluado->header).ultimoAcceso);
 				send(socket, paqStream, sizePaquete(paqueteAEnviar), 0);

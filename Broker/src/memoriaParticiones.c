@@ -164,7 +164,10 @@ void asignarMensajeAParticion(particion* partiLibre, msgMemoriaBroker* mensaje){
 	}else{
 		partiOcupada->sizeParticion = particionMinima;
 	}
+
+
 	partiOcupada->estadoParticion = PARTICION_OCUPADA;
+
 	partiOcupada->lru = temporal_get_string_time();
 	partiOcupada->tiempoDeCargaPart=TiempoCarga;
 	TiempoCarga++;
@@ -271,7 +274,9 @@ t_list* buscarMensajesDeColaEnParticiones (uint32_t cola){
 	for(int i = 0; i<sizeListaMutex(particionesOcupadas); i++){
 		particion1 = (particion*) getListaMutex(particionesOcupadas, i);
 		if(particion1->mensaje->cola == cola){
+			char* aux=particion1->lru;
 			particion1->lru = temporal_get_string_time();
+			free(aux);
 			list_add(msjsDeCola, (void*)particion1->mensaje);
 		}
 	}
