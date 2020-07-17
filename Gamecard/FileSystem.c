@@ -206,10 +206,6 @@ archivoHeader* crearMetadata(char* nombre, uint32_t tipo, char* direccion){
 	char* nuevaDirec = malloc(strlen(direccion)+strlen("metadata.bin")+1);
 	strcpy(nuevaDirec,direccion);
 	string_append(&nuevaDirec,"/metadata.bin");
-
-
-
-
 	if(!archivoHeaderYaRegistrado(nombre) && !archivoExiste(nuevaDirec)){
 	 metadataFile= malloc(sizeof(archivoHeader));
 
@@ -249,20 +245,19 @@ archivoHeader* crearMetadata(char* nombre, uint32_t tipo, char* direccion){
 	default:; log_info(gamecardLogger2,"Manqueada");break;
 	}
 
-
 	fclose(archivoMetadata);
 	if(tipo==ARCHIVO){
 		addListaMutex(listaArchivos, (void*)metadataFile);
 	}
 	}else if(archivoExiste(nuevaDirec) && archivoHeaderYaRegistrado(nombre)){
+		metadataFile=buscarArchivoHeaderPokemon(nombre); //ACA HAY ALGO RARO
 		free(nuevaDirec);
-		metadataFile=buscarArchivoHeaderPokemon(nombre);
 	}else{
 
-		metadataFile= cargarMetadata(nuevaDirec,tipo, nombre);
+		metadataFile= cargarMetadata(nuevaDirec,tipo, nombre); //ACA HAY ALGO RARO
 		addListaMutex(listaArchivos, (void*)metadataFile);
 	}
-
+	free(direccion);//PRUEBA
 	return metadataFile;
 
 }
@@ -301,6 +296,7 @@ archivoHeader* cargarMetadata(char* path, uint32_t tipo, char* nombre){
 			archivo->mutex=malloc(sizeof(pthread_mutex_t));
 			pthread_mutex_init(archivo->mutex,NULL);
 			archivo->tipo=ARCHIVO;
+			liberarArrayBidimensionalChar(listaBloques);//PRUEBA
 			break;
 
 		}
@@ -402,16 +398,7 @@ void escribirMetadata(archivoHeader* metadata){
 	//free(metadata);
 
 }
-/*
-void escribirBloque2(int32_t bloque, char* buffer){
-	FILE* block = fopen("/home/utnso/tp-2020-1c-Programadores-en-Fuga/Gamecard/TALL_GRASS/Blocks/1.bin","wb+");
-	fseek(block, 0, SEEK_SET);
-	uint32_t resultado=fputs(buffer,block);
-	printf("%i\n",resultado);
-	fclose(block);
-}
-*/
-//1-1=9\n\n
+
 int32_t escribirBloque(int32_t bloque, int32_t offset, int32_t longitud, char* buffer) {
 	blockHeader* headerBloque=obtenerBloquePorId(bloque);
 	if(tieneCapacidad(headerBloque,longitud)){

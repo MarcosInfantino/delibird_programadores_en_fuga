@@ -105,7 +105,6 @@ typedef struct{
 
 
 //------------Variables globales del config
-
 uint32_t tiempoRetardoGC;
 uint32_t tiempoReintentoOperacion;
 uint32_t tiempoReconexionGC;
@@ -224,5 +223,6 @@ uint32_t reconectarseAlBroker();
 //uint32_t reconectarseAlBroker(uint32_t cliente,void* direccionServidor,socklen_t length);
 int crearHiloConexionBroker(void* config, pthread_t* hilo);
 void liberarPrograma(t_config* configGamecard,t_log* gamecardLogger);
-t_config* crearYleerConfig();
+t_config* crearYleerConfig(char* path);
+void liberarArrayPosiciones(posicion* arrayPosiciones,uint32_t cantPosiciones);
 #endif /* GAMECARD_H_ */
