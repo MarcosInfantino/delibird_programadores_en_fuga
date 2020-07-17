@@ -69,6 +69,8 @@
 //
 
 int main(int argc , char* argv[]) {
+	sem_t* semaforo=malloc(sizeof(sem_t));
+	sem_init(semaforo, 0, NULL);
 
 	char* pathConfigGC = argv[1];
 	t_config* configGamecard = crearYleerConfig(pathConfigGC);
@@ -89,8 +91,11 @@ int main(int argc , char* argv[]) {
 	iniciarBitmap();
 	inicializarListaBloques();
 
-	crearHiloConexionBroker(configGamecard,&hiloConexionBroker);
-	crearHiloServidorGameboy(&hiloServidorDeEscucha);
+	//crearHiloConexionBroker(configGamecard,&hiloConexionBroker);
+
+	sem_wait(semaforo);
+	crearHiloServidorGameboyGC(&hiloServidorDeEscucha);
+	//iniciarServidorGameboy(NULL);
 	liberarPrograma(configGamecard,gamecardLogger);
 	return EXIT_SUCCESS;
 }
@@ -390,15 +395,16 @@ uint32_t reconectarseAlBroker(){
 
 
 
-int crearHiloServidorGameboy(pthread_t* hilo) {
+int crearHiloServidorGameboyGC(pthread_t* hilo) {
 	uint32_t err = pthread_create(hilo, NULL, iniciarServidorGameboy, NULL);
 	if (err != 0) {
 		log_info(gamecardLogger2,"Hubo un problema en la creación del hilo para iniciar el servidor para el Gameboy ");
 		return err;
 	}
 
-	pthread_detach(*hilo);
-	while(1);//despues sacarlo
+	pthread_join(*hilo,NULL);
+	//while(1);
+	//despues sacarlo
 	return 0;
 }
 
@@ -423,7 +429,7 @@ void* iniciarServidorGameboy(void* arg) {
 
 void esperar_cliente(uint32_t servidor) {
 
-	listen(servidor, 100);
+	listen(servidor, SOMAXCONN);
 	struct sockaddr_in dir_cliente;
 
 	uint32_t tam_direccion = sizeof(struct sockaddr_in);

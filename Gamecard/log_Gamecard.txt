@@ -7778,3 +7778,759 @@
 
 [INFO] 22:40:36:459 gamecard/(16852:16860): El reintento de conexión fue exitoso
 
+[INFO] 23:04:37:942 gamecard/(20990:20990): Inicio de programa: Gamecard.
+[INFO] 23:04:37:942 gamecard/(20990:20990): Se encontro el directorio metadata
+[INFO] 23:04:37:942 gamecard/(20990:20990): Se encontro el archivo metadata.bin
+[INFO] 23:04:37:961 gamecard/(20990:20990): Inicio de Metadata, Tamanio bloques: 64,  Cantidad de bloques: 1024,  Magic number: TALL_GRASS
+[INFO] 23:04:37:995 gamecard/(20990:20992): Estoy escuchando
+[INFO] 23:04:37:995 gamecard/(20990:20992): Espero un nuevo cliente
+[INFO] 23:05:22:526 gamecard/(20990:20993): Recibi mensaje new pokemon. El pokemon es: Pikachu. La posicion es: (9,9). La cantidad es: 10.
+[INFO] 23:05:22:528 gamecard/(20990:20993): Recibi mensaje new pokemon. El pokemon es: Squirtle. La posicion es: (5,2). La cantidad es: 10.
+[INFO] 23:05:22:528 gamecard/(20990:21053): Inicia proceso de atencion al New
+[INFO] 23:05:22:530 gamecard/(20990:21057): Inicia proceso de atencion al New
+[INFO] 23:05:22:532 gamecard/(20990:20993): Recibi mensaje new pokemon. El pokemon es: Jolteon. La posicion es: (2,2). La cantidad es: 10.
+[INFO] 23:05:22:534 gamecard/(20990:21063): Inicia proceso de atencion al New
+[INFO] 23:05:22:534 gamecard/(20990:20993): Recibi mensaje new pokemon. El pokemon es: Flareon. La posicion es: (4,6). La cantidad es: 10.
+[INFO] 23:05:22:535 gamecard/(20990:21067): Inicia proceso de atencion al New
+[INFO] 23:05:27:529 gamecard/(20990:21053): Cierro el archivo del pokemon: Pikachu. Posicion: (9, 9).
+[INFO] 23:05:27:529 gamecard/(20990:21053): Inicia proceso envio Appeared
+[INFO] 23:05:27:531 gamecard/(20990:21057): Cierro el archivo del pokemon: Squirtle. Posicion: (5, 2).
+[INFO] 23:05:27:531 gamecard/(20990:21057): Inicia proceso envio Appeared
+[INFO] 23:05:27:535 gamecard/(20990:21063): Cierro el archivo del pokemon: Jolteon. Posicion: (2, 2).
+[INFO] 23:05:27:535 gamecard/(20990:21063): Inicia proceso envio Appeared
+[INFO] 23:05:27:536 gamecard/(20990:21067): Cierro el archivo del pokemon: Flareon. Posicion: (4, 6).
+[INFO] 23:05:27:536 gamecard/(20990:21067): Inicia proceso envio Appeared
+[INFO] 23:05:43:15 gamecard/(20990:20995): Recibi mensaje get pokemon. El pokemon es: Vaporeon.
+[INFO] 23:05:43:15 gamecard/(20990:20995): Recibi mensaje get pokemon. El pokemon es: Jolteon.
+[INFO] 23:05:43:16 gamecard/(20990:20995): Recibi mensaje get pokemon. El pokemon es: Umbreon.
+[INFO] 23:05:43:16 gamecard/(20990:20995): Recibi mensaje get pokemon. El pokemon es: Flareon.
+[INFO] 23:05:43:16 gamecard/(20990:20995): Recibi mensaje get pokemon. El pokemon es: Espeon.
+[INFO] 23:05:43:21 gamecard/(20990:21136): Inicia proceso de atencion al Get
+[INFO] 23:05:43:22 gamecard/(20990:21136): Inicia proceso envio Localized
+[INFO] 23:05:43:23 gamecard/(20990:21134): Inicia proceso de atencion al Get
+[INFO] 23:05:43:23 gamecard/(20990:21138): Inicia proceso de atencion al Get
+[INFO] 23:05:43:23 gamecard/(20990:21140): Inicia proceso de atencion al Get
+[INFO] 23:05:43:25 gamecard/(20990:21140): Inicia proceso envio Localized
+[INFO] 23:05:43:26 gamecard/(20990:21132): Inicia proceso de atencion al Get
+[INFO] 23:05:43:27 gamecard/(20990:21132): Inicia proceso envio Localized
+[INFO] 23:05:48:25 gamecard/(20990:21134): Inicia proceso envio Localized
+[INFO] 23:05:48:26 gamecard/(20990:21138): Inicia proceso envio Localized
+[INFO] 23:05:51:918 gamecard/(20990:20995): Recibi mensaje get pokemon. El pokemon es: Squirtle.
+[INFO] 23:05:51:919 gamecard/(20990:20995): Recibi mensaje get pokemon. El pokemon es: Gengar.
+[INFO] 23:05:51:921 gamecard/(20990:21190): Inicia proceso de atencion al Get
+[INFO] 23:05:51:921 gamecard/(20990:20995): Recibi mensaje get pokemon. El pokemon es: Onix.
+[INFO] 23:05:51:923 gamecard/(20990:20995): Recibi mensaje get pokemon. El pokemon es: Pikachu.
+[INFO] 23:05:51:928 gamecard/(20990:21197): Inicia proceso de atencion al Get
+[INFO] 23:05:51:929 gamecard/(20990:21193): Inicia proceso de atencion al Get
+[INFO] 23:05:51:929 gamecard/(20990:21193): Inicia proceso envio Localized
+[INFO] 23:05:51:929 gamecard/(20990:21195): Inicia proceso de atencion al Get
+[INFO] 23:05:51:936 gamecard/(20990:21195): Inicia proceso envio Localized
+[INFO] 23:05:53:23 gamecard/(20990:20994): Recibi mensaje catch pokemon. El pokemon es: Jolteon. La posicion es: (2,2).
+[INFO] 23:05:53:31 gamecard/(20990:21214): Inicia proceso de atencion al Catch
+[INFO] 23:05:56:922 gamecard/(20990:21190): Inicia proceso envio Localized
+[INFO] 23:05:56:930 gamecard/(20990:21197): Inicia proceso envio Localized
+[INFO] 23:05:58:32 gamecard/(20990:21214): Cierro el archivo del pokemon: Jolteon. Posicion: (2, 2).
+[INFO] 23:05:58:32 gamecard/(20990:21214): Inicia proceso envio Caught
+[INFO] 23:06:13:26 gamecard/(20990:20994): Recibi mensaje catch pokemon. El pokemon es: Flareon. La posicion es: (4,6).
+[INFO] 23:06:13:35 gamecard/(20990:21252): Inicia proceso de atencion al Catch
+[INFO] 23:06:16:948 gamecard/(20990:20994): Recibi mensaje catch pokemon. El pokemon es: Squirtle. La posicion es: (5,2).
+[INFO] 23:06:16:951 gamecard/(20990:21258): Inicia proceso de atencion al Catch
+[INFO] 23:06:18:38 gamecard/(20990:21252): Cierro el archivo del pokemon: Flareon. Posicion: (4, 6).
+[INFO] 23:06:18:38 gamecard/(20990:21252): Inicia proceso envio Caught
+[INFO] 23:06:22:86 gamecard/(20990:21258): Cierro el archivo del pokemon: Squirtle. Posicion: (5, 2).
+[INFO] 23:06:22:86 gamecard/(20990:21258): Inicia proceso envio Caught
+[INFO] 23:07:26:958 gamecard/(20990:20994): Recibi mensaje catch pokemon. El pokemon es: Pikachu. La posicion es: (9,9).
+[INFO] 23:07:26:966 gamecard/(20990:21351): Inicia proceso de atencion al Catch
+[INFO] 23:07:31:971 gamecard/(20990:21351): Cierro el archivo del pokemon: Pikachu. Posicion: (9, 9).
+[INFO] 23:07:31:971 gamecard/(20990:21351): Inicia proceso envio Caught
+[INFO] 23:07:54:930 gamecard/(20990:20993): Recibi mensaje new pokemon. El pokemon es: Onix. La posicion es: (2,8). La cantidad es: 10.
+[INFO] 23:07:54:930 gamecard/(20990:21390): Inicia proceso de atencion al New
+[INFO] 23:07:54:952 gamecard/(20990:20993): Recibi mensaje new pokemon. El pokemon es: Gengar. La posicion es: (6,6). La cantidad es: 10.
+[INFO] 23:07:54:959 gamecard/(20990:21394): Inicia proceso de atencion al New
+[INFO] 23:07:54:980 gamecard/(20990:20993): Recibi mensaje new pokemon. El pokemon es: Squirtle. La posicion es: (5,5). La cantidad es: 10.
+[INFO] 23:07:54:984 gamecard/(20990:21400): Inicia proceso de atencion al New
+[INFO] 23:07:54:1 gamecard/(20990:20993): Recibi mensaje new pokemon. El pokemon es: Umbreon. La posicion es: (10,6). La cantidad es: 10.
+[INFO] 23:07:55:8 gamecard/(20990:21404): Inicia proceso de atencion al New
+[INFO] 23:07:55:23 gamecard/(20990:20993): Recibi mensaje new pokemon. El pokemon es: Espeon. La posicion es: (7,1). La cantidad es: 10.
+[INFO] 23:07:55:28 gamecard/(20990:21409): Inicia proceso de atencion al New
+[INFO] 23:07:55:32 gamecard/(20990:20993): Recibi mensaje new pokemon. El pokemon es: Vaporeon. La posicion es: (4,10). La cantidad es: 10.
+[INFO] 23:07:55:37 gamecard/(20990:21414): Inicia proceso de atencion al New
+[INFO] 23:07:59:936 gamecard/(20990:21390): Cierro el archivo del pokemon: Onix. Posicion: (2, 8).
+[INFO] 23:07:59:936 gamecard/(20990:21390): Inicia proceso envio Appeared
+[INFO] 23:07:59:966 gamecard/(20990:21394): Cierro el archivo del pokemon: Gengar. Posicion: (6, 6).
+[INFO] 23:07:59:966 gamecard/(20990:21394): Inicia proceso envio Appeared
+[INFO] 23:07:59:985 gamecard/(20990:21400): Cierro el archivo del pokemon: Squirtle. Posicion: (5, 5).
+[INFO] 23:07:59:985 gamecard/(20990:21400): Inicia proceso envio Appeared
+[INFO] 23:08:00:10 gamecard/(20990:21404): Cierro el archivo del pokemon: Umbreon. Posicion: (10, 6).
+[INFO] 23:08:00:10 gamecard/(20990:21404): Inicia proceso envio Appeared
+[INFO] 23:08:00:30 gamecard/(20990:21409): Cierro el archivo del pokemon: Espeon. Posicion: (7, 1).
+[INFO] 23:08:00:30 gamecard/(20990:21409): Inicia proceso envio Appeared
+[INFO] 23:08:00:40 gamecard/(20990:21414): Cierro el archivo del pokemon: Vaporeon. Posicion: (4, 10).
+[INFO] 23:08:00:40 gamecard/(20990:21414): Inicia proceso envio Appeared
+[INFO] 23:08:25:37 gamecard/(20990:20994): Recibi mensaje catch pokemon. El pokemon es: Umbreon. La posicion es: (10,6).
+[INFO] 23:08:25:44 gamecard/(20990:21475): Inicia proceso de atencion al Catch
+[INFO] 23:08:30:45 gamecard/(20990:21475): Cierro el archivo del pokemon: Umbreon. Posicion: (10, 6).
+[INFO] 23:08:30:45 gamecard/(20990:21475): Inicia proceso envio Caught
+[INFO] 23:08:34:959 gamecard/(20990:20994): Recibi mensaje catch pokemon. El pokemon es: Onix. La posicion es: (2,8).
+[INFO] 23:08:34:964 gamecard/(20990:21493): Inicia proceso de atencion al Catch
+[INFO] 23:08:39:991 gamecard/(20990:21493): Cierro el archivo del pokemon: Onix. Posicion: (2, 8).
+[INFO] 23:08:39:991 gamecard/(20990:21493): Inicia proceso envio Caught
+[INFO] 23:08:45:42 gamecard/(20990:20994): Recibi mensaje catch pokemon. El pokemon es: Espeon. La posicion es: (7,1).
+[INFO] 23:08:45:50 gamecard/(20990:21511): Inicia proceso de atencion al Catch
+[INFO] 23:08:50:54 gamecard/(20990:21511): Cierro el archivo del pokemon: Espeon. Posicion: (7, 1).
+[INFO] 23:08:50:54 gamecard/(20990:21511): Inicia proceso envio Caught
+[INFO] 23:09:04:968 gamecard/(20990:20994): Recibi mensaje catch pokemon. El pokemon es: Gengar. La posicion es: (6,6).
+[INFO] 23:09:04:975 gamecard/(20990:21543): Inicia proceso de atencion al Catch
+[INFO] 23:09:05:45 gamecard/(20990:20994): Recibi mensaje catch pokemon. El pokemon es: Vaporeon. La posicion es: (4,10).
+[INFO] 23:09:05:53 gamecard/(20990:21545): Inicia proceso de atencion al Catch
+[INFO] 23:09:09:977 gamecard/(20990:21543): Cierro el archivo del pokemon: Gengar. Posicion: (6, 6).
+[INFO] 23:09:09:977 gamecard/(20990:21543): Inicia proceso envio Caught
+[INFO] 23:09:10:58 gamecard/(20990:21545): Cierro el archivo del pokemon: Vaporeon. Posicion: (4, 10).
+[INFO] 23:09:10:58 gamecard/(20990:21545): Inicia proceso envio Caught
+[INFO] 23:09:49:976 gamecard/(20990:20994): Recibi mensaje catch pokemon. El pokemon es: Squirtle. La posicion es: (5,5).
+[INFO] 23:09:49:980 gamecard/(20990:21601): Inicia proceso de atencion al Catch
+[INFO] 23:09:54:982 gamecard/(20990:21601): Cierro el archivo del pokemon: Squirtle. Posicion: (5, 5).
+[INFO] 23:09:54:983 gamecard/(20990:21601): Inicia proceso envio Caught
+[INFO] 23:20:57:407 gamecard/(22513:22513): Inicio de programa: Gamecard.
+[INFO] 23:20:57:407 gamecard/(22513:22513): Se encontro el directorio metadata
+[INFO] 23:20:57:407 gamecard/(22513:22513): Se encontro el archivo metadata.bin
+[INFO] 23:20:57:407 gamecard/(22513:22513): Inicio de Metadata, Tamanio bloques: 64,  Cantidad de bloques: 1024,  Magic number: TALL_GRASS
+[INFO] 23:21:13:121 gamecard/(22531:22531): Inicio de programa: Gamecard.
+[INFO] 23:21:13:121 gamecard/(22531:22531): Se encontro el directorio metadata
+[INFO] 23:21:13:121 gamecard/(22531:22531): Se encontro el archivo metadata.bin
+[INFO] 23:21:13:121 gamecard/(22531:22531): Inicio de Metadata, Tamanio bloques: 64,  Cantidad de bloques: 1024,  Magic number: TALL_GRASS
+[INFO] 23:26:03:168 gamecard/(23278:23278): Inicio de programa: Gamecard.
+[INFO] 23:26:03:168 gamecard/(23278:23278): Se encontro el directorio metadata
+[INFO] 23:26:03:168 gamecard/(23278:23278): Se encontro el archivo metadata.bin
+[INFO] 23:26:03:168 gamecard/(23278:23278): Inicio de Metadata, Tamanio bloques: 64,  Cantidad de bloques: 1024,  Magic number: TALL_GRASS
+[INFO] 23:26:18:617 gamecard/(23335:23335): Inicio de programa: Gamecard.
+[INFO] 23:26:18:617 gamecard/(23335:23335): Se encontro el directorio metadata
+[INFO] 23:26:18:617 gamecard/(23335:23335): Se encontro el archivo metadata.bin
+[INFO] 23:26:18:617 gamecard/(23335:23335): Inicio de Metadata, Tamanio bloques: 64,  Cantidad de bloques: 1024,  Magic number: TALL_GRASS
+[INFO] 23:26:18:651 gamecard/(23335:23341): Estoy escuchando
+[INFO] 23:26:18:651 gamecard/(23335:23341): Espero un nuevo cliente
+[INFO] 23:26:18:652 gamecard/(23335:23344): Conexión fallida con el Broker
+
+[INFO] 23:26:18:652 gamecard/(23335:23344): Reintentando conexión en 10 segundos...
+
+[INFO] 23:26:18:652 gamecard/(23335:23343): Conexión fallida con el Broker
+
+[INFO] 23:26:18:652 gamecard/(23335:23343): Reintentando conexión en 10 segundos...
+
+[INFO] 23:26:18:656 gamecard/(23335:23342): Conexión fallida con el Broker
+
+[INFO] 23:26:18:656 gamecard/(23335:23342): Reintentando conexión en 10 segundos...
+
+[INFO] 23:27:15:447 gamecard/(23456:23456): Inicio de programa: Gamecard.
+[INFO] 23:27:15:447 gamecard/(23456:23456): Se encontro el directorio metadata
+[INFO] 23:27:15:447 gamecard/(23456:23456): Se encontro el archivo metadata.bin
+[INFO] 23:27:15:447 gamecard/(23456:23456): Inicio de Metadata, Tamanio bloques: 64,  Cantidad de bloques: 1024,  Magic number: TALL_GRASS
+[INFO] 23:27:15:525 gamecard/(23456:23462): Estoy escuchando
+[INFO] 23:27:15:525 gamecard/(23456:23462): Espero un nuevo cliente
+[INFO] 23:27:15:532 gamecard/(23456:23464): Conexión fallida con el Broker
+
+[INFO] 23:27:15:532 gamecard/(23456:23464): Reintentando conexión en 10 segundos...
+
+[INFO] 23:27:15:533 gamecard/(23456:23463): Conexión fallida con el Broker
+
+[INFO] 23:27:15:533 gamecard/(23456:23463): Reintentando conexión en 10 segundos...
+
+[INFO] 23:27:15:533 gamecard/(23456:23465): Conexión fallida con el Broker
+
+[INFO] 23:27:15:533 gamecard/(23456:23465): Reintentando conexión en 10 segundos...
+
+[INFO] 23:27:31:856 gamecard/(23523:23523): Inicio de programa: Gamecard.
+[INFO] 23:27:31:856 gamecard/(23523:23523): Se encontro el directorio metadata
+[INFO] 23:27:31:856 gamecard/(23523:23523): Se encontro el archivo metadata.bin
+[INFO] 23:27:31:856 gamecard/(23523:23523): Inicio de Metadata, Tamanio bloques: 64,  Cantidad de bloques: 1024,  Magic number: TALL_GRASS
+[INFO] 23:27:31:863 gamecard/(23523:23529): Estoy escuchando
+[INFO] 23:27:31:864 gamecard/(23523:23529): Espero un nuevo cliente
+[INFO] 23:27:31:864 gamecard/(23523:23530): Conexión fallida con el Broker
+
+[INFO] 23:27:31:864 gamecard/(23523:23530): Reintentando conexión en 10 segundos...
+
+[INFO] 23:27:31:864 gamecard/(23523:23532): Conexión fallida con el Broker
+
+[INFO] 23:27:31:864 gamecard/(23523:23532): Reintentando conexión en 10 segundos...
+
+[INFO] 23:27:31:870 gamecard/(23523:23531): Conexión fallida con el Broker
+
+[INFO] 23:27:31:870 gamecard/(23523:23531): Reintentando conexión en 10 segundos...
+
+[INFO] 23:27:41:864 gamecard/(23523:23530): Reintentando conexión en 10 segundos...
+
+[INFO] 23:27:41:864 gamecard/(23523:23532): Reintentando conexión en 10 segundos...
+
+[INFO] 23:27:41:871 gamecard/(23523:23531): Reintentando conexión en 10 segundos...
+
+[INFO] 23:27:51:865 gamecard/(23523:23532): El reintento de conexión no fue exitoso
+
+[INFO] 23:27:51:865 gamecard/(23523:23530): El reintento de conexión no fue exitoso
+
+[INFO] 23:27:51:865 gamecard/(23523:23532): Reintentando conexión en 10 segundos...
+
+[INFO] 23:27:51:865 gamecard/(23523:23530): Reintentando conexión en 10 segundos...
+
+[INFO] 23:27:51:872 gamecard/(23523:23531): El reintento de conexión no fue exitoso
+
+[INFO] 23:27:51:872 gamecard/(23523:23531): Reintentando conexión en 10 segundos...
+
+[INFO] 23:30:11:940 gamecard/(23765:23765): Inicio de programa: Gamecard.
+[INFO] 23:30:11:940 gamecard/(23765:23765): Se encontro el directorio metadata
+[INFO] 23:30:11:940 gamecard/(23765:23765): Se encontro el archivo metadata.bin
+[INFO] 23:30:11:940 gamecard/(23765:23765): Inicio de Metadata, Tamanio bloques: 64,  Cantidad de bloques: 1024,  Magic number: TALL_GRASS
+[INFO] 23:30:11:949 gamecard/(23765:23767): Estoy escuchando
+[INFO] 23:30:11:949 gamecard/(23765:23767): Espero un nuevo cliente
+[INFO] 23:30:40:237 gamecard/(23765:23768): Recibi mensaje new pokemon. El pokemon es: Pikachu. La posicion es: (9,9). La cantidad es: 10.
+[INFO] 23:30:40:237 gamecard/(23765:23807): Inicia proceso de atencion al New
+[INFO] 23:30:40:238 gamecard/(23765:23768): Recibi mensaje new pokemon. El pokemon es: Squirtle. La posicion es: (5,2). La cantidad es: 10.
+[INFO] 23:30:40:238 gamecard/(23765:23813): Inicia proceso de atencion al New
+[INFO] 23:30:40:239 gamecard/(23765:23768): Recibi mensaje new pokemon. El pokemon es: Jolteon. La posicion es: (2,2). La cantidad es: 10.
+[INFO] 23:30:40:240 gamecard/(23765:23817): Inicia proceso de atencion al New
+[INFO] 23:30:40:241 gamecard/(23765:23768): Recibi mensaje new pokemon. El pokemon es: Flareon. La posicion es: (4,6). La cantidad es: 10.
+[INFO] 23:30:40:242 gamecard/(23765:23822): Inicia proceso de atencion al New
+[INFO] 23:30:45:239 gamecard/(23765:23807): Cierro el archivo del pokemon: Pikachu. Posicion: (9, 9).
+[INFO] 23:30:45:239 gamecard/(23765:23807): Inicia proceso envio Appeared
+[INFO] 23:30:45:239 gamecard/(23765:23813): Cierro el archivo del pokemon: Squirtle. Posicion: (5, 2).
+[INFO] 23:30:45:239 gamecard/(23765:23813): Inicia proceso envio Appeared
+[INFO] 23:30:45:240 gamecard/(23765:23817): Cierro el archivo del pokemon: Jolteon. Posicion: (2, 2).
+[INFO] 23:30:45:240 gamecard/(23765:23817): Inicia proceso envio Appeared
+[INFO] 23:30:45:242 gamecard/(23765:23822): Cierro el archivo del pokemon: Flareon. Posicion: (4, 6).
+[INFO] 23:30:45:242 gamecard/(23765:23822): Inicia proceso envio Appeared
+[INFO] 23:30:50:213 gamecard/(23765:23770): Recibi mensaje get pokemon. El pokemon es: Vaporeon.
+[INFO] 23:30:50:214 gamecard/(23765:23863): Inicia proceso de atencion al Get
+[INFO] 23:30:50:214 gamecard/(23765:23770): Recibi mensaje get pokemon. El pokemon es: Espeon.
+[INFO] 23:30:50:214 gamecard/(23765:23770): Recibi mensaje get pokemon. El pokemon es: Flareon.
+[INFO] 23:30:50:215 gamecard/(23765:23770): Recibi mensaje get pokemon. El pokemon es: Umbreon.
+[INFO] 23:30:50:215 gamecard/(23765:23863): Inicia proceso envio Localized
+[INFO] 23:30:50:215 gamecard/(23765:23770): Recibi mensaje get pokemon. El pokemon es: Jolteon.
+[INFO] 23:30:50:216 gamecard/(23765:23865): Inicia proceso de atencion al Get
+[INFO] 23:30:50:216 gamecard/(23765:23867): Inicia proceso de atencion al Get
+[INFO] 23:30:50:216 gamecard/(23765:23865): Inicia proceso envio Localized
+[INFO] 23:30:50:218 gamecard/(23765:23869): Inicia proceso de atencion al Get
+[INFO] 23:30:50:218 gamecard/(23765:23869): Inicia proceso envio Localized
+[INFO] 23:30:50:219 gamecard/(23765:23872): Inicia proceso de atencion al Get
+[INFO] 23:30:55:225 gamecard/(23765:23872): Inicia proceso envio Localized
+[INFO] 23:30:55:225 gamecard/(23765:23867): Inicia proceso envio Localized
+[INFO] 23:31:05:679 gamecard/(23765:23770): Recibi mensaje get pokemon. El pokemon es: Squirtle.
+[INFO] 23:31:05:680 gamecard/(23765:23770): Recibi mensaje get pokemon. El pokemon es: Onix.
+[INFO] 23:31:05:682 gamecard/(23765:23770): Recibi mensaje get pokemon. El pokemon es: Pikachu.
+[INFO] 23:31:05:682 gamecard/(23765:23770): Recibi mensaje get pokemon. El pokemon es: Gengar.
+[INFO] 23:31:05:683 gamecard/(23765:23933): Inicia proceso de atencion al Get
+[INFO] 23:31:05:685 gamecard/(23765:23939): Inicia proceso de atencion al Get
+[INFO] 23:31:05:685 gamecard/(23765:23937): Inicia proceso de atencion al Get
+[INFO] 23:31:05:685 gamecard/(23765:23935): Inicia proceso de atencion al Get
+[INFO] 23:31:05:687 gamecard/(23765:23935): Inicia proceso envio Localized
+[INFO] 23:31:05:688 gamecard/(23765:23939): Inicia proceso envio Localized
+[INFO] 23:31:10:688 gamecard/(23765:23933): Inicia proceso envio Localized
+[INFO] 23:31:10:690 gamecard/(23765:23937): Inicia proceso envio Localized
+[INFO] 23:31:15:235 gamecard/(23765:23769): Recibi mensaje catch pokemon. El pokemon es: Jolteon. La posicion es: (2,2).
+[INFO] 23:31:15:240 gamecard/(23765:23973): Inicia proceso de atencion al Catch
+[INFO] 23:31:20:389 gamecard/(23765:23973): Cierro el archivo del pokemon: Jolteon. Posicion: (2, 2).
+[INFO] 23:31:20:389 gamecard/(23765:23973): Inicia proceso envio Caught
+[INFO] 23:31:25:238 gamecard/(23765:23769): Recibi mensaje catch pokemon. El pokemon es: Flareon. La posicion es: (4,6).
+[INFO] 23:31:25:241 gamecard/(23765:23989): Inicia proceso de atencion al Catch
+[INFO] 23:31:30:301 gamecard/(23765:23989): Cierro el archivo del pokemon: Flareon. Posicion: (4, 6).
+[INFO] 23:31:30:301 gamecard/(23765:23989): Inicia proceso envio Caught
+[INFO] 23:31:30:704 gamecard/(23765:23769): Recibi mensaje catch pokemon. El pokemon es: Squirtle. La posicion es: (5,2).
+[INFO] 23:31:30:708 gamecard/(23765:24001): Inicia proceso de atencion al Catch
+[INFO] 23:31:35:711 gamecard/(23765:24001): Cierro el archivo del pokemon: Squirtle. Posicion: (5, 2).
+[INFO] 23:31:35:711 gamecard/(23765:24001): Inicia proceso envio Caught
+[INFO] 23:32:40:719 gamecard/(23765:23769): Recibi mensaje catch pokemon. El pokemon es: Pikachu. La posicion es: (9,9).
+[INFO] 23:32:40:724 gamecard/(23765:24099): Inicia proceso de atencion al Catch
+[INFO] 23:32:45:735 gamecard/(23765:24099): Cierro el archivo del pokemon: Pikachu. Posicion: (9, 9).
+[INFO] 23:32:45:735 gamecard/(23765:24099): Inicia proceso envio Caught
+[INFO] 23:33:31:892 gamecard/(23765:23768): Recibi mensaje new pokemon. El pokemon es: Onix. La posicion es: (2,8). La cantidad es: 10.
+[INFO] 23:33:31:897 gamecard/(23765:24161): Inicia proceso de atencion al New
+[INFO] 23:33:31:900 gamecard/(23765:23768): Recibi mensaje new pokemon. El pokemon es: Gengar. La posicion es: (6,6). La cantidad es: 10.
+[INFO] 23:33:31:909 gamecard/(23765:24164): Inicia proceso de atencion al New
+[INFO] 23:33:31:914 gamecard/(23765:23768): Recibi mensaje new pokemon. El pokemon es: Squirtle. La posicion es: (5,5). La cantidad es: 10.
+[INFO] 23:33:31:921 gamecard/(23765:24170): Inicia proceso de atencion al New
+[INFO] 23:33:31:925 gamecard/(23765:23768): Recibi mensaje new pokemon. El pokemon es: Umbreon. La posicion es: (10,6). La cantidad es: 10.
+[INFO] 23:33:31:937 gamecard/(23765:24176): Inicia proceso de atencion al New
+[INFO] 23:33:31:949 gamecard/(23765:23768): Recibi mensaje new pokemon. El pokemon es: Espeon. La posicion es: (7,1). La cantidad es: 10.
+[INFO] 23:33:31:954 gamecard/(23765:24181): Inicia proceso de atencion al New
+[INFO] 23:33:31:961 gamecard/(23765:23768): Recibi mensaje new pokemon. El pokemon es: Vaporeon. La posicion es: (4,10). La cantidad es: 10.
+[INFO] 23:33:31:964 gamecard/(23765:24185): Inicia proceso de atencion al New
+[INFO] 23:33:36:901 gamecard/(23765:24161): Cierro el archivo del pokemon: Onix. Posicion: (2, 8).
+[INFO] 23:33:36:901 gamecard/(23765:24161): Inicia proceso envio Appeared
+[INFO] 23:33:36:910 gamecard/(23765:24164): Cierro el archivo del pokemon: Gengar. Posicion: (6, 6).
+[INFO] 23:33:36:910 gamecard/(23765:24164): Inicia proceso envio Appeared
+[INFO] 23:33:36:923 gamecard/(23765:24170): Cierro el archivo del pokemon: Squirtle. Posicion: (5, 5).
+[INFO] 23:33:36:923 gamecard/(23765:24170): Inicia proceso envio Appeared
+[INFO] 23:33:36:946 gamecard/(23765:24176): Cierro el archivo del pokemon: Umbreon. Posicion: (10, 6).
+[INFO] 23:33:36:947 gamecard/(23765:24176): Inicia proceso envio Appeared
+[INFO] 23:33:36:956 gamecard/(23765:24181): Cierro el archivo del pokemon: Espeon. Posicion: (7, 1).
+[INFO] 23:33:36:956 gamecard/(23765:24181): Inicia proceso envio Appeared
+[INFO] 23:33:36:976 gamecard/(23765:24185): Cierro el archivo del pokemon: Vaporeon. Posicion: (4, 10).
+[INFO] 23:33:36:976 gamecard/(23765:24185): Inicia proceso envio Appeared
+[INFO] 23:34:11:939 gamecard/(23765:23769): Recibi mensaje catch pokemon. El pokemon es: Onix. La posicion es: (2,8).
+[INFO] 23:34:11:944 gamecard/(23765:24270): Inicia proceso de atencion al Catch
+[INFO] 23:34:16:946 gamecard/(23765:24270): Cierro el archivo del pokemon: Onix. Posicion: (2, 8).
+[INFO] 23:34:16:946 gamecard/(23765:24270): Inicia proceso envio Caught
+[INFO] 23:34:31:971 gamecard/(23765:23769): Recibi mensaje catch pokemon. El pokemon es: Espeon. La posicion es: (7,1).
+[INFO] 23:34:31:980 gamecard/(23765:24303): Inicia proceso de atencion al Catch
+[INFO] 23:34:36:973 gamecard/(23765:23769): Recibi mensaje catch pokemon. El pokemon es: Vaporeon. La posicion es: (4,10).
+[INFO] 23:34:36:980 gamecard/(23765:24310): Inicia proceso de atencion al Catch
+[INFO] 23:34:36:983 gamecard/(23765:24303): Cierro el archivo del pokemon: Espeon. Posicion: (7, 1).
+[INFO] 23:34:36:983 gamecard/(23765:24303): Inicia proceso envio Caught
+[INFO] 23:34:41:945 gamecard/(23765:23769): Recibi mensaje catch pokemon. El pokemon es: Gengar. La posicion es: (6,6).
+[INFO] 23:34:41:952 gamecard/(23765:24323): Inicia proceso de atencion al Catch
+[INFO] 23:34:41:974 gamecard/(23765:23769): Recibi mensaje catch pokemon. El pokemon es: Umbreon. La posicion es: (10,6).
+[INFO] 23:34:41:980 gamecard/(23765:24325): Inicia proceso de atencion al Catch
+[INFO] 23:34:41:983 gamecard/(23765:24310): Cierro el archivo del pokemon: Vaporeon. Posicion: (4, 10).
+[INFO] 23:34:41:983 gamecard/(23765:24310): Inicia proceso envio Caught
+[INFO] 23:34:47:44 gamecard/(23765:24323): Cierro el archivo del pokemon: Gengar. Posicion: (6, 6).
+[INFO] 23:34:47:44 gamecard/(23765:24323): Inicia proceso envio Caught
+[INFO] 23:34:47:44 gamecard/(23765:24325): Cierro el archivo del pokemon: Umbreon. Posicion: (10, 6).
+[INFO] 23:34:47:44 gamecard/(23765:24325): Inicia proceso envio Caught
+[INFO] 23:35:26:953 gamecard/(23765:23769): Recibi mensaje catch pokemon. El pokemon es: Squirtle. La posicion es: (5,5).
+[INFO] 23:35:26:964 gamecard/(23765:24386): Inicia proceso de atencion al Catch
+[INFO] 23:35:32:43 gamecard/(23765:24386): Cierro el archivo del pokemon: Squirtle. Posicion: (5, 5).
+[INFO] 23:35:32:43 gamecard/(23765:24386): Inicia proceso envio Caught
+[INFO] 23:42:03:510 gamecard/(23765:23770): Conexión fallida con el Broker
+
+[INFO] 23:42:03:510 gamecard/(23765:23768): Conexión fallida con el Broker
+
+[INFO] 23:42:03:510 gamecard/(23765:23769): Conexión fallida con el Broker
+
+[INFO] 23:42:03:510 gamecard/(23765:23770): Reintentando conexión en 10 segundos...
+
+[INFO] 23:42:03:510 gamecard/(23765:23769): Reintentando conexión en 10 segundos...
+
+[INFO] 23:42:03:510 gamecard/(23765:23768): Reintentando conexión en 10 segundos...
+
+[INFO] 23:42:13:511 gamecard/(23765:23768): Reintentando conexión en 10 segundos...
+
+[INFO] 23:42:13:511 gamecard/(23765:23770): Reintentando conexión en 10 segundos...
+
+[INFO] 23:42:13:513 gamecard/(23765:23769): Reintentando conexión en 10 segundos...
+
+[INFO] 23:42:23:511 gamecard/(23765:23768): El reintento de conexión no fue exitoso
+
+[INFO] 23:42:23:512 gamecard/(23765:23768): Reintentando conexión en 10 segundos...
+
+[INFO] 23:42:23:512 gamecard/(23765:23770): El reintento de conexión no fue exitoso
+
+[INFO] 23:42:23:512 gamecard/(23765:23770): Reintentando conexión en 10 segundos...
+
+[INFO] 23:42:23:513 gamecard/(23765:23769): El reintento de conexión no fue exitoso
+
+[INFO] 23:42:23:513 gamecard/(23765:23769): Reintentando conexión en 10 segundos...
+
+[INFO] 23:42:33:515 gamecard/(23765:23769): El reintento de conexión no fue exitoso
+
+[INFO] 23:42:33:515 gamecard/(23765:23769): Reintentando conexión en 10 segundos...
+
+[INFO] 23:42:33:515 gamecard/(23765:23770): El reintento de conexión no fue exitoso
+
+[INFO] 23:42:33:515 gamecard/(23765:23770): Reintentando conexión en 10 segundos...
+
+[INFO] 23:42:33:515 gamecard/(23765:23768): El reintento de conexión no fue exitoso
+
+[INFO] 23:42:33:515 gamecard/(23765:23768): Reintentando conexión en 10 segundos...
+
+[INFO] 23:42:43:515 gamecard/(23765:23770): El reintento de conexión no fue exitoso
+
+[INFO] 23:42:43:515 gamecard/(23765:23768): El reintento de conexión no fue exitoso
+
+[INFO] 23:42:43:515 gamecard/(23765:23769): El reintento de conexión no fue exitoso
+
+[INFO] 23:42:43:515 gamecard/(23765:23770): Reintentando conexión en 10 segundos...
+
+[INFO] 23:42:43:515 gamecard/(23765:23768): Reintentando conexión en 10 segundos...
+
+[INFO] 23:42:43:515 gamecard/(23765:23769): Reintentando conexión en 10 segundos...
+
+[INFO] 23:42:53:516 gamecard/(23765:23770): El reintento de conexión no fue exitoso
+
+[INFO] 23:42:53:516 gamecard/(23765:23770): Reintentando conexión en 10 segundos...
+
+[INFO] 23:42:53:516 gamecard/(23765:23769): El reintento de conexión no fue exitoso
+
+[INFO] 23:42:53:516 gamecard/(23765:23769): Reintentando conexión en 10 segundos...
+
+[INFO] 23:42:53:516 gamecard/(23765:23768): El reintento de conexión no fue exitoso
+
+[INFO] 23:42:53:516 gamecard/(23765:23768): Reintentando conexión en 10 segundos...
+
+[INFO] 23:43:03:517 gamecard/(23765:23769): El reintento de conexión no fue exitoso
+
+[INFO] 23:43:03:517 gamecard/(23765:23770): El reintento de conexión no fue exitoso
+
+[INFO] 23:43:03:517 gamecard/(23765:23768): El reintento de conexión no fue exitoso
+
+[INFO] 23:43:03:517 gamecard/(23765:23769): Reintentando conexión en 10 segundos...
+
+[INFO] 23:43:03:517 gamecard/(23765:23770): Reintentando conexión en 10 segundos...
+
+[INFO] 23:43:03:517 gamecard/(23765:23768): Reintentando conexión en 10 segundos...
+
+[INFO] 23:43:13:518 gamecard/(23765:23769): El reintento de conexión no fue exitoso
+
+[INFO] 23:43:13:518 gamecard/(23765:23769): Reintentando conexión en 10 segundos...
+
+[INFO] 23:43:13:520 gamecard/(23765:23768): El reintento de conexión no fue exitoso
+
+[INFO] 23:43:13:520 gamecard/(23765:23770): El reintento de conexión no fue exitoso
+
+[INFO] 23:43:13:520 gamecard/(23765:23768): Reintentando conexión en 10 segundos...
+
+[INFO] 23:43:13:520 gamecard/(23765:23770): Reintentando conexión en 10 segundos...
+
+[INFO] 23:43:23:519 gamecard/(23765:23769): El reintento de conexión no fue exitoso
+
+[INFO] 23:43:23:519 gamecard/(23765:23769): Reintentando conexión en 10 segundos...
+
+[INFO] 23:43:23:521 gamecard/(23765:23768): El reintento de conexión no fue exitoso
+
+[INFO] 23:43:23:521 gamecard/(23765:23768): Reintentando conexión en 10 segundos...
+
+[INFO] 23:43:23:521 gamecard/(23765:23770): El reintento de conexión no fue exitoso
+
+[INFO] 23:43:23:521 gamecard/(23765:23770): Reintentando conexión en 10 segundos...
+
+[INFO] 23:43:33:520 gamecard/(23765:23769): El reintento de conexión no fue exitoso
+
+[INFO] 23:43:33:520 gamecard/(23765:23769): Reintentando conexión en 10 segundos...
+
+[INFO] 23:43:33:522 gamecard/(23765:23770): El reintento de conexión no fue exitoso
+
+[INFO] 23:43:33:522 gamecard/(23765:23770): Reintentando conexión en 10 segundos...
+
+[INFO] 23:43:33:522 gamecard/(23765:23768): El reintento de conexión no fue exitoso
+
+[INFO] 23:43:33:522 gamecard/(23765:23768): Reintentando conexión en 10 segundos...
+
+[INFO] 23:43:43:520 gamecard/(23765:23769): El reintento de conexión no fue exitoso
+
+[INFO] 23:43:43:521 gamecard/(23765:23769): Reintentando conexión en 10 segundos...
+
+[INFO] 23:43:43:522 gamecard/(23765:23770): El reintento de conexión no fue exitoso
+
+[INFO] 23:43:43:522 gamecard/(23765:23770): Reintentando conexión en 10 segundos...
+
+[INFO] 23:43:43:523 gamecard/(23765:23768): El reintento de conexión no fue exitoso
+
+[INFO] 23:43:43:523 gamecard/(23765:23768): Reintentando conexión en 10 segundos...
+
+[INFO] 23:43:53:521 gamecard/(23765:23769): El reintento de conexión no fue exitoso
+
+[INFO] 23:43:53:521 gamecard/(23765:23769): Reintentando conexión en 10 segundos...
+
+[INFO] 23:43:53:523 gamecard/(23765:23770): El reintento de conexión no fue exitoso
+
+[INFO] 23:43:53:523 gamecard/(23765:23770): Reintentando conexión en 10 segundos...
+
+[INFO] 23:43:53:523 gamecard/(23765:23768): El reintento de conexión no fue exitoso
+
+[INFO] 23:43:53:523 gamecard/(23765:23768): Reintentando conexión en 10 segundos...
+
+[INFO] 23:44:03:522 gamecard/(23765:23769): El reintento de conexión no fue exitoso
+
+[INFO] 23:44:03:522 gamecard/(23765:23769): Reintentando conexión en 10 segundos...
+
+[INFO] 23:44:03:526 gamecard/(23765:23770): El reintento de conexión no fue exitoso
+
+[INFO] 23:44:03:526 gamecard/(23765:23768): El reintento de conexión no fue exitoso
+
+[INFO] 23:44:03:526 gamecard/(23765:23770): Reintentando conexión en 10 segundos...
+
+[INFO] 23:44:03:526 gamecard/(23765:23768): Reintentando conexión en 10 segundos...
+
+[INFO] 23:44:13:523 gamecard/(23765:23769): El reintento de conexión no fue exitoso
+
+[INFO] 23:44:13:523 gamecard/(23765:23769): Reintentando conexión en 10 segundos...
+
+[INFO] 23:44:13:527 gamecard/(23765:23768): El reintento de conexión no fue exitoso
+
+[INFO] 23:44:13:527 gamecard/(23765:23770): El reintento de conexión no fue exitoso
+
+[INFO] 23:44:13:527 gamecard/(23765:23768): Reintentando conexión en 10 segundos...
+
+[INFO] 23:44:13:527 gamecard/(23765:23770): Reintentando conexión en 10 segundos...
+
+[INFO] 23:44:23:523 gamecard/(23765:23769): El reintento de conexión no fue exitoso
+
+[INFO] 23:44:23:524 gamecard/(23765:23769): Reintentando conexión en 10 segundos...
+
+[INFO] 23:44:23:528 gamecard/(23765:23770): El reintento de conexión no fue exitoso
+
+[INFO] 23:44:23:528 gamecard/(23765:23770): Reintentando conexión en 10 segundos...
+
+[INFO] 23:44:23:528 gamecard/(23765:23768): El reintento de conexión no fue exitoso
+
+[INFO] 23:44:23:528 gamecard/(23765:23768): Reintentando conexión en 10 segundos...
+
+[INFO] 23:44:33:524 gamecard/(23765:23769): El reintento de conexión no fue exitoso
+
+[INFO] 23:44:33:524 gamecard/(23765:23769): Reintentando conexión en 10 segundos...
+
+[INFO] 23:44:33:530 gamecard/(23765:23768): El reintento de conexión no fue exitoso
+
+[INFO] 23:44:33:530 gamecard/(23765:23768): Reintentando conexión en 10 segundos...
+
+[INFO] 23:44:33:530 gamecard/(23765:23770): El reintento de conexión no fue exitoso
+
+[INFO] 23:44:33:530 gamecard/(23765:23770): Reintentando conexión en 10 segundos...
+
+[INFO] 23:44:43:525 gamecard/(23765:23769): El reintento de conexión no fue exitoso
+
+[INFO] 23:44:43:525 gamecard/(23765:23769): Reintentando conexión en 10 segundos...
+
+[INFO] 23:44:43:531 gamecard/(23765:23768): El reintento de conexión no fue exitoso
+
+[INFO] 23:44:43:531 gamecard/(23765:23768): Reintentando conexión en 10 segundos...
+
+[INFO] 23:44:43:534 gamecard/(23765:23770): El reintento de conexión no fue exitoso
+
+[INFO] 23:44:43:534 gamecard/(23765:23770): Reintentando conexión en 10 segundos...
+
+[INFO] 23:44:53:526 gamecard/(23765:23769): El reintento de conexión no fue exitoso
+
+[INFO] 23:44:53:526 gamecard/(23765:23769): Reintentando conexión en 10 segundos...
+
+[INFO] 23:44:53:537 gamecard/(23765:23770): El reintento de conexión no fue exitoso
+
+[INFO] 23:44:53:538 gamecard/(23765:23770): Reintentando conexión en 10 segundos...
+
+[INFO] 23:44:53:538 gamecard/(23765:23768): El reintento de conexión no fue exitoso
+
+[INFO] 23:44:53:538 gamecard/(23765:23768): Reintentando conexión en 10 segundos...
+
+[INFO] 23:45:03:527 gamecard/(23765:23769): El reintento de conexión no fue exitoso
+
+[INFO] 23:45:03:527 gamecard/(23765:23769): Reintentando conexión en 10 segundos...
+
+[INFO] 23:45:03:539 gamecard/(23765:23768): El reintento de conexión no fue exitoso
+
+[INFO] 23:45:03:539 gamecard/(23765:23770): El reintento de conexión no fue exitoso
+
+[INFO] 23:45:03:539 gamecard/(23765:23768): Reintentando conexión en 10 segundos...
+
+[INFO] 23:45:03:539 gamecard/(23765:23770): Reintentando conexión en 10 segundos...
+
+[INFO] 23:45:13:531 gamecard/(23765:23769): El reintento de conexión no fue exitoso
+
+[INFO] 23:45:13:531 gamecard/(23765:23769): Reintentando conexión en 10 segundos...
+
+[INFO] 23:45:13:540 gamecard/(23765:23770): El reintento de conexión no fue exitoso
+
+[INFO] 23:45:13:540 gamecard/(23765:23768): El reintento de conexión no fue exitoso
+
+[INFO] 23:45:13:540 gamecard/(23765:23770): Reintentando conexión en 10 segundos...
+
+[INFO] 23:45:13:540 gamecard/(23765:23768): Reintentando conexión en 10 segundos...
+
+[INFO] 23:45:23:550 gamecard/(23765:23769): El reintento de conexión no fue exitoso
+
+[INFO] 23:45:23:550 gamecard/(23765:23769): Reintentando conexión en 10 segundos...
+
+[INFO] 23:45:23:554 gamecard/(23765:23770): El reintento de conexión no fue exitoso
+
+[INFO] 23:45:23:554 gamecard/(23765:23768): El reintento de conexión no fue exitoso
+
+[INFO] 23:45:23:554 gamecard/(23765:23770): Reintentando conexión en 10 segundos...
+
+[INFO] 23:45:23:554 gamecard/(23765:23768): Reintentando conexión en 10 segundos...
+
+[INFO] 23:45:33:559 gamecard/(23765:23770): El reintento de conexión no fue exitoso
+
+[INFO] 23:45:33:559 gamecard/(23765:23770): Reintentando conexión en 10 segundos...
+
+[INFO] 23:45:33:559 gamecard/(23765:23768): El reintento de conexión no fue exitoso
+
+[INFO] 23:45:33:559 gamecard/(23765:23768): Reintentando conexión en 10 segundos...
+
+[INFO] 23:45:33:559 gamecard/(23765:23769): El reintento de conexión no fue exitoso
+
+[INFO] 23:45:33:559 gamecard/(23765:23769): Reintentando conexión en 10 segundos...
+
+[INFO] 23:45:43:569 gamecard/(23765:23769): El reintento de conexión no fue exitoso
+
+[INFO] 23:45:43:569 gamecard/(23765:23769): Reintentando conexión en 10 segundos...
+
+[INFO] 23:45:43:569 gamecard/(23765:23768): El reintento de conexión no fue exitoso
+
+[INFO] 23:45:43:569 gamecard/(23765:23768): Reintentando conexión en 10 segundos...
+
+[INFO] 23:45:43:569 gamecard/(23765:23770): El reintento de conexión no fue exitoso
+
+[INFO] 23:45:43:569 gamecard/(23765:23770): Reintentando conexión en 10 segundos...
+
+[INFO] 23:45:53:588 gamecard/(23765:23768): El reintento de conexión no fue exitoso
+
+[INFO] 23:45:53:588 gamecard/(23765:23770): El reintento de conexión no fue exitoso
+
+[INFO] 23:45:53:588 gamecard/(23765:23769): El reintento de conexión no fue exitoso
+
+[INFO] 23:45:53:589 gamecard/(23765:23768): Reintentando conexión en 10 segundos...
+
+[INFO] 23:45:53:589 gamecard/(23765:23769): Reintentando conexión en 10 segundos...
+
+[INFO] 23:45:53:589 gamecard/(23765:23770): Reintentando conexión en 10 segundos...
+
+[INFO] 23:46:03:626 gamecard/(23765:23768): El reintento de conexión no fue exitoso
+
+[INFO] 23:46:03:626 gamecard/(23765:23768): Reintentando conexión en 10 segundos...
+
+[INFO] 23:46:03:626 gamecard/(23765:23770): El reintento de conexión no fue exitoso
+
+[INFO] 23:46:03:626 gamecard/(23765:23769): El reintento de conexión no fue exitoso
+
+[INFO] 23:46:03:626 gamecard/(23765:23770): Reintentando conexión en 10 segundos...
+
+[INFO] 23:46:03:626 gamecard/(23765:23769): Reintentando conexión en 10 segundos...
+
+[INFO] 23:46:13:638 gamecard/(23765:23768): El reintento de conexión no fue exitoso
+
+[INFO] 23:46:13:639 gamecard/(23765:23768): Reintentando conexión en 10 segundos...
+
+[INFO] 23:46:13:639 gamecard/(23765:23769): El reintento de conexión no fue exitoso
+
+[INFO] 23:46:13:639 gamecard/(23765:23769): Reintentando conexión en 10 segundos...
+
+[INFO] 23:46:13:639 gamecard/(23765:23770): El reintento de conexión no fue exitoso
+
+[INFO] 23:46:13:639 gamecard/(23765:23770): Reintentando conexión en 10 segundos...
+
+[INFO] 23:46:23:643 gamecard/(23765:23770): El reintento de conexión no fue exitoso
+
+[INFO] 23:46:23:643 gamecard/(23765:23770): Reintentando conexión en 10 segundos...
+
+[INFO] 23:46:23:643 gamecard/(23765:23769): El reintento de conexión no fue exitoso
+
+[INFO] 23:46:23:643 gamecard/(23765:23769): Reintentando conexión en 10 segundos...
+
+[INFO] 23:46:23:643 gamecard/(23765:23768): El reintento de conexión no fue exitoso
+
+[INFO] 23:46:23:643 gamecard/(23765:23768): Reintentando conexión en 10 segundos...
+
+[INFO] 23:46:33:644 gamecard/(23765:23768): El reintento de conexión no fue exitoso
+
+[INFO] 23:46:33:644 gamecard/(23765:23769): El reintento de conexión no fue exitoso
+
+[INFO] 23:46:33:645 gamecard/(23765:23770): El reintento de conexión no fue exitoso
+
+[INFO] 23:46:33:645 gamecard/(23765:23768): Reintentando conexión en 10 segundos...
+
+[INFO] 23:46:33:645 gamecard/(23765:23769): Reintentando conexión en 10 segundos...
+
+[INFO] 23:46:33:645 gamecard/(23765:23770): Reintentando conexión en 10 segundos...
+
+[INFO] 23:46:43:645 gamecard/(23765:23769): El reintento de conexión no fue exitoso
+
+[INFO] 23:46:43:645 gamecard/(23765:23768): El reintento de conexión no fue exitoso
+
+[INFO] 23:46:43:645 gamecard/(23765:23770): El reintento de conexión no fue exitoso
+
+[INFO] 23:46:43:645 gamecard/(23765:23769): Reintentando conexión en 10 segundos...
+
+[INFO] 23:46:43:645 gamecard/(23765:23768): Reintentando conexión en 10 segundos...
+
+[INFO] 23:46:43:645 gamecard/(23765:23770): Reintentando conexión en 10 segundos...
+
+[INFO] 23:46:53:646 gamecard/(23765:23770): El reintento de conexión no fue exitoso
+
+[INFO] 23:46:53:646 gamecard/(23765:23770): Reintentando conexión en 10 segundos...
+
+[INFO] 23:46:53:646 gamecard/(23765:23768): El reintento de conexión no fue exitoso
+
+[INFO] 23:46:53:646 gamecard/(23765:23768): Reintentando conexión en 10 segundos...
+
+[INFO] 23:46:53:647 gamecard/(23765:23769): El reintento de conexión no fue exitoso
+
+[INFO] 23:46:53:647 gamecard/(23765:23769): Reintentando conexión en 10 segundos...
+
+[INFO] 23:47:03:647 gamecard/(23765:23768): El reintento de conexión no fue exitoso
+
+[INFO] 23:47:03:647 gamecard/(23765:23768): Reintentando conexión en 10 segundos...
+
+[INFO] 23:47:03:647 gamecard/(23765:23770): El reintento de conexión no fue exitoso
+
+[INFO] 23:47:03:647 gamecard/(23765:23770): Reintentando conexión en 10 segundos...
+
+[INFO] 23:47:03:647 gamecard/(23765:23769): El reintento de conexión no fue exitoso
+
+[INFO] 23:47:03:647 gamecard/(23765:23769): Reintentando conexión en 10 segundos...
+
+[INFO] 23:47:13:647 gamecard/(23765:23768): El reintento de conexión no fue exitoso
+
+[INFO] 23:47:13:647 gamecard/(23765:23770): El reintento de conexión no fue exitoso
+
+[INFO] 23:47:13:647 gamecard/(23765:23770): Reintentando conexión en 10 segundos...
+
+[INFO] 23:47:13:647 gamecard/(23765:23769): El reintento de conexión no fue exitoso
+
+[INFO] 23:47:13:647 gamecard/(23765:23769): Reintentando conexión en 10 segundos...
+
+[INFO] 23:47:13:647 gamecard/(23765:23768): Reintentando conexión en 10 segundos...
+
+[INFO] 23:47:23:648 gamecard/(23765:23770): El reintento de conexión no fue exitoso
+
+[INFO] 23:47:23:649 gamecard/(23765:23770): Reintentando conexión en 10 segundos...
+
+[INFO] 23:47:23:650 gamecard/(23765:23769): El reintento de conexión no fue exitoso
+
+[INFO] 23:47:23:650 gamecard/(23765:23768): El reintento de conexión no fue exitoso
+
+[INFO] 23:47:23:650 gamecard/(23765:23769): Reintentando conexión en 10 segundos...
+
+[INFO] 23:47:23:650 gamecard/(23765:23768): Reintentando conexión en 10 segundos...
+
+[INFO] 23:47:33:685 gamecard/(23765:23769): El reintento de conexión no fue exitoso
+
+[INFO] 23:47:33:685 gamecard/(23765:23769): Reintentando conexión en 10 segundos...
+
+[INFO] 23:47:33:686 gamecard/(23765:23768): El reintento de conexión no fue exitoso
+
+[INFO] 23:47:33:686 gamecard/(23765:23768): Reintentando conexión en 10 segundos...
+
+[INFO] 23:47:33:686 gamecard/(23765:23770): El reintento de conexión no fue exitoso
+
+[INFO] 23:47:33:686 gamecard/(23765:23770): Reintentando conexión en 10 segundos...
+
+[INFO] 23:47:43:726 gamecard/(23765:23770): El reintento de conexión no fue exitoso
+
+[INFO] 23:47:43:726 gamecard/(23765:23770): Reintentando conexión en 10 segundos...
+
+[INFO] 23:47:43:726 gamecard/(23765:23768): El reintento de conexión no fue exitoso
+
+[INFO] 23:47:43:726 gamecard/(23765:23768): Reintentando conexión en 10 segundos...
+
+[INFO] 23:47:43:726 gamecard/(23765:23769): El reintento de conexión no fue exitoso
+
+[INFO] 23:47:43:727 gamecard/(23765:23769): Reintentando conexión en 10 segundos...
+
+[INFO] 23:47:53:727 gamecard/(23765:23769): El reintento de conexión no fue exitoso
+
+[INFO] 23:47:53:727 gamecard/(23765:23769): Reintentando conexión en 10 segundos...
+
+[INFO] 23:47:53:730 gamecard/(23765:23768): El reintento de conexión no fue exitoso
+
+[INFO] 23:47:53:730 gamecard/(23765:23768): Reintentando conexión en 10 segundos...
+
+[INFO] 23:47:53:730 gamecard/(23765:23770): El reintento de conexión no fue exitoso
+
+[INFO] 23:47:53:730 gamecard/(23765:23770): Reintentando conexión en 10 segundos...
+
+[INFO] 23:49:27:489 gamecard/(25685:25685): Inicio de programa: Gamecard.
+[INFO] 23:49:27:490 gamecard/(25685:25685): Se encontro el directorio metadata
+[INFO] 23:49:27:490 gamecard/(25685:25685): Se encontro el archivo metadata.bin
+[INFO] 23:49:27:490 gamecard/(25685:25685): Inicio de Metadata, Tamanio bloques: 64,  Cantidad de bloques: 1024,  Magic number: TALL_GRASS
+[INFO] 23:49:27:507 gamecard/(25685:25687): Estoy escuchando
+[INFO] 23:49:27:507 gamecard/(25685:25687): Espero un nuevo cliente
+[INFO] 23:52:35:448 gamecard/(25979:25979): Inicio de programa: Gamecard.
+[INFO] 23:52:35:448 gamecard/(25979:25979): Se encontro el directorio metadata
+[INFO] 23:52:35:448 gamecard/(25979:25979): Se encontro el archivo metadata.bin
+[INFO] 23:52:35:448 gamecard/(25979:25979): Inicio de Metadata, Tamanio bloques: 64,  Cantidad de bloques: 1024,  Magic number: TALL_GRASS
+[INFO] 23:52:35:485 gamecard/(25979:25979): Estoy escuchando
+[INFO] 23:52:35:485 gamecard/(25979:25979): Espero un nuevo cliente
+[INFO] 23:56:23:878 gamecard/(26430:26430): Inicio de programa: Gamecard.
+[INFO] 23:56:23:878 gamecard/(26430:26430): Se encontro el directorio metadata
+[INFO] 23:56:23:878 gamecard/(26430:26430): Se encontro el archivo metadata.bin
+[INFO] 23:56:23:878 gamecard/(26430:26430): Inicio de Metadata, Tamanio bloques: 64,  Cantidad de bloques: 1024,  Magic number: TALL_GRASS
+[INFO] 23:58:34:625 gamecard/(26611:26611): Inicio de programa: Gamecard.
+[INFO] 23:58:34:625 gamecard/(26611:26611): Se encontro el directorio metadata
+[INFO] 23:58:34:625 gamecard/(26611:26611): Se encontro el archivo metadata.bin
+[INFO] 23:58:34:625 gamecard/(26611:26611): Inicio de Metadata, Tamanio bloques: 64,  Cantidad de bloques: 1024,  Magic number: TALL_GRASS

@@ -450,3 +450,453 @@
 [INFO] 16:23:20:810 TEAM/(8292:8292): Cantidad de ciclos de CPU realizados por el entrenador 2: 22.
 [INFO] 16:23:20:810 TEAM/(8292:8292): Cantidad de ciclos de CPU realizados por el entrenador 3: 15.
 [INFO] 16:23:20:810 TEAM/(8292:8292): Cantidad de ciclos de CPU realizados por el entrenador 4: 19.
+[INFO] 23:05:42:384 TEAM/(21096:21096): ___________________________________________________________________________________________________________
+[INFO] 23:05:42:891 TEAM/(21096:21096): Inició el TEAM
+[INFO] 23:05:43:9 TEAM/(21096:21111): Recibi mensaje appeared pokemon. El pokemon es: Jolteon. La posicion es: (2,2).
+[INFO] 23:05:43:9 TEAM/(21096:21111): Recibi mensaje appeared pokemon. El pokemon es: Flareon. La posicion es: (4,6).
+[INFO] 23:05:43:20 TEAM/(21096:21127): Habilito el hilo del entrenador 0.
+[INFO] 23:05:43:20 TEAM/(21096:21110): El entrenador 0 ahora está en EXEC.
+[INFO] 23:05:43:20 TEAM/(21096:21101): El entrenador 0 ahora está en READY.
+[INFO] 23:05:43:20 TEAM/(21096:21101): El entrenador  0 se mueve a atrapar a Jolteon en posición (2, 2)
+
+[INFO] 23:05:43:20 TEAM/(21096:21101): El entrenador 0 ahora está en EXEC.
+[INFO] 23:05:43:21 TEAM/(21096:21130): Habilito el hilo del entrenador 1.
+[INFO] 23:05:43:21 TEAM/(21096:21102): El entrenador 1 ahora está en READY.
+[INFO] 23:05:43:31 TEAM/(21096:21112): Recibi mensaje localized. El pokemon es: Espeon. La cantidad es: 0.
+[INFO] 23:05:43:31 TEAM/(21096:21112): Las posiciones son: 
+[INFO] 23:05:43:34 TEAM/(21096:21112): Recibi mensaje localized. El pokemon es: Vaporeon. La cantidad es: 0.
+[INFO] 23:05:43:34 TEAM/(21096:21112): Las posiciones son: 
+[INFO] 23:05:43:48 TEAM/(21096:21112): Recibi mensaje localized. El pokemon es: Umbreon. La cantidad es: 0.
+[INFO] 23:05:43:48 TEAM/(21096:21112): Las posiciones son: 
+[INFO] 23:05:48:21 TEAM/(21096:21101): El entrenador 0 se movió a la posición (2, 2).
+[INFO] 23:05:48:29 TEAM/(21096:21112): Recibi mensaje localized. El pokemon es: Jolteon. La cantidad es: 1.
+[INFO] 23:05:48:29 TEAM/(21096:21112): Las posiciones son: 
+[INFO] 23:05:48:29 TEAM/(21096:21112): (2,2)
+[INFO] 23:05:48:36 TEAM/(21096:21112): Recibi mensaje localized. El pokemon es: Flareon. La cantidad es: 1.
+[INFO] 23:05:48:36 TEAM/(21096:21112): Las posiciones son: 
+[INFO] 23:05:48:36 TEAM/(21096:21112): (4,6)
+[INFO] 23:05:51:930 TEAM/(21096:21112): Recibi mensaje localized. El pokemon es: Gengar. La cantidad es: 0.
+[INFO] 23:05:51:930 TEAM/(21096:21112): Las posiciones son: 
+[INFO] 23:05:51:943 TEAM/(21096:21112): Recibi mensaje localized. El pokemon es: Onix. La cantidad es: 0.
+[INFO] 23:05:51:943 TEAM/(21096:21112): Las posiciones son: 
+[INFO] 23:05:53:22 TEAM/(21096:21101): El entrenador 0 ahora está en BLOCKED.
+[INFO] 23:05:53:23 TEAM/(21096:21110): El entrenador 1 ahora está en EXEC.
+[INFO] 23:05:53:23 TEAM/(21096:21102): El entrenador  1 se mueve a atrapar a Flareon en posición (4, 6)
+
+[INFO] 23:05:53:23 TEAM/(21096:21102): El entrenador 1 ahora está en EXEC.
+[INFO] 23:05:56:940 TEAM/(21096:21112): Recibi mensaje localized. El pokemon es: Squirtle. La cantidad es: 1.
+[INFO] 23:05:56:940 TEAM/(21096:21112): Las posiciones son: 
+[INFO] 23:05:56:940 TEAM/(21096:21112): (5,2)
+[INFO] 23:05:56:941 TEAM/(21096:21112): Recibi mensaje localized. El pokemon es: Pikachu. La cantidad es: 1.
+[INFO] 23:05:56:941 TEAM/(21096:21112): Las posiciones son: 
+[INFO] 23:05:56:941 TEAM/(21096:21112): (9,9)
+[INFO] 23:05:58:40 TEAM/(21096:21113): Recibi mensaje caught pokemon. El pokemon fue atrapado.
+[INFO] 23:05:58:44 TEAM/(21096:21239): El entrenador 0 atrapó al pokemon Jolteon en la posición (2,2).
+[INFO] 23:05:58:44 TEAM/(21096:21239): Inicio del algoritmo de detección de deadlock.
+[INFO] 23:05:58:44 TEAM/(21096:21239): Habilito el hilo del entrenador 0.
+[INFO] 23:05:58:44 TEAM/(21096:21239): No se encontró deadlock.
+[INFO] 23:06:08:25 TEAM/(21096:21102): El entrenador 1 se movió a la posición (4, 6).
+[INFO] 23:06:13:26 TEAM/(21096:21102): El entrenador 1 ahora está en BLOCKED.
+[INFO] 23:06:18:46 TEAM/(21096:21113): Recibi mensaje caught pokemon. El pokemon fue atrapado.
+[INFO] 23:06:18:46 TEAM/(21096:21261): El entrenador 1 atrapó al pokemon Flareon en la posición (4,6).
+[INFO] 23:06:18:46 TEAM/(21096:21261): Inicio del algoritmo de detección de deadlock.
+[INFO] 23:06:18:46 TEAM/(21096:21261): Habilito el hilo del entrenador 1.
+[INFO] 23:06:18:47 TEAM/(21096:21261): No se encontró deadlock.
+[INFO] 23:06:22:96 TEAM/(21096:21113): Recibi mensaje caught pokemon. El pokemon fue atrapado.
+[INFO] 23:07:31:972 TEAM/(21096:21113): Recibi mensaje caught pokemon. El pokemon fue atrapado.
+[INFO] 23:07:59:948 TEAM/(21096:21111): Recibi mensaje appeared pokemon. El pokemon es: Onix. La posicion es: (2,8).
+[INFO] 23:07:59:974 TEAM/(21096:21111): Recibi mensaje appeared pokemon. El pokemon es: Gengar. La posicion es: (6,6).
+[INFO] 23:07:59:996 TEAM/(21096:21111): Recibi mensaje appeared pokemon. El pokemon es: Squirtle. La posicion es: (5,5).
+[INFO] 23:08:00:22 TEAM/(21096:21111): Recibi mensaje appeared pokemon. El pokemon es: Umbreon. La posicion es: (10,6).
+[INFO] 23:08:00:30 TEAM/(21096:21440): Habilito el hilo del entrenador 2.
+[INFO] 23:08:00:30 TEAM/(21096:21103): El entrenador 2 ahora está en READY.
+[INFO] 23:08:00:32 TEAM/(21096:21110): El entrenador 2 ahora está en EXEC.
+[INFO] 23:08:00:32 TEAM/(21096:21103): El entrenador  2 se mueve a atrapar a Umbreon en posición (10, 6)
+
+[INFO] 23:08:00:32 TEAM/(21096:21103): El entrenador 2 ahora está en EXEC.
+[INFO] 23:08:00:36 TEAM/(21096:21111): Recibi mensaje appeared pokemon. El pokemon es: Espeon. La posicion es: (7,1).
+[INFO] 23:08:00:40 TEAM/(21096:21445): Habilito el hilo del entrenador 3.
+[INFO] 23:08:00:40 TEAM/(21096:21104): El entrenador 3 ahora está en READY.
+[INFO] 23:08:00:48 TEAM/(21096:21111): Recibi mensaje appeared pokemon. El pokemon es: Vaporeon. La posicion es: (4,10).
+[INFO] 23:08:00:53 TEAM/(21096:21450): Habilito el hilo del entrenador 4.
+[INFO] 23:08:00:53 TEAM/(21096:21105): El entrenador 4 ahora está en READY.
+[INFO] 23:08:20:35 TEAM/(21096:21103): El entrenador 2 se movió a la posición (10, 6).
+[INFO] 23:08:25:37 TEAM/(21096:21103): El entrenador 2 ahora está en BLOCKED.
+[INFO] 23:08:25:37 TEAM/(21096:21110): El entrenador 3 ahora está en EXEC.
+[INFO] 23:08:25:37 TEAM/(21096:21104): El entrenador  3 se mueve a atrapar a Espeon en posición (7, 1)
+
+[INFO] 23:08:25:37 TEAM/(21096:21104): El entrenador 3 ahora está en EXEC.
+[INFO] 23:08:30:56 TEAM/(21096:21113): Recibi mensaje caught pokemon. El pokemon fue atrapado.
+[INFO] 23:08:30:60 TEAM/(21096:21484): El entrenador 2 atrapó al pokemon Umbreon en la posición (10,6).
+[INFO] 23:08:30:60 TEAM/(21096:21484): Inicio del algoritmo de detección de deadlock.
+[INFO] 23:08:30:60 TEAM/(21096:21484): Habilito el hilo del entrenador 2.
+[INFO] 23:08:30:61 TEAM/(21096:21484): No se encontró deadlock.
+[INFO] 23:08:39:996 TEAM/(21096:21113): Recibi mensaje caught pokemon. El pokemon fue atrapado.
+[INFO] 23:08:40:40 TEAM/(21096:21104): El entrenador 3 se movió a la posición (7, 1).
+[INFO] 23:08:45:41 TEAM/(21096:21104): El entrenador 3 ahora está en BLOCKED.
+[INFO] 23:08:45:41 TEAM/(21096:21110): El entrenador 4 ahora está en EXEC.
+[INFO] 23:08:45:41 TEAM/(21096:21105): El entrenador  4 se mueve a atrapar a Vaporeon en posición (4, 10)
+
+[INFO] 23:08:45:41 TEAM/(21096:21105): El entrenador 4 ahora está en EXEC.
+[INFO] 23:08:50:59 TEAM/(21096:21113): Recibi mensaje caught pokemon. El pokemon fue atrapado.
+[INFO] 23:08:50:65 TEAM/(21096:21518): El entrenador 3 atrapó al pokemon Espeon en la posición (7,1).
+[INFO] 23:08:50:65 TEAM/(21096:21518): Inicio del algoritmo de detección de deadlock.
+[INFO] 23:08:50:65 TEAM/(21096:21518): Habilito el hilo del entrenador 3.
+[INFO] 23:08:50:65 TEAM/(21096:21518): No se encontró deadlock.
+[INFO] 23:09:00:43 TEAM/(21096:21105): El entrenador 4 se movió a la posición (4, 10).
+[INFO] 23:09:05:44 TEAM/(21096:21105): El entrenador 4 ahora está en BLOCKED.
+[INFO] 23:09:09:985 TEAM/(21096:21113): Recibi mensaje caught pokemon. El pokemon fue atrapado.
+[INFO] 23:09:10:69 TEAM/(21096:21113): Recibi mensaje caught pokemon. El pokemon fue atrapado.
+[INFO] 23:09:10:74 TEAM/(21096:21557): El entrenador 4 atrapó al pokemon Vaporeon en la posición (4,10).
+[INFO] 23:09:10:74 TEAM/(21096:21557): Inicio del algoritmo de detección de deadlock.
+[INFO] 23:09:10:74 TEAM/(21096:21557): Habilito el hilo del entrenador 4.
+[INFO] 23:09:10:75 TEAM/(21096:21557): Se encontró deadlock.
+[INFO] 23:09:10:75 TEAM/(21096:21107): Encontre una espera circular. Entrenadores involucrados: 
+[INFO] 23:09:10:75 TEAM/(21096:21107): Entrenador 0.
+[INFO] 23:09:10:75 TEAM/(21096:21107): Entrenador 4.
+[INFO] 23:09:10:75 TEAM/(21096:21107): Entrenador 3.
+[INFO] 23:09:10:75 TEAM/(21096:21107): Entrenador 2.
+[INFO] 23:09:10:75 TEAM/(21096:21107): Entrenador 1.
+[INFO] 23:09:10:75 TEAM/(21096:21107): El entrenador 0, esta en DEADLOCK con el entrenador 4.
+[INFO] 23:09:10:75 TEAM/(21096:21105): El entrenador 4 ahora está en READY.
+[INFO] 23:09:10:75 TEAM/(21096:21110): El entrenador 4 ahora está en EXEC.
+[INFO] 23:09:10:75 TEAM/(21096:21105): El entrenador 4 ahora está en EXEC.
+[INFO] 23:09:54:988 TEAM/(21096:21113): Recibi mensaje caught pokemon. El pokemon fue atrapado.
+[INFO] 23:10:00:87 TEAM/(21096:21105): El entrenador 4 se movió a la posición (2, 2).
+[INFO] 23:10:25:91 TEAM/(21096:21105): El entrenador 4 le da el pokemon Vaporeon al entrenador 0
+[INFO] 23:10:25:91 TEAM/(21096:21105): El entrenador 0 le da el pokemon Jolteon al entrenador 4
+[INFO] 23:10:25:91 TEAM/(21096:21105): Operación de intercambio realizada entre entrenadores 4 y 0
+[INFO] 23:10:25:91 TEAM/(21096:21105): El entrenador 4 ahora está en BLOCKED.
+[INFO] 23:10:25:91 TEAM/(21096:21107): El entrenador 4, esta en DEADLOCK con el entrenador 3.
+[INFO] 23:10:25:91 TEAM/(21096:21104): El entrenador 3 ahora está en READY.
+[INFO] 23:10:25:91 TEAM/(21096:21110): El entrenador 3 ahora está en EXEC.
+[INFO] 23:10:25:91 TEAM/(21096:21104): El entrenador 3 ahora está en EXEC.
+[INFO] 23:10:55:96 TEAM/(21096:21104): El entrenador 3 se movió a la posición (2, 2).
+[INFO] 23:11:20:101 TEAM/(21096:21104): El entrenador 3 le da el pokemon Espeon al entrenador 4
+[INFO] 23:11:20:101 TEAM/(21096:21104): El entrenador 4 le da el pokemon Jolteon al entrenador 3
+[INFO] 23:11:20:101 TEAM/(21096:21104): Operación de intercambio realizada entre entrenadores 3 y 4
+[INFO] 23:11:20:101 TEAM/(21096:21104): El entrenador 3 ahora está en BLOCKED.
+[INFO] 23:11:20:102 TEAM/(21096:21107): El entrenador 3, esta en DEADLOCK con el entrenador 2.
+[INFO] 23:11:20:102 TEAM/(21096:21103): El entrenador 2 ahora está en READY.
+[INFO] 23:11:20:102 TEAM/(21096:21110): El entrenador 2 ahora está en EXEC.
+[INFO] 23:11:20:102 TEAM/(21096:21103): El entrenador 2 ahora está en EXEC.
+[INFO] 23:12:20:118 TEAM/(21096:21103): El entrenador 2 se movió a la posición (2, 2).
+[INFO] 23:12:45:122 TEAM/(21096:21103): El entrenador 2 le da el pokemon Umbreon al entrenador 3
+[INFO] 23:12:45:122 TEAM/(21096:21103): El entrenador 3 le da el pokemon Jolteon al entrenador 2
+[INFO] 23:12:45:123 TEAM/(21096:21103): Operación de intercambio realizada entre entrenadores 2 y 3
+[INFO] 23:12:45:123 TEAM/(21096:21103): El entrenador 2 ahora está en BLOCKED.
+[INFO] 23:12:45:123 TEAM/(21096:21107): El entrenador 2, esta en DEADLOCK con el entrenador 1.
+[INFO] 23:12:45:123 TEAM/(21096:21102): El entrenador 1 ahora está en READY.
+[INFO] 23:12:45:123 TEAM/(21096:21110): El entrenador 1 ahora está en EXEC.
+[INFO] 23:12:45:123 TEAM/(21096:21102): El entrenador 1 ahora está en EXEC.
+[INFO] 23:13:15:128 TEAM/(21096:21102): El entrenador 1 se movió a la posición (2, 2).
+[INFO] 23:13:40:132 TEAM/(21096:21102): El entrenador 1 le da el pokemon Flareon al entrenador 2
+[INFO] 23:13:40:132 TEAM/(21096:21102): El entrenador 2 le da el pokemon Jolteon al entrenador 1
+[INFO] 23:13:40:132 TEAM/(21096:21102): Operación de intercambio realizada entre entrenadores 1 y 2
+[INFO] 23:13:40:132 TEAM/(21096:21102): El entrenador 1 ahora está en BLOCKED.
+[INFO] 23:13:40:133 TEAM/(21096:21107): El entrenador 0 ahora está en EXIT.
+[INFO] 23:13:40:133 TEAM/(21096:21107): El entrenador 1 ahora está en EXIT.
+[INFO] 23:13:40:133 TEAM/(21096:21107): El entrenador 2 ahora está en EXIT.
+[INFO] 23:13:40:133 TEAM/(21096:21107): El entrenador 3 ahora está en EXIT.
+[INFO] 23:13:40:133 TEAM/(21096:21107): El entrenador 4 ahora está en EXIT.
+[INFO] 23:13:40:133 TEAM/(21096:21096): ------------------------------------------------
+[INFO] 23:13:40:133 TEAM/(21096:21096): Programa terminado: objetivo global cumplido.
+[INFO] 23:13:40:133 TEAM/(21096:21096): Cantidad de ciclos de CPU totales: 73.
+[INFO] 23:13:40:133 TEAM/(21096:21096): Cantidad de cambios de contexto realizados: 9.
+[INFO] 23:13:40:133 TEAM/(21096:21096): ------------------------------------------------
+[INFO] 23:13:40:133 TEAM/(21096:21096): Información de los entrenadores: 
+[INFO] 23:13:40:133 TEAM/(21096:21096): Deadlocks producidos: 4.
+[INFO] 23:13:40:133 TEAM/(21096:21096): Deadlocks resueltos: 4.
+[INFO] 23:13:40:133 TEAM/(21096:21096): Cantidad de ciclos de CPU realizados por el entrenador 0: 2.
+[INFO] 23:13:40:133 TEAM/(21096:21096): Cantidad de ciclos de CPU realizados por el entrenador 1: 15.
+[INFO] 23:13:40:133 TEAM/(21096:21096): Cantidad de ciclos de CPU realizados por el entrenador 2: 22.
+[INFO] 23:13:40:133 TEAM/(21096:21096): Cantidad de ciclos de CPU realizados por el entrenador 3: 15.
+[INFO] 23:13:40:133 TEAM/(21096:21096): Cantidad de ciclos de CPU realizados por el entrenador 4: 19.
+[INFO] 23:30:50:106 TEAM/(23835:23835): ___________________________________________________________________________________________________________
+[INFO] 23:30:50:106 TEAM/(23835:23835): Inició el TEAM
+[INFO] 23:30:50:220 TEAM/(23835:23853): Recibi mensaje localized. El pokemon es: Vaporeon. La cantidad es: 0.
+[INFO] 23:30:50:220 TEAM/(23835:23853): Las posiciones son: 
+[INFO] 23:30:50:222 TEAM/(23835:23853): Recibi mensaje localized. El pokemon es: Espeon. La cantidad es: 0.
+[INFO] 23:30:50:222 TEAM/(23835:23853): Las posiciones son: 
+[INFO] 23:30:50:222 TEAM/(23835:23853): Recibi mensaje localized. El pokemon es: Umbreon. La cantidad es: 0.
+[INFO] 23:30:50:222 TEAM/(23835:23853): Las posiciones son: 
+[INFO] 23:30:55:228 TEAM/(23835:23853): Recibi mensaje localized. El pokemon es: Flareon. La cantidad es: 1.
+[INFO] 23:30:55:228 TEAM/(23835:23853): Las posiciones son: 
+[INFO] 23:30:55:228 TEAM/(23835:23853): (4,6)
+[INFO] 23:30:55:229 TEAM/(23835:23853): Recibi mensaje localized. El pokemon es: Jolteon. La cantidad es: 1.
+[INFO] 23:30:55:229 TEAM/(23835:23853): Las posiciones son: 
+[INFO] 23:30:55:229 TEAM/(23835:23853): (2,2)
+[INFO] 23:30:55:229 TEAM/(23835:23891): Habilito el hilo del entrenador 1.
+[INFO] 23:30:55:230 TEAM/(23835:23837): El entrenador 1 ahora está en READY.
+[INFO] 23:30:55:230 TEAM/(23835:23845): El entrenador 1 ahora está en EXEC.
+[INFO] 23:30:55:230 TEAM/(23835:23837): El entrenador  1 se mueve a atrapar a Flareon en posición (4, 6)
+
+[INFO] 23:30:55:230 TEAM/(23835:23837): El entrenador 1 ahora está en EXEC.
+[INFO] 23:30:55:230 TEAM/(23835:23893): Habilito el hilo del entrenador 0.
+[INFO] 23:30:55:230 TEAM/(23835:23836): El entrenador 0 ahora está en READY.
+[INFO] 23:31:00:231 TEAM/(23835:23845): El entrenador 1 ahora está en READY.
+[INFO] 23:31:00:231 TEAM/(23835:23845): El entrenador 0 ahora está en EXEC.
+[INFO] 23:31:00:231 TEAM/(23835:23836): El entrenador  0 se mueve a atrapar a Jolteon en posición (2, 2)
+
+[INFO] 23:31:00:231 TEAM/(23835:23836): El entrenador 0 ahora está en EXEC.
+[INFO] 23:31:05:232 TEAM/(23835:23836): El entrenador 0 se movió a la posición (2, 2).
+[INFO] 23:31:05:233 TEAM/(23835:23845): El entrenador 0 ahora está en READY.
+[INFO] 23:31:05:233 TEAM/(23835:23845): El entrenador 1 ahora está en EXEC.
+[INFO] 23:31:05:698 TEAM/(23835:23853): Recibi mensaje localized. El pokemon es: Gengar. La cantidad es: 0.
+[INFO] 23:31:05:698 TEAM/(23835:23853): Las posiciones son: 
+[INFO] 23:31:05:704 TEAM/(23835:23853): Recibi mensaje localized. El pokemon es: Onix. La cantidad es: 0.
+[INFO] 23:31:05:704 TEAM/(23835:23853): Las posiciones son: 
+[INFO] 23:31:10:234 TEAM/(23835:23845): El entrenador 1 ahora está en READY.
+[INFO] 23:31:10:234 TEAM/(23835:23845): El entrenador 0 ahora está en EXEC.
+[INFO] 23:31:10:696 TEAM/(23835:23853): Recibi mensaje localized. El pokemon es: Squirtle. La cantidad es: 1.
+[INFO] 23:31:10:696 TEAM/(23835:23853): Las posiciones son: 
+[INFO] 23:31:10:696 TEAM/(23835:23853): (5,2)
+[INFO] 23:31:10:696 TEAM/(23835:23853): Recibi mensaje localized. El pokemon es: Pikachu. La cantidad es: 1.
+[INFO] 23:31:10:696 TEAM/(23835:23853): Las posiciones son: 
+[INFO] 23:31:10:696 TEAM/(23835:23853): (9,9)
+[INFO] 23:31:15:235 TEAM/(23835:23836): El entrenador 0 ahora está en BLOCKED.
+[INFO] 23:31:15:235 TEAM/(23835:23845): El entrenador 1 ahora está en EXEC.
+[INFO] 23:31:20:236 TEAM/(23835:23837): El entrenador 1 se movió a la posición (4, 6).
+[INFO] 23:31:20:236 TEAM/(23835:23845): El entrenador 1 ahora está en READY.
+[INFO] 23:31:20:236 TEAM/(23835:23845): El entrenador 1 ahora está en EXEC.
+[INFO] 23:31:20:401 TEAM/(23835:23854): Recibi mensaje caught pokemon. El pokemon fue atrapado.
+[INFO] 23:31:20:410 TEAM/(23835:23981): El entrenador 0 atrapó al pokemon Jolteon en la posición (2,2).
+[INFO] 23:31:20:410 TEAM/(23835:23981): Inicio del algoritmo de detección de deadlock.
+[INFO] 23:31:20:410 TEAM/(23835:23981): Habilito el hilo del entrenador 0.
+[INFO] 23:31:20:410 TEAM/(23835:23981): No se encontró deadlock.
+[INFO] 23:31:25:238 TEAM/(23835:23837): El entrenador 1 ahora está en BLOCKED.
+[INFO] 23:31:30:307 TEAM/(23835:23854): Recibi mensaje caught pokemon. El pokemon fue atrapado.
+[INFO] 23:31:30:312 TEAM/(23835:23999): El entrenador 1 atrapó al pokemon Flareon en la posición (4,6).
+[INFO] 23:31:30:312 TEAM/(23835:23999): Inicio del algoritmo de detección de deadlock.
+[INFO] 23:31:30:312 TEAM/(23835:23999): Habilito el hilo del entrenador 1.
+[INFO] 23:31:30:313 TEAM/(23835:23999): No se encontró deadlock.
+[INFO] 23:31:35:717 TEAM/(23835:23854): Recibi mensaje caught pokemon. El pokemon fue atrapado.
+[INFO] 23:32:45:740 TEAM/(23835:23854): Recibi mensaje caught pokemon. El pokemon fue atrapado.
+[INFO] 23:33:36:908 TEAM/(23835:23852): Recibi mensaje appeared pokemon. El pokemon es: Onix. La posicion es: (2,8).
+[INFO] 23:33:36:914 TEAM/(23835:23852): Recibi mensaje appeared pokemon. El pokemon es: Gengar. La posicion es: (6,6).
+[INFO] 23:33:36:939 TEAM/(23835:23852): Recibi mensaje appeared pokemon. El pokemon es: Squirtle. La posicion es: (5,5).
+[INFO] 23:33:36:952 TEAM/(23835:23852): Recibi mensaje appeared pokemon. El pokemon es: Umbreon. La posicion es: (10,6).
+[INFO] 23:33:36:957 TEAM/(23835:24209): Habilito el hilo del entrenador 2.
+[INFO] 23:33:36:957 TEAM/(23835:23838): El entrenador 2 ahora está en READY.
+[INFO] 23:33:36:957 TEAM/(23835:23845): El entrenador 2 ahora está en EXEC.
+[INFO] 23:33:36:957 TEAM/(23835:23838): El entrenador  2 se mueve a atrapar a Umbreon en posición (10, 6)
+
+[INFO] 23:33:36:957 TEAM/(23835:23838): El entrenador 2 ahora está en EXEC.
+[INFO] 23:33:36:959 TEAM/(23835:23852): Recibi mensaje appeared pokemon. El pokemon es: Espeon. La posicion es: (7,1).
+[INFO] 23:33:36:964 TEAM/(23835:24212): Habilito el hilo del entrenador 3.
+[INFO] 23:33:36:964 TEAM/(23835:23839): El entrenador 3 ahora está en READY.
+[INFO] 23:33:36:985 TEAM/(23835:23852): Recibi mensaje appeared pokemon. El pokemon es: Vaporeon. La posicion es: (4,10).
+[INFO] 23:33:36:991 TEAM/(23835:24219): Habilito el hilo del entrenador 4.
+[INFO] 23:33:36:991 TEAM/(23835:23840): El entrenador 4 ahora está en READY.
+[INFO] 23:33:41:959 TEAM/(23835:23845): El entrenador 2 ahora está en READY.
+[INFO] 23:33:41:959 TEAM/(23835:23845): El entrenador 3 ahora está en EXEC.
+[INFO] 23:33:41:959 TEAM/(23835:23839): El entrenador  3 se mueve a atrapar a Espeon en posición (7, 1)
+
+[INFO] 23:33:41:959 TEAM/(23835:23839): El entrenador 3 ahora está en EXEC.
+[INFO] 23:33:46:960 TEAM/(23835:23845): El entrenador 3 ahora está en READY.
+[INFO] 23:33:46:960 TEAM/(23835:23845): El entrenador 4 ahora está en EXEC.
+[INFO] 23:33:46:960 TEAM/(23835:23840): El entrenador  4 se mueve a atrapar a Vaporeon en posición (4, 10)
+
+[INFO] 23:33:46:961 TEAM/(23835:23840): El entrenador 4 ahora está en EXEC.
+[INFO] 23:33:51:963 TEAM/(23835:23845): El entrenador 4 ahora está en READY.
+[INFO] 23:33:51:963 TEAM/(23835:23845): El entrenador 2 ahora está en EXEC.
+[INFO] 23:33:56:964 TEAM/(23835:23845): El entrenador 2 ahora está en READY.
+[INFO] 23:33:56:964 TEAM/(23835:23845): El entrenador 3 ahora está en EXEC.
+[INFO] 23:34:01:964 TEAM/(23835:23845): El entrenador 3 ahora está en READY.
+[INFO] 23:34:01:964 TEAM/(23835:23845): El entrenador 4 ahora está en EXEC.
+[INFO] 23:34:06:965 TEAM/(23835:23845): El entrenador 4 ahora está en READY.
+[INFO] 23:34:06:965 TEAM/(23835:23845): El entrenador 2 ahora está en EXEC.
+[INFO] 23:34:11:965 TEAM/(23835:23845): El entrenador 2 ahora está en READY.
+[INFO] 23:34:11:965 TEAM/(23835:23845): El entrenador 3 ahora está en EXEC.
+[INFO] 23:34:16:951 TEAM/(23835:23854): Recibi mensaje caught pokemon. El pokemon fue atrapado.
+[INFO] 23:34:16:969 TEAM/(23835:23839): El entrenador 3 se movió a la posición (7, 1).
+[INFO] 23:34:16:969 TEAM/(23835:23845): El entrenador 3 ahora está en READY.
+[INFO] 23:34:16:970 TEAM/(23835:23845): El entrenador 4 ahora está en EXEC.
+[INFO] 23:34:21:970 TEAM/(23835:23840): El entrenador 4 se movió a la posición (4, 10).
+[INFO] 23:34:21:970 TEAM/(23835:23845): El entrenador 4 ahora está en READY.
+[INFO] 23:34:21:970 TEAM/(23835:23845): El entrenador 2 ahora está en EXEC.
+[INFO] 23:34:26:970 TEAM/(23835:23838): El entrenador 2 se movió a la posición (10, 6).
+[INFO] 23:34:26:970 TEAM/(23835:23845): El entrenador 2 ahora está en READY.
+[INFO] 23:34:26:970 TEAM/(23835:23845): El entrenador 3 ahora está en EXEC.
+[INFO] 23:34:31:971 TEAM/(23835:23839): El entrenador 3 ahora está en BLOCKED.
+[INFO] 23:34:31:971 TEAM/(23835:23845): El entrenador 4 ahora está en EXEC.
+[INFO] 23:34:36:973 TEAM/(23835:23840): El entrenador 4 ahora está en BLOCKED.
+[INFO] 23:34:36:973 TEAM/(23835:23845): El entrenador 2 ahora está en EXEC.
+[INFO] 23:34:36:994 TEAM/(23835:23854): Recibi mensaje caught pokemon. El pokemon fue atrapado.
+[INFO] 23:34:36:995 TEAM/(23835:24313): El entrenador 3 atrapó al pokemon Espeon en la posición (7,1).
+[INFO] 23:34:36:995 TEAM/(23835:24313): Inicio del algoritmo de detección de deadlock.
+[INFO] 23:34:36:995 TEAM/(23835:24313): Habilito el hilo del entrenador 3.
+[INFO] 23:34:36:995 TEAM/(23835:24313): No se encontró deadlock.
+[INFO] 23:34:41:974 TEAM/(23835:23838): El entrenador 2 ahora está en BLOCKED.
+[INFO] 23:34:41:989 TEAM/(23835:23854): Recibi mensaje caught pokemon. El pokemon fue atrapado.
+[INFO] 23:34:41:998 TEAM/(23835:24330): El entrenador 4 atrapó al pokemon Vaporeon en la posición (4,10).
+[INFO] 23:34:41:998 TEAM/(23835:24330): Inicio del algoritmo de detección de deadlock.
+[INFO] 23:34:41:998 TEAM/(23835:24330): Habilito el hilo del entrenador 4.
+[INFO] 23:34:41:998 TEAM/(23835:24330): No se encontró deadlock.
+[INFO] 23:34:47:48 TEAM/(23835:23854): Recibi mensaje caught pokemon. El pokemon fue atrapado.
+[INFO] 23:34:47:48 TEAM/(23835:23854): Recibi mensaje caught pokemon. El pokemon fue atrapado.
+[INFO] 23:34:47:52 TEAM/(23835:24342): El entrenador 2 atrapó al pokemon Umbreon en la posición (10,6).
+[INFO] 23:34:47:52 TEAM/(23835:24342): Inicio del algoritmo de detección de deadlock.
+[INFO] 23:34:47:52 TEAM/(23835:24342): Habilito el hilo del entrenador 2.
+[INFO] 23:34:47:52 TEAM/(23835:24342): Se encontró deadlock.
+[INFO] 23:34:47:52 TEAM/(23835:23842): Encontre una espera circular. Entrenadores involucrados: 
+[INFO] 23:34:47:52 TEAM/(23835:23842): Entrenador 0.
+[INFO] 23:34:47:52 TEAM/(23835:23842): Entrenador 4.
+[INFO] 23:34:47:53 TEAM/(23835:23842): Entrenador 3.
+[INFO] 23:34:47:53 TEAM/(23835:23842): Entrenador 2.
+[INFO] 23:34:47:53 TEAM/(23835:23842): Entrenador 1.
+[INFO] 23:34:47:53 TEAM/(23835:23842): El entrenador 0, esta en DEADLOCK con el entrenador 4.
+[INFO] 23:34:47:53 TEAM/(23835:23840): El entrenador 4 ahora está en READY.
+[INFO] 23:34:47:53 TEAM/(23835:23845): El entrenador 4 ahora está en EXEC.
+[INFO] 23:34:47:53 TEAM/(23835:23840): El entrenador 4 ahora está en EXEC.
+[INFO] 23:34:52:54 TEAM/(23835:23845): El entrenador 4 ahora está en READY.
+[INFO] 23:34:52:54 TEAM/(23835:23845): El entrenador 4 ahora está en EXEC.
+[INFO] 23:34:57:55 TEAM/(23835:23845): El entrenador 4 ahora está en READY.
+[INFO] 23:34:57:55 TEAM/(23835:23845): El entrenador 4 ahora está en EXEC.
+[INFO] 23:35:02:56 TEAM/(23835:23845): El entrenador 4 ahora está en READY.
+[INFO] 23:35:02:56 TEAM/(23835:23845): El entrenador 4 ahora está en EXEC.
+[INFO] 23:35:07:56 TEAM/(23835:23845): El entrenador 4 ahora está en READY.
+[INFO] 23:35:07:56 TEAM/(23835:23845): El entrenador 4 ahora está en EXEC.
+[INFO] 23:35:12:57 TEAM/(23835:23845): El entrenador 4 ahora está en READY.
+[INFO] 23:35:12:57 TEAM/(23835:23845): El entrenador 4 ahora está en EXEC.
+[INFO] 23:35:17:58 TEAM/(23835:23845): El entrenador 4 ahora está en READY.
+[INFO] 23:35:17:58 TEAM/(23835:23845): El entrenador 4 ahora está en EXEC.
+[INFO] 23:35:22:59 TEAM/(23835:23845): El entrenador 4 ahora está en READY.
+[INFO] 23:35:22:59 TEAM/(23835:23845): El entrenador 4 ahora está en EXEC.
+[INFO] 23:35:27:60 TEAM/(23835:23845): El entrenador 4 ahora está en READY.
+[INFO] 23:35:27:60 TEAM/(23835:23845): El entrenador 4 ahora está en EXEC.
+[INFO] 23:35:32:44 TEAM/(23835:23854): Recibi mensaje caught pokemon. El pokemon fue atrapado.
+[INFO] 23:35:32:60 TEAM/(23835:23845): El entrenador 4 ahora está en READY.
+[INFO] 23:35:32:60 TEAM/(23835:23845): El entrenador 4 ahora está en EXEC.
+[INFO] 23:35:37:61 TEAM/(23835:23840): El entrenador 4 se movió a la posición (2, 2).
+[INFO] 23:35:37:61 TEAM/(23835:23845): El entrenador 4 ahora está en READY.
+[INFO] 23:35:37:61 TEAM/(23835:23845): El entrenador 4 ahora está en EXEC.
+[INFO] 23:35:42:62 TEAM/(23835:23845): El entrenador 4 ahora está en READY.
+[INFO] 23:35:42:62 TEAM/(23835:23845): El entrenador 4 ahora está en EXEC.
+[INFO] 23:35:47:63 TEAM/(23835:23845): El entrenador 4 ahora está en READY.
+[INFO] 23:35:47:63 TEAM/(23835:23845): El entrenador 4 ahora está en EXEC.
+[INFO] 23:35:52:63 TEAM/(23835:23845): El entrenador 4 ahora está en READY.
+[INFO] 23:35:52:63 TEAM/(23835:23845): El entrenador 4 ahora está en EXEC.
+[INFO] 23:35:57:64 TEAM/(23835:23845): El entrenador 4 ahora está en READY.
+[INFO] 23:35:57:65 TEAM/(23835:23845): El entrenador 4 ahora está en EXEC.
+[INFO] 23:36:02:65 TEAM/(23835:23840): El entrenador 4 le da el pokemon Vaporeon al entrenador 0
+[INFO] 23:36:02:65 TEAM/(23835:23840): El entrenador 0 le da el pokemon Jolteon al entrenador 4
+[INFO] 23:36:02:65 TEAM/(23835:23840): Operación de intercambio realizada entre entrenadores 4 y 0
+[INFO] 23:36:02:65 TEAM/(23835:23840): El entrenador 4 ahora está en BLOCKED.
+[INFO] 23:36:02:65 TEAM/(23835:23842): El entrenador 4, esta en DEADLOCK con el entrenador 3.
+[INFO] 23:36:02:65 TEAM/(23835:23839): El entrenador 3 ahora está en READY.
+[INFO] 23:36:02:65 TEAM/(23835:23845): El entrenador 3 ahora está en EXEC.
+[INFO] 23:36:02:65 TEAM/(23835:23839): El entrenador 3 ahora está en EXEC.
+[INFO] 23:36:07:67 TEAM/(23835:23845): El entrenador 3 ahora está en READY.
+[INFO] 23:36:07:67 TEAM/(23835:23845): El entrenador 3 ahora está en EXEC.
+[INFO] 23:36:12:67 TEAM/(23835:23845): El entrenador 3 ahora está en READY.
+[INFO] 23:36:12:67 TEAM/(23835:23845): El entrenador 3 ahora está en EXEC.
+[INFO] 23:36:17:70 TEAM/(23835:23845): El entrenador 3 ahora está en READY.
+[INFO] 23:36:17:70 TEAM/(23835:23845): El entrenador 3 ahora está en EXEC.
+[INFO] 23:36:22:71 TEAM/(23835:23845): El entrenador 3 ahora está en READY.
+[INFO] 23:36:22:71 TEAM/(23835:23845): El entrenador 3 ahora está en EXEC.
+[INFO] 23:36:27:71 TEAM/(23835:23845): El entrenador 3 ahora está en READY.
+[INFO] 23:36:27:71 TEAM/(23835:23845): El entrenador 3 ahora está en EXEC.
+[INFO] 23:36:32:72 TEAM/(23835:23839): El entrenador 3 se movió a la posición (2, 2).
+[INFO] 23:36:32:72 TEAM/(23835:23845): El entrenador 3 ahora está en READY.
+[INFO] 23:36:32:72 TEAM/(23835:23845): El entrenador 3 ahora está en EXEC.
+[INFO] 23:36:37:73 TEAM/(23835:23845): El entrenador 3 ahora está en READY.
+[INFO] 23:36:37:73 TEAM/(23835:23845): El entrenador 3 ahora está en EXEC.
+[INFO] 23:36:42:74 TEAM/(23835:23845): El entrenador 3 ahora está en READY.
+[INFO] 23:36:42:74 TEAM/(23835:23845): El entrenador 3 ahora está en EXEC.
+[INFO] 23:36:47:75 TEAM/(23835:23845): El entrenador 3 ahora está en READY.
+[INFO] 23:36:47:75 TEAM/(23835:23845): El entrenador 3 ahora está en EXEC.
+[INFO] 23:36:52:76 TEAM/(23835:23845): El entrenador 3 ahora está en READY.
+[INFO] 23:36:52:76 TEAM/(23835:23845): El entrenador 3 ahora está en EXEC.
+[INFO] 23:36:57:77 TEAM/(23835:23839): El entrenador 3 le da el pokemon Espeon al entrenador 4
+[INFO] 23:36:57:77 TEAM/(23835:23839): El entrenador 4 le da el pokemon Jolteon al entrenador 3
+[INFO] 23:36:57:77 TEAM/(23835:23839): Operación de intercambio realizada entre entrenadores 3 y 4
+[INFO] 23:36:57:77 TEAM/(23835:23839): El entrenador 3 ahora está en BLOCKED.
+[INFO] 23:36:57:77 TEAM/(23835:23842): El entrenador 3, esta en DEADLOCK con el entrenador 2.
+[INFO] 23:36:57:77 TEAM/(23835:23838): El entrenador 2 ahora está en READY.
+[INFO] 23:36:57:77 TEAM/(23835:23845): El entrenador 2 ahora está en EXEC.
+[INFO] 23:36:57:77 TEAM/(23835:23838): El entrenador 2 ahora está en EXEC.
+[INFO] 23:37:02:79 TEAM/(23835:23845): El entrenador 2 ahora está en READY.
+[INFO] 23:37:02:80 TEAM/(23835:23845): El entrenador 2 ahora está en EXEC.
+[INFO] 23:37:07:80 TEAM/(23835:23845): El entrenador 2 ahora está en READY.
+[INFO] 23:37:07:80 TEAM/(23835:23845): El entrenador 2 ahora está en EXEC.
+[INFO] 23:37:12:82 TEAM/(23835:23845): El entrenador 2 ahora está en READY.
+[INFO] 23:37:12:82 TEAM/(23835:23845): El entrenador 2 ahora está en EXEC.
+[INFO] 23:37:17:83 TEAM/(23835:23845): El entrenador 2 ahora está en READY.
+[INFO] 23:37:17:83 TEAM/(23835:23845): El entrenador 2 ahora está en EXEC.
+[INFO] 23:37:22:83 TEAM/(23835:23845): El entrenador 2 ahora está en READY.
+[INFO] 23:37:22:83 TEAM/(23835:23845): El entrenador 2 ahora está en EXEC.
+[INFO] 23:37:27:85 TEAM/(23835:23845): El entrenador 2 ahora está en READY.
+[INFO] 23:37:27:85 TEAM/(23835:23845): El entrenador 2 ahora está en EXEC.
+[INFO] 23:37:32:86 TEAM/(23835:23845): El entrenador 2 ahora está en READY.
+[INFO] 23:37:32:86 TEAM/(23835:23845): El entrenador 2 ahora está en EXEC.
+[INFO] 23:37:37:87 TEAM/(23835:23845): El entrenador 2 ahora está en READY.
+[INFO] 23:37:37:87 TEAM/(23835:23845): El entrenador 2 ahora está en EXEC.
+[INFO] 23:37:42:87 TEAM/(23835:23845): El entrenador 2 ahora está en READY.
+[INFO] 23:37:42:88 TEAM/(23835:23845): El entrenador 2 ahora está en EXEC.
+[INFO] 23:37:47:90 TEAM/(23835:23845): El entrenador 2 ahora está en READY.
+[INFO] 23:37:47:90 TEAM/(23835:23845): El entrenador 2 ahora está en EXEC.
+[INFO] 23:37:52:97 TEAM/(23835:23845): El entrenador 2 ahora está en READY.
+[INFO] 23:37:52:97 TEAM/(23835:23845): El entrenador 2 ahora está en EXEC.
+[INFO] 23:37:57:101 TEAM/(23835:23838): El entrenador 2 se movió a la posición (2, 2).
+[INFO] 23:37:57:101 TEAM/(23835:23845): El entrenador 2 ahora está en READY.
+[INFO] 23:37:57:101 TEAM/(23835:23845): El entrenador 2 ahora está en EXEC.
+[INFO] 23:38:02:108 TEAM/(23835:23845): El entrenador 2 ahora está en READY.
+[INFO] 23:38:02:108 TEAM/(23835:23845): El entrenador 2 ahora está en EXEC.
+[INFO] 23:38:07:109 TEAM/(23835:23845): El entrenador 2 ahora está en READY.
+[INFO] 23:38:07:109 TEAM/(23835:23845): El entrenador 2 ahora está en EXEC.
+[INFO] 23:38:12:125 TEAM/(23835:23845): El entrenador 2 ahora está en READY.
+[INFO] 23:38:12:125 TEAM/(23835:23845): El entrenador 2 ahora está en EXEC.
+[INFO] 23:38:17:132 TEAM/(23835:23845): El entrenador 2 ahora está en READY.
+[INFO] 23:38:17:132 TEAM/(23835:23845): El entrenador 2 ahora está en EXEC.
+[INFO] 23:38:22:133 TEAM/(23835:23838): El entrenador 2 le da el pokemon Umbreon al entrenador 3
+[INFO] 23:38:22:133 TEAM/(23835:23838): El entrenador 3 le da el pokemon Jolteon al entrenador 2
+[INFO] 23:38:22:133 TEAM/(23835:23838): Operación de intercambio realizada entre entrenadores 2 y 3
+[INFO] 23:38:22:133 TEAM/(23835:23838): El entrenador 2 ahora está en BLOCKED.
+[INFO] 23:38:22:133 TEAM/(23835:23842): El entrenador 2, esta en DEADLOCK con el entrenador 1.
+[INFO] 23:38:22:133 TEAM/(23835:23837): El entrenador 1 ahora está en READY.
+[INFO] 23:38:22:133 TEAM/(23835:23845): El entrenador 1 ahora está en EXEC.
+[INFO] 23:38:22:133 TEAM/(23835:23837): El entrenador 1 ahora está en EXEC.
+[INFO] 23:38:27:134 TEAM/(23835:23845): El entrenador 1 ahora está en READY.
+[INFO] 23:38:27:134 TEAM/(23835:23845): El entrenador 1 ahora está en EXEC.
+[INFO] 23:38:32:134 TEAM/(23835:23845): El entrenador 1 ahora está en READY.
+[INFO] 23:38:32:134 TEAM/(23835:23845): El entrenador 1 ahora está en EXEC.
+[INFO] 23:38:37:135 TEAM/(23835:23845): El entrenador 1 ahora está en READY.
+[INFO] 23:38:37:135 TEAM/(23835:23845): El entrenador 1 ahora está en EXEC.
+[INFO] 23:38:42:135 TEAM/(23835:23845): El entrenador 1 ahora está en READY.
+[INFO] 23:38:42:135 TEAM/(23835:23845): El entrenador 1 ahora está en EXEC.
+[INFO] 23:38:47:136 TEAM/(23835:23845): El entrenador 1 ahora está en READY.
+[INFO] 23:38:47:136 TEAM/(23835:23845): El entrenador 1 ahora está en EXEC.
+[INFO] 23:38:52:138 TEAM/(23835:23837): El entrenador 1 se movió a la posición (2, 2).
+[INFO] 23:38:52:138 TEAM/(23835:23845): El entrenador 1 ahora está en READY.
+[INFO] 23:38:52:138 TEAM/(23835:23845): El entrenador 1 ahora está en EXEC.
+[INFO] 23:38:57:142 TEAM/(23835:23845): El entrenador 1 ahora está en READY.
+[INFO] 23:38:57:142 TEAM/(23835:23845): El entrenador 1 ahora está en EXEC.
+[INFO] 23:39:02:142 TEAM/(23835:23845): El entrenador 1 ahora está en READY.
+[INFO] 23:39:02:142 TEAM/(23835:23845): El entrenador 1 ahora está en EXEC.
+[INFO] 23:39:07:147 TEAM/(23835:23845): El entrenador 1 ahora está en READY.
+[INFO] 23:39:07:147 TEAM/(23835:23845): El entrenador 1 ahora está en EXEC.
+[INFO] 23:39:12:147 TEAM/(23835:23845): El entrenador 1 ahora está en READY.
+[INFO] 23:39:12:147 TEAM/(23835:23845): El entrenador 1 ahora está en EXEC.
+[INFO] 23:39:17:148 TEAM/(23835:23837): El entrenador 1 le da el pokemon Flareon al entrenador 2
+[INFO] 23:39:17:148 TEAM/(23835:23837): El entrenador 2 le da el pokemon Jolteon al entrenador 1
+[INFO] 23:39:17:148 TEAM/(23835:23837): Operación de intercambio realizada entre entrenadores 1 y 2
+[INFO] 23:39:17:148 TEAM/(23835:23837): El entrenador 1 ahora está en BLOCKED.
+[INFO] 23:39:17:149 TEAM/(23835:23842): El entrenador 0 ahora está en EXIT.
+[INFO] 23:39:17:149 TEAM/(23835:23842): El entrenador 1 ahora está en EXIT.
+[INFO] 23:39:17:149 TEAM/(23835:23842): El entrenador 3 ahora está en EXIT.
+[INFO] 23:39:17:149 TEAM/(23835:23842): El entrenador 4 ahora está en EXIT.
+[INFO] 23:39:17:149 TEAM/(23835:23842): El entrenador 2 ahora está en EXIT.
+[INFO] 23:39:17:149 TEAM/(23835:23835): ------------------------------------------------
+[INFO] 23:39:17:149 TEAM/(23835:23835): Programa terminado: objetivo global cumplido.
+[INFO] 23:39:17:149 TEAM/(23835:23835): Cantidad de ciclos de CPU totales: 73.
+[INFO] 23:39:17:149 TEAM/(23835:23835): Cantidad de cambios de contexto realizados: 73.
+[INFO] 23:39:17:149 TEAM/(23835:23835): ------------------------------------------------
+[INFO] 23:39:17:149 TEAM/(23835:23835): Información de los entrenadores: 
+[INFO] 23:39:17:149 TEAM/(23835:23835): Deadlocks producidos: 4.
+[INFO] 23:39:17:149 TEAM/(23835:23835): Deadlocks resueltos: 4.
+[INFO] 23:39:17:149 TEAM/(23835:23835): Cantidad de ciclos de CPU realizados por el entrenador 0: 2.
+[INFO] 23:39:17:149 TEAM/(23835:23835): Cantidad de ciclos de CPU realizados por el entrenador 1: 15.
+[INFO] 23:39:17:149 TEAM/(23835:23835): Cantidad de ciclos de CPU realizados por el entrenador 2: 22.
+[INFO] 23:39:17:149 TEAM/(23835:23835): Cantidad de ciclos de CPU realizados por el entrenador 3: 15.
+[INFO] 23:39:17:149 TEAM/(23835:23835): Cantidad de ciclos de CPU realizados por el entrenador 4: 19.

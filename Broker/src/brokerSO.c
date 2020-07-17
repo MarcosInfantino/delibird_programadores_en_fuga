@@ -73,7 +73,7 @@ void* iniciarServidor(){
 	struct sockaddr_in direccionServidor;
 	direccionServidor.sin_family = AF_INET;
 	direccionServidor.sin_addr.s_addr = INADDR_ANY;
-	direccionServidor.sin_port = htons(5002);
+	direccionServidor.sin_port = htons(puerto_broker);
 
 	int servidor = socket(AF_INET, SOCK_STREAM, 0);
 

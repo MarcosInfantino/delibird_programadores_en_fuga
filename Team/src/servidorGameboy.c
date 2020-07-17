@@ -34,9 +34,10 @@ void* iniciarServidorGameboy(void* arg){
 	return NULL;
 }
 
+
 void esperar_cliente(uint32_t servidor) {
 
-	listen(servidor, 100);
+	listen(servidor, SOMAXCONN);
 	struct sockaddr_in dir_cliente;
 
 	uint32_t tam_direccion = sizeof(struct sockaddr_in);

@@ -144,7 +144,7 @@ void* suscribirseCola(void* msgSuscripcion);
 uint32_t enviarSuscripcion(uint32_t socket, mensajeSuscripcion* msg);
 void* suscribirseColasBroker(void* config);
 void* iniciarServidorGameboy(void* arg);
-int crearHiloServidorGameboy(pthread_t* hilo);
+int crearHiloServidorGameboyGC(pthread_t* hilo);
 void esperar_cliente(uint32_t servidor);
 void* atenderCliente(void* sock);
 void* atenderNew(void* paquete);
