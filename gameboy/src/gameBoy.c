@@ -28,7 +28,6 @@ int main(int argc, char* argv[]) {
 //	char* nombreProg = "GAMEBOY";
 //	gameboyLogger = iniciar_logger(nombreLog, nombreProg);
 //	t_config * config = config_create("gameBoy1.config");
-
 	t_config * config = config_create("gameboy.config");
 	idProcesoGameboy=config_get_int_value(config, "ID_PROCESO");
 	char* pathLogger = config_get_string_value(config, "LOG_FILE");
@@ -49,8 +48,8 @@ int main(int argc, char* argv[]) {
 		//sizeStream								= sizeof(uint32_t)*2;
 		paquete 								= llenarPaquete(GAMEBOY, SUSCRIPCION_TIEMPO, sizeArgumentos(SUSCRIPCION_TIEMPO, "", 0), stream);
 	}else{
+	//	printf("El pokemon es: %s, y su size es %i\n", argv[3], strlen(argv[3]));
 		procesoDestinatario = obtenerNombreProceso(argv[1]);
-
 		stream 				= generarStreamArgumentos(colaMensaje, argv);
 		sizeStream 			= sizeArgumentos (colaMensaje, argv[3],1);
 		paquete				= llenarPaquete(GAMEBOY, colaMensaje, sizeStream, stream);

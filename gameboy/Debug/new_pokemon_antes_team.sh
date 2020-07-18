@@ -1,6 +1,6 @@
 #!/bin/sh
-./gameboy BROKER APPEARED_POKEMON Pikachu 9 9
-./gameboy BROKER APPEARED_POKEMON Squirtle 5 2
+./gameboy BROKER APPEARED_POKEMON Pikachu 9 9 1001
+./gameboy BROKER APPEARED_POKEMON Squirtle 5 2 1002
 
-./gameboy BROKER APPEARED_POKEMON Jolteon 2 2
-./gameboy BROKER APPEARED_POKEMON Flareon 4 6
+./gameboy BROKER APPEARED_POKEMON Jolteon 2 2 1003
+./gameboy BROKER APPEARED_POKEMON Flareon 4 6 1004
