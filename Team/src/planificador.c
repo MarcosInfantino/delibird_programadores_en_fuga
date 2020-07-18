@@ -287,9 +287,7 @@ void obtenerAlgoritmoPlanificacion(t_config* config){
 }
 
 void pedirCicloCpu(dataEntrenador* entrenador){
-	printf("Antes del sem post pedido ciclo: %i\n", entrenador->id);
 	sem_post(entrenador->semaforoPedidoCiclo);
-	printf("Despues del sem post pedido ciclo: %i\n", entrenador->id);
 	int valorSemaforo=-500;
 	sem_getvalue(entrenador->semaforoPedidoCiclo,&valorSemaforo);
 	log_info(teamLogger2,"El entrenador %i pide un ciclo. Valor del semaforo: %i. ", entrenador->id, valorSemaforo);
@@ -310,9 +308,7 @@ int esperarPedidoCicloCpu(dataEntrenador* entrenador){
 
 	//pthread_mutex_lock(mutexPlanificador);
 	esperaPedido++;
-	printf("Antes del semwait esperar pedido ciclo: %i\n", entrenador->id);
 	sem_wait(entrenador->semaforoPedidoCiclo);
-	printf("Despues del semwait esperar pedido ciclo: %i\n", entrenador->id);
 	esperaPedido--;
 	//pthread_mutex_unlock(mutexPlanificador);
 

@@ -9,8 +9,6 @@
 
 #include "gamecard.h"
 
-
-
 int main(int argc , char* argv[]) {
 	pathConfigGC=argv[1];
 	sem_t * semaforoFinalizacionGC=malloc(sizeof(sem_t));
@@ -20,7 +18,7 @@ int main(int argc , char* argv[]) {
 	configGamecard = crearYleerConfig();
 	gamecardLogger = log_create(pathLoggerPrincipal,"gamecard",false,LOG_LEVEL_INFO);
 	//iniciar_logger(pathLoggerPrincipal, "GAMECARD"); //no se que culo le pasa q no lo crea
-	gamecardLogger2=log_create("gamecardLoggerSecundario.log","gamecard", true, LOG_LEVEL_INFO);
+	gamecardLogger2=log_create("gamecardLoggerSecundario.log","gamecard", false, LOG_LEVEL_INFO);
 
 
 	log_info(gamecardLogger, "Inicio de programa: Gamecard.");
@@ -200,7 +198,7 @@ uint32_t enviarSuscripcion(uint32_t socket, mensajeSuscripcion* msg){
 	uint32_t respuesta = -1;
 
 	recv(cliente,&respuesta,sizeof(uint32_t),0);
-	printf("Socket: %i, cola: %i\n", cliente, msg->cola);
+	//printf("Socket: %i, cola: %i\n", cliente, msg->cola);
 
 	if(respuesta!=CORRECTO){
 		log_info(gamecardLogger, "Hubo un problema con la suscripción a una cola.");

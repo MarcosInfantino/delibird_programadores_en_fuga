@@ -19,7 +19,7 @@ int main(int argc, char* argv[]) {
 	iteraciones = 0;
 	TiempoCarga = 0;
 
-    brokerLogger2 = log_create("brokerLoggerSecundario.log", "Broker", true, LOG_LEVEL_INFO);
+    brokerLogger2 = log_create("brokerLoggerSecundario.log", "Broker", false, LOG_LEVEL_INFO);
     log_info(brokerLogger2, "pid del proceso broker: %i", getpid());
 
 	signal(SIGUSR1, iniciarEscrituraDump);
@@ -180,26 +180,32 @@ void manejarTipoDeMensaje(paquete* paq, uint32_t* socket) {
 		 case APPEARED_POKEMON:
 			 meterEnCola(&appearedPokemon, paq, copiaSocket);
 			 free(socket);
+//			 meterEnCola(&appearedPokemon, paq, *socket);
 			 break;
 		 case NEW_POKEMON:
 			 meterEnCola( &newPokemon, paq, copiaSocket);
+			 //meterEnCola( &newPokemon, paq, *socket);
 			 free(socket);
 			 break;
 		 case CAUGHT_POKEMON:;
-			 meterEnCola( &caughtPokemon, paq, copiaSocket);
-			 free(socket);
+			meterEnCola( &caughtPokemon, paq, copiaSocket);
+		 //meterEnCola( &caughtPokemon, paq, *socket);
+			free(socket);
 			 break;
 		 case CATCH_POKEMON:
 			 meterEnCola( &catchPokemon, paq, copiaSocket);
 			 free(socket);
+//			 meterEnCola( &catchPokemon, paq, *socket);
 			 break;
 		 case GET_POKEMON:
 			 meterEnCola( &getPokemon, paq, copiaSocket);
 			 free(socket);
+//			 meterEnCola( &getPokemon, paq, *socket);
 			 break;
 		 case LOCALIZED_POKEMON:
 			 meterEnCola( &localizedPokemon, paq, copiaSocket);
 			 free(socket);
+//			 meterEnCola( &localizedPokemon, paq, *socket);
 			 break;
 		 case SUSCRIPCION:
 			 suscribirSegunCola(*paq, socket);

@@ -324,7 +324,8 @@ void removerDeListaBuddy(listaMutex* lista, struct nodoMemoria* nodo){
 	for(int i=0; i<sizeListaMutex(lista);i++){
 		aux = getListaMutex(lista, i);
 		if(aux == nodo){
-			removeAndDestroyElementListaMutex(lista,i,destroyMsgMemoriaBroker );
+			//removeAndDestroyElementListaMutex(lista,i,destroyMsgMemoriaBroker );
+			removeListaMutex(lista,i);
 		}
 	}
 }

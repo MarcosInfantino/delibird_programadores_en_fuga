@@ -30,7 +30,7 @@ int main(int argc , char* argv[]){
 	esperaPedido=0;
 	teamLogger = iniciar_logger(logFilePrincipal, "TEAM");
 
-	teamLogger2=log_create("teamLoggerSecundario.log","team", true, LOG_LEVEL_INFO);
+	teamLogger2=log_create("teamLoggerSecundario.log","team", false, LOG_LEVEL_INFO);
 
 	inicializarSemaforos();
 	inicializarColasYListas();

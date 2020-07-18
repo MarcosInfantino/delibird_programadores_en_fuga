@@ -106,7 +106,9 @@ void iniciarBitmap() {
 
 
 void iniciarBitmap() {
-	char* pathBitmap = "/home/utnso/tp-2020-1c-Programadores-en-Fuga/Gamecard/TALL_GRASS/Metadata/bitmap.bin";
+//	char* pathBitmap = "/home/utnso/tp-2020-1c-Programadores-en-Fuga/Gamecard/TALL_GRASS/Metadata/bitmap.bin";
+	char* pathBitmap = string_new();
+	string_append(&pathBitmap, "%s/Metadata/bitmap.bin", puntoMontaje);
 	if(!archivoExiste(pathBitmap)){
 		FILE* archivoBitmap = fopen(pathBitmap,"w+b");
 			fseek(archivoBitmap,0, SEEK_SET);
