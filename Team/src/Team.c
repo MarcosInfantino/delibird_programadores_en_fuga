@@ -350,7 +350,7 @@ uint32_t buscarEntrenadorParaMensaje(listaMutex* listaIds, uint32_t idMensaje){/
 int32_t crearHiloResolucionDeadlock(pthread_t* hilo){
 	int32_t err=pthread_create(hilo,NULL,resolverDeadlock,NULL);
 					if(err!=0){
-						printf("Hubo un problema en la creación del hilo para conectarse al broker \n");
+						//printf("Hubo un problema en la creación del hilo para conectarse al broker \n");
 						return err;
 					}
 
@@ -369,7 +369,7 @@ void crearHiloConexionColasBroker(void* config, pthread_t* hilo){
 uint32_t crearHiloParaEnviarGets(pthread_t* hilo){
 	uint32_t err=pthread_create(hilo,NULL,enviarGets,NULL);
 					if(err!=0){
-						printf("Hubo un problema en la creación del hilo para conectarse al broker \n");
+						//printf("Hubo un problema en la creación del hilo para conectarse al broker \n");
 						return err;
 					}
 
@@ -470,7 +470,7 @@ uint32_t enviarSuscripcion(uint32_t socket, mensajeSuscripcion* msg){
 	uint32_t respuesta = -1;
 
 	recv(cliente,&respuesta,sizeof(uint32_t),0);
-	printf("Socket: %i, cola: %i\n", cliente, msg->cola);
+//	printf("Socket: %i, cola: %i\n", cliente, msg->cola);
 
 	if(respuesta!=CORRECTO){
 		log_info(teamLogger2, "Hubo un problema con la suscripción a una cola.");
@@ -497,7 +497,7 @@ void* suscribirseCola(void* msgSuscripcion){
 	}
 
 	cliente=enviarSuscripcion(cliente, msg);
-	printf("socket: %i\n", cliente);
+//	printf("socket: %i\n", cliente);
 	log_info(teamLogger2,"Suscripción realizada correctamente\n");
 
 	while(1){

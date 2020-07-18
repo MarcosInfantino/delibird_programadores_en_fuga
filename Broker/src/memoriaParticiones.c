@@ -73,7 +73,7 @@ void eliminarParticion (particion* part){
 	partiNueva->sizeParticion = part->sizeParticion;
 	partiNueva->estadoParticion = PARTICION_LIBRE;
 	addListaMutex(particionesLibres, (void*)partiNueva);
-	log_info(loggerBroker, "Elimino particion que comienza en: %p", memoria + partiNueva->offset );
+	log_info(loggerBroker, "Elimino particion que comienza en: %i", partiNueva->offset);
 	removeAndDestroyElementListaMutex(particionesOcupadas, 0, destroyParticionOcupada);
 	consolidarSiSePuede(partiNueva);
 }

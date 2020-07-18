@@ -18,7 +18,7 @@ int inicializarEntrenadores(t_list* entrenadores){
 		uint32_t err		   = pthread_create(&(arrayIdHilosEntrenadores[i]),NULL,ejecucionHiloEntrenador,entrenadorActual);
 
 		if(err!=0){
-			printf("Hubo un problema en la creación del hilo del entrenador \n");
+			//printf("Hubo un problema en la creación del hilo del entrenador \n");
 			return err;
 		}
 

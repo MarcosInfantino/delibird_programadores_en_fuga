@@ -5,7 +5,7 @@
 int crearHiloServidorGameboy(pthread_t* hilo){
 	uint32_t err=pthread_create(hilo,NULL,iniciarServidorGameboy,NULL);
 					if(err!=0){
-						printf("Hubo un problema en la creación del hilo para iniciar el servidor para el Gameboy \n");
+					//	printf("Hubo un problema en la creación del hilo para iniciar el servidor para el Gameboy \n");
 						return err;
 					}
 

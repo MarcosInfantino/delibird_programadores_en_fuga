@@ -10,7 +10,7 @@ uint32_t crearHiloPlanificador(pthread_t* hiloPlanificador){
 	uint32_t err=pthread_create(hiloPlanificador,NULL,iniciarPlanificador,NULL);
 
 						if(err!=0){
-							printf("Hubo un problema en la creación del hilo para el planificador \n");
+							//printf("Hubo un problema en la creación del hilo para el planificador \n");
 							return err;
 						}
 

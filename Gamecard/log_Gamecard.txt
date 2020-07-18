@@ -10186,3 +10186,296 @@
 
 [INFO] 20:38:31:851 gamecard/(29905:29908): Reintentando conexión en 10 segundos...
 
+[INFO] 22:17:12:426 gamecard/(699:699): Inicio de programa: Gamecard.
+[INFO] 22:17:12:426 gamecard/(699:699): Se encontro el directorio metadata
+[INFO] 22:17:12:427 gamecard/(699:699): Se encontro el archivo metadata.bin
+[INFO] 22:17:12:427 gamecard/(699:699): Inicio de Metadata, Tamanio bloques: 64,  Cantidad de bloques: 1024,  Magic number: TALL_GRASS
+[INFO] 22:17:12:522 gamecard/(699:703): Estoy escuchando
+[INFO] 22:17:12:522 gamecard/(699:703): Espero un nuevo cliente
+[INFO] 22:17:59:931 gamecard/(699:700): Recibi mensaje new pokemon. El pokemon es: Pikachu. La posicion es: (9,9). La cantidad es: 10.
+[INFO] 22:17:59:932 gamecard/(699:729): Inicia proceso de atencion al New
+[INFO] 22:17:59:938 gamecard/(699:700): Recibi mensaje new pokemon. El pokemon es: Squirtle. La posicion es: (5,2). La cantidad es: 10.
+[INFO] 22:17:59:939 gamecard/(699:734): Inicia proceso de atencion al New
+[INFO] 22:17:59:944 gamecard/(699:700): Recibi mensaje new pokemon. El pokemon es: Jolteon. La posicion es: (2,2). La cantidad es: 10.
+[INFO] 22:17:59:946 gamecard/(699:739): Inicia proceso de atencion al New
+[INFO] 22:17:59:949 gamecard/(699:700): Recibi mensaje new pokemon. El pokemon es: Flareon. La posicion es: (4,6). La cantidad es: 10.
+[INFO] 22:17:59:951 gamecard/(699:744): Inicia proceso de atencion al New
+[INFO] 22:18:04:938 gamecard/(699:729): Cierro el archivo del pokemon: Pikachu. Posicion: (9, 9).
+[INFO] 22:18:04:938 gamecard/(699:729): Inicia proceso envio Appeared
+[INFO] 22:18:04:948 gamecard/(699:734): Cierro el archivo del pokemon: Squirtle. Posicion: (5, 2).
+[INFO] 22:18:04:948 gamecard/(699:734): Inicia proceso envio Appeared
+[INFO] 22:18:04:948 gamecard/(699:739): Cierro el archivo del pokemon: Jolteon. Posicion: (2, 2).
+[INFO] 22:18:04:948 gamecard/(699:739): Inicia proceso envio Appeared
+[INFO] 22:18:04:953 gamecard/(699:744): Cierro el archivo del pokemon: Flareon. Posicion: (4, 6).
+[INFO] 22:18:04:953 gamecard/(699:744): Inicia proceso envio Appeared
+[INFO] 22:21:56:768 gamecard/(699:702): Recibi mensaje get pokemon. El pokemon es: Squirtle.
+[INFO] 22:21:56:770 gamecard/(699:885): Inicia proceso de atencion al Get
+[INFO] 22:21:56:771 gamecard/(699:702): Recibi mensaje get pokemon. El pokemon es: Pikachu.
+[INFO] 22:21:56:773 gamecard/(699:889): Inicia proceso de atencion al Get
+[INFO] 22:21:56:774 gamecard/(699:702): Recibi mensaje get pokemon. El pokemon es: Gengar.
+[INFO] 22:21:56:775 gamecard/(699:702): Recibi mensaje get pokemon. El pokemon es: Onix.
+[INFO] 22:21:56:775 gamecard/(699:892): Inicia proceso de atencion al Get
+[INFO] 22:21:56:775 gamecard/(699:892): Inicia proceso envio Localized
+[INFO] 22:21:56:775 gamecard/(699:894): Inicia proceso de atencion al Get
+[INFO] 22:21:56:775 gamecard/(699:894): Inicia proceso envio Localized
+[INFO] 22:22:01:771 gamecard/(699:885): Inicia proceso envio Localized
+[INFO] 22:22:01:774 gamecard/(699:889): Inicia proceso envio Localized
+[INFO] 22:22:16:776 gamecard/(699:701): Recibi mensaje catch pokemon. El pokemon es: Squirtle. La posicion es: (5,2).
+[INFO] 22:22:16:783 gamecard/(699:915): Inicia proceso de atencion al Catch
+[INFO] 22:22:19:977 gamecard/(699:702): Recibi mensaje get pokemon. El pokemon es: Vaporeon.
+[INFO] 22:22:19:980 gamecard/(699:939): Inicia proceso de atencion al Get
+[INFO] 22:22:19:980 gamecard/(699:939): Inicia proceso envio Localized
+[INFO] 22:22:19:980 gamecard/(699:702): Recibi mensaje get pokemon. El pokemon es: Jolteon.
+[INFO] 22:22:19:981 gamecard/(699:944): Inicia proceso de atencion al Get
+[INFO] 22:22:21:827 gamecard/(699:915): Cierro el archivo del pokemon: Squirtle. Posicion: (5, 2).
+[INFO] 22:22:21:827 gamecard/(699:915): Inicia proceso envio Caught
+[INFO] 22:22:24:986 gamecard/(699:944): Inicia proceso envio Localized
+[INFO] 22:23:26:787 gamecard/(699:701): Recibi mensaje catch pokemon. El pokemon es: Pikachu. La posicion es: (9,9).
+[INFO] 22:23:26:798 gamecard/(699:997): Inicia proceso de atencion al Catch
+[INFO] 22:23:31:851 gamecard/(699:997): Cierro el archivo del pokemon: Pikachu. Posicion: (9, 9).
+[INFO] 22:23:31:851 gamecard/(699:997): Inicia proceso envio Caught
+[INFO] 22:23:31:862 gamecard/(699:700): Conexión fallida con el Broker
+
+[INFO] 22:23:31:862 gamecard/(699:700): Reintentando conexión en 10 segundos...
+
+[INFO] 22:23:31:862 gamecard/(699:701): Conexión fallida con el Broker
+
+[INFO] 22:23:31:862 gamecard/(699:701): Reintentando conexión en 10 segundos...
+
+[INFO] 22:23:31:862 gamecard/(699:702): Conexión fallida con el Broker
+
+[INFO] 22:23:31:862 gamecard/(699:702): Reintentando conexión en 10 segundos...
+
+[INFO] 22:23:41:863 gamecard/(699:700): Reintentando conexión en 10 segundos...
+
+[INFO] 22:23:41:863 gamecard/(699:701): Reintentando conexión en 10 segundos...
+
+[INFO] 22:23:41:863 gamecard/(699:702): Reintentando conexión en 10 segundos...
+
+[INFO] 22:23:51:863 gamecard/(699:702): El reintento de conexión no fue exitoso
+
+[INFO] 22:23:51:863 gamecard/(699:702): Reintentando conexión en 10 segundos...
+
+[INFO] 22:23:51:863 gamecard/(699:701): El reintento de conexión no fue exitoso
+
+[INFO] 22:23:51:863 gamecard/(699:701): Reintentando conexión en 10 segundos...
+
+[INFO] 22:23:51:863 gamecard/(699:700): El reintento de conexión no fue exitoso
+
+[INFO] 22:23:51:863 gamecard/(699:700): Reintentando conexión en 10 segundos...
+
+[INFO] 22:24:01:865 gamecard/(699:700): El reintento de conexión no fue exitoso
+
+[INFO] 22:24:01:865 gamecard/(699:700): Reintentando conexión en 10 segundos...
+
+[INFO] 22:24:01:865 gamecard/(699:701): El reintento de conexión no fue exitoso
+
+[INFO] 22:24:01:865 gamecard/(699:701): Reintentando conexión en 10 segundos...
+
+[INFO] 22:24:01:865 gamecard/(699:702): El reintento de conexión no fue exitoso
+
+[INFO] 22:24:01:865 gamecard/(699:702): Reintentando conexión en 10 segundos...
+
+[INFO] 22:24:11:865 gamecard/(699:701): El reintento de conexión no fue exitoso
+
+[INFO] 22:24:11:865 gamecard/(699:701): Reintentando conexión en 10 segundos...
+
+[INFO] 22:24:11:865 gamecard/(699:700): El reintento de conexión no fue exitoso
+
+[INFO] 22:24:11:865 gamecard/(699:700): Reintentando conexión en 10 segundos...
+
+[INFO] 22:24:11:865 gamecard/(699:702): El reintento de conexión no fue exitoso
+
+[INFO] 22:24:11:865 gamecard/(699:702): Reintentando conexión en 10 segundos...
+
+[INFO] 22:24:21:866 gamecard/(699:702): El reintento de conexión no fue exitoso
+
+[INFO] 22:24:21:866 gamecard/(699:702): Reintentando conexión en 10 segundos...
+
+[INFO] 22:24:21:866 gamecard/(699:700): El reintento de conexión no fue exitoso
+
+[INFO] 22:24:21:866 gamecard/(699:700): Reintentando conexión en 10 segundos...
+
+[INFO] 22:24:21:866 gamecard/(699:701): El reintento de conexión no fue exitoso
+
+[INFO] 22:24:21:866 gamecard/(699:701): Reintentando conexión en 10 segundos...
+
+[INFO] 22:24:31:866 gamecard/(699:701): El reintento de conexión no fue exitoso
+
+[INFO] 22:24:31:866 gamecard/(699:701): Reintentando conexión en 10 segundos...
+
+[INFO] 22:24:31:866 gamecard/(699:700): El reintento de conexión no fue exitoso
+
+[INFO] 22:24:31:866 gamecard/(699:700): Reintentando conexión en 10 segundos...
+
+[INFO] 22:24:31:866 gamecard/(699:702): El reintento de conexión no fue exitoso
+
+[INFO] 22:24:31:866 gamecard/(699:702): Reintentando conexión en 10 segundos...
+
+[INFO] 22:24:41:866 gamecard/(699:702): El reintento de conexión no fue exitoso
+
+[INFO] 22:24:41:866 gamecard/(699:702): Reintentando conexión en 10 segundos...
+
+[INFO] 22:24:41:867 gamecard/(699:700): El reintento de conexión no fue exitoso
+
+[INFO] 22:24:41:867 gamecard/(699:700): Reintentando conexión en 10 segundos...
+
+[INFO] 22:24:41:867 gamecard/(699:701): El reintento de conexión no fue exitoso
+
+[INFO] 22:24:41:867 gamecard/(699:701): Reintentando conexión en 10 segundos...
+
+[INFO] 22:24:51:867 gamecard/(699:701): El reintento de conexión no fue exitoso
+
+[INFO] 22:24:51:867 gamecard/(699:701): Reintentando conexión en 10 segundos...
+
+[INFO] 22:24:51:867 gamecard/(699:700): El reintento de conexión no fue exitoso
+
+[INFO] 22:24:51:867 gamecard/(699:700): Reintentando conexión en 10 segundos...
+
+[INFO] 22:24:51:867 gamecard/(699:702): El reintento de conexión no fue exitoso
+
+[INFO] 22:24:51:867 gamecard/(699:702): Reintentando conexión en 10 segundos...
+
+[INFO] 22:25:01:868 gamecard/(699:702): El reintento de conexión no fue exitoso
+
+[INFO] 22:25:01:868 gamecard/(699:702): Reintentando conexión en 10 segundos...
+
+[INFO] 22:25:01:868 gamecard/(699:700): El reintento de conexión no fue exitoso
+
+[INFO] 22:25:01:868 gamecard/(699:700): Reintentando conexión en 10 segundos...
+
+[INFO] 22:25:01:868 gamecard/(699:701): El reintento de conexión no fue exitoso
+
+[INFO] 22:25:01:868 gamecard/(699:701): Reintentando conexión en 10 segundos...
+
+[INFO] 22:25:11:868 gamecard/(699:700): El reintento de conexión no fue exitoso
+
+[INFO] 22:25:11:868 gamecard/(699:700): Reintentando conexión en 10 segundos...
+
+[INFO] 22:25:11:868 gamecard/(699:702): El reintento de conexión no fue exitoso
+
+[INFO] 22:25:11:868 gamecard/(699:702): Reintentando conexión en 10 segundos...
+
+[INFO] 22:25:11:868 gamecard/(699:701): El reintento de conexión no fue exitoso
+
+[INFO] 22:25:11:868 gamecard/(699:701): Reintentando conexión en 10 segundos...
+
+[INFO] 22:25:36:772 gamecard/(1092:1092): Inicio de programa: Gamecard.
+[INFO] 22:25:36:772 gamecard/(1092:1092): Se encontro el directorio metadata
+[INFO] 22:25:36:772 gamecard/(1092:1092): Se encontro el archivo metadata.bin
+[INFO] 22:25:36:773 gamecard/(1092:1092): Inicio de Metadata, Tamanio bloques: 64,  Cantidad de bloques: 1024,  Magic number: TALL_GRASS
+[INFO] 22:25:36:832 gamecard/(1092:1096): Estoy escuchando
+[INFO] 22:25:36:832 gamecard/(1092:1096): Espero un nuevo cliente
+[INFO] 22:25:43:745 gamecard/(1092:1093): Recibi mensaje new pokemon. El pokemon es: Pikachu. La posicion es: (9,9). La cantidad es: 10.
+[INFO] 22:25:43:746 gamecard/(1092:1107): Inicia proceso de atencion al New
+[INFO] 22:25:43:748 gamecard/(1092:1093): Recibi mensaje new pokemon. El pokemon es: Squirtle. La posicion es: (5,2). La cantidad es: 10.
+[INFO] 22:25:43:748 gamecard/(1092:1113): Inicia proceso de atencion al New
+[INFO] 22:25:43:750 gamecard/(1092:1093): Recibi mensaje new pokemon. El pokemon es: Jolteon. La posicion es: (2,2). La cantidad es: 10.
+[INFO] 22:25:43:750 gamecard/(1092:1118): Inicia proceso de atencion al New
+[INFO] 22:25:43:752 gamecard/(1092:1093): Recibi mensaje new pokemon. El pokemon es: Flareon. La posicion es: (4,6). La cantidad es: 10.
+[INFO] 22:25:43:755 gamecard/(1092:1123): Inicia proceso de atencion al New
+[INFO] 22:25:48:747 gamecard/(1092:1107): Cierro el archivo del pokemon: Pikachu. Posicion: (9, 9).
+[INFO] 22:25:48:748 gamecard/(1092:1107): Inicia proceso envio Appeared
+[INFO] 22:25:48:749 gamecard/(1092:1113): Cierro el archivo del pokemon: Squirtle. Posicion: (5, 2).
+[INFO] 22:25:48:749 gamecard/(1092:1113): Inicia proceso envio Appeared
+[INFO] 22:25:48:751 gamecard/(1092:1118): Cierro el archivo del pokemon: Jolteon. Posicion: (2, 2).
+[INFO] 22:25:48:751 gamecard/(1092:1118): Inicia proceso envio Appeared
+[INFO] 22:25:48:756 gamecard/(1092:1123): Cierro el archivo del pokemon: Flareon. Posicion: (4, 6).
+[INFO] 22:25:48:756 gamecard/(1092:1123): Inicia proceso envio Appeared
+[INFO] 22:25:52:108 gamecard/(1092:1095): Recibi mensaje get pokemon. El pokemon es: Vaporeon.
+[INFO] 22:25:52:112 gamecard/(1092:1156): Inicia proceso de atencion al Get
+[INFO] 22:25:52:112 gamecard/(1092:1156): Inicia proceso envio Localized
+[INFO] 22:25:52:113 gamecard/(1092:1095): Recibi mensaje get pokemon. El pokemon es: Jolteon.
+[INFO] 22:25:52:114 gamecard/(1092:1095): Recibi mensaje get pokemon. El pokemon es: Flareon.
+[INFO] 22:25:52:114 gamecard/(1092:1165): Inicia proceso de atencion al Get
+[INFO] 22:25:52:117 gamecard/(1092:1169): Inicia proceso de atencion al Get
+[INFO] 22:25:55:772 gamecard/(1092:1095): Recibi mensaje get pokemon. El pokemon es: Squirtle.
+[INFO] 22:25:55:774 gamecard/(1092:1190): Inicia proceso de atencion al Get
+[INFO] 22:25:55:776 gamecard/(1092:1095): Recibi mensaje get pokemon. El pokemon es: Pikachu.
+[INFO] 22:25:55:776 gamecard/(1092:1095): Recibi mensaje get pokemon. El pokemon es: Gengar.
+[INFO] 22:25:55:777 gamecard/(1092:1194): Inicia proceso de atencion al Get
+[INFO] 22:25:55:777 gamecard/(1092:1198): Inicia proceso de atencion al Get
+[INFO] 22:25:55:777 gamecard/(1092:1198): Inicia proceso envio Localized
+[INFO] 22:25:55:778 gamecard/(1092:1095): Recibi mensaje get pokemon. El pokemon es: Onix.
+[INFO] 22:25:55:778 gamecard/(1092:1201): Inicia proceso de atencion al Get
+[INFO] 22:25:55:778 gamecard/(1092:1201): Inicia proceso envio Localized
+[INFO] 22:25:57:115 gamecard/(1092:1165): Inicia proceso envio Localized
+[INFO] 22:25:57:118 gamecard/(1092:1169): Inicia proceso envio Localized
+[INFO] 22:26:00:786 gamecard/(1092:1194): Inicia proceso envio Localized
+[INFO] 22:26:00:786 gamecard/(1092:1190): Inicia proceso envio Localized
+[INFO] 22:26:12:119 gamecard/(1092:1094): Recibi mensaje catch pokemon. El pokemon es: Jolteon. La posicion es: (2,2).
+[INFO] 22:26:12:119 gamecard/(1092:1244): Inicia proceso de atencion al Catch
+[INFO] 22:26:17:122 gamecard/(1092:1244): Cierro el archivo del pokemon: Jolteon. Posicion: (2, 2).
+[INFO] 22:26:17:122 gamecard/(1092:1244): Inicia proceso envio Caught
+[INFO] 22:26:22:126 gamecard/(1092:1094): Recibi mensaje catch pokemon. El pokemon es: Flareon. La posicion es: (4,6).
+[INFO] 22:26:22:128 gamecard/(1092:1255): Inicia proceso de atencion al Catch
+[INFO] 22:26:27:133 gamecard/(1092:1255): Cierro el archivo del pokemon: Flareon. Posicion: (4, 6).
+[INFO] 22:26:27:133 gamecard/(1092:1255): Inicia proceso envio Caught
+[INFO] 22:27:10:799 gamecard/(1092:1094): Recibi mensaje catch pokemon. El pokemon es: Pikachu. La posicion es: (9,9).
+[INFO] 22:27:10:800 gamecard/(1092:1277): Inicia proceso de atencion al Catch
+[INFO] 22:27:15:806 gamecard/(1092:1277): Cierro el archivo del pokemon: Pikachu. Posicion: (9, 9).
+[INFO] 22:27:15:806 gamecard/(1092:1277): Inicia proceso envio Caught
+[INFO] 22:27:30:804 gamecard/(1092:1094): Recibi mensaje catch pokemon. El pokemon es: Squirtle. La posicion es: (5,2).
+[INFO] 22:27:30:804 gamecard/(1092:1291): Inicia proceso de atencion al Catch
+[INFO] 22:27:35:808 gamecard/(1092:1291): Cierro el archivo del pokemon: Squirtle. Posicion: (5, 2).
+[INFO] 22:27:35:808 gamecard/(1092:1291): Inicia proceso envio Caught
+[INFO] 22:28:50:482 gamecard/(1092:1093): Recibi mensaje new pokemon. El pokemon es: Onix. La posicion es: (2,8). La cantidad es: 10.
+[INFO] 22:28:50:483 gamecard/(1092:1314): Inicia proceso de atencion al New
+[INFO] 22:28:50:486 gamecard/(1092:1093): Recibi mensaje new pokemon. El pokemon es: Gengar. La posicion es: (6,6). La cantidad es: 10.
+[INFO] 22:28:50:486 gamecard/(1092:1319): Inicia proceso de atencion al New
+[INFO] 22:28:50:489 gamecard/(1092:1093): Recibi mensaje new pokemon. El pokemon es: Squirtle. La posicion es: (5,5). La cantidad es: 10.
+[INFO] 22:28:50:490 gamecard/(1092:1324): Inicia proceso de atencion al New
+[INFO] 22:28:50:492 gamecard/(1092:1093): Recibi mensaje new pokemon. El pokemon es: Umbreon. La posicion es: (10,6). La cantidad es: 10.
+[INFO] 22:28:50:493 gamecard/(1092:1329): Inicia proceso de atencion al New
+[INFO] 22:28:50:496 gamecard/(1092:1093): Recibi mensaje new pokemon. El pokemon es: Espeon. La posicion es: (7,1). La cantidad es: 10.
+[INFO] 22:28:50:497 gamecard/(1092:1334): Inicia proceso de atencion al New
+[INFO] 22:28:50:500 gamecard/(1092:1093): Recibi mensaje new pokemon. El pokemon es: Vaporeon. La posicion es: (4,10). La cantidad es: 10.
+[INFO] 22:28:50:502 gamecard/(1092:1339): Inicia proceso de atencion al New
+[INFO] 22:28:55:486 gamecard/(1092:1314): Cierro el archivo del pokemon: Onix. Posicion: (2, 8).
+[INFO] 22:28:55:486 gamecard/(1092:1314): Inicia proceso envio Appeared
+[INFO] 22:28:55:488 gamecard/(1092:1319): Cierro el archivo del pokemon: Gengar. Posicion: (6, 6).
+[INFO] 22:28:55:488 gamecard/(1092:1319): Inicia proceso envio Appeared
+[INFO] 22:28:55:491 gamecard/(1092:1324): Cierro el archivo del pokemon: Squirtle. Posicion: (5, 5).
+[INFO] 22:28:55:491 gamecard/(1092:1324): Inicia proceso envio Appeared
+[INFO] 22:28:55:496 gamecard/(1092:1329): Cierro el archivo del pokemon: Umbreon. Posicion: (10, 6).
+[INFO] 22:28:55:496 gamecard/(1092:1329): Inicia proceso envio Appeared
+[INFO] 22:28:55:504 gamecard/(1092:1334): Cierro el archivo del pokemon: Espeon. Posicion: (7, 1).
+[INFO] 22:28:55:504 gamecard/(1092:1334): Inicia proceso envio Appeared
+[INFO] 22:28:55:511 gamecard/(1092:1339): Cierro el archivo del pokemon: Vaporeon. Posicion: (4, 10).
+[INFO] 22:28:55:511 gamecard/(1092:1339): Inicia proceso envio Appeared
+[INFO] 22:29:30:495 gamecard/(1092:1094): Recibi mensaje catch pokemon. El pokemon es: Onix. La posicion es: (2,8).
+[INFO] 22:29:30:505 gamecard/(1092:1393): Inicia proceso de atencion al Catch
+[INFO] 22:29:35:607 gamecard/(1092:1393): Cierro el archivo del pokemon: Onix. Posicion: (2, 8).
+[INFO] 22:29:35:607 gamecard/(1092:1393): Inicia proceso envio Caught
+[INFO] 22:29:50:498 gamecard/(1092:1094): Recibi mensaje catch pokemon. El pokemon es: Squirtle. La posicion es: (5,5).
+[INFO] 22:29:50:498 gamecard/(1092:1415): Inicia proceso de atencion al Catch
+[INFO] 22:29:50:520 gamecard/(1092:1094): Recibi mensaje catch pokemon. El pokemon es: Espeon. La posicion es: (7,1).
+[INFO] 22:29:50:528 gamecard/(1092:1418): Inicia proceso de atencion al Catch
+[INFO] 22:29:55:499 gamecard/(1092:1415): Cierro el archivo del pokemon: Squirtle. Posicion: (5, 5).
+[INFO] 22:29:55:499 gamecard/(1092:1415): Inicia proceso envio Caught
+[INFO] 22:29:55:522 gamecard/(1092:1094): Recibi mensaje catch pokemon. El pokemon es: Vaporeon. La posicion es: (4,10).
+[INFO] 22:29:55:533 gamecard/(1092:1418): Cierro el archivo del pokemon: Espeon. Posicion: (7, 1).
+[INFO] 22:29:55:533 gamecard/(1092:1418): Inicia proceso envio Caught
+[INFO] 22:29:55:533 gamecard/(1092:1430): Inicia proceso de atencion al Catch
+[INFO] 22:30:00:523 gamecard/(1092:1094): Recibi mensaje catch pokemon. El pokemon es: Umbreon. La posicion es: (10,6).
+[INFO] 22:30:00:532 gamecard/(1092:1438): Inicia proceso de atencion al Catch
+[INFO] 22:30:00:548 gamecard/(1092:1430): Cierro el archivo del pokemon: Vaporeon. Posicion: (4, 10).
+[INFO] 22:30:00:548 gamecard/(1092:1430): Inicia proceso envio Caught
+[INFO] 22:30:05:535 gamecard/(1092:1438): Cierro el archivo del pokemon: Umbreon. Posicion: (10, 6).
+[INFO] 22:30:05:535 gamecard/(1092:1438): Inicia proceso envio Caught
+[INFO] 22:30:25:508 gamecard/(1092:1094): Recibi mensaje catch pokemon. El pokemon es: Gengar. La posicion es: (6,6).
+[INFO] 22:30:25:517 gamecard/(1092:1459): Inicia proceso de atencion al Catch
+[INFO] 22:30:30:558 gamecard/(1092:1459): Cierro el archivo del pokemon: Gengar. Posicion: (6, 6).
+[INFO] 22:30:30:558 gamecard/(1092:1459): Inicia proceso envio Caught
+[INFO] 22:35:07:927 gamecard/(1092:1093): Conexión fallida con el Broker
+
+[INFO] 22:35:07:927 gamecard/(1092:1093): Reintentando conexión en 10 segundos...
+
+[INFO] 22:35:07:927 gamecard/(1092:1094): Conexión fallida con el Broker
+
+[INFO] 22:35:07:927 gamecard/(1092:1094): Reintentando conexión en 10 segundos...
+
+[INFO] 22:35:07:927 gamecard/(1092:1095): Conexión fallida con el Broker
+
+[INFO] 22:35:07:927 gamecard/(1092:1095): Reintentando conexión en 10 segundos...
+
